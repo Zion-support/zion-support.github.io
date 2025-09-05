@@ -1,32 +1,19 @@
 
-import { createNotification } from './createNotification';
-import { HireRequestNotificationParams } from './types';
 
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications({
-  talentId,
-  adminId,
-  requesterName,
-  requesterEmail, 
-  projectType,
-  projectSummary,
-  hireRequestId
-}: HireRequestNotificationParams) {
-  const projectInfo = projectType 
+export async function createHireRequestNotifications(_{_talentId, _adminId, _requesterName, _requesterEmail, _projectType, _projectSummary, _hireRequestId}: HireRequestNotificationParams) {_const _projectInfo = projectType 
     ? `${projectType} project` 
     : "project";
   
-  const summaryText = projectSummary 
-    ? `: "${projectSummary}"` 
+  const _summaryText = projectSummary 
+    ? `: "${_projectSummary}"` 
     : "";
   
   // Create notification for talent
-  const talentNotification = await createNotification({
-    userId: talentId,
-    title: `New Hire Request from ${requesterName}`,
-    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
+  const _talentNotification = await createNotification({_userId: talentId, _title: `New Hire Request from ${requesterName}`,
+    message: `${_requesterName} (${_requesterEmail}) wants to hire you for a ${_projectInfo}${_summaryText}`,
     type: 'hire_request',
     relatedId: hireRequestId,
     sendEmail: true,
@@ -35,11 +22,8 @@ export async function createHireRequestNotifications({
   });
   
   // Create notification for admin if admin ID is provided
-  if (adminId) {
-    const adminNotification = await createNotification({
-      userId: adminId,
-      title: `New Hire Request for Talent`,
-      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,
+  if (adminId) {_const _adminNotification = await createNotification({
+      userId: adminId, _title: `New Hire Request for Talent`, _message: `${requesterName} (${_requesterEmail}) wants to hire talent for a ${_projectInfo}${_summaryText}`,
       type: 'hire_request',
       relatedId: hireRequestId,
       sendEmail: true,
@@ -47,15 +31,8 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     
-    return {
-      success: talentNotification.success && adminNotification.success,
-      talentNotification,
-      adminNotification
-    };
+    return {_success: talentNotification.success && adminNotification.success, _talentNotification, _adminNotification};
   }
   
-  return {
-    success: talentNotification.success,
-    talentNotification
-  };
+  return {_success: talentNotification.success, _talentNotification};
 }

@@ -1,101 +1,68 @@
 
-import React, { useState } from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Interview } from "@/types/interview";
-import { useAuth } from "@/hooks/useAuth";
-import { useInterviews } from "@/hooks/useInterviews";
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-import { InterviewResponseForm } from "./InterviewResponseForm";
+import React, {_useState} from "react";
 
-interface InterviewCardProps {
-  interview: Interview;
-  onRefresh: () => Promise<void>;
-}
+interface InterviewCardProps {_interview: Interview;
+  onRefresh: () => Promise<void>;}
 
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
-  const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
+export function InterviewCard(_{_interview, _onRefresh}: InterviewCardProps) {_const { user} = useAuth();
+  const {_respondToInterview, _cancelInterview} = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   
-  const isClient = user?.id === interview.client_id;
-  const isTalent = user?.id === interview.talent_id;
+  const _isClient = user?.id === interview.client_id;
+  const _isTalent = user?.id === interview.talent_id;
 
   // Format interview date and time
-  const interviewDate = parseISO(interview.scheduled_date);
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
-  const formattedTime = format(interviewDate, 'h:mm a');
+  const _interviewDate = parseISO(interview.scheduled_date);
+  const _formattedDate = format(interviewDate, 'EEEE, MMMM d');
+  const _formattedTime = format(interviewDate, 'h:mm a');
 
   // Calculate when interview ends
-  const endTime = new Date(interviewDate);
+  const _endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
-  const formattedEndTime = format(endTime, 'h:mm a');
+  const _formattedEndTime = format(endTime, 'h:mm a');
   
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)); // 5 minutes before
-  const isInterviewPast = isPast(interviewDate);
+  const _isInterviewPending = interview.status === 'requested';
+  const _isInterviewConfirmed = interview.status === 'confirmed';
+  const _isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)); // 5 minutes before
+  const _isInterviewPast = isPast(interviewDate);
   
-  const getRelativeTime = () => {
-    if (isPast(interviewDate)) {
+  const _getRelativeTime = () => {_if (isPast(interviewDate)) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`;
-    } else {
-      return `Starts in ${formatDistanceToNow(interviewDate)}`;
+    } else {_return `Starts in ${formatDistanceToNow(interviewDate)}`;
     }
   };
 
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true);
-    const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
-      status 
-    });
+  const _handleRespondToInterview = async (_status: 'confirmed' | 'declined' | 'rescheduled') => {_setIsLoading(true);
+    const _success = await respondToInterview(interview.id, _{ 
+      interview_id: interview.id, _status});
     
-    if (success) {
-      toast({
+    if (success) {_toast({
         title: `Interview ${status}`,
-        description: `You have successfully ${status} the interview request.`
+        description: `You have successfully ${_status} the interview request.`
       });
       setIsResponseDialogOpen(false);
       await onRefresh();
-    } else {
-      toast({
-        title: "Error",
-        description: "Failed to respond to the interview request. Please try again.",
-        variant: "destructive"
-      });
+    } else {_toast({
+        title: "Error", _description: "Failed to respond to the interview request. Please try again.", _variant: "destructive"});
     }
     setIsLoading(false);
   };
 
-  const handleCancelInterview = async () => {
-    setIsLoading(true);
-    const success = await cancelInterview(interview.id);
+  const _handleCancelInterview = async () => {_setIsLoading(true);
+    const _success = await cancelInterview(interview.id);
     
     if (success) {
       toast({
-        title: "Interview cancelled",
-        description: "The interview has been cancelled successfully."
-      });
+        title: "Interview cancelled", _description: "The interview has been cancelled successfully."});
       await onRefresh();
-    } else {
-      toast({
-        title: "Error",
-        description: "Failed to cancel the interview. Please try again.",
-        variant: "destructive"
-      });
+    } else {_toast({
+        title: "Error", _description: "Failed to cancel the interview. Please try again.", _variant: "destructive"});
     }
     setIsLoading(false);
   };
 
-  const getStatusBadge = () => {
-    switch (interview.status) {
+  const _getStatusBadge = () => {_switch (interview.status) {
       case 'requested':
         return <Badge className="bg-amber-500">Pending</Badge>;
       case 'confirmed':
@@ -115,23 +82,19 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     }
   };
   
-  const getOtherPartyName = () => {
-    if (isClient) {
-      return interview.talent_name || 'Talent';
-    } else {
-      return interview.client_name || 'Client';
-    }
+  const _getOtherPartyName = () => {_if (isClient) {
+      return interview.talent_name || 'Talent';} else {_return interview.client_name || 'Client';}
   };
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">
         <div className="absolute right-4 top-4">
-          {getStatusBadge()}
+          {_getStatusBadge()}
         </div>
-        <CardTitle className="text-lg">{interview.title}</CardTitle>
+        <CardTitle className="text-lg">{_interview.title}</CardTitle>
         <p className="text-sm text-muted-foreground">
-          with {getOtherPartyName()}
+          with {_getOtherPartyName()}
         </p>
       </CardHeader>
       
@@ -140,17 +103,17 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           <div className="flex items-start gap-3">
             <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" />
             <div>
-              <p className="font-medium">{formattedDate}</p>
+              <p className="font-medium">{_formattedDate}</p>
               <p className="text-sm text-muted-foreground">
-                {formattedTime} - {formattedEndTime} ({interview.duration_minutes} minutes)
+                {_formattedTime} - {_formattedEndTime} ({_interview.duration_minutes} minutes)
               </p>
               <p className="text-xs text-muted-foreground mt-1">
-                {getRelativeTime()}
+                {_getRelativeTime()}
               </p>
             </div>
           </div>
 
-          {interview.meeting_platform && (
+          {_interview.meeting_platform && (
             <div className="flex items-center gap-3">
               <Video className="h-4 w-4 text-muted-foreground" />
               <div>
@@ -159,7 +122,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
             </div>
           )}
           
-          {interview.notes && (
+          {_interview.notes && (
             <div className="flex items-start gap-3">
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />
               <p className="text-sm line-clamp-2">{interview.notes}</p>
@@ -170,8 +133,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
-          {/* For clients with pending requests */}
-          {isClient && isInterviewPending && (
+          {_/* For clients with pending requests */}
+          {_isClient && isInterviewPending && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button variant="outline" size="sm" className="w-full">
@@ -189,7 +152,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   <AlertDialogCancel>Go Back</AlertDialogCancel>
                   <AlertDialogAction 
                     onClick={handleCancelInterview} 
-                    disabled={isLoading}
+                    disabled={_isLoading}
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                   >
                     Cancel Interview
@@ -199,33 +162,32 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
             </AlertDialog>
           )}
           
-          {/* For talents with pending requests */}
-          {isTalent && isInterviewPending && (
-            <div className="grid grid-cols-2 gap-2">
-              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={isLoading}>
+          {_/* For talents with pending requests */}
+          {_isTalent && isInterviewPending && (_<div className="grid grid-cols-2 gap-2">
+              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={_isLoading}>
                 Respond
               </Button>
-              <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>
+              <Button variant="outline" onClick={_() => handleRespondToInterview('declined')} disabled={_isLoading}>
                 Decline
               </Button>
             </div>
           )}
           
-          {/* For confirmed interviews */}
-          {isInterviewConfirmed && !isInterviewPast && (
+          {_/* For confirmed interviews */}
+          {_isInterviewConfirmed && !isInterviewPast && (
             <>
               {interview.meeting_link ? (
                 <Button className="w-full" asChild disabled={!isInterviewLive}>
-                  <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">
+                  <a href={_interview.meeting_link} target="_blank" rel="noopener noreferrer">
                     <Video className="h-4 w-4 mr-2" /> 
-                    {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                    {_isInterviewLive ? 'Join Now' : 'Join Meeting'}
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </a>
                 </Button>
               ) : (
-                <Button className="w-full" disabled={!isInterviewLive}>
+                <Button className="w-full" disabled={_!isInterviewLive}>
                   <Video className="h-4 w-4 mr-2" /> 
-                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                  {_isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
               
@@ -245,8 +207,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   <AlertDialogFooter>
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction 
-                      onClick={handleCancelInterview} 
-                      disabled={isLoading}
+                      onClick={_handleCancelInterview} 
+                      disabled={_isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     >
                       Cancel Interview
@@ -259,17 +221,17 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </div>
       </CardFooter>
       
-      {/* Response dialog for talents */}
-      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
+      {_/* Response dialog for talents */}
+      <Dialog open={_isResponseDialogOpen} onOpenChange={_setIsResponseDialogOpen}>
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
           <InterviewResponseForm 
-            interview={interview}
-            onConfirm={() => handleRespondToInterview('confirmed')}
-            onClose={() => setIsResponseDialogOpen(false)}
-            isLoading={isLoading}
+            interview={_interview}
+            onConfirm={_() => handleRespondToInterview('confirmed')}
+            onClose={_() => setIsResponseDialogOpen(false)}
+            isLoading={_isLoading}
           />
         </DialogContent>
       </Dialog>

@@ -1,80 +1,44 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { 
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
+import {_Card, _CardContent, _CardFooter, _CardHeader, _CardTitle} from "@/components/ui/card";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
-interface PostFormValues {
-  title: string;
+interface PostFormValues {_title: string;
   content: string;
   categoryId: ForumCategory;
-  tags: string;
-}
+  tags: string;}
 
-interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void;
-  isEditing?: boolean;
-}
+interface PostFormProps {_initialValues?: Partial<PostFormValues>;
+  onSubmit: (_values: PostFormValues) => void;
+  isEditing?: boolean;}
 
-export const PostForm = ({
-  initialValues,
-  onSubmit,
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
+export const _PostForm = (_{_initialValues, _onSubmit, _isEditing = false}: PostFormProps) => {_const _form = useForm<PostFormValues>({
     defaultValues: {
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
-    }
+      title: initialValues?.title || "", _content: initialValues?.content || "", _categoryId: initialValues?.categoryId || "project-help", _tags: initialValues?.tags || ""}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true);
+  const _handleSubmit = async (_values: PostFormValues) => {_setIsSubmitting(true);
     try {
-      await onSubmit(values);
-    } finally {
-      setIsSubmitting(false);
-    }
+      await onSubmit(values);} finally {_setIsSubmitting(false);}
   };
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>
+        <CardTitle>{_isEditing ? "Edit Post" : "Create New Post"}</CardTitle>
       </CardHeader>
       <CardContent>
-        <Form {...form}>
-          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>
+        <Form {_...form}>
+          <form className="space-y-6" onSubmit={_form.handleSubmit(handleSubmit)}>
             <FormField
-              control={form.control}
+              control={_form.control}
               name="title"
-              render={({ field }) => (
+              render={_(_{ field}) => (
                 <FormItem>
                   <FormLabel>Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter post title..." {...field} />
+                    <Input placeholder="Enter post title..." {_...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -82,16 +46,16 @@ export const PostForm = ({
             />
             
             <FormField
-              control={form.control}
+              control={_form.control}
               name="content"
-              render={({ field }) => (
+              render={_(_{ field}) => (
                 <FormItem>
                   <FormLabel>Content</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Write your post content here..." 
                       className="min-h-[200px]"
-                      {...field} 
+                      {_...field} 
                     />
                   </FormControl>
                   <FormMessage />
@@ -100,15 +64,15 @@ export const PostForm = ({
             />
             
             <FormField
-              control={form.control}
+              control={_form.control}
               name="categoryId"
-              render={({ field }) => (
+              render={_(_{ field}) => (
                 <FormItem>
                   <FormLabel>Category</FormLabel>
                   <FormControl>
                     <select
                       className="w-full p-2 border rounded-md"
-                      {...field}
+                      {_...field}
                     >
                       <option value="getting-hired">Getting Hired</option>
                       <option value="project-help">Project Help</option>
@@ -122,15 +86,15 @@ export const PostForm = ({
             />
             
             <FormField
-              control={form.control}
+              control={_form.control}
               name="tags"
-              render={({ field }) => (
+              render={_(_{ field}) => (
                 <FormItem>
                   <FormLabel>Tags (comma-separated)</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="e.g. resume, hiring, flutter" 
-                      {...field} 
+                      {_...field} 
                     />
                   </FormControl>
                   <FormMessage />
@@ -138,8 +102,8 @@ export const PostForm = ({
               )}
             />
             
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
+            <Button type="submit" disabled={_isSubmitting}>
+              {_isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
             </Button>
           </form>
         </Form>

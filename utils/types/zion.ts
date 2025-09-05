@@ -1,14 +1,11 @@
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 
-export interface Branding {
-  logoUrl?: string;
+export interface Branding {_logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
-  subdomain?: string;
-}
+  subdomain?: string;}
 
-export interface DeployModules {
-  marketplace: boolean;
+export interface DeployModules {_marketplace: boolean;
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -25,44 +22,33 @@ export interface DeployModules {
   referralAmbassadors?: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
-  bookStore?: boolean;
-}
+  bookStore?: boolean;}
 
-export interface DeployInput {
-  instanceName: string;
+export interface DeployInput {_instanceName: string;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
-  requestedRoutes?: string[];
-}
+  requestedRoutes?: string[];}
 
-export interface DeployLogEntry {
-  timestamp: string;
+export interface DeployLogEntry {_timestamp: string;
   level: "info" | "warn" | "error";
   action: string;
-  details?: Record<string, unknown> | string;
-}
+  details?: Record<string, _unknown> | string;}
 
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event";
+export interface GeneratedAsset {_kind: "file" | "page" | "config" | "job" | "event";
   path: string;
-  description?: string;
-}
+  description?: string;}
 
-export interface DeployResult {
-  success: boolean;
+export interface DeployResult {_success: boolean;
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
-  version: string;
-}
+  version: string;}
 
-export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;
-}
+export interface AccessControlConfig {_allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  adminKeyConfigured: boolean;}

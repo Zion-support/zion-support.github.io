@@ -1,21 +1,13 @@
 
 import React from "react";
-import { WorkspaceHeader } from "./WorkspaceHeader";
-import { SharedInbox } from "./SharedInbox";
-import { TeamStats } from "./TeamStats";
-import { QuickActions } from "./QuickActions";
-import { RecentActivity } from "./RecentActivity";
-import { TalentPool } from "./TalentPool";
 
-export interface Company {
-  id: string;
+export interface Company {_id: string;
   name: string;
   logoUrl?: string;
   theme?: {
     primaryColor: string;
     backgroundColor: string;
-    textColor: string;
-  };
+    textColor: string;};
   plan: string;
   teamSize: number;
   teamLimit: number;
@@ -23,12 +15,9 @@ export interface Company {
   workspaceUrl: string;
 }
 
-interface CompanyDashboardProps {
-  company: Company;
-}
+interface CompanyDashboardProps {_company: Company;}
 
-export function CompanyDashboard({ company }: CompanyDashboardProps) {
-  return (
+export function CompanyDashboard(_{_company}: CompanyDashboardProps) {_return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
       

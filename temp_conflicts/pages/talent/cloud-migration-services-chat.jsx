@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const CloudMigrationServicesChat = () => {
-  return (
+const _CloudMigrationServicesChat = () => {_return (
     <div>
       <Head>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const CloudMigrationServicesChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default CloudMigrationServicesChat;

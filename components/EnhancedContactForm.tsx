@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { FormData, FormErrors } from '../types';
-import { useToast } from './ui/Toast';
+import React, {_useState} from 'react';
 
-const EnhancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: ''
-  });
+const EnhancedContactForm: React.FC = () => {_const [formData, _setFormData] = useState({
+    name: '', _email: '', _company: '', _service: '', _message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { showSuccess, showError } = useToast();
+  const {_showSuccess, _showError} = useToast();
 
-  const services = [
+  const _services = [
     'AI & Machine Learning',
     'Quantum Computing',
     'Cybersecurity',
@@ -26,67 +16,39 @@ const EnhancedContactForm: React.FC = () => {
     'Other'
   ];
 
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
+  const _validateForm = (): boolean => {_const newErrors: FormErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters long';
-    }
+    if (!formData.name.trim()) {_newErrors.name = 'Name is required';} else if (formData.name.trim().length < 2) {_newErrors.name = 'Name must be at least 2 characters long';}
 
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
+    if (!formData.email.trim()) {_newErrors.email = 'Email is required';} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {_newErrors.email = 'Please enter a valid email address';}
 
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
-    } else if (formData.message.trim().length > 1000) {
-      newErrors.message = 'Message must be less than 1000 characters';
-    }
+    if (!formData.message.trim()) {_newErrors.message = 'Message is required';} else if (formData.message.trim().length < 10) {_newErrors.message = 'Message must be at least 10 characters long';} else if (formData.message.trim().length > 1000) {_newErrors.message = 'Message must be less than 1000 characters';}
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     
     if (!validateForm()) {
-      showError('Validation Error', 'Please fix the errors in the form');
-      return;
-    }
+      showError('Validation Error', _'Please fix the errors in the form');
+      return;}
 
     setIsSubmitting(true);
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+    try {_// Simulate API call
+      await new Promise(resolve => setTimeout(resolve, _2000));
       
       setIsSubmitted(true);
-      showSuccess('Message Sent!', 'Thank you for contacting us. We\'ll get back to you soon.');
+      showSuccess('Message Sent!', _'Thank you for contacting us. We\'ll get back to you soon.');
       
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        message: ''
-      });
+        name: '', _email: '', _company: '', _service: '', _message: ''});
       setErrors({});
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      showError('Submission Failed', 'There was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (error) {_showError('Submission Failed', _'There was an error sending your message. Please try again.');} finally {_setIsSubmitting(false);}
   };
 
-  const services = [
+  const _services = [
     'AI Business Intelligence',
     'Quantum Cybersecurity',
     'Edge Computing Orchestration',
@@ -95,20 +57,17 @@ const EnhancedContactForm: React.FC = () => {
     'Other'
   ];
 
-  const handleInputBlur = (name: keyof FormData) => {
-    // Validate individual field on blur
+  const _handleInputBlur = (_name: keyof FormData) => {_// Validate individual field on blur
     if (formData[name] && errors[name]) {
-      const newErrors = { ...errors };
+      const _newErrors = { ...errors};
       delete newErrors[name];
       setErrors(newErrors);
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+  if (isSubmitted) {_return (_<motion.div
+        initial={{ opacity: 0, _scale: 0.9}}
+        animate={_{ opacity: 1, _scale: 1}}
         className="text-center py-12"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">
@@ -119,7 +78,7 @@ const EnhancedContactForm: React.FC = () => {
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
         <button
-          onClick={() => setIsSubmitted(false)}
+          onClick={_() => setIsSubmitted(false)}
           className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
         >
           Send Another Message
@@ -131,7 +90,7 @@ const EnhancedContactForm: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Contact Information */}
+        {_/* Contact Information */}
         <div className="space-y-8">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -173,9 +132,9 @@ const EnhancedContactForm: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {_/* Contact Form */}
         <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={_handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
@@ -185,24 +144,23 @@ const EnhancedContactForm: React.FC = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  onBlur={() => handleInputBlur('name')}
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
+                  value={_formData.name}
+                  onChange={_handleInputChange}
+                  onBlur={_() => handleInputBlur('name')}
+                  className={_`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
                     errors.name 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'} text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name"
                 />
-                {errors.name && (
+                {_errors.name && (
                   <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, _y: -10}}
+                    animate={_{ opacity: 1, _y: 0}}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
-                    {errors.name}
+                    {_errors.name}
                   </motion.p>
                 )}
               </div>
@@ -215,24 +173,23 @@ const EnhancedContactForm: React.FC = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  onBlur={() => handleInputBlur('email')}
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
+                  value={_formData.email}
+                  onChange={_handleInputChange}
+                  onBlur={_() => handleInputBlur('email')}
+                  className={_`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
                     errors.email 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'} text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address"
                 />
-                {errors.email && (
+                {_errors.email && (
                   <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, _y: -10}}
+                    animate={_{ opacity: 1, _y: 0}}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
-                    {errors.email}
+                    {_errors.email}
                   </motion.p>
                 )}
               </div>
@@ -247,8 +204,8 @@ const EnhancedContactForm: React.FC = () => {
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
+                  value={_formData.company}
+                  onChange={_handleInputChange}
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                   placeholder="Enter your company name"
                 />
@@ -261,14 +218,14 @@ const EnhancedContactForm: React.FC = () => {
                 <select
                   id="service"
                   name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
+                  value={_formData.service}
+                  onChange={_handleInputChange}
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                 >
                   <option value="">Select a service</option>
-                  {services.map((service) => (
-                    <option key={service} value={service} className="bg-slate-800 text-white">
-                      {service}
+                  {_services.map(_(service) => (
+                    <option key={service} value={_service} className="bg-slate-800 text-white">
+                      {_service}
                     </option>
                   ))}
                 </select>
@@ -282,39 +239,37 @@ const EnhancedContactForm: React.FC = () => {
               <textarea
                 id="message"
                 name="message"
-                rows={5}
-                value={formData.message}
-                onChange={handleInputChange}
-                onBlur={() => handleInputBlur('message')}
-                className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
+                rows={_5}
+                value={_formData.message}
+                onChange={_handleInputChange}
+                onBlur={_() => handleInputBlur('message')}
+                className={_`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
                   errors.message 
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                    : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                    : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'} text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements..."
               />
-              {errors.message && (
+              {_errors.message && (
                 <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, _y: -10}}
+                  animate={_{ opacity: 1, _y: 0}}
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />
-                  {errors.message}
+                  {_errors.message}
                 </motion.p>
               )}
             </div>
 
             <button
               type="submit"
-              disabled={isSubmitting}
-              className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
+              disabled={_isSubmitting}
+              className={_`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
                 isSubmitting 
                   ? 'bg-gray-600 cursor-not-allowed' 
-                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
-              } flex items-center justify-center gap-3`}
+                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'} flex items-center justify-center gap-3`}
             >
-              {isSubmitting ? (
+              {_isSubmitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
                   Sending Message...

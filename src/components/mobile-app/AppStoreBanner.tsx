@@ -1,30 +1,23 @@
 
-import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile";
+import React, {_useState, _useEffect} from "react";
 
-export const AppStoreBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+export const AppStoreBanner: React.FC = () => {_const [isVisible, _setIsVisible] = useState(false);
+  const _isMobile = useIsMobile();
   
-  useEffect(() => {
+  useEffect__(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 2000);
+      const _timer = setTimeout__(() => {
+        setIsVisible(true);}, 2000);
       
       return () => clearTimeout(timer);
     }
     return undefined;
   }, [isMobile]);
   
-  const dismissBanner = () => {
-    setIsVisible(false);
-    safeStorage.setItem("appBannerDismissed", "true");
-  };
+  const _dismissBanner = () => {_setIsVisible(false);
+    safeStorage.setItem("appBannerDismissed", _"true");};
   
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null;
@@ -45,7 +38,7 @@ export const AppStoreBanner: React.FC = () => {
             View
           </a>
           <button
-            onClick={dismissBanner}
+            onClick={_dismissBanner}
             className="text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
             aria-label="Dismiss banner"
           >

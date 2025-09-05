@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DataScienceChat: NextPage = () => {
-  return (
+const DataScienceChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>DataScienceChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DataScienceChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DataScienceChat;

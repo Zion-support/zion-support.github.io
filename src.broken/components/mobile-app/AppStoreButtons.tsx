@@ -1,9 +1,7 @@
 import React from 'react';
-export function AppStoreButtons() {
-  return (
+export function AppStoreButtons() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

@@ -1,18 +1,8 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function AdminDashboard() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Admin Dashboard",
-    "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
-    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  };
+export default function AdminDashboard() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Admin Dashboard", _"description": "Monitor marketplace activity, _manage listings and view analytics in one place.", _"url": "https://app.ziontechgroup.com/features/admin-dashboard"};
 
   return (
     <>
@@ -22,10 +12,10 @@ export default function AdminDashboard() {
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

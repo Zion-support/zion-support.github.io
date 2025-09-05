@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ReleaseNotesAgent: NextPage = () => {
-  return (
+const ReleaseNotesAgent: NextPage = () => {_return (
     <div>
       <Head>
         <title>AI Release Notes Agent</title>
@@ -15,7 +14,6 @@ const ReleaseNotesAgent: NextPage = () => {
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ReleaseNotesAgent;

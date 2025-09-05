@@ -1,50 +1,12 @@
 import React from 'react';
-import { 
-  Server, 
-  Cloud, 
-  Shield, 
-  Code, 
-  Database, 
-  Network, 
-  Cpu, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ExternalLink,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Monitor,
-  Lock,
-  Users,
-  BarChart3
-} from 'lucide-react';
+import {_Server, _Cloud, _Shield, _Code, _Database, _Network, _Cpu, _Zap, _CheckCircle, _Star, _ExternalLink, _ArrowRight, _Phone, _Mail, _MapPin, _Linkedin, _Twitter, _Github, _Monitor, _Lock, _Users, _BarChart3} from 'lucide-react';
 
-export default function ITServicesPage() {
-  const itServices = [
+export default function ITServicesPage() {_const _itServices = [
     {
-      name: "Cloud Migration & Optimization",
-      description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",
-      icon: <Cloud className="w-12 h-12 text-blue-500" />,
-      features: [
-        "Multi-cloud strategy development",
-        "Cost optimization and monitoring",
-        "Security compliance implementation",
-        "Performance tuning and optimization",
-        "24/7 monitoring and alerting",
-        "Disaster recovery planning",
-        "Data migration and validation",
-        "Team training and documentation"
-      ],
-      pricing: {
-        small: "From $2,500",
-        medium: "From $5,000",
-        enterprise: "From $15,000"
-      },
+      name: "Cloud Migration & Optimization", _description: "End-to-end cloud migration services with strategic planning, _cost optimization, _and performance tuning for maximum ROI.", _icon: <Cloud className="w-12 h-12 text-blue-500" />, _features: [
+        "Multi-cloud strategy development", _"Cost optimization and monitoring", _"Security compliance implementation", _"Performance tuning and optimization", _"24/7 monitoring and alerting", _"Disaster recovery planning", _"Data migration and validation", _"Team training and documentation"
+      ], _pricing: {
+        small: "From $2, _500", _medium: "From $5, _000", _enterprise: "From $15, _000"},
       marketPrice: "$5,000-15,000",
       useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"],
       benefits: [
@@ -56,25 +18,10 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/cloud-migration"
     },
-    {
-      name: "DevOps Automation Platform",
-      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",
-      icon: <Code className="w-12 h-12 text-green-500" />,
-      features: [
-        "CI/CD pipeline automation",
-        "Infrastructure as Code (IaC)",
-        "Container orchestration",
-        "Monitoring and alerting",
-        "Security scanning integration",
-        "Auto-scaling capabilities",
-        "Configuration management",
-        "Performance optimization"
-      ],
-      pricing: {
-        starter: "$599/month",
-        professional: "$1,199/month",
-        enterprise: "$2,499/month"
-      },
+    {_name: "DevOps Automation Platform", _description: "Complete CI/CD pipeline automation with infrastructure as code, _monitoring solutions, _and security integration.", _icon: <Code className="w-12 h-12 text-green-500" />, _features: [
+        "CI/CD pipeline automation", _"Infrastructure as Code (IaC)", _"Container orchestration", _"Monitoring and alerting", _"Security scanning integration", _"Auto-scaling capabilities", _"Configuration management", _"Performance optimization"
+      ], _pricing: {
+        starter: "$599/month", _professional: "$1, _199/month", _enterprise: "$2, _499/month"},
       marketPrice: "$800-1500/month",
       useCases: ["Development teams", "Tech companies", "Enterprises", "Startups", "DevOps teams"],
       benefits: [
@@ -86,25 +33,10 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/devops-automation"
     },
-    {
-      name: "Cybersecurity Assessment & Implementation",
-      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",
-      icon: <Shield className="w-12 h-12 text-red-500" />,
-      features: [
-        "Security audits and assessments",
-        "Penetration testing",
-        "Compliance framework implementation",
-        "Incident response planning",
-        "Security awareness training",
-        "Vulnerability management",
-        "Security monitoring setup",
-        "Compliance reporting"
-      ],
-      pricing: {
-        basic: "From $3,500",
-        comprehensive: "From $7,500",
-        enterprise: "From $20,000"
-      },
+    {_name: "Cybersecurity Assessment & Implementation", _description: "Comprehensive security audits, _penetration testing, _and security infrastructure deployment with compliance frameworks.", _icon: <Shield className="w-12 h-12 text-red-500" />, _features: [
+        "Security audits and assessments", _"Penetration testing", _"Compliance framework implementation", _"Incident response planning", _"Security awareness training", _"Vulnerability management", _"Security monitoring setup", _"Compliance reporting"
+      ], _pricing: {
+        basic: "From $3, _500", _comprehensive: "From $7, _500", _enterprise: "From $20, _000"},
       marketPrice: "$7,000-20,000",
       useCases: ["Financial services", "Healthcare", "Government", "Enterprises", "E-commerce"],
       benefits: [
@@ -116,25 +48,10 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/cybersecurity"
     },
-    {
-      name: "Network Infrastructure Design",
-      description: "Scalable network architecture design with high availability, security, and performance optimization.",
-      icon: <Network className="w-12 h-12 text-purple-500" />,
-      features: [
-        "Network architecture design",
-        "High availability setup",
-        "Security implementation",
-        "Performance optimization",
-        "Load balancing configuration",
-        "Network monitoring",
-        "Documentation and training",
-        "Ongoing support"
-      ],
-      pricing: {
-        small: "From $4,000",
-        medium: "From $8,000",
-        enterprise: "From $25,000"
-      },
+    {_name: "Network Infrastructure Design", _description: "Scalable network architecture design with high availability, _security, _and performance optimization.", _icon: <Network className="w-12 h-12 text-purple-500" />, _features: [
+        "Network architecture design", _"High availability setup", _"Security implementation", _"Performance optimization", _"Load balancing configuration", _"Network monitoring", _"Documentation and training", _"Ongoing support"
+      ], _pricing: {
+        small: "From $4, _000", _medium: "From $8, _000", _enterprise: "From $25, _000"},
       marketPrice: "$8,000-30,000",
       useCases: ["Enterprises", "Data centers", "Cloud providers", "Educational institutions", "Healthcare"],
       benefits: [
@@ -146,25 +63,10 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/network-infrastructure"
     },
-    {
-      name: "Database Design & Optimization",
-      description: "Database architecture design, performance tuning, and migration services for optimal data management.",
-      icon: <Database className="w-12 h-12 text-orange-500" />,
-      features: [
-        "Database architecture design",
-        "Performance tuning and optimization",
-        "Data migration services",
-        "Backup and recovery setup",
-        "Security implementation",
-        "Monitoring and alerting",
-        "Scalability planning",
-        "Maintenance procedures"
-      ],
-      pricing: {
-        consultation: "From $1,500",
-        implementation: "From $5,000",
-        enterprise: "From $15,000"
-      },
+    {_name: "Database Design & Optimization", _description: "Database architecture design, _performance tuning, _and migration services for optimal data management.", _icon: <Database className="w-12 h-12 text-orange-500" />, _features: [
+        "Database architecture design", _"Performance tuning and optimization", _"Data migration services", _"Backup and recovery setup", _"Security implementation", _"Monitoring and alerting", _"Scalability planning", _"Maintenance procedures"
+      ], _pricing: {
+        consultation: "From $1, _500", _implementation: "From $5, _000", _enterprise: "From $15, _000"},
       marketPrice: "$3,000-20,000",
       useCases: ["E-commerce platforms", "SaaS companies", "Enterprises", "Financial services", "Healthcare"],
       benefits: [
@@ -176,25 +78,10 @@ export default function ITServicesPage() {
       ],
       website: "https://ziontechgroup.com/database-services"
     },
-    {
-      name: "IT Infrastructure Management",
-      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",
-      icon: <Server className="w-12 h-12 text-indigo-500" />,
-      features: [
-        "24/7 infrastructure monitoring",
-        "Proactive maintenance",
-        "Performance optimization",
-        "Security updates",
-        "Backup management",
-        "Disaster recovery",
-        "Capacity planning",
-        "Vendor management"
-      ],
-      pricing: {
-        basic: "$799/month",
-        professional: "$1,599/month",
-        enterprise: "$3,199/month"
-      },
+    {_name: "IT Infrastructure Management", _description: "Comprehensive IT infrastructure management with proactive monitoring, _maintenance, _and optimization services.", _icon: <Server className="w-12 h-12 text-indigo-500" />, _features: [
+        "24/7 infrastructure monitoring", _"Proactive maintenance", _"Performance optimization", _"Security updates", _"Backup management", _"Disaster recovery", _"Capacity planning", _"Vendor management"
+      ], _pricing: {
+        basic: "$799/month", _professional: "$1, _599/month", _enterprise: "$3, _199/month"},
       marketPrice: "$1,200-3,500/month",
       useCases: ["Enterprises", "Mid-size companies", "Healthcare", "Financial services", "Educational institutions"],
       benefits: [
@@ -208,43 +95,22 @@ export default function ITServicesPage() {
     }
   ];
 
-  const additionalServices = [
-    {
-      name: "API Development & Integration",
-      description: "Custom API development and third-party system integration services.",
-      pricing: "From $2,500",
-      icon: <Code className="w-8 h-8 text-blue-400" />
-    },
-    {
-      name: "Data Backup & Recovery",
-      description: "Comprehensive backup solutions and disaster recovery planning.",
-      pricing: "From $299/month",
-      icon: <Database className="w-8 h-8 text-green-400" />
-    },
-    {
-      name: "Performance Monitoring",
-      description: "Real-time performance monitoring and optimization services.",
-      pricing: "From $199/month",
-      icon: <Monitor className="w-8 h-8 text-purple-400" />
-    },
-    {
-      name: "IT Consulting",
-      description: "Strategic IT consulting and technology roadmap planning.",
-      pricing: "From $150/hour",
-      icon: <Users className="w-8 h-8 text-orange-400" />
-    }
+  const _additionalServices = [
+    {_name: "API Development & Integration", _description: "Custom API development and third-party system integration services.", _pricing: "From $2, _500", _icon: <Code className="w-8 h-8 text-blue-400" />},
+    {_name: "Data Backup & Recovery", _description: "Comprehensive backup solutions and disaster recovery planning.", _pricing: "From $299/month", _icon: <Database className="w-8 h-8 text-green-400" />},
+    {_name: "Performance Monitoring", _description: "Real-time performance monitoring and optimization services.", _pricing: "From $199/month", _icon: <Monitor className="w-8 h-8 text-purple-400" />},
+    {_name: "IT Consulting", _description: "Strategic IT consulting and technology roadmap planning.", _pricing: "From $150/hour", _icon: <Users className="w-8 h-8 text-orange-400" />}
   ];
 
-  const stats = [
-    { label: "Infrastructure Deployed", value: "200+" },
-    { label: "Security Audits", value: "150+" },
-    { label: "Uptime Guarantee", value: "99.9%" },
-    { label: "Client Satisfaction", value: "97%" }
+  const _stats = [
+    {_label: "Infrastructure Deployed", _value: "200+"},
+    {_label: "Security Audits", _value: "150+"},
+    {_label: "Uptime Guarantee", _value: "99.9%"},
+    {_label: "Client Satisfaction", _value: "97%"}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
+  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {_/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -256,7 +122,7 @@ export default function ITServicesPage() {
               IT Infrastructure & DevOps Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Enterprise-grade IT solutions that drive operational excellence, security, and scalability. From cloud migration to cybersecurity, we build robust technology foundations.
+              Enterprise-grade IT solutions that drive operational excellence, _security, _and scalability. From cloud migration to cybersecurity, _we build robust technology foundations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -278,19 +144,19 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {_stats.map((stat, _index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{_stat.value}</div>
+              <div className="text-gray-300 text-sm">{_stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* IT Services Grid */}
+      {_/* IT Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -302,24 +168,23 @@ export default function ITServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {itServices.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+          {_itServices.map(_(service, _index) => (_<div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  {service.icon}
-                  <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                  {_service.icon}
+                  <h3 className="text-2xl font-bold text-white">{_service.name}</h3>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 leading-relaxed">{_service.description}</p>
                 
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {_service.features.map((feature, _featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {feature}
+                          {_feature}
                         </li>
                       ))}
                     </ul>
@@ -329,23 +194,23 @@ export default function ITServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Pricing:</h4>
                       <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (
+                        {_Object.entries(service.pricing).map(_([plan, _price]) => (
                           <div key={plan} className="flex justify-between text-sm">
-                            <span className="text-gray-400 capitalize">{plan}:</span>
-                            <span className="text-green-400 font-semibold">{price}</span>
+                            <span className="text-gray-400 capitalize">{_plan}:</span>
+                            <span className="text-green-400 font-semibold">{_price}</span>
                           </div>
                         ))}
                       </div>
                       <div className="mt-2 text-xs text-gray-400">
-                        Market price: <span className="line-through">{service.marketPrice}</span>
+                        Market price: <span className="line-through">{_service.marketPrice}</span>
                       </div>
                     </div>
 
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
-                          <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
+                        {_service.useCases.map(_(useCase, _useCaseIndex) => (
+                          <li key={useCaseIndex} className="text-xs text-gray-300">• {_useCase}</li>
                         ))}
                       </ul>
                     </div>
@@ -354,8 +219,8 @@ export default function ITServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
+                      {_service.benefits.map(_(benefit, _benefitIndex) => (
+                        <li key={benefitIndex} className="text-xs text-gray-300">• {_benefit}</li>
                       ))}
                     </ul>
                   </div>
@@ -363,14 +228,14 @@ export default function ITServicesPage() {
                   <div className="pt-4 border-t border-white/20">
                     <div className="flex gap-3">
                       <a 
-                        href={service.website}
+                        href={_service.website}
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Learn More</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
                       <a 
-                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                        href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                         className="inline-flex items-center justify-center px-4 py-2 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Get Quote</span>
@@ -384,7 +249,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Additional Services */}
+      {_/* Additional Services */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -396,17 +261,17 @@ export default function ITServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalServices.map((service, index) => (
+          {_additionalServices.map(_(service, _index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
               <div className="text-center space-y-4">
                 <div className="flex justify-center">
-                  {service.icon}
+                  {_service.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-                <div className="text-blue-400 font-semibold">{service.pricing}</div>
+                <h3 className="text-lg font-semibold text-white">{_service.name}</h3>
+                <p className="text-gray-300 text-sm">{_service.description}</p>
+                <div className="text-blue-400 font-semibold">{_service.pricing}</div>
                 <a 
-                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                  href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                   className="inline-block w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors text-center"
                 >
                   Get Quote
@@ -417,7 +282,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Why Choose Zion Tech Group */}
+      {_/* Why Choose Zion Tech Group */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-12">
@@ -460,7 +325,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Contact & CTA Section */}
+      {_/* Contact & CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-8">
@@ -513,7 +378,7 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Footer */}
+      {_/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

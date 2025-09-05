@@ -1,188 +1,118 @@
-import React, { useState, useEffect } from 'react';
+import React, {_useState, _useEffect} from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle, Star, TrendingUp, Target,
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
-  Earth, Factory, Car, Building, GraduationCap, Scale,
-  Palette, Camera, Video, Music, Gamepad2, Heart,
-  Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3
-} from 'lucide-react';
+import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Microscope, _DollarSign, _Home, _Users, _Briefcase, _BookOpen, _MessageCircle, _Star, _TrendingUp, _Target, _Layers, _Cpu, _Database, _Cloud, _Lock, _ShieldCheck, _Earth, _Factory, _Car, _Building, _GraduationCap, _Scale, _Palette, _Camera, _Video, _Music, _Gamepad2, _Heart, _Leaf, _Sun, _Moon, _Wind, _Droplets, _Mountain, _Code, _Wrench, _Smartphone, _BarChart3} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
-    icon: Rocket,
-    color: 'from-violet-600 to-purple-600',
-    description: 'Beyond the future of technology',
-    services: [
-      { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform', description: 'Predict climate changes with 99.9% accuracy', price: '$2,999/month' },
-      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall', description: 'Unbreakable quantum encryption', price: '$4,999/month' },
-      { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network', description: 'AI-powered drone delivery', price: '$1,999/month' },
-      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' }
+const _serviceCategories = [
+  {_title: '🚀 2028 Futuristic Innovations', _icon: Rocket, _color: 'from-violet-600 to-purple-600', _description: 'Beyond the future of technology', _services: [
+      { name: 'AI Climate Prediction Platform', _href: '/ai-climate-prediction-platform', _description: 'Predict climate changes with 99.9% accuracy', _price: '$2, _999/month'},
+      {_name: 'Quantum Cybersecurity Firewall', _href: '/quantum-cybersecurity-firewall', _description: 'Unbreakable quantum encryption', _price: '$4, _999/month'},
+      {_name: 'Autonomous Drone Delivery Network', _href: '/autonomous-drone-delivery-network', _description: 'AI-powered drone delivery', _price: '$1, _999/month'},
+      {_name: 'AI Healthcare Diagnosis Platform', _href: '/ai-healthcare-diagnosis-platform', _description: 'Revolutionary medical diagnosis', _price: '$3, _999/month'}
     ]
   },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    icon: Building,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Intelligent urban solutions',
-    services: [
-      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management', description: 'IoT and AI urban optimization', price: '$5,999/month' },
-      { name: 'IoT Energy Management System', href: '/iot-energy-management-system', description: 'Smart energy optimization', price: '$1,999/month' },
-      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform', description: 'Virtual manufacturing replicas', price: '$4,999/month' },
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'Self-optimizing factories', price: '$6,999/month' }
+  {_title: '🏙️ Smart City & Infrastructure', _icon: Building, _color: 'from-blue-600 to-cyan-600', _description: 'Intelligent urban solutions', _services: [
+      { name: 'Smart City Infrastructure Management', _href: '/smart-city-infrastructure-management', _description: 'IoT and AI urban optimization', _price: '$5, _999/month'},
+      {_name: 'IoT Energy Management System', _href: '/iot-energy-management-system', _description: 'Smart energy optimization', _price: '$1, _999/month'},
+      {_name: 'Digital Twin Manufacturing Platform', _href: '/digital-twin-manufacturing-platform', _description: 'Virtual manufacturing replicas', _price: '$4, _999/month'},
+      {_name: 'Autonomous Manufacturing AI', _href: '/autonomous-manufacturing-ai', _description: 'Self-optimizing factories', _price: '$6, _999/month'}
     ]
   },
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    icon: Atom,
-    color: 'from-indigo-600 to-blue-600',
-    description: 'Quantum computing and beyond',
-    services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading', price: '$8,999/month' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum computing for ML', price: '$7,999/month' },
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable internet security', price: '$3,999/month' },
-      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol', description: 'Next-generation internet', price: '$5,999/month' }
+  {_title: '⚛️ Quantum & Advanced Tech', _icon: Atom, _color: 'from-indigo-600 to-blue-600', _description: 'Quantum computing and beyond', _services: [
+      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform', _description: 'Quantum-powered trading', _price: '$8, _999/month'},
+      {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform', _description: 'Quantum computing for ML', _price: '$7, _999/month'},
+      {_name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway', _description: 'Unbreakable internet security', _price: '$3, _999/month'},
+      {_name: 'Quantum Internet Protocol', _href: '/quantum-internet-protocol', _description: 'Next-generation internet', _price: '$5, _999/month'}
     ]
   },
-  {
-    title: '🤖 AI & Machine Learning',
-    icon: Brain,
-    color: 'from-emerald-600 to-teal-600',
-    description: 'Next-generation AI solutions',
-    services: [
-      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Intelligent customer support', price: '$899/month' },
-      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' },
-      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' },
-      { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
+  {_title: '🤖 AI & Machine Learning', _icon: Brain, _color: 'from-emerald-600 to-teal-600', _description: 'Next-generation AI solutions', _services: [
+      { name: 'AI Customer Service Automation', _href: '/ai-customer-service-automation', _description: 'Intelligent customer support', _price: '$899/month'},
+      {_name: 'AI Education Platform', _href: '/ai-education-platform', _description: 'Personalized learning with AI', _price: '$1, _499/month'},
+      {_name: 'AI Content Creation Suite', _href: '/ai-content-creation-suite', _description: 'Unlimited AI content creation', _price: '$1, _299/month'},
+      {_name: 'AI Legal Research Platform', _href: '/ai-legal-research-platform', _description: 'Intelligent legal research', _price: '$2, _999/month'}
     ]
   },
-  {
-    title: '⛓️ Blockchain & Web3',
-    icon: Layers,
-    color: 'from-orange-600 to-red-600',
-    description: 'Decentralized solutions',
-    services: [
-      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end supply chain visibility', price: '$2,499/month' },
-      { name: 'Smart Contract Automation Platform', href: '/smart-contract-automation', description: 'Automated blockchain contracts', price: '$1,999/month' },
-      { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/month' },
-      { name: 'NFT Marketplace Platform', href: '/nft-marketplace-platform', description: 'Complete NFT ecosystem', price: '$2,999/month' }
+  {_title: '⛓️ Blockchain & Web3', _icon: Layers, _color: 'from-orange-600 to-red-600', _description: 'Decentralized solutions', _services: [
+      { name: 'Blockchain Supply Chain Transparency', _href: '/blockchain-supply-chain-transparency', _description: 'End-to-end supply chain visibility', _price: '$2, _499/month'},
+      {_name: 'Smart Contract Automation Platform', _href: '/smart-contract-automation', _description: 'Automated blockchain contracts', _price: '$1, _999/month'},
+      {_name: 'DeFi Yield Optimization', _href: '/defi-yield-optimization', _description: 'Maximize DeFi returns', _price: '$3, _999/month'},
+      {_name: 'NFT Marketplace Platform', _href: '/nft-marketplace-platform', _description: 'Complete NFT ecosystem', _price: '$2, _999/month'}
     ]
   },
-  {
-    title: '🚗 Autonomous & Mobility',
-    icon: Car,
-    color: 'from-red-600 to-pink-600',
-    description: 'Self-driving and mobility solutions',
-    services: [
-      { name: 'Autonomous Vehicle Fleet Management', href: '/autonomous-vehicle-fleet-management', description: 'Intelligent fleet management', price: '$3,999/month' },
-      { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' },
-      { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' },
-      { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
+  {_title: '🚗 Autonomous & Mobility', _icon: Car, _color: 'from-red-600 to-pink-600', _description: 'Self-driving and mobility solutions', _services: [
+      { name: 'Autonomous Vehicle Fleet Management', _href: '/autonomous-vehicle-fleet-management', _description: 'Intelligent fleet management', _price: '$3, _999/month'},
+      {_name: 'Smart Traffic Management System', _href: '/smart-traffic-management', _description: 'AI traffic optimization', _price: '$4, _999/month'},
+      {_name: 'Electric Vehicle Charging Network', _href: '/ev-charging-network', _description: 'Smart EV infrastructure', _price: '$2, _999/month'},
+      {_name: 'Mobility as a Service Platform', _href: '/mobility-as-a-service', _description: 'Integrated mobility solutions', _price: '$1, _999/month'}
     ]
   },
-  {
-    title: '🏥 Healthcare & Biotech',
-    icon: Heart,
-    color: 'from-pink-600 to-rose-600',
-    description: 'Advanced healthcare solutions',
-    services: [
-      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$9,999/month' },
-      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Tailored treatment plans', price: '$4,999/month' },
-      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-platform', description: 'Intelligent remote healthcare', price: '$2,999/month' },
-      { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced diagnostic imaging', price: '$3,999/month' }
+  {_title: '🏥 Healthcare & Biotech', _icon: Heart, _color: 'from-pink-600 to-rose-600', _description: 'Advanced healthcare solutions', _services: [
+      { name: 'AI Drug Discovery Platform', _href: '/ai-drug-discovery-platform', _description: 'Accelerate drug development', _price: '$9, _999/month'},
+      {_name: 'Personalized Medicine AI', _href: '/personalized-medicine-ai', _description: 'Tailored treatment plans', _price: '$4, _999/month'},
+      {_name: 'Telemedicine AI Platform', _href: '/telemedicine-ai-platform', _description: 'Intelligent remote healthcare', _price: '$2, _999/month'},
+      {_name: 'Medical Imaging AI', _href: '/medical-imaging-ai', _description: 'Advanced diagnostic imaging', _price: '$3, _999/month'}
     ]
   },
-  {
-    title: '🎓 Education & Training',
-    icon: GraduationCap,
-    color: 'from-green-600 to-emerald-600',
-    description: 'Next-generation learning',
-    services: [
-      { name: 'Virtual Reality Learning Platform', href: '/vr-learning-platform', description: 'Immersive educational experiences', price: '$1,999/month' },
-      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized AI tutoring', price: '$899/month' },
-      { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' },
-      { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
+  {_title: '🎓 Education & Training', _icon: GraduationCap, _color: 'from-green-600 to-emerald-600', _description: 'Next-generation learning', _services: [
+      { name: 'Virtual Reality Learning Platform', _href: '/vr-learning-platform', _description: 'Immersive educational experiences', _price: '$1, _999/month'},
+      {_name: 'AI Tutoring System', _href: '/ai-tutoring-system', _description: 'Personalized AI tutoring', _price: '$899/month'},
+      {_name: 'Corporate Training AI', _href: '/corporate-training-ai', _description: 'Intelligent employee training', _price: '$2, _499/month'},
+      {_name: 'Language Learning AI', _href: '/language-learning-ai', _description: 'AI-powered language acquisition', _price: '$1, _299/month'}
     ]
   },
-  {
-    title: '⚖️ Legal & Compliance',
-    icon: Scale,
-    color: 'from-slate-600 to-gray-600',
-    description: 'Legal technology solutions',
-    services: [
-      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' },
-      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' },
-      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' },
-      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
+  {_title: '⚖️ Legal & Compliance', _icon: Scale, _color: 'from-slate-600 to-gray-600', _description: 'Legal technology solutions', _services: [
+      { name: 'Contract Analysis AI', _href: '/contract-analysis-ai', _description: 'Intelligent contract review', _price: '$2, _999/month'},
+      {_name: 'Compliance Monitoring Platform', _href: '/compliance-monitoring-platform', _description: 'Automated compliance tracking', _price: '$3, _999/month'},
+      {_name: 'Legal Document Automation', _href: '/legal-document-automation', _description: 'Automated legal documents', _price: '$1, _999/month'},
+      {_name: 'Regulatory Change Tracker', _href: '/regulatory-change-tracker', _description: 'Monitor regulatory updates', _price: '$1, _499/month'}
     ]
   },
-  {
-    title: '🌍 Sustainability & Green Tech',
-    icon: Leaf,
-    color: 'from-emerald-600 to-green-600',
-    description: 'Environmental solutions',
-    services: [
-      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' },
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' },
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' },
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
+  {_title: '🌍 Sustainability & Green Tech', _icon: Leaf, _color: 'from-emerald-600 to-green-600', _description: 'Environmental solutions', _services: [
+      { name: 'Carbon Footprint Tracking', _href: '/carbon-footprint-tracking', _description: 'Monitor environmental impact', _price: '$1, _499/month'},
+      {_name: 'Renewable Energy Management', _href: '/renewable-energy-management', _description: 'Optimize green energy', _price: '$2, _999/month'},
+      {_name: 'Waste Management AI', _href: '/waste-management-ai', _description: 'Intelligent waste optimization', _price: '$1, _999/month'},
+      {_name: 'Sustainable Supply Chain', _href: '/sustainable-supply-chain', _description: 'Green supply chain solutions', _price: '$3, _999/month'}
     ]
   }
 ];
 
-const companyLinks = [
-  { name: '🏠 Home', href: '/', icon: Home },
-  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
-  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: '🎯 About Us', href: '/about', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
+const _companyLinks = [
+  {_name: '🏠 Home', _href: '/', _icon: Home},
+  {_name: '🚀 2028 Services', _href: '/2028-services-showcase', _icon: Rocket},
+  {_name: '⭐ Ultimate 2028', _href: '/ultimate-2028-services-showcase', _icon: Star},
+  {_name: '💰 2028 Pricing', _href: '/revolutionary-2028-pricing', _icon: DollarSign},
+  {_name: '📊 Case Studies', _href: '/case-studies', _icon: Briefcase},
+  {_name: '📚 Blog & Resources', _href: '/blog', _icon: BookOpen},
+  {_name: '🎯 About Us', _href: '/about', _icon: Users},
+  {_name: '📞 Contact', _href: '/contact', _icon: MessageCircle},
+  {_name: '🔒 Support', _href: '/support', _icon: ShieldCheck}
 ];
 
-const resourceLinks = [
-  { name: '📖 Documentation', href: '/docs', icon: BookOpen },
-  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
-  { name: '💡 API Reference', href: '/api', icon: Code },
-  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },
-  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
-  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
-  { name: '🔐 Security Center', href: '/security', icon: Shield },
-  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
+const _resourceLinks = [
+  {_name: '📖 Documentation', _href: '/docs', _icon: BookOpen},
+  {_name: '🎥 Video Tutorials', _href: '/tutorials', _icon: Video},
+  {_name: '💡 API Reference', _href: '/api', _icon: Code},
+  {_name: '🛠️ Developer Tools', _href: '/dev-tools', _icon: Wrench},
+  {_name: '📱 Mobile Apps', _href: '/mobile', _icon: Smartphone},
+  {_name: '☁️ Cloud Services', _href: '/cloud', _icon: Cloud},
+  {_name: '🔐 Security Center', _href: '/security', _icon: Shield},
+  {_name: '📊 Analytics', _href: '/analytics', _icon: BarChart3}
 ];
 
-export default function UltraFuturisticNavigation2028() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+export default function UltraFuturisticNavigation2028() {_const [isOpen, _setIsOpen] = useState(false);
+  const [activeCategory, _setActiveCategory] = useState<string | null>(null);
+  const [searchQuery, _setSearchQuery] = useState('');
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const _toggleMenu = () => setIsOpen(!isOpen);
+  const _closeMenu = () => setIsOpen(false);
 
-  const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle);
-  };
+  const _handleCategoryHover = (_categoryTitle: string) => {
+    setActiveCategory(categoryTitle);};
 
-  const handleCategoryLeave = () => {
-    setActiveCategory(null);
-  };
+  const _handleCategoryLeave = () => {_setActiveCategory(null);};
 
-  const filteredServices = serviceCategories.flatMap(category =>
+  const _filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -191,37 +121,37 @@ export default function UltraFuturisticNavigation2028() {
 
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
-      {/* Top Contact Bar */}
+      {_/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs text-purple-200">
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="h-3 w-3 text-purple-400" />
-                <span>{contactInfo.mobile}</span>
+                <span>{_contactInfo.mobile}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-3 w-3 text-purple-400" />
-                <span>{contactInfo.email}</span>
+                <span>{_contactInfo.email}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-3 w-3 text-purple-400" />
-                <span>{contactInfo.address}</span>
+                <span>{_contactInfo.address}</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
-                {contactInfo.website}
+              <a href={_contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
+                {_contactInfo.website}
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {_/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {_/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
@@ -239,9 +169,9 @@ export default function UltraFuturisticNavigation2028() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {_/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* Service Categories */}
+            {_/* Service Categories */}
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
                 <Sparkles className="w-5 h-5" />
@@ -249,32 +179,32 @@ export default function UltraFuturisticNavigation2028() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               
-              {/* Mega Menu */}
+              {_/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-6">
-                    {serviceCategories.slice(0, 6).map((category) => (
+                    {_serviceCategories.slice(0, _6).map(_(category) => (
                       <div key={category.title} className="space-y-3">
                         <div className="flex items-center space-x-3">
-                          <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
-                          <h3 className="font-semibold text-white">{category.title}</h3>
+                          <category.icon className={_`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
+                          <h3 className="font-semibold text-white">{_category.title}</h3>
                         </div>
-                        <p className="text-sm text-purple-300">{category.description}</p>
+                        <p className="text-sm text-purple-300">{_category.description}</p>
                         <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
+                          {_category.services.slice(0, _2).map(_(service) => (
                             <Link
                               key={service.name}
-                              href={service.href}
+                              href={_service.href}
                               className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group"
                             >
                               <div className="flex items-center justify-between">
                                 <div>
                                   <h4 className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
-                                    {service.name}
+                                    {_service.name}
                                   </h4>
-                                  <p className="text-xs text-purple-300">{service.description}</p>
+                                  <p className="text-xs text-purple-300">{_service.description}</p>
                                 </div>
-                                <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+                                <span className="text-xs text-purple-400 font-medium">{_service.price}</span>
                               </div>
                             </Link>
                           ))}
@@ -297,34 +227,34 @@ export default function UltraFuturisticNavigation2028() {
               </div>
             </div>
 
-            {/* Company Links */}
-            {companyLinks.slice(1, 5).map((link) => (
+            {_/* Company Links */}
+            {_companyLinks.slice(1, _5).map(_(link) => (
               <Link
                 key={link.name}
-                href={link.href}
+                href={_link.href}
                 className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2"
               >
                 <link.icon className="w-4 h-4" />
-                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                <span>{_link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, _'').trim()}</span>
               </Link>
             ))}
           </div>
 
-          {/* Search and Actions */}
+          {_/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Search */}
+            {_/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                value={_searchQuery}
+                onChange={_(_e) => setSearchQuery(e.target.value)}
                 className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
-            {/* CTA Button */}
+            {_/* CTA Button */}
             <Link
               href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25"
@@ -333,62 +263,60 @@ export default function UltraFuturisticNavigation2028() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {_/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={_toggleMenu}
               className="text-purple-200 hover:text-white transition-colors p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {_/* Mobile Menu */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+        {_isOpen && (_<motion.div
+            initial={{ opacity: 0, _height: 0}}
+            animate={_{ opacity: 1, _height: 'auto'}}
+            exit={_{ opacity: 0, _height: 0}}
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
-              {/* Mobile Search */}
+              {_/* Mobile Search */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
                 <input
                   type="text"
                   placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value={_searchQuery}
+                  onChange={_(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
-              {/* Mobile Service Categories */}
+              {_/* Mobile Service Categories */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
                 </h3>
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="space-y-2">
+                {_serviceCategories.map(_(category) => (_<div key={category.title} className="space-y-2">
                     <div className="flex items-center space-x-3 text-purple-200">
                       <category.icon className="w-5 h-5" />
-                      <span className="font-medium">{category.title}</span>
+                      <span className="font-medium">{_category.title}</span>
                     </div>
                     <div className="ml-8 space-y-2">
-                      {category.services.map((service) => (
+                      {_category.services.map((service) => (
                         <Link
                           key={service.name}
-                          href={service.href}
-                          onClick={closeMenu}
+                          href={_service.href}
+                          onClick={_closeMenu}
                           className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                         >
-                          <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                          <p className="text-xs text-purple-300">{service.description}</p>
-                          <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+                          <h4 className="text-sm font-medium text-white">{_service.name}</h4>
+                          <p className="text-xs text-purple-300">{_service.description}</p>
+                          <span className="text-xs text-purple-400 font-medium">{_service.price}</span>
                         </Link>
                       ))}
                     </div>
@@ -396,31 +324,31 @@ export default function UltraFuturisticNavigation2028() {
                 ))}
               </div>
 
-              {/* Mobile Company Links */}
+              {_/* Mobile Company Links */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Company
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {companyLinks.map((link) => (
+                  {_companyLinks.map(_(link) => (
                     <Link
                       key={link.name}
-                      href={link.href}
-                      onClick={closeMenu}
+                      href={_link.href}
+                      onClick={_closeMenu}
                       className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+                      <span className="text-purple-200">{_link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, _'').trim()}</span>
                     </Link>
                   ))}
                 </div>
               </div>
 
-              {/* Mobile CTA */}
+              {_/* Mobile CTA */}
               <div className="pt-4 border-t border-purple-500/30">
                 <Link
                   href="/contact"
-                  onClick={closeMenu}
+                  onClick={_closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
                   Get Started
@@ -431,23 +359,23 @@ export default function UltraFuturisticNavigation2028() {
         )}
       </AnimatePresence>
 
-      {/* Search Results Dropdown */}
-      {searchQuery && filteredServices.length > 0 && (
+      {_/* Search Results Dropdown */}
+      {_searchQuery && filteredServices.length > 0 && (
         <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50">
           <div className="p-4">
             <div className="space-y-2">
-              {filteredServices.slice(0, 8).map((service) => (
+              {filteredServices.slice(0, _8).map(_(service) => (
                 <Link
                   key={service.name}
-                  href={service.href}
+                  href={_service.href}
                   className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                      <p className="text-xs text-purple-300">{service.description}</p>
+                      <h4 className="text-sm font-medium text-white">{_service.name}</h4>
+                      <p className="text-xs text-purple-300">{_service.description}</p>
                     </div>
-                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+                    <span className="text-xs text-purple-400 font-medium">{_service.price}</span>
                   </div>
                 </Link>
               ))}

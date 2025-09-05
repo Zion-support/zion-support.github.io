@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
 
-const PriceIntelligenceService: NextPage = () => {
-  return (
+const PriceIntelligenceService: NextPage = () => {_return (
     <div>
       <Head>
         <title>PriceIntelligenceService - Zion Tech Solutions</title>
@@ -18,7 +17,6 @@ const PriceIntelligenceService: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default PriceIntelligenceService;

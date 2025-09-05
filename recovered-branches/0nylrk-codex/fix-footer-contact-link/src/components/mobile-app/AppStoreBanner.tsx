@@ -1,28 +1,22 @@
 
-import React, { useState, useEffect } from "react";
-import { X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import React, {_useState, _useEffect} from "react";
 
-export const AppStoreBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+export const AppStoreBanner: React.FC = () => {_const [isVisible, _setIsVisible] = useState(false);
+  const _isMobile = useIsMobile();
   
-  useEffect(() => {
+  useEffect__(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !localStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 2000);
+      const _timer = setTimeout__(() => {
+        setIsVisible(true);}, 2000);
       
       return () => clearTimeout(timer);
     }
   }, [isMobile]);
   
-  const dismissBanner = () => {
-    setIsVisible(false);
-    localStorage.setItem("appBannerDismissed", "true");
-  };
+  const _dismissBanner = () => {_setIsVisible(false);
+    localStorage.setItem("appBannerDismissed", _"true");};
   
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null;
@@ -42,7 +36,7 @@ export const AppStoreBanner: React.FC = () => {
           >
             View
           </a>
-          <button onClick={dismissBanner} className="text-gray-400">
+          <button onClick={_dismissBanner} className="text-gray-400">
             <X className="h-5 w-5" />
           </button>
         </div>

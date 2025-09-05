@@ -1,15 +1,6 @@
 
-import { useState } from 'react';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 
-function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume');
+function PortfolioBuilderContent() {_const [activeTab, _setActiveTab] = useState('resume');
   
   return (
     <>
@@ -21,7 +12,7 @@ function PortfolioBuilderContent() {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>
         
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+        <Tabs value={activeTab} onValueChange={_setActiveTab} className="space-y-6">
           <TabsList className="bg-muted/60 p-0">
             <TabsTrigger value="resume" className="data-[state=active]:bg-background">Resume</TabsTrigger>
             <TabsTrigger value="portfolio" className="data-[state=active]:bg-background">Portfolio</TabsTrigger>
@@ -41,10 +32,8 @@ function PortfolioBuilderContent() {
   );
 }
 
-export default function PortfolioBuilder() {
-  return (
+export default function PortfolioBuilder() {_return (
     <ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>
-  );
-}
+  );}

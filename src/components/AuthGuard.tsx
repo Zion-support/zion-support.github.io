@@ -1,58 +1,39 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { Loader2, Shield } from 'lucide-react'
+import React, {_useEffect} from 'react';
 
-interface AuthGuardProps {
-  children: React.ReactNode;
+interface AuthGuardProps {_children: React.ReactNode;
   requireAuth?: boolean;
   requireRole?: string[];
   redirectTo?: string;
   fallback?: React.ReactNode;
   showToast?: boolean;
-  allowGuest?: boolean;
-}
+  allowGuest?: boolean;}
 
-export function AuthGuard({
-  children,
-  requireAuth = true,
-  requireRole,
-  redirectTo = '/auth/login',
-  fallback,
-  showToast = true,
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+export function AuthGuard(_{_children, _requireAuth = true, _requireRole, _redirectTo = '/auth/login', _fallback, _showToast = true, _allowGuest = false}: AuthGuardProps) {_const { user, _isAuthenticated, _isLoading} = useAuth();
+  const _router = useRouter();
 
-  useEffect(() => {
-    // Don't redirect while auth is still loading
+  useEffect__(() => {_// Don't redirect while auth is still loading
     if (isLoading) return;
 
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
       if (showToast) {
         toast({
-          title: "Authentication Required",
-          description: "Please log in to access this feature.",
-          variant: "destructive"});
+          title: "Authentication Required", _description: "Please log in to access this feature.", _variant: "destructive"});
       }
 
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`${redirectTo}?returnTo=${returnTo}`);
+      const _returnTo = encodeURIComponent(router.asPath);
+      router.push(`${_redirectTo}?returnTo=${_returnTo}`);
       return;
     }
 
     // If specific roles are required
-    if (requireRole && isAuthenticated && user) {
-      const userRoles = user.role ? [user.role] : [];
-      const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
+    if (requireRole && isAuthenticated && user) {_const _userRoles = user.role ? [user.role] : [];
+      const _hasRequiredRole = requireRole.some(role => userRoles.includes(role));
 
       if (!hasRequiredRole) {
         if (showToast) {
           toast({
-            title: "Access Denied",
-            description: `This feature requires ${requireRole.join(' or ')} privileges.`,
+            title: "Access Denied", _description: `This feature requires ${requireRole.join(' or ')} privileges.`,
             variant: "destructive"});
         }
         router.push('/dashboard'); // Redirect to dashboard instead of login
@@ -62,20 +43,17 @@ export function AuthGuard({
   }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
 
   // Show loading state while auth is being determined
-  if (isLoading) {
-    return fallback || (
+  if (isLoading) {_return fallback || (
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex items-center gap-2 text-muted-foreground">
           <Loader2 className="h-6 w-6 animate-spin" />
           <span>Loading...</span>
         </div>
       </div>
-    );
-  }
+    );}
 
   // Show unauthorized state if auth is required but user is not authenticated
-  if (requireAuth && !isAuthenticated && !allowGuest) {
-    return fallback || (
+  if (requireAuth && !isAuthenticated && !allowGuest) {_return fallback || (
       <div className="flex flex-col items-center justify-center min-h-screen gap-4">
         <Shield className="h-12 w-12 text-muted-foreground" />
         <div className="text-center">
@@ -85,13 +63,11 @@ export function AuthGuard({
           </p>
         </div>
       </div>
-    );
-  }
+    );}
 
   // Show role denied state if user doesn't have required role
-  if (requireRole && isAuthenticated && user) {
-    const userRoles = user.role ? [user.role] : [];
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
+  if (requireRole && isAuthenticated && user) {_const _userRoles = user.role ? [user.role] : [];
+    const _hasRequiredRole = requireRole.some(role => userRoles.includes(role));
 
     if (!hasRequiredRole) {
       return fallback || (
@@ -109,67 +85,52 @@ export function AuthGuard({
   }
 
   // Render children if all auth checks pass
-  return <>{children}</>;
+  return <>{_children}</>;
 }
 
 // Higher-order component for easy wrapping
-export function withAuthGuard<P extends object>(
-  Component: React.ComponentType<P>,
-  guardOptions?: Omit<AuthGuardProps, 'children'>
-) {
-  return function AuthGuardedComponent(props: P) {
+export function withAuthGuard<P extends object>(_Component: React.ComponentType<P>, _guardOptions?: Omit<AuthGuardProps, _'children'>) {_return function AuthGuardedComponent(_props: P) {
     return (
       <AuthGuard {...guardOptions}>
-        <Component {...props} />
+        <Component {_...props} />
       </AuthGuard>
     );
   };
 }
 
 // Hook for programmatic auth checks
-export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+export function useAuthGuard() {_const { user, _isAuthenticated, _isLoading} = useAuth();
+  const _router = useRouter();
 
-  const requireAuth = (options?: {
-    redirectTo?: string;
+  const _requireAuth = (_options?: {_redirectTo?: string;
     showToast?: boolean;
-    returnUrl?: string;
-  }) => {
-    if (isLoading) return false;
+    returnUrl?: string;}) => {_if (isLoading) return false;
 
     if (!isAuthenticated) {
-      const redirectTo = options?.redirectTo || '/login';
-      const returnUrl = options?.returnUrl || router.asPath;
+      const _redirectTo = options?.redirectTo || '/login';
+      const _returnUrl = options?.returnUrl || router.asPath;
       
       if (options?.showToast !== false) {
         toast({
-          title: "Authentication Required",
-          description: "Please log in to continue.",
-          variant: "destructive"});
+          title: "Authentication Required", _description: "Please log in to continue.", _variant: "destructive"});
       }
 
-      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
+      router.push(`${_redirectTo}?returnTo=${_encodeURIComponent(returnUrl)}`);
       return false;
     }
 
     return true;
   };
 
-  const requireRole = (roles: string[], options?: {
-    showToast?: boolean;
-    redirectTo?: string;
-  }) => {
-    if (!requireAuth({ showToast: false })) return false;
+  const _requireRole = (_roles: string[], _options?: {_showToast?: boolean;
+    redirectTo?: string;}) => {_if (!requireAuth({ showToast: false})) return false;
 
-    const userRoles = user?.role ? [user.role] : [];
-    const hasRequiredRole = roles.some(role => userRoles.includes(role));
+    const _userRoles = user?.role ? [user.role] : [];
+    const _hasRequiredRole = roles.some(role => userRoles.includes(role));
 
-    if (!hasRequiredRole) {
-      if (options?.showToast !== false) {
+    if (!hasRequiredRole) {_if (options?.showToast !== false) {
         toast({
-          title: "Access Denied",
-          description: `This feature requires ${roles.join(' or ')} privileges.`,
+          title: "Access Denied", _description: `This feature requires ${roles.join(' or ')} privileges.`,
           variant: "destructive"});
       }
 
@@ -180,20 +141,12 @@ export function useAuthGuard() {
     return true;
   };
 
-  const checkPermission = (permission: string): boolean => {
-    if (!isAuthenticated || !user) return false;
+  const _checkPermission = (permission: string): boolean => {_if (!isAuthenticated || !user) return false;
     
     // Simple permission check - can be extended based on your permission system
-    // Use type assertion for extensibility, as permissions might be added to user type later
-    const userPermissions = (user as any).permissions || [];
-    return userPermissions.includes(permission);
-  };
+    // Use type assertion for extensibility, _as permissions might be added to user type later
+    const _userPermissions = (user as any).permissions || [];
+    return userPermissions.includes(permission);};
 
-  return {
-    requireAuth,
-    requireRole,
-    checkPermission,
-    isAuthenticated,
-    user,
-    isLoading};
+  return {_requireAuth, _requireRole, _checkPermission, _isAuthenticated, _user, _isLoading};
 }

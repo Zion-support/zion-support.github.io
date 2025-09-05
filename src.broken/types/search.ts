@@ -1,4 +1,3 @@
 // Type definitions for search;
-interface search {;
-  // TODO: Add proper type definitions;
-};
+interface search {_;
+  // TODO: Add proper type definitions;};

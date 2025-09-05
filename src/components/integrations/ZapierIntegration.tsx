@@ -1,22 +1,14 @@
 
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-import { Check, Copy, ExternalLink } from 'lucide-react'
+import React, {_useState} from "react";
 
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
+export function ZapierIntegration() {_const [copied, _setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
   
-  const handleCopyApiKey = () => {
+  const _handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard");
-  };
+    setTimeout__(() => setCopied(false), _2000);
+    toast.success("API key copied to clipboard");};
   
   return (
     <div className="space-y-6">
@@ -38,12 +30,12 @@ export function ZapierIntegration() {
                 <label className="text-sm font-medium">Your Zion API Key</label>
                 <div className="flex gap-2">
                   <Input 
-                    value={apiKey} 
+                    value={_apiKey} 
                     readOnly 
                     className="font-mono text-sm" 
                   />
-                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  <Button size="sm" variant="outline" onClick={_handleCopyApiKey}>
+                    {_copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>

@@ -1,90 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Eye, Lock, Database, Users, Globe,
-  CheckCircle, AlertTriangle, Info
-} from 'lucide-react';
+import {_Shield, _Eye, _Lock, _Database, _Users, _Globe, _CheckCircle, _AlertTriangle, _Info} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 15, 2025';
+export default function PrivacyPage() {_const _lastUpdated = 'January 15, _2025';
 
-  const sections = [
+  const _sections = [
     {
-      title: 'Information We Collect',
-      icon: <Database className="w-6 h-6" />,
-      content: [
-        'Personal information (name, email, phone number)',
-        'Company information and business details',
-        'Usage data and analytics',
-        'Technical information (IP address, browser type)',
-        'Communication records and support interactions'
-      ]
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: <Users className="w-6 h-6" />,
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and transactions',
-        'Send marketing communications (with consent)',
-        'Comply with legal obligations'
-      ]
-    },
-    {
-      title: 'Information Sharing',
-      icon: <Globe className="w-6 h-6" />,
-      content: [
-        'We do not sell your personal information',
-        'Share with service providers and partners',
-        'Comply with legal requirements',
-        'Protect our rights and safety',
-        'Business transfers (with notice)'
-      ]
-    },
-    {
-      title: 'Data Security',
-      icon: <Lock className="w-6 h-6" />,
-      content: [
-        'Industry-standard encryption protocols',
-        'Regular security audits and assessments',
-        'Access controls and authentication',
-        'Data backup and recovery procedures',
-        'Employee training on data protection'
-      ]
-    },
-    {
-      title: 'Your Rights',
-      icon: <CheckCircle className="w-6 h-6" />,
-      content: [
-        'Access your personal information',
-        'Correct inaccurate data',
-        'Request deletion of your data',
-        'Opt-out of marketing communications',
-        'Data portability'
-      ]
-    },
-    {
-      title: 'Data Retention',
-      icon: <Info className="w-6 h-6" />,
-      content: [
-        'Retain data as long as necessary',
-        'Comply with legal requirements',
-        'Resolve disputes and enforce agreements',
-        'Improve our services',
-        'Regular data cleanup procedures'
-      ]
-    }
+      title: 'Information We Collect', _icon: <Database className="w-6 h-6" />, _content: [
+        'Personal information (name, _email, _phone number)', _'Company information and business details', _'Usage data and analytics', _'Technical information (IP address, _browser type)', _'Communication records and support interactions'
+      ]},
+    {_title: 'How We Use Your Information', _icon: <Users className="w-6 h-6" />, _content: [
+        'Provide and improve our services', _'Communicate with you about our services', _'Process payments and transactions', _'Send marketing communications (with consent)', _'Comply with legal obligations'
+      ]},
+    {_title: 'Information Sharing', _icon: <Globe className="w-6 h-6" />, _content: [
+        'We do not sell your personal information', _'Share with service providers and partners', _'Comply with legal requirements', _'Protect our rights and safety', _'Business transfers (with notice)'
+      ]},
+    {_title: 'Data Security', _icon: <Lock className="w-6 h-6" />, _content: [
+        'Industry-standard encryption protocols', _'Regular security audits and assessments', _'Access controls and authentication', _'Data backup and recovery procedures', _'Employee training on data protection'
+      ]},
+    {_title: 'Your Rights', _icon: <CheckCircle className="w-6 h-6" />, _content: [
+        'Access your personal information', _'Correct inaccurate data', _'Request deletion of your data', _'Opt-out of marketing communications', _'Data portability'
+      ]},
+    {_title: 'Data Retention', _icon: <Info className="w-6 h-6" />, _content: [
+        'Retain data as long as necessary', _'Comply with legal requirements', _'Resolve disputes and enforce agreements', _'Improve our services', _'Regular data cleanup procedures'
+      ]}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Privacy Policy — Zion Tech Group | Data Protection & Privacy</title>
-        <meta name="description" content="Zion Tech Group's privacy policy outlines how we collect, use, and protect your personal information. Learn about your rights and our data protection practices." />
+        <meta name="description" content="Zion Tech Group's privacy policy outlines how we collect, _use, _and protect your personal information. Learn about your rights and our data protection practices." />
         <meta property="og:title" content="Privacy Policy — Zion Tech Group" />
         <meta property="og:description" content="Comprehensive privacy policy detailing how we protect your data and respect your privacy rights." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -93,13 +40,13 @@ export default function PrivacyPage() {
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Shield className="w-10 h-10 text-white" />
@@ -111,30 +58,29 @@ export default function PrivacyPage() {
               Your privacy is our priority. Learn how we protect your data and respect your rights.
             </p>
             <div className="mt-8 text-gray-300">
-              <p>Last updated: {lastUpdated}</p>
+              <p>Last updated: {_lastUpdated}</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Introduction */}
+      {_/* Introduction */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Our Commitment to Privacy</h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. 
-              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
+              At Zion Tech Group, _we are committed to protecting your privacy and ensuring the security of your personal information. 
+              This Privacy Policy explains how we collect, _use, _disclose, _and safeguard your information when you use our services.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              We believe in transparency and want you to understand how your data is handled. If you have any questions about this policy, 
-              please contact us at{' '}
+              We believe in transparency and want you to understand how your data is handled. If you have any questions about this policy, _please contact us at{_' '}
               <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
                 privacy@ziontechgroup.com
               </a>
@@ -143,30 +89,29 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Policy Sections */}
+      {_/* Policy Sections */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {sections.map((section, index) => (
-              <motion.div
+            {_sections.map((section, _index) => (_<motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    {section.icon}
+                    {_section.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{_section.title}</h3>
                 </div>
                 <ul className="space-y-2">
-                  {section.content.map((item, itemIndex) => (
+                  {_section.content.map((item, _itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300 text-sm">{item}</span>
+                      <span className="text-gray-300 text-sm">{_item}</span>
                     </li>
                   ))}
                 </ul>
@@ -176,14 +121,14 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Additional Information */}
+      {_/* Additional Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="space-y-8"
           >
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
@@ -234,14 +179,14 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {_/* Contact Information */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">

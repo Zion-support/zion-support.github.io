@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ProductManagementChat = () => {
-  return (
+const _ProductManagementChat = () => {_return (
     <div>
       <Head>
         <title>ProductManagementChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const ProductManagementChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ProductManagementChat;

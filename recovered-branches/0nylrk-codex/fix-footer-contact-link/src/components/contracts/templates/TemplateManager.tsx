@@ -1,87 +1,62 @@
 
-import { useState } from "react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { ContractTemplate } from "@/types/contracts";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { TemplateList } from "./TemplateList";
-import { TemplateSaveForm } from "./TemplateSaveForm";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { useToast } from "@/hooks/use-toast";
 
-interface TemplateManagerProps {
-  isOpen: boolean;
+interface TemplateManagerProps {_isOpen: boolean;
   onClose: () => void;
-  onSelectTemplate: (template: ContractFormValues) => void;
-  currentValues?: ContractFormValues;
-}
+  onSelectTemplate: (_template: ContractFormValues) => void;
+  currentValues?: ContractFormValues;}
 
-export function TemplateManager({
-  isOpen,
-  onClose,
-  onSelectTemplate,
-  currentValues
-}: TemplateManagerProps) {
-  const [mode, setMode] = useState<"list" | "save">("list");
-  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-  const { templates, isLoading } = useContractTemplates();
-  const { toast } = useToast();
+export function TemplateManager(_{_isOpen, _onClose, _onSelectTemplate, _currentValues}: TemplateManagerProps) {_const [mode, _setMode] = useState<"list" | "save">("list");
+  const [selectedTemplate, _setSelectedTemplate] = useState<ContractTemplate | null>(null);
+  const { templates, _isLoading} = useContractTemplates();
+  const {_toast} = useToast();
 
-  const handleSelectTemplate = (template: ContractTemplate) => {
-    if (template && template.template_data) {
+  const _handleSelectTemplate = (_template: ContractTemplate) => {_if (template && template.template_data) {
       onSelectTemplate(template.template_data);
       onClose();
       toast({
-        title: "Template loaded",
-        description: `Template "${template.title}" has been loaded.`});
+        title: "Template loaded", _description: `Template "${template.title}" has been loaded.`});
     }
   };
 
-  const handleSaveComplete = () => {
-    setMode("list");
-    setSelectedTemplate(null);
-  };
+  const _handleSaveComplete = () => {_setMode("list");
+    setSelectedTemplate(null);};
 
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+  return (_<Dialog open={_isOpen} onOpenChange={_onClose}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>
-            {mode === "list" ? "Contract Templates" : "Save Template"}
+            {_mode === "list" ? "Contract Templates" : "Save Template"}
           </DialogTitle>
         </DialogHeader>
 
-        {mode === "list" ? (
+        {_mode === "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
               <Button 
                 variant="outline" 
                 onClick={() => setMode("save")}
-                disabled={!currentValues}
+                disabled={_!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
             
             <TemplateList 
-              templates={templates}
-              isLoading={isLoading}
-              onSelect={handleSelectTemplate}
-              onEdit={(template) => {
+              templates={_templates}
+              isLoading={_isLoading}
+              onSelect={_handleSelectTemplate}
+              onEdit={_(_template) => {
                 setSelectedTemplate(template);
-                setMode("save");
-              }}
+                setMode("save");}}
             />
           </div>
-        ) : (
-          <TemplateSaveForm 
-            onCancel={() => {
+        ) : (_<TemplateSaveForm 
+            onCancel={_() => {
               setMode("list");
-              setSelectedTemplate(null);
-            }}
-            onComplete={handleSaveComplete}
-            editTemplate={selectedTemplate}
-            currentValues={currentValues}
+              setSelectedTemplate(null);}}
+            onComplete={_handleSaveComplete}
+            editTemplate={_selectedTemplate}
+            currentValues={_currentValues}
           />
         )}
       </DialogContent>

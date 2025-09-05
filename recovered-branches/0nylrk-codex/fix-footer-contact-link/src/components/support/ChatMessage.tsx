@@ -1,23 +1,16 @@
 
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
-import { useTheme } from "@/hooks/useTheme";
 
-interface ChatMessageProps {
-  message: string;
+interface ChatMessageProps {_message: string;
   isUser: boolean;
-  timestamp: Date;
-}
+  timestamp: Date;}
 
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme();
+export function ChatMessage(_{_message, _isUser, _timestamp}: ChatMessageProps) {_const { theme} = useTheme();
   
   return (
-    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+    <div className={_cn("flex items-start gap-3", _isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
-        {isUser ? (
+        {_isUser ? (
           <>
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />
             <AvatarFallback>U</AvatarFallback>
@@ -33,24 +26,22 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         )}
       </Avatar>
       
-      <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
+      <div className={_cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm", _isUser 
           ? "bg-zion-purple text-white" 
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
-        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
-        <div className={cn(
-          "text-xs mt-1",
-          isUser 
+        <div dangerouslySetInnerHTML={_{ __html: formatMessageWithLinks(message)}} />
+        <div className={_cn(
+          "text-xs mt-1", _isUser 
             ? "text-white/70" 
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
         )}>
-          {format(timestamp, "h:mm a")}
+          {_format(timestamp, _"h:mm a")}
         </div>
       </div>
     </div>
@@ -58,20 +49,16 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 }
 
 // Function to convert URLs and help links to actual clickable links
-function formatMessageWithLinks(message: string): string {
-  // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  let formattedMessage = message.replace(
-    urlRegex, 
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+function formatMessageWithLinks(_message: string): string {_// Replace URLs
+  const _urlRegex = /(https?:\/\/[^\s]+)/g;
+  let _formattedMessage = message.replace(
+    urlRegex, _'<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   );
   
   // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g;
+  const _helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex, 
-    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+    helpCenterRegex, _'<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   );
   
-  return formattedMessage;
-}
+  return formattedMessage;}

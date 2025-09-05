@@ -1,7 +1,4 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
 
 type EnhancementType = 
   | 'resume-summary' 
@@ -10,59 +7,34 @@ type EnhancementType =
   | 'proposal' 
   | 'general';
 
-export interface AIEnhancementOptions {
-  enhancementType: EnhancementType;
+export interface AIEnhancementOptions {_enhancementType: EnhancementType;
   content?: string;
   context?: string;
-  instructions?: string;
-}
+  instructions?: string;}
 
-export function useAIContentEnhancer() {
-  const [isEnhancing, setIsEnhancing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+export function useAIContentEnhancer() {_const [isEnhancing, _setIsEnhancing] = useState(false);
+  const [error, _setError] = useState<string | null>(null);
   
-  const enhanceContent = async ({
-    enhancementType,
-    content = '',
-    context = '',
-    instructions = ''
-  }: AIEnhancementOptions): Promise<string | null> => {
-    setIsEnhancing(true);
+  const _enhanceContent = async ({
+    enhancementType, _content = '', _context = '', _instructions = ''}: AIEnhancementOptions): Promise<string | null> => {_setIsEnhancing(true);
     setError(null);
     
     try {
-      const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {
-        body: { 
-          content,
-          enhancementType,
-          context,
-          instructions
-        }
+      const { data, _error} = await supabase.functions.invoke('ai-content-enhancer', {_body: { 
+          content, _enhancementType, _context, _instructions}
       });
       
-      if (error) {
-        throw new Error(error.message);
-      }
+      if (error) {_throw new Error(error.message);}
       
       return data.enhancedContent;
-    } catch (err: any) {
-      const errorMessage = err.message || 'Failed to enhance content';
+    } catch (err: unknown) {_const _errorMessage = err.message || 'Failed to enhance content';
       setError(errorMessage);
       toast({
-        title: "AI Enhancement Failed",
-        description: errorMessage,
-        variant: "destructive"
-      });
-      console.error('Enhancement error:', err);
+        title: "AI Enhancement Failed", _description: errorMessage, _variant: "destructive"});
+      
       return null;
-    } finally {
-      setIsEnhancing(false);
-    }
+    } finally {_setIsEnhancing(false);}
   };
   
-  return {
-    enhanceContent,
-    isEnhancing,
-    error
-  };
+  return {_enhanceContent, _isEnhancing, _error};
 }

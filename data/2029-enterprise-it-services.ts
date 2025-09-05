@@ -1,5 +1,4 @@
-export interface EnterpriseItService2029 {
-  id: string;
+export interface EnterpriseItService2029 {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface EnterpriseItService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
-  {
-    id: "2029-enterprise-it",
-    name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029",
-    price: "$599/month",
-    description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    features: [
-      "Enterprise IT services",
-      "Scalable solutions",
-      "Advanced security",
-      "24/7 support",
-      "Custom integration"
-    ],
-    link: "/services/2029-enterprise-it",
-    category: "Enterprise IT Services 2029",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "2029-enterprise-it", _name: "2029 Enterprise IT Service Platform", _tagline: "Enterprise IT services for 2029", _price: "$599/month", _description: "Advanced enterprise IT service platform designed for large organizations in 2029.", _features: [
+      "Enterprise IT services", _"Scalable solutions", _"Advanced security", _"24/7 support", _"Custom integration"
+    ], _link: "/services/2029-enterprise-it", _category: "Enterprise IT Services 2029", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

@@ -1,35 +1,24 @@
 
-import { useState } from 'react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume';
 
-interface ProjectCardProps {
-  project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;
-}
+interface ProjectCardProps {_project: PortfolioProject;
+  onEdit: (_project: PortfolioProject) => void;
+  onDelete: (_projectId: string) => void;}
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+export function ProjectCard(_{_project, _onEdit, _onDelete}: ProjectCardProps) {_const [deleteDialogOpen, _setDeleteDialogOpen] = useState(false);
   
-  const handleDelete = () => {
+  const _handleDelete = () => {
     if (project.id) {
-      onDelete(project.id);
-    }
+      onDelete(project.id);}
     setDeleteDialogOpen(false);
   };
   
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
-        {project.image_url ? (
+        {_project.image_url ? (
           <img 
             src={project.image_url} 
-            alt={project.title} 
+            alt={_project.title} 
             className="w-full h-full object-cover"
           />
         ) : (
@@ -41,17 +30,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
+          <h3 className="font-semibold text-lg">{_project.title}</h3>
           
-          {project.description && (
+          {_project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
           
-          {project.technologies && project.technologies.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+          {_project.technologies && project.technologies.length > 0 && (_<div className="flex flex-wrap gap-1 mt-2">
+              {project.technologies.map((tech, _index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
-                  {tech}
+                  {_tech}
                 </Badge>
               ))}
             </div>
@@ -61,7 +49,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
-          {project.github_url && (
+          {_project.github_url && (
             <a href={project.github_url} target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Github className="h-4 w-4" />
@@ -69,7 +57,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>
           )}
           
-          {project.demo_url && (
+          {_project.demo_url && (
             <a href={project.demo_url} target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Link className="h-4 w-4" />
@@ -79,16 +67,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </div>
         
         <div className="flex gap-2">
-          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
+          <Button variant="ghost" size="icon" onClick={_() => onEdit(project)}>
             <Edit className="h-4 w-4" />
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)}>
+          <Button variant="ghost" size="icon" onClick={_() => setDeleteDialogOpen(true)}>
             <Trash2 className="h-4 w-4" />
           </Button>
         </div>
       </CardFooter>
       
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+      <AlertDialog open={_deleteDialogOpen} onOpenChange={_setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
@@ -98,7 +86,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+            <AlertDialogAction onClick={_handleDelete} className="bg-destructive text-destructive-foreground">
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>

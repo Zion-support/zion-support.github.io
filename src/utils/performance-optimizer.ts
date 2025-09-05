@@ -1,8 +1,4 @@
 // Performance optimizer utilities
-export const optimizeImages = () => {
-  console.log('Optimizing images...');
-};
+export const _optimizeImages = () => {};
 
-export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
+export const _lazyLoadComponents = () => {};

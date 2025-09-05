@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const CybersecurityTrendsFor2024AndBeyondChat = () => {
-  return (
+const _CybersecurityTrendsFor2024AndBeyondChat = () => {_return (
     <div>
       <Head>
         <title>CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const CybersecurityTrendsFor2024AndBeyondChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default CybersecurityTrendsFor2024AndBeyondChat;

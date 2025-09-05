@@ -1,41 +1,24 @@
-import { defineConfig, devices } from '@playwright/test';
 
-export default defineConfig({
-  testDir: 'tests/e2e',
-  use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry'},
+export default defineConfig({_testDir: 'tests/e2e', _use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000', _trace: 'on-first-retry'},
   projects: [
-    {
-      name: 'Desktop Chrome',
-      use: {
-        browserName: 'chromium',
-        channel: 'chrome'}
+    {_name: 'Desktop Chrome', _use: {
+        browserName: 'chromium', _channel: 'window.chrome'}
     },
-    {
-      name: 'Desktop Firefox',
-      use: {
+    {_name: 'Desktop Firefox', _use: {
         browserName: 'firefox'}
     },
-    {
-      name: 'Desktop Safari',
-      use: {
+    {_name: 'Desktop Safari', _use: {
         browserName: 'webkit'}
     },
-    {
-      name: 'Mobile Chrome',
-      use: {
-        browserName: 'chromium',
-        ...devices['Pixel 5']}
+    {_name: 'Mobile Chrome', _use: {
+        browserName: 'chromium', _...devices['Pixel 5']}
     },
-    {
-      name: 'Mobile Safari',
-      use: {
-        browserName: 'webkit',
-        ...devices['iPhone 12']}
+    {_name: 'Mobile Safari', _use: {
+        browserName: 'webkit', _...devices['iPhone 12']}
     }
   ],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+    ['html', {_outputFolder: 'playwright-logs/html-report', _open: 'never'}]]
 });

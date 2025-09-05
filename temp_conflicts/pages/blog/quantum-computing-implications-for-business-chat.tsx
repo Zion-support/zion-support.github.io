@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const QuantumComputingImplicationsForBusinessChat = () => {
-  return (
+const _QuantumComputingImplicationsForBusinessChat = () => {_return (
     <div>
       <Head>
         <title>QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const QuantumComputingImplicationsForBusinessChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default QuantumComputingImplicationsForBusinessChat;

@@ -1,5 +1,4 @@
-export interface Revolutionary2027Service {
-  id: string;
+export interface Revolutionary2027Service {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface Revolutionary2027Service {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const revolutionary2027Services: Revolutionary2027Service[] = [
-  {
-    id: "2027-revolutionary-service",
-    name: "2027 Revolutionary Service Platform",
-    tagline: "Revolutionary services for 2027",
-    price: "$299/month",
-    description: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    features: [
-      "Revolutionary services",
-      "Transformative capabilities",
-      "Advanced technology",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
-    link: "/services/2027-revolutionary-service",
-    category: "Revolutionary 2027 Services",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "2027-revolutionary-service", _name: "2027 Revolutionary Service Platform", _tagline: "Revolutionary services for 2027", _price: "$299/month", _description: "Revolutionary service platform that transforms how businesses operate in 2027.", _features: [
+      "Revolutionary services", _"Transformative capabilities", _"Advanced technology", _"Innovation platform", _"Future-ready solutions"
+    ], _link: "/services/2027-revolutionary-service", _category: "Revolutionary 2027 Services", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

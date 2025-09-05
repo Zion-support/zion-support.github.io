@@ -1,30 +1,24 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from 'lucide-react'
 
-interface WorkspaceHeaderProps {
-  company: Company;
-}
+interface WorkspaceHeaderProps {_company: Company;}
 
-export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
-  return (
+export function WorkspaceHeader(_{_company}: WorkspaceHeaderProps) {_return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
               src={company.logoUrl || "/placeholder.svg"}
-              alt={company.name}
+              alt={_company.name}
               className="max-h-10 max-w-10"
               loading="lazy"
             />
           </div>
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
+            <h1 className="text-3xl font-bold tracking-tight">{_company.name} Workspace</h1>
             <p className="text-muted-foreground">
-              {company.plan} Plan · {company.teamSize} team members
+              {_company.plan} Plan · {_company.teamSize} team members
             </p>
           </div>
         </div>

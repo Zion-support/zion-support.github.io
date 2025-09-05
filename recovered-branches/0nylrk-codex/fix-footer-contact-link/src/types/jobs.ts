@@ -10,14 +10,11 @@ export type JobCategory =
   | 'business' 
   | 'other';
 
-export interface JobBudget {
-  min: number;
+export interface JobBudget {_min: number;
   max: number;
-  currency: string;
-}
+  currency: string;}
 
-export interface Job {
-  id: string;
+export interface Job {_id: string;
   client_id: string;
   title: string;
   description: string;
@@ -27,22 +24,18 @@ export interface Job {
   deadline: string;
   status: JobStatus;
   created_at: string;
-  updated_at: string;
-}
+  updated_at: string;}
 
-export interface JobFormData {
-  title: string;
+export interface JobFormData {_title: string;
   description: string;
   category: JobCategory;
   skills: string;
   budgetMin: number;
   budgetMax: number;
-  deadline: Date;
-}
+  deadline: Date;}
 
 // Add JobMatch interface to be shared across components
-export interface JobMatch {
-  id: string;
+export interface JobMatch {_id: string;
   job_id: string;
   talent_id: string;
   match_score: number;
@@ -60,28 +53,24 @@ export interface JobMatch {
     hourly_rate?: number;
     bio: string;
     years_experience: number;
-    key_projects: any[];
+    key_projects: unknown[];
     skills: string[];
     location?: string;
     category?: string;
-    company_name?: string;
-  };
+    company_name?: string;};
 }
 
-export interface ResumeAttachment {
-  id: string;
+export interface ResumeAttachment {_id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
   summary?: string;
-  skills?: string[];
-}
+  skills?: string[];}
 
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 
-export interface JobApplication {
-  id: string;
+export interface JobApplication {_id: string;
   job_id: string;
   talent_id: string;
   resume_id?: string;
@@ -98,26 +87,19 @@ export interface JobApplication {
     professional_title: string;
     profile_picture_url?: string;
     bio: string;
-    skills: string[];
-  };
+    skills: string[];};
   resume?: ResumeAttachment;
   // New fields for resume scoring
   match_score?: number;
   match_summary?: string;
-  match_breakdown?: {
-    skills_match?: {
+  match_breakdown?: {_skills_match?: {
       score: number;
       matching: string[];
-      missing: string[];
-    };
-    experience_match?: {
-      score: number;
-      analysis: string;
-    };
-    education_match?: {
-      score: number;
-      analysis: string;
-    };
+      missing: string[];};
+    experience_match?: {_score: number;
+      analysis: string;};
+    education_match?: {_score: number;
+      analysis: string;};
   };
   match_suggestion?: string;
   scored_at?: string;

@@ -1,75 +1,31 @@
 
-import { useState } from "react";
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useToast } from "@/hooks/use-toast";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { GradientHeading } from "@/components/GradientHeading";
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
-import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
-import { QuoteFormData } from "@/types/quotes";
-import { Sparkles, Loader2 } from 'lucide-react'
-import { z } from "zod";
 
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
-const serviceStepSchema = z.object({
-  serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() })});
+const _serviceStepSchema = z.object({_serviceType: z.string().min(1), _specificItem: z.object({ id: z.string()})});
 
-export function QuoteRequestForm() {
-  const router = useRouter();
-  const { toast } = useToast();
+export function QuoteRequestForm() {_const _router = useRouter();
+  const { toast} = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [autoFillLoading, setAutoFillLoading] = useState(false);
   const [autoFillOpen, setAutoFillOpen] = useState(false);
   
-  const [formData, setFormData] = useState<QuoteFormData>({
-    serviceType: "",
-    serviceCategory: "",
-    specificItem: null,
-    projectName: "",
-    projectDescription: "",
-    startDate: undefined,
-    endDate: undefined,
-    timeline: "flexible",
-    budget: {
-      amount: 0,
-      type: "fixed"
-    },
-    contactInfo: {
-      name: "",
-      email: "",
-      phone: "",
-      company: ""
-    }
+  const [formData, setFormData] = useState<QuoteFormData>({_serviceType: "", _serviceCategory: "", _specificItem: null, _projectName: "", _projectDescription: "", _startDate: undefined, _endDate: undefined, _timeline: "flexible", _budget: {
+      amount: 0, _type: "fixed"},
+    contactInfo: {_name: "", _email: "", _phone: "", _company: ""}
   });
   
-  const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
-      ...prev,
-      ...data
-    }));
+  const _updateFormData = (_data: Partial<QuoteFormData>) => {_setFormData(prev => ({
+      ...prev, _...data}));
   };
   
-  const handleNext = () => {
-    switch (currentStep) {
+  const _handleNext = () => {_switch (currentStep) {
       case "service": {
-        const result = serviceStepSchema.safeParse({
-          serviceType: formData.serviceType,
-          specificItem: formData.specificItem});
-        if (!result.success) {
-          toast({
-            title: "Service Required",
-            description: "Please select a service before continuing.",
-            variant: "destructive"});
+        const _result = serviceStepSchema.safeParse({
+          serviceType: formData.serviceType, _specificItem: formData.specificItem});
+        if (!result.success) {_toast({
+            title: "Service Required", _description: "Please select a service before continuing.", _variant: "destructive"});
           return;
         }
         setCurrentStep("details");
@@ -89,8 +45,7 @@ export function QuoteRequestForm() {
     }
   };
   
-  const handleBack = () => {
-    switch (currentStep) {
+  const _handleBack = () => {_switch (currentStep) {
       case "details":
         setCurrentStep("service");
         break;
@@ -104,86 +59,63 @@ export function QuoteRequestForm() {
         setCurrentStep("budget");
         break;
       default:
-        break;
-    }
+        break;}
   };
   
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
+  const _handleSubmit = async () => {_setIsSubmitting(true);
     
     try {
-      // In a real application, you would send the data to your backend
-      logDebug("Submitting form data:", { data: formData });
+      // In a real application, _you would send the data to your backend
+      logDebug("Submitting form data:", _{ data: formData});
       
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      toast({
-        title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon."});
+      toast({_title: "Quote Request Submitted", _description: "We've received your request and will get back to you soon."});
       
       // Redirect to confirmation page or homepage
       router.push("/");
-    } catch (error) {
-      toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (error) {_toast({
+        title: "Submission Failed", _description: "There was an error submitting your request. Please try again.", _variant: "destructive"});
+    } finally {_setIsSubmitting(false);}
   };
 
-  const handleAutoFill = async (description: string) => {
-    setAutoFillLoading(true);
+  const _handleAutoFill = async (_description: string) => {_setAutoFillLoading(true);
     try {
-      const res = await fetch("/api/openai/match", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ projectDescription: description })});
+      const _res = await fetch("/api/openai/match", _{
+        method: "POST", _headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({_projectDescription: description})});
       if (!res.ok) throw new Error("Request failed");
-      const { category, itemId, timeline, budget } = await res.json();
-      updateFormData({
-        projectDescription: description,
-        serviceType: category,
-        serviceCategory: category,
-        specificItem: itemId
-          ? { id: itemId, title: "AI Selected Item", category }
+      const {_category, _itemId, _timeline, _budget} = await res.json();
+      updateFormData({_projectDescription: description, _serviceType: category, _serviceCategory: category, _specificItem: itemId
+          ? { id: itemId, _title: "AI Selected Item", _category}
           : formData.specificItem,
         timeline: timeline || formData.timeline,
-        budget: { ...formData.budget, ...(budget || {}) }});
+        budget: {_...formData.budget, _...(budget || {}) }});
       setCurrentStep("summary");
       setAutoFillOpen(false);
-    } catch (err) {
-      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description });
-      toast({
-        title: "Auto-fill Failed",
-        description: "We couldn't process your request. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setAutoFillLoading(false);
-    }
+    } catch (err) {_logErrorToProduction("Auto-fill API error", _err as Error, _{ component: 'QuoteRequestForm', _projectDescription: description});
+      toast({_title: "Auto-fill Failed", _description: "We couldn't process your request. Please try again.", _variant: "destructive"});
+    } finally {_setAutoFillLoading(false);}
   };
   
-  const renderStepContent = () => {
-    switch (currentStep) {
+  const _renderStepContent = () => {_switch (currentStep) {
       case "service":
-        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+        return <ServiceTypeStep formData={formData} updateFormData={_updateFormData} />;
       case "details":
-        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+        return <ProjectDetailsStep formData={_formData} updateFormData={_updateFormData} />;
       case "timeline":
-        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+        return <TimelineStep formData={_formData} updateFormData={_updateFormData} />;
       case "budget":
-        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
+        return <BudgetStep formData={_formData} updateFormData={_updateFormData} />;
       case "summary":
-        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+        return <SummaryStep formData={_formData} updateFormData={_updateFormData} />;
       default:
         return null;
     }
   };
   
-  return (
-    <div className="container mx-auto px-4 py-12">
+  return (_<div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8 space-y-3">
           <GradientHeading>Request a Quote</GradientHeading>
@@ -196,11 +128,11 @@ export function QuoteRequestForm() {
           </div>
           <Button
             size="sm"
-            onClick={() => setAutoFillOpen(true)}
-            disabled={autoFillLoading}
+            onClick={_() => setAutoFillOpen(true)}
+            disabled={_autoFillLoading}
             className="mt-2"
           >
-            {autoFillLoading && (
+            {_autoFillLoading && (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             )}
             Auto Fill with AI
@@ -209,14 +141,14 @@ export function QuoteRequestForm() {
         
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">
           <CardContent className="px-6 py-8">
-            <StepProgress currentStep={currentStep} />
+            <StepProgress currentStep={_currentStep} />
             
             <div className="mt-8">
-              {renderStepContent()}
+              {_renderStepContent()}
             </div>
             
             <div className="flex justify-between mt-8">
-              {currentStep !== "service" && (
+              {_currentStep !== "service" && (
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -226,7 +158,7 @@ export function QuoteRequestForm() {
                 </Button>
               )}
               
-              {currentStep !== "summary" ? (
+              {_currentStep !== "summary" ? (
                 <Button 
                   onClick={handleNext}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -235,11 +167,11 @@ export function QuoteRequestForm() {
                 </Button>
               ) : (
                 <Button 
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
+                  onClick={_handleSubmit}
+                  disabled={_isSubmitting}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {_isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
             </div>
@@ -247,10 +179,10 @@ export function QuoteRequestForm() {
         </Card>
       </div>
       <AutoFillModal
-        open={autoFillOpen}
-        onOpenChange={setAutoFillOpen}
-        onSubmit={handleAutoFill}
-        loading={autoFillLoading}
+        open={_autoFillOpen}
+        onOpenChange={_setAutoFillOpen}
+        onSubmit={_handleAutoFill}
+        loading={_autoFillLoading}
       />
     </div>
   );

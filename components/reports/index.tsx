@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
 
-export default function ReportsIndex() {
-  return (
+export default function ReportsIndex() {_return (
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="container mx-auto px-4 py-12 max-w-7xl">
         {/* Header */}
@@ -15,10 +14,10 @@ export default function ReportsIndex() {
           </p>
         </div>
 
-        {/* Content Categorizer Component */}
+        {_/* Content Categorizer Component */}
         <ContentCategorizer />
 
-        {/* Back to Home */}
+        {_/* Back to Home */}
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200">
             ← Back to home

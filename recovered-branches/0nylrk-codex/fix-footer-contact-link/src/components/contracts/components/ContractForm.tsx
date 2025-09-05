@@ -1,25 +1,6 @@
 
-import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useToast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { generateContract } from "../utils/contractUtils";
-import { ProjectDetailsFields } from "./ProjectDetailsFields";
-import { PaymentTermsFields } from "./PaymentTermsFields";
-import { AdditionalClausesFields } from "./AdditionalClausesFields";
-import { DeploymentOptions } from "@/types/smart-contracts";
 
-const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required"),
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
-  startDate: z.date({
+const _formSchema = z.object({_projectName: z.string().min(1, _"Project name is required"), _scopeSummary: z.string().min(10, _"Scope summary should be at least 10 characters"), _startDate: z.date({
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
@@ -28,93 +9,57 @@ const formSchema = z.object({
 
 export type ContractFormValues = z.infer<typeof formSchema>;
 
-interface ContractFormProps {
-  talent: TalentProfile;
+interface ContractFormProps {_talent: TalentProfile;
   clientName: string;
   initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void;
-  onContractGenerated: (contractContent: string) => void;
+  onFormValuesChange?: (_values: ContractFormValues) => void;
+  onContractGenerated: (_contractContent: string) => void;
   deployOptions?: DeploymentOptions;
-  onDeployOptionsChange?: (options: DeploymentOptions) => void;
-}
+  onDeployOptionsChange?: (_options: DeploymentOptions) => void;}
 
-export function ContractForm({
-  talent,
-  clientName,
-  initialValues,
-  onFormValuesChange,
-  onContractGenerated,
-  deployOptions,
-  onDeployOptionsChange
-}: ContractFormProps) {
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
-  const { toast } = useToast();
+export function ContractForm(_{_talent, _clientName, _initialValues, _onFormValuesChange, _onContractGenerated, _deployOptions, _onDeployOptionsChange}: ContractFormProps) {_const [isGenerating, _setIsGenerating] = useState(false);
+  const [generatedMilestones, _setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast} = useToast();
 
-  const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: initialValues || {
-      projectName: "",
-      scopeSummary: "",
-      startDate: new Date(),
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+  const _form = useForm<ContractFormValues>({_resolver: zodResolver(formSchema), _defaultValues: initialValues || {
+      projectName: "", _scopeSummary: "", _startDate: new Date(), _paymentTerms: talent.hourly_rate ? "hourly" : "fixed", _paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}});
   
   // Update form when initialValues change
-  useEffect(() => {
-    if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
-        const typedKey = key as keyof ContractFormValues;
-        form.setValue(typedKey, initialValues[typedKey]);
-      });
+  useEffect__(() => {_if (initialValues) {
+      Object.keys(initialValues).forEach(_(key) => {
+        const _typedKey = key as keyof ContractFormValues;
+        form.setValue(typedKey, _initialValues[typedKey]);});
     }
   }, [initialValues, form]);
   
   // Track form values for template saving
-  useEffect(() => {
-    if (onFormValuesChange) {
-      const subscription = form.watch((value) => {
-        onFormValuesChange(value as ContractFormValues);
-      });
+  useEffect__(() => {_if (onFormValuesChange) {
+      const _subscription = form.watch(_(value) => {
+        onFormValuesChange(value as ContractFormValues);});
       
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]);
   
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
-    setGeneratedMilestones(milestones);
+  const _handleMilestonesGenerated = (_milestones: GeneratedMilestone[]) => {_setGeneratedMilestones(milestones);
     
-    // If payment terms isn't already set to milestone, update it
+    // If payment terms isn't already set to milestone, _update it
     if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone");
-    }
+      form.setValue("paymentTerms", _"milestone");}
     
-    toast({
-      title: "Milestones Generated",
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`});
+    toast({_title: "Milestones Generated", _description: `${milestones.length} milestones have been generated and will be included in the contract.`});
   };
   
-  const onSubmit = async (values: ContractFormValues) => {
-    setIsGenerating(true);
+  const _onSubmit = async (_values: ContractFormValues) => {_setIsGenerating(true);
     try {
-      const contract = await generateContract(
-        values, 
-        talent, 
-        clientName, 
-        generatedMilestones
+      const _contract = await generateContract(
+        values, _talent, _clientName, _generatedMilestones
       );
       
-      onContractGenerated(contract);
-    } catch (error) {
-      console.error("Error generating contract:", error);
-      toast({
-        title: "Contract Generation Failed",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsGenerating(false);
-    }
+      onContractGenerated(contract);} catch (error) {_toast({
+        title: "Contract Generation Failed", _description: error instanceof Error ? error.message : "Something went wrong. Please try again.", _variant: "destructive"});
+    } finally {_setIsGenerating(false);}
   };
   
   return (
@@ -122,32 +67,32 @@ export function ContractForm({
       <DialogHeader>
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>
-          Create a professional contract for your project with {talent.full_name}
+          Create a professional contract for your project with {_talent.full_name}
         </DialogDescription>
       </DialogHeader>
     
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <Form {_...form}>
+        <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
-            form={form} 
+            form={_form} 
           />
           
           <PaymentTermsFields 
-            form={form}
-            talent={talent}
-            handleMilestonesGenerated={handleMilestonesGenerated}
+            form={_form}
+            talent={_talent}
+            handleMilestonesGenerated={_handleMilestonesGenerated}
           />
           
           <AdditionalClausesFields 
-            form={form}
+            form={_form}
           />
           
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-            disabled={isGenerating}
+            disabled={_isGenerating}
           >
-            {isGenerating ? (
+            {_isGenerating ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Generating Contract...
@@ -162,8 +107,8 @@ export function ContractForm({
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 
-          onClick={() => form.reset()}
-          disabled={isGenerating}
+          onClick={_() => form.reset()}
+          disabled={_isGenerating}
         >
           Reset Form
         </Button>

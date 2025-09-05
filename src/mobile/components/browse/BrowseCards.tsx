@@ -1,13 +1,7 @@
 
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import React, {_useState} from "react";
 
-interface BrowseItem {
-  id: string;
+interface BrowseItem {_id: string;
   title: string;
   subtitle: string;
   description: string;
@@ -16,38 +10,32 @@ interface BrowseItem {
   price?: string;
   image?: string;
   match?: number;
-  timePosted?: string;
-}
+  timePosted?: string;}
 
-interface BrowseCardsProps {
-  items: BrowseItem[];
+interface BrowseCardsProps {_items: BrowseItem[];
   type: "jobs" | "talents";
-  onViewDetails: (id: string) => void;
-}
+  onViewDetails: (_id: string) => void;}
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]);
+export function BrowseCards(_{_items, _type, _onViewDetails}: BrowseCardsProps) {_const [savedItems, _setSavedItems] = useState<string[]>([]);
   
-  const toggleSaved = (id: string) => {
+  const _toggleSaved = (_id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
-        : [...prev, id]
-    );
-  };
+        : [...prev, _id]
+    );};
   
-  return (
-    <div className="space-y-4 pb-24">
-      {items.map((item) => (
+  return (_<div className="space-y-4 pb-24">
+      {_items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
-                  {type === "talents" ? (
+                  {_type === "talents" ? (
                     <Avatar className="h-12 w-12">
-                      <AvatarImage src={item.image} alt={item.title} />
-                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
+                      <AvatarImage src={item.image} alt={_item.title} />
+                      <AvatarFallback>{_item.title.charAt(0).toUpperCase()}</AvatarFallback>
                     </Avatar>
                   ) : (
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
@@ -55,16 +43,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </div>
                   )}
                   <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                    <h3 className="font-medium">{_item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{_item.subtitle}</p>
                   </div>
                 </div>
                 
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
+                  onClick={_() => toggleSaved(item.id)}
                 >
-                  {savedItems.includes(item.id) ? (
+                  {_savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
                     <Bookmark className="h-5 w-5 text-muted-foreground" />
@@ -73,42 +61,42 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               </div>
               
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
+                {_item.badges.map(_(badge, _index) => (
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
                   >
-                    {badge}
+                    {_badge}
                   </Badge>
                 ))}
               </div>
               
-              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
+              <p className="mt-3 text-sm line-clamp-2">{_item.description}</p>
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
-                {item.location && (
+                {_item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
                 )}
                 
-                {item.price && (
+                {_item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
                 
-                {item.timePosted && (
+                {_item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
                 
-                {item.match && (
+                {_item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -119,7 +107,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
-                onClick={() => onViewDetails(item.id)}
+                onClick={_() => onViewDetails(item.id)}
                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />

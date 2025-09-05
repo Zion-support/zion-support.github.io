@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DataScienceChat = () => {
-  return (
+const _DataScienceChat = () => {_return (
     <div>
       <Head>
         <title>DataScienceChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DataScienceChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DataScienceChat;

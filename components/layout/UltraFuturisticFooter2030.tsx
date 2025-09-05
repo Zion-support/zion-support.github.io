@@ -1,107 +1,84 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-  Rocket, Shield, Cpu, Target, Microscope, Users,
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, ArrowRight, Heart, Star, Award, CheckCircle
-} from 'lucide-react';
+import {_Phone, _Mail, _MapPin, _Globe, _Zap, _Brain, _Atom, _Rocket, _Shield, _Cpu, _Target, _Microscope, _Users, _Facebook, _Twitter, _Linkedin, _Instagram, _Youtube, _Github, _ArrowRight, _Heart, _Star, _Award, _CheckCircle} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-const serviceCategories = [
-  {
-    title: '🚀 AI & Consciousness',
-    services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotion-intelligence-platform' },
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' }
+const _serviceCategories = [
+  {_title: '🚀 AI & Consciousness', _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform'},
+      {_name: 'AI Emotional Intelligence', _href: '/ai-emotion-intelligence-platform'},
+      {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator'},
+      {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager'}
     ]
   },
-  {
-    title: '⚛️ Quantum & Emerging Tech',
-    services: [
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Learning Accelerator', href: '/quantum-learning-accelerator' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
+  {_title: '⚛️ Quantum & Emerging Tech', _services: [
+      { name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway'},
+      {_name: 'Quantum Learning Accelerator', _href: '/quantum-learning-accelerator'},
+      {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-platform'},
+      {_name: 'Quantum Cloud Infrastructure', _href: '/quantum-cloud-infrastructure'}
     ]
   },
-  {
-    title: '🧬 Biotech & DNA Computing',
-    services: [
-      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' },
-      { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },
-      { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },
-      { name: 'Research Automation', href: '/advanced-research-automation' }
+  {_title: '🧬 Biotech & DNA Computing', _services: [
+      { name: 'DNA Computing Platform', _href: '/biotech-dna-computing-platform'},
+      {_name: 'Personalized Nutrition', _href: '/biotech-personalized-nutrition'},
+      {_name: 'Predictive Health Analytics', _href: '/ai-predictive-health-analytics'},
+      {_name: 'Research Automation', _href: '/advanced-research-automation'}
     ]
   },
-  {
-    title: '🏙️ Enterprise IT Solutions',
-    services: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
-      { name: 'AI Enterprise Security', href: '/ai-powered-enterprise-security' },
-      { name: 'Intelligent Data Governance', href: '/intelligent-data-governance' }
+  {_title: '🏙️ Enterprise IT Solutions', _services: [
+      { name: 'Autonomous DevOps', _href: '/autonomous-devops-platform'},
+      {_name: 'Autonomous IT Operations', _href: '/autonomous-it-operations-center'},
+      {_name: 'AI Enterprise Security', _href: '/ai-powered-enterprise-security'},
+      {_name: 'Intelligent Data Governance', _href: '/intelligent-data-governance'}
     ]
   },
-  {
-    title: '🌌 Space & Metaverse Tech',
-    services: [
-      { name: 'Space Mining Automation', href: '/space-mining-automation-platform' },
-      { name: 'Metaverse Digital Reality', href: '/metaverse-digital-reality-platform' },
-      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },
-      { name: 'AI Research Assistant', href: '/ai-research-assistant' }
+  {_title: '🌌 Space & Metaverse Tech', _services: [
+      { name: 'Space Mining Automation', _href: '/space-mining-automation-platform'},
+      {_name: 'Metaverse Digital Reality', _href: '/metaverse-digital-reality-platform'},
+      {_name: 'Quantum Research Platform', _href: '/quantum-research-platform'},
+      {_name: 'AI Research Assistant', _href: '/ai-research-assistant'}
     ]
   },
-  {
-    title: '🎯 2030 Innovative Micro SAAS',
-    services: [
-      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },
-      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
+  {_title: '🎯 2030 Innovative Micro SAAS', _services: [
+      { name: 'AI Business Intelligence Suite 2030', _href: '/ai-business-intelligence-suite-2030'},
+      {_name: 'AI Customer Experience Platform 2030', _href: '/ai-customer-experience-platform-2030'},
+      {_name: 'AI Marketing Automation Suite 2030', _href: '/ai-marketing-automation-2030'},
+      {_name: 'AI HR Management Suite 2030', _href: '/ai-hr-management-suite-2030'}
     ]
   }
 ];
 
-const quickLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' }
+const _quickLinks = [
+  {_name: 'Home', _href: '/'},
+  {_name: 'Services', _href: '/services'},
+  {_name: 'Solutions', _href: '/solutions'},
+  {_name: 'Pricing', _href: '/pricing'},
+  {_name: 'Resources', _href: '/resources'},
+  {_name: 'Case Studies', _href: '/case-studies'},
+  {_name: 'Blog', _href: '/blog'},
+  {_name: 'Contact', _href: '/contact'}
 ];
 
-const companyInfo = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Press', href: '/press' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' }
+const _companyInfo = [
+  {_name: 'About Us', _href: '/about'},
+  {_name: 'Careers', _href: '/careers'},
+  {_name: 'Press', _href: '/press'},
+  {_name: 'Partners', _href: '/partners'},
+  {_name: 'Support', _href: '/support'},
+  {_name: 'Status', _href: '/status'}
 ];
 
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+const _socialLinks = [
+  {_name: 'LinkedIn', _href: 'https://linkedin.com/company/ziontechgroup', _icon: Linkedin},
+  {_name: 'Twitter', _href: 'https://twitter.com/ziontechgroup', _icon: Twitter},
+  {_name: 'Facebook', _href: 'https://facebook.com/ziontechgroup', _icon: Facebook},
+  {_name: 'Instagram', _href: 'https://instagram.com/ziontechgroup', _icon: Instagram},
+  {_name: 'YouTube', _href: 'https://youtube.com/ziontechgroup', _icon: Youtube},
+  {_name: 'GitHub', _href: 'https://github.com/ziontechgroup', _icon: Github}
 ];
 
-const certifications = [
+const _certifications = [
   'ISO 27001 Certified',
   'SOC 2 Type II Compliant',
   'GDPR Compliant',
@@ -110,8 +87,7 @@ const certifications = [
   'FedRAMP Authorized'
 ];
 
-export default function UltraFuturisticFooter2030() {
-  return (
+export default function UltraFuturisticFooter2030() {_return (
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -125,10 +101,10 @@ export default function UltraFuturisticFooter2030() {
       </div>
 
       <div className="relative z-10">
-        {/* Main Footer Content */}
+        {_/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Company Info */}
+            {_/* Company Info */}
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -147,51 +123,50 @@ export default function UltraFuturisticFooter2030() {
                 Transforming businesses through innovative solutions and intelligent automation.
               </p>
 
-              {/* Contact Info */}
+              {_/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Phone className="w-4 h-4 text-purple-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.mobile}
+                  <a href={_`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                    {_contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.email}
+                  <a href={_`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {_contactInfo.email}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <MapPin className="w-4 h-4 text-purple-400" />
-                  <span>{contactInfo.address}</span>
+                  <span>{_contactInfo.address}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Globe className="w-4 h-4 text-purple-400" />
-                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.website.replace('https://', '')}
+                  <a href={_contactInfo.website} className="hover:text-purple-400 transition-colors">
+                    {_contactInfo.website.replace('https://', _'')}
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Service Categories */}
+            {_/* Service Categories */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Rocket className="w-5 h-5 text-purple-400" />
                 <span>Our Services</span>
               </h4>
               <div className="grid grid-cols-1 gap-4">
-                {serviceCategories.slice(0, 3).map((category, index) => (
-                  <div key={index} className="space-y-2">
-                    <h5 className="text-sm font-medium text-purple-300">{category.title}</h5>
+                {_serviceCategories.slice(0, _3).map(_(category, _index) => (_<div key={index} className="space-y-2">
+                    <h5 className="text-sm font-medium text-purple-300">{_category.title}</h5>
                     <div className="space-y-1">
-                      {category.services.map((service, serviceIndex) => (
+                      {_category.services.map((service, _serviceIndex) => (
                         <Link
                           key={serviceIndex}
-                          href={service.href}
+                          href={_service.href}
                           className="block text-xs text-gray-400 hover:text-purple-300 transition-colors"
                         >
-                          {service.name}
+                          {_service.name}
                         </Link>
                       ))}
                     </div>
@@ -200,54 +175,54 @@ export default function UltraFuturisticFooter2030() {
               </div>
             </div>
 
-            {/* Quick Links */}
+            {_/* Quick Links */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Target className="w-5 h-5 text-cyan-400" />
                 <span>Quick Links</span>
               </h4>
               <div className="space-y-2">
-                {quickLinks.map((link, index) => (
+                {_quickLinks.map(_(link, _index) => (
                   <Link
                     key={index}
-                    href={link.href}
+                    href={_link.href}
                     className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group"
                   >
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    <span>{link.name}</span>
+                    <span>{_link.name}</span>
                   </Link>
                 ))}
               </div>
 
               <div className="space-y-2">
                 <h5 className="text-sm font-medium text-cyan-300">Company</h5>
-                {companyInfo.map((link, index) => (
+                {_companyInfo.map(_(link, _index) => (
                   <Link
                     key={index}
-                    href={link.href}
+                    href={_link.href}
                     className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                   >
-                    {link.name}
+                    {_link.name}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Social & Certifications */}
+            {_/* Social & Certifications */}
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Users className="w-5 h-5 text-green-400" />
                 <span>Connect & Trust</span>
               </h4>
               
-              {/* Social Links */}
+              {_/* Social Links */}
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
                 <div className="flex flex-wrap gap-2">
-                  {socialLinks.map((social, index) => (
+                  {_socialLinks.map(_(social, _index) => (
                     <a
                       key={index}
-                      href={social.href}
+                      href={_social.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40"
@@ -258,17 +233,17 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
 
-              {/* Certifications */}
+              {_/* Certifications */}
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
                   <span>Certifications</span>
                 </h5>
                 <div className="grid grid-cols-1 gap-2">
-                  {certifications.map((cert, index) => (
+                  {_certifications.map(_(cert, _index) => (
                     <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400" />
-                      <span>{cert}</span>
+                      <span>{_cert}</span>
                     </div>
                   ))}
                 </div>
@@ -277,7 +252,7 @@ export default function UltraFuturisticFooter2030() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {_/* Bottom Bar */}
         <div className="border-t border-purple-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">

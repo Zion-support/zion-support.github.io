@@ -1,78 +1,38 @@
-import React, { useState } from 'react';
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { formatDistanceToNow } from 'date-fns';
+import React, {_useState} from 'react';
 import Link from 'next/link';
-import { LoginModal } from '@/components/auth/LoginModal';
 
-export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
+export default function PointsPage() {_const { isAuthenticated, _user} = useAuth();
+  const {_ledger, _balance, _loading, _fetchLedger} = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
 
-  async function handleRedeem(reward: { id: string; cost: number; title: string }) {
-    if (!user?.id) return;
+  async function handleRedeem(_reward: {_id: string; cost: number; title: string}) {_if (!user?.id) return;
     setRedeeming(true);
     try {
-      await fetch('/api/points/redeem', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
+      await fetch('/api/points/redeem', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_userId: user.id, _cost: reward.cost, _reward: reward.title})
       });
       await fetchLedger();
-    } finally {
-      setRedeeming(false);
-    }
+    } finally {_setRedeeming(false);}
   }
 
-  const earningOpportunities = [
-    {
-      icon: <Users className="h-5 w-5" />,
-      title: "Sign Up & Profile Setup",
-      description: "Complete your profile and verify your email",
-      points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
-    },
-    {
-      icon: <ShoppingBag className="h-5 w-5" />,
-      title: "First Purchase",
-      description: "Make your first purchase on the marketplace",
-      points: "100 pts",
-      action: "Browse Marketplace"
-    },
-    {
-      icon: <MessageSquare className="h-5 w-5" />,
-      title: "Community Engagement",
-      description: "Post in the community or comment on discussions",
-      points: "25 pts per post",
-      action: "Join Community"
-    },
-    {
-      icon: <Users className="h-5 w-5" />,
-      title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
+  const _earningOpportunities = [
+    {_icon: <Users className="h-5 w-5" />, _title: "Sign Up & Profile Setup", _description: "Complete your profile and verify your email", _points: "50 pts", _action: isAuthenticated ? "✓ Completed" : "Get Started"},
+    {_icon: <ShoppingBag className="h-5 w-5" />, _title: "First Purchase", _description: "Make your first purchase on the marketplace", _points: "100 pts", _action: "Browse Marketplace"},
+    {_icon: <MessageSquare className="h-5 w-5" />, _title: "Community Engagement", _description: "Post in the community or comment on discussions", _points: "25 pts per post", _action: "Join Community"},
+    {_icon: <Users className="h-5 w-5" />, _title: "Refer Friends", _description: "Invite friends to join Zion marketplace", _points: "200 pts per referral", _action: "Share Referral Link"}
   ];
 
-  const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
-    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
-    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+  const _upcomingRewards = [
+    {_id: 'coupon5', _title: '$5 Off Coupon', _cost: 500, _category: 'Discount'},
+    {_id: 'premium1', _title: 'Premium Features (1 month)', _cost: 1000, _category: 'Subscription'},
+    {_id: 'swag', _title: 'Zion Swag Pack', _cost: 1500, _category: 'Merchandise'},
+    {_id: 'coupon25', _title: '$25 Off Coupon', _cost: 2000, _category: 'Discount'},
+    {_id: 'vip', _title: 'VIP Support Access', _cost: 3000, _category: 'Service'}
   ];
 
-  if (!isAuthenticated) {
-    return (
-      <>
+  if (!isAuthenticated) {_return (_<>
         <div className="container py-10 max-w-4xl">
           <div className="text-center mb-8">
             <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
@@ -97,14 +57,14 @@ export default function PointsPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {earningOpportunities.map((opportunity, index) => (
+                {_earningOpportunities.map(_(opportunity, _index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                    <div className="text-primary mt-1">{opportunity.icon}</div>
+                    <div className="text-primary mt-1">{_opportunity.icon}</div>
                     <div className="flex-1">
-                      <h4 className="font-medium">{opportunity.title}</h4>
-                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                      <h4 className="font-medium">{_opportunity.title}</h4>
+                      <p className="text-sm text-muted-foreground">{_opportunity.description}</p>
                     </div>
-                    <Badge variant="secondary">{opportunity.points}</Badge>
+                    <Badge variant="secondary">{_opportunity.points}</Badge>
                   </div>
                 ))}
               </CardContent>
@@ -121,13 +81,13 @@ export default function PointsPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {upcomingRewards.map((reward, index) => (
+                {_upcomingRewards.map(_(reward, _index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
+                      <h4 className="font-medium">{_reward.title}</h4>
+                      <p className="text-sm text-muted-foreground">{_reward.category}</p>
                     </div>
-                    <Badge variant="outline">{reward.cost}</Badge>
+                    <Badge variant="outline">{_reward.cost}</Badge>
                   </div>
                 ))}
               </CardContent>
@@ -141,13 +101,13 @@ export default function PointsPage() {
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
               </p>
-              <Button onClick={() => setLoginOpen(true)}>
+              <Button onClick={_() => setLoginOpen(true)}>
                 Create Account
               </Button>
             </CardContent>
           </Card>
         </div>
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+        <LoginModal isOpen={_loginOpen} onOpenChange={_setLoginOpen} />
       </>
     );
   }
@@ -158,10 +118,10 @@ export default function PointsPage() {
         <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
         <h1 className="text-4xl font-bold mb-4">Your Rewards</h1>
         <div className="text-6xl font-bold text-primary mb-2">
-          {loading ? "..." : balance}
+          {_loading ? "..." : balance}
         </div>
         <p className="text-xl text-muted-foreground">Points Available</p>
-        {!loading && balance === 0 && (
+        {_!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
@@ -181,16 +141,16 @@ export default function PointsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {earningOpportunities.map((opportunity, index) => (
+            {_earningOpportunities.map(_(opportunity, _index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                <div className="text-primary mt-1">{opportunity.icon}</div>
+                <div className="text-primary mt-1">{_opportunity.icon}</div>
                 <div className="flex-1">
-                  <h4 className="font-medium">{opportunity.title}</h4>
-                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                  <h4 className="font-medium">{_opportunity.title}</h4>
+                  <p className="text-sm text-muted-foreground">{_opportunity.description}</p>
                 </div>
                 <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+                  <Badge variant="secondary" className="mb-1">{_opportunity.points}</Badge>
+                  <p className="text-xs text-muted-foreground">{_opportunity.action}</p>
                 </div>
               </div>
             ))}
@@ -208,17 +168,16 @@ export default function PointsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {upcomingRewards.map((reward) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
+            {_upcomingRewards.map(_(reward) => (_<div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
                 <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                  <h4 className="font-medium">{_reward.title}</h4>
+                  <p className="text-sm text-muted-foreground">{_reward.category}</p>
                 </div>
                 <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
+                  <Badge variant="outline" className="mb-1">{_reward.cost} pts</Badge>
+                  {_balance >= reward.cost ? (
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={_redeeming}>
+                      {_redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
                     <p className="text-xs text-muted-foreground">Need more points</p>
@@ -239,7 +198,7 @@ export default function PointsPage() {
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
-          {ledger.length === 0 ? (
+          {_ledger.length === 0 ? (
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
             <ScrollArea className="h-64">
@@ -247,17 +206,17 @@ export default function PointsPage() {
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
-                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
+                      <p className="font-medium capitalize">{_entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+                        {_formatDistanceToNow(new Date(entry.created_at), _{ addSuffix: true})}
                       </p>
                     </div>
                     <Badge
                       variant="outline"
-                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+                      className={_entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >
-                      {entry.delta >= 0 ? '+' : ''}
-                      {entry.delta} pts
+                      {_entry.delta >= 0 ? '+' : ''}
+                      {_entry.delta} pts
                     </Badge>
                   </div>
                 ))}

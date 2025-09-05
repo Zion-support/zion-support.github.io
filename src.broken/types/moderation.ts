@@ -1,4 +1,3 @@
 // Type definitions for moderation;
-interface moderation {;
-  // TODO: Add proper type definitions;
-};
+interface moderation {_;
+  // TODO: Add proper type definitions;};

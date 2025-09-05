@@ -1,37 +1,30 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../utils/db';
-import type { Job } from '../../../utils/types';
-import { rateLimit } from '../../../utils/rateLimit';
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';
+import type {_NextApiRequest, _NextApiResponse} from 'next';
+import type {_Job} from '../../../utils/types';
 
-const FILE = 'jobs.json';
+const _FILE = 'jobs.json';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
-  const { id } = req.query;
-  const jobs = readJsonFile<Job[]>(FILE, []);
-  const idx = jobs.findIndex((j) => j.id === id);
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (!rateLimit(req, _res)) return;
+  const { id} = req.query;
+  const _jobs = readJsonFile<Job[]>(FILE, []);
+  const _idx = jobs.findIndex(_(j) => j.id === id);
 
-  if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' });
+  if (idx === -1) {_res.status(404).json({ error: 'Job not found'});
     return;
   }
 
-  if (req.method === 'GET') {
-    res.status(200).json({ job: jobs[idx] });
+  if (req.method === 'GET') {_res.status(200).json({ job: jobs[idx]});
     return;
   }
 
-  if (req.method === 'PATCH') {
-    const userEmail = getRequestUserEmail(req);
-    const job = jobs[idx];
-    const isOwner = userEmail && userEmail === job.clientEmail;
+  if (req.method === 'PATCH') {_const _userEmail = getRequestUserEmail(req);
+    const _job = jobs[idx];
+    const _isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' });
+      res.status(403).json({ error: 'Forbidden'});
       return;
     }
 
-    const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+    const {_title, _description, _category, _requiredSkills, _budgetMinUsd, _budgetMaxUsd, _deliveryDeadlineIso, _status} = req.body || {};
 
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
@@ -46,7 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     jobs[idx] = job;
     writeJsonFile<Job[]>(FILE, jobs);
 
-    res.status(200).json({ job });
+    res.status(200).json({_job});
     return;
   }
 

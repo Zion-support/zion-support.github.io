@@ -1,9 +1,7 @@
 import React from 'react';
-export function ExpoPage() {
-  return (
+export function ExpoPage() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

@@ -1,27 +1,20 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface PortfolioItem {
-  title: string;
-  description: string;
-}
+interface PortfolioItem {_title: string;
+  description: string;}
 
-interface PortfolioListProps {
-  projects: PortfolioItem[];
-}
+interface PortfolioListProps {_projects: PortfolioItem[];}
 
-export function PortfolioList({ projects }: PortfolioListProps) {
-  if (!projects.length) return null;
+export function PortfolioList(_{_projects}: PortfolioListProps) {_if (!projects.length) return null;
 
-  return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
+  return (_<Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
       <CardHeader>
         <CardTitle>Portfolio</CardTitle>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2 list-disc ml-5">
-          {projects.map((p, i) => (
+          {projects.map((p, _i) => (
             <li key={i}>
-              <span className="font-medium">{p.title}:</span> {p.description}
+              <span className="font-medium">{_p.title}:</span> {_p.description}
             </li>
           ))}
         </ul>

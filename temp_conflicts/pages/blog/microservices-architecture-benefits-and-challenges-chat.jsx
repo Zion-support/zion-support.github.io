@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MicroservicesArchitectureBenefitsAndChallengesChat = () => {
-  return (
+const _MicroservicesArchitectureBenefitsAndChallengesChat = () => {_return (
     <div>
       <Head>
         <title>MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const MicroservicesArchitectureBenefitsAndChallengesChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default MicroservicesArchitectureBenefitsAndChallengesChat;

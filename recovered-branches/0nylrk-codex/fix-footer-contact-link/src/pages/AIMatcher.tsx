@@ -1,40 +1,22 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { AIMatchmaker } from "@/components/AIMatchmaker";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
 
-export default function AIMatcherPage() {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+export default function AIMatcherPage() {_const _navigate = useNavigate();
+  const [selectedCategory, _setSelectedCategory] = useState<string>("all");
   
-  const handleMatchSelect = (match: MatchResult) => {
+  const _handleMatchSelect = (_match: MatchResult) => {
     // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase();
+    let _itemType = "service";
+    const _category = match.item.category.toLowerCase();
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {
-      itemType = "equipment";
-    }
+      itemType = "talent";} else if (category.includes("equipment") || category === "hardware") {_itemType = "equipment";}
     
-    toast({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`});
+    toast({_title: "Match Selected", _description: `You've selected ${match.item.title}`});
     
     // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: { 
-        serviceType: itemType,
-        specificItem: match.item
-      }
+    navigate("/request-quote", {_state: { 
+        serviceType: itemType, _specificItem: match.item}
     });
   };
   
@@ -55,7 +37,7 @@ export default function AIMatcherPage() {
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 I'm looking for:
               </label>
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <Select value={_selectedCategory} onValueChange={_setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
@@ -69,8 +51,8 @@ export default function AIMatcherPage() {
             </div>
             
             <AIMatchmaker 
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
+              serviceType={_selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={_handleMatchSelect}
             />
           </div>
         </div>

@@ -1,44 +1,17 @@
 
-import { useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useReferrals } from '@/hooks/useReferrals';
-import { ReferralStats } from '@/components/referrals/ReferralStats';
-import { ReferralLink } from '@/components/referrals/ReferralLink';
-import { ReferralTable } from '@/components/referrals/ReferralTable';
-import { RewardsCard } from '@/components/referrals/RewardsCard';
-import { ReferralGuide } from '@/components/referrals/ReferralGuide';
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from '@/components/ui/button';
-import { toast } from '@/hooks/use-toast';
-import { Share, Users } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
-export default function ReferralsPage() {
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  const {
-    isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia} = useReferrals();
+export default function ReferralsPage() {_const _navigate = useNavigate();
+  const { isAuthenticated} = useAuth();
+  const {_isLoading, _referralCode, _referrals, _rewards, _stats, _getReferralLink, _copyReferralLink, _shareOnSocialMedia} = useReferrals();
 
-  useEffect(() => {
-    if (!isAuthenticated) {
+  useEffect__(() => {_if (!isAuthenticated) {
       toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"});
+        title: "Authentication required", _description: "Please login to access the referral program", _variant: "destructive"});
       navigate("/login");
     }
   }, [isAuthenticated, navigate]);
 
-  const referralLink = getReferralLink();
+  const _referralLink = getReferralLink();
 
   return (
     <div className="container max-w-7xl py-10">
@@ -49,20 +22,20 @@ export default function ReferralsPage() {
             Invite others to Zion AI Marketplace and earn rewards
           </p>
         </div>
-        <Button className="flex items-center gap-2" onClick={copyReferralLink}>
+        <Button className="flex items-center gap-2" onClick={_copyReferralLink}>
           <Share className="h-4 w-4" />
           Share Referral Link
         </Button>
       </div>
 
-      <ReferralStats stats={stats} isLoading={isLoading} />
+      <ReferralStats stats={_stats} isLoading={_isLoading} />
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
           <ReferralLink 
-            referralLink={referralLink} 
-            onCopy={copyReferralLink} 
-            onShare={shareOnSocialMedia}
+            referralLink={_referralLink} 
+            onCopy={_copyReferralLink} 
+            onShare={_shareOnSocialMedia}
           />
           
           <Tabs defaultValue="referrals" className="w-full">
@@ -77,10 +50,10 @@ export default function ReferralsPage() {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
-              <ReferralTable referrals={referrals} isLoading={isLoading} />
+              <ReferralTable referrals={_referrals} isLoading={_isLoading} />
             </TabsContent>
             <TabsContent value="rewards" className="p-0 mt-6">
-              <RewardsCard rewards={rewards} isLoading={isLoading} />
+              <RewardsCard rewards={_rewards} isLoading={_isLoading} />
             </TabsContent>
           </Tabs>
         </div>

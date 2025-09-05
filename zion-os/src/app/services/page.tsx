@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-export default function ServicesPage() {
-  return (
+export default function ServicesPage() {_return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -21,7 +20,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Contact Info Banner */}
+      {_/* Contact Info Banner */}
       <div className="bg-zinc-800 py-4">
         <div className="container mx-auto px-6 text-center text-sm">
           <span className="mr-8">📱 +1 302 464 0950</span>
@@ -30,7 +29,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* AI Services Section */}
+      {_/* AI Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -41,7 +40,7 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* ZionGPT Core */}
+            {_/* ZionGPT Core */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">🧠</div>
               <h3 className="text-xl font-semibold mb-3">ZionGPT Core</h3>
@@ -61,7 +60,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* AI Content Generation */}
+            {_/* AI Content Generation */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">✍️</div>
               <h3 className="text-xl font-semibold mb-3">AI Content Generation</h3>
@@ -81,7 +80,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* AI-Powered Analytics */}
+            {_/* AI-Powered Analytics */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Analytics</h3>
@@ -101,7 +100,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* AI Customer Support */}
+            {_/* AI Customer Support */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">💬</div>
               <h3 className="text-xl font-semibold mb-3">AI Customer Support</h3>
@@ -121,7 +120,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* AI Process Automation */}
+            {_/* AI Process Automation */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">⚙️</div>
               <h3 className="text-xl font-semibold mb-3">AI Process Automation</h3>
@@ -141,7 +140,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* AI Security & Compliance */}
+            {_/* AI Security & Compliance */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold mb-3">AI Security & Compliance</h3>
@@ -170,7 +169,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* IT Services Section */}
+      {_/* IT Services Section */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -181,7 +180,7 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Cloud Infrastructure */}
+            {_/* Cloud Infrastructure */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">☁️</div>
               <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
@@ -201,7 +200,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* DevOps & CI/CD */}
+            {_/* DevOps & CI/CD */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold mb-3">DevOps & CI/CD</h3>
@@ -221,7 +220,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Cybersecurity */}
+            {_/* Cybersecurity */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
@@ -241,7 +240,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Data Engineering */}
+            {_/* Data Engineering */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-3">Data Engineering</h3>
@@ -261,7 +260,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* API Development */}
+            {_/* API Development */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🔌</div>
               <h3 className="text-xl font-semibold mb-3">API Development</h3>
@@ -281,7 +280,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Digital Transformation */}
+            {_/* Digital Transformation */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
@@ -310,7 +309,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Blockchain & Web3 Services Section */}
+      {_/* Blockchain & Web3 Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -321,7 +320,7 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* DeFi Platform Development */}
+            {_/* DeFi Platform Development */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">💰</div>
               <h3 className="text-xl font-semibold mb-3">DeFi Platform Development</h3>
@@ -341,7 +340,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* NFT Marketplace */}
+            {_/* NFT Marketplace */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold mb-3">NFT Marketplace Development</h3>
@@ -361,7 +360,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Smart Contract Development */}
+            {_/* Smart Contract Development */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">📜</div>
               <h3 className="text-xl font-semibold mb-3">Smart Contract Development</h3>
@@ -381,7 +380,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Web3 Infrastructure */}
+            {_/* Web3 Infrastructure */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold mb-3">Web3 Infrastructure</h3>
@@ -401,7 +400,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* DAO Development */}
+            {_/* DAO Development */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">🏛️</div>
               <h3 className="text-xl font-semibold mb-3">DAO Development</h3>
@@ -421,7 +420,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Blockchain Consulting */}
+            {_/* Blockchain Consulting */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">💡</div>
               <h3 className="text-xl font-semibold mb-3">Blockchain Consulting</h3>
@@ -450,7 +449,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Micro SAAS Services Section */}
+      {_/* Micro SAAS Services Section */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -461,7 +460,7 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Zion Marketplace */}
+            {_/* Zion Marketplace */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🛒</div>
               <h3 className="text-xl font-semibold mb-3">Zion Marketplace</h3>
@@ -481,7 +480,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Resume AI Builder */}
+            {_/* Resume AI Builder */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">📝</div>
               <h3 className="text-xl font-semibold mb-3">Resume AI Builder</h3>
@@ -501,7 +500,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Token Rewards System */}
+            {_/* Token Rewards System */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🪙</div>
               <h3 className="text-xl font-semibold mb-3">Token Rewards System</h3>
@@ -521,7 +520,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* KYC/AML Verification */}
+            {_/* KYC/AML Verification */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">✅</div>
               <h3 className="text-xl font-semibold mb-3">KYC/AML Verification</h3>
@@ -541,7 +540,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* DAO Governance Platform */}
+            {_/* DAO Governance Platform */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🗳️</div>
               <h3 className="text-xl font-semibold mb-3">DAO Governance Platform</h3>
@@ -561,7 +560,7 @@ export default function ServicesPage() {
               </a>
             </div>
 
-            {/* Zion Academy */}
+            {_/* Zion Academy */}
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🎓</div>
               <h3 className="text-xl font-semibold mb-3">Zion Academy</h3>
@@ -590,7 +589,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {_/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>

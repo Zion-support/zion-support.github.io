@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 
-const Page: NextPage = () => {
-  return (
+const Page: NextPage = () => {_return (
     <>
       <Head>
         <title>Auto Update 2025-08-08T17-37-01-527Z</title>

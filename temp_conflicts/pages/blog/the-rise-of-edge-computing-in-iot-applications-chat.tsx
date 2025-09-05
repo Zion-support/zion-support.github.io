@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const TheRiseOfEdgeComputingInIotApplicationsChat = () => {
-  return (
+const _TheRiseOfEdgeComputingInIotApplicationsChat = () => {_return (
     <div>
       <Head>
         <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default TheRiseOfEdgeComputingInIotApplicationsChat;

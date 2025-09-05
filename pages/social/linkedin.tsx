@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 import Head from 'next/head';
 
-export default function LinkedInRedirect() {
-	useEffect(() => {
+export default function LinkedInRedirect() {_useEffect__(() => {
 		if (typeof window !== 'undefined') {
-			window.location.replace('https://www.linkedin.com/company/zion-tech-group');
-		}
+			window.location.replace('https://www.linkedin.com/company/zion-tech-group');}
 	}, []);
 
 	return (

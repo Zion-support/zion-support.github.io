@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const AugmentedRealityInEnterpriseApplicationsChat = () => {
-  return (
+const _AugmentedRealityInEnterpriseApplicationsChat = () => {_return (
     <div>
       <Head>
         <title>AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const AugmentedRealityInEnterpriseApplicationsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default AugmentedRealityInEnterpriseApplicationsChat;

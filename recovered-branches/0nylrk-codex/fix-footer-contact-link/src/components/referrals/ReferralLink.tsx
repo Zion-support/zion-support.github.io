@@ -1,24 +1,15 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 
-interface ReferralLinkProps {
-  referralLink: string;
+interface ReferralLinkProps {_referralLink: string;
   onCopy: () => void;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-}
+  onShare: (_platform: 'twitter' | 'facebook' | 'linkedin') => void;}
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false);
+export function ReferralLink(_{_referralLink, _onCopy, _onShare}: ReferralLinkProps) {_const [copied, _setCopied] = useState(false);
   
-  const handleCopy = () => {
+  const _handleCopy = () => {
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+    setTimeout__(() => setCopied(false), _2000);};
 
   return (
     <Card className="mt-6">
@@ -35,17 +26,17 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
             <Input
-              value={referralLink}
+              value={_referralLink}
               readOnly
               className="font-mono text-sm"
             />
-            <Button variant="outline" size="icon" onClick={handleCopy}>
+            <Button variant="outline" size="icon" onClick={_handleCopy}>
               <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
           </div>
           
-          {copied && (
+          {_copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>
@@ -60,7 +51,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('twitter')}
+              onClick={_() => onShare('twitter')}
             >
               <Twitter className="h-4 w-4" />
               Twitter
@@ -69,7 +60,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('facebook')}
+              onClick={_() => onShare('facebook')}
             >
               <Facebook className="h-4 w-4" />
               Facebook
@@ -78,7 +69,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('linkedin')}
+              onClick={_() => onShare('linkedin')}
             >
               <Share className="h-4 w-4" />
               LinkedIn

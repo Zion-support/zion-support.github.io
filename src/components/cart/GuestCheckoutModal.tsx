@@ -1,50 +1,28 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
-import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe';
+import {_Dialog, _DialogContent, _DialogDescription, _DialogFooter, _DialogHeader, _DialogTitle} from '@/components/ui/dialog';
 
-interface GuestCheckoutModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (details: { email: string; address: string }) => void;
+interface GuestCheckoutModalProps {_open: boolean;
+  onOpenChange: (_open: boolean) => void;
+  onSubmit: (_details: { email: string; address: string}) => void;
 }
 
-export default function GuestCheckoutModal({
-  open,
-  onOpenChange,
-  onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export default function GuestCheckoutModal(_{_open, _onOpenChange, _onSubmit}: GuestCheckoutModalProps) {_const [email, _setEmail] = useState('');
+  const [address, _setAddress] = useState('');
+  const [isSubmitting, _setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email || !address) {
       alert('Please fill in all required fields');
-      return;
-    }
+      return;}
 
     setIsSubmitting(true);
-    try {
-      onSubmit({ email, address });
-    } finally {
-      setIsSubmitting(false);
-    }
+    try {_onSubmit({ email, _address});
+    } finally {_setIsSubmitting(false);}
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={_open} onOpenChange={_onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
         <DialogHeader>
           <DialogTitle className="text-white flex items-center gap-2">
@@ -56,13 +34,13 @@ export default function GuestCheckoutModal({
           </DialogDescription>
         </DialogHeader>
 
-        {!isProdDomain() && (
+        {_!isProdDomain() && (
           <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={_handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
               <Mail className="h-4 w-4 text-zion-cyan" />
@@ -71,8 +49,8 @@ export default function GuestCheckoutModal({
             <Input
               id="guest-email"
               type="email"
-              value={email || ''}
-              onChange={(e) => setEmail(e.target.value || '')}
+              value={_email || ''}
+              onChange={_(_e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com"
               required
               className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light"
@@ -86,8 +64,8 @@ export default function GuestCheckoutModal({
             </Label>
             <Textarea
               id="guest-address"
-              value={address || ''}
-              onChange={(e) => setAddress(e.target.value || '')}
+              value={_address || ''}
+              onChange={_(_e) => setAddress(e.target.value || '')}
               placeholder="Enter your full shipping address..."
               required
               className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]"
@@ -104,17 +82,17 @@ export default function GuestCheckoutModal({
             <Button
               type="button"
               variant="outline"
-              onClick={() => onOpenChange(false)}
+              onClick={_() => onOpenChange(false)}
               className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
             >
               Cancel
             </Button>
             <Button
               type="submit"
-              disabled={isSubmitting || !email || !address}
+              disabled={_isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
-              {isSubmitting ? (
+              {_isSubmitting ? (
                 'Processing...'
               ) : (
                 <>

@@ -1,30 +1,15 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-import { Switch } from "@/components/ui/switch";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { X, Filter } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
-import { Badge } from "@/components/ui/badge";
-import { Label } from "@/components/ui/label";
+import React, {_useState} from "react";
 
-interface BrowseFiltersProps {
-  type: "jobs" | "talents";
-}
+interface BrowseFiltersProps {_type: "jobs" | "talents";}
 
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+export function BrowseFilters(_{_type}: BrowseFiltersProps) {_const [activeFilters, _setActiveFilters] = useState<string[]>([]);
   
-  const addFilter = (filter: string) => {
+  const _addFilter = (_filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
-    }
+      setActiveFilters([...activeFilters, _filter]);}
   };
   
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter));
-  };
+  const _removeFilter = (_filter: string) => {_setActiveFilters(activeFilters.filter(f => f !== filter));};
   
   return (
     <div className="space-y-3">
@@ -39,11 +24,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SheetTrigger>
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
               <SheetHeader>
-                <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
+                <SheetTitle>Filter {_type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
               
               <div className="py-6 space-y-6">
-                {type === "jobs" ? (
+                {_type === "jobs" ? (
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -79,9 +64,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider 
-                        defaultValue={[0, 10]} 
-                        max={20} 
-                        step={1} 
+                        defaultValue={[0, _10]} 
+                        max={_20} 
+                        step={_1} 
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -136,7 +121,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+                <Button className="w-full" onClick={_() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -152,16 +137,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </SelectContent>
           </Select>
           
-          {activeFilters.map((filter) => (
-            <Badge 
+          {_activeFilters.map(_(filter) => (_<Badge 
               key={filter} 
               variant="secondary"
               className="flex items-center gap-1"
             >
-              {filter}
+              {_filter}
               <X 
                 className="h-3 w-3 cursor-pointer" 
-                onClick={() => removeFilter(filter)} 
+                onClick={_() => removeFilter(filter)} 
               />
             </Badge>
           ))}

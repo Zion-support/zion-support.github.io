@@ -1,24 +1,13 @@
 
-import { jsPDF } from 'jspdf';
-import { PortfolioProject } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
 
-export function addPortfolioSection(
-  doc: jsPDF,
-  projects: PortfolioProject[],
-  colors: PdfThemeColors,
-  startY: number,
-  maxProjects: number = 2
-): number {
-  if (projects.length === 0) return startY;
+export function addPortfolioSection(_doc: jsPDF, _projects: PortfolioProject[], _colors: PdfThemeColors, _startY: number, _maxProjects: number = 2): number {_if (projects.length === 0) return startY;
   
-  let yPos = startY;
+  let _yPos = startY;
   
   // Check if we need to add a new page
   if (yPos > 250) {
     doc.addPage();
-    yPos = 20;
-  }
+    yPos = 20;}
   
   doc.setFontSize(16);
   doc.setTextColor(colors.heading);
@@ -30,37 +19,31 @@ export function addPortfolioSection(
   yPos += 8;
   
   // Limit the number of projects shown based on maxProjects parameter
-  const displayProjects = projects.slice(0, maxProjects);
+  const _displayProjects = projects.slice(0, maxProjects);
   
-  for (const project of displayProjects) {
-    // Check if we need to add a new page
+  for (const project of displayProjects) {_// Check if we need to add a new page
     if (yPos > 260) {
       doc.addPage();
-      yPos = 20;
-    }
+      yPos = 20;}
     
     doc.setFontSize(14);
     doc.setTextColor(colors.subheading);
     doc.text(project.title, 20, yPos);
     yPos += 6;
     
-    if (project.technologies && project.technologies.length > 0) {
-      doc.setFontSize(10);
+    if (project.technologies && project.technologies.length > 0) {_doc.setFontSize(10);
       doc.setTextColor(colors.text);
-      doc.text(`Technologies: ${project.technologies.join(', ')}`, 20, yPos);
+      doc.text(`Technologies: ${project.technologies.join(', _')}`, 20, yPos);
       yPos += 5;
     }
     
-    if (project.description) {
-      doc.setFontSize(10);
-      const descriptionLines = doc.splitTextToSize(project.description, 170);
-      doc.text(descriptionLines, 20, yPos);
-      yPos += (descriptionLines.length * 5);
-    }
+    if (project.description) {_doc.setFontSize(10);
+      const _descriptionLines = doc.splitTextToSize(project.description, _170);
+      doc.text(descriptionLines, _20, _yPos);
+      yPos += (descriptionLines.length * 5);}
     
     // Add links if available
-    if (project.github_url || project.demo_url) {
-      yPos += 5;
+    if (project.github_url || project.demo_url) {_yPos += 5;
       doc.setFontSize(9);
       doc.setTextColor(colors.accent);
       
@@ -69,8 +52,7 @@ export function addPortfolioSection(
         yPos += 4;
       }
       
-      if (project.demo_url) {
-        doc.text(`Demo: ${project.demo_url}`, 20, yPos);
+      if (project.demo_url) {_doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4;
       }
     }
@@ -79,8 +61,7 @@ export function addPortfolioSection(
   }
   
   // If there are more projects than we're displaying
-  if (projects.length > maxProjects) {
-    doc.setFontSize(10);
+  if (projects.length > maxProjects) {_doc.setFontSize(10);
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;

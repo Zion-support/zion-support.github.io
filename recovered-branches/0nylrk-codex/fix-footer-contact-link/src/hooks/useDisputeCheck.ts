@@ -1,67 +1,47 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
 
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
-  const [disputeId, setDisputeId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export function useDisputeCheck(_projectId?: string, _milestoneId?: string) {_const [isUnderDispute, _setIsUnderDispute] = useState(false);
+  const [disputeStatus, _setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
+  const [disputeId, _setDisputeId] = useState<string | null>(null);
+  const [isLoading, _setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const checkDispute = async () => {
+  useEffect__(() => {
+    const _checkDispute = async () => {
       if (!projectId && !milestoneId) {
         setIsLoading(false);
-        return;
-      }
+        return;}
 
-      try {
-        setIsLoading(true);
+      try {_setIsLoading(true);
         
-        let query = supabase
+        let _query = supabase
           .from("disputes")
-          .select("id, status")
-          .eq("project_id", projectId);
+          .select("id, _status")
+          .eq("project_id", _projectId);
         
-        // If milestone ID is provided, filter by that too
+        // If milestone ID is provided, _filter by that too
         if (milestoneId) {
-          query = query.eq("milestone_id", milestoneId);
-        }
+          query = query.eq("milestone_id", _milestoneId);}
         
         // Order by status priority: open, under_review, resolved, closed
-        query = query.order("status", { ascending: true });
+        query = query.order("status", {_ascending: true});
         
-        const { data, error } = await query;
+        const {_data, _error} = await query;
         
         if (error) throw error;
         
-        if (data && data.length > 0) {
-          // Get the first dispute (highest priority based on status)
+        if (data && data.length > 0) {_// Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
           setDisputeStatus(data[0].status as any);
-          setDisputeId(data[0].id);
-        } else {
-          setIsUnderDispute(false);
+          setDisputeId(data[0].id);} else {_setIsUnderDispute(false);
           setDisputeStatus(null);
-          setDisputeId(null);
-        }
-      } catch (err) {
-        console.error("Error checking dispute status:", err);
-        setIsUnderDispute(false);
+          setDisputeId(null);}
+      } catch (err) {_setIsUnderDispute(false);
         setDisputeStatus(null);
-        setDisputeId(null);
-      } finally {
-        setIsLoading(false);
-      }
+        setDisputeId(null);} finally {_setIsLoading(false);}
     };
     
     checkDispute();
   }, [projectId, milestoneId]);
 
-  return { 
-    isUnderDispute, 
-    disputeStatus, 
-    disputeId,
-    isLoading 
-  };
+  return {_isUnderDispute, _disputeStatus, _disputeId, _isLoading};
 }

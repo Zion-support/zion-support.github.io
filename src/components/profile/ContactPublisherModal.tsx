@@ -1,106 +1,62 @@
 import React from 'react';
 import FocusLock from 'react-focus-lock';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage} from '@/components/ui/form';
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import {_Dialog, _DialogContent, _DialogHeader, _DialogTitle} from '@/components/ui/dialog';
+import {_Form, _FormField, _FormItem, _FormLabel, _FormControl, _FormMessage} from '@/components/ui/form';
 import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'
 import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
 
-interface ContactPublisherModalProps {
-  isOpen: boolean;
+interface ContactPublisherModalProps {_isOpen: boolean;
   onClose: () => void;
   publisherName: string;
   publisherEmail?: string;
-  productId?: string;
-}
+  productId?: string;}
 
-type FormValues = {
-  subject: string;
-  message: string;
-};
+type FormValues = {_subject: string;
+  message: string;};
 
 const schema: yup.ObjectSchema<FormValues> = yup
-  .object({
-    subject: yup
+  .object({_subject: yup
       .string()
-      .min(5, 'Subject must be at least 5 characters')
-      .required('Subject is required'),
-    message: yup
+      .min(5, _'Subject must be at least 5 characters')
+      .required('Subject is required'), _message: yup
       .string()
-      .min(20, 'Message must be at least 20 characters')
+      .min(20, _'Message must be at least 20 characters')
       .required('Message is required')})
   .required();
 
-export function ContactPublisherModal({
-  isOpen,
-  onClose,
-  publisherName,
-  publisherEmail,
-  productId}: ContactPublisherModalProps) {
-  const { user } = useAuth();
+export function ContactPublisherModal(_{_isOpen, _onClose, _publisherName, _publisherEmail, _productId}: ContactPublisherModalProps) {_const { user} = useAuth();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [loginOpen, setLoginOpen] = React.useState(false);
 
-  const form = useForm<FormValues>({
-    resolver: yupResolver(schema) as Resolver<FormValues>,
-    mode: 'onChange',
-    defaultValues: { subject: '', message: '' }});
+  const _form = useForm<FormValues>({_resolver: yupResolver(schema) as Resolver<FormValues>, _mode: 'onChange', _defaultValues: { subject: '', _message: ''}});
 
-  const handleSend = async () => {
-    if (!user) {
+  const _handleSend = async () => {_if (!user) {
       setLoginOpen(true);
-      return;
-    }
-    const values = form.getValues();
+      return;}
+    const _values = form.getValues();
     setIsSubmitting(true);
     setError(null);
-    try {
-      await api.post('/api/messages', {
-        productId,
-        subject: values.subject,
-        body: values.message,
-        fromUser: user.id});
+    try {_await api.post('/api/messages', _{
+        productId, _subject: values.subject, _body: values.message, _fromUser: user.id});
       toast.success('Message sent');
       form.reset();
       onClose();
-    } finally {
-      setIsSubmitting(false);
-    }
+    } finally {_setIsSubmitting(false);}
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+  const _handleKeyDown = (_e: React.KeyboardEvent) => {_if (e.key === 'Escape') {
       e.stopPropagation();
-      onClose();
-    }
+      onClose();}
   };
 
   return (
     <>
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <FocusLock disabled={!isOpen} returnFocus>
+    <Dialog open={_isOpen} onOpenChange={_onClose}>
+      <FocusLock disabled={_!isOpen} returnFocus>
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown={handleKeyDown}
+          onKeyDown={_handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
@@ -110,28 +66,28 @@ export function ContactPublisherModal({
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-          {error && <p className="text-red-500 mb-2">{error}</p>}
-          {publisherEmail && (
+          {_error && <p className="text-red-500 mb-2">{error}</p>}
+          {_publisherEmail && (
             <div className="mb-4 text-zion-slate-light">
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
-              {publisherEmail}
+              {_publisherEmail}
             </a>
           </div>
         )}
-        <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+        <Form {_...form}>
+          <form onSubmit={_(_e) => e.preventDefault()} className="space-y-4">
             <FormField
-              control={form.control}
+              control={_form.control}
               name="subject"
-              render={({ field }: { field: any }) => (
+              render={_(_{ field}: {_field: unknown}) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
-                      {...field}
+                      {_...field}
                     />
                   </FormControl>
                   <FormMessage className="text-red-500" />
@@ -139,16 +95,16 @@ export function ContactPublisherModal({
               )}
             />
             <FormField
-              control={form.control}
+              control={_form.control}
               name="message"
-              render={({ field }: { field: any }) => (
+              render={_(_{ field}: {_field: unknown}) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder={`Message to ${publisherName}...`}
+                      placeholder={_`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-                      {...field}
+                      {_...field}
                     />
                   </FormControl>
                   <FormMessage className="text-red-500" />
@@ -156,19 +112,19 @@ export function ContactPublisherModal({
               )}
             />
             <Button
-              onClick={handleSend}
+              onClick={_handleSend}
               className="w-full"
-              disabled={!form.formState.isValid || isSubmitting}
+              disabled={_!form.formState.isValid || isSubmitting}
             >
               <SendIcon className="mr-2" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {_isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </Form>
         </DialogContent>
       </FocusLock>
     </Dialog>
-    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    <LoginModal isOpen={_loginOpen} onOpenChange={_setLoginOpen} />
     </>
   );
 }

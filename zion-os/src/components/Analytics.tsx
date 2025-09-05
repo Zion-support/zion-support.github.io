@@ -1,55 +1,40 @@
 "use client";
 
-import { useEffect } from "react";
 
-interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
+interface FirstInputEntry extends PerformanceEntry {_processingStart: number;
   processingEnd: number;
-  target?: Element;
-}
+  target?: Element;}
 
-export function Analytics() {
-  useEffect(() => {
+export function Analytics() {_useEffect__(() => {
     // Performance monitoring
     if (typeof window !== "undefined") {
       // Core Web Vitals monitoring
-      const observer = new PerformanceObserver((list) => {
+      const _observer = new PerformanceObserver(_(list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === "largest-contentful-paint") {
-            console.log("LCP:", entry.startTime);
-          }
-          if (entry.entryType === "first-input") {
-            const firstInputEntry = entry as FirstInputEntry;
-            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
-          }
+          if (entry.entryType === "largest-contentful-paint") {}
+          if (entry.entryType === "first-input") {_const _firstInputEntry = entry as FirstInputEntry;}
         }
       });
 
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+      observer.observe({_entryTypes: ["largest-contentful-paint", _"first-input"]});
 
       // Cumulative Layout Shift monitoring
-      let cls = 0;
-      const observer2 = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+      let _cls = 0;
+      const _observer2 = new PerformanceObserver(_(list) => {_for (const entry of list.getEntries()) {
           if (entry.entryType === "layout-shift") {
-            const layoutShiftEntry = entry as any;
-            cls += layoutShiftEntry.value;
-          }
+            const _layoutShiftEntry = entry as any;
+            cls += layoutShiftEntry.value;}
         }
       });
 
-      observer2.observe({ entryTypes: ["layout-shift"] });
+      observer2.observe({_entryTypes: ["layout-shift"]});
 
       // Report metrics on page unload
-      window.addEventListener("beforeunload", () => {
-        console.log("CLS:", cls);
-      });
+      window.addEventListener(_"beforeunload", _() => {});
 
       // Cleanup
-      return () => {
-        observer.disconnect();
-        observer2.disconnect();
-      };
+      return () => {_observer.disconnect();
+        observer2.disconnect();};
     }
   }, []);
 

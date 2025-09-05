@@ -1,26 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
-import { getGitStatus, requireRoles } from "../../../utils/devAccess";
+import type {_NextApiRequest, _NextApiResponse} from "next";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const identity = requireRoles(req, res, ["admin", "maintainer"]);
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _identity = requireRoles(req, _res, _["admin", _"maintainer"]);
   if (!identity) return;
 
   if (req.method === "GET") {
-    const nodes = getSourceMapWithExistence();
-    const git = getGitStatus();
-    res.status(200).json({ nodes, status: { gitConnected: git.connected, gitBranch: git.branch } });
+    const _nodes = getSourceMapWithExistence();
+    const _git = getGitStatus();
+    res.status(200).json({ nodes, _status: { gitConnected: git.connected, _gitBranch: git.branch} });
     return;
   }
 
-  if (req.method === "POST") {
-    const { path: repoRelativePath } = req.body || {};
-    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-      res.status(400).json({ error: "Invalid path" });
+  if (req.method === "POST") {_const { path: repoRelativePath} = req.body || {};
+    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {_res.status(400).json({ error: "Invalid path"});
       return;
     }
-    const result = deployBasicTemplateForPath(repoRelativePath);
-    res.status(200).json({ ok: true, result });
+    const _result = deployBasicTemplateForPath(repoRelativePath);
+    res.status(200).json({_ok: true, _result});
     return;
   }
 

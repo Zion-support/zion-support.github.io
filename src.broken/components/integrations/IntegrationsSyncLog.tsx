@@ -1,9 +1,7 @@
 import React from 'react';
-export function IntegrationsSyncLog() {
-  return (
+export function IntegrationsSyncLog() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

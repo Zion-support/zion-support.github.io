@@ -1,24 +1,10 @@
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card";
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
+import {_Card, _CardContent, _CardDescription, _CardFooter, _CardHeader, _CardTitle} from "@/components/ui/card";
 
-export function UsageStats() {
-  const handleSaveChanges = () => {
+export function UsageStats() {_const _handleSaveChanges = () => {
     toast({
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."});
+      title: "Limits updated", _description: "The new usage limits have been saved successfully."});
   };
 
   return (
@@ -44,7 +30,7 @@ export function UsageStats() {
                 <div className="text-sm font-medium">Monthly job posting limit</div>
                 <Badge variant="outline">25 / 50</Badge>
               </div>
-              <Progress value={50} className="h-2" />
+              <Progress value={_50} className="h-2" />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
@@ -56,7 +42,7 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
         
@@ -73,7 +59,7 @@ export function UsageStats() {
                 <div className="text-sm font-medium">Monthly contact credits</div>
                 <Badge variant="outline">178 / 500</Badge>
               </div>
-              <Progress value={35.6} className="h-2" />
+              <Progress value={_35.6} className="h-2" />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
@@ -85,7 +71,7 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
         
@@ -102,7 +88,7 @@ export function UsageStats() {
                 <div className="text-sm font-medium">AI matching credits</div>
                 <Badge variant="outline">435 / 1000</Badge>
               </div>
-              <Progress value={43.5} className="h-2" />
+              <Progress value={_43.5} className="h-2" />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
@@ -114,7 +100,7 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
         
@@ -131,7 +117,7 @@ export function UsageStats() {
                 <div className="text-sm font-medium">Monthly budget</div>
                 <Badge variant="outline">$1,250 / $5,000</Badge>
               </div>
-              <Progress value={25} className="h-2" />
+              <Progress value={_25} className="h-2" />
             </div>
             <div className="grid gap-4">
               <div className="grid grid-cols-3 items-center gap-4">
@@ -154,7 +140,7 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+            <Button size="sm" onClick={_handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
       </div>

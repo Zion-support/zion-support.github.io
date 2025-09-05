@@ -1,22 +1,15 @@
-import { useState, useEffect } from 'react';
-import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert';
 
-export const OfflineIndicator = () => {
-  const [isOnline, setIsOnline] = useState(true);
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false);
+export const _OfflineIndicator = () => {_const [isOnline, _setIsOnline] = useState(true);
+  const [showOfflineAlert, _setShowOfflineAlert] = useState(false);
 
-  useEffect(() => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine;
+  useEffect__(() => {
+    const _updateOnlineStatus = () => {
+      const _online = navigator.onLine;
       setIsOnline(online);
       
       if (!online) {
-        setShowOfflineAlert(true);
-      } else if (showOfflineAlert) {
-        // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000);
-      }
+        setShowOfflineAlert(true);} else if (showOfflineAlert) {_// Show brief "back online" message then hide
+        setTimeout__(() => setShowOfflineAlert(false), _3000);}
     };
 
     // Set initial status
@@ -26,25 +19,23 @@ export const OfflineIndicator = () => {
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
 
-    return () => {
-      window.removeEventListener('online', updateOnlineStatus);
-      window.removeEventListener('offline', updateOnlineStatus);
-    };
+    return () => {_window.removeEventListener('online', _updateOnlineStatus);
+      window.removeEventListener('offline', _updateOnlineStatus);};
   }, [showOfflineAlert]);
 
   if (!showOfflineAlert) return null;
 
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
-      <Alert variant={isOnline ? "default" : "destructive"}>
+      <Alert variant={_isOnline ? "default" : "destructive"}>
         <div className="flex items-center gap-2">
-          {isOnline ? (
+          {_isOnline ? (
             <Wifi className="h-4 w-4" />
           ) : (
             <WifiOff className="h-4 w-4" />
           )}
           <AlertDescription>
-            {isOnline ? (
+            {_isOnline ? (
               'Connection restored'
             ) : (
               'You are offline. Some features may not work.'

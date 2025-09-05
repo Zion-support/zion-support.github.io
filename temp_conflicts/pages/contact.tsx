@@ -1,29 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function ContactPage() {
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
+export default function ContactPage() {_const [formData, _setFormData] = React.useState({
+    name: '', _email: '', _company: '', _message: ''});
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
+    // Handle form submission};
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const _handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {_setFormData({
+      ...formData, _[e.target.name]: e.target.value});
   };
 
   return (
@@ -36,13 +23,13 @@ export default function ContactPage() {
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Get In Touch
@@ -54,19 +41,19 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {_/* Contact Form Section */}
       <section className="py-20 px-6 bg-slate-800">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
+            {_/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _x: -30}}
+              animate={_{ opacity: 1, _x: 0}}
+              transition={_{ duration: 0.8}}
               className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-8 backdrop-blur-xl"
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={_handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
                     Full Name *
@@ -76,8 +63,8 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={_formData.name}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
                     placeholder="Enter your full name"
                   />
@@ -92,8 +79,8 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={_formData.email}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
                     placeholder="Enter your email address"
                   />
@@ -107,8 +94,8 @@ export default function ContactPage() {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
+                    value={_formData.company}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
                     placeholder="Enter your company name"
                   />
@@ -122,9 +109,9 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
+                    rows={_5}
+                    value={_formData.message}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none"
                     placeholder="Tell us about your project or how we can help"
                   />
@@ -139,11 +126,11 @@ export default function ContactPage() {
               </form>
             </motion.div>
 
-            {/* Contact Information */}
+            {_/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={_{ opacity: 0, _x: 30}}
+              animate={_{ opacity: 1, _x: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
               className="space-y-8"
             >
               <div>
@@ -199,7 +186,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Additional Info */}
+              {_/* Additional Info */}
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">Why Choose Zion Tech Group?</h3>
                 <ul className="space-y-2 text-white/70">

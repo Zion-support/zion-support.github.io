@@ -1,9 +1,7 @@
 import React from 'react';
-export function ErrorOverlay() {
-  return (
+export function ErrorOverlay() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

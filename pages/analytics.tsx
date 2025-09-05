@@ -1,33 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
 
 
-export default function AnalyticsPage() {
-  const features = [
+export default function AnalyticsPage() {_const _features = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Real-time Dashboards',
-      description: 'Live monitoring and visualization of your key metrics'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      title: 'Predictive Analytics',
-      description: 'AI-powered forecasting and trend analysis'
-    },
-    {
-      icon: <PieChart className="w-8 h-8 text-white" />,
-      title: 'Custom Reports',
-      description: 'Build and schedule personalized reports'
-    },
-    {
-      icon: <Activity className="w-8 h-8 text-white" />,
-      title: 'Performance Monitoring',
-      description: 'Track system performance and user behavior'
-    }
+      icon: <BarChart3 className="w-8 h-8 text-white" />, _title: 'Real-time Dashboards', _description: 'Live monitoring and visualization of your key metrics'},
+    {_icon: <TrendingUp className="w-8 h-8 text-white" />, _title: 'Predictive Analytics', _description: 'AI-powered forecasting and trend analysis'},
+    {_icon: <PieChart className="w-8 h-8 text-white" />, _title: 'Custom Reports', _description: 'Build and schedule personalized reports'},
+    {_icon: <Activity className="w-8 h-8 text-white" />, _title: 'Performance Monitoring', _description: 'Track system performance and user behavior'}
   ];
 
-  const benefits = [
+  const _benefits = [
     'Make data-driven decisions',
     'Identify growth opportunities',
     'Optimize user experience',
@@ -44,7 +27,7 @@ export default function AnalyticsPage() {
       </Head>
 
       <div className="min-h-screen bg-black">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="pt-32 pb-20 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -80,7 +63,7 @@ export default function AnalyticsPage() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {_/* Features Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -93,17 +76,17 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {_features.map(_(feature, _index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                    {feature.icon}
+                    {_feature.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
+                    {_feature.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    {feature.description}
+                    {_feature.description}
                   </p>
                 </div>
               ))}
@@ -111,7 +94,7 @@ export default function AnalyticsPage() {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {_/* Benefits Section */}
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -120,12 +103,12 @@ export default function AnalyticsPage() {
                   Transform Data into Action
                 </h2>
                 <div className="space-y-6">
-                  {benefits.map((benefit, index) => (
+                  {_benefits.map(_(benefit, _index) => (
                     <div key={index} className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
-                      <span className="text-gray-300 text-lg">{benefit}</span>
+                      <span className="text-gray-300 text-lg">{_benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -152,7 +135,7 @@ export default function AnalyticsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">

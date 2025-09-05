@@ -1,4 +1,3 @@
 // Utility functions for env-polyfill;
-export const env-polyfill = {;
-  // TODO: Implement utility functions;
-};
+export const env-polyfill = {_;
+  // TODO: Implement utility functions;};

@@ -1,51 +1,35 @@
 
-import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { format, isPast, parseISO } from "date-fns";
+import React, {_useEffect, _useState} from "react";
 import Link from "next/link";
-import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar";
-import {logErrorToProduction} from '@/utils/productionLogger';
 
-export function UpcomingInterviewsCard() {
-
-  const { fetchInterviews } = useInterviews();
+export function UpcomingInterviewsCard() {_const { fetchInterviews} = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const loadInterviews = async () => {
+  useEffect__(() => {_const _loadInterviews = async () => {
       setIsLoading(true);
       try {
-        const interviews = await fetchInterviews();
+        const _interviews = await fetchInterviews();
         
         // Filter for confirmed interviews in the future
-        const upcoming = interviews
+        const _upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-          .sort((a, b) => 
+          .sort(_(a, _b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
-          .slice(0, 3); // Take only the next 3 interviews
+          .slice(0, _3); // Take only the next 3 interviews
         
-        setUpcomingInterviews(upcoming);
-      } catch (error) {
-        logErrorToProduction('Error loading upcoming interviews:', { data: error });
-      } finally {
-        setIsLoading(false);
-      }
+        setUpcomingInterviews(upcoming);} catch (error) {_logErrorToProduction('Error loading upcoming interviews:', _{ data: error});
+      } finally {_setIsLoading(false);}
     };
 
     loadInterviews();
   }, []);
 
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
@@ -55,7 +39,7 @@ export function UpcomingInterviewsCard() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {[1, 2].map(i => (
+            {[1, _2].map(i => (
               <div key={i} className="flex items-center gap-3 animate-pulse">
                 <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
                 <div className="flex-1">
@@ -70,8 +54,7 @@ export function UpcomingInterviewsCard() {
     );
   }
 
-  if (upcomingInterviews.length === 0) {
-    return (
+  if (upcomingInterviews.length === 0) {_return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
@@ -89,8 +72,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    );
-  }
+    );}
 
   return (
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -102,38 +84,38 @@ export function UpcomingInterviewsCard() {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
+          {_upcomingInterviews.map(interview => {
+            const _interviewDate = parseISO(interview.scheduled_date);
+            const _formattedDate = format(interviewDate, _'EEE, _MMM d');
+            const _formattedTime = format(interviewDate, _'h:mm a');
             
             // Determine if interview is happening soon (within 30 minutes)
-            const now = new Date();
-            const isStartingSoon = 
+            const _now = new Date();
+            const _isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
             
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {interview.client_avatar || interview.talent_avatar ? (
+                  {_interview.client_avatar || interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
-                      alt={interview.client_name || interview.talent_name}
+                      alt={_interview.client_name || interview.talent_name}
                       loading="lazy"
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                      {_(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
                   )}
                 </Avatar>
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
-                      {interview.title || "Interview"}
+                      {_interview.title || "Interview"}
                     </p>
-                    {isStartingSoon && (
+                    {_isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
@@ -141,7 +123,7 @@ export function UpcomingInterviewsCard() {
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
-                    {formattedDate} at {formattedTime}
+                    {_formattedDate} at {_formattedTime}
                   </div>
                 </div>
               </div>

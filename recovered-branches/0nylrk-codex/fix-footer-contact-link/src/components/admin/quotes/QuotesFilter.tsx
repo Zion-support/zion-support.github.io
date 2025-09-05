@@ -1,40 +1,18 @@
 import React from "react";
-import { Calendar, RefreshCw } from "@/components/icons";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
+import type {_DateRange} from "@/types/dateRange";
+import type {_QuoteStatus} from "@/types/quotes";
 
-interface QuotesFilterProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
+interface QuotesFilterProps {_searchQuery: string;
+  setSearchQuery: (_value: string) => void;
   statusFilter: QuoteStatus | 'all';
-  setStatusFilter: (value: QuoteStatus | 'all') => void;
+  setStatusFilter: (_value: QuoteStatus | 'all') => void;
   archiveFilter: 'active' | 'archived' | 'all';
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+  setArchiveFilter: (_value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
-  setDateRange: (range: DateRange | undefined) => void;
-  onReset: () => void;
-}
+  setDateRange: (_range: DateRange | undefined) => void;
+  onReset: () => void;}
 
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter,
-  dateRange,
-  setDateRange,
-  onReset
-}) => {
-  return (
-    <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
+export const QuotesFilter: React.FC<QuotesFilterProps> = (_{_searchQuery, _setSearchQuery, _statusFilter, _setStatusFilter, _archiveFilter, _setArchiveFilter, _dateRange, _setDateRange, _onReset}) => {_return (_<Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           <div className="relative">
@@ -42,13 +20,13 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               placeholder="Search quotes..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={_(e) => setSearchQuery(e.target.value)}
             />
           </div>
           
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
-            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
+            <Select value={_statusFilter} onValueChange={_(_value: unknown) => setStatusFilter(value)}>
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
@@ -65,7 +43,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
           
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
+            <Select value={_archiveFilter} onValueChange={_(_value: unknown) => setArchiveFilter(value)}>
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
                 <SelectValue placeholder="Archive Status" />
               </SelectTrigger>
@@ -86,11 +64,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
                 >
                   <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />
-                  {dateRange?.from ? (
+                  {_dateRange?.from ? (
                     dateRange.to ? (
                       <>
-                        {format(dateRange.from, "LLL dd, y")} -{" "}
-                        {format(dateRange.to, "LLL dd, y")}
+                        {format(dateRange.from, _"LLL dd, _y")} -{_" "}
+                        {_format(dateRange.to, _"LLL dd, _y")}
                       </>
                     ) : (
                       format(dateRange.from, "LLL dd, y")
@@ -104,10 +82,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
                   mode="range"
-                  defaultMonth={dateRange?.from}
-                  selected={dateRange}
-                  onSelect={setDateRange}
-                  numberOfMonths={2}
+                  defaultMonth={_dateRange?.from}
+                  selected={_dateRange}
+                  onSelect={_setDateRange}
+                  numberOfMonths={_2}
                 />
               </PopoverContent>
             </Popover>
@@ -117,7 +95,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         <div className="mt-4 flex justify-end">
           <Button 
             variant="outline" 
-            onClick={onReset}
+            onClick={_onReset}
             className="border-zion-blue-light text-zion-slate-light"
           >
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters

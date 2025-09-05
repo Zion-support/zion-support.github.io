@@ -1,51 +1,32 @@
 
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import { checkNewRegistration } from "@/utils/authUtils";
-import { useNavigate } from 'react-router-dom';
+import type {_UserProfile} from "@/types/auth";
 
 /**
  * Custom hook for auth event handling
  */
-export function useAuthEventHandlers(
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
-  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
-) {
-  const navigate = useNavigate();
+export function useAuthEventHandlers(_setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>, _setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>) {_const _navigate = useNavigate();
 
-  const handleSignedIn = (mappedUser: UserProfile) => {
+  const _handleSignedIn = (_mappedUser: UserProfile) => {
     toast({
-      title: "Welcome back!",
-      description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,
+      title: "Welcome back!", _description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,
       variant: "default"});
     
     // Check for new registration and send welcome email if needed
-    setTimeout(() => {
-      if (mappedUser) {
-        checkNewRegistration(mappedUser);
-      }
+    setTimeout__(() => {_if (mappedUser) {
+        checkNewRegistration(mappedUser);}
     }, 0);
 
     // Check if user needs to complete onboarding
-    if (!mappedUser.profileComplete && navigate) {
-      setOnboardingStep('profile');
+    if (!mappedUser.profileComplete && navigate) {_setOnboardingStep('profile');
       toast({
-        title: "Complete your profile",
-        description: "Please complete your profile information to get started",
-        variant: "default"});
+        title: "Complete your profile", _description: "Please complete your profile information to get started", _variant: "default"});
       navigate('/onboarding');
     }
   };
 
-  const handleSignedOut = () => {
-    toast({
-      title: "Signed out",
-      description: "You have been successfully logged out",
-      variant: "default"});
+  const _handleSignedOut = () => {_toast({
+      title: "Signed out", _description: "You have been successfully logged out", _variant: "default"});
   };
 
-  return {
-    handleSignedIn,
-    handleSignedOut
-  };
+  return {_handleSignedIn, _handleSignedOut};
 }

@@ -1,5 +1,4 @@
-export interface BlockchainWeb3Service {
-  id: string;
+export interface BlockchainWeb3Service {_id: string;
   name: string;
   tagline: string;
   description: string;
@@ -10,8 +9,7 @@ export interface BlockchainWeb3Service {
     currency: string;
     trialDays: number;
     setupTime: string;
-    enterprise: string;
-  };
+    enterprise: string;};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -36,20 +34,8 @@ export interface BlockchainWeb3Service {
 }
 
 export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
-  {
-    id: 'decentralized-identity-management',
-    name: 'Decentralized Identity Management Platform',
-    tagline: 'Self-sovereign identity with zero-knowledge proof verification',
-    description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.',
-    category: 'Blockchain & Web3',
-    price: {
-      monthly: 99,
-      yearly: 990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '1-2 days',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'decentralized-identity-management', _name: 'Decentralized Identity Management Platform', _tagline: 'Self-sovereign identity with zero-knowledge proof verification', _description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.', _category: 'Blockchain & Web3', _price: {
+      monthly: 99, _yearly: 990, _currency: 'USD', _trialDays: 30, _setupTime: '1-2 days', _enterprise: 'Custom pricing'},
     features: [
       'Self-sovereign identity management',
       'Zero-knowledge proof verification',
@@ -103,20 +89,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.8,
     reviews: 850
   },
-  {
-    id: 'ai-powered-defi-yield-optimizer',
-    name: 'AI-Powered DeFi Yield Optimizer',
-    tagline: 'Intelligent yield farming with AI-driven strategy optimization',
-    description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',
-    category: 'DeFi & Yield Optimization',
-    price: {
-      monthly: 199,
-      yearly: 1990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '1-3 days',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'ai-powered-defi-yield-optimizer', _name: 'AI-Powered DeFi Yield Optimizer', _tagline: 'Intelligent yield farming with AI-driven strategy optimization', _description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, _manages risk, _and maximizes returns across multiple blockchain networks and protocols.', _category: 'DeFi & Yield Optimization', _price: {
+      monthly: 199, _yearly: 1990, _currency: 'USD', _trialDays: 14, _setupTime: '1-3 days', _enterprise: 'Custom pricing'},
     features: [
       'AI-powered yield strategy optimization',
       'Multi-chain protocol support',
@@ -141,7 +115,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Institutional investors',
       'Crypto hedge funds',
       'Family offices',
-      'Retail crypto investors',
+      'Retail window.crypto investors',
       'DeFi protocol developers'
     ],
     marketPosition: 'Leading AI-powered DeFi optimization platform. Competes with Yearn Finance (free), Harvest Finance (free), and Beefy Finance (free). Our advantage: AI optimization and risk management.',
@@ -170,20 +144,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.9,
     reviews: 6200
   },
-  {
-    id: 'nft-marketplace-intelligence-platform',
-    name: 'NFT Marketplace Intelligence Platform',
-    tagline: 'AI-powered NFT analytics, valuation, and trading insights',
-    description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.',
-    category: 'NFT & Digital Assets',
-    price: {
-      monthly: 149,
-      yearly: 1490,
-      currency: 'USD',
-      trialDays: 7,
-      setupTime: 'Immediate',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'nft-marketplace-intelligence-platform', _name: 'NFT Marketplace Intelligence Platform', _tagline: 'AI-powered NFT analytics, _valuation, _and trading insights', _description: 'Comprehensive NFT intelligence platform that provides real-time analytics, _AI-powered valuation models, _and trading insights to maximize NFT investment returns.', _category: 'NFT & Digital Assets', _price: {
+      monthly: 149, _yearly: 1490, _currency: 'USD', _trialDays: 7, _setupTime: 'Immediate', _enterprise: 'Custom pricing'},
     features: [
       'AI-powered NFT valuation models',
       'Real-time market analytics',
@@ -237,20 +199,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.7,
     reviews: 2100
   },
-  {
-    id: 'blockchain-supply-chain-traceability',
-    name: 'Blockchain Supply Chain Traceability Platform',
-    tagline: 'End-to-end transparency with immutable supply chain tracking',
-    description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real-time tracking, compliance monitoring, and sustainability verification.',
-    category: 'Supply Chain & Traceability',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2-4 weeks',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'blockchain-supply-chain-traceability', _name: 'Blockchain Supply Chain Traceability Platform', _tagline: 'End-to-end transparency with immutable supply chain tracking', _description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, _enabling real-time tracking, _compliance monitoring, _and sustainability verification.', _category: 'Supply Chain & Traceability', _price: {
+      monthly: 299, _yearly: 2990, _currency: 'USD', _trialDays: 30, _setupTime: '2-4 weeks', _enterprise: 'Custom pricing'},
     features: [
       'End-to-end supply chain tracking',
       'Real-time transparency monitoring',
@@ -304,20 +254,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.8,
     reviews: 680
   },
-  {
-    id: 'web3-social-media-platform',
-    name: 'Web3 Social Media Platform',
-    tagline: 'Decentralized social networking with content ownership',
-    description: 'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',
-    category: 'Web3 & Social Media',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      currency: 'USD',
-      trialDays: 0,
-      setupTime: 'Immediate',
-      enterprise: 'Custom pricing'
-    },
+  {_id: 'web3-social-media-platform', _name: 'Web3 Social Media Platform', _tagline: 'Decentralized social networking with content ownership', _description: 'Revolutionary Web3 social media platform where users own their content, _earn from engagement, _and maintain complete control over their data and privacy.', _category: 'Web3 & Social Media', _price: {
+      monthly: 0, _yearly: 0, _currency: 'USD', _trialDays: 0, _setupTime: 'Immediate', _enterprise: 'Custom pricing'},
     features: [
       'Decentralized content ownership',
       'Token-based reward system',

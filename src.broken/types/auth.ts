@@ -1,4 +1,3 @@
 // Type definitions for auth;
-interface auth {;
-  // TODO: Add proper type definitions;
-};
+interface auth {_;
+  // TODO: Add proper type definitions;};

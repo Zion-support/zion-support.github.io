@@ -1,10 +1,9 @@
 import React from 'react'
 ;
-export export export default function dropdown-menu()   {;
+export export export default function dropdown-menu()   {_;
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

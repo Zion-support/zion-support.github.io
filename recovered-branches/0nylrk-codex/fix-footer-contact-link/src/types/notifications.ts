@@ -1,5 +1,4 @@
-export interface Notification {
-  id: string;
+export interface Notification {_id: string;
   user_id: string;
   title: string;
   message: string;
@@ -7,5 +6,4 @@ export interface Notification {
   related_id?: string;
   read: boolean;
   created_at: string;
-  updated_at: string;
-}
+  updated_at: string;}

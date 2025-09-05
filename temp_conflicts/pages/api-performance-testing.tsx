@@ -1,19 +1,12 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 
-export default function ApiPerformanceTestingPage() {
-	const features = [
-		'k6/Gatling-compatible test runner',
-		'SLO-aware latency reports',
-		'Regression baselines per endpoint',
-		'CI checks and PR annotations',
-		'Synthetic traffic for staging'
+export default function ApiPerformanceTestingPage() {_const _features = [
+		'k6/Gatling-compatible test runner', _'SLO-aware latency reports', _'Regression baselines per endpoint', _'CI checks and PR annotations', _'Synthetic traffic for staging'
 	];
 
-	return (
-		<>
-			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
+	return (_<>
+			<SEO title="API Performance Testing" description="Load, _latency and regression testing-as-a-service with CI and SLOs." />
 			<main id="main" className="container mx-auto px-4 py-24">
 				<section className="max-w-5xl mx-auto">
 					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
@@ -22,7 +15,7 @@ export default function ApiPerformanceTestingPage() {
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
+								<p className="text-gray-200">{_f}</p>
 							</div>
 						))}
 					</div>

@@ -1,36 +1,25 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
 
-export default function SignUpPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
+export default function SignUpPage() {_const [name, _setName] = useState("");
+  const [email, _setEmail] = useState("");
+  const [password, _setPassword] = useState("");
+  const [confirmPassword, _setConfirmPassword] = useState("");
+  const [isLoading, _setIsLoading] = useState(false);
+  const [error, _setError] = useState("");
+  const { register} = useAuth();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     setIsLoading(true);
     setError("");
 
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       setIsLoading(false);
-      return;
-    }
+      return;}
 
-    try {
-      await register(name, email, password);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {
-      setIsLoading(false);
-    }
+    try {_await register(name, _email, _password);} catch (error) {_setError(error instanceof Error ? error.message : "Registration failed");} finally {_setIsLoading(false);}
   };
 
   return (
@@ -42,7 +31,7 @@ export default function SignUpPage() {
             Start your free trial and launch sovereign AI-powered digital economies
           </p>
           
-          {/* Free Trial Badge */}
+          {_/* Free Trial Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">
             <span className="text-green-400 text-sm font-medium">
               🚀 Free Trial Available
@@ -50,7 +39,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        {/* What You Get Section */}
+        {_/* What You Get Section */}
         <div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30">
           <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3>
           <ul className="space-y-2 text-sm text-zinc-400">
@@ -74,8 +63,8 @@ export default function SignUpPage() {
         </div>
 
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {error && (
+          <form onSubmit={_handleSubmit} className="space-y-6">
+            {_error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
                 <p className="text-red-400 text-sm">{error}</p>
               </div>
@@ -89,8 +78,8 @@ export default function SignUpPage() {
                 id="name"
                 type="text"
                 required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={_name}
+                onChange={_(_e) => setName(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your full name"
               />
@@ -104,8 +93,8 @@ export default function SignUpPage() {
                 id="email"
                 type="email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={_email}
+                onChange={_(_e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your email address"
               />
@@ -119,8 +108,8 @@ export default function SignUpPage() {
                 id="password"
                 type="password"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={_password}
+                onChange={_(_e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Create a strong password"
               />
@@ -135,8 +124,8 @@ export default function SignUpPage() {
                 id="confirmPassword"
                 type="password"
                 required
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                value={_confirmPassword}
+                onChange={_(_e) => setConfirmPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Confirm your password"
               />
@@ -144,16 +133,16 @@ export default function SignUpPage() {
 
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={_isLoading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
             >
-              {isLoading ? "Creating Account..." : "Start Free Trial"}
+              {_isLoading ? "Creating Account..." : "Start Free Trial"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-zinc-400 text-sm">
-              Already have an account?{" "}
+              Already have an account?{_" "}
               <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">
                 Sign in
               </Link>
@@ -163,11 +152,11 @@ export default function SignUpPage() {
 
         <div className="text-center">
           <p className="text-zinc-500 text-xs">
-            By signing up, you agree to our{" "}
+            By signing up, you agree to our{_" "}
             <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
               Terms of Service
-            </Link>{" "}
-            and{" "}
+            </Link>{_" "}
+            and{_" "}
             <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
               Privacy Policy
             </Link>

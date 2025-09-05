@@ -1,9 +1,7 @@
 import React from 'react';
-export function SidebarMenuButton() {
-  return (
+export function SidebarMenuButton() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

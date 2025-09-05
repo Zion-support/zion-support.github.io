@@ -1,10 +1,9 @@
 import React from 'react'
 ;
-export export export default function radio-group()   {;
+export export export default function radio-group()   {_;
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

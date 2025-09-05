@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MarketSignals: NextPage = () => {
-  return (
+const MarketSignals: NextPage = () => {_return (
     <div>
       <Head>
         <title>AI Market Signals Agent</title>
@@ -17,7 +16,6 @@ const MarketSignals: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  );};
 
 export default MarketSignals;

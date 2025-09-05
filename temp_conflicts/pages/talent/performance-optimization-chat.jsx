@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const PerformanceOptimizationChat = () => {
-  return (
+const _PerformanceOptimizationChat = () => {_return (
     <div>
       <Head>
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const PerformanceOptimizationChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default PerformanceOptimizationChat;

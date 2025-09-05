@@ -1,5 +1,4 @@
 // Hook for usePoints;
-export const useUsePoints: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUsePoints: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

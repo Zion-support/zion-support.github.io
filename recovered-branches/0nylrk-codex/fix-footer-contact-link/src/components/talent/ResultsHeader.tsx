@@ -1,13 +1,9 @@
 
-import { Loader2 } from "lucide-react";
 
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number;
-}
+interface ResultsHeaderProps {_isLoading: boolean;
+  resultCount: number;}
 
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
-  return (
+export function ResultsHeader(_{_isLoading, _resultCount}: ResultsHeaderProps) {_return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (
         <div className="flex items-center">
@@ -19,7 +15,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
           ) : (
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+            `Found ${resultCount} talent${_resultCount !== 1 ? 's' : ''}`
           )}
         </span>
       )}

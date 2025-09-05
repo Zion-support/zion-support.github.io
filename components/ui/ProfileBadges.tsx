@@ -1,9 +1,6 @@
 import React from 'react';
-import type { KycProfile } from '../../utils/kyc';
-import { getBadgeLabels } from '../../utils/kyc';
-import { VerifiedBadge } from './VerifiedBadge';
+import type {_KycProfile} from '../../utils/kyc';
 
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-  const labels = getBadgeLabels(profile || undefined);
+export function ProfileBadges(_{_profile}: {_profile?: KycProfile | null}) {_const _labels = getBadgeLabels(profile || undefined);
   return <VerifiedBadge labels={labels} />;
 }

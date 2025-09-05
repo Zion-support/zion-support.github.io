@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const BusinessIntelligenceChat = () => {
-  return (
+const _BusinessIntelligenceChat = () => {_return (
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const BusinessIntelligenceChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default BusinessIntelligenceChat;

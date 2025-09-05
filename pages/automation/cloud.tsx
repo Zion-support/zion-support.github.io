@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react';
 
-export default function CloudAutomationHub() {
-  const [logs, setLogs] = useState<any[]>([]);
+export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
 
-  useEffect(() => {
+  useEffect__(() => {
     fetch('/api/automation/cloud-logs')
-      .then((r) => r.json())
-      .then((d) => setLogs(d.logs || []))
-      .catch(() => setLogs([]));
-  }, []);
+      .then(_(r) => r.json())
+      .then(_(d) => setLogs(d.logs || []))
+      .catch__(() => setLogs([]));}, []);
 
   return (
     <div className="space-y-6">
@@ -35,11 +32,11 @@ export default function CloudAutomationHub() {
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
-          {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
-          {logs.map((log) => (
+          {_logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+          {_logs.map(_(log) => (
             <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt || log.file}</span>
-              <span className="text-gray-600">{log.insights?.theme}</span>
+              <span>{_log.generatedAt || log.file}</span>
+              <span className="text-gray-600">{_log.insights?.theme}</span>
             </li>
           ))}
         </ul>

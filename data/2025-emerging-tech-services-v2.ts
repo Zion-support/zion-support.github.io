@@ -1,5 +1,4 @@
-export interface EmergingTechService {
-  id: string;
+export interface EmergingTechService {_id: string;
   name: string;
   tagline: string;
   description: string;
@@ -10,8 +9,7 @@ export interface EmergingTechService {
     currency: string;
     trialDays: number;
     setupTime: string;
-    enterprise: number;
-  };
+    enterprise: number;};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -38,20 +36,8 @@ export interface EmergingTechService {
 }
 
 export const emergingTechServicesV2: EmergingTechService[] = [
-  {
-    id: 'space-mining-platform',
-    name: 'Space Mining Platform',
-    tagline: 'Revolutionary asteroid mining and space resource extraction',
-    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
-    category: 'Space & Emerging Tech',
-    price: {
-      monthly: 999,
-      yearly: 9990,
-      currency: 'USD',
-      trialDays: 7,
-      setupTime: '24 hours',
-      enterprise: 4999
-    },
+  {_id: 'space-mining-platform', _name: 'Space Mining Platform', _tagline: 'Revolutionary asteroid mining and space resource extraction', _description: 'Advanced platform that enables automated asteroid mining, _resource extraction, _and space resource management using cutting-edge robotics and AI technology.', _category: 'Space & Emerging Tech', _price: {
+      monthly: 999, _yearly: 9990, _currency: 'USD', _trialDays: 7, _setupTime: '24 hours', _enterprise: 4999},
     features: [
       'Asteroid identification and mapping',
       'Automated mining operations',
@@ -107,20 +93,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$3.5B space mining market',
     growthRate: '85% annually'
   },
-  {
-    id: 'quantum-bio-computing-platform',
-    name: 'Quantum Bio-Computing Platform',
-    tagline: 'Quantum computing meets biological systems',
-    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-    category: 'Quantum & Emerging Tech',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '8 hours',
-      enterprise: 2499
-    },
+  {_id: 'quantum-bio-computing-platform', _name: 'Quantum Bio-Computing Platform', _tagline: 'Quantum computing meets biological systems', _description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, _drug discovery, _and genetic analysis.', _category: 'Quantum & Emerging Tech', _price: {
+      monthly: 599, _yearly: 5990, _currency: 'USD', _trialDays: 14, _setupTime: '8 hours', _enterprise: 2499},
     features: [
       'Quantum-biological hybrid processing',
       'DNA sequence analysis',
@@ -176,20 +150,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$12B quantum bio-computing market',
     growthRate: '65% annually'
   },
-  {
-    id: 'brain-computer-interface-platform',
-    name: 'Brain-Computer Interface Platform',
-    tagline: 'Direct neural interface for human-computer interaction',
-    description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-    category: 'Emerging Tech',
-    price: {
-      monthly: 399,
-      yearly: 3990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '6 hours',
-      enterprise: 1599
-    },
+  {_id: 'brain-computer-interface-platform', _name: 'Brain-Computer Interface Platform', _tagline: 'Direct neural interface for human-computer interaction', _description: 'Advanced platform that enables direct communication between the human brain and computers, _opening new possibilities for accessibility, _gaming, _and medical applications.', _category: 'Emerging Tech', _price: {
+      monthly: 399, _yearly: 3990, _currency: 'USD', _trialDays: 21, _setupTime: '6 hours', _enterprise: 1599},
     features: [
       'Neural signal processing',
       'Brain activity monitoring',
@@ -245,20 +207,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$18B BCI market',
     growthRate: '55% annually'
   },
-  {
-    id: 'quantum-energy-platform',
-    name: 'Quantum Energy Platform',
-    tagline: 'Quantum-enhanced energy optimization and fusion simulation',
-    description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-    category: 'Quantum & Emerging Tech',
-    price: {
-      monthly: 499,
-      yearly: 4990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '6 hours',
-      enterprise: 1999
-    },
+  {_id: 'quantum-energy-platform', _name: 'Quantum Energy Platform', _tagline: 'Quantum-enhanced energy optimization and fusion simulation', _description: 'Revolutionary platform that uses quantum computing to optimize energy systems, _simulate fusion reactions, _and enable breakthrough energy solutions.', _category: 'Quantum & Emerging Tech', _price: {
+      monthly: 499, _yearly: 4990, _currency: 'USD', _trialDays: 14, _setupTime: '6 hours', _enterprise: 1999},
     features: [
       'Quantum energy optimization',
       'Fusion reaction simulation',
@@ -314,20 +264,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$25B quantum energy market',
     growthRate: '45% annually'
   },
-  {
-    id: 'autonomous-vehicle-ai-platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI for self-driving vehicles and transportation',
-    description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '12 hours',
-      enterprise: 2999
-    },
+  {_id: 'autonomous-vehicle-ai-platform', _name: 'Autonomous Vehicle AI Platform', _tagline: 'Advanced AI for self-driving vehicles and transportation', _description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, _decision-making, _and safety systems for the future of transportation.', _category: 'Emerging Tech', _price: {
+      monthly: 799, _yearly: 7990, _currency: 'USD', _trialDays: 14, _setupTime: '12 hours', _enterprise: 2999},
     features: [
       'Advanced computer vision',
       'Real-time decision making',

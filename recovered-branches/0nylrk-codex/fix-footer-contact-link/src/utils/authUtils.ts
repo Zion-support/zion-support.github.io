@@ -1,37 +1,31 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import type { UserDetails } from "@/types/auth";
+import type {_UserDetails} from "@/types/auth";
 
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
-export const cleanupAuthState = () => {
-  // Remove standard auth tokens
+export const _cleanupAuthState = () => {_// Remove standard auth tokens
   localStorage.removeItem('supabase.auth.token');
   
   // Remove all Supabase auth keys from localStorage
-  Object.keys(localStorage).forEach((key) => {
+  Object.keys(localStorage).forEach(_(key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      localStorage.removeItem(key);
-    }
+      localStorage.removeItem(key);}
   });
   
   // Remove from sessionStorage if in use
-  Object.keys(sessionStorage || {}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      sessionStorage.removeItem(key);
-    }
+  Object.keys(sessionStorage || {}).forEach(_(key) => {_if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
+      sessionStorage.removeItem(key);}
   });
 };
 
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
-export const checkNewRegistration = async (user: UserDetails) => {
-  try {
+export const _checkNewRegistration = async (_user: UserDetails) => {_try {
     // Check if user has received welcome email already
-    const { data: existingCampaign } = await supabase
+    const { data: existingCampaign} = await supabase
       .from("email_campaigns")
       .select("id")
       .eq("user_id", user.id)
@@ -39,38 +33,20 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .maybeSingle();
       
     // If no welcome email sent yet, schedule one
-    if (!existingCampaign) {
-      // Create a scheduled job for the welcome email
+    if (!existingCampaign) {_// Create a scheduled job for the welcome email
       await supabase
         .from("scheduled_jobs")
         .insert({
-          job_type: "send_retention_email",
-          scheduled_for: new Date().toISOString(),
-          status: "pending",
-          payload: {
-            user_id: user.id,
-            email_type: "welcome_series",
-            user_type: user.userType || "unknown",
-            display_name: user.displayName || user.email?.split("@")[0] || "User"
-          }
+          job_type: "send_retention_email", _scheduled_for: new Date().toISOString(), _status: "pending", _payload: {
+            user_id: user.id, _email_type: "welcome_series", _user_type: user.userType || "unknown", _display_name: user.displayName || user.email?.split("@")[0] || "User"}
         });
         
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
-        .insert({
-          user_id: user.id,
-          campaign_type: "welcome_series",
-          template_name: "welcome_email",
-          template_data: {
-            user_id: user.id,
-            email_type: "welcome_series",
-            user_type: user.userType || "unknown",
-            display_name: user.displayName || user.email?.split("@")[0] || "User"
-          }
+        .insert({_user_id: user.id, _campaign_type: "welcome_series", _template_name: "welcome_email", _template_data: {
+            user_id: user.id, _email_type: "welcome_series", _user_type: user.userType || "unknown", _display_name: user.displayName || user.email?.split("@")[0] || "User"}
         });
     }
-  } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error);
-  }
+  } catch (error) {}
 };

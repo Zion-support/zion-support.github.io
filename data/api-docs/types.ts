@@ -2,53 +2,41 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export type Visibility = 'public' | 'partner' | 'internal';
 
-export interface CodeSample {
-  language: 'curl' | 'javascript' | 'python';
-  code: string;
-}
+export interface CodeSample {_language: 'curl' | 'javascript' | 'python';
+  code: string;}
 
-export interface RateLimitInfo {
-  tier: 'free' | 'partner' | 'internal';
+export interface RateLimitInfo {_tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
-  burst?: number;
-}
+  burst?: number;}
 
-export interface ErrorCode {
-  code: string;
+export interface ErrorCode {_code: string;
   httpStatus: number;
-  message: string;
-}
+  message: string;}
 
-export interface EndpointSpec {
-  id: string;
+export interface EndpointSpec {_id: string;
   title: string;
   description: string;
   path: string;
   method: HttpMethod;
   visibility: Visibility;
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
-  query?: Record<string, string>;
-  params?: Record<string, string>;
+  query?: Record<string, _string>;
+  params?: Record<string, _string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
   samples: CodeSample[];
   rateLimits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
-  versions: string[]; // e.g., ['v1'] or ['v1','v2']
-}
+  versions: string[]; // e.g., _['v1'] or ['v1', _'v2']}
 
-export interface SectionSpec {
-  id: string;
+export interface SectionSpec {_id: string;
   title: string;
   description?: string;
-  endpoints: EndpointSpec[];
-}
+  endpoints: EndpointSpec[];}
 
-export interface ApiDocsSpec {
-  product: 'Zion OS';
+export interface ApiDocsSpec {_product: 'Zion OS';
   versions: string[]; // available versions
   defaultVersion: string;
   sections: SectionSpec[];
-  lastUpdatedIso: string;
-}
+  lastUpdatedIso: string;}

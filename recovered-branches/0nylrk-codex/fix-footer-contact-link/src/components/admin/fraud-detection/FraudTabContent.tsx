@@ -1,13 +1,9 @@
 
 import React from "react";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 
-interface FraudTabContentProps {
-  tabValue: string;
-}
+interface FraudTabContentProps {_tabValue: string;}
 
-export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
-  switch(tabValue) {
+export const FraudTabContent: React.FC<FraudTabContentProps> = (_{_tabValue}) => {_switch(tabValue) {
     case 'pending':
       return (
         <div className="bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center">
@@ -42,6 +38,5 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       );
     
     default:
-      return null;
-  }
+      return null;}
 };

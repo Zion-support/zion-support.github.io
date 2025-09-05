@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-export default function FrontLanding() {
-  return (
+export default function FrontLanding() {_return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
-        <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
+        <meta name="description" content="Futuristic, _cloud-native autonomous automations that innovate, _optimize, _and sync changes to the repo continuously." />
       </Head>
 
       {/* Animated background layers */}
@@ -21,7 +19,7 @@ export default function FrontLanding() {
         </div>
       </div>
 
-      {/* Header */}
+      {_/* Header */}
       <header className="relative z-10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <div className="text-2xl font-bold tracking-wide">
@@ -36,14 +34,14 @@ export default function FrontLanding() {
         </nav>
       </header>
 
-      {/* Hero */}
+      {_/* Hero */}
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={_{ opacity: 0, _y: 10}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
               className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md"
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -51,138 +49,132 @@ export default function FrontLanding() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
+              initial={_{ opacity: 0, _y: 8}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.7, _delay: 0.05}}
               className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"
             >
               <span className="gradient-text">Autonomous Cloud Automations</span>
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              initial={_{ opacity: 0, _y: 8}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.7, _delay: 0.1}}
               className="mx-auto mt-5 max-w-3xl text-lg text-white/80"
             >
               Self-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              initial={_{ opacity: 0}}
+              animate={_{ opacity: 1}}
+              transition={_{ delay: 0.2, _duration: 0.6}}
               className="mt-8 flex flex-wrap justify-center gap-3"
             >
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
               <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Meta Factory</a>
             </motion.div>
 
-            {/* Quick stats */}
+            {_/* Quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {[
-                ['24/7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails']].map(([k, v]) => (
+              {_[
+                ['24/7', _'Autonomous'], _['Main', _'Direct Sync'], _['0 Ops', _'Cloud‑Native'], _['Safety', _'Guardrails']].map(_([k, _v]) => (
                 <motion.div
                   key={k}
-                  initial={{ opacity: 0, y: 6 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                  initial={_{ opacity: 0, _y: 6}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  viewport={_{ once: true}}
+                  transition={_{ duration: 0.5}}
                   className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left"
                 >
-                  <div className="text-lg font-bold text-white">{k}</div>
-                  <div className="text-xs text-white/70">{v}</div>
+                  <div className="text-lg font-bold text-white">{_k}</div>
+                  <div className="text-xs text-white/70">{_v}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Features */}
+        {_/* Features */}
         <section className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
-              { title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
-              { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
-              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
-              { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
-              { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }].map((f) => (
+            {_[
+              { title: 'Self‑Improving', _desc: 'Agents continuously analyze, _invent, _and evolve automations.'},
+              {_title: 'Repo Sync', _desc: 'Changes are committed and pushed automatically to main.'},
+              {_title: 'Zero Ops', _desc: 'Runs fully in the cloud—no servers or manual intervention.'},
+              {_title: 'Safety‑First', _desc: 'Conservative edits with logs, _reports, _and guardrails.'},
+              {_title: 'Scalable', _desc: 'Generates domain‑specific factories on demand.'},
+              {_title: 'Observability', _desc: 'Dashboards, _reports, _and GitHub Actions artifacts.'}].map(_(f) => (
               <motion.article
-                key={f.title}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                key={_f.title}
+                initial={_{ opacity: 0, _y: 8}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                viewport={_{ once: true}}
+                transition={_{ duration: 0.6}}
                 className="group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30"
               >
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold">{f.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{f.desc}</p>
+                <h3 className="text-lg font-semibold">{_f.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{_f.desc}</p>
               </motion.article>
             ))}
           </div>
         </section>
 
-        {/* Capabilities */}
+        {_/* Capabilities */}
         <section className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
+            {_[
+              { title: 'Code Quality & Refactors', _desc: 'Lints, _fixes, _and proposes refactors with type‑safety improvements.'},
+              {_title: 'Performance & A11y', _desc: 'Optimizes bundles, _assets, _and accessibility with continuous checks.'},
+              {_title: 'Content & SEO', _desc: 'Curates content, _updates promotions, _and tunes metadata for reach.'}].map(_(c) => (
               <motion.article
-                key={c.title}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                key={_c.title}
+                initial={_{ opacity: 0, _y: 8}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                viewport={_{ once: true}}
+                transition={_{ duration: 0.6}}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl"
               >
                 <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
-                <h3 className="text-lg font-semibold">{c.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{c.desc}</p>
+                <h3 className="text-lg font-semibold">{_c.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{_c.desc}</p>
               </motion.article>
             ))}
           </div>
         </section>
 
-        {/* Benefits */}
+        {_/* Benefits */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
-            {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports'].map((b) => (
+            {_[
+              '24/7 progress without human intervention', _'Rapid feedback loop with safe, _incremental edits', _'Continuous delivery directly to main branch', _'Fewer regressions via layered checks and reports'].map(_(b) => (
               <motion.div
                 key={b}
-                initial={{ opacity: 0, y: 6 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                initial={_{ opacity: 0, _y: 6}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                viewport={_{ once: true}}
+                transition={_{ duration: 0.5}}
                 className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
               >
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                <span className="text-sm text-white/80">{b}</span>
+                <span className="text-sm text-white/80">{_b}</span>
               </motion.div>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
+        {_/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            initial={_{ opacity: 0, _scale: 0.98}}
+            whileInView={_{ opacity: 1, _scale: 1}}
+            viewport={_{ once: true}}
+            transition={_{ duration: 0.6}}
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
@@ -194,7 +186,7 @@ export default function FrontLanding() {
           </motion.div>
         </section>
 
-        {/* Explore more */}
+        {_/* Explore more */}
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

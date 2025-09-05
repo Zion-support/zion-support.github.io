@@ -1,42 +1,29 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
-import { CheckIcon } from 'lucide-react'
 
-interface StepProps {
-  status: "incomplete" | "current" | "complete";
+interface StepProps {_status: "incomplete" | "current" | "complete";
   label: string;
   description?: string;
-  className?: string;
-}
+  className?: string;}
 
-export function Step({
-  status,
-  label,
-  description,
-  className}: StepProps) {
-  return (
+export function Step(_{_status, _label, _description, _className}: StepProps) {_return (
     <li
       className={cn(
-        "relative flex items-center",
-        {
+        "relative flex items-center", _{
           "opacity-60": status === "incomplete"},
         className
       )}
     >
       <div
-        className={cn(
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
-          {
+        className={_cn(
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium", _{
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
-              status === "incomplete",
-            "bg-zion-blue border-zion-cyan text-white":
-              status === "current",
-            "bg-zion-purple border-zion-purple text-white":
+              status === "incomplete", _"bg-zion-blue border-zion-cyan text-white":
+              status === "current", _"bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
       >
-        {status === "complete" ? (
+        {_status === "complete" ? (
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
@@ -47,13 +34,12 @@ export function Step({
 
       <div className="ml-4 min-w-0">
         <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete",
-            "text-white": status === "current" || status === "complete"})}
+          className={_cn("text-sm font-medium", _{
+            "text-zion-slate-light": status === "incomplete", _"text-white": status === "current" || status === "complete"})}
         >
-          {label}
+          {_label}
         </h3>
-        {description && (
+        {_description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
         )}
       </div>
@@ -61,26 +47,23 @@ export function Step({
   );
 }
 
-interface StepsProps {
-  currentStep: number;
+interface StepsProps {_currentStep: number;
   className?: string;
-  children: React.ReactNode;
-}
+  children: React.ReactNode;}
 
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children);
+export function Steps(_{_currentStep, _className, _children}: StepsProps) {_const _childrenArray = React.Children.toArray(children);
   
   return (
-    <div className={cn("w-full", className)}>
+    <div className={cn("w-full", _className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
+        {_React.Children.map(_childrenArray, _(child, _index) => {
           if (!React.isValidElement(child)) return null;
           
           let status: "incomplete" | "current" | "complete" = "incomplete";
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
           
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
+          return React.cloneElement(child as React.ReactElement<StepProps>, _{
             status});
         })}
       </ol>
@@ -89,7 +72,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
-            style={{
+            style={_{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>

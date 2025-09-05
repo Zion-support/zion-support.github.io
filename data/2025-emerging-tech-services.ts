@@ -1,5 +1,4 @@
-export interface EmergingTechService {
-  id: string;
+export interface EmergingTechService {_id: string;
   name: string;
   tagline: string;
   description: string;
@@ -9,8 +8,7 @@ export interface EmergingTechService {
     yearly: number;
     currency: string;
     trialDays: number;
-    setupTime: string;
-  };
+    setupTime: string;};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -35,19 +33,8 @@ export interface EmergingTechService {
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
-  {
-    id: 'neuromorphic-computing',
-    name: 'Neuromorphic Computing Platform',
-    tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI',
-    description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, enabling edge computing with minimal power consumption and maximum performance.',
-    category: 'Emerging Technology',
-    price: {
-      monthly: 3499,
-      yearly: 34990,
-      currency: 'USD',
-      trialDays: 45,
-      setupTime: '2 weeks'
-    },
+  {_id: 'neuromorphic-computing', _name: 'Neuromorphic Computing Platform', _tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI', _description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, _enabling edge computing with minimal power consumption and maximum performance.', _category: 'Emerging Technology', _price: {
+      monthly: 3499, _yearly: 34990, _currency: 'USD', _trialDays: 45, _setupTime: '2 weeks'},
     features: [
       'Brain-inspired neural architecture',
       'Ultra-low power consumption',
@@ -101,19 +88,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 78
   },
-  {
-    id: 'quantum-encryption',
-    name: 'Quantum Encryption Platform',
-    tagline: 'Unbreakable quantum encryption for the post-quantum era',
-    description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.',
-    category: 'Cybersecurity',
-    price: {
-      monthly: 1899,
-      yearly: 18990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '1 week'
-    },
+  {_id: 'quantum-encryption', _name: 'Quantum Encryption Platform', _tagline: 'Unbreakable quantum encryption for the post-quantum era', _description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.', _category: 'Cybersecurity', _price: {
+      monthly: 1899, _yearly: 18990, _currency: 'USD', _trialDays: 30, _setupTime: '1 week'},
     features: [
       'Quantum-resistant algorithms',
       'Quantum key distribution',
@@ -167,19 +143,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 145
   },
-  {
-    id: 'synthetic-biology-platform',
-    name: 'Synthetic Biology Platform',
-    tagline: 'Design, build, and test synthetic biological systems with AI',
-    description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',
-    category: 'Biotechnology',
-    price: {
-      monthly: 2799,
-      yearly: 27990,
-      currency: 'USD',
-      trialDays: 60,
-      setupTime: '1 month'
-    },
+  {_id: 'synthetic-biology-platform', _name: 'Synthetic Biology Platform', _tagline: 'Design, _build, _and test synthetic biological systems with AI', _description: 'Revolutionary platform that combines synthetic biology with AI to design, _build, _and test synthetic biological systems for healthcare, _agriculture, _and industrial applications.', _category: 'Biotechnology', _price: {
+      monthly: 2799, _yearly: 27990, _currency: 'USD', _trialDays: 60, _setupTime: '1 month'},
     features: [
       'AI-powered DNA design',
       'Synthetic organism creation',
@@ -233,19 +198,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 56
   },
-  {
-    id: 'fusion-energy-ai',
-    name: 'Fusion Energy AI Platform',
-    tagline: 'AI-powered fusion energy optimization and control systems',
-    description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, control plasma stability, and accelerate the development of commercial fusion power.',
-    category: 'Energy Technology',
-    price: {
-      monthly: 5999,
-      yearly: 59990,
-      currency: 'USD',
-      trialDays: 90,
-      setupTime: '2 months'
-    },
+  {_id: 'fusion-energy-ai', _name: 'Fusion Energy AI Platform', _tagline: 'AI-powered fusion energy optimization and control systems', _description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, _control plasma stability, _and accelerate the development of commercial fusion power.', _category: 'Energy Technology', _price: {
+      monthly: 5999, _yearly: 59990, _currency: 'USD', _trialDays: 90, _setupTime: '2 months'},
     features: [
       'AI-powered plasma control',
       'Fusion reaction optimization',
@@ -299,19 +253,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 5.0,
     reviews: 6
   },
-  {
-    id: 'quantum-internet',
-    name: 'Quantum Internet Platform',
-    tagline: 'Build the quantum internet with secure quantum communication networks',
-    description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum key distribution, and ultra-secure quantum communication networks.',
-    category: 'Quantum Technology',
-    price: {
-      monthly: 3999,
-      yearly: 39990,
-      currency: 'USD',
-      trialDays: 60,
-      setupTime: '1 month'
-    },
+  {_id: 'quantum-internet', _name: 'Quantum Internet Platform', _tagline: 'Build the quantum internet with secure quantum communication networks', _description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, _quantum key distribution, _and ultra-secure quantum communication networks.', _category: 'Quantum Technology', _price: {
+      monthly: 3999, _yearly: 39990, _currency: 'USD', _trialDays: 60, _setupTime: '1 month'},
     features: [
       'Quantum network infrastructure',
       'Quantum entanglement networks',
@@ -365,19 +308,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 23
   },
-  {
-    id: 'brain-computer-interface',
-    name: 'Brain-Computer Interface Platform',
-    tagline: 'Direct brain-to-computer communication for enhanced human capabilities',
-    description: 'Revolutionary platform that enables direct communication between the human brain and computers, opening new possibilities for human-computer interaction, medical applications, and cognitive enhancement.',
-    category: 'Human-Computer Interaction',
-    price: {
-      monthly: 4499,
-      yearly: 44990,
-      currency: 'USD',
-      trialDays: 90,
-      setupTime: '2 months'
-    },
+  {_id: 'brain-computer-interface', _name: 'Brain-Computer Interface Platform', _tagline: 'Direct brain-to-computer communication for enhanced human capabilities', _description: 'Revolutionary platform that enables direct communication between the human brain and computers, _opening new possibilities for human-computer interaction, _medical applications, _and cognitive enhancement.', _category: 'Human-Computer Interaction', _price: {
+      monthly: 4499, _yearly: 44990, _currency: 'USD', _trialDays: 90, _setupTime: '2 months'},
     features: [
       'Neural signal processing',
       'Brain-computer communication',
@@ -431,19 +363,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 42
   },
-  {
-    id: 'quantum-sensors',
-    name: 'Quantum Sensors Platform',
-    tagline: 'Ultra-sensitive quantum sensors for precision measurement and detection',
-    description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, detection, and monitoring across various applications.',
-    category: 'Quantum Technology',
-    price: {
-      monthly: 1999,
-      yearly: 19990,
-      currency: 'USD',
-      trialDays: 45,
-      setupTime: '2 weeks'
-    },
+  {_id: 'quantum-sensors', _name: 'Quantum Sensors Platform', _tagline: 'Ultra-sensitive quantum sensors for precision measurement and detection', _description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, _detection, _and monitoring across various applications.', _category: 'Quantum Technology', _price: {
+      monthly: 1999, _yearly: 19990, _currency: 'USD', _trialDays: 45, _setupTime: '2 weeks'},
     features: [
       'Quantum sensor arrays',
       'Ultra-sensitive detection',
@@ -497,19 +418,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 98
   },
-  {
-    id: 'autonomous-robotics',
-    name: 'Autonomous Robotics Platform',
-    tagline: 'AI-powered autonomous robots for industrial and commercial applications',
-    description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.',
-    category: 'Robotics & Automation',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '1 week'
-    },
+  {_id: 'autonomous-robotics', _name: 'Autonomous Robotics Platform', _tagline: 'AI-powered autonomous robots for industrial and commercial applications', _description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, _commercial applications, _and advanced robotics systems.', _category: 'Robotics & Automation', _price: {
+      monthly: 1299, _yearly: 12990, _currency: 'USD', _trialDays: 30, _setupTime: '1 week'},
     features: [
       'Autonomous robot control',
       'AI-powered decision making',
@@ -563,19 +473,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 187
   },
-  {
-    id: 'quantum-materials',
-    name: 'Quantum Materials Platform',
-    tagline: 'AI-powered discovery and design of quantum materials for next-generation technology',
-    description: 'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.',
-    category: 'Materials Science',
-    price: {
-      monthly: 2499,
-      yearly: 24990,
-      currency: 'USD',
-      trialDays: 60,
-      setupTime: '1 month'
-    },
+  {_id: 'quantum-materials', _name: 'Quantum Materials Platform', _tagline: 'AI-powered discovery and design of quantum materials for next-generation technology', _description: 'Revolutionary platform that uses AI to discover, _design, _and optimize quantum materials for next-generation electronics, _energy storage, _and advanced technology applications.', _category: 'Materials Science', _price: {
+      monthly: 2499, _yearly: 24990, _currency: 'USD', _trialDays: 60, _setupTime: '1 month'},
     features: [
       'AI-powered material discovery',
       'Quantum material design',
@@ -629,19 +528,8 @@ export const emergingTechServices2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 67
   },
-  {
-    id: 'quantum-communications',
-    name: 'Quantum Communications Platform',
-    tagline: 'Secure quantum communication networks for unbreakable data transmission',
-    description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
-    category: 'Quantum Technology',
-    price: {
-      monthly: 2999,
-      yearly: 29990,
-      currency: 'USD',
-      trialDays: 45,
-      setupTime: '2 weeks'
-    },
+  {_id: 'quantum-communications', _name: 'Quantum Communications Platform', _tagline: 'Secure quantum communication networks for unbreakable data transmission', _description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, _quantum entanglement, _and unbreakable data transmission capabilities.', _category: 'Quantum Technology', _price: {
+      monthly: 2999, _yearly: 29990, _currency: 'USD', _trialDays: 45, _setupTime: '2 weeks'},
     features: [
       'Quantum key distribution',
       'Quantum entanglement networks',
@@ -697,17 +585,11 @@ export const emergingTechServices2025: EmergingTechService[] = [
   }
 ];
 
-export const getPopularEmergingTechServices = () => {
-  return emergingTechServices2025.filter(service => service.popular);
-};
+export const _getPopularEmergingTechServices = () => {_return emergingTechServices2025.filter(service => service.popular);};
 
-export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025.filter(service => service.category === category);
-};
+export const _getEmergingTechServicesByCategory = (_category: string) => {_return emergingTechServices2025.filter(service => service.category === category);};
 
-export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return emergingTechServices2025.filter(service => {
-    const price = parseInt(service.price.monthly.toString()) || 0;
-    return price >= minPrice && price <= maxPrice;
-  });
+export const _getEmergingTechServicesByPriceRange = (_minPrice: number, _maxPrice: number) => {_return emergingTechServices2025.filter(service => {
+    const _price = parseInt(service.price.monthly.toString()) || 0;
+    return price >= minPrice && price <= maxPrice;});
 };

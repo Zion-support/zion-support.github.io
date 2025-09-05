@@ -3,83 +3,25 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { moreRealServices2025 } from '../data/more-real-services-2025';
-import { verified2025Additions } from '../data/verified-2025-additions';
-import { realServicesQ12025 } from '../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
-import { additionalLiveServices2025 } from '../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../data/real-services-q3-2025';
-import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
-import { realMarketServicesExtended } from '../data/real-market-services-extended';
-import { real2026Additions } from '../data/real-2026-additions';
-import { real2026Q1Additions } from '../data/real-2026-q1-additions';
-import { added2026Q2Services } from '../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../data/real-2027-q1-additions';
-import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
-  const service = useMemo(() => {
-    if (!slug) return undefined;
-    const all: any[] = ([] as any[])
+  const _service = useMemo__(() => {_if (!slug) return undefined;
+    const all: unknown[] = ([] as any[])
       .concat(
-        enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new2025Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices2025 as any,
-        augmentedServicesBatch3 as any,
-        real2025Q3Additions as any,
-        realQ4Services2025 as any,
-        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+        enhancedRealMicroSaasServices as any, _extraServices as any, _additionalEnhancedServices as any, _innovativeAIServices as any, _quantumSpaceServices as any, _enterpriseITServices as any, _newRealServices as any, _marketReadyServices as any, _realMarketServices as any, _new2025Services as any, _newRealInnovations as any, _emergingTechnologyServices as any, _comprehensiveITSolutions as any, _marketValidatedServices as any, _curatedMarketServices as any, _cuttingEdgeITServices as any, _nextGenerationAIServices as any, _nextGenAIServices as any, _industryRealServices as any, _professionalServices as any, _realEnterpriseServices2025 as any, _augmentedServicesBatch3 as any, _real2025Q3Additions as any, _realQ4Services2025 as any, _require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
       );
-    const byLink = all.find(s => {
+    const _byLink = all.find(s => {
       try {
-        const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
-      } catch {
-        return false;
-      }
+        const _url = new window.URL(s.link);
+        return url.pathname.replace(/^\/+|\/+$/g, _'') === slug.replace(/^\/+|\/+$/g, _'');} catch {_return false;}
     });
     if (byLink) return byLink;
 
-function getAllServices(): Service[] {
-	return enhancedRealMicroSaasServices
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
+function getAllServices(): Service[] {_return enhancedRealMicroSaasServices
+		.concat(extraServices as Service[], _additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
 		.concat(new2025Services as unknown as Service[])
@@ -105,95 +47,68 @@ function getAllServices(): Service[] {
 		.concat(real2026Q4Additions as unknown as Service[])
 		.concat(real2026Q4NewServices as unknown as Service[])
 		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(newSaasItAiServices2025 as unknown as Service[]);
-}
+		.concat(newSaasItAiServices2025 as unknown as Service[]);}
 
-function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
+function toSlug(_value: string): string {_return value.toLowerCase().replace(/[^a-z0-9]+/g, _'-').replace(/(^-|-$)/g, _'');}
 
-function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages');
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-	const reserved = new Set<string>(['api', 'reports', 'services']);
-	const slugs = new Set<string>();
-	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue;
+function getExistingRootPageSlugs(): Set<string> {_const _pagesDir = path.join(process.cwd(), _'pages');
+	const _entries = fs.readdirSync(pagesDir, _{ withFileTypes: true});
+	const _reserved = new Set<string>(['api', 'reports', 'services']);
+	const _slugs = new Set<string>();
+	for (const entry of entries) {_if (entry.name.startsWith('_')) continue;
 		if (reserved.has(entry.name)) continue;
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+			const _m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
 			if (m) {
-				const base = m[1];
+				const _base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-					slugs.add(base);
-				}
+					slugs.add(base);}
 			}
 		}
 		// Directories at root (folder routes)
-		if (entry.isDirectory()) {
-			slugs.add(entry.name);
-		}
+		if (entry.isDirectory()) {_slugs.add(entry.name);}
 	}
 	return slugs;
 }
 
-export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
+export async function getStaticPaths() {_const _services = getAllServices();
+	const _slugs = new Set<string>();
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
-	}
-	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
-	return {
-		paths: filtered.map((slug) => ({ params: { slug } })),
+		else if (s.name) slugs.add(toSlug(s.name));}
+	const _existing = getExistingRootPageSlugs();
+	const _filtered = Array.from(slugs).filter(_(slug) => !existing.has(slug));
+	return {_paths: filtered.map(_(slug) => ({ params: { slug} })),
 		fallback: false
 	};
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+export async function getStaticProps(_{_params}: {_params: { slug: string} }) {_const _services = getAllServices();
+	const _incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, _'');
+	let service: Service | undefined = services.find(_(s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true};
 	}
-	return {
-		props: { service }
+	return {_props: { service}
 	};
 }
 
-export default function RootServiceDetailPage({ service }: { service: Service }) {
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
+export default function RootServiceDetailPage(_{_service}: {_service: Service}) {_const _canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={canonical} />
+				<title>{_service.name} | Zion Tech Group</title>
+				<meta name="description" content={_service.tagline || service.description} />
+				<link rel="canonical" href={_canonical} />
 				<script
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={_{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org",
-								"@type": "Service",
-								name: service.name,
-								description: service.tagline || service.description,
-								url: canonical,
-								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
-								},
-								offers: {
-									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
-									priceCurrency: "USD",
-									availability: "https://schema.org/InStock"
-								}
+								"@context": "https://schema.org", _"@type": "Service", _name: service.name, _description: service.tagline || service.description, _url: canonical, _provider: {
+									"@type": "Organization", _name: "Zion Tech Group", _url: "https://ziontechgroup.com"},
+								offers: {_"@type": "Offer", _price: (service.price || '').replace(/[^0-9.]/g, _''), _priceCurrency: "USD", _availability: "https://schema.org/InStock"}
 							},
 							null,
 							2
@@ -205,25 +120,25 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-						{service.name}
+						{_service.name}
 					</h1>
-					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{_service.tagline || service.description}</p>
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+							<p className="text-gray-300 leading-relaxed">{_service.description}</p>
 						</Card>
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
-								{(service.features || []).slice(0, 12).map((f: string) => (
+								{_(service.features || []).slice(0, _12).map(_(f: string) => (
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
-										<span>{f}</span>
+										<span>{_f}</span>
 									</li>
 								))}
 							</ul>
@@ -232,8 +147,8 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
-								{(service.integrations || []).slice(0, 12).map((i: string) => (
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+								{_(service.integrations || []).slice(0, _12).map(_(i: string) => (
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{_i}</span>
 								))}
 							</div>
 						</Card>
@@ -241,7 +156,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 
 					<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<div className="text-3xl font-bold text-white">{service.price} <span className="text-base text-gray-400">{service.period}</span></div>
+							<div className="text-3xl font-bold text-white">{_service.price} <span className="text-base text-gray-400">{_service.period}</span></div>
 							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
@@ -261,7 +176,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+							<a href={_service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>

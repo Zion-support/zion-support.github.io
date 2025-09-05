@@ -1,8 +1,6 @@
 
-import { LoginCard } from "./LoginCard";
 
-export function LoginContent() {
-  return (
+export function LoginContent() {_return (
     <div className="flex min-h-screen bg-zion-blue">
       <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <LoginCard />
@@ -13,12 +11,11 @@ export function LoginContent() {
             <div className="max-w-md text-center">
               <h3 className="text-3xl font-bold text-white mb-4">Join the Zion Community</h3>
               <p className="text-lg text-white/80">
-                Connect with thousands of AI professionals, discover new opportunities, and showcase your services to a global audience.
+                Connect with thousands of AI professionals, _discover new opportunities, _and showcase your services to a global audience.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-}
+  );}

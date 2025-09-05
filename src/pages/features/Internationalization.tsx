@@ -1,18 +1,8 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function Internationalization() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Internationalization",
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-  };
+export default function Internationalization() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Internationalization", _"description": "Use Zion in multiple languages and attract clients worldwide with localized listings.", _"url": "https://app.ziontechgroup.com/features/internationalization"};
 
   return (
     <>
@@ -22,10 +12,10 @@ export default function Internationalization() {
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

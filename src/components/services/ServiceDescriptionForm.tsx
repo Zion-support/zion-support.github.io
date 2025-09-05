@@ -1,78 +1,38 @@
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
+import React, {_useState} from "react";
 import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {logErrorToProduction} from '@/utils/productionLogger';
 
 
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()});
+const _formSchema = z.object({_title: z.string().min(3, _"Title must be at least 3 characters"), _keyFeatures: z.string(), _targetAudience: z.string()});
 
 type FormData = z.infer<typeof formSchema>;
 
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void;
-}
+interface ServiceDescriptionFormProps {_onDescriptionGenerated: (_description: string) => void;}
 
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
+export function ServiceDescriptionForm(_{_onDescriptionGenerated}: ServiceDescriptionFormProps) {_const { toast} = useToast();
   const [isLoading, setIsLoading] = useState(false);
   
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: "",
-      keyFeatures: "",
-      targetAudience: ""}});
+  const _form = useForm<FormData>({_resolver: zodResolver(formSchema), _defaultValues: {
+      title: "", _keyFeatures: "", _targetAudience: ""}});
 
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true);
+  const _handleSubmit = async (_data: FormData) => {_setIsLoading(true);
     
     try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-        body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
-          targetAudience: data.targetAudience 
-        }
+      const { data: response, _error} = await supabase.functions.invoke('generate-service-description', {_body: { 
+          title: data.title, _keyFeatures: data.keyFeatures, _targetAudience: data.targetAudience}
       });
 
-      if (error) {
-        throw new Error(error.message);
-      }
+      if (error) {_throw new Error(error.message);}
       
-      if (response && (response as any).error) {
-        throw new Error((response as any).error);
-      }
+      if (response && (response as any).error) {_throw new Error((response as any).error);}
 
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+      const _description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
       
       onDescriptionGenerated(description);
       
-      toast({
-        title: "Description Generated",
-        description: "Your professional service description has been created."
-      });
-    } catch (error) {
-      logErrorToProduction('Error generating description:', { data: error });
-      toast({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsLoading(false);
-    }
+      toast({_title: "Description Generated", _description: "Your professional service description has been created."});
+    } catch (error) {_logErrorToProduction('Error generating description:', _{ data: error});
+      toast({_title: "Generation Failed", _description: error instanceof Error ? error.message : "Failed to generate description. Please try again.", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
   };
 
   return (
@@ -87,20 +47,20 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+        <Form {_...form}>
+          <form onSubmit={_form.handleSubmit(handleSubmit)} className="space-y-4">
             <FormField
-              control={form.control}
+              control={_form.control}
               name="title"
-              render={({ field }: { field: any }) => (
+              render={_(_{ field}: {_field: unknown}) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
                     <Input
-                      {...field}
+                      {_...field}
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-                      disabled={isLoading}
+                      disabled={_isLoading}
                     />
                   </FormControl>
                   <FormMessage />
@@ -109,17 +69,17 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <FormField
-              control={form.control}
+              control={_form.control}
               name="keyFeatures"
-              render={({ field }: { field: any }) => (
+              render={_(_{ field}: {_field: unknown}) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
                   <FormControl>
                     <Textarea
-                      {...field}
+                      {_...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
-                      disabled={isLoading}
+                      disabled={_isLoading}
                     />
                   </FormControl>
                   <FormMessage />
@@ -128,17 +88,17 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <FormField
-              control={form.control}
+              control={_form.control}
               name="targetAudience"
-              render={({ field }: { field: any }) => (
+              render={_(_{ field}: {_field: unknown}) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
                   <FormControl>
                     <Input
-                      {...field}
+                      {_...field}
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-                      disabled={isLoading}
+                      disabled={_isLoading}
                     />
                   </FormControl>
                   <FormMessage />
@@ -148,10 +108,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             
             <Button 
               type="submit"
-              disabled={isLoading}
+              disabled={_isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
             >
-              {isLoading ? (
+              {_isLoading ? (
                 <>
                   <Loader className="mr-2 h-4 w-4 animate-spin" />
                   Generating Description...

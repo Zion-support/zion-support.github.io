@@ -1,10 +1,7 @@
-import { useEffect } from 'react';
 
-export default function LinksReportRedirect() {
-  useEffect(() => {
+export default function LinksReportRedirect() {_useEffect__(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('/reports/links/index.html');
-    }
+      window.location.replace('/reports/links/index.html');}
   }, []);
   return null;
 }

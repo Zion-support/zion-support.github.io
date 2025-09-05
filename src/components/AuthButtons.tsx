@@ -1,36 +1,27 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react';
 
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 
-interface AuthButtonsProps {
-  providers?: Provider[];
-}
+interface AuthButtonsProps {_providers?: Provider[];}
 
-export function AuthButtons({ providers = ['google', 'github', 'facebook', 'credentials'] }: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
+export function AuthButtons(_{_providers = ['google', _'github', _'facebook', _'credentials']}: AuthButtonsProps) {_const [loadingProvider, _setLoadingProvider] = useState<string | null>(null);
 
-  const handleSignIn = async (provider: Provider) => {
+  const _handleSignIn = async (_provider: Provider) => {
     setLoadingProvider(provider);
-    await signIn(provider);
-  };
+    await signIn(provider);};
 
-  const gridCols = `grid-cols-${providers.length}`;
+  const _gridCols = `grid-cols-${_providers.length}`;
 
   return (
-    <div className={`mt-6 grid ${gridCols} gap-3`}>
-      {providers.includes('google') && (
-        <Button
+    <div className={_`mt-6 grid ${gridCols} gap-3`}>
+      {_providers.includes('google') && (_<Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}
+          disabled={_loadingProvider !== null}
         >
           <span className="sr-only">Sign in with Google</span>
-          {loadingProvider === 'google' ? (
+          {_loadingProvider === 'google' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -42,16 +33,15 @@ export function AuthButtons({ providers = ['google', 'github', 'facebook', 'cred
           )}
         </Button>
       )}
-      {providers.includes('github') && (
-        <Button
+      {_providers.includes('github') && (_<Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}
+          disabled={_loadingProvider !== null}
         >
           <span className="sr-only">Sign in with GitHub</span>
-          {loadingProvider === 'github' ? (
+          {_loadingProvider === 'github' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
@@ -60,31 +50,29 @@ export function AuthButtons({ providers = ['google', 'github', 'facebook', 'cred
           )}
         </Button>
       )}
-      {providers.includes('facebook') && (
-        <Button
+      {_providers.includes('facebook') && (_<Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}
+          disabled={_loadingProvider !== null}
         >
           <span className="sr-only">Sign in with Facebook</span>
-          {loadingProvider === 'facebook' ? (
+          {_loadingProvider === 'facebook' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <Facebook className="h-5 w-5" />
           )}
         </Button>
       )}
-      {providers.includes('credentials') && (
-        <Button
+      {_providers.includes('credentials') && (_<Button
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
+          disabled={_loadingProvider !== null}
         >
-          {loadingProvider === 'credentials' ? (
+          {_loadingProvider === 'credentials' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <>Email Login</>

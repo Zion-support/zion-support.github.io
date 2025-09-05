@@ -1,213 +1,56 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink,
-  TrendingUp,
-  Award,
-  Rocket,
-  Globe,
-  Brain,
-  Atom,
-  Zap
-} from 'lucide-react';
+import {_Newspaper, _Calendar, _User, _Tag, _ArrowRight, _ExternalLink, _TrendingUp, _Award, _Rocket, _Globe, _Brain, _Atom, _Zap} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
-const NewsPage: React.FC = () => {
-  const newsArticles = [
+const NewsPage: React.FC = () => {_const _newsArticles = [
     {
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
-      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
-      author: 'Press Team',
-      date: '2025-01-15',
-      author: 'Zion Tech Group',
-      readTime: '5 min read',
-      featured: true,
-      image: '/images/news/ai-consciousness-breakthrough.jpg',
-      tags: ['AI Consciousness', 'Breakthrough', 'Research', 'Innovation']
-    },
-    {
-      id: 2,
-      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',
-      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.',
-      category: 'company',
-      date: '2025-01-10',
-      author: 'Zion Tech Group',
-      readTime: '3 min read',
-      featured: true,
-      image: '/images/news/series-c-funding.jpg',
-      tags: ['Funding', 'Investment', 'Growth', 'Expansion']
-    },
-    {
-      id: 3,
-      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',
-      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',
-      category: 'partnerships',
-      date: '2025-01-05',
-      author: 'Zion Tech Group',
-      readTime: '4 min read',
-      featured: true,
-      image: '/images/news/quantum-azure-partnership.jpg',
-      tags: ['Quantum Computing', 'Microsoft Azure', 'Security', 'Partnership']
-    }
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform', _excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.', _author: 'Press Team', _date: '2025-01-15', _author: 'Zion Tech Group', _readTime: '5 min read', _featured: true, _image: '/images/news/ai-consciousness-breakthrough.jpg', _tags: ['AI Consciousness', _'Breakthrough', _'Research', _'Innovation']},
+    {_id: 2, _title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion', _excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.', _category: 'company', _date: '2025-01-10', _author: 'Zion Tech Group', _readTime: '3 min read', _featured: true, _image: '/images/news/series-c-funding.jpg', _tags: ['Funding', _'Investment', _'Growth', _'Expansion']},
+    {_id: 3, _title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure', _excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, _setting new security standards.', _category: 'partnerships', _date: '2025-01-05', _author: 'Zion Tech Group', _readTime: '4 min read', _featured: true, _image: '/images/news/quantum-azure-partnership.jpg', _tags: ['Quantum Computing', _'Microsoft Azure', _'Security', _'Partnership']}
   ];
 
-  const latestNews = [
-    {
-      id: 4,
-      title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate',
-      excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.',
-      category: 'product',
-      date: '2025-01-12',
-      author: 'Sarah Chen',
-      readTime: '4 min read',
-      featured: false,
-      image: '/images/news/ai-customer-success.jpg',
-      tags: ['AI', 'Customer Success', 'Retention', 'Platform']
-    },
-    {
-      id: 5,
-      title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year',
-      excerpt: 'Recognition as one of the world\'s most innovative AI companies highlights our leadership in artificial intelligence and quantum computing.',
-      category: 'company',
-      date: '2025-01-08',
-      author: 'Zion Tech Group',
-      readTime: '2 min read',
-      featured: false,
-      image: '/images/news/forbes-ai-50.jpg',
-      tags: ['Recognition', 'Forbes', 'AI Leadership', 'Innovation']
-    },
-    {
-      id: 6,
-      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
-      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
-      category: 'research',
-      date: '2025-01-03',
-      author: 'Dr. Michael Rodriguez',
-      readTime: '8 min read',
-      featured: false,
-      image: '/images/news/quantum-drug-discovery.jpg',
-      tags: ['Quantum Computing', 'Drug Discovery', 'Research', 'Healthcare']
-    },
-    {
-      id: 7,
-      title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
-      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.',
-      category: 'partnerships',
-      date: '2024-12-28',
-      author: 'Zion Tech Group',
-      readTime: '3 min read',
-      featured: false,
-      image: '/images/news/deloitte-partnership.jpg',
-      tags: ['Partnership', 'Deloitte', 'Enterprise', 'AI Implementation']
-    },
-    {
-      id: 8,
-      title: 'AI Autonomous Business Operations Platform Beta Launch',
-      excerpt: 'Revolutionary platform enables fully autonomous business management with AI-driven decision making and process optimization.',
-      category: 'product',
-      date: '2024-12-20',
-      author: 'Zion Tech Group',
-      readTime: '6 min read',
-      featured: false,
-      image: '/images/news/ai-autonomous-business.jpg',
-      tags: ['AI', 'Autonomous Operations', 'Business', 'Platform']
-    },
-    {
-      id: 9,
-      title: 'Zion Tech Group Expands to European Markets',
-      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.',
-      category: 'company',
-      date: '2024-12-15',
-      author: 'Zion Tech Group',
-      readTime: '3 min read',
-      featured: false,
-      image: '/images/news/european-expansion.jpg',
-      tags: ['Expansion', 'Europe', 'International', 'Growth']
-    }
+  const _latestNews = [
+    {_id: 4, _title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate', _excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.', _category: 'product', _date: '2025-01-12', _author: 'Sarah Chen', _readTime: '4 min read', _featured: false, _image: '/images/news/ai-customer-success.jpg', _tags: ['AI', _'Customer Success', _'Retention', _'Platform']},
+    {_id: 5, _title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year', _excerpt: 'Recognition as one of the world\'s most innovative AI companies highlights our leadership in artificial intelligence and quantum computing.', _category: 'company', _date: '2025-01-08', _author: 'Zion Tech Group', _readTime: '2 min read', _featured: false, _image: '/images/news/forbes-ai-50.jpg', _tags: ['Recognition', _'Forbes', _'AI Leadership', _'Innovation']},
+    {_id: 6, _title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"', _excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, _potentially accelerating drug development by decades.', _category: 'research', _date: '2025-01-03', _author: 'Dr. Michael Rodriguez', _readTime: '8 min read', _featured: false, _image: '/images/news/quantum-drug-discovery.jpg', _tags: ['Quantum Computing', _'Drug Discovery', _'Research', _'Healthcare']},
+    {_id: 7, _title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation', _excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, _accelerating digital transformation initiatives.', _category: 'partnerships', _date: '2024-12-28', _author: 'Zion Tech Group', _readTime: '3 min read', _featured: false, _image: '/images/news/deloitte-partnership.jpg', _tags: ['Partnership', _'Deloitte', _'Enterprise', _'AI Implementation']},
+    {_id: 8, _title: 'AI Autonomous Business Operations Platform Beta Launch', _excerpt: 'Revolutionary platform enables fully autonomous business management with AI-driven decision making and process optimization.', _category: 'product', _date: '2024-12-20', _author: 'Zion Tech Group', _readTime: '6 min read', _featured: false, _image: '/images/news/ai-autonomous-business.jpg', _tags: ['AI', _'Autonomous Operations', _'Business', _'Platform']},
+    {_id: 9, _title: 'Zion Tech Group Expands to European Markets', _excerpt: 'Strategic expansion into European Union markets with new offices in London, _Berlin, _and Paris to serve growing demand.', _category: 'company', _date: '2024-12-15', _author: 'Zion Tech Group', _readTime: '3 min read', _featured: false, _image: '/images/news/european-expansion.jpg', _tags: ['Expansion', _'Europe', _'International', _'Growth']}
   ];
 
-  const pressReleases = [
-    {
-      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
-      date: '2025-01-15',
-      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'
-    },
-    {
-      title: 'Series C Funding Round: $250M Investment for Global Expansion',
-      date: '2025-01-10',
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'
-    },
-    {
-      title: 'Quantum-Secure Cloud Partnership with Microsoft Azure',
-      date: '2025-01-05',
-      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'
-    }
+  const _pressReleases = [
+    {_title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough', _date: '2025-01-15', _summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'},
+    {_title: 'Series C Funding Round: $250M Investment for Global Expansion', _date: '2025-01-10', _summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'},
+    {_title: 'Quantum-Secure Cloud Partnership with Microsoft Azure', _date: '2025-01-05', _summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'}
   ];
 
-  const mediaResources = [
-    {
-      title: 'Company Fact Sheet',
-      description: 'Key facts, figures, and company information for media and investors.',
-      type: 'PDF',
-      size: '2.1 MB',
-      download: '/media/zion-tech-group-fact-sheet.pdf'
-    },
-    {
-      title: 'Executive Biographies',
-      description: 'Professional backgrounds and photos of Zion Tech Group leadership team.',
-      type: 'ZIP',
-      size: '15.3 MB',
-      download: '/media/executive-bios.zip'
-    },
-    {
-      title: 'Company Logo Package',
-      description: 'High-resolution logos and brand assets for media use.',
-      type: 'ZIP',
-      size: '8.7 MB',
-      download: '/media/logo-package.zip'
-    },
-    {
-      title: 'Product Screenshots',
-      description: 'High-quality screenshots of our AI and quantum computing platforms.',
-      type: 'ZIP',
-      size: '25.1 MB',
-      download: '/media/product-screenshots.zip'
-    }
+  const _mediaResources = [
+    {_title: 'Company Fact Sheet', _description: 'Key facts, _figures, _and company information for media and investors.', _type: 'PDF', _size: '2.1 MB', _download: '/media/zion-tech-group-fact-sheet.pdf'},
+    {_title: 'Executive Biographies', _description: 'Professional backgrounds and photos of Zion Tech Group leadership team.', _type: 'ZIP', _size: '15.3 MB', _download: '/media/executive-bios.zip'},
+    {_title: 'Company Logo Package', _description: 'High-resolution logos and brand assets for media use.', _type: 'ZIP', _size: '8.7 MB', _download: '/media/logo-package.zip'},
+    {_title: 'Product Screenshots', _description: 'High-quality screenshots of our AI and quantum computing platforms.', _type: 'ZIP', _size: '25.1 MB', _download: '/media/product-screenshots.zip'}
   ];
 
-  const filteredNews = [...featuredNews, ...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
-    const searchMatch = searchQuery === '' || 
+  const _filteredNews = [...featuredNews, ...latestNews].filter(news => {_const _categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
+    const _searchMatch = searchQuery === '' || 
       news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return categoryMatch && searchMatch;
-  });
+    return categoryMatch && searchMatch;});
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
+  const _formatDate = (_dateString: string) => {_const _date = new Date(dateString);
+    return date.toLocaleDateString('en-US', _{ 
+      year: 'numeric', _month: 'long', _day: 'numeric'});
   };
 import React from 'react';
 import SEO from '../components/SEO';
 
-export default function NewsPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
+export default function NewsPage() {_return (_<UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
-          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
+          <meta name="description" content="Stay updated with Zion Tech Group's latest news, _product launches, _partnerships, _and industry insights. Read about our breakthroughs in AI, _quantum computing, _and emerging technologies." />
         </Head>
 
         {/* Hero Section */}
@@ -215,9 +58,9 @@ export default function NewsPage() {
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -227,175 +70,104 @@ export default function NewsPage() {
                 News & Press
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Stay updated with the latest developments, breakthroughs, and innovations 
+                Stay updated with the latest developments, _breakthroughs, _and innovations 
                 from Zion Tech Group and the technology industry.
               </p>
             </motion.div>
 
-        {/* Category Filter */}
+        {_/* Category Filter */}
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
               className="flex flex-wrap justify-center gap-4"
             >
-              {categories.map((category, index) => (
+              {_categories.map((category, _index) => (
                 <button
                   key={category}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  className={_`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react';
+import React, _{ useState} from 'react';
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
-  ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react';
+import {_Newspaper, _Globe, _Award, _Users, _Rocket, _Brain, _ArrowRight, _ExternalLink, _Calendar, _Tag, _Star} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function NewsPage() {
-  const newsItems = [
+export default function NewsPage() {_const _newsItems = [
     {
-      title: "Zion Tech Group Named Top AI Innovation Company 2025",
-      category: "Awards & Recognition",
-      date: "January 15, 2025",
-      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.",
-      image: "/api/placeholder/600/400",
-      source: "TechCrunch",
-      url: "#",
-      featured: true,
-      icon: Award,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Revolutionary Quantum AI Breakthrough Announced",
-      category: "Technology Innovation",
-      date: "January 10, 2025",
-      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.",
-      image: "/api/placeholder/600/400",
-      source: "MIT Technology Review",
-      url: "#",
-      featured: false,
-      icon: Brain,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Partnership with Fortune 500 Financial Institution",
-      category: "Business Development",
-      date: "January 5, 2025",
-      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.",
-      image: "/api/placeholder/600/400",
-      source: "Business Insider",
-      url: "#",
-      featured: false,
-      icon: Users,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "New Cybersecurity Division Launch",
-      category: "Company News",
-      date: "December 28, 2024",
-      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.",
-      image: "/api/placeholder/600/400",
-      source: "Security Weekly",
-      url: "#",
-      featured: false,
-      icon: Rocket,
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Record-Breaking AI Model Performance",
-      category: "Research & Development",
-      date: "December 20, 2024",
-      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.",
-      image: "/api/placeholder/600/400",
-      source: "AI Research Journal",
-      url: "#",
-      featured: false,
-      icon: Brain,
-      color: "from-emerald-500 to-teal-500"
-    },
-    {
-      title: "Global Expansion: New Office in Singapore",
-      category: "Company News",
-      date: "December 15, 2024",
-      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.",
-      image: "/api/placeholder/600/400",
-      source: "Singapore Business Times",
-      url: "#",
-      featured: false,
-      icon: Globe,
-      color: "from-indigo-500 to-purple-500"
-    }
+      title: "Zion Tech Group Named Top AI Innovation Company 2025", _category: "Awards & Recognition", _date: "January 15, _2025", _excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, _highlighting our breakthrough work in autonomous AI systems and quantum computing integration.", _image: "/api/placeholder/600/400", _source: "TechCrunch", _url: "#", _featured: true, _icon: Award, _color: "from-yellow-500 to-orange-500"},
+    {_title: "Revolutionary Quantum AI Breakthrough Announced", _category: "Technology Innovation", _date: "January 10, _2025", _excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, _achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.", _image: "/api/placeholder/600/400", _source: "MIT Technology Review", _url: "#", _featured: false, _icon: Brain, _color: "from-purple-500 to-pink-500"},
+    {_title: "Partnership with Fortune 500 Financial Institution", _category: "Business Development", _date: "January 5, _2025", _excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.", _image: "/api/placeholder/600/400", _source: "Business Insider", _url: "#", _featured: false, _icon: Users, _color: "from-blue-500 to-cyan-500"},
+    {_title: "New Cybersecurity Division Launch", _category: "Company News", _date: "December 28, _2024", _excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, _offering quantum-resistant encryption and AI-powered threat detection solutions.", _image: "/api/placeholder/600/400", _source: "Security Weekly", _url: "#", _featured: false, _icon: Rocket, _color: "from-red-500 to-orange-500"},
+    {_title: "Record-Breaking AI Model Performance", _category: "Research & Development", _date: "December 20, _2024", _excerpt: "Our research team achieves record-breaking performance in natural language processing, _with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.", _image: "/api/placeholder/600/400", _source: "AI Research Journal", _url: "#", _featured: false, _icon: Brain, _color: "from-emerald-500 to-teal-500"},
+    {_title: "Global Expansion: New Office in Singapore", _category: "Company News", _date: "December 15, _2024", _excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, _expanding our global reach and strengthening partnerships in the region.", _image: "/api/placeholder/600/400", _source: "Singapore Business Times", _url: "#", _featured: false, _icon: Globe, _color: "from-indigo-500 to-purple-500"}
   ];
 
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"];
+  const _categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
-  const filteredNews = selectedCategory === "All" 
+  const _filteredNews = selectedCategory === "All" 
     ? newsItems 
     : newsItems.filter(item => item.category === selectedCategory);
 
-  const featuredNews = newsItems.filter(item => item.featured);
+  const _featuredNews = newsItems.filter(item => item.featured);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>News & Press - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with Zion Tech Group's latest news, press releases, awards, and media coverage. Discover our innovations in AI, quantum computing, and technology." />
+        <meta name="description" content="Stay updated with Zion Tech Group's latest news, _press releases, _awards, _and media coverage. Discover our innovations in AI, _quantum computing, _and technology." />
         <meta property="og:title" content="News & Press - Zion Tech Group" />
-        <meta property="og:description" content="Stay updated with our latest news, awards, and media coverage." />
+        <meta property="og:description" content="Stay updated with our latest news, _awards, _and media coverage." />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               News & Press
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Stay updated with our latest innovations, awards, and media coverage
+              Stay updated with our latest innovations, _awards, _and media coverage
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 0.2}}
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Discover the latest developments in AI, quantum computing, and technology 
+              Discover the latest developments in AI, _quantum computing, _and technology 
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Featured News */}
-      {featuredNews.length > 0 && (
+      {_/* Featured News */}
+      {_featuredNews.length > 0 && (
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -403,23 +175,23 @@ export default function NewsPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredNews.map((item, index) => (
+              {_featuredNews.map((item, _index) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                      <div className={_`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
-                          {item.category}
+                          {_item.category}
                         </span>
                         <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
                           Featured
@@ -427,17 +199,17 @@ export default function NewsPage() {
                       </div>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                    <p className="text-white/70 mb-6">{item.excerpt}</p>
+                    <h3 className="text-2xl font-bold text-white mb-4">{_item.title}</h3>
+                    <p className="text-white/70 mb-6">{_item.excerpt}</p>
                     
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{item.date}</span>
+                        <span>{_item.date}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Newspaper className="w-4 h-4" />
-                        <span>{item.source}</span>
+                        <span>{_item.source}</span>
                       </div>
                     </div>
                     
@@ -453,35 +225,33 @@ export default function NewsPage() {
         </section>
       )}
 
-      {/* Category Filter */}
+      {_/* Category Filter */}
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
+            {_categories.map(_(category) => (_<button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                onClick={_() => setSelectedCategory(category)}
+                className={_`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
+                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'}`}
               >
-                {category}
+                {_category}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* News Grid */}
+      {_/* News Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
@@ -491,36 +261,36 @@ export default function NewsPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredNews.filter(item => !item.featured).map((item, index) => (
+            {_filteredNews.filter(item => !item.featured).map(_(item, _index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                    <div className={_`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
-                      {item.category}
+                      {_item.category}
                     </span>
                   </div>
                   
-                  <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{item.title}</h3>
-                  <p className="text-white/70 text-sm mb-4 line-clamp-3">{item.excerpt}</p>
+                  <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{_item.title}</h3>
+                  <p className="text-white/70 text-sm mb-4 line-clamp-3">{_item.excerpt}</p>
                   
                   <div className="flex items-center justify-between text-xs text-white/60 mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
-                      <span>{item.date}</span>
+                      <span>{_item.date}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Newspaper className="w-3 h-3" />
-                      <span>{item.source}</span>
+                      <span>{_item.source}</span>
                     </div>
                   </div>
                   
@@ -534,12 +304,12 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Press Kit CTA */}
+      {_/* Press Kit CTA */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
                     <a
-                      href={`/news/${news.id}`}
+                      href={_`/news/${news.id}`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Read More
@@ -559,9 +329,9 @@ export default function NewsPage() {
 
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6, _delay: 0.6}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -571,29 +341,29 @@ export default function NewsPage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsArticles.filter(article => !article.featured).map((article, index) => (
+              {_newsArticles.filter(article => !article.featured).map(_(article, _index) => (
                 <motion.article
                   key={article.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  animate={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: 0.1 * index}}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
-                      {article.category}
+                      {_article.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 line-clamp-2">{article.title}</h3>
-                  <p className="text-gray-400 mb-4 line-clamp-3">{article.excerpt}</p>
+                  <h3 className="text-xl font-semibold mb-3 line-clamp-2">{_article.title}</h3>
+                  <p className="text-gray-400 mb-4 line-clamp-3">{_article.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      {new Date(article.date).toLocaleDateString()}
+                      {_new Date(article.date).toLocaleDateString()}
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
-                      {article.readTime}
+                      {_article.readTime}
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -606,7 +376,7 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* Newsletter Signup */}
+        {_/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
@@ -615,9 +385,9 @@ export default function NewsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6, _delay: 0.8}}
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -636,30 +406,30 @@ export default function NewsPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pressReleases.map((release, index) => (
+              {_pressReleases.map(_(release, _index) => (
                 <motion.article
                   key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-                      {release.category}
+                      {_release.category}
                     </span>
-                    <span className="text-gray-400 text-sm">{release.readTime}</span>
+                    <span className="text-gray-400 text-sm">{_release.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-                    {release.title}
+                    {_release.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {release.excerpt}
+                    {_release.excerpt}
                   </p>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-400 text-sm">{release.date}</span>
+                    <span className="text-gray-400 text-sm">{_release.date}</span>
                   </div>
                 </motion.article>
               ))}
@@ -667,14 +437,14 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* News Categories */}
+        {_/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -686,38 +456,38 @@ export default function NewsPage() {
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {newsCategories.map((category, index) => (
+              {_newsCategories.map(_(category, _index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-                      {category.icon}
+                      {_category.icon}
                     </div>
                   </div>
                   <h3 className="text-sm font-semibold text-white mb-1">
-                    {category.name}
+                    {_category.name}
                   </h3>
-                  <p className="text-gray-400 text-xs">{category.count} articles</p>
+                  <p className="text-gray-400 text-xs">{_category.count} articles</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Recent News */}
+        {_/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -729,35 +499,35 @@ export default function NewsPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {recentNews.map((news, index) => (
+              {_recentNews.map(_(news, _index) => (
                 <motion.article
                   key={news.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-                      {news.category}
+                      {_news.category}
                     </span>
-                    <span className="text-gray-400 text-sm">{news.readTime}</span>
+                    <span className="text-gray-400 text-sm">{_news.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-                    {news.title}
+                    {_news.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {news.excerpt}
+                    {_news.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <User className="w-4 h-4 text-gray-400" />
-                      <span className="text-gray-400 text-sm">{news.author}</span>
+                      <span className="text-gray-400 text-sm">{_news.author}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-gray-400" />
-                      <span className="text-gray-400 text-sm">{news.date}</span>
+                      <span className="text-gray-400 text-sm">{_news.date}</span>
                     </div>
                   </div>
                 </motion.article>
@@ -766,14 +536,14 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* Media Contact */}
+        {_/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
@@ -801,14 +571,14 @@ export default function NewsPage() {
           </div>
         </section>
       </div>
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
@@ -839,14 +609,14 @@ export default function NewsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-      {/* Call to Action */}
+      {_/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -862,10 +632,10 @@ export default function NewsPage() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
               </a>
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
@@ -884,14 +654,14 @@ export default function NewsPage() {
           </motion.div>
         </div>
       </section>
-        {/* Latest News */}
+        {_/* Latest News */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -903,13 +673,13 @@ export default function NewsPage() {
             </motion.div>
             
             <div className="grid lg:grid-cols-2 gap-8">
-              {filteredNews.filter(news => !news.featured).map((news, index) => (
+              {_filteredNews.filter(news => !news.featured).map(_(news, _index) => (
                 <motion.div
                   key={news.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -918,31 +688,31 @@ export default function NewsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs border border-purple-500/30">
-                        {news.category}
+                        {_news.category}
                       </span>
                       <span className="text-gray-400 text-xs">
-                        {news.readTime}
+                        {_news.readTime}
                       </span>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
-                      {news.title}
+                      {_news.title}
                     </h3>
                     <p className="text-gray-300 text-sm mb-3 line-clamp-2">
-                      {news.excerpt}
+                      {_news.excerpt}
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>{formatDate(news.date)}</span>
-                      <span>{news.author}</span>
+                      <span>{_formatDate(news.date)}</span>
+                      <span>{_news.author}</span>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {filteredNews.filter(news => !news.featured).length === 0 && (
+            {_filteredNews.filter(news => !news.featured).length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={_{ opacity: 1}}
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
@@ -953,14 +723,14 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* Press Releases */}
+        {_/* Press Releases */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -972,24 +742,24 @@ export default function NewsPage() {
             </motion.div>
             
             <div className="max-w-4xl mx-auto space-y-6">
-              {pressReleases.map((release, index) => (
+              {_pressReleases.map(_(release, _index) => (
                 <motion.div
                   key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.2}}
+                  viewport={_{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-white mb-3">
-                    {release.title}
+                    {_release.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    {release.summary}
+                    {_release.summary}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">
-                      {formatDate(release.date)}
+                      {_formatDate(release.date)}
                     </span>
                     <a
                       href="/contact"
@@ -1004,14 +774,14 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* Media Resources */}
+        {_/* Media Resources */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1023,30 +793,30 @@ export default function NewsPage() {
             </motion.div>
             
             <div className="grid lg:grid-cols-2 gap-8">
-              {mediaResources.map((resource, index) => (
+              {_mediaResources.map(_(resource, _index) => (
                 <motion.div
                   key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.2}}
+                  viewport={_{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-white mb-3">
-                    {resource.title}
+                    {_resource.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    {resource.description}
+                    {_resource.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
-                        {resource.type}
+                        {_resource.type}
                       </span>
-                      <span>{resource.size}</span>
+                      <span>{_resource.size}</span>
                     </div>
                     <a
-                      href={resource.download}
+                      href={_resource.download}
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
@@ -1058,14 +828,14 @@ export default function NewsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Stay Updated

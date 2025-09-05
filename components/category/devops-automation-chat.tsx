@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DevopsAutomationChat: NextPage = () => {
-  return (
+const DevopsAutomationChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DevopsAutomationChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DevopsAutomationChat;

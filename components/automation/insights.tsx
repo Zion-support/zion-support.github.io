@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-export default function AutomationInsightsPage() {
-  const [intel, setIntel] = useState<any>(null);
-  const [talentMd, setTalentMd] = useState<string>('');
+export default function AutomationInsightsPage() {_const [intel, _setIntel] = useState<any>(null);
+  const [talentMd, _setTalentMd] = useState<string>('');
 
-  useEffect(() => {
-    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {});
+  useEffect__(() => {
+    fetch('/data/automation/market-intel.json').then(_(r) => r.json()).then(setIntel).catch__(() => {});
+    fetch('/data/automation/talent-highlights.md').then(_(r) => r.text()).then(setTalentMd).catch__(() => {});
   }, []);
 
   return (
@@ -16,7 +14,7 @@ export default function AutomationInsightsPage() {
       <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>
       <section className="mb-8">
         <h2 className="font-medium">Market Intelligence</h2>
-        {!intel ? (
+        {_!intel ? (
           <div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <div className="mt-3 text-sm">
@@ -24,16 +22,16 @@ export default function AutomationInsightsPage() {
             <div className="mt-3">
               <h3 className="font-medium">Top Keywords</h3>
               <ul className="list-disc list-inside">
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
-                  <li key={k}>{k}: {v as any}</li>
+                {_Object.entries(intel.insights.keywordCounts).map(_([k, _v]: unknown) => (
+                  <li key={k}>{_k}: {_v as any}</li>
                 ))}
               </ul>
             </div>
             <div className="mt-4">
               <h3 className="font-medium">Top Languages</h3>
               <ul className="list-disc list-inside">
-                {intel.insights.topLanguages.map((l: any) => (
-                  <li key={l.lang}>{l.lang}: {l.count}</li>
+                {_intel.insights.topLanguages.map(_(l: unknown) => (
+                  <li key={l.lang}>{_l.lang}: {_l.count}</li>
                 ))}
               </ul>
             </div>
@@ -43,7 +41,7 @@ export default function AutomationInsightsPage() {
 
       <section id="talent" className="mb-8">
         <h2 className="font-medium">Talent Highlights</h2>
-        {!talentMd ? (
+        {_!talentMd ? (
           <div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>

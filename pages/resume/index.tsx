@@ -1,10 +1,7 @@
-import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
+export const getServerSideProps: GetServerSideProps = async () => {_return {
     redirect: {
-      destination: '/resume/preview',
-      permanent: false}};
+      destination: '/resume/preview', _permanent: false}};
 };
 
-export default function ResumeIndex() { return null; }
+export default function ResumeIndex() {_return null;}

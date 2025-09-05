@@ -1,19 +1,14 @@
-export interface BlogSEO {
-  metaTitle: string;
+export interface BlogSEO {_metaTitle: string;
   metaDescription: string;
-  ogImageUrl?: string;
-}
+  ogImageUrl?: string;}
 
 export type PostStatus = 'draft' | 'published';
 
-export interface BlogMetrics {
-  views: number;
+export interface BlogMetrics {_views: number;
   likes: number;
-  shares: number;
-}
+  shares: number;}
 
-export interface BlogPost {
-  id: string;
+export interface BlogPost {_id: string;
   title: string;
   slug: string;
   coverImageUrl?: string;
@@ -24,5 +19,4 @@ export interface BlogPost {
   seo: BlogSEO;
   body: string; // Markdown or HTML
   status: PostStatus;
-  metrics: BlogMetrics;
-}
+  metrics: BlogMetrics;}

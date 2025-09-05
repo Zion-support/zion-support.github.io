@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const NetworkSecurityChat = () => {
-  return (
+const _NetworkSecurityChat = () => {_return (
     <div>
       <Head>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const NetworkSecurityChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default NetworkSecurityChat;

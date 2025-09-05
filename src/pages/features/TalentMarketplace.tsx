@@ -1,18 +1,8 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function TalentMarketplace() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Talent Marketplace",
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  };
+export default function TalentMarketplace() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Talent Marketplace", _"description": "Hire vetted AI and tech professionals from around the world on Zion.", _"url": "https://app.ziontechgroup.com/features/talent-marketplace"};
 
   return (
     <>
@@ -22,10 +12,10 @@ export default function TalentMarketplace() {
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

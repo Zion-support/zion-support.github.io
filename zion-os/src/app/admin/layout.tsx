@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
-  return (
+export default function AdminLayout(_{_children}: {_children: ReactNode}) {_return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       {/* Admin Header */}
       <div className="glass border-b border-white/10">
@@ -38,9 +36,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
       </div>
 
-      {/* Admin Content */}
+      {_/* Admin Content */}
       <div className="py-8">
-        {children}
+        {_children}
       </div>
     </div>
   );

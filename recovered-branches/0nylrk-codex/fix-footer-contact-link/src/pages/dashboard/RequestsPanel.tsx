@@ -1,67 +1,42 @@
 
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
-  QuoteRequestsList 
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import React, {_useState} from "react";
+import {_RequestsHeader, _QuoteRequestsList} from "@/components/quotes";
+import type {_QuoteRequest} from "@/types/quotes";
 
-export default function RequestsPanel() {
-  const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+export default function RequestsPanel() {_const { user} = useAuth();
+  const _isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
-  const {
-    quotes,
-    unreadCount,
-    isLoading,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    markAsViewed,
-    markAsResponded,
-    toggleArchive
-  } = useTalentQuotes();
+  const {_quotes, _unreadCount, _isLoading, _statusFilter, _setStatusFilter, _archiveFilter, _setArchiveFilter, _markAsViewed, _markAsResponded, _toggleArchive} = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
+  const _handleViewDetails = (_quote: QuoteRequest) => {_setSelectedQuote(quote);
     setShowDetails(true);
     
-    // If status is new, mark as viewed
+    // If status is new, _mark as viewed
     if (quote.status === 'new') {
-      markAsViewed(quote.id);
-    }
+      markAsViewed(quote.id);}
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
+  const _activeQuotes = quotes.filter(q => !q.is_archived);
+  const _archivedQuotes = quotes.filter(q => q.is_archived);
 
-  return (
-    <ProtectedRoute>
+  return (_<ProtectedRoute>
       <div>
         <Header />
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
-              unreadCount={unreadCount}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              archiveFilter={archiveFilter}
-              setArchiveFilter={setArchiveFilter}
+              unreadCount={_unreadCount}
+              statusFilter={_statusFilter}
+              setStatusFilter={_setStatusFilter}
+              archiveFilter={_archiveFilter}
+              setArchiveFilter={_setArchiveFilter}
             />
             
-            {/* Main Content */}
+            {_/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Requests</TabsTrigger>
@@ -70,37 +45,36 @@ export default function RequestsPanel() {
               
               <TabsContent value="active">
                 <QuoteRequestsList
-                  quotes={activeQuotes}
-                  isLoading={isLoading}
-                  isArchived={false}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
+                  quotes={_activeQuotes}
+                  isLoading={_isLoading}
+                  isArchived={_false}
+                  onViewDetails={_handleViewDetails}
+                  onMarkAsResponded={_markAsResponded}
+                  onToggleArchive={_toggleArchive}
                 />
               </TabsContent>
               
               <TabsContent value="archived">
                 <QuoteRequestsList
-                  quotes={archivedQuotes}
-                  isLoading={isLoading}
-                  isArchived={true}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
+                  quotes={_archivedQuotes}
+                  isLoading={_isLoading}
+                  isArchived={_true}
+                  onViewDetails={_handleViewDetails}
+                  onMarkAsResponded={_markAsResponded}
+                  onToggleArchive={_toggleArchive}
                 />
               </TabsContent>
             </Tabs>
           </div>
         </div>
         
-        {/* Quote Details Modal */}
+        {_/* Quote Details Modal */}
         <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
+          quote={_selectedQuote}
+          isOpen={_showDetails}
+          onClose={_() => {
             setShowDetails(false);
-            setSelectedQuote(null);
-          }}
+            setSelectedQuote(null);}}
         />
         
         <Footer />

@@ -1,37 +1,17 @@
 
-import { format } from "date-fns";
-import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
-import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
-  FormMessage 
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormDescription, _FormMessage} from "@/components/ui/form";
 
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-}
+interface ProjectDetailsFieldsProps {_form: UseFormReturn<ContractFormValues>;}
 
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
+export function ProjectDetailsFields(_{_form}: ProjectDetailsFieldsProps) {_return (_<>
       <FormField
         control={form.control}
         name="projectName"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+        render={_({ field}: {_field: ControllerRenderProps<ContractFormValues, _"projectName">}) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
-              <Input placeholder="AI Website Development" {...field} />
+              <Input placeholder="AI Website Development" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -39,16 +19,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       />
       
       <FormField
-        control={form.control}
+        control={_form.control}
         name="scopeSummary"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
+        render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"scopeSummary">}) => (
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
-                {...field}
+                {_...field}
               />
             </FormControl>
             <FormDescription>
@@ -61,20 +41,20 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-          control={form.control}
+          control={_form.control}
           name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> }) => (
+          render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"startDate">}) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                      variant={_"outline"}
+                      className={_`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-                      {field.value ? (
-                        format(field.value, "PPP")
+                      {_field.value ? (
+                        format(field.value, _"PPP")
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -85,9 +65,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    disabled={(date) => date < new Date()}
+                    selected={_field.value}
+                    onSelect={_field.onChange}
+                    disabled={_(_date) => date < new Date()}
                     initialFocus
                   />
                 </PopoverContent>
@@ -98,20 +78,20 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
         
         <FormField
-          control={form.control}
+          control={_form.control}
           name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> }) => (
+          render={_(_{ field}: {_field: ControllerRenderProps<ContractFormValues, _"endDate">}) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                      variant={_"outline"}
+                      className={_`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-                      {field.value ? (
-                        format(field.value, "PPP")
+                      {_field.value ? (
+                        format(field.value, _"PPP")
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -122,9 +102,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
-                    selected={field.value || undefined}
-                    onSelect={field.onChange}
-                    disabled={(date) => date < form.getValues("startDate")}
+                    selected={_field.value || undefined}
+                    onSelect={_field.onChange}
+                    disabled={_(_date) => date < form.getValues("startDate")}
                     initialFocus
                   />
                 </PopoverContent>

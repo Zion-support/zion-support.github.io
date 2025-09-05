@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 
-const Index: NextPage = () => {
-  return (
+const Index: NextPage = () => {_return (
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const Index: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Index;

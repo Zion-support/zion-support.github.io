@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const FutureOfWorkAndAutomation = () => {
-  return (
+const _FutureOfWorkAndAutomation = () => {_return (
     <div>
       <Head>
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const FutureOfWorkAndAutomation = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default FutureOfWorkAndAutomation;

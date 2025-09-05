@@ -1,20 +1,16 @@
 export type SyncScope = "full" | "dao" | "marketplace";
 
-export interface Peer {
-  id: string;
-  baseUrl: string; // e.g., https://zion-latam.example.org
+export interface Peer {_id: string;
+  baseUrl: string; // e.g., _https://zion-latam.example.org
   scope?: SyncScope;
-  paused?: boolean;
-}
+  paused?: boolean;}
 
-export interface InstanceConfig {
-  instanceId: string;
+export interface InstanceConfig {_instanceId: string;
   optIn: boolean;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
-  secretConfigured: boolean;
-}
+  secretConfigured: boolean;}
 
 export type SyncEventType =
   | "proposal"
@@ -23,55 +19,41 @@ export type SyncEventType =
   | "dao_endorsement"
   | "leaderboard_entry";
 
-export interface BaseEventPayload {
-  id: string;
-}
+export interface BaseEventPayload {_id: string;}
 
-export interface ProposalVoteEntry {
-  voterId: string;
+export interface ProposalVoteEntry {_voterId: string;
   weight: number;
-  choice: string;
-}
+  choice: string;}
 
-export interface ProposalPayload extends BaseEventPayload {
-  proposalId: string;
+export interface ProposalPayload extends BaseEventPayload {_proposalId: string;
   title: string;
-  votes: ProposalVoteEntry[];
-}
+  votes: ProposalVoteEntry[];}
 
-export interface TokenTransferPayload extends BaseEventPayload {
-  txId: string;
+export interface TokenTransferPayload extends BaseEventPayload {_txId: string;
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
-  timestamp: number;
-}
+  timestamp: number;}
 
-export interface TalentMobilityPayload extends BaseEventPayload {
-  personId: string;
+export interface TalentMobilityPayload extends BaseEventPayload {_personId: string;
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
-  endDate?: string;
-}
+  endDate?: string;}
 
-export interface DaoEndorsementPayload extends BaseEventPayload {
-  fromDAO: string;
+export interface DaoEndorsementPayload extends BaseEventPayload {_fromDAO: string;
   toDAO: string;
   resolutionId: string;
   decision: "endorse" | "reject";
-  timestamp: number;
-}
+  timestamp: number;}
 
-export interface LeaderboardEntryPayload extends BaseEventPayload {
-  subjectId: string; // userId or teamId
+export interface LeaderboardEntryPayload extends BaseEventPayload {_subjectId: string; // userId or teamId
   score: number;
-  category: string; // e.g., grants, contributions
+  category: string; // e.g., _grants, _contributions
   rank?: number;
-  period?: string; // e.g., 2025-Q3
-}
+  period?: string; // e.g., _2025-Q3}
 
 export type SyncEventPayload =
   | ProposalPayload
@@ -80,21 +62,17 @@ export type SyncEventPayload =
   | DaoEndorsementPayload
   | LeaderboardEntryPayload;
 
-export interface SyncEvent {
-  eventId: string;
+export interface SyncEvent {_eventId: string;
   type: SyncEventType;
   payload: SyncEventPayload;
   originInstanceId: string;
   version: number;
   timestamp: number;
-  merkleRoot?: string; // required for proposal events
-}
+  merkleRoot?: string; // required for proposal events}
 
-export interface MultiverseState {
-  config: InstanceConfig;
+export interface MultiverseState {_config: InstanceConfig;
   lastSyncedAt: number;
-  seenEventIds: Record<string, true>;
-  latestVersionByEntityId: Record<string, number>;
-  proposalMerkleById: Record<string, string>;
-  events: SyncEvent[];
-}
+  seenEventIds: Record<string, _true>;
+  latestVersionByEntityId: Record<string, _number>;
+  proposalMerkleById: Record<string, _string>;
+  events: SyncEvent[];}

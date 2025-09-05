@@ -1,41 +1,19 @@
 
 import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { format } from 'date-fns';
-import { Check, ArrowDown, X } from 'lucide-react'
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
-interface MilestoneCardProps {
-  id: string;
+interface MilestoneCardProps {_id: string;
   projectId: string;
   title: string;
   description?: string;
   amount: number;
   status: string;
   dueDate?: string;
-  onApprove?: (id: string) => Promise<void>;
-  onReject?: (id: string) => Promise<void>;
-}
+  onApprove?: (_id: string) => Promise<void>;
+  onReject?: (_id: string) => Promise<void>;}
 
-export function MilestoneCard({ 
-  id, 
-  projectId,
-  title, 
-  description, 
-  amount, 
-  status, 
-  dueDate,
-  onApprove,
-  onReject
-}: MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+export function MilestoneCard(_{_id, _projectId, _title, _description, _amount, _status, _dueDate, _onApprove, _onReject}: MilestoneCardProps) {_const { isUnderDispute, _disputeStatus} = useDisputeCheck(projectId, id);
   
-  function getStatusBadgeColor() {
-    switch (status) {
+  function getStatusBadgeColor() {_switch (status) {
       case 'completed':
         return 'bg-green-500';
       case 'in_progress':
@@ -45,8 +23,7 @@ export function MilestoneCard({
       case 'rejected':
         return 'bg-red-500';
       default:
-        return 'bg-gray-500';
-    }
+        return 'bg-gray-500';}
   }
   
   return (
@@ -54,19 +31,19 @@ export function MilestoneCard({
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle className="text-xl">{title}</CardTitle>
-            {dueDate && (
+            <CardTitle className="text-xl">{_title}</CardTitle>
+            {_dueDate && (
               <p className="text-sm text-muted-foreground">
-                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+                Due: {format(new Date(dueDate), _'MMM d, _yyyy')}
               </p>
             )}
           </div>
           <div className="flex gap-2">
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
-              {status.replace('_', ' ')}
+            <Badge variant="outline" className={_`capitalize ${getStatusBadgeColor()} text-white`}>
+              {_status.replace('_', _' ')}
             </Badge>
             
-            {isUnderDispute && disputeStatus && (
+            {_isUnderDispute && disputeStatus && (
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
@@ -74,20 +51,20 @@ export function MilestoneCard({
       </CardHeader>
       
       <CardContent className="pb-2">
-        {description && (
+        {_description && (
           <p className="text-muted-foreground">{description}</p>
         )}
         <div className="mt-4">
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+          <p className="text-xl font-bold">${_amount.toFixed(2)}</p>
         </div>
       </CardContent>
       
       <CardFooter className="pt-2 flex justify-between">
         <div>
-          {status !== 'completed' && status !== 'rejected' && (
+          {_status !== 'completed' && status !== 'rejected' && (
             <RaiseDisputeButton 
               projectId={projectId} 
-              milestoneId={id} 
+              milestoneId={_id} 
               variant="ghost"
               size="sm"
             />
@@ -95,19 +72,17 @@ export function MilestoneCard({
         </div>
         
         <div className="flex gap-2">
-          {status === 'pending' && onReject && !isUnderDispute && (
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
+          {_status === 'pending' && onReject && !isUnderDispute && (_<Button variant="outline" size="sm" onClick={() => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
           )}
           
-          {status === 'pending' && onApprove && !isUnderDispute && (
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>
+          {_status === 'pending' && onApprove && !isUnderDispute && (_<Button variant="default" size="sm" onClick={() => onApprove(id)}>
               <Check className="h-4 w-4 mr-1" /> Approve
             </Button>
           )}
           
-          {isUnderDispute && (
+          {_isUnderDispute && (
             <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute
             </Button>

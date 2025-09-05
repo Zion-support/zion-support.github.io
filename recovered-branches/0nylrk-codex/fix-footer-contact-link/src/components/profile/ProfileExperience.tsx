@@ -1,14 +1,8 @@
 
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
-import { Briefcase } from "lucide-react";
 
-interface ProfileExperienceProps {
-  experience: ProfileExperienceType[];
-}
+interface ProfileExperienceProps {_experience: ProfileExperienceType[];}
 
-export function ProfileExperience({ experience }: ProfileExperienceProps) {
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+export function ProfileExperience(_{_experience}: ProfileExperienceProps) {_return (_<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
       
       <div className="space-y-6">
@@ -21,12 +15,12 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
             </div>
             
             <div>
-              <h4 className="text-white font-medium">{exp.role}</h4>
-              <div className="text-zion-cyan mb-1">{exp.company}</div>
+              <h4 className="text-white font-medium">{_exp.role}</h4>
+              <div className="text-zion-cyan mb-1">{_exp.company}</div>
               <div className="text-sm text-zion-slate-light mb-2">
-                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
+                {_exp.startDate} - {_exp.current ? 'Present' : exp.endDate}
               </div>
-              <p className="text-zion-slate">{exp.description}</p>
+              <p className="text-zion-slate">{_exp.description}</p>
             </div>
           </div>
         ))}

@@ -1,25 +1,21 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+export function Navigation() {_const [isMobileMenuOpen, _setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, _setIsSearchOpen] = useState(false);
 
-  return (
-    <nav 
+  return (_<nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? "bg-black/90 backdrop-blur-md border-b border-white/20 shadow-lg" 
-          : "bg-black/80 backdrop-blur-md border-b border-white/10"
-      }`}
+          : "bg-black/80 backdrop-blur-md border-b border-white/10"}`}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {_/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity" aria-label="Zion OS Home">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -29,26 +25,25 @@ export function Navigation() {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
+          {_/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
+            {_/* Services Dropdown */}
             <div className="relative group">
               <button 
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+                onMouseEnter={_() => setIsServicesOpen(true)}
+                onMouseLeave={_() => setIsServicesOpen(false)}
               >
                 Services
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
-              {isServicesOpen && (
-                <div 
+              {_isServicesOpen && (_<div 
                   className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl"
                   onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+                  onMouseLeave={_() => setIsServicesOpen(false)}
                 >
                   <div className="p-4">
                     <div className="grid grid-cols-2 gap-4">
@@ -76,24 +71,23 @@ export function Navigation() {
               )}
             </div>
 
-            {/* Company Dropdown */}
+            {_/* Company Dropdown */}
             <div className="relative group">
               <button 
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium flex items-center"
-                onMouseEnter={() => setIsCompanyOpen(true)}
-                onMouseLeave={() => setIsCompanyOpen(false)}
+                onMouseEnter={_() => setIsCompanyOpen(true)}
+                onMouseLeave={_() => setIsCompanyOpen(false)}
               >
                 Company
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
-              {isCompanyOpen && (
-                <div 
+              {_isCompanyOpen && (_<div 
                   className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl"
                   onMouseEnter={() => setIsCompanyOpen(true)}
-                  onMouseLeave={() => setIsCompanyOpen(false)}
+                  onMouseLeave={_() => setIsCompanyOpen(false)}
                 >
                   <div className="p-4">
                     <ul className="space-y-1">
@@ -140,12 +134,12 @@ export function Navigation() {
               Docs
             </a>
             <button 
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={_() => setIsSearchOpen(!isSearchOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
               aria-label="Search"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
             <button className="btn-primary text-sm">
@@ -153,41 +147,41 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {_/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button 
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={_() => setIsSearchOpen(!isSearchOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
               aria-label="Search"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={_() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
               aria-label="Toggle mobile menu"
-              aria-expanded={isMobileMenuOpen}
+              aria-expanded={_isMobileMenuOpen}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                {isMobileMenuOpen ? (
+                {_isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Search Bar */}
-        {isSearchOpen && (
+        {_/* Search Bar */}
+        {_isSearchOpen && (
           <div className="py-4 animate-fade-in">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search Zion OS documentation, features, and more..."
+                placeholder="Search Zion OS documentation, _features, _and more..."
                 className="w-full bg-gray-900/50 border border-white/20 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 autoFocus
               />
@@ -198,9 +192,8 @@ export function Navigation() {
           </div>
         )}
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden animate-fade-in">
+        {_/* Mobile Navigation */}
+        {_isMobileMenuOpen && (_<div className="lg:hidden animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 rounded-lg mt-2 mb-4">
               {/* Services Section */}
               <div className="border-b border-white/10 pb-2">
@@ -208,64 +201,64 @@ export function Navigation() {
                 <a 
                   href="/ai-autonomous-business-manager" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   AI Business Manager
                 </a>
                 <a 
                   href="/ai-autonomous-business-operations" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   Business Operations
                 </a>
                 <a 
                   href="/quantum-services" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   Quantum Computing
                 </a>
                 <a 
                   href="/services" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   View All Services
                 </a>
               </div>
 
-              {/* Company Section */}
+              {_/* Company Section */}
               <div className="border-b border-white/10 pb-2">
                 <h3 className="text-sm font-semibold text-purple-400 mb-2 px-3">Company</h3>
                 <a 
                   href="/about" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   About Us
                 </a>
                 <a 
                   href="/contact" 
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={_() => setIsMobileMenuOpen(false)}
                 >
                   Contact
                 </a>
               </div>
 
-              {/* Other Links */}
+              {_/* Other Links */}
               <a 
                 href="/docs" 
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={_() => setIsMobileMenuOpen(false)}
               >
                 Documentation
               </a>
               <a 
                 href="/multiverse/launch" 
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={_() => setIsMobileMenuOpen(false)}
               >
                 Launch
               </a>

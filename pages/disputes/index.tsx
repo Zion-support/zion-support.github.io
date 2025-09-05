@@ -2,13 +2,11 @@ import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const _fetcher = (_url: string) => fetch(url).then(r => r.json());
 
-export default function DisputesIndexPage() {
-  const { data } = useSWR('/api/disputes', fetcher);
-  const disputes = data?.disputes || [];
-  return (
-    <EnhancedLayout>
+export default function DisputesIndexPage() {_const { data} = useSWR('/api/disputes', fetcher);
+  const _disputes = data?.disputes || [];
+  return (_<EnhancedLayout>
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">My Disputes</h1>
@@ -25,15 +23,15 @@ export default function DisputesIndexPage() {
               </tr>
             </thead>
             <tbody>
-              {disputes.map((d: any) => (
+              {_disputes.map((d: unknown) => (
                 <tr key={d.id} className="border-t">
-                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
-                  <td className="px-3 py-2">{d.projectId}</td>
-                  <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
-                  <td className="px-3 py-2">{d.status}</td>
+                  <td className="px-3 py-2"><Link href={_`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{_d.id}</a></Link></td>
+                  <td className="px-3 py-2">{_d.projectId}</td>
+                  <td className="px-3 py-2">{_new Date(d.createdAt).toLocaleString()}</td>
+                  <td className="px-3 py-2">{_d.status}</td>
                 </tr>
               ))}
-              {disputes.length === 0 && (
+              {_disputes.length === 0 && (
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
                 </tr>

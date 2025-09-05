@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MobileAppDevelopmentChat: NextPage = () => {
-  return (
+const MobileAppDevelopmentChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const MobileAppDevelopmentChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default MobileAppDevelopmentChat;

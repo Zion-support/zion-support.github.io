@@ -10,40 +10,32 @@
   `typeRoots` are merged with normal type resolution.
 */
 
-declare module "react" {
-  // Basic ReactElement stub (JSX trees ultimately compile into this).
+declare module "react" {_// Basic ReactElement stub (JSX trees ultimately compile into this).
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
+  export interface ReactElement<P = any, _T extends string | React.JSXElementConstructor<any> = any> {
     type: T;
     props: P;
-    key: React.Key | null;
-  }
+    key: React.Key | null;}
 
   // Function Component (very trimmed-down).
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  export interface FC<P = Record<string, unknown>> {
-    (props: P): ReactElement | null;
-  }
+  export interface FC<P = Record<string, unknown>> {_(props: P): ReactElement | null;}
 
   // Common hooks we rely on.
-  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+  export function useMemo<T>(_factory: () => T, deps: readonly unknown[]): T;
 
   export type Key = string | number;
 
   // Default export so `import React from 'react'` keeps working even without
   // the real react package being installed.
-  const React: {
-    useMemo: typeof useMemo;
-  } & Record<string, unknown>;
+  const React: {_useMemo: typeof useMemo;} & Record<string, unknown>;
 
   export default React;
 }
 
-declare namespace React {
-  // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"
+declare namespace React {_// Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"
   // errors when `@types/react` is not present.
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface IntrinsicElements {
-    [elemName: string]: any;
-  }
+    [elemName: string]: unknown;}
 }

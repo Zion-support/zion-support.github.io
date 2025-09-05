@@ -1,9 +1,7 @@
 import React from 'react';
-export function CommunityPage() {
-  return (
+export function CommunityPage() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

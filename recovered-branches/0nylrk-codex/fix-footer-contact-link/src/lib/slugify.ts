@@ -1,6 +1,5 @@
-export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(_title: string, _separator = "-"): string {_const _sep = separator;
+  const _escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   return title
     .trim()
@@ -10,8 +9,8 @@ export function slugify(title: string, separator = "-"): string {
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
-    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+    .replace(new RegExp(`${_escaped}{_2}`, "g"), sep)
+    .replace(new RegExp(`^${_escaped}+|${_escaped}+$`, "g"), "");
 }
 
 /**
@@ -19,11 +18,9 @@ export function slugify(title: string, separator = "-"): string {
  * This simply splits the slug on the separator and
  * capitalizes each word.
  */
-export function unslugify(slug: string, separator = "-"): string {
-  return slug
+export function unslugify(_slug: string, _separator = "-"): string {_return slug
     .split(separator)
     .filter(Boolean)
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
+    .join(" ");}
 

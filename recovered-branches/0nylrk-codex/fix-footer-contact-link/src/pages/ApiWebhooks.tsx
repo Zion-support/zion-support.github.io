@@ -1,138 +1,86 @@
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export function ApiWebhooks() {
-  // Sample webhook event payload
-  const newApplicationPayload = `{
-  "event_type": "new_application",
-  "created_at": "2023-06-10T15:42:31Z",
-  "data": {
-    "application_id": "app-123456",
-    "job_id": "job-789",
-    "talent_id": "talent-456",
-    "status": "new",
-    "cover_letter": "I'm excited to apply for this position...",
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
-    "created_at": "2023-06-10T15:42:31Z"
-  }
+export function ApiWebhooks() {_// Sample webhook event payload
+  const _newApplicationPayload = `{
+  "event_type": "new_application", _"created_at": "2023-06-10T15:42:31Z", _"data": {
+    "application_id": "app-123456", _"job_id": "job-789", _"talent_id": "talent-456", _"status": "new", _"cover_letter": "I'm excited to apply for this position...", _"resume_url": "https://storage.zionai.com/resumes/resume-123.pdf", _"created_at": "2023-06-10T15:42:31Z"}
 }`;
 
-  const newHirePayload = `{
-  "event_type": "talent_hired",
-  "created_at": "2023-06-12T09:15:22Z",
-  "data": {
-    "project_id": "project-123",
-    "job_id": "job-456",
-    "client_id": "client-789",
-    "talent_id": "talent-123",
-    "start_date": "2023-07-01",
-    "status": "offer_accepted",
-    "created_at": "2023-06-12T09:15:22Z"
-  }
+  const _newHirePayload = `{_"event_type": "talent_hired", _"created_at": "2023-06-12T09:15:22Z", _"data": {
+    "project_id": "project-123", _"job_id": "job-456", _"client_id": "client-789", _"talent_id": "talent-123", _"start_date": "2023-07-01", _"status": "offer_accepted", _"created_at": "2023-06-12T09:15:22Z"}
 }`;
 
-  const quoteReceivedPayload = `{
-  "event_type": "quote_received",
-  "created_at": "2023-06-15T11:30:00Z",
-  "data": {
-    "quote_id": "quote-123",
-    "client_id": "client-456",
-    "talent_id": "talent-789",
-    "project_name": "Website Redesign",
-    "budget_min": 5000,
-    "budget_max": 8000,
-    "status": "new",
-    "created_at": "2023-06-15T11:30:00Z"
-  }
+  const _quoteReceivedPayload = `{_"event_type": "quote_received", _"created_at": "2023-06-15T11:30:00Z", _"data": {
+    "quote_id": "quote-123", _"client_id": "client-456", _"talent_id": "talent-789", _"project_name": "Website Redesign", _"budget_min": 5000, _"budget_max": 8000, _"status": "new", _"created_at": "2023-06-15T11:30:00Z"}
 }`;
 
-  const messageReceivedPayload = `{
-  "event_type": "message_received",
-  "created_at": "2023-06-18T14:22:15Z",
-  "data": {
-    "message_id": "msg-123",
-    "conversation_id": "conv-456",
-    "sender_id": "user-789",
-    "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.",
-    "created_at": "2023-06-18T14:22:15Z"
-  }
+  const _messageReceivedPayload = `{_"event_type": "message_received", _"created_at": "2023-06-18T14:22:15Z", _"data": {
+    "message_id": "msg-123", _"conversation_id": "conv-456", _"sender_id": "user-789", _"recipient_id": "user-012", _"content": "Hi, _I'd like to discuss the project details.", _"created_at": "2023-06-18T14:22:15Z"}
 }`;
 
-  const webhookHandlerJs = `// Express.js webhook handler example
-const express = require('express');
-const app = express();
-const crypto = require('crypto');
+  const _webhookHandlerJs = `// Express.js webhook handler example
+const _express = require('express');
+const _app = express();
+const _crypto = require('window.crypto');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
 // Your webhook secret from the Zion dashboard
-const webhookSecret = 'YOUR_WEBHOOK_SECRET';
+const _webhookSecret = 'YOUR_WEBHOOK_SECRET';
 
 // Middleware to verify webhook signatures
-function verifyWebhookSignature(req, res, next) {
-  const signature = req.headers['x-zion-signature'];
-  const timestamp = req.headers['x-zion-timestamp'];
+function verifyWebhookSignature(_req, _res, _next) {_const _signature = req.headers['x-zion-signature'];
+  const _timestamp = req.headers['x-zion-timestamp'];
   
   if (!signature || !timestamp) {
-    return res.status(401).send('Missing signature or timestamp');
-  }
+    return res.status(401).send('Missing signature or timestamp');}
   
   // Verify the signature
-  const payload = timestamp + '.' + JSON.stringify(req.body);
-  const expectedSignature = crypto
+  const _payload = timestamp + '.' + JSON.stringify(req.body);
+  const _expectedSignature = window.crypto
     .createHmac('sha256', webhookSecret)
     .update(payload)
     .digest('hex');
   
-  if (signature !== expectedSignature) {
-    return res.status(401).send('Invalid signature');
-  }
+  if (signature !== expectedSignature) {_return res.status(401).send('Invalid signature');}
   
   next();
 }
 
 // Webhook endpoint with signature verification
-app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body;
+app.post(_'/webhooks/zion', _verifyWebhookSignature, _(req, _res) => {_const { event_type, _data} = req.body;
   
   // Handle different event types
-  switch (event_type) {
-    case 'new_application':
-      console.log('New application received:', data.application_id);
+  switch (event_type) {_case 'new_application':
+      
       // Process the new application...
       break;
     
     case 'talent_hired':
-      console.log('Talent hired:', data.talent_id);
+      
       // Update your system...
       break;
     
     case 'quote_received':
-      console.log('New quote received:', data.quote_id);
+      
       // Process the quote...
       break;
     
     case 'message_received':
-      console.log('New message received:', data.message_id);
+      
       // Process the message...
       break;
     
-    default:
-      console.log('Unknown event type:', event_type);
-  }
+    default:}
   
   // Always return a 200 response quickly
   res.status(200).send('Webhook received');
 });
 
-app.listen(3000, () => {
-  console.log('Webhook server listening on port 3000');
-});`;
+app.listen(_3000, _() => {});`;
 
   return (
     <ApiDocsLayout>
@@ -184,7 +132,7 @@ app.listen(3000, () => {
         
         <ul>
           <li>A name for the webhook (for your reference)</li>
-          <li>The URL where you want to receive webhook events</li>
+          <li>The window.URL where you want to receive webhook events</li>
           <li>The event types you want to subscribe to</li>
         </ul>
         
@@ -203,16 +151,16 @@ app.listen(3000, () => {
             <TabsTrigger value="message_received">Message Received</TabsTrigger>
           </TabsList>
           <TabsContent value="new_application">
-            <CodeBlock code={newApplicationPayload} language="json" showLineNumbers={true} />
+            <CodeBlock code={_newApplicationPayload} language="json" showLineNumbers={_true} />
           </TabsContent>
           <TabsContent value="talent_hired">
-            <CodeBlock code={newHirePayload} language="json" showLineNumbers={true} />
+            <CodeBlock code={_newHirePayload} language="json" showLineNumbers={_true} />
           </TabsContent>
           <TabsContent value="quote_received">
-            <CodeBlock code={quoteReceivedPayload} language="json" showLineNumbers={true} />
+            <CodeBlock code={_quoteReceivedPayload} language="json" showLineNumbers={_true} />
           </TabsContent>
           <TabsContent value="message_received">
-            <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />
+            <CodeBlock code={_messageReceivedPayload} language="json" showLineNumbers={_true} />
           </TabsContent>
         </Tabs>
 
@@ -229,7 +177,7 @@ app.listen(3000, () => {
         
         <p>Here's an example of verifying a webhook in Node.js:</p>
         
-        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
+        <CodeBlock code={_webhookHandlerJs} language="javascript" showLineNumbers={_true} />
 
         <h2>Testing Webhooks</h2>
         <p>

@@ -1,128 +1,78 @@
 
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { z } from "zod";
-import { LockKeyhole } from 'lucide-react'
 
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { toast } from "@/hooks/use-toast";
-import { cleanupAuthState } from "@/utils/authUtils";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
 // Form validation schema
-const updatePasswordSchema = z
-  .object({
-    password: z
+const _updatePasswordSchema = z
+  .object({_password: z
       .string()
-      .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]});
+      .min(8, _"Password must be at least 8 characters")
+      .max(64, _"Password must be less than 64 characters"), _confirmPassword: z.string()})
+  .refine(_(data) => data.password === data.confirmPassword, {_message: "Passwords do not match", _path: ["confirmPassword"]});
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
-export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const router = useRouter();
+export default function UpdatePassword() {_const [isLoading, _setIsLoading] = useState(false);
+  const [accessToken, _setAccessToken] = useState<string | null>(null);
+  const [error, _setError] = useState<string | null>(null);
+  const [success, _setSuccess] = useState(false);
+  const _router = useRouter();
 
   // Initialize react-hook-form
-  const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
-    defaultValues: {
-      password: "",
-      confirmPassword: ""}});
+  const _form = useForm<UpdatePasswordFormValues>({
+    resolver: zodResolver(updatePasswordSchema), _defaultValues: {
+      password: "", _confirmPassword: ""}});
 
-  useEffect(() => {
-    // Extract access token from URL hash on the client
-    const hash = typeof window !== 'undefined' ? window.location.hash : "";
-    const hashParams = new URLSearchParams(hash.substring(1));
-    const token = hashParams.get("access_token");
+  useEffect__(() => {_// Extract access token from window.URL hash on the client
+    const _hash = typeof window !== 'undefined' ? window.location.hash : "";
+    const _hashParams = new URLSearchParams(hash.substring(1));
+    const _token = hashParams.get("access_token");
     
     if (token) {
-      setAccessToken(token);
-    } else {
-      setError("No access token found. Please request a new password reset link.");
-    }
+      setAccessToken(token);} else {_setError("No access token found. Please request a new password reset link.");}
 
     // Clean up auth state to prevent issues
     cleanupAuthState();
   }, []);
 
   // Form submission handler
-  const onSubmit = async (data: UpdatePasswordFormValues) => {
-    if (!accessToken) {
+  const _onSubmit = async (_data: UpdatePasswordFormValues) => {_if (!accessToken) {
       setError("No access token found. Please request a new password reset link.");
-      return;
-    }
+      return;}
 
     setIsLoading(true);
-    try {
-      // Set the session with the access token
+    try {_// Set the session with the access token
       await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: ''});
+        access_token: accessToken, _refresh_token: ''});
 
       // Update the password
-      const { error } = await supabase.auth.updateUser({
-        password: data.password});
+      const {_error} = await supabase.auth.updateUser({_password: data.password});
 
-      if (error) {
-        toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive"});
+      if (error) {_toast({
+          title: "Password update failed", _description: error.message, _variant: "destructive"});
         setError(error.message);
         return;
       }
 
       // Show success message and clean up auth state
       setSuccess(true);
-      toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password."});
+      toast({_title: "Password updated successfully", _description: "You can now log in with your new password."});
 
       // Clean auth state and redirect after a delay
       cleanupAuthState();
-      setTimeout(() => {
-        router.push("/login");
-      }, 3000);
-    } catch (error: any) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' });
-      toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+      setTimeout__(() => {_router.push("/login");}, 3000);
+    } catch (error: unknown) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Password update error'});
+      toast({_title: "Password update failed", _description: error.message || "An unexpected error occurred", _variant: "destructive"});
       setError(error.message || "An unexpected error occurred");
-    } finally {
-      setIsLoading(false);
-    }
+    } finally {_setIsLoading(false);}
   };
 
-  const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
+  const _onInvalid = (_errors: unknown) => {_const _firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
     if (firstError) {
-      form.setFocus(firstError);
-    }
+      form.setFocus(firstError);}
   };
 
-  return (
-    <>
+  return (_<>
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -136,20 +86,20 @@ export default function UpdatePassword() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              {error && (
+              {_error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
                   <Button 
                     className="mt-3 text-xs"
                     variant="outline"
-                    onClick={() => router.push('/forgot-password')}
+                    onClick={_() => router.push('/forgot-password')}
                   >
                     Request new reset link
                   </Button>
                 </div>
               )}
 
-              {success ? (
+              {_success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple" />
@@ -164,11 +114,11 @@ export default function UpdatePassword() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
+                  <form onSubmit={_form.handleSubmit(onSubmit, _onInvalid)} className="space-y-6">
                     <FormField
-                      control={form.control}
+                      control={_form.control}
                       name="password"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
+                      render={_(_{ field}: {_field: ControllerRenderProps<UpdatePasswordFormValues, _"password">}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
@@ -176,10 +126,10 @@ export default function UpdatePassword() {
                               type="password"
                               placeholder="Enter password"
                               aria-label="New password"
-                              aria-invalid={!!form.formState.errors.password}
+                              aria-invalid={_!!form.formState.errors.password}
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
-                              {...field}
+                              disabled={_isLoading}
+                              {_...field}
                             />
                           </FormControl>
                           <FormMessage className="text-red-400" />
@@ -188,9 +138,9 @@ export default function UpdatePassword() {
                     />
 
                     <FormField
-                      control={form.control}
+                      control={_form.control}
                       name="confirmPassword"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
+                      render={_(_{ field}: {_field: ControllerRenderProps<UpdatePasswordFormValues, _"password">}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
@@ -198,10 +148,10 @@ export default function UpdatePassword() {
                               type="password"
                               placeholder="Enter password"
                               aria-label="Confirm password"
-                              aria-invalid={!!form.formState.errors.confirmPassword}
+                              aria-invalid={_!!form.formState.errors.confirmPassword}
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
-                              {...field}
+                              disabled={_isLoading}
+                              {_...field}
                             />
                           </FormControl>
                           <FormMessage className="text-red-400" />
@@ -212,16 +162,16 @@ export default function UpdatePassword() {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
+                      disabled={_isLoading || !accessToken}
                     >
-                      {isLoading ? "Updating..." : "Update Password"}
+                      {_isLoading ? "Updating..." : "Update Password"}
                     </Button>
 
                     <div className="text-center">
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
-                        onClick={() => router.push("/login")}
+                        onClick={_() => router.push("/login")}
                         type="button"
                       >
                         Back to login

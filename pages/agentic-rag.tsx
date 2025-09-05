@@ -2,26 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
-export default function AgenticRAGPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+export default function AgenticRAGPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/month', 'Web/PDF ingestion', 'Basic reranker', 'CSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/month', 'GitHub/S3 connectors', 'Hybrid search + rerank', 'Eval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'] }];
+	const _plans = [
+		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
+		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
+		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
 
-	return (
-		<UltraFuturisticMatrixBackground>
+	return (_<UltraFuturisticMatrixBackground>
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
-				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
+				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, _indexing, _reranking, _and evaluation built-in." />
 				<link rel="canonical" href="https://ziontechgroup.com/agentic-rag" />
 			</Head>
 
@@ -36,13 +29,12 @@ export default function AgenticRAGPage() {
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-					{plans.map((p) => (
-						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-							<h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-							<div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
+					{_plans.map((p) => (_<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
+							<h3 className="text-2xl font-bold text-white mb-2">{_p.name}</h3>
+							<div className="text-cyan-400 font-semibold mb-4">{_p.price}</div>
 							<ul className="space-y-2 text-gray-300 text-sm">
-								{p.items.map((i) => (
-									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
+								{_p.items.map((i) => (
+									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{_i}</span></li>
 								))}
 							</ul>
 						</div>
@@ -69,9 +61,9 @@ export default function AgenticRAGPage() {
 
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{_contactInfo.mobile}</span></div>
+						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{_contactInfo.email}</span></div>
+						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{_contactInfo.address}</span></div>
 					</div>
 					<div className="text-center">
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>

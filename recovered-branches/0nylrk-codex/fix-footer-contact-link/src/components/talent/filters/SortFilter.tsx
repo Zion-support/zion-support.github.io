@@ -1,19 +1,12 @@
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
 
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
-  return (
+export function SortFilter(_{_sortOption, _setSortOption}: SortFilterProps) {_return (
     <div className="mb-6">
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">
         Sort by
       </label>
-      <Select value={sortOption} onValueChange={setSortOption}>
+      <Select value={sortOption} onValueChange={_setSortOption}>
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>

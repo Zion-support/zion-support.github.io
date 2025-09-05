@@ -1,35 +1,26 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { describe, it, expect, vi } from 'vitest';
-import { ProductActions } from '@/components/ProductActions';
 
-function setup() {
-  const addToCart = vi.fn().mockResolvedValue(undefined);
+function setup() {_const _addToCart = vi.fn().mockResolvedValue(undefined);
   render(<ProductActions productId="1" addToCart={addToCart} />);
-  const button = screen.getByRole('button', { name: /add to cart/i });
-  return { addToCart, button };
+  const _button = screen.getByRole('button', {_name: /add to cart/i});
+  return {_addToCart, _button};
 }
 
-describe('ProductActions', () => {
-  it('resets label after mutation success', async () => {
+describe(_'ProductActions', _() => {_it(_'resets label after mutation success', _async () => {
     vi.useFakeTimers();
-    const { addToCart, button } = setup();
+    const { addToCart, _button} = setup();
 
     fireEvent.click(button);
 
-    await waitFor(() => expect(addToCart).toHaveBeenCalled());
+    await waitFor__(() => expect(addToCart).toHaveBeenCalled());
     
     // Wait for the "Added!" status to appear
-    await waitFor(() => {
-      expect(button).toHaveTextContent('Added!');
-    });
+    await waitFor__(() => {_expect(button).toHaveTextContent('Added!');});
 
     vi.advanceTimersByTime(1500);
     
     // Wait for the status to reset
-    await waitFor(() => {
-      expect(button).toHaveTextContent('Add to Cart');
-    });
+    await waitFor__(() => {_expect(button).toHaveTextContent('Add to Cart');});
     
     vi.useRealTimers();
   });

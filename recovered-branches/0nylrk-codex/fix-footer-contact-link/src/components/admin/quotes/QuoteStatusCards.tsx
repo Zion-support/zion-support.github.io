@@ -1,20 +1,15 @@
 
 import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
-interface QuoteStatusCardsProps {
-  statusCounts: {
+interface QuoteStatusCardsProps {_statusCounts: {
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-    closed: number;
-  };
+    closed: number;};
 }
 
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
-  return (
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCounts}) => {_return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -32,7 +27,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
             In Review
-            <Badge className="bg-yellow-500">{statusCounts.in_review}</Badge>
+            <Badge className="bg-yellow-500">{_statusCounts.in_review}</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -44,7 +39,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
             Responded
-            <Badge className="bg-purple-500">{statusCounts.responded}</Badge>
+            <Badge className="bg-purple-500">{_statusCounts.responded}</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -56,7 +51,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
             Accepted
-            <Badge className="bg-green-500">{statusCounts.accepted}</Badge>
+            <Badge className="bg-green-500">{_statusCounts.accepted}</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -68,7 +63,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
             Closed
-            <Badge className="bg-gray-500">{statusCounts.closed}</Badge>
+            <Badge className="bg-gray-500">{_statusCounts.closed}</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent>

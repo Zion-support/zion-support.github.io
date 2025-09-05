@@ -1,56 +1,37 @@
 
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+const _corsHeaders = {_'Access-Control-Allow-Origin': '*', _'Access-Control-Allow-Headers': 'authorization, _x-client-info, _apikey, _content-type'};
 
-interface Milestone {
-  title: string;
+interface Milestone {_title: string;
   description: string;
   dueDate: string;
-  estimatedHours: number;
-}
+  estimatedHours: number;}
 
-serve(async (req) => {
-  // Handle CORS preflight requests
+serve(_async (req) => {_// Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, _{ headers: corsHeaders});
   }
 
-  try {
-    // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY');
+  try {_// Get the OpenAI API key from environment variables
+    const _apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set');
-    }
+      throw new Error('OPENAI_API_KEY is not set');}
 
     // Parse request body
-    const {
-      talentName,
-      clientName,
-      projectName,
-      scopeSummary,
-      startDate,
-      endDate,
-      paymentTerms,
-      paymentAmount,
-      additionalClauses,
-      milestones
-    } = await req.json();
+    const {_talentName, _clientName, _projectName, _scopeSummary, _startDate, _endDate, _paymentTerms, _paymentAmount, _additionalClauses, _milestones} = await req.json();
 
     // Create the contract prompt for OpenAI
-    let prompt = `
-    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
+    let _prompt = `
+    Please generate a professional contractual agreement between ${_clientName} (Client) and ${_talentName} (Talent) for the following project:
 
-    Project Name: ${projectName}
-    Project Scope: ${scopeSummary}
-    Start Date: ${new Date(startDate).toLocaleDateString()}
-    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
+    Project Name: ${_projectName}
+    Project Scope: ${_scopeSummary}
+    Start Date: ${_new Date(startDate).toLocaleDateString()}
+    ${_endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
     
-    Payment Terms: ${paymentTerms}
-    Payment Amount: ${paymentAmount}
+    Payment Terms: ${_paymentTerms}
+    Payment Amount: ${_paymentAmount}
     
     The contract should include standard sections like:
     - Parties involved
@@ -60,30 +41,28 @@ serve(async (req) => {
     - Deliverables
     `;
 
-    if (additionalClauses && additionalClauses.length > 0) {
-      prompt += `
+    if (additionalClauses && additionalClauses.length > 0) {_prompt += `
       
       Please also include the following additional clauses:
       ${additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
+      ${_additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
+      ${_additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
+      ${_additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
       `;
     }
 
     // Add milestone information if available
-    if (milestones && milestones.length > 0) {
-      prompt += `
+    if (milestones && milestones.length > 0) {_prompt += `
       
       The project will be divided into the following milestones:
       `;
       
-      milestones.forEach((milestone: Milestone, index: number) => {
+      milestones.forEach(_(milestone: Milestone, _index: number) => {
         prompt += `
-        Milestone ${index + 1}: ${milestone.title}
-        - Description: ${milestone.description}
-        - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
-        - Estimated Work: ${milestone.estimatedHours} hours
+        Milestone ${index + 1}: ${_milestone.title}
+        - Description: ${_milestone.description}
+        - Due Date: ${_new Date(milestone.dueDate).toLocaleDateString()}
+        - Estimated Work: ${_milestone.estimatedHours} hours
         `;
       });
       
@@ -99,45 +78,25 @@ serve(async (req) => {
     `;
 
     // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`},
-      body: JSON.stringify({
-        model: 'gpt-4o',
-        messages: [
+    const _response = await fetch('https://api.openai.com/v1/chat/completions', {_method: 'POST', _headers: {
+        'Content-Type': 'application/json', _'Authorization': `Bearer ${apiKey}`},
+      body: JSON.stringify({_model: 'gpt-4o', _messages: [
           {
-            role: 'system',
-            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},
-          {
-            role: 'user',
-            content: prompt}],
+            role: 'system', _content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, _comprehensive contract based on the provided details.'},
+          {_role: 'user', _content: prompt}],
         temperature: 0.7})});
 
-    const data = await response.json();
+    const _data = await response.json();
     
-    if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate contract');
-    }
+    if (!response.ok) {_throw new Error(data.error?.message || 'Failed to generate contract');}
 
-    const contract = data.choices[0].message.content.trim();
+    const _contract = data.choices[0].message.content.trim();
     
-    return new Response(JSON.stringify({ 
-      success: true, 
-      contract 
-    }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-  } catch (error) {
-    console.error('Error generating contract:', error);
-    return new Response(
+    return new Response(JSON.stringify({_success: true, _contract}), {_headers: { ...corsHeaders, _'Content-Type': 'application/json'}});
+  } catch (error) {_return new Response(
       JSON.stringify({ 
-        success: false, 
-        error: error.message || 'Failed to generate contract' 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        success: false, _error: error.message || 'Failed to generate contract'}),
+      {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'}}
     );
   }
 });

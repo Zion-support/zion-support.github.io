@@ -1,9 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getAllTransactions } from "../../../../utils/token/service";
+import type {_NextApiRequest, _NextApiResponse} from "next";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query;
-  const txs = getAllTransactions();
-  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs;
-  res.status(200).json({ transactions: filtered });
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const { userId} = req.query;
+  const _txs = getAllTransactions();
+  const _filtered = typeof userId === "string" ? txs.filter(_(t) => t.userId === userId) : txs;
+  res.status(200).json({_transactions: filtered});
 }

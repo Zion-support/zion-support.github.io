@@ -1,81 +1,54 @@
 
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
-import { toast } from 'sonner';
+import React, {_useState} from 'react';
 
-export default function ProjectRoom() {
-  const { projectId } = useParams() as { projectId: string };
+export default function ProjectRoom() {_const { projectId} = useParams() as {_projectId: string};
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string;
+  const [callParticipants, setCallParticipants] = useState<Array<{_id: string;
     name: string;
     avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
-    isHost?: boolean;
-  }>>([
-    {
-      id: 'user-1',
-      name: 'You',
-      isHost: true,
-      isVideoEnabled: true,
-      isMuted: false
-    }
+    isHost?: boolean;}>>([
+    {_id: 'user-1', _name: 'You', _isHost: true, _isVideoEnabled: true, _isMuted: false}
   ]);
   
-  const startVideoCall = () => {
-    setIsInCall(true);
-    toast.success("Video call started", {
-      description: "Others can join with the project room link"
-    });
+  const _startVideoCall = () => {_setIsInCall(true);
+    toast.success("Video call started", _{
+      description: "Others can join with the project room link"});
     // Switch to video tab if not already there
-    if (activeTab !== 'video') {
-      setActiveTab('video');
-    }
+    if (activeTab !== 'video') {_setActiveTab('video');}
   };
   
-  const endVideoCall = () => {
-    setIsInCall(false);
-    toast.info("Video call ended", {
-      description: "Call duration and participants will be logged"
-    });
+  const _endVideoCall = () => {_setIsInCall(false);
+    toast.info("Video call ended", _{
+      description: "Call duration and participants will be logged"});
   };
   
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+  const _simulateUserJoining = () => {_// This is just for demo purposes - in a real app, _this would be handled by the video call service
+    const _mockUsers = [
+      { id: 'user-2', _name: 'Alex Chen', _isVideoEnabled: true, _isMuted: false},
+      {_id: 'user-3', _name: 'Taylor Kim', _isVideoEnabled: false, _isMuted: true},
+      {_id: 'user-4', _name: 'Jordan Smith', _isVideoEnabled: true, _isMuted: false, _isScreenSharing: true}
     ];
     
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    const _randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     
-    if (!callParticipants.find(p => p.id === randomUser.id)) {
-      setCallParticipants(prev => [...prev, randomUser]);
+    if (!callParticipants.find(p => p.id === randomUser.id)) {_setCallParticipants(prev => [...prev, _randomUser]);
       toast(`${randomUser.name} joined the call`);
     }
   };
   
   return (
     <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
+      <SEO title={_`Project Room - ${projectId}`} description="Collaborate on your project" />
       <Header />
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
+          <h1 className="text-3xl font-bold">Project Room: {_projectId}</h1>
           <div className="flex gap-2">
-            {isInCall && (
+            {_isInCall && (
               <Button variant="destructive" className="flex items-center gap-2">
                 <X className="h-4 w-4" />
                 End Call
@@ -85,7 +58,7 @@ export default function ProjectRoom() {
           </div>
         </div>
         
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+        <Tabs value={_activeTab} onValueChange={_setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4" />
@@ -98,7 +71,7 @@ export default function ProjectRoom() {
             <TabsTrigger value="video" className="flex items-center gap-2">
               <Video className="h-4 w-4" />
               <span className="hidden sm:inline">Video</span>
-              {isInCall && (
+              {_isInCall && (
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -154,17 +127,17 @@ export default function ProjectRoom() {
                 <CardDescription>Schedule and join video calls</CardDescription>
               </CardHeader>
               <CardContent className="min-h-[400px] p-4">
-                {isInCall ? (
+                {_isInCall ? (
                   <div className="space-y-4">
                     <VideoCallRoom 
                       roomId={`project-${projectId}`}
-                      participants={callParticipants}
-                      onLeave={endVideoCall}
+                      participants={_callParticipants}
+                      onLeave={_endVideoCall}
                     />
                     
-                    {/* This button is just for demo/testing purposes */}
+                    {_/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
-                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                      <Button variant="outline" onClick={_simulateUserJoining} className="text-sm">
                         Simulate user joining (demo only)
                       </Button>
                     </div>
@@ -173,7 +146,7 @@ export default function ProjectRoom() {
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">
                     <p className="text-muted-foreground">Start a video call with your team</p>
                     <div className="flex gap-2">
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
+                      <Button onClick={_startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4" />
                         Start Video Call
                       </Button>

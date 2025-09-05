@@ -1,47 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  ExternalLink
-} from 'lucide-react';
+import {_ExternalLink} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
-export default function HomePage() {
-  const [isVisible, setIsVisible] = useState(false);
+export default function HomePage() {_const [isVisible, _setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  useEffect__(() => {
+    setIsVisible(true);}, []);
 
-  const services = [
-    {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with AI-powered analytics",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      link: "https://ziontechgroup.com/ai-business-intelligence",
-      price: "$499/month",
-      features: ["AI-powered dashboards", "Predictive analytics", "Real-time insights"]
-    },
-    {
-      title: "Quantum Cybersecurity",
-      description: "Future-proof security with quantum-resistant encryption and AI threat detection",
-      icon: "🔒",
-      color: "from-red-500 to-orange-500",
-      link: "https://ziontechgroup.com/quantum-cybersecurity",
-      price: "$799/month",
-      features: ["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"]
-    },
-    {
-    <UltraFuturisticBackground2029>
+  const _services = [
+    {_title: "AI Business Intelligence", _description: "Transform data into actionable insights with AI-powered analytics", _icon: "🧠", _color: "from-purple-500 to-pink-500", _link: "https://ziontechgroup.com/ai-business-intelligence", _price: "$499/month", _features: ["AI-powered dashboards", _"Predictive analytics", _"Real-time insights"]},
+    {_title: "Quantum Cybersecurity", _description: "Future-proof security with quantum-resistant encryption and AI threat detection", _icon: "🔒", _color: "from-red-500 to-orange-500", _link: "https://ziontechgroup.com/quantum-cybersecurity", _price: "$799/month", _features: ["Quantum-resistant encryption", _"AI threat detection", _"Zero-trust architecture"]},
+    {_<UltraFuturisticBackground2029>
       <Head>
-        <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>
-        <meta name="description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Transform your business with cutting-edge solutions." />
-        <meta name="keywords" content="AI consciousness, quantum computing, space mining, biotechnology, 2029 technology, revolutionary services, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, _Quantum Computing, _Space Tech</title>
+        <meta name="description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, _quantum computing, _space mining, _and advanced biotechnology. Transform your business with cutting-edge solutions." />
+        <meta name="keywords" content="AI consciousness, _quantum computing, _space mining, _biotechnology, _2029 technology, _revolutionary services, _Zion Tech Group" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
@@ -51,39 +29,22 @@ export default function HomePage() {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         
-        {/* Twitter */}
+        {_/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />
         <meta name="twitter:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
         
-        {/* Additional Meta Tags */}
+        {_/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com" />
         
-        {/* Structured Data */}
+        {_/* Structured Data */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "description": "Leading provider of revolutionary 2029 technology services",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
-            }
+          {_JSON.stringify({
+            "@context": "https://schema.org", _"@type": "Organization", _"name": "Zion Tech Group", _"description": "Leading provider of revolutionary 2029 technology services", _"url": "https://ziontechgroup.com", _"logo": "https://ziontechgroup.com/logo.png", _"contactPoint": {
+              "@type": "ContactPoint", _"telephone": "+1-302-464-0950", _"contactType": "customer service", _"email": "kleber@ziontechgroup.com"},
+            "address": {_"@type": "PostalAddress", _"streetAddress": "364 E Main St STE 1008", _"addressLocality": "Middletown", _"addressRegion": "DE", _"postalCode": "19709", _"addressCountry": "US"}
           })}
         </script>
       title: "AI Customer Experience",
@@ -96,34 +57,18 @@ export default function HomePage() {
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Delivered", icon: "✅" },
-    { number: "50+", label: "Enterprise Clients", icon: "👥" },
-    { number: "99.9%", label: "Uptime Guarantee", icon: "🔒" },
-    { number: "24/7", label: "Support Available", icon: "⏰" }
+  const _stats = [
+    {_number: "500+", _label: "Projects Delivered", _icon: "✅"},
+    {_number: "50+", _label: "Enterprise Clients", _icon: "👥"},
+    {_number: "99.9%", _label: "Uptime Guarantee", _icon: "🔒"},
+    {_number: "24/7", _label: "Support Available", _icon: "⏰"}
   ];
 
-  const features = [
-    {
-      title: "Cutting-Edge Technology",
-      description: "Leverage the latest advancements in AI, quantum computing, and cybersecurity",
-      icon: "🚀"
-    },
-    {
-      title: "Enterprise-Grade Security",
-      description: "Bank-level security with SOC 2 compliance and regular penetration testing",
-      icon: "🛡️"
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Built to grow with your business, from startup to enterprise",
-      icon: "📈"
-    },
-    {
-      title: "Expert Support",
-      description: "24/7 technical support with dedicated account managers",
-      icon: "💬"
-    }
+  const _features = [
+    {_title: "Cutting-Edge Technology", _description: "Leverage the latest advancements in AI, _quantum computing, _and cybersecurity", _icon: "🚀"},
+    {_title: "Enterprise-Grade Security", _description: "Bank-level security with SOC 2 compliance and regular penetration testing", _icon: "🛡️"},
+    {_title: "Scalable Solutions", _description: "Built to grow with your business, _from startup to enterprise", _icon: "📈"},
+    {_title: "Expert Support", _description: "24/7 technical support with dedicated account managers", _icon: "💬"}
   ];
 
   return (
@@ -137,21 +82,21 @@ export default function HomePage() {
       </Head>
 
       <UltraFuturisticBackground2029>
-        {/* Navigation */}
+        {_/* Navigation */}
         <UltraFuturisticNavigation2029 />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
+        {_/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         
-        {/* Content */}
+        {_/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: isVisible ? 1 : 0, _y: isVisible ? 0 : 30}}
+            transition={_{ duration: 0.8}}
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
@@ -180,11 +125,11 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Trust Indicators */}
+          {_/* Trust Indicators */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={_{ opacity: 0, _y: 20}}
+            animate={_{ opacity: isVisible ? 1 : 0, _y: isVisible ? 0 : 20}}
+            transition={_{ duration: 0.8, _delay: 0.2}}
             className="flex flex-wrap justify-center items-center gap-8 text-white/60 text-sm"
           >
             <span>Trusted by Fortune 500 companies</span>
@@ -195,7 +140,7 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Floating Elements */}
+        {_/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
           <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-1000" />
@@ -203,14 +148,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {_/* Features Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -222,32 +167,32 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {_features.map(_(feature, _index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-white/70">{feature.description}</p>
+                <div className="text-4xl mb-4">{_feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{_feature.title}</h3>
+                <p className="text-white/70">{_feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {_/* Services Section */}
       <section className="py-20 px-6 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -259,35 +204,34 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
+            {_services.map(_(service, _index) => (_<motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 
                 <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}>
-                    <span className="text-3xl">{service.icon}</span>
+                  <div className={_`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}>
+                    <span className="text-3xl">{_service.icon}</span>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-white/70 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{_service.title}</h3>
+                  <p className="text-white/70 mb-6 leading-relaxed">{_service.description}</p>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{_service.price}</div>
                     <div className="text-sm text-white/50">Starting price</div>
                   </div>
                   
                   <div className="space-y-1">
-                    {service.features.map((feature, idx) => (
+                    {_service.features.map((feature, _idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <span className="text-cyan-400">✅</span>
-                        <span>{feature}</span>
+                        <span>{_feature}</span>
                       </div>
                     ))}
                   </div>
@@ -295,7 +239,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Enhanced Service Showcase Components */}
+            {_/* Enhanced Service Showcase Components */}
             <Enhanced2026ServicesShowcase />
             <Revolutionary2026ServiceShowcase />
             <Revolutionary2027ServicesShowcase />
@@ -303,14 +247,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Service Categories Section */}
+        {_/* Service Categories Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -323,23 +267,23 @@ export default function HomePage() {
               </p>
             </motion.div>
 
-            {/* Service Categories Grid */}
+            {_/* Service Categories Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {Object.entries(servicesByCategory).slice(0, 9).map(([category, services], index) => (
+              {_Object.entries(servicesByCategory).slice(0, _9).map(_([category, _services], _index) => (
                 <motion.div
                   key={category}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="group cursor-pointer"
                 >
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <Brain className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{category}</h3>
-                    <p className="text-gray-300 mb-4">{services.length} revolutionary services</p>
+                    <h3 className="text-xl font-semibold text-white mb-4">{_category}</h3>
+                    <p className="text-gray-300 mb-4">{_services.length} revolutionary services</p>
                     <div className="flex items-center justify-between">
                       <span className="text-cyan-400 font-semibold">Explore</span>
                       <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
@@ -351,15 +295,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why Choose Zion Tech Group Section */}
+        {_/* Why Choose Zion Tech Group Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-purple-900/10"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -373,58 +317,29 @@ export default function HomePage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
+              {_[
                 {
-                  icon: Rocket,
-                  title: "Cutting-Edge Innovation",
-                  description: "We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",
-                  color: "from-purple-500 to-pink-500"
-                },
-                {
-                  icon: Brain,
-                  title: "AI-First Approach",
-                  description: "Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",
-                  color: "from-blue-500 to-cyan-500"
-                },
-                {
-                  icon: Atom,
-                  title: "Quantum-Ready Solutions",
-                  description: "Our services are designed to leverage quantum computing capabilities as they become commercially available.",
-                  color: "from-green-500 to-emerald-500"
-                },
-                {
-                  icon: Shield,
-                  title: "Unbreakable Security",
-                  description: "Quantum internet protocol suite with unbreakable encryption and quantum network security.",
-                  color: "from-indigo-500 to-blue-500"
-                },
-                {
-                  icon: Zap,
-                  title: "Future-Ready Solutions",
-                  description: "Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",
-                  color: "from-yellow-500 to-orange-500"
-                },
-                {
-                  icon: Star,
-                  title: "Proven Results",
-                  description: "Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",
-                  color: "from-pink-500 to-rose-500"
-                }
-              ].map((feature, index) => (
+                  icon: Rocket, _title: "Cutting-Edge Innovation", _description: "We stay ahead of the curve, _constantly researching and implementing the latest technological breakthroughs.", _color: "from-purple-500 to-pink-500"},
+                {_icon: Brain, _title: "AI-First Approach", _description: "Every solution we create is built with artificial intelligence at its core, _ensuring maximum efficiency and intelligence.", _color: "from-blue-500 to-cyan-500"},
+                {_icon: Atom, _title: "Quantum-Ready Solutions", _description: "Our services are designed to leverage quantum computing capabilities as they become commercially available.", _color: "from-green-500 to-emerald-500"},
+                {_icon: Shield, _title: "Unbreakable Security", _description: "Quantum internet protocol suite with unbreakable encryption and quantum network security.", _color: "from-indigo-500 to-blue-500"},
+                {_icon: Zap, _title: "Future-Ready Solutions", _description: "Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.", _color: "from-yellow-500 to-orange-500"},
+                {_icon: Star, _title: "Proven Results", _description: "Our services deliver measurable ROI and transformative business outcomes for clients worldwide.", _color: "from-pink-500 to-rose-500"}
+              ].map(_(feature, _index) => (
                 <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  key={_feature.title}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="group cursor-pointer"
                 >
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={_`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <feature.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-4">{_feature.title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{_feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -432,14 +347,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Call to Action Section */}
+        {_/* Call to Action Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
@@ -465,11 +380,11 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-              {/* Contact Information */}
+              {_/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
-                  <span>{contactInfo.mobile}</span>
+                  <span>{_contactInfo.mobile}</span>
                 </div>
               </motion.div>
             ))}
@@ -477,25 +392,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {_stats.map(_(stat, _index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _scale: 0.8}}
+                whileInView={_{ opacity: 1, _scale: 1}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">{stat.icon}</span>
+                  <span className="text-3xl">{_stat.icon}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
-                  <span className="text-sm">{contactInfo.address}</span>
+                  <span className="text-sm">{_contactInfo.address}</span>
                 </div>
               </div>
             </motion.div>
@@ -503,22 +418,22 @@ export default function HomePage() {
         </section>
       </main>
 
-      {/* Enhanced Services Showcase */}
+      {_/* Enhanced Services Showcase */}
       <div id="services">
         <EnhancedServicesShowcase />
       </div>
 
-      {/* Enhanced Testimonials Section */}
+      {_/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
 
-      {/* Latest Updates Section */}
+      {_/* Latest Updates Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -558,14 +473,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?

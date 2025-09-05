@@ -1,48 +1,38 @@
 "use client";
 
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import Link from "next/link";
 
-export default function DashboardPage() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+export default function DashboardPage() {_const { user, _isAuthenticated, _isLoading} = useAuth();
+  const _router = useRouter();
 
-  useEffect(() => {
-    if (!isLoading && !isAuthenticated) {
-      router.push("/auth/signin");
-    }
+  useEffect__(() => {_if (!isLoading && !isAuthenticated) {
+      router.push("/auth/signin");}
   }, [isAuthenticated, isLoading, router]);
 
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
           <p className="text-zinc-400">Loading...</p>
         </div>
       </div>
-    );
-  }
+    );}
 
-  if (!isAuthenticated) {
-    return null;
-  }
+  if (!isAuthenticated) {_return null;}
 
   return (
     <div className="space-y-8">
-      {/* Welcome Header */}
+      {_/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">
         <h1 className="text-3xl font-bold text-white mb-2">
-          Welcome back, {user?.name || "User"}! 👋
+          Welcome back, {_user?.name || "User"}! 👋
         </h1>
         <p className="text-zinc-300 text-lg">
           Ready to continue building your digital economy? Here's what you can do next.
         </p>
       </div>
 
-      {/* Quick Actions */}
+      {_/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Link
           href="/multiverse/launch"
@@ -90,7 +80,7 @@ export default function DashboardPage() {
         </Link>
       </div>
 
-      {/* Recent Activity */}
+      {_/* Recent Activity */}
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">
         <h2 className="text-xl font-semibold text-white mb-4">Recent Activity</h2>
         <div className="space-y-3">
@@ -107,21 +97,21 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Account Info */}
+      {_/* Account Info */}
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">
         <h2 className="text-xl font-semibold text-white mb-4">Account Information</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>
-            <p className="text-white">{user?.name || "Not provided"}</p>
+            <p className="text-white">{_user?.name || "Not provided"}</p>
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Email</label>
-            <p className="text-white">{user?.email}</p>
+            <p className="text-white">{_user?.email}</p>
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Role</label>
-            <p className="text-white capitalize">{user?.role}</p>
+            <p className="text-white capitalize">{_user?.role}</p>
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Member Since</label>

@@ -1,48 +1,27 @@
-import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { JobStatus } from "@/types/jobs";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
-import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useIsMobile } from "@/hooks/use-mobile";
 
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
+function ClientDashboardContent() {_const [activeTab, _setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, _isLoading} = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
+  const _isMobile = useIsMobile();
+  const _onboardingStatus = useOnboardingStatus();
+  const _showAdvanced =
     onboardingStatus.jobPosted &&
     onboardingStatus.inviteSent &&
     onboardingStatus.responseReceived;
 
   // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = jobs[0];
+  useEffect__(() => {_if (jobs.length > 0 && !selectedJobId) {
+      const _firstJob = jobs[0];
       if (firstJob) {
         setSelectedJobId(firstJob.id);
-        setSelectedJobTitle(firstJob.title);
-      }
+        setSelectedJobTitle(firstJob.title);}
     }
   }, [jobs, selectedJobId]);
 
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);
-    setSelectedJobTitle(jobTitle);
-  };
+  const _handleJobSelect = (_jobId: string, _jobTitle: string) => {_setSelectedJobId(jobId);
+    setSelectedJobTitle(jobTitle);};
 
   return (
     <>
@@ -51,18 +30,18 @@ function ClientDashboardContent() {
         description="Manage your jobs and talent requests in the Zion AI Marketplace." 
       />
       <main className="container mx-auto px-4 py-8">
-        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
+        <div className={_`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
+            <h1 className={_`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
             <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>
           </div>
-          <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
-            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
+          <div className={_`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
+            <Button variant="outline" asChild className={_isMobile ? 'w-full justify-center' : ''}>
               <Link href="/hiring-tracker">
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
               </Link>
             </Button>
-            <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
+            <Button asChild className={_isMobile ? 'w-full justify-center' : ''}>
               <Link href="/post-job">
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
               </Link>
@@ -70,10 +49,10 @@ function ClientDashboardContent() {
           </div>
         </div>
 
-        {/* New Onboarding Steps */}
+        {_/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
-          {showAdvanced && (
+          {_showAdvanced && (
             <div className="mt-6">
               <AdvancedOnboardingSteps />
             </div>
@@ -82,49 +61,49 @@ function ClientDashboardContent() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
+            <Tabs defaultValue="all" onValueChange={_(_value) => setActiveTab(value as JobStatus | "all")}>
+              <TabsList className={_`mb-6 ${isMobile ? 'w-full' : ''}`}>
+                <TabsTrigger value="all" className={_isMobile ? 'flex-1' : ''}>All</TabsTrigger>
+                <TabsTrigger value="new" className={_isMobile ? 'flex-1' : ''}>New</TabsTrigger>
+                <TabsTrigger value="in_progress" className={_isMobile ? 'flex-1' : ''}>Active</TabsTrigger>
+                <TabsTrigger value="filled" className={_isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
+                <TabsTrigger value="closed" className={_isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
               <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect} />
+                <JobsList onSelectJob={_handleJobSelect} />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
-                <JobsList filter="new" onSelectJob={handleJobSelect} />
+                <JobsList filter="new" onSelectJob={_handleJobSelect} />
               </TabsContent>
               <TabsContent value="in_progress" className="mt-0">
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
+                <JobsList filter="in_progress" onSelectJob={_handleJobSelect} />
               </TabsContent>
               <TabsContent value="filled" className="mt-0">
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />
+                <JobsList filter="filled" onSelectJob={_handleJobSelect} />
               </TabsContent>
               <TabsContent value="closed" className="mt-0">
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />
+                <JobsList filter="closed" onSelectJob={_handleJobSelect} />
               </TabsContent>
             </Tabs>
           </div>
           
           <div>
             <div className="sticky top-4 space-y-6">
-              {/* Active Projects Card */}
+              {_/* Active Projects Card */}
               <ActiveProjectsCard />
               
-              {/* Upcoming Interviews Card */}
+              {_/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
               
-              {/* AI Talent Suggestions */}
+              {_/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
                 
-                {selectedJobId ? (
+                {_selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">
@@ -142,10 +121,8 @@ function ClientDashboardContent() {
   );
 }
 
-export default function ClientDashboard() {
-  return (
+export default function ClientDashboard() {_return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  );
-}
+  );}

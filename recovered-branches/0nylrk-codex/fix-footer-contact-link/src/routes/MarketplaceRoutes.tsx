@@ -1,6 +1,4 @@
 
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";
 import CategoryDetail from "@/pages/CategoryDetail";
@@ -20,73 +18,64 @@ import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 
-const MarketplaceRoutes = () => {
-  return (
+const _MarketplaceRoutes = () => {_return (
     <Routes>
       {/* Marketplace Routes */}
-      <Route path="/marketplace" element={<Marketplace />} />
-      <Route path="/categories" element={<Categories />} />
-      <Route path="/category/:slug" element={<CategoryDetail />} />
-      <Route path="/featured" element={<Featured />} />
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />
-      <Route path="/listing/:id" element={<ListingDetail />} />
+      <Route path="/marketplace" element={_<Marketplace />} />
+      <Route path="/categories" element={_<Categories />} />
+      <Route path="/category/:slug" element={_<CategoryDetail />} />
+      <Route path="/featured" element={_<Featured />} />
+      <Route path="/marketplace/listing/:id" element={_<ListingDetail />} />
+      <Route path="/listing/:id" element={_<ListingDetail />} />
       
-      {/* Equipment Routes */}
-      <Route path="/equipment" element={<EquipmentPage />} />
-      <Route path="/equipment/:id" element={<EquipmentDetail />} />
+      {_/* Equipment Routes */}
+      <Route path="/equipment" element={_<EquipmentPage />} />
+      <Route path="/equipment/:id" element={_<EquipmentDetail />} />
       
-      {/* Job Routes */}
+      {_/* Job Routes */}
       <Route
         path="/post-job" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <PostJob />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
-      <Route path="/jobs/:id" element={<JobDetails />} />
+      <Route path="/jobs/:id" element={_<JobDetails />} />
       
-      {/* AI Matcher Routes */}
-      <Route path="/ai-matcher" element={<AIMatcher />} />
-      <Route path="/match" element={<AIMatcher />} />
+      {_/* AI Matcher Routes */}
+      <Route path="/ai-matcher" element={_<AIMatcher />} />
+      <Route path="/match" element={_<AIMatcher />} />
       
-      {/* Creator Routes */}
+      {_/* Creator Routes */}
       <Route 
         path="/publish" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <PublishProduct />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       
-      {/* Service Routes */}
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-      <Route path="/request-quote" element={<RequestQuote />} />
-      <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
+      {_/* Service Routes */}
+      <Route path="/services" element={_<ServicesPage />} />
+      <Route path="/it-onsite-services" element={_<ITOnsiteServicesPage />} />
+      <Route path="/request-quote" element={_<RequestQuote />} />
+      <Route path="/service-description-generator" element={_<ServiceDescriptionGenerator />} />
       
-      {/* Search Route */}
-      <Route path="/search" element={<SearchPage />} />
+      {_/* Search Route */}
+      <Route path="/search" element={_<SearchPage />} />
       
-      {/* Project Room Routes */}
+      {_/* Project Room Routes */}
       <Route 
         path="/project/:projectId" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ProjectRoom />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       
-      {/* Video Call Routes */}
+      {_/* Video Call Routes */}
       <Route 
         path="/call/:roomId" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <VideoCall />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
     </Routes>
   );

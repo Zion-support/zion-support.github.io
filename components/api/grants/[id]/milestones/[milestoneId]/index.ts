@@ -1,1 +1,1 @@
-export { default } from './complete';
+export {_default} from './complete';

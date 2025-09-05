@@ -1,10 +1,7 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react'
 
-export function EnterpriseCTA() {
-  return (
+export function EnterpriseCTA() {_return (
     <section id="contact" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">
@@ -62,5 +59,4 @@ export function EnterpriseCTA() {
         </div>
       </div>
     </section>
-  );
-}
+  );}

@@ -1,80 +1,65 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type {_GetServerSideProps, _NextPage} from 'next';
 import Head from 'next/head';
-import { useEffect, useMemo } from 'react';
-import { BlogPost } from '@/utils/types/blog';
-import { findPostBySlug, listPublishedPosts } from '@/utils/data/blogStore';
 import PostContent from '@/components/blog/PostContent';
 import ShareButtons from '@/components/blog/ShareButtons';
 import SuggestedArticles from '@/components/blog/SuggestedArticles';
 import CTASection from '@/components/blog/CTASection';
 import LikeButton from '@/components/blog/LikeButton';
 
-type Props = { post: BlogPost; all: BlogPost[] };
+type Props = {_post: BlogPost; all: BlogPost[]};
 
-const PostPage: NextPage<Props> = ({ post, all }) => {
-  const pageUrl = typeof window === 'undefined' ? '' : window.location.href;
+const PostPage: NextPage<Props> = (_{_post, _all}) => {_const _pageUrl = typeof window === 'undefined' ? '' : window.location.href;
 
-  useEffect(() => {
+  useEffect__(() => {
     // track view
-    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' }).catch(() => {});
+    fetch(`/api/blog/metrics/${post.id}/views`, {_method: 'POST'}).catch__(() => {});
   }, [post.id]);
 
-  const toc = useMemo(() => {
-    const headings: { level: number; text: string; id: string }[] = [];
-    const lines = post.body.split('\n');
-    lines.forEach((line) => {
-      const m = /^(#{1,3})\s+(.*)$/.exec(line);
-      if (m) {
-        const level = m[1].length;
-        const text = m[2].trim();
-        const id = text;
-        headings.push({ level, text, id });
+  const _toc = useMemo__(() => {_const headings: { level: number; text: string; id: string}[] = [];
+    const _lines = post.body.split('\n');
+    lines.forEach(_(line) => {_const _m = /^(#{1, _3})\s+(.*)$/.exec(line);
+      if (m) {_const _level = m[1].length;
+        const _text = m[2].trim();
+        const _id = text;
+        headings.push({ level, _text, _id});
       }
     });
     return headings;
   }, [post.body]);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.seo.metaTitle || post.title,
-    description: post.seo.metaDescription,
-    image: post.seo.ogImageUrl || post.coverImageUrl,
-    datePublished: post.publishDate,
-    author: [{ '@type': 'Person', name: post.author }],
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` }};
+  const _jsonLd = {_'@context': 'https://schema.org', _'@type': 'BlogPosting', _headline: post.seo.metaTitle || post.title, _description: post.seo.metaDescription, _image: post.seo.ogImageUrl || post.coverImageUrl, _datePublished: post.publishDate, _author: [{ '@type': 'Person', _name: post.author}],
+    mainEntityOfPage: {_'@type': 'WebPage', _'@id': `/blog/${post.slug}` }};
 
   return (
     <div>
       <Head>
-        <title>{post.seo.metaTitle || post.title}</title>
-        <meta name="description" content={post.seo.metaDescription} />
-        {post.seo.ogImageUrl || post.coverImageUrl ? (
+        <title>{_post.seo.metaTitle || post.title}</title>
+        <meta name="description" content={_post.seo.metaDescription} />
+        {_post.seo.ogImageUrl || post.coverImageUrl ? (
           <meta property="og:image" content={post.seo.ogImageUrl || post.coverImageUrl} />
         ) : null}
-        <meta property="og:title" content={post.seo.metaTitle || post.title} />
-        <meta property="og:description" content={post.seo.metaDescription} />
+        <meta property="og:title" content={_post.seo.metaTitle || post.title} />
+        <meta property="og:description" content={_post.seo.metaDescription} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seo.metaTitle || post.title} />
-        <meta name="twitter:description" content={post.seo.metaDescription} />
-        {(post.seo.ogImageUrl || post.coverImageUrl) && <meta name="twitter:image" content={post.seo.ogImageUrl || post.coverImageUrl} />}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <meta name="twitter:title" content={_post.seo.metaTitle || post.title} />
+        <meta name="twitter:description" content={_post.seo.metaDescription} />
+        {_(post.seo.ogImageUrl || post.coverImageUrl) && <meta name="twitter:image" content={post.seo.ogImageUrl || post.coverImageUrl} />}
+        <script type="application/ld+json" dangerouslySetInnerHTML={_{ __html: JSON.stringify(jsonLd)}} />
       </Head>
 
       <article className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
+        <h1 className="text-3xl font-bold">{_post.title}</h1>
         <div className="text-gray-600 dark:text-gray-300 mt-1">
-          {new Date(post.publishDate).toLocaleDateString()} • {post.author}
+          {_new Date(post.publishDate).toLocaleDateString()} • {_post.author}
         </div>
-        {toc.length > 0 && (
-          <nav className="mt-6 p-4 border rounded bg-gray-50 dark:bg-zinc-900">
+        {_toc.length > 0 && (_<nav className="mt-6 p-4 border rounded bg-gray-50 dark:bg-zinc-900">
             <div className="font-semibold mb-2">On this page</div>
             <ul className="space-y-1">
-              {toc.map((h, i) => (
-                <li key={i} className={h.level === 1 ? '' : h.level === 2 ? 'ml-3' : 'ml-6'}>
-                  <a href={`#${encodeURIComponent(h.id)}`}>
-                    {h.text}
+              {toc.map((h, _i) => (
+                <li key={i} className={_h.level === 1 ? '' : h.level === 2 ? 'ml-3' : 'ml-6'}>
+                  <a href={_`#${encodeURIComponent(h.id)}`}>
+                    {_h.text}
                   </a>
                 </li>
               ))}
@@ -83,15 +68,15 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
         )}
 
         <div className="mt-6">
-          <PostContent body={post.body} />
+          <PostContent body={_post.body} />
         </div>
 
         <div className="mt-8 flex items-center gap-4">
-          <ShareButtons title={post.title} url={pageUrl || `/blog/${post.slug}`} description={post.seo.metaDescription} onShare={() => fetch(`/api/blog/metrics/${post.id}/shares`, { method: 'POST' }).catch(() => {})} />
-          <LikeButton postId={post.id} initialLikes={post.metrics?.likes || 0} />
+          <ShareButtons title={_post.title} url={_pageUrl || `/blog/${post.slug}`} description={_post.seo.metaDescription} onShare={_() => fetch(`/api/blog/metrics/${post.id}/shares`, {_method: 'POST'}).catch__(() => {})} />
+          <LikeButton postId={_post.id} initialLikes={_post.metrics?.likes || 0} />
         </div>
 
-        <SuggestedArticles current={post} all={all} />
+        <SuggestedArticles current={_post} all={_all} />
 
         <CTASection />
       </article>
@@ -99,14 +84,13 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
-  const post = findPostBySlug(slug);
+export const getServerSideProps: GetServerSideProps = async (_ctx) => {_const _slug = ctx.params?.slug as string;
+  const _post = findPostBySlug(slug);
   if (!post || post.status !== 'published') {
-    return { notFound: true };
+    return { notFound: true};
   }
-  const all = listPublishedPosts();
-  return { props: { post, all } };
+  const _all = listPublishedPosts();
+  return {_props: { post, _all} };
 };
 
 export default PostPage;

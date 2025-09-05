@@ -1,21 +1,16 @@
-import { useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
-interface FileData {
-  name: string;
+interface FileData {_name: string;
   type: string;
   size: number;
-  base64: string; // data URL
-}
+  base64: string; // data window.URL}
 
-interface OnboardingFormData {
-  fullName: string;
+interface OnboardingFormData {_fullName: string;
   professionalTitle: string;
   profilePicture?: FileData | null;
 
   bio: string;
   projects: string;
-  yearsOfExperience: string; // keep as string for input, convert on submit
+  yearsOfExperience: string; // keep as string for input, _convert on submit
 
   skills: string;
   tools: string;
@@ -24,10 +19,9 @@ interface OnboardingFormData {
   timezone: string;
   hourlyRate?: string;
   portfolioLinks?: string;
-  cvFile?: FileData | null;
-}
+  cvFile?: FileData | null;}
 
-const steps = [
+const _steps = [
   'Basic Info',
   'Experience',
   'Skills & Tech',
@@ -35,108 +29,66 @@ const steps = [
 
 type StepKey = typeof steps[number];
 
-const containerVariants = {
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -16 }};
+const _containerVariants = {_initial: { opacity: 0, _y: 16},
+  animate: {_opacity: 1, _y: 0},
+  exit: {_opacity: 0, _y: -16}};
 
-function useInitialFormState(): OnboardingFormData {
-  return {
-    fullName: '',
-    professionalTitle: '',
-    profilePicture: null,
-    bio: '',
-    projects: '',
-    yearsOfExperience: '',
-    skills: '',
-    tools: '',
-    availability: '',
-    timezone: '',
-    hourlyRate: '',
-    portfolioLinks: '',
-    cvFile: null};
+function useInitialFormState(): OnboardingFormData {_return {
+    fullName: '', _professionalTitle: '', _profilePicture: null, _bio: '', _projects: '', _yearsOfExperience: '', _skills: '', _tools: '', _availability: '', _timezone: '', _hourlyRate: '', _portfolioLinks: '', _cvFile: null};
 }
 
-async function fileToBase64(file: File): Promise<FileData> {
-  const toBase64 = (fileInner: File) =>
-    new Promise<string>((resolve, reject) => {
-      const reader = new FileReader();
+async function fileToBase64(_file: File): Promise<FileData> {_const _toBase64 = (_fileInner: File) =>
+    new Promise<string>(_(resolve, _reject) => {
+      const _reader = new FileReader();
       reader.readAsDataURL(fileInner);
       reader.onload = () => resolve(reader.result as string);
-      reader.onerror = (error) => reject(error);
-    });
-  const base64 = await toBase64(file);
-  return {
-    name: file.name,
-    type: file.type,
-    size: file.size,
-    base64};
+      reader.onerror = (_error) => reject(error);});
+  const _base64 = await toBase64(file);
+  return {_name: file.name, _type: file.type, _size: file.size, _base64};
 }
 
-export default function TalentOnboardingPage() {
-  const [stepIndex, setStepIndex] = useState(0);
-  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+export default function TalentOnboardingPage() {_const [stepIndex, _setStepIndex] = useState(0);
+  const [formData, _setFormData] = useState<OnboardingFormData>(useInitialFormState);
+  const [submitting, _setSubmitting] = useState(false);
+  const [submitted, _setSubmitted] = useState(false);
+  const [errorMessage, _setErrorMessage] = useState<string | null>(null);
 
   const currentStep: StepKey = steps[stepIndex];
-  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]);
+  const _progressPercent = useMemo__(() => ((stepIndex + 1) / steps.length) * 100, _[stepIndex]);
 
   function nextStep() {
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
-  }
-  function prevStep() {
-    if (stepIndex > 0) setStepIndex(stepIndex - 1);
+    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);}
+  function prevStep() {_if (stepIndex > 0) setStepIndex(stepIndex - 1);}
+
+  function update<K extends keyof OnboardingFormData>(_key: K, _value: OnboardingFormData[K]) {_setFormData(_(prev) => ({ ...prev, _[key]: value}));
   }
 
-  function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {
-    setFormData((prev) => ({ ...prev, [key]: value }));
-  }
-
-  function requiredMissingForStep(): string | null {
-    if (currentStep === 'Basic Info') {
+  function requiredMissingForStep(): string | null {_if (currentStep === 'Basic Info') {
       if (!formData.fullName.trim()) return 'Full Name is required.';
-      if (!formData.professionalTitle.trim()) return 'Professional Title is required.';
-    }
-    if (currentStep === 'Experience') {
-      if (!formData.bio.trim()) return 'Short Bio is required.';
-      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.';
-    }
-    if (currentStep === 'Skills & Tech') {
-      if (!formData.skills.trim()) return 'Please list at least one skill.';
-    }
-    if (currentStep === 'Availability') {
-      if (!formData.availability) return 'Please select your current availability.';
-      if (!formData.timezone.trim()) return 'Preferred Timezone is required.';
-    }
+      if (!formData.professionalTitle.trim()) return 'Professional Title is required.';}
+    if (currentStep === 'Experience') {_if (!formData.bio.trim()) return 'Short Bio is required.';
+      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.';}
+    if (currentStep === 'Skills & Tech') {_if (!formData.skills.trim()) return 'Please list at least one skill.';}
+    if (currentStep === 'Availability') {_if (!formData.availability) return 'Please select your current availability.';
+      if (!formData.timezone.trim()) return 'Preferred Timezone is required.';}
     return null;
   }
 
-  async function handleSubmit() {
-    const missing = requiredMissingForStep();
+  async function handleSubmit() {_const _missing = requiredMissingForStep();
     if (missing) {
       setErrorMessage(missing);
-      return;
-    }
+      return;}
     setErrorMessage(null);
     setSubmitting(true);
-    try {
-      const response = await fetch('/api/talent/onboard', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData })});
+    try {_const _response = await fetch('/api/talent/onboard', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_...formData})});
       if (!response.ok) throw new Error('Submission failed');
       setSubmitted(true);
-    } catch (err) {
-      setErrorMessage('Submission failed. Please try again.');
-    } finally {
-      setSubmitting(false);
-    }
+    } catch (err) {_setErrorMessage('Submission failed. Please try again.');} finally {_setSubmitting(false);}
   }
 
-  if (submitted) {
-    return (
+  if (submitted) {_return (
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">
         <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">
           <div className="text-center space-y-3">
@@ -145,8 +97,7 @@ export default function TalentOnboardingPage() {
           </div>
         </div>
       </div>
-    );
-  }
+    );}
 
   return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md:p-8">
@@ -157,33 +108,32 @@ export default function TalentOnboardingPage() {
         </div>
 
         <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width: `${progressPercent}%` }} />
+          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={_{ width: `${progressPercent}%` }} />
         </div>
 
-        {errorMessage && (
-          <div className="mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239,68,68,0.1)]">
+        {_errorMessage && (
+          <div className="mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239, _68, _68, _0.1)]">
             {errorMessage}
           </div>
         )}
 
         <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">
           <AnimatePresence mode="wait">
-            {currentStep === 'Basic Info' && (
-              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+            {_currentStep === 'Basic Info' && (_<motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={_{ duration: 0.3}}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <FloatingInput
                     id="fullName"
                     label="Full Name"
-                    value={formData.fullName}
-                    onChange={(v) => update('fullName', v)}
+                    value={_formData.fullName}
+                    onChange={_(v) => update('fullName', _v)}
                     required
                   />
                   <FloatingInput
                     id="professionalTitle"
                     label="Professional Title"
                     placeholder="e.g., AI Developer, Network Engineer"
-                    value={formData.professionalTitle}
-                    onChange={(v) => update('professionalTitle', v)}
+                    value={_formData.professionalTitle}
+                    onChange={_(_v) => update('professionalTitle', _v)}
                     required
                   />
                 </div>
@@ -192,75 +142,74 @@ export default function TalentOnboardingPage() {
                     id="profilePicture"
                     label="Profile Picture (optional)"
                     accept="image/*"
-                    fileData={formData.profilePicture}
-                    onFileChange={(f) => update('profilePicture', f)}
+                    fileData={_formData.profilePicture}
+                    onFileChange={_(_f) => update('profilePicture', _f)}
                   />
                 </div>
               </motion.div>
             )}
 
-            {currentStep === 'Experience' && (
-              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+            {_currentStep === 'Experience' && (_<motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={_{ duration: 0.3}}>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <FloatingTextarea
                     id="bio"
                     label="Short Bio or Work History"
-                    value={formData.bio}
-                    onChange={(v) => update('bio', v)}
+                    value={_formData.bio}
+                    onChange={_(v) => update('bio', _v)}
                     required
                   />
                   <FloatingTextarea
                     id="projects"
                     label="Key Projects or Roles (optional)"
                     placeholder="Use bullets or short lines"
-                    value={formData.projects}
-                    onChange={(v) => update('projects', v)}
+                    value={_formData.projects}
+                    onChange={_(_v) => update('projects', _v)}
                   />
                   <FloatingInput
                     id="yearsOfExperience"
                     label="Years of Experience"
                     type="number"
-                    min={0}
-                    value={formData.yearsOfExperience}
-                    onChange={(v) => update('yearsOfExperience', v)}
+                    min={_0}
+                    value={_formData.yearsOfExperience}
+                    onChange={_(_v) => update('yearsOfExperience', _v)}
                     required
                   />
                 </div>
               </motion.div>
             )}
 
-            {currentStep === 'Skills & Tech' && (
-              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+            {_currentStep === 'Skills & Tech' && (
+              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={_{ duration: 0.3}}>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <FloatingInput
                     id="skills"
                     label="Skills (comma-separated)"
                     placeholder="e.g., Python, LLMs, Kubernetes"
-                    value={formData.skills}
-                    onChange={(v) => update('skills', v)}
+                    value={_formData.skills}
+                    onChange={_(_v) => update('skills', _v)}
                     required
                   />
                   <FloatingInput
                     id="tools"
                     label="Tools/Platforms (optional, comma-separated)"
                     placeholder="e.g., AWS, GCP, Docker, Snowflake"
-                    value={formData.tools}
-                    onChange={(v) => update('tools', v)}
+                    value={_formData.tools}
+                    onChange={_(_v) => update('tools', _v)}
                   />
                 </div>
               </motion.div>
             )}
 
-            {currentStep === 'Availability' && (
-              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+            {_currentStep === 'Availability' && (
+              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={_{ duration: 0.3}}>
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="availability" className="block text-sm mb-2 text-high-contrast-secondary">Current Availability</label>
                     <select
                       id="availability"
                       className="w-full rounded-lg bg-high-contrast-tertiary/50 border border-[var(--border-secondary)] px-4 py-3 outline-none focus:ring-2 focus:ring-[var(--focus-ring)]"
-                      value={formData.availability}
-                      onChange={(e) => update('availability', e.target.value as OnboardingFormData['availability'])}
+                      value={_formData.availability}
+                      onChange={_(_e) => update('availability', _e.target.value as OnboardingFormData['availability'])}
                     >
                       <option value="">Select...</option>
                       <option value="Full-time">Full-time</option>
@@ -273,8 +222,8 @@ export default function TalentOnboardingPage() {
                     id="timezone"
                     label="Preferred Timezone"
                     placeholder="e.g., UTC-5, PST, CET"
-                    value={formData.timezone}
-                    onChange={(v) => update('timezone', v)}
+                    value={_formData.timezone}
+                    onChange={_(_v) => update('timezone', _v)}
                     required
                   />
 
@@ -282,25 +231,25 @@ export default function TalentOnboardingPage() {
                     id="hourlyRate"
                     label="Hourly Rate (optional)"
                     type="number"
-                    min={0}
-                    value={formData.hourlyRate || ''}
-                    onChange={(v) => update('hourlyRate', v)}
+                    min={_0}
+                    value={_formData.hourlyRate || ''}
+                    onChange={_(_v) => update('hourlyRate', _v)}
                   />
 
                   <FloatingInput
                     id="portfolioLinks"
                     label="Portfolio Links (optional)"
                     placeholder="e.g., https://github.com/you, https://your-site.com"
-                    value={formData.portfolioLinks || ''}
-                    onChange={(v) => update('portfolioLinks', v)}
+                    value={_formData.portfolioLinks || ''}
+                    onChange={_(_v) => update('portfolioLinks', _v)}
                   />
 
                   <FileUpload
                     id="cvFile"
                     label="Upload CV (optional)"
                     accept=".pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    fileData={formData.cvFile}
-                    onFileChange={(f) => update('cvFile', f)}
+                    fileData={_formData.cvFile}
+                    onFileChange={_(_f) => update('cvFile', _f)}
                   />
                 </div>
               </motion.div>
@@ -311,22 +260,21 @@ export default function TalentOnboardingPage() {
             <button
               type="button"
               className="px-4 py-2 rounded-lg border border-[var(--border-secondary)] text-high-contrast-secondary hover:bg-high-contrast-tertiary/60 transition-colors"
-              onClick={prevStep}
-              disabled={stepIndex === 0}
+              onClick={_prevStep}
+              disabled={_stepIndex === 0}
             >
               Back
             </button>
 
-            {stepIndex < steps.length - 1 ? (
+            {_stepIndex < steps.length - 1 ? (
               <button
                 type="button"
                 className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50"
                 onClick={() => {
-                  const missing = requiredMissingForStep();
+                  const _missing = requiredMissingForStep();
                   if (missing) {
                     setErrorMessage(missing);
-                    return;
-                  }
+                    return;}
                   setErrorMessage(null);
                   nextStep();
                 }}
@@ -337,10 +285,10 @@ export default function TalentOnboardingPage() {
               <button
                 type="button"
                 className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50"
-                onClick={handleSubmit}
-                disabled={submitting}
+                onClick={_handleSubmit}
+                disabled={_submitting}
               >
-                {submitting ? 'Submitting…' : 'Submit'}
+                {_submitting ? 'Submitting…' : 'Submit'}
               </button>
             )}
           </div>
@@ -350,102 +298,86 @@ export default function TalentOnboardingPage() {
   );
 }
 
-function FloatingInput(props: {
-  id: string;
+function FloatingInput(_props: {_id: string;
   label: string;
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
   type?: string;
   min?: number;
-  required?: boolean;
-}) {
-  const { id, label, value, onChange, placeholder, type = 'text', min, required } = props;
-  return (
-    <div className="relative">
+  required?: boolean;}) {_const { id, _label, _value, _onChange, _placeholder, _type = 'text', _min, _required} = props;
+  return (_<div className="relative">
       <input
-        id={id}
-        name={id}
-        type={type}
-        min={min}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
+        id={_id}
+        name={_id}
+        type={_type}
+        min={_min}
+        value={_value}
+        onChange={_(e) => onChange(e.target.value)}
+        placeholder={_placeholder}
         className="w-full rounded-lg bg-high-contrast-tertiary/50 border border-[var(--border-secondary)] px-4 pt-5 pb-2 outline-none focus:ring-2 focus:ring-[var(--focus-ring)] placeholder:text-transparent"
-        aria-required={required}
+        aria-required={_required}
       />
-      <label htmlFor={id} className="absolute left-4 top-2 text-xs text-high-contrast-muted">
-        {label}
+      <label htmlFor={_id} className="absolute left-4 top-2 text-xs text-high-contrast-muted">
+        {_label}
       </label>
     </div>
   );
 }
 
-function FloatingTextarea(props: {
-  id: string;
+function FloatingTextarea(_props: {_id: string;
   label: string;
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  required?: boolean;
-}) {
-  const { id, label, value, onChange, placeholder, required } = props;
-  return (
-    <div className="relative">
+  required?: boolean;}) {_const { id, _label, _value, _onChange, _placeholder, _required} = props;
+  return (_<div className="relative">
       <textarea
-        id={id}
-        name={id}
-        rows={6}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
+        id={_id}
+        name={_id}
+        rows={_6}
+        value={_value}
+        onChange={_(e) => onChange(e.target.value)}
+        placeholder={_placeholder}
         className="w-full rounded-lg bg-high-contrast-tertiary/50 border border-[var(--border-secondary)] px-4 pt-6 pb-3 outline-none focus:ring-2 focus:ring-[var(--focus-ring)] placeholder:text-transparent"
-        aria-required={required}
+        aria-required={_required}
       />
-      <label htmlFor={id} className="absolute left-4 top-2 text-xs text-high-contrast-muted">
-        {label}
+      <label htmlFor={_id} className="absolute left-4 top-2 text-xs text-high-contrast-muted">
+        {_label}
       </label>
     </div>
   );
 }
 
-function FileUpload(props: {
-  id: string;
+function FileUpload(_props: {_id: string;
   label: string;
   accept?: string;
   fileData: FileData | null | undefined;
-  onFileChange: (file: FileData | null) => void;
-}) {
-  const { id, label, accept, fileData, onFileChange } = props;
+  onFileChange: (file: FileData | null) => void;}) {_const { id, _label, _accept, _fileData, _onFileChange} = props;
   const [localError, setLocalError] = useState<string | null>(null);
 
   return (
     <div>
-      <label htmlFor={id} className="block text-sm mb-2 text-high-contrast-secondary">{label}</label>
+      <label htmlFor={_id} className="block text-sm mb-2 text-high-contrast-secondary">{_label}</label>
       <input
-        id={id}
+        id={_id}
         type="file"
-        accept={accept}
+        accept={_accept}
         className="block w-full text-sm text-high-contrast-secondary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90"
-        onChange={async (e) => {
-          const file = e.target.files?.[0];
+        onChange={_async (_e) => {
+          const _file = e.target.files?.[0];
           if (!file) {
             onFileChange(null);
-            return;
-          }
-          try {
-            const base64 = await fileToBase64(file);
+            return;}
+          try {_const _base64 = await fileToBase64(file);
             onFileChange(base64);
-            setLocalError(null);
-          } catch (err) {
-            setLocalError('Failed to read file.');
-          }
+            setLocalError(null);} catch (err) {_setLocalError('Failed to read file.');}
         }}
       />
-      {fileData && (
-        <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name} ({Math.round((fileData.size / 1024) * 10) / 10} KB)</p>
+      {_fileData && (
+        <p className="mt-2 text-xs text-high-contrast-muted">Selected: {fileData.name} ({_Math.round((fileData.size / 1024) * 10) / 10} KB)</p>
       )}
-      {localError && (
+      {_localError && (
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>
       )}
     </div>

@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
 
-const CustomerSupportChatbot: NextPage = () => {
-  return (
+const CustomerSupportChatbot: NextPage = () => {_return (
     <div>
       <Head>
         <title>CustomerSupportChatbot - Zion Tech Solutions</title>
@@ -18,7 +17,6 @@ const CustomerSupportChatbot: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default CustomerSupportChatbot;

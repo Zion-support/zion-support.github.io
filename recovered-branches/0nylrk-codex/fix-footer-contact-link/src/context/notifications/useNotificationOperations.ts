@@ -1,71 +1,56 @@
-import { useState, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Notification, FilterType, NotificationContextType } from './types';
 
-export const useNotificationOperations = (userId?: string): NotificationContextType => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [filter, setFilter] = useState<FilterType>('all');
+export const _useNotificationOperations = (userId?: string): NotificationContextType => {_const [notifications, _setNotifications] = useState<Notification[]>([]);
+  const [loading, _setLoading] = useState(false);
+  const [filter, _setFilter] = useState<FilterType>('all');
 
-  const fetchNotifications = useCallback(async () => {
+  const _fetchNotifications = useCallback(_async () => {
     if (!userId) return;
 
     setLoading(true);
     try {
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from('notifications')
         .select('*')
         .eq('user_id', userId)
-        .order('created_at', { ascending: false });
+        .order('created_at', {_ascending: false});
 
       if (error) throw error;
       setNotifications(data || []);
-    } catch (err) {
-      console.error('Error fetching notifications:', err);
-    } finally {
-      setLoading(false);
-    }
+    } catch (err) {} finally {_setLoading(false);}
   }, [userId]);
 
-  const markAsRead = useCallback(async (id: string) => {
-    if (!userId) return;
+  const _markAsRead = useCallback(_async (id: string) => {_if (!userId) return;
 
     try {
-      const { error } = await supabase
+      const { error} = await supabase
         .from('notifications')
-        .update({ read: true })
+        .update({_read: true})
         .eq('id', id)
         .eq('user_id', userId);
 
       if (error) throw error;
       await fetchNotifications();
-    } catch (err) {
-      console.error('Error marking notification as read:', err);
-    }
+    } catch (err) {}
   }, [userId, fetchNotifications]);
 
-  const markAllAsRead = useCallback(async () => {
-    if (!userId) return;
+  const _markAllAsRead = useCallback(_async () => {_if (!userId) return;
 
     try {
-      const { error } = await supabase
+      const { error} = await supabase
         .from('notifications')
-        .update({ read: true })
+        .update({_read: true})
         .eq('user_id', userId)
         .eq('read', false);
 
       if (error) throw error;
       await fetchNotifications();
-    } catch (err) {
-      console.error('Error marking all notifications as read:', err);
-    }
+    } catch (err) {}
   }, [userId, fetchNotifications]);
 
-  const dismissNotification = useCallback(async (id: string) => {
-    if (!userId) return;
+  const _dismissNotification = useCallback(_async (id: string) => {_if (!userId) return;
 
     try {
-      const { error } = await supabase
+      const { error} = await supabase
         .from('notifications')
         .delete()
         .eq('id', id)
@@ -73,13 +58,10 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
       if (error) throw error;
       await fetchNotifications();
-    } catch (err) {
-      console.error('Error dismissing notification:', err);
-    }
+    } catch (err) {}
   }, [userId, fetchNotifications]);
 
-  const filteredNotifications = notifications.filter(notification => {
-    switch (filter) {
+  const _filteredNotifications = notifications.filter(notification => {_switch (filter) {
       case 'unread':
         return !notification.read;
       case 'messages':
@@ -89,21 +71,10 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       case 'system':
         return notification.type === 'system';
       default:
-        return true;
-    }
+        return true;}
   });
 
-  const unreadCount = notifications.filter(n => !n.read).length;
+  const _unreadCount = notifications.filter(n => !n.read).length;
 
-  return {
-    notifications,
-    filteredNotifications,
-    unreadCount,
-    loading,
-    filter,
-    markAsRead,
-    markAllAsRead,
-    dismissNotification,
-    setFilter,
-    fetchNotifications};
+  return {_notifications, _filteredNotifications, _unreadCount, _loading, _filter, _markAsRead, _markAllAsRead, _dismissNotification, _setFilter, _fetchNotifications};
 };

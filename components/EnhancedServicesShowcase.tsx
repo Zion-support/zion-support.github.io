@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import { 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
-  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
-} from 'lucide-react';
+import React, {_useState} from 'react';
+import {_Brain, _Shield, _Rocket, _Cpu, _Database, _Atom, _Users, _CheckCircle, _TrendingUp, _Clock, _Star, _Filter, _ChevronDown} from 'lucide-react';
 
-interface Service {
-  id: string;
+interface Service {_id: string;
   name: string;
   tagline: string;
   category: string;
@@ -20,155 +16,42 @@ interface Service {
   growthRate: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
-  color: string;
-}
+  color: string;}
 
-const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+const EnhancedServicesShowcase: React.FC = () => {_const [selectedCategory, _setSelectedCategory] = useState<string>('all');
+  const [searchTerm, _setSearchTerm] = useState('');
 
   const services: Service[] = [
     {
-      id: 'ai-bi',
-      name: 'AI Business Intelligence',
-      tagline: 'Transform data into actionable insights with AI-powered analytics',
-      category: 'AI & Analytics',
-      price: '$499',
-      period: '/month',
-      setupTime: '2-3 weeks',
-      customers: '150+',
-      features: ['AI-powered dashboards', 'Predictive analytics', 'Real-time insights', 'Custom reporting'],
-      benefits: ['30% faster decision making', 'Improved data accuracy', 'Cost reduction'],
-      roi: 'Average 3.2x ROI within 6 months',
-      marketSize: '$25B',
-      growthRate: '25% YoY',
-      popular: true,
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'quantum-cyber',
-      name: 'Quantum Cybersecurity',
-      tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection',
-      category: 'Security',
-      price: '$799',
-      period: '/month',
-      setupTime: '4-6 weeks',
-      customers: '75+',
-      features: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture', '24/7 monitoring'],
-      benefits: ['99.99% threat prevention', 'Compliance ready', 'Reduced security incidents'],
-      roi: 'Average 4.1x ROI within 8 months',
-      marketSize: '$18B',
-      growthRate: '32% YoY',
-      popular: false,
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      id: 'edge-computing',
-      name: 'Edge Computing Orchestration',
-      tagline: 'Deploy and manage applications at the edge with intelligent orchestration',
-      category: 'Infrastructure',
-      price: '$349',
-      period: '/month',
-      setupTime: '1-2 weeks',
-      customers: '200+',
-      features: ['Edge node management', 'IoT device management', 'Real-time monitoring', 'Auto-scaling'],
-      benefits: ['50% latency reduction', 'Improved reliability', 'Cost optimization'],
-      roi: 'Average 2.8x ROI within 4 months',
-      marketSize: '$12B',
-      growthRate: '28% YoY',
-      popular: false,
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500'
-    },
-    {
-      id: 'space-tech',
-      name: 'Space Technology Innovation',
-      tagline: 'Accelerate space exploration with cutting-edge technology solutions',
-      category: 'Space Tech',
-      price: '$2,499',
-      period: '/month',
-      setupTime: '8-12 weeks',
-      customers: '25+',
-      features: ['Satellite management', 'AI mission planning', 'Quantum communication', 'Space analytics'],
-      benefits: ['Mission success rate 95%+', 'Reduced launch costs', 'Advanced capabilities'],
-      roi: 'Average 5.2x ROI within 12 months',
-      marketSize: '$8B',
-      growthRate: '45% YoY',
-      popular: true,
-      icon: Rocket,
-      color: 'from-violet-500 to-purple-500'
-    },
-    {
-      id: 'neural-interface',
-      name: 'Neural Interface Development',
-      tagline: 'Build the future of human-computer interaction with neural interfaces',
-      category: 'Emerging Tech',
-      price: '$899',
-      period: '/month',
-      setupTime: '6-8 weeks',
-      customers: '40+',
-      features: ['BCI development tools', 'Neural signal processing', 'AI pattern recognition', 'Safety protocols'],
-      benefits: ['Revolutionary UX', 'Accessibility improvements', 'Research advancement'],
-      roi: 'Average 6.8x ROI within 18 months',
-      marketSize: '$3B',
-      growthRate: '67% YoY',
-      popular: false,
-      icon: Brain,
-      color: 'from-pink-500 to-rose-500'
-    },
-    {
-      id: 'quantum-ai',
-      name: 'Quantum AI Neural Networks',
-      tagline: 'Quantum-powered AI with advanced consciousness capabilities',
-      category: 'Quantum AI',
-      price: '$1,299',
-      period: '/month',
-      setupTime: '10-14 weeks',
-      customers: '15+',
-      features: ['Quantum neural networks', 'Consciousness simulation', 'Advanced learning', 'Quantum optimization'],
-      benefits: ['Unprecedented AI capabilities', 'Breakthrough research', 'Competitive advantage'],
-      roi: 'Average 8.5x ROI within 24 months',
-      marketSize: '$2B',
-      growthRate: '89% YoY',
-      popular: true,
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500'
-    }
+      id: 'ai-bi', _name: 'AI Business Intelligence', _tagline: 'Transform data into actionable insights with AI-powered analytics', _category: 'AI & Analytics', _price: '$499', _period: '/month', _setupTime: '2-3 weeks', _customers: '150+', _features: ['AI-powered dashboards', _'Predictive analytics', _'Real-time insights', _'Custom reporting'], _benefits: ['30% faster decision making', _'Improved data accuracy', _'Cost reduction'], _roi: 'Average 3.2x ROI within 6 months', _marketSize: '$25B', _growthRate: '25% YoY', _popular: true, _icon: Brain, _color: 'from-purple-500 to-pink-500'},
+    {_id: 'quantum-cyber', _name: 'Quantum Cybersecurity', _tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection', _category: 'Security', _price: '$799', _period: '/month', _setupTime: '4-6 weeks', _customers: '75+', _features: ['Quantum-resistant encryption', _'AI threat detection', _'Zero-trust architecture', _'24/7 monitoring'], _benefits: ['99.99% threat prevention', _'Compliance ready', _'Reduced security incidents'], _roi: 'Average 4.1x ROI within 8 months', _marketSize: '$18B', _growthRate: '32% YoY', _popular: false, _icon: Shield, _color: 'from-red-500 to-orange-500'},
+    {_id: 'edge-computing', _name: 'Edge Computing Orchestration', _tagline: 'Deploy and manage applications at the edge with intelligent orchestration', _category: 'Infrastructure', _price: '$349', _period: '/month', _setupTime: '1-2 weeks', _customers: '200+', _features: ['Edge node management', _'IoT device management', _'Real-time monitoring', _'Auto-scaling'], _benefits: ['50% latency reduction', _'Improved reliability', _'Cost optimization'], _roi: 'Average 2.8x ROI within 4 months', _marketSize: '$12B', _growthRate: '28% YoY', _popular: false, _icon: Cpu, _color: 'from-emerald-500 to-teal-500'},
+    {_id: 'space-tech', _name: 'Space Technology Innovation', _tagline: 'Accelerate space exploration with cutting-edge technology solutions', _category: 'Space Tech', _price: '$2, _499', _period: '/month', _setupTime: '8-12 weeks', _customers: '25+', _features: ['Satellite management', _'AI mission planning', _'Quantum communication', _'Space analytics'], _benefits: ['Mission success rate 95%+', _'Reduced launch costs', _'Advanced capabilities'], _roi: 'Average 5.2x ROI within 12 months', _marketSize: '$8B', _growthRate: '45% YoY', _popular: true, _icon: Rocket, _color: 'from-violet-500 to-purple-500'},
+    {_id: 'neural-interface', _name: 'Neural Interface Development', _tagline: 'Build the future of human-computer interaction with neural interfaces', _category: 'Emerging Tech', _price: '$899', _period: '/month', _setupTime: '6-8 weeks', _customers: '40+', _features: ['BCI development tools', _'Neural signal processing', _'AI pattern recognition', _'Safety protocols'], _benefits: ['Revolutionary UX', _'Accessibility improvements', _'Research advancement'], _roi: 'Average 6.8x ROI within 18 months', _marketSize: '$3B', _growthRate: '67% YoY', _popular: false, _icon: Brain, _color: 'from-pink-500 to-rose-500'},
+    {_id: 'quantum-ai', _name: 'Quantum AI Neural Networks', _tagline: 'Quantum-powered AI with advanced consciousness capabilities', _category: 'Quantum AI', _price: '$1, _299', _period: '/month', _setupTime: '10-14 weeks', _customers: '15+', _features: ['Quantum neural networks', _'Consciousness simulation', _'Advanced learning', _'Quantum optimization'], _benefits: ['Unprecedented AI capabilities', _'Breakthrough research', _'Competitive advantage'], _roi: 'Average 8.5x ROI within 24 months', _marketSize: '$2B', _growthRate: '89% YoY', _popular: true, _icon: Atom, _color: 'from-blue-500 to-cyan-500'}
   ];
 
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
+  const _categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
   
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const _filteredServices = services.filter(service => {_const _matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch;});
 
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI & Analytics': Brain,
-      'Security': Shield,
-      'Infrastructure': Cpu,
-      'Space Tech': Rocket,
-      'Emerging Tech': Brain,
-      'Quantum AI': Atom
-    };
+  const _getCategoryIcon = (_category: string) => {_const iconMap: { [key: string]: React.ComponentType<any>} = {_'AI & Analytics': Brain, _'Security': Shield, _'Infrastructure': Cpu, _'Space Tech': Rocket, _'Emerging Tech': Brain, _'Quantum AI': Atom};
     return iconMap[category] || Brain;
   };
 
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">
-      {/* Background */}
+      {_/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
+        {_/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -180,46 +63,46 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
 
-        {/* Filters */}
+        {_/* Filters */}
         <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
-          {/* Category Filter */}
+          {_/* Category Filter */}
           <div className="relative">
             <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              value={_selectedCategory}
+              onChange={_(_e) => setSelectedCategory(e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
             >
-              {categories.map((category) => (
-                <option key={category} value={category} className="bg-slate-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
+              {_categories.map(_(category) => (
+                <option key={category} value={_category} className="bg-slate-800 text-white">
+                  {_category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
             </select>
             <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
           </div>
 
-          {/* Search */}
+          {_/* Search */}
           <div className="relative">
             <input
               type="text"
               placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              value={_searchTerm}
+              onChange={_(_e) => setSearchTerm(e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
             />
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
           </div>
         </div>
 
-        {/* Services Grid */}
+        {_/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+          {_filteredServices.map(_(service, _index) => (
             <div
               key={service.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
-              {/* Popular Badge */}
-              {service.popular && (
+              {_/* Popular Badge */}
+              {_service.popular && (
                 <div className="absolute top-4 right-4 z-20">
                   <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                     <Star className="w-3 h-3" />
@@ -228,86 +111,86 @@ const EnhancedServicesShowcase: React.FC = () => {
                 </div>
               )}
 
-              {/* Service Content */}
+              {_/* Service Content */}
               <div className="p-8">
-                {/* Icon and Category */}
+                {_/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
+                  <div className={_`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-right">
-                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>
-                    <div className="text-xs text-white/40">{service.category}</div>
+                    <div className="text-xs text-white/60 mb-1">{_getCategoryIcon(service.category)({ className: 'w-3 h-3'})}</div>
+                    <div className="text-xs text-white/40">{_service.category}</div>
                   </div>
                 </div>
 
-                {/* Service Info */}
-                <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
-                <p className="text-white/70 text-sm mb-4 leading-relaxed">{service.tagline}</p>
+                {_/* Service Info */}
+                <h3 className="text-xl font-bold mb-3 text-white">{_service.name}</h3>
+                <p className="text-white/70 text-sm mb-4 leading-relaxed">{_service.tagline}</p>
 
-                {/* Pricing */}
+                {_/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-white/60">{service.period}</span>
+                    <span className="text-3xl font-bold text-white">{_service.price}</span>
+                    <span className="text-white/60">{_service.period}</span>
                   </div>
                   <div className="flex items-center gap-4 text-xs text-white/50">
                     <span className="flex items-center gap-1">
                       <Clock className="w-3 h-3" />
-                      {service.setupTime}
+                      {_service.setupTime}
                     </span>
                     <span className="flex items-center gap-1">
                       <Users className="w-3 h-3" />
-                      {service.customers} customers
+                      {_service.customers} customers
                     </span>
                   </div>
                 </div>
 
-                {/* Key Features */}
+                {_/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                   <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {_service.features.slice(0, _3).map(_(feature, _idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <CheckCircle className="w-3 h-3 text-green-400" />
-                        {feature}
+                        {_feature}
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Benefits */}
+                {_/* Benefits */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
                   <div className="space-y-2">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {_service.benefits.slice(0, _2).map(_(benefit, _idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <TrendingUp className="w-3 h-3 text-blue-400" />
-                        {benefit}
+                        {_benefit}
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* ROI and Market Info */}
+                {_/* ROI and Market Info */}
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
-                  <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
+                  <div className="text-xs text-white/80 leading-relaxed">{_service.roi}</div>
                   <div className="mt-2 text-xs text-white/60">
-                    Market: {service.marketSize} • Growth: {service.growthRate}
+                    Market: {_service.marketSize} • Growth: {_service.growthRate}
                   </div>
                 </div>
 
-                {/* Action Buttons */}
+                {_/* Action Buttons */}
                 <div className="flex gap-3">
                   <button
-                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                    onClick={_() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105"
                   >
                     Get Started
                   </button>
                   <button
-                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`}
+                    onClick={_() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`}
                     className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
                   >
                     Demo
@@ -318,7 +201,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">

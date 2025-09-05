@@ -1,8 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-export default function AccessibilityScannerPage() {
-	return (
+export default function AccessibilityScannerPage() {_return (
 		<>
 			<SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility-scanner" />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
@@ -16,5 +15,4 @@ export default function AccessibilityScannerPage() {
 				</div>
 			</section>
 		</>
-	);
-}
+	);}

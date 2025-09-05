@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function ApiDocsPage() {
-  return (
+export default function ApiDocsPage() {_return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
@@ -14,5 +13,4 @@ export default function ApiDocsPage() {
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
     </>
-  );
-}
+  );}

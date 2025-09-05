@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DevopsAutomationStrategiesForModernTeamsChat = () => {
-  return (
+const _DevopsAutomationStrategiesForModernTeamsChat = () => {_return (
     <div>
       <Head>
         <title>DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DevopsAutomationStrategiesForModernTeamsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DevopsAutomationStrategiesForModernTeamsChat;

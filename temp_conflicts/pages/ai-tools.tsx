@@ -2,203 +2,43 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { 
-  Brain, 
-  MessageSquare, 
-  Image, 
-  Video, 
-  Code, 
-  FileText, 
-  Zap, 
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Shield
-} from 'lucide-react';
+import {_Brain, _MessageSquare, _Image, _Video, _Code, _FileText, _Zap, _Star, _ExternalLink, _CheckCircle, _TrendingUp, _Shield} from 'lucide-react';
 
-export default function AiToolsPage() {
-  const aiTools = [
+export default function AiToolsPage() {_const _aiTools = [
     {
-      icon: <Brain className="w-8 h-8 text-white" />,
-      title: 'ChatGPT Plus',
-      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
-      features: [
-        'Advanced reasoning & analysis',
-        'Web browsing & real-time info',
-        'Plugin ecosystem access',
-        'Code generation & debugging',
-        'Professional writing assistance'
-      ],
-      pricing: '$20/month',
-      marketPrice: '$20/month',
-      website: 'https://chat.openai.com',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      popular: true,
-      category: 'Conversational AI'
-    },
-    {
-      icon: <Image className="w-8 h-8 text-white" />,
-      title: 'Midjourney',
-      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
-      features: [
-        'High-quality image generation',
-        'Artistic style control',
-        'Commercial usage rights',
-        'Community features',
-        'Advanced prompting system'
-      ],
-      pricing: '$10-30/month',
-      marketPrice: '$10-30/month',
-      website: 'https://midjourney.com',
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      textColor: 'text-purple-400',
-      gradient: 'from-purple-400 to-pink-500',
-      popular: true,
-      category: 'Image Generation'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: 'GitHub Copilot',
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
-      features: [
-        'Intelligent code completion',
-        'Multi-language support',
-        'IDE integration',
-        'Code explanation',
-        'Security vulnerability detection'
-      ],
-      pricing: '$10/month',
-      marketPrice: '$10-20/month',
-      website: 'https://github.com/features/copilot',
-      color: 'bg-gradient-to-br from-gray-500 to-black',
-      textColor: 'text-gray-400',
-      gradient: 'from-gray-400 to-black',
-      popular: true,
-      category: 'Code Generation'
-    },
-    {
-      icon: <Video className="w-8 h-8 text-white" />,
-      title: 'Runway ML',
-      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
-      features: [
-        'AI video generation',
-        'Video editing tools',
-        'Motion tracking',
-        'Green screen removal',
-        'Professional workflows'
-      ],
-      pricing: '$12-76/month',
-      marketPrice: '$15-100/month',
-      website: 'https://runwayml.com',
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-indigo-500',
-      popular: false,
-      category: 'Video Generation'
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-white" />,
-      title: 'Claude Pro',
-      description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
-      features: [
-        'Advanced reasoning abilities',
-        'Document analysis',
-        'Code generation',
-        'Creative writing',
-        'Research assistance'
-      ],
-      pricing: '$20/month',
-      marketPrice: '$20/month',
-      website: 'https://claude.ai',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
-      popular: false,
-      category: 'Conversational AI'
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-white" />,
-      title: 'Jasper AI',
-      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
-      features: [
-        'Content generation',
-        'Brand voice training',
-        'SEO optimization',
-        'Team collaboration',
-        'Enterprise integrations'
-      ],
-      pricing: '$39-125/month',
-      marketPrice: '$40-150/month',
-      website: 'https://jasper.ai',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      popular: false,
-      category: 'Content Creation'
-    }
+      icon: <Brain className="w-8 h-8 text-white" />, _title: 'ChatGPT Plus', _description: 'Advanced AI chatbot with enhanced reasoning, _web browsing, _and plugin capabilities for professional use.', _features: [
+        'Advanced reasoning & analysis', _'Web browsing & real-time info', _'Plugin ecosystem access', _'Code generation & debugging', _'Professional writing assistance'
+      ], _pricing: '$20/month', _marketPrice: '$20/month', _website: 'https://chat.openai.com', _color: 'bg-gradient-to-br from-green-500 to-emerald-600', _textColor: 'text-green-400', _gradient: 'from-green-400 to-emerald-500', _popular: true, _category: 'Conversational AI'},
+    {_icon: <Image className="w-8 h-8 text-white" />, _title: 'Midjourney', _description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.', _features: [
+        'High-quality image generation', _'Artistic style control', _'Commercial usage rights', _'Community features', _'Advanced prompting system'
+      ], _pricing: '$10-30/month', _marketPrice: '$10-30/month', _website: 'https://midjourney.com', _color: 'bg-gradient-to-br from-purple-500 to-pink-600', _textColor: 'text-purple-400', _gradient: 'from-purple-400 to-pink-500', _popular: true, _category: 'Image Generation'},
+    {_icon: <Code className="w-8 h-8 text-white" />, _title: 'GitHub Copilot', _description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.', _features: [
+        'Intelligent code completion', _'Multi-language support', _'IDE integration', _'Code explanation', _'Security vulnerability detection'
+      ], _pricing: '$10/month', _marketPrice: '$10-20/month', _website: 'https://github.com/features/copilot', _color: 'bg-gradient-to-br from-gray-500 to-black', _textColor: 'text-gray-400', _gradient: 'from-gray-400 to-black', _popular: true, _category: 'Code Generation'},
+    {_icon: <Video className="w-8 h-8 text-white" />, _title: 'Runway ML', _description: 'Professional AI video generation and editing tools for filmmakers, _marketers, _and content creators.', _features: [
+        'AI video generation', _'Video editing tools', _'Motion tracking', _'Green screen removal', _'Professional workflows'
+      ], _pricing: '$12-76/month', _marketPrice: '$15-100/month', _website: 'https://runwayml.com', _color: 'bg-gradient-to-br from-blue-500 to-indigo-600', _textColor: 'text-blue-400', _gradient: 'from-blue-400 to-indigo-500', _popular: false, _category: 'Video Generation'},
+    {_icon: <MessageSquare className="w-8 h-8 text-white" />, _title: 'Claude Pro', _description: 'Anthropic\'s advanced AI assistant with superior reasoning, _analysis, _and document processing capabilities.', _features: [
+        'Advanced reasoning abilities', _'Document analysis', _'Code generation', _'Creative writing', _'Research assistance'
+      ], _pricing: '$20/month', _marketPrice: '$20/month', _website: 'https://claude.ai', _color: 'bg-gradient-to-br from-orange-500 to-red-600', _textColor: 'text-orange-400', _gradient: 'from-orange-400 to-red-500', _popular: false, _category: 'Conversational AI'},
+    {_icon: <FileText className="w-8 h-8 text-white" />, _title: 'Jasper AI', _description: 'AI-powered content creation platform for marketers, _writers, _and businesses with enterprise features.', _features: [
+        'Content generation', _'Brand voice training', _'SEO optimization', _'Team collaboration', _'Enterprise integrations'
+      ], _pricing: '$39-125/month', _marketPrice: '$40-150/month', _website: 'https://jasper.ai', _color: 'bg-gradient-to-br from-teal-500 to-cyan-600', _textColor: 'text-teal-400', _gradient: 'from-teal-400 to-cyan-500', _popular: false, _category: 'Content Creation'}
   ];
 
-  const aiMarketStats = [
-    {
-      title: 'AI Market Size',
-      value: '$136.6B',
-      growth: '+37% YoY',
-      description: 'Global AI market value in 2024'
-    },
-    {
-      title: 'AI Adoption Rate',
-      value: '35%',
-      growth: '+12% YoY',
-      description: 'Businesses actively using AI tools'
-    },
-    {
-      title: 'AI Investment',
-      value: '$93.5B',
-      growth: '+28% YoY',
-      description: 'Global AI investment in 2024'
-    },
-    {
-      title: 'AI Productivity Gain',
-      value: '40%',
-      growth: '+15% YoY',
-      description: 'Average productivity improvement'
-    }
+  const _aiMarketStats = [
+    {_title: 'AI Market Size', _value: '$136.6B', _growth: '+37% YoY', _description: 'Global AI market value in 2024'},
+    {_title: 'AI Adoption Rate', _value: '35%', _growth: '+12% YoY', _description: 'Businesses actively using AI tools'},
+    {_title: 'AI Investment', _value: '$93.5B', _growth: '+28% YoY', _description: 'Global AI investment in 2024'},
+    {_title: 'AI Productivity Gain', _value: '40%', _growth: '+15% YoY', _description: 'Average productivity improvement'}
   ];
 
-  const aiCategories = [
-    {
-      name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models',
-      tools: 3,
-      avgPrice: '$20/month'
-    },
-    {
-      name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation',
-      tools: 1,
-      avgPrice: '$20/month'
-    },
-    {
-      name: 'Code Generation',
-      description: 'AI-assisted programming and development tools',
-      tools: 1,
-      avgPrice: '$10/month'
-    },
-    {
-      name: 'Video Generation',
-      description: 'AI video creation and editing tools',
-      tools: 1,
-      avgPrice: '$44/month'
-    },
-    {
-      name: 'Content Creation',
-      description: 'AI-powered writing and content generation',
-      tools: 1,
-      avgPrice: '$82/month'
-    }
+  const _aiCategories = [
+    {_name: 'Conversational AI', _description: 'Chatbots, _virtual assistants, _and language models', _tools: 3, _avgPrice: '$20/month'},
+    {_name: 'Image Generation', _description: 'AI-powered art, _design, _and visual content creation', _tools: 1, _avgPrice: '$20/month'},
+    {_name: 'Code Generation', _description: 'AI-assisted programming and development tools', _tools: 1, _avgPrice: '$10/month'},
+    {_name: 'Video Generation', _description: 'AI video creation and editing tools', _tools: 1, _avgPrice: '$44/month'},
+    {_name: 'Content Creation', _description: 'AI-powered writing and content generation', _tools: 1, _avgPrice: '$82/month'}
   ];
 
   return (
@@ -211,7 +51,7 @@ export default function AiToolsPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
@@ -232,7 +72,7 @@ export default function AiToolsPage() {
         </div>
       </section>
 
-      {/* AI Market Statistics */}
+      {_/* AI Market Statistics */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -245,17 +85,17 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {aiMarketStats.map((stat, index) => (
+            {_aiMarketStats.map(_(stat, _index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
-                  <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
-                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
-                  <p className="text-sm text-gray-400">{stat.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-3">{_stat.title}</h3>
+                  <div className="text-2xl font-bold text-cursor-blue mb-2">{_stat.value}</div>
+                  <div className="text-sm text-green-400 mb-3">{_stat.growth}</div>
+                  <p className="text-sm text-gray-400">{_stat.description}</p>
                 </div>
               </Card>
             ))}
@@ -263,7 +103,7 @@ export default function AiToolsPage() {
         </div>
       </section>
 
-      {/* AI Tools Grid */}
+      {_/* AI Tools Grid */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -276,15 +116,14 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {aiTools.map((tool, index) => (
+            {_aiTools.map(_(tool, _index) => (
               <Card
                 key={index}
-                className={`card-hover group border-gradient-blue relative ${
-                  tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={_`card-hover group border-gradient-blue relative ${
+                  tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''}`}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
-                {tool.popular && (
+                {_tool.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
                       <Star className="w-3 h-3 mr-1" />
@@ -295,49 +134,49 @@ export default function AiToolsPage() {
 
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {tool.icon}
+                    <div className={_`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {_tool.icon}
                     </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                    <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className={`text-2xl font-bold ${tool.textColor}`}>
-                        {tool.title}
+                      <h3 className={_`text-2xl font-bold ${tool.textColor}`}>
+                        {_tool.title}
                       </h3>
                       <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
-                        {tool.category}
+                        {_tool.category}
                       </span>
                     </div>
                     
                     <p className="text-gray-400 leading-relaxed mb-6">
-                      {tool.description}
+                      {_tool.description}
                     </p>
                     
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm text-gray-500">Service Price:</span>
-                        <span className="text-lg font-semibold text-cursor-blue">{tool.pricing}</span>
+                        <span className="text-lg font-semibold text-cursor-blue">{_tool.pricing}</span>
                       </div>
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm text-gray-500">Market Average:</span>
-                        <span className="text-sm text-gray-400">{tool.marketPrice}</span>
+                        <span className="text-sm text-gray-400">{_tool.marketPrice}</span>
                       </div>
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {tool.features.map((feature, featureIndex) => (
+                      {_tool.features.map(_(feature, _featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
+                          {_feature}
                         </li>
                       ))}
                     </ul>
 
                     <div className="flex items-center justify-between">
                       <Button
-                        href={tool.website}
+                        href={_tool.website}
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -347,7 +186,7 @@ export default function AiToolsPage() {
                       </Button>
                       <div className="text-right">
                         <div className="text-xs text-gray-500">Direct Link</div>
-                        <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
+                        <div className="text-xs text-cursor-blue font-mono">{_tool.website}</div>
                       </div>
                     </div>
                   </div>
@@ -358,7 +197,7 @@ export default function AiToolsPage() {
         </div>
       </section>
 
-      {/* AI Categories Overview */}
+      {_/* AI Categories Overview */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -371,18 +210,18 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiCategories.map((category, index) => (
+            {_aiCategories.map(_(category, _index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{_category.name}</h3>
+                  <p className="text-gray-400 mb-4">{_category.description}</p>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
-                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{_category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{_category.avgPrice}</span>
                   </div>
                 </div>
               </Card>
@@ -391,7 +230,7 @@ export default function AiToolsPage() {
         </div>
       </section>
 
-      {/* AI Implementation Guide */}
+      {_/* AI Implementation Guide */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -441,7 +280,7 @@ export default function AiToolsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor text-center">
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">

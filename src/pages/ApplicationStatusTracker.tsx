@@ -1,13 +1,6 @@
 
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
 
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
+function ApplicationStatusTrackerContent() {_const _isMobile = useIsMobile();
   
   return (
     <>
@@ -31,7 +24,7 @@ function ApplicationStatusTrackerContent() {
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
               </CardTitle>
             </CardHeader>
-            <CardContent className={`p-${isMobile ? '3' : '6'}`}>
+            <CardContent className={_`p-${isMobile ? '3' : '6'}`}>
               <ApplicationsTracker />
             </CardContent>
           </Card>
@@ -41,10 +34,8 @@ function ApplicationStatusTrackerContent() {
   );
 }
 
-export default function ApplicationStatusTracker() {
-  return (
+export default function ApplicationStatusTracker() {_return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-  );
-}
+  );}

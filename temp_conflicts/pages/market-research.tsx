@@ -2,323 +2,97 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 
-export default function MarketResearchPage() {
-  const marketSegments = [
+export default function MarketResearchPage() {_const _marketSegments = [
     {
-      name: 'AI & Machine Learning',
-      marketSize: '$15.7B',
-      growthRate: '23.4% CAGR',
-      keyTrends: [
-        'Generative AI adoption accelerating',
-        'AI-powered automation increasing',
-        'Natural language processing growth',
-        'Computer vision applications expanding'
-      ],
-      topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
-      opportunities: [
-        'AI content generation tools',
-        'Predictive analytics platforms',
-        'Automated customer service',
-        'Intelligent process automation'
-      ],
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className="w-8 h-8 text-white" />
-    },
-    {
-      name: 'Database & Analytics',
-      marketSize: '$8.9B',
-      growthRate: '18.7% CAGR',
-      keyTrends: [
-        'Real-time analytics demand',
-        'Cloud database migration',
-        'Data privacy regulations',
-        'Performance optimization focus'
-      ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-      opportunities: [
-        'Database performance monitoring',
-        'Real-time analytics dashboards',
-        'Data visualization tools',
-        'Query optimization platforms'
-      ],
-      color: 'from-cyan-500 to-blue-600',
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-    },
-    {
-      name: 'Security & Identity',
-      marketSize: '$12.3B',
-      growthRate: '21.2% CAGR',
-      keyTrends: [
-        'Zero-trust security adoption',
-        'Multi-factor authentication growth',
-        'API security concerns',
-        'Compliance requirements increasing'
-      ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-      opportunities: [
-        'Identity verification platforms',
-        'API security gateways',
-        'Compliance monitoring tools',
-        'Threat detection systems'
-      ],
-      color: 'from-green-500 to-emerald-600',
-      icon: <Target className="w-8 h-8 text-white" />
-    },
-    {
-      name: 'Business Intelligence',
-      marketSize: '$22.1B',
-      growthRate: '19.8% CAGR',
-      keyTrends: [
-        'Self-service BI adoption',
-        'Real-time data integration',
-        'Mobile BI growth',
-        'Predictive analytics demand'
-      ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-      opportunities: [
-        'Custom dashboard builders',
-        'Data integration platforms',
-        'Mobile analytics solutions',
-        'Predictive modeling tools'
-      ],
-      color: 'from-orange-500 to-red-600',
-      icon: <Activity className="w-8 h-8 text-white" />
-    },
-    {
-      name: 'API Management',
-      marketSize: '$6.8B',
-      growthRate: '24.1% CAGR',
-      keyTrends: [
-        'Microservices architecture growth',
-        'API-first development',
-        'Rate limiting importance',
-        'Developer experience focus'
-      ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-      opportunities: [
-        'API rate limiting services',
-        'Developer portal platforms',
-        'API analytics tools',
-        'Webhook management systems'
-      ],
-      color: 'from-indigo-500 to-purple-600',
-      icon: <Globe className="w-8 h-8 text-white" />
-    },
-    {
-      name: 'User Experience Analytics',
-      marketSize: '$9.4B',
-      growthRate: '20.5% CAGR',
-      keyTrends: [
-        'Privacy-compliant tracking',
-        'Real-time user insights',
-        'Conversion optimization focus',
-        'Mobile app analytics growth'
-      ],
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-      opportunities: [
-        'Heatmap and session recording',
-        'A/B testing platforms',
-        'User journey mapping tools',
-        'Conversion funnel analytics'
-      ],
-      color: 'from-teal-500 to-cyan-600',
-      icon: <Users className="w-8 h-8 text-white" />
-    }
+      name: 'AI & Machine Learning', _marketSize: '$15.7B', _growthRate: '23.4% CAGR', _keyTrends: [
+        'Generative AI adoption accelerating', _'AI-powered automation increasing', _'Natural language processing growth', _'Computer vision applications expanding'
+      ], _topPlayers: ['OpenAI', _'Anthropic', _'Google AI', _'Microsoft Azure AI'], _opportunities: [
+        'AI content generation tools', _'Predictive analytics platforms', _'Automated customer service', _'Intelligent process automation'
+      ], _color: 'from-fuchsia-500 to-purple-600', _icon: <Zap className="w-8 h-8 text-white" />},
+    {_name: 'Database & Analytics', _marketSize: '$8.9B', _growthRate: '18.7% CAGR', _keyTrends: [
+        'Real-time analytics demand', _'Cloud database migration', _'Data privacy regulations', _'Performance optimization focus'
+      ], _topPlayers: ['DataDog', _'New Relic', _'SolarWinds', _'Splunk'], _opportunities: [
+        'Database performance monitoring', _'Real-time analytics dashboards', _'Data visualization tools', _'Query optimization platforms'
+      ], _color: 'from-cyan-500 to-blue-600', _icon: <BarChart3 className="w-8 h-8 text-white" />},
+    {_name: 'Security & Identity', _marketSize: '$12.3B', _growthRate: '21.2% CAGR', _keyTrends: [
+        'Zero-trust security adoption', _'Multi-factor authentication growth', _'API security concerns', _'Compliance requirements increasing'
+      ], _topPlayers: ['Okta', _'Auth0', _'Ping Identity', _'OneLogin'], _opportunities: [
+        'Identity verification platforms', _'API security gateways', _'Compliance monitoring tools', _'Threat detection systems'
+      ], _color: 'from-green-500 to-emerald-600', _icon: <Target className="w-8 h-8 text-white" />},
+    {_name: 'Business Intelligence', _marketSize: '$22.1B', _growthRate: '19.8% CAGR', _keyTrends: [
+        'Self-service BI adoption', _'Real-time data integration', _'Mobile BI growth', _'Predictive analytics demand'
+      ], _topPlayers: ['Tableau', _'Power BI', _'Looker', _'Qlik'], _opportunities: [
+        'Custom dashboard builders', _'Data integration platforms', _'Mobile analytics solutions', _'Predictive modeling tools'
+      ], _color: 'from-orange-500 to-red-600', _icon: <Activity className="w-8 h-8 text-white" />},
+    {_name: 'API Management', _marketSize: '$6.8B', _growthRate: '24.1% CAGR', _keyTrends: [
+        'Microservices architecture growth', _'API-first development', _'Rate limiting importance', _'Developer experience focus'
+      ], _topPlayers: ['Kong', _'Tyk', _'AWS API Gateway', _'Azure API Management'], _opportunities: [
+        'API rate limiting services', _'Developer portal platforms', _'API analytics tools', _'Webhook management systems'
+      ], _color: 'from-indigo-500 to-purple-600', _icon: <Globe className="w-8 h-8 text-white" />},
+    {_name: 'User Experience Analytics', _marketSize: '$9.4B', _growthRate: '20.5% CAGR', _keyTrends: [
+        'Privacy-compliant tracking', _'Real-time user insights', _'Conversion optimization focus', _'Mobile app analytics growth'
+      ], _topPlayers: ['Hotjar', _'FullStory', _'Mixpanel', _'Amplitude'], _opportunities: [
+        'Heatmap and session recording', _'A/B testing platforms', _'User journey mapping tools', _'Conversion funnel analytics'
+      ], _color: 'from-teal-500 to-cyan-600', _icon: <Users className="w-8 h-8 text-white" />}
   ];
 
-  const competitiveAnalysis = [
-    {
-      company: 'Enterprise Giants',
-      examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
-      strengths: [
-        'Extensive resources and R&D',
-        'Established customer base',
-        'Comprehensive feature sets',
-        'Global presence and support'
-      ],
-      weaknesses: [
-        'High pricing and complexity',
-        'Slow innovation cycles',
-        'Difficult customization',
-        'Long implementation times'
-      ],
-      marketShare: '45-60%',
-      pricing: 'High ($1000+/month)'
-    },
-    {
-      company: 'Mid-Market Leaders',
-      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'],
-      strengths: [
-        'Balanced features and pricing',
-        'Strong user experience',
-        'Active community support',
-        'Regular feature updates'
-      ],
-      weaknesses: [
-        'Limited customization options',
-        'Growing complexity over time',
-        'Dependency on integrations',
-        'Scalability challenges'
-      ],
-      marketShare: '25-35%',
-      pricing: 'Medium ($100-500/month)'
-    },
-    {
-      company: 'Micro SaaS Innovators',
-      examples: ['Zapier', 'Notion', 'Airtable', 'Linear'],
-      strengths: [
-        'Focused feature sets',
-        'Fast innovation cycles',
-        'Affordable pricing',
-        'Easy implementation'
-      ],
-      weaknesses: [
-        'Limited feature scope',
-        'Smaller support teams',
-        'Integration dependencies',
-        'Market volatility risk'
-      ],
-      marketShare: '15-25%',
-      pricing: 'Low ($10-100/month)'
-    }
+  const _competitiveAnalysis = [
+    {_company: 'Enterprise Giants', _examples: ['Salesforce', _'Microsoft', _'Oracle', _'SAP'], _strengths: [
+        'Extensive resources and R&D', _'Established customer base', _'Comprehensive feature sets', _'Global presence and support'
+      ], _weaknesses: [
+        'High pricing and complexity', _'Slow innovation cycles', _'Difficult customization', _'Long implementation times'
+      ], _marketShare: '45-60%', _pricing: 'High ($1000+/month)'},
+    {_company: 'Mid-Market Leaders', _examples: ['HubSpot', _'Atlassian', _'Slack', _'Zoom'], _strengths: [
+        'Balanced features and pricing', _'Strong user experience', _'Active community support', _'Regular feature updates'
+      ], _weaknesses: [
+        'Limited customization options', _'Growing complexity over time', _'Dependency on integrations', _'Scalability challenges'
+      ], _marketShare: '25-35%', _pricing: 'Medium ($100-500/month)'},
+    {_company: 'Micro SaaS Innovators', _examples: ['Zapier', _'Notion', _'Airtable', _'Linear'], _strengths: [
+        'Focused feature sets', _'Fast innovation cycles', _'Affordable pricing', _'Easy implementation'
+      ], _weaknesses: [
+        'Limited feature scope', _'Smaller support teams', _'Integration dependencies', _'Market volatility risk'
+      ], _marketShare: '15-25%', _pricing: 'Low ($10-100/month)'}
   ];
 
-  const marketTrends = [
-    {
-      trend: 'AI-First Approach',
-      description: 'Companies prioritizing AI capabilities in their products',
-      impact: 'High',
-      timeline: '2024-2026',
-      examples: [
-        'AI-powered content generation',
-        'Intelligent automation',
-        'Predictive analytics',
-        'Natural language interfaces'
-      ],
-      opportunities: 'AI integration services, custom AI models, AI consulting'
-    },
-    {
-      trend: 'Privacy-First Design',
-      description: 'Growing focus on data privacy and compliance',
-      impact: 'High',
-      timeline: '2024-2027',
-      examples: [
-        'GDPR compliance tools',
-        'Privacy analytics platforms',
-        'Data anonymization services',
-        'Consent management systems'
-      ],
-      opportunities: 'Privacy compliance tools, data governance platforms, audit services'
-    },
-    {
-      trend: 'API-First Architecture',
-      description: 'Shift towards API-centric application development',
-      impact: 'Medium',
-      timeline: '2024-2026',
-      examples: [
-        'API management platforms',
-        'Developer experience tools',
-        'API analytics and monitoring',
-        'Integration platforms'
-      ],
-      opportunities: 'API development tools, integration services, developer portals'
-    },
-    {
-      trend: 'Real-Time Everything',
-      description: 'Demand for real-time data and analytics',
-      impact: 'Medium',
-      timeline: '2024-2025',
-      examples: [
-        'Real-time dashboards',
-        'Live collaboration tools',
-        'Instant notifications',
-        'Streaming analytics'
-      ],
-      opportunities: 'Real-time platforms, streaming services, live collaboration tools'
-    }
+  const _marketTrends = [
+    {_trend: 'AI-First Approach', _description: 'Companies prioritizing AI capabilities in their products', _impact: 'High', _timeline: '2024-2026', _examples: [
+        'AI-powered content generation', _'Intelligent automation', _'Predictive analytics', _'Natural language interfaces'
+      ], _opportunities: 'AI integration services, _custom AI models, _AI consulting'},
+    {_trend: 'Privacy-First Design', _description: 'Growing focus on data privacy and compliance', _impact: 'High', _timeline: '2024-2027', _examples: [
+        'GDPR compliance tools', _'Privacy analytics platforms', _'Data anonymization services', _'Consent management systems'
+      ], _opportunities: 'Privacy compliance tools, _data governance platforms, _audit services'},
+    {_trend: 'API-First Architecture', _description: 'Shift towards API-centric application development', _impact: 'Medium', _timeline: '2024-2026', _examples: [
+        'API management platforms', _'Developer experience tools', _'API analytics and monitoring', _'Integration platforms'
+      ], _opportunities: 'API development tools, _integration services, _developer portals'},
+    {_trend: 'Real-Time Everything', _description: 'Demand for real-time data and analytics', _impact: 'Medium', _timeline: '2024-2025', _examples: [
+        'Real-time dashboards', _'Live collaboration tools', _'Instant notifications', _'Streaming analytics'
+      ], _opportunities: 'Real-time platforms, _streaming services, _live collaboration tools'}
   ];
 
-  const pricingStrategies = [
-    {
-      strategy: 'Value-Based Pricing',
-      description: 'Pricing based on customer value and ROI',
-      pros: [
-        'Higher profit margins',
-        'Customer alignment',
-        'Scalable pricing model',
-        'Competitive differentiation'
-      ],
-      cons: [
-        'Complex pricing structure',
-        'Customer education required',
-        'Value measurement challenges',
-        'Pricing optimization needed'
-      ],
-      bestFor: 'Enterprise solutions, high-value services, ROI-focused products'
-    },
-    {
-      strategy: 'Usage-Based Pricing',
-      description: 'Pricing based on actual usage or consumption',
-      pros: [
-        'Fair pricing model',
-        'Easy to understand',
-        'Scalable with growth',
-        'Low barrier to entry'
-      ],
-      cons: [
-        'Revenue predictability challenges',
-        'Complex billing systems',
-        'Usage optimization needed',
-        'Customer cost management'
-      ],
-      bestFor: 'API services, storage platforms, compute resources'
-    },
-    {
-      strategy: 'Freemium Model',
-      description: 'Free basic tier with paid premium features',
-      pros: [
-        'Low customer acquisition cost',
-        'Viral growth potential',
-        'Large user base',
-        'Easy market entry'
-      ],
-      cons: [
-        'Low conversion rates',
-        'Revenue per user challenges',
-        'Support cost management',
-        'Feature differentiation needed'
-      ],
-      bestFor: 'Consumer tools, productivity apps, collaboration platforms'
-    }
+  const _pricingStrategies = [
+    {_strategy: 'Value-Based Pricing', _description: 'Pricing based on customer value and ROI', _pros: [
+        'Higher profit margins', _'Customer alignment', _'Scalable pricing model', _'Competitive differentiation'
+      ], _cons: [
+        'Complex pricing structure', _'Customer education required', _'Value measurement challenges', _'Pricing optimization needed'
+      ], _bestFor: 'Enterprise solutions, _high-value services, _ROI-focused products'},
+    {_strategy: 'Usage-Based Pricing', _description: 'Pricing based on actual usage or consumption', _pros: [
+        'Fair pricing model', _'Easy to understand', _'Scalable with growth', _'Low barrier to entry'
+      ], _cons: [
+        'Revenue predictability challenges', _'Complex billing systems', _'Usage optimization needed', _'Customer cost management'
+      ], _bestFor: 'API services, _storage platforms, _compute resources'},
+    {_strategy: 'Freemium Model', _description: 'Free basic tier with paid premium features', _pros: [
+        'Low customer acquisition cost', _'Viral growth potential', _'Large user base', _'Easy market entry'
+      ], _cons: [
+        'Low conversion rates', _'Revenue per user challenges', _'Support cost management', _'Feature differentiation needed'
+      ], _bestFor: 'Consumer tools, _productivity apps, _collaboration platforms'}
   ];
 
-  const investmentInsights = [
-    {
-      metric: 'Total VC Investment',
-      value: '$45.2B',
-      change: '+18.7% YoY',
-      description: 'Venture capital investment in SaaS companies in 2024'
-    },
-    {
-      metric: 'Average Series A',
-      value: '$12.8M',
-      change: '+22.3% YoY',
-      description: 'Average Series A funding round for SaaS startups'
-    },
-    {
-      metric: 'Exit Valuations',
-      value: '8.2x ARR',
-      change: '+15.4% YoY',
-      description: 'Average exit valuation multiple based on annual recurring revenue'
-    },
-    {
-      metric: 'Time to Profitability',
-      value: '3.2 years',
-      change: '-0.8 years YoY',
-      description: 'Average time for SaaS companies to reach profitability'
-    }
+  const _investmentInsights = [
+    {_metric: 'Total VC Investment', _value: '$45.2B', _change: '+18.7% YoY', _description: 'Venture capital investment in SaaS companies in 2024'},
+    {_metric: 'Average Series A', _value: '$12.8M', _change: '+22.3% YoY', _description: 'Average Series A funding round for SaaS startups'},
+    {_metric: 'Exit Valuations', _value: '8.2x ARR', _change: '+15.4% YoY', _description: 'Average exit valuation multiple based on annual recurring revenue'},
+    {_metric: 'Time to Profitability', _value: '3.2 years', _change: '-0.8 years YoY', _description: 'Average time for SaaS companies to reach profitability'}
   ];
 
   return (
@@ -331,7 +105,7 @@ export default function MarketResearchPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
@@ -351,7 +125,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* Investment Insights */}
+      {_/* Investment Insights */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-16">
@@ -364,19 +138,19 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {investmentInsights.map((insight, index) => (
+            {_investmentInsights.map(_(insight, _index) => (
               <Card
                 key={index}
                 className="card-hover text-center border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
-                  <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>
-                  <div className="text-sm text-gray-400 mb-3">{insight.metric}</div>
-                  <div className="text-sm text-gray-300 mb-4">{insight.description}</div>
+                  <div className="text-3xl font-bold text-white mb-2">{_insight.value}</div>
+                  <div className="text-sm text-gray-400 mb-3">{_insight.metric}</div>
+                  <div className="text-sm text-gray-300 mb-4">{_insight.description}</div>
                   <div className="inline-flex items-center text-sm text-green-400">
                     <TrendingUp className="w-4 h-4 mr-1" />
-                    {insight.change}
+                    {_insight.change}
                   </div>
                 </div>
               </Card>
@@ -385,7 +159,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* Market Segments */}
+      {_/* Market Segments */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -398,85 +172,84 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="space-y-8">
-            {marketSegments.map((segment, index) => (
-              <Card
+            {_marketSegments.map(_(segment, _index) => (_<Card
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-8">
                   <div className="flex flex-col lg:flex-row gap-8">
-                    {/* Segment Header */}
+                    {_/* Segment Header */}
                     <div className="lg:w-1/3">
                       <div className="text-center lg:text-left">
-                        <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>
-                          {segment.icon}
+                        <div className={_`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>
+                          {_segment.icon}
                         </div>
                         <h3 className="text-2xl font-bold mb-3 text-white">
-                          {segment.name}
+                          {_segment.name}
                         </h3>
                         
-                        {/* Market Data */}
+                        {_/* Market Data */}
                         <div className="space-y-3 text-sm mb-6">
                           <div className="flex items-center justify-between">
                             <span className="text-gray-400">Market Size:</span>
-                            <span className="text-white font-semibold">{segment.marketSize}</span>
+                            <span className="text-white font-semibold">{_segment.marketSize}</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-gray-400">Growth Rate:</span>
-                            <span className="text-green-400 font-semibold">{segment.growthRate}</span>
+                            <span className="text-green-400 font-semibold">{_segment.growthRate}</span>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Market Analysis */}
+                    {_/* Market Analysis */}
                     <div className="lg:w-2/3">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {/* Key Trends */}
+                        {_/* Key Trends */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                             <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
                             Key Trends
                           </h4>
                           <ul className="space-y-2">
-                            {segment.keyTrends.map((trend, trendIndex) => (
+                            {_segment.keyTrends.map((trend, _trendIndex) => (
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-                                {trend}
+                                {_trend}
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        {/* Top Players */}
+                        {_/* Top Players */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                             <Award className="w-5 h-5 mr-2 text-yellow-400" />
                             Top Players
                           </h4>
                           <ul className="space-y-2">
-                            {segment.topPlayers.map((player, playerIndex) => (
+                            {_segment.topPlayers.map(_(player, _playerIndex) => (
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-                                {player}
+                                {_player}
                               </li>
                             ))}
                           </ul>
                         </div>
                       </div>
 
-                      {/* Opportunities */}
+                      {_/* Opportunities */}
                       <div className="mt-8 pt-6 border-t border-gray-700">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                           <Target className="w-5 h-5 mr-2 text-blue-400" />
                           Market Opportunities
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {segment.opportunities.map((opportunity, oppIndex) => (
+                          {_segment.opportunities.map(_(opportunity, _oppIndex) => (
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-                              {opportunity}
+                              {_opportunity}
                             </div>
                           ))}
                         </div>
@@ -490,7 +263,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* Competitive Analysis */}
+      {_/* Competitive Analysis */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -503,54 +276,54 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {competitiveAnalysis.map((analysis, index) => (
+            {_competitiveAnalysis.map(_(analysis, _index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{_analysis.company}</h3>
                   
-                  {/* Examples */}
+                  {_/* Examples */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <div className="text-sm text-gray-300">{analysis.examples.join(', ')}</div>
+                    <div className="text-sm text-gray-300">{_analysis.examples.join(', _')}</div>
                   </div>
 
-                  {/* Market Share & Pricing */}
+                  {_/* Market Share & Pricing */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div>
                       <span className="text-gray-400">Market Share:</span>
-                      <div className="text-white font-semibold">{analysis.marketShare}</div>
+                      <div className="text-white font-semibold">{_analysis.marketShare}</div>
                     </div>
                     <div>
                       <span className="text-gray-400">Pricing:</span>
-                      <div className="text-white font-semibold">{analysis.pricing}</div>
+                      <div className="text-white font-semibold">{_analysis.pricing}</div>
                     </div>
                   </div>
 
-                  {/* Strengths */}
+                  {_/* Strengths */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.strengths.map((strength, strengthIndex) => (
+                      {_analysis.strengths.map(_(strength, _strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {strength}
+                          {_strength}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Weaknesses */}
+                  {_/* Weaknesses */}
                   <div>
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
+                      {_analysis.weaknesses.map(_(weakness, _weaknessIndex) => (
                         <li key={weaknessIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {weakness}
+                          {_weakness}
                         </li>
                       ))}
                     </ul>
@@ -562,7 +335,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* Market Trends */}
+      {_/* Market Trends */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -575,38 +348,36 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {marketTrends.map((trend, index) => (
-              <Card
+            {_marketTrends.map(_(trend, _index) => (_<Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
+                    <h3 className="text-xl font-bold text-white">{_trend.trend}</h3>
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                      <span className={_`px-2 py-1 rounded text-xs font-medium ${
                         trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
                         trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-green-500/20 text-green-400'
-                      }`}>
-                        {trend.impact} Impact
+                        'bg-green-500/20 text-green-400'}`}>
+                        {_trend.impact} Impact
                       </span>
                       <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
-                        {trend.timeline}
+                        {_trend.timeline}
                       </span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <p className="text-gray-300 mb-4">{_trend.description}</p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
+                      {_trend.examples.map((example, _exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {example}
+                          {_example}
                         </li>
                       ))}
                     </ul>
@@ -614,7 +385,7 @@ export default function MarketResearchPage() {
 
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
-                    <p className="text-xs text-gray-300">{trend.opportunities}</p>
+                    <p className="text-xs text-gray-300">{_trend.opportunities}</p>
                   </div>
                 </div>
               </Card>
@@ -623,7 +394,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* Pricing Strategies */}
+      {_/* Pricing Strategies */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -636,46 +407,45 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingStrategies.map((strategy, index) => (
-              <Card
+            {_pricingStrategies.map(_(strategy, _index) => (_<Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
-                  <p className="text-gray-300 mb-6">{strategy.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{_strategy.strategy}</h3>
+                  <p className="text-gray-300 mb-6">{_strategy.description}</p>
                   
-                  {/* Pros */}
+                  {_/* Pros */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.pros.map((pro, proIndex) => (
+                      {_strategy.pros.map((pro, _proIndex) => (
                         <li key={proIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {pro}
+                          {_pro}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Cons */}
+                  {_/* Cons */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.cons.map((con, conIndex) => (
+                      {_strategy.cons.map(_(con, _conIndex) => (
                         <li key={conIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {con}
+                          {_con}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Best For */}
+                  {_/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
-                    <p className="text-xs text-gray-300">{strategy.bestFor}</p>
+                    <p className="text-xs text-gray-300">{_strategy.bestFor}</p>
                   </div>
                 </div>
               </Card>
@@ -684,7 +454,7 @@ export default function MarketResearchPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-10" />
         <div className="container-cursor text-center relative z-10">

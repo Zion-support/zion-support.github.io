@@ -1,59 +1,39 @@
 
-import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import React, {_useEffect, _useState} from "react";
 
-interface StickyActionProps {
-  className?: string;
+interface StickyActionProps {_className?: string;
   children: React.ReactNode;
   showAfterScroll?: number;
-  position?: "bottom" | "top";
-}
+  position?: "bottom" | "top";}
 
-export function StickyAction({
-  className,
-  children,
-  showAfterScroll = 300,
-  position = "bottom"
-}: StickyActionProps) {
-  const [isVisible, setIsVisible] = useState(false);
+export function StickyAction(_{_className, _children, _showAfterScroll = 300, _position = "bottom"}: StickyActionProps) {_const [isVisible, _setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect__(() => {
+    const _handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+        setIsVisible(true);} else {_setIsVisible(false);}
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => {_window.removeEventListener("scroll", _handleScroll);};
   }, [showAfterScroll]);
 
-  const positionClasses = {
-    bottom: "bottom-4",
-    top: "top-20"
-  };
+  const _positionClasses = {_bottom: "bottom-4", _top: "top-20"};
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {_isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0.2 }}
-          className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4",
-            positionClasses[position],
-            className
+          initial={{ opacity: 0, _y: position === "bottom" ? 20 : -20}}
+          animate={_{ opacity: 1, _y: 0}}
+          exit={_{ opacity: 0, _y: position === "bottom" ? 20 : -20}}
+          transition={_{ duration: 0.2}}
+          className={_cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4", _positionClasses[position], _className
           )}
         >
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
-            {children}
+            {_children}
           </div>
         </motion.div>
       )}

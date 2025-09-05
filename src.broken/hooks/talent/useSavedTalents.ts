@@ -1,5 +1,4 @@
 // Hook for useSavedTalents;
-export const useUseSavedTalents: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUseSavedTalents: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

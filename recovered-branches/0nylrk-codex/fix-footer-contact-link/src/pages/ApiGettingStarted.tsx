@@ -1,22 +1,20 @@
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
 
-export function ApiGettingStarted() {
-  const authExample = `curl -X GET \\
+export function ApiGettingStarted() {_const _authExample = `curl -X GET \\
   https://api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`;
 
-  const quickStartJs = `import axios from 'axios';
+  const _quickStartJs = `import axios from 'axios';
 
-const response = await axios.get('https://api.zionai.com/v1/jobs', {
+const _response = await axios.get('https://api.zionai.com/v1/jobs', _{
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
 });
 
-console.log(response.data);`;
+`;
 
   return (
     <ApiDocsLayout>
@@ -36,7 +34,7 @@ console.log(response.data);`;
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
         </p>
         
-        <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
+        <CodeBlock code={_authExample} language="bash" showLineNumbers={_false} />
         
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
           <h3 className="text-yellow-500 text-sm font-medium mt-0">Important</h3>
@@ -45,8 +43,8 @@ console.log(response.data);`;
           </p>
         </div>
 
-        <h2>Base URL</h2>
-        <p>All API requests should be made to the following base URL:</p>
+        <h2>Base window.URL</h2>
+        <p>All API requests should be made to the following base window.URL:</p>
         <div className="bg-zinc-900 p-4 rounded-md">
           <code className="text-zion-cyan break-words">https://api.zionai.com/v1</code>
         </div>
@@ -60,7 +58,7 @@ console.log(response.data);`;
         <h2>Quick Start</h2>
         <p>Here's a simple example of fetching jobs using JavaScript:</p>
         
-        <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />
+        <CodeBlock code={_quickStartJs} language="javascript" showLineNumbers={_true} />
 
         <h2>Available APIs</h2>
         <ul>

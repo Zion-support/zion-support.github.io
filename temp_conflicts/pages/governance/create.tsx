@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function GovernanceCreatePage() {
-  return (
+export default function GovernanceCreatePage() {_return (
     <>
       <Head>
         <title>Create Proposal - Zion Tech Group</title>
@@ -18,5 +17,4 @@ export default function GovernanceCreatePage() {
         </div>
       </div>
     </>
-  );
-}
+  );}

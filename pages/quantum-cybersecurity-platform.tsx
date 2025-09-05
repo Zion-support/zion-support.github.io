@@ -2,9 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
 
-export default function QuantumCybersecurityPlatform() {
-  return (
-    <>
+export default function QuantumCybersecurityPlatform() {_return (_<>
       <Head>
         <title>Quantum Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." />
@@ -14,18 +12,13 @@ export default function QuantumCybersecurityPlatform() {
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Quantum Cybersecurity</h1>
-            <p className="text-gray-300 text-lg">Quantum-safe encryption, threat detection, and secure communications.</p>
+            <p className="text-gray-300 text-lg">Quantum-safe encryption, _threat detection, _and secure communications.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Post-quantum cryptography integration',
-              'Quantum key distribution options',
-              'Advanced anomaly and threat detection',
-              'Security analytics and incident workflows',
-              'Compliance and reporting',
-              'From $4,999/mo'
+              'Post-quantum cryptography integration', _'Quantum key distribution options', _'Advanced anomaly and threat detection', _'Security analytics and incident workflows', _'Compliance and reporting', _'From $4, _999/mo'
             ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
+              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{_f}</div>
             ))}
           </section>
           <div className="text-center">

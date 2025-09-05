@@ -4,124 +4,33 @@ import Link from 'next/link';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-export default function CaseStudies() {
-  const caseStudies = [
+export default function CaseStudies() {_const _caseStudies = [
     {
-      id: 'enterprise-ai-transformation',
-      title: 'Enterprise AI Transformation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Complex supply chain management with 50+ locations worldwide, manual processes causing delays and inefficiencies.',
-      solution: 'Implemented AI Autonomous Business Manager with predictive analytics and automated decision-making.',
-      results: [
-        '40% reduction in supply chain delays',
-        '25% improvement in inventory management',
-        '30% cost savings in operations',
-        '99.9% uptime achieved'
-      ],
-      technologies: ['AI/ML', 'Predictive Analytics', 'Automation', 'Cloud Infrastructure'],
-      duration: '6 months',
-      roi: '300%',
-      image: '🏭'
-    },
-    {
-      id: 'cybersecurity-automation',
-      title: 'Cybersecurity Automation Platform',
-      company: 'Financial Services Inc',
-      industry: 'Financial Services',
-      challenge: 'Increasing cyber threats, manual security monitoring, compliance requirements, and 24/7 security operations.',
-      solution: 'Deployed AI-Powered Enterprise Security with autonomous threat detection and response.',
-      results: [
-        '95% faster threat detection',
-        '80% reduction in false positives',
-        '100% compliance achievement',
-        'Zero security breaches'
-      ],
-      technologies: ['AI Security', 'Threat Intelligence', 'Automation', 'Compliance'],
-      duration: '4 months',
-      roi: '400%',
-      image: '🔒'
-    },
-    {
-      id: 'ai-content-automation',
-      title: 'AI Content Creation Revolution',
-      company: 'Digital Marketing Agency',
-      industry: 'Marketing & Advertising',
-      challenge: 'High content creation costs, inconsistent quality, slow turnaround times, and scaling challenges.',
-      solution: 'Integrated AI Content Generation Platform with personalized content creation and optimization.',
-      results: [
-        '70% reduction in content creation time',
-        '60% improvement in content quality',
-        '3x increase in content output',
-        '45% cost savings'
-      ],
-      technologies: ['NLP', 'Content AI', 'Personalization', 'Analytics'],
-      duration: '3 months',
-      roi: '250%',
-      image: '📝'
-    },
-    {
-      id: 'quantum-computing-research',
-      title: 'Quantum Computing Research Platform',
-      company: 'Research Institute',
-      industry: 'Research & Development',
-      challenge: 'Complex computational problems, limited computing resources, and need for breakthrough research capabilities.',
-      solution: 'Deployed Quantum Cloud Infrastructure with AI-powered research automation.',
-      results: [
-        '1000x faster computation for specific problems',
-        'Breakthrough discoveries in 3 research areas',
-        '50% reduction in research time',
-        'New patent applications filed'
-      ],
-      technologies: ['Quantum Computing', 'AI Research', 'Cloud Native', 'Research Automation'],
-      duration: '12 months',
-      roi: '500%',
-      image: '⚛️'
-    },
-    {
-      id: 'healthcare-ai-diagnostics',
-      title: 'Healthcare AI Diagnostics System',
-      company: 'Regional Medical Center',
-      industry: 'Healthcare',
-      challenge: 'High diagnostic error rates, long wait times, limited specialist availability, and increasing patient load.',
-      solution: 'Implemented AI Autonomous Healthcare Physician with diagnostic assistance and patient monitoring.',
-      results: [
-        '90% reduction in diagnostic errors',
-        '60% faster diagnosis times',
-        '40% improvement in patient outcomes',
-        '24/7 diagnostic availability'
-      ],
-      technologies: ['Medical AI', 'Computer Vision', 'Diagnostics', 'Patient Monitoring'],
-      duration: '8 months',
-      roi: '350%',
-      image: '🏥'
-    },
-    {
-      id: 'blockchain-analytics-platform',
-      title: 'Blockchain Analytics & Governance',
-      company: 'Cryptocurrency Exchange',
-      industry: 'Blockchain & Finance',
-      challenge: 'Complex blockchain transactions, regulatory compliance, fraud detection, and market analysis needs.',
-      solution: 'Built AI Blockchain Analytics platform with governance and compliance automation.',
-      results: [
-        '99.9% fraud detection accuracy',
-        'Real-time compliance monitoring',
-        '50% reduction in regulatory reporting time',
-        'Enhanced market insights'
-      ],
-      technologies: ['Blockchain', 'AI Analytics', 'Compliance', 'Real-time Processing'],
-      duration: '5 months',
-      roi: '280%',
-      image: '⛓️'
-    }
+      id: 'enterprise-ai-transformation', _title: 'Enterprise AI Transformation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _challenge: 'Complex supply chain management with 50+ locations worldwide, _manual processes causing delays and inefficiencies.', _solution: 'Implemented AI Autonomous Business Manager with predictive analytics and automated decision-making.', _results: [
+        '40% reduction in supply chain delays', _'25% improvement in inventory management', _'30% cost savings in operations', _'99.9% uptime achieved'
+      ], _technologies: ['AI/ML', _'Predictive Analytics', _'Automation', _'Cloud Infrastructure'], _duration: '6 months', _roi: '300%', _image: '🏭'},
+    {_id: 'cybersecurity-automation', _title: 'Cybersecurity Automation Platform', _company: 'Financial Services Inc', _industry: 'Financial Services', _challenge: 'Increasing cyber threats, _manual security monitoring, _compliance requirements, _and 24/7 security operations.', _solution: 'Deployed AI-Powered Enterprise Security with autonomous threat detection and response.', _results: [
+        '95% faster threat detection', _'80% reduction in false positives', _'100% compliance achievement', _'Zero security breaches'
+      ], _technologies: ['AI Security', _'Threat Intelligence', _'Automation', _'Compliance'], _duration: '4 months', _roi: '400%', _image: '🔒'},
+    {_id: 'ai-content-automation', _title: 'AI Content Creation Revolution', _company: 'Digital Marketing Agency', _industry: 'Marketing & Advertising', _challenge: 'High content creation costs, _inconsistent quality, _slow turnaround times, _and scaling challenges.', _solution: 'Integrated AI Content Generation Platform with personalized content creation and optimization.', _results: [
+        '70% reduction in content creation time', _'60% improvement in content quality', _'3x increase in content output', _'45% cost savings'
+      ], _technologies: ['NLP', _'Content AI', _'Personalization', _'Analytics'], _duration: '3 months', _roi: '250%', _image: '📝'},
+    {_id: 'quantum-computing-research', _title: 'Quantum Computing Research Platform', _company: 'Research Institute', _industry: 'Research & Development', _challenge: 'Complex computational problems, _limited computing resources, _and need for breakthrough research capabilities.', _solution: 'Deployed Quantum Cloud Infrastructure with AI-powered research automation.', _results: [
+        '1000x faster computation for specific problems', _'Breakthrough discoveries in 3 research areas', _'50% reduction in research time', _'New patent applications filed'
+      ], _technologies: ['Quantum Computing', _'AI Research', _'Cloud Native', _'Research Automation'], _duration: '12 months', _roi: '500%', _image: '⚛️'},
+    {_id: 'healthcare-ai-diagnostics', _title: 'Healthcare AI Diagnostics System', _company: 'Regional Medical Center', _industry: 'Healthcare', _challenge: 'High diagnostic error rates, _long wait times, _limited specialist availability, _and increasing patient load.', _solution: 'Implemented AI Autonomous Healthcare Physician with diagnostic assistance and patient monitoring.', _results: [
+        '90% reduction in diagnostic errors', _'60% faster diagnosis times', _'40% improvement in patient outcomes', _'24/7 diagnostic availability'
+      ], _technologies: ['Medical AI', _'Computer Vision', _'Diagnostics', _'Patient Monitoring'], _duration: '8 months', _roi: '350%', _image: '🏥'},
+    {_id: 'blockchain-analytics-platform', _title: 'Blockchain Analytics & Governance', _company: 'Cryptocurrency Exchange', _industry: 'Blockchain & Finance', _challenge: 'Complex blockchain transactions, _regulatory compliance, _fraud detection, _and market analysis needs.', _solution: 'Built AI Blockchain Analytics platform with governance and compliance automation.', _results: [
+        '99.9% fraud detection accuracy', _'Real-time compliance monitoring', _'50% reduction in regulatory reporting time', _'Enhanced market insights'
+      ], _technologies: ['Blockchain', _'AI Analytics', _'Compliance', _'Real-time Processing'], _duration: '5 months', _roi: '280%', _image: '⛓️'}
   ];
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Case Studies - Zion Tech Group | Client Success Stories & AI Implementations</title>
         <meta name="description" content="Explore real-world case studies of Zion Tech Group's AI solutions. See how we've transformed businesses across industries with autonomous technology." />
-        <meta name="keywords" content="case studies, AI implementations, client success stories, business transformation, Zion Tech Group" />
+        <meta name="keywords" content="case studies, _AI implementations, _client success stories, _business transformation, _Zion Tech Group" />
         <meta property="og:title" content="Case Studies - Zion Tech Group" />
         <meta property="og:description" content="Real-world examples of AI transformation and business success." />
         <meta property="og:type" content="website" />
@@ -133,7 +42,7 @@ export default function CaseStudies() {
         <SmartHeader />
         
         <main id="main-content" className="pt-16">
-          {/* Hero Section */}
+          {_/* Hero Section */}
           <section className="relative py-20 px-6">
             <div className="mx-auto max-w-7xl">
               <div className="text-center">
@@ -161,7 +70,7 @@ export default function CaseStudies() {
             </div>
           </section>
 
-          {/* Stats Section */}
+          {_/* Stats Section */}
           <section className="py-20 px-6 bg-white/5">
             <div className="mx-auto max-w-7xl">
               <div className="grid md:grid-cols-4 gap-8 text-center">
@@ -185,7 +94,7 @@ export default function CaseStudies() {
             </div>
           </section>
 
-          {/* Case Studies Grid */}
+          {_/* Case Studies Grid */}
           <section className="py-20 px-6">
             <div className="mx-auto max-w-7xl">
               <div className="text-center mb-16">
@@ -196,34 +105,33 @@ export default function CaseStudies() {
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {caseStudies.map((study) => (
-                  <div key={study.id} className="bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-fuchsia-500/30 transition-all duration-300 hover:scale-105">
+                {_caseStudies.map((study) => (_<div key={study.id} className="bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-fuchsia-500/30 transition-all duration-300 hover:scale-105">
                     <div className="p-6">
-                      <div className="text-4xl mb-4">{study.image}</div>
+                      <div className="text-4xl mb-4">{_study.image}</div>
                       <div className="inline-flex items-center px-3 py-1 rounded-full bg-fuchsia-500/20 border border-fuchsia-500/30 text-fuchsia-300 text-xs font-medium mb-4">
-                        {study.industry}
+                        {_study.industry}
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                      <p className="text-white/60 text-sm mb-4">{study.company}</p>
+                      <h3 className="text-xl font-bold text-white mb-2">{_study.title}</h3>
+                      <p className="text-white/60 text-sm mb-4">{_study.company}</p>
                       
                       <div className="space-y-3 mb-6">
                         <div>
                           <h4 className="text-white font-semibold text-sm mb-1">Challenge:</h4>
-                          <p className="text-white/70 text-sm">{study.challenge}</p>
+                          <p className="text-white/70 text-sm">{_study.challenge}</p>
                         </div>
                         <div>
                           <h4 className="text-white font-semibold text-sm mb-1">Solution:</h4>
-                          <p className="text-white/70 text-sm">{study.solution}</p>
+                          <p className="text-white/70 text-sm">{_study.solution}</p>
                         </div>
                       </div>
 
                       <div className="mb-6">
                         <h4 className="text-white font-semibold text-sm mb-2">Key Results:</h4>
                         <ul className="space-y-1">
-                          {study.results.map((result, index) => (
+                          {_study.results.map((result, _index) => (
                             <li key={index} className="text-white/70 text-sm flex items-start">
                               <span className="text-green-400 mr-2 mt-1">✓</span>
-                              {result}
+                              {_result}
                             </li>
                           ))}
                         </ul>
@@ -232,27 +140,27 @@ export default function CaseStudies() {
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
                           <span className="text-white/60">Duration:</span>
-                          <div className="text-white font-semibold">{study.duration}</div>
+                          <div className="text-white font-semibold">{_study.duration}</div>
                         </div>
                         <div>
                           <span className="text-white/60">ROI:</span>
-                          <div className="text-white font-semibold">{study.roi}</div>
+                          <div className="text-white font-semibold">{_study.roi}</div>
                         </div>
                       </div>
 
                       <div className="mb-6">
                         <h4 className="text-white font-semibold text-sm mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {study.technologies.map((tech, index) => (
+                          {_study.technologies.map(_(tech, _index) => (
                             <span key={index} className="px-2 py-1 bg-white/10 rounded text-xs text-white/80">
-                              {tech}
+                              {_tech}
                             </span>
                           ))}
                         </div>
                       </div>
 
                       <Link 
-                        href={`/case-studies/${study.id}`}
+                        href={_`/case-studies/${study.id}`}
                         className="w-full px-4 py-2 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center block"
                       >
                         Read Full Case Study
@@ -264,7 +172,7 @@ export default function CaseStudies() {
             </div>
           </section>
 
-          {/* Industry Focus */}
+          {_/* Industry Focus */}
           <section className="py-20 px-6 bg-white/5">
             <div className="mx-auto max-w-7xl">
               <div className="text-center mb-16">
@@ -310,7 +218,7 @@ export default function CaseStudies() {
             </div>
           </section>
 
-          {/* Testimonials */}
+          {_/* Testimonials */}
           <section className="py-20 px-6">
             <div className="mx-auto max-w-7xl">
               <div className="text-center mb-16">
@@ -369,7 +277,7 @@ export default function CaseStudies() {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {_/* CTA Section */}
           <section className="py-20 px-6 bg-white/5">
             <div className="mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Write Your Success Story?</h2>

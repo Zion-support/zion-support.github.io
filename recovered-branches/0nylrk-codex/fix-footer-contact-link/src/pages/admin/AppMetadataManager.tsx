@@ -1,11 +1,7 @@
 
 import React from "react";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
 
-const AppMetadataManager: React.FC = () => {
-  return (
+const AppMetadataManager: React.FC = () => {_return (
     <AppLayout>
       <SEO 
         title="App Metadata Manager"

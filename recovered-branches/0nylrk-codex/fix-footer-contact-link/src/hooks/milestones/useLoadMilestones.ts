@@ -1,31 +1,22 @@
 
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from 'sonner';
-import { Milestone, MilestoneActivity } from './types';
 
-export const useLoadMilestones = (projectId?: string) => {
-  const { user } = useAuth();
+export const _useLoadMilestones = (_projectId?: string) => {_const { user} = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [activities, setActivities] = useState<Record<string, MilestoneActivity[]>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchMilestones = async () => {
-    if (!projectId) {
+  const _fetchMilestones = async () => {_if (!projectId) {
       setIsLoading(false);
-      return;
-    }
+      return;}
     
-    try {
-      setIsLoading(true);
+    try {_setIsLoading(true);
       
-      const { data: milestonesData, error: milestonesError } = await supabase
+      const { data: milestonesData, _error: milestonesError} = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
-        .order('due_date', { ascending: true });
+        .order('due_date', {_ascending: true});
       
       if (milestonesError) throw milestonesError;
       
@@ -34,15 +25,14 @@ export const useLoadMilestones = (projectId?: string) => {
       // Fetch activities for each milestone
       const activitiesMap: Record<string, MilestoneActivity[]> = {};
       
-      for (const milestone of milestonesData) {
-        const { data: activitiesData, error: activitiesError } = await supabase
+      for (const milestone of milestonesData) {_const { data: activitiesData, _error: activitiesError} = await supabase
           .from('milestone_activities')
           .select(`
             *,
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('milestone_id', milestone.id)
-          .order('created_at', { ascending: false });
+          .order('created_at', {_ascending: false});
           
         if (activitiesError) throw activitiesError;
         
@@ -51,27 +41,14 @@ export const useLoadMilestones = (projectId?: string) => {
       
       setActivities(activitiesMap);
       setError(null);
-    } catch (err: any) {
-      console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
-      toast.error("Failed to fetch milestones");
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (err: unknown) {_setError("Failed to fetch milestones: " + err.message);
+      toast.error("Failed to fetch milestones");} finally {_setIsLoading(false);}
   };
 
   // Fetch milestones when component mounts or projectId changes
-  useEffect(() => {
-    if (projectId) {
-      fetchMilestones();
-    }
+  useEffect__(() => {_if (projectId) {
+      fetchMilestones();}
   }, [projectId]);
 
-  return {
-    milestones,
-    activities,
-    isLoading,
-    error,
-    refetch: fetchMilestones
-  };
+  return {_milestones, _activities, _isLoading, _error, _refetch: fetchMilestones};
 };

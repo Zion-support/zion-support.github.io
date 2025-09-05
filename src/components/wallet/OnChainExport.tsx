@@ -1,89 +1,58 @@
 
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from "@/components/ui/tooltip";
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
+import React, {_useState} from "react";
+import {_Tooltip, _TooltipContent, _TooltipProvider, _TooltipTrigger} from "@/components/ui/tooltip";
 
-export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
-  const { toast } = useToast();
-  const { user } = useAuth();
+export function OnChainExport() {_const [isConnected, _setIsConnected] = useState(false);
+  const [isExporting, _setIsExporting] = useState(false);
+  const [exportStatus, _setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const { toast} = useToast();
+  const {_user} = useAuth();
   
-  const handleConnectWallet = async () => {
-    try {
+  const _handleConnectWallet = async () => {_try {
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
+      const _ethereum = (window as any).ethereum;
       if (!ethereum) {
         toast({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive"
-        });
+          title: "Wallet not detected", _description: "Please install MetaMask or another Ethereum wallet to use this feature", _variant: "destructive"});
         return;
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      const address = accounts[0];
+      const _accounts = await ethereum.request({_method: 'eth_requestAccounts'});
+      const _address = accounts[0];
       
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-      await ethereum.request({
-        method: 'personal_sign',
-        params: [address, message]
-      });
+      const _message = `Zion AI Marketplace wallet verification\nAddress: ${_address}\nTime: ${_new Date().toISOString()}`;
+      await ethereum.request({_method: 'personal_sign', _params: [address, _message]});
       
       setIsConnected(true);
-      toast({
-        title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
-    } catch (error: any) {
-      toast({
-        title: "Connection failed",
-        description: error.message || "Could not connect to wallet",
-        variant: "destructive"
-      });
+      toast({_title: "Wallet connected", _description: `Wallet ${address.slice(0, _6)}...${_address.slice(-4)} connected successfully`});
+    } catch (error: unknown) {_toast({
+        title: "Connection failed", _description: error.message || "Could not connect to wallet", _variant: "destructive"});
     }
   };
   
-  const handleExportTokens = async () => {
-    setIsExporting(true);
+  const _handleExportTokens = async () => {_setIsExporting(true);
     setExportStatus('processing');
     
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, _2000));
       
       setExportStatus('success');
       toast({
-        title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet"});
-    } catch (error: any) {
-      setExportStatus('error');
+        title: "Tokens exported", _description: "Your ZION$ tokens have been exported to your wallet"});
+    } catch (error: unknown) {_setExportStatus('error');
       toast({
-        title: "Export failed",
-        description: error.message || "Could not export tokens",
-        variant: "destructive"
-      });
-    } finally {
-      setIsExporting(false);
-    }
+        title: "Export failed", _description: error.message || "Could not export tokens", _variant: "destructive"});
+    } finally {_setIsExporting(false);}
   };
   
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          {isConnected ? (
+          {_isConnected ? (
             <Wallet className="h-5 w-5 text-primary" />
           ) : (
             <Wallet className="h-5 w-5" />
@@ -103,7 +72,7 @@ export function OnChainExport() {
         <CardDescription>Export your ZION$ to an external wallet</CardDescription>
       </CardHeader>
       <CardContent>
-        {isConnected ? (
+        {_isConnected ? (
           <div className="space-y-4">
             <div className="flex justify-between text-sm">
               <span>Available to export:</span>
@@ -118,10 +87,10 @@ export function OnChainExport() {
               <Button 
                 className="w-full" 
                 onClick={handleExportTokens} 
-                disabled={isExporting}
+                disabled={_isExporting}
               >
-                {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+                {_isExporting ? "Processing..." : "Export Tokens"}
+                {_!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
             )}
           </div>
@@ -130,7 +99,7 @@ export function OnChainExport() {
             <p className="text-sm text-muted-foreground mb-3">
               Connect your web3 wallet to export tokens to the blockchain.
             </p>
-            <Button onClick={handleConnectWallet} className="w-full">
+            <Button onClick={_handleConnectWallet} className="w-full">
               Connect Wallet
             </Button>
           </div>

@@ -1,12 +1,7 @@
-import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
+export const getServerSideProps: GetServerSideProps = async () => {_return {
     redirect: {
-      destination: '/academy/founder-course',
-      permanent: false}};
+      destination: '/academy/founder-course', _permanent: false}};
 };
 
-export default function LaunchRedirect() {
-  return null;
-}
+export default function LaunchRedirect() {_return null;}

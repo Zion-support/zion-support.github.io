@@ -1,28 +1,22 @@
 
-import { supabase } from "@/integrations/supabase/client";
 
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
-export const ensureProfilesTableExists = async () => {
-  try {
+export const _ensureProfilesTableExists = async () => {_try {
     // Try to execute a simple query to check if the table exists
-    const { error } = await supabase.rpc('exec', { 
-      sql: `SELECT EXISTS (
+    const { error} = await supabase.rpc('exec', {_sql: `SELECT EXISTS (
         SELECT FROM information_schema.tables 
         WHERE table_schema = 'public' 
         AND table_name = 'profiles'
-      );`
-    });
+      );`});
     
     // If there's an error, log it and proceed with table creation
-    if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error);
-    }
+    if (error) {}
     
     // Attempt to create the table and related objects
-    const createTableQuery = `
+    const _createTableQuery = `
       CREATE TABLE IF NOT EXISTS public.profiles (
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
@@ -93,19 +87,11 @@ export const ensureProfilesTableExists = async () => {
     `;
     
     // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery });
+    const {_error: createError} = await supabase.rpc('exec', {_sql: createTableQuery});
     
-    if (createError) {
-      console.error('Error creating profiles table:', createError);
-    } else {
-      console.log('Profiles table setup completed');
-    }
-  } catch (error) {
-    console.error('Error setting up profiles table:', error);
-  }
+    if (createError) {} else {}
+  } catch (error) {}
 };
 
 // Call this when the app starts to ensure the table exists
-export const initializeDatabase = async () => {
-  await ensureProfilesTableExists();
-};
+export const _initializeDatabase = async () => {_await ensureProfilesTableExists();};

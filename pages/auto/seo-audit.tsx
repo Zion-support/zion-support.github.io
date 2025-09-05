@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const SEOAudit: NextPage = () => {
-  return (
+const SEOAudit: NextPage = () => {_return (
     <div>
       <Head>
         <title>Autonomous SEO Auditor</title>
@@ -17,7 +16,6 @@ const SEOAudit: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  );};
 
 export default SEOAudit;

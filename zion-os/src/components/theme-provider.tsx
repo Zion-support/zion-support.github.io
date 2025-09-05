@@ -1,93 +1,71 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
 
-type ThemeProviderProps = {
-  children: React.ReactNode;
+type ThemeProviderProps = {_children: React.ReactNode;
   defaultTheme?: Theme;
-  storageKey?: string;
-};
+  storageKey?: string;};
 
-type ThemeProviderState = {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-};
+type ThemeProviderState = {_theme: Theme;
+  setTheme: (_theme: Theme) => void;};
 
-const initialState: ThemeProviderState = {
-  theme: "system",
-  setTheme: () => null};
+const initialState: ThemeProviderState = {_theme: "system", _setTheme: () => null};
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+const _ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
-export function ThemeProvider({
-  children,
-  defaultTheme = "system",
-  storageKey = "zion-ui-theme",
-  ...props
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
-  const [mounted, setMounted] = useState(false);
+export function ThemeProvider(_{_children, _defaultTheme = "system", _storageKey = "zion-ui-theme", _...props}: ThemeProviderProps) {_const [theme, _setTheme] = useState<Theme>(defaultTheme);
+  const [mounted, _setMounted] = useState(false);
 
-  useEffect(() => {
+  useEffect__(() => {
     setMounted(true);
     
     // Only access localStorage on the client side
     if (typeof window !== "undefined") {
-      const storedTheme = localStorage.getItem(storageKey) as Theme;
+      const _storedTheme = localStorage.getItem(storageKey) as Theme;
       if (storedTheme) {
-        setTheme(storedTheme);
-      }
+        setTheme(storedTheme);}
     }
   }, [storageKey]);
 
-  useEffect(() => {
-    if (!mounted) return;
+  useEffect__(() => {_if (!mounted) return;
 
-    const root = window.document.documentElement;
+    const _root = window.document.documentElement;
 
-    root.classList.remove("light", "dark");
+    root.classList.remove("light", _"dark");
 
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const _systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light";
 
       root.classList.add(systemTheme);
-      return;
-    }
+      return;}
 
     root.classList.add(theme);
   }, [theme, mounted]);
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
+  const _value = {_theme, _setTheme: (_theme: Theme) => {
       if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, theme);
-      }
+        localStorage.setItem(storageKey, _theme);}
       setTheme(theme);
     }};
 
   // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return <>{children}</>;
+  if (!mounted) {_return <>{children}</>;
   }
 
   return (
-    <ThemeProviderContext.Provider {...props} value={value}>
-      {children}
+    <ThemeProviderContext.Provider {_...props} value={_value}>
+      {_children}
     </ThemeProviderContext.Provider>
   );
 }
 
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext);
+export const _useTheme = () => {_const _context = useContext(ThemeProviderContext);
 
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider");
 
-  return context;
-};
+  return context;};

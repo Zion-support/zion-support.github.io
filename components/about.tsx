@@ -3,28 +3,21 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
 
-export default function AboutPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+export default function AboutPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-	const pillars = [
-		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
-		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
-		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
-		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
+	const _pillars = [
+		{_title: 'AI-first Engineering', _icon: <Brain className="w-6 h-6" />, _desc: 'LLM apps, _RAG, _guardrails, _evals and AI observability from day one.'},
+		{_title: 'Platform and SRE', _icon: <ShieldCheck className="w-6 h-6" />, _desc: 'GitOps, _IaC, _SLOs, _incident automation, _cost and compliance by default.'},
+		{_title: 'Quantum R&D', _icon: <Cpu className="w-6 h-6" />, _desc: 'Exploratory quantum workloads with pragmatic business outcomes.'},
+		{_title: 'Global Delivery', _icon: <Globe className="w-6 h-6" />, _desc: 'Secure, _reliable delivery with 24/7 support and 99.99% uptime.'}
 	];
 
-	return (
-		<UltraFuturisticBackground variant="holographic" intensity="high">
+	return (_<UltraFuturisticBackground variant="holographic" intensity="high">
 			<Head>
 				<title>About Us - Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support." />
+				<meta name="description" content="Zion Tech Group builds outcome-driven AI, _micro SaaS, _and platform engineering solutions with transparent pricing and 24/7 support." />
 			</Head>
 			<section className="relative py-24 px-4">
 				<div className="max-w-6xl mx-auto">
@@ -33,7 +26,7 @@ export default function AboutPage() {
 							We build practical AI and platform solutions
 						</h1>
 						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
-							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
+							From micro SaaS accelerators to enterprise AI services, _we focus on measurable outcomes: faster delivery, _higher reliability, _and lower cost.
 						</p>
 					</div>
 
@@ -54,7 +47,7 @@ export default function AboutPage() {
 							</div>
 							<ul className="list-disc list-inside text-gray-300 space-y-2">
 								<li>Productized service tiers with clear SLAs</li>
-								<li>Security, compliance, and FinOps baked in</li>
+								<li>Security, _compliance, _and FinOps baked in</li>
 								<li>Build-operate-transfer options for in-house teams</li>
 								<li>Transparent pricing and usage-based add-ons</li>
 							</ul>
@@ -62,10 +55,10 @@ export default function AboutPage() {
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-						{pillars.map((p) => (
+						{_pillars.map((p) => (
 							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
-								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>
-								<p className="text-gray-300 text-sm">{p.desc}</p>
+								<div className="flex items-center gap-3 mb-3 text-white">{_p.icon}<span className="font-semibold">{_p.title}</span></div>
+								<p className="text-gray-300 text-sm">{_p.desc}</p>
 							</Card>
 						))}
 					</div>
@@ -74,16 +67,16 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="flex items-center gap-3 text-cyan-400">
 								<Phone className="w-5 h-5" />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">{contactInfo.mobile}</a>
+								<a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`} className="hover:text-white">{_contactInfo.mobile}</a>
 							</div>
 							<div className="flex items-center gap-3 text-purple-400">
 								<Mail className="w-5 h-5" />
-								<a href={`mailto:${contactInfo.email}`} className="hover:text-white">{contactInfo.email}</a>
+								<a href={_`mailto:${contactInfo.email}`} className="hover:text-white">{_contactInfo.email}</a>
 							</div>
 							<div className="flex items-center gap-3 text-green-400">
 								<MapPin className="w-5 h-5" />
-								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-									{contactInfo.address}
+								<a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+									{_contactInfo.address}
 								</a>
 							</div>
 						</div>
@@ -102,56 +95,26 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-export default function AboutPage() {
-  const values = [
+export default function AboutPage() {_const _values = [
     {
-      icon: '🚀',
-      title: 'Innovation',
-      description: 'Constantly pushing boundaries and exploring new frontiers in technology',
-      color: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500'},
-    {
-      icon: '🤖',
-      title: 'Autonomy',
-      description: 'Building systems that can operate independently and make intelligent decisions',
-      color: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500'},
-    {
-      icon: '🌍',
-      title: 'Impact',
-      description: 'Creating technology that makes a positive difference in the world',
-      color: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500'}];
+      icon: '🚀', _title: 'Innovation', _description: 'Constantly pushing boundaries and exploring new frontiers in technology', _color: 'text-cyan-400', _gradient: 'from-cyan-400 to-blue-500'},
+    {_icon: '🤖', _title: 'Autonomy', _description: 'Building systems that can operate independently and make intelligent decisions', _color: 'text-fuchsia-400', _gradient: 'from-fuchsia-400 to-purple-500'},
+    {_icon: '🌍', _title: 'Impact', _description: 'Creating technology that makes a positive difference in the world', _color: 'text-green-400', _gradient: 'from-green-400 to-emerald-500'}];
 
-  const services = [
-    {
-      title: 'AI Development',
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
-      icon: '🧠',
-      color: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500'},
-    {
-      title: 'Automation Systems',
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
-      icon: '⚙️',
-      color: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500'}];
+  const _services = [
+    {_title: 'AI Development', _description: 'Advanced machine learning models, _natural language processing, _computer vision systems, _and autonomous decision making.', _icon: '🧠', _color: 'text-cyan-400', _gradient: 'from-cyan-400 to-blue-500'},
+    {_title: 'Automation Systems', _description: 'Cloud infrastructure automation, _CI/CD pipeline optimization, _self-healing applications, _and performance monitoring.', _icon: '⚙️', _color: 'text-fuchsia-400', _gradient: 'from-fuchsia-400 to-purple-500'}];
 
-  const achievements = [
-    { number: '600+', label: 'Services', color: 'text-cyan-400' },
-    { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' },
-    { number: '24/7', label: 'Support', color: 'text-green-400' },
-    { number: '99.9%', label: 'SLA', color: 'text-blue-400' }];
+  const _achievements = [
+    {_number: '600+', _label: 'Services', _color: 'text-cyan-400'},
+    {_number: '1000%', _label: 'ROI', _color: 'text-fuchsia-400'},
+    {_number: '24/7', _label: 'Support', _color: 'text-green-400'},
+    {_number: '99.9%', _label: 'SLA', _color: 'text-blue-400'}];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
   return (
-      {/* Mission & Vision */}
+      {_/* Mission & Vision */}
     <>
       <Head>
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>
@@ -214,15 +177,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+            {_values.map(_(value, _index) => (
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={_{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {value.icon}
+                  <div className={_`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    {_value.icon}
                   </div>
                 </div>
-                <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{value.description}</p>
+                <h3 className={_`text-2xl font-bold mb-4 ${value.color}`}>{_value.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{_value.description}</p>
               </Card>
             ))}
           </div>
@@ -238,17 +201,17 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
-              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+            {_services.map(_(service, _index) => (
+              <Card key={index} className="card-hover group border-gradient-blue" style={_{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      {service.icon}
+                    <div className={_`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      {_service.icon}
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-2xl font-bold mb-4 ${service.color}`}>{service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                    <h3 className={_`text-2xl font-bold mb-4 ${service.color}`}>{_service.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{_service.description}</p>
                   </div>
                 </div>
               </Card>
@@ -260,10 +223,10 @@ export default function AboutPage() {
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {_achievements.map(_(achievement, _index) => (
               <div key={index} className="text-center group">
-                <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
-                <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>
+                <div className={_`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{_achievement.number}</div>
+                <div className="text-gray-400 text-sm md:text-base font-medium">{_achievement.label}</div>
               </div>
             ))}
           </div>
@@ -283,7 +246,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Contact Section */}
+        {_/* Contact Section */}
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-16">
@@ -297,28 +260,28 @@ export default function AboutPage() {
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">
                 <div className="text-4xl mb-4">📞</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
-                <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>
+                <p className="text-blue-400 font-semibold text-lg">{_contactInfo.mobile}</p>
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
               </Card>
               
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
                 <div className="text-4xl mb-4">✉️</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
-                <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>
+                <p className="text-green-400 font-semibold text-lg">{_contactInfo.email}</p>
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
               </Card>
               
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
                 <div className="text-4xl mb-4">📍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
-                <p className="text-purple-400 font-semibold text-sm">{contactInfo.address}</p>
+                <p className="text-purple-400 font-semibold text-sm">{_contactInfo.address}</p>
                 <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>
               </Card>
             </div>
 
             <div className="text-center">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">
-                🌐 Visit our website: {contactInfo.website}
+                🌐 Visit our website: {_contactInfo.website}
               </div>
               <p className="text-gray-400 text-lg">
                 Start your 21-day free trial today and experience the future of technology

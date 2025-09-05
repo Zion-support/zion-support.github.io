@@ -1,38 +1,22 @@
 import React from "react";
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
-interface MobileHeaderProps {
-  title: string;
+interface MobileHeaderProps {_title: string;
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
-}
+  onSettingsClick?: () => void;}
 
-export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
-  const router = useRouter();
+export function MobileHeader(_{_title, _showBack = false, _showNotifications = false, _showSettings = false, _className, _onNotificationsClick, _onSettingsClick}: MobileHeaderProps) {_const _router = useRouter();
 
   return (
     <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-      className
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border", _className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
-          {showBack && (
-            <Button 
+          {_showBack && (_<Button 
               variant="ghost" 
               size="icon" 
               className="mr-2" 
@@ -43,11 +27,11 @@ export function MobileHeader({
             </Button>
           )}
           <h1 className="text-lg font-medium leading-none truncate">
-            {title}
+            {_title}
           </h1>
         </div>
         <div className="flex items-center space-x-2">
-          {showNotifications && (
+          {_showNotifications && (
             <Button 
               variant="ghost" 
               size="icon"
@@ -57,7 +41,7 @@ export function MobileHeader({
               <span className="sr-only">Notifications</span>
             </Button>
           )}
-          {showSettings && (
+          {_showSettings && (
             <Button 
               variant="ghost" 
               size="icon"

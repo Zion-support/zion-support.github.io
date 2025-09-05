@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const BlockchainSolutions = () => {
-  return (
+const _BlockchainSolutions = () => {_return (
     <div>
       <Head>
         <title>BlockchainSolutions - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const BlockchainSolutions = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default BlockchainSolutions;

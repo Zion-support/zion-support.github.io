@@ -1,33 +1,20 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const _resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+serve(_async (req) => {_if (req.method === "OPTIONS") {
+    return new Response(null, _{ headers: corsHeaders});
   }
 
-  try {
-    const { to, subject, html } = await req.json();
+  try {_const { to, _subject, _html} = await req.json();
 
-    const emailResponse = await resend.emails.send({
-      from: "Lovable <onboarding@resend.dev>",
-      to: [to],
-      subject,
-      html});
+    const _emailResponse = await resend.emails.send({_from: "Lovable <onboarding@resend.dev>", _to: [to], _subject, _html});
 
-    return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify(emailResponse), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
       status: 200});
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+  } catch (error) {_return new Response(JSON.stringify({ error: error.message}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
       status: 500});
   }
 });

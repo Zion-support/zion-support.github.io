@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const AutoIndex: NextPage = () => {
-  return (
+const AutoIndex: NextPage = () => {_return (
     <div>
       <Head>
         <title>Autonomous Cloud Agents - Zion</title>
-        <meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
+        <meta name="description" content="Autonomous agents that run in the cloud, _no human needed." />
       </Head>
       <main className="space-y-6">
         <h1 className="text-2xl font-bold">Autonomous Cloud Agents</h1>
@@ -28,7 +27,6 @@ const AutoIndex: NextPage = () => {
         </ul>
       </main>
     </div>
-  );
-};
+  );};
 
 export default AutoIndex;

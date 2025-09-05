@@ -2,13 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function CaseStudyPage() {
-  return (
-    <>
+export default function CaseStudyPage() {_return (_<>
       <Head>
         <title>Data Analytics Transformation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
-        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
+        <meta name="keywords" content="data analytics, _healthcare analytics, _predictive modeling, _big data, _machine learning" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -26,7 +24,7 @@ export default function CaseStudyPage() {
             <span className="text-white">Data Analytics Transformation</span>
           </nav>
 
-          {/* Header */}
+          {_/* Header */}
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
               Healthcare Industry
@@ -39,16 +37,15 @@ export default function CaseStudyPage() {
             </p>
           </header>
 
-          {/* Case Study Content */}
+          {_/* Case Study Content */}
           <div className="max-w-4xl mx-auto">
-            {/* Company Overview */}
+            {_/* Company Overview */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A large healthcare network serving multiple communities with hospitals, 
-                  clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
+                  A large healthcare network serving multiple communities with hospitals, _clinics, _and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                   <div className="text-center">
@@ -67,7 +64,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Challenge */}
+            {_/* Challenge */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -93,29 +90,27 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Solution */}
+            {_/* Solution */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Comprehensive Data Analytics Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
-                  We built a comprehensive data analytics platform that provides real-time insights, 
-                  predictive modeling, and automated reporting for improved patient care and operational efficiency.
+                  We built a comprehensive data analytics platform that provides real-time insights, _predictive modeling, _and automated reporting for improved patient care and operational efficiency.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
                     <p className="text-white/80">
-                      Advanced big data infrastructure processes millions of patient records, 
-                      lab results, and operational data points in real-time.
+                      Advanced big data infrastructure processes millions of patient records, _lab results, _and operational data points in real-time.
                     </p>
                   </div>
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
                     <p className="text-white/80">
-                      ML algorithms identify patterns, predict outcomes, and provide 
+                      ML algorithms identify patterns, _predict outcomes, _and provide 
                       personalized treatment recommendations.
                     </p>
                   </div>
@@ -123,23 +118,21 @@ export default function CaseStudyPage() {
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
                     <p className="text-white/80">
-                      Live dashboards provide instant insights into patient conditions, 
-                      resource utilization, and operational metrics.
+                      Live dashboards provide instant insights into patient conditions, _resource utilization, _and operational metrics.
                     </p>
                   </div>
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
-                      Advanced predictive models forecast patient outcomes, readmission risks, 
-                      and resource requirements.
+                      Advanced predictive models forecast patient outcomes, _readmission risks, _and resource requirements.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Results */}
+            {_/* Results */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -191,21 +184,21 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Technologies */}
+            {_/* Technologies */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Big Data', 'Machine Learning', 'Real-time Analytics', 'Predictive Modeling'].map((tech) => (
+                  {_['Big Data', _'Machine Learning', _'Real-time Analytics', _'Predictive Modeling'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                      <span className="text-purple-400 font-semibold">{tech}</span>
+                      <span className="text-purple-400 font-semibold">{_tech}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
-            {/* Implementation */}
+            {_/* Implementation */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -245,7 +238,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Call to Action */}
+            {_/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Data Analytics?</h2>

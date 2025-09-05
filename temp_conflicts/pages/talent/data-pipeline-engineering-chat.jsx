@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DataPipelineEngineeringChat = () => {
-  return (
+const _DataPipelineEngineeringChat = () => {_return (
     <div>
       <Head>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DataPipelineEngineeringChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DataPipelineEngineeringChat;

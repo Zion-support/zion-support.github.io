@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 
-export default function ElasticSearchSearch() {
-  const [query, setQuery] = useState('');
+export default function ElasticSearchSearch() {_const [query, _setQuery] = useState('');
 
-  const search = () => {
-    // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query', query);
-  };
+  const _search = () => {
+    // Placeholder for actual ElasticSearch request};
 
-  return (
-    <div className="space-y-2">
+  return (_<div className="space-y-2">
       <input
         className="border p-2 rounded w-full"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={_query}
+        onChange={_(e) => setQuery(e.target.value)}
         placeholder="ElasticSearch query"
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={search}>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={_search}>
         Search
       </button>
     </div>

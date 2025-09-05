@@ -1,27 +1,25 @@
 const path = require('path');
-const { spawnSync } = require('child_process');
+const {_spawnSync} = require('child_process');
 
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+function runNode(_relPath, _args = []) {_const _abs = path.resolve(__dirname, _'..', _'..', _relPath);
+  const _res = spawnSync('node', _[abs, _...args], _{ stdio: 'pipe', _encoding: 'utf8'});
+  return {_status: res.status || 0, _stdout: res.stdout || '', _stderr: res.stderr || ''};
 }
 
-exports.config = { schedule: '0 */12 * * *' };
+exports.config = {_schedule: '0 */12 * * *'};
 
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
+exports.handler = async () => {_const _logs = [];
+  const _step = (_name, _fn) => {
     logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+    const {_status, _stdout, _stderr} = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${_status}`);
     return status;
   };
 
-  step('deps:auto-upgrade', () => runNode('automation/deps-auto-upgrade.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  step(_'deps:auto-upgrade', _() => runNode('automation/deps-auto-upgrade.cjs'));
+  step(_'git:sync', _() => runNode('automation/advanced-git-sync.cjs'));
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+  return {_statusCode: 200, _headers: { 'content-type': 'text/plain'}, body: logs.join('\n') };
 };

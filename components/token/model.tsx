@@ -1,1 +1,1 @@
-export { default } from '../economy/simulator';
+export {_default} from '../economy/simulator';

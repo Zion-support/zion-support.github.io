@@ -1,95 +1,76 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
-  Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-} from 'lucide-react';
+import {_Phone, _Mail, _MapPin, _Globe, _ArrowRight, _Star, _Shield, _Brain, _DollarSign, _Dna, _Rocket, _Users, _Award, _Zap, _Facebook, _Twitter, _Linkedin, _Instagram, _Youtube, _Github} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-const serviceCategories = [
-  {
-    title: 'AI & Automation',
-    services: [
-      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' },
-      { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' },
-      { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success' },
-      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' },
-      { name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence' }
+const _serviceCategories = [
+  {_title: 'AI & Automation', _services: [
+      { name: 'AI Autonomous Business Processor', _href: '/ai-autonomous-business-processor'},
+      {_name: 'AI Predictive Enterprise Analytics', _href: '/ai-predictive-enterprise-analytics'},
+      {_name: 'AI Autonomous Customer Success', _href: '/ai-autonomous-customer-success'},
+      {_name: 'AI Autonomous Marketing Orchestrator', _href: '/ai-autonomous-marketing-orchestrator'},
+      {_name: 'AI Autonomous Sales Intelligence', _href: '/ai-autonomous-sales-intelligence'}
     ]
   },
-  {
-    title: 'Cybersecurity & Quantum',
-    services: [
-      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform' },
-      { name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter' },
-      { name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security' },
-      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' },
-      { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
+  {_title: 'Cybersecurity & Quantum', _services: [
+      { name: 'Quantum Encryption Platform', _href: '/quantum-encryption-platform'},
+      {_name: 'AI Autonomous Threat Hunter', _href: '/ai-autonomous-threat-hunter'},
+      {_name: 'Quantum Zero Trust Security', _href: '/quantum-zero-trust-security'},
+      {_name: 'AI Autonomous Vulnerability Scanner', _href: '/ai-autonomous-vulnerability-scanner'},
+      {_name: 'Quantum Secure Communication', _href: '/quantum-secure-communication'}
     ]
   },
-  {
-    title: 'Fintech & Blockchain',
-    services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
-      { name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management' },
-      { name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance' },
-      { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' },
-      { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
+  {_title: 'Fintech & Blockchain', _services: [
+      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
+      {_name: 'AI Autonomous Wealth Management', _href: '/ai-autonomous-wealth-management'},
+      {_name: 'Quantum Blockchain Finance', _href: '/quantum-blockchain-finance'},
+      {_name: 'AI Autonomous Insurance Platform', _href: '/ai-autonomous-insurance-platform'},
+      {_name: 'Quantum Payment Processing', _href: '/quantum-payment-processing'}
     ]
   },
-  {
-    title: 'Healthcare & Biotech',
-    services: [
-      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics' },
-      { name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform' },
-      { name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care' },
-      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' },
-      { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
+  {_title: 'Healthcare & Biotech', _services: [
+      { name: 'AI Autonomous Medical Diagnostics', _href: '/ai-autonomous-medical-diagnostics'},
+      {_name: 'Quantum Drug Discovery Platform', _href: '/quantum-drug-discovery-platform'},
+      {_name: 'AI Autonomous Patient Care', _href: '/ai-autonomous-patient-care'},
+      {_name: 'Quantum Genomic Analysis', _href: '/quantum-genomic-analysis'},
+      {_name: 'AI Autonomous Clinical Trials', _href: '/ai-autonomous-clinical-trials'}
     ]
   }
 ];
 
-const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Leadership Team', href: '/leadership' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News & Press', href: '/news' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Investors', href: '/investors' },
-  { name: 'Contact Us', href: '/contact' },
-  { name: 'Locations', href: '/locations' }
+const _companyLinks = [
+  {_name: 'About Us', _href: '/about'},
+  {_name: 'Leadership Team', _href: '/leadership'},
+  {_name: 'Careers', _href: '/careers'},
+  {_name: 'News & Press', _href: '/news'},
+  {_name: 'Partners', _href: '/partners'},
+  {_name: 'Investors', _href: '/investors'},
+  {_name: 'Contact Us', _href: '/contact'},
+  {_name: 'Locations', _href: '/locations'}
 ];
 
-const resourceLinks = [
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-documentation' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Support Center', href: '/support' },
-  { name: 'Training & Certification', href: '/training' },
-  { name: 'Community Forum', href: '/community' },
-  { name: 'Developer Resources', href: '/developer-resources' }
+const _resourceLinks = [
+  {_name: 'Documentation', _href: '/docs'},
+  {_name: 'API Reference', _href: '/api-documentation'},
+  {_name: 'Case Studies', _href: '/case-studies'},
+  {_name: 'Blog & News', _href: '/blog'},
+  {_name: 'Support Center', _href: '/support'},
+  {_name: 'Training & Certification', _href: '/training'},
+  {_name: 'Community Forum', _href: '/community'},
+  {_name: 'Developer Resources', _href: '/developer-resources'}
 ];
 
-const socialLinks = [
-  { name: 'Facebook', href: '#', icon: Facebook },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Instagram', href: '#', icon: Instagram },
-  { name: 'YouTube', href: '#', icon: Youtube },
-  { name: 'GitHub', href: '#', icon: Github }
+const _socialLinks = [
+  {_name: 'Facebook', _href: '#', _icon: Facebook},
+  {_name: 'Twitter', _href: '#', _icon: Twitter},
+  {_name: 'LinkedIn', _href: '#', _icon: Linkedin},
+  {_name: 'Instagram', _href: '#', _icon: Instagram},
+  {_name: 'YouTube', _href: '#', _icon: Youtube},
+  {_name: 'GitHub', _href: '#', _icon: Github}
 ];
 
-export default function UltraFuturisticFooter2026() {
-  return (
+export default function UltraFuturisticFooter2026() {_return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -98,14 +79,14 @@ export default function UltraFuturisticFooter2026() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
+        {_/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
+          {_/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
@@ -120,52 +101,51 @@ export default function UltraFuturisticFooter2026() {
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
               </p>
               
-              {/* Contact Info */}
+              {_/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center text-gray-300">
                   <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.mobile}</span>
+                  <span>{_contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Mail className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.email}</span>
+                  <span>{_contactInfo.email}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.address}</span>
+                  <span>{_contactInfo.address}</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.website}</span>
+                  <span>{_contactInfo.website}</span>
                 </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Service Categories */}
-          {serviceCategories.map((category, index) => (
-            <motion.div
+          {_/* Service Categories */}
+          {_serviceCategories.map(_(category, _index) => (_<motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6, _delay: index * 0.1}}
             >
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
-                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
-                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
-                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
-                {category.title}
+                {_category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
+                {_category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
+                {_category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
+                {_category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
+                {_category.title}
               </h4>
               <ul className="space-y-2">
-                {category.services.map((service, serviceIndex) => (
+                {_category.services.map((service, _serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
-                      href={service.href}
+                      href={_service.href}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      {service.name}
+                      {_service.name}
                     </Link>
                   </li>
                 ))}
@@ -174,71 +154,71 @@ export default function UltraFuturisticFooter2026() {
           ))}
         </div>
 
-        {/* Additional Links */}
+        {_/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Company Links */}
+          {_/* Company Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6, _delay: 0.2}}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Users className="w-5 h-5 mr-2 text-purple-400" />
               Company
             </h4>
             <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
+              {_companyLinks.map(_(link, _index) => (
                 <li key={index}>
                   <Link 
-                    href={link.href}
+                    href={_link.href}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                    {link.name}
+                    {_link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Resources */}
+          {_/* Resources */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6, _delay: 0.3}}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Award className="w-5 h-5 mr-2 text-yellow-400" />
               Resources
             </h4>
             <ul className="space-y-2">
-              {resourceLinks.map((link, index) => (
+              {_resourceLinks.map(_(link, _index) => (
                 <li key={index}>
                   <Link 
-                    href={link.href}
+                    href={_link.href}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                    {link.name}
+                    {_link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Social Media */}
+          {_/* Social Media */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6, _delay: 0.4}}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Rocket className="w-5 h-5 mr-2 text-pink-400" />
               Follow Us
             </h4>
             <div className="grid grid-cols-3 gap-4">
-              {socialLinks.map((social, index) => (
+              {_socialLinks.map(_(social, _index) => (
                 <Link
                   key={index}
-                  href={social.href}
+                  href={_social.href}
                   className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
@@ -248,11 +228,11 @@ export default function UltraFuturisticFooter2026() {
           </motion.div>
         </div>
 
-        {/* Newsletter Signup */}
+        {_/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={_{ opacity: 0, _y: 20}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.5}}
           className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
         >
           <div className="text-center">
@@ -276,11 +256,11 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
 
-        {/* Bottom Bar */}
+        {_/* Bottom Bar */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={_{ opacity: 0}}
+          whileInView={_{ opacity: 1}}
+          transition={_{ duration: 0.6, _delay: 0.6}}
           className="border-t border-gray-800 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center">

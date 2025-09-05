@@ -1,25 +1,15 @@
 
 import React from 'react';
-import { Milestone } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react';
 
-interface PaymentSummaryProps {
-  milestones: Milestone[];
-  paymentTerms: string | null;
-}
+interface PaymentSummaryProps {_milestones: Milestone[];
+  paymentTerms: string | null;}
 
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
-    0
+export const PaymentSummary: React.FC<PaymentSummaryProps> = (_{_milestones, _paymentTerms}) => {_const _totalPayment = milestones.reduce(_(sum, _m) => sum + parseFloat(m.amount.toString()), _0
   ).toFixed(2);
   
-  const paidAmount = milestones
+  const _paidAmount = milestones
     .filter(m => m.status === 'paid')
-    .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString()), 
-      0
+    .reduce(_(sum, _m) => sum + parseFloat(m.amount.toString()), _0
     ).toFixed(2);
 
   return (
@@ -41,14 +31,14 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
-              {paymentTerms || "Not specified"}
+              {_paymentTerms || "Not specified"}
             </p>
           </div>
           
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
-              ${paidAmount}
+              ${_paidAmount}
             </p>
           </div>
         </div>

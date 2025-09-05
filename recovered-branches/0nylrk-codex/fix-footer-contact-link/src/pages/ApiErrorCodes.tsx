@@ -1,123 +1,37 @@
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
 
-export function ApiErrorCodes() {
-  const errorExample = `{
-  "error": "validation_error",
-  "message": "The request was invalid",
-  "details": [
+export function ApiErrorCodes() {_const _errorExample = `{
+  "error": "validation_error", _"message": "The request was invalid", _"details": [
     {
-      "field": "title",
-      "error": "Title is required"
-    },
-    {
-      "field": "budget.min",
-      "error": "Budget minimum must be greater than 0"
-    }
+      "field": "title", _"error": "Title is required"},
+    {_"field": "budget.min", _"error": "Budget minimum must be greater than 0"}
   ]
 }`;
 
-  const rateLimitExample = `{
-  "error": "rate_limit_exceeded",
-  "message": "Rate limit exceeded. Try again in 30 seconds",
-  "retry_after": 30
-}`;
+  const _rateLimitExample = `{_"error": "rate_limit_exceeded", _"message": "Rate limit exceeded. Try again in 30 seconds", _"retry_after": 30}`;
 
-  const errorCodes = [
-    {
-      status: 400,
-      code: "validation_error",
-      message: "The request was invalid. Check the details for specific field errors.",
-      details: "Includes field-specific validation errors."
-    },
-    {
-      status: 400,
-      code: "invalid_request",
-      message: "The request is invalid or malformed.",
-      details: "The request could not be processed due to syntactical errors."
-    },
-    {
-      status: 401,
-      code: "invalid_token",
-      message: "Invalid or expired API key.",
-      details: "The provided API key is incorrect, expired, or revoked."
-    },
-    {
-      status: 403,
-      code: "forbidden",
-      message: "You don't have permission to access this resource.",
-      details: "Your API key doesn't have the required permissions for this operation."
-    },
-    {
-      status: 404,
-      code: "not_found",
-      message: "The requested resource was not found.",
-      details: "The specified ID does not exist or is not accessible."
-    },
-    {
-      status: 409,
-      code: "conflict",
-      message: "The request conflicts with the current state of the resource.",
-      details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
-    },
-    {
-      status: 429,
-      code: "rate_limit_exceeded",
-      message: "Rate limit exceeded. Try again later.",
-      details: "Includes retry_after parameter indicating when to retry."
-    },
-    {
-      status: 500,
-      code: "internal_error",
-      message: "An unexpected error occurred.",
-      details: "Something went wrong on our end. If the problem persists, contact support."
-    },
-    {
-      status: 503,
-      code: "service_unavailable",
-      message: "Service temporarily unavailable.",
-      details: "The API is temporarily unavailable due to maintenance or high load."
-    }
+  const _errorCodes = [
+    {_status: 400, _code: "validation_error", _message: "The request was invalid. Check the details for specific field errors.", _details: "Includes field-specific validation errors."},
+    {_status: 400, _code: "invalid_request", _message: "The request is invalid or malformed.", _details: "The request could not be processed due to syntactical errors."},
+    {_status: 401, _code: "invalid_token", _message: "Invalid or expired API key.", _details: "The provided API key is incorrect, _expired, _or revoked."},
+    {_status: 403, _code: "forbidden", _message: "You don't have permission to access this resource.", _details: "Your API key doesn't have the required permissions for this operation."},
+    {_status: 404, _code: "not_found", _message: "The requested resource was not found.", _details: "The specified ID does not exist or is not accessible."},
+    {_status: 409, _code: "conflict", _message: "The request conflicts with the current state of the resource.", _details: "For example, _trying to create a duplicate resource or updating a resource that has been modified."},
+    {_status: 429, _code: "rate_limit_exceeded", _message: "Rate limit exceeded. Try again later.", _details: "Includes retry_after parameter indicating when to retry."},
+    {_status: 500, _code: "internal_error", _message: "An unexpected error occurred.", _details: "Something went wrong on our end. If the problem persists, _contact support."},
+    {_status: 503, _code: "service_unavailable", _message: "Service temporarily unavailable.", _details: "The API is temporarily unavailable due to maintenance or high load."}
   ];
 
-  const rateLimits = [
-    {
-      endpoint: "All GET endpoints",
-      limit: "100 requests per minute",
-      notes: "Aggregate limit across all GET endpoints"
-    },
-    {
-      endpoint: "All POST endpoints",
-      limit: "30 requests per minute",
-      notes: "Aggregate limit across all POST endpoints"
-    },
-    {
-      endpoint: "All PUT/PATCH endpoints",
-      limit: "30 requests per minute",
-      notes: "Aggregate limit across all PUT/PATCH endpoints"
-    },
-    {
-      endpoint: "All DELETE endpoints",
-      limit: "15 requests per minute",
-      notes: "Aggregate limit across all DELETE endpoints"
-    },
-    {
-      endpoint: "/api/jobs (Search)",
-      limit: "50 requests per minute",
-      notes: "Higher limit for common search operations"
-    },
-    {
-      endpoint: "/api/talent (Search)",
-      limit: "50 requests per minute",
-      notes: "Higher limit for common search operations"
-    },
-    {
-      endpoint: "Webhook delivery",
-      limit: "N/A",
-      notes: "Webhooks don't count against your rate limits"
-    }
+  const _rateLimits = [
+    {_endpoint: "All GET endpoints", _limit: "100 requests per minute", _notes: "Aggregate limit across all GET endpoints"},
+    {_endpoint: "All POST endpoints", _limit: "30 requests per minute", _notes: "Aggregate limit across all POST endpoints"},
+    {_endpoint: "All PUT/PATCH endpoints", _limit: "30 requests per minute", _notes: "Aggregate limit across all PUT/PATCH endpoints"},
+    {_endpoint: "All DELETE endpoints", _limit: "15 requests per minute", _notes: "Aggregate limit across all DELETE endpoints"},
+    {_endpoint: "/api/jobs (Search)", _limit: "50 requests per minute", _notes: "Higher limit for common search operations"},
+    {_endpoint: "/api/talent (Search)", _limit: "50 requests per minute", _notes: "Higher limit for common search operations"},
+    {_endpoint: "Webhook delivery", _limit: "N/A", _notes: "Webhooks don't count against your rate limits"}
   ];
 
   return (
@@ -131,7 +45,7 @@ export function ApiErrorCodes() {
           a JSON response body containing details about the error.
         </p>
         
-        <CodeBlock code={errorExample} language="json" showLineNumbers={true} />
+        <CodeBlock code={_errorExample} language="json" showLineNumbers={_true} />
         
         <p>
           Most errors include:
@@ -156,18 +70,17 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {errorCodes.map((error, index) => (
-                <tr key={error.code} className={index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>
+              {_errorCodes.map(_(error, _index) => (
+                <tr key={error.code} className={_index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 px-4 text-white">
-                    <span className={`inline-block px-2 rounded text-xs font-medium ${
-                      error.status < 500 ? "bg-orange-950 text-orange-500" : "bg-red-950 text-red-500"
-                    }`}>
-                      {error.status}
+                    <span className={_`inline-block px-2 rounded text-xs font-medium ${
+                      error.status < 500 ? "bg-orange-950 text-orange-500" : "bg-red-950 text-red-500"}`}>
+                      {_error.status}
                     </span>
                   </td>
-                  <td className="py-2 px-4 text-white font-mono">{error.code}</td>
-                  <td className="py-2 px-4 text-zinc-300">{error.message}</td>
-                  <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>
+                  <td className="py-2 px-4 text-white font-mono">{_error.code}</td>
+                  <td className="py-2 px-4 text-zinc-300">{_error.message}</td>
+                  <td className="py-2 px-4 text-zinc-400 text-sm">{_error.details}</td>
                 </tr>
               ))}
             </tbody>
@@ -190,7 +103,7 @@ export function ApiErrorCodes() {
           When you exceed the rate limit, you'll receive a 429 response with details on when to retry:
         </p>
         
-        <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />
+        <CodeBlock code={_rateLimitExample} language="json" showLineNumbers={_true} />
         
         <h2>Rate Limits</h2>
         <p>
@@ -208,11 +121,11 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {rateLimits.map((limit, index) => (
-                <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>
-                  <td className="py-2 px-4 text-white font-mono">{limit.endpoint}</td>
-                  <td className="py-2 px-4 text-zinc-300">{limit.limit}</td>
-                  <td className="py-2 px-4 text-zinc-400 text-sm">{limit.notes}</td>
+              {_rateLimits.map(_(limit, _index) => (
+                <tr key={index} className={_index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>
+                  <td className="py-2 px-4 text-white font-mono">{_limit.endpoint}</td>
+                  <td className="py-2 px-4 text-zinc-300">{_limit.limit}</td>
+                  <td className="py-2 px-4 text-zinc-400 text-sm">{_limit.notes}</td>
                 </tr>
               ))}
             </tbody>

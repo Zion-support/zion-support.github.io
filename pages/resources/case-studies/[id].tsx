@@ -1,35 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-export default function CaseStudyResourcePage() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function CaseStudyResourcePage() {_const _router = useRouter();
+  const { id} = router.query;
 
   // Case studies data - this should match the data in resources.tsx
-  const caseStudies = [
-    {
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
+  const _caseStudies = [
+    {_id: 'ai-automation-manufacturing', _title: 'AI-Powered Manufacturing Automation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _results: '40% increase in production efficiency, _60% reduction in downtime', _description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.', _fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, 
-        delivering significant improvements in efficiency, quality, and cost reduction.</p>
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, _delivering significant improvements in efficiency, _quality, _and cost reduction.</p>
         
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line 
+        High downtime, _inefficient production scheduling, _and quality control issues were impacting their bottom line 
         and preventing them from meeting growing customer demands.</p>
         
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands, 
-        minimize human intervention, and provide real-time insights into their operations.</p>
+        and reducing operational costs. They required a solution that could adapt to changing production demands, _minimize human intervention, _and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
@@ -71,29 +60,21 @@ export default function CaseStudyResourcePage() {
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential 
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company 
         as a leader in smart manufacturing.</p>
-      `
-    },
-    {
-      id: 'content-generation-scale',
-      title: 'Scaling Content Generation 10x',
-      company: 'Digital Marketing Agency',
-      industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement',
-      description: 'Transforming content creation through autonomous AI systems.',
-      fullContent: `
+      `},
+    {_id: 'content-generation-scale', _title: 'Scaling Content Generation 10x', _company: 'Digital Marketing Agency', _industry: 'Marketing', _results: '10x increase in content output, _85% improvement in engagement', _description: 'Transforming content creation through autonomous AI systems.', _fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling 
+        <p>This case study explores how autonomous AI systems can revolutionize content creation, _enabling 
         marketing agencies to scale their operations dramatically while maintaining quality and creativity.</p>
         
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
         Their manual processes were limiting growth and preventing them from taking on new clients. The creative 
-        team was overwhelmed, and content quality was beginning to suffer under the pressure.</p>
+        team was overwhelmed, _and content quality was beginning to suffer under the pressure.</p>
         
         <h2>Challenge</h2>
         <p>The agency needed to dramatically increase their content production capacity while maintaining 
         high quality standards and creative excellence. They required a solution that could handle multiple 
-        content types and formats, adapt to different client needs, and maintain consistency across all outputs.</p>
+        content types and formats, _adapt to different client needs, _and maintain consistency across all outputs.</p>
         
         <h2>Solution</h2>
         <p>We implemented an autonomous content generation system that included:</p>
@@ -132,31 +113,23 @@ export default function CaseStudyResourcePage() {
         </ul>
         
         <h2>Conclusion</h2>
-        <p>The AI content generation system transformed the agency's operations, enabling unprecedented scale 
-        while maintaining creative excellence. The system continues to learn and improve, positioning the agency 
+        <p>The AI content generation system transformed the agency's operations, _enabling unprecedented scale 
+        while maintaining creative excellence. The system continues to learn and improve, _positioning the agency 
         for continued growth and success.</p>
-      `
-    },
-    {
-      id: 'cloud-infrastructure-optimization',
-      title: 'Cloud Infrastructure Optimization',
-      company: 'E-commerce Platform',
-      industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
-      fullContent: `
+      `},
+    {_id: 'cloud-infrastructure-optimization', _title: 'Cloud Infrastructure Optimization', _company: 'E-commerce Platform', _industry: 'Technology', _results: '50% reduction in cloud costs, _99.9% uptime achieved', _description: 'Building self-healing, _auto-scaling cloud infrastructure.', _fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
         reduce costs while improving performance and reliability for high-traffic applications.</p>
         
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
-        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer 
+        Their infrastructure was not scaling efficiently with their business growth, _leading to poor customer 
         experience and high operational expenses.</p>
         
         <h2>Challenge</h2>
-        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
-        They required a solution that could automatically adapt to traffic patterns, prevent outages, and 
+        <p>The platform needed to optimize their cloud infrastructure for cost, _performance, _and reliability. 
+        They required a solution that could automatically adapt to traffic patterns, _prevent outages, _and 
         optimize resource allocation in real-time.</p>
         
         <h2>Solution</h2>
@@ -197,16 +170,14 @@ export default function CaseStudyResourcePage() {
         
         <h2>Conclusion</h2>
         <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure. 
-        The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining 
+        The self-healing, _auto-scaling infrastructure now supports continued business growth while maintaining 
         optimal performance and cost efficiency.</p>
-      `
-    }
+      `}
   ];
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const _caseStudy = caseStudies.find(study => study.id === id);
 
-  if (!caseStudy) {
-    return (
+  if (!caseStudy) {_return (
       <>
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
@@ -228,16 +199,15 @@ export default function CaseStudyResourcePage() {
           </main>
         </div>
       </>
-    );
-  }
+    );}
 
   return (
     <>
       <Head>
-        <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
-        <meta name="description" content={caseStudy.description} />
-        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
-        <meta property="og:description" content={caseStudy.description} />
+        <title>{_caseStudy.title} | Zion Tech Group - Case Study Resource</title>
+        <meta name="description" content={_caseStudy.description} />
+        <meta property="og:title" content={_`${caseStudy.title} | Zion Tech Group`} />
+        <meta property="og:description" content={_caseStudy.description} />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -252,23 +222,23 @@ export default function CaseStudyResourcePage() {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
+                  {_caseStudy.industry}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
-              <p className="text-white/80 text-lg">{caseStudy.description}</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{_caseStudy.title}</h1>
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{_caseStudy.company}</p>
+              <p className="text-white/80 text-lg">{_caseStudy.description}</p>
             </header>
             
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">
               <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>
-              <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
+              <p className="text-green-400 font-semibold text-lg">{_caseStudy.results}</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div 
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={_{ __html: caseStudy.fullContent}}
               />
             </div>
             

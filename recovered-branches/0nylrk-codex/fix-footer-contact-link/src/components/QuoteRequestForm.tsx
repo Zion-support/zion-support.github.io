@@ -1,57 +1,22 @@
 
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { GradientHeading } from "@/components/GradientHeading";
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
-import { QuoteFormData } from "@/types/quotes";
-import { Sparkles } from "lucide-react";
 
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
-export function QuoteRequestForm() {
-  const navigate = useNavigate();
-  const { toast } = useToast();
+export function QuoteRequestForm() {_const _navigate = useNavigate();
+  const { toast} = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const [formData, setFormData] = useState<QuoteFormData>({
-    serviceType: "",
-    serviceCategory: "",
-    specificItem: null,
-    projectName: "",
-    projectDescription: "",
-    startDate: undefined,
-    endDate: undefined,
-    timeline: "flexible",
-    budget: {
-      amount: 0,
-      type: "fixed"
-    },
-    contactInfo: {
-      name: "",
-      email: "",
-      phone: "",
-      company: ""
-    }
+  const [formData, setFormData] = useState<QuoteFormData>({_serviceType: "", _serviceCategory: "", _specificItem: null, _projectName: "", _projectDescription: "", _startDate: undefined, _endDate: undefined, _timeline: "flexible", _budget: {
+      amount: 0, _type: "fixed"},
+    contactInfo: {_name: "", _email: "", _phone: "", _company: ""}
   });
   
-  const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
-      ...prev,
-      ...data
-    }));
+  const _updateFormData = (_data: Partial<QuoteFormData>) => {_setFormData(prev => ({
+      ...prev, _...data}));
   };
   
-  const handleNext = () => {
-    switch (currentStep) {
+  const _handleNext = () => {_switch (currentStep) {
       case "service":
         setCurrentStep("details");
         break;
@@ -65,12 +30,10 @@ export function QuoteRequestForm() {
         setCurrentStep("summary");
         break;
       default:
-        break;
-    }
+        break;}
   };
   
-  const handleBack = () => {
-    switch (currentStep) {
+  const _handleBack = () => {_switch (currentStep) {
       case "details":
         setCurrentStep("service");
         break;
@@ -84,48 +47,39 @@ export function QuoteRequestForm() {
         setCurrentStep("budget");
         break;
       default:
-        break;
-    }
+        break;}
   };
   
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
+  const _handleSubmit = async () => {_setIsSubmitting(true);
     
     try {
-      // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData);
+      // In a real application, _you would send the data to your backend
+      
       
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve, _1500));
       
       toast({
-        title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon."});
+        title: "Quote Request Submitted", _description: "We've received your request and will get back to you soon."});
       
       // Redirect to confirmation page or homepage
       navigate("/");
-    } catch (error) {
-      toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (error) {_toast({
+        title: "Submission Failed", _description: "There was an error submitting your request. Please try again.", _variant: "destructive"});
+    } finally {_setIsSubmitting(false);}
   };
   
-  const renderStepContent = () => {
-    switch (currentStep) {
+  const _renderStepContent = () => {_switch (currentStep) {
       case "service":
-        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+        return <ServiceTypeStep formData={formData} updateFormData={_updateFormData} />;
       case "details":
-        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+        return <ProjectDetailsStep formData={_formData} updateFormData={_updateFormData} />;
       case "timeline":
-        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+        return <TimelineStep formData={_formData} updateFormData={_updateFormData} />;
       case "budget":
-        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
+        return <BudgetStep formData={_formData} updateFormData={_updateFormData} />;
       case "summary":
-        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+        return <SummaryStep formData={_formData} updateFormData={_updateFormData} />;
       default:
         return null;
     }
@@ -147,14 +101,14 @@ export function QuoteRequestForm() {
         
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">
           <CardContent className="px-6 py-8">
-            <StepProgress currentStep={currentStep} />
+            <StepProgress currentStep={_currentStep} />
             
             <div className="mt-8">
-              {renderStepContent()}
+              {_renderStepContent()}
             </div>
             
             <div className="flex justify-between mt-8">
-              {currentStep !== "service" && (
+              {_currentStep !== "service" && (
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -164,7 +118,7 @@ export function QuoteRequestForm() {
                 </Button>
               )}
               
-              {currentStep !== "summary" ? (
+              {_currentStep !== "summary" ? (
                 <Button 
                   onClick={handleNext}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -173,11 +127,11 @@ export function QuoteRequestForm() {
                 </Button>
               ) : (
                 <Button 
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
+                  onClick={_handleSubmit}
+                  disabled={_isSubmitting}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {_isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
             </div>

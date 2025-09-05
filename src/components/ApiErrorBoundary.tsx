@@ -1,145 +1,105 @@
-import React, { Component, ReactNode } from 'react';
-import { QueryClient } from '@tanstack/react-query';
+import React, {_Component, _ReactNode} from 'react';
 import * as Sentry from '@sentry/nextjs';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCw, WifiOff } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
 
 
-interface ApiErrorBoundaryProps {
-  children: ReactNode;
+interface ApiErrorBoundaryProps {_children: ReactNode;
   queryClient?: QueryClient;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode;}
 
-interface ApiErrorBoundaryState {
-  hasError: boolean;
+interface ApiErrorBoundaryState {_hasError: boolean;
   error: Error | null;
-  errorInfo: any;
+  errorInfo: unknown;
   isRetrying: boolean;
-  isOnline: boolean;
-}
+  isOnline: boolean;}
 
-export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
+export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {_private retryTimeoutId: NodeJS.Timeout | null = null;
 
   constructor(props: ApiErrorBoundaryProps) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true};
+      hasError: false, _error: null, _errorInfo: null, _isRetrying: false, _isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true};
   }
 
-  static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
-    return {
-      hasError: true,
-      error};
+  static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {_return {
+      hasError: true, _error};
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
-    // Log to Sentry
-    Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', 'ApiErrorBoundary');
-      scope.setContext('errorInfo', errorInfo);
+  componentDidCatch(error: Error, errorInfo: unknown) {_// Log to Sentry
+    Sentry.withScope(_(scope) => {
+      scope.setTag('errorBoundary', _'ApiErrorBoundary');
+      scope.setContext('errorInfo', _errorInfo);
       scope.setLevel('error');
-      Sentry.captureException(error);
-    });
+      Sentry.captureException(error);});
 
-    this.setState({
-      error,
-      errorInfo});
+    this.setState({_error, _errorInfo});
 
     logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
   }
 
-  componentDidMount() {
-    // Listen for online/offline events
+  componentDidMount() {_// Listen for online/offline events
     if (typeof window !== 'undefined') {
-      window.addEventListener('online', this.handleOnline);
-      window.addEventListener('offline', this.handleOffline);
-    }
+      window.addEventListener('online', _this.handleOnline);
+      window.addEventListener('offline', _this.handleOffline);}
   }
 
-  componentWillUnmount() {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('online', this.handleOnline);
-      window.removeEventListener('offline', this.handleOffline);
-    }
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
+  componentWillUnmount() {_if (typeof window !== 'undefined') {
+      window.removeEventListener('online', _this.handleOnline);
+      window.removeEventListener('offline', _this.handleOffline);}
+    if (this.retryTimeoutId) {_clearTimeout(this.retryTimeoutId);}
   }
 
-  handleOnline = () => {
-    this.setState({ isOnline: true });
+  handleOnline = () => {_this.setState({ isOnline: true});
     // Auto-retry when coming back online
-    if (this.state.hasError) {
-      this.handleRetry();
-    }
+    if (this.state.hasError) {_this.handleRetry();}
   };
 
-  handleOffline = () => {
-    this.setState({ isOnline: false });
+  handleOffline = () => {_this.setState({ isOnline: false});
   };
 
-  handleRetry = async () => {
-    this.setState({ isRetrying: true });
+  handleRetry = async () => {_this.setState({ isRetrying: true});
 
-    try {
-      // Invalidate all queries to force refetch
+    try {_// Invalidate all queries to force refetch
       if (this.props.queryClient) {
         await this.props.queryClient.invalidateQueries();
-        await this.props.queryClient.refetchQueries();
-      }
+        await this.props.queryClient.refetchQueries();}
 
       // Reset error state after a brief delay
-      this.retryTimeoutId = setTimeout(() => {
-        this.setState({
-          hasError: false,
-          error: null,
-          errorInfo: null,
-          isRetrying: false});
+      this.retryTimeoutId = setTimeout__(() => {_this.setState({
+          hasError: false, _error: null, _errorInfo: null, _isRetrying: false});
       }, 500);
-    } catch (retryError) {
-      logErrorToProduction('Retry failed:', { data: retryError });
+    } catch (retryError) {_logErrorToProduction('Retry failed:', _{ data: retryError});
       Sentry.captureException(retryError);
-      this.setState({ isRetrying: false });
+      this.setState({_isRetrying: false});
     }
   };
 
-  render() {
-    if (this.state.hasError) {
+  render() {_if (this.state.hasError) {
       // Check if it's a network-related error
-      const isNetworkError = this.state.error?.message?.includes('fetch') ||
+      const _isNetworkError = this.state.error?.message?.includes('fetch') ||
                            this.state.error?.message?.includes('network') ||
                            this.state.error?.message?.includes('timeout') ||
                            !this.state.isOnline;
 
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback;}
 
       return (
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
-                {isNetworkError ? (
+                {_isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>
-                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+                  {_isNetworkError ? 'Connection Problem' : 'Something went wrong'}
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
-                {isNetworkError ? (
+                {_isNetworkError ? (
                   !this.state.isOnline ? (
                     'You appear to be offline. Please check your internet connection.'
                   ) : (
@@ -153,11 +113,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
             <div className="flex flex-col gap-2">
               <Button
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
+                onClick={_this.handleRetry}
+                disabled={_this.state.isRetrying}
                 className="w-full"
               >
-                {this.state.isRetrying ? (
+                {_this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
@@ -172,28 +132,28 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
               <Button
                 variant="outline"
-                onClick={() => window.location.reload()}
+                onClick={_() => window.location.reload()}
                 className="w-full"
               >
                 Reload Page
               </Button>
             </div>
 
-            {!this.state.isOnline && (
+            {_!this.state.isOnline && (
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                 <WifiOff className="h-4 w-4" />
                 <span>Offline</span>
               </div>
             )}
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {_process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                  {_this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
@@ -207,14 +167,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 }
 
 // Hook for accessing query client in function components
-export const useApiErrorHandler = () => {
-  const handleApiError = (error: Error) => {
-    Sentry.withScope((scope) => {
-      scope.setTag('source', 'useApiErrorHandler');
+export const _useApiErrorHandler = () => {_const _handleApiError = (_error: Error) => {
+    Sentry.withScope(_(scope) => {
+      scope.setTag('source', _'useApiErrorHandler');
       scope.setLevel('error');
-      Sentry.captureException(error);
-    });
+      Sentry.captureException(error);});
   };
 
-  return { handleApiError };
+  return {_handleApiError};
 }; 

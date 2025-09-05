@@ -1,19 +1,7 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout } from '@/layout';
-import { supabase } from '@/integrations/supabase/client'; // Import Supabase client
-import { useAuth } from '@/hooks/useAuth'; // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 
-export default function VerifyStatus() {
-
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
-  const { email: emailParam } = router.query;
+export default function VerifyStatus() {_const _router = useRouter();
+  const { user: authUser, _isLoading: authLoading} = useAuth(); // Get user from AuthContext
+  const {_email: emailParam} = router.query;
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -22,123 +10,90 @@ export default function VerifyStatus() {
   const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
   const [countdown, setCountdown] = useState(0);
 
-  useEffect(() => {
-    if (typeof emailParam === 'string') {
-      setEmail(emailParam);
-    }
+  useEffect__(() => {_if (typeof emailParam === 'string') {
+      setEmail(emailParam);}
   }, [emailParam]);
 
   // Countdown timer for resend button
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
+  useEffect__(() => {_let interval: NodeJS.Timeout;
     if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1);
-      }, 1000);
+      interval = setInterval__(() => {
+        setCountdown(prev => prev - 1);}, 1000);
     }
     return () => clearInterval(interval);
   }, [countdown]);
 
-  const handleResendEmail = async () => {
-    if (!email) {
+  const _handleResendEmail = async () => {_if (!email) {
       setError('Please enter your email address');
-      return;
-    }
+      return;}
 
     setIsResending(true);
     setError('');
     setMessage('');
 
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+    try {_const _response = await fetch('/api/resend-verification-email', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_email})
       });
 
-      const data = await response.json();
+      const _data = await response.json();
 
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
+      if (response.ok) {_setMessage('Verification email sent successfully! Please check your inbox.');
         setLastSentTime(new Date());
-        setCountdown(60); // 60 second cooldown
-      } else {
-        setError(data.message || 'Failed to resend verification email');
-      }
-    } catch (err) {
-      setError('Network error. Please try again.');
-    } finally {
-      setIsResending(false);
-    }
+        setCountdown(60); // 60 second cooldown} else {_setError(data.message || 'Failed to resend verification email');}
+    } catch (err) {_setError('Network error. Please try again.');} finally {_setIsResending(false);}
   };
 
-  const handleCheckStatus = async () => {
-    if (!email) {
+  const _handleCheckStatus = async () => {_if (!email) {
       setError('Please enter your email address');
-      return;
-    }
+      return;}
 
     setIsCheckingStatus(true);
     setError('');
     setMessage('');
 
-    try {
-      // Attempt to refresh the session to get the latest user status
-      const { error: refreshError } = await supabase.auth.refreshSession();
+    try {_// Attempt to refresh the session to get the latest user status
+      const { error: refreshError} = await supabase.auth.refreshSession();
 
-      if (refreshError) {
-        // Don't treat all refresh errors as critical for this check,
-        // as user might not have a session yet or it might be invalid.
-        logWarn('Error during session refresh:', { data: refreshError.message });
+      if (refreshError) {_// Don't treat all refresh errors as critical for this check, _// as user might not have a session yet or it might be invalid.
+        logWarn('Error during session refresh:', _{ data: refreshError.message});
       }
 
       // Get the current user details from Supabase
-      const { data: { user }, error: getUserError } = await supabase.auth.getUser();
+      const {_data: { user}, error: getUserError } = await supabase.auth.getUser();
 
-      if (getUserError) {
-        setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`);
+      if (getUserError) {_setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`);
         setIsCheckingStatus(false);
         return;
       }
 
-      if (user && user.email_confirmed_at) {
-        setMessage('Email is verified! Redirecting to login...');
+      if (user && user.email_confirmed_at) {_setMessage('Email is verified! Redirecting to login...');
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
-        setTimeout(() => {
+        setTimeout__(() => {
           router.push(`/auth/login?email=${encodeURIComponent(email)}`);
         }, 2000);
-      } else if (user) {
-        setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.');
-        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.');
-        setError(''); // Clear previous errors
-      } else {
-        // This case means there's no active user session found by Supabase client.
+      } else if (user) {_setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, _try logging in.');
+        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, _please wait a few moments and try again, _or attempt to log in.');
+        setError(''); // Clear previous errors} else {_// This case means there's no active user session found by Supabase client.
         // This is expected if they haven't clicked the link from a different browser/device context yet.
-        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
-        setError('');
-      }
-    } catch (err: any) {
-      logErrorToProduction('Error checking verification status:', { data: err });
+        setMessage('No active session found. Please click the verification link in your email. If you have just done so, _please wait a few moments and try again, _or attempt to log in.');
+        setError('');}
+    } catch (err: unknown) {_logErrorToProduction('Error checking verification status:', _{ data: err});
       setError('An unexpected error occurred while checking status. Please try again.');
-    } finally {
-      setIsCheckingStatus(false);
-    }
+    } finally {_setIsCheckingStatus(false);}
   };
 
-  const handleTryLogin = () => {
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`);
+  const _handleTryLogin = () => {_router.push(`/auth/login?email=${encodeURIComponent(email)}`);
   };
 
-  const handleGoBack = () => {
-    router.back();
-  };
+  const _handleGoBack = () => {_router.back();};
 
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
-          {/* Header */}
+          {_/* Header */}
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -149,23 +104,23 @@ export default function VerifyStatus() {
             </p>
           </div>
 
-          {/* Success Message */}
-          {message && (
+          {_/* Success Message */}
+          {_message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
           )}
 
-          {/* Error Message */}
-          {error && (
+          {_/* Error Message */}
+          {_error && (
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
 
-          {/* Email Input */}
+          {_/* Email Input */}
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -173,20 +128,20 @@ export default function VerifyStatus() {
             <Input
               id="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={_email}
+              onChange={_(_e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
               className="w-full"
             />
-            {email && (
+            {_email && (
               <p className="text-xs text-gray-500">
                 We'll check the verification status for this email address
               </p>
             )}
           </div>
 
-          {/* Status Info */}
-          {email && (
+          {_/* Status Info */}
+          {_email && (
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
               <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
@@ -203,16 +158,16 @@ export default function VerifyStatus() {
             </div>
           )}
 
-          {/* Action Buttons */}
+          {_/* Action Buttons */}
           <div className="space-y-3">
-            {/* Check Status Button */}
+            {_/* Check Status Button */}
             <Button
-              onClick={handleCheckStatus}
-              disabled={!email || isCheckingStatus}
+              onClick={_handleCheckStatus}
+              disabled={_!email || isCheckingStatus}
               className="w-full"
               variant="outline"
             >
-              {isCheckingStatus ? (
+              {_isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Checking Status...
@@ -225,14 +180,14 @@ export default function VerifyStatus() {
               )}
             </Button>
 
-            {/* Resend Email Button */}
+            {_/* Resend Email Button */}
             <Button
-              onClick={handleResendEmail}
-              disabled={!email || isResending || countdown > 0}
+              onClick={_handleResendEmail}
+              disabled={_!email || isResending || countdown > 0}
               className="w-full"
               variant="secondary"
             >
-              {isResending ? (
+              {_isResending ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                   Sending Email...
@@ -250,23 +205,23 @@ export default function VerifyStatus() {
               )}
             </Button>
 
-            {/* Try Login Button */}
+            {_/* Try Login Button */}
             <Button
-              onClick={handleTryLogin}
-              disabled={!email}
+              onClick={_handleTryLogin}
+              disabled={_!email}
               className="w-full"
             >
               Try Login
             </Button>
           </div>
 
-          {/* Help Text */}
+          {_/* Help Text */}
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
-              onClick={handleGoBack}
+              onClick={_handleGoBack}
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -276,17 +231,17 @@ export default function VerifyStatus() {
             </Button>
           </div>
 
-          {/* Additional Options */}
+          {_/* Additional Options */}
           <div className="border-t pt-4 space-y-2">
             <Button
-              onClick={() => router.push('/signup')}
+              onClick={_() => router.push('/signup')}
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
-              onClick={() => router.push('/contact')}
+              onClick={_() => router.push('/contact')}
               variant="ghost"
               className="w-full text-sm"
             >

@@ -1,23 +1,16 @@
 
-import { Button } from "@/components/ui/button";
 
-interface Contract {
-  id: string;
+interface Contract {_id: string;
   title: string;
   client: string;
   talent: string;
   date: string;
-  isSmartContract: boolean;
-}
+  isSmartContract: boolean;}
 
-interface RecentContractsTableProps {
-  contracts: Contract[];
-  onViewContract: (contractId: string) => void;
-}
+interface RecentContractsTableProps {_contracts: Contract[];
+  onViewContract: (_contractId: string) => void;}
 
-export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-  return (
-    <>
+export function RecentContractsTable(_{_contracts, _onViewContract}: RecentContractsTableProps) {_return (_<>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>
       <div className="overflow-x-auto rounded-md border">
         <table className="min-w-full divide-y divide-border">
@@ -47,19 +40,19 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
             {contracts.map((contract) => (
               <tr key={contract.id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.title}
+                  {_contract.title}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.client}
+                  {_contract.client}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.talent}
+                  {_contract.talent}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {new Date(contract.date).toLocaleDateString()}
+                  {_new Date(contract.date).toLocaleDateString()}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.isSmartContract ? (
+                  {_contract.isSmartContract ? (
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs">
                       Smart Contract
                     </span>
@@ -73,7 +66,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    onClick={() => onViewContract(contract.id)}
+                    onClick={_() => onViewContract(contract.id)}
                   >
                     View
                   </Button>

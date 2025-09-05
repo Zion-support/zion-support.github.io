@@ -1,14 +1,12 @@
 
 // Add basic type definitions for Node.js globals used in the project
-interface Process {
-  env: {
+interface Process {_env: {
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
     SLACK_SIGNING_SECRET?: string;
     SLACK_BOT_TOKEN?: string;
-    OPENAI_API_KEY?: string;
-  };
+    OPENAI_API_KEY?: string;};
 }
 
 declare var process: Process;

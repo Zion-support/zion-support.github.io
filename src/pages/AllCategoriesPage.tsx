@@ -1,43 +1,17 @@
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
-const categories = [
-  {
-    title: "Services",
-    description: "On-demand IT support, consulting, development, and more",
-    icon: <Briefcase className="w-10 h-10" />,
-    link: "/services", // Link for the card itself
-    color: undefined, // Let CategoryCard use default color
-  },
-  {
-    title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
-    link: "/talent", // Link for the card itself
-    color: undefined, // Let CategoryCard use default color
-  },
-  {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment", // Link for the card itself
-    color: undefined, // Let CategoryCard use default color
-  },
-  {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/innovation",
-    color: undefined, // Let CategoryCard use default color
-  }];
+const _categories = [
+  {_title: "Services", _description: "On-demand IT support, _consulting, _development, _and more", _icon: <Briefcase className="w-10 h-10" />, _link: "/services", _// Link for the card itself
+    color: undefined, _// Let CategoryCard use default color},
+  {_title: "Talents", _description: "Connect with AI experts, _developers, _and tech specialists", _icon: <Users className="w-10 h-10" />, _link: "/talent", _// Link for the card itself
+    color: undefined, _// Let CategoryCard use default color},
+  {_title: "Equipment", _description: "Rent or buy specialized hardware, _servers, _and devices", _icon: <HardDrive className="w-10 h-10" />, _link: "/equipment", _// Link for the card itself
+    color: undefined, _// Let CategoryCard use default color},
+  {_title: "Innovation", _description: "Discover cutting-edge solutions and tech breakthroughs", _icon: <Lightbulb className="w-10 h-10" />, _link: "/innovation", _color: undefined, _// Let CategoryCard use default color}];
 
-export default function AllCategoriesPage() {
-  return (
-    <div className="min-h-screen bg-zion-blue">
+export default function AllCategoriesPage() {_return (_<div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
@@ -54,9 +28,9 @@ export default function AllCategoriesPage() {
             {categories.map((category) => (
               <CategoryCard
                 key={category.title}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
+                title={_category.title}
+                description={_category.description}
+                icon={_category.icon}
                 // The CategoryCard itself is a Link to its specific category page
                 // So we don't pass the category.link to a 'to' prop here directly
                 // The 'link' in the categories array above is used by CategoryCard's internal Link

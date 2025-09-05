@@ -1,159 +1,116 @@
 
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useProjects } from '@/hooks/useProjects';
-import { useMilestones } from '@/hooks/useMilestones';
-import { useJobDetails } from '@/hooks/useJobDetails';
-import { useAuth } from '@/hooks/useAuth';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import React, {_useState, _useEffect} from 'react';
 
-import { 
-  MilestoneActivities,
-  MilestoneManager,
-  MilestoneCreator,
-  ProjectActions,
-  ProjectHeader
-} from './components';
+import {_MilestoneActivities, _MilestoneManager, _MilestoneCreator, _ProjectActions, _ProjectHeader} from './components';
 
-export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const { getProjectById } = useProjects();
-  const { 
-    milestones, 
-    activities,
-    isLoading: milestonesLoading, 
-    createMilestone,
-    updateMilestoneStatus,
-    deleteMilestone,
-    uploadDeliverable,
-    isSubmitting,
-    refetch
-  } = useMilestones(projectId);
+export function ProjectMilestonesContent() {_const { projectId} = useParams() as {_projectId?: string};
+  const {_user} = useAuth();
+  const {_getProjectById} = useProjects();
+  const {_milestones, _activities, _isLoading: milestonesLoading, _createMilestone, _updateMilestoneStatus, _deleteMilestone, _uploadDeliverable, _isSubmitting, _refetch} = useMilestones(projectId);
   const [project, setProject] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id);
+  const {_job, _isLoading: jobLoading} = useJobDetails(project?.job_id);
   
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+  const {_isUnderDispute, _disputeId} = useDisputeCheck(projectId);
 
-  useEffect(() => {
-    async function loadProject() {
+  useEffect__(() => {_async function loadProject() {
       if (!projectId) return;
       
       setIsLoading(true);
       try {
-        const projectData = await getProjectById(projectId);
+        const _projectData = await getProjectById(projectId);
         if (projectData) {
-          setProject(projectData);
-        }
-      } catch (error) {
-        console.error("Error loading project:", error);
-      } finally {
-        setIsLoading(false);
-      }
+          setProject(projectData);}
+      } catch (error) {} finally {_setIsLoading(false);}
     }
     
     loadProject();
     refetch();
   }, [projectId, getProjectById, refetch]);
 
-  const handleMilestoneCreated = async () => {
-    await refetch();
-  };
+  const _handleMilestoneCreated = async () => {_await refetch();};
   
   // Determine if the user is the client or talent
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
+  const _isClient = user?.id === project?.client_id;
+  const _isTalent = user?.id === project?.talent_id;
 
   // Determine project type based on job category or default to "Other"
-  const projectType = job?.category || "Other";
+  const _projectType = job?.category || "Other";
 
-  if (isLoading || !project) {
-    return (
+  if (isLoading || !project) {_return (
       <div className="container mx-auto py-8 px-4">
         <div className="flex justify-center items-center h-64">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
         </div>
       </div>
-    );
-  }
+    );}
 
-  const handleMilestoneSubmit = async (data: any) => {
-    if (!projectId) return;
+  const _handleMilestoneSubmit = async (_data: unknown) => {_if (!projectId) return;
     
     // Ensure all required fields are present
-    const milestoneData = {
-      project_id: projectId,
-      title: data.title,
-      description: data.description || "",
-      amount: data.amount,
-      status: "pending" as const,
-      due_date: data.due_date ? data.due_date.toISOString() : undefined
-    };
+    const _milestoneData = {
+      project_id: projectId, _title: data.title, _description: data.description || "", _amount: data.amount, _status: "pending" as const, _due_date: data.due_date ? data.due_date.toISOString() : undefined};
     
     await createMilestone(milestoneData);
     setActiveTab('milestones');
     await handleMilestoneCreated();
   };
 
-  return (
-    <div className="container mx-auto py-8 px-4">
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+  return (_<div className="container mx-auto py-8 px-4">
+      <ProjectHeader title={_project.job?.title || "Untitled Project"} />
       
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
         <ProjectActions 
-          projectId={projectId || ''}
-          isUnderDispute={isUnderDispute}
-          disputeId={disputeId}
-          isTalent={isTalent}
-          onAddMilestone={() => setActiveTab('create')}
+          projectId={_projectId || ''}
+          isUnderDispute={_isUnderDispute}
+          disputeId={_disputeId}
+          isTalent={_isTalent}
+          onAddMilestone={_() => setActiveTab('create')}
         />
       </div>
       
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
+      <Tabs value={_activeTab} onValueChange={_setActiveTab}>
         <TabsList className="mb-6">
           <TabsTrigger value="milestones">Milestones</TabsTrigger>
           <TabsTrigger value="activity">Activity</TabsTrigger>
-          {isTalent && (
+          {_isTalent && (
             <TabsTrigger value="create">Create Milestone</TabsTrigger>
           )}
         </TabsList>
         
         <TabsContent value="milestones">
           <MilestoneManager 
-            projectId={projectId || ''}
-            milestones={milestones}
-            activities={activities}
-            isLoading={milestonesLoading}
-            isClient={isClient}
-            isTalent={isTalent}
-            paymentTerms={project.payment_terms}
-            isSubmitting={isSubmitting}
-            onCreateMilestone={createMilestone}
-            onUpdateStatus={updateMilestoneStatus}
-            onDeleteMilestone={deleteMilestone}
-            onUploadDeliverable={uploadDeliverable}
-            refetch={refetch}
+            projectId={_projectId || ''}
+            milestones={_milestones}
+            activities={_activities}
+            isLoading={_milestonesLoading}
+            isClient={_isClient}
+            isTalent={_isTalent}
+            paymentTerms={_project.payment_terms}
+            isSubmitting={_isSubmitting}
+            onCreateMilestone={_createMilestone}
+            onUpdateStatus={_updateMilestoneStatus}
+            onDeleteMilestone={_deleteMilestone}
+            onUploadDeliverable={_uploadDeliverable}
+            refetch={_refetch}
           />
         </TabsContent>
         
         <TabsContent value="activity">
-          <MilestoneActivities projectId={projectId || ''} />
+          <MilestoneActivities projectId={_projectId || ''} />
         </TabsContent>
         
         <TabsContent value="create">
-          {(isClient || isTalent) && (
-            <MilestoneCreator 
+          {_(isClient || isTalent) && (_<MilestoneCreator 
               onSubmit={handleMilestoneSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setActiveTab('milestones')}
-              projectScope={project.scope_summary}
-              projectStartDate={project.start_date}
-              projectEndDate={project.end_date}
-              projectType={projectType}
+              isSubmitting={_isSubmitting}
+              onCancel={_() => setActiveTab('milestones')}
+              projectScope={_project.scope_summary}
+              projectStartDate={_project.start_date}
+              projectEndDate={_project.end_date}
+              projectType={_projectType}
             />
           )}
         </TabsContent>

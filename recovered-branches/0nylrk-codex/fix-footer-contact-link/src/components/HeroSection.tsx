@@ -1,15 +1,11 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
 
-export function HeroSection() {
-  return (
+export function HeroSection() {_return (
     <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
       
-      {/* Animated floating particles */}
+      {_/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse"></div>

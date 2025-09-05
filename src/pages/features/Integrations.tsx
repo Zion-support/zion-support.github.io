@@ -1,25 +1,12 @@
-import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import React, {_useEffect} from "react";
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 
-export default function IntegrationsFeature() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "API & Integrations",
-    "description": "Connect Zion with Slack, your website and other tools via our API and widgets.",
-    "url": "https://app.ziontechgroup.com/features/integrations"
-  };
+export default function IntegrationsFeature() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "API & Integrations", _"description": "Connect Zion with Slack, _your website and other tools via our API and widgets.", _"url": "https://app.ziontechgroup.com/features/integrations"};
 
-  const { markSlackConnected } = useAdvancedOnboardingStatus();
+  const {_markSlackConnected} = useAdvancedOnboardingStatus();
 
-  useEffect(() => {
-    markSlackConnected();
-  }, [markSlackConnected]);
+  useEffect__(() => {_markSlackConnected();}, [markSlackConnected]);
 
   return (
     <>
@@ -29,10 +16,10 @@ export default function IntegrationsFeature() {
         keywords="Zion API, Slack integration, embed widget"
         canonical="https://app.ziontechgroup.com/features/integrations"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

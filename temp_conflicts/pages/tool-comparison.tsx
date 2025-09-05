@@ -2,179 +2,50 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { 
-  Search, 
-  Filter, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  Star,
-  Check,
-  X,
-  ArrowRight,
-  ExternalLink,
-  Zap,
-  Brain,
-  Globe,
-  Rocket
-} from 'lucide-react';
+import {_Search, _Filter, _TrendingUp, _DollarSign, _Users, _Star, _Check, _X, _ArrowRight, _ExternalLink, _Zap, _Brain, _Globe, _Rocket} from 'lucide-react';
 
-export default function ToolComparisonPage() {
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [sortBy, setSortBy] = React.useState('rating');
+export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm] = React.useState('');
+  const [selectedCategory, _setSelectedCategory] = React.useState('All');
+  const [sortBy, _setSortBy] = React.useState('rating');
 
-  const allTools = [
+  const _allTools = [
     // AI Tools
     {
-      name: 'ChatGPT',
-      category: 'AI Assistant',
-      pricing: 'Free - $20/month',
-      rating: 4.8,
-      users: '100M+',
-      bestFor: 'Content creators, developers, researchers',
-      pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
-      website: 'https://chat.openai.com',
-      icon: <Brain className="w-6 h-6" />,
-      color: 'text-green-400'
-    },
-    {
-      name: 'Midjourney',
-      category: 'AI Art',
-      pricing: '$10 - $30/month',
-      rating: 4.7,
-      users: '1M+',
-      bestFor: 'Designers, marketers, content creators',
-      pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
-      cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
-      website: 'https://midjourney.com',
-      icon: <Zap className="w-6 h-6" />,
-      color: 'text-purple-400'
-    },
-    {
-      name: 'Jasper',
-      category: 'AI Writing',
-      pricing: '$39 - $125/month',
-      rating: 4.6,
-      users: '100K+',
-      bestFor: 'Marketing teams, content creators, businesses',
-      pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      website: 'https://jasper.ai',
-      icon: <Brain className="w-6 h-6" />,
-      color: 'text-blue-400'
-    },
+      name: 'ChatGPT', _category: 'AI Assistant', _pricing: 'Free - $20/month', _rating: 4.8, _users: '100M+', _bestFor: 'Content creators, _developers, _researchers', _pros: ['Powerful capabilities', _'Easy to use', _'Regular updates', _'Good free tier'], _cons: ['Sometimes inaccurate', _'Limited context', _'Privacy concerns'], _website: 'https://chat.openai.com', _icon: <Brain className="w-6 h-6" />, _color: 'text-green-400'},
+    {_name: 'Midjourney', _category: 'AI Art', _pricing: '$10 - $30/month', _rating: 4.7, _users: '1M+', _bestFor: 'Designers, _marketers, _content creators', _pros: ['High-quality output', _'Creative control', _'Commercial rights', _'Active community'], _cons: ['Discord-only interface', _'Limited customization', _'Monthly subscription'], _website: 'https://midjourney.com', _icon: <Zap className="w-6 h-6" />, _color: 'text-purple-400'},
+    {_name: 'Jasper', _category: 'AI Writing', _pricing: '$39 - $125/month', _rating: 4.6, _users: '100K+', _bestFor: 'Marketing teams, _content creators, _businesses', _pros: ['Specialized for marketing', _'Brand voice training', _'SEO optimization', _'Team features'], _cons: ['Expensive', _'Limited free trial', _'Can be repetitive'], _website: 'https://jasper.ai', _icon: <Brain className="w-6 h-6" />, _color: 'text-blue-400'},
     // SaaS Tools
-    {
-      name: 'Zapier',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      bestFor: 'Businesses looking to automate workflows',
-      pros: ['Easy to use', 'Extensive integrations', 'Reliable', 'Great support'],
-      cons: ['Can get expensive', 'Limited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className="w-6 h-6" />,
-      color: 'text-orange-400'
-    },
-    {
-      name: 'Notion',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      bestFor: 'Teams that need flexible workspace',
-      pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className="w-6 h-6" />,
-      color: 'text-gray-400'
-    },
-    {
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-      bestFor: 'Online businesses, SaaS companies, e-commerce',
-      pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
-      cons: ['Higher fees than some alternatives', 'Complex for beginners', 'Strict requirements'],
-      website: 'https://stripe.com',
-      icon: <DollarSign className="w-6 h-6" />,
-      color: 'text-blue-400'
-    },
+    {_name: 'Zapier', _category: 'Automation', _pricing: 'Free - $19.99/month', _rating: 4.8, _users: '2M+', _bestFor: 'Businesses looking to automate workflows', _pros: ['Easy to use', _'Extensive integrations', _'Reliable', _'Great support'], _cons: ['Can get expensive', _'Limited customization'], _website: 'https://zapier.com', _icon: <Zap className="w-6 h-6" />, _color: 'text-orange-400'},
+    {_name: 'Notion', _category: 'Productivity', _pricing: 'Free - $8/month', _rating: 4.7, _users: '20M+', _bestFor: 'Teams that need flexible workspace', _pros: ['Highly flexible', _'Beautiful interface', _'Great templates', _'Free tier'], _cons: ['Learning curve', _'Limited offline access', _'Can be overwhelming'], _website: 'https://notion.so', _icon: <Globe className="w-6 h-6" />, _color: 'text-gray-400'},
+    {_name: 'Stripe', _category: 'Payments', _pricing: '2.9% + 30¢ per transaction', _rating: 4.9, _users: '1M+', _bestFor: 'Online businesses, _SaaS companies, _e-commerce', _pros: ['Developer-friendly', _'Global reach', _'Excellent docs', _'Reliable'], _cons: ['Higher fees than some alternatives', _'Complex for beginners', _'Strict requirements'], _website: 'https://stripe.com', _icon: <DollarSign className="w-6 h-6" />, _color: 'text-blue-400'},
     // Startup Tools
-    {
-      name: 'HubSpot',
-      category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      bestFor: 'B2B startups, SaaS companies, marketing teams',
-      pros: ['Free tier', 'All-in-one solution', 'Great for beginners', 'Excellent support'],
-      cons: ['Can get expensive', 'Complex for small teams', 'Limited customization'],
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: 'text-orange-400'
-    },
-    {
-      name: 'Mailchimp',
-      category: 'Email Marketing',
-      pricing: 'Free - $59/month',
-      rating: 4.5,
-      users: '12M+',
-      bestFor: 'E-commerce, content creators, small businesses',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
-      website: 'https://mailchimp.com',
-      icon: <Users className="w-6 h-6" />,
-      color: 'text-yellow-400'
-    },
-    {
-      name: 'Calendly',
-      category: 'Productivity',
-      pricing: 'Free - $12/month',
-      rating: 4.8,
-      users: '10M+',
-      bestFor: 'Sales teams, consultants, remote teams',
-      pros: ['Free tier', 'Easy integration', 'Professional appearance', 'Time-saving'],
-      cons: ['Limited free features', 'Basic customization', 'Can be expensive'],
-      website: 'https://calendly.com',
-      icon: <Globe className="w-6 h-6" />,
-      color: 'text-blue-400'
-    }
+    {_name: 'HubSpot', _category: 'Marketing & Sales', _pricing: 'Free - $45/month', _rating: 4.7, _users: '135K+', _bestFor: 'B2B startups, _SaaS companies, _marketing teams', _pros: ['Free tier', _'All-in-one solution', _'Great for beginners', _'Excellent support'], _cons: ['Can get expensive', _'Complex for small teams', _'Limited customization'], _website: 'https://hubspot.com', _icon: <TrendingUp className="w-6 h-6" />, _color: 'text-orange-400'},
+    {_name: 'Mailchimp', _category: 'Email Marketing', _pricing: 'Free - $59/month', _rating: 4.5, _users: '12M+', _bestFor: 'E-commerce, _content creators, _small businesses', _pros: ['Free tier', _'Easy to use', _'Good templates', _'Affordable'], _cons: ['Limited free features', _'Basic automation', _'Can be expensive'], _website: 'https://mailchimp.com', _icon: <Users className="w-6 h-6" />, _color: 'text-yellow-400'},
+    {_name: 'Calendly', _category: 'Productivity', _pricing: 'Free - $12/month', _rating: 4.8, _users: '10M+', _bestFor: 'Sales teams, _consultants, _remote teams', _pros: ['Free tier', _'Easy integration', _'Professional appearance', _'Time-saving'], _cons: ['Limited free features', _'Basic customization', _'Can be expensive'], _website: 'https://calendly.com', _icon: <Globe className="w-6 h-6" />, _color: 'text-blue-400'}
   ];
 
-  const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'Automation', 'Productivity', 'Payments', 'Marketing & Sales', 'Email Marketing'];
+  const _categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'Automation', 'Productivity', 'Payments', 'Marketing & Sales', 'Email Marketing'];
 
-  const filteredTools = allTools.filter(tool => {
-    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const _filteredTools = allTools.filter(tool => {_const _matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+    const _matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;});
 
-  const sortedTools = [...filteredTools].sort((a, b) => {
-    switch (sortBy) {
+  const _sortedTools = [...filteredTools].sort(_(a, _b) => {_switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
-        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
+        return parseInt(b.users.replace(/[^0-9]/g, _'')) - parseInt(a.users.replace(/[^0-9]/g, _''));
       case 'name':
         return a.name.localeCompare(b.name);
       default:
-        return 0;
-    }
+        return 0;}
   });
 
-  const getPricingColor = (pricing: string) => {
-    if (pricing.includes('Free')) return 'text-green-400';
+  const _getPricingColor = (_pricing: string) => {_if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
-    return 'text-gray-400';
-  };
+    return 'text-gray-400';};
 
   return (
     <>
@@ -186,7 +57,7 @@ export default function ToolComparisonPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -218,7 +89,7 @@ export default function ToolComparisonPage() {
                 href="#comparison"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={_{ animationDelay: '0.2s'}}
               >
                 Start Comparing
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -228,18 +99,18 @@ export default function ToolComparisonPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={_{ animationDelay: '0.4s'}}
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          {_/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={_{ animationDelay: '0.6s'}}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
-                {allTools.length}+
+                {_allTools.length}+
               </div>
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
@@ -265,45 +136,43 @@ export default function ToolComparisonPage() {
         </div>
       </section>
 
-      {/* Filters and Search */}
+      {_/* Filters and Search */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
+            {_/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={_searchTerm}
+                onChange={_(_e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
-            {/* Category Filter */}
+            {_/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+              {_categories.map(_(category) => (_<button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  onClick={_() => setSelectedCategory(category)}
+                  className={_`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                  }`}
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                 >
-                  {category}
+                  {_category}
                 </button>
               ))}
             </div>
 
-            {/* Sort */}
+            {_/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
               <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                value={_sortBy}
+                onChange={_(_e) => setSortBy(e.target.value)}
                 className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="rating">Sort by Rating</option>
@@ -315,7 +184,7 @@ export default function ToolComparisonPage() {
         </div>
       </section>
 
-      {/* Comparison Table */}
+      {_/* Comparison Table */}
       <section id="comparison" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -341,42 +210,42 @@ export default function ToolComparisonPage() {
                 </tr>
               </thead>
               <tbody>
-                {sortedTools.map((tool, index) => (
+                {_sortedTools.map(_(tool, _index) => (
                   <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-3">
-                        <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
-                          {tool.icon}
+                        <div className={_`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
+                          {_tool.icon}
                         </div>
                         <div>
-                          <div className="font-semibold text-white">{tool.name}</div>
+                          <div className="font-semibold text-white">{_tool.name}</div>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6">
                       <span className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">
-                        {tool.category}
+                        {_tool.category}
                       </span>
                     </td>
                     <td className="py-4 px-6">
-                      <span className={`font-medium ${getPricingColor(tool.pricing)}`}>
-                        {tool.pricing}
+                      <span className={_`font-medium ${getPricingColor(tool.pricing)}`}>
+                        {_tool.pricing}
                       </span>
                     </td>
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white">{tool.rating}</span>
+                        <span className="text-white">{_tool.rating}</span>
                       </div>
                     </td>
-                    <td className="py-4 px-6 text-gray-300">{tool.users}</td>
+                    <td className="py-4 px-6 text-gray-300">{_tool.users}</td>
                     <td className="py-4 px-6">
-                      <div className="max-w-xs text-sm text-gray-400">{tool.bestFor}</div>
+                      <div className="max-w-xs text-sm text-gray-400">{_tool.bestFor}</div>
                     </td>
                     <td className="py-4 px-6">
                       <div className="flex space-x-2">
                         <Button
-                          href={tool.website}
+                          href={_tool.website}
                           variant="outline"
                           size="sm"
                           className="text-xs"
@@ -385,7 +254,7 @@ export default function ToolComparisonPage() {
                           <ExternalLink className="w-3 h-3 ml-1" />
                         </Button>
                         <Button
-                          href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          href={_`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, _'-')}`}
                           variant="ghost"
                           size="sm"
                           className="text-xs"
@@ -400,7 +269,7 @@ export default function ToolComparisonPage() {
             </table>
           </div>
 
-          {sortedTools.length === 0 && (
+          {_sortedTools.length === 0 && (
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
@@ -410,7 +279,7 @@ export default function ToolComparisonPage() {
         </div>
       </section>
 
-      {/* Detailed Comparison Cards */}
+      {_/* Detailed Comparison Cards */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -423,25 +292,25 @@ export default function ToolComparisonPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {sortedTools.slice(0, 6).map((tool, index) => (
+            {_sortedTools.slice(0, _6).map(_(tool, _index) => (
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
-                    {tool.icon}
+                  <div className={_`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
+                    {_tool.icon}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
-                      {tool.name}
+                      {_tool.name}
                     </h3>
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
-                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
+                      <span className="px-2 py-1 bg-gray-800 rounded-full">{_tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span>{tool.rating}</span>
+                        <span>{_tool.rating}</span>
                       </div>
                     </div>
                   </div>
@@ -449,7 +318,7 @@ export default function ToolComparisonPage() {
 
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
-                  <p className="text-sm text-gray-400">{tool.bestFor}</p>
+                  <p className="text-sm text-gray-400">{_tool.bestFor}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -459,10 +328,10 @@ export default function ToolComparisonPage() {
                       Pros
                     </h4>
                     <ul className="space-y-1">
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
+                      {_tool.pros.slice(0, _3).map(_(pro, _proIndex) => (
                         <li key={proIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-                          {pro}
+                          {_pro}
                         </li>
                       ))}
                     </ul>
@@ -473,10 +342,10 @@ export default function ToolComparisonPage() {
                       Cons
                     </h4>
                     <ul className="space-y-1">
-                      {tool.cons.slice(0, 3).map((con, conIndex) => (
+                      {_tool.cons.slice(0, _3).map(_(con, _conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-                          {con}
+                          {_con}
                         </li>
                       ))}
                     </ul>
@@ -484,11 +353,11 @@ export default function ToolComparisonPage() {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-                    {tool.pricing}
+                  <span className={_`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
+                    {_tool.pricing}
                   </span>
                   <Button
-                    href={tool.website}
+                    href={_tool.website}
                     variant="outline"
                     size="sm"
                     className="group-hover:border-purple-500 group-hover:text-purple-400"
@@ -503,7 +372,7 @@ export default function ToolComparisonPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

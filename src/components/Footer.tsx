@@ -1,38 +1,32 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link"; // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 
-function resolveUrl(envVar: string | undefined, fallback: string) {
-  if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
-    return fallback;
-  }
+function resolveUrl(_envVar: string | undefined, _fallback: string) {_if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
+    return fallback;}
   return envVar;
 }
 
-const TWITTER_URL = resolveUrl(
+const _TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
   "https://twitter.com/ZionTechGroup"
 );
-const LINKEDIN_URL = resolveUrl(
+const _LINKEDIN_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
   "https://linkedin.com/company/ziontechgroup"
 );
-const FACEBOOK_URL = resolveUrl(
+const _FACEBOOK_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
   "https://facebook.com/ZionTechGroup"
 );
-const INSTAGRAM_URL = resolveUrl(
+const _INSTAGRAM_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
   "https://instagram.com/ZionTechGroup"
 );
-const GITHUB_URL = resolveUrl(
+const _GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
   "https://github.com/ZionTechGroup"
 );
 
-export function Footer() {
-  return (
+export function Footer() {_return (
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -40,12 +34,12 @@ export function Footer() {
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
             </div>
-            <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
+            <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, _90%, _20rem)'}}>
               The world&apos;s first free marketplace dedicated to high-tech and artificial intelligence.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href={TWITTER_URL}
+                href={_TWITTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -56,7 +50,7 @@ export function Footer() {
                 <span className="sr-only">Twitter</span>
               </a>
               <a
-                href={LINKEDIN_URL}
+                href={_LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -67,7 +61,7 @@ export function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href={FACEBOOK_URL}
+                href={_FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -78,7 +72,7 @@ export function Footer() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href={INSTAGRAM_URL}
+                href={_INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -89,7 +83,7 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href={GITHUB_URL}
+                href={_GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -106,7 +100,7 @@ export function Footer() {
             <h3 className="text-foreground font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-2">
               <li><Link href="/marketplace" className="text-foreground/80 hover:text-primary transition-colors text-sm">Products</Link></li>
-              {/* Ensure the services link routes to the main services page */}
+              {_/* Ensure the services link routes to the main services page */}
               <li>
                 <Link
                   href="/services"
@@ -166,11 +160,9 @@ export function Footer() {
         <div className="mt-8 flex justify-end">
           <button
             type="button"
-            onClick={() => {
+            onClick={_() => {
               window.scrollTo({ 
-                top: 0, 
-                behavior: 'smooth' 
-              });
+                top: 0, _behavior: 'smooth'});
             }}
             className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
@@ -183,7 +175,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-foreground/80 text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              &copy; {_new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link

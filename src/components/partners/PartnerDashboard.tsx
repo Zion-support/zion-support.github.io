@@ -1,22 +1,12 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-  const stats = {
-    totalReferrals: 42,
-    pendingReferrals: 8,
-    completedReferrals: 34,
-    conversionRate: 18.5,
-    totalRevenue: 850.00,
-    pendingRevenue: 200.00
-  };
+export function PartnerDashboard() {_// Placeholder data - would come from API in real implementation
+  const _stats = {
+    totalReferrals: 42, _pendingReferrals: 8, _completedReferrals: 34, _conversionRate: 18.5, _totalRevenue: 850.00, _pendingRevenue: 200.00};
   
   return (
     <div className="space-y-6">
-      {/* Stats Overview */}
+      {_/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -24,9 +14,9 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+            <div className="text-2xl font-bold">{_stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
-              {stats.completedReferrals} completed, {stats.pendingReferrals} pending
+              {_stats.completedReferrals} completed, {_stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
@@ -37,7 +27,7 @@ export function PartnerDashboard() {
             <TrendingUp className="h-4 w-4 text-zion-purple" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.conversionRate}%</div>
+            <div className="text-2xl font-bold">{_stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
               Of clicks that convert to sign-ups
             </p>
@@ -50,15 +40,15 @@ export function PartnerDashboard() {
             <DollarSign className="h-4 w-4 text-green-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">${stats.totalRevenue}</div>
+            <div className="text-2xl font-bold">${_stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
-              ${stats.pendingRevenue} pending payout
+              ${_stats.pendingRevenue} pending payout
             </p>
           </CardContent>
         </Card>
       </div>
       
-      {/* Performance Chart */}
+      {_/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -72,7 +62,7 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
       
-      {/* Recent Referrals */}
+      {_/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
           <div>

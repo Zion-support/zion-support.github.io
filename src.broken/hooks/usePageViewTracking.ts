@@ -1,5 +1,4 @@
 // Hook for usePageViewTracking;
-export const useUsePageViewTracking: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUsePageViewTracking: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

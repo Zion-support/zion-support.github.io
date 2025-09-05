@@ -1,17 +1,7 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
-  SidebarGroupContent} from "@/components/ui/sidebar";
+import {_Sidebar, _SidebarContent, _SidebarGroup, _SidebarMenu, _SidebarMenuItem, _SidebarMenuButton, _SidebarGroupLabel, _SidebarGroupContent} from "@/components/ui/sidebar";
 
-export function AppSidebar() {
-  return (
+export function AppSidebar() {_return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
@@ -29,7 +19,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/messaging">
-                    <Mail size={16} />
+                    <Mail size={_16} />
                     <span>Messages</span>
                   </a>
                 </SidebarMenuButton>
@@ -37,7 +27,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/notifications">
-                    <Bell size={16} />
+                    <Bell size={_16} />
                     <span>Notifications</span>
                   </a>
                 </SidebarMenuButton>
@@ -53,7 +43,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/publish">
-                    <FileText size={16} />
+                    <FileText size={_16} />
                     <span>My Content</span>
                   </a>
                 </SidebarMenuButton>
@@ -61,7 +51,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/analytics">
-                    <Search size={16} />
+                    <Search size={_16} />
                     <span>Analytics</span>
                   </a>
                 </SidebarMenuButton>
@@ -77,7 +67,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/profile">
-                    <Users size={16} />
+                    <Users size={_16} />
                     <span>Profile</span>
                   </a>
                 </SidebarMenuButton>
@@ -85,7 +75,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/settings">
-                    <Settings size={16} />
+                    <Settings size={_16} />
                     <span>Settings</span>
                   </a>
                 </SidebarMenuButton>

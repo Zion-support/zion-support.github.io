@@ -1,18 +1,13 @@
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
-interface VideoCallRoomProps {
-  room?: string;
+interface VideoCallRoomProps {_room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
-  className?: string;
-}
+  className?: string;}
 
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
-  return (
+export function VideoCallRoom(_{_room, _token, _serverUrl, _onDisconnect, _className}: VideoCallRoomProps) {_return (
     <Card className={className || "w-full max-w-3xl mx-auto"}>
       <CardHeader>
         <CardTitle>Video Call</CardTitle>
@@ -23,7 +18,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
           Please check back later or use an alternative communication method.
         </p>
         <div className="flex gap-2">
-          <Button onClick={onDisconnect}>Close</Button>
+          <Button onClick={_onDisconnect}>Close</Button>
         </div>
       </CardContent>
     </Card>

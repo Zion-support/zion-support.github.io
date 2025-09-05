@@ -3,17 +3,11 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
 
-export default function AuditLogVaultPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+export default function AuditLogVaultPage() {_const _contactInfo = {
+    mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-  const features = [
+  const _features = [
     'Append-only, tamper-evident storage',
     'Flexible retention and legal holds',
     'Cryptographic digests and attestations',
@@ -22,11 +16,10 @@ export default function AuditLogVaultPage() {
     'Alerts for risky access patterns'
   ];
 
-  return (
-    <UltraAdvancedFuturisticBackground>
+  return (_<UltraAdvancedFuturisticBackground>
       <Head>
         <title>Audit Log Vault | Zion Tech Group</title>
-        <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />
+        <meta name="description" content="Immutable, _indexed, _long-term audit trails for compliance and forensics with search, _exports and cryptographic attestations." />
         <link rel="canonical" href="https://ziontechgroup.com/audit-log-vault" />
       </Head>
 
@@ -36,17 +29,17 @@ export default function AuditLogVaultPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
               <ShieldCheck className="w-10 h-10" /> Audit Log Vault
             </h1>
-            <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">Compliance-first audit log storage and search with WORM options, retention, attestations and exports.</p>
+            <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">Compliance-first audit log storage and search with WORM options, _retention, _attestations and exports.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <Card className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50">
               <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
-              <p className="text-gray-300 mb-6">Centralize audit logs from apps and platforms into an immutable, indexed store with strong retention controls and cryptographic integrity, ready for SOC 2, HIPAA and ISO reviews.</p>
+              <p className="text-gray-300 mb-6">Centralize audit logs from apps and platforms into an immutable, _indexed store with strong retention controls and cryptographic integrity, _ready for SOC 2, _HIPAA and ISO reviews.</p>
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-300">
-                {features.map((f) => (
-                  <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
+                {_features.map((f) => (
+                  <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-400 mt-0.5" /> <span>{_f}</span></li>
                 ))}
               </ul>
             </Card>
@@ -59,9 +52,9 @@ export default function AuditLogVaultPage() {
                 <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
               </div>
               <div className="mt-6 space-y-3 text-sm">
-                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
-                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={_`tel:${contactInfo.mobile.replace(/[^+\\d]/g, _'')}`} className="hover:underline">{_contactInfo.mobile}</a></div>
+                <div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={_`mailto:${contactInfo.email}`} className="hover:underline">{_contactInfo.email}</a></div>
+                <div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{_contactInfo.address}</a></div>
               </div>
             </Card>
           </div>

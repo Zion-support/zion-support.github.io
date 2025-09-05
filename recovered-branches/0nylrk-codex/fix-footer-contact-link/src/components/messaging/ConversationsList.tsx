@@ -1,23 +1,12 @@
 
 import React from 'react';
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
 
-interface ConversationsListProps {
-  conversations: Conversation[];
+interface ConversationsListProps {_conversations: Conversation[];
   activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>;
-}
+  setActiveConversation: (_conversation: Conversation) => void;
+  markAsRead: (_conversationId: string) => Promise<void>;}
 
-export function ConversationsList({ 
-  conversations, 
-  activeConversation, 
-  setActiveConversation, 
-  markAsRead 
-}: ConversationsListProps) {
-  return (
+export function ConversationsList(_{_conversations, _activeConversation, _setActiveConversation, _markAsRead}: ConversationsListProps) {_return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
@@ -31,17 +20,14 @@ export function ConversationsList({
             Start a conversation from a job or talent profile.
           </p>
         </div>
-      ) : (
-        <div>
-          {conversations.map((conversation) => (
-            <ConversationItem
+      ) : (_<div>
+          {conversations.map((conversation) => (_<ConversationItem
               key={conversation.id}
-              conversation={conversation}
-              isActive={activeConversation?.id === conversation.id}
-              onClick={() => {
+              conversation={_conversation}
+              isActive={_activeConversation?.id === conversation.id}
+              onClick={_() => {
                 setActiveConversation(conversation);
-                markAsRead(conversation.id);
-              }}
+                markAsRead(conversation.id);}}
             />
           ))}
         </div>

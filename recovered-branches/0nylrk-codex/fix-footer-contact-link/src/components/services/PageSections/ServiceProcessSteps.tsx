@@ -1,6 +1,5 @@
 
-export function ServiceProcessSteps() {
-  return (
+export function ServiceProcessSteps() {_return (
     <div className="my-20">
       <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>
       
@@ -30,5 +29,4 @@ export function ServiceProcessSteps() {
         </div>
       </div>
     </div>
-  );
-}
+  );}

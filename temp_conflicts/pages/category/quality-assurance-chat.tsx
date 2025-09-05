@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const QualityAssuranceChat = () => {
-  return (
+const _QualityAssuranceChat = () => {_return (
     <div>
       <Head>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const QualityAssuranceChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default QualityAssuranceChat;

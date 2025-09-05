@@ -1,28 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-export default function CaseStudyPage() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function CaseStudyPage() {_const _router = useRouter();
+  const { id} = router.query;
 
   // Case studies data - this should match the data in case-studies.tsx
-  const caseStudies = [
-    {
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
-      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.',
-      results: ['40% increase in production efficiency', '60% reduction in downtime', '25% improvement in quality control'],
-      duration: '6 months',
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
+  const _caseStudies = [
+    {_id: 'ai-automation-manufacturing', _title: 'AI-Powered Manufacturing Automation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.', _solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.', _results: ['40% increase in production efficiency', _'60% reduction in downtime', _'25% improvement in quality control'], _duration: '6 months', _description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.', _fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
+        High downtime, _inefficient production scheduling, _and quality control issues were impacting their bottom line.</p>
         
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
@@ -48,20 +36,9 @@ export default function CaseStudyPage() {
         
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
-        The system was deployed in phases, allowing for gradual adoption and optimization.</p>
-      `
-    },
-    {
-      id: 'content-generation-scale',
-      title: 'Scaling Content Generation 10x',
-      company: 'Digital Marketing Agency',
-      industry: 'Marketing',
-      challenge: 'Manual content creation was limiting growth and unable to meet client demands.',
-      solution: 'Deployed autonomous AI content generation systems with human oversight.',
-      results: ['10x increase in content output', '85% improvement in engagement', '70% reduction in production time'],
-      duration: '4 months',
-      description: 'Transforming content creation through autonomous AI systems.',
-      fullContent: `
+        The system was deployed in phases, _allowing for gradual adoption and optimization.</p>
+      `},
+    {_id: 'content-generation-scale', _title: 'Scaling Content Generation 10x', _company: 'Digital Marketing Agency', _industry: 'Marketing', _challenge: 'Manual content creation was limiting growth and unable to meet client demands.', _solution: 'Deployed autonomous AI content generation systems with human oversight.', _results: ['10x increase in content output', _'85% improvement in engagement', _'70% reduction in production time'], _duration: '4 months', _description: 'Transforming content creation through autonomous AI systems.', _fullContent: `
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
         Their manual processes were limiting growth and preventing them from taking on new clients.</p>
@@ -91,25 +68,14 @@ export default function CaseStudyPage() {
         <h2>Implementation Timeline</h2>
         <p>The system was deployed in 4 months with comprehensive training for the creative team. 
         The AI systems learned from human feedback and continuously improved over time.</p>
-      `
-    },
-    {
-      id: 'cloud-infrastructure-optimization',
-      title: 'Cloud Infrastructure Optimization',
-      company: 'E-commerce Platform',
-      industry: 'Technology',
-      challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
-      results: ['50% reduction in cloud costs', '99.9% uptime achieved', '3x improvement in performance'],
-      duration: '8 months',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
-      fullContent: `
+      `},
+    {_id: 'cloud-infrastructure-optimization', _title: 'Cloud Infrastructure Optimization', _company: 'E-commerce Platform', _industry: 'Technology', _challenge: 'Cloud costs were spiraling out of control with poor resource utilization.', _solution: 'Built self-healing, _auto-scaling cloud infrastructure with intelligent cost optimization.', _results: ['50% reduction in cloud costs', _'99.9% uptime achieved', _'3x improvement in performance'], _duration: '8 months', _description: 'Building self-healing, _auto-scaling cloud infrastructure.', _fullContent: `
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
         Their infrastructure was not scaling efficiently with their business growth.</p>
         
         <h2>Challenge</h2>
-        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
+        <p>The platform needed to optimize their cloud infrastructure for cost, _performance, _and reliability. 
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         
         <h2>Solution</h2>
@@ -132,14 +98,12 @@ export default function CaseStudyPage() {
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 8 months with careful planning to avoid service disruption. 
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
-      `
-    }
+      `}
   ];
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const _caseStudy = caseStudies.find(study => study.id === id);
 
-  if (!caseStudy) {
-    return (
+  if (!caseStudy) {_return (
       <>
         <Head>
           <title>Case Study Not Found | Zion Tech Group</title>
@@ -161,16 +125,14 @@ export default function CaseStudyPage() {
           </main>
         </div>
       </>
-    );
-  }
+    );}
 
-  return (
-    <>
+  return (_<>
       <Head>
-        <title>{caseStudy.title} | Zion Tech Group - Case Study</title>
-        <meta name="description" content={caseStudy.description} />
-        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
-        <meta property="og:description" content={caseStudy.description} />
+        <title>{_caseStudy.title} | Zion Tech Group - Case Study</title>
+        <meta name="description" content={_caseStudy.description} />
+        <meta property="og:title" content={_`${caseStudy.title} | Zion Tech Group`} />
+        <meta property="og:description" content={_caseStudy.description} />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -185,12 +147,12 @@ export default function CaseStudyPage() {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
+                  {_caseStudy.industry}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
-              <p className="text-white/80 text-lg">{caseStudy.description}</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{_caseStudy.title}</h1>
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{_caseStudy.company}</p>
+              <p className="text-white/80 text-lg">{_caseStudy.description}</p>
             </header>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
@@ -200,11 +162,11 @@ export default function CaseStudyPage() {
                   <div className="space-y-6">
                     <div>
                       <h3 className="font-semibold text-cyan-400 text-lg mb-2">Challenge</h3>
-                      <p className="text-white/80">{caseStudy.challenge}</p>
+                      <p className="text-white/80">{_caseStudy.challenge}</p>
                     </div>
                     <div>
                       <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>
-                      <p className="text-white/80">{caseStudy.solution}</p>
+                      <p className="text-white/80">{_caseStudy.solution}</p>
                     </div>
                   </div>
                 </div>
@@ -214,10 +176,10 @@ export default function CaseStudyPage() {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
                   <ul className="space-y-3">
-                    {caseStudy.results.map((result, index) => (
+                    {_caseStudy.results.map((result, _index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        {result}
+                        {_result}
                       </li>
                     ))}
                   </ul>
@@ -228,11 +190,11 @@ export default function CaseStudyPage() {
                   <div className="space-y-3">
                     <div>
                       <span className="text-white/60 text-sm">Duration:</span>
-                      <p className="text-white font-medium">{caseStudy.duration}</p>
+                      <p className="text-white font-medium">{_caseStudy.duration}</p>
                     </div>
                     <div>
                       <span className="text-white/60 text-sm">Industry:</span>
-                      <p className="text-white font-medium">{caseStudy.industry}</p>
+                      <p className="text-white font-medium">{_caseStudy.industry}</p>
                     </div>
                   </div>
                 </div>
@@ -242,7 +204,7 @@ export default function CaseStudyPage() {
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div 
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={_{ __html: caseStudy.fullContent}}
               />
             </div>
             

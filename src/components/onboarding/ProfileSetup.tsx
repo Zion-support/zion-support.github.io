@@ -1,42 +1,18 @@
 
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
-const profileSchema = z.object({
-  displayName: z.string().min(2, "Full Name must be at least 2 characters"),
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+const _profileSchema = z.object({_displayName: z.string().min(2, _"Full Name must be at least 2 characters"), _bio: z.string().min(10, _"Bio must be at least 10 characters").max(500, _"Bio must be less than 500 characters"), _headline: z.string().min(5, _"Headline must be at least 5 characters").max(100, _"Headline must be less than 100 characters")});
 
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
-interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void;
-  userType: string;
-}
+interface ProfileSetupProps {_onComplete: (_data: ProfileFormValues) => void;
+  userType: string;}
 
-export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
-  const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileSchema),
-    defaultValues: {
-      displayName: "",
-      bio: "",
-      headline: ""}});
+export function ProfileSetup(_{_onComplete, _userType}: ProfileSetupProps) {_const _form = useForm<ProfileFormValues>({
+    resolver: zodResolver(profileSchema), _defaultValues: {
+      displayName: "", _bio: "", _headline: ""}});
 
-  const getTypeLabel = () => {
-    switch (userType) {
+  const _getTypeLabel = () => {_switch (userType) {
       case "serviceProvider":
         return "Service Provider";
       case "talent":
@@ -44,25 +20,24 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       case "client":
         return "Client";
       default:
-        return "User";
-    }
+        return "User";}
   };
 
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>
+        <h3 className="text-2xl font-bold text-white">Create Your {_getTypeLabel()} Profile</h3>
         <p className="text-zion-slate-light mt-2">
           Help others get to know you better
         </p>
       </div>
       
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
+      <Form {_...form}>
+        <form onSubmit={_form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
-            control={form.control}
+            control={_form.control}
             name="displayName"
-            render={({ field }: { field: any }) => (
+            render={_(_{ field}: {_field: unknown}) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>
@@ -70,7 +45,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     <Input
                       placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                      {...field}
+                      {_...field}
                     />
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   </div>
@@ -81,21 +56,20 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control={_form.control}
             name="headline"
-            render={({ field }: { field: any }) => (
+            render={_(_{ field}: {_field: unknown}) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <Input
-                      placeholder={`e.g., ${
+                      placeholder={_`e.g., _${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
-                        "Creative Director at XYZ Studios"
-                      }`}
+                        "Creative Director at XYZ Studios"}`}
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                      {...field}
+                      {_...field}
                     />
                     <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   </div>
@@ -106,20 +80,19 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control={_form.control}
             name="bio"
-            render={({ field }: { field: any }) => (
+            render={_(_{ field}: {_field: unknown}) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder={`Tell us about your ${
+                    placeholder={_`Tell us about your ${
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
-                      "business and needs"
-                    }`}
+                      "business and needs"}`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
-                    {...field}
+                    {_...field}
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />

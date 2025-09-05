@@ -1,178 +1,106 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
+export default function Services() {_const [isLoaded, _setIsLoaded] = useState(false);
   
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+  useEffect__(() => {
+    const _timer = setTimeout__(() => setIsLoaded(true), _100);
+    return () => clearTimeout(timer);}, []);
 
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
+  const contact: ContactInfo = {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _site: 'https://ziontechgroup.com'};
 
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses',
-      count: '150+',
-      color: 'blue',
-      services: [
-        'AI-Powered Video Clip Maker',
-        'Smart Contract Analyzer',
-        'Cybersecurity Threat Intelligence',
-        'Multi-Language Website Translator',
-        'Predictive Inventory Optimizer',
-        'Real-Time Analytics Dashboard',
-        'Automated Customer Support',
-        'Blockchain Transaction Monitor'
-      ],
-      href: '/micro-saas'
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions for enterprise needs',
-      count: '100+',
-      color: 'purple',
-      services: [
-        'Autonomous AI Agents',
-        'AI-Powered Financial Trading',
-        'AI Legal Document Analysis',
-        'AI-Powered Voice Analytics',
-        'AI-Powered Search & Discovery',
-        'Machine Learning Model Training',
-        'Natural Language Processing',
-        'Computer Vision Solutions'
-      ],
-      href: '/ai-services'
-    },
-    {
-      title: 'IT & Cloud Services',
-      description: 'Comprehensive IT solutions for enterprise-grade operations',
-      count: '100+',
-      color: 'green',
-      services: [
-        'Quantum Computing Consulting',
-        'Blockchain & Web3 Solutions',
-        'DevSecOps & Security Automation',
-        'Enterprise Data Platform',
-        'High-Performance Computing',
-        'Cloud Migration Services',
-        'Infrastructure as Code',
-        'Disaster Recovery Solutions'
-      ],
-      href: '/it-services'
-    }
+  const _serviceCategories = [
+    {_title: 'Micro SaaS Products', _description: 'Innovative, _focused software solutions for modern businesses', _count: '150+', _color: 'blue', _services: [
+        'AI-Powered Video Clip Maker', _'Smart Contract Analyzer', _'Cybersecurity Threat Intelligence', _'Multi-Language Website Translator', _'Predictive Inventory Optimizer', _'Real-Time Analytics Dashboard', _'Automated Customer Support', _'Blockchain Transaction Monitor'
+      ], _href: '/micro-saas'},
+    {_title: 'AI Services', _description: 'Advanced artificial intelligence solutions for enterprise needs', _count: '100+', _color: 'purple', _services: [
+        'Autonomous AI Agents', _'AI-Powered Financial Trading', _'AI Legal Document Analysis', _'AI-Powered Voice Analytics', _'AI-Powered Search & Discovery', _'Machine Learning Model Training', _'Natural Language Processing', _'Computer Vision Solutions'
+      ], _href: '/ai-services'},
+    {_title: 'IT & Cloud Services', _description: 'Comprehensive IT solutions for enterprise-grade operations', _count: '100+', _color: 'green', _services: [
+        'Quantum Computing Consulting', _'Blockchain & Web3 Solutions', _'DevSecOps & Security Automation', _'Enterprise Data Platform', _'High-Performance Computing', _'Cloud Migration Services', _'Infrastructure as Code', _'Disaster Recovery Solutions'
+      ], _href: '/it-services'}
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors = {
+  const _getColorClasses = (_color: string) => {_const _colors = {
       blue: {
-        bg: 'bg-blue-600',
-        hover: 'hover:bg-blue-700',
-        text: 'text-blue-400',
-        border: 'border-blue-500/40',
-        ring: 'focus:ring-blue-500'
-      },
-      purple: {
-        bg: 'bg-purple-600',
-        hover: 'hover:bg-purple-700',
-        text: 'text-purple-400',
-        border: 'border-purple-500/40',
-        ring: 'focus:ring-purple-500'
-      },
-      green: {
-        bg: 'bg-green-600',
-        hover: 'hover:bg-green-700',
-        text: 'text-green-400',
-        border: 'border-green-500/40',
-        ring: 'focus:ring-green-500'
-      }
+        bg: 'bg-blue-600', _hover: 'hover:bg-blue-700', _text: 'text-blue-400', _border: 'border-blue-500/40', _ring: 'focus:ring-blue-500'},
+      purple: {_bg: 'bg-purple-600', _hover: 'hover:bg-purple-700', _text: 'text-purple-400', _border: 'border-purple-500/40', _ring: 'focus:ring-purple-500'},
+      green: {_bg: 'bg-green-600', _hover: 'hover:bg-green-700', _text: 'text-green-400', _border: 'border-green-500/40', _ring: 'focus:ring-green-500'}
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${contact.site}/services`} />
+        <meta name="description" content="Explore our comprehensive range of micro SaaS products, _AI services, _and IT solutions. 350+ innovative services to transform your business." />
+        <meta name="keywords" content="micro SaaS, _AI services, _IT solutions, _cloud computing, _automation, _machine learning, _DevOps, _cybersecurity" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+        <meta name="robots" content="index, _follow" />
+        <link rel="canonical" href={_`${contact.site}/services`} />
       </Head>
       
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          {/* Hero Section */}
+          {_/* Hero Section */}
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Our Services
               </h1>
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <p className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 350+ Innovative Solutions for Modern Businesses
               </p>
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, 
-                we provide everything your business needs to thrive in the digital age.
+              <p className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, _we provide everything your business needs to thrive in the digital age.
               </p>
             </div>
           </section>
 
-          {/* Service Categories */}
+          {_/* Service Categories */}
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
-                {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color);
-                  return (
-                    <div 
+                {_serviceCategories.map((category, _index) => {
+                  const _colors = getColorClasses(category.color);
+                  return (_<div 
                       key={category.title}
-                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay: `${index * 200}ms` }}
+                      className={_`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${_isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      style={_{ transitionDelay: `${index * 200}ms` }}
                     >
                       <div className="flex items-center justify-between mb-6">
-                        <h3 className={`text-2xl font-bold ${colors.text}`}>
-                          {category.title}
+                        <h3 className={_`text-2xl font-bold ${colors.text}`}>
+                          {_category.title}
                         </h3>
-                        <span className={`text-3xl font-bold ${colors.text}`}>
-                          {category.count}
+                        <span className={_`text-3xl font-bold ${colors.text}`}>
+                          {_category.count}
                         </span>
                       </div>
                       
                       <p className="text-slate-300 mb-6">
-                        {category.description}
+                        {_category.description}
                       </p>
                       
                       <ul className="text-slate-400 space-y-2 mb-8">
-                        {category.services.map((service, serviceIndex) => (
+                        {_category.services.map((service, _serviceIndex) => (
                           <li key={serviceIndex} className="flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
-                            {service}
+                            {_service}
                           </li>
                         ))}
                       </ul>
                       
                       <Link 
-                        href={category.href}
-                        className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
+                        href={_category.href}
+                        className={_`inline-flex items-center px-6 py-3 ${colors.bg} ${_colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${_colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >
-                        View All {category.title}
+                        View All {_category.title}
                         <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
                     </div>
@@ -182,7 +110,7 @@ export default function Services() {
             </div>
           </section>
 
-          {/* Why Choose Us */}
+          {_/* Why Choose Us */}
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -193,7 +121,7 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
@@ -203,7 +131,7 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2">Enterprise Grade</h3>
@@ -213,7 +141,7 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2">Secure & Reliable</h3>
@@ -223,7 +151,7 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
@@ -233,7 +161,7 @@ export default function Services() {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {_/* CTA Section */}
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -252,13 +180,13 @@ export default function Services() {
                   Get a Quote
                 </Link>
                 <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+                  href={_`tel:${contact.phone.replace(/[^\d+]/g, _'')}`} 
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
-                  Call {contact.phone}
+                  Call {_contact.phone}
                 </a>
                 <a 
-                  href={`mailto:${contact.email}`} 
+                  href={_`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
                 >
                   Email Us

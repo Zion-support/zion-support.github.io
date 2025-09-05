@@ -1,22 +1,11 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Link from 'next/link';
-import {
-  Menu,
-  X,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from 'lucide-react';
+import {_Menu, _X, _Phone, _Mail, _Facebook, _Twitter, _Linkedin, _Instagram, } from 'lucide-react';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header: React.FC = () => {_const [isMenuOpen, _setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const _toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);};
 
   return (
     <header className="bg-white shadow-lg">
@@ -103,10 +92,10 @@ const Header: React.FC = () => {
           </div>
 
           <button
-            onClick={toggleMenu}
+            onClick={_toggleMenu}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
           >
-            {isMenuOpen ? (
+            {_isMenuOpen ? (
               <X className="w-6 h-6" />
             ) : (
               <Menu className="w-6 h-6" />
@@ -114,7 +103,7 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {isMenuOpen && (
+        {_isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <Link

@@ -1,40 +1,30 @@
 
-import React, { createContext, useContext, useState } from "react";
+import React, {_createContext, _useContext, _useState} from "react";
 
-interface SidebarContextType {
-  isOpen: boolean;
+interface SidebarContextType {_isOpen: boolean;
   toggle: () => void;
   open: () => void;
-  close: () => void;
-}
+  close: () => void;}
 
-const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true,
-  toggle: () => {},
+const _SidebarContext = createContext<SidebarContextType>(_{_isOpen: true, _toggle: () => {},
   open: () => {},
   close: () => {}});
 
-export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
+export const _useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
-interface SidebarProviderProps {
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}
+interface SidebarProviderProps {_children: React.ReactNode;
+  defaultOpen?: boolean;}
 
-export function SidebarProvider({ 
-  children, 
-  defaultOpen = true 
-}: SidebarProviderProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+export function SidebarProvider(_{_children, _defaultOpen = true}: SidebarProviderProps) {_const [isOpen, _setIsOpen] = useState(defaultOpen);
 
-  const toggle = () => setIsOpen(!isOpen);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
+  const _toggle = () => setIsOpen(!isOpen);
+  const _open = () => setIsOpen(true);
+  const _close = () => setIsOpen(false);
 
   return (
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
-        {children}
+    <SidebarContext.Provider value={{ isOpen, _toggle, _open, _close}}>
+      <div className={_`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+        {_children}
       </div>
     </SidebarContext.Provider>
   );

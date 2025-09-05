@@ -1,95 +1,40 @@
 import React from 'react';
       ]
     },
-    {
-      title: 'Quantum Technology Services',
-      terms: [
-        'Quantum computing resources are allocated based on service tier',
-        'Users must comply with export control regulations',
-        'Performance metrics are provided for informational purposes only',
-        'Service interruptions may occur during quantum system calibration'
-      ]
-    },
-    {
-      title: 'Cybersecurity Services',
-      terms: [
-        'Security assessments are conducted according to industry standards',
-        'Vulnerability reports are confidential and must not be shared',
-        'Penetration testing requires written authorization',
-        'Incident response follows our established protocols'
+    {_title: 'Quantum Technology Services', _terms: [
+        'Quantum computing resources are allocated based on service tier', _'Users must comply with export control regulations', _'Performance metrics are provided for informational purposes only', _'Service interruptions may occur during quantum system calibration'
+      ]},
+    {_title: 'Cybersecurity Services', _terms: [
+        'Security assessments are conducted according to industry standards', _'Vulnerability reports are confidential and must not be shared', _'Penetration testing requires written authorization', _'Incident response follows our established protocols'
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
 import { 
-  FileText, Shield, AlertTriangle, CheckCircle, 
-  User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
+  FileText, _Shield, _AlertTriangle, _CheckCircle, _User, _Lock, _Globe, _Scale, _Clock, _Mail} from 'lucide-react';
 
-const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+const TermsPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
 
-  const termsSections = [
+  const _termsSections = [
     {
-      title: 'Acceptance of Terms',
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
-      ]
-    },
-    {
-      title: 'Service Description',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'AI and machine learning solutions',
-        'Quantum computing services',
-        'IT infrastructure and consulting',
-        'Micro SAAS applications',
-        'Business automation services',
-        'Technical support and maintenance'
-      ]
-    },
-    {
-      title: 'User Responsibilities',
-      icon: <User className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
-        'Respect intellectual property rights'
-      ]
-    },
-    {
-      title: 'Intellectual Property',
-      icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your own content',
-        'No transfer of intellectual property rights',
-        'License to use our services as intended',
-        'Prohibition of reverse engineering'
-      ]
-    }
+      title: 'Acceptance of Terms', _icon: <CheckCircle className="w-8 h-8" />, _color: 'from-cyan-500 to-blue-500', _content: [
+        'By accessing or using our services, _you agree to be bound by these terms', _'If you do not agree to these terms, _do not use our services', _'We may modify these terms at any time with notice', _'Continued use after changes constitutes acceptance of new terms'
+      ]},
+    {_title: 'Service Description', _icon: <Globe className="w-8 h-8" />, _color: 'from-purple-500 to-pink-500', _content: [
+        'AI and machine learning solutions', _'Quantum computing services', _'IT infrastructure and consulting', _'Micro SAAS applications', _'Business automation services', _'Technical support and maintenance'
+      ]},
+    {_title: 'User Responsibilities', _icon: <User className="w-8 h-8" />, _color: 'from-green-500 to-emerald-500', _content: [
+        'Provide accurate and complete information', _'Maintain security of your account credentials', _'Comply with applicable laws and regulations', _'Use services for lawful purposes only', _'Respect intellectual property rights'
+      ]},
+    {_title: 'Intellectual Property', _icon: <Lock className="w-8 h-8" />, _color: 'from-orange-500 to-red-500', _content: [
+        'Our services and content are protected by copyright', _'You retain rights to your own content', _'No transfer of intellectual property rights', _'License to use our services as intended', _'Prohibition of reverse engineering'
+      ]}
   ];
 
-  const prohibitedActivities = [
-import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  Globe, Calendar, Scale, Users, ArrowRight,
-  BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+  const _prohibitedActivities = [
+import {_FileText, _Shield, _CheckCircle, _AlertTriangle, _Globe, _Calendar, _Scale, _Users, _ArrowRight, _BookOpen, _Lock, _Zap, _Building, _Brain, _Rocket} from 'lucide-react';
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">Terms of Service</h1>
@@ -99,114 +44,57 @@ import {
         </div>
       </section>
 
-import { motion } from 'framer-motion';
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-const Terms: React.FC = () => {
-  const sections = [
+const Terms: React.FC = () => {_const _sections = [
     {
-      title: 'Acceptance of Terms',
-      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`,
-      icon: <FileText className="w-6 h-6 text-purple-400" />
-    },
-    {
-      title: 'Use License',
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.`,
-      icon: <Lock className="w-6 h-6 text-blue-400" />
-    },
-    {
-      title: 'Service Description',
-      content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`,
-      icon: <Globe className="w-6 h-6 text-green-400" />
-    },
-    {
-      title: 'User Responsibilities',
-      content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`,
-      icon: <Users className="w-6 h-6 text-yellow-400" />
-    },
-    {
-      title: 'Privacy and Data Protection',
-      content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`,
-      icon: <Eye className="w-6 h-6 text-cyan-400" />
-    },
-    {
-      title: 'Intellectual Property Rights',
-      content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
-      icon: <Shield className="w-6 h-6 text-red-400" />
-    }
+      title: 'Acceptance of Terms', _content: `By accessing and using the Zion Tech Group website and services, _you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, _please do not use this service.`, _icon: <FileText className="w-6 h-6 text-purple-400" />},
+    {_title: 'Use License', _content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, _non-commercial transitory viewing only. This is the grant of a license, _not a transfer of title, _and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.`, _icon: <Lock className="w-6 h-6 text-blue-400" />},
+    {_title: 'Service Description', _content: `Zion Tech Group provides AI consciousness technology, _quantum computing solutions, _autonomous systems, _and related consulting services. We reserve the right to modify, _suspend, _or discontinue any aspect of our services at any time.`, _icon: <Globe className="w-6 h-6 text-green-400" />},
+    {_title: 'User Responsibilities', _content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, _or in any way that violates applicable laws or regulations.`, _icon: <Users className="w-6 h-6 text-yellow-400" />},
+    {_title: 'Privacy and Data Protection', _content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, _which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`, _icon: <Eye className="w-6 h-6 text-cyan-400" />},
+    {_title: 'Intellectual Property Rights', _content: `All content on this website, _including but not limited to text, _graphics, _logos, _images, _software, _and other materials, _is the property of Zion Tech Group or its licensors and is protected by copyright, _trademark, _and other intellectual property laws.`, _icon: <Shield className="w-6 h-6 text-red-400" />}
   ];
 
-  const importantNotices = [
-    {
-      title: 'AI Technology Risks',
-      content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.',
-      type: 'warning'
-    },
-    {
-      title: 'Quantum Computing Limitations',
-      content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.',
-      type: 'info'
-    },
-    {
-      title: 'Service Availability',
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
-      type: 'info'
-    }
+  const _importantNotices = [
+    {_title: 'AI Technology Risks', _content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.', _type: 'warning'},
+    {_title: 'Quantum Computing Limitations', _content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.', _type: 'info'},
+    {_title: 'Service Availability', _content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.', _type: 'info'}
   ];
 
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 
-const termsSections = [
-  {
-    title: 'Acceptance of Terms',
-    icon: <CheckCircle className="w-6 h-6 text-green-400" />,
-    content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'
-  },
-  {
-    title: 'Use License',
-    icon: <Scale className="w-6 h-6 text-blue-400" />,
-    content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.'
-  },
-  {
-    title: 'Disclaimer',
-    icon: <AlertTriangle className="w-6 h-6 text-orange-400" />,
-    content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.'
-  },
-  {
-    title: 'Limitations',
-    icon: <Shield className="w-6 h-6 text-purple-400" />,
-    content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
-  }
+const _termsSections = [
+  {_title: 'Acceptance of Terms', _icon: <CheckCircle className="w-6 h-6 text-green-400" />, _content: 'By accessing and using our services, _you accept and agree to be bound by the terms and provision of this agreement.'},
+  {_title: 'Use License', _icon: <Scale className="w-6 h-6 text-blue-400" />, _content: 'Permission is granted to temporarily use our services for personal, _non-commercial transitory viewing only.'},
+  {_title: 'Disclaimer', _icon: <AlertTriangle className="w-6 h-6 text-orange-400" />, _content: 'The materials on our website are provided on an "as is" basis. We make no warranties, _expressed or implied.'},
+  {_title: 'Limitations', _icon: <Shield className="w-6 h-6 text-purple-400" />, _content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'}
 ];
 
-export default function Terms() {
-  return (
+export default function Terms() {_return (
     <Layout>
       <SEO
         title="Terms of Service | Zion Tech Group"
-        description="Read Zion Tech Group's Terms of Service, including usage policies, user agreements, and legal conditions for accessing our technology services."
-        keywords={["terms of service", "user agreement", "legal terms", "conditions of use", "service agreement", "Zion Tech Group"]}
+        description="Read Zion Tech Group's Terms of Service, _including usage policies, _user agreements, _and legal conditions for accessing our technology services."
+        keywords={["terms of service", _"user agreement", _"legal terms", _"conditions of use", _"service agreement", _"Zion Tech Group"]}
       />
 
       <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
@@ -389,14 +277,14 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* User Obligations Section */}
+        {_/* User Obligations Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -413,10 +301,10 @@ export default function Terms() {
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Your Responsibilities:</h3>
                   <ul className="space-y-3">
-                    {userObligations.map((obligation, index) => (
+                    {_userObligations.map(_(obligation, _index) => (
                       <li key={index} className="flex items-start gap-3 text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span>{obligation}</span>
+                        <span>{_obligation}</span>
                       </li>
                     ))}
                   </ul>
@@ -449,15 +337,15 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* Liability Limitations */}
-        {/* Intellectual Property Section */}
+        {_/* Liability Limitations */}
+        {_/* Intellectual Property Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -483,9 +371,9 @@ export default function Terms() {
 
             <div className="space-y-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8}}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
@@ -498,9 +386,9 @@ export default function Terms() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: 0.1}}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
@@ -510,9 +398,9 @@ export default function Terms() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: 0.2}}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
@@ -527,14 +415,14 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* Limitation of Liability Section */}
+        {_/* Limitation of Liability Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -583,17 +471,17 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        {/* Contact Section */}
+        {_/* CTA Section */}
+        {_/* Contact Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Contact Section */}
+        {_/* Contact Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
@@ -624,15 +512,15 @@ export default function Terms() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Contact Support
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300"
                 >
                   Download Terms PDF
@@ -643,13 +531,13 @@ export default function Terms() {
         </section>
       </div>
     </Layout>
-      {/* Terms Overview */}
+      {_/* Terms Overview */}
       <section id="terms-sections" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -661,20 +549,20 @@ export default function Terms() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {termsSections.map((section, index) => (
+            {_termsSections.map(_(section, _index) => (
               <motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
                 className="group cursor-pointer"
               >
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
-                  <div className={`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    {section.icon}
+                  <div className={_`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    {_section.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{section.title}</h3>
-                  <p className="text-gray-300 text-sm">{section.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{_section.title}</h3>
+                  <p className="text-gray-300 text-sm">{_section.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -682,13 +570,13 @@ export default function Terms() {
         </div>
       </section>
 
-      {/* Service Categories */}
+      {_/* Service Categories */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -700,33 +588,32 @@ export default function Terms() {
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {serviceCategories.map((service, index) => (
-              <motion.div
+            {_serviceCategories.map(_(service, _index) => (_<motion.div
                 key={service.category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
                   <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-                      {service.icon}
+                      {_service.icon}
                     </div>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.category}
+                      {_service.category}
                     </h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <p className="text-gray-300 mb-4">{_service.description}</p>
                     
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {service.features.map((feature, featureIndex) => (
+                        {_service.features.map((feature, _featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                            {feature}
+                            {_feature}
                           </li>
                         ))}
                       </ul>
@@ -735,10 +622,10 @@ export default function Terms() {
                     <div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {service.restrictions.map((restriction, restrictionIndex) => (
+                        {_service.restrictions.map(_(restriction, _restrictionIndex) => (
                           <li key={restrictionIndex} className="flex items-start gap-2">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            {restriction}
+                            {_restriction}
                           </li>
                         ))}
                       </ul>
@@ -750,7 +637,7 @@ export default function Terms() {
     'Use of services for illegal activities'
   ];
 
-  const limitations = [
+  const _limitations = [
     'Services provided "as is" without warranties',
     'No guarantee of uninterrupted service',
     'Limitation of liability for damages',
@@ -759,19 +646,18 @@ export default function Terms() {
     'Technical support during business hours only'
   ];
 
-  return (
-    <ErrorBoundary>
+  return (_<ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
         <main className="relative z-10 pt-8">
-          {/* Hero Section */}
+          {_/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Terms of Service
@@ -781,32 +667,32 @@ export default function Terms() {
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <FileText className="w-6 h-6" />
-                  <span>Last updated: {lastUpdated}</span>
+                  <span>Last updated: {_lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
 
-          {/* Overview */}
+          {_/* Overview */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={_{ opacity: 0, _x: -20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6}}
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Understanding Our Terms
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     These Terms of Service establish the rules and guidelines for using Zion Tech Group's 
-                    services. They protect both you and us, ensuring a clear understanding of our relationship 
+                    services. They protect both you and us, _ensuring a clear understanding of our relationship 
                     and responsibilities.
                   </p>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    By using our services, you acknowledge that you have read, understood, and agree to 
-                    be bound by these terms. If you have any questions, please contact us before proceeding.
+                    By using our services, _you acknowledge that you have read, _understood, _and agree to 
+                    be bound by these terms. If you have any questions, _please contact us before proceeding.
                   </p>
                   <div className="flex items-center gap-4 text-cyan-400">
                     <Scale className="w-6 h-6" />
@@ -815,9 +701,9 @@ export default function Terms() {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={_{ opacity: 0, _x: 20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6, _delay: 0.2}}
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -845,13 +731,13 @@ export default function Terms() {
             </div>
           </section>
 
-          {/* Key Terms */}
+          {_/* Key Terms */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
@@ -859,25 +745,24 @@ export default function Terms() {
               </motion.div>
               
               <div className="grid md:grid-cols-2 gap-8">
-                {termsSections.map((section, index) => (
-                  <motion.div
+                {_termsSections.map((section, _index) => (_<motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _y: 20}}
+                    whileInView={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <div className={_`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
-                        {section.icon}
+                        {_section.icon}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">{_section.title}</h3>
                     <ul className="space-y-3">
-                      {section.content.map((item, itemIndex) => (
+                      {_section.content.map((item, _itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300">{item}</span>
+                          <span className="text-gray-300">{_item}</span>
                         </li>
                       ))}
                     </ul>
@@ -887,13 +772,13 @@ export default function Terms() {
             </div>
           </section>
 
-          {/* Prohibited Activities */}
+          {_/* Prohibited Activities */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
@@ -901,9 +786,9 @@ export default function Terms() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.2}}
                 className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -911,10 +796,10 @@ export default function Terms() {
                   <h3 className="text-2xl font-bold text-white">What You Cannot Do</h3>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {prohibitedActivities.map((activity, index) => (
+                  {_prohibitedActivities.map(_(activity, _index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{activity}</span>
+                      <span className="text-gray-300">{_activity}</span>
                     </div>
                   ))}
                 </div>
@@ -928,13 +813,13 @@ export default function Terms() {
             </div>
           </section>
 
-          {/* Service Limitations */}
+          {_/* Service Limitations */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
@@ -942,9 +827,9 @@ export default function Terms() {
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.2}}
                 className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -952,10 +837,10 @@ export default function Terms() {
                   <h3 className="text-2xl font-bold text-white">Service Limitations</h3>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {limitations.map((limitation, index) => (
+                  {_limitations.map(_(limitation, _index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300">{limitation}</span>
+                      <span className="text-gray-300">{_limitation}</span>
                     </div>
                   ))}
                 </div>
@@ -970,13 +855,13 @@ export default function Terms() {
             </div>
           </section>
 
-          {/* Detailed Terms */}
+          {_/* Detailed Terms */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="space-y-12"
               >
                 <div>
@@ -1134,14 +1019,14 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* Terms Overview */}
+        {_/* Terms Overview */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
@@ -1151,36 +1036,36 @@ export default function Terms() {
               </p>
             </motion.div>
 
-            {/* Key Terms Points */}
+            {_/* Key Terms Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {termsSections.map((section, index) => (
+              {_termsSections.map(_(section, _index) => (
                 <motion.div
                   key={section.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    {section.icon}
-                    <h3 className="text-xl font-semibold">{section.title}</h3>
+                    {_section.icon}
+                    <h3 className="text-xl font-semibold">{_section.title}</h3>
                   </div>
-                  <p className="text-gray-300">{section.content}</p>
+                  <p className="text-gray-300">{_section.content}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Detailed Terms */}
+        {_/* Detailed Terms */}
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -1190,7 +1075,7 @@ export default function Terms() {
                 </p>
               </div>
 
-              {/* Section 1: Definitions */}
+              {_/* Section 1: Definitions */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">1. Definitions</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1207,7 +1092,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 2: Acceptance */}
+              {_/* Section 2: Acceptance */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1223,7 +1108,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 3: Use of Services */}
+              {_/* Section 3: Use of Services */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-emerald-400 mb-4">3. Use of Services</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1247,7 +1132,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 4: Intellectual Property */}
+              {_/* Section 4: Intellectual Property */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-orange-400 mb-4">4. Intellectual Property Rights</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1269,7 +1154,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 5: Privacy */}
+              {_/* Section 5: Privacy */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-pink-400 mb-4">5. Privacy</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1284,7 +1169,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 6: Disclaimers */}
+              {_/* Section 6: Disclaimers */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-red-400 mb-4">6. Disclaimers and Limitations</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1310,7 +1195,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 7: Termination */}
+              {_/* Section 7: Termination */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-yellow-400 mb-4">7. Termination</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1325,7 +1210,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 8: Governing Law */}
+              {_/* Section 8: Governing Law */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-indigo-400 mb-4">8. Governing Law</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1340,7 +1225,7 @@ export default function Terms() {
                 </div>
               </div>
 
-              {/* Section 9: Contact Information */}
+              {_/* Section 9: Contact Information */}
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">9. Contact Information</h3>
                 <div className="text-gray-300 space-y-4">
@@ -1361,14 +1246,14 @@ export default function Terms() {
           </div>
         </section>
 
-        {/* Agreement Section */}
+        {_/* Agreement Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1392,13 +1277,13 @@ export default Terms;
             </div>
           </section>
 
-          {/* Contact Information */}
+          {_/* Contact Information */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About These Terms?

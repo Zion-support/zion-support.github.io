@@ -1,15 +1,9 @@
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, ShieldCheck } from 'lucide-react'
 
-interface ContractTypeCardsProps {
-  onStandardClick: () => void;
-  onSmartClick: () => void;
-}
+interface ContractTypeCardsProps {_onStandardClick: () => void;
+  onSmartClick: () => void;}
 
-export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
-  return (
+export function ContractTypeCards(_{_onStandardClick, _onSmartClick}: ContractTypeCardsProps) {_return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
@@ -63,7 +57,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
-            onClick={onSmartClick}
+            onClick={_onSmartClick}
           >
             Create Smart Contract
           </Button>

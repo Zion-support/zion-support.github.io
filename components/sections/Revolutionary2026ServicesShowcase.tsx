@@ -1,41 +1,26 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 
-export default function Revolutionary2026ServicesShowcase() {
-  // Get featured services from each category
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
+export default function Revolutionary2026ServicesShowcase() {_// Get featured services from each category
+  const _featuredAIServices = aiAutonomousServices2026.slice(0, _3);
+  const _featuredQuantumServices = quantumSpaceTechServices2026.slice(0, _3);
+  const _featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, _3);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const _containerVariants = {
+    hidden: { opacity: 0},
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6
-      }
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.6}
     }
   };
 
-  return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Enhanced Background Effects */}
+  return (_<section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {_/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30"></div>
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20"></div>
@@ -44,12 +29,12 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Enhanced Header */}
+        {_/* Enhanced Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={_{ opacity: 0, _y: 30}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.8}}
+          viewport={_{ once: true}}
           className="text-center mb-20"
         >
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
@@ -64,22 +49,22 @@ export default function Revolutionary2026ServicesShowcase() {
           </h2>
           
           <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
+            Experience the most advanced AI, _quantum computing, _and metaverse technologies ever created. 
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </p>
 
-          {/* Service Statistics */}
+          {_/* Service Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>
+              <div className="text-3xl font-bold text-purple-400">{_aiAutonomousServices2026.length}</div>
               <div className="text-gray-400 text-sm">AI Autonomous Services</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026.length}</div>
+              <div className="text-3xl font-bold text-cyan-400">{_quantumSpaceTechServices2026.length}</div>
               <div className="text-gray-400 text-sm">Quantum Space Tech</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026.length}</div>
+              <div className="text-3xl font-bold text-pink-400">{_metaverseDigitalRealityServices2026.length}</div>
               <div className="text-gray-400 text-sm">Metaverse Services</div>
             </div>
             <div className="text-center">
@@ -89,12 +74,12 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
         </motion.div>
 
-        {/* AI Autonomous Services Section */}
+        {_/* AI Autonomous Services Section */}
         <motion.div
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={_{ once: true}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -108,49 +93,49 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredAIServices.map((service, index) => (
+            {_featuredAIServices.map((service, _index) => (
               <motion.div
                 key={service.id}
-                variants={itemVariants}
+                variants={_itemVariants}
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
+                    <div className="text-3xl">{_service.icon}</div>
                     <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-blue-300 text-sm">{service.tagline}</p>
+                      <h4 className="text-xl font-bold text-white">{_service.name}</h4>
+                      <p className="text-blue-300 text-sm">{_service.tagline}</p>
                     </div>
                   </div>
                   
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
+                    {_service.description}
                   </p>
 
                   <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {_service.features.slice(0, _3).map(_(feature, _idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
+                        <span className="text-gray-400 text-sm">{_feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <span className="text-2xl font-bold text-blue-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className="text-2xl font-bold text-blue-400">{_service.price}</span>
+                      <span className="text-gray-400">{_service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                      <span className="text-yellow-400 text-sm">{_service.rating}</span>
+                      <span className="text-gray-400 text-sm">({_service.reviews})</span>
                     </div>
                   </div>
 
                   <Link 
-                    href={service.link} 
+                    href={_service.link} 
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -170,12 +155,12 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
         </motion.div>
 
-        {/* Quantum Space Tech Services Section */}
+        {_/* Quantum Space Tech Services Section */}
         <motion.div
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={_{ once: true}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -189,49 +174,49 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredQuantumServices.map((service, index) => (
+            {_featuredQuantumServices.map(_(service, _index) => (
               <motion.div
                 key={service.id}
-                variants={itemVariants}
+                variants={_itemVariants}
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
+                    <div className="text-3xl">{_service.icon}</div>
                     <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-indigo-300 text-sm">{service.tagline}</p>
+                      <h4 className="text-xl font-bold text-white">{_service.name}</h4>
+                      <p className="text-indigo-300 text-sm">{_service.tagline}</p>
                     </div>
                   </div>
                   
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
+                    {_service.description}
                   </p>
 
                   <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {_service.features.slice(0, _3).map(_(feature, _idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
+                        <span className="text-gray-400 text-sm">{_feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className="text-2xl font-bold text-indigo-400">{_service.price}</span>
+                      <span className="text-gray-400">{_service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                      <span className="text-yellow-400 text-sm">{_service.rating}</span>
+                      <span className="text-gray-400 text-sm">({_service.reviews})</span>
                     </div>
                   </div>
 
                   <Link 
-                    href={service.link} 
+                    href={_service.link} 
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -251,12 +236,12 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
         </motion.div>
 
-        {/* Metaverse & Digital Reality Services Section */}
+        {_/* Metaverse & Digital Reality Services Section */}
         <motion.div
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={_{ once: true}}
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -270,49 +255,49 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredMetaverseServices.map((service, index) => (
+            {_featuredMetaverseServices.map(_(service, _index) => (
               <motion.div
                 key={service.id}
-                variants={itemVariants}
+                variants={_itemVariants}
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="text-3xl">{service.icon}</div>
+                    <div className="text-3xl">{_service.icon}</div>
                     <div>
-                      <h4 className="text-xl font-bold text-white">{service.name}</h4>
-                      <p className="text-pink-300 text-sm">{service.tagline}</p>
+                      <h4 className="text-xl font-bold text-white">{_service.name}</h4>
+                      <p className="text-pink-300 text-sm">{_service.tagline}</p>
                     </div>
                   </div>
                   
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
+                    {_service.description}
                   </p>
 
                   <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {_service.features.slice(0, _3).map(_(feature, _idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
+                        <span className="text-gray-400 text-sm">{_feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <span className="text-2xl font-bold text-pink-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className="text-2xl font-bold text-pink-400">{_service.price}</span>
+                      <span className="text-gray-400">{_service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                      <span className="text-yellow-400 text-sm">{_service.rating}</span>
+                      <span className="text-gray-400 text-sm">({_service.reviews})</span>
                     </div>
                   </div>
 
                   <Link 
-                    href={service.link} 
+                    href={_service.link} 
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -332,12 +317,12 @@ export default function Revolutionary2026ServicesShowcase() {
           </div>
         </motion.div>
 
-        {/* Call to Action Section */}
+        {_/* Call to Action Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={_{ opacity: 0, _y: 30}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.8}}
+          viewport={_{ once: true}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">

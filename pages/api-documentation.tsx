@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-export default function APIDocumentationPage() {
-	return (
+export default function APIDocumentationPage() {_return (
 		<Layout>
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -14,5 +13,4 @@ export default function APIDocumentationPage() {
 				<p className="text-gray-300">REST and SDK references. Coming soon.</p>
 			</section>
 		</Layout>
-	);
-}
+	);}

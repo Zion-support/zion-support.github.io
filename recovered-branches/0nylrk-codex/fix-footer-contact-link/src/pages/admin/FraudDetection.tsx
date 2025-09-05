@@ -1,45 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { FraudFlag, FraudStats } from "@/types/fraud";
+import React, {_useState, _useEffect} from "react";
 
 // Import refactored components
-import {
-  FraudStatsCards,
-  FraudFilters,
-  FraudFlagsTable,
-  FraudTabContent
-} from "@/components/admin/fraud-detection";
+import {_FraudStatsCards, _FraudFilters, _FraudFlagsTable, _FraudTabContent} from "@/components/admin/fraud-detection";
 
-export default function FraudDetection() {
-  const [flags, setFlags] = useState<FraudFlag[]>([]);
-  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [severityFilter, setSeverityFilter] = useState<string | null>(null);
-  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null);
-  const [stats, setStats] = useState<FraudStats>({
-    total_flags: 0,
-    pending_flags: 0,
-    suspicious_count: 0,
-    dangerous_count: 0,
-    false_positives: 0,
-    actioned_count: 0});
+export default function FraudDetection() {_const [flags, _setFlags] = useState<FraudFlag[]>([]);
+  const [filteredFlags, _setFilteredFlags] = useState<FraudFlag[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [searchQuery, _setSearchQuery] = useState("");
+  const [statusFilter, _setStatusFilter] = useState<string | null>(null);
+  const [severityFilter, _setSeverityFilter] = useState<string | null>(null);
+  const [contentTypeFilter, _setContentTypeFilter] = useState<string | null>(null);
+  const [stats, _setStats] = useState<FraudStats>({
+    total_flags: 0, _pending_flags: 0, _suspicious_count: 0, _dangerous_count: 0, _false_positives: 0, _actioned_count: 0});
 
   // Fetch fraud flags
-  const fetchFraudFlags = async () => {
-    setIsLoading(true);
+  const _fetchFraudFlags = async () => {_setIsLoading(true);
     try {
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from("fraud_flags")
         .select("*")
-        .order("timestamp", { ascending: false });
+        .order("timestamp", {_ascending: false});
 
       if (error) throw error;
 
@@ -47,105 +27,68 @@ export default function FraudDetection() {
       setFilteredFlags(data || []);
       
       // Calculate stats
-      const newStats: FraudStats = {
-        total_flags: data?.length || 0,
-        pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
-        suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
-        dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
-        false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
-        actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0};
+      const newStats: FraudStats = {_total_flags: data?.length || 0, _pending_flags: data?.filter(flag => flag.status === 'pending').length || 0, _suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0, _dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0, _false_positives: data?.filter(flag => flag.is_false_positive).length || 0, _actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0};
       setStats(newStats);
       
-    } catch (error) {
-      console.error("Error fetching fraud flags:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load fraud detection data",
-        variant: "destructive"});
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (error) {_toast({
+        title: "Error", _description: "Failed to load fraud detection data", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
   };
 
-  useEffect(() => {
-    fetchFraudFlags();
-  }, []);
+  useEffect__(() => {_fetchFraudFlags();}, []);
 
   // Apply filters
-  useEffect(() => {
-    let result = [...flags];
+  useEffect__(() => {_let _result = [...flags];
 
     // Apply search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(
-        (flag) =>
+      const _query = searchQuery.toLowerCase();
+      result = result.filter(_(flag) =>
           flag.user_email?.toLowerCase().includes(query) ||
           flag.content_excerpt.toLowerCase().includes(query) ||
           flag.reason.toLowerCase().includes(query)
-      );
-    }
+      );}
 
     // Apply status filter
-    if (statusFilter) {
-      result = result.filter((flag) => flag.status === statusFilter);
-    }
+    if (statusFilter) {_result = result.filter(_(flag) => flag.status === statusFilter);}
 
     // Apply severity filter
-    if (severityFilter) {
-      result = result.filter((flag) => flag.severity === severityFilter);
-    }
+    if (severityFilter) {_result = result.filter(_(flag) => flag.severity === severityFilter);}
 
     // Apply content type filter
-    if (contentTypeFilter) {
-      result = result.filter((flag) => flag.content_type === contentTypeFilter);
-    }
+    if (contentTypeFilter) {_result = result.filter(_(flag) => flag.content_type === contentTypeFilter);}
 
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
 
-  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
-    try {
-      const status = action === 'ignore' ? 'ignored' : 'actioned';
-      const actionTaken = action === 'ignore' ? 'none' : action;
+  const _handleAction = async (_flagId: string, _action: 'warning' | 'suspension' | 'ban' | 'ignore') => {_try {
+      const _status = action === 'ignore' ? 'ignored' : 'actioned';
+      const _actionTaken = action === 'ignore' ? 'none' : action;
       
-      const { error } = await supabase
+      const { error} = await supabase
         .from("fraud_flags")
-        .update({
-          status,
-          action_taken: actionTaken,
-          reviewed_at: new Date().toISOString(),
-          // In a real app, you'd get the current user's ID
-          reviewed_by: 'admin'
-        })
+        .update({_status, _action_taken: actionTaken, _reviewed_at: new Date().toISOString(), _// In a real app, _you'd get the current user's ID
+          reviewed_by: 'admin'})
         .eq("id", flagId);
 
       if (error) throw error;
 
-      toast({
-        title: "Flag updated",
-        description: `Action '${action}' was applied successfully.`});
+      toast({_title: "Flag updated", _description: `Action '${action}' was applied successfully.`});
       
       // Refresh the data
       fetchFraudFlags();
       
-    } catch (error) {
-      console.error("Error updating fraud flag:", error);
-      toast({
-        title: "Error",
-        description: "Failed to update flag",
-        variant: "destructive"});
+    } catch (error) {_toast({
+        title: "Error", _description: "Failed to update flag", _variant: "destructive"});
     }
   };
 
-  const resetFilters = () => {
-    setSearchQuery("");
+  const _resetFilters = () => {_setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
-    setContentTypeFilter(null);
-  };
+    setContentTypeFilter(null);};
 
-  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
+  const _hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
 
   return (
     <AppLayout>
@@ -167,17 +110,17 @@ export default function FraudDetection() {
           
           <div className="mt-4 md:mt-0">
             <Button 
-              onClick={fetchFraudFlags} 
+              onClick={_fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
-              disabled={isLoading}
+              disabled={_isLoading}
             >
               Refresh Data
             </Button>
           </div>
         </div>
         
-        {/* Stats Cards */}
-        <FraudStatsCards stats={stats} />
+        {_/* Stats Cards */}
+        <FraudStatsCards stats={_stats} />
         
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
@@ -188,28 +131,28 @@ export default function FraudDetection() {
           </TabsList>
           
           <TabsContent value="all" className="mt-6">
-            {/* Search and Filters */}
+            {_/* Search and Filters */}
             <FraudFilters
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              severityFilter={severityFilter}
-              setSeverityFilter={setSeverityFilter}
-              contentTypeFilter={contentTypeFilter}
-              setContentTypeFilter={setContentTypeFilter}
-              resetFilters={resetFilters}
+              searchQuery={_searchQuery}
+              setSearchQuery={_setSearchQuery}
+              statusFilter={_statusFilter}
+              setStatusFilter={_setStatusFilter}
+              severityFilter={_severityFilter}
+              setSeverityFilter={_setSeverityFilter}
+              contentTypeFilter={_contentTypeFilter}
+              setContentTypeFilter={_setContentTypeFilter}
+              resetFilters={_resetFilters}
             />
             
-            {/* Flags Table */}
+            {_/* Flags Table */}
             <Card>
               <CardContent className="p-0">
                 <FraudFlagsTable
-                  flags={filteredFlags}
-                  isLoading={isLoading}
-                  hasFilters={hasFilters}
-                  resetFilters={resetFilters}
-                  onAction={handleAction}
+                  flags={_filteredFlags}
+                  isLoading={_isLoading}
+                  hasFilters={_hasFilters}
+                  resetFilters={_resetFilters}
+                  onAction={_handleAction}
                 />
               </CardContent>
             </Card>

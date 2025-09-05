@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function ZGPLibraryPage() {
-  return (
+export default function ZGPLibraryPage() {_return (
     <>
       <Head>
         <title>ZGP Library - Zion Tech Group</title>
@@ -18,5 +17,4 @@ export default function ZGPLibraryPage() {
         </div>
       </div>
     </>
-  );
-}
+  );}

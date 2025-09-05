@@ -1,4 +1,3 @@
 // Type definitions for product;
-interface product {;
-  // TODO: Add proper type definitions;
-};
+interface product {_;
+  // TODO: Add proper type definitions;};

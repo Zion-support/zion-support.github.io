@@ -1,10 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getUserFromCookies } from '../auth-utils';
+import type {_NextApiRequest, _NextApiResponse} from 'next';
 
-export function requireSuperadminApi(req: NextApiRequest, res: NextApiResponse): boolean {
-  const user = getUserFromCookies(req.headers.cookie);
+export function requireSuperadminApi(_req: NextApiRequest, _res: NextApiResponse): boolean {_const _user = getUserFromCookies(req.headers.cookie);
   if (!user || user.role !== 'superadmin' || !user.twofaVerified) {
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status(401).json({ error: 'Unauthorized'});
     return false;
   }
   return true;

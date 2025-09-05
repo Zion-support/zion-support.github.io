@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const BlockchainTechnologyInModernBusinessSolutionsChat = () => {
-  return (
+const _BlockchainTechnologyInModernBusinessSolutionsChat = () => {_return (
     <div>
       <Head>
         <title>BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const BlockchainTechnologyInModernBusinessSolutionsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default BlockchainTechnologyInModernBusinessSolutionsChat;

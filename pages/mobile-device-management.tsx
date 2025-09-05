@@ -2,25 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
 
-export default function MDMPage() {
-  const features = [
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)',
-    'Device posture checks, compliance policies, and remediation',
-    'App management, OS updates, remote lock/wipe, geofencing',
-    'Identity integration (SAML/SCIM) and conditional access',
-    'Kiosk/COPE/COBO support with granular restrictions'];
+export default function MDMPage() {_const _features = [
+    'Zero-touch enrollment (Apple DEP/ABM, _Android Zero-Touch)', _'Device posture checks, _compliance policies, _and remediation', _'App management, _OS updates, _remote lock/wipe, _geofencing', _'Identity integration (SAML/SCIM) and conditional access', _'Kiosk/COPE/COBO support with granular restrictions'];
 
-  const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
+  const _pricing = [
+    { tier: 'SMB (up to 100 devices)', _range: '$300–$1, _000/month', _note: 'Based on device count and features'},
+    {_tier: 'Mid-market (100–1, _000 devices)', _range: '$1, _000–$7, _000/month', _note: 'Advanced policies, _integrations, _support'},
+    {_tier: 'Enterprise (1, _000+ devices)', _range: 'Custom', _note: 'SLA, _multi-tenant, _dedicated support'}];
 
-  const references = [
-    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
-    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
-    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }];
+  const _references = [
+    {_name: 'Microsoft Intune pricing', _url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing'},
+    {_name: 'Jamf pricing', _url: 'https://www.jamf.com/pricing/'},
+    {_name: 'VMware Workspace ONE pricing', _url: 'https://www.vmware.com/products/workspace-one/pricing.html'}];
 
   return (
     <Layout>
@@ -46,10 +40,10 @@ export default function MDMPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
+              {_features.map(_(f) => (
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
-                  <span className="text-gray-200">{f}</span>
+                  <span className="text-gray-200">{_f}</span>
                 </div>
               ))}
             </div>
@@ -58,11 +52,11 @@ export default function MDMPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {pricing.map((p) => (
+              {_pricing.map(_(p) => (
                 <div key={p.tier} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="text-gray-400 text-sm mb-1">{p.tier}</div>
-                  <div className="text-2xl font-bold text-white">{p.range}</div>
-                  <div className="text-sm text-gray-400 mt-2">{p.note}</div>
+                  <div className="text-gray-400 text-sm mb-1">{_p.tier}</div>
+                  <div className="text-2xl font-bold text-white">{_p.range}</div>
+                  <div className="text-sm text-gray-400 mt-2">{_p.note}</div>
                 </div>
               ))}
             </div>
@@ -72,10 +66,10 @@ export default function MDMPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Vendor References</h2>
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              {references.map((r) => (
-                <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
+              {_references.map(_(r) => (
+                <a key={r.name} href={_r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
                   <ExternalLink className="w-4 h-4" />
-                  <span>{r.name}</span>
+                  <span>{_r.name}</span>
                 </a>
               ))}
             </div>

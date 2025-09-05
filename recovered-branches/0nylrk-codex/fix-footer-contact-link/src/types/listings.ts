@@ -1,13 +1,10 @@
 
-export interface ListingCategory {
-  id: string;
+export interface ListingCategory {_id: string;
   name: string;
   description: string;
-  icon: string;
-}
+  icon: string;}
 
-export interface ProductListing {
-  id: string;
+export interface ProductListing {_id: string;
   title: string;
   description: string;
   category: string;
@@ -19,8 +16,7 @@ export interface ProductListing {
     name: string;
     id: string;
     avatarUrl?: string;
-    email?: string; // Added optional email property
-  };
+    email?: string; // Added optional email property};
   images: string[];
   createdAt: string;
   rating?: number;
@@ -31,12 +27,10 @@ export interface ProductListing {
   availability?: string; // Adding availability property to fix TypeScript errors
 }
 
-export interface ListingItem {
-  id: string;
+export interface ListingItem {_id: string;
   title: string;
   category: string;
   image?: string;
-  description?: string;
-}
+  description?: string;}
 
 export type ListingView = 'grid' | 'list';

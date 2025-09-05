@@ -1,18 +1,13 @@
 
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
 
-interface ReviewsListProps {
-  reviews: Review[];
+interface ReviewsListProps {_reviews: Review[];
   isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
-}
+  onReportReview: (_reviewId: string, _reason: string) => Promise<boolean>;}
 
-export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListProps) {
-  if (isLoading) {
+export function ReviewsList(_{_reviews, _isLoading, _onReportReview}: ReviewsListProps) {_if (isLoading) {
     return (
       <div className="space-y-4">
-        {Array(3).fill(0).map((_, i) => (
+        {Array(3).fill(0).map(_(_, _i) => (
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">
             <div className="flex items-center gap-3 mb-3">
               <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -32,24 +27,21 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
     );
   }
   
-  if (reviews.length === 0) {
-    return (
+  if (reviews.length === 0) {_return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
         <p className="text-muted-foreground">
-          Once reviews are submitted and approved, they will appear here.
+          Once reviews are submitted and approved, _they will appear here.
         </p>
       </div>
-    );
-  }
+    );}
   
-  return (
-    <div className="space-y-4">
-      {reviews.map((review) => (
+  return (_<div className="space-y-4">
+      {_reviews.map((review) => (
         <ReviewCard 
           key={review.id} 
-          review={review} 
-          onReport={onReportReview} 
+          review={_review} 
+          onReport={_onReportReview} 
         />
       ))}
     </div>

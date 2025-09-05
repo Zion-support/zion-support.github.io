@@ -2,43 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { 
-  Code, 
-  Database, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Bot, 
-  BarChart3, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  ExternalLink,
-  Play,
-  BookOpen,
-  Github,
-  Terminal
-} from 'lucide-react';
+import {_Code, _Database, _Globe, _Shield, _Zap, _Bot, _BarChart3, _Lock, _ArrowRight, _CheckCircle, _Star, _ExternalLink, _Play, _BookOpen, _Github, _Terminal} from 'lucide-react';
 
-export default function ApiToolsPage() {
-  const apiTools = [
+export default function ApiToolsPage() {_const _apiTools = [
     {
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: 'CodeGen API - AI-Powered Code Generation',
-      description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
-      features: [
-        'Support for 20+ programming languages',
-        'Real-time code completion and suggestions',
-        'Custom code templates and patterns',
-        'Integration with popular IDEs',
-        'Code review and optimization suggestions'
-      ],
-      pricing: {
-        free: '100 requests/month',
-        pro: '$49/month',
-        enterprise: 'Custom'
-      },
+      icon: <Code className="w-8 h-8 text-white" />, _title: 'CodeGen API - AI-Powered Code Generation', _description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.', _features: [
+        'Support for 20+ programming languages', _'Real-time code completion and suggestions', _'Custom code templates and patterns', _'Integration with popular IDEs', _'Code review and optimization suggestions'
+      ], _pricing: {
+        free: '100 requests/month', _pro: '$49/month', _enterprise: 'Custom'},
       category: 'Development',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
@@ -50,22 +21,10 @@ export default function ApiToolsPage() {
       rating: 4.8,
       responseTime: '<100ms'
     },
-    {
-      icon: <Database className="w-8 h-8 text-white" />,
-      title: 'DataSync API - Real-time Data Synchronization',
-      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
-      features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)',
-        'Real-time change detection and propagation',
-        'Conflict resolution and data validation',
-        'Webhook support for custom integrations',
-        'Comprehensive audit logging and monitoring'
-      ],
-      pricing: {
-        free: '1,000 syncs/month',
-        pro: '$79/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Database className="w-8 h-8 text-white" />, _title: 'DataSync API - Real-time Data Synchronization', _description: 'Seamlessly sync data across multiple databases, _applications, _and cloud services in real-time.', _features: [
+        'Multi-database support (PostgreSQL, _MySQL, _MongoDB)', _'Real-time change detection and propagation', _'Conflict resolution and data validation', _'Webhook support for custom integrations', _'Comprehensive audit logging and monitoring'
+      ], _pricing: {
+        free: '1, _000 syncs/month', _pro: '$79/month', _enterprise: 'Custom'},
       category: 'Data',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
@@ -77,22 +36,10 @@ export default function ApiToolsPage() {
       rating: 4.9,
       responseTime: '<50ms'
     },
-    {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      title: 'GeoAPI - Advanced Geospatial Services',
-      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
-      features: [
-        'Global geocoding and reverse geocoding',
-        'Real-time traffic and routing optimization',
-        'Geofencing and location tracking',
-        'Map visualization and customization',
-        'Spatial data analysis and clustering'
-      ],
-      pricing: {
-        free: '10,000 requests/month',
-        pro: '$99/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Globe className="w-8 h-8 text-white" />, _title: 'GeoAPI - Advanced Geospatial Services', _description: 'Comprehensive geolocation, _mapping, _and spatial analysis APIs for location-based applications.', _features: [
+        'Global geocoding and reverse geocoding', _'Real-time traffic and routing optimization', _'Geofencing and location tracking', _'Map visualization and customization', _'Spatial data analysis and clustering'
+      ], _pricing: {
+        free: '10, _000 requests/month', _pro: '$99/month', _enterprise: 'Custom'},
       category: 'Location',
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
@@ -104,22 +51,10 @@ export default function ApiToolsPage() {
       rating: 4.7,
       responseTime: '<75ms'
     },
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'AuthGuard API - Enterprise Authentication',
-      description: 'Secure, scalable authentication and authorization system with advanced security features.',
-      features: [
-        'Multi-factor authentication (MFA)',
-        'OAuth 2.0 and OpenID Connect support',
-        'Role-based access control (RBAC)',
-        'Advanced threat detection and prevention',
-        'Compliance with SOC2, GDPR, and HIPAA'
-      ],
-      pricing: {
-        free: '1,000 users/month',
-        pro: '$149/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Shield className="w-8 h-8 text-white" />, _title: 'AuthGuard API - Enterprise Authentication', _description: 'Secure, _scalable authentication and authorization system with advanced security features.', _features: [
+        'Multi-factor authentication (MFA)', _'OAuth 2.0 and OpenID Connect support', _'Role-based access control (RBAC)', _'Advanced threat detection and prevention', _'Compliance with SOC2, _GDPR, _and HIPAA'
+      ], _pricing: {
+        free: '1, _000 users/month', _pro: '$149/month', _enterprise: 'Custom'},
       category: 'Security',
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
@@ -131,22 +66,10 @@ export default function ApiToolsPage() {
       rating: 4.9,
       responseTime: '<25ms'
     },
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'WebhookHub - Intelligent Webhook Management',
-      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
-      features: [
-        'Guaranteed webhook delivery with retry logic',
-        'Event filtering and transformation',
-        'Real-time monitoring and analytics',
-        'Custom authentication and security',
-        'Integration with popular platforms'
-      ],
-      pricing: {
-        free: '5,000 webhooks/month',
-        pro: '$39/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Zap className="w-8 h-8 text-white" />, _title: 'WebhookHub - Intelligent Webhook Management', _description: 'Reliable webhook delivery, _retry logic, _and event processing for modern applications.', _features: [
+        'Guaranteed webhook delivery with retry logic', _'Event filtering and transformation', _'Real-time monitoring and analytics', _'Custom authentication and security', _'Integration with popular platforms'
+      ], _pricing: {
+        free: '5, _000 webhooks/month', _pro: '$39/month', _enterprise: 'Custom'},
       category: 'Integration',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500',
@@ -158,22 +81,10 @@ export default function ApiToolsPage() {
       rating: 4.8,
       responseTime: '<30ms'
     },
-    {
-      icon: <Bot className="w-8 h-8 text-white" />,
-      title: 'NLP API - Natural Language Processing',
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
-      features: [
-        'Text classification and categorization',
-        'Sentiment analysis and emotion detection',
-        'Named entity recognition (NER)',
-        'Language detection and translation',
-        'Custom model training and fine-tuning'
-      ],
-      pricing: {
-        free: '5,000 requests/month',
-        pro: '$69/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Bot className="w-8 h-8 text-white" />, _title: 'NLP API - Natural Language Processing', _description: 'Advanced text analysis, _sentiment detection, _and language understanding capabilities.', _features: [
+        'Text classification and categorization', _'Sentiment analysis and emotion detection', _'Named entity recognition (NER)', _'Language detection and translation', _'Custom model training and fine-tuning'
+      ], _pricing: {
+        free: '5, _000 requests/month', _pro: '$69/month', _enterprise: 'Custom'},
       category: 'AI/ML',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
@@ -185,22 +96,10 @@ export default function ApiToolsPage() {
       rating: 4.7,
       responseTime: '<200ms'
     },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Analytics API - Business Intelligence',
-      description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
-      features: [
-        'Real-time data aggregation and analysis',
-        'Custom dashboard creation and sharing',
-        'Advanced filtering and segmentation',
-        'Export capabilities (CSV, JSON, PDF)',
-        'Scheduled reports and alerts'
-      ],
-      pricing: {
-        free: '10,000 events/month',
-        pro: '$89/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <BarChart3 className="w-8 h-8 text-white" />, _title: 'Analytics API - Business Intelligence', _description: 'Comprehensive analytics and reporting APIs for data-driven decision making.', _features: [
+        'Real-time data aggregation and analysis', _'Custom dashboard creation and sharing', _'Advanced filtering and segmentation', _'Export capabilities (CSV, _JSON, _PDF)', _'Scheduled reports and alerts'
+      ], _pricing: {
+        free: '10, _000 events/month', _pro: '$89/month', _enterprise: 'Custom'},
       category: 'Analytics',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500',
@@ -212,22 +111,10 @@ export default function ApiToolsPage() {
       rating: 4.8,
       responseTime: '<150ms'
     },
-    {
-      icon: <Lock className="w-8 h-8 text-white" />,
-      title: 'EncryptAPI - Data Encryption Services',
-      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
-      features: [
-        'AES-256 encryption and decryption',
-        'Secure key management and rotation',
-        'Digital signatures and certificates',
-        'Compliance with FIPS 140-2 standards',
-        'Hardware security module (HSM) support'
-      ],
-      pricing: {
-        free: '1,000 operations/month',
-        pro: '$119/month',
-        enterprise: 'Custom'
-      },
+    {_icon: <Lock className="w-8 h-8 text-white" />, _title: 'EncryptAPI - Data Encryption Services', _description: 'Enterprise-grade encryption, _hashing, _and cryptographic operations for secure applications.', _features: [
+        'AES-256 encryption and decryption', _'Secure key management and rotation', _'Digital signatures and certificates', _'Compliance with FIPS 140-2 standards', _'Hardware security module (HSM) support'
+      ], _pricing: {
+        free: '1, _000 operations/month', _pro: '$119/month', _enterprise: 'Custom'},
       category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
@@ -241,10 +128,10 @@ export default function ApiToolsPage() {
     }
   ];
 
-  const categories = ['All', 'Development', 'Data', 'Location', 'Security', 'Integration', 'AI/ML', 'Analytics'];
+  const _categories = ['All', 'Development', 'Data', 'Location', 'Security', 'Integration', 'AI/ML', 'Analytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-  const filteredTools = selectedCategory === 'All' 
+  const _filteredTools = selectedCategory === 'All' 
     ? apiTools 
     : apiTools.filter(tool => tool.category === selectedCategory);
 
@@ -258,7 +145,7 @@ export default function ApiToolsPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
@@ -276,97 +163,95 @@ export default function ApiToolsPage() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {categories.map((category) => (
-              <button
+            {_categories.map(_(category) => (_<button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                onClick={_() => setSelectedCategory(category)}
+                className={_`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-indigo-600 text-white shadow-lg'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'}`}
               >
-                {category}
+                {_category}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* API Tools Grid */}
+      {_/* API Tools Grid */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-              {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
+              {_selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
+              {_filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredTools.map((tool, index) => (
+            {_filteredTools.map(_(tool, _index) => (
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {tool.icon}
+                    <div className={_`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {_tool.icon}
                     </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                    <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                        {tool.title}
+                        {_tool.title}
                       </h3>
                       <div className="flex items-center space-x-2">
                         <div className="flex items-center text-yellow-400">
                           <Star className="w-4 h-4 fill-current" />
-                          <span className="ml-1 text-sm font-medium">{tool.rating}</span>
+                          <span className="ml-1 text-sm font-medium">{_tool.rating}</span>
                         </div>
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
-                          {tool.status}
+                          {_tool.status}
                         </span>
                       </div>
                     </div>
                     
                     <p className="text-gray-400 leading-relaxed mb-6">
-                      {tool.description}
+                      {_tool.description}
                     </p>
                     
                     <div className="grid grid-cols-3 gap-4 mb-6">
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
+                        <div className="text-lg font-bold text-indigo-400">{_tool.users}</div>
                         <div className="text-xs text-gray-500">Users</div>
                       </div>
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
+                        <div className="text-lg font-bold text-green-400">{_tool.responseTime}</div>
                         <div className="text-xs text-gray-500">Response</div>
                       </div>
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">
                         <div className="text-sm font-medium text-gray-300">Starting at</div>
-                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
+                        <div className="text-lg font-bold text-green-400">{_tool.pricing.free}</div>
                       </div>
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
+                      {_tool.features.slice(0, _3).map(_(feature, _featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          {_feature}
                         </li>
                       ))}
                     </ul>
 
                     <div className="flex flex-wrap gap-3">
                       <Button
-                        href={tool.website}
+                        href={_tool.website}
                         variant="primary"
                         size="sm"
                         className="bg-indigo-600 hover:bg-indigo-700"
@@ -375,7 +260,7 @@ export default function ApiToolsPage() {
                         Visit API
                       </Button>
                       <Button
-                        href={tool.docs}
+                        href={_tool.docs}
                         variant="outline"
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
@@ -384,7 +269,7 @@ export default function ApiToolsPage() {
                         Documentation
                       </Button>
                       <Button
-                        href={tool.github}
+                        href={_tool.github}
                         variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
@@ -401,7 +286,7 @@ export default function ApiToolsPage() {
         </div>
       </section>
 
-      {/* Developer Resources */}
+      {_/* Developer Resources */}
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -459,7 +344,7 @@ export default function ApiToolsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

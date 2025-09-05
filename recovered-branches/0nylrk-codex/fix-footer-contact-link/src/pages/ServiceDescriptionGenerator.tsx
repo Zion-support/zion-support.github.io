@@ -1,37 +1,24 @@
 
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import React, {_useState} from "react";
 
-export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
+export default function ServiceDescriptionGenerator() {_const { isAuthenticated, _isLoading} = useAuth();
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
   
   // Show loading while checking authentication
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
       </div>
-    );
-  }
+    );}
   
   // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
+  if (!isAuthenticated) {_return <Navigate to="/login" state={{ from: '/service-description-generator'}} replace />;
   }
 
-  const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription);
-    // Here you could also save to database if needed
-  };
+  const _handleDescriptionSave = (_editedDescription: string) => {_setGeneratedDescription(editedDescription);
+    // Here you could also save to database if needed};
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -49,12 +36,12 @@ export default function ServiceDescriptionGenerator() {
           </p>
           
           <div className="space-y-8">
-            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
+            <ServiceDescriptionForm onDescriptionGenerated={_setGeneratedDescription} />
             
-            {generatedDescription && (
+            {_generatedDescription && (
               <GeneratedDescriptionDisplay 
                 description={generatedDescription}
-                onSave={handleDescriptionSave}
+                onSave={_handleDescriptionSave}
               />
             )}
           </div>

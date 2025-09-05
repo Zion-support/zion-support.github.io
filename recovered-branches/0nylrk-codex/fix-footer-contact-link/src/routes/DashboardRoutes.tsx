@@ -1,7 +1,4 @@
 
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -22,177 +19,134 @@ import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 
-const DashboardRoutes = () => {
-  return (
+const _DashboardRoutes = () => {_return (
     <Routes>
       {/* Dashboard Routes */}
       <Route 
         path="/dashboard" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Dashboard />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/client-dashboard" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ClientDashboard />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/talent-dashboard" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <TalentDashboard />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route 
         path="/creator-dashboard" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <CreatorDashboard />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/analytics" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Analytics />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/project/:id/milestones" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ProjectMilestones />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route
         path="/project/:id"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ProjectDetails />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route
         path="/project/:id/room"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ProjectRoom />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route
         path="/messages"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <MessagingInbox />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/inbox" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <MessagingInbox />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/payments" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Payments />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/interviews" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Interviews />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/notifications" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Notifications />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/applications/track" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ApplicationStatusTracker />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/hiring-tracker" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <HiringTracker />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/portfolio-builder" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <PortfolioBuilder />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/referrals" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Referrals />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route
         path="/developers"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <DeveloperPortal />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route
         path="/wallet"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <WalletPage />
-          </ProtectedRoute>
-        }
+          </ProtectedRoute>}
       />
       <Route
         path="/dashboard/api-access"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <DeveloperPortal />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route
         path="/contract-builder"
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ContractBuilder />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
     </Routes>
   );

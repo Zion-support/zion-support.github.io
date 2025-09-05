@@ -1,169 +1,100 @@
 
-import React, { useState } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
+import React, {_useState} from 'react';
+import {_Dialog, _DialogContent, _DialogDescription, _DialogHeader, _DialogTitle} from "@/components/ui/dialog";
 
-export interface HireConfirmationModalProps {
-  isOpen: boolean;
+export interface HireConfirmationModalProps {_isOpen: boolean;
   onClose: () => void;
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void;
-  isSubmitting?: boolean;
-}
+  isSubmitting?: boolean;}
 
-export function HireConfirmationModal({ 
-  isOpen, 
-  onClose, 
-  candidateData, 
-  application,
-  onConfirm,
-  isSubmitting = false
-}: HireConfirmationModalProps) {
-  const [projectName, setProjectName] = useState('');
-  const [projectDescription, setProjectDescription] = useState('');
-  const [updateAvailability, setUpdateAvailability] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
-  const { user } = useAuth();
+export function HireConfirmationModal(_{_isOpen, _onClose, _candidateData, _application, _onConfirm, _isSubmitting = false}: HireConfirmationModalProps) {_const [projectName, _setProjectName] = useState('');
+  const [projectDescription, _setProjectDescription] = useState('');
+  const [updateAvailability, _setUpdateAvailability] = useState(true);
+  const [isLoading, _setIsLoading] = useState(false);
+  const { user} = useAuth();
 
   // Get talent information from either candidateData or application
-  const talentData = candidateData || (application?.talent_profile as TalentProfile);
+  const _talentData = candidateData || (application?.talent_profile as TalentProfile);
 
-  const handleHireCandidate = async () => {
-    if (!projectName || !projectDescription) {
+  const _handleHireCandidate = async () => {_if (!projectName || !projectDescription) {
       toast({
-        title: 'Required fields missing',
-        description: 'Please fill in both project name and description.',
-        variant: 'destructive'});
+        title: 'Required fields missing', _description: 'Please fill in both project name and description.', _variant: 'destructive'});
       return;
     }
 
-    if (!user) {
-      toast({
-        title: 'Not authenticated',
-        description: 'You must be logged in to hire a candidate.',
-        variant: 'destructive'});
+    if (!user) {_toast({
+        title: 'Not authenticated', _description: 'You must be logged in to hire a candidate.', _variant: 'destructive'});
       return;
     }
 
-    if (!talentData) {
-      toast({
-        title: 'Missing talent data',
-        description: 'Talent information is missing.',
-        variant: 'destructive'});
+    if (!talentData) {_toast({
+        title: 'Missing talent data', _description: 'Talent information is missing.', _variant: 'destructive'});
       return;
     }
 
     setIsLoading(true);
 
     // Create a new project
-    try {
-      const { data: projectData, error: projectError } = await supabase
+    try {_const { data: projectData, _error: projectError} = await supabase
         .from('projects')
         .insert([
-          {
-            client_id: user.id,
-            talent_id: talentData.user_id,
-            job_id: application?.job_id || null,
-            title: projectName,
-            description: projectDescription,
-            status: 'active',
-            payment_terms: 'hourly'}])
+          {_client_id: user.id, _talent_id: talentData.user_id, _job_id: application?.job_id || null, _title: projectName, _description: projectDescription, _status: 'active', _payment_terms: 'hourly'}])
         .select()
         .single();
 
-      if (projectError) {
-        toast({
-          title: 'Error creating project',
-          description: projectError.message,
-          variant: 'destructive'});
+      if (projectError) {_toast({
+          title: 'Error creating project', _description: projectError.message, _variant: 'destructive'});
         setIsLoading(false);
         return;
       }
 
       // Create a new hiring record
-      const { error: hiringError } = await supabase
+      const {_error: hiringError} = await supabase
         .from('hiring_records')
         .insert([
-          {
-            client_id: user.id,
-            talent_id: talentData.user_id,
-            project_id: projectData.id,
-            hire_date: new Date().toISOString(),
-            status: 'active'}]);
+          {_client_id: user.id, _talent_id: talentData.user_id, _project_id: projectData.id, _hire_date: new Date().toISOString(), _status: 'active'}]);
 
-      if (hiringError) {
-        toast({
-          title: 'Error creating hiring record',
-          description: hiringError.message,
-          variant: 'destructive'});
+      if (hiringError) {_toast({
+          title: 'Error creating hiring record', _description: hiringError.message, _variant: 'destructive'});
         setIsLoading(false);
         return;
       }
 
       // Update the availability status
-      if (updateAvailability) {
-        try {
-          const { error: availabilityError } = await supabase
+      if (updateAvailability) {_try {
+          const { error: availabilityError} = await supabase
             .from('talent_profiles')
-            .update({ availability_type: 'unavailable' })
+            .update({_availability_type: 'unavailable'})
             .eq('id', talentData.id);
 
-          if (availabilityError) {
-            toast({
-              title: 'Error updating availability',
-              description: availabilityError.message,
-              variant: 'destructive'});
+          if (availabilityError) {_toast({
+              title: 'Error updating availability', _description: availabilityError.message, _variant: 'destructive'});
             setIsLoading(false);
             return;
           }
-        } catch (error) {
-          console.error('Error updating availability:', error);
-          toast({
-            title: 'Error updating availability',
-            description: 'Failed to update candidate availability status.',
-            variant: 'destructive'});
+        } catch (error) {_toast({
+            title: 'Error updating availability', _description: 'Failed to update candidate availability status.', _variant: 'destructive'});
           setIsLoading(false);
           return;
         }
       }
 
-      toast({
-        title: 'Candidate hired successfully',
-        description: `${talentData.full_name} has been hired for the project.`});
+      toast({_title: 'Candidate hired successfully', _description: `${talentData.full_name} has been hired for the project.`});
       onConfirm();
       onClose();
-    } catch (error) {
-      console.error('Error hiring candidate:', error);
-      toast({
-        title: 'Error hiring candidate',
-        description: 'Failed to hire candidate. Please try again.',
-        variant: 'destructive'});
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (error) {_toast({
+        title: 'Error hiring candidate', _description: 'Failed to hire candidate. Please try again.', _variant: 'destructive'});
+    } finally {_setIsLoading(false);}
   };
 
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+  return (_<Dialog open={_isOpen} onOpenChange={_onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Confirm Hire</DialogTitle>
           <DialogDescription>
-            Confirm that you want to hire {talentData?.full_name || "this candidate"} for a new project.
+            Confirm that you want to hire {_talentData?.full_name || "this candidate"} for a new project.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -173,8 +104,8 @@ export function HireConfirmationModal({
             </Label>
             <Input
               id="projectName"
-              value={projectName}
-              onChange={(e) => setProjectName(e.target.value)}
+              value={_projectName}
+              onChange={_(e) => setProjectName(e.target.value)}
               className="col-span-3"
             />
           </div>
@@ -184,8 +115,8 @@ export function HireConfirmationModal({
             </Label>
             <Textarea
               id="projectDescription"
-              value={projectDescription}
-              onChange={(e) => setProjectDescription(e.target.value)}
+              value={_projectDescription}
+              onChange={_(_e) => setProjectDescription(e.target.value)}
               className="col-span-3"
             />
           </div>
@@ -194,8 +125,8 @@ export function HireConfirmationModal({
               type="checkbox"
               id="updateAvailability"
               className="h-4 w-4"
-              checked={updateAvailability}
-              onChange={(e) => setUpdateAvailability(e.target.checked)}
+              checked={_updateAvailability}
+              onChange={_(_e) => setUpdateAvailability(e.target.checked)}
             />
             <label
               htmlFor="updateAvailability"
@@ -206,11 +137,11 @@ export function HireConfirmationModal({
           </div>
         </div>
         <div className="flex justify-end gap-2">
-          <Button type="button" variant="secondary" onClick={onClose}>
+          <Button type="button" variant="secondary" onClick={_onClose}>
             Cancel
           </Button>
-          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>
-            {isLoading ? "Hiring..." : "Confirm Hire"}
+          <Button type="button" onClick={_handleHireCandidate} disabled={_isSubmitting || isLoading}>
+            {_isLoading ? "Hiring..." : "Confirm Hire"}
           </Button>
         </div>
       </DialogContent>

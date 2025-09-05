@@ -1,18 +1,8 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function SearchFeature() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Advanced Search",
-    "description": "Quickly locate products, services and talent using intelligent search filters.",
-    "url": "https://app.ziontechgroup.com/features/search"
-  };
+export default function SearchFeature() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "Advanced Search", _"description": "Quickly locate products, _services and talent using intelligent search filters.", _"url": "https://app.ziontechgroup.com/features/search"};
 
   return (
     <>
@@ -22,10 +12,10 @@ export default function SearchFeature() {
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

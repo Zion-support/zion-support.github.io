@@ -1,8 +1,5 @@
-export const SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN;
+export const _SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN;
 
-export function captureException(error: unknown) {
-  if (typeof console !== 'undefined') {
-    console.error('Sentry captured exception:', error);
-  }
+export function captureException(_error: unknown) {_if (typeof console !== 'undefined') {}
   // Here you would send the error to Sentry using the DSN
 }

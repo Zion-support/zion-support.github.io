@@ -1,16 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-export default function NeoFuturisticFooter() {
-  return (
+export default function NeoFuturisticFooter() {_return (
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
@@ -20,7 +12,7 @@ export default function NeoFuturisticFooter() {
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <motion.h3 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+            <motion.h3 initial={{ opacity: 0, _y: 8}} animate={_{ opacity: 1, _y: 0}} transition={_{ duration: 0.5}} className="text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
               Zion Tech Group
             </motion.h3>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -30,10 +22,10 @@ export default function NeoFuturisticFooter() {
 
           <div className="space-y-2 text-sm">
             <div className="font-semibold text-slate-100 mb-2">Contact</div>
-            <div className="flex items-center gap-2 text-cyan-300"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-            <div className="flex items-center gap-2 text-purple-300"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
-            <div className="flex items-center gap-2 text-emerald-300"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
-            <div className="flex items-center gap-2 text-sky-300"><Globe className="w-4 h-4" /><a href={contactInfo.website} className="hover:underline">ziontechgroup.com</a></div>
+            <div className="flex items-center gap-2 text-cyan-300"><Phone className="w-4 h-4" /><a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`} className="hover:underline">{_contactInfo.mobile}</a></div>
+            <div className="flex items-center gap-2 text-purple-300"><Mail className="w-4 h-4" /><a href={_`mailto:${contactInfo.email}`} className="hover:underline">{_contactInfo.email}</a></div>
+            <div className="flex items-center gap-2 text-emerald-300"><MapPin className="w-4 h-4" /><a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{_contactInfo.address}</a></div>
+            <div className="flex items-center gap-2 text-sky-300"><Globe className="w-4 h-4" /><a href={_contactInfo.website} className="hover:underline">ziontechgroup.com</a></div>
           </div>
 
           <div className="space-y-2 text-sm">
@@ -49,7 +41,7 @@ export default function NeoFuturisticFooter() {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
-          <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          <div className="text-xs text-slate-500">© {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover:text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>

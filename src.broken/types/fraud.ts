@@ -1,4 +1,3 @@
 // Type definitions for fraud;
-interface fraud {;
-  // TODO: Add proper type definitions;
-};
+interface fraud {_;
+  // TODO: Add proper type definitions;};

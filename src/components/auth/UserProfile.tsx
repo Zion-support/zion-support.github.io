@@ -1,27 +1,18 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { supabase } from '@/utils/supabase/client'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { User, LogOut, LogIn } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js'
+import React, {_useEffect, _useState} from 'react'
+import type {_User as SupabaseUser, _AuthChangeEvent, _Session} from '@supabase/supabase-js'
 
-interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void
-}
+interface UserProfileProps {_onUserChange?: (_user: SupabaseUser | null) => void}
 
-export default function UserProfile({ onUserChange }: UserProfileProps) {
-  const [user, setUser] = useState<SupabaseUser | null>(null)
-  const [loading, setLoading] = useState(true)
-  const router = useRouter()
+export default function UserProfile(_{_onUserChange}: UserProfileProps) {_const [user, _setUser] = useState<SupabaseUser | null>(null)
+  const [loading, _setLoading] = useState(true)
+  const _router = useRouter()
 
-  useEffect(() => {
+  useEffect__(() => {
     // Get initial session
-    const getInitialSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
+    const _getInitialSession = async () => {
+      const { data: { session} } = await supabase.auth.getSession()
       setUser(session?.user ?? null)
       setLoading(false)
       onUserChange?.(session?.user ?? null)
@@ -30,27 +21,19 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     getInitialSession()
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event: AuthChangeEvent, session: Session | null) => {
-        setUser(session?.user ?? null)
+    const {_data: { subscription} } = supabase.auth.onAuthStateChange(_(event: AuthChangeEvent, _session: Session | null) => {_setUser(session?.user ?? null)
         setLoading(false)
-        onUserChange?.(session?.user ?? null)
-      }
+        onUserChange?.(session?.user ?? null)}
     )
 
     return () => subscription.unsubscribe()
   }, [onUserChange])
 
-  const handleSignOut = async () => {
-    await supabase.auth.signOut()
-  }
+  const _handleSignOut = async () => {_await supabase.auth.signOut()}
 
-  const handleSignIn = () => {
-    router.push('/auth/login')
-  }
+  const _handleSignIn = () => {_router.push('/auth/login')}
 
-  if (loading) {
-    return (
+  if (loading) {_return (
       <Card className="w-full max-w-sm">
         <CardContent className="p-6">
           <div className="animate-pulse space-y-4">
@@ -59,11 +42,9 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
           </div>
         </CardContent>
       </Card>
-    )
-  }
+    )}
 
-  if (!user) {
-    return (
+  if (!user) {_return (
       <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -93,23 +74,23 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium">Email:</span>
-            <span className="text-sm">{user.email}</span>
+            <span className="text-sm">{_user.email}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium">Status:</span>
-            <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
-              {user.email_confirmed_at ? "Verified" : "Unverified"}
+            <Badge variant={_user.email_confirmed_at ? "default" : "secondary"}>
+              {_user.email_confirmed_at ? "Verified" : "Unverified"}
             </Badge>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium">Joined:</span>
             <span className="text-sm">
-              {new Date(user.created_at).toLocaleDateString()}
+              {_new Date(user.created_at).toLocaleDateString()}
             </span>
           </div>
         </div>
         
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
+        <Button onClick={_handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
           Sign Out
         </Button>

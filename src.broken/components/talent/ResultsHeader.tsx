@@ -1,9 +1,7 @@
 import React from 'react';
-export function ResultsHeader() {
-  return (
+export function ResultsHeader() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder - needs implementation</p>;
     </div>
-  );
-}
+  );}

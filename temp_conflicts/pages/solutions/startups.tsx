@@ -1,82 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Globe, Cpu, Database, Star, Lightbulb, Clock, DollarSign
-} from 'lucide-react';
+import {_Rocket, _ArrowRight, _CheckCircle, _Zap, _Target, _Users, _TrendingUp, _Globe, _Cpu, _Database, _Star, _Lightbulb, _Clock, _DollarSign} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function StartupToolsPage() {
-  const tools = [
+export default function StartupToolsPage() {_const _tools = [
     {
-      title: "Rapid Prototyping Platform",
-      description: "Fast-track your MVP development with our rapid prototyping tools",
-      features: [
-        "Quick setup",
-        "Template library",
-        "Real-time collaboration",
-        "Instant deployment"
-      ],
-      price: "$99/month",
-      icon: Lightbulb
-    },
-    {
-      title: "Startup AI Suite",
-      description: "AI-powered tools designed specifically for startup growth",
-      features: [
-        "Customer insights",
-        "Market analysis",
-        "Growth optimization",
-        "Automated marketing"
-      ],
-      price: "$199/month",
-      icon: Cpu
-    },
-    {
-      title: "Startup DevOps",
-      description: "Streamlined DevOps solutions for growing startups",
-      features: [
-        "Automated deployment",
-        "Monitoring tools",
-        "Cost optimization",
-        "Scalable infrastructure"
-      ],
-      price: "$149/month",
-      icon: Database
-    }
+      title: "Rapid Prototyping Platform", _description: "Fast-track your MVP development with our rapid prototyping tools", _features: [
+        "Quick setup", _"Template library", _"Real-time collaboration", _"Instant deployment"
+      ], _price: "$99/month", _icon: Lightbulb},
+    {_title: "Startup AI Suite", _description: "AI-powered tools designed specifically for startup growth", _features: [
+        "Customer insights", _"Market analysis", _"Growth optimization", _"Automated marketing"
+      ], _price: "$199/month", _icon: Cpu},
+    {_title: "Startup DevOps", _description: "Streamlined DevOps solutions for growing startups", _features: [
+        "Automated deployment", _"Monitoring tools", _"Cost optimization", _"Scalable infrastructure"
+      ], _price: "$149/month", _icon: Database}
   ];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: "Fast Time-to-Market",
-      description: "Get your product to market quickly with our streamlined tools"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost-Effective",
-      description: "Startup-friendly pricing that grows with your business"
-    },
-    {
-      icon: Users,
-      title: "Startup Community",
-      description: "Access to our network of startup founders and investors"
-    },
-    {
-      icon: Star,
-      title: "Proven Success",
-      description: "Tools that have helped hundreds of startups succeed"
-    }
+  const _benefits = [
+    {_icon: Zap, _title: "Fast Time-to-Market", _description: "Get your product to market quickly with our streamlined tools"},
+    {_icon: DollarSign, _title: "Cost-Effective", _description: "Startup-friendly pricing that grows with your business"},
+    {_icon: Users, _title: "Startup Community", _description: "Access to our network of startup founders and investors"},
+    {_icon: Star, _title: "Proven Success", _description: "Tools that have helped hundreds of startups succeed"}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Startup Tools - Zion Tech Group</title>
-        <meta name="description" content="Innovative tools and platforms designed specifically for growing startups. Rapid prototyping, AI solutions, and DevOps automation." />
-        <meta name="keywords" content="startup tools, rapid prototyping, startup AI, startup DevOps, Zion Tech Group" />
+        <meta name="description" content="Innovative tools and platforms designed specifically for growing startups. Rapid prototyping, _AI solutions, _and DevOps automation." />
+        <meta name="keywords" content="startup tools, _rapid prototyping, _startup AI, _startup DevOps, _Zion Tech Group" />
         <meta property="og:title" content="Startup Tools - Zion Tech Group" />
         <meta property="og:description" content="Innovative tools designed specifically for growing startups." />
         <meta property="og:type" content="website" />
@@ -86,13 +38,13 @@ export default function StartupToolsPage() {
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 p-5 mx-auto mb-8">
               <Rocket className="w-10 h-10 text-white" />
@@ -102,12 +54,12 @@ export default function StartupToolsPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
               Innovative tools and platforms designed specifically for growing startups. 
-              From rapid prototyping to AI-powered growth, we help startups succeed.
+              From rapid prototyping to AI-powered growth, _we help startups succeed.
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={_{ scale: 1.05}}
+              whileTap={_{ scale: 0.95}}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Building</span>
@@ -117,14 +69,14 @@ export default function StartupToolsPage() {
         </div>
       </section>
 
-      {/* Tools Section */}
+      {_/* Tools Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
@@ -136,13 +88,12 @@ export default function StartupToolsPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tools.map((tool, index) => (
-              <motion.div
+            {_tools.map((tool, _index) => (_<motion.div
                 key={tool.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-purple-400/30 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-purple-500/0 via-pink-400/10 to-purple-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />
@@ -151,24 +102,24 @@ export default function StartupToolsPage() {
                   <tool.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{tool.title}</h3>
-                <p className="text-white/70 mb-6">{tool.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{_tool.title}</h3>
+                <p className="text-white/70 mb-6">{_tool.description}</p>
                 
                 <ul className="space-y-3 mb-6">
-                  {tool.features.map((feature, featureIndex) => (
+                  {_tool.features.map((feature, _featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                      <span className="text-white/80">{feature}</span>
+                      <span className="text-white/80">{_feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <div className="text-2xl font-bold text-purple-400 mb-4">{tool.price}</div>
+                <div className="text-2xl font-bold text-purple-400 mb-4">{_tool.price}</div>
                 
                 <motion.a
                   href="mailto:kleber@ziontechgroup.com"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={_{ scale: 1.02}}
+                  whileTap={_{ scale: 0.98}}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300"
                 >
                   Get Started
@@ -179,14 +130,14 @@ export default function StartupToolsPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {_/* Benefits Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
@@ -198,21 +149,21 @@ export default function StartupToolsPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {_benefits.map(_(benefit, _index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _x: index % 2 === 0 ? -30 : 30}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10"
               >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-4 flex-shrink-0">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-white/70">{benefit.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{_benefit.title}</h3>
+                  <p className="text-white/70">{_benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -220,14 +171,14 @@ export default function StartupToolsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent">
               Ready to Accelerate Your Startup?
@@ -237,8 +188,8 @@ export default function StartupToolsPage() {
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={_{ scale: 1.05}}
+              whileTap={_{ scale: 0.95}}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Your Journey</span>

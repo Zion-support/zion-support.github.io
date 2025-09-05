@@ -1,7 +1,5 @@
 import dynamic from 'next/dynamic';
 
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
+const _ApiDocsPage = dynamic__(() => import('../../components/docs/ApiDocsPage'), {_ssr: false});
 
-export default function ZionStackApiRoute() {
-  return <ApiDocsPage />;
-}
+export default function ZionStackApiRoute() {_return <ApiDocsPage />;}

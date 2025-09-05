@@ -1,32 +1,18 @@
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link";
 
-export default function GreenIT() {
-  const greenITSolutions = [
+export default function GreenIT() {_const _greenITSolutions = [
     {
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
+      title: "Energy-Efficient Hardware", _description: "Modern processors, _storage solutions, _and networking equipment delivering significant performance improvements while consuming less power.", _icon: Server},
+    {_title: "Optimized Cooling Systems", _description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.", _icon: Cloud},
+    {_title: "Renewable Energy Integration", _description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.", _icon: Leaf}
   ];
 
-  return (
-    <>
+  return (_<>
       <SEO
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
-        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+        keywords="green IT, _sustainable technology, _eco-friendly computing, _energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -44,12 +30,12 @@ export default function GreenIT() {
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    As AI and cloud computing demand grows exponentially, _so does the environmental impact of data centers. 
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
                     while maintaining performance and reliability.
                   </p>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    From energy-efficient hardware to renewable energy integration, _we offer comprehensive solutions 
                     for reducing your carbon footprint.
                   </p>
                   <div className="mt-8">
@@ -72,13 +58,13 @@ export default function GreenIT() {
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {greenITSolutions.map((solution, index) => (
+                {_greenITSolutions.map((solution, _index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />
                     </div>
-                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
-                    <p className="text-zion-slate-light text-center">{solution.description}</p>
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{_solution.title}</h3>
+                    <p className="text-zion-slate-light text-center">{_solution.description}</p>
                   </div>
                 ))}
               </div>

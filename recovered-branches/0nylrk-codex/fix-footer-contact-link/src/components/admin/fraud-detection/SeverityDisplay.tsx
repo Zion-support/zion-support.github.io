@@ -1,17 +1,13 @@
 
 import React from "react";
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
 
-interface SeverityDisplayProps {
-  severity: string;
-}
+interface SeverityDisplayProps {_severity: string;}
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = (_{_severity}) => {_return (
     <SeverityIndicator 
       severity={severity as "safe" | "suspicious" | "dangerous"} 
-      showIcon={true}
-      showText={true}
+      showIcon={_true}
+      showText={_true}
     />
   );
 };

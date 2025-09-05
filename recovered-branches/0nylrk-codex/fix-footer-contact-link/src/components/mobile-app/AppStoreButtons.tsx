@@ -1,45 +1,31 @@
 
 import React from "react";
-import { Apple, GithubIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
 
-interface AppStoreButtonsProps {
-  className?: string;
+interface AppStoreButtonsProps {_className?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
-  onGooglePlayClick?: () => void;
-}
+  onGooglePlayClick?: () => void;}
 
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className, 
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
-  onAppStoreClick,
-  onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = (_{_className, _appStoreUrl = "#", _googlePlayUrl = "#", _onAppStoreClick, _onGooglePlayClick}) => {_const _handleAppStoreClick = (_e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault();
-      console.log("App Store download clicked");
-      onAppStoreClick?.();
-    }
+      
+      onAppStoreClick?.();}
   };
 
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl || googlePlayUrl === "#") {
+  const _handleGooglePlayClick = (_e: React.MouseEvent<HTMLAnchorElement>) => {_if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault();
-      console.log("Google Play download clicked");
-      onGooglePlayClick?.();
-    }
+      
+      onGooglePlayClick?.();}
   };
 
   return (
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
+    <div className={_cn("flex flex-col sm:flex-row gap-4", _className)}>
       <a 
-        href={appStoreUrl} 
+        href={_appStoreUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleAppStoreClick}
+        onClick={_handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -51,9 +37,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
 
       <a 
-        href={googlePlayUrl} 
+        href={_googlePlayUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleGooglePlayClick}
+        onClick={_handleGooglePlayClick}
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -1,40 +1,15 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
-export function TalentPool() {
-  // Mock talent data
-  const talents = [
+export function TalentPool() {_// Mock talent data
+  const _talents = [
     {
-      id: "talent-1",
-      name: "Jessica Lee",
-      role: "UI/UX Designer",
-      skills: ["Figma", "Sketch", "User Testing"],
-      status: "available",
-      match: 95
-    },
-    {
-      id: "talent-2",
-      name: "Marcus Wright",
-      role: "Full Stack Developer",
-      skills: ["React", "Node.js", "MongoDB"],
-      status: "interviewing",
-      match: 92
-    },
-    {
-      id: "talent-3",
-      name: "Aisha Patel",
-      role: "Product Manager",
-      skills: ["Agile", "Roadmapping", "User Research"],
-      status: "available",
-      match: 88
-    }
+      id: "talent-1", _name: "Jessica Lee", _role: "UI/UX Designer", _skills: ["Figma", _"Sketch", _"User Testing"], _status: "available", _match: 95},
+    {_id: "talent-2", _name: "Marcus Wright", _role: "Full Stack Developer", _skills: ["React", _"Node.js", _"MongoDB"], _status: "interviewing", _match: 92},
+    {_id: "talent-3", _name: "Aisha Patel", _role: "Product Manager", _skills: ["Agile", _"Roadmapping", _"User Research"], _status: "available", _match: 88}
   ];
 
-  const getStatusBadge = (status: string) => {
-    switch (status) {
+  const _getStatusBadge = (_status: string) => {_switch (status) {
       case "available":
         return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":
@@ -46,8 +21,7 @@ export function TalentPool() {
     }
   };
 
-  return (
-    <Card>
+  return (_<Card>
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
@@ -59,24 +33,24 @@ export function TalentPool() {
       </CardHeader>
       <CardContent className="p-0">
         <div className="divide-y divide-border">
-          {talents.map((talent) => (
+          {_talents.map((talent) => (
             <div key={talent.id} className="p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-semibold">{talent.name}</p>
-                  <p className="text-sm text-muted-foreground">{talent.role}</p>
+                  <p className="font-semibold">{_talent.name}</p>
+                  <p className="text-sm text-muted-foreground">{_talent.role}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  {getStatusBadge(talent.status)}
+                  {_getStatusBadge(talent.status)}
                   <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
-                    {talent.match}% Match
+                    {_talent.match}% Match
                   </Badge>
                 </div>
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
-                {talent.skills.map((skill, index) => (
+                {_talent.skills.map(_(skill, _index) => (
                   <Badge key={index} variant="secondary" className="text-xs">
-                    {skill}
+                    {_skill}
                   </Badge>
                 ))}
               </div>

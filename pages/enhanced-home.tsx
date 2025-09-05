@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 
-const EnhancedHome: NextPage = () => {
-  return (
+const EnhancedHome: NextPage = () => {_return (
     <div>
       <Head>
         <title>EnhancedHome - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const EnhancedHome: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default EnhancedHome;

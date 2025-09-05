@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DigitalTwinsRevolutionizingIndustry40Chat = () => {
-  return (
+const _DigitalTwinsRevolutionizingIndustry40Chat = () => {_return (
     <div>
       <Head>
         <title>DigitalTwinsRevolutionizingIndustry40Chat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DigitalTwinsRevolutionizingIndustry40Chat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DigitalTwinsRevolutionizingIndustry40Chat;

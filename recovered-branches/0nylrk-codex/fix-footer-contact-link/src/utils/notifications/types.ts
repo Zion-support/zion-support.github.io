@@ -1,44 +1,34 @@
 
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
-export interface CreateNotificationParams {
-  userId: string;
+export interface CreateNotificationParams {_userId: string;
   title: string;
   message: string;
   type: NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null;
-  actionText?: string | null;
-}
+  actionText?: string | null;}
 
-export interface CreateNotificationResult {
-  success: boolean;
+export interface CreateNotificationResult {_success: boolean;
   notificationId?: string;
-  error?: any;
-}
+  error?: unknown;}
 
-export interface HireRequestNotificationParams {
-  talentId: string;
+export interface HireRequestNotificationParams {_talentId: string;
   adminId?: string;
   requesterName: string;
   requesterEmail: string;
   projectType?: string;
   projectSummary?: string;
-  hireRequestId: string;
-}
+  hireRequestId: string;}
 
-export interface OnboardingNotificationParams {
-  userId: string;
+export interface OnboardingNotificationParams {_userId: string;
   missingMilestone: string;
-  userRole: 'talent' | 'client';
-}
+  userRole: 'talent' | 'client';}
 
-export interface SystemNotificationParams {
-  userId: string;
+export interface SystemNotificationParams {_userId: string;
   title: string;
   message: string;
   actionUrl?: string | null;
   actionText?: string | null;
-  sendEmail?: boolean;
-}
+  sendEmail?: boolean;}

@@ -1,7 +1,6 @@
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 
-export type Job = {
-  id: string;
+export type Job = {_id: string;
   title: string;
   description: string;
   category: string;
@@ -12,42 +11,34 @@ export type Job = {
   clientEmail: string;
   status: JobStatus;
   createdAtIso: string;
-  updatedAtIso: string;
-};
+  updatedAtIso: string;};
 
 export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
 
-export type Application = {
-  id: string;
+export type Application = {_id: string;
   jobId: string;
   talentSlug: string;
   status: ApplicationStatus;
-  createdAtIso: string;
-};
+  createdAtIso: string;};
 
-export type Participant = { type: 'email' | 'talent'; id: string };
+export type Participant = {_type: 'email' | 'talent'; id: string};
 
-export type Attachment = {
-  name: string;
+export type Attachment = {_name: string;
   url: string;
-  sizeBytes?: number;
-};
+  sizeBytes?: number;};
 
-export type Message = {
-  id: string;
+export type Message = {_id: string;
   conversationId: string;
   sender: Participant;
   text?: string;
   attachments?: Attachment[];
   createdAtIso: string;
-  readBy?: { participantId: string; readAtIso: string }[];
+  readBy?: { participantId: string; readAtIso: string}[];
 };
 
-export type Conversation = {
-  id: string;
+export type Conversation = {_id: string;
   jobId?: string;
   participants: Participant[];
   createdAtIso: string;
   updatedAtIso: string;
-  messages: Message[];
-};
+  messages: Message[];};

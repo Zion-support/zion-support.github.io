@@ -1,5 +1,4 @@
 // Hook for useUIState;
-export const useUseUIState: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUseUIState: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

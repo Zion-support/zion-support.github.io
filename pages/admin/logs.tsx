@@ -1,23 +1,13 @@
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
 
 
-interface LogEntry {
-  id: string;
+interface LogEntry {_id: string;
   timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
-  context?: Record<string, unknown>;
+  context?: Record<string, _unknown>;
   stack?: string;
   url?: string;
   userAgent?: string;
@@ -30,25 +20,19 @@ interface LogEntry {
     name: string;
     message: string;
     stack?: string;
-    cause?: unknown;
-  };
-  performance?: {
-    memory?: number;
+    cause?: unknown;};
+  performance?: {_memory?: number;
     timing?: number;
-    fps?: number;
-  };
+    fps?: number;};
 }
 
-interface LogsPageProps {
-  logs: LogEntry[];
+interface LogsPageProps {_logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-  lastUpdated: string;
-}
+  lastUpdated: string;}
 
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
-  switch (level) {
+const _LogLevelIcon = (_{_level}: {_level: LogEntry['level']}) => {_switch (level) {
     case 'debug':
       return <Info className="h-4 w-4 text-blue-500" />;
     case 'info':
@@ -60,39 +44,32 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     case 'critical':
       return <XCircle className="h-4 w-4 text-red-700" />;
     default:
-      return <Info className="h-4 w-4 text-gray-500" />;
-  }
+      return <Info className="h-4 w-4 text-gray-500" />;}
 };
 
-const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
-  const colors = {
-    debug: 'bg-blue-100 text-blue-800',
-    info: 'bg-green-100 text-green-800',
-    warn: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    critical: 'bg-red-200 text-red-900'};
+const _LogLevelBadge = (_{_level}: {_level: LogEntry['level']}) => {_const _colors = {
+    debug: 'bg-blue-100 text-blue-800', _info: 'bg-green-100 text-green-800', _warn: 'bg-yellow-100 text-yellow-800', _error: 'bg-red-100 text-red-800', _critical: 'bg-red-200 text-red-900'};
 
   return (
-    <Badge className={colors[level]}>
-      {level.toUpperCase()}
+    <Badge className={_colors[level]}>
+      {_level.toUpperCase()}
     </Badge>
   );
 };
 
-export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
-  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [levelFilter, setLevelFilter] = useState<string>('all');
-  const [categoryFilter, setCategoryFilter] = useState<string>('all');
-  const [sourceFilter, setSourceFilter] = useState<string>('all');
-  const [isLoading, setIsLoading] = useState(false);
+export default function LogsPage(_{_logs: initialLogs, _errorCount, _warningCount, _totalCount, _lastUpdated}: LogsPageProps) {_const [logs, _setLogs] = useState<LogEntry[]>(initialLogs);
+  const [filteredLogs, _setFilteredLogs] = useState<LogEntry[]>(initialLogs);
+  const [searchTerm, _setSearchTerm] = useState('');
+  const [levelFilter, _setLevelFilter] = useState<string>('all');
+  const [categoryFilter, _setCategoryFilter] = useState<string>('all');
+  const [sourceFilter, _setSourceFilter] = useState<string>('all');
+  const [isLoading, _setIsLoading] = useState(false);
 
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
+  const _categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
+  const _sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
 
-  useEffect(() => {
-    let filtered = logs;
+  useEffect__(() => {
+    let _filtered = logs;
 
     // Search filter
     if (searchTerm) {
@@ -100,70 +77,51 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
+      );}
 
     // Level filter
-    if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter);
-    }
+    if (levelFilter !== 'all') {_filtered = filtered.filter(log => log.level === levelFilter);}
 
     // Category filter
-    if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter);
-    }
+    if (categoryFilter !== 'all') {_filtered = filtered.filter(log => log.category === categoryFilter);}
 
     // Source filter
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter);
-    }
+    if (sourceFilter !== 'all') {_filtered = filtered.filter(log => log.source === sourceFilter);}
 
     setFilteredLogs(filtered);
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
 
-  const refreshLogs = async () => {
-    setIsLoading(true);
+  const _refreshLogs = async () => {_setIsLoading(true);
     try {
-      const response = await fetch('/api/admin/logs');
+      const _response = await fetch('/api/admin/logs');
       if (response.ok) {
-        const data = await response.json();
-        setLogs(data.logs);
-      }
-    } catch (error) {
-      logErrorToProduction('Failed to refresh logs:', error);
-    } finally {
-      setIsLoading(false);
-    }
+        const _data = await response.json();
+        setLogs(data.logs);}
+    } catch (error) {_logErrorToProduction('Failed to refresh logs:', _error);} finally {_setIsLoading(false);}
   };
 
-  const exportLogs = () => {
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+  const _exportLogs = () => {_const _dataStr = JSON.stringify(filteredLogs, _null, _2);
+    const _dataUri = 'data:application/json;charset=utf-8, _'+ encodeURIComponent(dataStr);
     
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+    const _exportFileDefaultName = `logs-${new Date().toISOString().slice(0, _10)}.json`;
     
-    const linkElement = document.createElement('a');
+    const _linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
   };
 
-  const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();
-  };
+  const _formatTimestamp = (_timestamp: string) => {_return new Date(timestamp).toLocaleString();};
 
-  const formatPerformance = (performance?: LogEntry['performance']) => {
-    if (!performance) return null;
+  const _formatPerformance = (_performance?: LogEntry['performance']) => {_if (!performance) return null;
     
-    const parts = [];
+    const _parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`);
     }
-    if (performance.timing) {
-      parts.push(`Timing: ${performance.timing}ms`);
+    if (performance.timing) {_parts.push(`Timing: ${performance.timing}ms`);
     }
-    if (performance.fps) {
-      parts.push(`FPS: ${performance.fps}`);
+    if (performance.fps) {_parts.push(`FPS: ${performance.fps}`);
     }
     
     return parts.length > 0 ? parts.join(', ') : null;
@@ -174,18 +132,18 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>
         <div className="flex items-center space-x-2">
-          <Button onClick={refreshLogs} disabled={isLoading} variant="outline">
-            <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+          <Button onClick={_refreshLogs} disabled={_isLoading} variant="outline">
+            <RefreshCw className={_`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
             Refresh
           </Button>
-          <Button onClick={exportLogs} variant="outline">
+          <Button onClick={_exportLogs} variant="outline">
             <Download className="h-4 w-4 mr-2" />
             Export
           </Button>
         </div>
       </div>
 
-      {/* Summary Cards */}
+      {_/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -193,7 +151,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <Info className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{totalCount}</div>
+            <div className="text-2xl font-bold">{_totalCount}</div>
             <p className="text-xs text-muted-foreground">All log entries</p>
           </CardContent>
         </Card>
@@ -204,7 +162,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <XCircle className="h-4 w-4 text-red-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-red-600">{errorCount}</div>
+            <div className="text-2xl font-bold text-red-600">{_errorCount}</div>
             <p className="text-xs text-muted-foreground">Critical & error logs</p>
           </CardContent>
         </Card>
@@ -215,7 +173,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <AlertTriangle className="h-4 w-4 text-yellow-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>
+            <div className="text-2xl font-bold text-yellow-600">{_warningCount}</div>
             <p className="text-xs text-muted-foreground">Warning logs</p>
           </CardContent>
         </Card>
@@ -226,13 +184,13 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <RefreshCw className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>
+            <div className="text-sm font-medium">{_formatTimestamp(lastUpdated)}</div>
             <p className="text-xs text-muted-foreground">Data freshness</p>
           </CardContent>
         </Card>
       </div>
 
-      {/* Filters */}
+      {_/* Filters */}
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -244,12 +202,12 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <Input
                 placeholder="Search logs..."
                 className="pl-8"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={_searchTerm}
+                onChange={_(_e) => setSearchTerm(e.target.value)}
               />
             </div>
             
-            <Select value={levelFilter} onValueChange={setLevelFilter}>
+            <Select value={_levelFilter} onValueChange={_setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
@@ -263,26 +221,26 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               </SelectContent>
             </Select>
 
-            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+            <Select value={_categoryFilter} onValueChange={_setCategoryFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
-                {categories.map(category => (
-                  <SelectItem key={category} value={category}>{category}</SelectItem>
+                {_categories.map(category => (
+                  <SelectItem key={category} value={_category}>{_category}</SelectItem>
                 ))}
               </SelectContent>
             </Select>
 
-            <Select value={sourceFilter} onValueChange={setSourceFilter}>
+            <Select value={_sourceFilter} onValueChange={_setSourceFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="All sources" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
-                {sources.map(source => (
-                  <SelectItem key={source} value={source}>{source}</SelectItem>
+                {_sources.map(source => (
+                  <SelectItem key={source} value={_source}>{_source}</SelectItem>
                 ))}
               </SelectContent>
             </Select>
@@ -290,53 +248,52 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
         </CardContent>
       </Card>
 
-      {/* Logs Table */}
+      {_/* Logs Table */}
       <Card>
         <CardHeader>
-          <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
+          <CardTitle>Log Entries ({_filteredLogs.length})</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {filteredLogs.length > 0 ? (
-              filteredLogs.map((log) => (
+            {_filteredLogs.length > 0 ? (_filteredLogs.map((log) => (
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <LogLevelIcon level={log.level} />
-                      <LogLevelBadge level={log.level} />
-                      <Badge variant="outline">{log.category}</Badge>
-                      <Badge variant="secondary">{log.source}</Badge>
-                      {log.component && (
+                      <LogLevelIcon level={_log.level} />
+                      <LogLevelBadge level={_log.level} />
+                      <Badge variant="outline">{_log.category}</Badge>
+                      <Badge variant="secondary">{_log.source}</Badge>
+                      {_log.component && (
                         <Badge variant="outline">{log.component}</Badge>
                       )}
                     </div>
                     <span className="text-sm text-muted-foreground">
-                      {formatTimestamp(log.timestamp)}
+                      {_formatTimestamp(log.timestamp)}
                     </span>
                   </div>
                   
-                  <div className="text-sm font-medium">{log.message}</div>
+                  <div className="text-sm font-medium">{_log.message}</div>
                   
-                  {log.context && Object.keys(log.context).length > 0 && (
+                  {_log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
-                        {JSON.stringify(log.context, null, 2)}
+                        {JSON.stringify(log.context, _null, _2)}
                       </pre>
                     </details>
                   )}
                   
-                  {log.error && (
+                  {_log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
                         View Error Details
                       </summary>
                       <div className="mt-2 p-2 bg-red-50 rounded">
                         <div><strong>Name:</strong> {log.error.name}</div>
-                        <div><strong>Message:</strong> {log.error.message}</div>
-                        {log.error.stack && (
+                        <div><strong>Message:</strong> {_log.error.message}</div>
+                        {_log.error.stack && (
                           <details className="mt-2">
                             <summary className="cursor-pointer">Stack Trace</summary>
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
@@ -348,17 +305,17 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                   
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <div>
-                      Session: {log.sessionId}
-                      {log.userId && ` • User: ${log.userId}`}
+                      Session: {_log.sessionId}
+                      {_log.userId && ` • User: ${log.userId}`}
                     </div>
-                    {log.performance && (
+                    {_log.performance && (
                       <div>{formatPerformance(log.performance)}</div>
                     )}
                   </div>
                   
-                  {log.url && (
+                  {_log.url && (
                     <div className="text-xs text-muted-foreground truncate">
-                      URL: {log.url}
+                      window.URL: {log.url}
                     </div>
                   )}
                 </div>
@@ -375,59 +332,44 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const logsDir = path.join(process.cwd(), 'logs');
+export const getServerSideProps: GetServerSideProps = async () => {_try {
+    const _logsDir = path.join(process.cwd(), _'logs');
     const logs: LogEntry[] = [];
 
     // Read all log files
     if (fs.existsSync(logsDir)) {
-      const files = fs.readdirSync(logsDir);
-      const logFiles = files.filter(file => file.endsWith('.log'));
+      const _files = fs.readdirSync(logsDir);
+      const _logFiles = files.filter(file => file.endsWith('.log'));
 
       for (const file of logFiles) {
         try {
-          const filePath = path.join(logsDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
-          const lines = content.split('\n').filter(line => line.trim());
+          const _filePath = path.join(logsDir, _file);
+          const _content = fs.readFileSync(filePath, _'utf-8');
+          const _lines = content.split('\n').filter(line => line.trim());
 
           for (const line of lines) {
             try {
-              const logEntry = JSON.parse(line);
-              logs.push(logEntry);
-            } catch (parseError) {
-              // Skip malformed log entries
-            }
+              const _logEntry = JSON.parse(line);
+              logs.push(logEntry);} catch (parseError) {_// Skip malformed log entries}
           }
-        } catch (fileError) {
-          // Skip problematic files
-        }
+        } catch (fileError) {_// Skip problematic files}
       }
     }
 
     // Sort logs by timestamp (newest first)
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+    logs.sort(_(a, _b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
     // Calculate statistics
-    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
-    const warningCount = logs.filter(log => log.level === 'warn').length;
-    const totalCount = logs.length;
+    const _errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
+    const _warningCount = logs.filter(log => log.level === 'warn').length;
+    const _totalCount = logs.length;
 
+    return {_props: {
+        logs: logs.slice(0, _1000), _// Limit to most recent 1000 logs
+        errorCount, _warningCount, _totalCount, _lastUpdated: new Date().toISOString()}};
+  } catch (error) {_logErrorToProduction('Error reading logs:', _error);
     return {
       props: {
-        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-        errorCount,
-        warningCount,
-        totalCount,
-        lastUpdated: new Date().toISOString()}};
-  } catch (error) {
-            logErrorToProduction('Error reading logs:', error);
-    return {
-      props: {
-        logs: [],
-        errorCount: 0,
-        warningCount: 0,
-        totalCount: 0,
-        lastUpdated: new Date().toISOString()}};
+        logs: [], _errorCount: 0, _warningCount: 0, _totalCount: 0, _lastUpdated: new Date().toISOString()}};
   }
 }; 

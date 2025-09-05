@@ -1,17 +1,9 @@
 
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 
-interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
-}
+interface ProjectDetailsStepProps {_formData: QuoteFormData;
+  updateFormData: (_data: Partial<QuoteFormData>) => void;}
 
-export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
-  return (
-    <div className="space-y-6">
+export function ProjectDetailsStep(_{_formData, _updateFormData}: ProjectDetailsStepProps) {_return (_<div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
         
@@ -22,7 +14,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="projectName"
               placeholder="Enter a name for your project"
               value={formData.projectName}
-              onChange={(e) => updateFormData({ projectName: e.target.value })}
+              onChange={_(e) => updateFormData({ projectName: e.target.value})}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -32,8 +24,8 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Textarea
               id="projectDescription"
               placeholder="Describe your project in detail..."
-              value={formData.projectDescription}
-              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
+              value={_formData.projectDescription}
+              onChange={_(_e) => updateFormData({ projectDescription: e.target.value})}
               className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -49,9 +41,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input
               id="name"
               placeholder="Your name"
-              value={formData.contactInfo.name}
-              onChange={(e) => updateFormData({ 
-                contactInfo: { ...formData.contactInfo, name: e.target.value } 
+              value={_formData.contactInfo.name}
+              onChange={_(_e) => updateFormData({ 
+                contactInfo: { ...formData.contactInfo, _name: e.target.value} 
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -62,9 +54,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input
               id="company"
               placeholder="Your company name"
-              value={formData.contactInfo.company}
-              onChange={(e) => updateFormData({ 
-                contactInfo: { ...formData.contactInfo, company: e.target.value } 
+              value={_formData.contactInfo.company}
+              onChange={_(_e) => updateFormData({ 
+                contactInfo: { ...formData.contactInfo, _company: e.target.value} 
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -76,9 +68,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="email"
               type="email"
               placeholder="Your email address"
-              value={formData.contactInfo.email}
-              onChange={(e) => updateFormData({ 
-                contactInfo: { ...formData.contactInfo, email: e.target.value } 
+              value={_formData.contactInfo.email}
+              onChange={_(_e) => updateFormData({ 
+                contactInfo: { ...formData.contactInfo, _email: e.target.value} 
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
@@ -89,9 +81,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input
               id="phone"
               placeholder="Your phone number"
-              value={formData.contactInfo.phone}
-              onChange={(e) => updateFormData({ 
-                contactInfo: { ...formData.contactInfo, phone: e.target.value } 
+              value={_formData.contactInfo.phone}
+              onChange={_(_e) => updateFormData({ 
+                contactInfo: { ...formData.contactInfo, _phone: e.target.value} 
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />

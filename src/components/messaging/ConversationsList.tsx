@@ -1,45 +1,29 @@
 
-import React, { useMemo } from 'react';
-import { User } from 'lucide-react'
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
+import React, {_useMemo} from 'react';
 
-interface ConversationsListProps {
-  conversations: Conversation[];
+interface ConversationsListProps {_conversations: Conversation[];
   activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>;
-}
+  setActiveConversation: (_conversation: Conversation) => void;
+  markAsRead: (_conversationId: string) => Promise<void>;}
 
-export function ConversationsList({
-  conversations,
-  activeConversation,
-  setActiveConversation,
-  markAsRead
-}: ConversationsListProps) {
-  const itemSize = 80;
+export function ConversationsList(_{_conversations, _activeConversation, _setActiveConversation, _markAsRead}: ConversationsListProps) {_const _itemSize = 80;
 
-  const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600);
-  }, [conversations.length]);
+  const _listHeight = useMemo__(() => {
+    return Math.min(conversations.length * itemSize, _600);}, [conversations.length]);
 
-  const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index];
+  const _Row = (_{_index, _style}: ListChildComponentProps) => {_const _conversation = conversations[index];
     
     if (!conversation) {
       return <div style={style} />;
     }
     
-    return (
-      <div style={style}>
+    return (_<div style={_style}>
         <ConversationItem
-          conversation={conversation}
-          isActive={activeConversation?.id === conversation.id}
-          onClick={() => {
+          conversation={_conversation}
+          isActive={_activeConversation?.id === conversation.id}
+          onClick={_() => {
             setActiveConversation(conversation);
-            markAsRead(conversation.id);
-          }}
+            markAsRead(conversation.id);}}
         />
       </div>
     );
@@ -51,7 +35,7 @@ export function ConversationsList({
         <h3 className="font-medium text-white">Conversations</h3>
       </div>
 
-      {conversations.length === 0 ? (
+      {_conversations.length === 0 ? (
         <div className="p-8 text-center text-zion-slate">
           <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />
           <p>No conversations yet</p>
@@ -62,11 +46,11 @@ export function ConversationsList({
       ) : (
         <List
           height={listHeight}
-          itemCount={conversations.length}
-          itemSize={itemSize}
+          itemCount={_conversations.length}
+          itemSize={_itemSize}
           width="100%"
         >
-          {Row}
+          {_Row}
         </List>
       )}
     </div>

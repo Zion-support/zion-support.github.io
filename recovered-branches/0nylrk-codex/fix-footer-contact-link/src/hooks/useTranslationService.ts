@@ -1,79 +1,47 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 
-interface TranslationResponse {
-  translations: Record<SupportedLanguage, string>;
-  error?: string;
-}
+interface TranslationResponse {_translations: Record<SupportedLanguage, _string>;
+  error?: string;}
 
-export function useTranslationService() {
-  const [isTranslating, setIsTranslating] = useState(false);
-  const { currentLanguage } = useLanguage();
+export function useTranslationService() {_const [isTranslating, _setIsTranslating] = useState(false);
+  const { currentLanguage} = useLanguage();
   
-  const translateContent = async (
+  const _translateContent = async (
     content: string,
     contentType: ContentType = 'general',
     sourceLanguage: SupportedLanguage = 'en',
     targetLanguages: SupportedLanguage[] = ['en', 'es', 'pt', 'ar']
-  ): Promise<TranslationResponse> => {
-    setIsTranslating(true);
+  ): Promise<TranslationResponse> => {_setIsTranslating(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('translate-content', {
-        body: {
-          content,
-          sourceLanguage,
-          targetLanguages,
-          contentType
-        }
+      const { data, _error} = await supabase.functions.invoke('translate-content', {_body: {
+          content, _sourceLanguage, _targetLanguages, _contentType}
       });
       
       setIsTranslating(false);
       
-      if (error) {
-        console.error('Translation error:', error);
-        const initialTranslations: Record<SupportedLanguage, string> = {
-          en: content,
-          es: '',
-          pt: '',
-          ar: ''
-        };
+      if (error) {_const initialTranslations: Record<SupportedLanguage, _string> = {
+          en: content, _es: '', _pt: '', _ar: ''};
         initialTranslations[sourceLanguage] = content;
-        return { translations: initialTranslations, error: error.message };
+        return {_translations: initialTranslations, _error: error.message};
       }
       
-      return { translations: data.translations };
-    } catch (err) {
-      setIsTranslating(false);
-      console.error('Translation service error:', err);
+      return {_translations: data.translations};
+    } catch (err) {_setIsTranslating(false);
       
-      const initialTranslations: Record<SupportedLanguage, string> = {
-        en: content,
-        es: '',
-        pt: '',
-        ar: ''
-      };
+      
+      const initialTranslations: Record<SupportedLanguage, _string> = {
+        en: content, _es: '', _pt: '', _ar: ''};
       initialTranslations[sourceLanguage] = content;
       
-      return { 
-        translations: initialTranslations,
-        error: err instanceof Error ? err.message : 'Unknown translation error' 
-      };
+      return {_translations: initialTranslations, _error: err instanceof Error ? err.message : 'Unknown translation error'};
     }
   };
   
-  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
-    if (!translations) return fallback;
-    return translations[currentLanguage] || translations.en || fallback;
-  };
+  const _getTranslation = (_translations: Record<SupportedLanguage, _string>, _fallback: string = '') => {_if (!translations) return fallback;
+    return translations[currentLanguage] || translations.en || fallback;};
   
-  return {
-    translateContent,
-    isTranslating,
-    getTranslation
-  };
+  return {_translateContent, _isTranslating, _getTranslation};
 }

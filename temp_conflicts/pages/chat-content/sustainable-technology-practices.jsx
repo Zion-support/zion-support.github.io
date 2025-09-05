@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const SustainableTechnologyPractices = () => {
-  return (
+const _SustainableTechnologyPractices = () => {_return (
     <div>
       <Head>
         <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const SustainableTechnologyPractices = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default SustainableTechnologyPractices;

@@ -1,27 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 
-type Outdated = { name: string; current: string; latest: string; type: 'dependency' | 'devDependency' };
+type Outdated = {_name: string; current: string; latest: string; type: 'dependency' | 'devDependency'};
 
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'dep-radar.json');
+export async function getServerSideProps() {_const _file = path.join(process.cwd(), _'data', _'dep-radar.json');
   let outdated: Outdated[] = [];
-  let generatedAt = '';
+  let _generatedAt = '';
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
+    const _raw = fs.readFileSync(file, _'utf-8');
+    const _json = JSON.parse(raw);
     outdated = json.outdated || [];
-    generatedAt = json.generatedAt || '';
-  } catch {}
-  return { props: { outdated, generatedAt } };
+    generatedAt = json.generatedAt || '';} catch {}
+  return {_props: { outdated, _generatedAt} };
 }
 
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[]; generatedAt: string }) {
-  return (
+export default function DepRadarPage(_{_outdated, _generatedAt}: {_outdated: Outdated[]; generatedAt: string}) {_return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      {outdated.length === 0 ? (
+      {_outdated.length === 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -37,10 +34,10 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
             <tbody>
               {outdated.map(o => (
                 <tr key={o.name} className="border-t">
-                  <td className="p-2">{o.name}</td>
-                  <td className="p-2">{o.current}</td>
-                  <td className="p-2">{o.latest}</td>
-                  <td className="p-2">{o.type}</td>
+                  <td className="p-2">{_o.name}</td>
+                  <td className="p-2">{_o.current}</td>
+                  <td className="p-2">{_o.latest}</td>
+                  <td className="p-2">{_o.type}</td>
                 </tr>
               ))}
             </tbody>

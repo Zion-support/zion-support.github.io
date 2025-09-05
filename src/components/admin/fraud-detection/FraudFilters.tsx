@@ -1,45 +1,28 @@
 
 import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from 'lucide-react'
 
-interface FraudFiltersProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
+interface FraudFiltersProps {_searchQuery: string;
+  setSearchQuery: (_value: string) => void;
   statusFilter: string | null;
-  setStatusFilter: (value: string | null) => void;
+  setStatusFilter: (_value: string | null) => void;
   severityFilter: string | null;
-  setSeverityFilter: (value: string | null) => void;
+  setSeverityFilter: (_value: string | null) => void;
   contentTypeFilter: string | null;
-  setContentTypeFilter: (value: string | null) => void;
-  resetFilters: () => void;
-}
+  setContentTypeFilter: (_value: string | null) => void;
+  resetFilters: () => void;}
 
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-  setContentTypeFilter,
-  resetFilters}) => {
-  return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
+export const FraudFilters: React.FC<FraudFiltersProps> = (_{_searchQuery, _setSearchQuery, _statusFilter, _setStatusFilter, _severityFilter, _setSeverityFilter, _contentTypeFilter, _setContentTypeFilter, _resetFilters}) => {_return (_<div className="flex flex-col md:flex-row gap-4 mb-6">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={_(e) => setSearchQuery(e.target.value)}
           className="pl-10"
         />
       </div>
       
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+      <Select value={_statusFilter || ""} onValueChange={_value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -52,7 +35,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
       
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
+      <Select value={_severityFilter || ""} onValueChange={_value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -64,7 +47,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
       
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
+      <Select value={_contentTypeFilter || ""} onValueChange={_value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
@@ -78,7 +61,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
       
-      <Button variant="outline" onClick={resetFilters} className="md:w-auto">
+      <Button variant="outline" onClick={_resetFilters} className="md:w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
     </div>

@@ -1,31 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
 
-export default function Custom404() {
-  const quickLinks = [
-    { href: '/', label: '🏠 Home', icon: Home },
-    { href: '/services', label: '🚀 Services', icon: Rocket },
-    { href: '/explore', label: '🔍 Explore', icon: Search },
-    { href: '/about', label: '👥 About', icon: Users },
-    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }];
+export default function Custom404() {_const _quickLinks = [
+    { href: '/', _label: '🏠 Home', _icon: Home},
+    {_href: '/services', _label: '🚀 Services', _icon: Rocket},
+    {_href: '/explore', _label: '🔍 Explore', _icon: Search},
+    {_href: '/about', _label: '👥 About', _icon: Users},
+    {_href: '/sitemap', _label: '🗺️ Sitemap', _icon: Map}];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Zion Tech Group's main services and solutions." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, _nofollow" />
       </Head>
 
       <div className="max-w-4xl mx-auto text-center">
-        {/* 404 Icon and Title */}
+        {_/* 404 Icon and Title */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={_{ opacity: 0, _scale: 0.8}}
+          animate={_{ opacity: 1, _scale: 1}}
+          transition={_{ duration: 0.6}}
           className="mb-8"
         >
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center">
@@ -39,78 +35,78 @@ export default function Custom404() {
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             The page you're looking for doesn't exist or has been moved. 
-            Don't worry, we've got plenty of amazing content for you to explore.
+            Don't worry, _we've got plenty of amazing content for you to explore.
           </p>
         </motion.div>
 
-        {/* Quick Navigation */}
+        {_/* Quick Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={_{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.2}}
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
             Quick Navigation
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl mx-auto">
-            {quickLinks.map((link, index) => (
+            {_quickLinks.map((link, _index) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.4, _delay: 0.3 + index * 0.1}}
               >
                 <Link
-                  href={link.href}
+                  href={_link.href}
                   className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105"
                 >
                   <link.icon className="w-6 h-6 mx-auto mb-2 text-cyan-400" />
-                  <span className="text-sm text-white/80">{link.label}</span>
+                  <span className="text-sm text-white/80">{_link.label}</span>
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Popular Services Section */}
+        {_/* Popular Services Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={_{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.4}}
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
             Popular Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            {[
-              { href: '/ai-business-intelligence', label: 'AI Business Intelligence', desc: 'Transform data into actionable insights' },
-              { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', desc: 'Future-proof security solutions' },
-              { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' }].map((service, index) => (
+            {_[
+              { href: '/ai-business-intelligence', _label: 'AI Business Intelligence', _desc: 'Transform data into actionable insights'},
+              {_href: '/quantum-cybersecurity', _label: 'Quantum Cybersecurity', _desc: 'Future-proof security solutions'},
+              {_href: '/edge-computing-orchestration', _label: 'Edge Computing', _desc: 'Advanced edge optimization platform'}].map(_(service, _index) => (
               <motion.div
-                key={service.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                key={_service.href}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.4, _delay: 0.5 + index * 0.1}}
               >
                 <Link
-                  href={service.href}
+                  href={_service.href}
                   className="block p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
-                  <h4 className="font-semibold text-white mb-2">{service.label}</h4>
-                  <p className="text-sm text-white/60">{service.desc}</p>
+                  <h4 className="font-semibold text-white mb-2">{_service.label}</h4>
+                  <p className="text-sm text-white/60">{_service.desc}</p>
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Action Buttons */}
+        {_/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={_{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.6}}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
@@ -129,11 +125,11 @@ export default function Custom404() {
           </Link>
         </motion.div>
 
-        {/* Help Section */}
+        {_/* Help Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={_{ opacity: 0, _y: 20}}
+          animate={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.8}}
           className="mt-12 pt-8 border-t border-white/10"
         >
           <p className="text-white/60 mb-4">

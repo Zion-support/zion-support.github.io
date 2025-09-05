@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const AiConsultingChat = () => {
-  return (
+const _AiConsultingChat = () => {_return (
     <div>
       <Head>
         <title>AiConsultingChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const AiConsultingChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default AiConsultingChat;

@@ -2,13 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function CaseStudyPage() {
-  return (
-    <>
+export default function CaseStudyPage() {_return (_<>
       <Head>
         <title>Intelligent Customer Service Automation - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing. Read our detailed case study." />
-        <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />
+        <meta name="keywords" content="customer service automation, _chatbots, _AI automation, _ticket routing, _sentiment analysis" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -26,7 +24,7 @@ export default function CaseStudyPage() {
             <span className="text-white">Intelligent Customer Service Automation</span>
           </nav>
 
-          {/* Header */}
+          {_/* Header */}
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
               Financial Services Industry
@@ -39,16 +37,15 @@ export default function CaseStudyPage() {
             </p>
           </header>
 
-          {/* Case Study Content */}
+          {_/* Case Study Content */}
           <div className="max-w-4xl mx-auto">
-            {/* Company Overview */}
+            {_/* Company Overview */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A leading financial services company serving millions of customers with banking, 
-                  investment, and insurance products. The company faced challenges with high customer service costs and long response times.
+                  A leading financial services company serving millions of customers with banking, _investment, _and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                   <div className="text-center">
@@ -67,7 +64,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Challenge */}
+            {_/* Challenge */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -93,14 +90,14 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Solution */}
+            {_/* Solution */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">AI-Powered Customer Service Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
                   We implemented a comprehensive customer service automation platform that combines 
-                  intelligent chatbots, automated ticket routing, and sentiment analysis for optimal customer experience.
+                  intelligent chatbots, _automated ticket routing, _and sentiment analysis for optimal customer experience.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -139,7 +136,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Results */}
+            {_/* Results */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -191,21 +188,21 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Technologies */}
+            {_/* Technologies */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Chatbots', 'Natural Language Processing', 'Ticket Routing', 'Sentiment Analysis'].map((tech) => (
+                  {_['Chatbots', _'Natural Language Processing', _'Ticket Routing', _'Sentiment Analysis'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
-                      <span className="text-green-400 font-semibold">{tech}</span>
+                      <span className="text-green-400 font-semibold">{_tech}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
-            {/* Implementation */}
+            {_/* Implementation */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -245,7 +242,7 @@ export default function CaseStudyPage() {
               </div>
             </section>
 
-            {/* Call to Action */}
+            {_/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>

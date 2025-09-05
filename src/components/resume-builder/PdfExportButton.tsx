@@ -1,73 +1,40 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger, _DropdownMenuSeparator, _DropdownMenuLabel, _DropdownMenuRadioGroup, _DropdownMenuRadioItem, _DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
-import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
-import { Resume } from '@/types/resume';
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
-import { toast } from '@/hooks/use-toast';
-import { FontFamily } from '@/utils/pdf/fontConfig';
 
-interface PdfExportButtonProps {
-  resume: Resume;
-}
+interface PdfExportButtonProps {_resume: Resume;}
 
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [includePortfolio, setIncludePortfolio] = useState(true);
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+export function PdfExportButton(_{_resume}: PdfExportButtonProps) {_const [isExporting, _setIsExporting] = useState(false);
+  const [theme, _setTheme] = useState<'light' | 'dark'>('light');
+  const [includePortfolio, _setIncludePortfolio] = useState(true);
+  const [fontFamily, _setFontFamily] = useState<FontFamily>('default');
 
-  const handleExport = async () => {
+  const _handleExport = async () => {
     if (isExporting) return;
     
     setIsExporting(true);
     
     try {
       const options: ExportOptions = {
-        theme,
-        includePortfolio,
-        maxProjects: 3,
-        fontFamily
-      };
+        theme, _includePortfolio, _maxProjects: 3, _fontFamily};
       
-      const pdfBlob = await exportResumeToPDF(resume, options);
+      const _pdfBlob = await exportResumeToPDF(resume, options);
       
       // Create download link and trigger download
-      const url = URL.createObjectURL(pdfBlob);
-      const link = document.createElement('a');
+      const _url = window.URL.createObjectURL(pdfBlob);
+      const _link = document.createElement('a');
       link.href = url;
-      link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
+      link.download = `${_resume.basic_info.title || 'Resume'}.pdf`;
       document.body.appendChild(link);
       link.click();
       
       // Clean up
       document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      window.URL.revokeObjectURL(url);
       
-      toast({
-        title: "Success!",
-        description: "Your resume has been downloaded as a PDF."});
-    } catch (error) {
-      logErrorToProduction('Error exporting PDF:', { data: error });
-      toast({
-        title: "Export failed",
-        description: "There was an error exporting your resume to PDF.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsExporting(false);
-    }
+      toast({_title: "Success!", _description: "Your resume has been downloaded as a PDF."});
+    } catch (error) {_logErrorToProduction('Error exporting PDF:', _{ data: error});
+      toast({_title: "Export failed", _description: "There was an error exporting your resume to PDF.", _variant: "destructive"});
+    } finally {_setIsExporting(false);}
   };
 
   return (
@@ -76,9 +43,9 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         <Button 
           variant="outline" 
           className="gap-2"
-          disabled={isExporting}
+          disabled={_isExporting}
         >
-          {isExporting ? (
+          {_isExporting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
             <FileText className="h-4 w-4" />
@@ -92,14 +59,14 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         <DropdownMenuSeparator />
         
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
+        <DropdownMenuRadioGroup value={_theme} onValueChange={_(_value) => setTheme(value as 'light' | 'dark')}>
           <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
         <DropdownMenuSeparator />
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
+        <DropdownMenuRadioGroup value={_fontFamily} onValueChange={_(_value) => setFontFamily(value as FontFamily)}>
           <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
@@ -108,14 +75,14 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         
         <DropdownMenuSeparator />
         <DropdownMenuCheckboxItem 
-          checked={includePortfolio}
-          onCheckedChange={setIncludePortfolio}
+          checked={_includePortfolio}
+          onCheckedChange={_setIncludePortfolio}
         >
           Include Portfolio Projects
         </DropdownMenuCheckboxItem>
         
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleExport}>
+        <DropdownMenuItem onClick={_handleExport}>
           <Download className="h-4 w-4 mr-2" />
           Download PDF
         </DropdownMenuItem>

@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DatabaseAdministrationChat: NextPage = () => {
-  return (
+const DatabaseAdministrationChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DatabaseAdministrationChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DatabaseAdministrationChat;

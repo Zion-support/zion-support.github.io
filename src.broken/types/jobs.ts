@@ -1,4 +1,3 @@
 // Type definitions for jobs;
-interface jobs {;
-  // TODO: Add proper type definitions;
-};
+interface jobs {_;
+  // TODO: Add proper type definitions;};

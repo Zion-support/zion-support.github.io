@@ -2,8 +2,7 @@
 
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 
-export interface SmartContractInfo {
-  id: string;
+export interface SmartContractInfo {_id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
   blockNumber?: number;
@@ -12,22 +11,17 @@ export interface SmartContractInfo {
   metadataUrl?: string;
   createdAt: string;
   createdBy: string;
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
-}
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled';}
 
-export interface EscrowContractDetails {
-  client: string;
+export interface EscrowContractDetails {_client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
   completionDeadline: string;
-  arbitrator?: string;
-}
+  arbitrator?: string;}
 
-export interface DeploymentOptions {
-  network: BlockchainNetwork;
+export interface DeploymentOptions {_network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean;
-  deployToChain: boolean;
-}
+  deployToChain: boolean;}

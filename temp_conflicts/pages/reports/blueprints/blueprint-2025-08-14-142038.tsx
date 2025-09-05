@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
-export default function Page(){
-  return (
+export default function Page(){_return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>

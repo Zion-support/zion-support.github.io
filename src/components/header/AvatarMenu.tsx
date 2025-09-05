@@ -1,23 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuLabel} from '@/components/ui/dropdown-menu';
-import { User as UserIcon, Package } from 'lucide-react'
-import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger, _DropdownMenuSeparator, _DropdownMenuLabel} from '@/components/ui/dropdown-menu';
 
-export const AvatarMenu: React.FC = () => {
-  const { user, logout, avatarUrl } = useAuth();
+export const AvatarMenu: React.FC = () => {_const { user, _logout, _avatarUrl} = useAuth();
 
   if (!user) return null;
 
-  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
+  const _initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
 
   return (
     <DropdownMenu>
@@ -27,10 +16,10 @@ export const AvatarMenu: React.FC = () => {
           aria-label="Open user menu"
         >
           <Avatar className="h-8 w-8">
-            {avatarUrl ? (
-              <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
+            {_avatarUrl ? (
+              <AvatarImage src={avatarUrl} alt={_user.displayName || user.name || 'User avatar'} />
             ) : (
-              <AvatarFallback>{initials}</AvatarFallback>
+              <AvatarFallback>{_initials}</AvatarFallback>
             )}
           </Avatar>
         </button>
@@ -39,9 +28,9 @@ export const AvatarMenu: React.FC = () => {
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">
-              {user.displayName || user.name}
+              {_user.displayName || user.name}
             </p>
-            {user.email && (
+            {_user.email && (
               <p className="text-xs leading-none text-muted-foreground">
                 {user.email}
               </p>
@@ -62,7 +51,7 @@ export const AvatarMenu: React.FC = () => {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={logout} className="flex items-center cursor-pointer">
+        <DropdownMenuItem onClick={_logout} className="flex items-center cursor-pointer">
           <LogOut className="mr-2 h-4 w-4" />
           <span>Logout</span>
         </DropdownMenuItem>

@@ -3,43 +3,27 @@ import Head from 'next/head';
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-const Home = () => {
-  const features = [
+const _Home = () => {_const _features = [
     {
-      title: "AI Development",
-      description: "Custom AI solutions and machine learning models for your business needs.",
-      icon: "🤖",
-      href: "/services/ai-development"
-    },
-    {
-      title: "Cloud Architecture",
-      description: "Scalable cloud solutions and infrastructure design for modern applications.",
-      icon: "☁️",
-      href: "/services/cloud-services"
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation services to modernize your business.",
-      icon: "🚀",
-      href: "/services"
-    }
+      title: "AI Development", _description: "Custom AI solutions and machine learning models for your business needs.", _icon: "🤖", _href: "/services/ai-development"},
+    {_title: "Cloud Architecture", _description: "Scalable cloud solutions and infrastructure design for modern applications.", _icon: "☁️", _href: "/services/cloud-services"},
+    {_title: "Digital Transformation", _description: "End-to-end digital transformation services to modernize your business.", _icon: "🚀", _href: "/services"}
   ];
 
-  const stats = [
-    { number: "100+", label: "Happy Clients" },
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Team Members" },
-    { number: "5+", label: "Years of Excellence" }
+  const _stats = [
+    {_number: "100+", _label: "Happy Clients"},
+    {_number: "500+", _label: "Projects Completed"},
+    {_number: "50+", _label: "Team Members"},
+    {_number: "5+", _label: "Years of Excellence"}
   ];
 
-  return (
-    <EnhancedLayout>
+  return (_<EnhancedLayout>
       <Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence." />
+        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, _we help companies transform their digital presence." />
       </Head>
       
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -47,7 +31,7 @@ const Home = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100">
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
+            with cutting-edge AI, _cloud architecture, _and innovative development services.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
@@ -61,7 +45,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {_/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -75,12 +59,12 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
+            {_features.map((feature, _index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
-                <div className="text-6xl mb-6">{feature.icon}</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 mb-6">{feature.description}</p>
-                <Link href={feature.href} className="text-blue-600 hover:text-blue-700 font-medium">
+                <div className="text-6xl mb-6">{_feature.icon}</div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{_feature.title}</h3>
+                <p className="text-gray-600 mb-6">{_feature.description}</p>
+                <Link href={_feature.href} className="text-blue-600 hover:text-blue-700 font-medium">
                   Learn More →
                 </Link>
               </div>
@@ -89,21 +73,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
+            {_stats.map(_(stat, _index) => (
               <div key={index}>
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{_stat.number}</div>
+                <div className="text-gray-600">{_stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">

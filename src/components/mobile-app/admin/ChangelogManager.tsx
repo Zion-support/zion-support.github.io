@@ -1,62 +1,33 @@
 
-import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Plus, Trash2 } from 'lucide-react'
-import { AppPlatform } from "./MetadataManager";
+import React, {_useState} from "react";
 
-interface ChangelogManagerProps {
-  platform: AppPlatform;
-}
+interface ChangelogManagerProps {_platform: AppPlatform;}
 
-type ChangelogEntry = {
-  id: string;
+type ChangelogEntry = {_id: string;
   version: string;
   date: string;
-  changes: string;
-};
+  changes: string;};
 
-export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
+export const ChangelogManager: React.FC<ChangelogManagerProps> = (_{_platform}) => {_const [entries, _setEntries] = useState<ChangelogEntry[]>([
     {
-      id: "1",
-      version: "1.0.0",
-      date: "2025-05-15",
-      changes: "Initial release of the Zion AI Marketplace app."
-    }
+      id: "1", _version: "1.0.0", _date: "2025-05-15", _changes: "Initial release of the Zion AI Marketplace app."}
   ]);
   
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
-    version: "",
-    date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
-    changes: ""
-  });
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({_version: "", _date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'), _changes: ""});
   
-  const handleAddEntry = () => {
-    if (!newEntry.version || !newEntry.changes) return;
+  const _handleAddEntry = () => {_if (!newEntry.version || !newEntry.changes) return;
     
     const entry: ChangelogEntry = {
-      ...newEntry,
-      id: Math.random().toString(36).substring(2, 9)
-    };
+      ...newEntry, _id: Math.random().toString(36).substring(2, _9)};
     
     setEntries([entry, ...entries]);
-    setNewEntry({
-      version: "",
-      date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
-      changes: ""
-    });
+    setNewEntry({_version: "", _date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'), _changes: ""});
   };
   
-  const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id));
-  };
+  const _handleRemoveEntry = (_id: string) => {_setEntries(entries.filter(entry => entry.id !== id));};
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setNewEntry(prev => ({ ...prev, [name]: value }));
+  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {_const { name, _value} = e.target;
+    setNewEntry(prev => ({_...prev, _[name]: value}));
   };
   
   return (
@@ -71,19 +42,19 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
-                value={newEntry.version}
-                onChange={handleInputChange}
+                value={_newEntry.version}
+                onChange={_handleInputChange}
               />
               <Input
                 type="date"
                 name="date"
-                value={newEntry.date}
-                onChange={handleInputChange}
+                value={_newEntry.date}
+                onChange={_handleInputChange}
               />
             </div>
             <Button 
-              onClick={handleAddEntry}
-              disabled={!newEntry.version || !newEntry.changes}
+              onClick={_handleAddEntry}
+              disabled={_!newEntry.version || !newEntry.changes}
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
@@ -93,36 +64,35 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
-            value={newEntry.changes}
-            onChange={handleInputChange}
-            rows={3}
+            value={_newEntry.changes}
+            onChange={_handleInputChange}
+            rows={_3}
           />
           
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry) => (
-              <div 
+            {_entries.map(_(entry) => (_<div 
                 key={entry.id}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
               >
                 <div className="flex justify-between mb-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-zion-cyan font-semibold">v{entry.version}</span>
-                    <span className="text-sm text-gray-400">{entry.date}</span>
+                    <span className="text-zion-cyan font-semibold">v{_entry.version}</span>
+                    <span className="text-sm text-gray-400">{_entry.date}</span>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => handleRemoveEntry(entry.id)}
+                    onClick={_() => handleRemoveEntry(entry.id)}
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>
-                <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
+                <p className="text-sm whitespace-pre-wrap">{_entry.changes}</p>
               </div>
             ))}
             
-            {entries.length === 0 && (
+            {_entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
           </div>

@@ -2,26 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
-export default function AIEvalsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+export default function AIEvalsPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval calls', 'Latency/Cost tracking', 'Toxicity/PII checks', 'CSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval calls', 'Custom metrics (BLEU/ROUGE/F1)', 'CI evals via API', 'Slack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPC', 'SLA & audit logs', 'SOC2 support', 'SAML/SSO'] }];
+	const _plans = [
+		{_name: 'Startup', _price: '$149/month', _items: ['5K eval calls', _'Latency/Cost tracking', _'Toxicity/PII checks', _'CSV export']},
+		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
+		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
 
-	return (
-		<QuantumHolographicMatrixBackground intensity={1.5}>
+	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
-				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
+				<meta name="description" content="Automated LLM evaluation with accuracy, _faithfulness, _latency, _and cost metrics. Integrate with CI and guardrails." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
 
@@ -36,13 +29,12 @@ export default function AIEvalsPage() {
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-					{plans.map((p) => (
-						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-							<h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-							<div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
+					{_plans.map((p) => (_<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
+							<h3 className="text-2xl font-bold text-white mb-2">{_p.name}</h3>
+							<div className="text-cyan-400 font-semibold mb-4">{_p.price}</div>
 							<ul className="space-y-2 text-gray-300 text-sm">
-								{p.items.map((i) => (
-									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
+								{_p.items.map((i) => (
+									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{_i}</span></li>
 								))}
 							</ul>
 						</div>
@@ -69,9 +61,9 @@ export default function AIEvalsPage() {
 
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{_contactInfo.mobile}</span></div>
+						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{_contactInfo.email}</span></div>
+						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{_contactInfo.address}</span></div>
 					</div>
 					<div className="text-center">
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>

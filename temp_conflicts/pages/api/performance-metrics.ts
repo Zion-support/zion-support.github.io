@@ -1,9 +1,8 @@
 // API endpoint for performance metrics collection
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { PerformanceReport } from '@/utils/performance-monitor';
+import type {_NextApiRequest, _NextApiResponse} from 'next';
+import type {_PerformanceReport} from '@/utils/performance-monitor';
 
-interface PerformanceData {
-  timestamp: string;
+interface PerformanceData {_timestamp: string;
   url: string;
   userAgent: string;
   fcp: number;
@@ -11,47 +10,36 @@ interface PerformanceData {
   fid: number;
   cls: number;
   ttfb: number;
-  sessionId: string;
-}
+  sessionId: string;}
 
-interface ErrorData {
-  timestamp: string;
+interface ErrorData {_timestamp: string;
   url: string;
   userAgent: string;
   error: string;
   stack?: string;
-  sessionId: string;
-}
+  sessionId: string;}
 
 // In-memory storage for demo purposes
 // In production, use a proper database
 let performanceMetrics: PerformanceData[] = [];
 let errorLogs: ErrorData[] = [];
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> {
-  if (req.method === 'POST') {
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse): Promise<void> {_if (req.method === 'POST') {
     try {
-      const performanceReport = req['body'];
+      const _performanceReport = req['body'];
       
       // Validate the report structure
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
-        res.status(400).json({ error: 'Invalid performance report format' });
+        res.status(400).json({ error: 'Invalid performance report format'});
         return;
       }
 
       // Log performance metrics (in production, you would store these in a database)
-      // Removed console.log('🔧 Performance Report:', { ... });
+      // Removed 
 
       // Log critical performance issues
-      const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor');
-      if (poorMetrics.length > 0) {
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
-          `${m.name}: ${m.value}ms`
-        ));
-      }
+      const _poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor');
+      if (poorMetrics.length > 0) {_);}
 
       // In production, you would:
       // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
@@ -60,126 +48,64 @@ export default async function handler(
       // 4. Aggregate metrics for performance dashboards
 
       // Example: Send to external analytics service
-      if (process.env['NODE_ENV'] === 'production' && process.env['ANALYTICS_ENDPOINT']) {
-        try {
-          await fetch(process.env['ANALYTICS_ENDPOINT'], {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
+      if (process.env['NODE_ENV'] === 'production' && process.env['ANALYTICS_ENDPOINT']) {_try {
+          await fetch(process.env['ANALYTICS_ENDPOINT'], _{
+            method: 'POST', _headers: {
+              'Content-Type': 'application/json', _'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
             },
-            body: JSON.stringify({
-              type: 'performance',
-              data: performanceReport,
-              timestamp: Date.now()
-            })
+            body: JSON.stringify({_type: 'performance', _data: performanceReport, _timestamp: Date.now()})
           });
-        } catch (error) {
-          console.error('Error sending to analytics:', error);
-        }
+        } catch (error) {}
       }
 
-      res.status(200).json({ success: true, message: 'Performance data recorded' });
-    } catch (error) {
-      console.error('Error processing request:', error);
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      });
+      res.status(200).json({_success: true, _message: 'Performance data recorded'});
+    } catch (error) {_res.status(500).json({ 
+        success: false, _message: 'Internal server error'});
     }
-  } catch (error) {
-    console.error('Error processing request:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Internal server error' 
-    });
+  } catch (error) {_res.status(500).json({ 
+      success: false, _message: 'Internal server error'});
     return;
   }
   
-  if (req.method === 'GET') {
-    try {
-      const { type, limit = 100 } = req.query;
+  if (req.method === 'GET') {_try {
+      const { type, _limit = 100} = req.query;
       
-      if (type === 'performance') {
-        const limitedMetrics = performanceMetrics
+      if (type === 'performance') {_const _limitedMetrics = performanceMetrics
           .slice(-Number(limit))
           .map(metric => ({
-            ...metric,
-            timestamp: new Date(metric.timestamp).toLocaleString()
-          }));
+            ...metric, _timestamp: new Date(metric.timestamp).toLocaleString()}));
 
-        res.status(200).json({
-          success: true,
-          data: limitedMetrics,
-          total: performanceMetrics.length,
-          average: calculateAverages(performanceMetrics)
-        });
-      } else if (type === 'error') {
-        const limitedErrors = errorLogs
+        res.status(200).json({_success: true, _data: limitedMetrics, _total: performanceMetrics.length, _average: calculateAverages(performanceMetrics)});
+      } else if (type === 'error') {_const _limitedErrors = errorLogs
           .slice(-Number(limit))
           .map(error => ({
-            ...error,
-            timestamp: new Date(error.timestamp).toLocaleString()
-          }));
+            ...error, _timestamp: new Date(error.timestamp).toLocaleString()}));
 
-        res.status(200).json({
-          success: true,
-          data: limitedErrors,
-          total: errorLogs.length
-        });
-      } else if (type === 'summary') {
-        res.status(200).json({
-          success: true,
-          summary: {
+        res.status(200).json({_success: true, _data: limitedErrors, _total: errorLogs.length});
+      } else if (type === 'summary') {_res.status(200).json({
+          success: true, _summary: {
             performance: {
-              total: performanceMetrics.length,
-              average: calculateAverages(performanceMetrics),
-              recent: performanceMetrics.slice(-10).length
-            },
-            errors: {
-              total: errorLogs.length,
-              recent: errorLogs.slice(-10).length
-            }
+              total: performanceMetrics.length, _average: calculateAverages(performanceMetrics), _recent: performanceMetrics.slice(-10).length},
+            errors: {_total: errorLogs.length, _recent: errorLogs.slice(-10).length}
           }
         });
-      } else {
-        res.status(400).json({ 
-          success: false, 
-          message: 'Invalid type parameter' 
-        });
+      } else {_res.status(400).json({ 
+          success: false, _message: 'Invalid type parameter'});
       }
-    } catch (error) {
-      console.error('Error retrieving data:', error);
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      });
+    } catch (error) {_res.status(500).json({ 
+        success: false, _message: 'Internal server error'});
     }
-  } else {
-    res.setHeader('Allow', ['POST', 'GET']);
+  } else {_res.setHeader('Allow', _['POST', _'GET']);
     res.status(405).json({ 
-      success: false, 
-      message: `Method ${req.method} Not Allowed` 
+      success: false, _message: `Method ${req.method} Not Allowed` 
     });
   }
 }
 
-function calculateAverages(metrics: PerformanceData[]) {
-  if (metrics.length === 0) return null;
+function calculateAverages(_metrics: PerformanceData[]) {_if (metrics.length === 0) return null;
 
-  const sums = metrics.reduce((acc, metric) => ({
-    fcp: acc.fcp + metric.fcp,
-    lcp: acc.lcp + metric.lcp,
-    fid: acc.fid + metric.fid,
-    cls: acc.cls + metric.cls,
-    ttfb: acc.ttfb + metric.ttfb
-  }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 });
+  const _sums = metrics.reduce(_(acc, _metric) => ({
+    fcp: acc.fcp + metric.fcp, _lcp: acc.lcp + metric.lcp, _fid: acc.fid + metric.fid, _cls: acc.cls + metric.cls, _ttfb: acc.ttfb + metric.ttfb}), {_fcp: 0, _lcp: 0, _fid: 0, _cls: 0, _ttfb: 0});
 
-  return {
-    fcp: Math.round(sums.fcp / metrics.length),
-    lcp: Math.round(sums.lcp / metrics.length),
-    fid: Math.round(sums.fid / metrics.length),
-    cls: Math.round((sums.cls / metrics.length) * 1000) / 1000,
-    ttfb: Math.round(sums.ttfb / metrics.length)
-  };
+  return {_fcp: Math.round(sums.fcp / metrics.length), _lcp: Math.round(sums.lcp / metrics.length), _fid: Math.round(sums.fid / metrics.length), _cls: Math.round((sums.cls / metrics.length) * 1000) / 1000, _ttfb: Math.round(sums.ttfb / metrics.length)};
 }

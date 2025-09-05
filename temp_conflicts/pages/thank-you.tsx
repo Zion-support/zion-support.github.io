@@ -1,39 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  Mail, 
-  Clock, 
-  Users, 
-  ArrowRight,
-  Home,
-  Briefcase,
-  Phone
-} from 'lucide-react';
+import {_CheckCircle, _Mail, _Clock, _Users, _ArrowRight, _Home, _Briefcase, _Phone} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
-export default function ThankYouPage() {
-  const nextSteps = [
+export default function ThankYouPage() {_const _nextSteps = [
     {
-      title: 'Confirmation Email',
-      description: 'You\'ll receive a confirmation email within the next few minutes.',
-      icon: <Mail className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Team Review',
-      description: 'Our team will review your inquiry within 24 hours.',
-      icon: <Users className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Follow-up Call',
-      description: 'We\'ll schedule a follow-up call to discuss your needs in detail.',
-      icon: <Phone className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
-    }
+      title: 'Confirmation Email', _description: 'You\'ll receive a confirmation email within the next few minutes.', _icon: <Mail className="w-6 h-6" />, _color: 'from-blue-500 to-cyan-500'},
+    {_title: 'Team Review', _description: 'Our team will review your inquiry within 24 hours.', _icon: <Users className="w-6 h-6" />, _color: 'from-purple-500 to-pink-500'},
+    {_title: 'Follow-up Call', _description: 'We\'ll schedule a follow-up call to discuss your needs in detail.', _icon: <Phone className="w-6 h-6" />, _color: 'from-green-500 to-emerald-500'}
   ];
 
 	return (

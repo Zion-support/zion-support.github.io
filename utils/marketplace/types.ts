@@ -1,17 +1,15 @@
 export type PaymentTermsType = "hourly" | "fixed" | "milestone";
 
-export type Milestone = {
-  id: string;
+export type Milestone = {_id: string;
   title: string;
   dueDateIso?: string;
   amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
-};
+  status?: "planned" | "in-progress" | "done";};
 
 export type PaymentTerms =
-  | { type: "hourly"; hourlyRateUsd: number }
-  | { type: "fixed"; fixedAmountUsd: number }
-  | { type: "milestone"; milestones: Milestone[] };
+  | {_type: "hourly"; hourlyRateUsd: number}
+  | {_type: "fixed"; fixedAmountUsd: number}
+  | {_type: "milestone"; milestones: Milestone[]};
 
 export type OfferStatus =
   | "SENT"
@@ -19,8 +17,7 @@ export type OfferStatus =
   | "CHANGES_REQUESTED"
   | "DECLINED";
 
-export type Offer = {
-  id: string;
+export type Offer = {_id: string;
   createdAtIso: string;
   clientId: string;
   talentSlug: string;
@@ -30,28 +27,22 @@ export type Offer = {
   agreementUrl?: string;
   status: OfferStatus;
   changeRequestNote?: string;
-  projectId?: string;
-};
+  projectId?: string;};
 
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
 
-export type ProjectDocument = {
-  id: string;
+export type ProjectDocument = {_id: string;
   name: string;
   url?: string;
-  uploadedAtIso: string;
-};
+  uploadedAtIso: string;};
 
-export type ProjectNote = {
-  id: string;
+export type ProjectNote = {_id: string;
   authorId: string;
   authorRole: "client" | "talent";
   content: string;
-  createdAtIso: string;
-};
+  createdAtIso: string;};
 
-export type Project = {
-  id: string;
+export type Project = {_id: string;
   title: string;
   summary: string;
   clientId: string;
@@ -60,10 +51,7 @@ export type Project = {
   status: ProjectStatus;
   timeline: Milestone[];
   documents: ProjectDocument[];
-  notes: ProjectNote[];
-};
+  notes: ProjectNote[];};
 
-export type MarketplaceDb = {
-  offers: Offer[];
-  projects: Project[];
-};
+export type MarketplaceDb = {_offers: Offer[];
+  projects: Project[];};

@@ -1,28 +1,19 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
 
-export default function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { login } = useAuth();
+export default function SignInPage() {_const [email, _setEmail] = useState("");
+  const [password, _setPassword] = useState("");
+  const [isLoading, _setIsLoading] = useState(false);
+  const [error, _setError] = useState("");
+  const { login} = useAuth();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     setIsLoading(true);
     setError("");
 
     try {
-      await login(email, password);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed");
-    } finally {
-      setIsLoading(false);
-    }
+      await login(email, _password);} catch (error) {_setError(error instanceof Error ? error.message : "Login failed");} finally {_setIsLoading(false);}
   };
 
   return (
@@ -36,8 +27,8 @@ export default function SignInPage() {
         </div>
 
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {error && (
+          <form onSubmit={_handleSubmit} className="space-y-6">
+            {_error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
                 <p className="text-red-400 text-sm">{error}</p>
               </div>
@@ -51,8 +42,8 @@ export default function SignInPage() {
                 id="email"
                 type="email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={_email}
+                onChange={_(_e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your email"
               />
@@ -66,8 +57,8 @@ export default function SignInPage() {
                 id="password"
                 type="password"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={_password}
+                onChange={_(_e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your password"
               />
@@ -75,16 +66,16 @@ export default function SignInPage() {
 
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={_isLoading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
             >
-              {isLoading ? "Signing In..." : "Sign In"}
+              {_isLoading ? "Signing In..." : "Sign In"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-zinc-400 text-sm">
-              Don't have an account?{" "}
+              Don't have an account?{_" "}
               <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 font-medium">
                 Sign up for free
               </Link>
@@ -94,11 +85,11 @@ export default function SignInPage() {
 
         <div className="text-center">
           <p className="text-zinc-500 text-xs">
-            By signing in, you agree to our{" "}
+            By signing in, you agree to our{_" "}
             <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
               Terms of Service
-            </Link>{" "}
-            and{" "}
+            </Link>{_" "}
+            and{_" "}
             <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
               Privacy Policy
             </Link>

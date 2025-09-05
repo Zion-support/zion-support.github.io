@@ -1,32 +1,20 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons } from '@/components/AuthButtons';
-import { fireEvent } from '@/lib/analytics';
-import { logInfo } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
 
-const RegisterPage = () => {
-  const router = useRouter();
+const _RegisterPage = () => {_const _router = useRouter();
 
-  useEffect(() => {
-    fireEvent('signup_page_view');
-  }, []);
+  useEffect__(() => {
+    fireEvent('signup_page_view');}, []);
 
-  const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string;
-    emailVerificationRequired: boolean;
-  }) => {
-    if (emailVerificationRequired) {
+  const _handleSuccess = (_{_email, _emailVerificationRequired}: {_email: string;
+    emailVerificationRequired: boolean;}) => {_if (emailVerificationRequired) {
       router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-    } else {
-      router.push('/auth/login?registrationSuccess=true');
-    }
+    } else {_router.push('/auth/login?registrationSuccess=true');}
   };
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
         <meta name="description" content="Create your Zion Tech Marketplace account" />
@@ -39,18 +27,17 @@ const RegisterPage = () => {
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
-              width={48}
-              height={48}
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement;
-                target.style.display = 'none';
-              }}
+              width={_48}
+              height={_48}
+              onError={_(e) => {
+                const _target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';}}
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-              Or{' '}
+              Or{_' '}
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -60,9 +47,9 @@ const RegisterPage = () => {
             </p>
           </div>
 
-          <SignupForm onSuccess={handleSuccess} />
+          <SignupForm onSuccess={_handleSuccess} />
 
-          {/* Social signup options */}
+          {_/* Social signup options */}
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -72,16 +59,16 @@ const RegisterPage = () => {
                 <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
               </div>
             </div>
-            <AuthButtons providers={["google", "github"]} />
+            <AuthButtons providers={_["google", _"github"]} />
           </div>
 
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
-              By creating an account, you agree to our{' '}
+              By creating an account, you agree to our{_' '}
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
                 Terms of Service
-              </Link>{' '}
-              and{' '}
+              </Link>{_' '}
+              and{_' '}
               <Link href="/legal/privacy" className="text-blue-600 hover:text-blue-500">
                 Privacy Policy
               </Link>

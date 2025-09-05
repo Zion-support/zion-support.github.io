@@ -1,49 +1,21 @@
 
-import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { 
-  Select, 
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue 
-} from "@/components/ui/select";
-import { Zap, ChevronLeft, ChevronRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import React, {_useState} from "react";
+import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+export function MobileJobPost() {_const [currentStep, _setCurrentStep] = useState<JobPostStep>("details");
   
-  const goToNextStep = () => {
+  const _goToNextStep = () => {
     if (currentStep === "details") {
-      setCurrentStep("requirements");
-    } else if (currentStep === "requirements") {
-      setCurrentStep("budget");
-    } else if (currentStep === "budget") {
-      setCurrentStep("preview");
-    }
+      setCurrentStep("requirements");} else if (currentStep === "requirements") {_setCurrentStep("budget");} else if (currentStep === "budget") {_setCurrentStep("preview");}
   };
   
-  const goToPrevStep = () => {
-    if (currentStep === "requirements") {
-      setCurrentStep("details");
-    } else if (currentStep === "budget") {
-      setCurrentStep("requirements");
-    } else if (currentStep === "preview") {
-      setCurrentStep("budget");
-    }
+  const _goToPrevStep = () => {_if (currentStep === "requirements") {
+      setCurrentStep("details");} else if (currentStep === "budget") {_setCurrentStep("requirements");} else if (currentStep === "preview") {_setCurrentStep("budget");}
   };
   
-  const renderStepContent = () => {
-    switch (currentStep) {
+  const _renderStepContent = () => {_switch (currentStep) {
       case "details":
         return <DetailsStep />;
       case "requirements":
@@ -53,24 +25,23 @@ export function MobileJobPost() {
       case "preview":
         return <PreviewStep />;
       default:
-        return <DetailsStep />;
-    }
+        return <DetailsStep />;}
   };
   
   return (
     <div className="min-h-screen flex flex-col">
       <MobileHeader
-        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        title={_`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
       />
       
       <main className="flex-1 py-4 pb-24 px-4">
         <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
+            <Badge variant={_currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
+            <Badge variant={_currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
+            <Badge variant={_currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
+            <Badge variant={_currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
           </div>
           
           <Button variant="outline" className="flex gap-1">
@@ -78,10 +49,10 @@ export function MobileJobPost() {
           </Button>
         </div>
         
-        {renderStepContent()}
+        {_renderStepContent()}
         
         <div className="flex gap-2 mt-6">
-          {currentStep !== "details" && (
+          {_currentStep !== "details" && (
             <Button 
               variant="outline" 
               className="flex-1 gap-1" 
@@ -93,10 +64,10 @@ export function MobileJobPost() {
           
           <Button 
             className="flex-1 gap-1"
-            onClick={goToNextStep}
+            onClick={_goToNextStep}
           >
-            {currentStep === "preview" ? "Publish Job" : "Continue"}
-            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+            {_currentStep === "preview" ? "Publish Job" : "Continue"}
+            {_currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
           </Button>
         </div>
       </main>
@@ -106,8 +77,7 @@ export function MobileJobPost() {
   );
 }
 
-function DetailsStep() {
-  return (
+function DetailsStep() {_return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Details</h2>
       
@@ -162,25 +132,20 @@ function DetailsStep() {
   );
 }
 
-function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
+function RequirementsStep() {_const [skills, _setSkills] = useState<string[]>([
+    "React", _"TypeScript", _"Node.js"
   ]);
-  const [newSkill, setNewSkill] = useState("");
+  const [newSkill, _setNewSkill] = useState("");
   
-  const addSkill = () => {
+  const _addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
-      setNewSkill("");
-    }
+      setSkills([...skills, _newSkill]);
+      setNewSkill("");}
   };
   
-  const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill));
-  };
+  const _removeSkill = (_skill: string) => {_setSkills(skills.filter(s => s !== skill));};
   
-  return (
-    <div className="space-y-4">
+  return (_<div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
       
       <div className="space-y-2">
@@ -218,16 +183,15 @@ function RequirementsStep() {
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
-          {skills.map((skill) => (
-            <Badge 
+          {_skills.map((skill) => (_<Badge 
               key={skill} 
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
-              {skill}
+              {_skill}
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-                onClick={() => removeSkill(skill)}
+                onClick={_() => removeSkill(skill)}
               >
                 ×
               </button>
@@ -236,12 +200,12 @@ function RequirementsStep() {
         </div>
         <div className="flex gap-2">
           <Input 
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
+            value={_newSkill}
+            onChange={_(_e) => setNewSkill(e.target.value)}
             placeholder="Add a skill"
-            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+            onKeyDown={_(_e) => e.key === 'Enter' && addSkill()}
           />
-          <Button onClick={addSkill}>Add</Button>
+          <Button onClick={_addSkill}>Add</Button>
         </div>
       </div>
       
@@ -250,7 +214,7 @@ function RequirementsStep() {
         <Textarea 
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
-          rows={4}
+          rows={_4}
         />
       </div>
       
@@ -259,15 +223,14 @@ function RequirementsStep() {
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
-          rows={4}
+          rows={_4}
         />
       </div>
     </div>
   );
 }
 
-function BudgetStep() {
-  return (
+function BudgetStep() {_return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
       
@@ -343,8 +306,7 @@ function BudgetStep() {
   );
 }
 
-function PreviewStep() {
-  return (
+function PreviewStep() {_return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
       
@@ -361,7 +323,7 @@ function PreviewStep() {
           
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
-            <p>$80,000 - $120,000 USD / year</p>
+            <p>$80, _000 - $120, _000 USD / year</p>
           </div>
           
           <div className="space-y-1 text-sm mt-3">
@@ -371,7 +333,7 @@ function PreviewStep() {
           
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
-            <p>December 15, 2023</p>
+            <p>December 15, _2023</p>
           </div>
           
           <div className="mt-4 pt-3 border-t border-border">
@@ -383,5 +345,4 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  );
-}
+  );}

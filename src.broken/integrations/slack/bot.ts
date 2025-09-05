@@ -1,48 +1,33 @@
 
 // Mock implementation of Slack bot that doesn't require external dependencies
 // This replaces the original implementation which had dependency issues
-import { switchNetlifySite } from '../../../scripts/switch-netlify-site.js';
 
-interface SlackCommand {
-  text: string;
-}
+interface SlackCommand {_text: string;}
 
-interface SlackAck {
-  (): Promise<void>;
-}
+interface SlackAck {_(): Promise<void>;}
 
-interface SlackRespond {
-  (text: string): Promise<void>;
-}
+interface SlackRespond {_(text: string): Promise<void>;}
 
 // Define console type to avoid TypeScript errors
-interface SafeConsole {
-  log: (message: string) => void;
-}
+interface SafeConsole {_log: (_message: string) => void;}
 
 // Declare available globals
-declare const globalThis: {
-  console?: SafeConsole;
+declare const globalThis: {_console?: SafeConsole;
   process?: {
     env: {
       PORT?: string;
-      [key: string]: string | undefined;
-    };
+      [key: string]: string | undefined;};
   };
 };
 
-type CommandHandler = (args: { command?: SlackCommand; ack: SlackAck; respond: SlackRespond }) => Promise<void>;
-class MockApp {
-  private commandHandlers: Record<string, CommandHandler> = {};
+type CommandHandler = (_args: {_command?: SlackCommand; ack: SlackAck; respond: SlackRespond}) => Promise<void>;
+class MockApp {_private commandHandlers: Record<string, _CommandHandler> = {};
 
-  command(commandName: string, handler: CommandHandler) {
-    this.commandHandlers[commandName] = handler;
-    return this;
-  }
+  command(commandName: string, handler: CommandHandler) {_this.commandHandlers[commandName] = handler;
+    return this;}
 
-  async start(port?: number): Promise<void> {
-    // Safely log without direct console reference
-    const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+  async start(port?: number): Promise<void> {_// Safely log without direct console reference
+    const _safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
     }
@@ -51,33 +36,30 @@ class MockApp {
 }
 
 // Create a mock app instance
-const app = new MockApp();
+const _app = new MockApp();
 
-async function askZionGPT(prompt: string): Promise<string> {
-  // Safely log without direct console reference
-  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+async function askZionGPT(_prompt: string): Promise<string> {_// Safely log without direct console reference
+  const _safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
-  return `AI response to: ${prompt}`;
+  return `AI response to: ${_prompt}`;
 }
 
-app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
-  await ack();
-  const [action, ...args] = command?.text.split(/\s+/) || [];
+app.command(_'/zion', _async ({_command, _ack, _respond}: {_command?: SlackCommand, _ack: SlackAck, _respond: SlackRespond}) => {_await ack();
+  const [action, _...args] = command?.text.split(/\s+/) || [];
 
   switch (action) {
     case 'post-job':
       await respond('Please provide job details via the web interface.');
       break;
     case 'suggest-talent': {
-      const query = args.join(' ');
-      const answer = await askZionGPT(`Suggest talent for ${query}`);
+      const _query = args.join(' ');
+      const _answer = await askZionGPT(`Suggest talent for ${query}`);
       await respond(answer);
       break;
     }
-    case 'track-project': {
-      const project = args.join(' ');
+    case 'track-project': {_const _project = args.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break;
     }
@@ -93,39 +75,34 @@ app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand,
   }
 });
 
-app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond: SlackRespond }) => {
-  await ack();
+app.command(_'/zion-rollback', _async ({_ack, _respond}: {_ack: SlackAck, _respond: SlackRespond}) => {_await ack();
   try {
     await switchNetlifySite();
-    await respond('Rollback complete. DNS switched to the previous site.');
-  } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : String(err);
+    await respond('Rollback complete. DNS switched to the previous site.');} catch (err: unknown) {_const _message = err instanceof Error ? err.message : String(err);
     await respond(`Rollback failed: ${message}`);
   }
 });
 
 // Mock startup with safer environment access
-(async () => {
-  // Get PORT from environment or use default
-  const env = typeof globalThis !== 'undefined' && globalThis.process ? 
+(_async () => {_// Get PORT from environment or use default
+  const _env = typeof globalThis !== 'undefined' && globalThis.process ? 
     globalThis.process.env : {};
-  const port = env.PORT ? Number(env.PORT) : 3000;
+  const _port = env.PORT ? Number(env.PORT) : 3000;
   await app.start(port);
 })();
 
 // Add this function either inside MockApp or as an exported function
-async function sendSlackAlert(message: string): Promise<void> {
-  // Safely log without direct console reference
-  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+async function sendSlackAlert(_message: string): Promise<void> {_// Safely log without direct console reference
+  const _safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`SLACK_ALERT: ${message}`);
   }
   // In a real scenario, this would use the Slack API to send a message
-  // For example: await app.client.chat.postMessage({ channel: '#alerts', text: message });
+  // For example: await app.client.chat.postMessage({_channel: '#alerts', _text: message});
   return Promise.resolve();
 }
 
 // Export it if it's standalone, or ensure it can be called
-export { sendSlackAlert }; // If standalone
+export {_sendSlackAlert}; // If standalone
 
 export default app;

@@ -1,21 +1,14 @@
 
-import React, { useState } from "react";
-import type { UserProfile } from "@/types/auth";
+import React, {_useState} from "react";
+import type {_UserProfile} from "@/types/auth";
 
 /**
  * Custom hook to manage auth state
  */
-export function useAuthState() {
-  const [user, setUser] = useState<UserProfile | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
+export function useAuthState() {_const [user, _setUser] = useState<UserProfile | null>(null);
+  const [isLoading, _setIsLoading] = useState<boolean>(true);
+  const [onboardingStep, _setOnboardingStep] = useState<string | null>(null);
   
   return {
-    user,
-    setUser,
-    isLoading,
-    setIsLoading,
-    onboardingStep,
-    setOnboardingStep
-  };
+    user, _setUser, _isLoading, _setIsLoading, _onboardingStep, _setOnboardingStep};
 }

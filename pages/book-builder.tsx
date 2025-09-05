@@ -1,6 +1,4 @@
 import dynamic from 'next/dynamic';
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
+const _BookBuilder = dynamic__(() => import('../components/book/BookBuilder'), {_ssr: false});
 
-export default function BookBuilderPage() {
-  return <BookBuilder />;
-}
+export default function BookBuilderPage() {_return <BookBuilder />;}

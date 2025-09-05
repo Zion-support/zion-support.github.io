@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function MyVotesPage() {
-  return (
+export default function MyVotesPage() {_return (
     <>
       <Head>
         <title>My Votes - Zion Tech Group</title>
@@ -18,5 +17,4 @@ export default function MyVotesPage() {
         </div>
       </div>
     </>
-  );
-}
+  );}

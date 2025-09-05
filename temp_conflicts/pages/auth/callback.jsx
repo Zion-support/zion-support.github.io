@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const Callback = () => {
-  return (
+const _Callback = () => {_return (
     <div>
       <Head>
         <title>Callback - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const Callback = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Callback;

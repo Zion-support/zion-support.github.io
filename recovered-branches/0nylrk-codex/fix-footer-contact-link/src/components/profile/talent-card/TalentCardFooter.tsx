@@ -1,67 +1,41 @@
 
-import React, { useState } from "react";
-import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import { UserProfile } from "@/types/auth";
-import { useNavigate } from "react-router-dom";
+import React, {_useState} from "react";
 
-interface TalentCardFooterProps {
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
+interface TalentCardFooterProps {_profile: TalentProfile;
+  onViewProfile: (_id: string) => void;
+  onRequestHire?: (_profile: TalentProfile) => void;}
 
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const navigate = useNavigate();
+export function TalentCardFooter(_{_profile, _onViewProfile, _onRequestHire}: TalentCardFooterProps) {_const [isHireModalOpen, _setIsHireModalOpen] = useState(false);
+  const { userDetails} = useAuthStatus();
+  const _navigate = useNavigate();
 
   // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
-    id: userDetails?.id,
-    displayName: userDetails?.name || '',
-    email: userDetails?.email || '',
-    userType: '',
-    profileComplete: false,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  };
+  const userProfile: UserProfile = {_id: userDetails?.id, _displayName: userDetails?.name || '', _email: userDetails?.email || '', _userType: '', _profileComplete: false, _createdAt: new Date().toISOString(), _updatedAt: new Date().toISOString()};
 
   // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const _handleRequestHire = (_e: React.MouseEvent) => {_e.stopPropagation();
     
     if (onRequestHire) {
-      onRequestHire(profile);
-    } else {
-      // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true);
-    }
+      onRequestHire(profile);} else {_// Open hire modal directly if no handler provided
+      setIsHireModalOpen(true);}
   };
 
   // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const _handleViewProfile = (_e: React.MouseEvent) => {_e.stopPropagation();
     
     // Navigate to the talent profile page
     navigate(`/talent/${profile.id || ''}`);
     
     // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(profile.id || '');
-    }
+    if (onViewProfile) {_onViewProfile(profile.id || '');}
   };
 
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
-        {/* Experience or Hourly Rate */}
+        {_/* Experience or Hourly Rate */}
         <div>
-          {profile.hourly_rate ? (
+          {_profile.hourly_rate ? (
             <div>
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>
               <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
@@ -69,17 +43,17 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           ) : (
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 text-zion-purple" />
-              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
+              <span className="text-zion-slate-light">{_profile.years_experience} years exp.</span>
             </div>
           )}
         </div>
         
-        {/* Action Buttons */}
+        {_/* Action Buttons */}
         <div className="flex gap-2">
           <Button 
             variant="default" 
             size="sm" 
-            onClick={handleRequestHire}
+            onClick={_handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
@@ -88,7 +62,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="outline" 
             size="sm" 
-            onClick={handleViewProfile}
+            onClick={_handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -97,12 +71,12 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
       </div>
       
-      {/* Hire Request Modal */}
+      {_/* Hire Request Modal */}
       <HireRequestModal
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
+        talent={_profile}
+        isOpen={_isHireModalOpen}
+        onClose={_() => setIsHireModalOpen(false)}
+        userDetails={_userProfile}
       />
     </>
   );

@@ -1,19 +1,9 @@
 
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-import { ApplicationStatus } from "@/types/jobs";
 
-export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications();
+export function MyApplications() {_const { applications, _isLoading, _error} = useJobApplications();
   
-  const getStatusBadge = (status: ApplicationStatus) => {
-    switch (status) {
+  const _getStatusBadge = (_status: ApplicationStatus) => {_switch (status) {
       case "new":
         return <Badge variant="secondary">New</Badge>;
       case "viewed":
@@ -31,24 +21,20 @@ export function MyApplications() {
     }
   };
   
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    );
-  }
+    );}
   
-  if (error) {
-    return (
+  if (error) {_return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
         <p>{error}</p>
       </div>
     );
   }
   
-  if (applications.length === 0) {
-    return (
+  if (applications.length === 0) {_return (
       <Card className="bg-muted/30">
         <CardContent className="pt-6 text-center">
           <p className="text-muted-foreground">
@@ -59,27 +45,25 @@ export function MyApplications() {
           </Button>
         </CardContent>
       </Card>
-    );
-  }
+    );}
   
-  return (
-    <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application) => (
+  return (_<div className="grid gap-4 md:grid-cols-2">
+      {_applications.map((application) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
-                {application.job?.title || "Unknown Job"}
+                {_application.job?.title || "Unknown Job"}
               </CardTitle>
-              {getStatusBadge(application.status)}
+              {_getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}
             </p>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {application.cover_letter && (
+              {_application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
                   {application.cover_letter}
                 </p>
@@ -92,7 +76,7 @@ export function MyApplications() {
                   className="text-xs"
                   asChild
                 >
-                  <Link href={`/jobs/${application.job_id}`}>
+                  <Link href={_`/jobs/${application.job_id}`}>
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
@@ -103,7 +87,7 @@ export function MyApplications() {
                   className="text-xs"
                   asChild
                 >
-                  <Link href={`/messages?jobId=${application.job_id}`}>
+                  <Link href={_`/messages?jobId=${application.job_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
                   </Link>
                 </Button>

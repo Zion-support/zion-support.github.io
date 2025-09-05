@@ -1,12 +1,11 @@
 import Head from 'next/head';
 
-export default function Pm2RedundancyRedirect() {
-  return (
+export default function Pm2RedundancyRedirect() {_return (
     <>
       <Head>
         <meta httpEquiv="refresh" content="0; url=/README_PM2_REDUNDANCY_COMPLETE.md" />
       </Head>
-      <main style={{ padding: 24 }}>
+      <main style={{ padding: 24}}>
         <p>Redirecting to PM2 Redundancy docs…</p>
       </main>
     </>

@@ -1,23 +1,14 @@
 
 import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
 
-interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
+interface BudgetFieldsProps {_form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;}
 
-export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-  return (
-    <>
+export function BudgetFields(_{_form, _talent}: BudgetFieldsProps) {_return (_<>
       <FormField
         control={form.control}
         name="budgetMin"
-        render={({ field }) => (
+        render={_({ field}) => (
           <FormItem>
             <FormLabel className="text-white">Budget (Min)</FormLabel>
             <FormControl>
@@ -26,7 +17,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
                 <Input 
                   type="number" 
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
-                  {...field} 
+                  {_...field} 
                 />
               </div>
             </FormControl>
@@ -36,9 +27,9 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
       />
       
       <FormField
-        control={form.control}
+        control={_form.control}
         name="budgetMax"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel className="text-white">Budget (Max)</FormLabel>
             <FormControl>
@@ -47,7 +38,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
                 <Input 
                   type="number" 
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
-                  {...field} 
+                  {_...field} 
                 />
               </div>
             </FormControl>

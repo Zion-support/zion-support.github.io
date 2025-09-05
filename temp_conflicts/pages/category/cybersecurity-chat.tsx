@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const CybersecurityChat = () => {
-  return (
+const _CybersecurityChat = () => {_return (
     <div>
       <Head>
         <title>CybersecurityChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const CybersecurityChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default CybersecurityChat;

@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
-  return (
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Chat5gTechnologyAndItsImpactOnIotChat;

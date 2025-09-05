@@ -1,14 +1,7 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { TransactionHistory } from "@/components/transactions/TransactionHistory";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function Payments() {
-  return (
-    <>
+export default function Payments() {_return (_<>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -17,7 +10,7 @@ export default function Payments() {
               Payments & Transactions
             </GradientHeading>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Track your payment history, manage transactions in escrow, and view your financial activities.
+              Track your payment history, _manage transactions in escrow, _and view your financial activities.
             </p>
           </div>
           
@@ -42,7 +35,7 @@ export default function Payments() {
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button 
-                      onClick={() => window.open('https://stripe.com', '_blank')}
+                      onClick={() => window.open('https://stripe.com', _'_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
                       Manage Payment Methods
@@ -100,7 +93,3 @@ export default function Payments() {
 }
 
 // Import UI components for Payment Settings tab
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";

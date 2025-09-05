@@ -1,49 +1,29 @@
-import { useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Download, Link, Plus } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useReferrals } from "@/hooks/useReferrals";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
+export function PartnerReferralLinks() {_const { referralCode, _getReferralLink, _copyReferralLink, _shareOnSocialMedia} = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
+  const [generatedLinks, setGeneratedLinks] = useState<{_name: string, _link: string}[]>([]);
   
   // Get the base referral link
-  const baseLink = getReferralLink();
+  const _baseLink = getReferralLink();
   
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link);
+  const _handleCopyLink = (_link: string) => {_navigator.clipboard.writeText(link);
     toast({
-      title: "Link copied!",
-      description: "The referral link has been copied to your clipboard",
-      variant: "default"
-    });
+      title: "Link copied!", _description: "The referral link has been copied to your clipboard", _variant: "default"});
   };
   
-  const handleGenerateLink = () => {
-    if (baseLink) {
-      const url = new URL(baseLink);
+  const _handleGenerateLink = () => {_if (baseLink) {
+      const _url = new window.URL(baseLink);
       
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign);
-      }
+        url.searchParams.append("campaign", _selectedCampaign);}
       
       // Add custom parameter if provided
-      if (customParam) {
-        url.searchParams.append("source", customParam);
-      }
+      if (customParam) {_url.searchParams.append("source", _customParam);}
       
-      const newLink = {
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+      const _newLink = {_name: `${selectedCampaign}${_customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       };
       
@@ -53,20 +33,19 @@ export function PartnerReferralLinks() {
     }
   };
   
-  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink },
+  const _handleDownloadLinks = () => {_const _allLinks = [
+      { name: "Default", _link: baseLink},
       ...generatedLinks
     ];
     
-    const csvContent = [
+    const _csvContent = [
       "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
+      ...allLinks.map(l => `${_l.name},${_l.link}`)
     ].join("\n");
     
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
+    const _blob = new Blob([csvContent], {_type: 'text/csv;charset=utf-8;'});
+    const _url = window.URL.createObjectURL(blob);
+    const _link = document.createElement("a");
     link.setAttribute("href", url);
     link.setAttribute("download", "zion_referral_links.csv");
     link.style.visibility = 'hidden';
@@ -75,8 +54,7 @@ export function PartnerReferralLinks() {
     document.body.removeChild(link);
   };
 
-  return (
-    <div className="space-y-6">
+  return (_<div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
@@ -84,7 +62,7 @@ export function PartnerReferralLinks() {
             <Button 
               variant="outline" 
               size="sm" 
-              onClick={handleDownloadLinks}
+              onClick={_handleDownloadLinks}
               className="flex items-center gap-2"
             >
               <Download className="h-4 w-4" />
@@ -96,11 +74,11 @@ export function PartnerReferralLinks() {
         <CardContent>
           <div className="flex space-x-2">
             <Input
-              value={baseLink}
+              value={_baseLink}
               readOnly
               className="font-mono text-sm"
             />
-            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
+            <Button variant="outline" onClick={_() => handleCopyLink(baseLink)}>
               <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
@@ -110,7 +88,7 @@ export function PartnerReferralLinks() {
 
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={_isDialogOpen} onOpenChange={_setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -128,8 +106,8 @@ export function PartnerReferralLinks() {
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
                 <Select 
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}
+                  value={_selectedCampaign}
+                  onValueChange={_setSelectedCampaign}
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
@@ -149,8 +127,8 @@ export function PartnerReferralLinks() {
                 <Input 
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
-                  value={customParam}
-                  onChange={(e) => setCustomParam(e.target.value)}
+                  value={_customParam}
+                  onChange={_(_e) => setCustomParam(e.target.value)}
                 />
               </div>
             </div>
@@ -158,13 +136,13 @@ export function PartnerReferralLinks() {
               <Button 
                 type="button" 
                 variant="secondary" 
-                onClick={() => setIsDialogOpen(false)}
+                onClick={_() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
               <Button 
                 type="button" 
-                onClick={handleGenerateLink}
+                onClick={_handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
               >
                 Generate Link
@@ -175,28 +153,26 @@ export function PartnerReferralLinks() {
       </div>
 
       <div className="grid gap-4">
-        {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+        {_generatedLinks.length > 0 ? (_generatedLinks.map((item, _index) => (_<Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Link className="h-4 w-4 text-zion-purple" />
-                    <span>{item.name || "Campaign Link"}</span>
+                    <span>{_item.name || "Campaign Link"}</span>
                   </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
                   <Input
-                    value={item.link}
+                    value={_item.link}
                     readOnly
                     className="font-mono text-xs"
                   />
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    onClick={() => handleCopyLink(item.link)}
+                    onClick={_() => handleCopyLink(item.link)}
                   >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
@@ -205,15 +181,14 @@ export function PartnerReferralLinks() {
               </CardContent>
             </Card>
           ))
-        ) : (
-          <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">
+        ) : (_<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">
             <CardContent className="flex flex-col items-center justify-center p-6">
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
               </p>
               <Button 
                 variant="outline"
-                onClick={() => setIsDialogOpen(true)}
+                onClick={_() => setIsDialogOpen(true)}
                 className="flex items-center gap-2"
               >
                 <Plus className="h-4 w-4" />

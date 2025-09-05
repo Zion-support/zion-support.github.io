@@ -1,5 +1,4 @@
 // Hook for useAISearch;
-export const useUseAISearch: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUseAISearch: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

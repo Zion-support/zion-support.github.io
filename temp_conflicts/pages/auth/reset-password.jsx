@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const ResetPassword = () => {
-  return (
+const _ResetPassword = () => {_return (
     <div>
       <Head>
         <title>ResetPassword - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const ResetPassword = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ResetPassword;

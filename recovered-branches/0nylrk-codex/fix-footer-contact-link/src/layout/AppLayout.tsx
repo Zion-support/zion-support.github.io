@@ -1,21 +1,16 @@
 
 import React from "react";
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
 
-interface AppLayoutProps {
-  children: React.ReactNode;
-  hideFooter?: boolean;
-}
+interface AppLayoutProps {_children: React.ReactNode;
+  hideFooter?: boolean;}
 
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-  return (
+export function AppLayout(_{_children, _hideFooter = false}: AppLayoutProps) {_return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">
         {children}
       </main>
-      {!hideFooter && <Footer />}
+      {_!hideFooter && <Footer />}
     </div>
   );
 }

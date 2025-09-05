@@ -1,21 +1,15 @@
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 
-export type TrackEventPayload = {
-  name: string;
+export type TrackEventPayload = {_name: string;
   page?: string;
   userType?: UserType;
-  properties?: Record<string, any>;
-  at?: string;
-};
+  properties?: Record<string, _any>;
+  at?: string;};
 
-export async function trackEvent(payload: TrackEventPayload) {
-  try {
-    await fetch('/api/analytics/events/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+export async function trackEvent(_payload: TrackEventPayload) {_try {
+    await fetch('/api/analytics/events/track', _{
+      method: 'POST', _headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(payload),
       keepalive: true as any});
-  } catch (e) {
-    // swallow
-  }
+  } catch (e) {_// swallow}
 }

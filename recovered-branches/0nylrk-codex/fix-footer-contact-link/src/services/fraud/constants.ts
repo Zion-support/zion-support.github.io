@@ -2,7 +2,7 @@
 // Common constants used across fraud detection modules
 
 // Phrases that might indicate fraud
-export const suspiciousPhrases = [
+export const _suspiciousPhrases = [
   "whatsapp me",
   "contact me outside",
   "cashapp only",
@@ -18,7 +18,7 @@ export const suspiciousPhrases = [
 ];
 
 // Email domains often used for throwaway accounts
-export const suspiciousEmailDomains = [
+export const _suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
   "fakeemail",

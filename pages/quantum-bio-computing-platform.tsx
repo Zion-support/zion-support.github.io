@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-export default function QuantumBioComputingPlatformPage() {
-	return (
+export default function QuantumBioComputingPlatformPage() {_return (
 		<UltraFuturisticBackground>
 			<Head>
 				<title>Quantum Bio-Computing Platform | Zion Tech Group</title>
@@ -21,5 +20,4 @@ export default function QuantumBioComputingPlatformPage() {
 				</ul>
 			</div>
 		</UltraFuturisticBackground>
-	);
-}
+	);}

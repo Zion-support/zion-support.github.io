@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function ForbiddenPage() {
-  return (
+export default function ForbiddenPage() {_return (
     <>
       <Head>
         <title>403 - Zion App</title>
@@ -18,5 +17,4 @@ export default function ForbiddenPage() {
         </div>
       </div>
     </>
-  );
-}
+  );}

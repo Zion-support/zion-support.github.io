@@ -1,5 +1,4 @@
 // Hook for useSmartContracts;
-export const useUseSmartContracts: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUseSmartContracts: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

@@ -1,16 +1,12 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
-interface PageViewsChartProps {
-  data: Array<{ date: string; views: number }>;
+interface PageViewsChartProps {_data: Array<{ date: string; views: number}>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void;
+  onTimeRangeChange: (_range: string) => void;
 }
 
-export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
-  return (
+export function PageViewsChart(_{_data, _timeRange, _onTimeRangeChange}: PageViewsChartProps) {_return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
         <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>
@@ -20,9 +16,9 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart 
           title=""
           data={data || []}
-          dataKeys={['views']}
-          timeRange={timeRange}
-          onTimeRangeChange={onTimeRangeChange}
+          dataKeys={_['views']}
+          timeRange={_timeRange}
+          onTimeRangeChange={_onTimeRangeChange}
         />
       </CardContent>
     </Card>

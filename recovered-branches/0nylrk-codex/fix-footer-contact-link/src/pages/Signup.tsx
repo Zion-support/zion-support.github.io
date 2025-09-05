@@ -1,81 +1,41 @@
 
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
 // Form validation schema
-const signupSchema = z
-  .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
-    password: z.string()
-      .min(8, "Password must be at least 8 characters")
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-      .regex(/[0-9]/, "Password must contain at least one number"),
-    confirmPassword: z.string(),
-    termsAccepted: z.boolean().refine(val => val === true, {
+const _signupSchema = z
+  .object({_displayName: z.string().min(2, _"Name must be at least 2 characters"), _email: z.string().email("Please enter a valid email"), _password: z.string()
+      .min(8, _"Password must be at least 8 characters")
+      .regex(/[A-Z]/, _"Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, _"Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, _"Password must contain at least one number"), _confirmPassword: z.string(), _termsAccepted: z.boolean().refine(val => val === true, _{
       message: "You must accept the terms and conditions"})})
-  .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]});
+  .refine(data => data.password === data.confirmPassword, {_message: "Passwords do not match", _path: ["confirmPassword"]});
 
 type SignupFormValues = z.infer<typeof signupSchema>;
 
-export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+export default function Signup() {_const { signup, _loginWithGoogle, _loginWithFacebook, _loginWithTwitter, _isLoading, _isAuthenticated, _user} = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(signupSchema),
-    defaultValues: {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>;
+  const _form = useForm({_resolver: zodResolver(signupSchema), _defaultValues: {
+      displayName: "", _email: "", _password: "", _confirmPassword: "", _termsAccepted: false}}) as UseFormReturn<SignupFormValues>;
 
   // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions
+  const _onSubmit = async (_data: SignupFormValues) => {_if (isSubmitting) return; // Prevent multiple submissions
     
     setIsSubmitting(true);
     try {
-      await signup(data.email, data.password, data.displayName);
-    } finally {
-      setIsSubmitting(false);
-    }
+      await signup(data.email, _data.password, _data.displayName);} finally {_setIsSubmitting(false);}
   };
 
   // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
-  }
+  if (isAuthenticated && user?.profileComplete) {_return <Navigate to="/" />;}
   
   // Redirect to onboarding if user is authenticated but hasn't completed profile
-  if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />;
-  }
+  if (isAuthenticated && !user?.profileComplete) {_return <Navigate to="/onboarding" />;}
 
   return (
     <>
@@ -88,7 +48,7 @@ export default function Signup() {
                 Create your account
               </h2>
               <p className="mt-2 text-sm text-zion-slate-light">
-                Already have an account?{" "}
+                Already have an account?{_" "}
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
                   Sign in
                 </Link>
@@ -96,12 +56,12 @@ export default function Signup() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
+              <Form {_...form}>
+                <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
                   <FormField
-                    control={form.control}
+                    control={_form.control}
                     name="displayName"
-                    render={({ field }) => (
+                    render={_(_{ field}) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                         <FormControl>
@@ -109,7 +69,7 @@ export default function Signup() {
                             <Input
                               placeholder="John Doe"
                               className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
+                              {_...field}
                               aria-autocomplete="none"
                               autoComplete="off"
                             />
@@ -122,9 +82,9 @@ export default function Signup() {
                   />
 
                   <FormField
-                    control={form.control}
+                    control={_form.control}
                     name="email"
-                    render={({ field }) => (
+                    render={_(_{ field}) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                         <FormControl>
@@ -132,7 +92,7 @@ export default function Signup() {
                             <Input
                               placeholder="you@example.com"
                               className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
+                              {_...field}
                               autoComplete="off"
                               aria-autocomplete="none"
                               type="email"
@@ -146,18 +106,17 @@ export default function Signup() {
                   />
 
                   <FormField
-                    control={form.control}
+                    control={_form.control}
                     name="password"
-                    render={({ field }) => (
-                      <FormItem>
+                    render={_(_{ field}) => (_<FormItem>
                         <FormLabel className="text-zion-slate-light">Password</FormLabel>
                         <FormControl>
                           <div className="relative">
                             <Input
-                              type={showPassword ? "text" : "password"}
+                              type={_showPassword ? "text" : "password"}
                               placeholder="••••••••"
                               className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
-                              {...field}
+                              {_...field}
                               autoComplete="new-password"
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -166,15 +125,15 @@ export default function Signup() {
                               variant="ghost"
                               size="sm"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
-                              onClick={() => setShowPassword(!showPassword)}
+                              onClick={_() => setShowPassword(!showPassword)}
                             >
-                              {showPassword ? (
+                              {_showPassword ? (
                                 <EyeOff className="h-4 w-4" />
                               ) : (
                                 <Eye className="h-4 w-4" />
                               )}
                               <span className="sr-only">
-                                {showPassword ? "Hide password" : "Show password"}
+                                {_showPassword ? "Hide password" : "Show password"}
                               </span>
                             </Button>
                           </div>
@@ -185,18 +144,17 @@ export default function Signup() {
                   />
 
                   <FormField
-                    control={form.control}
+                    control={_form.control}
                     name="confirmPassword"
-                    render={({ field }) => (
-                      <FormItem>
+                    render={_(_{ field}) => (_<FormItem>
                         <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                         <FormControl>
                           <div className="relative">
                             <Input
-                              type={showConfirmPassword ? "text" : "password"}
+                              type={_showConfirmPassword ? "text" : "password"}
                               placeholder="••••••••"
                               className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
-                              {...field}
+                              {_...field}
                               autoComplete="new-password"
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -205,15 +163,15 @@ export default function Signup() {
                               variant="ghost"
                               size="sm"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
-                              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                              onClick={_() => setShowConfirmPassword(!showConfirmPassword)}
                             >
-                              {showConfirmPassword ? (
+                              {_showConfirmPassword ? (
                                 <EyeOff className="h-4 w-4" />
                               ) : (
                                 <Eye className="h-4 w-4" />
                               )}
                               <span className="sr-only">
-                                {showConfirmPassword ? "Hide password" : "Show password"}
+                                {_showConfirmPassword ? "Hide password" : "Show password"}
                               </span>
                             </Button>
                           </div>
@@ -224,24 +182,24 @@ export default function Signup() {
                   />
 
                   <FormField
-                    control={form.control}
+                    control={_form.control}
                     name="termsAccepted"
-                    render={({ field }) => (
+                    render={_(_{ field}) => (
                       <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                         <FormControl>
                           <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
+                            checked={_field.value}
+                            onCheckedChange={_field.onChange}
                             className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
                           <FormLabel className="text-sm text-zion-slate-light">
-                            I agree to the{" "}
+                            I agree to the{_" "}
                             <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
                               Terms of Service
-                            </a>{" "}
-                            and{" "}
+                            </a>{_" "}
+                            and{_" "}
                             <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
                               Privacy Policy
                             </a>
@@ -255,9 +213,9 @@ export default function Signup() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isLoading || isSubmitting}
+                    disabled={_isLoading || isSubmitting}
                   >
-                    {isLoading ? "Creating Account..." : "Create Account"}
+                    {_isLoading ? "Creating Account..." : "Create Account"}
                   </Button>
                 </form>
               </Form>
@@ -277,8 +235,8 @@ export default function Signup() {
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-                    onClick={() => loginWithGoogle()}
-                    disabled={isLoading || isSubmitting}
+                    onClick={_() => loginWithGoogle()}
+                    disabled={_isLoading || isSubmitting}
                   >
                     <span className="sr-only">Sign in with Google</span>
                     <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -292,8 +250,8 @@ export default function Signup() {
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-                    onClick={() => loginWithFacebook()}
-                    disabled={isLoading || isSubmitting}
+                    onClick={_() => loginWithFacebook()}
+                    disabled={_isLoading || isSubmitting}
                   >
                     <span className="sr-only">Sign in with Facebook</span>
                     <Facebook className="h-5 w-5" />
@@ -302,8 +260,8 @@ export default function Signup() {
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-                    onClick={() => loginWithTwitter()}
-                    disabled={isLoading || isSubmitting}
+                    onClick={_() => loginWithTwitter()}
+                    disabled={_isLoading || isSubmitting}
                   >
                     <span className="sr-only">Sign in with Twitter</span>
                     <Twitter className="h-5 w-5" />

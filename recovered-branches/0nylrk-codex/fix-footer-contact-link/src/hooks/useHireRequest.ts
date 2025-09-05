@@ -1,74 +1,48 @@
 
-import { useState } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
 
-export interface HireRequestData {
-  talent: {
+export interface HireRequestData {_talent: {
     id: string;
     full_name: string;
     professional_title: string;
-    email?: string;
-  };
-  requester: {
-    name: string;
+    email?: string;};
+  requester: {_name: string;
     email: string;
-    id?: string;
-  };
-  project: {
-    overview: string;
+    id?: string;};
+  project: {_overview: string;
     timeline: string;
     budgetMin: number;
-    budgetMax: number;
-  };
+    budgetMax: number;};
 }
 
-export function useHireRequest() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useState(false);
+  const [error, _setError] = useState<string | null>(null);
 
-  const submitHireRequest = async (requestData: HireRequestData) => {
+  const _submitHireRequest = async (_requestData: HireRequestData) => {
     setIsSubmitting(true);
     setError(null);
     
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
-        body: requestData
-      });
+      const { data: response, _error} = await supabase.functions.invoke(_'process-hire-request', _{_body: requestData});
       
       if (error) throw error;
       
       // Show success message
-      toast({
-        title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
+      toast({_title: "Request Submitted", _description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       
-      return { success: true, requestId: response?.request_id };
-    } catch (error) {
-      console.error("Error submitting hire request:", error);
-      
-      const errorMessage = error instanceof Error 
+      return {_success: true, _requestId: response?.request_id};
+    } catch (error) {_const _errorMessage = error instanceof Error 
         ? error.message 
         : "There was a problem submitting your request. Please try again.";
       
       setError(errorMessage);
       
       toast({
-        title: "Error",
-        description: errorMessage,
-        variant: "destructive"});
+        title: "Error", _description: errorMessage, _variant: "destructive"});
       
-      return { success: false, error: errorMessage };
-    } finally {
-      setIsSubmitting(false);
-    }
+      return {_success: false, _error: errorMessage};
+    } finally {_setIsSubmitting(false);}
   };
   
-  return {
-    submitHireRequest,
-    isSubmitting,
-    error
-  };
+  return {_submitHireRequest, _isSubmitting, _error};
 }

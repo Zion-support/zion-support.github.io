@@ -1,25 +1,8 @@
 
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
+import React, {_useState} from 'react';
 
-export default function ContentGenerator() {
-  const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
+export default function ContentGenerator() {_const { user, _isLoading} = useAuth();
+  const _navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
   const [topic, setTopic] = useState('');
@@ -30,74 +13,45 @@ export default function ContentGenerator() {
   const [testEmail, setTestEmail] = useState('');
 
   // Redirect if not logged in
-  React.useEffect(() => {
-    if (!isLoading && !user) {
+  React.useEffect__(() => {_if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
-      navigate("/login?redirect=/content-generator");
-    }
+      navigate("/login?redirect=/content-generator");}
   }, [user, isLoading, navigate]);
 
-  const generateContent = async () => {
-    setIsGenerating(true);
+  const _generateContent = async () => {_setIsGenerating(true);
     setPreviewContent(null);
     
     try {
-      const { data, error } = await supabase.functions.invoke('generate-content', {
-        body: {
-          contentType,
-          prompt: customPrompt || undefined,
-          topic: topic || undefined,
-          autoPublish,
-          includeImage: contentType === 'blog' ? includeImage : false
-        }
+      const { data, _error} = await supabase.functions.invoke('generate-content', {_body: {
+          contentType, _prompt: customPrompt || undefined, _topic: topic || undefined, _autoPublish, _includeImage: contentType === 'blog' ? includeImage : false}
       });
       
       if (error) throw error;
       
       setPreviewContent(data);
-      toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-    } catch (error) {
-      console.error("Error generating content:", error);
-      toast.error("Failed to generate content. Please try again.");
-    } finally {
-      setIsGenerating(false);
-    }
+      toast.success(`${_contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
+    } catch (error) {_toast.error("Failed to generate content. Please try again.");} finally {_setIsGenerating(false);}
   };
 
-  const sendTestNewsletter = async () => {
-    if (!testEmail) {
+  const _sendTestNewsletter = async () => {_if (!testEmail) {
       toast.error("Please enter a test email address");
-      return;
-    }
+      return;}
     
-    if (!previewContent) {
-      toast.error("Generate newsletter content first");
-      return;
-    }
+    if (!previewContent) {_toast.error("Generate newsletter content first");
+      return;}
     
-    try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
-        body: {
-          subject: previewContent.subject,
-          previewText: previewContent.previewText,
-          body: previewContent.body,
-          testMode: true,
-          testEmail
-        }
+    try {_const { data, _error} = await supabase.functions.invoke('send-newsletter', {_body: {
+          subject: previewContent.subject, _previewText: previewContent.previewText, _body: previewContent.body, _testMode: true, _testEmail}
       });
       
       if (error) throw error;
       
-      toast.success(`Test newsletter sent to ${testEmail}!`);
-    } catch (error) {
-      console.error("Error sending test newsletter:", error);
-      toast.error("Failed to send test newsletter. Please try again.");
-    }
+      toast.success(`Test newsletter sent to ${_testEmail}!`);
+    } catch (error) {_toast.error("Failed to send test newsletter. Please try again.");}
   };
 
   // Check if user is still loading
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <>
         <Header />
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
@@ -105,11 +59,9 @@ export default function ContentGenerator() {
         </div>
         <Footer />
       </>
-    );
-  }
+    );}
 
-  return (
-    <>
+  return (_<>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
@@ -127,7 +79,7 @@ export default function ContentGenerator() {
                 <CardContent className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="contentType" className="text-white">Content Type</Label>
-                    <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter')}>
+                    <Select value={_contentType} onValueChange={_(value) => setContentType(value as 'blog' | 'newsletter')}>
                       <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
                         <SelectValue placeholder="Select content type" />
                       </SelectTrigger>
@@ -142,10 +94,10 @@ export default function ContentGenerator() {
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
                     <Input
                       id="topic"
-                      placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
+                      placeholder={_contentType === 'blog' ? "e.g., _Hiring AI Freelancers" : "e.g., _May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
-                      value={topic}
-                      onChange={(e) => setTopic(e.target.value)}
+                      value={_topic}
+                      onChange={_(_e) => setTopic(e.target.value)}
                     />
                   </div>
                   
@@ -155,19 +107,19 @@ export default function ContentGenerator() {
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
-                      value={customPrompt}
-                      onChange={(e) => setCustomPrompt(e.target.value)}
+                      value={_customPrompt}
+                      onChange={_(_e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
                   
-                  {contentType === 'blog' && (
+                  {_contentType === 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
                         <Switch
                           id="autoPublish"
                           checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
+                          onCheckedChange={_setAutoPublish}
                         />
                       </div>
                       
@@ -175,15 +127,14 @@ export default function ContentGenerator() {
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-                          checked={includeImage}
-                          onCheckedChange={setIncludeImage}
+                          checked={_includeImage}
+                          onCheckedChange={_setIncludeImage}
                         />
                       </div>
                     </>
                   )}
                   
-                  {contentType === 'newsletter' && (
-                    <div className="space-y-2">
+                  {_contentType === 'newsletter' && (_<div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
                       <Input
                         id="testEmail"
@@ -191,18 +142,18 @@ export default function ContentGenerator() {
                         placeholder="your@email.com"
                         className="bg-zion-blue border border-zion-blue-light text-white"
                         value={testEmail}
-                        onChange={(e) => setTestEmail(e.target.value)}
+                        onChange={_(e) => setTestEmail(e.target.value)}
                       />
                     </div>
                   )}
                 </CardContent>
                 <CardFooter>
                   <Button
-                    onClick={generateContent}
-                    disabled={isGenerating}
+                    onClick={_generateContent}
+                    disabled={_isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
-                    {isGenerating ? (
+                    {_isGenerating ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Generating...
@@ -224,7 +175,7 @@ export default function ContentGenerator() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  {isGenerating ? (
+                  {_isGenerating ? (
                     <div className="flex flex-col items-center justify-center py-12">
                       <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4" />
                       <p className="text-zion-slate-light">Generating content...</p>
@@ -243,12 +194,12 @@ export default function ContentGenerator() {
                             <ScrollArea className="h-[500px] pr-4">
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
-                                <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
+                                <p className="text-zion-slate-light">{_previewContent.metaDescription}</p>
                                 <div 
                                   className="prose prose-invert max-w-none"
-                                  dangerouslySetInnerHTML={{ 
+                                  dangerouslySetInnerHTML={_{ 
                                     __html: previewContent.body
-                                      .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
+                                      .replace(/^#{1, _6}\s+(.+)$/gm, "<h$1>$2</h$1>")
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>")
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>")
@@ -262,7 +213,7 @@ export default function ContentGenerator() {
                           <TabsContent value="markdown" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
-                                {previewContent.body}
+                                {_previewContent.body}
                               </pre>
                             </ScrollArea>
                           </TabsContent>
@@ -271,36 +222,36 @@ export default function ContentGenerator() {
                             <div className="space-y-4">
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Title</h3>
-                                <p className="text-zion-slate-light">{previewContent.title}</p>
+                                <p className="text-zion-slate-light">{_previewContent.title}</p>
                               </div>
                               
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Meta Description</h3>
-                                <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
+                                <p className="text-zion-slate-light">{_previewContent.metaDescription}</p>
                               </div>
                               
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>
                                 <div className="flex flex-wrap gap-2">
-                                  {previewContent.tags.map((tag: string, index: number) => (
+                                  {_previewContent.tags.map(_(tag: string, _index: number) => (
                                     <span 
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan"
                                     >
-                                      {tag}
+                                      {_tag}
                                     </span>
                                   ))}
                                 </div>
                               </div>
                               
-                              {previewContent.tweetSummary && (
+                              {_previewContent.tweetSummary && (
                                 <div>
                                   <h3 className="text-white font-semibold mb-1">Tweet Summary</h3>
                                   <p className="text-zion-slate-light">{previewContent.tweetSummary}</p>
                                 </div>
                               )}
                               
-                              {previewContent.imagePrompt && (
+                              {_previewContent.imagePrompt && (
                                 <div>
                                   <h3 className="text-white font-semibold mb-1">Image Prompt</h3>
                                   <p className="text-zion-slate-light">{previewContent.imagePrompt}</p>
@@ -320,27 +271,27 @@ export default function ContentGenerator() {
                           
                           <TabsContent value="preview" className="pt-4">
                             <div className="bg-white rounded-lg p-6 text-black">
-                              <h2 className="text-xl font-bold">{previewContent.subject}</h2>
-                              <p className="text-gray-500 text-sm mt-2">{previewContent.previewText}</p>
+                              <h2 className="text-xl font-bold">{_previewContent.subject}</h2>
+                              <p className="text-gray-500 text-sm mt-2">{_previewContent.previewText}</p>
                               <div className="border-t border-gray-200 my-4"></div>
                               <div 
                                 className="prose max-w-none"
-                                dangerouslySetInnerHTML={{ __html: previewContent.body }}
+                                dangerouslySetInnerHTML={_{ __html: previewContent.body}}
                               />
                               <div className="mt-6">
                                 <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-                                  {previewContent.cta || "Visit Zion Marketplace"}
+                                  {_previewContent.cta || "Visit Zion Marketplace"}
                                 </Button>
                               </div>
                             </div>
                             
                             <div className="mt-4 flex justify-end">
                               <Button
-                                onClick={sendTestNewsletter}
-                                disabled={!testEmail}
+                                onClick={_sendTestNewsletter}
+                                disabled={_!testEmail}
                                 className="bg-zion-blue-light hover:bg-zion-blue text-white"
                               >
-                                Send Test to {testEmail || "your email"}
+                                Send Test to {_testEmail || "your email"}
                               </Button>
                             </div>
                           </TabsContent>
@@ -348,7 +299,7 @@ export default function ContentGenerator() {
                           <TabsContent value="html" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
-                                {previewContent.body}
+                                {_previewContent.body}
                               </pre>
                             </ScrollArea>
                           </TabsContent>

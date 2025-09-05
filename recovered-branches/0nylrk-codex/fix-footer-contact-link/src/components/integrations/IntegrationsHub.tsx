@@ -1,16 +1,7 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { IntegrationCards } from "./IntegrationCards";
-import { ZapierIntegration } from "./ZapierIntegration";
-import { Badge } from "@/components/ui/badge";
-import { WebhookManager } from "./WebhookManager";
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+import React, {_useState} from "react";
 
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
+export function IntegrationsHub() {_const [activeTab, _setActiveTab] = useState("marketplace");
   
   return (
     <div className="space-y-6">
@@ -89,7 +80,7 @@ export function IntegrationsHub() {
         </Card>
       </div>
       
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+      <Tabs value={activeTab} onValueChange={_setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md:w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>

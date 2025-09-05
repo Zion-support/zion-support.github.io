@@ -1,17 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { format } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
+import React, {_useState, _useEffect} from 'react';
 
-interface MilestoneActivitiesProps {
-  projectId: string;
-}
+interface MilestoneActivitiesProps {_projectId: string;}
 
-interface Activity {
-  id: string;
+interface Activity {_id: string;
   milestone_id: string;
   user_id: string;
   action: string;
@@ -20,24 +12,20 @@ interface Activity {
   comment: string | null;
   created_at: string;
   milestone: {
-    title: string;
-  };
-  created_by_profile: {
-    display_name: string;
-    avatar_url: string | null;
-  };
+    title: string;};
+  created_by_profile: {_display_name: string;
+    avatar_url: string | null;};
 }
 
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export function MilestoneActivities(_{_projectId}: MilestoneActivitiesProps) {_const [activities, _setActivities] = useState<Activity[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect__(() => {
     async function fetchActivities() {
       try {
         setIsLoading(true);
         
-        const { data, error } = await supabase
+        const { data, _error} = await supabase
           .from('milestone_activities')
           .select(`
             *,
@@ -45,29 +33,22 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('project_id', projectId)
-          .order('created_at', { ascending: false });
+          .order('created_at', {_ascending: false});
 
         if (error) throw error;
         
         setActivities(data || []);
-      } catch (err) {
-        console.error('Error fetching milestone activities:', err);
-      } finally {
-        setIsLoading(false);
-      }
+      } catch (err) {} finally {_setIsLoading(false);}
     }
 
-    if (projectId) {
-      fetchActivities();
-    }
+    if (projectId) {_fetchActivities();}
   }, [projectId]);
 
-  function getActivityDescription(activity: Activity): string {
-    switch (activity.action) {
+  function getActivityDescription(_activity: Activity): string {_switch (activity.action) {
       case 'created':
         return 'created a new milestone';
       case 'status_changed':
-        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`;
+        return `changed status from ${activity.previous_status || 'none'} to ${_activity.new_status}`;
       case 'updated':
         return 'updated milestone details';
       case 'deliverable_added':
@@ -77,10 +58,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
     }
   }
 
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
+  if (isLoading) {_return (_<div className="space-y-4">
+        {[1, _2, _3].map((i) => (
           <Card key={i}>
             <CardContent className="p-6">
               <div className="flex items-center space-x-4">
@@ -97,45 +76,42 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
     );
   }
 
-  if (activities.length === 0) {
-    return (
+  if (activities.length === 0) {_return (
       <Card>
         <CardContent className="p-6 text-center">
           <p className="text-muted-foreground py-8">No activity found for this project</p>
         </CardContent>
       </Card>
-    );
-  }
+    );}
 
-  return (
-    <div className="space-y-4">
+  return (_<div className="space-y-4">
       <Card>
         <CardHeader>
           <CardTitle>Project Activity</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <div className="space-y-6">
-            {activities.map((activity) => (
+            {_activities.map((activity) => (
               <div key={activity.id} className="flex items-start space-x-4">
                 <Avatar className="h-10 w-10">
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />
+                  <AvatarImage src={_activity.created_by_profile?.avatar_url || ''} alt="User" />
                   <AvatarFallback>
-                    {activity.created_by_profile?.display_name?.charAt(0) || '?'}
+                    {_activity.created_by_profile?.display_name?.charAt(0) || '?'}
                   </AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2">
-                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>
+                    <span className="font-medium">{_activity.created_by_profile?.display_name}</span>
                     <span className="text-muted-foreground text-sm">
-                      {getActivityDescription(activity)}
+                      {_getActivityDescription(activity)}
                     </span>
                     <span className="text-muted-foreground text-xs">
-                      {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
+                      {_format(new Date(activity.created_at), _'MMM d, _yyyy h:mm a')}
                     </span>
                   </div>
                   <p className="text-sm">
-                    <span className="font-medium">{activity.milestone?.title}</span>
-                    {activity.comment && (
+                    <span className="font-medium">{_activity.milestone?.title}</span>
+                    {_activity.comment && (
                       <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>
                     )}
                   </p>

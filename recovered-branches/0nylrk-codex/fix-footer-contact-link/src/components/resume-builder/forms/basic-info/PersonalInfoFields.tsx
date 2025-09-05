@@ -1,24 +1,16 @@
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
 
-interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
+interface PersonalInfoFieldsProps {_control: Control<BasicInfoFormData>;}
 
-export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+export function PersonalInfoFields(_{_control}: PersonalInfoFieldsProps) {_return (_<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <FormField
         control={control}
         name="fullName"
-        render={({ field }) => (
+        render={_({ field}) => (
           <FormItem>
             <FormLabel>Full Name</FormLabel>
             <FormControl>
-              <Input placeholder="John Doe" {...field} />
+              <Input placeholder="John Doe" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -26,13 +18,13 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="title"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Professional Title</FormLabel>
             <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
+              <Input placeholder="Senior Software Engineer" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -40,13 +32,13 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="email"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
+              <Input type="email" placeholder="john@example.com" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -54,13 +46,13 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="phone"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
+              <Input placeholder="+1 234 567 8900" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

@@ -1,45 +1,18 @@
 
 import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import type {_QuoteRequest, _QuoteStatus} from "@/types/quotes";
 
-interface QuotesTableProps {
-  quotes: QuoteRequest[];
+interface QuotesTableProps {_quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
-  deleteQuote: (id: string) => void;
-  onViewDetails: (quote: QuoteRequest) => void;
-}
+  updateStatus: (_id: string, _status: QuoteStatus) => void;
+  toggleArchive: (_id: string, _isArchived: boolean) => void;
+  deleteQuote: (_id: string) => void;
+  onViewDetails: (_quote: QuoteRequest) => void;}
 
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes,
-  isArchived = false,
-  isLoading,
-  updateStatus,
-  toggleArchive,
-  deleteQuote,
-  onViewDetails
-}) => {
-  return (
+export const QuotesTable: React.FC<QuotesTableProps> = (_{_quotes, _isArchived = false, _isLoading, _updateStatus, _toggleArchive, _deleteQuote, _onViewDetails}) => {_return (
     <div className="overflow-x-auto">
       <Table>
         <TableHeader>
@@ -62,8 +35,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : quotes.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                {isArchived 
+              <TableCell colSpan={_7} className="text-center py-10 text-zion-slate-light">
+                {_isArchived 
                   ? "No archived quote requests found." 
                   : "No quote requests found."}
               </TableCell>
@@ -71,52 +44,51 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           ) : (
             quotes.map(quote => (
               <TableRow 
-                key={quote.id}
+                key={_quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
-                  {quote.talent_name || 'Unknown Talent'}
+                  {_quote.talent_name || 'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-                  {quote.requester_name}
+                  {_quote.requester_name}
                 </TableCell>
                 <TableCell className="text-white">
-                  <div className="font-medium">{quote.project_name}</div>
+                  <div className="font-medium">{_quote.project_name}</div>
                   <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
-                    {quote.project_summary}
+                    {_quote.project_summary}
                   </div>
                 </TableCell>
                 <TableCell className="text-white">
-                  {quote.budget_display || 
+                  {_quote.budget_display || 
                   (quote.budget_min && quote.budget_max 
-                   ? `$${quote.budget_min} - $${quote.budget_max}` 
+                   ? `$${quote.budget_min} - $${_quote.budget_max}` 
                    : quote.budget_min 
-                     ? `$${quote.budget_min}` 
+                     ? `$${_quote.budget_min}` 
                      : 'Not specified')}
                 </TableCell>
                 <TableCell className="text-white">
-                  {formatDate(quote.created_at)}
+                  {_formatDate(quote.created_at)}
                 </TableCell>
                 <TableCell>
-                  <QuoteStatusBadge status={quote.status} />
+                  <QuoteStatusBadge status={_quote.status} />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <Button 
                       variant="ghost" 
                       size="icon" 
-                      onClick={() => onViewDetails(quote)}
+                      onClick={_() => onViewDetails(quote)}
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
                     
-                    {isArchived ? (
-                      <>
+                    {_isArchived ? (_<>
                         <Button 
                           variant="ghost" 
                           size="icon"
-                          onClick={() => toggleArchive(quote.id, false)}
+                          onClick={() => toggleArchive(quote.id, _false)}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
@@ -125,18 +97,16 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           variant="ghost" 
                           size="icon"
                           className="text-red-500"
-                          onClick={() => {
+                          onClick={_() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                              deleteQuote(quote.id);
-                            }
+                              deleteQuote(quote.id);}
                           }}
                         >
                           <Trash2 className="h-4 w-4" />
                           <span className="sr-only">Delete</span>
                         </Button>
                       </>
-                    ) : (
-                      <DropdownMenu>
+                    ) : (_<DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <Button variant="ghost" size="icon">
                             <MoreHorizontal className="h-4 w-4" />
@@ -144,30 +114,29 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
+                          <DropdownMenuItem onClick={_() => updateStatus(quote.id, _'new')}>
                             Mark as New
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
+                          <DropdownMenuItem onClick={_() => updateStatus(quote.id, _'in_review')}>
                             Mark as In Review
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
+                          <DropdownMenuItem onClick={_() => updateStatus(quote.id, _'responded')}>
                             Mark as Responded
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
+                          <DropdownMenuItem onClick={_() => updateStatus(quote.id, _'accepted')}>
                             Mark as Accepted
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
+                          <DropdownMenuItem onClick={_() => updateStatus(quote.id, _'closed')}>
                             Mark as Closed
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
+                          <DropdownMenuItem onClick={_() => toggleArchive(quote.id, _true)}>
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
                           <DropdownMenuItem 
-                            onClick={() => {
+                            onClick={_() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                                deleteQuote(quote.id);
-                              }
+                                deleteQuote(quote.id);}
                             }}
                             className="text-red-500"
                           >

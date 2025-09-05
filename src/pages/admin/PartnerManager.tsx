@@ -1,142 +1,80 @@
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
 
-interface PartnerProfile {
-  id: string;
+interface PartnerProfile {_id: string;
   user_id: string;
   name: string;
   status: 'pending' | 'approved' | 'rejected';
   created_at: string;
   niche: string;
   audience_size: string;
-  social_media?: Record<string, string>;
+  social_media?: Record<string, _string>;
   website?: string;
   bio?: string;
   payout_method?: string;
   fraud_flags?: number;
-  commission_rate?: number;
-}
+  commission_rate?: number;}
 
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
+export default function PartnerManager() {_const [partners, _setPartners] = useState<PartnerProfile[]>([]);
+  const [filteredPartners, _setFilteredPartners] = useState<PartnerProfile[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [searchQuery, _setSearchQuery] = useState("");
+  const [activeTab, _setActiveTab] = useState("pending");
+  const [selectedPartner, _setSelectedPartner] = useState<PartnerProfile | null>(null);
+  const [isDetailsOpen, _setIsDetailsOpen] = useState(false);
+  const [isSettingsOpen, _setIsSettingsOpen] = useState(false);
+  const [commissionRate, _setCommissionRate] = useState(25);
+  const { user, _isAuthenticated} = useAuth();
+  const _router = useRouter();
 
-  useEffect(() => {
-    if (!isAuthenticated) {
+  useEffect__(() => {_if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'));
-      return;
-    }
+      return;}
 
     fetchPartners();
   }, [isAuthenticated, router]);
 
-  const fetchPartners = async () => {
-    try {
+  const _fetchPartners = async () => {_try {
       setIsLoading(true);
-      // In a real application, check admin permissions here
+      // In a real application, _check admin permissions here
       
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from('partner_profiles')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', {_ascending: false});
         
       if (error) throw error;
       
       // If no data is returned, use mock data
-      if (!data || data.length === 0) {
-        const mockData: PartnerProfile[] = [
+      if (!data || data.length === 0) {_const mockData: PartnerProfile[] = [
           {
-            id: '1',
-            user_id: 'user1',
-            name: 'AI Bytes',
-            status: 'pending',
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-            niche: 'AI Tutorials',
-            audience_size: '10k-50k',
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
+            id: '1', _user_id: 'user1', _name: 'AI Bytes', _status: 'pending', _created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), _niche: 'AI Tutorials', _audience_size: '10k-50k', _social_media: { twitter: '@aibytes', _youtube: 'AI Bytes'},
             website: 'aibytes.com',
             bio: 'We create AI tutorials and insights for developers.',
             payout_method: 'paypal',
             fraud_flags: 0,
             commission_rate: 25
           },
-          {
-            id: '2',
-            user_id: 'user2',
-            name: 'ML Academy',
-            status: 'approved',
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),
-            niche: 'Machine Learning Education',
-            audience_size: 'over100k',
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
+          {_id: '2', _user_id: 'user2', _name: 'ML Academy', _status: 'approved', _created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(), _niche: 'Machine Learning Education', _audience_size: 'over100k', _social_media: { twitter: '@mlacademy', _youtube: 'ML Academy'},
             website: 'mlacademy.edu',
             bio: 'Premiere online academy for machine learning enthusiasts.',
             payout_method: 'bank',
             fraud_flags: 0,
             commission_rate: 30
           },
-          {
-            id: '3',
-            user_id: 'user3',
-            name: 'Tech Insights',
-            status: 'rejected',
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
-            niche: 'Technology News',
-            audience_size: '1k-10k',
-            social_media: { twitter: '@techinsights' },
+          {_id: '3', _user_id: 'user3', _name: 'Tech Insights', _status: 'rejected', _created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), _niche: 'Technology News', _audience_size: '1k-10k', _social_media: { twitter: '@techinsights'},
             website: 'techinsights.io',
             bio: 'We share insights about the latest in tech.',
-            payout_method: 'crypto',
+            payout_method: 'window.crypto',
             fraud_flags: 2,
             commission_rate: 20
           },
-          {
-            id: '4',
-            user_id: 'user4',
-            name: 'CodeMaster',
-            status: 'approved',
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
-            niche: 'Coding Tutorials',
-            audience_size: '50k-100k',
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
+          {_id: '4', _user_id: 'user4', _name: 'CodeMaster', _status: 'approved', _created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), _niche: 'Coding Tutorials', _audience_size: '50k-100k', _social_media: { youtube: 'CodeMaster', _linkedin: 'codemaster'},
             website: 'codemaster.dev',
             bio: 'Learn to code with our expert tutorials.',
             payout_method: 'paypal',
             fraud_flags: 0,
             commission_rate: 25
           },
-          {
-            id: '5',
-            user_id: 'user5',
-            name: 'AI Daily',
-            status: 'pending',
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
-            niche: 'AI News',
-            audience_size: '10k-50k',
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
+          {_id: '5', _user_id: 'user5', _name: 'AI Daily', _status: 'pending', _created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), _niche: 'AI News', _audience_size: '10k-50k', _social_media: { twitter: '@aidaily', _instagram: '@aidailynews'},
             website: 'aidaily.news',
             bio: 'Daily updates on the world of artificial intelligence.',
             payout_method: 'platform_credit',
@@ -147,138 +85,98 @@ export default function PartnerManager() {
         
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
-      } else {
-        setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' });
-      toast({
-        title: "Error",
-        description: "Failed to load partner data",
-        variant: "destructive"});
-    } finally {
-      setIsLoading(false);
-    }
+      } else {_setPartners(data as PartnerProfile[]);
+        filterPartners(data as PartnerProfile[], _activeTab, _searchQuery);}
+    } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error fetching partners'});
+      toast({_title: "Error", _description: "Failed to load partner data", _variant: "destructive"});
+    } finally {_setIsLoading(false);}
   };
 
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners;
+  const _filterPartners = (_partners: PartnerProfile[], _status: string, _query: string) => {_let _filtered = partners;
     
     // Filter by status
     if (status !== "all") {
-      filtered = filtered.filter(p => p.status === status);
-    }
+      filtered = filtered.filter(p => p.status === status);}
     
     // Filter by search query
-    if (query) {
-      const lowerQuery = query.toLowerCase();
+    if (query) {_const _lowerQuery = query.toLowerCase();
       filtered = filtered.filter(p => 
         p.name.toLowerCase().includes(lowerQuery) ||
         p.niche.toLowerCase().includes(lowerQuery) ||
         p.bio?.toLowerCase().includes(lowerQuery) ||
         p.website?.toLowerCase().includes(lowerQuery)
-      );
-    }
+      );}
     
     setFilteredPartners(filtered);
   };
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-    filterPartners(partners, activeTab, e.target.value);
-  };
+  const _handleSearch = (_e: React.ChangeEvent<HTMLInputElement>) => {_setSearchQuery(e.target.value);
+    filterPartners(partners, _activeTab, _e.target.value);};
 
-  const handleTabChange = (value: string) => {
-    setActiveTab(value);
-    filterPartners(partners, value, searchQuery);
-  };
+  const _handleTabChange = (_value: string) => {_setActiveTab(value);
+    filterPartners(partners, _value, _searchQuery);};
 
-  const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner);
-    setIsDetailsOpen(true);
-  };
+  const _handleViewDetails = (_partner: PartnerProfile) => {_setSelectedPartner(partner);
+    setIsDetailsOpen(true);};
 
-  const handleOpenSettings = (partner: PartnerProfile) => {
-    setSelectedPartner(partner);
+  const _handleOpenSettings = (_partner: PartnerProfile) => {_setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate || 25);
-    setIsSettingsOpen(true);
-  };
+    setIsSettingsOpen(true);};
 
-  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
-    try {
-      // In a real app, this would update the database
+  const _handleUpdateStatus = async (_partnerId: string, _status: 'approved' | 'rejected') => {_try {
+      // In a real app, _this would update the database
       setPartners(partners.map(p => 
-        p.id === partnerId ? { ...p, status } : p
+        p.id === partnerId ? { ...p, _status} : p
       ));
       
       filterPartners(
-        partners.map(p => p.id === partnerId ? { ...p, status } : p),
+        partners.map(p => p.id === partnerId ? {_...p, _status} : p),
         activeTab,
         searchQuery
       );
       
-      toast({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
-        description: `The partner has been ${status}.`,
+      toast({_title: status === 'approved' ? "Partner Approved" : "Partner Rejected", _description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"});
       
       // Close the dialog if open
-      if (isDetailsOpen && selectedPartner?.id === partnerId) {
-        setIsDetailsOpen(false);
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' });
-      toast({
-        title: "Error",
-        description: "Failed to update partner status",
-        variant: "destructive"});
+      if (isDetailsOpen && selectedPartner?.id === partnerId) {_setIsDetailsOpen(false);}
+    } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error updating partner status'});
+      toast({_title: "Error", _description: "Failed to update partner status", _variant: "destructive"});
     }
   };
 
-  const handleSaveSettings = async () => {
-    if (!selectedPartner) return;
+  const _handleSaveSettings = async () => {_if (!selectedPartner) return;
     
     try {
       // Update commission rate
       setPartners(partners.map(p => 
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+        p.id === selectedPartner.id ? { ...p, _commission_rate: commissionRate} : p
       ));
       
       filterPartners(
-        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
+        partners.map(p => p.id === selectedPartner.id ? {_...p, _commission_rate: commissionRate} : p),
         activeTab,
         searchQuery
       );
       
-      toast({
-        title: "Settings Updated",
-        description: "Partner settings have been updated successfully.",
-        variant: "default"});
+      toast({_title: "Settings Updated", _description: "Partner settings have been updated successfully.", _variant: "default"});
       
       setIsSettingsOpen(false);
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' });
-      toast({
-        title: "Error",
-        description: "Failed to update partner settings",
-        variant: "destructive"});
+    } catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error updating partner settings'});
+      toast({_title: "Error", _description: "Failed to update partner settings", _variant: "destructive"});
     }
   };
 
-  const getAudienceSizeLabel = (size: string) => {
-    switch (size) {
-      case 'under1k': return 'Under 1,000';
-      case '1k-10k': return '1,000 - 10,000';
-      case '10k-50k': return '10,000 - 50,000';
-      case '50k-100k': return '50,000 - 100,000';
-      case 'over100k': return 'Over 100,000';
-      default: return size;
-    }
+  const _getAudienceSizeLabel = (_size: string) => {_switch (size) {
+      case 'under1k': return 'Under 1, _000';
+      case '1k-10k': return '1, _000 - 10, _000';
+      case '10k-50k': return '10, _000 - 50, _000';
+      case '50k-100k': return '50, _000 - 100, _000';
+      case 'over100k': return 'Over 100, _000';
+      default: return size;}
   };
 
-  const getStatusBadge = (status: string) => {
-    switch (status) {
+  const _getStatusBadge = (_status: string) => {_switch (status) {
       case 'pending':
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
       case 'approved':
@@ -290,8 +188,7 @@ export default function PartnerManager() {
     }
   };
 
-  const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null;
+  const _getFraudFlagBadge = (_flags: number = 0) => {_if (flags === 0) return null;
     
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
@@ -322,7 +219,7 @@ export default function PartnerManager() {
                   Pending Applications
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'pending').length}
+                  {_partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -338,7 +235,7 @@ export default function PartnerManager() {
                   Active Partners
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'approved').length}
+                  {_partners.filter(p => p.status === 'approved').length}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -354,7 +251,7 @@ export default function PartnerManager() {
                   Fraud Flags
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+                  {_partners.reduce(_(total, _p) => total + (p.fraud_flags || 0), _0)}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -379,14 +276,14 @@ export default function PartnerManager() {
               <Input
                 placeholder="Search partners..."
                 className="pl-8"
-                value={searchQuery}
-                onChange={handleSearch}
+                value={_searchQuery}
+                onChange={_handleSearch}
               />
             </div>
           </div>
         </CardHeader>
         <CardContent>
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">
+          <Tabs value={_activeTab} onValueChange={_handleTabChange} className="space-y-4">
             <TabsList className="grid grid-cols-4 w-full md:w-auto">
               <TabsTrigger value="pending">Pending</TabsTrigger>
               <TabsTrigger value="approved">Approved</TabsTrigger>
@@ -396,57 +293,57 @@ export default function PartnerManager() {
             
             <TabsContent value="pending" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners={_filteredPartners} 
+                isLoading={_isLoading}
+                onViewDetails={_handleViewDetails}
+                onUpdateStatus={_handleUpdateStatus}
+                onOpenSettings={_handleOpenSettings}
+                getStatusBadge={_getStatusBadge}
+                getFraudFlagBadge={_getFraudFlagBadge}
               />
             </TabsContent>
             
             <TabsContent value="approved" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners={_filteredPartners} 
+                isLoading={_isLoading}
+                onViewDetails={_handleViewDetails}
+                onUpdateStatus={_handleUpdateStatus}
+                onOpenSettings={_handleOpenSettings}
+                getStatusBadge={_getStatusBadge}
+                getFraudFlagBadge={_getFraudFlagBadge}
               />
             </TabsContent>
             
             <TabsContent value="rejected" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus} 
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners={_filteredPartners} 
+                isLoading={_isLoading}
+                onViewDetails={_handleViewDetails}
+                onUpdateStatus={_handleUpdateStatus} 
+                onOpenSettings={_handleOpenSettings}
+                getStatusBadge={_getStatusBadge}
+                getFraudFlagBadge={_getFraudFlagBadge}
               />
             </TabsContent>
             
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners={_filteredPartners} 
+                isLoading={_isLoading}
+                onViewDetails={_handleViewDetails}
+                onUpdateStatus={_handleUpdateStatus}
+                onOpenSettings={_handleOpenSettings}
+                getStatusBadge={_getStatusBadge}
+                getFraudFlagBadge={_getFraudFlagBadge}
               />
             </TabsContent>
           </Tabs>
         </CardContent>
       </Card>
       
-      {/* Partner Details Dialog */}
-      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
+      {_/* Partner Details Dialog */}
+      <Dialog open={_isDetailsOpen} onOpenChange={_setIsDetailsOpen}>
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">
           <DialogHeader>
             <DialogTitle>Partner Details</DialogTitle>
@@ -455,7 +352,7 @@ export default function PartnerManager() {
             </DialogDescription>
           </DialogHeader>
           
-          {selectedPartner && (
+          {_selectedPartner && (
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2">
                 <div>
@@ -464,41 +361,41 @@ export default function PartnerManager() {
                 </div>
                 <div>
                   <p className="text-xs text-zion-slate-light">Status</p>
-                  <div>{getStatusBadge(selectedPartner.status)}</div>
+                  <div>{_getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
               
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
-                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
+                <p className="text-white">{_selectedPartner.bio || "No bio provided"}</p>
               </div>
               
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
-                  <p className="text-white">{selectedPartner.niche}</p>
+                  <p className="text-white">{_selectedPartner.niche}</p>
                 </div>
                 <div>
                   <p className="text-xs text-zion-slate-light">Audience Size</p>
-                  <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
+                  <p className="text-white">{_getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
               </div>
               
-              {selectedPartner.website && (
+              {_selectedPartner.website && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Website</p>
                   <p className="text-zion-cyan">{selectedPartner.website}</p>
                 </div>
               )}
               
-              {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
+              {_selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
+                    {Object.entries(selectedPartner.social_media).map(_([platform, _handle]) => (
                       <p key={platform} className="text-white">
-                        <span className="font-medium">{platform}: </span>
-                        {handle}
+                        <span className="font-medium">{_platform}: </span>
+                        {_handle}
                       </p>
                     ))}
                   </div>
@@ -508,15 +405,15 @@ export default function PartnerManager() {
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
-                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>
+                  <p className="text-white capitalize">{_selectedPartner.payout_method || "Not specified"}</p>
                 </div>
                 <div>
                   <p className="text-xs text-zion-slate-light">Commission Rate</p>
-                  <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
+                  <p className="text-white">{_selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
               
-              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
+              {_selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
                   <AlertTitle className="flex items-center gap-2">
                     <Flag className="h-4 w-4" />
@@ -528,18 +425,17 @@ export default function PartnerManager() {
                 </Alert>
               )}
               
-              {selectedPartner.status === 'pending' && (
-                <div className="flex justify-end gap-2 mt-4">
+              {_selectedPartner.status === 'pending' && (_<div className="flex justify-end gap-2 mt-4">
                   <Button 
                     variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+                    onClick={() => handleUpdateStatus(selectedPartner.id, _'rejected')}
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
                   </Button>
                   <Button 
                     className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                    onClick={_() => handleUpdateStatus(selectedPartner.id, _'approved')}
                   >
                     <Check className="h-4 w-4 mr-1" />
                     Approve
@@ -551,8 +447,8 @@ export default function PartnerManager() {
         </DialogContent>
       </Dialog>
       
-      {/* Partner Settings Dialog */}
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
+      {_/* Partner Settings Dialog */}
+      <Dialog open={_isSettingsOpen} onOpenChange={_setIsSettingsOpen}>
         <DialogContent className="bg-zion-blue border-zion-blue-light">
           <DialogHeader>
             <DialogTitle>Partner Settings</DialogTitle>
@@ -561,7 +457,7 @@ export default function PartnerManager() {
             </DialogDescription>
           </DialogHeader>
           
-          {selectedPartner && (
+          {_selectedPartner && (
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
@@ -577,8 +473,8 @@ export default function PartnerManager() {
                   type="number"
                   min="1"
                   max="50"
-                  value={commissionRate}
-                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+                  value={_commissionRate}
+                  onChange={_(_e) => setCommissionRate(parseInt(e.target.value))}
                 />
                 <p className="text-xs text-zion-slate-light mt-1">
                   Percentage of reward granted to this partner for successful referrals
@@ -586,10 +482,10 @@ export default function PartnerManager() {
               </div>
               
               <DialogFooter>
-                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
+                <Button variant="outline" onClick={_() => setIsSettingsOpen(false)}>
                   Cancel
                 </Button>
-                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
+                <Button onClick={_handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
                   Save Changes
                 </Button>
               </DialogFooter>
@@ -601,35 +497,22 @@ export default function PartnerManager() {
   );
 }
 
-interface PartnerTableProps {
-  partners: PartnerProfile[];
+interface PartnerTableProps {_partners: PartnerProfile[];
   isLoading: boolean;
-  onViewDetails: (partner: PartnerProfile) => void;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void;
-  onOpenSettings: (partner: PartnerProfile) => void;
-  getStatusBadge: (status: string) => JSX.Element;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
-}
+  onViewDetails: (_partner: PartnerProfile) => void;
+  onUpdateStatus: (_partnerId: string, _status: 'approved' | 'rejected') => void;
+  onOpenSettings: (_partner: PartnerProfile) => void;
+  getStatusBadge: (_status: string) => JSX.Element;
+  getFraudFlagBadge: (_flags?: number) => JSX.Element | null;}
 
-function PartnerTable({ 
-  partners, 
-  isLoading, 
-  onViewDetails, 
-  onUpdateStatus,
-  onOpenSettings,
-  getStatusBadge,
-  getFraudFlagBadge
-}: PartnerTableProps) {
-  if (isLoading) {
+function PartnerTable(_{_partners, _isLoading, _onViewDetails, _onUpdateStatus, _onOpenSettings, _getStatusBadge, _getFraudFlagBadge}: PartnerTableProps) {_if (isLoading) {
     return (
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
-    );
-  }
+    );}
   
-  if (partners.length === 0) {
-    return (
+  if (partners.length === 0) {_return (
       <div className="py-8">
         <EmptyState
           icon={<Users className="h-8 w-8" />}
@@ -641,8 +524,7 @@ function PartnerTable({
     );
   }
   
-  return (
-    <Table>
+  return (_<Table>
       <TableHeader>
         <TableRow className="hover:bg-transparent">
           <TableHead>Name</TableHead>
@@ -654,30 +536,29 @@ function PartnerTable({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {partners.map((partner) => (
+        {_partners.map((partner) => (
           <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
             <TableCell className="font-medium text-white">
               <div className="flex items-center gap-2">
-                {partner.name}
-                {getFraudFlagBadge(partner.fraud_flags)}
+                {_partner.name}
+                {_getFraudFlagBadge(partner.fraud_flags)}
               </div>
             </TableCell>
-            <TableCell>{partner.niche}</TableCell>
+            <TableCell>{_partner.niche}</TableCell>
             <TableCell>
-              {partner.audience_size.replace('k', ',000').replace('-', ' - ').replace('over', 'Over ')}
+              {_partner.audience_size.replace('k', _', _000').replace('-', _' - ').replace('over', _'Over ')}
             </TableCell>
-            <TableCell>{getStatusBadge(partner.status)}</TableCell>
+            <TableCell>{_getStatusBadge(partner.status)}</TableCell>
             <TableCell>
-              {new Date(partner.created_at).toLocaleDateString()}
+              {_new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
             <TableCell className="text-right">
               <div className="flex justify-end gap-2">
-                {partner.status === 'pending' && (
-                  <>
+                {_partner.status === 'pending' && (_<>
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}
+                      onClick={() => onUpdateStatus(partner.id, _'rejected')}
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
                       <X className="h-4 w-4" />
@@ -686,7 +567,7 @@ function PartnerTable({
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}
+                      onClick={_() => onUpdateStatus(partner.id, _'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />
@@ -698,7 +579,7 @@ function PartnerTable({
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  onClick={() => onOpenSettings(partner)}
+                  onClick={_() => onOpenSettings(partner)}
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
@@ -708,7 +589,7 @@ function PartnerTable({
                 <Button 
                   variant="outline" 
                   size="sm"
-                  onClick={() => onViewDetails(partner)}
+                  onClick={_() => onViewDetails(partner)}
                 >
                   View
                 </Button>

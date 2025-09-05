@@ -2,8 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
-export default function CloudNativeAutomation() {
-  return (
+export default function CloudNativeAutomation() {_return (
     <>
       <Head>
         <title>
@@ -11,7 +10,7 @@ export default function CloudNativeAutomation() {
         </title>
         <meta
           name='description'
-          content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
+          content='A deep dive into our cloud-native approach to building scalable, _reliable automation systems.'
         />
         <meta
           property='og:title'
@@ -19,7 +18,7 @@ export default function CloudNativeAutomation() {
         />
         <meta
           property='og:description'
-          content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
+          content='A deep dive into our cloud-native approach to building scalable, _reliable automation systems.'
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
@@ -43,7 +42,7 @@ export default function CloudNativeAutomation() {
                     Infrastructure
                   </span>
                   <span className='text-white/60 text-sm'>
-                    January 12, 2025
+                    January 12, _2025
                   </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>10 min read</span>
@@ -53,7 +52,7 @@ export default function CloudNativeAutomation() {
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
                   A deep dive into our cloud-native approach to building
-                  scalable, reliable automation systems that can handle the
+                  scalable, _reliable automation systems that can handle the
                   demands of modern business operations.
                 </p>
               </header>
@@ -74,7 +73,7 @@ export default function CloudNativeAutomation() {
                   <li>Cost-effective through efficient resource utilization</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-                  Each automation service operates independently, communicating
+                  Each automation service operates independently, _communicating
                   through well-defined APIs and message queues. This decoupling
                   ensures that a failure in one service doesn&apos;t bring down
                   the entire system.
@@ -87,13 +86,12 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   We leverage Docker containers and Kubernetes orchestration to
-                  create a flexible, portable automation environment. This
+                  create a flexible, _portable automation environment. This
                   approach provides several key benefits:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Consistent runtime environments across development,
-                    staging, and production
+                    • Consistent runtime environments across development, _staging, _and production
                   </li>
                   <li>
                     Automatic scaling based on demand and resource utilization
@@ -102,8 +100,7 @@ export default function CloudNativeAutomation() {
                   <li>Efficient resource allocation and management</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-                  Our Kubernetes clusters automatically handle load balancing,
-                  service discovery, and failover, ensuring high availability
+                  Our Kubernetes clusters automatically handle load balancing, _service discovery, _and failover, _ensuring high availability
                   and performance.
                 </p>
               </section>
@@ -113,7 +110,7 @@ export default function CloudNativeAutomation() {
                   Infrastructure as Code
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  We treat infrastructure as code, using tools like Terraform
+                  We treat infrastructure as code, _using tools like Terraform
                   and CloudFormation to define and manage our cloud resources.
                   This approach enables:
                 </p>
@@ -127,8 +124,8 @@ export default function CloudNativeAutomation() {
                   <li>Easy disaster recovery and environment replication</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-                  By codifying our infrastructure, we can quickly spin up new
-                  environments, test changes safely, and maintain consistency
+                  By codifying our infrastructure, _we can quickly spin up new
+                  environments, _test changes safely, _and maintain consistency
                   across our automation platform.
                 </p>
               </section>
@@ -171,7 +168,7 @@ export default function CloudNativeAutomation() {
                 </ul>
                 <p className='text-white/90 mb-4'>
                   We maintain compliance with industry standards and
-                  regulations, ensuring that our automation systems meet the
+                  regulations, _ensuring that our automation systems meet the
                   highest security requirements.
                 </p>
               </section>
@@ -182,7 +179,7 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-                  infrastructure, we&apos;re exploring emerging technologies
+                  infrastructure, _we&apos;re exploring emerging technologies
                   like:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -226,5 +223,4 @@ export default function CloudNativeAutomation() {
         </main>
       </div>
     </>
-  );
-}
+  );}

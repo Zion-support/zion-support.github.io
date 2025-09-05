@@ -1,109 +1,94 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+import {_Check, _Star, _Users, _Clock, _Shield, _Zap, _Globe, _Rocket, _Brain, _Atom, _ArrowRight, _ExternalLink, _TrendingUp, _Award, _Target, _ChevronDown} from 'lucide-react';
 
-export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+export default function ComprehensivePricingPage() {_const [selectedCategory, _setSelectedCategory] = useState('all');
+  const [billingCycle, _setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [expandedService, _setExpandedService] = useState<string | null>(null);
 
   // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
+  const _allServices = [...comprehensiveMicroSaasServices, _...specializedEmergingTechServices];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' },
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
+  const _categories = [
+    { id: 'all', _name: 'All Services', _icon: '🚀'},
+    {_id: 'AI & Machine Learning', _name: 'AI & ML', _icon: '🧠'},
+    {_id: 'Healthcare AI', _name: 'Healthcare', _icon: '🏥'},
+    {_id: 'Fintech AI', _name: 'Fintech', _icon: '💰'},
+    {_id: 'Cybersecurity', _name: 'Security', _icon: '🛡️'},
+    {_id: 'IoT & Smart Cities', _name: 'Smart Cities', _icon: '🏙️'},
+    {_id: 'Blockchain & DeFi', _name: 'Blockchain', _icon: '🔗'},
+    {_id: 'Quantum Computing', _name: 'Quantum', _icon: '⚛️'},
+    {_id: 'Space Technology', _name: 'Space Tech', _icon: '🚀'},
+    {_id: 'Autonomous Systems', _name: 'Autonomous', _icon: '🤖'},
+    {_id: 'AR/VR & Metaverse', _name: 'AR/VR', _icon: '🥽'},
+    {_id: '5G/6G Networks', _name: '5G/6G', _icon: '📡'},
+    {_id: 'Biotechnology AI', _name: 'Biotech', _icon: '🧬'},
+    {_id: 'Renewable Energy', _name: 'Energy', _icon: '⚡'},
+    {_id: 'Edge Computing', _name: 'Edge', _icon: '🌐'},
+    {_id: 'Quantum Internet', _name: 'Q-Internet', _icon: '🌍'},
+    {_id: 'Neuromorphic Computing', _name: 'Neuro', _icon: '🧠'}
   ];
 
-  const filteredServices = selectedCategory === 'all' 
+  const _filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => service.category === selectedCategory);
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
+  const _getCategoryIcon = (_category: string) => {_const _categoryData = categories.find(cat => cat.id === category);
+    return categoryData?.icon || '🚀';};
 
-  const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(',', ''));
+  const _calculateYearlyPrice = (_monthlyPrice: string) => {_const _price = parseFloat(monthlyPrice.replace('$', _'').replace(', _', _''));
     return `$${(price * 12 * 0.8).toFixed(0)}`; // 20% discount for yearly
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+  const _toggleServiceExpansion = (_serviceId: string) => {_setExpandedService(expandedService === serviceId ? null : serviceId);};
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Comprehensive Pricing 2025 - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />
-        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
+        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, _quantum computing, _cybersecurity, _and emerging technology solutions." />
+        <meta name="keywords" content="micro SAAS pricing, _AI services, _quantum computing, _cybersecurity, _emerging technology, _Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        {/* Header */}
+        {_/* Header */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                 Comprehensive Pricing 2025
               </h1>
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-                Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
+                Revolutionary micro SAAS services that transform businesses with cutting-edge AI, _quantum computing, _and emerging technologies
               </p>
               
-              {/* Billing Toggle */}
+              {_/* Billing Toggle */}
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
-                  }`}
+                  onClick={_() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                  className={_`relative w-16 h-8 rounded-full transition-all duration-300 ${
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'}`}
                 >
-                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
-                  }`} />
+                  <div className={_`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'}`} />
                 </button>
                 <span className="text-white/60">Yearly</span>
-                {billingCycle === 'yearly' && (
+                {_billingCycle === 'yearly' && (
                   <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
                     Save 20%
                   </span>
                 )}
               </div>
 
-              {/* Stats */}
+              {_/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
+                  <div className="text-3xl font-bold text-blue-400">{_allServices.length}+</div>
                   <div className="text-white/60">Services Available</div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
@@ -123,112 +108,109 @@ export default function ComprehensivePricingPage() {
           </div>
         </section>
 
-        {/* Category Filter */}
+        {_/* Category Filter */}
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
               className="flex flex-wrap justify-center gap-3"
             >
-              {categories.map((category) => (
-                <button
+              {_categories.map(_(category) => (_<button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                  onClick={_() => setSelectedCategory(category.id)}
+                  className={_`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                      : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
+                      : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'}`}
                 >
-                  <span>{category.icon}</span>
-                  {category.name}
+                  <span>{_category.icon}</span>
+                  {_category.name}
                 </button>
               ))}
             </motion.div>
           </div>
         </section>
 
-        {/* Services Grid */}
+        {_/* Services Grid */}
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               <AnimatePresence mode="wait">
-                {filteredServices.map((service, index) => (
+                {_filteredServices.map(_(service, _index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _y: 30}}
+                    animate={_{ opacity: 1, _y: 0}}
+                    exit={_{ opacity: 0, _y: -30}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
-                    {/* Popular Badge */}
-                    {service.popular && (
+                    {_/* Popular Badge */}
+                    {_service.popular && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                         <Star className="w-3 h-3" />
                         Popular
                       </div>
                     )}
 
-                    {/* Service Header */}
+                    {_/* Service Header */}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-4xl">{_service.icon}</div>
                         <div className="text-right">
                           <div className="text-3xl font-bold text-white">
-                            {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price}
+                            {_billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price}
                           </div>
                           <div className="text-white/60">
-                            {billingCycle === 'yearly' ? '/year' : service.period}
+                            {_billingCycle === 'yearly' ? '/year' : service.period}
                           </div>
                         </div>
                       </div>
 
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
+                      <h3 className="text-xl font-bold text-white mb-2">{_service.name}</h3>
+                      <p className="text-white/70 text-sm mb-4">{_service.tagline}</p>
 
-                      {/* Key Features */}
+                      {_/* Key Features */}
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 4).map((feature, idx) => (
+                        {_service.features.slice(0, _4).map(_(feature, _idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="line-clamp-2">{feature}</span>
+                            <span className="line-clamp-2">{_feature}</span>
                           </div>
                         ))}
                       </div>
 
-                      {/* Service Stats */}
+                      {_/* Service Stats */}
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
-                          <div className="text-lg font-bold text-blue-400">{service.rating}</div>
+                          <div className="text-lg font-bold text-blue-400">{_service.rating}</div>
                           <div className="text-xs text-white/60">Rating</div>
                         </div>
                         <div>
-                          <div className="text-lg font-bold text-green-400">{service.customers}+</div>
+                          <div className="text-lg font-bold text-green-400">{_service.customers}+</div>
                           <div className="text-xs text-white/60">Customers</div>
                         </div>
                         <div>
-                          <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
+                          <div className="text-lg font-bold text-purple-400">{_service.trialDays}d</div>
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
                       </div>
 
-                      {/* Expand/Collapse Button */}
+                      {_/* Expand/Collapse Button */}
                       <button
-                        onClick={() => toggleServiceExpansion(service.id)}
+                        onClick={_() => toggleServiceExpansion(service.id)}
                         className="w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 mb-4"
                       >
-                        {expandedService === service.id ? 'Show Less' : 'View Details'}
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          expandedService === service.id ? 'rotate-180' : ''
-                        }`} />
+                        {_expandedService === service.id ? 'Show Less' : 'View Details'}
+                        <ChevronDown className={_`w-4 h-4 transition-transform duration-300 ${
+                          expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
 
-                      {/* CTA Button */}
+                      {_/* CTA Button */}
                       <a
-                        href={service.link}
+                        href={_service.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -238,70 +220,69 @@ export default function ComprehensivePricingPage() {
                       </a>
                     </div>
 
-                    {/* Expanded Details */}
+                    {_/* Expanded Details */}
                     <AnimatePresence>
-                      {expandedService === service.id && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                      {_expandedService === service.id && (_<motion.div
+                          initial={{ height: 0, _opacity: 0}}
+                          animate={_{ height: 'auto', _opacity: 1}}
+                          exit={_{ height: 0, _opacity: 0}}
+                          transition={_{ duration: 0.3}}
                           className="overflow-hidden border-t border-white/10"
                         >
                           <div className="p-6 bg-white/5">
-                            {/* Market Position */}
+                            {_/* Market Position */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
-                              <p className="text-white/70 text-sm">{service.marketPosition}</p>
+                              <p className="text-white/70 text-sm">{_service.marketPosition}</p>
                             </div>
 
-                            {/* Technology Stack */}
+                            {_/* Technology Stack */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
-                                {service.technology.map((tech, idx) => (
+                                {_service.technology.map((tech, _idx) => (
                                   <span key={idx} className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs">
-                                    {tech}
+                                    {_tech}
                                   </span>
                                 ))}
                               </div>
                             </div>
 
-                            {/* Use Cases */}
+                            {_/* Use Cases */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
-                                {service.useCases.map((useCase, idx) => (
+                                {_service.useCases.map(_(useCase, _idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <Target className="w-3 h-3 text-blue-400" />
-                                    {useCase}
+                                    {_useCase}
                                   </div>
                                 ))}
                               </div>
                             </div>
 
-                            {/* ROI and Benefits */}
+                            {_/* ROI and Benefits */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
-                              <p className="text-white/70 text-sm mb-3">{service.roi}</p>
+                              <p className="text-white/70 text-sm mb-3">{_service.roi}</p>
                               <div className="grid grid-cols-2 gap-2">
-                                {service.benefits.map((benefit, idx) => (
+                                {_service.benefits.map(_(benefit, _idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <TrendingUp className="w-3 h-3 text-green-400" />
-                                    {benefit}
+                                    {_benefit}
                                   </div>
                                 ))}
                               </div>
                             </div>
 
-                            {/* Contact Information */}
+                            {_/* Contact Information */}
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                               <div className="space-y-2 text-sm text-white/60">
-                                <div>📱 {service.contactInfo.mobile}</div>
-                                <div>✉️ {service.contactInfo.email}</div>
-                                <div>📍 {service.contactInfo.address}</div>
-                                <div>🌐 {service.contactInfo.website}</div>
+                                <div>📱 {_service.contactInfo.mobile}</div>
+                                <div>✉️ {_service.contactInfo.email}</div>
+                                <div>📍 {_service.contactInfo.address}</div>
+                                <div>🌐 {_service.contactInfo.website}</div>
                               </div>
                             </div>
                           </div>
@@ -315,14 +296,14 @@ export default function ComprehensivePricingPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
+        {_/* Contact CTA */}
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">

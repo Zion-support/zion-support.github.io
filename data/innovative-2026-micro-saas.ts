@@ -1,5 +1,4 @@
-export interface Innovative2026MicroSaas {
-  id: string;
+export interface Innovative2026MicroSaas {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface Innovative2026MicroSaas {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
-  {
-    id: "2026-micro-saas",
-    name: "2026 Micro SAAS Platform",
-    tagline: "Next-generation micro SAAS solutions",
-    price: "$89/month",
-    description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.",
-    features: [
-      "Micro SAAS solutions",
-      "Advanced features",
-      "Scalable platform",
-      "Integration capabilities",
-      "Future-ready architecture"
-    ],
-    link: "/services/2026-micro-saas",
-    category: "Innovative 2026 Micro SAAS",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "2026-micro-saas", _name: "2026 Micro SAAS Platform", _tagline: "Next-generation micro SAAS solutions", _price: "$89/month", _description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.", _features: [
+      "Micro SAAS solutions", _"Advanced features", _"Scalable platform", _"Integration capabilities", _"Future-ready architecture"
+    ], _link: "/services/2026-micro-saas", _category: "Innovative 2026 Micro SAAS", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

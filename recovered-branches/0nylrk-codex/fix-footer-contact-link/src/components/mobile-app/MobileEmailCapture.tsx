@@ -1,38 +1,29 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import React, {_useState} from "react";
 
-export const MobileEmailCapture: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+export const MobileEmailCapture: React.FC = () => {_const [email, _setEmail] = useState("");
+  const [isSubmitting, _setIsSubmitting] = useState(false);
+  const [isSuccess, _setIsSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (_e: React.FormEvent) => {
     e.preventDefault();
     if (!email || isSubmitting) return;
 
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would connect to a backend service
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real implementation, _this would connect to a backend service
+      // For now, _we'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, _1000));
       setIsSuccess(true);
       setEmail("");
       
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    } catch (error) {
-      console.error("Error subscribing:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+      setTimeout__(() => {
+        setIsSuccess(false);}, 5000);
+    } catch (error) {} finally {_setIsSubmitting(false);}
   };
 
-  return (
-    <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
+  return (_<section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -42,21 +33,21 @@ export const MobileEmailCapture: React.FC = () => {
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.
           </p>
           
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form onSubmit={_handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
               placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={_email}
+              onChange={_(e) => setEmail(e.target.value)}
               className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400"
               required
             />
             <Button 
               type="submit" 
-              disabled={isSubmitting || isSuccess}
+              disabled={_isSubmitting || isSuccess}
               className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium"
             >
-              {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
+              {_isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
             </Button>
           </form>
           

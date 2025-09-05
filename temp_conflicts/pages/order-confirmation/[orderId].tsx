@@ -1,10 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
-export default function OrderConfirmationPage() {
-  const router = useRouter();
-  const { orderId } = router.query;
+export default function OrderConfirmationPage() {_const _router = useRouter();
+  const { orderId} = router.query;
 
   return (
     <>
@@ -14,7 +12,7 @@ export default function OrderConfirmationPage() {
       </Head>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Order Confirmation</h1>
-        {orderId && (
+        {_orderId && (
           <p className="text-lg mb-4">Order ID: {orderId}</p>
         )}
         <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>

@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const CloudNativeArchitectureBestPracticesChat = () => {
-  return (
+const _CloudNativeArchitectureBestPracticesChat = () => {_return (
     <div>
       <Head>
         <title>CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const CloudNativeArchitectureBestPracticesChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default CloudNativeArchitectureBestPracticesChat;

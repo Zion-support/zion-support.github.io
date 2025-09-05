@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Custom404() {
-  return (
+export default function Custom404() {_return (
     <>
       <Head>
         <title>404 - Page Not Found</title>
@@ -22,5 +21,4 @@ export default function Custom404() {
         </div>
       </div>
     </>
-  );
-}
+  );}

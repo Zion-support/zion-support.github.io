@@ -1,106 +1,66 @@
 
-import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
-} from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { toast } from '@/hooks/use-toast';
-import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from '@/components/icons';
-import { format } from 'date-fns';
+import React, {_useState, _useEffect} from 'react';
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from '@/components/ui/table';
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 
-export function TenantsList() {
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export function TenantsList() {_const [tenants, _setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
 
-  useEffect(() => {
-    loadTenants();
-  }, []);
+  useEffect__(() => {
+    loadTenants();}, []);
 
-  const loadTenants = async () => {
-    try {
+  const _loadTenants = async () => {_try {
       setIsLoading(true);
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from('whitelabel_tenants')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', {_ascending: false});
         
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
-    } catch (error: any) {
-      console.error('Error loading tenants:', error);
-      toast({
-        variant: 'destructive',
-        title: 'Failed to load tenants',
-        description: error.message});
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (error: unknown) {_toast({
+        variant: 'destructive', _title: 'Failed to load tenants', _description: error.message});
+    } finally {_setIsLoading(false);}
   };
 
-  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
-    try {
-      const { error } = await supabase
+  const _toggleTenantStatus = async (_tenant: WhitelabelTenant) => {_try {
+      const { error} = await supabase
         .from('whitelabel_tenants')
-        .update({ is_active: !tenant.is_active })
+        .update({_is_active: !tenant.is_active})
         .eq('id', tenant.id);
         
       if (error) throw error;
       
       // Update local state
       setTenants(tenants.map(t => 
-        t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
+        t.id === tenant.id ? {_...t, _is_active: !t.is_active} : t
       ));
       
-      toast({
-        title: `Tenant ${tenant.is_active ? 'deactivated' : 'activated'}`,
-        description: `${tenant.brand_name} has been ${tenant.is_active ? 'deactivated' : 'activated'} successfully.`});
-    } catch (error: any) {
-      console.error('Error toggling tenant status:', error);
-      toast({
-        variant: 'destructive',
-        title: 'Failed to update tenant',
-        description: error.message});
+      toast({_title: `Tenant ${tenant.is_active ? 'deactivated' : 'activated'}`,
+        description: `${_tenant.brand_name} has been ${_tenant.is_active ? 'deactivated' : 'activated'} successfully.`});
+    } catch (error: unknown) {_toast({
+        variant: 'destructive', _title: 'Failed to update tenant', _description: error.message});
     }
   };
 
-  const verifyDns = async (tenant: WhitelabelTenant) => {
-    try {
-      // In a real implementation, this would verify DNS records
-      // For now, we'll just mark it as verified
-      const { error } = await supabase
+  const _verifyDns = async (_tenant: WhitelabelTenant) => {_try {
+      // In a real implementation, _this would verify DNS records
+      // For now, _we'll just mark it as verified
+      const { error} = await supabase
         .from('whitelabel_tenants')
-        .update({ dns_verified: true })
+        .update({_dns_verified: true})
         .eq('id', tenant.id);
         
       if (error) throw error;
       
       // Update local state
       setTenants(tenants.map(t => 
-        t.id === tenant.id ? { ...t, dns_verified: true } : t
+        t.id === tenant.id ? {_...t, _dns_verified: true} : t
       ));
       
-      toast({
-        title: 'DNS verified',
-        description: `Custom domain for ${tenant.brand_name} has been verified.`});
-    } catch (error: any) {
-      console.error('Error verifying DNS:', error);
-      toast({
-        variant: 'destructive',
-        title: 'Failed to verify DNS',
-        description: error.message});
+      toast({_title: 'DNS verified', _description: `Custom domain for ${tenant.brand_name} has been verified.`});
+    } catch (error: unknown) {_toast({
+        variant: 'destructive', _title: 'Failed to verify DNS', _description: error.message});
     }
   };
 
@@ -108,13 +68,13 @@ export function TenantsList() {
     <div className="space-y-4">
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={loadTenants} variant="outline" size="sm">
+        <Button onClick={_loadTenants} variant="outline" size="sm">
           <RefreshCcw className="mr-2 h-4 w-4" />
           Refresh
         </Button>
       </div>
 
-      {isLoading ? (
+      {_isLoading ? (
         <div className="flex justify-center p-8">
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
         </div>
@@ -138,23 +98,21 @@ export function TenantsList() {
                     No tenants found. Create a new white-label instance to get started.
                   </TableCell>
                 </TableRow>
-              ) : (
-                tenants.map((tenant) => (
-                  <TableRow key={tenant.id}>
-                    <TableCell className="font-medium">{tenant.brand_name}</TableCell>
+              ) : (_tenants.map((tenant) => (_<TableRow key={_tenant.id}>
+                    <TableCell className="font-medium">{_tenant.brand_name}</TableCell>
                     <TableCell>
                       <a 
-                        href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
+                        href={_`https://${tenant.subdomain}.ziontechmarketplace.com`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center hover:underline"
                       >
-                        {tenant.subdomain}
+                        {_tenant.subdomain}
                         <ExternalLink className="ml-1 h-3 w-3" />
                       </a>
                     </TableCell>
                     <TableCell>
-                      {tenant.custom_domain ? (
+                      {_tenant.custom_domain ? (
                         <div className="flex items-center">
                           <a
                             href={`https://${tenant.custom_domain}`}
@@ -162,16 +120,16 @@ export function TenantsList() {
                             rel="noopener noreferrer"
                             className="hover:underline flex items-center"
                           >
-                            {tenant.custom_domain}
+                            {_tenant.custom_domain}
                             <ExternalLink className="ml-1 h-3 w-3" />
                           </a>
                           <Badge 
-                            variant={tenant.dns_verified ? "default" : "outline"} 
+                            variant={_tenant.dns_verified ? "default" : "outline"} 
                             className="ml-2"
                           >
-                            {tenant.dns_verified ? "Verified" : "Pending"}
+                            {_tenant.dns_verified ? "Verified" : "Pending"}
                           </Badge>
-                          {!tenant.dns_verified && (
+                          {_!tenant.dns_verified && (
                             <Button 
                               variant="ghost" 
                               size="sm" 
@@ -188,11 +146,11 @@ export function TenantsList() {
                       )}
                     </TableCell>
                     <TableCell>
-                      <Badge variant={tenant.is_active ? "default" : "destructive"}>
-                        {tenant.is_active ? "Active" : "Inactive"}
+                      <Badge variant={_tenant.is_active ? "default" : "destructive"}>
+                        {_tenant.is_active ? "Active" : "Inactive"}
                       </Badge>
                     </TableCell>
-                    <TableCell>{format(new Date(tenant.created_at), 'MMM d, yyyy')}</TableCell>
+                    <TableCell>{_format(new Date(tenant.created_at), _'MMM d, _yyyy')}</TableCell>
                     <TableCell className="text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -210,8 +168,8 @@ export function TenantsList() {
                             <Users className="mr-2 h-4 w-4" />
                             Manage Admins
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => toggleTenantStatus(tenant)}>
-                            {tenant.is_active ? (
+                          <DropdownMenuItem onClick={_() => toggleTenantStatus(tenant)}>
+                            {_tenant.is_active ? (
                               <>
                                 <PowerOff className="mr-2 h-4 w-4" />
                                 Disable Tenant

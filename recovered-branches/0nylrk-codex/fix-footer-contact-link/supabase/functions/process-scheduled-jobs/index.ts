@@ -1,24 +1,18 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+serve(_async (req) => {_if (req.method === "OPTIONS") {
+    return new Response(null, _{ headers: corsHeaders});
   }
 
-  const supabaseAdmin = createClient(
+  const _supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
+    {_auth: { persistSession: false} }
   );
 
-  try {
-    // Get pending jobs
-    const { data: jobs, error: fetchError } = await supabaseAdmin
+  try {_// Get pending jobs
+    const { data: jobs, _error: fetchError} = await supabaseAdmin
       .from('scheduled_jobs')
       .select('*')
       .eq('status', 'pending')
@@ -26,19 +20,14 @@ serve(async (req) => {
 
     if (fetchError) throw fetchError;
 
-    for (const job of jobs || []) {
-      // Process job based on type
+    for (const job of jobs || []) {_// Process job based on type
       switch (job.job_type) {
         case 'onboarding_reminder':
           // Process onboarding reminder
           if (job.payload && job.payload.user_id && job.payload.missing_milestone) {
             await processOnboardingReminder(
-              supabaseAdmin,
-              job.payload.user_id,
-              job.payload.missing_milestone,
-              job.payload.role
-            );
-          }
+              supabaseAdmin, _job.payload.user_id, _job.payload.missing_milestone, _job.payload.role
+            );}
           break;
         case 'email_reminder':
           // Process email reminder
@@ -48,9 +37,7 @@ serve(async (req) => {
           break;
         case 'resume_scoring':
           // Process resume scoring request
-          if (job.payload && job.payload.application_id) {
-            await processResumeScoring(supabaseAdmin, job.payload.application_id);
-          }
+          if (job.payload && job.payload.application_id) {_await processResumeScoring(supabaseAdmin, _job.payload.application_id);}
           break;
         case 'blog_generation':
           await processContentGeneration(supabaseAdmin, 'blog');
@@ -64,175 +51,114 @@ serve(async (req) => {
       // Update job status
       await supabaseAdmin
         .from('scheduled_jobs')
-        .update({
-          status: 'completed',
-          completed_at: new Date().toISOString()
-        })
+        .update({_status: 'completed', _completed_at: new Date().toISOString()})
         .eq('id', job.id);
     }
 
-    return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify({_processed: jobs?.length || 0}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
       status: 200});
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+  } catch (error) {_return new Response(JSON.stringify({ error: error.message}), {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
       status: 500});
   }
 });
 
-async function processOnboardingReminder(supabase, userId, milestone, role) {
-  try {
+async function processOnboardingReminder(_supabase, _userId, _milestone, _role) {_try {
     // Create notification for user
-    const milestoneMessages = {
-      profile_completed: "Complete your profile to get noticed by clients",
-      skills_added: "Add your skills to get better job matches",
-      availability_set: "Set your availability to receive project offers",
-      job_posted: "Post your first job to start finding talent",
-      match_viewed: "Check out your AI matched talent recommendations",
-      talent_invited: "Invite talent to your job posting to get responses"
-    };
+    const _milestoneMessages = {
+      profile_completed: "Complete your profile to get noticed by clients", _skills_added: "Add your skills to get better job matches", _availability_set: "Set your availability to receive project offers", _job_posted: "Post your first job to start finding talent", _match_viewed: "Check out your AI matched talent recommendations", _talent_invited: "Invite talent to your job posting to get responses"};
     
-    const message = milestoneMessages[milestone] || "Continue your onboarding process";
-    const title = `Action needed: ${message}`;
+    const _message = milestoneMessages[milestone] || "Continue your onboarding process";
+    const _title = `Action needed: ${_message}`;
     
     // Insert notification
-    await supabase.from('notifications').insert({
-      user_id: userId,
-      title,
-      message,
-      type: 'onboarding_reminder',
-      read: false
-    });
+    await supabase.from('notifications').insert({_user_id: userId, _title, _message, _type: 'onboarding_reminder', _read: false});
     
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
     
-  } catch (error) {
-    console.error("Error processing onboarding reminder:", error);
-  }
+  } catch (_error) {}
 }
 
-async function processResumeScoring(supabase, applicationId) {
-  try {
+async function processResumeScoring(_supabase, _applicationId) {_try {
     // Call the resume-scorer function to process the application
-    const response = await fetch(
-      `${Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({ applicationId })}
+    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`,
+      {_method: "POST", _headers: {
+          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+        body: JSON.stringify({_applicationId})}
     );
 
-    if (!response.ok) {
-      const errorData = await response.json();
+    if (!response.ok) {_const _errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
     }
 
-    console.log(`Successfully scored application ${applicationId}`);
+    
     
     // Notify the client that their application has been scored
-    const { data: application } = await supabase
+    const {_data: application} = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
       .single();
       
-    if (application) {
-      const { data: job } = await supabase
+    if (application) {_const { data: job} = await supabase
         .from("jobs")
         .select("client_id, title")
         .eq("id", application.job_id)
         .single();
         
-      if (job) {
-        // Create notification for the client
+      if (job) {_// Create notification for the client
         await supabase.from("notifications").insert({
-          user_id: job.client_id,
-          title: "Application Scored",
-          message: `An application for "${job.title}" has been scored and is ready for review.`,
+          user_id: job.client_id, _title: "Application Scored", _message: `An application for "${job.title}" has been scored and is ready for review.`,
           type: "application_scored",
           related_id: applicationId,
           read: false
         });
       }
     }
-  } catch (error) {
-    console.error("Error processing resume scoring:", error);
-  }
+  } catch (error) {}
 }
 
-async function processContentGeneration(supabase, contentType) {
-  try {
-    console.log(`Starting scheduled content generation for ${contentType}`);
+async function processContentGeneration(_supabase, _contentType) {_try {
+    
     
     // Call the content generation function
-    const response = await fetch(
-      `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({ 
-          contentType,
-          autoPublish: contentType === 'blog' ? true : false,
-          includeImage: contentType === 'blog' ? true : false
-        })}
+    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
+      {_method: "POST", _headers: {
+          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+        body: JSON.stringify({_contentType, _autoPublish: contentType === 'blog' ? true : false, _includeImage: contentType === 'blog' ? true : false})}
     );
 
-    if (!response.ok) {
-      const errorData = await response.json();
+    if (!response.ok) {_const _errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
 
-    const contentData = await response.json();
-    console.log(`Successfully generated ${contentType} content`);
+    const _contentData = await response.json();
+    
     
     // If it's a newsletter, send a test email to the admin
-    if (contentType === 'newsletter') {
-      // Get admin email from profiles
-      const { data: adminProfiles } = await supabase
+    if (contentType === 'newsletter') {_// Get admin email from profiles
+      const { data: adminProfiles} = await supabase
         .from('profiles')
         .select('email')
         .eq('role', 'admin')
         .limit(1);
       
-      if (adminProfiles && adminProfiles.length > 0) {
-        const adminEmail = adminProfiles[0].email;
+      if (adminProfiles && adminProfiles.length > 0) {_const _adminEmail = adminProfiles[0].email;
         
         // Send test newsletter to admin
         await fetch(
           `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-            body: JSON.stringify({
-              subject: contentData.subject,
-              previewText: contentData.previewText,
-              body: contentData.body,
-              testMode: true,
-              testEmail: adminEmail
-            })}
+          {_method: "POST", _headers: {
+              "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+            body: JSON.stringify({_subject: contentData.subject, _previewText: contentData.previewText, _body: contentData.body, _testMode: true, _testEmail: adminEmail})}
         );
         
         // Create notification for admin
-        await supabase.from('notifications').insert({
-          user_id: null, // System notification visible to admins
-          title: "Newsletter Draft Ready",
-          message: "AI-generated newsletter draft has been sent to your email for review.",
-          type: "system",
-          read: false
-        });
+        await supabase.from('notifications').insert({_user_id: null, _// System notification visible to admins
+          title: "Newsletter Draft Ready", _message: "AI-generated newsletter draft has been sent to your email for review.", _type: "system", _read: false});
       }
     }
     
     return contentData;
-  } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error);
-  }
+  } catch (error) {}
 }

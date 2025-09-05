@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, {_useState, _useEffect} from 'react';
 import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
-} from 'lucide-react';
+import {_ArrowRight, _Play, _Star, _Users, _Award, _TrendingUp, _Brain, _Shield, _Rocket, _Loader2, _ChevronDown, _Zap, _Globe, _Target, _Lightbulb, _Code, _Database, _Cloud, _Lock, _ChartBar, _Cpu, _Atom, _Satellite, _Gamepad2, _Palette} from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
-import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
 
 // Loading fallback component
-const LoadingFallback = () => (
+const _LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      initial={_{ opacity: 0, _scale: 0.5}}
+      animate={_{ opacity: 1, _scale: 1}}
+      transition={_{ duration: 0.5}}
       className="text-center"
     >
       <div className="relative">
@@ -31,88 +23,73 @@ const LoadingFallback = () => (
   </div>
 );
 
-const Homepage2035: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
+const Homepage2035: React.FC = () => {_const [isLoading, _setIsLoading] = useState(true);
+  const [isVisible, _setIsVisible] = useState(false);
+  const [activeCategory, _setActiveCategory] = useState('all');
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect__(() => {
+    const _timer = setTimeout__(() => {
       setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
+      setIsVisible(true);}, 800);
 
     return () => clearTimeout(timer);
   }, []);
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+  const _fadeInUp = {_initial: { opacity: 0, _y: 60},
+    animate: {_opacity: 1, _y: 0},
+    transition: {_duration: 0.6, _ease: "easeOut"}
   };
 
-  const staggerContainer = {
-    animate: {
+  const _staggerContainer = {_animate: {
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
+        staggerChildren: 0.1, _delayChildren: 0.2}
     }
   };
 
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { duration: 1.5, ease: "easeOut" as const }
+  const _backgroundVariants = {_initial: { opacity: 0, _scale: 0.8},
+    animate: {_opacity: 1, _scale: 1, _transition: { duration: 1.5, _ease: "easeOut" as const}
     }
   };
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> },
-    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> },
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
+  const _categories = [
+    {_id: 'all', _name: 'All Services', _icon: <Globe className="w-5 h-5" />},
+    {_id: 'ai', _name: 'AI & ML', _icon: <Brain className="w-5 h-5" />},
+    {_id: 'it', _name: 'IT Enterprise', _icon: <Cpu className="w-5 h-5" />},
+    {_id: 'quantum', _name: 'Quantum Tech', _icon: <Atom className="w-5 h-5" />},
+    {_id: 'space', _name: 'Space Tech', _icon: <Satellite className="w-5 h-5" />},
+    {_id: 'cyber', _name: 'Cybersecurity', _icon: <Shield className="w-5 h-5" />},
+    {_id: 'cloud', _name: 'Cloud & DevOps', _icon: <Cloud className="w-5 h-5" />},
+    {_id: 'fintech', _name: 'FinTech', _icon: <ChartBar className="w-5 h-5" />}
   ];
 
-  const allServices = [
+  const _allServices = [
     ...innovative2025MicroSaasBatch,
     ...innovative2025ITEnterpriseBatch,
     ...innovative2025AIServicesBatch
   ];
 
-  const filteredServices = activeCategory === 'all' 
+  const _filteredServices = activeCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning');
+    : allServices.filter(service => {_if (activeCategory === 'ai') return service.category.includes('AI') || service.category.includes('Machine Learning');
         if (activeCategory === 'it') return service.category.includes('IT') || service.category.includes('Enterprise');
         if (activeCategory === 'quantum') return service.name.includes('Quantum');
         if (activeCategory === 'space') return service.category.includes('Space');
         if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity');
         if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps');
         if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading');
-        return true;
-      });
+        return true;});
 
-  if (isLoading) {
-    return <LoadingFallback />;
-  }
+  if (isLoading) {_return <LoadingFallback />;}
 
-  return (
-    <Layout>
+  return (_<Layout>
       <UltraFuturisticBackground2035>
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="mb-8"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -121,20 +98,20 @@ const Homepage2035: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Pioneering the future with cutting-edge AI, Quantum Computing, and Space Technology solutions
+                Pioneering the future with cutting-edge AI, _Quantum Computing, _and Space Technology solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <Play className="w-5 h-5" />
@@ -143,43 +120,40 @@ const Homepage2035: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Stats */}
+            {_/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
-              {[
-                { icon: <Users className="w-8 h-8" />, value: '50K+', label: 'Happy Clients' },
-                { icon: <Star className="w-8 h-8" />, value: '4.9', label: 'Average Rating' },
-                { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' },
-                { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
-              ].map((stat, index) => (
+              {_[
+                { icon: <Users className="w-8 h-8" />, _value: '50K+', _label: 'Happy Clients'}, _{_icon: <Star className="w-8 h-8" />, _value: '4.9', _label: 'Average Rating'}, _{_icon: <Award className="w-8 h-8" />, _value: '200+', _label: 'Services'}, _{_icon: <TrendingUp className="w-8 h-8" />, _value: '99.9%', _label: 'Uptime'}
+              ].map((stat, _index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  key={_index}
+                  initial={_{ opacity: 0, _scale: 0.5}}
+                  animate={_{ opacity: 1, _scale: 1}}
+                  transition={_{ duration: 0.5, _delay: 0.3 + index * 0.1}}
                   className="text-center"
                 >
-                  <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                  <div className="text-cyan-400 mb-2 flex justify-center">{_stat.icon}</div>
+                  <div className="text-3xl font-bold text-white mb-1">{_stat.value}</div>
+                  <div className="text-gray-400 text-sm">{_stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {_/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -190,62 +164,60 @@ const Homepage2035: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* Category Filter */}
+            {_/* Category Filter */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
+              viewport={_{ once: true}}
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
-              {categories.map((category) => (
-                <motion.button
+              {_categories.map(_(category) => (_<motion.button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
+                  onClick={_() => setActiveCategory(category.id)}
+                  className={_`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                     activeCategory === category.id
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
-                      : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
-                  }`}
+                      : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'}`}
                 >
-                  {category.icon}
-                  <span>{category.name}</span>
+                  {_category.icon}
+                  <span>{_category.name}</span>
                 </motion.button>
               ))}
             </motion.div>
 
-            {/* Services Grid */}
+            {_/* Services Grid */}
             <motion.div
-              variants={staggerContainer}
+              variants={_staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={_{ once: true}}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredServices.map((service, index) => (
+              {_filteredServices.map(_(service, _index) => (
                 <motion.div
                   key={service.id}
-                  variants={fadeInUp}
+                  variants={_fadeInUp}
                   className="w-full"
                 >
-                  <UltraFuturisticServiceCard2035 service={service} />
+                  <UltraFuturisticServiceCard2035 service={_service} />
                 </motion.div>
               ))}
             </motion.div>
 
-            {/* View All Services Button */}
+            {_/* View All Services Button */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.4}}
+              viewport={_{ once: true}}
               className="text-center mt-16"
             >
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={_{ scale: 1.05}}
+                whileTap={_{ scale: 0.95}}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>View All Services</span>
@@ -255,14 +227,14 @@ const Homepage2035: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {_/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -274,65 +246,42 @@ const Homepage2035: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
+              {_[
                 {
-                  icon: <Brain className="w-12 h-12" />,
-                  title: 'AI-Powered Solutions',
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
-                },
-                {
-                  icon: <Shield className="w-12 h-12" />,
-                  title: 'Enterprise Security',
-                  description: 'Military-grade security protocols and compliance standards to protect your business'
-                },
-                {
-                  icon: <Rocket className="w-12 h-12" />,
-                  title: 'Space Technology',
-                  description: 'Pioneering space tech solutions for the next generation of innovation'
-                },
-                {
-                  icon: <Atom className="w-12 h-12" />,
-                  title: 'Quantum Computing',
-                  description: 'Access to quantum computing power for complex problem-solving'
-                },
-                {
-                  icon: <Cloud className="w-12 h-12" />,
-                  title: 'Cloud-Native',
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                },
-                {
-                  icon: <Target className="w-12 h-12" />,
-                  title: 'Results-Driven',
-                  description: 'Focused on delivering measurable business outcomes and ROI'
-                }
-              ].map((feature, index) => (
+                  icon: <Brain className="w-12 h-12" />, _title: 'AI-Powered Solutions', _description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'},
+                {_icon: <Shield className="w-12 h-12" />, _title: 'Enterprise Security', _description: 'Military-grade security protocols and compliance standards to protect your business'},
+                {_icon: <Rocket className="w-12 h-12" />, _title: 'Space Technology', _description: 'Pioneering space tech solutions for the next generation of innovation'},
+                {_icon: <Atom className="w-12 h-12" />, _title: 'Quantum Computing', _description: 'Access to quantum computing power for complex problem-solving'},
+                {_icon: <Cloud className="w-12 h-12" />, _title: 'Cloud-Native', _description: 'Built for the cloud with scalability, _reliability, _and performance in mind'},
+                {_icon: <Target className="w-12 h-12" />, _title: 'Results-Driven', _description: 'Focused on delivering measurable business outcomes and ROI'}
+              ].map(_(feature, _index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  key={_index}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
+                  viewport={_{ once: true}}
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                    {_feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{_feature.title}</h3>
+                  <p className="text-gray-300">{_feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
             >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -342,16 +291,16 @@ const Homepage2035: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
                 >
                   Schedule a Demo

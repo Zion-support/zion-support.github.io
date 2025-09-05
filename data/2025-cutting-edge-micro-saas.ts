@@ -1,44 +1,16 @@
-export const cuttingEdgeMicroSaasServices2025 = [
-  {
-    id: 'customer-success-ai-pro',
-    name: 'Customer Success AI Pro',
-    description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
-    features: [
-      'AI-powered churn prediction with 92% accuracy',
-      'Personalized engagement recommendations',
-      'Customer health scoring and monitoring',
-      'Automated success playbook creation',
-      'Real-time customer sentiment analysis',
-      'Predictive analytics dashboard',
-      'Integration with CRM and support tools',
-      'Automated customer onboarding workflows',
-      'Performance metrics and reporting',
-      'Custom AI model training'
-    ],
-    pricing: {
+export const _cuttingEdgeMicroSaasServices2025 = [
+  {_id: 'customer-success-ai-pro', _name: 'Customer Success AI Pro', _description: 'Intelligent customer success platform that uses AI to predict customer churn, _optimize engagement strategies, _and maximize customer lifetime value through predictive analytics.', _features: [
+      'AI-powered churn prediction with 92% accuracy', _'Personalized engagement recommendations', _'Customer health scoring and monitoring', _'Automated success playbook creation', _'Real-time customer sentiment analysis', _'Predictive analytics dashboard', _'Integration with CRM and support tools', _'Automated customer onboarding workflows', _'Performance metrics and reporting', _'Custom AI model training'
+    ], _pricing: {
       starter: { 
-        price: 199, 
-        period: 'month', 
-        features: ['Up to 1,000 customers', 'Basic AI features', 'Email support'] 
-      },
-      professional: { 
-        price: 499, 
-        period: 'month', 
-        features: ['Up to 10,000 customers', 'Advanced AI features', 'Priority support', 'Custom workflows'] 
-      },
-      enterprise: { 
-        price: 1299, 
-        period: 'month', 
-        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support'] 
-      }
+        price: 199, _period: 'month', _features: ['Up to 1, _000 customers', _'Basic AI features', _'Email support']},
+      professional: {_price: 499, _period: 'month', _features: ['Up to 10, _000 customers', _'Advanced AI features', _'Priority support', _'Custom workflows']},
+      enterprise: {_price: 1299, _period: 'month', _features: ['Unlimited customers', _'Full AI platform', _'Dedicated specialists', _'24/7 support']}
     },
     category: 'Customer Success',
     tags: ['Customer Success', 'AI', 'Churn Prediction', 'Engagement', 'Analytics'],
     website: 'https://ziontechgroup.com/customer-success-ai-pro',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contact: {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com'},
     marketSize: '$11.8B',
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',
     competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics',
@@ -52,46 +24,18 @@ export const cuttingEdgeMicroSaasServices2025 = [
     integrations: ['Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams'],
     compliance: ['GDPR', 'CCPA', 'SOC2', 'Data Privacy Standards']
   },
-  {
-    id: 'quantum-supply-chain-optimizer',
-    name: 'Quantum Supply Chain Optimizer',
-    description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.',
-    features: [
-      'Quantum-enhanced route optimization',
-      'Real-time supply chain monitoring',
-      'Predictive demand forecasting',
-      'Inventory optimization algorithms',
-      'Supplier performance analytics',
-      'Risk assessment and mitigation',
-      'Cost optimization modeling',
-      'Sustainability impact analysis',
-      'Multi-modal transportation planning',
-      'Real-time collaboration tools'
-    ],
-    pricing: {
+  {_id: 'quantum-supply-chain-optimizer', _name: 'Quantum Supply Chain Optimizer', _description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, _reduce costs, _and improve efficiency across global supply networks.', _features: [
+      'Quantum-enhanced route optimization', _'Real-time supply chain monitoring', _'Predictive demand forecasting', _'Inventory optimization algorithms', _'Supplier performance analytics', _'Risk assessment and mitigation', _'Cost optimization modeling', _'Sustainability impact analysis', _'Multi-modal transportation planning', _'Real-time collaboration tools'
+    ], _pricing: {
       starter: { 
-        price: 299, 
-        period: 'month', 
-        features: ['Basic optimization features', 'Standard analytics', 'Email support'] 
-      },
-      professional: { 
-        price: 799, 
-        period: 'month', 
-        features: ['Advanced optimization', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
-      },
-      enterprise: { 
-        price: 1999, 
-        period: 'month', 
-        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
+        price: 299, _period: 'month', _features: ['Basic optimization features', _'Standard analytics', _'Email support']},
+      professional: {_price: 799, _period: 'month', _features: ['Advanced optimization', _'Quantum algorithms', _'Priority support', _'Custom modeling']},
+      enterprise: {_price: 1999, _period: 'month', _features: ['Full quantum platform', _'Custom algorithms', _'Dedicated specialists', _'24/7 support']}
     },
     category: 'Supply Chain',
     tags: ['Supply Chain', 'Quantum Computing', 'Logistics', 'Optimization', 'Analytics'],
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contact: {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com'},
     marketSize: '$15.4B',
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',
     competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics',
@@ -105,46 +49,18 @@ export const cuttingEdgeMicroSaasServices2025 = [
     integrations: ['ERP Systems', 'WMS Platforms', 'TMS Solutions', 'E-commerce Platforms', 'Analytics Tools'],
     compliance: ['Supply Chain Standards', 'Logistics Regulations', 'Data Privacy Laws']
   },
-  {
-    id: 'blockid-verify-pro',
-    name: 'BlockID Verify Pro',
-    description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.',
-    features: [
-      'Blockchain-based identity verification',
-      'Multi-factor biometric authentication',
-      'Real-time identity validation',
-      'Fraud detection and prevention',
-      'Compliance with global regulations',
-      'API integration capabilities',
-      'Custom verification workflows',
-      'Audit trail and reporting',
-      'Mobile and web applications',
-      'White-label solutions'
-    ],
-    pricing: {
+  {_id: 'blockid-verify-pro', _name: 'BlockID Verify Pro', _description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, _tamper-proof digital identity verification.', _features: [
+      'Blockchain-based identity verification', _'Multi-factor biometric authentication', _'Real-time identity validation', _'Fraud detection and prevention', _'Compliance with global regulations', _'API integration capabilities', _'Custom verification workflows', _'Audit trail and reporting', _'Mobile and web applications', _'White-label solutions'
+    ], _pricing: {
       starter: { 
-        price: 149, 
-        period: 'month', 
-        features: ['Up to 1,000 verifications', 'Basic verification features', 'Email support'] 
-      },
-      professional: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Up to 10,000 verifications', 'Advanced verification features', 'Priority support', 'Custom workflows'] 
-      },
-      enterprise: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support'] 
-      }
+        price: 149, _period: 'month', _features: ['Up to 1, _000 verifications', _'Basic verification features', _'Email support']},
+      professional: {_price: 399, _period: 'month', _features: ['Up to 10, _000 verifications', _'Advanced verification features', _'Priority support', _'Custom workflows']},
+      enterprise: {_price: 999, _period: 'month', _features: ['Unlimited verifications', _'Full verification platform', _'Dedicated specialists', _'24/7 support']}
     },
     category: 'Identity Verification',
     tags: ['Identity Verification', 'Blockchain', 'Biometrics', 'Security', 'Compliance'],
     website: 'https://ziontechgroup.com/blockid-verify-pro',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contact: {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com'},
     marketSize: '$13.7B',
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',
     competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance',
@@ -158,46 +74,18 @@ export const cuttingEdgeMicroSaasServices2025 = [
     integrations: ['CRM Systems', 'Banking Platforms', 'Healthcare Systems', 'E-commerce Platforms', 'Government APIs'],
     compliance: ['KYC/AML', 'GDPR', 'CCPA', 'SOC2', 'Global Identity Standards']
   },
-  {
-    id: 'hr-analytics-ai-suite',
-    name: 'HR Analytics AI Suite',
-    description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.',
-    features: [
-      'AI-powered performance analytics',
-      'Employee engagement monitoring',
-      'Predictive turnover analysis',
-      'Recruitment optimization algorithms',
-      'Workforce planning and forecasting',
-      'Diversity and inclusion analytics',
-      'Real-time performance dashboards',
-      'Custom reporting and analytics',
-      'Integration with HR systems',
-      'Predictive modeling capabilities'
-    ],
-    pricing: {
+  {_id: 'hr-analytics-ai-suite', _name: 'HR Analytics AI Suite', _description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, _engagement, _retention, _and organizational effectiveness.', _features: [
+      'AI-powered performance analytics', _'Employee engagement monitoring', _'Predictive turnover analysis', _'Recruitment optimization algorithms', _'Workforce planning and forecasting', _'Diversity and inclusion analytics', _'Real-time performance dashboards', _'Custom reporting and analytics', _'Integration with HR systems', _'Predictive modeling capabilities'
+    ], _pricing: {
       starter: { 
-        price: 249, 
-        period: 'month', 
-        features: ['Up to 500 employees', 'Basic analytics features', 'Email support'] 
-      },
-      professional: { 
-        price: 649, 
-        period: 'month', 
-        features: ['Up to 5,000 employees', 'Advanced analytics features', 'Priority support', 'Custom reporting'] 
-      },
-      enterprise: { 
-        price: 1699, 
-        period: 'month', 
-        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support'] 
-      }
+        price: 249, _period: 'month', _features: ['Up to 500 employees', _'Basic analytics features', _'Email support']},
+      professional: {_price: 649, _period: 'month', _features: ['Up to 5, _000 employees', _'Advanced analytics features', _'Priority support', _'Custom reporting']},
+      enterprise: {_price: 1699, _period: 'month', _features: ['Unlimited employees', _'Full analytics platform', _'Dedicated specialists', _'24/7 support']}
     },
     category: 'HR Analytics',
     tags: ['HR Analytics', 'AI', 'Performance Management', 'Employee Engagement', 'Predictive Analytics'],
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contact: {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com'},
     marketSize: '$9.8B',
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
     competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights',
@@ -211,46 +99,18 @@ export const cuttingEdgeMicroSaasServices2025 = [
     integrations: ['Workday', 'BambooHR', 'ADP', 'SuccessFactors', 'Slack', 'Microsoft Teams'],
     compliance: ['HR Data Privacy', 'Employment Laws', 'Data Protection Regulations']
   },
-  {
-    id: 'quantum-risk-financial-manager',
-    name: 'Quantum Risk Financial Manager',
-    description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.',
-    features: [
-      'Quantum-enhanced risk modeling',
-      'Real-time portfolio optimization',
-      'Advanced financial analytics',
-      'Risk assessment and monitoring',
-      'Portfolio stress testing',
-      'Regulatory compliance reporting',
-      'Custom risk models',
-      'Real-time market data integration',
-      'Performance attribution analysis',
-      'Comprehensive risk reporting'
-    ],
-    pricing: {
+  {_id: 'quantum-risk-financial-manager', _name: 'Quantum Risk Financial Manager', _description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, _portfolio optimization, _and financial modeling for complex investment strategies.', _features: [
+      'Quantum-enhanced risk modeling', _'Real-time portfolio optimization', _'Advanced financial analytics', _'Risk assessment and monitoring', _'Portfolio stress testing', _'Regulatory compliance reporting', _'Custom risk models', _'Real-time market data integration', _'Performance attribution analysis', _'Comprehensive risk reporting'
+    ], _pricing: {
       starter: { 
-        price: 399, 
-        period: 'month', 
-        features: ['Basic risk management', 'Standard analytics', 'Email support'] 
-      },
-      professional: { 
-        price: 999, 
-        period: 'month', 
-        features: ['Advanced risk management', 'Quantum algorithms', 'Priority support', 'Custom models'] 
-      },
-      enterprise: { 
-        price: 2499, 
-        period: 'month', 
-        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
-      }
+        price: 399, _period: 'month', _features: ['Basic risk management', _'Standard analytics', _'Email support']},
+      professional: {_price: 999, _period: 'month', _features: ['Advanced risk management', _'Quantum algorithms', _'Priority support', _'Custom models']},
+      enterprise: {_price: 2499, _period: 'month', _features: ['Full risk management platform', _'Custom algorithms', _'Dedicated specialists', _'24/7 support']}
     },
     category: 'Financial Risk Management',
     tags: ['Risk Management', 'Quantum Computing', 'Financial Analytics', 'Portfolio Optimization', 'Compliance'],
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contact: {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com'},
     marketSize: '$28.9B',
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',
     competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics',

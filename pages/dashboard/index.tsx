@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 
-const Dashboard: NextPage = () => {
-  return (
+const Dashboard: NextPage = () => {_return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Dashboard - Zion</title>
@@ -17,8 +16,8 @@ const Dashboard: NextPage = () => {
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
           icon={<span>🧰</span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+          primaryAction={_{ label: 'Post a job', _href: '/jobs/post'}}
+          secondaryAction={_{ label: 'Explore talent', _href: '/talent'}}
         />
       </section>
 
@@ -27,8 +26,8 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No messages yet"
           description="When conversations start, they’ll show up here."
-          icon={<span>💬</span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
+          icon={_<span>💬</span>}
+          primaryAction={_{ label: 'Browse services', _href: '/services'}}
         />
       </section>
     </div>

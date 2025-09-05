@@ -1,19 +1,14 @@
 
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
 
-interface ServiceDetailsSectionProps {
-  selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void;
-}
+interface ServiceDetailsSectionProps {_selectedCountry: CountryPricing | null;
+  setSelectedCountry: (_country: CountryPricing | null) => void;}
 
-export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
-  return (
+export function ServiceDetailsSection(_{_selectedCountry, _setSelectedCountry}: ServiceDetailsSectionProps) {_return (
     <div id="service-details" className="mt-12">
       {selectedCountry ? (
         <CountryServiceSelector 
           selectedCountry={selectedCountry}
-          onCountryChange={setSelectedCountry}
+          onCountryChange={_setSelectedCountry}
         />
       ) : (
         <div className="text-center">

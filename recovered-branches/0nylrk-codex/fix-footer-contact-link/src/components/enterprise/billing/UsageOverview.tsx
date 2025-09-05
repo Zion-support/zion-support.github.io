@@ -1,32 +1,13 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export function UsageOverview() {
-  // Mock usage data
-  const usage = {
+export function UsageOverview() {_// Mock usage data
+  const _usage = {
     jobPosts: {
-      used: 32,
-      total: 100,
-      percentage: 32
-    },
-    interviews: {
-      used: 45,
-      total: 150,
-      percentage: 30
-    },
-    messaging: {
-      used: 1250,
-      total: 5000,
-      percentage: 25
-    },
-    storage: {
-      used: 2.4,
-      total: 10,
-      percentage: 24
-    }
+      used: 32, _total: 100, _percentage: 32},
+    interviews: {_used: 45, _total: 150, _percentage: 30},
+    messaging: {_used: 1250, _total: 5000, _percentage: 25},
+    storage: {_used: 2.4, _total: 10, _percentage: 24}
   };
 
   return (
@@ -48,40 +29,40 @@ export function UsageOverview() {
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium">Job Posts</p>
                   <p className="text-sm text-muted-foreground">
-                    {usage.jobPosts.used} / {usage.jobPosts.total}
+                    {_usage.jobPosts.used} / {_usage.jobPosts.total}
                   </p>
                 </div>
-                <Progress value={usage.jobPosts.percentage} className="h-2" />
+                <Progress value={_usage.jobPosts.percentage} className="h-2" />
               </div>
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium">Interviews Conducted</p>
                   <p className="text-sm text-muted-foreground">
-                    {usage.interviews.used} / {usage.interviews.total}
+                    {_usage.interviews.used} / {_usage.interviews.total}
                   </p>
                 </div>
-                <Progress value={usage.interviews.percentage} className="h-2" />
+                <Progress value={_usage.interviews.percentage} className="h-2" />
               </div>
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium">Messages Sent</p>
                   <p className="text-sm text-muted-foreground">
-                    {usage.messaging.used} / {usage.messaging.total}
+                    {_usage.messaging.used} / {_usage.messaging.total}
                   </p>
                 </div>
-                <Progress value={usage.messaging.percentage} className="h-2" />
+                <Progress value={_usage.messaging.percentage} className="h-2" />
               </div>
               
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <p className="text-sm font-medium">Storage (GB)</p>
                   <p className="text-sm text-muted-foreground">
-                    {usage.storage.used} / {usage.storage.total} GB
+                    {_usage.storage.used} / {_usage.storage.total} GB
                   </p>
                 </div>
-                <Progress value={usage.storage.percentage} className="h-2" />
+                <Progress value={_usage.storage.percentage} className="h-2" />
               </div>
             </div>
             

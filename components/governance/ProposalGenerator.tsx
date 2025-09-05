@@ -1,102 +1,71 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
 
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 
-export type ProposalForm = {
-  targetInstitution: string;
+export type ProposalForm = {_targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
-  customPrompt?: string;
-};
+  customPrompt?: string;};
 
-export default function ProposalGenerator() {
-  const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP',
-    type: 'Workforce Dev',
-    regionalScope: 'Global',
-    budgetOrGoals: '',
-    supportingMultiverses: '',
-    language: 'English',
-    customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
+export default function ProposalGenerator() {_const [form, _setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP', _type: 'Workforce Dev', _regionalScope: 'Global', _budgetOrGoals: '', _supportingMultiverses: '', _language: 'English', _customPrompt:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, _social outcomes, _and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
-  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string; jsonUrl?: string; mdUrl?: string } | null>(null);
+  const [exportLinks, setExportLinks] = useState<{_pdfUrl?: string; jsonUrl?: string; mdUrl?: string} | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
-  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }));
+  function handleChange<K extends keyof ProposalForm>(_key: K, _value: ProposalForm[K]) {_setForm(_(prev) => ({ ...prev, _[key]: value}));
   }
 
-  async function handleGenerate() {
-    setIsGenerating(true);
+  async function handleGenerate() {_setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
-      const res = await fetch('/api/proposals/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const _res = await fetch('/api/proposals/generate', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(form)});
-      const data = await res.json();
+      const _data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {
-      console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {
-      setIsGenerating(false);
-    }
+    } catch (e: unknown) {_setStatusMessage('Failed to generate. You can edit manually and export.');} finally {_setIsGenerating(false);}
   }
 
-  async function handleExport() {
-    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+  async function handleExport() {_setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
-      const res = await fetch('/api/proposals/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form})});
-      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl });
+      const _res = await fetch('/api/proposals/export', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_markdown: draftMarkdown, _json: draftJson, _meta: form})});
+      const _data = await res.json();
+      setExportLinks({_pdfUrl: data.pdfUrl, _jsonUrl: data.jsonUrl, _mdUrl: data.mdUrl});
       setStatusMessage('Exported. Files saved.');
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Export failed');
-    }
+    } catch (e) {_setStatusMessage('Export failed');}
   }
 
-  async function handleSubmitBridge() {
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+  async function handleSubmitBridge() {_setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })});
-      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`);
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed');
-    }
+      const _res = await fetch('/api/proposals/submit', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_markdown: draftMarkdown, _json: draftJson, _meta: form})});
+      const _data = await res.json();
+      setStatusMessage(`Submitted. Status: ${_data.status || 'queued'}. IPFS: ${_data.ipfsCid || 'N/A'}`);
+    } catch (e) {_setStatusMessage('Submission failed');}
   }
 
-  return (
-    <div className="space-y-6">
+  return (_<div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium">Target institution</label>
             <input
               className="w-full border rounded px-3 py-2"
-              value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
+              value={_form.targetInstitution}
+              onChange={_(e) => handleChange('targetInstitution', _e.target.value)}
               placeholder="UNDP / World Bank / ILO"
             />
           </div>
@@ -104,8 +73,8 @@ export default function ProposalGenerator() {
             <label className="block text-sm font-medium">Type</label>
             <select
               className="w-full border rounded px-3 py-2"
-              value={form.type}
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
+              value={_form.type}
+              onChange={_(_e) => handleChange('type', _e.target.value as ProposalType)}
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -117,8 +86,8 @@ export default function ProposalGenerator() {
             <label className="block text-sm font-medium">Regional scope</label>
             <input
               className="w-full border rounded px-3 py-2"
-              value={form.regionalScope}
-              onChange={(e) => handleChange('regionalScope', e.target.value)}
+              value={_form.regionalScope}
+              onChange={_(_e) => handleChange('regionalScope', _e.target.value)}
               placeholder="Global / Africa / LATAM / APAC / EU / ..."
             />
           </div>
@@ -126,8 +95,8 @@ export default function ProposalGenerator() {
             <label className="block text-sm font-medium">Budget / Resolution goals</label>
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
-              value={form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
+              value={_form.budgetOrGoals}
+              onChange={_(_e) => handleChange('budgetOrGoals', _e.target.value)}
               placeholder="$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc."
             />
           </div>
@@ -135,8 +104,8 @@ export default function ProposalGenerator() {
             <label className="block text-sm font-medium">Supporting multiverse(s)</label>
             <input
               className="w-full border rounded px-3 py-2"
-              value={form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
+              value={_form.supportingMultiverses}
+              onChange={_(_e) => handleChange('supportingMultiverses', _e.target.value)}
               placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
             />
           </div>
@@ -145,8 +114,8 @@ export default function ProposalGenerator() {
               <label className="block text-sm font-medium">Language</label>
               <input
                 className="w-full border rounded px-3 py-2"
-                value={form.language}
-                onChange={(e) => handleChange('language', e.target.value)}
+                value={_form.language}
+                onChange={_(_e) => handleChange('language', _e.target.value)}
                 placeholder="English / French / Spanish / Arabic / ..."
               />
             </div>
@@ -154,48 +123,48 @@ export default function ProposalGenerator() {
               <label className="block text-sm font-medium">GPT Prompt Assist</label>
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
-                value={form.customPrompt}
-                onChange={(e) => handleChange('customPrompt', e.target.value)}
+                value={_form.customPrompt}
+                onChange={_(_e) => handleChange('customPrompt', _e.target.value)}
               />
             </div>
           </div>
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-              onClick={handleGenerate}
-              disabled={isGenerating}
+              onClick={_handleGenerate}
+              disabled={_isGenerating}
             >
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
+              {_isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
               className="px-4 py-2 bg-emerald-600 text-white rounded"
-              onClick={handleExport}
-              disabled={!draftMarkdown}
+              onClick={_handleExport}
+              disabled={_!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
               className="px-4 py-2 bg-purple-600 text-white rounded"
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
+              onClick={_handleSubmitBridge}
+              disabled={_!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
-          {exportLinks && (
+          {_statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+          {_exportLinks && (
             <div className="text-sm space-y-1">
               {exportLinks.pdfUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
                 </div>
               )}
-              {exportLinks.mdUrl && (
+              {_exportLinks.mdUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
                 </div>
               )}
-              {exportLinks.jsonUrl && (
+              {_exportLinks.jsonUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
@@ -207,8 +176,8 @@ export default function ProposalGenerator() {
           <label className="block text-sm font-medium">Draft (Markdown)</label>
           <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
-            value={draftMarkdown}
-            onChange={(e) => setDraftMarkdown(e.target.value)}
+            value={_draftMarkdown}
+            onChange={_(_e) => setDraftMarkdown(e.target.value)}
           />
         </div>
       </div>

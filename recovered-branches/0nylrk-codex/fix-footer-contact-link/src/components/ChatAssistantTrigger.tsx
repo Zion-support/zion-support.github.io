@@ -1,38 +1,25 @@
 
-import { useState } from "react";
-import { MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ChatAssistant } from "@/components/ChatAssistant";
 
-export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false);
+export function ChatAssistantTrigger() {_const [isOpen, _setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
-  const handleSendMessage = async (message: string): Promise<void> => {
+  const _handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
+      const _response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", _{
+        method: "POST", _headers: {
           "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+        body: JSON.stringify({_messages: [{ role: "user", _content: message}] 
         })});
       
-      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant");
-      }
+      if (!response.ok) {_throw new Error("Failed to get response from AI assistant");}
       
       return Promise.resolve();
-    } catch (error) {
-      console.error("Error in AI chat:", error);
-      return Promise.resolve();
-    }
+    } catch (error) {_return Promise.resolve();}
   };
 
-  return (
-    <>
+  return (_<>
       <Button
-        onClick={() => setIsOpen(true)}
+        onClick={_() => setIsOpen(true)}
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -41,17 +28,12 @@ export function ChatAssistantTrigger() {
         <MessageSquare className="h-5 w-5" />
       </Button>
       
-      {isOpen && (
-        <ChatAssistant
+      {_isOpen && (_<ChatAssistant
           isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Virtual Assistant'
-          }}
-          onSendMessage={handleSendMessage}
+          onClose={_() => setIsOpen(false)}
+          recipient={_{
+            id: 'ai-assistant', _name: 'AI Assistant', _avatarUrl: 'https://placehold.co/64x64?text=AI', _role: 'Virtual Assistant'}}
+          onSendMessage={_handleSendMessage}
         />
       )}
     </>

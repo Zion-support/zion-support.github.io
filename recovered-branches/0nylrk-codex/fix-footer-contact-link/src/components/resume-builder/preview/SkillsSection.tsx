@@ -1,17 +1,12 @@
 
-import { Skill } from '@/types/resume';
 
-interface SkillsSectionProps {
-  skills: Skill[];
-}
+interface SkillsSectionProps {_skills: Skill[];}
 
-export function SkillsSection({ skills }: SkillsSectionProps) {
-  // Group skills by category
-  const skillsByCategory = skills.reduce((acc, skill) => {
-    const category = skill.category || 'Other';
+export function SkillsSection(_{_skills}: SkillsSectionProps) {_// Group skills by category
+  const _skillsByCategory = skills.reduce(_(acc, _skill) => {
+    const _category = skill.category || 'Other';
     if (!acc[category]) {
-      acc[category] = [];
-    }
+      acc[category] = [];}
     acc[category].push(skill);
     return acc;
   }, {} as Record<string, Skill[]>);
@@ -22,11 +17,11 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
       <div className="space-y-2">
-        {Object.entries(skillsByCategory).map(([category, skills]) => (
+        {_Object.entries(skillsByCategory).map(_([category, _skills]) => (
           <div key={category}>
-            <h3 className="text-sm font-medium">{category}</h3>
+            <h3 className="text-sm font-medium">{_category}</h3>
             <p className="text-sm">
-              {skills.map(skill => skill.name).join(', ')}
+              {_skills.map(skill => skill.name).join(', _')}
             </p>
           </div>
         ))}

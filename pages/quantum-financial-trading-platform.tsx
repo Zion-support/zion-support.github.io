@@ -4,8 +4,7 @@ import Layout from '../components/layout/Layout';
 
 
 
-export default function QuantumFinancialTradingPlatformPage() {
-  return (
+export default function QuantumFinancialTradingPlatformPage() {_return (
     <Layout>
       <Head>
         <title>Quantum Financial Trading Platform | Zion Tech Group</title>
@@ -21,10 +20,10 @@ export default function QuantumFinancialTradingPlatformPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-slate-300">Market prediction models, algorithmic trading, risk management, and performance analytics with enterprise-grade security and compliance.</p>
+              <p className="text-slate-300">Market prediction models, _algorithmic trading, _risk management, _and performance analytics with enterprise-grade security and compliance.</p>
             </div>
             <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $18,999<span >/month</span></div>
+              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $18, _999<span >/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 2–3 weeks</div>
               <div className="mt-6 flex gap-3">
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
@@ -35,6 +34,5 @@ export default function QuantumFinancialTradingPlatformPage() {
         </div>
       </div>
     </Layout>
-  );
-}
+  );}
 

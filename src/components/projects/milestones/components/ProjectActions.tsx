@@ -1,26 +1,14 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react'
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
-interface ProjectActionsProps {
-  projectId: string;
+interface ProjectActionsProps {_projectId: string;
   isUnderDispute: boolean;
   disputeId?: string;
   isTalent: boolean;
-  onAddMilestone: () => void;
-}
+  onAddMilestone: () => void;}
 
-export function ProjectActions({
-  projectId,
-  isUnderDispute,
-  disputeId,
-  isTalent,
-  onAddMilestone
-}: ProjectActionsProps) {
-  return (
+export function ProjectActions(_{_projectId, _isUnderDispute, _disputeId, _isTalent, _onAddMilestone}: ProjectActionsProps) {_return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
@@ -31,11 +19,11 @@ export function ProjectActions({
         </Button>
       ) : (
         <RaiseDisputeButton 
-          projectId={projectId}
+          projectId={_projectId}
           variant="outline"
         />
       )}
-      {isTalent && !isUnderDispute && (
+      {_isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>

@@ -1,71 +1,51 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
-import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
-import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
+import React, {_useState} from 'react';
 
-const RevolutionaryServicesShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [visibleServices, setVisibleServices] = useState(12);
+const RevolutionaryServicesShowcase: React.FC = () => {_const [activeCategory, _setActiveCategory] = useState('all');
+  const [visibleServices, _setVisibleServices] = useState(12);
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
-    { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
-    { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
-    { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
+  const _categories = [
+    { id: 'all', _name: 'All Services', _count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length},
+    {_id: 'ai', _name: 'AI & ML', _count: [...revolutionary2025MicroSaasServices, _...emergingTech2025Services, _...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length},
+    {_id: 'quantum', _name: 'Quantum Tech', _count: [...revolutionary2025MicroSaasServices, _...emergingTech2025Services, _...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length},
+    {_id: 'emerging', _name: 'Emerging Tech', _count: emergingTech2025Services.length},
+    {_id: 'enterprise', _name: 'Enterprise IT', _count: enterpriseIT2025Services.length},
+    {_id: 'revolutionary', _name: 'Revolutionary', _count: revolutionary2025MicroSaasServices.length}
   ];
 
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  const _allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
 
-  const filteredServices = activeCategory === 'all' 
+  const _filteredServices = activeCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI');
+    : allServices.filter(service => {_if (activeCategory === 'ai') return service.category.includes('AI');
         if (activeCategory === 'quantum') return service.category.includes('Quantum');
         if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
         if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
         if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
-        return true;
-      });
+        return true;});
 
-  const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
-  };
+  const _loadMore = () => {_setVisibleServices(prev => Math.min(prev + 12, _filteredServices.length));};
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const _containerVariants = {_hidden: { opacity: 0},
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
     }
   };
 
-  return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+  return (_<section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {_/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={_{ opacity: 0, _y: 30}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.8}}
+          viewport={_{ once: true}}
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -75,116 +55,113 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <span className="text-white">Services</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Experience the future with our cutting-edge AI, _quantum computing, _and emerging technology solutions. 
             Transform your business with services that were once science fiction.
           </p>
         </motion.div>
 
-        {/* Category Filter */}
+        {_/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={_{ opacity: 0, _y: 20}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6}}
+          viewport={_{ once: true}}
         >
-          {categories.map((category) => (
-            <button
+          {_categories.map((category) => (_<button
               key={category.id}
-              onClick={() => {
+              onClick={_() => {
                 setActiveCategory(category.id);
-                setVisibleServices(12);
-              }}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
+                setVisibleServices(12);}}
+              className={_`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
                 activeCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'
-              }`}
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'}`}
             >
-              {category.name}
+              {_category.name}
               <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-                {category.count}
+                {_category.count}
               </span>
             </button>
           ))}
         </motion.div>
 
-        {/* Services Grid */}
+        {_/* Services Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={_{ once: true}}
         >
-          {filteredServices.slice(0, visibleServices).map((service, index) => (
+          {_filteredServices.slice(0, _visibleServices).map(_(service, _index) => (
             <motion.div
               key={service.id}
-              variants={itemVariants}
+              variants={_itemVariants}
               className="group relative cursor-pointer"
-              style={{ perspective: '1000px' }}
+              style={_{ perspective: '1000px'}}
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
-                {/* Background Effects */}
+                {_/* Background Effects */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 </div>
 
-                {/* Popular Badge */}
-                {service.popular && (
+                {_/* Popular Badge */}
+                {_service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
                     <Star className="w-3 h-3 inline mr-1" />
                     POPULAR
                   </div>
                 )}
 
-                {/* Service Header */}
+                {_/* Service Header */}
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="text-4xl">{service.icon}</div>
+                      <div className="text-4xl">{_service.icon}</div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                          {service.name}
+                          {_service.name}
                         </h3>
-                        <p className="text-gray-400 text-sm">{service.tagline}</p>
+                        <p className="text-gray-400 text-sm">{_service.tagline}</p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-gray-400 text-sm">{service.period}</div>
+                      <div className="text-2xl font-bold text-white">{_service.price}</div>
+                      <div className="text-gray-400 text-sm">{_service.period}</div>
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                  {_/* Description */}
+                  <p className="text-gray-300 mb-4 leading-relaxed">{_service.description}</p>
 
-                  {/* Stats Grid */}
+                  {_/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="flex items-center space-x-2 text-sm">
                       <Users className="w-4 h-4 text-cyan-400" />
-                      <span className="text-gray-300">{service.customers}+ users</span>
+                      <span className="text-gray-300">{_service.customers}+ users</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400" />
-                      <span className="text-gray-300">{service.rating}/5 ({service.reviews})</span>
+                      <span className="text-gray-300">{_service.rating}/5 ({_service.reviews})</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm">
                       <TrendingUp className="w-4 h-4 text-green-400" />
-                      <span className="text-gray-300">{service.growthRate}</span>
+                      <span className="text-gray-300">{_service.growthRate}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm">
                       <Shield className="w-4 h-4 text-blue-400" />
-                      <span className="text-gray-300">{service.trialDays} day trial</span>
+                      <span className="text-gray-300">{_service.trialDays} day trial</span>
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
+                  {_/* Action Buttons */}
                   <div className="flex space-x-3 mt-6">
                     <a
-                      href={service.link}
+                      href={_service.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn"
@@ -198,30 +175,30 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Floating Particles */}
+                {_/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={_{ left: '20%', _top: '30%'}}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={_{ left: '35%', _top: '40%'}}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={_{ left: '50%', _top: '50%'}}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={_{ left: '65%', _top: '60%'}}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={_{ left: '80%', _top: '70%'}}></div>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Load More Button */}
-        {visibleServices < filteredServices.length && (
+        {_/* Load More Button */}
+        {_visibleServices < filteredServices.length && (
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0}}
+            whileInView={_{ opacity: 1}}
+            transition={_{ duration: 0.6}}
+            viewport={_{ once: true}}
           >
             <button
-              onClick={loadMore}
+              onClick={_loadMore}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
             >
               Load More Revolutionary Services
@@ -229,13 +206,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Call to Action */}
+        {_/* Call to Action */}
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={_{ opacity: 0, _y: 30}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.8}}
+          viewport={_{ once: true}}
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Experience the Future?

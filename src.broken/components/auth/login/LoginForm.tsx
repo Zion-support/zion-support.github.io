@@ -1,90 +1,56 @@
 
-import { useState } from "react";
-import { useRouter } from 'next/router';
-import { useForm } from "react-hook-form";
-import type { ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
+import type {_ControllerRenderProps} from "react-hook-form";
 
-import { useAuth } from "@/hooks/useAuth";
-import { loginUser } from "@/services/authService";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
 // Form validation schema
-const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters")});
+const _loginSchema = z.object({_email: z.string().email("Please enter a valid email").min(1, _"Email is required"), _password: z.string().min(6, _"Password must be at least 6 characters")});
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const navigate = useNavigate();
+export function LoginForm() {_const { isLoading, _login} = useAuth();
+  const _navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
-    defaultValues: {
-      email: "",
-      password: ""}});
+  const _form = useForm<LoginFormValues>({_resolver: zodResolver(loginSchema), _defaultValues: {
+      email: "", _password: ""}});
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+  const _onSubmit = async (_data: LoginFormValues) => {_if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
-      if (!res.ok) {
-        toast.error(resData?.error || "Invalid credentials");
-        return;
-      }
+      const { res, _data: resData} = await loginUser(data.email, data.password);
+      if (!res.ok) {_toast.error(resData?.error || "Invalid credentials");
+        return;}
       toast.success("Logged in successfully");
-      if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`;
+      if (resData?.token) {_document.cookie = `token=${resData.token}; path=/`;
       }
       navigate("/");
-    } catch (err) {
-      toast.error("Unable to login. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (err) {_toast.error("Unable to login. Please try again.");} finally {_setIsSubmitting(false);}
   };
 
   return (
-    <Form {...form}>
-      {form.formState.errors.root && (
+    <Form {_...form}>
+      {_form.formState.errors.root && (
         <Alert variant="destructive" className="mb-4">
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
       <form
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
+        onSubmit={_form.handleSubmit(_onSubmit, _(errors) => {
+          const _firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
-            form.setFocus(firstError);
-          }
+            form.setFocus(firstError);}
         })}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
         <FormField
-          control={form.control}
+          control={_form.control}
           name="email"
-          render={({ field }) => (
+          render={_(_{ field}) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
               <FormControl>
@@ -92,9 +58,9 @@ export function LoginForm() {
                   <Input
                     placeholder="you@example.com"
                     aria-label="Email address"
-                    aria-invalid={!!form.formState.errors.email}
+                    aria-invalid={_!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
-                    {...field}
+                    {_...field}
                     autoComplete="off" // Disable browser autofill
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -106,20 +72,19 @@ export function LoginForm() {
         />
 
         <FormField
-          control={form.control}
+          control={_form.control}
           name="password"
-          render={({ field }) => (
-            <FormItem>
+          render={_(_{ field}) => (_<FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
                 <div className="relative">
                   <Input
-                    type={showPassword ? "text" : "password"}
+                    type={_showPassword ? "text" : "password"}
                     placeholder="Enter password"
                     aria-label="Password"
-                    aria-invalid={!!form.formState.errors.password}
+                    aria-invalid={_!!form.formState.errors.password}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
-                    {...field}
+                    {_...field}
                     autoComplete="off" // Disable browser autofill
                   />
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -128,15 +93,15 @@ export function LoginForm() {
                     variant="ghost"
                     size="sm"
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={_() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? (
+                    {_showPassword ? (
                       <EyeOff className="h-4 w-4" />
                     ) : (
                       <Eye className="h-4 w-4" />
                     )}
                     <span className="sr-only">
-                      {showPassword ? "Hide password" : "Show password"}
+                      {_showPassword ? "Hide password" : "Show password"}
                     </span>
                   </Button>
                 </div>
@@ -157,12 +122,12 @@ export function LoginForm() {
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-          disabled={isLoading || isSubmitting}
+          disabled={_isLoading || isSubmitting}
         >
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+          {_isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
       </form>
-      <LoadingOverlay visible={isLoading || isSubmitting} />
+      <LoadingOverlay visible={_isLoading || isSubmitting} />
     </Form>
   );
 }

@@ -1,10 +1,7 @@
-import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
+export const getServerSideProps: GetServerSideProps = async () => {_return {
     redirect: {
-      destination: '/help',
-      permanent: false}};
+      destination: '/help', _permanent: false}};
 };
 
-export default function SupportRedirect() { return null; }
+export default function SupportRedirect() {_return null;}

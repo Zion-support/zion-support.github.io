@@ -3,24 +3,20 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
 
-export interface Integration {
-  id: string;
+export interface Integration {_id: string;
   name: string;
   description: string;
   logoUrl: string;
   status: IntegrationStatus;
   lastSync?: string;
-  type: IntegrationType;
-}
+  type: IntegrationType;}
 
-export interface SyncLog {
-  id: string;
+export interface SyncLog {_id: string;
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
   timestamp: string;
-  details: string;
-}
+  details: string;}
 
 export type CrmIntegrationEvents = 
   | "contact_synced"

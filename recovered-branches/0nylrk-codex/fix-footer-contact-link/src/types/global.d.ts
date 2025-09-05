@@ -1,20 +1,16 @@
 
-import { ReactNode } from 'react';
 
 // Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {
+declare module '@/components/FeatureCard' {_export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
     className?: string;
-    key?: number | string;
-  }
+    key?: number | string;}
 }
 
 // Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {
+declare module '@/components/ListingScoreCard' {_export interface ListingScoreCardProps {
     title: string;
     description: string;
     category: string;
@@ -26,26 +22,21 @@ declare module '@/components/ListingScoreCard' {
     rating?: number;
     reviewCount?: number;
     key?: string | number;
-    variant?: string;
-  }
+    variant?: string;}
 }
 
 // Extend ChatMessageProps to include key for mapping
-declare module '@/components/ChatAssistant/ChatMessage' {
-  export interface ChatMessageProps {
+declare module '@/components/ChatAssistant/ChatMessage' {_export interface ChatMessageProps {
     role: 'user' | 'assistant';
     message: string;
     timestamp?: Date;
-    key?: string | number;
-  }
+    key?: string | number;}
 }
 
 // Extend ProductListingCardProps to include key for mapping
-declare module '@/components/ProductListingCard' {
-  export interface ProductListingCardProps {
-    listing: any;
-    view: any;
-    onRequestQuote: (listingId: string) => void;
-    key?: string | number;
-  }
+declare module '@/components/ProductListingCard' {_export interface ProductListingCardProps {
+    listing: unknown;
+    view: unknown;
+    onRequestQuote: (_listingId: string) => void;
+    key?: string | number;}
 }

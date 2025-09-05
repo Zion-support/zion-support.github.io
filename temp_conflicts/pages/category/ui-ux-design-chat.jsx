@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const UiUxDesignChat = () => {
-  return (
+const _UiUxDesignChat = () => {_return (
     <div>
       <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const UiUxDesignChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default UiUxDesignChat;

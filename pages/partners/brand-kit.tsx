@@ -1,5 +1,4 @@
-export default function BrandKit() {
-  return (
+export default function BrandKit() {_return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Influencer Brand Kit</h1>
       <p>Download assets and messaging to promote Zion AI Marketplace.</p>
@@ -11,5 +10,4 @@ export default function BrandKit() {
         <p>Invite your AI audience to earn & help them get hired.</p>
       </div>
     </div>
-  );
-}
+  );}

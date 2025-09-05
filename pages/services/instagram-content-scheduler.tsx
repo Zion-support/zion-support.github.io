@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
 
-const InstagramContentScheduler: NextPage = () => {
-  return (
+const InstagramContentScheduler: NextPage = () => {_return (
     <div>
       <Head>
         <title>InstagramContentScheduler - Zion Tech Solutions</title>
@@ -18,7 +17,6 @@ const InstagramContentScheduler: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default InstagramContentScheduler;

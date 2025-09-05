@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 
-const EmergingTechnologyTrends: NextPage = () => {
-  return (
+const EmergingTechnologyTrends: NextPage = () => {_return (
     <div>
       <Head>
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const EmergingTechnologyTrends: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default EmergingTechnologyTrends;

@@ -1,9 +1,7 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+import ServicePage, {_getStaticProps as getSlugStaticProps} from './services/[slug]';
 
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'ai-financial-planning-platform' } });
+export async function getStaticProps() {_return (getSlugStaticProps as any)({ params: { slug: 'ai-financial-planning-platform'} });
 }
 
-export default function AIFinancialPlanningPlatform(props: any) {
-	return <ServicePage {...props} />;
+export default function AIFinancialPlanningPlatform(_props: unknown) {_return <ServicePage {...props} />;
 }

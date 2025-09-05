@@ -1,9 +1,7 @@
 import React from 'react';
-export function KanbanColumn() {
-  return (
+export function KanbanColumn() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

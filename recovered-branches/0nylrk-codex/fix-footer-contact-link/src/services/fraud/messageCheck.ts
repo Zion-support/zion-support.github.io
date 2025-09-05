@@ -1,14 +1,10 @@
 
 // Message checking functionality
-import { FraudSeverity } from '@/types/fraud';
-import { analyzeContent } from './analyzeContent';
-import { MessageAnalysisResult } from './types';
 
 /**
  * Check message for suspicious content
  */
-export const checkMessage = (messageContent: string): MessageAnalysisResult => {
-  const analysis = analyzeContent(messageContent);
+export const _checkMessage = (messageContent: string): MessageAnalysisResult => {_const _analysis = analyzeContent(messageContent);
   
   // Determine severity based on number and type of issues
   let severity: FraudSeverity = 'safe';
@@ -16,11 +12,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity = analysis.reasons.length > 2 || 
               analysis.reasons.some(r => r.includes('payment') || r.includes('external')) 
       ? 'dangerous' 
-      : 'suspicious';
-  }
+      : 'suspicious';}
   
-  return {
-    ...analysis,
-    severity
-  };
+  return {_...analysis, _severity};
 };

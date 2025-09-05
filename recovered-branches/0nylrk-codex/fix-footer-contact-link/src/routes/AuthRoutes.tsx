@@ -1,48 +1,38 @@
 
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
 
-const AuthRoutes = () => {
-  return (
+const _AuthRoutes = () => {_return (
     <Routes>
       {/* Auth Routes */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/update-password" element={<UpdatePassword />} />
+      <Route path="/login" element={_<Login />} />
+      <Route path="/signup" element={_<Signup />} />
+      <Route path="/forgot-password" element={_<ForgotPassword />} />
+      <Route path="/update-password" element={_<UpdatePassword />} />
       
-      {/* Onboarding Routes */}
+      {_/* Onboarding Routes */}
       <Route 
         path="/onboarding" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <Onboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/talent-onboarding" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <TalentOnboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
       <Route 
         path="/service-onboarding" 
-        element={
-          <ProtectedRoute>
+        element={_<ProtectedRoute>
             <ServiceOnboarding />
-          </ProtectedRoute>
-        } 
+          </ProtectedRoute>} 
       />
     </Routes>
   );

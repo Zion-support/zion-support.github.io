@@ -1,93 +1,43 @@
-import { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 
-const config: Config = {
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"],
+const config: Config = {_darkMode: ["class"], _content: [
+    "./pages/**/*.{ts, _tsx}",
+    "./components/**/*.{_ts, _tsx}",
+    "./app/**/*.{_ts, _tsx}",
+    "./src/**/*.{_ts, _tsx}"],
   safelist: ['border-border'],
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
+  theme: {_container: {
+      center: true, _padding: "2rem", _screens: {
         "2xl": "1400px"}},
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))"},
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))"},
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))"},
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))"},
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))"},
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))"},
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))"},
+    extend: {_colors: {
+        border: "hsl(var(--border))", _input: "hsl(var(--input))", _ring: "hsl(var(--ring))", _background: "hsl(var(--background))", _foreground: "hsl(var(--foreground))", _primary: {
+          DEFAULT: "hsl(var(--primary))", _foreground: "hsl(var(--primary-foreground))"},
+        secondary: {_DEFAULT: "hsl(var(--secondary))", _foreground: "hsl(var(--secondary-foreground))"},
+        destructive: {_DEFAULT: "hsl(var(--destructive))", _foreground: "hsl(var(--destructive-foreground))"},
+        muted: {_DEFAULT: "hsl(var(--muted))", _foreground: "hsl(var(--muted-foreground))"},
+        accent: {_DEFAULT: "hsl(var(--accent))", _foreground: "hsl(var(--accent-foreground))"},
+        popover: {_DEFAULT: "hsl(var(--popover))", _foreground: "hsl(var(--popover-foreground))"},
+        card: {_DEFAULT: "hsl(var(--card))", _foreground: "hsl(var(--card-foreground))"},
         // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f",
-          light: "#1e263b",
-          dark: "#090c1a"},
-        "zion-purple": {
-          DEFAULT: "#a855f7",
-          light: "#d8b4fe",
-          dark: "#9333ea"},
-        "zion-cyan": {
-          DEFAULT: "#00e5ff",
-          light: "#7df9ff",
-          dark: "#00c4cc"},
-        "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B"}},
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"},
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans]},
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }},
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" }}},
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"}}},
+        "zion-blue": {_DEFAULT: "#0a0f1f", _light: "#1e263b", _dark: "#090c1a"},
+        "zion-purple": {_DEFAULT: "#a855f7", _light: "#d8b4fe", _dark: "#9333ea"},
+        "zion-cyan": {_DEFAULT: "#00e5ff", _light: "#7df9ff", _dark: "#00c4cc"},
+        "zion-slate": {_DEFAULT: "#94A3B8", _light: "#CBD5E1", _dark: "#64748B"}},
+      borderRadius: {_lg: "var(--radius)", _md: "calc(var(--radius) - 2px)", _sm: "calc(var(--radius) - 4px)"},
+      fontFamily: {_sans: ["var(--font-sans)", _...fontFamily.sans]},
+      keyframes: {_"accordion-down": {
+          from: { height: "0"},
+          to: {_height: "var(--radix-accordion-content-height)"}},
+        "accordion-up": {_from: { height: "var(--radix-accordion-content-height)"},
+          to: {_height: "0"}}},
+      animation: {_"accordion-down": "accordion-down 0.2s ease-out", _"accordion-up": "accordion-up 0.2s ease-out"}}},
   plugins: [
     animatePlugin,
-    plugin(function({ addUtilities }) {
-      const newUtilities = {
+    plugin(function({_addUtilities}) {_const _newUtilities = {
         '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right'},
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left'}};
+          direction: 'rtl', _textAlign: 'right'},
+        '.ltr': {_direction: 'ltr', _textAlign: 'left'}};
       addUtilities(newUtilities);
     })]};
 

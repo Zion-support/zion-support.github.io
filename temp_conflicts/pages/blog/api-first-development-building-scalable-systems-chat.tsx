@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
-  return (
+const _ApiFirstDevelopmentBuildingScalableSystemsChat = () => {_return (
     <div>
       <Head>
         <title>ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ApiFirstDevelopmentBuildingScalableSystemsChat;

@@ -1,16 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-export default function Blockchain() {
-  return (
+export default function Blockchain() {_return (
     <>
       <Head>
         <title>Blockchain Services - Zion Tech Group</title>
         <meta
           name="description"
-          content="Blockchain and Web3 solutions including smart contracts, DeFi, and cryptocurrency development."
+          content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
       </Head>
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -25,5 +24,4 @@ export default function Blockchain() {
         </main>
       </ErrorBoundary>
     </>
-  );
-}
+  );}

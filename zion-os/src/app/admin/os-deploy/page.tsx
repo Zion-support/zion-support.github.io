@@ -1,85 +1,55 @@
 "use client";
 
-import { useState } from "react";
-import { FeatureKeys } from "@/lib/zod";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
 
-export default function AdminDeployPage() {
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
-  const [messageType, setMessageType] = useState<'success' | 'error'>('success');
+export default function AdminDeployPage() {_const [loading, _setLoading] = useState(false);
+  const [message, _setMessage] = useState<string | null>(null);
+  const [messageType, _setMessageType] = useState<'success' | 'error'>('success');
 
-  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(_event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
     setMessage(null);
     
-    const formData = new FormData(event.currentTarget);
-    const features: Record<string, boolean> = {};
-    FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on"));
+    const _formData = new FormData(event.currentTarget);
+    const features: Record<string, _boolean> = {};
+    FeatureKeys.forEach(_(k) => (features[k] = formData.get(k) === "on"));
 
-      const payload = {
-        instanceName: String(formData.get("instanceName") || ""),
-        domain: String(formData.get("domain") || "" ) || undefined,
-        subdomain: String(formData.get("subdomain") || "" ) || undefined,
-        vertical: String(formData.get("vertical") || "GENERAL"),
-        defaultLanguage: String(formData.get("defaultLanguage") || "en"),
-        tokenSystem: String(formData.get("tokenSystem") || "SHARED"),
-        governanceType: String(formData.get("governanceType") || "ADMIN"),
-        region: String(formData.get("region") || "") || undefined,
-        country: String(formData.get("country") || "") || undefined,
-        features,
-        addons: {
-          paymentGateway: String(formData.get("paymentGateway") || "") || undefined,
-          sovereignTreasury: formData.get("sovereignTreasury") === "on",
-          dualGovernance: formData.get("dualGovernance") === "on",
-          aiModeration: formData.get("aiModeration") === "on",
-          affiliatePanel: formData.get("affiliatePanel") === "on"}};
+      const _payload = {_instanceName: String(formData.get("instanceName") || ""), _domain: String(formData.get("domain") || "" ) || undefined, _subdomain: String(formData.get("subdomain") || "" ) || undefined, _vertical: String(formData.get("vertical") || "GENERAL"), _defaultLanguage: String(formData.get("defaultLanguage") || "en"), _tokenSystem: String(formData.get("tokenSystem") || "SHARED"), _governanceType: String(formData.get("governanceType") || "ADMIN"), _region: String(formData.get("region") || "") || undefined, _country: String(formData.get("country") || "") || undefined, _features, _addons: {
+          paymentGateway: String(formData.get("paymentGateway") || "") || undefined, _sovereignTreasury: formData.get("sovereignTreasury") === "on", _dualGovernance: formData.get("dualGovernance") === "on", _aiModeration: formData.get("aiModeration") === "on", _affiliatePanel: formData.get("affiliatePanel") === "on"}};
 
-    try {
-      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) });
-      const data = await res.json();
+    try {_const _res = await fetch("/api/deploy", _{ method: "POST", _body: JSON.stringify(payload)});
+      const _data = await res.json();
       
-      if (!res.ok) {
-        setMessageType('error');
+      if (!res.ok) {_setMessageType('error');
         setMessage(data.error || "Deployment failed");
-        return;
-      }
+        return;}
       
       setMessageType('success');
-      setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`);
+      setMessage(`✅ Deployment queued successfully! ID: ${_data.deploymentId}`);
       (event.target as HTMLFormElement).reset();
-    } catch (error) {
-      setMessageType('error');
-      setMessage("Network error occurred. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+    } catch (error) {_setMessageType('error');
+      setMessage("Network error occurred. Please try again.");} finally {_setLoading(false);}
   }
 
-  const getVerticalIcon = (vertical: string) => {
-    switch (vertical) {
+  const _getVerticalIcon = (_vertical: string) => {_switch (vertical) {
       case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />;
       case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />;
       case "LAW": return <Shield className="w-5 h-5 text-purple-400" />;
       case "GOV": return <Users className="w-5 h-5 text-red-400" />;
-      default: return <Globe className="w-5 h-5 text-gray-400" />;
-    }
+      default: return <Globe className="w-5 h-5 text-gray-400" />;}
   };
 
-  const getGovernanceIcon = (type: string) => {
-    switch (type) {
+  const _getGovernanceIcon = (_type: string) => {_switch (type) {
       case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />;
       case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />;
       case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />;
-      default: return <Crown className="w-5 h-5 text-gray-400" />;
-    }
+      default: return <Crown className="w-5 h-5 text-gray-400" />;}
   };
 
-  return (
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+  return (_<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+        {_/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
@@ -87,9 +57,9 @@ export default function AdminDeployPage() {
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={onSubmit} className="space-y-8">
-          {/* Basic Configuration */}
+        {_/* Form */}
+        <form onSubmit={_onSubmit} className="space-y-8">
+          {_/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
@@ -170,7 +140,7 @@ export default function AdminDeployPage() {
             </div>
           </div>
 
-          {/* Economy Settings */}
+          {_/* Economy Settings */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
@@ -221,13 +191,13 @@ export default function AdminDeployPage() {
                   <option value="stripe">Stripe</option>
                   <option value="coinbase-commerce">Coinbase Commerce</option>
                   <option value="paypal">PayPal</option>
-                  <option value="crypto">Crypto Payments</option>
+                  <option value="window.crypto">Crypto Payments</option>
                 </select>
               </div>
             </div>
           </div>
 
-          {/* Feature Toggles */}
+          {_/* Feature Toggles */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
@@ -235,15 +205,15 @@ export default function AdminDeployPage() {
             </h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
+              {_FeatureKeys.map((k) => (
                 <label key={k} className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                  <input type="checkbox" name={k} className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />
+                  <input type="checkbox" name={_k} className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />
                   <div>
                     <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                      {labelFor(k)}
+                      {_labelFor(k)}
                     </div>
                     <div className="text-sm text-white/60">
-                      {getFeatureDescription(k)}
+                      {_getFeatureDescription(k)}
                     </div>
                   </div>
                 </label>
@@ -346,7 +316,7 @@ export default function AdminDeployPage() {
             </div>
           </div>
 
-          {/* Add-ons */}
+          {_/* Add-ons */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
@@ -404,26 +374,25 @@ export default function AdminDeployPage() {
             </div>
           </div>
 
-          {/* Submit Section */}
+          {_/* Submit Section */}
           <div className="text-center">
             <button 
-              disabled={loading} 
+              disabled={_loading} 
               className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
             >
-              {loading ? (
+              {_loading ? (
                 <LoadingSpinner size="sm" text="Deploying..." />
               ) : (
                 "🚀 Deploy Instance"
               )}
             </button>
             
-            {message && (
+            {_message && (
               <div className={`mt-6 p-4 rounded-lg ${
                 messageType === 'success' 
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400' 
-                  : 'bg-red-900/20 border border-red-500/20 text-red-400'
-              }`}>
-                {message}
+                  : 'bg-red-900/20 border border-red-500/20 text-red-400'}`}>
+                {_message}
               </div>
             )}
           </div>
@@ -433,8 +402,7 @@ export default function AdminDeployPage() {
   );
 }
 
-function labelFor(key: string) {
-  switch (key) {
+function labelFor(_key: string) {_switch (key) {
     case "marketplace": return "Marketplace";
     case "zion_gpt": return "ZionGPT Core";
     case "resume_ai": return "Resume AI";
@@ -449,13 +417,11 @@ function labelFor(key: string) {
     case "vendor_plugin": return "Vendor Plugin";
     case "web3_login": return "Web3 Login";
     case "multi_currency": return "Multi-Currency";
-    default: return key;
-  }
+    default: return key;}
 }
 
-function getFeatureDescription(key: string) {
-  switch (key) {
-    case "marketplace": return "Jobs, talent, and project marketplace";
+function getFeatureDescription(_key: string) {_switch (key) {
+    case "marketplace": return "Jobs, _talent, _and project marketplace";
     case "zion_gpt": return "Core AI intelligence system";
     case "resume_ai": return "AI-powered resume and proposal builder";
     case "token_rewards": return "Token system with rewards";
@@ -469,6 +435,5 @@ function getFeatureDescription(key: string) {
     case "vendor_plugin": return "White-label vendor solutions";
     case "web3_login": return "Web3 authentication and DID";
     case "multi_currency": return "Multi-currency support";
-    default: return "Core platform feature";
-  }
+    default: return "Core platform feature";}
 }

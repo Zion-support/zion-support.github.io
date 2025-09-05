@@ -1,34 +1,19 @@
 import React from 'react';
-import { render, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return (
+const _AllTheProviders = (_{_children}: {_children: React.ReactNode}) => {_return (
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
     </ThemeProvider>
   );
 };
 
-const customRender = (
-  ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options });
+const _customRender = (_ui: React.ReactElement, _options?: Omit<RenderOptions, _'wrapper'>) => render(ui, {_wrapper: AllTheProviders, _...options});
 
 export * from '@testing-library/react';
-export { customRender as render };
+export {_customRender as render};
 
-export const mockNextRouter = () => ({
-  push: jest.fn(),
-  replace: jest.fn(),
-  prefetch: jest.fn(),
-  back: jest.fn(),
-  beforePopState: jest.fn(),
-  events: {
-    on: jest.fn(),
-    off: jest.fn(),
-    emit: jest.fn(),
-  },
+export const _mockNextRouter = () => ({_push: jest.fn(), _replace: jest.fn(), _prefetch: jest.fn(), _back: jest.fn(), _beforePopState: jest.fn(), _events: {
+    on: jest.fn(), _off: jest.fn(), _emit: jest.fn(), },
   isFallback: false,
   isLocale: false,
   isReady: true,
@@ -37,6 +22,4 @@ export const mockNextRouter = () => ({
   isPreview: false,
 });
 
-export const createMockProps = (overrides = {}) => ({
-  ...overrides,
-});
+export const _createMockProps = (_overrides = {}) => ({_...overrides, });

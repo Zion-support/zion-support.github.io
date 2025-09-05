@@ -10,4 +10,4 @@ export * from "./sidebar-group"
 export * from "./sidebar-menu"
 
 // Also export types 
-export type { SafeRef } from "../sidebar.types"
+export type {_SafeRef} from "../sidebar.types"

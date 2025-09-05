@@ -1,38 +1,24 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { CASE_STUDIES } from '@/data/case-studies';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react'
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb';
+import {_Breadcrumb, _BreadcrumbList, _BreadcrumbItem, _BreadcrumbLink, _BreadcrumbSeparator} from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
-export default function CaseStudy() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find((s) => s.slug === slug);
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
+export default function CaseStudy() {_const _router = useRouter();
+  const _slug = router.query.slug as string;
+  const _study = CASE_STUDIES.find(_(s) => s.slug === slug);
+  const _breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 
-  if (!study) {
-    return (
+  if (!study) {_return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
       </div>
-    );
-  }
+    );}
 
   return (
     <>
-      <SEO title={study.title} description={study.excerpt} />
+      <SEO title={_study.title} description={_study.excerpt} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
+          <BreadcrumbJsonLd breadcrumbs={_breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -49,7 +35,7 @@ export default function CaseStudy() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild aria-current="page">
-                  <span>{study.title}</span>
+                  <span>{_study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
@@ -64,14 +50,14 @@ export default function CaseStudy() {
             </Link>
           </Button>
           <img
-            src={study.companyLogo}
-            alt={`${study.company} logo`}
+            src={_study.companyLogo}
+            alt={_`${study.company} logo`}
             className="h-12 mb-4"
             loading="lazy"
           />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
-          {study.pdf && (
+          <h1 className="text-3xl font-bold text-white mb-4">{_study.title}</h1>
+          <p className="text-zion-slate-light mb-8">{_study.excerpt}</p>
+          {_study.pdf && (
             <Button variant="secondary" className="mb-6" asChild>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
                 Download PDF
@@ -80,10 +66,10 @@ export default function CaseStudy() {
           )}
           <div
             className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={_{ __html: study.content}}
           />
           <p className="mt-8 text-white font-semibold">
-            — {study.author}, {study.role}
+            — {_study.author}, {_study.role}
           </p>
         </div>
       </div>

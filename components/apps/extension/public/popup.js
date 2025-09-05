@@ -1,66 +1,50 @@
 const API_BASE = 'http://localhost:4000';
 
-function getUserId(cb) {
-  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
+function getUserId(_cb) {_window.chrome.storage.local.get(_['user_id'], _({ user_id}) => cb(user_id));
 }
 
-function setUserId(id) {
-  chrome.storage.local.set({ user_id: id });
+function setUserId(_id) {_window.chrome.storage.local.set({ user_id: id});
 }
 
-document.querySelectorAll('.example').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.getElementById('prompt').value = btn.dataset.text || '';
-  });
+document.querySelectorAll('.example').forEach(_(btn) => {_btn.addEventListener(_'click', _() => {
+    document.getElementById('prompt').value = btn.dataset.text || '';});
 });
 
-document.getElementById('askBtn').addEventListener('click', async () => {
-  const prompt = document.getElementById('prompt').value.trim();
+document.getElementById('askBtn').addEventListener(_'click', _async () => {_const _prompt = document.getElementById('prompt').value.trim();
   if (!prompt) return;
-  const userId = await new Promise((r) => getUserId(r));
-  const res = await fetch(`${API_BASE}/ai/ask`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON.stringify({ prompt })
+  const _userId = await new Promise(_(r) => getUserId(r));
+  const _res = await fetch(`${API_BASE}/ai/ask`, {_method: 'POST', _headers: { 'content-type': 'application/json', _...(userId ? { 'x-user-id': userId} : {}) },
+    body: JSON.stringify({_prompt})
   });
-  const data = await res.json();
+  const _data = await res.json();
   document.getElementById('result').textContent = data.text || JSON.stringify(data, null, 2);
 });
 
-document.getElementById('postJob').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r));
-  const res = await fetch(`${API_BASE}/jobs/generate`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON.stringify({ role: 'Cloud Engineer' })
+document.getElementById('postJob').addEventListener(_'click', _async () => {_const _userId = await new Promise(_(r) => getUserId(r));
+  const _res = await fetch(`${API_BASE}/jobs/generate`, {_method: 'POST', _headers: { 'content-type': 'application/json', _...(userId ? { 'x-user-id': userId} : {}) },
+    body: JSON.stringify({_role: 'Cloud Engineer'})
   });
-  const data = await res.json();
+  const _data = await res.json();
   document.getElementById('result').textContent = data.description || 'Draft saved.';
 });
 
-document.getElementById('resumeSearch').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r));
+document.getElementById('resumeSearch').addEventListener(_'click', _async () => {_const _userId = await new Promise(_(r) => getUserId(r));
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
-  const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
-    headers: { ...(userId ? { 'x-user-id': userId } : {}) }
+  const _res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {_headers: { ...(userId ? { 'x-user-id': userId} : {}) }
   });
-  const data = await res.json();
+  const _data = await res.json();
   document.getElementById('result').textContent = JSON.stringify(data.results || [], null, 2);
 });
 
-document.getElementById('viewNotifications').addEventListener('click', async () => {
-  const userId = await new Promise((r) => getUserId(r));
+document.getElementById('viewNotifications').addEventListener(_'click', _async () => {_const _userId = await new Promise(_(r) => getUserId(r));
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
-  const res = await fetch(`${API_BASE}/notifications`, {
-    headers: { 'x-user-id': userId }
+  const _res = await fetch(`${API_BASE}/notifications`, {_headers: { 'x-user-id': userId}
   });
-  const data = await res.json();
+  const _data = await res.json();
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2);
 });
 
-document.getElementById('signIn').addEventListener('click', async () => {
-  // Placeholder sign-in: generate a random user id and store it.
-  const id = crypto.randomUUID();
+document.getElementById('signIn').addEventListener(_'click', _async () => {_// Placeholder sign-in: generate a random user id and store it.
+  const _id = window.crypto.randomUUID();
   setUserId(id);
-  document.getElementById('result').textContent = 'Signed in (local).';
-});
+  document.getElementById('result').textContent = 'Signed in (local).';});

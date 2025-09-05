@@ -1,26 +1,10 @@
-import { UnifiedService } from '../types/unified-service-types';
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contact = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
-  {
-    id: 'ai-powered-enterprise-risk-management',
-    name: 'AI-Powered Enterprise Risk Management',
-    tagline: 'Intelligent risk assessment and mitigation for enterprise',
-    price: {
-      monthly: 899,
-      yearly: 8990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
-    },
+  {_id: 'ai-powered-enterprise-risk-management', _name: 'AI-Powered Enterprise Risk Management', _tagline: 'Intelligent risk assessment and mitigation for enterprise', _price: {
+      monthly: 899, _yearly: 8990, _currency: 'USD', _trialDays: 30, _setupTime: '2-3 weeks', _enterprise: 'Custom enterprise pricing available'},
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
       'Real-time risk monitoring',
@@ -74,25 +58,10 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
     category: 'Enterprise Solutions',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+    contactInfo: {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'}
   },
-  {
-    id: 'autonomous-business-process-optimization',
-    name: 'Autonomous Business Process Optimization',
-    tagline: 'AI-powered business process automation and optimization',
-    price: {
-      monthly: 699,
-      yearly: 6990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
-    },
+  {_id: 'autonomous-business-process-optimization', _name: 'Autonomous Business Process Optimization', _tagline: 'AI-powered business process automation and optimization', _price: {
+      monthly: 699, _yearly: 6990, _currency: 'USD', _trialDays: 21, _setupTime: '2-3 weeks', _enterprise: 'Custom enterprise pricing available'},
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
       'Process analysis AI',
@@ -146,51 +115,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     marketSize: '$19.6B business process automation market',
     growthRate: '31% annual growth',
     category: 'Enterprise Solutions',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+    contactInfo: {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'}
   },
-  {
-    id: 'ai-enterprise-knowledge-management',
-    name: 'AI Enterprise Knowledge Management',
-    tagline: 'Intelligent knowledge discovery and management for enterprises',
-    price: '$799',
-    period: '/month',
-    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
-    features: [
-      'AI knowledge discovery',
-      'Intelligent categorization',
-      'Semantic search',
-      'Knowledge graphs',
-      'Collaborative workspaces',
-      'Version control',
-      'Access control',
-      'Analytics dashboard',
-      'Integration capabilities',
-      'Mobile access'
-    ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-purple-600 via-violet-600 to-indigo-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',
-    marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
-    targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',
-    category: 'AI Automation',
-    realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Knowledge Graphs', 'Machine Learning', 'Semantic Search'],
-    integrations: ['Document management systems', 'CRM platforms', 'ERP systems', 'Collaboration tools', 'Business intelligence tools'],
-    useCases: ['Knowledge discovery', 'Document management', 'Research collaboration', 'Decision support', 'Training and onboarding'],
-    roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
-    competitors: ['Microsoft SharePoint', 'Confluence', 'Notion', 'Slack', 'Box'],
-    marketSize: '$15.2B enterprise content management market',
-    growthRate: '28% annual growth',
-    customers: 29,
-    rating: 4.6,
-    reviews: 41,
-    contactInfo: contact
-  }
+  {_id: 'ai-enterprise-knowledge-management', _name: 'AI Enterprise Knowledge Management', _tagline: 'Intelligent knowledge discovery and management for enterprises', _price: '$799', _period: '/month', _description: 'Advanced AI platform that intelligently discovers, _organizes, _and manages enterprise knowledge, _enabling better decision-making and knowledge sharing across organizations.', _features: [
+      'AI knowledge discovery', _'Intelligent categorization', _'Semantic search', _'Knowledge graphs', _'Collaborative workspaces', _'Version control', _'Access control', _'Analytics dashboard', _'Integration capabilities', _'Mobile access'
+    ], _popular: true, _icon: '🧠', _color: 'from-purple-600 via-violet-600 to-indigo-600', _textColor: 'text-purple-400', _link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management', _marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery', _targetAudience: 'Large enterprises, _Consulting firms, _Research organizations, _Government agencies', _category: 'AI Automation', _realService: true, _technology: ['AI/ML', _'Natural Language Processing', _'Knowledge Graphs', _'Machine Learning', _'Semantic Search'], _integrations: ['Document management systems', _'CRM platforms', _'ERP systems', _'Collaboration tools', _'Business intelligence tools'], _useCases: ['Knowledge discovery', _'Document management', _'Research collaboration', _'Decision support', _'Training and onboarding'], _roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.', _competitors: ['Microsoft SharePoint', _'Confluence', _'Notion', _'Slack', _'Box'], _marketSize: '$15.2B enterprise content management market', _growthRate: '28% annual growth', _customers: 29, _rating: 4.6, _reviews: 41, _contactInfo: contact}
 ];

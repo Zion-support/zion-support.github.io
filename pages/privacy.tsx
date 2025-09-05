@@ -3,113 +3,47 @@ import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react';
+import {_Shield, _Lock, _Eye, _Database, _Globe, _User, _Settings, _AlertTriangle, _CheckCircle, _Mail} from 'lucide-react';
 
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
+const PrivacyPage: React.FC = () => {_const _lastUpdated = 'January 17, _2025';
 
-  const privacySections = [
+  const _privacySections = [
     {
-      title: 'Information We Collect',
-      icon: <Database className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      content: [
-        'Personal information (name, email, phone number, company)',
-        'Business information (company size, industry, project requirements)',
-        'Technical information (IP address, browser type, device information)',
-        'Usage data (website interactions, service usage patterns)',
-        'Communication records (emails, phone calls, support tickets)'
-      ]
-    },
-    {
-      title: 'How We Use Your Information',
-      icon: <Settings className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and manage accounts',
-        'Send marketing communications (with consent)',
-        'Analyze usage patterns and improve user experience',
-        'Comply with legal obligations'
-      ]
-    },
-    {
-      title: 'Information Sharing',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        'We do not sell, trade, or rent your personal information',
-        'Share with trusted service providers under strict confidentiality',
-        'Comply with legal requirements and court orders',
-        'Protect our rights, property, and safety',
-        'Business transfers (with notice and choice)'
-      ]
-    },
-    {
-      title: 'Data Security',
-      icon: <Lock className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        'Industry-standard encryption for data in transit and at rest',
-        'Regular security audits and vulnerability assessments',
-        'Access controls and authentication measures',
-        'Employee training on data protection',
-        'Incident response and breach notification procedures'
-      ]
-    }
+      title: 'Information We Collect', _icon: <Database className="w-8 h-8" />, _color: 'from-cyan-500 to-blue-500', _content: [
+        'Personal information (name, _email, _phone number, _company)', _'Business information (company size, _industry, _project requirements)', _'Technical information (IP address, _browser type, _device information)', _'Usage data (website interactions, _service usage patterns)', _'Communication records (emails, _phone calls, _support tickets)'
+      ]},
+    {_title: 'How We Use Your Information', _icon: <Settings className="w-8 h-8" />, _color: 'from-purple-500 to-pink-500', _content: [
+        'Provide and improve our services', _'Communicate with you about our services', _'Process payments and manage accounts', _'Send marketing communications (with consent)', _'Analyze usage patterns and improve user experience', _'Comply with legal obligations'
+      ]},
+    {_title: 'Information Sharing', _icon: <Globe className="w-8 h-8" />, _color: 'from-green-500 to-emerald-500', _content: [
+        'We do not sell, _trade, _or rent your personal information', _'Share with trusted service providers under strict confidentiality', _'Comply with legal requirements and court orders', _'Protect our rights, _property, _and safety', _'Business transfers (with notice and choice)'
+      ]},
+    {_title: 'Data Security', _icon: <Lock className="w-8 h-8" />, _color: 'from-orange-500 to-red-500', _content: [
+        'Industry-standard encryption for data in transit and at rest', _'Regular security audits and vulnerability assessments', _'Access controls and authentication measures', _'Employee training on data protection', _'Incident response and breach notification procedures'
+      ]}
   ];
 
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal information',
-      icon: <Eye className="w-6 h-6" />
-    },
-    {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: <AlertTriangle className="w-6 h-6" />
-    },
-    {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: <Database className="w-6 h-6" />
-    },
-    {
-      title: 'Objection',
-      description: 'Object to processing of your personal information',
-      icon: <User className="w-6 h-6" />
-    },
-    {
-      title: 'Restriction',
-      description: 'Request restriction of processing activities',
-      icon: <Settings className="w-6 h-6" />
-    }
+  const _rights = [
+    {_title: 'Access', _description: 'Request access to your personal information', _icon: <Eye className="w-6 h-6" />},
+    {_title: 'Correction', _description: 'Request correction of inaccurate information', _icon: <CheckCircle className="w-6 h-6" />},
+    {_title: 'Deletion', _description: 'Request deletion of your personal information', _icon: <AlertTriangle className="w-6 h-6" />},
+    {_title: 'Portability', _description: 'Request transfer of your data to another service', _icon: <Database className="w-6 h-6" />},
+    {_title: 'Objection', _description: 'Object to processing of your personal information', _icon: <User className="w-6 h-6" />},
+    {_title: 'Restriction', _description: 'Request restriction of processing activities', _icon: <Settings className="w-6 h-6" />}
   ];
 
-  return (
-    <ErrorBoundary>
+  return (_<ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
         <main className="relative z-10 pt-8">
-          {/* Hero Section */}
+          {_/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
@@ -119,32 +53,31 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
-                  <span>Last updated: {lastUpdated}</span>
+                  <span>Last updated: {_lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
 
-          {/* Overview */}
+          {_/* Overview */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={_{ opacity: 0, _x: -20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6}}
                 >
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Our Commitment to Privacy
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
-                    of your personal information. This Privacy Policy explains how we collect, use, disclose, 
-                    and safeguard your information when you use our services.
+                    At Zion Tech Group, _we are committed to protecting your privacy and ensuring the security 
+                    of your personal information. This Privacy Policy explains how we collect, _use, _disclose, _and safeguard your information when you use our services.
                   </p>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     We believe in transparency and want you to understand how your information is handled. 
-                    This policy applies to all users of our website, services, and applications.
+                    This policy applies to all users of our website, _services, _and applications.
                   </p>
                   <div className="flex items-center gap-4 text-cyan-400">
                     <Lock className="w-6 h-6" />
@@ -153,9 +86,9 @@ const PrivacyPage: React.FC = () => {
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={_{ opacity: 0, _x: 20}}
+                  whileInView={_{ opacity: 1, _x: 0}}
+                  transition={_{ duration: 0.6, _delay: 0.2}}
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -183,13 +116,13 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Privacy Principles */}
+          {_/* Privacy Principles */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
@@ -197,25 +130,24 @@ const PrivacyPage: React.FC = () => {
               </motion.div>
               
               <div className="grid md:grid-cols-2 gap-8">
-                {privacySections.map((section, index) => (
-                  <motion.div
+                {_privacySections.map((section, _index) => (_<motion.div
                     key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _y: 20}}
+                    whileInView={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <div className={_`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
-                        {section.icon}
+                        {_section.icon}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">{_section.title}</h3>
                     <ul className="space-y-3">
-                      {section.content.map((item, itemIndex) => (
+                      {_section.content.map((item, _itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300">{item}</span>
+                          <span className="text-gray-300">{_item}</span>
                         </li>
                       ))}
                     </ul>
@@ -225,13 +157,13 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Your Rights */}
+          {_/* Your Rights */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
@@ -239,34 +171,34 @@ const PrivacyPage: React.FC = () => {
               </motion.div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {rights.map((right, index) => (
+                {_rights.map(_(right, _index) => (
                   <motion.div
                     key={right.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _y: 20}}
+                    whileInView={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.6, _delay: index * 0.1}}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <div className="text-white">
-                        {right.icon}
+                        {_right.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
-                    <p className="text-gray-300 text-sm">{right.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{_right.title}</h3>
+                    <p className="text-gray-300 text-sm">{_right.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* Detailed Policy */}
+          {_/* Detailed Policy */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
                 className="space-y-12"
               >
                 <div>
@@ -393,13 +325,13 @@ const PrivacyPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Contact Information */}
+          {_/* Contact Information */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?

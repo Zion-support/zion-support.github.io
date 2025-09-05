@@ -1,18 +1,8 @@
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
-export default function Ecommerce() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-  };
+export default function Ecommerce() {_const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "E-commerce Platform", _"description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.", _"url": "https://app.ziontechgroup.com/features/e-commerce"};
 
   return (
     <>
@@ -22,10 +12,10 @@ export default function Ecommerce() {
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

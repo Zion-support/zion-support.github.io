@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 
-const Messages: NextPage = () => {
-  return (
+const Messages: NextPage = () => {_return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Messages - Zion</title>
@@ -15,8 +14,8 @@ const Messages: NextPage = () => {
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
         icon={<span>📫</span>}
-        primaryAction={{ label: 'Explore talent', href: '/talent' }}
-        secondaryAction={{ label: 'Browse services', href: '/services' }}
+        primaryAction={_{ label: 'Explore talent', _href: '/talent'}}
+        secondaryAction={_{ label: 'Browse services', _href: '/services'}}
       />
     </div>
   );

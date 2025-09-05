@@ -1,7 +1,6 @@
 
 
-export interface PartnerProfile {
-  id: string;
+export interface PartnerProfile {_id: string;
   user_id: string;
   name: string;
   website?: string;
@@ -10,8 +9,7 @@ export interface PartnerProfile {
     instagram?: string;
     youtube?: string;
     linkedin?: string;
-    [key: string]: string | undefined;
-  };
+    [key: string]: string | undefined;};
   niche: string;
   audience_size: string;
   payout_method: string;
@@ -22,30 +20,24 @@ export interface PartnerProfile {
   commission_rate?: number;
 }
 
-export interface PartnerSettings {
-  id: string;
+export interface PartnerSettings {_id: string;
   commission_rate: number;
   fraud_threshold: number;
-  is_payouts_enabled: boolean;
-}
+  is_payouts_enabled: boolean;}
 
-export interface PartnerReferralLink {
-  id: string;
+export interface PartnerReferralLink {_id: string;
   name: string;
   url: string;
   campaign?: string;
   source?: string;
   clicks: number;
   conversions: number;
-  created_at: string;
-}
+  created_at: string;}
 
-export interface PartnerPayout {
-  id: string;
+export interface PartnerPayout {_id: string;
   partner_id: string;
   amount: number;
   status: 'pending' | 'processing' | 'completed' | 'failed';
   method: string;
   created_at: string;
-  completed_at?: string;
-}
+  completed_at?: string;}

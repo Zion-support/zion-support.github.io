@@ -1,9 +1,7 @@
 import React from 'react';
-export function NewPostDialog() {
-  return (
+export function NewPostDialog() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder - needs implementation</p>;
     </div>
-  );
-}
+  );}

@@ -1,26 +1,19 @@
 
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
 
-export function QuoteFormSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export function QuoteFormSection() {_const [isSubmitted, _setIsSubmitted] = useState(false);
+  const [isSubmitting, _setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const _handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-    setTimeout(() => {
+    setTimeout__(() => {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1000);
+      setIsSubmitted(true);}, 1000);
   };
 
-  return (
-    <section className="py-20 bg-zion-blue">
+  return (_<section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <GradientHeading>Get a Quote Now</GradientHeading>
@@ -30,7 +23,7 @@ export function QuoteFormSection() {
         </div>
 
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
-          {isSubmitted ? (
+          {_isSubmitted ? (
             <div className="text-center py-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">
                 <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +35,7 @@ export function QuoteFormSection() {
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.
               </p>
               <Button 
-                onClick={() => setIsSubmitted(false)}
+                onClick={_() => setIsSubmitted(false)}
                 variant="outline" 
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
               >
@@ -50,7 +43,7 @@ export function QuoteFormSection() {
               </Button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={_handleSubmit}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
@@ -101,15 +94,15 @@ export function QuoteFormSection() {
                   I'm interested in (select all that apply)
                 </label>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
-                  {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (
+                  {_["AI Products/Services", _"IT Equipment", _"Server Solutions", _"Storage Solutions", _"Networking", _"24/7 Support", _"Recycling Services"].map(_(item, _index) => (
                     <div key={index} className="flex items-center">
                       <input
-                        id={`interest-${index}`}
+                        id={_`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-                      <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
-                        {item}
+                      <label htmlFor={_`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+                        {_item}
                       </label>
                     </div>
                   ))}
@@ -122,7 +115,7 @@ export function QuoteFormSection() {
                 </label>
                 <textarea
                   id="message"
-                  rows={4}
+                  rows={_4}
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
@@ -130,10 +123,10 @@ export function QuoteFormSection() {
               <div className="mt-6">
                 <Button 
                   type="submit" 
-                  disabled={isSubmitting} 
+                  disabled={_isSubmitting} 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
                 >
-                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
+                  {_isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
                 </Button>
               </div>
             </form>

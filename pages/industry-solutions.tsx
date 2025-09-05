@@ -2,12 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function IndustrySolutions() {
-  return (
+export default function IndustrySolutions() {_return (
     <>
       <Head>
         <title>Industry Solutions | Zion Tech Group</title>
-        <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
+        <meta name="description" content="Industry-specific AI, _quantum, _and micro SaaS solutions for healthcare, _finance, _manufacturing, _retail, _education, _government, _energy, _biotech and more." />
         <link rel="canonical" href="https://ziontechgroup.com/industry-solutions" />
       </Head>
       <div className="min-h-screen bg-black text-white">
@@ -28,5 +27,4 @@ export default function IndustrySolutions() {
         </section>
       </div>
     </>
-  );
-}
+  );}

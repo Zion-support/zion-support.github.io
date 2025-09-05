@@ -1,23 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
-type RouteInfo = { path: string; lastModified: string };
+type RouteInfo = {_path: string; lastModified: string};
 
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'site-map.json');
+export async function getServerSideProps() {_const _file = path.join(process.cwd(), _'data', _'site-map.json');
   let routes: RouteInfo[] = [];
-  let generatedAt = '';
+  let _generatedAt = '';
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
+    const _raw = fs.readFileSync(file, _'utf-8');
+    const _json = JSON.parse(raw);
     routes = json.routes || [];
-    generatedAt = json.generatedAt || '';
-  } catch {}
-  return { props: { routes, generatedAt } };
+    generatedAt = json.generatedAt || '';} catch {}
+  return {_props: { routes, _generatedAt} };
 }
 
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[]; generatedAt: string }) {
-  return (
+export default function SiteMapIntelPage(_{_routes, _generatedAt}: {_routes: RouteInfo[]; generatedAt: string}) {_return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
@@ -30,10 +27,10 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
             </tr>
           </thead>
           <tbody>
-            {routes.map(r => (
+            {_routes.map(r => (
               <tr key={r.path} className="border-t">
-                <td className="p-2">{r.path}</td>
-                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
+                <td className="p-2">{_r.path}</td>
+                <td className="p-2">{_new Date(r.lastModified).toLocaleString()}</td>
               </tr>
             ))}
           </tbody>

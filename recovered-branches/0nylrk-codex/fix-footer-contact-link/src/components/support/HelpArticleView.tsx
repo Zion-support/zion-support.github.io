@@ -1,39 +1,26 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-import { HELP_CATEGORIES } from "./help-content";
+import React, {_useState} from "react";
 
-interface HelpArticleViewProps {
-  articleId: string;
-}
+interface HelpArticleViewProps {_articleId: string;}
 
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+export function HelpArticleView(_{_articleId}: HelpArticleViewProps) {_const [feedbackGiven, _setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   
   // Find the article in all categories
   let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId);
+    const _found = category.articles.find(a => a.id === articleId);
     if (found) {
       article = found;
-      break;
-    }
+      break;}
   }
   
-  if (!article) {
-    return <div>Article not found</div>;
-  }
+  if (!article) {_return <div>Article not found</div>;}
   
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type);
+  const _handleFeedback = (_type: "helpful" | "not-helpful") => {_setFeedbackGiven(type);
     
-    // In a real implementation, this would send feedback to the server
+    // In a real implementation, _this would send feedback to the server
     toast({
-      title: "Thank you for your feedback!",
-      description: type === "helpful" 
+      title: "Thank you for your feedback!", _description: type === "helpful" 
         ? "We're glad this article was helpful." 
         : "We'll work on improving this article."});
   };
@@ -41,15 +28,15 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   return (
     <div>
       <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
+        <h2 className="text-2xl font-bold mb-4">{_article.title}</h2>
         
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
+          <span>Last updated: {_formatDate(article.lastUpdated)}</span>
         </div>
         
         <div className="prose dark:prose-invert max-w-none mb-8">
-          {article.content.split("\n").map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
+          {_article.content.split("\n").map(_(paragraph, _idx) => (
+            <p key={idx}>{_paragraph}</p>
           ))}
         </div>
         
@@ -63,9 +50,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
-                onClick={() => handleFeedback("helpful")}
-                disabled={feedbackGiven !== null}
+                className={_feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
+                onClick={_() => handleFeedback("helpful")}
+                disabled={_feedbackGiven !== null}
               >
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
@@ -74,9 +61,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
-                onClick={() => handleFeedback("not-helpful")}
-                disabled={feedbackGiven !== null}
+                className={_feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+                onClick={_() => handleFeedback("not-helpful")}
+                disabled={_feedbackGiven !== null}
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />
                 No
@@ -84,7 +71,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>
           </div>
           
-          {feedbackGiven === "not-helpful" && (
+          {_feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
                 We're sorry this article wasn't helpful. Please contact our support team for further assistance.
@@ -100,10 +87,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   );
 }
 
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+function formatDate(_date: string): string {_return new Date(date).toLocaleDateString("en-US", _{
+    year: "numeric", _month: "long", _day: "numeric"});
 }

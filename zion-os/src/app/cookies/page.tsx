@@ -1,5 +1,4 @@
-export default function CookiesPage() {
-  return (
+export default function CookiesPage() {_return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="relative mb-20">
@@ -15,7 +14,7 @@ export default function CookiesPage() {
         </div>
       </section>
 
-      {/* Cookie Content */}
+      {_/* Cookie Content */}
       <section className="mb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
@@ -192,7 +191,7 @@ export default function CookiesPage() {
               </p>
               <div className="space-y-2 text-white/70">
                 <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+                <p><strong>Phone:</strong> +1 (_302) 464-0950</p>
                 <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
               </div>
               <p className="text-white/80 mt-4">
@@ -203,7 +202,7 @@ export default function CookiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Need Help with Cookie Settings?</h2>

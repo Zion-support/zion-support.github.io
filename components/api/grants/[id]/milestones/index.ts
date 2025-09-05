@@ -1,1 +1,1 @@
-export { default } from '../milestones';
+export {_default} from '../milestones';

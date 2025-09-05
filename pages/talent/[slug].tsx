@@ -1,29 +1,23 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 
-const TalentProfile: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+const TalentProfile: NextPage = () => {_const _router = useRouter();
+  const { slug} = router.query;
 
-  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate'; at: string }>>([]);
+  const [responseLog, setResponseLog] = useState<Array<{_action: 'Accept' | 'Decline' | 'Negotiate'; at: string}>>([]);
 
-  const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
-    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }]);
+  const _handleRespond = (_action: 'Accept' | 'Decline' | 'Negotiate') => {_setResponseLog(_(prev) => [...prev, _{ action, _at: new Date().toISOString()}]);
   };
 
-  return (
-    <div className="space-y-6 pb-20">
+  return (_<div className="space-y-6 pb-20">
       <Head>
-        <title>{slug} - Talent - Zion</title>
+        <title>{_slug} - Talent - Zion</title>
       </Head>
 
       <header className="flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold">{slug}</h1>
+          <h1 className="text-2xl font-semibold">{_slug}</h1>
           <div className="text-sm opacity-80">Full-Stack Developer</div>
           <div className="mt-2 flex gap-1">
             <TrustBadge type="Verified" />
@@ -31,9 +25,9 @@ const TalentProfile: NextPage = () => {
           </div>
         </div>
         <div className="flex gap-2">
-          <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>
-          <EnhancedButton variant="secondary" onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>
-          <EnhancedButton variant="ghost" onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
+          <EnhancedButton onClick={_() => handleRespond('Accept')}>Accept</EnhancedButton>
+          <EnhancedButton variant="secondary" onClick={_() => handleRespond('Decline')}>Decline</EnhancedButton>
+          <EnhancedButton variant="ghost" onClick={_() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
         </div>
       </header>
 
@@ -54,11 +48,11 @@ const TalentProfile: NextPage = () => {
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
-              {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
-              {responseLog.map((r, idx) => (
+              {_responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
+              {_responseLog.map(_(r, _idx) => (
                 <li key={idx} className="flex items-center justify-between">
-                  <span>{r.action}</span>
-                  <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
+                  <span>{_r.action}</span>
+                  <span className="opacity-70">{_new Date(r.at).toLocaleString()}</span>
                 </li>
               ))}
             </ul>

@@ -1,132 +1,96 @@
 
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { 
-  Star, 
-  MapPin, 
-  Clock, 
-  Link as LinkIcon, 
-  Github, 
-  Twitter, 
-  Linkedin,
-  CheckCircle2
-} from "lucide-react";
+import {_Star, _MapPin, _Clock, _Link as LinkIcon, _Github, _Twitter, _Linkedin, _CheckCircle2} from "lucide-react";
 
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
+export default function ProfilePage() {_// useParams may be untyped in this environment, _so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string };
+  const { profileId} = useParams() as {_profileId?: string};
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
-    const fetchProfile = async () => {
+  useEffect__(() => {_const _fetchProfile = async () => {
       setIsLoading(true);
       setIsError(false);
       try {
-        const { data, error } = await supabase
+        const { data, _error} = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
           .single();
 
-        if (error) {
-          throw error;
-        }
+        if (error) {_throw error;}
 
         setProfileData(data);
-      } catch (error) {
-        console.error("Error fetching profile:", error);
-        setIsError(true);
+      } catch (error) {_setIsError(true);
         toast({
-          title: "Error",
-          description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
-      } finally {
-        setIsLoading(false);
-      }
+          title: "Error", _description: "Failed to load profile. Please try again later.", _variant: "destructive"});
+      } finally {_setIsLoading(false);}
     };
 
-    if (profileId) {
-      fetchProfile();
-    }
+    if (profileId) {_fetchProfile();}
   }, [profileId]);
 
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    );
-  }
+    );}
 
-  if (isError || !profileData) {
-    return (
+  if (isError || !profileData) {_return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    );
-  }
+    );}
 
   return (
     <>
       <SEO
-        title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio || "View the profile of this talented individual."}
+        title={_`${profileData.full_name} | Talent Profile`}
+        description={_profileData.bio || "View the profile of this talented individual."}
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-          {/* Main Content Area */}
+          {_/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
-            {/* Profile Header */}
+            {_/* Profile Header */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <div className="flex items-start">
-                {/* Avatar */}
+                {_/* Avatar */}
                 <div className="relative mr-4">
                   <Avatar className="w-24 h-24">
-                    {profileData.profile_picture_url ? (
-                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    {_profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={_profileData.full_name} />
                     ) : (
-                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
+                      <AvatarFallback>{_profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
                   </Avatar>
-                  {profileData.is_verified && (
+                  {_profileData.is_verified && (
                     <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                     </div>
                   )}
                 </div>
                 
-                {/* Main Info */}
+                {_/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>
-                      <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
+                      <h1 className="text-2xl font-bold text-white">{_profileData.full_name}</h1>
+                      <p className="text-zion-cyan font-medium">{_profileData.professional_title}</p>
                     </div>
-                    {/* Add Save/Unsave Button Here */}
+                    {_/* Add Save/Unsave Button Here */}
                   </div>
                   
-                  {/* Location & Availability */}
+                  {_/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
-                    {profileData.location && (
+                    {_profileData.location && (
                       <div className="flex items-center text-zion-slate-light">
                         <MapPin className="h-4 w-4 mr-1" />
                         <span>{profileData.location}</span>
                       </div>
                     )}
-                    {profileData.availability && (
+                    {_profileData.availability && (
                       <div className="flex items-center text-zion-slate-light">
                         <Clock className="h-4 w-4 mr-1" />
                         <span>{profileData.availability}</span>
@@ -136,40 +100,38 @@ export default function ProfilePage() {
                 </div>
               </div>
               
-              {/* Skills */}
-              {profileData.skills && profileData.skills.length > 0 && (
-                <div className="mt-4">
+              {_/* Skills */}
+              {_profileData.skills && profileData.skills.length > 0 && (_<div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {profileData.skills.map((skill, index) => (
-                      <Badge key={index} variant="secondary">{skill}</Badge>
+                    {profileData.skills.map((skill, _index) => (
+                      <Badge key={index} variant="secondary">{_skill}</Badge>
                     ))}
                   </div>
                 </div>
               )}
             </div>
             
-            {/* Bio Section */}
+            {_/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+              <p className="text-zion-slate-light">{_profileData.bio || "No bio provided."}</p>
             </div>
             
-            {/* Portfolio Section */}
+            {_/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
-                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
-                  profileData.portfolio_links.map((link, index) => (
+                {_profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (_profileData.portfolio_links.map((link, _index) => (
                     <a
                       key={index}
-                      href={link}
+                      href={_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
                     >
                       <LinkIcon className="h-4 w-4 mr-2" />
-                      {link}
+                      {_link}
                     </a>
                   ))
                 ) : (
@@ -178,17 +140,17 @@ export default function ProfilePage() {
               </div>
             </div>
             
-            {/* Experience Section */}
+            {_/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
+              <p className="text-zion-slate-light">{_profileData.experience || "No experience provided."}</p>
             </div>
             
-            {/* Social Links */}
+            {_/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
               <div className="flex space-x-4">
-                {profileData.github_link && (
+                {_profileData.github_link && (
                   <a
                     href={profileData.github_link}
                     target="_blank"
@@ -198,7 +160,7 @@ export default function ProfilePage() {
                     <Github className="h-6 w-6" />
                   </a>
                 )}
-                {profileData.twitter_link && (
+                {_profileData.twitter_link && (
                   <a
                     href={profileData.twitter_link}
                     target="_blank"
@@ -208,7 +170,7 @@ export default function ProfilePage() {
                     <Twitter className="h-6 w-6" />
                   </a>
                 )}
-                {profileData.linkedin_link && (
+                {_profileData.linkedin_link && (
                   <a
                     href={profileData.linkedin_link}
                     target="_blank"
@@ -222,17 +184,13 @@ export default function ProfilePage() {
             </div>
           </div>
         
-          {/* Sidebar with HireNowCTA */}
+          {_/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
-              }}
+              talentProfile={_{
+                id: profileData?.id || '', _full_name: profileData?.full_name || '', _professional_title: profileData?.professional_title || '', _hourly_rate: profileData?.hourly_rate || 0}}
             />
-            {/* Placeholder for other sidebar elements */}
+            {_/* Placeholder for other sidebar elements */}
           </div>
         </div>
       </div>

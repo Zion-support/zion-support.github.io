@@ -1,13 +1,8 @@
 
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
 
-export function TalentDashboard() {
-  return (
+export function TalentDashboard() {_return (
     <div className="space-y-6 px-4 pb-24">
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -157,5 +152,4 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
-  );
-}
+  );}

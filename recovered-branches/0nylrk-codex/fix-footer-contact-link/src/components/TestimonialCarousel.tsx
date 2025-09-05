@@ -1,43 +1,13 @@
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+import {_Carousel, _CarouselContent, _CarouselItem, _CarouselNext, _CarouselPrevious} from "@/components/ui/carousel";
 
-const testimonials = [
-  {
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
-    author: "Sarah Chen",
-    role: "CTO, DataMind Solutions",
-    avatar: "https://i.pravatar.cc/150?img=32",
-    company: "DataMind"},
-  {
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",
-    author: "Michael Rodriguez",
-    role: "IT Director, GlobalTech",
-    avatar: "https://i.pravatar.cc/150?img=12",
-    company: "GlobalTech"},
-  {
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",
-    author: "Aanya Patel",
-    role: "Independent AI Consultant",
-    avatar: "https://i.pravatar.cc/150?img=28",
-    company: "AI Systems"},
-  {
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
-    author: "Thomas Klein",
-    role: "Operations Manager, EcoTech Systems",
-    avatar: "https://i.pravatar.cc/150?img=67",
-    company: "EcoTech"}];
+const _testimonials = [
+  {_quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!", _author: "Sarah Chen", _role: "CTO, _DataMind Solutions", _avatar: "https://i.pravatar.cc/150?img=32", _company: "DataMind"},
+  {_quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.", _author: "Michael Rodriguez", _role: "IT Director, _GlobalTech", _avatar: "https://i.pravatar.cc/150?img=12", _company: "GlobalTech"},
+  {_quote: "As an AI developer, _Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.", _author: "Aanya Patel", _role: "Independent AI Consultant", _avatar: "https://i.pravatar.cc/150?img=28", _company: "AI Systems"},
+  {_quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.", _author: "Thomas Klein", _role: "Operations Manager, _EcoTech Systems", _avatar: "https://i.pravatar.cc/150?img=67", _company: "EcoTech"}];
 
-export function TestimonialCarousel() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
+export function TestimonialCarousel() {_return (_<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>
@@ -49,27 +19,26 @@ export function TestimonialCarousel() {
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
             opts={{
-              align: "start",
-              loop: true}}
+              align: "start", _loop: true}}
             className="w-full"
           >
             <CarouselContent>
-              {testimonials.map((testimonial, index) => (
+              {_testimonials.map((testimonial, _index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-                          <img src={testimonial.avatar} alt={testimonial.author} />
+                          <img src={_testimonial.avatar} alt={_testimonial.author} />
                         </Avatar>
                         <div className="text-center md:text-left">
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                          <p className="font-bold text-zion-cyan">{_testimonial.author}</p>
+                          <p className="text-zion-slate-light text-sm">{_testimonial.role}</p>
                         </div>
                       </div>
                       <div className="flex-1">
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
+                        <p className="text-white text-lg mb-6">"{_testimonial.quote}"</p>
                       </div>
                     </CardContent>
                   </Card>

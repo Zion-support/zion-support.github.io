@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const DigitalTransformationInsights = () => {
-  return (
+const _DigitalTransformationInsights = () => {_return (
     <div>
       <Head>
         <title>DigitalTransformationInsights - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const DigitalTransformationInsights = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DigitalTransformationInsights;

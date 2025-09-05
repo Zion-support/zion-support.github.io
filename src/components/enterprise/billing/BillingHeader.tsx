@@ -1,11 +1,8 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from "next/link";
 
-export function BillingHeader() {
-  return (
+export function BillingHeader() {_return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
@@ -27,8 +24,7 @@ export function BillingHeader() {
         </div>
       </div>
       <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
+        Manage your subscription, _view invoice history, _and update payment methods.
       </p>
     </div>
-  );
-}
+  );}

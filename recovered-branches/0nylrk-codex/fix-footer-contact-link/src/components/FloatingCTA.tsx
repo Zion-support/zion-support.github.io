@@ -1,35 +1,23 @@
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
 
-export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
+export function FloatingCTA() {_const [isVisible, _setIsVisible] = useState(false);
+  const [isClosed, _setIsClosed] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
+  useEffect__(() => {
+    const _handleScroll = () => {
+      const _scrollPosition = window.scrollY;
+      const _threshold = 600; // Show CTA after scrolling 600px
 
       if (scrollPosition > threshold && !isClosed) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+        setIsVisible(true);} else {_setIsVisible(false);}
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => {_window.removeEventListener("scroll", _handleScroll);};
   }, [isClosed]);
 
-  const handleClose = () => {
-    setIsClosed(true);
-    setIsVisible(false);
-  };
+  const _handleClose = () => {_setIsClosed(true);
+    setIsVisible(false);};
 
   if (!isVisible) return null;
 
@@ -50,7 +38,7 @@ export function FloatingCTA() {
             <Link to="/signup">Register Now</Link>
           </Button>
           <button 
-            onClick={handleClose}
+            onClick={_handleClose}
             className="text-zion-slate hover:text-white p-1"
             aria-label="Close"
           >

@@ -1,106 +1,77 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
 
-export default function EmailValidatorPage() {
-  const [emails, setEmails] = useState('');
-  const [validationResults, setValidationResults] = useState<any[]>([]);
-  const [isValidating, setIsValidating] = useState(false);
-  const [bulkMode, setBulkMode] = useState(false);
+export default function EmailValidatorPage() {_const [emails, _setEmails] = useState('');
+  const [validationResults, _setValidationResults] = useState<any[]>([]);
+  const [isValidating, _setIsValidating] = useState(false);
+  const [bulkMode, _setBulkMode] = useState(false);
 
-  const validateEmails = async () => {
+  const _validateEmails = async () => {
     if (!emails.trim()) return;
     
     setIsValidating(true);
     setValidationResults([]);
     
-    const emailList = emails.split('\n').filter(email => email.trim());
-    const results = [];
+    const _emailList = emails.split('\n').filter(email => email.trim());
+    const _results = [];
     
     // Simulate email validation with realistic results
     for (let i = 0; i < emailList.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise(resolve => setTimeout(resolve, _200));
       
-      const email = emailList[i].trim();
-      const result = validateSingleEmail(email);
-      results.push(result);
-    }
+      const _email = emailList[i].trim();
+      const _result = validateSingleEmail(email);
+      results.push(result);}
     
     setValidationResults(results);
     setIsValidating(false);
   };
 
-  const validateSingleEmail = (email: string) => {
-    // Basic email regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const _validateSingleEmail = (_email: string) => {_// Basic email regex
+    const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     // Check for common disposable email domains
-    const disposableDomains = [
-      'tempmail.org', 'guerrillamail.com', 'mailinator.com', '10minutemail.com',
-      'throwaway.email', 'temp-mail.org', 'sharklasers.com', 'getairmail.com'
+    const _disposableDomains = [
+      'tempmail.org', _'guerrillamail.com', _'mailinator.com', _'10minutemail.com', _'throwaway.email', _'temp-mail.org', _'sharklasers.com', _'getairmail.com'
     ];
     
     // Check for common typos
-    const commonTypos = {
-      'gmail.com': ['gmial.com', 'gamil.com', 'gmai.com'],
-      'yahoo.com': ['yaho.com', 'yahooo.com', 'yhaoo.com'],
-      'hotmail.com': ['hotmai.com', 'hotmial.com', 'hotmeil.com'],
-      'outlook.com': ['outlok.com', 'outloook.com', 'outlok.com']
-    };
+    const _commonTypos = {
+      'gmail.com': ['gmial.com', _'gamil.com', _'gmai.com'], _'yahoo.com': ['yaho.com', _'yahooo.com', _'yhaoo.com'], _'hotmail.com': ['hotmai.com', _'hotmial.com', _'hotmeil.com'], _'outlook.com': ['outlok.com', _'outloook.com', _'outlok.com']};
     
-    const domain = email.split('@')[1];
-    const isDisposable = disposableDomains.includes(domain);
-    const hasTypo = Object.entries(commonTypos).some(([correct, typos]) => 
+    const _domain = email.split('@')[1];
+    const _isDisposable = disposableDomains.includes(domain);
+    const _hasTypo = Object.entries(commonTypos).some(_([correct, _typos]) => 
       typos.includes(domain)
     );
     
-    let status = 'valid';
-    let score = 100;
-    let issues = [];
+    let _status = 'valid';
+    let _score = 100;
+    let _issues = [];
     
-    if (!emailRegex.test(email)) {
-      status = 'invalid';
+    if (!emailRegex.test(email)) {_status = 'invalid';
       score = 0;
-      issues.push('Invalid email format');
-    } else if (isDisposable) {
-      status = 'disposable';
+      issues.push('Invalid email format');} else if (isDisposable) {_status = 'disposable';
       score = 20;
-      issues.push('Disposable email domain');
-    } else if (hasTypo) {
-      status = 'suspicious';
+      issues.push('Disposable email domain');} else if (hasTypo) {_status = 'suspicious';
       score = 60;
-      issues.push('Possible typo in domain');
-    }
+      issues.push('Possible typo in domain');}
     
     // Additional checks
-    if (email.length > 254) {
-      status = 'invalid';
+    if (email.length > 254) {_status = 'invalid';
       score = 0;
-      issues.push('Email too long');
-    }
+      issues.push('Email too long');}
     
-    if (email.split('@')[0].length > 64) {
-      status = 'invalid';
+    if (email.split('@')[0].length > 64) {_status = 'invalid';
       score = 0;
-      issues.push('Local part too long');
-    }
+      issues.push('Local part too long');}
     
-    return {
-      email,
-      status,
-      score,
-      issues,
-      domain,
-      isDisposable,
-      hasTypo,
-      timestamp: new Date().toLocaleTimeString()
-    };
+    return {_email, _status, _score, _issues, _domain, _isDisposable, _hasTypo, _timestamp: new Date().toLocaleTimeString()};
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
+  const _getStatusIcon = (_status: string) => {_switch (status) {
       case 'valid':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'suspicious':
@@ -110,12 +81,10 @@ export default function EmailValidatorPage() {
       case 'invalid':
         return <XCircle className="w-5 h-5 text-red-400" />;
       default:
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />;
-    }
+        return <AlertTriangle className="w-5 h-5 text-gray-400" />;}
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const _getStatusColor = (_status: string) => {_switch (status) {
       case 'valid':
         return 'text-green-400';
       case 'suspicious':
@@ -125,54 +94,46 @@ export default function EmailValidatorPage() {
       case 'invalid':
         return 'text-red-400';
       default:
-        return 'text-gray-400';
-    }
+        return 'text-gray-400';}
   };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-400';
+  const _getScoreColor = (_score: number) => {_if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     if (score >= 40) return 'text-orange-400';
-    return 'text-red-400';
-  };
+    return 'text-red-400';};
 
-  const copyResults = () => {
-    const resultsText = validationResults.map(result => 
-      `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`
+  const _copyResults = () => {_const _resultsText = validationResults.map(result => 
+      `${result.email} - ${_result.status.toUpperCase()} (Score: ${_result.score})`
     ).join('\n');
     navigator.clipboard.writeText(resultsText);
   };
 
-  const clearResults = () => {
-    setValidationResults([]);
-    setEmails('');
+  const _clearResults = () => {_setValidationResults([]);
+    setEmails('');};
+
+  const _getStats = () => {_if (validationResults.length === 0) return null;
+    
+    const _total = validationResults.length;
+    const _valid = validationResults.filter(r => r.status === 'valid').length;
+    const _invalid = validationResults.filter(r => r.status === 'invalid').length;
+    const _suspicious = validationResults.filter(r => r.status === 'suspicious').length;
+    const _disposable = validationResults.filter(r => r.status === 'disposable').length;
+    const _avgScore = validationResults.reduce(_(sum, _r) => sum + r.score, _0) / total;
+    
+    return { total, _valid, _invalid, _suspicious, _disposable, _avgScore};
   };
 
-  const getStats = () => {
-    if (validationResults.length === 0) return null;
-    
-    const total = validationResults.length;
-    const valid = validationResults.filter(r => r.status === 'valid').length;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
-    
-    return { total, valid, invalid, suspicious, disposable, avgScore };
-  };
+  const _stats = getStats();
 
-  const stats = getStats();
-
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Email Validator - Zion Tech Group</title>
-        <meta name="description" content="Validate email addresses with our advanced email validation service. Check for typos, disposable domains, and ensure deliverability." />
+        <meta name="description" content="Validate email addresses with our advanced email validation service. Check for typos, _disposable domains, _and ensure deliverability." />
         <meta property="og:title" content="Email Validator - Zion Tech Group" />
         <meta property="og:description" content="Advanced email validation service to ensure deliverability and prevent typos." />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
@@ -185,13 +146,12 @@ export default function EmailValidatorPage() {
             Email Validator
           </h1>
           <p className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
-            and ensure maximum deliverability for your email campaigns and user registrations.
+            Validate email addresses with our advanced validation service. Check for typos, _disposable domains, _and ensure maximum deliverability for your email campaigns and user registrations.
           </p>
         </div>
       </section>
 
-      {/* Email Validation Tool */}
+      {_/* Email Validation Tool */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -204,7 +164,7 @@ export default function EmailValidatorPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Input Form */}
+            {_/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
@@ -215,36 +175,35 @@ export default function EmailValidatorPage() {
                   <label className="text-sm text-gray-300">Bulk Mode</label>
                   <input
                     type="checkbox"
-                    checked={bulkMode}
-                    onChange={(e) => setBulkMode(e.target.checked)}
+                    checked={_bulkMode}
+                    onChange={_(e) => setBulkMode(e.target.checked)}
                     className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
                   />
                 </div>
               </div>
 
               <div className="space-y-6">
-                {bulkMode ? (
+                {_bulkMode ? (
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Addresses (One per line)
                     </label>
                     <textarea
                       value={emails}
-                      onChange={(e) => setEmails(e.target.value)}
+                      onChange={_(_e) => setEmails(e.target.value)}
                       placeholder="john@example.com&#10;jane@company.org&#10;user@domain.net"
-                      rows={8}
+                      rows={_8}
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     />
                   </div>
-                ) : (
-                  <div>
+                ) : (_<div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address
                     </label>
                     <input
                       type="email"
-                      value={emails}
-                      onChange={(e) => setEmails(e.target.value)}
+                      value={_emails}
+                      onChange={_(e) => setEmails(e.target.value)}
                       placeholder="Enter email address to validate"
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -253,11 +212,11 @@ export default function EmailValidatorPage() {
 
                 <div className="flex space-x-3">
                   <Button
-                    onClick={validateEmails}
-                    disabled={!emails.trim() || isValidating}
+                    onClick={_validateEmails}
+                    disabled={_!emails.trim() || isValidating}
                     className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isValidating ? (
+                    {_isValidating ? (
                       <>
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
                         Validating...
@@ -270,7 +229,7 @@ export default function EmailValidatorPage() {
                     )}
                   </Button>
                   
-                  {validationResults.length > 0 && (
+                  {_validationResults.length > 0 && (
                     <Button
                       onClick={clearResults}
                       variant="outline"
@@ -290,14 +249,14 @@ export default function EmailValidatorPage() {
               </div>
             </Card>
 
-            {/* Validation Results */}
+            {_/* Validation Results */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-indigo-400" />
                   Validation Results
                 </h3>
-                {validationResults.length > 0 && (
+                {_validationResults.length > 0 && (
                   <Button
                     onClick={copyResults}
                     variant="outline"
@@ -310,7 +269,7 @@ export default function EmailValidatorPage() {
                 )}
               </div>
 
-              {stats && (
+              {_stats && (
                 <div className="mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
@@ -319,72 +278,69 @@ export default function EmailValidatorPage() {
                     </div>
                     <div>
                       <span className="text-gray-400">Valid:</span>
-                      <span className="ml-2 text-green-400 font-medium">{stats.valid}</span>
+                      <span className="ml-2 text-green-400 font-medium">{_stats.valid}</span>
                     </div>
                     <div>
                       <span className="text-gray-400">Invalid:</span>
-                      <span className="ml-2 text-red-400 font-medium">{stats.invalid}</span>
+                      <span className="ml-2 text-red-400 font-medium">{_stats.invalid}</span>
                     </div>
                     <div>
                       <span className="text-gray-400">Avg Score:</span>
-                      <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
-                        {stats.avgScore.toFixed(0)}
+                      <span className={_`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
+                        {_stats.avgScore.toFixed(0)}
                       </span>
                     </div>
                   </div>
                 </div>
               )}
 
-              {validationResults.length > 0 ? (
-                <div className="space-y-3 max-h-96 overflow-y-auto">
-                  {validationResults.map((result, index) => (
+              {_validationResults.length > 0 ? (_<div className="space-y-3 max-h-96 overflow-y-auto">
+                  {validationResults.map((result, _index) => (
                     <div
                       key={index}
-                      className={`p-4 rounded-lg border ${
+                      className={_`p-4 rounded-lg border ${
                         result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :
                         result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :
                         result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :
-                        'border-red-500/30 bg-red-500/10'
-                      }`}
+                        'border-red-500/30 bg-red-500/10'}`}
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-3">
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>
-                            {result.email}
+                          {_getStatusIcon(result.status)}
+                          <span className={_`font-medium ${getStatusColor(result.status)}`}>
+                            {_result.email}
                           </span>
                         </div>
-                        <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>
-                          Score: {result.score}
+                        <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
+                          Score: {_result.score}
                         </span>
                       </div>
                       
                       <div className="text-sm text-gray-300 mb-2">
                         <span className="text-gray-400">Domain:</span>
-                        <span className="ml-2">{result.domain}</span>
+                        <span className="ml-2">{_result.domain}</span>
                       </div>
 
-                      {result.issues.length > 0 && (
-                        <div className="text-sm">
+                      {_result.issues.length > 0 && (_<div className="text-sm">
                           <span className="text-gray-400">Issues:</span>
                           <ul className="mt-1 space-y-1">
-                            {result.issues.map((issue: string, issueIndex: number) => (
+                            {result.issues.map((issue: string, _issueIndex: number) => (
                               <li key={issueIndex} className="text-red-300 flex items-center">
                                 <XCircle className="w-3 h-3 mr-2 flex-shrink-0" />
-                                {issue}
+                                {_issue}
                               </li>
                             ))}
                           </ul>
                         </div>
                       )}
 
-                      {result.isDisposable && (
+                      {_result.isDisposable && (
                         <div className="mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300">
                           ⚠️ Disposable email domain detected
                         </div>
                       )}
 
-                      {result.hasTypo && (
+                      {_result.hasTypo && (
                         <div className="mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300">
                           💡 Possible typo detected in domain
                         </div>
@@ -405,7 +361,7 @@ export default function EmailValidatorPage() {
         </div>
       </section>
 
-      {/* Features */}
+      {_/* Features */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -469,7 +425,7 @@ export default function EmailValidatorPage() {
         </div>
       </section>
 
-      {/* Use Cases */}
+      {_/* Use Cases */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -537,7 +493,7 @@ export default function EmailValidatorPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">

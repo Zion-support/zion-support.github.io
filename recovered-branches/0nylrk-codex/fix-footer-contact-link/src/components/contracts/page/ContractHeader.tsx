@@ -1,12 +1,8 @@
 
-import { Button } from "@/components/ui/button";
 
-interface ContractHeaderProps {
-  onCreateClick: () => void;
-}
+interface ContractHeaderProps {_onCreateClick: () => void;}
 
-export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
-  return (
+export function ContractHeader(_{_onCreateClick}: ContractHeaderProps) {_return (
     <div className="flex justify-between items-center mb-8">
       <div>
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>

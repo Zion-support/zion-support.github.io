@@ -1,18 +1,12 @@
 
 import React from 'react';
-import { completeSitemap, dynamicPaths } from '@/config/sitemap';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
-import { SEO } from './SEO';
-import { AppLayout } from '@/layout/AppLayout';
 
-export const SitemapPage: React.FC = () => {
-  return (
+export const SitemapPage: React.FC = () => {_return (
     <AppLayout>
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitemap, zion, ai marketplace, navigation"
+        keywords="sitemap, _zion, _ai marketplace, _navigation"
         canonical="https://app.ziontechgroup.com/sitemap-page"
       />
       <div className="container mx-auto px-4 py-12">
@@ -23,16 +17,16 @@ export const SitemapPage: React.FC = () => {
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
             <ul className="space-y-2">
-              {completeSitemap
+              {_completeSitemap
                 .filter(route => !route.requiredAuth)
                 .map(route => (
                   <li key={route.path}>
                     <Link 
-                      to={route.path} 
+                      to={_route.path} 
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
+                      {_route.label}
                     </Link>
                   </li>
                 ))
@@ -40,12 +34,12 @@ export const SitemapPage: React.FC = () => {
             </ul>
           </div>
           
-          {/* Talent Routes */}
+          {_/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
-              {completeSitemap
+              {_completeSitemap
                 .filter(route => 
                   route.requiredRoles?.includes('jobSeeker') || 
                   route.requiredRoles?.includes('creator')
@@ -53,11 +47,11 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link 
-                      to={route.path} 
+                      to={_route.path} 
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
+                      {_route.label}
                     </Link>
                   </li>
                 ))
@@ -65,12 +59,12 @@ export const SitemapPage: React.FC = () => {
             </ul>
           </div>
           
-          {/* Client Routes */}
+          {_/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
-              {completeSitemap
+              {_completeSitemap
                 .filter(route => 
                   route.requiredRoles?.includes('employer') || 
                   route.requiredRoles?.includes('buyer')
@@ -78,11 +72,11 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link 
-                      to={route.path} 
+                      to={_route.path} 
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
+                      {_route.label}
                     </Link>
                   </li>
                 ))
@@ -90,12 +84,12 @@ export const SitemapPage: React.FC = () => {
             </ul>
           </div>
           
-          {/* Shared Routes */}
+          {_/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
-              {completeSitemap
+              {_completeSitemap
                 .filter(route => 
                   route.requiredAuth && 
                   (!route.requiredRoles || route.requiredRoles.length === 0)
@@ -103,11 +97,11 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link 
-                      to={route.path} 
+                      to={_route.path} 
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
+                      {_route.label}
                     </Link>
                   </li>
                 ))
@@ -115,23 +109,23 @@ export const SitemapPage: React.FC = () => {
             </ul>
           </div>
           
-          {/* Admin Routes */}
+          {_/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
-              {completeSitemap
+              {_completeSitemap
                 .filter(route => 
                   route.requiredRoles?.includes('admin')
                 )
                 .map(route => (
                   <li key={route.path}>
                     <Link 
-                      to={route.path} 
+                      to={_route.path} 
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      {route.label}
+                      {_route.label}
                     </Link>
                   </li>
                 ))
@@ -139,16 +133,16 @@ export const SitemapPage: React.FC = () => {
             </ul>
           </div>
           
-          {/* Dynamic Routes */}
+          {_/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([key, path]) => (
+              {_Object.entries(dynamicPaths).map(_([key, _path]) => (
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
+                    {_path} <span className="ml-2 text-xs italic">({_key})</span>
                   </div>
                 </li>
               ))}

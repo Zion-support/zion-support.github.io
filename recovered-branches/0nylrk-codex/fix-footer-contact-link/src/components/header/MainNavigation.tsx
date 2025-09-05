@@ -1,19 +1,13 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from "@/lib/utils";
-import { NavLink } from "react-router-dom";
 
-interface MainNavigationProps {
-  className?: string;
-}
+interface MainNavigationProps {_className?: string;}
 
-export function MainNavigation({ className }: MainNavigationProps) {
-  return (
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+export function MainNavigation(_{_className}: MainNavigationProps) {_return (
+    <nav className={cn("hidden md:flex items-center space-x-6", _className)}>
       <NavLink
         to="/"
-        className={({ isActive }) =>
+        className={_(_{ isActive}) =>
           cn(
             "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground"
@@ -39,7 +33,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       </Link>
       <NavLink
         to="/partners"
-        className={({ isActive }) =>
+        className={_(_{ isActive}) =>
           cn(
             "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground"
@@ -50,7 +44,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       </NavLink>
       <NavLink
         to="/signup"
-        className={({ isActive }) =>
+        className={_(_{ isActive}) =>
           cn(
             "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground",

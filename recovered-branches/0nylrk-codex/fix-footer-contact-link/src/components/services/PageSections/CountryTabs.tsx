@@ -1,28 +1,12 @@
 
-import { useState } from "react";
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CountryServiceCard } from "@/components/services/CountryServiceCard";
-import { CountryPricing } from "@/data/onsiteServicePricing";
 
-interface CountryTabsProps {
-  popularCountries: string[];
+interface CountryTabsProps {_popularCountries: string[];
   filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
+  handleCountrySelect: (_country: CountryPricing) => void;
   searchQuery: string;
-  setSearchQuery: (query: string) => void;
-}
+  setSearchQuery: (_query: string) => void;}
 
-export function CountryTabs({ 
-  popularCountries, 
-  filteredCountries, 
-  handleCountrySelect, 
-  searchQuery, 
-  setSearchQuery 
-}: CountryTabsProps) {
-  return (
+export function CountryTabs(_{_popularCountries, _filteredCountries, _handleCountrySelect, _searchQuery, _setSearchQuery}: CountryTabsProps) {_return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
         <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">
@@ -47,9 +31,9 @@ export function CountryTabs({
             .map(country => (
               <CountryServiceCard 
                 key={country.country} 
-                country={country} 
-                onSelect={handleCountrySelect}
-                isPopular={true}
+                country={_country} 
+                onSelect={_handleCountrySelect}
+                isPopular={_true}
               />
             ))
           }
@@ -64,31 +48,30 @@ export function CountryTabs({
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={_searchQuery}
+              onChange={_(_e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {filteredCountries.slice(0, 12).map(country => (
+          {_filteredCountries.slice(0, _12).map(country => (
             <CountryServiceCard 
               key={country.country} 
-              country={country} 
-              onSelect={handleCountrySelect}
-              isPopular={popularCountries.includes(country.country)}
+              country={_country} 
+              onSelect={_handleCountrySelect}
+              isPopular={_popularCountries.includes(country.country)}
             />
           ))}
         </div>
         
-        {filteredCountries.length > 12 && (
-          <div className="text-center mt-8">
+        {_filteredCountries.length > 12 && (_<div className="text-center mt-8">
             <Button
-              onClick={() => document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth'})}
               variant="outline"
               className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             >
-              View All {filteredCountries.length} Countries
+              View All {_filteredCountries.length} Countries
             </Button>
           </div>
         )}

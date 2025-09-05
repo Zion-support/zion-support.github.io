@@ -1,47 +1,25 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion";
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+import React, {_useState} from 'react';
+import {_Accordion, _AccordionContent, _AccordionItem, _AccordionTrigger} from "@/components/ui/accordion";
 
-export function FraudDetectionSettings() {
-  const { user } = useAuth();
+export function FraudDetectionSettings() {_const { user} = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   
-  const handleSavePreferences = async () => {
-    if (!user?.id) return;
+  const _handleSavePreferences = async () => {_if (!user?.id) return;
     
     setIsSaving(true);
     try {
-      // In a real implementation, we would save these preferences to the database
-      // For now, we'll just simulate a successful save
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real implementation, _we would save these preferences to the database
+      // For now, _we'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve, _1000));
       
       toast({
-        title: "Settings saved",
-        description: "Your fraud detection preferences have been updated."});
-    } catch (error) {
-      logErrorToProduction('Error saving preferences:', { data: error });
-      toast({
-        title: "Error",
-        description: "Failed to save your preferences. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsSaving(false);
-    }
+        title: "Settings saved", _description: "Your fraud detection preferences have been updated."});
+    } catch (error) {_logErrorToProduction('Error saving preferences:', _{ data: error});
+      toast({_title: "Error", _description: "Failed to save your preferences. Please try again.", _variant: "destructive"});
+    } finally {_setIsSaving(false);}
   };
 
   return (
@@ -70,8 +48,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="message-scanning"
                 aria-label="Message scanning"
-                checked={messageScanningEnabled}
-                onCheckedChange={setMessageScanningEnabled}
+                checked={_messageScanningEnabled}
+                onCheckedChange={_setMessageScanningEnabled}
               />
             </div>
             
@@ -87,8 +65,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="activity-monitoring"
                 aria-label="Activity monitoring"
-                checked={activityMonitoringEnabled}
-                onCheckedChange={setActivityMonitoringEnabled}
+                checked={_activityMonitoringEnabled}
+                onCheckedChange={_setActivityMonitoringEnabled}
               />
             </div>
             
@@ -104,8 +82,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="ai-analysis"
                 aria-label="AI analysis"
-                checked={aiAnalysisEnabled}
-                onCheckedChange={setAiAnalysisEnabled}
+                checked={_aiAnalysisEnabled}
+                onCheckedChange={_setAiAnalysisEnabled}
               />
             </div>
           </div>
@@ -137,11 +115,11 @@ export function FraudDetectionSettings() {
           
           <div className="pt-2">
             <Button 
-              onClick={handleSavePreferences}
-              disabled={isSaving}
+              onClick={_handleSavePreferences}
+              disabled={_isSaving}
               className="bg-zion-purple hover:bg-zion-purple-light"
             >
-              {isSaving ? "Saving..." : "Save Preferences"}
+              {_isSaving ? "Saving..." : "Save Preferences"}
             </Button>
           </div>
         </div>

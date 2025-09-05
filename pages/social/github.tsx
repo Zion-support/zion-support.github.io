@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 import Head from 'next/head';
 
-export default function GitHubRedirect() {
-	useEffect(() => {
+export default function GitHubRedirect() {_useEffect__(() => {
 		if (typeof window !== 'undefined') {
-			window.location.replace('https://github.com/Zion-Holdings');
-		}
+			window.location.replace('https://github.com/Zion-Holdings');}
 	}, []);
 	return (
 		<>

@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const EnhancedHome = () => {
-  return (
+const _EnhancedHome = () => {_return (
     <div>
       <Head>
         <title>EnhancedHome - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const EnhancedHome = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default EnhancedHome;

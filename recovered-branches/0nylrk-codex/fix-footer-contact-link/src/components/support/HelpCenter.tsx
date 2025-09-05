@@ -1,40 +1,22 @@
 
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
+import React, {_useState} from "react";
 
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+export default function HelpCenter() {_const [selectedCategory, _setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, _setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, _setSearchQuery] = useState("");
   
-  const handleCategorySelect = (categoryId: string) => {
+  const _handleCategorySelect = (_categoryId: string) => {
     setSelectedCategory(categoryId);
-    setSelectedArticle(null);
-  };
+    setSelectedArticle(null);};
   
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  };
+  const _handleArticleSelect = (_articleId: string) => {_setSelectedArticle(articleId);};
   
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
+  const _handleBackToCategories = () => {_setSelectedCategory(null);
+    setSelectedArticle(null);};
   
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  };
+  const _handleBackToArticles = () => {_setSelectedArticle(null);};
   
-  return (
-    <AppLayout>
+  return (_<AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -47,8 +29,8 @@ export default function HelpCenter() {
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={_searchQuery}
+              onChange={_(e) => setSearchQuery(e.target.value)}
               className="pl-10"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -62,15 +44,15 @@ export default function HelpCenter() {
             </TabsList>
             
             <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
+              {_!selectedCategory && !selectedArticle && (
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
+                  onCategorySelect={_handleCategorySelect}
+                  searchQuery={_searchQuery}
                 />
               )}
               
-              {selectedCategory && !selectedArticle && (
+              {_selectedCategory && !selectedArticle && (
                 <>
                   <Button
                     variant="ghost"
@@ -80,14 +62,14 @@ export default function HelpCenter() {
                     ← All Categories
                   </Button>
                   <HelpArticleList 
-                    categoryId={selectedCategory}
-                    onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}
+                    categoryId={_selectedCategory}
+                    onArticleSelect={_handleArticleSelect}
+                    searchQuery={_searchQuery}
                   />
                 </>
               )}
               
-              {selectedArticle && (
+              {_selectedArticle && (
                 <>
                   <Button
                     variant="ghost"
@@ -96,7 +78,7 @@ export default function HelpCenter() {
                   >
                     ← Back to Articles
                   </Button>
-                  <HelpArticleView articleId={selectedArticle} />
+                  <HelpArticleView articleId={_selectedArticle} />
                 </>
               )}
             </TabsContent>

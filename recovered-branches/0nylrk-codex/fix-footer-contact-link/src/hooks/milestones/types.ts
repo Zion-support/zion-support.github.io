@@ -1,10 +1,8 @@
 
-import { supabase } from '@/integrations/supabase/client';
 
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 
-export interface Milestone {
-  id: string;
+export interface Milestone {_id: string;
   project_id: string;
   title: string;
   description?: string;
@@ -14,11 +12,9 @@ export interface Milestone {
   created_at: string;
   updated_at: string;
   created_by: string;
-  deliverables?: any[];
-}
+  deliverables?: unknown[];}
 
-export interface MilestoneActivity {
-  id: string;
+export interface MilestoneActivity {_id: string;
   milestone_id: string;
   user_id: string;
   action: string;
@@ -28,6 +24,5 @@ export interface MilestoneActivity {
   created_at: string;
   created_by_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
+    avatar_url?: string;};
 }

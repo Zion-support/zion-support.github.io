@@ -1,45 +1,22 @@
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Mail } from "lucide-react";
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
 // Form validation schema
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")});
+const _forgotPasswordSchema = z.object({_email: z.string().email("Please enter a valid email")});
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
+export default function ForgotPassword() {_const { resetPassword, _isLoading} = useAuth();
   const [submitted, setSubmitted] = useState(false);
   
   // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema),
-    defaultValues: {
+  const _form = useForm({_resolver: zodResolver(forgotPasswordSchema), _defaultValues: {
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
 
   // Form submission handler
-  const onSubmit = async (data: ForgotPasswordFormValues) => {
-    await resetPassword(data.email);
-    setSubmitted(true);
-  };
+  const _onSubmit = async (_data: ForgotPasswordFormValues) => {_await resetPassword(data.email);
+    setSubmitted(true);};
 
   return (
     <>
@@ -57,7 +34,7 @@ export default function ForgotPassword() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              {submitted ? (
+              {_submitted ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <Mail className="h-6 w-6 text-zion-purple" />
@@ -77,11 +54,11 @@ export default function ForgotPassword() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
-                      control={form.control}
+                      control={_form.control}
                       name="email"
-                      render={({ field }) => (
+                      render={_(_{ field}) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                           <FormControl>
@@ -89,7 +66,7 @@ export default function ForgotPassword() {
                               <Input
                                 placeholder="you@example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                                {...field}
+                                {_...field}
                               />
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                             </div>
@@ -102,9 +79,9 @@ export default function ForgotPassword() {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading}
+                      disabled={_isLoading}
                     >
-                      {isLoading ? "Sending..." : "Reset Password"}
+                      {_isLoading ? "Sending..." : "Reset Password"}
                     </Button>
 
                     <div className="text-center">

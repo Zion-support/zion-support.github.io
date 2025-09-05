@@ -1,53 +1,30 @@
 
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
 
-interface SuggestedJobsProps {
-  talentId?: string;
-}
+interface SuggestedJobsProps {_talentId?: string;}
 
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
-  const { 
-    isLoading, 
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
+export function SuggestedJobs(_{_talentId}: SuggestedJobsProps) {_const { user} = useAuth();
+  const _currentTalentId = talentId || user?.id;
+  const {_isLoading, _updateJobMatchStatus, _categorizedMatches: { 
+      newMatches, _viewedMatches, _appliedMatches} 
   } = useJobSuggestions(currentTalentId);
 
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
-  };
+  const _handleApply = (_matchId: string, _jobId: string) => {_updateJobMatchStatus(matchId, _'applied');
+    // In a real app, _this might redirect to application form or open a modal};
 
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
-  };
+  const _handleDecline = (_matchId: string) => {_updateJobMatchStatus(matchId, _'declined');};
 
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
-    );
-  }
+    );}
 
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />;
-  }
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {_return <NoJobsCard />;}
   
   return (
     <div className="space-y-6">
-      {/* New Matches Section */}
-      {newMatches.length > 0 && (
+      {_/* New Matches Section */}
+      {_newMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">New Job Matches</h3>
@@ -57,20 +34,20 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
           
           <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
+            {_newMatches.map(match => (
               <JobMatchesCard 
                 key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                match={_match} 
+                onApply={_handleApply} 
+                onDecline={_handleDecline} 
               />
             ))}
           </div>
         </div>
       )}
       
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
+      {_/* Previously Viewed Section */}
+      {_viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
@@ -80,17 +57,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
             {viewedMatches.map(match => (
               <JobMatchesCard 
                 key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                match={_match} 
+                onApply={_handleApply} 
+                onDecline={_handleDecline} 
               />
             ))}
           </div>
         </div>
       )}
       
-      {/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (
+      {_/* Applied Jobs Section */}
+      {_appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
@@ -100,10 +77,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
             {appliedMatches.map(match => (
               <JobMatchesCard 
                 key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
+                match={_match} 
+                onApply={_handleApply} 
+                onDecline={_handleDecline}
+                showApplied={_true}
               />
             ))}
           </div>

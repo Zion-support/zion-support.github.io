@@ -1,61 +1,14 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger} from "@/components/ui/alert-dialog";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import {
-  AlertCircle,
-  Calendar,
-  CheckCircle2,
-  Clock,
-  FileText,
-  Layers,
-  MessageSquare,
-  Video,
-  User,
-  XCircle} from "lucide-react";
+import {_Card, _CardContent, _CardDescription, _CardFooter, _CardHeader, _CardTitle} from "@/components/ui/card";
+import {_Tabs, _TabsContent, _TabsList, _TabsTrigger} from "@/components/ui/tabs";
+import {_AlertDialog, _AlertDialogAction, _AlertDialogCancel, _AlertDialogContent, _AlertDialogDescription, _AlertDialogFooter, _AlertDialogHeader, _AlertDialogTitle, _AlertDialogTrigger} from "@/components/ui/alert-dialog";
+import {_AlertCircle, _Calendar, _CheckCircle2, _Clock, _FileText, _Layers, _MessageSquare, _Video, _User, _XCircle} from "lucide-react";
 
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
+function ProjectDetailsContent() {_// useParams may be untyped in this environment, _so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
+  const { projectId} = useParams() as {_projectId?: string};
+  const {_user} = useAuth();
+  const _navigate = useNavigate();
+  const {_getProjectById, _updateProjectStatus} = useProjects();
   
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,23 +18,18 @@ function ProjectDetailsContent() {
   const [activeTab, setActiveTab] = useState("details");
   
   // Load project data
-  useEffect(() => {
-    async function loadProject() {
+  useEffect__(() => {_async function loadProject() {
       if (!projectId) return;
       
       setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      const _projectData = await getProjectById(projectId);
       
       if (projectData) {
         setProject(projectData);
         
         // Now fetch notes
-        fetchProjectNotes(projectId);
-      } else {
-        toast({
-          title: "Project not found",
-          description: "The requested project could not be found.",
-          variant: "destructive"});
+        fetchProjectNotes(projectId);} else {_toast({
+          title: "Project not found", _description: "The requested project could not be found.", _variant: "destructive"});
         navigate("/dashboard");
       }
       
@@ -91,37 +39,30 @@ function ProjectDetailsContent() {
     loadProject();
   }, [projectId]);
   
-  const fetchProjectNotes = async (projectId: string) => {
-    try {
-      const { data, error } = await supabase
+  const _fetchProjectNotes = async (_projectId: string) => {_try {
+      const { data, _error} = await supabase
         .from("project_notes")
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-        .order("created_at", { ascending: false });
+        .order("created_at", {_ascending: false});
       
       if (error) throw error;
       
       setNotes(data || []);
-    } catch (err) {
-      console.error("Error fetching project notes:", err);
-    }
+    } catch (err) {}
   };
   
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
+  const _handleSubmitNote = async () => {_if (!newNote.trim() || !project || !user) return;
     
     setIsSubmittingNote(true);
     
     try {
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from("project_notes")
-        .insert({
-          project_id: project.id,
-          user_id: user.id,
-          content: newNote})
+        .insert({_project_id: project.id, _user_id: user.id, _content: newNote})
         .select();
       
       if (error) throw error;
@@ -130,41 +71,28 @@ function ProjectDetailsContent() {
       fetchProjectNotes(project.id);
       setNewNote("");
       
-      toast({
-        title: "Note added",
-        description: "Your note has been added to the project."});
-    } catch (err: any) {
-      console.error("Error adding note:", err);
-      toast({
-        title: "Failed to add note",
-        description: err.message || "An error occurred while adding your note.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmittingNote(false);
-    }
+      toast({_title: "Note added", _description: "Your note has been added to the project."});
+    } catch (err: unknown) {_toast({
+        title: "Failed to add note", _description: err.message || "An error occurred while adding your note.", _variant: "destructive"});
+    } finally {_setIsSubmittingNote(false);}
   };
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
+  const _handleStatusChange = async (_newStatus: ProjectStatus) => {_if (!project) return;
     
-    const success = await updateProjectStatus(project.id, newStatus);
+    const _success = await updateProjectStatus(project.id, _newStatus);
     
     if (success) {
       setProject({
-        ...project,
-        status: newStatus});
+        ...project, _status: newStatus});
       
       // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
-        toast({
-          title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!"});
+      if (newStatus === "offer_accepted") {_toast({
+          title: "Offer Accepted! 🎉", _description: "The project is now in progress. Congratulations!"});
       }
     }
   };
   
-  const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
+  const _getStatusBadge = (_status: ProjectStatus) => {_switch (status) {
       case "offer_sent":
         return <Badge variant="outline">Offer Sent</Badge>;
       case "offer_accepted":
@@ -182,8 +110,7 @@ function ProjectDetailsContent() {
     }
   };
   
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
           <div className="text-center">
@@ -192,12 +119,9 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
-    );
-  }
+    );}
   
-  if (!project) {
-    return (
-      <div className="container mx-auto py-8">
+  if (!project) {_return (_<div className="container mx-auto py-8">
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-10">
             <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
@@ -215,22 +139,20 @@ function ProjectDetailsContent() {
   }
   
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const _isClient = user?.id === project.client_id;
+  const _isTalent = user?.id === project.talent_id;
   
-  if (!isClient && !isTalent) {
-    navigate("/unauthorized");
-    return null;
-  }
+  if (!isClient && !isTalent) {_navigate("/unauthorized");
+    return null;}
   
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const _isOfferPending = project.status === "offer_sent";
+  const _isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const _isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
   
   return (
     <>
       <SEO 
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
+        title={_`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
       />
       <AppHeader />
@@ -238,19 +160,18 @@ function ProjectDetailsContent() {
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
+              <h1 className="text-3xl font-bold">{_project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
-                {getStatusBadge(project.status)}
+                {_getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
-                  Started on {format(new Date(project.start_date), "PPP")}
+                  Started on {_format(new Date(project.start_date), _"PPP")}
                 </span>
               </div>
             </div>
             
-            {/* Action Buttons Based on Role and Status */}
+            {_/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
-              {isTalent && isOfferPending && (
-                <>
+              {_isTalent && isOfferPending && (_<>
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
@@ -261,7 +182,7 @@ function ProjectDetailsContent() {
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offer, _you agree to the project terms and timeline. 
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -274,14 +195,13 @@ function ProjectDetailsContent() {
                     </AlertDialogContent>
                   </AlertDialog>
                   
-                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
+                  <Button variant="outline" onClick={_() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
                   </Button>
                 </>
               )}
               
-              {(isClient || isTalent) && project.status === "in_progress" && (
-                <AlertDialog>
+              {_(isClient || isTalent) && project.status === "in_progress" && (_<AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
                       <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed
@@ -305,7 +225,7 @@ function ProjectDetailsContent() {
                 </AlertDialog>
               )}
               
-              {isActiveProject && (
+              {_isActiveProject && (
                 <Button variant="default" asChild>
                   <Link to={`/project/${project.id}/milestones`}>
                     <Layers className="mr-2 h-4 w-4" /> Milestones
@@ -313,7 +233,7 @@ function ProjectDetailsContent() {
                 </Button>
               )}
 
-              {isActiveProject && (
+              {_isActiveProject && (
                 <Button variant="outline" asChild>
                   <Link to={`/project/${project.id}/room`}>
                     <Video className="mr-2 h-4 w-4" /> Project Room
@@ -321,10 +241,9 @@ function ProjectDetailsContent() {
                 </Button>
               )}
               
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
-                <Button 
+              {_(isClient || isTalent) && ["offer_sent", _"offer_accepted", _"in_progress"].includes(project.status) && (_<Button 
                   variant="outline" 
-                  onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
+                  onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${_project.client_id}`)}
                 >
                   <MessageSquare className="mr-2 h-4 w-4" /> Message
                 </Button>
@@ -335,13 +254,13 @@ function ProjectDetailsContent() {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
-            <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
+            <Tabs defaultValue="details" value={_activeTab} onValueChange={_setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="details">Project Details</TabsTrigger>
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>
                 <TabsTrigger value="documents">Documents</TabsTrigger>
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>
-                {project.status === "completed" && (
+                {_project.status === "completed" && (
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                 )}
               </TabsList>
@@ -359,21 +278,21 @@ function ProjectDetailsContent() {
                       <div>
                         <h3 className="font-semibold mb-2">Project Description</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{project.scope_summary}</p>
+                          <p className="whitespace-pre-wrap">{_project.scope_summary}</p>
                         </div>
                       </div>
                       
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
-                          {project.payment_terms} Payment
+                          {_project.payment_terms} Payment
                         </Badge>
                       </div>
                       
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{project.job?.description}</p>
+                          <p className="whitespace-pre-wrap">{_project.job?.description}</p>
                         </div>
                       </div>
                     </div>
@@ -395,7 +314,7 @@ function ProjectDetailsContent() {
                         <Calendar className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-semibold">Start Date</h3>
-                          <p>{format(new Date(project.start_date), "PPP")}</p>
+                          <p>{_format(new Date(project.start_date), _"PPP")}</p>
                         </div>
                       </div>
                       
@@ -404,7 +323,7 @@ function ProjectDetailsContent() {
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
-                            {getStatusBadge(project.status)}
+                            {_getStatusBadge(project.status)}
                           </div>
                         </div>
                       </div>
@@ -422,7 +341,7 @@ function ProjectDetailsContent() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    {project.agreement_url ? (
+                    {_project.agreement_url ? (
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">
                         <div className="flex items-center gap-3">
                           <FileText className="h-5 w-5 text-primary" />
@@ -463,28 +382,27 @@ function ProjectDetailsContent() {
                   <CardContent>
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
-                        {notes.length > 0 ? (
-                          notes.map((note) => (
+                        {_notes.length > 0 ? (_notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
-                                  {note.created_by_profile?.avatar_url ? (
+                                  {_note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
+                                      alt={_note.created_by_profile.display_name}
                                     />
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
                                 </Avatar>
                                 <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name || "User"}
+                                  {_note.created_by_profile?.display_name || "User"}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
-                                  {format(new Date(note.created_at), "PPp")}
+                                  {_format(new Date(note.created_at), _"PPp")}
                                 </span>
                               </div>
-                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
+                              <p className="text-sm whitespace-pre-wrap">{_note.content}</p>
                             </div>
                           ))
                         ) : (
@@ -497,19 +415,18 @@ function ProjectDetailsContent() {
                         )}
                       </div>
                       
-                      {isOfferAccepted && (
-                        <div>
+                      {_isOfferAccepted && (_<div>
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
-                            onChange={(e) => setNewNote(e.target.value)}
+                            onChange={_(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
                           <Button
-                            onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
+                            onClick={_handleSubmitNote}
+                            disabled={_!newNote.trim() || isSubmittingNote}
                           >
-                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                            {_isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
                         </div>
                       )}
@@ -519,7 +436,7 @@ function ProjectDetailsContent() {
               </TabsContent>
               
               <TabsContent value="reviews">
-                <ProjectReviewSection project={project} />
+                <ProjectReviewSection project={_project} />
               </TabsContent>
             </Tabs>
           </div>
@@ -533,10 +450,10 @@ function ProjectDetailsContent() {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-                      {project.talent_profile?.profile_picture_url ? (
+                      {_project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
+                          alt={_project.talent_profile.full_name}
                         />
                       ) : (
                         <User className="h-6 w-6" />
@@ -544,13 +461,12 @@ function ProjectDetailsContent() {
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Talent"}
+                        {_project.talent_profile?.full_name || "Talent"}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title || "Professional"}
+                        {_project.talent_profile?.professional_title || "Professional"}
                       </p>
-                      {isClient && (
-                        <Button
+                      {_isClient && (_<Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -564,10 +480,10 @@ function ProjectDetailsContent() {
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-                      {project.client_profile?.avatar_url ? (
+                      {_project.client_profile?.avatar_url ? (
                         <img
                           src={project.client_profile.avatar_url}
-                          alt={project.client_profile.display_name}
+                          alt={_project.client_profile.display_name}
                         />
                       ) : (
                         <User className="h-6 w-6" />
@@ -575,11 +491,10 @@ function ProjectDetailsContent() {
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.client_profile?.display_name || "Client"}
+                        {_project.client_profile?.display_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (
-                        <Button
+                      {_isTalent && (_<Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -594,7 +509,7 @@ function ProjectDetailsContent() {
               </CardContent>
             </Card>
             
-            {/* Project Status Card */}
+            {_/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
@@ -603,28 +518,27 @@ function ProjectDetailsContent() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Current Status:</span>
-                    <div>{getStatusBadge(project.status)}</div>
+                    <div>{_getStatusBadge(project.status)}</div>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
-                      {format(new Date(project.created_at), "PPP")}
+                      {_format(new Date(project.created_at), _"PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
-                      {format(new Date(project.start_date), "PPP")}
+                      {_format(new Date(project.start_date), _"PPP")}
                     </span>
                   </div>
                 </div>
               </CardContent>
               
-              {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && isClient && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+              {_/* Conditional Footer Based on Status */}
+              {_project.status === "changes_requested" && isClient && (_<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
@@ -638,7 +552,7 @@ function ProjectDetailsContent() {
                 </CardFooter>
               )}
               
-              {project.status === "offer_sent" && isClient && (
+              {_project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
                     Waiting for the talent to accept your offer.
@@ -646,7 +560,7 @@ function ProjectDetailsContent() {
                 </CardFooter>
               )}
               
-              {project.status === "completed" && (
+              {_project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
                     <CheckCircle2 className="h-4 w-4" /> This project has been completed.
@@ -654,7 +568,7 @@ function ProjectDetailsContent() {
                 </CardFooter>
               )}
               
-              {project.status === "canceled" && (
+              {_project.status === "canceled" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-red-600 flex items-center gap-1">
                     <XCircle className="h-4 w-4" /> This project has been canceled.
@@ -670,10 +584,8 @@ function ProjectDetailsContent() {
   );
 }
 
-export default function ProjectDetails() {
-  return (
+export default function ProjectDetails() {_return (
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-  );
-}
+  );}

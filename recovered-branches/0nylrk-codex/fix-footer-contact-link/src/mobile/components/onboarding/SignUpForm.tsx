@@ -1,81 +1,54 @@
 
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { AlertCircle } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import React, {_useState} from "react";
 
-export function SignUpForm() {
-  const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
+export function SignUpForm() {_const _navigate = useNavigate();
+  const { signup, _login, _loginWithGoogle} = useAuth();
   
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    name: ""});
+  const [formData, setFormData] = useState({_email: "", _password: "", _name: ""});
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement>) => {_const { name, _value} = e.target;
+    setFormData(prev => ({_...prev, _[name]: value}));
     setError("");
   };
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     setError("");
     setIsLoading(true);
     
     try {
       if (signupMode) {
-        const { error } = await signup(formData.email, formData.password, {
-          name: formData.name});
+        const { error} = await signup(formData.email, formData.password, {_name: formData.name});
         
-        if (error) {
-          throw new Error(error);
-        }
+        if (error) {_throw new Error(error);}
         
         navigate("/mobile");
-      } else {
-        const { error } = await login(formData.email, formData.password);
+      } else {_const { error} = await login(formData.email, formData.password);
         
-        if (error) {
-          throw new Error(error);
-        }
+        if (error) {_throw new Error(error);}
         
         navigate("/mobile");
       }
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (err: unknown) {_setError(err.message);} finally {_setIsLoading(false);}
   };
   
-  const handleGoogleLogin = async () => {
-    try {
-      await loginWithGoogle();
-    } catch (err: any) {
-      setError(err.message);
-    }
+  const _handleGoogleLogin = async () => {_try {
+      await loginWithGoogle();} catch (err: unknown) {_setError(err.message);}
   };
   
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
-        {signupMode ? "Create your account" : "Welcome back"}
+        {_signupMode ? "Create your account" : "Welcome back"}
       </h2>
       
       <div className="space-y-2">
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
-          onClick={handleGoogleLogin}
+          onClick={_handleGoogleLogin}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -103,22 +76,22 @@ export function SignUpForm() {
         <div className="flex-grow border-t border-border"></div>
       </div>
       
-      {error && (
+      {_error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
       
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {signupMode && (
+      <form onSubmit={_handleSubmit} className="space-y-4">
+        {_signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
             <Input
               id="name"
               name="name"
               value={formData.name}
-              onChange={handleInputChange}
+              onChange={_handleInputChange}
               required
               placeholder="Enter your full name"
             />
@@ -131,8 +104,8 @@ export function SignUpForm() {
             id="email"
             name="email"
             type="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value={_formData.email}
+            onChange={_handleInputChange}
             required
             placeholder="Enter your email"
           />
@@ -144,8 +117,8 @@ export function SignUpForm() {
             id="password"
             name="password"
             type="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            value={_formData.password}
+            onChange={_handleInputChange}
             required
             placeholder="Create a password"
           />
@@ -154,28 +127,26 @@ export function SignUpForm() {
         <Button 
           type="submit" 
           className="w-full py-6"
-          disabled={isLoading}
+          disabled={_isLoading}
         >
-          {isLoading 
+          {_isLoading 
             ? "Please wait..." 
             : signupMode 
               ? "Create Account" 
-              : "Sign In"
-          }
+              : "Sign In"}
         </Button>
       </form>
       
       <p className="text-center text-sm">
-        {signupMode
+        {_signupMode
           ? "Already have an account? "
-          : "Don't have an account? "
-        }
+          : "Don't have an account? "}
         <Button
           variant="link"
           className="p-0 h-auto"
-          onClick={() => setSignupMode(!signupMode)}
+          onClick={_() => setSignupMode(!signupMode)}
         >
-          {signupMode ? "Sign In" : "Sign Up"}
+          {_signupMode ? "Sign In" : "Sign Up"}
         </Button>
       </p>
     </div>

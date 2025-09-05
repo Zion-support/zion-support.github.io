@@ -1,3 +1,1 @@
-export default function AutomationStatus() {
-  return <div>Automation status coming soon.</div>;
-}
+export default function AutomationStatus() {_return <div>Automation status coming soon.</div>;}

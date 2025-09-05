@@ -1,57 +1,33 @@
 
-import { useState, useEffect } from "react";
-import { format } from "date-fns";
-import { List, RefreshCw } from 'lucide-react'
-import { useApiKeys } from "@/hooks/useApiKeys";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { ApiLogsChart } from "./ApiLogsChart";
 
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+export function ApiLogs() {_const { logs, _totalLogs, _loading, _fetchApiLogs} = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   
   // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  }, [pageSize, currentPage]);
+  useEffect__(() => {_fetchApiLogs(pageSize, _currentPage * pageSize);}, [pageSize, currentPage]);
   
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  };
+  const _handleRefresh = () => {_fetchApiLogs(pageSize, _currentPage * pageSize);};
   
   // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
-  };
+  const _formatTimestamp = (_timestamp: string) => {_return format(new Date(timestamp), _'yyyy-MM-dd HH:mm:ss');};
   
   // Helper to get badge color based on status code
-  const getStatusBadge = (statusCode: number) => {
-    if (statusCode >= 200 && statusCode < 300) {
-      return <Badge className="bg-green-700">Success</Badge>;
-    } else if (statusCode >= 400 && statusCode < 500) {
-      return <Badge className="bg-amber-700">Client Error</Badge>;
-    } else if (statusCode >= 500) {
-      return <Badge className="bg-red-700">Server Error</Badge>;
-    } else {
-      return <Badge className="bg-blue-700">Other</Badge>;
-    }
+  const _getStatusBadge = (_statusCode: number) => {_if (statusCode >= 200 && statusCode < 300) {
+      return <Badge className="bg-green-700">Success</Badge>;} else if (statusCode >= 400 && statusCode < 500) {_return <Badge className="bg-amber-700">Client Error</Badge>;} else if (statusCode >= 500) {_return <Badge className="bg-red-700">Server Error</Badge>;} else {_return <Badge className="bg-blue-700">Other</Badge>;}
   };
   
   // Calculate pagination info
-  const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
+  const _totalPages = Math.ceil(totalLogs / pageSize);
+  const _hasNextPage = currentPage < totalPages - 1;
+  const _hasPrevPage = currentPage > 0;
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <List className="mr-2" size={20} /> API Request Logs
+          <List className="mr-2" size={_20} /> API Request Logs
         </CardTitle>
         <CardDescription className="text-zinc-400">
           View logs of requests made using your API keys.
@@ -63,11 +39,10 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
-              value={pageSize.toString()}
-              onValueChange={(value) => {
+              value={_pageSize.toString()}
+              onValueChange={_(_value) => {
                 setPageSize(Number(value));
-                setCurrentPage(0); // Reset to first page when changing page size
-              }}
+                setCurrentPage(0); // Reset to first page when changing page size}}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
                 <SelectValue placeholder="25" />
@@ -82,13 +57,13 @@ export function ApiLogs() {
             <span className="text-sm text-zinc-400">per page</span>
           </div>
           
-          <Button variant="outline" size="sm" onClick={handleRefresh}>
-            <RefreshCw size={14} className="mr-1" /> Refresh
+          <Button variant="outline" size="sm" onClick={_handleRefresh}>
+            <RefreshCw size={_14} className="mr-1" /> Refresh
           </Button>
         </div>
 
-        {/* Visualization of logs per day */}
-        {logs.length > 0 && (
+        {_/* Visualization of logs per day */}
+        {_logs.length > 0 && (
           <div className="mb-6">
             <ApiLogsChart logs={logs} />
           </div>
@@ -107,7 +82,7 @@ export function ApiLogs() {
               </tr>
             </thead>
             <tbody>
-              {loading ? (
+              {_loading ? (
                 <tr>
                   <td colSpan={6} className="text-center py-12">
                     <div className="flex flex-col items-center">
@@ -118,9 +93,9 @@ export function ApiLogs() {
                 </tr>
               ) : logs.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="text-center py-12">
+                  <td colSpan={_6} className="text-center py-12">
                     <div className="flex flex-col items-center">
-                      <List className="opacity-30 mb-3" size={24} />
+                      <List className="opacity-30 mb-3" size={_24} />
                       <span className="text-zinc-500">No API logs found.</span>
                       <span className="text-sm text-zinc-600 mt-1">
                         Logs will appear here when you make API requests.
@@ -128,37 +103,34 @@ export function ApiLogs() {
                     </div>
                   </td>
                 </tr>
-              ) : (
-                logs.map((log) => (
-                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
-                    <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
+              ) : (_logs.map((log) => (
+                  <tr key={_log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
+                    <td className="px-4 py-3 text-sm">{_formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge 
                         variant="outline"
-                        className={
-                          log.method === 'GET' 
+                        className={_log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log.method === 'POST' 
                             ? "border-blue-500 text-blue-400"
                             : log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
-                            : "border-red-500 text-red-400"
-                        }
+                            : "border-red-500 text-red-400"}
                       >
-                        {log.method}
+                        {_log.method}
                       </Badge>
                     </td>
-                    <td className="px-4 py-3 font-mono text-sm text-zinc-400">{log.endpoint}</td>
+                    <td className="px-4 py-3 font-mono text-sm text-zinc-400">{_log.endpoint}</td>
                     <td className="px-4 py-3">
                       <div className="flex items-center">
-                        <span className="font-mono mr-2">{log.status_code}</span>
-                        {getStatusBadge(log.status_code)}
+                        <span className="font-mono mr-2">{_log.status_code}</span>
+                        {_getStatusBadge(log.status_code)}
                       </div>
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      {log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
+                      {_log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
                     </td>
-                    <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>
+                    <td className="px-4 py-3 text-sm">{_log.ip_address || '-'}</td>
                   </tr>
                 ))
               )}
@@ -166,25 +138,25 @@ export function ApiLogs() {
           </table>
         </div>
         
-        {logs.length > 0 && (
+        {_logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
+              Showing {currentPage * pageSize + 1} to {_Math.min((currentPage + 1) * pageSize, _totalLogs)} of {_totalLogs} logs
             </div>
             <div className="flex space-x-2">
               <Button
                 variant="outline"
                 size="sm"
-                disabled={!hasPrevPage}
-                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled={_!hasPrevPage}
+                onClick={_() => setCurrentPage(currentPage - 1)}
               >
                 Previous
               </Button>
               <Button
                 variant="outline"
                 size="sm"
-                disabled={!hasNextPage}
-                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled={_!hasNextPage}
+                onClick={_() => setCurrentPage(currentPage + 1)}
               >
                 Next
               </Button>

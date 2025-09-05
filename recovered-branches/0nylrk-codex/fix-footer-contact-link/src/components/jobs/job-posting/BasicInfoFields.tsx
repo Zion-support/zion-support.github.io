@@ -1,39 +1,24 @@
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormMessage 
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-import { Card, CardContent } from "@/components/ui/card";
+import React, {_useState} from "react";
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormMessage} from "@/components/ui/form";
 
-interface BasicInfoFieldsProps {
-  control: Control<any>;
-}
+interface BasicInfoFieldsProps {_control: Control<any>;}
 
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = (_{_control}) => {_const [minBudget, _setMinBudget] = useState<string>("");
+  const [maxBudget, _setMaxBudget] = useState<string>("");
 
-  const handleSuggestionApplied = (min: number, max: number) => {
+  const _handleSuggestionApplied = (_min: number, _max: number) => {
     setMinBudget(min.toString());
-    setMaxBudget(max.toString());
-  };
+    setMaxBudget(max.toString());};
 
-  return (
-    <div className="space-y-4">
+  return (_<div className="space-y-4">
       <FormField
-        control={control}
+        control={_control}
         name="title"
-        render={({ field }) => (
+        render={_({ field}) => (
           <FormItem>
             <FormLabel>Job Title</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Senior React Developer" {...field} />
+              <Input placeholder="e.g. Senior React Developer" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -41,13 +26,13 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="company"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Company</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Acme Corporation" {...field} />
+              <Input placeholder="e.g. Acme Corporation" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -55,15 +40,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       />
       
       <FormField
-        control={control}
+        control={_control}
         name="category"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Job Category</FormLabel>
             <FormControl>
               <select
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                {...field}
+                {_...field}
               >
                 <option value="">Select a category</option>
                 <option value="development">Development</option>
@@ -82,21 +67,20 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
-          control={control}
+          control={_control}
           name="budgetMin"
-          render={({ field: { onChange, ...rest } }) => (
+          render={_(_{ field: { onChange, _...rest} }) => (
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
                 <Input
                   type="number"
                   placeholder="e.g. 30"
-                  value={minBudget || rest.value}
-                  onChange={e => {
+                  value={_minBudget || rest.value}
+                  onChange={_e => {
                     setMinBudget(e.target.value);
-                    onChange(e);
-                  }}
-                  {...rest}
+                    onChange(e);}}
+                  {_...rest}
                 />
               </FormControl>
               <FormMessage />
@@ -105,21 +89,20 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         />
 
         <FormField
-          control={control}
+          control={_control}
           name="budgetMax"
-          render={({ field: { onChange, ...rest } }) => (
+          render={_(_{ field: { onChange, _...rest} }) => (
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
                 <Input
                   type="number"
                   placeholder="e.g. 60"
-                  value={maxBudget || rest.value}
-                  onChange={e => {
+                  value={_maxBudget || rest.value}
+                  onChange={_e => {
                     setMaxBudget(e.target.value);
-                    onChange(e);
-                  }}
-                  {...rest}
+                    onChange(e);}}
+                  {_...rest}
                 />
               </FormControl>
               <FormMessage />
@@ -131,22 +114,22 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
-            jobTitle={control._formValues.title || ""}
-            category={control._formValues.category || ""}
-            experienceLevel={control._formValues.experienceLevel || ""}
-            onSuggestionApplied={handleSuggestionApplied}
+            jobTitle={_control._formValues.title || ""}
+            category={_control._formValues.category || ""}
+            experienceLevel={_control._formValues.experienceLevel || ""}
+            onSuggestionApplied={_handleSuggestionApplied}
           />
         </CardContent>
       </Card>
 
       <FormField
-        control={control}
+        control={_control}
         name="location"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+              <Input placeholder="e.g. Remote, San Francisco, etc." {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

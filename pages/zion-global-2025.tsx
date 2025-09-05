@@ -1,1 +1,1 @@
-export { default } from './summit';
+export {_default} from './summit';

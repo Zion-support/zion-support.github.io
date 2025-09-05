@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 import Head from 'next/head';
 
-export default function FacebookRedirect() {
-	useEffect(() => {
+export default function FacebookRedirect() {_useEffect__(() => {
 		if (typeof window !== 'undefined') {
-			window.location.replace('https://facebook.com/ziontechgroup');
-		}
+			window.location.replace('https://facebook.com/ziontechgroup');}
 	}, []);
 	return (
 		<>

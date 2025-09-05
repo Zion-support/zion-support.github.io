@@ -1,14 +1,9 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { AppStoreButtons } from "./AppStoreButtons";
 
-export const MobileAppHero: React.FC = () => {
-  // These would come from environment variables or a config
-  const appStoreUrl = "#"; // Replace with actual App Store URL when available
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
+export const MobileAppHero: React.FC = () => {_// These would come from environment variables or a config
+  const _appStoreUrl = "#"; // Replace with actual App Store window.URL when available
+  const _googlePlayUrl = "#"; // Replace with actual Google Play window.URL when available
 
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
@@ -19,20 +14,20 @@ export const MobileAppHero: React.FC = () => {
               <span className="text-zion-cyan">Zion</span> in Your Pocket
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
+              Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, _now available on your mobile device.
             </p>
             
             <div className="mb-8">
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+                googlePlayUrl={_googlePlayUrl}
               />
             </div>
             
             <Link to="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
                 Open App
-                <ArrowRight size={20} />
+                <ArrowRight size={_20} />
               </Button>
             </Link>
           </div>
@@ -41,7 +36,7 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-              {/* This would be replaced with an actual phone mockup image in production */}
+              {_/* This would be replaced with an actual phone mockup image in production */}
             </div>
           </div>
         </div>

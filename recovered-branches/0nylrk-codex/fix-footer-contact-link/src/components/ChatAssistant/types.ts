@@ -1,15 +1,11 @@
 
-export interface Message {
-  id: string;
+export interface Message {_id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean;
-}
+  read?: boolean;}
 
-export interface Recipient {
-  id: string;
+export interface Recipient {_id: string;
   name: string;
   avatarUrl?: string;
-  role?: string;
-}
+  role?: string;}

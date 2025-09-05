@@ -1,23 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Mail } from "lucide-react";
 
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+export function EnhancedNewsletterForm() {_const [email, _setEmail] = useState("");
+  const [isSubmitting, _setIsSubmitting] = useState(false);
+  const [isSubmitted, _setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const _handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate API call
-    setTimeout(() => {
+    setTimeout__(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setEmail("");
-    }, 1000);
+      setEmail("");}, 1000);
   };
 
   return (
@@ -32,36 +26,35 @@ export function EnhancedNewsletterForm() {
         </div>
       </div>
       
-      {isSubmitted ? (
+      {_isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
         </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
+      ) : (_<form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            value={_email}
+            onChange={_(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
           <Button 
             type="submit" 
-            disabled={isSubmitting}
+            disabled={_isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
           >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
+            {_isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
       )}
       
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
-          {[...Array(3)].map((_, i) => (
+          {_[...Array(3)].map(_(_, _i) => (
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
-              {String.fromCharCode(65 + i)}
+              {_String.fromCharCode(65 + i)}
             </div>
           ))}
         </div>

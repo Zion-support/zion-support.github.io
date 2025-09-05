@@ -1,18 +1,9 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Switch } from '@/components/ui/switch';
-import { Button } from '@/components/ui/button';
-import { useConsent } from '@/context/ConsentContext';
 
-export default function PrivacySettings() {
-  const { consent, updateConsent } = useConsent();
+export default function PrivacySettings() {_const { consent, _updateConsent} = useConsent();
   const [analytics, setAnalytics] = useState(consent.analytics);
   const [ads, setAds] = useState(consent.ads);
 
-  const handleSave = () => {
-    updateConsent({ analytics, ads });
+  const _handleSave = () => {_updateConsent({ analytics, _ads});
   };
 
   return (
@@ -24,13 +15,13 @@ export default function PrivacySettings() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <span>Analytics Cookies</span>
-            <Switch checked={analytics} onCheckedChange={setAnalytics} />
+            <Switch checked={_analytics} onCheckedChange={_setAnalytics} />
           </div>
           <div className="flex items-center justify-between">
             <span>Advertising Cookies</span>
-            <Switch checked={ads} onCheckedChange={setAds} />
+            <Switch checked={_ads} onCheckedChange={_setAds} />
           </div>
-          <Button onClick={handleSave}>Save Preferences</Button>
+          <Button onClick={_handleSave}>Save Preferences</Button>
         </div>
       </main>
       <Footer />

@@ -1,17 +1,9 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth";
 import Link from "next/link";
 
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primaryColor} = useWhitelabel();
+  const {_isAuthenticated} = useAuth();
   
   return (
     <>
@@ -21,16 +13,16 @@ export default function ZionHireAI() {
       />
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section 
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
-          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+          style={_primaryColor ? { backgroundImage: `linear-gradient(to bottom right, _${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
-                  {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
+                  {_isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">
                   Empower your team with AI-driven talent acquisition. Streamline your hiring process, 
@@ -42,7 +34,7 @@ export default function ZionHireAI() {
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
                     asChild
                   >
-                    <Link href={isAuthenticated ? "/enterprise/admin" : "/login"}>
+                    <Link href={_isAuthenticated ? "/enterprise/admin" : "/login"}>
                       Get Started <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -71,7 +63,7 @@ export default function ZionHireAI() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {_/* Features Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -242,7 +234,7 @@ export default function ZionHireAI() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>

@@ -1,9 +1,7 @@
 import React from 'react';
-export function ErrorBanner() {
-  return (
+export function ErrorBanner() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

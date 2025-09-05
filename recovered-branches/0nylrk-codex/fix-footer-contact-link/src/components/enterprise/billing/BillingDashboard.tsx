@@ -1,18 +1,8 @@
 
 import React from "react";
-import { BillingHeader } from "./BillingHeader";
-import { CurrentSubscription } from "./CurrentSubscription";
-import { PaymentMethods } from "./PaymentMethods";
-import { InvoiceHistory } from "./InvoiceHistory";
-import { UsageOverview } from "./UsageOverview";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs";
+import {_Tabs, _TabsContent, _TabsList, _TabsTrigger} from "@/components/ui/tabs";
 
-export function BillingDashboard() {
-  return (
+export function BillingDashboard() {_return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <BillingHeader />
       
@@ -41,5 +31,4 @@ export function BillingDashboard() {
         </TabsContent>
       </Tabs>
     </div>
-  );
-}
+  );}

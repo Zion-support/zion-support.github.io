@@ -1,4 +1,3 @@
 // Type definitions for org;
-interface org {;
-  // TODO: Add proper type definitions;
-};
+interface org {_;
+  // TODO: Add proper type definitions;};

@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Custom500() {
-  return (
+export default function Custom500() {_return (
     <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
@@ -59,5 +58,4 @@ export default function Custom500() {
         </div>
       </div>
     </>
-  );
-}
+  );}

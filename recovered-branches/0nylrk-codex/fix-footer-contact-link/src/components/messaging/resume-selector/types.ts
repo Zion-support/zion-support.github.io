@@ -1,14 +1,9 @@
 
-import { Resume } from "@/types/resume";
 
-export interface ResumeOption {
-  id: string;
+export interface ResumeOption {_id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
-  file?: File;
-}
+  file?: File;}
 
-export interface ResumeSelectorProps {
-  onResumeSelected: (resumeOption: ResumeOption) => void;
-}
+export interface ResumeSelectorProps {_onResumeSelected: (_resumeOption: ResumeOption) => void;}

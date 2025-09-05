@@ -3,20 +3,19 @@ import Head from 'next/head';
 import ContactForm from '../components/ContactForm';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-export default function Contact() {
-  return (
+export default function Contact() {_return (
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
           name="description"
-          content="Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation."
+          content="Get in touch with Zion Tech Group for innovative micro SaaS, _AI services, _and IT solutions. Contact us for a free consultation."
         />
         <meta
           name="keywords"
-          content="contact, consultation, micro SaaS, AI services, IT solutions, Zion Tech Group"
+          content="contact, _consultation, _micro SaaS, _AI services, _IT solutions, _Zion Tech Group"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
       <ErrorBoundary level="page">
@@ -63,7 +62,7 @@ export default function Contact() {
                       <p className="text-slate-300">
                         364 E Main St STE 1008
                         <br />
-                        Middletown, DE 19709
+                        Middletown, _DE 19709
                       </p>
                     </div>
                     <div>
@@ -90,5 +89,4 @@ export default function Contact() {
         </main>
       </ErrorBoundary>
     </>
-  );
-}
+  );}

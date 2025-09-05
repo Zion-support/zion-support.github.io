@@ -1,33 +1,27 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useWhitelabel } from '@/context/WhitelabelContext';
 
-interface LogoProps {
-  customLogo?: string;
-  customColor?: string;
-}
+interface LogoProps {_customLogo?: string;
+  customColor?: string;}
 
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
+export function Logo(_{_customLogo, _customColor}: LogoProps) {_const { isWhitelabel, _logoUrl, _brandName, _primaryColor} = useWhitelabel();
   
   // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
+  const _logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific customColor is provided
-  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
+  const _colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
   
-  if (logoToUse) {
-    return (
+  if (logoToUse) {_return (
       <Link to="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
+        <img src={logoToUse} alt={_`${brandName} Logo`} className="h-8" />
       </Link>
     );
   }
   
   return (
     <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
+      <div className="text-2xl font-bold" style={_colorToUse ? { color: colorToUse} : {}}>
+        {_isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
     </Link>
   );

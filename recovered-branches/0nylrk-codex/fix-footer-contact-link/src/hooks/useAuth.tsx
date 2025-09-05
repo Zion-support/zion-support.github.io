@@ -1,11 +1,8 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { AuthContext } from "@/context/auth/AuthContext";
-import type { UserDetails as AuthUserDetails } from "@/types/auth";
+import React, {_createContext, _useContext, _useState, _useEffect, _ReactNode} from "react";
+import type {_UserDetails as AuthUserDetails} from "@/types/auth";
 
 // Define types for our context
-export interface UserDetails {
-  id?: string;
+export interface UserDetails {_id?: string;
   name?: string;
   email?: string;
   userType?: string;
@@ -18,22 +15,20 @@ export interface UserDetails {
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string;
-}
+  updatedAt?: string;}
 
-export interface AuthContextType {
-  user: UserDetails | null;
+export interface AuthContextType {_user: UserDetails | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  signIn: (email: string, password: string) => Promise<{ error: any }>;
+  signIn: (_email: string, _password: string) => Promise<{ error: unknown}>;
   signOut: () => Promise<void>;
-  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+  signUp: (_email: string, _password: string, _userData?: Partial<UserDetails>) => Promise<{_error: unknown}>;
   // Aliases for compatibility with other components
-  login: (email: string, password: string) => Promise<{ error: any }>;
+  login: (_email: string, _password: string) => Promise<{_error: unknown}>;
   logout: () => Promise<void>;
-  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
-  resetPassword: (email: string) => Promise<{ error: any }>;
-  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>;
+  signup: (_email: string, _password: string, _userData?: Partial<UserDetails>) => Promise<{_error: unknown}>;
+  resetPassword: (_email: string) => Promise<{_error: unknown}>;
+  updateProfile: (_data: Partial<UserDetails>) => Promise<{_error: unknown}>;
   loginWithGoogle: () => Promise<void>;
   loginWithFacebook: () => Promise<void>;
   loginWithTwitter: () => Promise<void>;
@@ -41,162 +36,87 @@ export interface AuthContextType {
 }
 
 // Create a provider component
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<UserDetails | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export function AuthProvider(_{_children}: {_children: ReactNode}) {_const [user, _setUser] = useState<UserDetails | null>(null);
+  const [isLoading, _setIsLoading] = useState(true);
 
   // Mock auth functions for now - these would connect to Supabase in a real implementation
-  const signIn = async (email: string, password: string) => {
+  const _signIn = async (_email: string, _password: string) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign in attempted with:", email);
+    
     // Mock successful sign-in
     setUser({ 
-      id: "mock-user-id", 
-      email, 
-      displayName: "Mock User", 
-      name: "Mock User",
-      avatarUrl: "",
-      profileComplete: true,
-      role: "enterprise_admin",
-      permissions: ["billing_access", "admin_access", "team_management"],
-      companyId: "company-123"
-    });
-    return { error: null };
+      id: "mock-user-id", _email, _displayName: "Mock User", _name: "Mock User", _avatarUrl: "", _profileComplete: true, _role: "enterprise_admin", _permissions: ["billing_access", _"admin_access", _"team_management"], _companyId: "company-123"});
+    return {_error: null};
   };
 
-  const signOut = async () => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign out attempted");
-    setUser(null);
-  };
+  const _signOut = async () => {_// This would be replaced with actual Supabase auth
+    
+    setUser(null);};
 
-  const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign up attempted with:", email, userData);
+  const _signUp = async (_email: string, _password: string, _userData?: Partial<UserDetails>) => {_// This would be replaced with actual Supabase auth
+    
     // Mock successful sign-up
     setUser({ 
-      id: "mock-user-id", 
-      email, 
-      displayName: userData?.name || "New User",
-      name: userData?.name || "New User",
-      userType: userData?.userType,
-      profileComplete: false
-    });
-    return { error: null };
+      id: "mock-user-id", _email, _displayName: userData?.name || "New User", _name: userData?.name || "New User", _userType: userData?.userType, _profileComplete: false});
+    return {_error: null};
   };
 
-  const resetPassword = async (email: string) => {
-    // Mock implementation
-    console.log("Password reset requested for:", email);
-    return { error: null };
+  const _resetPassword = async (_email: string) => {_// Mock implementation
+    
+    return { error: null};
   };
 
-  const updateProfile = async (data: Partial<UserDetails>) => {
-    // Mock implementation
-    console.log("Profile update requested with:", data);
+  const _updateProfile = async (_data: Partial<UserDetails>) => {_// Mock implementation
+    
     if (user) {
-      setUser({ ...user, ...data });
+      setUser({ ...user, _...data});
     }
-    return { error: null };
+    return {_error: null};
   };
 
-  const loginWithGoogle = async () => {
-    console.log("Google login requested");
-    // Mock implementation
+  const _loginWithGoogle = async () => {_// Mock implementation
     setUser({ 
-      id: "google-user-id", 
-      email: "google@example.com", 
-      displayName: "Google User",
-      name: "Google User",
-      profileComplete: true
-    });
+      id: "google-user-id", _email: "google@example.com", _displayName: "Google User", _name: "Google User", _profileComplete: true});
   };
 
-  const loginWithFacebook = async () => {
-    console.log("Facebook login requested");
-    // Mock implementation
+  const _loginWithFacebook = async () => {_// Mock implementation
     setUser({ 
-      id: "facebook-user-id", 
-      email: "facebook@example.com", 
-      displayName: "Facebook User", 
-      name: "Facebook User",
-      profileComplete: true
-    });
+      id: "facebook-user-id", _email: "facebook@example.com", _displayName: "Facebook User", _name: "Facebook User", _profileComplete: true});
   };
 
-  const loginWithTwitter = async () => {
-    console.log("Twitter login requested");
-    // Mock implementation
+  const _loginWithTwitter = async () => {_// Mock implementation
     setUser({
-      id: "twitter-user-id",
-      email: "twitter@example.com",
-      displayName: "Twitter User",
-      name: "Twitter User",
-      profileComplete: true
-    });
+      id: "twitter-user-id", _email: "twitter@example.com", _displayName: "Twitter User", _name: "Twitter User", _profileComplete: true});
   };
 
-  const loginWithWeb3 = async () => {
-    console.log("Web3 login requested");
-    const ethereum = (window as any).ethereum;
+  const _loginWithWeb3 = async () => {_const _ethereum = (window as any).ethereum;
     if (!ethereum) {
-      console.warn("No wallet detected");
-      return;
-    }
-    try {
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      const address = accounts[0];
-      await ethereum.request({
-        method: 'personal_sign',
-        params: [address, address]
-      });
-      setUser({
-        id: address,
-        displayName: address,
-        profileComplete: true
-      });
-    } catch (err) {
-      console.error('Web3 login failed', err);
-    }
+      
+      return;}
+    try {_const _accounts = await ethereum.request({ method: 'eth_requestAccounts'});
+      const _address = accounts[0];
+      await ethereum.request({_method: 'personal_sign', _params: [address, _address]});
+      setUser({_id: address, _displayName: address, _profileComplete: true});
+    } catch (err) {}
   };
 
   // Check for existing session on mount
-  useEffect(() => {
-    // Mock loading state and then set a null user to simulate no session
+  useEffect__(() => {_// Mock loading state and then set a null user to simulate no session
     setIsLoading(true);
-    setTimeout(() => {
+    setTimeout__(() => {
       setUser(null);
-      setIsLoading(false);
-    }, 100);
+      setIsLoading(false);}, 100);
   }, []);
 
-  const value = {
-    user,
-    isAuthenticated: !!user,
-    isLoading,
-    signIn,
-    signOut,
-    signUp,
-    // Add aliases for compatibility
-    login: signIn,
-    logout: signOut,
-    signup: signUp,
-    resetPassword,
-    updateProfile,
-    loginWithGoogle,
-    loginWithFacebook,
-    loginWithTwitter,
-    loginWithWeb3
-  };
+  const _value = {_user, _isAuthenticated: !!user, _isLoading, _signIn, _signOut, _signUp, _// Add aliases for compatibility
+    login: signIn, _logout: signOut, _signup: signUp, _resetPassword, _updateProfile, _loginWithGoogle, _loginWithFacebook, _loginWithTwitter, _loginWithWeb3};
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={_value}>{_children}</AuthContext.Provider>;
 }
 
 // Custom hook to use the auth context
-export function useAuth(): AuthContextType {
-  const context = useContext(AuthContext);
+export function useAuth(): AuthContextType {_const _context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
+    throw new Error("useAuth must be used within an AuthProvider");}
   return context;
 }

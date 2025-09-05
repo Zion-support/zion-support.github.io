@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-export default function ToolResourcePage() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function ToolResourcePage() {_const _router = useRouter();
+  const { id} = router.query;
 
   // Tools data - this should match the data in resources.tsx
-  const tools = [
-    {
-      id: 'automation-assessment',
-      title: 'Automation Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-      type: 'Interactive Tool',
-      estimatedTime: '15 minutes',
-      fullContent: `
+  const _tools = [
+    {_id: 'automation-assessment', _title: 'Automation Readiness Assessment', _description: 'Evaluate your organization\'s readiness for AI automation implementation.', _type: 'Interactive Tool', _estimatedTime: '15 minutes', _fullContent: `
         <h2>About This Tool</h2>
         <p>The Automation Readiness Assessment is designed to help organizations evaluate their current 
         capabilities and identify opportunities for AI automation implementation. This comprehensive assessment 
-        covers technology infrastructure, organizational culture, and business processes.</p>
+        covers technology infrastructure, _organizational culture, _and business processes.</p>
         
         <h2>What You'll Learn</h2>
         <p>This assessment will help you understand:</p>
@@ -33,11 +25,11 @@ export default function ToolResourcePage() {
         <h2>Assessment Categories</h2>
         <p>The assessment covers several key areas:</p>
         <ul>
-          <li><strong>Technology Infrastructure:</strong> Current systems, data quality, and technical capabilities</li>
-          <li><strong>Organizational Culture:</strong> Change readiness, innovation mindset, and learning culture</li>
-          <li><strong>Business Processes:</strong> Process maturity, standardization, and optimization opportunities</li>
-          <li><strong>Data & Analytics:</strong> Data availability, quality, and analytical capabilities</li>
-          <li><strong>Leadership & Strategy:</strong> Executive support, strategic alignment, and resource allocation</li>
+          <li><strong>Technology Infrastructure:</strong> Current systems, _data quality, _and technical capabilities</li>
+          <li><strong>Organizational Culture:</strong> Change readiness, _innovation mindset, _and learning culture</li>
+          <li><strong>Business Processes:</strong> Process maturity, _standardization, _and optimization opportunities</li>
+          <li><strong>Data & Analytics:</strong> Data availability, _quality, _and analytical capabilities</li>
+          <li><strong>Leadership & Strategy:</strong> Executive support, _strategic alignment, _and resource allocation</li>
         </ul>
         
         <h2>How to Use This Tool</h2>
@@ -50,29 +42,17 @@ export default function ToolResourcePage() {
         </ol>
         
         <h2>Next Steps After Assessment</h2>
-        <p>Once you complete the assessment, you'll receive:</p>
+        <p>Once you complete the assessment, _you'll receive:</p>
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `,
-      features: [
-        'Comprehensive evaluation framework',
-        'Industry benchmarking',
-        'Actionable recommendations',
-        'Progress tracking',
-        'Resource library access'
-      ]
-    },
-    {
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      type: 'Framework',
-      estimatedTime: '30 minutes',
-      fullContent: `
+      `, _features: [
+        'Comprehensive evaluation framework', _'Industry benchmarking', _'Actionable recommendations', _'Progress tracking', _'Resource library access'
+      ]},
+    {_id: 'ai-maturity-model', _title: 'AI Maturity Model', _description: 'Assess your current AI capabilities and plan your transformation journey.', _type: 'Framework', _estimatedTime: '30 minutes', _fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your 
         organization's AI capabilities. This framework helps you identify where you are today and 
@@ -91,11 +71,11 @@ export default function ToolResourcePage() {
         <h2>Assessment Dimensions</h2>
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
-          <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
-          <li><strong>Technology & Infrastructure:</strong> AI platforms, data infrastructure, and technical capabilities</li>
-          <li><strong>Data & Analytics:</strong> Data quality, governance, and analytical maturity</li>
-          <li><strong>People & Skills:</strong> AI talent, training programs, and organizational capabilities</li>
-          <li><strong>Processes & Governance:</strong> AI governance, risk management, and operational processes</li>
+          <li><strong>Strategy & Leadership:</strong> AI vision, _executive support, _and strategic alignment</li>
+          <li><strong>Technology & Infrastructure:</strong> AI platforms, _data infrastructure, _and technical capabilities</li>
+          <li><strong>Data & Analytics:</strong> Data quality, _governance, _and analytical maturity</li>
+          <li><strong>People & Skills:</strong> AI talent, _training programs, _and organizational capabilities</li>
+          <li><strong>Processes & Governance:</strong> AI governance, _risk management, _and operational processes</li>
         </ul>
         
         <h2>Using the Framework</h2>
@@ -117,22 +97,10 @@ export default function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `,
-      features: [
-        '5-level maturity framework',
-        'Multi-dimensional assessment',
-        'Gap analysis tools',
-        'Transformation roadmap',
-        'Progress tracking'
-      ]
-    },
-    {
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
-      fullContent: `
+      `, _features: [
+        '5-level maturity framework', _'Multi-dimensional assessment', _'Gap analysis tools', _'Transformation roadmap', _'Progress tracking'
+      ]},
+    {_id: 'performance-benchmark', _title: 'Performance Benchmarking Tool', _description: 'Compare your automation performance against industry standards.', _type: 'Analytics Tool', _estimatedTime: '20 minutes', _fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against 
         industry standards and best practices. This tool provides insights into how your organization 
@@ -141,11 +109,11 @@ export default function ToolResourcePage() {
         <h2>Benchmarking Categories</h2>
         <p>The tool covers several performance categories:</p>
         <ul>
-          <li><strong>Efficiency Metrics:</strong> Process automation rates, time savings, and cost reduction</li>
-          <li><strong>Quality Metrics:</strong> Error rates, accuracy improvements, and customer satisfaction</li>
-          <li><strong>Scalability Metrics:</strong> System performance, throughput, and capacity utilization</li>
-          <li><strong>ROI Metrics:</strong> Investment returns, payback periods, and value creation</li>
-          <li><strong>Innovation Metrics:</strong> New capabilities, competitive advantages, and market position</li>
+          <li><strong>Efficiency Metrics:</strong> Process automation rates, _time savings, _and cost reduction</li>
+          <li><strong>Quality Metrics:</strong> Error rates, _accuracy improvements, _and customer satisfaction</li>
+          <li><strong>Scalability Metrics:</strong> System performance, _throughput, _and capacity utilization</li>
+          <li><strong>ROI Metrics:</strong> Investment returns, _payback periods, _and value creation</li>
+          <li><strong>Innovation Metrics:</strong> New capabilities, _competitive advantages, _and market position</li>
         </ul>
         
         <h2>Industry Benchmarks</h2>
@@ -178,7 +146,7 @@ export default function ToolResourcePage() {
         </ul>
         
         <h2>Action Planning</h2>
-        <p>Based on benchmark results, develop action plans that include:</p>
+        <p>Based on benchmark results, _develop action plans that include:</p>
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -186,21 +154,14 @@ export default function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `,
-      features: [
-        'Industry benchmark database',
-        'Performance gap analysis',
-        'Trend analysis tools',
-        'Action planning framework',
-        'Progress tracking'
-      ]
-    }
+      `, _features: [
+        'Industry benchmark database', _'Performance gap analysis', _'Trend analysis tools', _'Action planning framework', _'Progress tracking'
+      ]}
   ];
 
-  const tool = tools.find(t => t.id === id);
+  const _tool = tools.find(t => t.id === id);
 
-  if (!tool) {
-    return (
+  if (!tool) {_return (
       <>
         <Head>
           <title>Tool Resource Not Found | Zion Tech Group</title>
@@ -222,16 +183,14 @@ export default function ToolResourcePage() {
           </main>
         </div>
       </>
-    );
-  }
+    );}
 
-  return (
-    <>
+  return (_<>
       <Head>
-        <title>{tool.title} | Zion Tech Group - Tool Resource</title>
-        <meta name="description" content={tool.description} />
-        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
-        <meta property="og:description" content={tool.description} />
+        <title>{_tool.title} | Zion Tech Group - Tool Resource</title>
+        <meta name="description" content={_tool.description} />
+        <meta property="og:title" content={_`${tool.title} | Zion Tech Group`} />
+        <meta property="og:description" content={_tool.description} />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -246,13 +205,13 @@ export default function ToolResourcePage() {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-                  {tool.type}
+                  {_tool.type}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
-              <p className="text-xl text-white/80 mb-4">{tool.description}</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">{_tool.title}</h1>
+              <p className="text-xl text-white/80 mb-4">{_tool.description}</p>
               <div className="flex items-center gap-4 text-white/60">
-                <span>Estimated time: {tool.estimatedTime}</span>
+                <span>Estimated time: {_tool.estimatedTime}</span>
               </div>
             </header>
             
@@ -261,7 +220,7 @@ export default function ToolResourcePage() {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                   <div 
                     className="prose prose-invert max-w-none"
-                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={_{ __html: tool.fullContent}}
                   />
                 </div>
               </div>
@@ -270,10 +229,10 @@ export default function ToolResourcePage() {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
                   <ul className="space-y-3">
-                    {tool.features.map((feature, index) => (
+                    {_tool.features.map((feature, _index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        {feature}
+                        {_feature}
                       </li>
                     ))}
                   </ul>
@@ -284,11 +243,11 @@ export default function ToolResourcePage() {
                   <div className="space-y-3">
                     <div>
                       <span className="text-white/60 text-sm">Type:</span>
-                      <p className="text-white font-medium">{tool.type}</p>
+                      <p className="text-white font-medium">{_tool.type}</p>
                     </div>
                     <div>
                       <span className="text-white/60 text-sm">Time Required:</span>
-                      <p className="text-white font-medium">{tool.estimatedTime}</p>
+                      <p className="text-white font-medium">{_tool.estimatedTime}</p>
                     </div>
                   </div>
                 </div>

@@ -1,67 +1,23 @@
 
 import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Download, FileText, Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
 
-export function InvoiceHistory() {
-  // Mock invoice data
-  const invoices = [
+export function InvoiceHistory() {_// Mock invoice data
+  const _invoices = [
     {
-      id: "INV-1234",
-      date: "May 1, 2025",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "May 2025"},
-    {
-      id: "INV-1233",
-      date: "Apr 1, 2025",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Apr 2025"},
-    {
-      id: "INV-1232",
-      date: "Mar 1, 2025",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Mar 2025"},
-    {
-      id: "INV-1231",
-      date: "Feb 1, 2025",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Feb 2025"},
-    {
-      id: "INV-1230",
-      date: "Jan 1, 2025",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Jan 2025"},
-    {
-      id: "INV-1229",
-      date: "Dec 1, 2024",
-      amount: "$1,999.00",
-      status: "paid",
-      period: "Dec 2024"}];
+      id: "INV-1234", _date: "May 1, _2025", _amount: "$1, _999.00", _status: "paid", _period: "May 2025"},
+    {_id: "INV-1233", _date: "Apr 1, _2025", _amount: "$1, _999.00", _status: "paid", _period: "Apr 2025"},
+    {_id: "INV-1232", _date: "Mar 1, _2025", _amount: "$1, _999.00", _status: "paid", _period: "Mar 2025"},
+    {_id: "INV-1231", _date: "Feb 1, _2025", _amount: "$1, _999.00", _status: "paid", _period: "Feb 2025"},
+    {_id: "INV-1230", _date: "Jan 1, _2025", _amount: "$1, _999.00", _status: "paid", _period: "Jan 2025"},
+    {_id: "INV-1229", _date: "Dec 1, _2024", _amount: "$1, _999.00", _status: "paid", _period: "Dec 2024"}];
 
-  const handleDownloadInvoice = (invoiceId: string) => {
-    // In a real app, this would trigger a download of the invoice PDF
+  const _handleDownloadInvoice = (_invoiceId: string) => {_// In a real app, _this would trigger a download of the invoice PDF
     toast({
-      title: "Downloading invoice",
-      description: `Downloading invoice ${invoiceId} as PDF.`});
+      title: "Downloading invoice", _description: `Downloading invoice ${invoiceId} as PDF.`});
   };
 
-  const getBadgeForStatus = (status: string) => {
-    switch (status) {
+  const _getBadgeForStatus = (_status: string) => {_switch (status) {
       case "paid":
         return <Badge className="bg-green-500">Paid</Badge>;
       case "pending":
@@ -73,8 +29,7 @@ export function InvoiceHistory() {
     }
   };
 
-  return (
-    <div className="space-y-6">
+  return (_<div className="space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-medium">Invoice History</h3>
         <div className="relative">
@@ -100,20 +55,20 @@ export function InvoiceHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {invoices.map((invoice) => (
+            {_invoices.map((invoice) => (
               <TableRow key={invoice.id}>
-                <TableCell className="font-medium">{invoice.id}</TableCell>
-                <TableCell>{invoice.date}</TableCell>
-                <TableCell>{invoice.period}</TableCell>
-                <TableCell>{invoice.amount}</TableCell>
-                <TableCell>{getBadgeForStatus(invoice.status)}</TableCell>
+                <TableCell className="font-medium">{_invoice.id}</TableCell>
+                <TableCell>{_invoice.date}</TableCell>
+                <TableCell>{_invoice.period}</TableCell>
+                <TableCell>{_invoice.amount}</TableCell>
+                <TableCell>{_getBadgeForStatus(invoice.status)}</TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">
                     <Button
                       variant="outline"
                       size="sm"
                       className="h-8 gap-1"
-                      onClick={() => handleDownloadInvoice(invoice.id)}
+                      onClick={_() => handleDownloadInvoice(invoice.id)}
                     >
                       <Download className="h-3.5 w-3.5" />
                       PDF

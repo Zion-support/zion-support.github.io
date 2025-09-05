@@ -1,5 +1,4 @@
-export interface RealOperationalService {
-  id: string;
+export interface RealOperationalService {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface RealOperationalService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const realOperationalServices: RealOperationalService[] = [
-  {
-    id: "operational-intelligence",
-    name: "Operational Intelligence Platform",
-    tagline: "Real-time operational insights and optimization",
-    price: "$99/month",
-    description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-    features: [
-      "Real-time monitoring",
-      "Performance analytics",
-      "Operational insights",
-      "Optimization recommendations",
-      "Alert system"
-    ],
-    link: "/services/operational-intelligence",
-    category: "Operational Services",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "operational-intelligence", _name: "Operational Intelligence Platform", _tagline: "Real-time operational insights and optimization", _price: "$99/month", _description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", _features: [
+      "Real-time monitoring", _"Performance analytics", _"Operational insights", _"Optimization recommendations", _"Alert system"
+    ], _link: "/services/operational-intelligence", _category: "Operational Services", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

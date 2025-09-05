@@ -1,87 +1,64 @@
 
-import React, { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Switch } from "@/components/ui/switch";
-import { toast } from "sonner";
+import React, {_useState} from "react";
 
-interface Integration {
-  id: string;
+interface Integration {_id: string;
   name: string;
   description: string;
   logoUrl?: string;
   status: "connected" | "warning" | "disconnected";
-  lastSync?: string;
-}
+  lastSync?: string;}
 
-interface IntegrationConnectionModalProps {
-  isOpen: boolean;
+interface IntegrationConnectionModalProps {_isOpen: boolean;
   onClose: () => void;
-  integration: Integration;
-}
+  integration: Integration;}
 
-export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
-  const [isConnecting, setIsConnecting] = useState(false);
-  const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true,
-    pushNotes: false,
-    syncJobDetails: true,
-    syncApplicantData: true
-  });
+export function IntegrationConnectionModal(_{_isOpen, _onClose, _integration}: IntegrationConnectionModalProps) {_const [isConnecting, _setIsConnecting] = useState(false);
+  const [syncSettings, _setSyncSettings] = useState({
+    autoCreateContacts: true, _pushNotes: false, _syncJobDetails: true, _syncApplicantData: true});
   
-  const handleConnectOAuth = () => {
-    setIsConnecting(true);
+  const _handleConnectOAuth = () => {_setIsConnecting(true);
     
     // Simulate OAuth flow 
-    setTimeout(() => {
+    setTimeout__(() => {
       setIsConnecting(false);
       toast.success(`Connected to ${integration.name} successfully`);
       onClose();
     }, 2000);
     
     // In a real application, this would open a popup for OAuth authentication
-    // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600');
+    // window.open(`/api/oauth/${_integration.id}`, 'oauth', 'width=600,height=600');
   };
   
-  const handleDisconnect = () => {
-    // In a real application, this would revoke the OAuth token
+  const _handleDisconnect = () => {_// In a real application, _this would revoke the OAuth token
     toast.info(`Disconnected from ${integration.name}`);
     onClose();
   };
   
-  const handleSaveSettings = () => {
-    // In a real application, this would save the sync settings
+  const _handleSaveSettings = () => {_// In a real application, _this would save the sync settings
     toast.success("Integration settings saved");
-    onClose();
-  };
+    onClose();};
   
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+  return (_<Dialog open={_isOpen} onOpenChange={_onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="flex flex-row items-center gap-4">
           <img 
-            src={integration.logoUrl} 
-            alt={`${integration.name} logo`} 
+            src={_integration.logoUrl} 
+            alt={_`${integration.name} logo`} 
             className="h-12 w-12 rounded" 
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = "/placeholder.svg";
-            }}
+            onError={_(e) => {
+              (e.target as HTMLImageElement).src = "/placeholder.svg";}}
           />
           <div>
-            <DialogTitle>{integration.name} Integration</DialogTitle>
+            <DialogTitle>{_integration.name} Integration</DialogTitle>
             <DialogDescription>
-              {integration.status === "connected" || integration.status === "warning" 
+              {_integration.status === "connected" || integration.status === "warning" 
                 ? "Manage your connection settings" 
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
         
-        {(integration.status === "connected" || integration.status === "warning") ? (
-          <>
+        {_(integration.status === "connected" || integration.status === "warning") ? (_<>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
@@ -90,19 +67,19 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   <Checkbox 
                     id="autoCreateContacts" 
                     checked={syncSettings.autoCreateContacts} 
-                    onCheckedChange={(checked) => 
-                      setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
+                    onCheckedChange={_(checked) => 
+                      setSyncSettings({...syncSettings, _autoCreateContacts: checked as boolean})
                     }
                   />
-                  <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
+                  <Label htmlFor="autoCreateContacts">Auto-create contacts in {_integration.name}</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
-                    checked={syncSettings.pushNotes} 
-                    onCheckedChange={(checked) => 
-                      setSyncSettings({...syncSettings, pushNotes: checked as boolean})
+                    checked={_syncSettings.pushNotes} 
+                    onCheckedChange={_(_checked) => 
+                      setSyncSettings({...syncSettings, _pushNotes: checked as boolean})
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -111,9 +88,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
-                    checked={syncSettings.syncJobDetails} 
-                    onCheckedChange={(checked) => 
-                      setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
+                    checked={_syncSettings.syncJobDetails} 
+                    onCheckedChange={_(_checked) => 
+                      setSyncSettings({...syncSettings, _syncJobDetails: checked as boolean})
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -122,9 +99,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
-                    checked={syncSettings.syncApplicantData} 
-                    onCheckedChange={(checked) => 
-                      setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
+                    checked={_syncSettings.syncApplicantData} 
+                    onCheckedChange={_(_checked) => 
+                      setSyncSettings({...syncSettings, _syncApplicantData: checked as boolean})
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
@@ -134,7 +111,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
-                  Last synced: {integration.lastSync 
+                  Last synced: {_integration.lastSync 
                     ? new Date(integration.lastSync).toLocaleString() 
                     : "Never"}
                 </p>
@@ -142,10 +119,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </div>
             
             <DialogFooter className="flex items-center justify-between">
-              <Button variant="outline" onClick={handleDisconnect} type="button">
+              <Button variant="outline" onClick={_handleDisconnect} type="button">
                 Disconnect
               </Button>
-              <Button onClick={handleSaveSettings} type="button">
+              <Button onClick={_handleSaveSettings} type="button">
                 Save Settings
               </Button>
             </DialogFooter>
@@ -154,8 +131,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-                Connect your {integration.name} account to sync job contacts, applicants, and more. 
-                You'll be redirected to {integration.name} to authorize this connection.
+                Connect your {_integration.name} account to sync job contacts, applicants, and more. 
+                You'll be redirected to {_integration.name} to authorize this connection.
               </p>
               
               <div className="space-y-4">
@@ -170,8 +147,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </div>
             
             <DialogFooter>
-              <Button onClick={handleConnectOAuth} disabled={isConnecting}>
-                {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
+              <Button onClick={_handleConnectOAuth} disabled={_isConnecting}>
+                {_isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
               </Button>
             </DialogFooter>
           </>

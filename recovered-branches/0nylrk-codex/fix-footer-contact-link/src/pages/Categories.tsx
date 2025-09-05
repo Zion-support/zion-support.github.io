@@ -1,11 +1,6 @@
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
 
-export default function Categories() {
-  return (
+export default function Categories() {_return (
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue">
@@ -21,7 +16,7 @@ export default function Categories() {
           </div>
           
           {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false} />
+          <CategoriesSection showTitle={_false} />
         </div>
       </div>
       <Footer />

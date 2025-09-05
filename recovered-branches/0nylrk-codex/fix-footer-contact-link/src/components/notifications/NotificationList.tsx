@@ -1,29 +1,14 @@
 
 import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
 
-interface NotificationListProps {
-  loading: boolean;
+interface NotificationListProps {_loading: boolean;
   error: string | null;
   notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
-  onRetry: () => void;
-}
+  onMarkAsRead: (_id: string) => Promise<void>;
+  onDismiss: (_id: string) => Promise<void>;
+  onRetry: () => void;}
 
-export const NotificationList: React.FC<NotificationListProps> = ({
-  loading,
-  error,
-  notifications,
-  onMarkAsRead,
-  onDismiss,
-  onRetry
-}) => {
-  return (
+export const NotificationList: React.FC<NotificationListProps> = (_{_loading, _error, _notifications, _onMarkAsRead, _onDismiss, _onRetry}) => {_return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
       {error ? (
         <div className="p-8 text-center text-amber-500">
@@ -32,7 +17,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             variant="outline" 
             size="sm" 
             className="mt-2"
-            onClick={onRetry}
+            onClick={_onRetry}
           >
             Try Again
           </Button>
@@ -47,13 +32,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         <div className="p-8 text-center text-zion-slate-light">
           <p>No notifications yet</p>
         </div>
-      ) : (
-        notifications.map((notification) => (
+      ) : (_notifications.map((notification) => (
           <NotificationItem
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            onDismiss={onDismiss}
+            key={_notification.id}
+            notification={_notification}
+            onMarkAsRead={_onMarkAsRead}
+            onDismiss={_onDismiss}
           />
         ))
       )}

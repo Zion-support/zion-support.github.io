@@ -1,12 +1,9 @@
-import { render, screen } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
-import { vi } from 'vitest';
 import * as useWalletHook from '@/hooks/useWallet';
 
-describe('WalletPage', () => {
-  it('renders balance heading', () => {
-    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
-      wallet: { user_id: '1', balance: 100, updated_at: '' },
+describe(_'WalletPage', _() => {_it(_'renders balance heading', _() => {
+    vi.spyOn(useWalletHook, _'useWallet').mockReturnValue({
+      wallet: { user_id: '1', _balance: 100, _updated_at: ''},
       transactions: [],
       loading: false,
       fetchWallet: vi.fn(),
@@ -16,7 +13,7 @@ describe('WalletPage', () => {
 
     render(<WalletPage />);
     expect(
-      screen.getByRole('heading', { name: /balance/i })
+      screen.getByRole('heading', {_name: /balance/i})
     ).toBeInTheDocument();
   });
 });

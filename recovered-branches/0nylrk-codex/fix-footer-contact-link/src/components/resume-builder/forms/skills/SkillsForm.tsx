@@ -1,53 +1,33 @@
 
-import { useState } from 'react';
-import { Skill } from '@/types/resume';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { useResume } from '@/hooks/useResume';
-import { SkillsFormProps } from './types';
-import { SkillsList } from './SkillsList';
-import { AddSkillForm } from './AddSkillForm';
-import { BulkAddSkills } from './BulkAddSkills';
 
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-  const { addSkill, deleteSkill, fetchResume } = useResume();
+export function SkillsForm(_{_resumeId, _skills, _onComplete, _onBack}: SkillsFormProps) {_const { addSkill, _deleteSkill, _fetchResume} = useResume();
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
   
-  const handleAddSkill = async (data: Skill) => {
-    try {
+  const _handleAddSkill = async (_data: Skill) => {_try {
       setError(null);
-      const success = await addSkill(resumeId, data);
+      const _success = await addSkill(resumeId, _data);
       if (success) {
         // Refresh the skills list
-        await refreshSkills();
-      }
+        await refreshSkills();}
       return success;
-    } catch (err: any) {
-      setError(err.message || 'An error occurred');
-      return false;
-    }
+    } catch (err: unknown) {_setError(err.message || 'An error occurred');
+      return false;}
   };
 
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
-    if (confirm('Are you sure you want to delete this skill?')) {
-      const success = await deleteSkill(id);
+  const _handleDeleteSkill = async (_id: string, _category: string = 'Other') => {_if (confirm('Are you sure you want to delete this skill?')) {
+      const _success = await deleteSkill(id);
       if (success) {
         // Update local state
-        setLocalSkills(localSkills.filter(skill => skill.id !== id));
-      }
+        setLocalSkills(localSkills.filter(skill => skill.id !== id));}
     }
   };
   
-  const refreshSkills = async () => {
-    try {
-      const resumeData = await fetchResume(resumeId);
+  const _refreshSkills = async () => {_try {
+      const _resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {
-        setLocalSkills(resumeData.skills);
-      }
-    } catch (err: any) {
-      setError(err.message || 'Failed to refresh skills');
-    }
+        setLocalSkills(resumeData.skills);}
+    } catch (err: unknown) {_setError(err.message || 'Failed to refresh skills');}
   };
 
   return (
@@ -59,25 +39,25 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         </p>
       </div>
 
-      {/* Display skills by category */}
-      <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />
+      {_/* Display skills by category */}
+      <SkillsList skills={_localSkills} onDeleteSkill={_handleDeleteSkill} />
 
       <div className="space-y-6">
         <div className="bg-muted/40 p-6 rounded-lg">
           <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>
-          <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />
+          <AddSkillForm resumeId={_resumeId} onAddSkill={_handleAddSkill} />
         </div>
 
-        <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />
+        <BulkAddSkills resumeId={_resumeId} onSuccess={_refreshSkills} />
       </div>
 
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      {_error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
       <div className="flex justify-between">
-        <Button variant="outline" onClick={onBack}>
+        <Button variant="outline" onClick={_onBack}>
           Back
         </Button>
-        <Button onClick={onComplete} disabled={localSkills.length === 0}>
+        <Button onClick={_onComplete} disabled={_localSkills.length === 0}>
           Next
         </Button>
       </div>

@@ -1,28 +1,10 @@
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
-import { useAuth } from "@/hooks/useAuth";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { MyApplications } from "@/components/jobs/MyApplications";
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 
-function TalentDashboardContent() {
-  const { user } = useAuth();
+function TalentDashboardContent() {_const { user} = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
+  const _onboardingStatus = useOnboardingStatus();
+  const _showAdvanced =
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
@@ -55,7 +37,7 @@ function TalentDashboardContent() {
           </div>
         </div>
 
-        {/* Project Offer Banner - Show pending offers */}
+        {_/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -65,17 +47,17 @@ function TalentDashboardContent() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
+                      {_user?.avatarUrl ? (
+                        <img src={user.avatarUrl} alt={_user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
+                          {_user?.displayName?.charAt(0) || "U"}
                         </div>
                       )}
                     </Avatar>
                     <div>
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+                      <CardTitle>{_user?.displayName || "User"}</CardTitle>
+                      <CardDescription>{_user?.headline || "AI Professional"}</CardDescription>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -107,15 +89,15 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
             
-            {/* New Onboarding Progress Tracker */}
+            {_/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
-            {showAdvanced && (
+            {_showAdvanced && (
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
             )}
             
-            {/* Upcoming Interviews Card */}
+            {_/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
@@ -148,7 +130,7 @@ function TalentDashboardContent() {
           </div>
           
           <div className="lg:col-span-2">
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
+            <Tabs defaultValue="job-matches" onValueChange={_setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
@@ -193,10 +175,8 @@ function TalentDashboardContent() {
   );
 }
 
-export default function TalentDashboard() {
-  return (
+export default function TalentDashboard() {_return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  );
-}
+  );}

@@ -1,127 +1,66 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../../components/SEO';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
-const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug,
-  title: item.name,
-  description: item.description,
-  provider: 'Zion Provider',
-  priceRangeUSD: item.priceRangeUSD,
-  categories: [item.category],
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
+const _mapLocalToServiceItem = (item: unknown): ServiceItem => ({_slug: item.slug, _title: item.name, _description: item.description, _provider: 'Zion Provider', _priceRangeUSD: item.priceRangeUSD, _categories: [item.category], _rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
 
-const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]);
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] });
+const ServicesPage: NextPage = () => {_const [services, _setServices] = React.useState<ServiceItem[]>([]);
+  const [filtered, _setFiltered] = React.useState<ServiceItem[]>([]);
+  const [filters, _setFilters] = React.useState<Filters>({ categories: []});
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 
-export default function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[])
+export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
-      extraServices as any[],
-      additionalEnhancedServices as any[],
-      newlyAddedServices as any[],
-      curatedMarketServices as any[],
-      realMarketServices as any[],
-      new2025Services as any[],
-      marketValidatedServices as any[],
-      moreRealServices2025 as any[],
-      realOperationalServices as any[],
-      verified2025Additions as any[],
-      realServicesQ12025 as any[],
-      newVerifiedServicesQ22025 as any[]
+      extraServices as any[], _additionalEnhancedServices as any[], _newlyAddedServices as any[], _curatedMarketServices as any[], _realMarketServices as any[], _new2025Services as any[], _marketValidatedServices as any[], _moreRealServices2025 as any[], _realOperationalServices as any[], _verified2025Additions as any[], _realServicesQ12025 as any[], _newVerifiedServicesQ22025 as any[]
     );
-  const byCategory: Record<string, unknown[]> = {};
+  const byCategory: Record<string, _unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
-  for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
+  const categoryAliases: Record<string, string> = {_'AI & Data': 'AI & Data', _'AI & Machine Learning': 'AI & Data', _'GenAI': 'AI & Data', _'Cloud & FinOps': 'Cloud & FinOps', _'Cloud & Data': 'Cloud & FinOps', _'Platform Engineering': 'Cloud & FinOps', _'Observability': 'Observability', _'Observability & Telemetry': 'Observability', _'Quality & Monitoring': 'Quality & Monitoring', _'Security & Reliability': 'Quality & Monitoring', _'Security & Compliance': 'Quality & Monitoring', _'Developer Tools': 'Developer Tools', _'Growth & Marketing': 'Developer Tools'};
+  for (const s of all) {_const _service = s as { category?: string};
+    const _rawCat = (service.category || '').trim();
+    const _mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
     byCategory[mapped].push(s);
   }
 
-  React.useEffect(() => {
-    const next = services.filter((s) => {
+  React.useEffect__(() => {_const _next = services.filter(_(s) => {
       // Category
-      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
+      if (_filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
       // Price
-      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
-      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
+      const _min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
+      const _max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
       if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false;
       if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
       // Rating
       if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
       // Delivery time (not available in data; simulate pass-through)
-      return true;
-    });
+      return true;});
     setFiltered(next);
   }, [filters, services]);
 
-  const availableCategories = React.useMemo(() => {
-    const set = new Set<string>();
-    services.forEach((s) => s.categories.forEach((c) => set.add(c)));
-    return Array.from(set);
-  }, [services]);
+  const _availableCategories = React.useMemo__(() => {_const _set = new Set<string>();
+    services.forEach(_(s) => s.categories.forEach(_(c) => set.add(c)));
+    return Array.from(set);}, [services]);
 
-  const handleRequestQuote = (service: ServiceItem) => {
-    setSelected(service);
-    setModalOpen(true);
-  };
+  const _handleRequestQuote = (_service: ServiceItem) => {_setSelected(service);
+    setModalOpen(true);};
 
-  const handleSubmit = async (values: QuoteFormValues) => {
-    const res = await fetch('/api/quote-request', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        service: values.serviceTitle,
-        description: values.projectDescription,
-        timeline: { start: values.timelineStart, end: values.timelineEnd },
+  const _handleSubmit = async (_values: QuoteFormValues) => {_const _res = await fetch('/api/quote-request', _{
+      method: 'POST', _headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify({_service: values.serviceTitle, _description: values.projectDescription, _timeline: { start: values.timelineStart, _end: values.timelineEnd},
         budgetRange: values.budgetRange,
         email: values.email})});
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
+    if (!res.ok) {_const _err = await res.json().catch__(() => ({}));
       throw new Error(err?.message || 'Failed to submit');
     }
   };
 
-  return (
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+  return (_<UltraFuturisticBackground variant="quantum" intensity={_1.5}>
       <Head>
         <title>Zion AI Marketplace - Services</title>
         <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
@@ -129,15 +68,15 @@ export default function ServicesIndexPage() {
       <div className="relative">
         <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
         <div className="flex flex-col sm:flex-row gap-6">
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
+          <MarketplaceFilters availableCategories={_availableCategories} value={_filters} onChange={_setFilters} />
           <div className="flex-1">
             <div className="mb-4 flex items-center justify-between">
               <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
+              <div className="text-sm text-white/70">{_filtered.length} results</div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+              {_filtered.map((service) => (
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={_service} onRequestQuote={_handleRequestQuote} />
               ))}
             </div>
           </div>
@@ -145,10 +84,10 @@ export default function ServicesIndexPage() {
       </div>
 
       <QuoteRequestModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
+        open={_modalOpen}
+        onClose={_() => setModalOpen(false)}
+        service={_selected}
+        onSubmit={_handleSubmit}
       />
     </div>
   );

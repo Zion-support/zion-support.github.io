@@ -1,67 +1,54 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 
 // Skip link component for keyboard navigation
-export function SkipLink({ targetId, children }: { targetId: string; children: React.ReactNode }) {
-  return (
+export function SkipLink(_{_targetId, _children}: {_targetId: string; children: React.ReactNode}) {_return (
     <a
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50"
     >
-      {children}
+      {_children}
     </a>
   );
 }
 
 // Live region for screen reader announcements
-export function LiveRegion({ 
-  message, 
-  role = "status", 
-  "aria-live": ariaLive = "polite" 
-}: { 
-  message: string; 
+export function LiveRegion(_{_message, _role = "status", _"aria-live": ariaLive = "polite"}: {_message: string; 
   role?: "status" | "alert" | "log"; 
-  "aria-live"?: "polite" | "assertive" | "off";
-}) {
-  return (
+  "aria-live"?: "polite" | "assertive" | "off";}) {_return (
     <div
       role={role}
-      aria-live={ariaLive}
+      aria-live={_ariaLive}
       className="sr-only"
       aria-atomic="true"
     >
-      {message}
+      {_message}
     </div>
   );
 }
 
 // Focus trap for modals and dialogs
-export function useFocusTrap(enabled: boolean = true) {
-  const containerRef = useRef<HTMLDivElement>(null);
+export function useFocusTrap(_enabled: boolean = true) {_const _containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect__(() => {
     if (!enabled || !containerRef.current) return;
 
-    const container = containerRef.current;
-    const focusableElements = container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    const _container = containerRef.current;
+    const _focusableElements = container.querySelectorAll(
+      'button, _[href], _input, _select, _textarea, _[tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const _firstElement = focusableElements[0] as HTMLElement;
+    const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const _handleKeyDown = (_e: KeyboardEvent) => {
       if (e.key === "Tab") {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();
-            lastElement.focus();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
+            lastElement.focus();}
+        } else {_if (document.activeElement === lastElement) {
             e.preventDefault();
-            firstElement.focus();
-          }
+            firstElement.focus();}
         }
       }
     };
@@ -74,10 +61,9 @@ export function useFocusTrap(enabled: boolean = true) {
 }
 
 // Keyboard navigation hook
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+export function useKeyboardNavigation(_items: unknown[], _onSelect: (item: unknown) => void) {_const [selectedIndex, _setSelectedIndex] = useState(-1);
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const _handleKeyDown = (_e: KeyboardEvent) => {
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
@@ -91,8 +77,7 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
       case " ":
         e.preventDefault();
         if (selectedIndex >= 0) {
-          onSelect(items[selectedIndex]);
-        }
+          onSelect(items[selectedIndex]);}
         break;
       case "Escape":
         setSelectedIndex(-1);
@@ -100,73 +85,56 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]);
+  useEffect__(() => {_document.addEventListener("keydown", _handleKeyDown);
+    return () => document.removeEventListener("keydown", _handleKeyDown);}, [items, selectedIndex, onSelect]);
 
-  return { selectedIndex, setSelectedIndex };
+  return {_selectedIndex, _setSelectedIndex};
 }
 
 // Announcement component for screen readers
-export function Announcement({ 
-  message, 
-  priority = "polite" 
-}: { 
-  message: string; 
-  priority?: "polite" | "assertive";
-}) {
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+export function Announcement(_{_message, _priority = "polite"}: {_message: string; 
+  priority?: "polite" | "assertive";}) {_const [announcements, _setAnnouncements] = useState<string[]>([]);
 
-  useEffect(() => {
+  useEffect__(() => {
     if (message) {
-      setAnnouncements(prev => [...prev, message]);
+      setAnnouncements(prev => [...prev, _message]);
       
       // Clear announcement after a delay
-      const timer = setTimeout(() => {
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000);
+      const _timer = setTimeout__(() => {
+        setAnnouncements(prev => prev.slice(1));}, 1000);
 
       return () => clearTimeout(timer);
     }
   }, [message]);
 
-  return (
-    <div aria-live={priority} aria-atomic="true" className="sr-only">
-      {announcements.map((announcement, index) => (
-        <div key={index}>{announcement}</div>
+  return (_<div aria-live={_priority} aria-atomic="true" className="sr-only">
+      {_announcements.map((announcement, _index) => (
+        <div key={index}>{_announcement}</div>
       ))}
     </div>
   );
 }
 
 // Progress indicator component
-export function ProgressIndicator({ 
-  value, 
-  max, 
-  label 
-}: { 
-  value: number; 
+export function ProgressIndicator(_{_value, _max, _label}: {_value: number; 
   max: number; 
-  label: string;
-}) {
-  const percentage = Math.round((value / max) * 100);
+  label: string;}) {_const _percentage = Math.round((value / max) * 100);
   
   return (
     <div className="space-y-2">
       <div className="flex justify-between text-sm">
         <span>{label}</span>
-        <span>{percentage}%</span>
+        <span>{_percentage}%</span>
       </div>
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-[var(--accent)] h-2 rounded-full transition-all duration-300"
-          style={{ width: `${percentage}%` }}
+          style={_{ width: `${percentage}%` }}
           role="progressbar"
-          aria-valuenow={value}
-          aria-valuemin={0}
-          aria-valuemax={max}
-          aria-label={label}
+          aria-valuenow={_value}
+          aria-valuemin={_0}
+          aria-valuemax={_max}
+          aria-label={_label}
         />
       </div>
     </div>
@@ -174,42 +142,34 @@ export function ProgressIndicator({
 }
 
 // Collapsible section component
-export function CollapsibleSection({ 
-  title, 
-  children, 
-  defaultExpanded = false 
-}: { 
-  title: string; 
+export function CollapsibleSection(_{_title, _children, _defaultExpanded = false}: {_title: string; 
   children: React.ReactNode; 
-  defaultExpanded?: boolean;
-}) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const contentRef = useRef<HTMLDivElement>(null);
+  defaultExpanded?: boolean;}) {_const [isExpanded, _setIsExpanded] = useState(defaultExpanded);
+  const _contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="border border-[var(--border)] rounded-lg">
       <button
         className="w-full px-4 py-3 text-left font-medium hover:bg-[var(--bg-secondary)] transition-colors flex items-center justify-between"
         onClick={() => setIsExpanded(!isExpanded)}
-        aria-expanded={isExpanded}
-        aria-controls={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        aria-expanded={_isExpanded}
+        aria-controls={_`collapsible-${title.toLowerCase().replace(/\s+/g, _'-')}`}
       >
-        {title}
+        {_title}
         <span className="text-[var(--accent)]">
-          {isExpanded ? "−" : "+"}
+          {_isExpanded ? "−" : "+"}
         </span>
       </button>
       
       <div
-        id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
-        ref={contentRef}
-        className={`overflow-hidden transition-all duration-300 ${
-          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-        aria-hidden={!isExpanded}
+        id={_`collapsible-${title.toLowerCase().replace(/\s+/g, _'-')}`}
+        ref={_contentRef}
+        className={_`overflow-hidden transition-all duration-300 ${
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+        aria-hidden={_!isExpanded}
       >
         <div className="px-4 pb-3">
-          {children}
+          {_children}
         </div>
       </div>
     </div>
@@ -217,45 +177,32 @@ export function CollapsibleSection({
 }
 
 // Tooltip component with proper accessibility
-export function Tooltip({ 
-  children, 
-  content, 
-  position = "top" 
-}: { 
-  children: React.ReactNode; 
+export function Tooltip(_{_children, _content, _position = "top"}: {_children: React.ReactNode; 
   content: string; 
-  position?: "top" | "bottom" | "left" | "right";
-}) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`);
+  position?: "top" | "bottom" | "left" | "right";}) {_const [isVisible, _setIsVisible] = useState(false);
+  const [tooltipId] = useState__(() => `tooltip-${Math.random().toString(36).substr(2, _9)}`);
 
-  const positionClasses = {
-    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",
-    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 transform -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 transform -translate-y-1/2 ml-2"
-  };
+  const _positionClasses = {_top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2", _bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2", _left: "right-full top-1/2 transform -translate-y-1/2 mr-2", _right: "left-full top-1/2 transform -translate-y-1/2 ml-2"};
 
-  return (
-    <div className="relative inline-block">
+  return (_<div className="relative inline-block">
       <div
-        onMouseEnter={() => setIsVisible(true)}
-        onMouseLeave={() => setIsVisible(false)}
-        onFocus={() => setIsVisible(true)}
-        onBlur={() => setIsVisible(false)}
-        aria-describedby={tooltipId}
-        tabIndex={0}
+        onMouseEnter={_() => setIsVisible(true)}
+        onMouseLeave={_() => setIsVisible(false)}
+        onFocus={_() => setIsVisible(true)}
+        onBlur={_() => setIsVisible(false)}
+        aria-describedby={_tooltipId}
+        tabIndex={_0}
       >
-        {children}
+        {_children}
       </div>
       
-      {isVisible && (
+      {_isVisible && (
         <div
           id={tooltipId}
-          className={`absolute z-50 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positionClasses[position]}`}
+          className={_`absolute z-50 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positionClasses[position]}`}
           role="tooltip"
         >
-          {content}
+          {_content}
           <div className="absolute w-2 h-2 bg-gray-900 transform rotate-45" />
         </div>
       )}

@@ -1,46 +1,37 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 
-export default function AdminLoginPage() {
-  const router = useRouter();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+export default function AdminLoginPage() {_const _router = useRouter();
+  const [username, _setUsername] = useState('');
+  const [password, _setPassword] = useState('');
+  const [error, _setError] = useState<string | null>(null);
+  const [loading, _setLoading] = useState(false);
 
-  async function onSubmit(e: React.FormEvent) {
+  async function onSubmit(_e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })});
+      const _res = await fetch('/api/admin/login', _{
+        method: 'POST', _headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({_username, _password})});
       if (!res.ok) throw new Error('Invalid credentials');
       router.push('/admin');
-    } catch (err: any) {
-      setError(err.message || 'Login failed');
-    } finally {
-      setLoading(false);
-    }
+    } catch (err: unknown) {_setError(err.message || 'Login failed');} finally {_setLoading(false);}
   }
 
-  return (
-    <div className="max-w-sm mx-auto bg-white p-6 rounded shadow">
+  return (_<div className="max-w-sm mx-auto bg-white p-6 rounded shadow">
       <h1 className="text-xl font-semibold mb-4">Admin Login</h1>
-      <form onSubmit={onSubmit} className="space-y-4">
+      <form onSubmit={_onSubmit} className="space-y-4">
         <div>
           <label className="block text-sm mb-1">Username</label>
-          <input className="w-full border rounded px-3 py-2" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input className="w-full border rounded px-3 py-2" value={_username} onChange={_(e) => setUsername(e.target.value)} />
         </div>
         <div>
           <label className="block text-sm mb-1">Password</label>
-          <input type="password" className="w-full border rounded px-3 py-2" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" className="w-full border rounded px-3 py-2" value={_password} onChange={_(_e) => setPassword(e.target.value)} />
         </div>
-        {error && <p className="text-red-600 text-sm">{error}</p>}
-        <button type="submit" disabled={loading} className="w-full bg-indigo-600 text-white rounded px-3 py-2 hover:bg-indigo-700 disabled:opacity-50">
-          {loading ? 'Signing in…' : 'Sign in'}
+        {_error && <p className="text-red-600 text-sm">{error}</p>}
+        <button type="submit" disabled={_loading} className="w-full bg-indigo-600 text-white rounded px-3 py-2 hover:bg-indigo-700 disabled:opacity-50">
+          {_loading ? 'Signing in…' : 'Sign in'}
         </button>
       </form>
     </div>

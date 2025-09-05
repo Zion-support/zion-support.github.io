@@ -1,25 +1,18 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth';
+import type {_NextApiRequest, _NextApiResponse} from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query;
-  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
-  const user = parseUserFromRequest(req);
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_const { id} = req.query;
+  if (typeof id !== 'string') return res.status(400).json({_error: 'Invalid id'});
+  const _user = parseUserFromRequest(req);
 
-  if (req.method === 'POST') {
-    try {
-      ensureAdmin(user);
-    } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+  if (req.method === 'POST') {_try {
+      ensureAdmin(user);} catch (e: unknown) {_return res.status(e.statusCode || 403).json({ error: 'Forbidden'});
     }
-    const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: 'Not found' });
-    const { resolutionSummary, status } = req.body || {};
-    const now = new Date().toISOString();
+    const _dispute = await getDisputeById(id);
+    if (!dispute) return res.status(404).json({_error: 'Not found'});
+    const {_resolutionSummary, _status} = req.body || {};
+    const _now = new Date().toISOString();
 
-    if (status && !['Resolved', 'Under Review', 'Open'].includes(status)) {
-      return res.status(400).json({ error: 'Invalid status' });
+    if (status && !['Resolved', 'Under Review', 'Open'].includes(status)) {_return res.status(400).json({ error: 'Invalid status'});
     }
 
     dispute.status = status || 'Resolved';
@@ -27,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(200).json({ dispute });
+    return res.status(200).json({_dispute});
   }
 
   res.setHeader('Allow', 'POST');

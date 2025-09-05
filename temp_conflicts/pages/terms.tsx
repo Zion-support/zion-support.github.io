@@ -1,82 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  FileText, CheckCircle, AlertTriangle, Shield, Users, 
-  Globe, Lock, Database, Info, AlertCircle
-} from 'lucide-react';
+import {_FileText, _CheckCircle, _AlertTriangle, _Shield, _Users, _Globe, _Lock, _Database, _Info, _AlertCircle} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function TermsPage() {
-  const lastUpdated = 'January 15, 2025';
+export default function TermsPage() {_const _lastUpdated = 'January 15, _2025';
 
-  const sections = [
+  const _sections = [
     {
-      title: 'Acceptance of Terms',
-      icon: <CheckCircle className="w-6 h-6" />,
-      content: [
-        'By accessing or using our services, you agree to be bound by these terms',
-        'If you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with notice',
-        'Continued use after changes constitutes acceptance of new terms'
-      ]
-    },
-    {
-      title: 'Service Description',
-      icon: <Info className="w-6 h-6" />,
-      content: [
-        'AI and machine learning platforms and services',
-        'Quantum computing solutions and infrastructure',
-        'Cybersecurity and data protection services',
-        'Consulting and professional services',
-        'Technical support and maintenance'
-      ]
-    },
-    {
-      title: 'User Responsibilities',
-      icon: <Users className="w-6 h-6" />,
-      content: [
-        'Provide accurate and complete information',
-        'Maintain security of your account credentials',
-        'Comply with applicable laws and regulations',
-        'Use services for lawful purposes only',
-        'Respect intellectual property rights'
-      ]
-    },
-    {
-      title: 'Intellectual Property',
-      icon: <Shield className="w-6 h-6" />,
-      content: [
-        'Our services and content are protected by copyright',
-        'You retain rights to your data and content',
-        'You grant us license to use your content for service provision',
-        'No transfer of intellectual property rights',
-        'Respect for third-party intellectual property'
-      ]
-    },
-    {
-      title: 'Privacy and Data',
-      icon: <Lock className="w-6 h-6" />,
-      content: [
-        'Collection and use of data as described in Privacy Policy',
-        'Implementation of appropriate security measures',
-        'Compliance with data protection regulations',
-        'Data retention and deletion policies',
-        'Your rights regarding your personal data'
-      ]
-    },
-    {
-      title: 'Limitation of Liability',
-      icon: <AlertTriangle className="w-6 h-6" />,
-      content: [
-        'Services provided "as is" without warranties',
-        'Limitation of liability to extent permitted by law',
-        'No liability for indirect or consequential damages',
-        'Force majeure events and circumstances',
-        'Your responsibility for backup and data protection'
-      ]
-    }
+      title: 'Acceptance of Terms', _icon: <CheckCircle className="w-6 h-6" />, _content: [
+        'By accessing or using our services, _you agree to be bound by these terms', _'If you do not agree to these terms, _do not use our services', _'We may modify these terms at any time with notice', _'Continued use after changes constitutes acceptance of new terms'
+      ]},
+    {_title: 'Service Description', _icon: <Info className="w-6 h-6" />, _content: [
+        'AI and machine learning platforms and services', _'Quantum computing solutions and infrastructure', _'Cybersecurity and data protection services', _'Consulting and professional services', _'Technical support and maintenance'
+      ]},
+    {_title: 'User Responsibilities', _icon: <Users className="w-6 h-6" />, _content: [
+        'Provide accurate and complete information', _'Maintain security of your account credentials', _'Comply with applicable laws and regulations', _'Use services for lawful purposes only', _'Respect intellectual property rights'
+      ]},
+    {_title: 'Intellectual Property', _icon: <Shield className="w-6 h-6" />, _content: [
+        'Our services and content are protected by copyright', _'You retain rights to your data and content', _'You grant us license to use your content for service provision', _'No transfer of intellectual property rights', _'Respect for third-party intellectual property'
+      ]},
+    {_title: 'Privacy and Data', _icon: <Lock className="w-6 h-6" />, _content: [
+        'Collection and use of data as described in Privacy Policy', _'Implementation of appropriate security measures', _'Compliance with data protection regulations', _'Data retention and deletion policies', _'Your rights regarding your personal data'
+      ]},
+    {_title: 'Limitation of Liability', _icon: <AlertTriangle className="w-6 h-6" />, _content: [
+        'Services provided "as is" without warranties', _'Limitation of liability to extent permitted by law', _'No liability for indirect or consequential damages', _'Force majeure events and circumstances', _'Your responsibility for backup and data protection'
+      ]}
   ];
 
   return (
@@ -92,13 +41,13 @@ export default function TermsPage() {
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <FileText className="w-10 h-10 text-white" />
@@ -110,20 +59,20 @@ export default function TermsPage() {
               Please read these terms carefully before using our services.
             </p>
             <div className="mt-8 text-gray-300">
-              <p>Last updated: {lastUpdated}</p>
+              <p>Last updated: {_lastUpdated}</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Introduction */}
+      {_/* Introduction */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
@@ -139,30 +88,29 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Terms Sections */}
+      {_/* Terms Sections */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {sections.map((section, index) => (
-              <motion.div
+            {_sections.map(_(section, _index) => (_<motion.div
                 key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    {section.icon}
+                    {_section.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{_section.title}</h3>
                 </div>
                 <ul className="space-y-2">
-                  {section.content.map((item, itemIndex) => (
+                  {_section.content.map((item, _itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300 text-sm">{item}</span>
+                      <span className="text-gray-300 text-sm">{_item}</span>
                     </li>
                   ))}
                 </ul>
@@ -172,14 +120,14 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Additional Terms */}
+      {_/* Additional Terms */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="space-y-8"
           >
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
@@ -239,14 +187,14 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Governing Law */}
+      {_/* Governing Law */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Governing Law and Disputes</h2>
@@ -268,14 +216,14 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {_/* Contact Information */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">

@@ -1,44 +1,25 @@
 
-import { SEO } from "@/components/SEO";
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+function ReviewsModerationContent() {_const [activeTab, _setActiveTab] = useState("pending");
+  const [reviews, _setReviews] = useState([]);
+  const [isLoading, _setIsLoading] = useState(true);
   
-  const fetchReviews = async () => {
+  const _fetchReviews = async () => {
     setIsLoading(true);
     try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real application, _you would fetch reviews from an API
+      // For now, _let's simulate a delay and return empty data
+      await new Promise(resolve => setTimeout(resolve, _1000));
       setReviews([]);
-      setIsLoading(false);
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
-      toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
+      setIsLoading(false);} catch (error) {_logErrorToProduction(error instanceof Error ? error.message : String(error), _error instanceof Error ? error : undefined, _{ message: 'Error fetching reviews'});
+      toast({_title: "Error", _description: "Failed to load reviews. Please try again later.", _variant: "destructive"});
       setIsLoading(false);
     }
   };
 
-  useEffect(() => {
-    fetchReviews();
-  }, [activeTab]);
+  useEffect__(() => {_fetchReviews();}, [activeTab]);
 
-  const handleRefresh = () => {
-    fetchReviews();
-  };
+  const _handleRefresh = () => {_fetchReviews();};
   
   return (
     <>
@@ -65,7 +46,7 @@ function ReviewsModerationContent() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
+            <Tabs defaultValue="pending" value={_activeTab} onValueChange={_setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
@@ -73,9 +54,9 @@ function ReviewsModerationContent() {
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
+                  reviews={_reviews}
+                  isLoading={_isLoading}
+                  onRefresh={_handleRefresh}
                 />
               </TabsContent>
               
@@ -96,10 +77,8 @@ function ReviewsModerationContent() {
   );
 }
 
-export default function ReviewsModeration() {
-  return (
+export default function ReviewsModeration() {_return (
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  );
-}
+  );}

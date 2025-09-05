@@ -1,18 +1,10 @@
-import { useRouter } from 'next/router'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const errorMessages: Record<string, string> = {
-  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
-  default: 'There was an issue with your authentication request.'
-}
+const errorMessages: Record<string, string> = {_OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.', _default: 'There was an issue with your authentication request.'}
 
-export default function AuthErrorPage() {
-  const { query } = useRouter()
-  const message = errorMessages[query.error as string] || errorMessages.default
+export default function AuthErrorPage() {_const { query} = useRouter()
+  const _message = errorMessages[query.error as string] || errorMessages.default
 
   return (
     <>
@@ -27,7 +19,7 @@ export default function AuthErrorPage() {
               <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
             </div>
             <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
-            <p className="text-sm text-muted-foreground">{message}</p>
+            <p className="text-sm text-muted-foreground">{_message}</p>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="text-center space-y-2">

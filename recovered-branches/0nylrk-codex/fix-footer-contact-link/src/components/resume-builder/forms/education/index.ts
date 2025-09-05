@@ -1,3 +1,3 @@
 
-export { EducationForm } from './EducationForm';
+export {_EducationForm} from './EducationForm';
 export * from './types';

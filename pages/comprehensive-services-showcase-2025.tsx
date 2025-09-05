@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react';
+import {_CheckCircle, _ArrowRight, _Star, _TrendingUp, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Shield, _Award, _Zap, _Cloud, _Target, _Search, _Filter, _Grid, _List, _DollarSign, _Users, _Clock, _Eye, _Heart} from 'lucide-react';
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-const categories = [
+const _categories = [
   'All Services',
   'AI & Machine Learning',
   'Customer Success',
@@ -31,7 +20,7 @@ const categories = [
   'Business Intelligence'
 ];
 
-const pricingRanges = [
+const _pricingRanges = [
   'All Prices',
   'Under $300',
   '$300 - $500',
@@ -39,20 +28,19 @@ const pricingRanges = [
   '$800+'
 ];
 
-export default function ComprehensiveServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+export default function ComprehensiveServicesShowcase2025() {_const [selectedCategory, _setSelectedCategory] = useState('All Services');
+  const [selectedPriceRange, _setSelectedPriceRange] = useState('All Prices');
+  const [searchQuery, _setSearchQuery] = useState('');
+  const [viewMode, _setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, _setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
 
   // Filter services based on selections
-  const filteredServices = comprehensiveRealServices2025.filter(service => {
-    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
+  const _filteredServices = comprehensiveRealServices2025.filter(service => {
+    const _categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
     
-    let priceMatch = true;
+    let _priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {
-      const price = parseInt(service.price.replace('$', ''));
+      const _price = parseInt(service.price.replace('$', _''));
       switch (selectedPriceRange) {
         case 'Under $300':
           priceMatch = price < 300;
@@ -65,11 +53,10 @@ export default function ComprehensiveServicesShowcase2025() {
           break;
         case '$800+':
           priceMatch = price > 800;
-          break;
-      }
+          break;}
     }
     
-    const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const _searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        service.category.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -77,42 +64,34 @@ export default function ComprehensiveServicesShowcase2025() {
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$', _'')) - parseInt(b.price.replace('$', _''));
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       default:
-        return 0;
-    }
+        return 0;}
   });
 
-  const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
+  const _getPriceRange = (_price: string) => {_const _numPrice = parseInt(price.replace('$', _''));
     if (numPrice < 300) return 'Under $300';
     if (numPrice <= 500) return '$300 - $500';
     if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  };
+    return '$800+';};
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => 
+  const _getCategoryIcon = (_category: string) => {_const _categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
-    return categoryData ? categoryData.icon : Globe;
-  };
+    return categoryData ? categoryData.icon : Globe;};
 
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat => 
+  const _getCategoryColor = (_category: string) => {_const _categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
-  };
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';};
 
   return (
     <>
@@ -127,9 +106,9 @@ export default function ComprehensiveServicesShowcase2025() {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
       </Head>
 
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-          {/* Animated Background */}
+          {_/* Animated Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.05),transparent_50%)]" />
@@ -140,9 +119,9 @@ export default function ComprehensiveServicesShowcase2025() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h1 className="text-5xl lg:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -157,10 +136,10 @@ export default function ComprehensiveServicesShowcase2025() {
                 <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
               </p>
               
-              {/* Stats */}
+              {_/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{_comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
                 </div>
                 <div className="text-center">
@@ -177,7 +156,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 </div>
               </div>
 
-              {/* Contact CTA */}
+              {_/* Contact CTA */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/contact"
@@ -187,90 +166,86 @@ export default function ComprehensiveServicesShowcase2025() {
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </Link>
                 <a
-                  href={`tel:${contactInfo.mobile}`}
+                  href={_`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5 mr-2 inline" />
-                  {contactInfo.mobile}
+                  {_contactInfo.mobile}
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Filters and Search Section */}
+        {_/* Filters and Search Section */}
         <section className="py-12 bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */}
+              {_/* Search */}
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value={_searchQuery}
+                  onChange={_(_e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
 
-              {/* Category Filter */}
+              {_/* Category Filter */}
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
+                {_categories.map(_(category) => (_<button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    onClick={_() => setSelectedCategory(category)}
+                    className={_`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
-                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                    }`}
+                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                   >
-                    {category}
+                    {_category}
                   </button>
                 ))}
               </div>
 
-              {/* Price Range Filter */}
+              {_/* Price Range Filter */}
               <div className="flex items-center gap-2">
                 <Filter className="w-5 h-5 text-gray-400" />
                 <select
-                  value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  value={_selectedPriceRange}
+                  onChange={_(_e) => setSelectedPriceRange(e.target.value)}
                   className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
-                  {pricingRanges.map((range) => (
-                    <option key={range} value={range}>{range}</option>
+                  {_pricingRanges.map(_(range) => (
+                    <option key={range} value={_range}>{_range}</option>
                   ))}
                 </select>
               </div>
 
-              {/* View Mode Toggle */}
+              {_/* View Mode Toggle */}
               <div className="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all duration-300 ${
-                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
+                  onClick={_() => setViewMode('grid')}
+                  className={_`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all duration-300 ${
-                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
+                  onClick={_() => setViewMode('list')}
+                  className={_`p-2 rounded-md transition-all duration-300 ${
+                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <List className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Sort Options */}
+              {_/* Sort Options */}
               <div className="flex items-center gap-2">
                 <span className="text-gray-400 text-sm">Sort by:</span>
                 <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  value={_sortBy}
+                  onChange={_(_e) => setSortBy(e.target.value as any)}
                   className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="popularity">Popularity</option>
@@ -283,31 +258,30 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </section>
 
-        {/* Services Grid/List */}
+        {_/* Services Grid/List */}
         <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
-            {/* Results Count */}
+            {_/* Results Count */}
             <div className="mb-8">
               <p className="text-gray-400">
-                Showing <span className="text-cyan-400 font-semibold">{sortedServices.length}</span> of{' '}
-                <span className="text-cyan-400 font-semibold">{comprehensiveRealServices2025.length}</span> services
+                Showing <span className="text-cyan-400 font-semibold">{_sortedServices.length}</span> of{_' '}
+                <span className="text-cyan-400 font-semibold">{_comprehensiveRealServices2025.length}</span> services
               </p>
             </div>
 
-            {viewMode === 'grid' ? (
-              /* Grid View */
+            {_viewMode === 'grid' ? (_/* Grid View */
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {sortedServices.map((service, index) => (
+                {sortedServices.map((service, _index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _y: 30}}
+                    animate={_{ opacity: 1, _y: 0}}
+                    transition={_{ duration: 0.5, _delay: index * 0.1}}
                     className="group"
                   >
                     <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full relative overflow-hidden">
-                      {/* Popular Badge */}
-                      {service.popular && (
+                      {_/* Popular Badge */}
+                      {_service.popular && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
                             Popular
@@ -315,62 +289,62 @@ export default function ComprehensiveServicesShowcase2025() {
                         </div>
                       )}
 
-                      {/* Service Icon */}
-                      <div className="text-6xl mb-6">{service.icon}</div>
+                      {_/* Service Icon */}
+                      <div className="text-6xl mb-6">{_service.icon}</div>
                       
-                      {/* Service Info */}
-                      <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
-                      <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+                      {_/* Service Info */}
+                      <h3 className="text-2xl font-bold text-white mb-3">{_service.name}</h3>
+                      <p className="text-gray-300 mb-4 line-clamp-3">{_service.description}</p>
                       
-                      {/* Price */}
+                      {_/* Price */}
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-3xl font-bold text-cyan-400">
-                          {service.price}
-                          <span className="text-lg text-gray-400">{service.period}</span>
+                          {_service.price}
+                          <span className="text-lg text-gray-400">{_service.period}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                          <span className="text-white font-semibold">{service.rating}</span>
-                          <span className="text-gray-400">({service.reviews})</span>
+                          <span className="text-white font-semibold">{_service.rating}</span>
+                          <span className="text-gray-400">({_service.reviews})</span>
                         </div>
                       </div>
 
-                      {/* Key Features */}
+                      {_/* Key Features */}
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {_service.features.slice(0, _3).map(_(feature, _idx) => (
                           <div key={idx} className="flex items-center">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
+                            <span className="text-gray-300 text-sm">{_feature}</span>
                           </div>
                         ))}
                       </div>
 
-                      {/* Category and Setup */}
+                      {_/* Category and Setup */}
                       <div className="flex items-center justify-between mb-6 text-sm">
                         <span className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full">
-                          {service.category}
+                          {_service.category}
                         </span>
                         <span className="text-gray-400">
-                          Setup: {service.setupTime}
+                          Setup: {_service.setupTime}
                         </span>
                       </div>
 
-                      {/* Key Benefits */}
+                      {_/* Key Benefits */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3">Key Benefits:</h4>
                         <div className="space-y-2">
-                          {service.keyBenefits.slice(0, 2).map((benefit, idx) => (
+                          {_service.keyBenefits.slice(0, _2).map(_(benefit, _idx) => (
                             <div key={idx} className="flex items-center">
                               <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                              <span className="text-gray-300 text-sm">{benefit}</span>
+                              <span className="text-gray-300 text-sm">{_benefit}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      {/* CTA Button */}
+                      {_/* CTA Button */}
                       <Link
-                        href={service.link}
+                        href={_service.link}
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
@@ -380,66 +354,65 @@ export default function ComprehensiveServicesShowcase2025() {
                   </motion.div>
                 ))}
               </div>
-            ) : (
-              /* List View */
+            ) : (_/* List View */
               <div className="space-y-6">
-                {sortedServices.map((service, index) => (
+                {_sortedServices.map((service, _index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _x: -30}}
+                    animate={_{ opacity: 1, _x: 0}}
+                    transition={_{ duration: 0.5, _delay: index * 0.1}}
                     className="group"
                   >
                     <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
                       <div className="flex flex-col lg:flex-row gap-6 items-start">
-                        {/* Service Icon and Basic Info */}
+                        {_/* Service Icon and Basic Info */}
                         <div className="flex items-start gap-4">
-                          <div className="text-4xl">{service.icon}</div>
+                          <div className="text-4xl">{_service.icon}</div>
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
-                              <h3 className="text-2xl font-bold text-white">{service.name}</h3>
-                              {service.popular && (
+                              <h3 className="text-2xl font-bold text-white">{_service.name}</h3>
+                              {_service.popular && (
                                 <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
                                   Popular
                                 </span>
                               )}
                             </div>
-                            <p className="text-gray-300 mb-3">{service.description}</p>
+                            <p className="text-gray-300 mb-3">{_service.description}</p>
                             <div className="flex items-center gap-4 text-sm text-gray-400">
-                              <span>Category: {service.category}</span>
-                              <span>Setup: {service.setupTime}</span>
-                              <span>Trial: {service.trialDays} days</span>
+                              <span>Category: {_service.category}</span>
+                              <span>Setup: {_service.setupTime}</span>
+                              <span>Trial: {_service.trialDays} days</span>
                             </div>
                           </div>
                         </div>
 
-                        {/* Price and Rating */}
+                        {_/* Price and Rating */}
                         <div className="text-right">
                           <div className="text-3xl font-bold text-cyan-400 mb-2">
-                            {service.price}
-                            <span className="text-lg text-gray-400">{service.period}</span>
+                            {_service.price}
+                            <span className="text-lg text-gray-400">{_service.period}</span>
                           </div>
                           <div className="flex items-center justify-end gap-1 mb-2">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-white font-semibold">{service.rating}</span>
-                            <span className="text-gray-400">({service.reviews})</span>
+                            <span className="text-white font-semibold">{_service.rating}</span>
+                            <span className="text-gray-400">({_service.reviews})</span>
                           </div>
                           <span className="text-sm text-gray-400">
-                            {getPriceRange(service.price)}
+                            {_getPriceRange(service.price)}
                           </span>
                         </div>
                       </div>
 
-                      {/* Features and Benefits */}
+                      {_/* Features and Benefits */}
                       <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div>
                           <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                           <div className="space-y-2">
-                            {service.features.slice(0, 4).map((feature, idx) => (
+                            {_service.features.slice(0, _4).map(_(feature, _idx) => (
                               <div key={idx} className="flex items-center">
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                                <span className="text-gray-300 text-sm">{feature}</span>
+                                <span className="text-gray-300 text-sm">{_feature}</span>
                               </div>
                             ))}
                           </div>
@@ -447,25 +420,25 @@ export default function ComprehensiveServicesShowcase2025() {
                         <div>
                           <h4 className="text-white font-semibold mb-3">Key Benefits:</h4>
                           <div className="space-y-2">
-                            {service.keyBenefits.slice(0, 4).map((benefit, idx) => (
+                            {_service.keyBenefits.slice(0, _4).map(_(benefit, _idx) => (
                               <div key={idx} className="flex items-center">
                                 <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                                <span className="text-gray-300 text-sm">{benefit}</span>
+                                <span className="text-gray-300 text-sm">{_benefit}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                       </div>
 
-                      {/* CTA and Additional Info */}
+                      {_/* CTA and Additional Info */}
                       <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-4 text-sm text-gray-400">
-                          <span>Market: {service.marketSize}</span>
-                          <span>Growth: {service.growthRate}</span>
-                          <span>ROI: {service.roi}</span>
+                          <span>Market: {_service.marketSize}</span>
+                          <span>Growth: {_service.growthRate}</span>
+                          <span>ROI: {_service.roi}</span>
                         </div>
                         <Link
-                          href={service.link}
+                          href={_service.link}
                           className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                         >
                           Learn More
@@ -478,9 +451,8 @@ export default function ComprehensiveServicesShowcase2025() {
               </div>
             )}
 
-            {/* No Results */}
-            {sortedServices.length === 0 && (
-              <div className="text-center py-20">
+            {_/* No Results */}
+            {_sortedServices.length === 0 && (_<div className="text-center py-20">
                 <div className="text-6xl mb-6">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
                 <p className="text-gray-400 mb-6">
@@ -490,8 +462,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   onClick={() => {
                     setSelectedCategory('All Services');
                     setSelectedPriceRange('All Prices');
-                    setSearchQuery('');
-                  }}
+                    setSearchQuery('');}}
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
                   Clear All Filters
@@ -501,14 +472,14 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {_/* Contact Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+              viewport={_{ once: true}}
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl lg:text-6xl font-bold mb-6">
@@ -525,24 +496,24 @@ export default function ComprehensiveServicesShowcase2025() {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                 <a
-                  href={`tel:${contactInfo.mobile}`}
+                  href={_`tel:${contactInfo.mobile}`}
                   className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  {contactInfo.mobile}
+                  {_contactInfo.mobile}
                 </a>
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={_`mailto:${contactInfo.email}`}
                   className="flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  {contactInfo.email}
+                  {_contactInfo.email}
                 </a>
               </div>
 
               <div className="text-center text-gray-400">
-                <p className="mb-2">{contactInfo.address}</p>
-                <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>
+                <p className="mb-2">{_contactInfo.address}</p>
+                <p>Visit us at: <a href={_contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{_contactInfo.website}</a></p>
               </div>
             </motion.div>
           </div>

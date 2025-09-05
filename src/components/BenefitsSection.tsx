@@ -1,54 +1,34 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
 
-interface BenefitsSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
+interface BenefitsSectionProps {_className?: string;
+  style?: React.CSSProperties;}
 
-const getBenefits = (t: any) => [
-  {
-    title: t('benefits.ai_matchmaking'),
-    description: t('benefits.ai_matchmaking_desc'),
-    icon: <Bot className="w-8 h-8" />},
-  {
-    title: t('benefits.global_availability'),
-    description: t('benefits.global_availability_desc'),
-    icon: <Globe className="w-8 h-8" />},
-  {
-    title: t('benefits.support_24_7'),
-    description: t('benefits.support_24_7_desc'),
-    icon: <Clock className="w-8 h-8" />},
-  {
-    title: t('benefits.cost_reduction'),
-    description: t('benefits.cost_reduction_desc'),
-    icon: <TrendingDown className="w-8 h-8" />}];
+const _getBenefits = (_t: unknown) => [
+  {_title: t('benefits.ai_matchmaking'), _description: t('benefits.ai_matchmaking_desc'), _icon: <Bot className="w-8 h-8" />},
+  {_title: t('benefits.global_availability'), _description: t('benefits.global_availability_desc'), _icon: <Globe className="w-8 h-8" />},
+  {_title: t('benefits.support_24_7'), _description: t('benefits.support_24_7_desc'), _icon: <Clock className="w-8 h-8" />},
+  {_title: t('benefits.cost_reduction'), _description: t('benefits.cost_reduction_desc'), _icon: <TrendingDown className="w-8 h-8" />}];
 
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation();
-  const benefits = getBenefits(t);
+export function BenefitsSection(_{_className, _style}: BenefitsSectionProps) {_const { t} = useTranslation();
+  const _benefits = getBenefits(t);
   
   return (
-    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+    <section className={_cn("py-20 bg-zion-blue-light", _className)} style={_style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
+          <GradientHeading>{_t('home.benefits_title')}</GradientHeading>
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.benefits_subtitle')}
+            {_t('home.benefits_subtitle')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
+          {_benefits.map(_(benefit, _index) => (
             <FeatureCard
               key={index}
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
+              title={_benefit.title}
+              description={_benefit.description}
+              icon={_benefit.icon}
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}

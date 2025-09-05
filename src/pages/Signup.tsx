@@ -1,243 +1,148 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import Link from 'next/link';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
-import { AuthButtons } from '@/components/AuthButtons';
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-import { toast } from '@/hooks/use-toast';
-import { AuthLayout } from '@/layout';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
-const SignupSchema = Yup.object({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
-  password: Yup.string()
-    .min(8, 'Password must be at least 8 characters')
-    .matches(/[A-Z]/, 'Password must include an uppercase letter')
-    .matches(/[a-z]/, 'Password must include a lowercase letter')
-    .matches(/[0-9]/, 'Password must include a number')
-    .required('Password is required'),
-  confirm: Yup.string()
-    .oneOf([Yup.ref('password')], 'Passwords must match')
-    .required('Confirm password is required'),
-  terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
-});
+const _SignupSchema = Yup.object({_name: Yup.string().required('Name is required'), _email: Yup.string().email('Invalid email').required('Email is required'), _password: Yup.string()
+    .min(8, _'Password must be at least 8 characters')
+    .matches(/[A-Z]/, _'Password must include an uppercase letter')
+    .matches(/[a-z]/, _'Password must include a lowercase letter')
+    .matches(/[0-9]/, _'Password must include a number')
+    .required('Password is required'), _confirm: Yup.string()
+    .oneOf([Yup.ref('password')], _'Passwords must match')
+    .required('Confirm password is required'), _terms: Yup.boolean().oneOf([true], _'You must accept the terms and conditions')});
 
-export default function Signup() {
-  const router = useRouter(); // Changed from navigate
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
-  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true);
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
+export default function Signup() {_const _router = useRouter(); // Changed from navigate
+  const [loading, _setLoading] = useState(false);
+  const [errorMessage, _setErrorMessage] = useState('');
+  const [successMessage, _setSuccessMessage] = useState('');
+  const [emailVerificationRequired, _setEmailVerificationRequired] = useState(false);
+  const [authServiceAvailable, _setAuthServiceAvailable] = useState(true);
+  const [healthCheckLoading, _setHealthCheckLoading] = useState(true);
+  const [healthCheckError, _setHealthCheckError] = useState<string | null>(null);
   
   // Check if this is a partner signup
-  const isPartnerSignup = router.query.type === 'partner';
-  const signupSource = router.query.source as string || 'direct';
+  const _isPartnerSignup = router.query.type === 'partner';
+  const _signupSource = router.query.source as string || 'direct';
 
-  const performHealthCheck = async () => {
+  const _performHealthCheck = async () => {
     setHealthCheckLoading(true);
     setHealthCheckError(null);
     try {
-      const res = await axios.get('/api/auth/health');
+      const _res = await axios.get('/api/auth/health');
       setAuthServiceAvailable(res.status === 200);
       if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues');
-      }
-    } catch (err: any) {
-      logErrorToProduction('Auth service health check failed', { data: err });
+        setHealthCheckError('Authentication service is experiencing issues');}
+    } catch (err: unknown) {_logErrorToProduction('Auth service health check failed', _{ data: err});
       setAuthServiceAvailable(false);
       // Set a more specific error message based on the error type
-      if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
-        setHealthCheckError('Network connection issues detected');
-      } else if (err.response?.status === 500) {
-        setHealthCheckError('Authentication service is temporarily unavailable');
-      } else {
-        setHealthCheckError('Unable to verify authentication service status');
-      }
-    } finally {
-      setHealthCheckLoading(false);
-    }
+      if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {_setHealthCheckError('Network connection issues detected');} else if (err.response?.status === 500) {_setHealthCheckError('Authentication service is temporarily unavailable');} else {_setHealthCheckError('Unable to verify authentication service status');}
+    } finally {_setHealthCheckLoading(false);}
   };
 
-  useEffect(() => {
-    performHealthCheck();
-  }, []);
+  useEffect__(() => {_performHealthCheck();}, []);
 
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
-      terms: false
-    },
-    validationSchema: SignupSchema,
-    onSubmit: async (values, { setErrors }) => {
-      logInfo('Form submission started with:', { 
-        name: values.name, 
-        email: values.email,
-        hasPassword: !!values.password,
-        isPartnerSignup 
-      });
+  const _formik = useFormik(_{_initialValues: {
+      name: '', _email: '', _password: '', _confirm: '', _terms: false}, _validationSchema: SignupSchema, _onSubmit: async (values, _{_setErrors}) => {_logInfo('Form submission started with:', _{ 
+        name: values.name, _email: values.email, _hasPassword: !!values.password, _isPartnerSignup});
       
       setLoading(true);
       setErrorMessage(''); // Clear any previous error
       setSuccessMessage(''); // Clear any previous success message
       setEmailVerificationRequired(false);
       
-      try {
-        const requestData = {
-          name: values.name,
-          email: values.email,
-          password: values.password,
-          ...(isPartnerSignup && {
-            userType: 'partner',
-            source: signupSource,
-            metadata: {
-              partnerProgram: true,
-              signupType: 'partner'
-            }
+      try {_const _requestData = {
+          name: values.name, _email: values.email, _password: values.password, _...(isPartnerSignup && {
+            userType: 'partner', _source: signupSource, _metadata: {
+              partnerProgram: true, _signupType: 'partner'}
           })
         };
         
-        logInfo('Making API request to /api/auth/register with:', { 
-          ...requestData, 
-          password: '[REDACTED]' 
-        });
+        logInfo('Making API request to /api/auth/register with:', {_...requestData, _password: '[REDACTED]'});
         
-        const res = await axios.post('/api/auth/register', requestData);
+        const _res = await axios.post('/api/auth/register', requestData);
         
-        logInfo('API response received:', { 
-          status: res.status, 
-          data: res.data 
-        });
+        logInfo('API response received:', {_status: res.status, _data: res.data});
         
-        if (res.status === 201) {
-          const data = res.data;
+        if (res.status === 201) {_const _data = res.data;
           
           if (data.emailVerificationRequired) {
             // Email verification is required
             setEmailVerificationRequired(true);
-            const message = isPartnerSignup 
-              ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.'
+            const _message = isPartnerSignup 
+              ? 'Partner application submitted! Please check your email to verify your account. Once verified, _your partner application will be reviewed.'
               : 'Account created! Please check your email to verify your account.';
             setSuccessMessage(data.message || message);
             
             toast({
-              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
-              description: isPartnerSignup 
+              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!', _description: isPartnerSignup 
                 ? 'Please verify your email. Your partner application will be reviewed after verification.'
                 : 'Please check your email to verify your account before logging in.'});
-          } else {
-            // Account created and ready to use
-            const message = isPartnerSignup 
+          } else {_// Account created and ready to use
+            const _message = isPartnerSignup 
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.'
               : 'Account created successfully!';
             setSuccessMessage(data.message || message);
             
             toast({
-              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',
-              description: isPartnerSignup 
+              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!', _description: isPartnerSignup 
                 ? 'Welcome to the partner program. You can now log in.'
                 : 'Welcome to the platform. You can now log in.'});
             
             // Redirect to appropriate page after a short delay
-            setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login');
-            }, 2000);
+            setTimeout__(() => {_router.push(isPartnerSignup ? '/partners' : '/login');}, 2000);
           }
         }
-      } catch (err: any) {
-        logErrorToProduction('Signup error details:', {
-          message: err.message,
-          response: err.response ? {
-            status: err.response.status,
-            statusText: err.response.statusText,
-            data: err.response.data
-          } : 'No response',
+      } catch (err: unknown) {_logErrorToProduction('Signup error details:', _{
+          message: err.message, _response: err.response ? {
+            status: err.response.status, _statusText: err.response.statusText, _data: err.response.data} : 'No response',
           request: err.request ? 'Request made but no response' : 'No request',
-          config: err.config ? {
-            url: err.config.url,
-            method: err.config.method
-          } : 'No config'
+          config: err.config ? {_url: err.config.url, _method: err.config.method} : 'No config'
         });
         
-        const status = err.response?.status;
+        const _status = err.response?.status;
         // Try both 'error' and 'message' fields for compatibility
-        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
+        const _errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
         
-        logInfo('Processed error message:', { data: errorMsg });
+        logInfo('Processed error message:', {_data: errorMsg});
         
-        if (status === 409) {
-          // Handle duplicate email specifically
+        if (status === 409) {_// Handle duplicate email specifically
           setErrorMessage(errorMsg);
-          setErrors({ email: errorMsg });
+          setErrors({ email: errorMsg});
           
           // Show toast notification
-          toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive'});
-        } else if (status === 400) {
-          // Handle validation errors (weak password, etc.)
+          toast({_title: 'Signup failed', _description: errorMsg, _variant: 'destructive'});
+        } else if (status === 400) {_// Handle validation errors (weak password, _etc.)
           setErrorMessage(errorMsg);
           
           // Set the error on password field if it's password-related
           if (errorMsg.toLowerCase().includes('password')) {
-            setErrors({ password: errorMsg });
-          } else {
-            setErrors({ confirm: errorMsg });
+            setErrors({ password: errorMsg});
+          } else {_setErrors({ confirm: errorMsg});
           }
           
-          toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive'});
-        } else {
-          // Handle other errors (network, server, etc.)
+          toast({_title: 'Signup failed', _description: errorMsg, _variant: 'destructive'});
+        } else {_// Handle other errors (network, _server, _etc.)
           setErrorMessage(errorMsg);
-          setErrors({ confirm: errorMsg });
+          setErrors({ confirm: errorMsg});
           
           // Show toast notification for other errors
-          toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive'});
+          toast({_title: 'Signup failed', _description: errorMsg, _variant: 'destructive'});
         }
-      } finally {
-        logInfo('Form submission completed, setting loading to false');
-        setLoading(false);
-      }
+      } finally {_logInfo('Form submission completed, _setting loading to false');
+        setLoading(false);}
     }
   });
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const _handleFormSubmit = async (_e: React.FormEvent<HTMLFormElement>) => {_e.preventDefault();
     formik.setTouched({
-      name: true,
-      email: true,
-      password: true,
-      confirm: true,
-      terms: true
-    });
+      name: true, _email: true, _password: true, _confirm: true, _terms: true});
     await formik.handleSubmit(e);
   };
 
   // After successful registration, guide the user to the verification screen
-  useEffect(() => {
-    if (emailVerificationRequired && formik.values.email) {
-      const timer = setTimeout(() => {
+  useEffect__(() => {_if (emailVerificationRequired && formik.values.email) {
+      const _timer = setTimeout__(() => {
         router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`);
       }, 3000);
       return () => clearTimeout(timer);
@@ -246,8 +151,7 @@ export default function Signup() {
   }, [emailVerificationRequired, formik.values.email, router]);
 
   // Show loading state only during initial health check
-  if (healthCheckLoading) {
-    return (
+  if (healthCheckLoading) {_return (
       <AuthLayout>
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="text-center space-y-4">
@@ -256,14 +160,13 @@ export default function Signup() {
           </div>
         </div>
       </AuthLayout>
-    );
-  }
+    );}
 
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-sm space-y-4">
-          {isPartnerSignup && (
+          {_isPartnerSignup && (
             <div className="text-center mb-6">
               <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
               <p className="text-sm text-muted-foreground mt-2">
@@ -271,9 +174,9 @@ export default function Signup() {
               </p>
             </div>
           )}
-          <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
-          {/* Show Health Check Warning */}
-          {healthCheckError && (
+          <form onSubmit={_handleFormSubmit} className="space-y-4" noValidate>
+          {_/* Show Health Check Warning */}
+          {_healthCheckError && (
             <Alert variant="destructive" className="border-yellow-500 bg-yellow-50 text-yellow-900">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription className="flex items-center justify-between">
@@ -281,37 +184,37 @@ export default function Signup() {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  onClick={performHealthCheck}
-                  disabled={healthCheckLoading}
+                  onClick={_performHealthCheck}
+                  disabled={_healthCheckLoading}
                   className="ml-2 text-xs"
                 >
-                  {healthCheckLoading ? 'Checking...' : 'Retry'}
+                  {_healthCheckLoading ? 'Checking...' : 'Retry'}
                 </Button>
               </AlertDescription>
             </Alert>
           )}
           
-          {/* Show Success message */}
-          {successMessage && (
+          {_/* Show Success message */}
+          {_successMessage && (
             <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
               {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
-              <AlertDescription>{successMessage}</AlertDescription>
+              <AlertDescription>{_successMessage}</AlertDescription>
             </Alert>
           )}
           
-          {/* Show Error message */}
-          {errorMessage && (
+          {_/* Show Error message */}
+          {_errorMessage && (
             <Alert variant="destructive" data-testid="error-alert">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{errorMessage}</AlertDescription>
             </Alert>
           )}
           
-          {emailVerificationRequired && (
+          {_emailVerificationRequired && (
             <Alert className="border-blue-500 bg-blue-50 text-blue-900">
               <Mail className="h-4 w-4" />
               <AlertDescription>
-                Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
+                Before you can log in, _please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
               </AlertDescription>
             </Alert>
           )}
@@ -324,11 +227,11 @@ export default function Signup() {
               id="name"
               name="name"
               data-testid="name-input"
-              value={formik.values.name}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value={_formik.values.name}
+              onChange={_formik.handleChange}
+              disabled={_loading || emailVerificationRequired}
             />
-            {formik.touched.name && formik.errors.name && (
+            {_formik.touched.name && formik.errors.name && (
               <div className="text-red-500 text-sm">{formik.errors.name}</div>
             )}
           </div>
@@ -342,11 +245,11 @@ export default function Signup() {
               type="email"
               name="email"
               data-testid="email-input"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value={_formik.values.email}
+              onChange={_formik.handleChange}
+              disabled={_loading || emailVerificationRequired}
             />
-            {formik.touched.email && formik.errors.email && (
+            {_formik.touched.email && formik.errors.email && (
               <div className="text-red-500 text-sm">{formik.errors.email}</div>
             )}
           </div>
@@ -360,12 +263,12 @@ export default function Signup() {
             type="password"
             name="password"
             data-testid="password-input"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            disabled={loading || emailVerificationRequired}
+            value={_formik.values.password}
+            onChange={_formik.handleChange}
+            disabled={_loading || emailVerificationRequired}
           />
-          <PasswordStrengthMeter password={formik.values.password} />
-          {formik.touched.password && formik.errors.password && (
+          <PasswordStrengthMeter password={_formik.values.password} />
+          {_formik.touched.password && formik.errors.password && (
             <div className="text-red-500 text-sm">{formik.errors.password}</div>
           )}
         </div>
@@ -379,11 +282,11 @@ export default function Signup() {
               type="password"
               name="confirm"
               data-testid="confirm-password-input"
-              value={formik.values.confirm}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value={_formik.values.confirm}
+              onChange={_formik.handleChange}
+              disabled={_loading || emailVerificationRequired}
             />
-            {formik.touched.confirm && formik.errors.confirm && (
+            {_formik.touched.confirm && formik.errors.confirm && (
               <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
             )}
           </div>
@@ -394,29 +297,29 @@ export default function Signup() {
               name="terms"
               type="checkbox"
               data-testid="terms-checkbox"
-              checked={formik.values.terms}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              checked={_formik.values.terms}
+              onChange={_formik.handleChange}
+              disabled={_loading || emailVerificationRequired}
             />
             <label htmlFor="terms" className="text-sm">
-              I agree to the{' '}
-              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
-              and{' '}
+              I agree to the{_' '}
+              <Link href="/terms" className="underline">Terms of Service</Link>{_' '}
+              and{_' '}
               <Link href="/privacy" className="underline">Privacy Policy</Link>
             </label>
           </div>
-          {formik.touched.terms && formik.errors.terms && (
+          {_formik.touched.terms && formik.errors.terms && (
             <div className="text-red-500 text-sm">{formik.errors.terms}</div>
           )}
           
-          {!emailVerificationRequired ? (
+          {_!emailVerificationRequired ? (
             <Button 
               type="submit" 
               disabled={loading} 
               data-testid="signup-submit"
-              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+              className={_healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
             >
-              {loading ? (
+              {_loading ? (
                 <>
                   <LoadingSpinner size="sm" className="mr-2" />
                   Creating Account...
@@ -425,13 +328,12 @@ export default function Signup() {
                 healthCheckError ? 'Try Creating Account' : 'Create Account'
               )}
             </Button>
-          ) : (
-            <div className="space-y-2">
+          ) : (_<div className="space-y-2">
               <Button
                 type="button"
                 variant="outline"
                 className="w-full"
-                onClick={() => router.push('/login')}
+                onClick={_() => router.push('/login')}
               >
                 Go to Login
               </Button>
@@ -439,7 +341,7 @@ export default function Signup() {
                 type="button"
                 variant="outline"
                 className="w-full"
-                onClick={() =>
+                onClick={_() =>
                   router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
                 }
               >
@@ -449,27 +351,26 @@ export default function Signup() {
                 type="button"
                 variant="ghost"
                 className="w-full text-sm"
-                onClick={() => {
+                onClick={_() => {
                   setEmailVerificationRequired(false);
-                  setSuccessMessage('');
-                }}
+                  setSuccessMessage('');}}
               >
                 Try Different Email
               </Button>
             </div>
           )}
           
-          {/* Additional help text when service issues are detected */}
-          {healthCheckError && (
+          {_/* Additional help text when service issues are detected */}
+          {_healthCheckError && (
             <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
               <p>⚠️ We detected some authentication service issues.</p>
-              <p>If signup fails, please try again in a few minutes or contact support.</p>
+              <p>If signup fails, _please try again in a few minutes or contact support.</p>
             </div>
           )}
           </form>
-          {!emailVerificationRequired && (
+          {_!emailVerificationRequired && (
             <div className="mt-6">
-              <AuthButtons providers={["google", "github"]} />
+              <AuthButtons providers={["google", _"github"]} />
             </div>
           )}
         </div>

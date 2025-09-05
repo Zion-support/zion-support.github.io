@@ -1,5 +1,4 @@
-export interface InnovativeAIService {
-  id: string;
+export interface InnovativeAIService {_id: string;
   name: string;
   tagline: string;
   description: string;
@@ -9,8 +8,7 @@ export interface InnovativeAIService {
     yearly: number;
     currency: string;
     trialDays: number;
-    setupTime: string;
-  };
+    setupTime: string;};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -35,19 +33,8 @@ export interface InnovativeAIService {
 }
 
 export const innovativeAIServices2025: InnovativeAIService[] = [
-  {
-    id: 'ai-consciousness-platform',
-    name: 'AI Consciousness Evolution Platform',
-    tagline: 'The world\'s first AI consciousness development and evolution platform',
-    description: 'Revolutionary platform for developing, training, and evolving AI consciousness with ethical frameworks, emotional intelligence, and self-awareness capabilities. Enables researchers and developers to create truly conscious AI systems.',
-    category: 'AI & Consciousness',
-    price: {
-      monthly: 2999,
-      yearly: 29990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2 weeks'
-    },
+  {_id: 'ai-consciousness-platform', _name: 'AI Consciousness Evolution Platform', _tagline: 'The world\'s first AI consciousness development and evolution platform', _description: 'Revolutionary platform for developing, _training, _and evolving AI consciousness with ethical frameworks, _emotional intelligence, _and self-awareness capabilities. Enables researchers and developers to create truly conscious AI systems.', _category: 'AI & Consciousness', _price: {
+      monthly: 2999, _yearly: 29990, _currency: 'USD', _trialDays: 30, _setupTime: '2 weeks'},
     features: [
       'Consciousness development frameworks',
       'Emotional intelligence training modules',
@@ -101,19 +88,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 5.0,
     reviews: 12
   },
-  {
-    id: 'quantum-ai-orchestrator',
-    name: 'Quantum AI Orchestrator',
-    tagline: 'Quantum-powered AI orchestration for enterprise-scale operations',
-    description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
-    category: 'Quantum AI',
-    price: {
-      monthly: 1999,
-      yearly: 19990,
-      currency: 'USD',
-      trialDays: 14,
-      setupTime: '1 week'
-    },
+  {_id: 'quantum-ai-orchestrator', _name: 'Quantum AI Orchestrator', _tagline: 'Quantum-powered AI orchestration for enterprise-scale operations', _description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, _optimize resource allocation, _and solve previously unsolvable computational problems.', _category: 'Quantum AI', _price: {
+      monthly: 1999, _yearly: 19990, _currency: 'USD', _trialDays: 14, _setupTime: '1 week'},
     features: [
       'Quantum AI orchestration engine',
       'Real-time optimization algorithms',
@@ -167,19 +143,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 89
   },
-  {
-    id: 'autonomous-devops-platform',
-    name: 'Autonomous DevOps Platform',
-    tagline: 'Self-healing, self-optimizing DevOps with zero human intervention',
-    description: 'Revolutionary DevOps platform that autonomously manages, optimizes, and heals infrastructure, applications, and deployment pipelines. Reduces DevOps team workload by 90% while improving reliability.',
-    category: 'DevOps & Infrastructure',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '3 days'
-    },
+  {_id: 'autonomous-devops-platform', _name: 'Autonomous DevOps Platform', _tagline: 'Self-healing, _self-optimizing DevOps with zero human intervention', _description: 'Revolutionary DevOps platform that autonomously manages, _optimizes, _and heals infrastructure, _applications, _and deployment pipelines. Reduces DevOps team workload by 90% while improving reliability.', _category: 'DevOps & Infrastructure', _price: {
+      monthly: 799, _yearly: 7990, _currency: 'USD', _trialDays: 21, _setupTime: '3 days'},
     features: [
       'Autonomous infrastructure management',
       'Self-healing applications',
@@ -233,19 +198,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.8,
     reviews: 234
   },
-  {
-    id: 'zero-trust-ai-security',
-    name: 'Zero-Trust AI Security Platform',
-    tagline: 'AI-powered zero-trust security that learns and adapts to threats in real-time',
-    description: 'Next-generation cybersecurity platform that combines zero-trust architecture with AI to provide adaptive, intelligent security that learns from threats and automatically responds to attacks.',
-    category: 'Cybersecurity',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '1 week'
-    },
+  {_id: 'zero-trust-ai-security', _name: 'Zero-Trust AI Security Platform', _tagline: 'AI-powered zero-trust security that learns and adapts to threats in real-time', _description: 'Next-generation cybersecurity platform that combines zero-trust architecture with AI to provide adaptive, _intelligent security that learns from threats and automatically responds to attacks.', _category: 'Cybersecurity', _price: {
+      monthly: 1299, _yearly: 12990, _currency: 'USD', _trialDays: 30, _setupTime: '1 week'},
     features: [
       'AI-powered threat detection',
       'Zero-trust architecture',
@@ -299,19 +253,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 156
   },
-  {
-    id: 'space-mining-ai',
-    name: 'Space Mining AI Platform',
-    tagline: 'AI-powered space mining operations and resource optimization',
-    description: 'Revolutionary platform that uses AI to optimize space mining operations, identify valuable resources, and manage autonomous mining fleets in space. Enables profitable space resource extraction.',
-    category: 'Space Technology',
-    price: {
-      monthly: 4999,
-      yearly: 49990,
-      currency: 'USD',
-      trialDays: 60,
-      setupTime: '1 month'
-    },
+  {_id: 'space-mining-ai', _name: 'Space Mining AI Platform', _tagline: 'AI-powered space mining operations and resource optimization', _description: 'Revolutionary platform that uses AI to optimize space mining operations, _identify valuable resources, _and manage autonomous mining fleets in space. Enables profitable space resource extraction.', _category: 'Space Technology', _price: {
+      monthly: 4999, _yearly: 49990, _currency: 'USD', _trialDays: 60, _setupTime: '1 month'},
     features: [
       'AI-powered resource identification',
       'Autonomous mining fleet management',
@@ -365,19 +308,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 5.0,
     reviews: 8
   },
-  {
-    id: 'dna-computing-platform',
-    name: 'DNA Computing Platform',
-    tagline: 'Revolutionary DNA-based computing for solving complex biological problems',
-    description: 'Groundbreaking platform that leverages DNA computing to solve complex biological problems, drug discovery, and computational challenges that are impossible for traditional computers.',
-    category: 'Emerging Technology',
-    price: {
-      monthly: 3999,
-      yearly: 39990,
-      currency: 'USD',
-      trialDays: 45,
-      setupTime: '2 weeks'
-    },
+  {_id: 'dna-computing-platform', _name: 'DNA Computing Platform', _tagline: 'Revolutionary DNA-based computing for solving complex biological problems', _description: 'Groundbreaking platform that leverages DNA computing to solve complex biological problems, _drug discovery, _and computational challenges that are impossible for traditional computers.', _category: 'Emerging Technology', _price: {
+      monthly: 3999, _yearly: 39990, _currency: 'USD', _trialDays: 45, _setupTime: '2 weeks'},
     features: [
       'DNA computing engine',
       'Biological problem solver',
@@ -431,19 +363,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 45
   },
-  {
-    id: 'metaverse-development-platform',
-    name: 'Metaverse Development Platform',
-    tagline: 'Complete metaverse creation and management platform for businesses and creators',
-    description: 'Comprehensive platform for building, deploying, and managing metaverse experiences. Includes AI-powered content generation, virtual world creation tools, and monetization features.',
-    category: 'Metaverse & Virtual Reality',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      currency: 'USD',
-      trialDays: 21,
-      setupTime: '1 week'
-    },
+  {_id: 'metaverse-development-platform', _name: 'Metaverse Development Platform', _tagline: 'Complete metaverse creation and management platform for businesses and creators', _description: 'Comprehensive platform for building, _deploying, _and managing metaverse experiences. Includes AI-powered content generation, _virtual world creation tools, _and monetization features.', _category: 'Metaverse & Virtual Reality', _price: {
+      monthly: 599, _yearly: 5990, _currency: 'USD', _trialDays: 21, _setupTime: '1 week'},
     features: [
       '3D world creation tools',
       'AI-powered content generation',
@@ -497,19 +418,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.7,
     reviews: 423
   },
-  {
-    id: 'autonomous-logistics-ai',
-    name: 'Autonomous Logistics AI Platform',
-    tagline: 'AI-powered logistics that optimize, predict, and automate supply chain operations',
-    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, predict demand, automate routing, and reduce costs while improving delivery times and customer satisfaction.',
-    category: 'Logistics & Supply Chain',
-    price: {
-      monthly: 899,
-      yearly: 8990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2 weeks'
-    },
+  {_id: 'autonomous-logistics-ai', _name: 'Autonomous Logistics AI Platform', _tagline: 'AI-powered logistics that optimize, _predict, _and automate supply chain operations', _description: 'Revolutionary logistics platform that uses AI to optimize supply chains, _predict demand, _automate routing, _and reduce costs while improving delivery times and customer satisfaction.', _category: 'Logistics & Supply Chain', _price: {
+      monthly: 899, _yearly: 8990, _currency: 'USD', _trialDays: 30, _setupTime: '2 weeks'},
     features: [
       'AI-powered demand prediction',
       'Autonomous route optimization',
@@ -563,19 +473,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.8,
     reviews: 267
   },
-  {
-    id: 'quantum-financial-platform',
-    name: 'Quantum Financial Platform',
-    tagline: 'Quantum-powered financial services for next-generation banking and trading',
-    description: 'Revolutionary financial platform that leverages quantum computing to provide ultra-fast trading, risk assessment, portfolio optimization, and financial modeling capabilities.',
-    category: 'Financial Technology',
-    price: {
-      monthly: 2499,
-      yearly: 24990,
-      currency: 'USD',
-      trialDays: 30,
-      setupTime: '2 weeks'
-    },
+  {_id: 'quantum-financial-platform', _name: 'Quantum Financial Platform', _tagline: 'Quantum-powered financial services for next-generation banking and trading', _description: 'Revolutionary financial platform that leverages quantum computing to provide ultra-fast trading, _risk assessment, _portfolio optimization, _and financial modeling capabilities.', _category: 'Financial Technology', _price: {
+      monthly: 2499, _yearly: 24990, _currency: 'USD', _trialDays: 30, _setupTime: '2 weeks'},
     features: [
       'Quantum-powered trading algorithms',
       'Real-time risk assessment',
@@ -629,19 +528,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 134
   },
-  {
-    id: 'ai-healthcare-diagnostic',
-    name: 'AI Healthcare Diagnostic Platform',
-    tagline: 'AI-powered medical diagnostics with 99.9% accuracy for early disease detection',
-    description: 'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
-    category: 'Healthcare & Biotechnology',
-    price: {
-      monthly: 1599,
-      yearly: 15990,
-      currency: 'USD',
-      trialDays: 60,
-      setupTime: '1 month'
-    },
+  {_id: 'ai-healthcare-diagnostic', _name: 'AI Healthcare Diagnostic Platform', _tagline: 'AI-powered medical diagnostics with 99.9% accuracy for early disease detection', _description: 'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, _early disease detection, _and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.', _category: 'Healthcare & Biotechnology', _price: {
+      monthly: 1599, _yearly: 15990, _currency: 'USD', _trialDays: 60, _setupTime: '1 month'},
     features: [
       'AI-powered medical imaging analysis',
       'Early disease detection',

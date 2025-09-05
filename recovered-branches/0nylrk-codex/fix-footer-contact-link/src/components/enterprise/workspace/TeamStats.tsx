@@ -1,10 +1,7 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 
-export function TeamStats() {
-  return (
+export function TeamStats() {_return (
     <Card>
       <CardHeader>
         <CardTitle>Team Stats</CardTitle>

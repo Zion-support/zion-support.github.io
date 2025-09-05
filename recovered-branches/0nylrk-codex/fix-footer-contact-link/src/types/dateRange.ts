@@ -1,4 +1,2 @@
-export interface DateRange {
-  from?: Date;
-  to?: Date;
-}
+export interface DateRange {_from?: Date;
+  to?: Date;}

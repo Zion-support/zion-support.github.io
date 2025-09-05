@@ -1,137 +1,40 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
-  Brain, Shield, Rocket, Cpu, Database, Atom, 
-  Users, Target, Star, Zap, Globe, TrendingUp,
-  CheckCircle, ArrowRight, ExternalLink, Sparkles
-} from 'lucide-react';
+import {_Brain, _Shield, _Rocket, _Cpu, _Database, _Atom, _Users, _Target, _Star, _Zap, _Globe, _TrendingUp, _CheckCircle, _ArrowRight, _ExternalLink, _Sparkles} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function ServicesPage() {
-  const mainServices = [
+export default function ServicesPage() {_const _mainServices = [
     {
-      icon: Brain,
-      title: "AI Business Intelligence",
-      description: "Transform your data into actionable insights with our advanced AI-powered analytics platform.",
-      features: [
-        "Real-time data processing",
-        "Predictive analytics",
-        "Custom AI models",
-        "Interactive dashboards",
-        "Automated reporting"
-      ],
-      price: "$499/month",
-      color: "from-purple-500 to-pink-500",
-      href: "/ai-business-intelligence"
-    },
-    {
-      icon: Shield,
-      title: "Quantum Cybersecurity",
-      description: "Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",
-      features: [
-        "Quantum-resistant encryption",
-        "AI threat detection",
-        "Zero-trust architecture",
-        "24/7 monitoring",
-        "Compliance ready"
-      ],
-      price: "$799/month",
-      color: "from-red-500 to-orange-500",
-      href: "/quantum-cybersecurity"
-    },
-    {
-      icon: Users,
-      title: "AI Customer Experience",
-      description: "Deliver personalized customer experiences at scale with intelligent automation and insights.",
-      features: [
-        "Customer journey mapping",
-        "AI personalization",
-        "Sentiment analysis",
-        "Automated support",
-        "Behavioral insights"
-      ],
-      price: "$399/month",
-      color: "from-green-500 to-teal-500",
-      href: "/ai-customer-experience"
-    },
-    {
-      icon: Database,
-      title: "Edge Computing Orchestration",
-      description: "Deploy and manage applications at the edge with intelligent orchestration and optimization.",
-      features: [
-        "Edge node management",
-        "IoT device management",
-        "Real-time monitoring",
-        "Load balancing",
-        "Auto-scaling"
-      ],
-      price: "$349/month",
-      color: "from-yellow-500 to-orange-500",
-      href: "/edge-computing-orchestration"
-    },
-    {
-      icon: Rocket,
-      title: "Space Technology Innovation",
-      description: "Accelerate space exploration with cutting-edge AI and quantum technology solutions.",
-      features: [
-        "Satellite management",
-        "AI mission planning",
-        "Quantum communication",
-        "Resource optimization",
-        "Risk assessment"
-      ],
-      price: "$2,499/month",
-      color: "from-violet-500 to-purple-500",
-      href: "/space-technology"
-    },
-    {
-      icon: Atom,
-      title: "Neural Interface Development",
-      description: "Build the future of human-computer interaction with advanced neural interfaces.",
-      features: [
-        "BCI development tools",
-        "Neural signal processing",
-        "AI pattern recognition",
-        "Real-time analysis",
-        "Custom algorithms"
-      ],
-      price: "$899/month",
-      color: "from-pink-500 to-rose-500",
-      href: "/neural-interface"
-    }
+      icon: Brain, _title: "AI Business Intelligence", _description: "Transform your data into actionable insights with our advanced AI-powered analytics platform.", _features: [
+        "Real-time data processing", _"Predictive analytics", _"Custom AI models", _"Interactive dashboards", _"Automated reporting"
+      ], _price: "$499/month", _color: "from-purple-500 to-pink-500", _href: "/ai-business-intelligence"},
+    {_icon: Shield, _title: "Quantum Cybersecurity", _description: "Future-proof your security with quantum-resistant encryption and AI-powered threat detection.", _features: [
+        "Quantum-resistant encryption", _"AI threat detection", _"Zero-trust architecture", _"24/7 monitoring", _"Compliance ready"
+      ], _price: "$799/month", _color: "from-red-500 to-orange-500", _href: "/quantum-cybersecurity"},
+    {_icon: Users, _title: "AI Customer Experience", _description: "Deliver personalized customer experiences at scale with intelligent automation and insights.", _features: [
+        "Customer journey mapping", _"AI personalization", _"Sentiment analysis", _"Automated support", _"Behavioral insights"
+      ], _price: "$399/month", _color: "from-green-500 to-teal-500", _href: "/ai-customer-experience"},
+    {_icon: Database, _title: "Edge Computing Orchestration", _description: "Deploy and manage applications at the edge with intelligent orchestration and optimization.", _features: [
+        "Edge node management", _"IoT device management", _"Real-time monitoring", _"Load balancing", _"Auto-scaling"
+      ], _price: "$349/month", _color: "from-yellow-500 to-orange-500", _href: "/edge-computing-orchestration"},
+    {_icon: Rocket, _title: "Space Technology Innovation", _description: "Accelerate space exploration with cutting-edge AI and quantum technology solutions.", _features: [
+        "Satellite management", _"AI mission planning", _"Quantum communication", _"Resource optimization", _"Risk assessment"
+      ], _price: "$2, _499/month", _color: "from-violet-500 to-purple-500", _href: "/space-technology"},
+    {_icon: Atom, _title: "Neural Interface Development", _description: "Build the future of human-computer interaction with advanced neural interfaces.", _features: [
+        "BCI development tools", _"Neural signal processing", _"AI pattern recognition", _"Real-time analysis", _"Custom algorithms"
+      ], _price: "$899/month", _color: "from-pink-500 to-rose-500", _href: "/neural-interface"}
   ];
 
-  const specializedServices = [
-    {
-      title: "AI Autonomous Systems",
-      description: "Build self-managing, self-optimizing systems that adapt and evolve",
-      icon: Brain,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum computing for unprecedented ML performance",
-      icon: Atom,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "AI-Powered DevOps",
-      description: "Automate and optimize your development and deployment processes",
-      icon: Cpu,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Blockchain AI Integration",
-      description: "Combine blockchain security with AI intelligence for next-gen applications",
-      icon: Shield,
-      color: "from-orange-500 to-red-500"
-    }
+  const _specializedServices = [
+    {_title: "AI Autonomous Systems", _description: "Build self-managing, _self-optimizing systems that adapt and evolve", _icon: Brain, _color: "from-blue-500 to-cyan-500"},
+    {_title: "Quantum Machine Learning", _description: "Leverage quantum computing for unprecedented ML performance", _icon: Atom, _color: "from-purple-500 to-pink-500"},
+    {_title: "AI-Powered DevOps", _description: "Automate and optimize your development and deployment processes", _icon: Cpu, _color: "from-green-500 to-emerald-500"},
+    {_title: "Blockchain AI Integration", _description: "Combine blockchain security with AI intelligence for next-gen applications", _icon: Shield, _color: "from-orange-500 to-red-500"}
   ];
 
-  const industries = [
+  const _industries = [
     "Finance & Banking",
     "Healthcare & Life Sciences",
     "Manufacturing & Industry 4.0",
@@ -142,88 +45,85 @@ export default function ServicesPage() {
     "Government & Defense"
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
-        <title>Services — Zion Tech Group | AI, Quantum Computing & Technology Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's comprehensive AI, quantum computing, and technology services. Transform your business with cutting-edge solutions." />
+        <title>Services — Zion Tech Group | AI, _Quantum Computing & Technology Solutions</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive AI, _quantum computing, _and technology services. Transform your business with cutting-edge solutions." />
         <meta property="og:title" content="Zion Tech Group Services" />
-        <meta property="og:description" content="AI, quantum computing, and technology solutions for modern businesses." />
-        <meta name="keywords" content="AI services, quantum computing, technology solutions, business intelligence, cybersecurity" />
+        <meta property="og:description" content="AI, _quantum computing, _and technology solutions for modern businesses." />
+        <meta name="keywords" content="AI services, _quantum computing, _technology solutions, _business intelligence, _cybersecurity" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive AI, quantum computing, and technology solutions designed to transform 
+              Comprehensive AI, _quantum computing, _and technology solutions designed to transform 
               your business and drive innovation across every industry.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Main Services Grid */}
+      {_/* Main Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Core Technology Services</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose from our comprehensive suite of AI and quantum technology solutions, 
-              each designed to address specific business challenges and opportunities.
+              Choose from our comprehensive suite of AI and quantum technology solutions, _each designed to address specific business challenges and opportunities.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainServices.map((service, index) => (
-              <motion.div
+            {_mainServices.map((service, _index) => (_<motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={_`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{_service.title}</h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">{_service.description}</p>
                 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {_service.features.map((feature, _featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2 text-slate-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{_feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-2xl font-bold text-blue-400">{service.price}</div>
+                  <div className="text-2xl font-bold text-blue-400">{_service.price}</div>
                   <a
-                    href={service.href}
+                    href={_service.href}
                     className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                   >
                     <span>Learn More</span>
@@ -244,14 +144,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Specialized Services */}
+      {_/* Specialized Services */}
       <section className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Specialized Solutions</h2>
@@ -261,20 +161,20 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {specializedServices.map((service, index) => (
+            {_specializedServices.map(_(service, _index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _x: index % 2 === 0 ? -30 : 30}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 hover:border-slate-600/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
+                <div className={_`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">{service.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{_service.title}</h3>
+                <p className="text-slate-300 leading-relaxed mb-6">{_service.description}</p>
                 <Link
                   href="/contact"
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
@@ -288,14 +188,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {_/* Industries We Serve */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Industries We Serve</h2>
@@ -306,33 +206,33 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+            {_industries.map(_(industry, _index) => (
               <motion.div
                 key={industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: index * 0.05}}
+                viewport={_{ once: true}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-slate-600/50 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-white font-semibold">{industry}</h3>
+                <h3 className="text-white font-semibold">{_industry}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {_/* Why Choose Us */}
       <section className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
@@ -344,10 +244,10 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.1}}
+              viewport={_{ once: true}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -361,10 +261,10 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
+              viewport={_{ once: true}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -378,10 +278,10 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.3}}
+              viewport={_{ once: true}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -397,14 +297,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

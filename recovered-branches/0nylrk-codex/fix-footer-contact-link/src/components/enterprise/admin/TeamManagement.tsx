@@ -1,99 +1,46 @@
 
-import React, { useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import React, {_useState} from "react";
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
+import {_Dialog, _DialogContent, _DialogDescription, _DialogFooter, _DialogHeader, _DialogTitle, _DialogTrigger} from "@/components/ui/dialog";
 
-export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
+export function TeamManagement() {_const [isAddingMember, _setIsAddingMember] = useState(false);
+  const [newMemberEmail, _setNewMemberEmail] = useState("");
 
   // Mock team members data
-  const teamMembers = [
+  const _teamMembers = [
     {
-      id: 1,
-      name: "Alex Johnson",
-      email: "alex@example.com",
-      role: "Admin",
-      status: "active",
-      lastActive: "2 hours ago"},
-    {
-      id: 2,
-      name: "Jamie Smith",
-      email: "jamie@example.com",
-      role: "Recruiter",
-      status: "active",
-      lastActive: "Yesterday"},
-    {
-      id: 3,
-      name: "Sam Williams",
-      email: "sam@example.com",
-      role: "Manager",
-      status: "pending",
-      lastActive: "Never"},
-    {
-      id: 4,
-      name: "Taylor Brown",
-      email: "taylor@example.com",
-      role: "Viewer",
-      status: "active",
-      lastActive: "3 days ago"}];
+      id: 1, _name: "Alex Johnson", _email: "alex@example.com", _role: "Admin", _status: "active", _lastActive: "2 hours ago"},
+    {_id: 2, _name: "Jamie Smith", _email: "jamie@example.com", _role: "Recruiter", _status: "active", _lastActive: "Yesterday"},
+    {_id: 3, _name: "Sam Williams", _email: "sam@example.com", _role: "Manager", _status: "pending", _lastActive: "Never"},
+    {_id: 4, _name: "Taylor Brown", _email: "taylor@example.com", _role: "Viewer", _status: "active", _lastActive: "3 days ago"}];
 
-  const handleAddMember = () => {
-    // In a real app, this would make an API call to add the member
+  const _handleAddMember = () => {_// In a real app, _this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"});
+        title: "Email required", _description: "Please enter an email address for the new team member.", _variant: "destructive"});
       return;
     }
 
-    toast({
-      title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`});
+    toast({_title: "Invitation sent", _description: `An invitation has been sent to ${newMemberEmail}`});
 
     setNewMemberEmail("");
     setIsAddingMember(false);
   };
 
-  const handleRemoveMember = (memberId: number) => {
-    // In a real app, this would make an API call to remove the member
+  const _handleRemoveMember = (_memberId: number) => {_// In a real app, _this would make an API call to remove the member
     toast({
-      title: "Team member removed",
-      description: "The team member has been removed from your workspace."});
+      title: "Team member removed", _description: "The team member has been removed from your workspace."});
   };
 
-  const handleResendInvite = (memberEmail: string) => {
-    // In a real app, this would make an API call to resend the invitation
+  const _handleResendInvite = (_memberEmail: string) => {_// In a real app, _this would make an API call to resend the invitation
     toast({
-      title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`});
+      title: "Invitation resent", _description: `A new invitation has been sent to ${memberEmail}`});
   };
 
-  return (
-    <div className="space-y-6">
+  return (_<div className="space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-medium">Team Members</h3>
-        <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>
+        <Dialog open={_isAddingMember} onOpenChange={_setIsAddingMember}>
           <DialogTrigger asChild>
             <Button className="gap-2">
               <UserPlus className="h-4 w-4" />
@@ -117,8 +64,8 @@ export function TeamManagement() {
                   type="email"
                   placeholder="colleague@company.com"
                   className="col-span-3"
-                  value={newMemberEmail}
-                  onChange={(e) => setNewMemberEmail(e.target.value)}
+                  value={_newMemberEmail}
+                  onChange={_(e) => setNewMemberEmail(e.target.value)}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
@@ -137,10 +84,10 @@ export function TeamManagement() {
               </div>
             </div>
             <DialogFooter>
-              <Button variant="outline" onClick={() => setIsAddingMember(false)}>
+              <Button variant="outline" onClick={_() => setIsAddingMember(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleAddMember}>Send Invitation</Button>
+              <Button onClick={_handleAddMember}>Send Invitation</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -158,39 +105,38 @@ export function TeamManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {teamMembers.map((member) => (
+            {_teamMembers.map(_(member) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
-                        {member.name
+                        {_member.name
                           .split(" ")
-                          .map((n) => n[0])
+                          .map(_(n) => n[0])
                           .join("")}
                       </span>
                     </div>
                     <div>
-                      <div className="font-medium">{member.name}</div>
+                      <div className="font-medium">{_member.name}</div>
                       <div className="text-sm text-muted-foreground">
-                        {member.email}
+                        {_member.email}
                       </div>
                     </div>
                   </div>
                 </TableCell>
-                <TableCell>{member.role}</TableCell>
+                <TableCell>{_member.role}</TableCell>
                 <TableCell>
                   <Badge
-                    variant={member.status === "active" ? "default" : "outline"}
+                    variant={_member.status === "active" ? "default" : "outline"}
                   >
-                    {member.status}
+                    {_member.status}
                   </Badge>
                 </TableCell>
-                <TableCell>{member.lastActive}</TableCell>
+                <TableCell>{_member.lastActive}</TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">
-                    {member.status === "pending" ? (
-                      <Button
+                    {_member.status === "pending" ? (_<Button
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
@@ -198,12 +144,11 @@ export function TeamManagement() {
                         <Mail className="h-4 w-4 mr-1" />
                         Resend
                       </Button>
-                    ) : (
-                      <Button
+                    ) : (_<Button
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-                        onClick={() => handleRemoveMember(member.id)}
+                        onClick={_() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />
                       </Button>

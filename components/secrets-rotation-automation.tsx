@@ -1,18 +1,11 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 
-export default function SecretsRotationAutomationPage() {
-	const features = [
-		'Automated key and secret rotation',
-		'JIT credentials with expirations',
-		'Policy approvals and audit trails',
-		'CI/CD integration (GitHub Actions, CircleCI)',
-		'Cloud KMS and Vault support'
+export default function SecretsRotationAutomationPage() {_const _features = [
+		'Automated key and secret rotation', _'JIT credentials with expirations', _'Policy approvals and audit trails', _'CI/CD integration (GitHub Actions, _CircleCI)', _'Cloud KMS and Vault support'
 	];
 
-	return (
-		<>
+	return (_<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
 			<main id="main" className="container mx-auto px-4 py-24">
 				<section className="max-w-5xl mx-auto">
@@ -22,7 +15,7 @@ export default function SecretsRotationAutomationPage() {
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
-								<p className="text-gray-200">{f}</p>
+								<p className="text-gray-200">{_f}</p>
 							</div>
 						))}
 					</div>

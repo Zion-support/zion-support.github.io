@@ -8,26 +8,21 @@ export type DisputeReason =
   | 'Communication Breakdown'
   | 'Other';
 
-export type DisputeAttachment = {
-  id: string;
+export type DisputeAttachment = {_id: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
   path: string; // server-side storage path
   uploadedAt: string;
-  uploadedByUserId: string;
-};
+  uploadedByUserId: string;};
 
-export type DisputeMessage = {
-  id: string;
+export type DisputeMessage = {_id: string;
   authorUserId: string;
   authorRole: 'client' | 'talent' | 'admin';
   body: string;
-  createdAt: string;
-};
+  createdAt: string;};
 
-export type DisputeCase = {
-  id: string; // case id like DSP-YYYYMMDD-XXXX
+export type DisputeCase = {_id: string; // case id like DSP-YYYYMMDD-XXXX
   projectId: string;
   entityType?: 'milestone' | 'contract' | 'thread';
   entityId?: string;
@@ -43,20 +38,15 @@ export type DisputeCase = {
   messages: DisputeMessage[];
   adminNotes?: string;
   resolvedAt?: string;
-  resolutionSummary?: string;
-};
+  resolutionSummary?: string;};
 
 export type DisputeListItem = Pick<
   DisputeCase,
   'id' | 'projectId' | 'createdAt' | 'status'
-> & {
-  talentName: string;
+> & {_talentName: string;
   clientName: string;
-  projectName?: string;
-};
+  projectName?: string;};
 
-export type UserSummary = {
-  id: string;
+export type UserSummary = {_id: string;
   name: string;
-  role: 'admin' | 'client' | 'talent';
-};
+  role: 'admin' | 'client' | 'talent';};

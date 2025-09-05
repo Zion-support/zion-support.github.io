@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-export default function DocsPage() {
-	return (
+export default function DocsPage() {_return (
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
@@ -11,8 +10,7 @@ export default function DocsPage() {
 			</Head>
 			<section className="container mx-auto px-4 py-24">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
-				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+				<p className="text-gray-300">Guides, _API docs, _and best practices. Coming soon.</p>
 			</section>
 		</Layout>
-	);
-}
+	);}

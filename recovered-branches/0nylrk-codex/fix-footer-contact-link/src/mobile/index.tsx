@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { MobileApp } from './MobileApp';
 
-export { MobileApp };
+export {_MobileApp};
 
 // Export all mobile components for potential reuse in other projects
 export * from './components/common/BottomNavigation';

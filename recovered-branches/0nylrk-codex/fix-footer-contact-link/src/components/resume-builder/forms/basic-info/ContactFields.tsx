@@ -1,24 +1,16 @@
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
 
-interface ContactFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
+interface ContactFieldsProps {_control: Control<BasicInfoFormData>;}
 
-export function ContactFields({ control }: ContactFieldsProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+export function ContactFields(_{_control}: ContactFieldsProps) {_return (_<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <FormField
         control={control}
         name="location"
-        render={({ field }) => (
+        render={_({ field}) => (
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="San Francisco, CA" {...field} />
+              <Input placeholder="San Francisco, CA" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -26,13 +18,13 @@ export function ContactFields({ control }: ContactFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="website"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>Website</FormLabel>
             <FormControl>
-              <Input placeholder="https://yourwebsite.com" {...field} />
+              <Input placeholder="https://yourwebsite.com" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -40,13 +32,13 @@ export function ContactFields({ control }: ContactFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="linkedin"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>LinkedIn</FormLabel>
             <FormControl>
-              <Input placeholder="https://linkedin.com/in/username" {...field} />
+              <Input placeholder="https://linkedin.com/in/username" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -54,13 +46,13 @@ export function ContactFields({ control }: ContactFieldsProps) {
       />
 
       <FormField
-        control={control}
+        control={_control}
         name="github"
-        render={({ field }) => (
+        render={_(_{ field}) => (
           <FormItem>
             <FormLabel>GitHub</FormLabel>
             <FormControl>
-              <Input placeholder="https://github.com/username" {...field} />
+              <Input placeholder="https://github.com/username" {_...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

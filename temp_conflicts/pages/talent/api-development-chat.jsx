@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ApiDevelopmentChat = () => {
-  return (
+const _ApiDevelopmentChat = () => {_return (
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const ApiDevelopmentChat = () => {
         <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ApiDevelopmentChat;

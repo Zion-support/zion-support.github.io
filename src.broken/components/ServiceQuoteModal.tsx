@@ -1,9 +1,7 @@
 import React from 'react';
-export function ServiceQuoteModal() {
-  return (
+export function ServiceQuoteModal() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

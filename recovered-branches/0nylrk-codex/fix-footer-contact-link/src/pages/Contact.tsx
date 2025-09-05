@@ -1,129 +1,69 @@
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
 import z from "zod";
-import { ChatAssistant } from "@/components/ChatAssistant";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
+export default function Contact() {_const [formData, _setFormData] = useState({
+    name: "", _email: "", _subject: "", _message: ""});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const _handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {_const { name, _value} = e.target;
+    setFormData(prev => ({_...prev, _[name]: value}));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
     
     try {
       // Basic validation with Zod
-      const schema = z.object({
-        name: z.string().min(2, "Name must be at least 2 characters"),
-        email: z.string().email("Invalid email address"),
-        subject: z.string().min(2, "Subject must be at least 2 characters"),
-        message: z.string().min(10, "Message must be at least 10 characters")
-      });
+      const _schema = z.object({
+        name: z.string().min(2, _"Name must be at least 2 characters"), _email: z.string().email("Invalid email address"), _subject: z.string().min(2, _"Subject must be at least 2 characters"), _message: z.string().min(10, _"Message must be at least 10 characters")});
       
       schema.parse(formData);
       
       // Simulate form submission
       setIsSubmitting(true);
       
-      setTimeout(() => {
-        setIsSubmitting(false);
+      setTimeout__(() => {_setIsSubmitting(false);
         toast({
-          title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+          title: "Message Sent", _description: "We've received your message and will get back to you soon."});
         
         // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
+        setFormData({_name: "", _email: "", _subject: "", _message: ""});
       }, 1500);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
+    } catch (error) {_if (error instanceof z.ZodError) {
         toast({
-          title: "Form Validation Error",
-          description: error.errors[0].message,
-          variant: "destructive"
-        });
-      } else {
-        toast({
-          title: "An error occurred",
-          description: "Please try again later",
-          variant: "destructive"
-        });
+          title: "Form Validation Error", _description: error.errors[0].message, _variant: "destructive"});
+      } else {_toast({
+          title: "An error occurred", _description: "Please try again later", _variant: "destructive"});
       }
     }
   };
 
   // Handle sending messages to the AI chat assistant
-  const handleSendMessage = async (message: string): Promise<void> => {
-    try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
+  const _handleSendMessage = async (message: string): Promise<void> => {_try {
+      const _response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", _{
+        method: "POST", _headers: {
           "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+        body: JSON.stringify({_messages: [{ role: "user", _content: message}] 
         })});
       
-      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant");
-      }
+      if (!response.ok) {_throw new Error("Failed to get response from AI assistant");}
       
       return Promise.resolve();
-    } catch (error) {
-      console.error("Error in AI chat:", error);
-      toast({
-        title: "Chat Error",
-        description: "There was an error communicating with our AI assistant. Please try again.",
-        variant: "destructive"
-      });
+    } catch (error) {_toast({
+        title: "Chat Error", _description: "There was an error communicating with our AI assistant. Please try again.", _variant: "destructive"});
       return Promise.resolve();
     }
   };
 
-  const offices = [
-    {
-      name: "Headquarters",
-      address: "123 Tech Avenue, San Francisco, CA 94105",
-      phone: "+1 302 464 0950",
-      email: "commercial@ziontechgroup.com"
-    },
-    {
-      name: "East Coast Office",
-      address: "456 Innovation Street, New York, NY 10001",
-      phone: "+1 302 464 0950", 
-      email: "commercial@ziontechgroup.com"
-    }
+  const _offices = [
+    {_name: "Headquarters", _address: "123 Tech Avenue, _San Francisco, _CA 94105", _phone: "+1 302 464 0950", _email: "commercial@ziontechgroup.com"},
+    {_name: "East Coast Office", _address: "456 Innovation Street, _New York, _NY 10001", _phone: "+1 302 464 0950", _email: "commercial@ziontechgroup.com"}
   ];
 
-  return (
-    <AppLayout>
+  return (_<AppLayout>
       <SEO 
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
-        keywords="contact Zion, AI marketplace support, tech platform contact"
+        keywords="contact Zion, _AI marketplace support, _tech platform contact"
         canonical="https://app.ziontechgroup.com/contact"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -139,19 +79,18 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
               <p className="text-zion-slate-light text-lg mb-8">
-                Whether you have a question about our platform, pricing, or anything else, 
-                our team is ready to answer all your questions.
+                Whether you have a question about our platform, _pricing, _or anything else, _our team is ready to answer all your questions.
               </p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={_handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-white mb-2">Your Name</label>
                     <Input 
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
+                      value={_formData.name}
+                      onChange={_handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
@@ -163,8 +102,8 @@ export default function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      value={_formData.email}
+                      onChange={_handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example.com"
                       required
@@ -177,8 +116,8 @@ export default function Contact() {
                   <Input 
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    value={_formData.subject}
+                    onChange={_handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
@@ -190,8 +129,8 @@ export default function Contact() {
                   <Textarea 
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    value={_formData.message}
+                    onChange={_handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
@@ -201,9 +140,9 @@ export default function Contact() {
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  disabled={isSubmitting}
+                  disabled={_isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {_isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
@@ -211,22 +150,22 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
+                {_offices.map((office, _index) => (
                   <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{office.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">{_office.name}</h3>
                     <div className="space-y-3">
                       <div className="flex items-start">
                         <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">{office.address}</span>
+                        <span className="text-zion-slate-light">{_office.address}</span>
                       </div>
                       <div className="flex items-center">
                         <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">{office.phone}</span>
+                        <span className="text-zion-slate-light">{_office.phone}</span>
                       </div>
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a href={`mailto:${office.email}`} className="text-zion-cyan hover:underline">
-                          {office.email}
+                        <a href={_`mailto:${office.email}`} className="text-zion-cyan hover:underline">
+                          {_office.email}
                         </a>
                       </div>
                     </div>
@@ -239,8 +178,8 @@ export default function Contact() {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk" 
                   width="100%" 
                   height="300" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
+                  style={_{ border: 0}} 
+                  allowFullScreen={_true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Zion Office Locations"
@@ -259,7 +198,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <Button
-                    onClick={() => setIsChatOpen(true)}
+                    onClick={_() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
                     Chat With Our AI Assistant
@@ -276,7 +215,7 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
-                onClick={() => setIsChatOpen(true)}
+                onClick={_() => setIsChatOpen(true)}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
@@ -297,18 +236,13 @@ export default function Contact() {
         </div>
       </main>
 
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (
-        <ChatAssistant
+      {_/* Chat Assistant Modal */}
+      {_isChatOpen && (_<ChatAssistant
           isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-          recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Support Bot'
-          }}
-          onSendMessage={handleSendMessage}
+          onClose={_() => setIsChatOpen(false)}
+          recipient={_{
+            id: 'ai-assistant', _name: 'AI Assistant', _avatarUrl: 'https://placehold.co/64x64?text=AI', _role: 'Support Bot'}}
+          onSendMessage={_handleSendMessage}
         />
       )}
     </AppLayout>

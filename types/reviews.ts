@@ -1,25 +1,20 @@
 export type ProjectStatus = 'InProgress' | 'Completed';
 
-export type Project = {
-  id: string;
+export type Project = {_id: string;
   clientId: string; // slug for client/user
   talentSlug: string; // slug from TALENT_PROFILES
   title: string;
   status: ProjectStatus;
-  completedAt?: string; // ISO string
-};
+  completedAt?: string; // ISO string};
 
 export type ReviewRole = 'client' | 'talent';
 
-export type ReviewCategoryScores = {
-  communication?: number; // 1-5 optional
+export type ReviewCategoryScores = {_communication?: number; // 1-5 optional
   qualityOfWork?: number; // 1-5 optional
   timeliness?: number; // 1-5 optional
-  wouldWorkWithAgain?: boolean; // optional
-};
+  wouldWorkWithAgain?: boolean; // optional};
 
-export type Review = {
-  id: string;
+export type Review = {_id: string;
   projectId: string;
   fromRole: ReviewRole;
   fromId: string; // clientId or talentSlug depending on fromRole
@@ -31,16 +26,14 @@ export type Review = {
   anonymous?: boolean;
   approved: boolean; // admin moderated visibility
   reported: boolean;
-  reports?: { reason: string; reportedAt: string }[];
+  reports?: { reason: string; reportedAt: string}[];
   removed?: boolean;
   createdAt: string; // ISO
 };
 
-export type PublicReview = Omit<Review, 'fromId'> & { authorName: string };
+export type PublicReview = Omit<Review, 'fromId'> & {_authorName: string};
 
-export type ReviewsSummary = {
-  averageRating: number;
+export type ReviewsSummary = {_averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
-  mostRecent: PublicReview[];
-};
+  mostRecent: PublicReview[];};

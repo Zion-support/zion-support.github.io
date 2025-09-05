@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -6,59 +6,30 @@ import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
 import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
-export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+export default function DemosPage() {_const [activeDemo, _setActiveDemo] = useState<string>('email-validator');
 
-  const demos = [
+  const _demos = [
     {
-      id: 'email-validator',
-      title: 'Email Validator Pro',
-      description: 'Advanced email validation with domain checking and deliverability scoring',
-      icon: <Mail className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-600',
-      component: <EmailValidatorDemo />
-    },
-    {
-      id: 'password-strength',
-      title: 'Password Strength Analyzer',
-      description: 'Comprehensive password security analysis with entropy calculation',
-      icon: <Lock className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-600',
-      component: <PasswordStrengthDemo />
-    },
-    {
-      id: 'url-shortener',
-      title: 'Smart URL Shortener',
-      description: 'Professional URL shortening with analytics and custom codes',
-      icon: <Link className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-600',
-      component: <UrlShortenerDemo />
-    },
-    {
-      id: 'text-analyzer',
-      title: 'Text Analysis Suite',
-      description: 'Advanced text analysis with readability and sentiment analysis',
-      icon: <FileText className="w-6 h-6" />,
-      color: 'from-orange-500 to-red-600',
-      component: <TextAnalyzerDemo />
-    }
+      id: 'email-validator', _title: 'Email Validator Pro', _description: 'Advanced email validation with domain checking and deliverability scoring', _icon: <Mail className="w-6 h-6" />, _color: 'from-blue-500 to-cyan-600', _component: <EmailValidatorDemo />},
+    {_id: 'password-strength', _title: 'Password Strength Analyzer', _description: 'Comprehensive password security analysis with entropy calculation', _icon: <Lock className="w-6 h-6" />, _color: 'from-green-500 to-emerald-600', _component: <PasswordStrengthDemo />},
+    {_id: 'url-shortener', _title: 'Smart window.URL Shortener', _description: 'Professional window.URL shortening with analytics and custom codes', _icon: <Link className="w-6 h-6" />, _color: 'from-purple-500 to-pink-600', _component: <UrlShortenerDemo />},
+    {_id: 'text-analyzer', _title: 'Text Analysis Suite', _description: 'Advanced text analysis with readability and sentiment analysis', _icon: <FileText className="w-6 h-6" />, _color: 'from-orange-500 to-red-600', _component: <TextAnalyzerDemo />}
   ];
 
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+  const _activeDemoData = demos.find(demo => demo.id === activeDemo);
 
   return (
     <>
       <Head>
         <title>Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services</title>
-        <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validation, password strength, URL shortening, and text analysis in real-time." />
+        <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validation, password strength, window.URL shortening, and text analysis in real-time." />
         <meta property="og:title" content="Interactive Demos | Zion Tech Group" />
         <meta property="og:description" content="Test our micro SaaS services with interactive demos." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -93,7 +64,7 @@ export default function DemosPage() {
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0.2s' }}
+                style={_{ animationDelay: '0.2s'}}
               >
                 Start Testing
                 <Play className="w-5 h-5 ml-2" />
@@ -103,7 +74,7 @@ export default function DemosPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                style={{ animationDelay: '0.4s' }}
+                style={_{ animationDelay: '0.4s'}}
               >
                 <Code className="w-5 h-5 mr-2" />
                 View All Services
@@ -111,8 +82,8 @@ export default function DemosPage() {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          {_/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={_{ animationDelay: '0.6s'}}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                 4
@@ -141,7 +112,7 @@ export default function DemosPage() {
         </div>
       </section>
 
-      {/* Demo Navigation */}
+      {_/* Demo Navigation */}
       <section id="demos" className="py-16 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -155,26 +126,24 @@ export default function DemosPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {demos.map((demo) => (
-              <button
+            {_demos.map(_(demo) => (_<button
                 key={demo.id}
-                onClick={() => setActiveDemo(demo.id)}
-                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
+                onClick={_() => setActiveDemo(demo.id)}
+                className={_`p-4 rounded-lg border transition-all duration-300 text-left group ${
                   activeDemo === demo.id
                     ? 'border-blue-500 bg-blue-500/10'
-                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'
-                }`}
+                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'}`}
               >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  {demo.icon}
+                <div className={_`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  {_demo.icon}
                 </div>
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                  {demo.title}
+                  {_demo.title}
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                  {demo.description}
+                  {_demo.description}
                 </p>
-                {activeDemo === demo.id && (
+                {_activeDemo === demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Active Demo
@@ -186,7 +155,7 @@ export default function DemosPage() {
         </div>
       </section>
 
-      {/* Active Demo */}
+      {_/* Active Demo */}
       <section className="py-16 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
@@ -195,20 +164,20 @@ export default function DemosPage() {
               Live Demo
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              {activeDemoData?.title}
+              {_activeDemoData?.title}
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              {activeDemoData?.description}
+              {_activeDemoData?.description}
             </p>
           </div>
 
           <div className="animate-fade-in">
-            {activeDemoData?.component}
+            {_activeDemoData?.component}
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {_/* Features */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -297,7 +266,7 @@ export default function DemosPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

@@ -1,80 +1,58 @@
 
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
 
-interface LazyLoadProps {
-  height?: string | number;
+interface LazyLoadProps {_height?: string | number;
   width?: string | number;
   children: ReactNode;
   loadingComponent?: ReactNode;
-  className?: string;
-}
+  className?: string;}
 
-export function LazyLoad({
-  height = "200px",
-  width = "100%",
-  children,
-  loadingComponent,
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+export function LazyLoad(_{_height = "200px", _width = "100%", _children, _loadingComponent, _className}: LazyLoadProps) {_const [isVisible, _setIsVisible] = useState(false);
+  const [isLoaded, _setIsLoaded] = useState(false);
+  const _containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
+  useEffect__(() => {
+    const _observer = new IntersectionObserver(_(entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
-        }
+          observer.disconnect();}
       },
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
+      {_rootMargin: "200px", _// Start loading when element is within 200px of viewport
         threshold: 0.1}
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    if (containerRef.current) {_observer.observe(containerRef.current);}
 
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+    return () => {_if (containerRef.current) {
+        observer.unobserve(containerRef.current);}
     };
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
+  useEffect__(() => {_if (isVisible) {
       // Simulate loading delay (remove in production)
-      const timer = setTimeout(() => {
-        setIsLoaded(true);
-      }, 500);
+      const _timer = setTimeout__(() => {
+        setIsLoaded(true);}, 500);
 
       return () => clearTimeout(timer);
     }
   }, [isVisible]);
 
-  const defaultLoadingComponent = (
+  const _defaultLoadingComponent = (
     <Skeleton
-      style={{ height, width }}
+      style={_{ height, _width}}
       className="rounded-md bg-zion-blue-light/20"
     />
   );
 
   return (
     <div
-      ref={containerRef}
-      className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0",
-        className
+      ref={_containerRef}
+      className={_cn("transition-opacity duration-500", _isLoaded ? "opacity-100" : "opacity-0", _className
       )}
     >
-      {isVisible ? (
+      {_isVisible ? (
         <>
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
-          {isLoaded && children}
+          {_isLoaded && children}
         </>
       ) : (
         loadingComponent || defaultLoadingComponent

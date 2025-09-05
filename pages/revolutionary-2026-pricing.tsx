@@ -1,73 +1,50 @@
-import React, { useState, useMemo } from 'react';
+import React, {_useState, _useMemo} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
-  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
-  Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
-  Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-} from 'lucide-react';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
+import {_CheckCircle, _Star, _TrendingUp, _DollarSign, _Clock, _Users, _ArrowRight, _Rocket, _Brain, _Zap, _Shield, _Atom, _Sparkles, _Target, _Satellite, _Globe, _Cpu, _Lock, _Palette, _Layers, _Phone, _Mail, _MapPin, _ExternalLink, _Filter, _Grid, _List} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 
-export default function Revolutionary2026Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('price-low');
+export default function Revolutionary2026Pricing() {_const [selectedCategory, _setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, _setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, _setSortBy] = useState<string>('price-low');
 
   // Combine all 2026 services
-  const all2026Services = [
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2
+  const _all2026Services = [
+    ...innovative2026MicroSaasServicesV2, _...emergingTech2026ServicesV2
   ];
 
   // Filter services based on category and price
-  const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
+  const _filteredServices = useMemo__(() => {
+    let _filtered = all2026Services;
 
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
-          return service.category.includes('AI') || service.category.includes('Machine Learning');
-        } else if (selectedCategory === 'quantum') {
-          return service.category.includes('Quantum') || service.category.includes('Space');
-        } else if (selectedCategory === 'emerging') {
-          return service.category.includes('Emerging') || service.category.includes('Technology');
-        } else if (selectedCategory === 'enterprise') {
-          return service.category.includes('Enterprise') || service.category.includes('Business');
-        }
+          return service.category.includes('AI') || service.category.includes('Machine Learning');} else if (selectedCategory === 'quantum') {_return service.category.includes('Quantum') || service.category.includes('Space');} else if (selectedCategory === 'emerging') {_return service.category.includes('Emerging') || service.category.includes('Technology');} else if (selectedCategory === 'enterprise') {_return service.category.includes('Enterprise') || service.category.includes('Business');}
         return true;
       });
     }
 
     // Price filter
-    if (selectedPriceRange !== 'all') {
-      filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+    if (selectedPriceRange !== 'all') {_filtered = filtered.filter(service => {
+        const _price = parseFloat(service.price.replace(/[^0-9.]/g, _''));
         if (selectedPriceRange === 'low') return price < 1000;
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
-        return true;
-      });
+        return true;});
     }
 
     // Sort services
-    filtered.sort((a, b) => {
-      if (sortBy === 'price-low') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
-        return priceA - priceB;
-      }
-      if (sortBy === 'price-high') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
-        return priceB - priceA;
-      }
+    filtered.sort(_(a, _b) => {_if (sortBy === 'price-low') {
+        const _priceA = parseFloat(a.price.replace(/[^0-9.]/g, _'')) || 0;
+        const _priceB = parseFloat(b.price.replace(/[^0-9.]/g, _'')) || 0;
+        return priceA - priceB;}
+      if (sortBy === 'price-high') {_const _priceA = parseFloat(a.price.replace(/[^0-9.]/g, _'')) || 0;
+        const _priceB = parseFloat(b.price.replace(/[^0-9.]/g, _'')) || 0;
+        return priceB - priceA;}
       if (sortBy === 'rating') return b.rating - a.rating;
       if (sortBy === 'popularity') return b.customers - a.customers;
       if (sortBy === 'name') return a.name.localeCompare(b.name);
@@ -77,44 +54,36 @@ export default function Revolutionary2026Pricing() {
     return filtered;
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
-    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
+  const _categories = [
+    {_id: 'all', _name: 'All Services', _icon: '🚀', _count: all2026Services.length},
+    {_id: 'ai', _name: 'AI & Machine Learning', _icon: '🧠', _count: all2026Services.filter(s => s.category.includes('AI')).length},
+    {_id: 'quantum', _name: 'Quantum & Space', _icon: '⚛️', _count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length},
+    {_id: 'emerging', _name: 'Emerging Technologies', _icon: '✨', _count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length},
+    {_id: 'enterprise', _name: 'Enterprise Solutions', _icon: '🏢', _count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length}
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+  const _priceRanges = [
+    {_id: 'all', _name: 'All Prices', _range: 'All'},
+    {_id: 'low', _name: 'Under $1K/month', _range: 'Under $1K'},
+    {_id: 'medium', _name: '$1K - $5K/month', _range: '$1K - $5K'},
+    {_id: 'high', _name: '$5K - $20K/month', _range: '$5K - $20K'},
+    {_id: 'premium', _name: '$20K+/month', _range: '$20K+'}
   ];
 
-  const sortOptions = [
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'popularity', name: 'Most Popular' },
-    { id: 'name', name: 'Name A-Z' }
+  const _sortOptions = [
+    {_id: 'price-low', _name: 'Price Low to High'},
+    {_id: 'price-high', _name: 'Price High to Low'},
+    {_id: 'rating', _name: 'Highest Rated'},
+    {_id: 'popularity', _name: 'Most Popular'},
+    {_id: 'name', _name: 'Name A-Z'}
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
   // Calculate pricing statistics
-  const pricingStats = {
-    totalServices: all2026Services.length,
-    averagePrice: all2026Services.reduce((acc, service) => {
-      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
-      return acc + price;
-    }, 0) / all2026Services.length,
+  const _pricingStats = {_totalServices: all2026Services.length, _averagePrice: all2026Services.reduce(_(acc, _service) => {
+      const _price = parseFloat(service.price.replace(/[^0-9.]/g, _'')) || 0;
+      return acc + price;}, 0) / all2026Services.length,
     lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
     highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
     popularServices: all2026Services.filter(s => s.popular).length
@@ -124,11 +93,11 @@ export default function Revolutionary2026Pricing() {
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
       colorScheme="neural-network"
-      particleCount={500}
-      animationSpeed={2.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-      enableNeuralNetwork={true}
+      particleCount={_500}
+      animationSpeed={_2.5}
+      enableHolographic={_true}
+      enableQuantumEffects={_true}
+      enableNeuralNetwork={_true}
     >
       <div className="min-h-screen">
         <Head>
@@ -143,18 +112,18 @@ export default function Revolutionary2026Pricing() {
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
 
-        {/* Enhanced Navigation */}
+        {_/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
 
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -167,103 +136,99 @@ export default function Revolutionary2026Pricing() {
                 Get maximum ROI with our revolutionary services.
               </p>
               
-              {/* Pricing Statistics */}
+              {_/* Pricing Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
+                  <div className="text-2xl font-bold text-purple-400">{_pricingStats.totalServices}+</div>
                   <div className="text-gray-400 text-sm">Total Services</div>
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-green-400">${Math.round(pricingStats.averagePrice).toLocaleString()}</div>
+                  <div className="text-2xl font-bold text-green-400">${_Math.round(pricingStats.averagePrice).toLocaleString()}</div>
                   <div className="text-gray-400 text-sm">Average Price</div>
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-blue-400">${pricingStats.lowestPrice}</div>
+                  <div className="text-2xl font-bold text-blue-400">${_pricingStats.lowestPrice}</div>
                   <div className="text-gray-400 text-sm">Starting Price</div>
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-yellow-400">{pricingStats.popularServices}</div>
+                  <div className="text-2xl font-bold text-yellow-400">{_pricingStats.popularServices}</div>
                   <div className="text-gray-400 text-sm">Popular Services</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Contact Information */}
+            {_/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6, _delay: 0.2}}
+              viewport={_{ once: true}}
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="flex flex-col items-center space-y-2">
                   <Phone className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
+                  <span className="text-sm text-gray-300">{_contactInfo.mobile}</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <Mail className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm text-gray-300">{contactInfo.email}</span>
+                  <span className="text-sm text-gray-300">{_contactInfo.email}</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <MapPin className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm text-gray-300">{contactInfo.address}</span>
+                  <span className="text-sm text-gray-300">{_contactInfo.address}</span>
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Filters */}
+        {_/* Filters */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
-                {/* Category Filter */}
+                {_/* Category Filter */}
                 <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <button
+                  {_categories.map(_(category) => (_<button
                       key={category.id}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      onClick={_() => setSelectedCategory(category.id)}
+                      className={_`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selectedCategory === category.id
                           ? 'bg-purple-600 text-white'
-                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
-                      }`}
+                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'}`}
                     >
-                      {category.icon} {category.name} ({category.count})
+                      {_category.icon} {_category.name} ({_category.count})
                     </button>
                   ))}
                 </div>
 
-                {/* Price Range Filter */}
+                {_/* Price Range Filter */}
                 <div className="flex flex-wrap gap-2">
-                  {priceRanges.map((range) => (
-                    <button
+                  {_priceRanges.map(_(range) => (_<button
                       key={range.id}
-                      onClick={() => setSelectedPriceRange(range.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      onClick={_() => setSelectedPriceRange(range.id)}
+                      className={_`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selectedPriceRange === range.id
                           ? 'bg-blue-600 text-white'
-                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
-                      }`}
+                          : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'}`}
                     >
-                      {range.name}
+                      {_range.name}
                     </button>
                   ))}
                 </div>
 
-                {/* Sort Options */}
+                {_/* Sort Options */}
                 <div className="flex items-center space-x-4">
                   <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
+                    value={_sortBy}
+                    onChange={_(_e) => setSortBy(e.target.value)}
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60"
                   >
-                    {sortOptions.map((option) => (
-                      <option key={option.id} value={option.id}>
-                        {option.name}
+                    {_sortOptions.map(_(option) => (
+                      <option key={option.id} value={_option.id}>
+                        {_option.name}
                       </option>
                     ))}
                   </select>
@@ -273,12 +238,12 @@ export default function Revolutionary2026Pricing() {
           </div>
         </section>
 
-        {/* Services Pricing Grid */}
+        {_/* Services Pricing Grid */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-white mb-2">
-                {filteredServices.length} Services Available
+                {_filteredServices.length} Services Available
               </h2>
               <p className="text-gray-400">
                 Compare pricing and features to find the perfect solution for your business
@@ -286,11 +251,11 @@ export default function Revolutionary2026Pricing() {
             </div>
 
             <AnimatePresence mode="wait">
-              {filteredServices.length === 0 ? (
+              {_filteredServices.length === 0 ? (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0}}
+                  animate={_{ opacity: 1}}
+                  exit={_{ opacity: 0}}
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
@@ -299,105 +264,104 @@ export default function Revolutionary2026Pricing() {
                     Try adjusting your filters.
                   </div>
                 </motion.div>
-              ) : (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+              ) : (_<motion.div
+                  initial={_{ opacity: 0}}
+                  animate={_{ opacity: 1}}
+                  exit={_{ opacity: 0}}
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 >
-                  {filteredServices.map((service, index) => (
+                  {_filteredServices.map((service, _index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={_{ opacity: 0, _y: 20}}
+                      animate={_{ opacity: 1, _y: 0}}
+                      transition={_{ duration: 0.5, _delay: index * 0.1}}
                       className="group relative"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                       <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300">
-                        {/* Service Header */}
+                        {_/* Service Header */}
                         <div className="text-center mb-6">
                           <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
-                            {service.icon}
+                            {_service.icon}
                           </div>
                           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                            {service.name}
+                            {_service.name}
                           </h3>
-                          <p className="text-purple-300 text-sm mb-4">{service.tagline}</p>
+                          <p className="text-purple-300 text-sm mb-4">{_service.tagline}</p>
                           
-                          {/* Pricing */}
+                          {_/* Pricing */}
                           <div className="mb-6">
                             <div className="text-4xl font-bold text-white mb-2">
-                              {service.price}
-                              <span className="text-lg text-gray-400">{service.period}</span>
+                              {_service.price}
+                              <span className="text-lg text-gray-400">{_service.period}</span>
                             </div>
                             <div className="text-gray-400 text-sm">
-                              {service.trialDays > 0 ? `${service.trialDays}-day free trial` : 'No trial available'}
+                              {_service.trialDays > 0 ? `${service.trialDays}-day free trial` : 'No trial available'}
                             </div>
                           </div>
                         </div>
 
-                        {/* Features */}
+                        {_/* Features */}
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
                             <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
                             Key Features
                           </h4>
                           <ul className="space-y-2">
-                            {service.features.slice(0, 6).map((feature, idx) => (
+                            {_service.features.slice(0, _6).map(_(feature, _idx) => (
                               <li key={idx} className="flex items-start space-x-2 text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                <span>{feature}</span>
+                                <span>{_feature}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        {/* Service Info */}
+                        {_/* Service Info */}
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
                           <div>
                             <span className="text-gray-400">Category:</span>
-                            <div className="text-white">{service.category}</div>
+                            <div className="text-white">{_service.category}</div>
                           </div>
                           <div>
                             <span className="text-gray-400">Rating:</span>
                             <div className="flex items-center text-white">
                               <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                              {service.rating}/5
+                              {_service.rating}/5
                             </div>
                           </div>
                           <div>
                             <span className="text-gray-400">Customers:</span>
-                            <div className="text-white">{service.customers.toLocaleString()}+</div>
+                            <div className="text-white">{_service.customers.toLocaleString()}+</div>
                           </div>
                           <div>
                             <span className="text-gray-400">Setup:</span>
-                            <div className="text-white">{service.setupTime}</div>
+                            <div className="text-white">{_service.setupTime}</div>
                           </div>
                         </div>
 
-                        {/* ROI and Market Info */}
+                        {_/* ROI and Market Info */}
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
                           <div className="text-sm text-purple-300 mb-2">
-                            <strong>ROI:</strong> {service.roi}
+                            <strong>ROI:</strong> {_service.roi}
                           </div>
                           <div className="text-xs text-gray-400">
-                            <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
+                            <strong>Market:</strong> {_service.marketSize} | <strong>Growth:</strong> {_service.growthRate}
                           </div>
                         </div>
 
-                        {/* Action Buttons */}
+                        {_/* Action Buttons */}
                         <div className="flex flex-col gap-3">
                           <Link
-                            href={service.link}
+                            href={_service.link}
                             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center group-hover:scale-105"
                           >
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                           </Link>
                           <a
-                            href={`tel:${contactInfo.mobile}`}
+                            href={_`tel:${contactInfo.mobile}`}
                             className="bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                           >
                             <Phone className="w-4 h-4 mr-2" />
@@ -405,14 +369,14 @@ export default function Revolutionary2026Pricing() {
                           </a>
                         </div>
 
-                        {/* Badges */}
+                        {_/* Badges */}
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
-                          {service.popular && (
+                          {_service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
                           )}
-                          {service.price.includes('Custom') && (
+                          {_service.price.includes('Custom') && (
                             <div className="bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full">
                               CUSTOM
                             </div>
@@ -427,14 +391,14 @@ export default function Revolutionary2026Pricing() {
           </div>
         </section>
 
-        {/* Pricing Comparison */}
+        {_/* Pricing Comparison */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -446,12 +410,12 @@ export default function Revolutionary2026Pricing() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Value Proposition */}
+              {_/* Value Proposition */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.1}}
+                viewport={_{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -464,12 +428,12 @@ export default function Revolutionary2026Pricing() {
                 </p>
               </motion.div>
 
-              {/* Technology */}
+              {_/* Technology */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.2}}
+                viewport={_{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -482,12 +446,12 @@ export default function Revolutionary2026Pricing() {
                 </p>
               </motion.div>
 
-              {/* Support */}
+              {_/* Support */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.3}}
+                viewport={_{ once: true}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -503,14 +467,14 @@ export default function Revolutionary2026Pricing() {
           </div>
         </section>
 
-        {/* Call to Action */}
+        {_/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6}}
+              viewport={_{ once: true}}
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -522,14 +486,14 @@ export default function Revolutionary2026Pricing() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href={`tel:${contactInfo.mobile}`}
+                  href={_`tel:${contactInfo.mobile}`}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call {contactInfo.mobile}
+                  Call {_contactInfo.mobile}
                 </a>
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={_`mailto:${contactInfo.email}`}
                   className="bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -537,8 +501,8 @@ export default function Revolutionary2026Pricing() {
                 </a>
               </div>
               <div className="mt-8 text-gray-400 text-sm">
-                <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</a></p>
-                <p className="mt-2">{contactInfo.address}</p>
+                <p>Visit us at: <a href={_contactInfo.website} className="text-purple-400 hover:text-purple-300">{_contactInfo.website}</a></p>
+                <p className="mt-2">{_contactInfo.address}</p>
               </div>
             </motion.div>
           </div>

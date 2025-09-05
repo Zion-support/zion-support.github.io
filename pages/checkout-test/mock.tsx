@@ -1,17 +1,11 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
-export default function MockCheckoutPage() {
-  const router = useRouter();
-  const { mock } = router.query;
+export default function MockCheckoutPage() {_const _router = useRouter();
+  const { mock} = router.query;
 
-  if (!mock) {
-    router.push('/checkout');
-    return <div>Redirecting...</div>;
-  }
+  if (!mock) {_router.push('/checkout');
+    return <div>Redirecting...</div>;}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
@@ -34,7 +28,7 @@ export default function MockCheckoutPage() {
             <h3 className="text-lg font-semibold text-white mb-2">What happened:</h3>
             <ul className="text-zion-slate-light space-y-1 text-sm">
               <li>• Checkout request received successfully</li>
-              <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
+              <li>• Mock session ID generated: cs_test_mock_session_id_{_Date.now()}</li>
               <li>• Cart items would be processed</li>
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>

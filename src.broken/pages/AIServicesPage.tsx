@@ -1,46 +1,12 @@
 import React from 'react';
-import { 
-  Brain, 
-  MessageSquare, 
-  BarChart3, 
-  FileText, 
-  Search, 
-  Shield, 
-  Users, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ExternalLink,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github
-} from 'lucide-react';
+import {_Brain, _MessageSquare, _BarChart3, _FileText, _Search, _Shield, _Users, _Zap, _CheckCircle, _Star, _ExternalLink, _ArrowRight, _Phone, _Mail, _MapPin, _Linkedin, _Twitter, _Github} from 'lucide-react';
 
-export default function AIServicesPage() {
-  const aiServices = [
+export default function AIServicesPage() {_const _aiServices = [
     {
-      name: "AI Content Generation Suite",
-      description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.",
-      icon: <FileText className="w-12 h-12 text-blue-500" />,
-      features: [
-        "Multi-language content generation",
-        "SEO optimization with keyword research",
-        "Brand voice training and customization",
-        "Plagiarism detection and originality scoring",
-        "Content performance analytics",
-        "Automated content scheduling",
-        "Team collaboration tools",
-        "API integration capabilities"
-      ],
-      pricing: {
-        starter: "$299/month",
-        professional: "$599/month",
-        enterprise: "$1,299/month"
-      },
+      name: "AI Content Generation Suite", _description: "Revolutionary AI-powered content creation platform that generates high-quality, _SEO-optimized content for blogs, _marketing materials, _and social media.", _icon: <FileText className="w-12 h-12 text-blue-500" />, _features: [
+        "Multi-language content generation", _"SEO optimization with keyword research", _"Brand voice training and customization", _"Plagiarism detection and originality scoring", _"Content performance analytics", _"Automated content scheduling", _"Team collaboration tools", _"API integration capabilities"
+      ], _pricing: {
+        starter: "$299/month", _professional: "$599/month", _enterprise: "$1, _299/month"},
       marketPrice: "$500-800/month",
       useCases: ["Marketing agencies", "Content creators", "E-commerce businesses", "Bloggers", "Social media managers"],
       benefits: [
@@ -52,25 +18,10 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-content-generation"
     },
-    {
-      name: "AI Customer Service Platform",
-      description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",
-      icon: <MessageSquare className="w-12 h-12 text-green-500" />,
-      features: [
-        "Natural language understanding",
-        "Multi-language support (50+ languages)",
-        "Sentiment analysis and mood detection",
-        "Seamless human agent handoff",
-        "Integration with major CRM platforms",
-        "Real-time analytics and reporting",
-        "Custom knowledge base training",
-        "Voice and text support"
-      ],
-      pricing: {
-        starter: "$199/month",
-        professional: "$399/month",
-        enterprise: "$799/month"
-      },
+    {_name: "AI Customer Service Platform", _description: "Intelligent chatbot solution with advanced natural language processing, _sentiment analysis, _and seamless human handoff capabilities.", _icon: <MessageSquare className="w-12 h-12 text-green-500" />, _features: [
+        "Natural language understanding", _"Multi-language support (50+ languages)", _"Sentiment analysis and mood detection", _"Seamless human agent handoff", _"Integration with major CRM platforms", _"Real-time analytics and reporting", _"Custom knowledge base training", _"Voice and text support"
+      ], _pricing: {
+        starter: "$199/month", _professional: "$399/month", _enterprise: "$799/month"},
       marketPrice: "$300-600/month",
       useCases: ["E-commerce platforms", "SaaS companies", "Customer support teams", "Healthcare providers", "Financial services"],
       benefits: [
@@ -82,25 +33,10 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-customer-service"
     },
-    {
-      name: "AI Sales Intelligence Platform",
-      description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.",
-      icon: <BarChart3 className="w-12 h-12 text-purple-500" />,
-      features: [
-        "Advanced lead scoring algorithms",
-        "Sales forecasting and predictions",
-        "Pipeline analytics and insights",
-        "CRM and marketing automation integration",
-        "Real-time performance tracking",
-        "Custom sales playbooks",
-        "Competitive intelligence",
-        "Revenue optimization recommendations"
-      ],
-      pricing: {
-        starter: "$399/month",
-        professional: "$799/month",
-        enterprise: "$1,599/month"
-      },
+    {_name: "AI Sales Intelligence Platform", _description: "Predictive analytics and lead scoring platform powered by machine learning algorithms for sales optimization and revenue growth.", _icon: <BarChart3 className="w-12 h-12 text-purple-500" />, _features: [
+        "Advanced lead scoring algorithms", _"Sales forecasting and predictions", _"Pipeline analytics and insights", _"CRM and marketing automation integration", _"Real-time performance tracking", _"Custom sales playbooks", _"Competitive intelligence", _"Revenue optimization recommendations"
+      ], _pricing: {
+        starter: "$399/month", _professional: "$799/month", _enterprise: "$1, _599/month"},
       marketPrice: "$600-1000/month",
       useCases: ["Sales teams", "B2B companies", "Growth teams", "Sales managers", "Revenue operations"],
       benefits: [
@@ -112,25 +48,10 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-sales-intelligence"
     },
-    {
-      name: "AI-Powered Search & RAG System",
-      description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",
-      icon: <Search className="w-12 h-12 text-orange-500" />,
-      features: [
-        "Vector-based semantic search",
-        "Document processing and indexing",
-        "Contextual question answering",
-        "Multi-format document support",
-        "Real-time knowledge updates",
-        "Custom knowledge base creation",
-        "API access and integrations",
-        "Advanced analytics and insights"
-      ],
-      pricing: {
-        starter: "$499/month",
-        professional: "$999/month",
-        enterprise: "$1,999/month"
-      },
+    {_name: "AI-Powered Search & RAG System", _description: "Advanced retrieval-augmented generation system for intelligent document search, _knowledge management, _and contextual information retrieval.", _icon: <Search className="w-12 h-12 text-orange-500" />, _features: [
+        "Vector-based semantic search", _"Document processing and indexing", _"Contextual question answering", _"Multi-format document support", _"Real-time knowledge updates", _"Custom knowledge base creation", _"API access and integrations", _"Advanced analytics and insights"
+      ], _pricing: {
+        starter: "$499/month", _professional: "$999/month", _enterprise: "$1, _999/month"},
       marketPrice: "$800-1500/month",
       useCases: ["Research institutions", "Legal firms", "Healthcare organizations", "Educational institutions", "Enterprise knowledge management"],
       benefits: [
@@ -142,25 +63,10 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-search-rag"
     },
-    {
-      name: "AI Security & Guardrails",
-      description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",
-      icon: <Shield className="w-12 h-12 text-red-500" />,
-      features: [
-        "Content safety filtering",
-        "Bias detection and mitigation",
-        "Ethical AI guidelines enforcement",
-        "Real-time threat detection",
-        "Compliance monitoring",
-        "Audit trails and reporting",
-        "Custom policy creation",
-        "Integration with AI platforms"
-      ],
-      pricing: {
-        starter: "$599/month",
-        professional: "$1,199/month",
-        enterprise: "$2,499/month"
-      },
+    {_name: "AI Security & Guardrails", _description: "Comprehensive AI safety and security platform with content filtering, _bias detection, _and ethical AI governance tools.", _icon: <Shield className="w-12 h-12 text-red-500" />, _features: [
+        "Content safety filtering", _"Bias detection and mitigation", _"Ethical AI guidelines enforcement", _"Real-time threat detection", _"Compliance monitoring", _"Audit trails and reporting", _"Custom policy creation", _"Integration with AI platforms"
+      ], _pricing: {
+        starter: "$599/month", _professional: "$1, _199/month", _enterprise: "$2, _499/month"},
       marketPrice: "$1000-2000/month",
       useCases: ["AI development teams", "Enterprises", "Government agencies", "Healthcare providers", "Financial institutions"],
       benefits: [
@@ -172,25 +78,10 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-security-guardrails"
     },
-    {
-      name: "AI Evaluation & Testing Lab",
-      description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",
-      icon: <Brain className="w-12 h-12 text-indigo-500" />,
-      features: [
-        "Automated model testing",
-        "Performance benchmarking",
-        "Quality assurance tools",
-        "Bias and fairness testing",
-        "Robustness evaluation",
-        "Custom evaluation metrics",
-        "Continuous monitoring",
-        "Comprehensive reporting"
-      ],
-      pricing: {
-        starter: "$799/month",
-        professional: "$1,599/month",
-        enterprise: "$3,199/month"
-      },
+    {_name: "AI Evaluation & Testing Lab", _description: "Comprehensive AI model evaluation platform with automated testing, _performance benchmarking, _and quality assurance tools.", _icon: <Brain className="w-12 h-12 text-indigo-500" />, _features: [
+        "Automated model testing", _"Performance benchmarking", _"Quality assurance tools", _"Bias and fairness testing", _"Robustness evaluation", _"Custom evaluation metrics", _"Continuous monitoring", _"Comprehensive reporting"
+      ], _pricing: {
+        starter: "$799/month", _professional: "$1, _599/month", _enterprise: "$3, _199/month"},
       marketPrice: "$1200-2500/month",
       useCases: ["AI research teams", "ML engineers", "Data scientists", "AI product teams", "Quality assurance teams"],
       benefits: [
@@ -204,16 +95,15 @@ export default function AIServicesPage() {
     }
   ];
 
-  const stats = [
-    { label: "AI Models Deployed", value: "500+" },
-    { label: "Client Satisfaction", value: "98%" },
-    { label: "Cost Savings", value: "40-60%" },
-    { label: "Implementation Time", value: "2-4 weeks" }
+  const _stats = [
+    {_label: "AI Models Deployed", _value: "500+"},
+    {_label: "Client Satisfaction", _value: "98%"},
+    {_label: "Cost Savings", _value: "40-60%"},
+    {_label: "Implementation Time", _value: "2-4 weeks"}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
+  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {_/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -225,7 +115,7 @@ export default function AIServicesPage() {
               AI Services & Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI-powered solutions that transform businesses through intelligent automation, predictive analytics, and cutting-edge machine learning technologies.
+              Revolutionary AI-powered solutions that transform businesses through intelligent automation, _predictive analytics, _and cutting-edge machine learning technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -247,19 +137,19 @@ export default function AIServicesPage() {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {_stats.map((stat, _index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{_stat.value}</div>
+              <div className="text-gray-300 text-sm">{_stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* AI Services Grid */}
+      {_/* AI Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -271,24 +161,23 @@ export default function AIServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {aiServices.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
+          {_aiServices.map(_(service, _index) => (_<div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  {service.icon}
-                  <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                  {_service.icon}
+                  <h3 className="text-2xl font-bold text-white">{_service.name}</h3>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 leading-relaxed">{_service.description}</p>
                 
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {_service.features.map((feature, _featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {feature}
+                          {_feature}
                         </li>
                       ))}
                     </ul>
@@ -300,27 +189,27 @@ export default function AIServicesPage() {
                       <div className="space-y-1">
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-400">Starter:</span>
-                          <span className="text-green-400 font-semibold">{service.pricing.starter}</span>
+                          <span className="text-green-400 font-semibold">{_service.pricing.starter}</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-400">Professional:</span>
-                          <span className="text-blue-400 font-semibold">{service.pricing.professional}</span>
+                          <span className="text-blue-400 font-semibold">{_service.pricing.professional}</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-400">Enterprise:</span>
-                          <span className="text-purple-400 font-semibold">{service.pricing.enterprise}</span>
+                          <span className="text-purple-400 font-semibold">{_service.pricing.enterprise}</span>
                         </div>
                       </div>
                       <div className="mt-2 text-xs text-gray-400">
-                        Market price: <span className="line-through">{service.marketPrice}</span>
+                        Market price: <span className="line-through">{_service.marketPrice}</span>
                       </div>
                     </div>
 
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
-                          <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
+                        {_service.useCases.map(_(useCase, _useCaseIndex) => (
+                          <li key={useCaseIndex} className="text-xs text-gray-300">• {_useCase}</li>
                         ))}
                       </ul>
                     </div>
@@ -329,8 +218,8 @@ export default function AIServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
+                      {_service.benefits.map(_(benefit, _benefitIndex) => (
+                        <li key={benefitIndex} className="text-xs text-gray-300">• {_benefit}</li>
                       ))}
                     </ul>
                   </div>
@@ -338,14 +227,14 @@ export default function AIServicesPage() {
                   <div className="pt-4 border-t border-white/20">
                     <div className="flex gap-3">
                       <a 
-                        href={service.website}
+                        href={_service.website}
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Learn More</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
                       <a 
-                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                        href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                         className="inline-flex items-center justify-center px-4 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Get Quote</span>
@@ -359,7 +248,7 @@ export default function AIServicesPage() {
         </div>
       </div>
 
-      {/* Why Choose Zion Tech Group */}
+      {_/* Why Choose Zion Tech Group */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-12">
@@ -402,7 +291,7 @@ export default function AIServicesPage() {
         </div>
       </div>
 
-      {/* Contact & CTA Section */}
+      {_/* Contact & CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-8">
@@ -455,7 +344,7 @@ export default function AIServicesPage() {
         </div>
       </div>
 
-      {/* Footer */}
+      {_/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

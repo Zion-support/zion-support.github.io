@@ -11,16 +11,4 @@ import EnterpriseRoutes from "./EnterpriseRoutes";
 import CommunityRoutes from "./CommunityRoutes";
 import DeveloperRoutes from "./DeveloperRoutes";
 
-export {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
-};
+export {_AuthRoutes, _DashboardRoutes, _MarketplaceRoutes, _TalentRoutes, _AdminRoutes, _MobileAppRoutes, _ContentRoutes, _ErrorRoutes, _EnterpriseRoutes, _CommunityRoutes, _DeveloperRoutes};

@@ -1,6 +1,5 @@
 
-export interface TalentProfile {
-  id: string;
+export interface TalentProfile {_id: string;
   user_id: string;
   full_name: string;
   professional_title: string;
@@ -18,21 +17,17 @@ export interface TalentProfile {
   is_verified?: boolean;
   key_projects?: {
     title: string;
-    description: string;
-  }[];
+    description: string;}[];
 }
 
-export interface TalentProfileFilters {
-  search?: string;
+export interface TalentProfileFilters {_search?: string;
   skills?: string[];
   availabilities?: string[];
   regions?: string[];
-  priceRange?: [number, number];
-  experienceRange?: [number, number];
-}
+  priceRange?: [number, _number];
+  experienceRange?: [number, _number];}
 
-export interface HireRequest {
-  id: string;
+export interface HireRequest {_id: string;
   clientId: string;
   talentId: string;
   projectTitle: string;
@@ -40,13 +35,10 @@ export interface HireRequest {
   budget: {
     min: number;
     max: number;
-    currency: string;
-  };
-  timeline: {
-    startDate: string;
+    currency: string;};
+  timeline: {_startDate: string;
     endDate?: string;
-    estimatedDuration?: string;
-  };
+    estimatedDuration?: string;};
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
 }

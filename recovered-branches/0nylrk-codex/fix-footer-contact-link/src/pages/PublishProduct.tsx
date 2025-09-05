@@ -1,29 +1,19 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
 
-export default function PublishProduct() {
-  const { isAuthenticated, isLoading } = useAuth();
+export default function PublishProduct() {_const { isAuthenticated, _isLoading} = useAuth();
   
   // Show loading while checking authentication
-  if (isLoading) {
-    return (
+  if (isLoading) {_return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
       </div>
-    );
-  }
+    );}
   
   // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+  if (!isAuthenticated) {_return <Navigate to="/login" state={{ from: '/publish'}} replace />;
   }
 
   return (

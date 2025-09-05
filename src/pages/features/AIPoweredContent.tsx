@@ -1,27 +1,13 @@
-import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import React, {_useEffect} from "react";
 import Link from 'next/link';
-import { useFeatureUsage } from "@/hooks/useFeatureUsage";
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 
-export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT');
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "AI Content Generation",
-    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
-    "url": "https://app.ziontechgroup.com/features/ai-content-generation"
-  };
+export default function AIPoweredContent() {_useFeatureUsage('ZionGPT');
+  const _schema = {
+    "@context": "https://schema.org", _"@type": "WebPage", _"name": "AI Content Generation", _"description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.", _"url": "https://app.ziontechgroup.com/features/ai-content-generation"};
 
-  const { markAiExplored } = useAdvancedOnboardingStatus();
+  const {_markAiExplored} = useAdvancedOnboardingStatus();
 
-  useEffect(() => {
-    markAiExplored();
-  }, [markAiExplored]);
+  useEffect__(() => {_markAiExplored();}, [markAiExplored]);
 
   return (
     <>
@@ -31,10 +17,10 @@ export default function AIPoweredContent() {
         keywords="AI content generation, ZionGPT, SEO tools"
         canonical="https://app.ziontechgroup.com/features/ai-content-generation"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

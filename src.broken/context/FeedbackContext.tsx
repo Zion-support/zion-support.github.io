@@ -1,9 +1,7 @@
 import React from 'react';
-export function FeedbackContext() {
-  return (
+export function FeedbackContext() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

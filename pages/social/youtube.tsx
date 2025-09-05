@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React, {_useEffect} from 'react';
 import Head from 'next/head';
 
-export default function YouTubeRedirect() {
-	useEffect(() => {
+export default function YouTubeRedirect() {_useEffect__(() => {
 		if (typeof window !== 'undefined') {
-			window.location.replace('https://youtube.com/@ziontechgroup');
-		}
+			window.location.replace('https://youtube.com/@ziontechgroup');}
 	}, []);
 	return (
 		<>

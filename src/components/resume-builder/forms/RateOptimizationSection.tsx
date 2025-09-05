@@ -1,53 +1,30 @@
 
-import React, { useState } from "react";
-import { Control, UseFormSetValue } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
+import React, {_useState} from "react";
+import {_FormField, _FormItem, _FormLabel, _FormControl, _FormDescription, _FormMessage} from "@/components/ui/form";
 
-interface RateOptimizationSectionProps {
-  control: Control<any>;
+interface RateOptimizationSectionProps {_control: Control<any>;
   setValue: UseFormSetValue<any>;
   skills: string[];
   yearsExperience: number;
   location?: string;
-  rateType: "hourly" | "fixed";
-}
+  rateType: "hourly" | "fixed";}
 
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control,
-  setValue,
-  skills,
-  yearsExperience,
-  location,
-  rateType
-}) => {
-  const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate);
-  };
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (_{_control, _setValue, _skills, _yearsExperience, _location, _rateType}) => {_const _handleSuggestionApplied = (_rate: number) => {
+    setValue("hourlyRate", _rate);};
 
-  return (
-    <div className="space-y-4">
+  return (_<div className="space-y-4">
       <FormField
-        control={control}
+        control={_control}
         name="hourlyRate"
-        render={({ field }: { field: any }) => (
+        render={_({ field}: {_field: unknown}) => (
           <FormItem>
-            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>
+            <FormLabel>Your {_rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>
             <FormControl>
               <Input
                 type="number"
                 min="1"
                 step="0.01"
-                {...field}
+                {_...field}
               />
             </FormControl>
             <FormDescription>
@@ -61,11 +38,11 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-            skills={skills}
-            yearsExperience={yearsExperience}
-            location={location}
-            onSuggestionApplied={handleSuggestionApplied}
-            rateType={rateType}
+            skills={_skills}
+            yearsExperience={_yearsExperience}
+            location={_location}
+            onSuggestionApplied={_handleSuggestionApplied}
+            rateType={_rateType}
           />
         </CardContent>
       </Card>

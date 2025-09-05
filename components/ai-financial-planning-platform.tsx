@@ -1,47 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
-  Award, MessageCircle, Calculator
-} from 'lucide-react';
+import {_DollarSign, _TrendingUp, _Shield, _Zap, _Target, _BarChart3, _CheckCircle, _Star, _Globe, _Lock, _Smartphone, _Monitor, _Award, _MessageCircle, _Calculator} from 'lucide-react';
 
-export default function AIFinancialPlanningPlatform() {
-  const features = [
+export default function AIFinancialPlanningPlatform() {_const _features = [
     {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: 'AI-Powered Financial Analysis',
-      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Predictive Financial Planning',
-      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: 'Goal-Based Planning',
-      description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Automated Portfolio Management',
-      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Risk Assessment & Management',
-      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Real-Time Financial Insights',
-      description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
-    }
+      icon: <DollarSign className="w-6 h-6" />, _title: 'AI-Powered Financial Analysis', _description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'},
+    {_icon: <TrendingUp className="w-6 h-6" />, _title: 'Predictive Financial Planning', _description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'},
+    {_icon: <Target className="w-6 h-6" />, _title: 'Goal-Based Planning', _description: 'Personalized financial planning based on your specific goals, _timeline, _and risk tolerance.'},
+    {_icon: <Zap className="w-6 h-6" />, _title: 'Automated Portfolio Management', _description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'},
+    {_icon: <Shield className="w-6 h-6" />, _title: 'Risk Assessment & Management', _description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'},
+    {_icon: <BarChart3 className="w-6 h-6" />, _title: 'Real-Time Financial Insights', _description: 'Live financial data, _market analysis, _and personalized recommendations updated in real-time.'}
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase investment returns by 25%',
     'Reduce financial planning time by 70%',
     'Improve risk-adjusted returns by 40%',
@@ -74,12 +45,11 @@ export default function AIFinancialPlanningPlatform() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
 					</div>
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>AI Financial Planning Platform | Zion Tech Group</title>
-        <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management." />
-        <meta name="keywords" content="AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor" />
+        <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plans, _portfolio optimization, _and risk management." />
+        <meta name="keywords" content="AI financial planning, _financial planning, _wealth management, _portfolio optimization, _investment planning, _financial advisor" />
         <meta property="og:title" content="AI Financial Planning Platform | Zion Tech Group" />
         <meta property="og:description" content="Intelligent financial planning and wealth management with AI." />
         <meta property="og:type" content="website" />
@@ -88,14 +58,14 @@ export default function AIFinancialPlanningPlatform() {
       </Head>
 
       <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
@@ -107,20 +77,19 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans, 
-                portfolio optimization, and risk management that drives financial success.
+                Intelligent financial planning and wealth management with AI. Get personalized plans, _portfolio optimization, _and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Watch Demo
@@ -130,13 +99,13 @@ export default function AIFinancialPlanningPlatform() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {_/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -149,34 +118,34 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {_features.map((feature, _index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-yellow-400">
-                      {feature.icon}
+                      {_feature.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{_feature.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{_feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {_/* Benefits Section */}
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -189,17 +158,17 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {_benefits.map(_(benefit, _index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={_{ opacity: 0, _y: 30}}
+                  whileInView={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
-                    <span className="text-white font-medium text-sm">{benefit}</span>
+                    <span className="text-white font-medium text-sm">{_benefit}</span>
                   </div>
                 </motion.div>
               ))}
@@ -207,13 +176,13 @@ export default function AIFinancialPlanningPlatform() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {_/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -226,31 +195,31 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {useCases.map((useCase, index) => (
+              {_useCases.map(_(useCase, _index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={_{ opacity: 0, _scale: 0.8}}
+                  whileInView={_{ opacity: 1, _scale: 1}}
+                  transition={_{ duration: 0.8, _delay: index * 0.1}}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
                   </div>
-                  <span className="text-white font-medium text-sm">{useCase}</span>
+                  <span className="text-white font-medium text-sm">{_useCase}</span>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 30}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Financial Planning?
@@ -261,15 +230,15 @@ export default function AIFinancialPlanningPlatform() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
                   Get Started Now
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales

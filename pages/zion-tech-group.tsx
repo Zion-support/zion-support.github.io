@@ -1,32 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  Brain, Zap, Target, BarChart3, Users, TrendingUp, 
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
-  FileText, Image, Video, Music, Palette, Type,
-  User, Search, Eye, Heart, ShoppingCart, Code,
-  Database, Users2, Award, Lock, Server, Network, 
-  Monitor, Settings, RefreshCw, Play, Pause, 
-  AlertTriangle, CheckCircle2, Building, Wifi, 
-  HardDrive, Cloud, Smartphone, Blocks, Wallet, 
-  CreditCard, PiggyBank, Building2, Activity,
-  Waves, BrainCircuit, CpuIcon, MonitorHeart,
-  Film, Headphones, Camera, Gamepad2, Tv, Radio,
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
-  Calendar, Clock, FileText2, PieChart, Atom,
-  Truck, ChevronRight, Home
-} from 'lucide-react';
+import {_Brain, _Zap, _Target, _BarChart3, _Users, _TrendingUp, _MessageSquare, _Mail, _Phone, _MapPin, _ArrowRight, _Star, _CheckCircle, _Rocket, _Globe, _Shield, _Cpu, _FileText, _Image, _Video, _Music, _Palette, _Type, _User, _Search, _Eye, _Heart, _ShoppingCart, _Code, _Database, _Users2, _Award, _Lock, _Server, _Network, _Monitor, _Settings, _RefreshCw, _Play, _Pause, _AlertTriangle, _CheckCircle2, _Building, _Wifi, _HardDrive, _Cloud, _Smartphone, _Blocks, _Wallet, _CreditCard, _PiggyBank, _Building2, _Activity, _Waves, _BrainCircuit, _CpuIcon, _MonitorHeart, _Film, _Headphones, _Camera, _Gamepad2, _Tv, _Radio, _Factory, _Cog, _Gauge, _Wrench, _Settings2, _CpuIcon2, _Calendar, _Clock, _FileText2, _PieChart, _Atom, _Truck, _ChevronRight, _Home} from 'lucide-react';
 
-export default function ZionTechGroupPage() {
-  return (
+export default function ZionTechGroupPage() {_return (
     <>
       <Head>
         <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
-        <meta name="description" content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting-edge platforms. Learn about our innovative solutions and global impact." />
-        <meta name="keywords" content="Zion Tech Group, about us, quantum AI, autonomous systems, technology innovation, company mission" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, _autonomous systems, _and cutting-edge platforms. Learn about our innovative solutions and global impact." />
+        <meta name="keywords" content="Zion Tech Group, _about us, _quantum AI, _autonomous systems, _technology innovation, _company mission" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -57,7 +40,7 @@ export default function ZionTechGroupPage() {
           </div>
         </nav>
 
-        {/* Breadcrumb */}
+        {_/* Breadcrumb */}
         <div className="bg-black/20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
@@ -81,7 +64,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <div className="relative overflow-hidden py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -96,7 +79,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Mission & Vision Section */}
+        {_/* Mission & Vision Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -129,7 +112,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Core Values Section */}
+        {_/* Core Values Section */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -203,7 +186,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Technology Stack Section */}
+        {_/* Technology Stack Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -257,7 +240,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Company Stats Section */}
+        {_/* Company Stats Section */}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -288,7 +271,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Team Section */}
+        {_/* Team Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -335,7 +318,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <div className="bg-purple-600">
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -356,7 +339,7 @@ export default function ZionTechGroupPage() {
           </div>
         </div>
 
-        {/* Footer */}
+        {_/* Footer */}
         <footer className="bg-black/40">
           <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">

@@ -1,30 +1,27 @@
 import fs from "fs";
 import path from "path";
 
-export type FeedbackRecord = {
-  id: string;
+export type FeedbackRecord = {_id: string;
   createdAtIso: string;
-  user: { id?: string; role?: string; talentSlug?: string };
+  user: { id?: string; role?: string; talentSlug?: string};
   rating: number;
   comment?: string;
   kind: "general" | "bug" | "feature";
-  context?: { actionType?: string; metadata?: any };
+  context?: {_actionType?: string; metadata?: unknown};
 };
 
-const DATA_DIR = path.join(process.cwd(), "data", "runtime");
-const DB_PATH = path.join(DATA_DIR, "feedback.json");
+const _DATA_DIR = path.join(process.cwd(), "data", "runtime");
+const _DB_PATH = path.join(DATA_DIR, "feedback.json");
 
-function ensureDataFile(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8");
+function ensureDataFile(): void {_if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, _{ recursive: true});
+  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({_items: []}, null, 2), "utf-8");
 }
 
-export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
-  ensureDataFile();
-  const raw = fs.readFileSync(DB_PATH, "utf-8");
-  const data = JSON.parse(raw || "{}");
+export function saveFeedbackFallback(_rec: FeedbackRecord): FeedbackRecord {_ensureDataFile();
+  const _raw = fs.readFileSync(DB_PATH, _"utf-8");
+  const _data = JSON.parse(raw || "{}");
   const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
   items.push(rec);
-  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
+  fs.writeFileSync(DB_PATH, JSON.stringify({_items}, null, 2), "utf-8");
   return rec;
 }

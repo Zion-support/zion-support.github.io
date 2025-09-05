@@ -1,57 +1,36 @@
-import React, { useState, useEffect, Suspense } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+import React, {_useState, _useEffect, _Suspense} from 'react';
+import {_innovativeRealMicroSaasServices2025} from '../data/2025-innovative-real-micro-saas-services';
+import {_innovativeAIServicesEnhanced2025} from '../data/2025-innovative-ai-services-enhanced';
+import {_innovativeITServicesEnhanced2025} from '../data/2025-innovative-it-services-enhanced';
+import {_emergingTechServicesEnhanced2025} from '../data/2025-emerging-tech-services-enhanced';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
-import { 
-  ArrowRight, Star, Brain, Atom, Shield, Zap,
-  Users, Globe, TrendingUp, Rocket, Cpu, Lock,
-  BarChart3, Cloud
-} from 'lucide-react';
+import {_ArrowRight, _Star, _Brain, _Atom, _Shield, _Zap, _Users, _Globe, _TrendingUp, _Rocket, _Cpu, _Lock, _BarChart3, _Cloud} from 'lucide-react';
 
-interface Homepage2025Props { showInternalNav?: boolean }
+interface Homepage2025Props {_showInternalNav?: boolean}
 
-const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Homepage2025: React.FC<Homepage2025Props> = (_{_showInternalNav = true}) => {_const [activeSection, _setActiveSection] = useState('hero');
+  const [currentServiceIndex, _setCurrentServiceIndex] = useState(0);
+  const [isVisible, _setIsVisible] = useState(false);
+  const [isMobileMenuOpen, _setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
+  useEffect__(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
-    }, 5000);
+    const _interval = setInterval__(() => {
+      setCurrentServiceIndex(_(prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);}, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+  const _scrollToSection = (_sectionId: string) => {_const _element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth'});
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
     }
   };
 
-  const allServices = [
+  const _allServices = [
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
@@ -63,96 +42,73 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...emergingTechServices2026
   ];
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+  const _featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
-  const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
+  const _navigationSections = [
+    {_id: 'hero', _label: 'Home', _icon: '🏠'},
+    {_id: 'services', _label: 'Micro SAAS', _icon: '🚀'},
+    {_id: 'ai', _label: 'AI Services', _icon: '🧠'},
+    {_id: 'automation', _label: 'AI Automation', _icon: '⚡'},
+    {_id: 'quantum', _label: 'Quantum Security', _icon: '🔐'},
+    {_id: 'it', _label: 'IT Solutions', _icon: '💻'},
+    {_id: 'emerging', _label: 'Emerging Tech', _icon: '🌟'},
+    {_id: 'contact', _label: 'Contact', _icon: '📞'}
   ];
 
-  const features = [
-    {
-      title: "AI-Powered Innovation",
-      description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
-      icon: Brain
-    },
-    {
-      title: "Quantum Computing",
-      description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography",
-      icon: Atom
-    },
-    {
-      title: "Cybersecurity Excellence",
-      description: "Enterprise-grade security solutions with AI-powered threat detection and response",
-      icon: Shield
-    },
-    {
-      title: "Process Automation",
-      description: "Intelligent automation that streamlines operations and enhances productivity",
-      icon: Zap
-    }
+  const _features = [
+    {_title: "AI-Powered Innovation", _description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth", _icon: Brain},
+    {_title: "Quantum Computing", _description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography", _icon: Atom},
+    {_title: "Cybersecurity Excellence", _description: "Enterprise-grade security solutions with AI-powered threat detection and response", _icon: Shield},
+    {_title: "Process Automation", _description: "Intelligent automation that streamlines operations and enhances productivity", _icon: Zap}
   ];
 
-  const itemVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+  const _itemVariants = {_initial: { opacity: 0, _y: 20},
+    animate: {_opacity: 1, _y: 0},
+    transition: {_duration: 0.6}
   };
 
-  const staggerContainer = {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
+  const _staggerContainer = {_initial: {},
+    animate: {_transition: {
+        staggerChildren: 0.1}
     }
   };
 
-  return (
-    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
-      {showInternalNav && (
+  return (_<UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {_showInternalNav && (
         <>
           {/* Navigation */}
           <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={_{ opacity: 0, _x: -20}}
+                  animate={_{ opacity: 1, _x: 0}}
                   className="flex items-center space-x-2"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
                 </motion.div>
                 
-                {/* Desktop Navigation */}
+                {_/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
-                  {navigationSections.map((section) => (
-                    <button
+                  {_navigationSections.map((section) => (_<button
                       key={section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
+                      onClick={_() => scrollToSection(section.id)}
+                      className={_`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
                         activeSection === section.id
                           ? 'text-cyan-400 border-b-2 border-cyan-400'
-                          : 'text-gray-300 hover:text-cyan-400'
-                      }`}
+                          : 'text-gray-300 hover:text-cyan-400'}`}
                     >
-                      <span>{section.icon}</span>
-                      <span>{section.label}</span>
+                      <span>{_section.icon}</span>
+                      <span>{_section.label}</span>
                     </button>
                   ))}
                 </div>
 
-                {/* Contact Info */}
+                {_/* Contact Info */}
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={_{ opacity: 0, _x: 20}}
+                  animate={_{ opacity: 1, _x: 0}}
                   className="hidden md:flex items-center space-x-4"
                 >
                   <a
@@ -169,39 +125,36 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </a>
                 </motion.div>
 
-                {/* Mobile Menu Button */}
+                {_/* Mobile Menu Button */}
                 <button
                   className="lg:hidden text-white p-2"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  onClick={_() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={_2} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 </button>
               </div>
 
-              {/* Mobile Navigation Menu */}
+              {_/* Mobile Navigation Menu */}
               <AnimatePresence>
-                {isMobileMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                {_isMobileMenuOpen && (_<motion.div
+                    initial={{ opacity: 0, _height: 0}}
+                    animate={_{ opacity: 1, _height: 'auto'}}
+                    exit={_{ opacity: 0, _height: 0}}
                     className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
-                      {navigationSections.map((section) => (
-                        <button
+                      {_navigationSections.map((section) => (_<button
                           key={section.id}
-                          onClick={() => scrollToSection(section.id)}
-                          className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
+                          onClick={_() => scrollToSection(section.id)}
+                          className={_`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
-                              : 'text-gray-300 hover:bg-white/10'
-                          }`}
+                              : 'text-gray-300 hover:bg-white/10'}`}
                         >
-                          <span>{section.icon}</span>
-                          <span>{section.label}</span>
+                          <span>{_section.icon}</span>
+                          <span>{_section.label}</span>
                         </button>
                       ))}
                       <div className="pt-4 border-t border-white/10">
@@ -229,24 +182,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </>
       )}
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
             className="text-center max-w-6xl mx-auto relative z-10"
           >
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={_{ y: [0, _10, _0]}}
+              transition={_{ duration: 2, _repeat: Infinity}}
               className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={_{ opacity: 0, _scale: 0.8}}
+                animate={_{ opacity: 1, _scale: 1}}
+                transition={_{ duration: 0.6, _delay: 0.2}}
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
               >
                 <Star className="w-5 h-5" />
@@ -260,9 +213,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Pioneering the future of technology with innovative solutions that drive business transformation
               </p>
               
-              {/* Enhanced CTA Section */}
+              {_/* Enhanced CTA Section */}
               <motion.div 
-                variants={itemVariants}
+                variants={_itemVariants}
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
                 <Link href="/comprehensive-services-showcase-2026">
@@ -285,11 +238,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </Link>
               </motion.div>
               
-              {/* Trust Indicators */}
+              {_/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={_{ opacity: 0, _y: 20}}
+                animate={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.8, _delay: 0.4}}
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -310,14 +263,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
-      {/* Features Section */}
+      {_/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -329,23 +282,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+            {_features.map(_(feature, _index) => (
               <motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                initial={_{ opacity: 0, _y: 40}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
+                whileHover={_{ y: -10, _scale: 1.02}}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-3 mb-6">
                     <feature.icon className="w-full h-full text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{_feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{_feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -353,15 +306,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
-      {/* Enhanced Services Preview */}
+      {_/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 40}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Revolutionary 2026 Services
@@ -372,31 +325,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
+            {_[
+              { title: "AI Business Intelligence", _description: "Transform data into actionable insights with AI-powered analytics", _icon: Brain, _gradient: "from-purple-500 to-pink-500", _link: "/comprehensive-services-showcase-2026"},
+              {_title: "Cloud Infrastructure", _description: "Automate cloud infrastructure deployment and management", _icon: Cloud, _gradient: "from-cyan-500 to-blue-500", _link: "/comprehensive-services-showcase-2026"},
+              {_title: "Cybersecurity Intelligence", _description: "Advanced threat detection and response with AI", _icon: Shield, _gradient: "from-red-500 to-orange-500", _link: "/comprehensive-services-showcase-2026"},
+              {_title: "Data Engineering", _description: "Streamline data pipelines and analytics with AI", _icon: BarChart3, _gradient: "from-emerald-500 to-teal-500", _link: "/comprehensive-services-showcase-2026"},
+              {_title: "Quantum Computing", _description: "Access quantum computing power through the cloud", _icon: Atom, _gradient: "from-indigo-500 to-purple-500", _link: "/comprehensive-services-showcase-2026"},
+              {_title: "Blockchain Intelligence", _description: "Intelligent blockchain analytics and DeFi optimization", _icon: Lock, _gradient: "from-yellow-500 to-orange-500", _link: "/comprehensive-services-showcase-2026"}
+            ].map(_(service, _index) => (_<motion.div
+                key={_index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                onClick={() => window.location.href = service.link}
+                initial={_{ opacity: 0, _y: 40}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                whileHover={_{ y: -10, _scale: 1.02}}
+                onClick={_() => window.location.href = service.link}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                <div className={_`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 <div className="relative p-6">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}>
+                  <div className={_`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}>
                     <service.icon className="w-full h-full text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
-                  <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3">{_service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{_service.description}</p>
+                  <a href={_service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Explore Service</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
@@ -405,13 +357,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             ))}
           </div>
 
-          {/* Call to Action for Services Showcase */}
+          {_/* Call to Action for Services Showcase */}
           <motion.div
             className="text-center mt-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 40}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6, _delay: 0.3}}
+            viewport={_{ once: true}}
           >
             <a
               href="/comprehensive-services-showcase-2026"
@@ -425,15 +377,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
-      {/* Contact Section */}
+      {_/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 40}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -469,10 +421,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 20}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.6, _delay: 0.2}}
+            viewport={_{ once: true}}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -492,7 +444,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
-      {/* Footer */}
+      {_/* Footer */}
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <div className="text-gray-400 mb-4">

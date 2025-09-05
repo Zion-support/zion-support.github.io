@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const DatabaseDesignChat = () => {
-  return (
+const _DatabaseDesignChat = () => {_return (
     <div>
       <Head>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const DatabaseDesignChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  );};
 
 export default DatabaseDesignChat;

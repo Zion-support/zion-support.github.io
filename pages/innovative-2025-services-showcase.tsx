@@ -1,38 +1,26 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Rocket, Globe, Cpu, Database, 
-  TrendingUp, Users, Star, Zap, Lock, Target,
-  ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
+import React, {_useState} from 'react';
+import {_Brain, _Shield, _Rocket, _Globe, _Cpu, _Database, _TrendingUp, _Users, _Star, _Zap, _Lock, _Target, _ArrowRight, _Phone, _Mail, _MapPin, _ExternalLink} from 'lucide-react';
 
 // Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 
-const Innovative2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+const Innovative2025ServicesShowcase: React.FC = () => {_const [selectedCategory, _setSelectedCategory] = useState('all');
+  const [searchTerm, _setSearchTerm] = useState('');
 
   // Combine all innovative services
-  const allInnovativeServices = [
-    ...innovativeMicroSaasExpansionV32025,
-    ...innovativeITServicesExpansion2025V3,
-    ...innovativeAIServicesExpansion2025V3
+  const _allInnovativeServices = [
+    ...innovativeMicroSaasExpansionV32025, _...innovativeITServicesExpansion2025V3, _...innovativeAIServicesExpansion2025V3
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
+  const _categories = [
+    { id: 'all', _name: 'All Services', _icon: SparklesIcon, _color: 'from-purple-500 to-pink-500', _count: allInnovativeServices.length},
+    {_id: 'ai', _name: 'AI & Machine Learning', _icon: BrainIcon, _color: 'from-cyan-500 to-blue-500', _count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length},
+    {_id: 'it', _name: 'IT Infrastructure', _icon: Cpu, _color: 'from-yellow-500 to-orange-500', _count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length},
+    {_id: 'cybersecurity', _name: 'Cybersecurity', _icon: ShieldIcon, _color: 'from-red-500 to-orange-500', _count: allInnovativeServices.filter(s => s.category.includes('Security')).length},
+    {_id: 'cloud', _name: 'Cloud & FinOps', _icon: Database, _color: 'from-blue-500 to-indigo-500', _count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length},
+    {_id: 'developer', _name: 'Developer Tools', _icon: Code, _color: 'from-green-500 to-teal-500', _count: allInnovativeServices.filter(s => s.category.includes('Developer')).length}
   ];
 
-  const filteredServices = allInnovativeServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+  const _filteredServices = allInnovativeServices.filter(service => {_const _matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
       (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
       (selectedCategory === 'it' && (service.category.includes('IT') || service.category.includes('Infrastructure'))) ||
@@ -40,31 +28,27 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       (selectedCategory === 'cloud' && (service.category.includes('Cloud') || service.category.includes('FinOps'))) ||
       (selectedCategory === 'developer' && service.category.includes('Developer'));
     
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase());
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch;});
 
-  const stats = [
-    { number: "15+", label: "Innovative Services", icon: Star },
-    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
-    { number: "24/7", label: "AI Support Available", icon: Brain },
-    { number: "200+", label: "Countries Served", icon: Globe }
+  const _stats = [
+    {_number: "15+", _label: "Innovative Services", _icon: Star},
+    {_number: "99.9%", _label: "Uptime Guarantee", _icon: CheckCircle},
+    {_number: "24/7", _label: "AI Support Available", _icon: Brain},
+    {_number: "200+", _label: "Countries Served", _icon: Globe}
   ];
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+  const _fadeInUp = {_initial: { opacity: 0, _y: 30},
+    animate: {_opacity: 1, _y: 0},
+    transition: {_duration: 0.6, _ease: "easeOut"}
   };
 
-  const staggerContainer = {
-    animate: {
+  const _staggerContainer = {_animate: {
       transition: {
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.1}
     }
   };
 
@@ -79,38 +63,38 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       </Head>
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
-        {/* Animated Background */}
+        {_/* Animated Background */}
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
           
-          {/* Floating Particles */}
+          {_/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
+            {_[...Array(20)].map(_(_, _i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-                style={{
+                style={_{
                   left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 2}s`,
-                  animationDuration: `${2 + Math.random() * 3}s`
+                  top: `${_Math.random() * 100}%`,
+                  animationDelay: `${_Math.random() * 2}s`,
+                  animationDuration: `${_2 + Math.random() * 3}s`
                 }}
               />
             ))}
           </div>
         </div>
 
-        {/* Content */}
+        {_/* Content */}
         <div className="relative z-10">
-          {/* Header */}
+          {_/* Header */}
           <motion.header 
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: -20}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -121,9 +105,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 0.2}}
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
@@ -131,41 +115,39 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 0.4}}
           >
             <div className="max-w-7xl mx-auto">
-              {/* Search Bar */}
+              {_/* Search Bar */}
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={_searchTerm}
+                    onChange={_(_e) => setSearchTerm(e.target.value)}
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
 
-              {/* Category Filters */}
+              {_/* Category Filters */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
+                {_categories.map(_(category) => (_<button
                     key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl border transition-all duration-300 ${
+                    onClick={_() => setSelectedCategory(category.id)}
+                    className={_`flex items-center space-x-2 px-6 py-3 rounded-xl border transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'border-purple-500 bg-purple-500/20 text-purple-300'
-                        : 'border-gray-700 text-gray-300 hover:border-gray-600 hover:text-white'
-                    }`}
+                        : 'border-gray-700 text-gray-300 hover:border-gray-600 hover:text-white'}`}
                   >
                     <category.icon className="w-5 h-5" />
-                    <span>{category.name}</span>
+                    <span>{_category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
-                      {category.count}
+                      {_category.count}
                     </span>
                   </button>
                 ))}
@@ -173,85 +155,85 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             </div>
           </motion.section>
 
-          {/* Services Grid */}
+          {_/* Services Grid */}
           <motion.section 
             className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
-            variants={staggerContainer}
+            variants={_staggerContainer}
             initial="initial"
             animate="animate"
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service) => (
+                {_filteredServices.map(_(service) => (
                   <motion.div
                     key={service.id}
                     className="group relative"
-                    variants={fadeInUp}
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
+                    variants={_fadeInUp}
+                    whileHover={_{ y: -10}}
+                    transition={_{ duration: 0.3}}
                   >
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
-                      {/* Service Icon and Header */}
+                      {_/* Service Icon and Header */}
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
-                          <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
-                            {(service as any).icon || '🚀'}
+                          <div className={_`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
+                            {_(service as any).icon || '🚀'}
                           </div>
-                                                      {(service as any).popular && (
+                                                      {_(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
                           )}
                         </div>
 
-                        {/* Service Name and Tagline */}
+                        {_/* Service Name and Tagline */}
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                          {service.name}
+                          {_service.name}
                         </h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">
-                          {(service as any).tagline || service.description?.substring(0, 100) || 'Innovative service solution'}
+                          {_(service as any).tagline || service.description?.substring(0, _100) || 'Innovative service solution'}
                         </p>
 
-                        {/* Price */}
+                        {_/* Price */}
                         <div className="flex items-baseline mb-6">
-                          <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
-                          <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
+                          <span className="text-3xl font-bold text-white">{_(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
+                          <span className="text-gray-400 ml-2">{_(service as any).period || ''}</span>
                         </div>
 
-                        {/* Features */}
+                        {_/* Features */}
                         <div className="space-y-3 mb-8">
-                          {service.features.slice(0, 5).map((feature, featureIndex) => (
+                          {_service.features.slice(0, _5).map(_(feature, _featureIndex) => (
                             <div key={featureIndex} className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-300 text-sm">{feature}</span>
+                              <span className="text-gray-300 text-sm">{_feature}</span>
                             </div>
                           ))}
-                          {service.features.length > 5 && (
+                          {_service.features.length > 5 && (
                             <div className="text-gray-500 text-sm">
                               +{service.features.length - 5} more features
                             </div>
                           )}
                         </div>
 
-                        {/* Service Stats */}
+                        {_/* Service Stats */}
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).customers || '1000'}+</div>
+                            <div className="text-lg font-bold text-white">{_(service as any).customers || '1000'}+</div>
                             <div className="text-xs text-gray-400">Customers</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).rating || '4.8'}</div>
+                            <div className="text-lg font-bold text-white">{_(service as any).rating || '4.8'}</div>
                             <div className="text-xs text-gray-400">Rating</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).reviews || '500'}</div>
+                            <div className="text-lg font-bold text-white">{_(service as any).reviews || '500'}</div>
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
 
-                        {/* CTA Button */}
+                        {_/* CTA Button */}
                         <Link
-                          href={`/services/${service.id}`}
+                          href={_`/services/${service.id}`}
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
@@ -259,18 +241,17 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                         </Link>
                       </div>
 
-                      {/* Hover Overlay */}
+                      {_/* Hover Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              {filteredServices.length === 0 && (
-                <motion.div 
+              {_filteredServices.length === 0 && (_<motion.div 
                   className="text-center py-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0}}
+                  animate={_{ opacity: 1}}
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -278,10 +259,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     Try adjusting your search terms or category filters
                   </p>
                   <button
-                    onClick={() => {
+                    onClick={_() => {
                       setSearchTerm('');
-                      setSelectedCategory('all');
-                    }}
+                      setSelectedCategory('all');}}
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -291,12 +271,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             </div>
           </motion.section>
 
-          {/* Contact Section */}
+          {_/* Contact Section */}
           <motion.section 
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 1.2}}
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -342,12 +322,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             </div>
           </motion.section>
 
-          {/* Footer */}
+          {_/* Footer */}
           <motion.footer 
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8, _delay: 1.4}}
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

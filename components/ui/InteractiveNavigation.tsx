@@ -1,32 +1,21 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
 
-interface NavItem {
-  label: string;
+interface NavItem {_label: string;
   href: string;
-  children?: NavItem[];
-}
+  children?: NavItem[];}
 
-interface InteractiveNavigationProps {
-  items: NavItem[];
-  className?: string;
-}
+interface InteractiveNavigationProps {_items: NavItem[];
+  className?: string;}
 
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
-  items,
-  className = '',
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = (_{_items, _className = '', _}) => {_const [isOpen, _setIsOpen] = useState(false);
+  const [activeDropdown, _setActiveDropdown] = useState<string | null>(null);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
-  };
+  const _toggleMenu = () => setIsOpen(!isOpen);
+  const _toggleDropdown = (_label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);};
 
-  return (
-    <nav className={'bg-white shadow-lg ' + className}>
+  return (_<nav className={_'bg-white shadow-lg ' + className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
@@ -34,26 +23,26 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {items.map(item => (
+            {_items.map(item => (
               <div key={item.label} className="relative">
-                {item.children ? (
+                {_item.children ? (
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.label)}
                       className="flex items-center text-gray-700 hover:text-blue-600"
                     >
-                      {item.label}
+                      {_item.label}
                       <ChevronDown className="w-4 h-4 ml-1" />
                     </button>
-                    {activeDropdown === item.label && (
+                    {_activeDropdown === item.label && (
                       <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">
                         {item.children.map(child => (
                           <Link
                             key={child.href}
-                            href={child.href}
+                            href={_child.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
-                            {child.label}
+                            {_child.label}
                           </Link>
                         ))}
                       </div>
@@ -61,10 +50,10 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                   </div>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={_item.href}
                     className="text-gray-700 hover:text-blue-600"
                   >
-                    {item.label}
+                    {_item.label}
                   </Link>
                 )}
               </div>
@@ -72,48 +61,45 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
           </div>
 
           <button
-            onClick={toggleMenu}
+            onClick={_toggleMenu}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+        {_isOpen && (_<div className="md:hidden py-4 border-t border-gray-200">
             {items.map(item => (
               <div key={item.label}>
-                {item.children ? (
+                {_item.children ? (
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.label)}
                       className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100"
                     >
-                      {item.label}
+                      {_item.label}
                       <ChevronDown className="w-4 h-4" />
                     </button>
-                    {activeDropdown === item.label && (
-                      <div className="pl-4">
+                    {_activeDropdown === item.label && (_<div className="pl-4">
                         {item.children.map(child => (
                           <Link
                             key={child.href}
-                            href={child.href}
+                            href={_child.href}
                             className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100"
-                            onClick={() => setIsOpen(false)}
+                            onClick={_() => setIsOpen(false)}
                           >
-                            {child.label}
+                            {_child.label}
                           </Link>
                         ))}
                       </div>
                     )}
                   </div>
-                ) : (
-                  <Link
-                    href={item.href}
+                ) : (_<Link
+                    href={_item.href}
                     className="block px-3 py-2 text-gray-700 hover:bg-gray-100"
-                    onClick={() => setIsOpen(false)}
+                    onClick={_() => setIsOpen(false)}
                   >
-                    {item.label}
+                    {_item.label}
                   </Link>
                 )}
               </div>

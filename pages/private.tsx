@@ -1,19 +1,10 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next/types'
-import { createServerSideClient } from '../src/utils/supabase/server'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { User, Mail, Calendar, Shield } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
-import type { User as SupabaseUser } from '@supabase/supabase-js'
+import type {_User as SupabaseUser} from '@supabase/supabase-js'
 
-interface PrivatePageProps {
-  user: SupabaseUser
-}
+interface PrivatePageProps {_user: SupabaseUser}
 
-export default function PrivatePage({ user }: PrivatePageProps) {
-  return (
+export default function PrivatePage(_{_user}: PrivatePageProps) {_return (
     <>
       <Head>
         <title>Private Profile - Zion Tech Marketplace</title>
@@ -42,20 +33,20 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm">{user.email}</span>
-                    <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
-                      {user.email_confirmed_at ? "Verified" : "Unverified"}
+                    <Badge variant={_user.email_confirmed_at ? "default" : "secondary"}>
+                      {_user.email_confirmed_at ? "Verified" : "Unverified"}
                     </Badge>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm">
-                      Joined {new Date(user.created_at).toLocaleDateString()}
+                      Joined {_new Date(user.created_at).toLocaleDateString()}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-sm">User ID: </span>
                     <code className="px-2 py-1 bg-muted rounded text-xs font-mono">
-                      {user.id}
+                      {_user.id}
                     </code>
                   </div>
                 </div>
@@ -67,15 +58,14 @@ export default function PrivatePage({ user }: PrivatePageProps) {
               <div className="grid gap-2 text-sm">
                 <div>
                   <span className="font-medium">Last Sign In: </span>
-                  {user.last_sign_in_at 
+                  {_user.last_sign_in_at 
                     ? new Date(user.last_sign_in_at).toLocaleString()
-                    : 'Never'
-                  }
+                    : 'Never'}
                 </div>
                 <div>
                   <span className="font-medium">App Metadata: </span>
                   <code className="text-xs">
-                    {JSON.stringify(user.app_metadata, null, 2)}
+                    {_JSON.stringify(user.app_metadata, _null, _2)}
                   </code>
                 </div>
               </div>
@@ -100,19 +90,15 @@ export default function PrivatePage({ user }: PrivatePageProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const supabase = createServerSideClient(context)
+export const getServerSideProps: GetServerSideProps = async (_context: GetServerSidePropsContext) => {_const _supabase = createServerSideClient(context)
 
-  const { data, error } = await supabase.auth.getUser()
+  const { data, _error} = await supabase.auth.getUser()
 
-  if (error || !data?.user) {
-    return {
+  if (error || !data?.user) {_return {
       redirect: {
-        destination: '/auth/login',
-        permanent: false}}
+        destination: '/auth/login', _permanent: false}}
   }
 
-  return {
-    props: {
+  return {_props: {
       user: data.user}}
 } 

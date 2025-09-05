@@ -2,20 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
 
-export default function SpaceTechPage() {
-  const features = [
-    'Mission control dashboards and telemetry pipelines',
-    'Satellite operations playbooks and anomaly response',
-    'Ground station integrations and data delivery SLAs',
-    'Secure communications and zero-trust segmentation'];
+export default function SpaceTechPage() {_const _features = [
+    'Mission control dashboards and telemetry pipelines', _'Satellite operations playbooks and anomaly response', _'Ground station integrations and data delivery SLAs', _'Secure communications and zero-trust segmentation'];
 
-  return (
-    <Layout>
+  return (_<Layout>
       <Head>
         <title>Space Technology | Zion Tech Group</title>
-        <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
+        <meta name="description" content="Space mission control, _satellite operations, _and secure communications consulting." />
         <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -25,7 +19,7 @@ export default function SpaceTechPage() {
               <Satellite className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, _reliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
@@ -38,7 +32,7 @@ export default function SpaceTechPage() {
               {features.map((f) => (
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
-                  <span className="text-gray-200">{f}</span>
+                  <span className="text-gray-200">{_f}</span>
                 </div>
               ))}
             </div>

@@ -1,17 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { getServiceById } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
 
-export default function ServiceDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function ServiceDetailPage() {_const _router = useRouter();
+  const { id} = router.query;
   
-  if (!id || typeof id !== 'string') {
-    return (
+  if (!id || typeof id !== 'string') {_return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
@@ -22,13 +17,11 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-    );
-  }
+    );}
 
-  const service = getServiceById(id);
+  const _service = getServiceById(id);
 
-  if (!service) {
-    return (
+  if (!service) {_return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
@@ -45,15 +38,15 @@ export default function ServiceDetailPage() {
   return (
     <>
       <Head>
-        <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-        <meta name="description" content={service.description} />
-        <meta property="og:title" content={`${service.name} | Zion Tech Group`} />
-        <meta property="og:description" content={service.description} />
+        <title>{_service.name} | Zion Tech Group - Micro SaaS Services</title>
+        <meta name="description" content={_service.description} />
+        <meta property="og:title" content={_`${service.name} | Zion Tech Group`} />
+        <meta property="og:description" content={_service.description} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <div className="min-h-screen bg-black">
-        {/* Navigation */}
+        {_/* Navigation */}
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -67,10 +60,10 @@ export default function ServiceDetailPage() {
                 Back to Services
               </Button>
               <Button
-                href={service.website}
+                href={_service.website}
                 variant="primary"
                 size="sm"
-                icon={<ExternalLink className="w-4 h-4" />}
+                icon={_<ExternalLink className="w-4 h-4" />}
               >
                 Visit Service
               </Button>
@@ -78,10 +71,10 @@ export default function ServiceDetailPage() {
           </div>
         </nav>
 
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />
+        {_/* Service Detail Content */}
+        <ServiceDetail service={_service} />
 
-        {/* Related Services CTA */}
+        {_/* Related Services CTA */}
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">

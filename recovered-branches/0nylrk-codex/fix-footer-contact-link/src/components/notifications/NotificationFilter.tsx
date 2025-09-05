@@ -1,23 +1,15 @@
 
 import React from 'react';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 
-interface NotificationFilterProps {
-  filter: FilterType;
-  onFilterChange: (filter: FilterType) => void;
-}
+interface NotificationFilterProps {_filter: FilterType;
+  onFilterChange: (_filter: FilterType) => void;}
 
-export const NotificationFilter: React.FC<NotificationFilterProps> = ({
-  filter,
-  onFilterChange
-}) => {
-  return (
-    <div className="border-b border-zion-blue-light">
+export const NotificationFilter: React.FC<NotificationFilterProps> = (_{_filter, _onFilterChange}) => {_return (_<div className="border-b border-zion-blue-light">
       <Tabs 
         defaultValue={filter} 
-        onValueChange={(value) => onFilterChange(value as FilterType)}
+        onValueChange={_(value) => onFilterChange(value as FilterType)}
       >
         <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">
           <TabsTrigger value="all" className="text-xs">All</TabsTrigger>

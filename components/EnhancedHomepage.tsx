@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, {_useEffect, _useState} from 'react';
 import Link from 'next/link';
-import { 
-  ArrowRight, 
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowUpRight
-} from 'lucide-react';
+import {_ArrowRight, _TrendingUp, _Brain, _Shield, _Rocket, _Atom, _Sparkles, _Building, _Phone, _Mail, _MapPin, _ArrowUpRight} from 'lucide-react';
 import Head from 'next/head';
 
 // Import our enhanced components
@@ -24,52 +10,36 @@ import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 
-const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+const EnhancedHomepage: React.FC = () => {_const [isVisible, _setIsVisible] = useState(false);
+  const [selectedCategory, _setSelectedCategory] = useState('all');
+  const [mousePosition, _setMousePosition] = useState({ x: 0, _y: 0});
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   
-  useEffect(() => {
-    setIsVisible(true);
+  useEffect__(() => {_setIsVisible(true);
     
     // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
+    const _interval = setInterval__(() => {
+      setCurrentServiceIndex(_(prev) => (prev + 1) % 6);}, 6000);
     
     // Track mouse movement for parallax effects
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+    const _handleMouseMove = (_e: MouseEvent) => {_setMousePosition({ x: e.clientX, _y: e.clientY});
     };
     
     // Show performance monitor after 5 seconds
-    const performanceTimer = setTimeout(() => {
-      setShowPerformanceMonitor(true);
-    }, 5000);
+    const _performanceTimer = setTimeout__(() => {_setShowPerformanceMonitor(true);}, 5000);
     
     window.addEventListener('mousemove', handleMouseMove);
     
-    return () => {
-      clearInterval(interval);
+    return () => {_clearInterval(interval);
       clearTimeout(performanceTimer);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+      window.removeEventListener('mousemove', _handleMouseMove);};
   }, []);
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [
+  const _allRevolutionaryServices = [
     ...revolutionary2044AdvancedMicroSaas,
     ...revolutionary2044ITServices,
     ...revolutionary2044AIServices,
@@ -81,142 +51,115 @@ const EnhancedHomepage: React.FC = () => {
   ];
 
   // Filter services by category
-  const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
+  const _getFilteredServices = () => {_if (selectedCategory === 'all') return allRevolutionaryServices;
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-    );
-  };
+    );};
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
+  const _categories = [
+    {_id: 'all', _name: 'All Services', _icon: Sparkles, _color: 'from-purple-500 to-pink-500', _scheme: 'holographic' as const},
+    {_id: 'ai', _name: 'AI & Consciousness', _icon: Brain, _color: 'from-cyan-500 to-blue-500', _scheme: 'cyber' as const},
+    {_id: 'quantum', _name: 'Quantum Technology', _icon: Atom, _color: 'from-blue-500 to-indigo-500', _scheme: 'quantum' as const},
+    {_id: 'cybersecurity', _name: 'Cybersecurity', _icon: Shield, _color: 'from-red-500 to-orange-500', _scheme: 'neon' as const},
+    {_id: 'space', _name: 'Space Technology', _icon: Rocket, _color: 'from-indigo-500 to-purple-500', _scheme: 'holographic' as const},
+    {_id: 'enterprise', _name: 'Enterprise Solutions', _icon: Building, _color: 'from-green-500 to-teal-500', _scheme: 'cyber' as const}
   ];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const _featuredServices = allRevolutionaryServices.slice(0, 6);
 
   // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.1
-      }
+  const _containerVariants = {_hidden: { opacity: 0},
+    visible: {_opacity: 1, _transition: {
+        duration: 0.8, _staggerChildren: 0.1}
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.6, _ease: "easeOut" as const}
     }
   };
 
-  const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: "easeOut" as const
-      }
+  const _heroVariants = {_hidden: { opacity: 0, _y: 50},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 1, _ease: "easeOut" as const}
     }
   };
 
-  const floatingVariants = {
-    animate: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        ease: "easeInOut" as const
-      }
+  const _floatingVariants = {_animate: {
+      y: [-10, _10, _-10], _transition: {
+        duration: 3, _ease: "easeInOut" as const}
     }
   };
 
-  const handleCategoryChange = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    const category = categories.find(cat => cat.id === categoryId);
+  const _handleCategoryChange = (_categoryId: string) => {_setSelectedCategory(categoryId);
+    const _category = categories.find(cat => cat.id === categoryId);
     if (category) {
-      setColorScheme(category.scheme);
-    }
+      setColorScheme(category.scheme);}
   };
 
-  return (
-    <>
+  return (_<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />
+        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, _quantum computing, _and autonomous solutions. Transform your business with cutting-edge innovation." />
+        <meta name="keywords" content="AI consciousness, _quantum computing, _autonomous solutions, _space technology, _cybersecurity, _business intelligence, _Zion Tech Group, _2045 technology" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
         
-        {/* Performance and SEO Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        {_/* Performance and SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, _initial-scale=1, _viewport-fit=cover" />
         <meta name="theme-color" content="#00d4ff" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, _follow" />
         <meta name="author" content="Zion Tech Group" />
         
-        {/* Preload critical resources */}
+        {_/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </Head>
 
-      {/* Enhanced Navigation */}
+      {_/* Enhanced Navigation */}
       <EnhancedNavigation />
 
-      <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
-        {/* Hero Section */}
+      <UltraFuturisticBackground variant={_colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
+        {_/* Hero Section */}
         <motion.section 
           className="relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20"
-          variants={heroVariants}
+          variants={_heroVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="relative z-10 text-center max-w-6xl mx-auto">
-            {/* Main Heading */}
+            {_/* Main Heading */}
             <motion.h1 
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               Zion Tech Group
             </motion.h1>
             
             <motion.p 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness, 
-              Quantum Computing, and Autonomous Solutions
+              Pioneering the Future of Technology with Revolutionary AI Consciousness, _Quantum Computing, _and Autonomous Solutions
             </motion.p>
 
-            {/* CTA Buttons */}
+            {_/* CTA Buttons */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               <Link href="/services">
                 <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                 >
                   Explore Services
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -226,8 +169,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/quote">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                 >
                   Get Quote
                   <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
@@ -235,10 +178,10 @@ const EnhancedHomepage: React.FC = () => {
               </Link>
             </motion.div>
 
-            {/* Contact Information */}
+            {_/* Contact Information */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
@@ -255,10 +198,10 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Floating Elements */}
+          {_/* Floating Elements */}
           <motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
-            variants={floatingVariants}
+            variants={_floatingVariants}
             animate="animate"
           >
             <Atom className="w-8 h-8" />
@@ -266,96 +209,94 @@ const EnhancedHomepage: React.FC = () => {
           
           <motion.div
             className="absolute top-40 right-20 text-blue-400/20"
-            variants={floatingVariants}
+            variants={_floatingVariants}
             animate="animate"
-            style={{ animationDelay: '1s' }}
+            style={_{ animationDelay: '1s'}}
           >
             <Brain className="w-6 h-6" />
           </motion.div>
           
           <motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
-            variants={floatingVariants}
+            variants={_floatingVariants}
             animate="animate"
-            style={{ animationDelay: '2s' }}
+            style={_{ animationDelay: '2s'}}
           >
             <Rocket className="w-7 h-7" />
           </motion.div>
         </motion.section>
 
-        {/* Category Filter */}
+        {_/* Category Filter */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-6xl mx-auto">
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               Explore Our Revolutionary Services
             </motion.h2>
             
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
-              {categories.map((category) => (
-                <motion.button
+              {_categories.map((category) => (_<motion.button
                   key={category.id}
-                  onClick={() => handleCategoryChange(category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                  onClick={_() => handleCategoryChange(category.id)}
+                  className={_`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'}`}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                 >
                   <category.icon className="inline-block w-5 h-5 mr-2" />
-                  {category.name}
+                  {_category.name}
                 </motion.button>
               ))}
             </motion.div>
           </div>
         </motion.section>
 
-        {/* Services Grid */}
+        {_/* Services Grid */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}
+              variants={_containerVariants}
             >
-              {getFilteredServices().slice(0, 12).map((service, index) => (
+              {_getFilteredServices().slice(0, _12).map(_(service, _index) => (
                 <EnhancedServiceCard
                   key={service.id}
-                  id={service.id}
-                  title={service.name}
-                  description={service.description}
-                  category={service.category}
-                  type={(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
-                  slug={(service as any).slug || service.id}
-                  index={index}
-                  isPopular={Math.random() > 0.7}
-                  isNew={Math.random() > 0.8}
-                  rating={4.0 + Math.random() * 1.0}
-                  reviewCount={Math.floor(Math.random() * 100) + 10}
+                  id={_service.id}
+                  title={_service.name}
+                  description={_service.description}
+                  category={_service.category}
+                  type={_(service as any).type || service.category}
+                  features={_service.features?.map(f => ({ name: f, _description: f}))}
+                  slug={_(service as any).slug || service.id}
+                  index={_index}
+                  isPopular={_Math.random() > 0.7}
+                  isNew={_Math.random() > 0.8}
+                  rating={_4.0 + Math.random() * 1.0}
+                  reviewCount={_Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-                  technologies={['AI', 'Cloud', 'Security', 'Automation']}
+                  technologies={_['AI', _'Cloud', _'Security', _'Automation']}
                 />
               ))}
             </motion.div>
             
-            {getFilteredServices().length > 12 && (
+            {_getFilteredServices().length > 12 && (
               <motion.div 
                 className="text-center mt-12"
                 variants={itemVariants}
@@ -363,8 +304,8 @@ const EnhancedHomepage: React.FC = () => {
                 <Link href="/services">
                   <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={_{ scale: 1.05}}
+                    whileTap={_{ scale: 0.95}}
                   >
                     View All Services
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -375,56 +316,56 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 
-        {/* Featured Service Showcase */}
+        {_/* Featured Service Showcase */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-6xl mx-auto">
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               Featured Revolutionary Services
             </motion.h2>
             
             <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={currentServiceIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5 }}
+                  key={_currentServiceIndex}
+                  initial={_{ opacity: 0, _x: 20}}
+                  animate={_{ opacity: 1, _x: 0}}
+                  exit={_{ opacity: 0, _x: -20}}
+                  transition={_{ duration: 0.5}}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
                 >
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      {featuredServices[currentServiceIndex]?.name}
+                      {_featuredServices[currentServiceIndex]?.name}
                     </h3>
                     
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      {featuredServices[currentServiceIndex]?.description}
+                      {_featuredServices[currentServiceIndex]?.description}
                     </p>
                     
                     <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
+                      {_featuredServices[currentServiceIndex]?.features?.slice(0, _3).map(_(feature, _idx) => (
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
-                          {feature}
+                          {_feature}
                         </span>
                       ))}
                     </div>
                     
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+                    <Link href={_`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={_{ scale: 1.05}}
+                        whileTap={_{ scale: 0.95}}
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
@@ -448,24 +389,24 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 
-        {/* Call to Action */}
+        {_/* Call to Action */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
+          variants={_containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               Ready to Transform Your Business?
             </motion.h2>
             
             <motion.p 
               className="text-xl text-gray-300 mb-8"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
@@ -473,13 +414,13 @@ const EnhancedHomepage: React.FC = () => {
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              variants={itemVariants}
+              variants={_itemVariants}
             >
               <Link href="/quote">
                 <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                 >
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -489,8 +430,8 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/contact">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={_{ scale: 1.05}}
+                  whileTap={_{ scale: 0.95}}
                 >
                   Contact Us
                   <Phone className="inline-block ml-2 w-5 h-5" />
@@ -501,9 +442,9 @@ const EnhancedHomepage: React.FC = () => {
         </motion.section>
       </UltraFuturisticBackground>
 
-      {/* Performance Monitor */}
+      {_/* Performance Monitor */}
       <AnimatePresence>
-        {showPerformanceMonitor && (
+        {_showPerformanceMonitor && (
           <PerformanceMonitor />
         )}
       </AnimatePresence>

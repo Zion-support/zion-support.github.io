@@ -1,48 +1,33 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Rocket, Dna, Globe, TrendingUp, Shield, 
-  Wifi, Package, Bot, Lock, Car, Building2,
-  DollarSign, Monitor, Users, FileText, Search, Phone,
-  Star, CheckCircle, ArrowRight, ExternalLink
-} from 'lucide-react';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
+import {_Brain, _Rocket, _Dna, _Globe, _TrendingUp, _Shield, _Wifi, _Package, _Bot, _Lock, _Car, _Building2, _DollarSign, _Monitor, _Users, _FileText, _Search, _Phone, _Star, _CheckCircle, _ArrowRight, _ExternalLink} from 'lucide-react';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 
-export default function InnovativeServicesShowcase() {
-  const allServices = [...innovativeMicroSaasServices, ...emergingTechServices];
+export default function InnovativeServicesShowcase() {_const _allServices = [...innovativeMicroSaasServices, _...emergingTechServices];
 
-  const categories = [
-    { name: 'Quantum AI & Neuroscience', icon: Brain, color: 'from-purple-600 to-pink-600' },
-    { name: 'Space Technology', icon: Rocket, color: 'from-blue-600 to-indigo-600' },
-    { name: 'Biotech & AI', icon: Dna, color: 'from-green-600 to-emerald-600' },
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-violet-600 to-purple-600' },
-    { name: 'Quantum Finance', icon: TrendingUp, color: 'from-yellow-600 to-orange-600' },
-    { name: 'Quantum Cybersecurity', icon: Shield, color: 'from-red-600 to-pink-600' },
-    { name: 'Quantum IoT', icon: Wifi, color: 'from-blue-600 to-cyan-600' },
-    { name: 'Quantum Logistics', icon: Package, color: 'from-green-600 to-blue-600' },
-    { name: 'Quantum Robotics', icon: Bot, color: 'from-gray-600 to-slate-600' },
-    { name: 'Autonomous Vehicles', icon: Car, color: 'from-blue-600 to-green-600' },
-    { name: 'Autonomous Manufacturing', icon: Building2, color: 'from-gray-600 to-blue-600' },
-    { name: 'AI Sales & Marketing', icon: DollarSign, color: 'from-green-600 to-yellow-600' },
-    { name: 'AI Content & Media', icon: Monitor, color: 'from-purple-600 to-pink-600' },
-    { name: 'AI HR & Legal', icon: Users, color: 'from-blue-600 to-indigo-600' },
-    { name: 'AI Research & Analytics', icon: Search, color: 'from-green-600 to-blue-600' },
-    { name: 'AI Communication', icon: Phone, color: 'from-blue-600 to-green-600' }
+  const _categories = [
+    { name: 'Quantum AI & Neuroscience', _icon: Brain, _color: 'from-purple-600 to-pink-600'},
+    {_name: 'Space Technology', _icon: Rocket, _color: 'from-blue-600 to-indigo-600'},
+    {_name: 'Biotech & AI', _icon: Dna, _color: 'from-green-600 to-emerald-600'},
+    {_name: 'Metaverse & AI', _icon: Globe, _color: 'from-violet-600 to-purple-600'},
+    {_name: 'Quantum Finance', _icon: TrendingUp, _color: 'from-yellow-600 to-orange-600'},
+    {_name: 'Quantum Cybersecurity', _icon: Shield, _color: 'from-red-600 to-pink-600'},
+    {_name: 'Quantum IoT', _icon: Wifi, _color: 'from-blue-600 to-cyan-600'},
+    {_name: 'Quantum Logistics', _icon: Package, _color: 'from-green-600 to-blue-600'},
+    {_name: 'Quantum Robotics', _icon: Bot, _color: 'from-gray-600 to-slate-600'},
+    {_name: 'Autonomous Vehicles', _icon: Car, _color: 'from-blue-600 to-green-600'},
+    {_name: 'Autonomous Manufacturing', _icon: Building2, _color: 'from-gray-600 to-blue-600'},
+    {_name: 'AI Sales & Marketing', _icon: DollarSign, _color: 'from-green-600 to-yellow-600'},
+    {_name: 'AI Content & Media', _icon: Monitor, _color: 'from-purple-600 to-pink-600'},
+    {_name: 'AI HR & Legal', _icon: Users, _color: 'from-blue-600 to-indigo-600'},
+    {_name: 'AI Research & Analytics', _icon: Search, _color: 'from-green-600 to-blue-600'},
+    {_name: 'AI Communication', _icon: Phone, _color: 'from-blue-600 to-green-600'}
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-  return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Enhanced Background Effects */}
+  return (_<div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {_/* Enhanced Background Effects */}
       <div className="quantum-matrix-grid"></div>
       <div className="holographic-rings"></div>
       <div className="neural-network-pattern"></div>
@@ -51,18 +36,18 @@ export default function InnovativeServicesShowcase() {
       
       <Head>
         <title>Innovative Services Showcase - Zion Tech Group | Revolutionary AI & Quantum Solutions</title>
-        <meta name="description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services. First-to-market solutions with breakthrough capabilities." />
-        <meta name="keywords" content="innovative AI, quantum computing, neural interface, space technology, biotech, autonomous systems, revolutionary technology" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Explore our most innovative and revolutionary AI, _quantum computing, _and emerging technology services. First-to-market solutions with breakthrough capabilities." />
+        <meta name="keywords" content="innovative AI, _quantum computing, _neural interface, _space technology, _biotech, _autonomous systems, _revolutionary technology" />
+        <meta name="viewport" content="width=device-width, _initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services." />
+        <meta property="og:description" content="Explore our most innovative and revolutionary AI, _quantum computing, _and emerging technology services." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
 
-      {/* Enhanced Header */}
+      {_/* Enhanced Header */}
       <header className="relative z-10 bg-black/80 backdrop-blur-xl border-b border-purple-500/20">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
@@ -70,7 +55,7 @@ export default function InnovativeServicesShowcase() {
               Innovative Services Showcase
             </h1>
             <p className="quantum-text text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Discover our most revolutionary and first-to-market AI, quantum computing, and emerging technology solutions
+              Discover our most revolutionary and first-to-market AI, _quantum computing, _and emerging technology solutions
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <span className="px-6 py-3 bg-purple-500/20 border border-purple-500/40 rounded-full text-purple-400 font-semibold">
@@ -92,22 +77,22 @@ export default function InnovativeServicesShowcase() {
 
       <UltraFuturisticMatrixBackground>
         <div className="min-h-screen relative z-10">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Micro SAAS Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Experience the future of business with our cutting-edge micro SAAS solutions powered by quantum AI, autonomous systems, and breakthrough technology.
+                Experience the future of business with our cutting-edge micro SAAS solutions powered by quantum AI, _autonomous systems, _and breakthrough technology.
               </p>
               
-              {/* Stats Grid */}
+              {_/* Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
                   <div className="text-3xl font-bold text-purple-400 mb-2">25+</div>
@@ -127,21 +112,21 @@ export default function InnovativeServicesShowcase() {
                 </div>
               </div>
 
-              {/* Contact Information */}
+              {_/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>
                 <div className="space-y-4 text-left">
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-cyan-400" />
-                    <span className="text-gray-300">{contactInfo.mobile}</span>
+                    <span className="text-gray-300">{_contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <ExternalLink className="w-5 h-5 text-purple-400" />
-                    <span className="text-gray-300">{contactInfo.email}</span>
+                    <span className="text-gray-300">{_contactInfo.email}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-gray-300">{contactInfo.address}</span>
+                    <span className="text-gray-300">{_contactInfo.address}</span>
                   </div>
                 </div>
               </div>
@@ -149,13 +134,13 @@ export default function InnovativeServicesShowcase() {
           </div>
         </section>
 
-        {/* Categories Section */}
+        {_/* Categories Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.2}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -167,20 +152,20 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {categories.map((category, index) => {
-                const Icon = category.icon;
+              {_categories.map((category, _index) => {
+                const _Icon = category.icon;
                 return (
                   <motion.div
                     key={category.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={_{ opacity: 0, _scale: 0.8}}
+                    animate={_{ opacity: 1, _scale: 1}}
+                    transition={_{ duration: 0.5, _delay: index * 0.1}}
                     className="group cursor-pointer"
                   >
-                    <div className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
+                    <div className={_`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
                       <Icon className="w-8 h-8 mx-auto mb-3 text-white" />
                       <h3 className="text-sm font-semibold text-white leading-tight">
-                        {category.name}
+                        {_category.name}
                       </h3>
                     </div>
                   </motion.div>
@@ -190,13 +175,13 @@ export default function InnovativeServicesShowcase() {
           </div>
         </section>
 
-        {/* Featured Services Section */}
+        {_/* Featured Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.4}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -208,18 +193,18 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {allServices.filter(service => service.popular).slice(0, 9).map((service, index) => (
+              {_allServices.filter(service => service.popular).slice(0, _9).map(_(service, _index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={_{ opacity: 0, _y: 20}}
+                  animate={_{ opacity: 1, _y: 0}}
+                  transition={_{ duration: 0.6, _delay: index * 0.1}}
                   className="group"
                 >
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
                     <div className="flex items-center justify-between mb-6">
-                      <div className="text-4xl">{service.icon}</div>
-                      {service.popular && (
+                      <div className="text-4xl">{_service.icon}</div>
+                      {_service.popular && (
                         <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
                           Popular
                         </span>
@@ -227,30 +212,30 @@ export default function InnovativeServicesShowcase() {
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                      {service.name}
+                      {_service.name}
                     </h3>
                     
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                      {service.description}
+                      {_service.description}
                     </p>
 
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-purple-400">
-                        {service.price}
-                        <span className="text-sm text-gray-400">{service.period}</span>
+                        {_service.price}
+                        <span className="text-sm text-gray-400">{_service.period}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{service.rating}</span>
-                        <span className="text-xs text-gray-500">({service.reviews})</span>
+                        <span className="text-sm text-gray-300">{_service.rating}</span>
+                        <span className="text-xs text-gray-500">({_service.reviews})</span>
                       </div>
                     </div>
 
                     <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {_service.features.slice(0, _3).map(_(feature, _idx) => (
                         <div key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-xs text-gray-300">{feature}</span>
+                          <span className="text-xs text-gray-300">{_feature}</span>
                         </div>
                       ))}
                     </div>
@@ -258,21 +243,21 @@ export default function InnovativeServicesShowcase() {
                     <div className="space-y-3 mb-6">
                       <div className="text-xs">
                         <span className="text-gray-400">Market Size:</span>
-                        <span className="text-green-400 ml-2">{service.marketSize}</span>
+                        <span className="text-green-400 ml-2">{_service.marketSize}</span>
                       </div>
                       <div className="text-xs">
                         <span className="text-gray-400">Growth Rate:</span>
-                        <span className="text-blue-400 ml-2">{service.growthRate}</span>
+                        <span className="text-blue-400 ml-2">{_service.growthRate}</span>
                       </div>
                       <div className="text-xs">
                         <span className="text-gray-400">ROI:</span>
-                        <span className="text-purple-400 ml-2">{service.roi}</span>
+                        <span className="text-purple-400 ml-2">{_service.roi}</span>
                       </div>
                     </div>
 
                     <div className="flex space-x-3">
                       <a
-                        href={service.link}
+                        href={_service.link}
                         className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <span>Learn More</span>
@@ -289,13 +274,13 @@ export default function InnovativeServicesShowcase() {
           </div>
         </section>
 
-        {/* Market Analysis Section */}
+        {_/* Market Analysis Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.6}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -364,13 +349,13 @@ export default function InnovativeServicesShowcase() {
           </div>
         </section>
 
-        {/* Contact CTA Section */}
+        {_/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={_{ opacity: 0, _y: 20}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8, _delay: 0.8}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -385,17 +370,17 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-center">
                     <Phone className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
                     <div className="text-white font-semibold">Phone</div>
-                    <div className="text-gray-300">{contactInfo.mobile}</div>
+                    <div className="text-gray-300">{_contactInfo.mobile}</div>
                   </div>
                   <div className="text-center">
                     <ExternalLink className="w-8 h-8 mx-auto mb-3 text-purple-400" />
                     <div className="text-white font-semibold">Email</div>
-                    <div className="text-gray-300">{contactInfo.email}</div>
+                    <div className="text-gray-300">{_contactInfo.email}</div>
                   </div>
                   <div className="text-center">
                     <CheckCircle className="w-8 h-8 mx-auto mb-3 text-green-400" />
                     <div className="text-white font-semibold">Address</div>
-                    <div className="text-gray-300 text-sm">{contactInfo.address}</div>
+                    <div className="text-gray-300 text-sm">{_contactInfo.address}</div>
                   </div>
                 </div>
                 
@@ -408,7 +393,7 @@ export default function InnovativeServicesShowcase() {
                     <ExternalLink className="w-5 h-5" />
                   </a>
                   <a
-                    href={`tel:${contactInfo.mobile}`}
+                    href={_`tel:${contactInfo.mobile}`}
                     className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <span>Call Now</span>

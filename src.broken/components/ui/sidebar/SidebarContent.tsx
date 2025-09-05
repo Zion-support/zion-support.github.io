@@ -1,9 +1,7 @@
 import React from 'react';
-export function SidebarContent() {
-  return (
+export function SidebarContent() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

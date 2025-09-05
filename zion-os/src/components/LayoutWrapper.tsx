@@ -1,15 +1,12 @@
 "use client";
 
-import { useWalkthroughTarget } from "./OnboardingWalkthrough";
-import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {
-  const { user, isAuthenticated, logout } = useAuth();
+export function LayoutWrapper(_{_children}: {_children: React.ReactNode}) {_const { user, _isAuthenticated, _logout} = useAuth();
 
   return (
     <>
-      <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {...useWalkthroughTarget("nav-menu")}>
+      <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {_...useWalkthroughTarget("nav-menu")}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="font-semibold text-lg">Zion OS</Link>
@@ -27,7 +24,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="flex items-center gap-4">
-            {isAuthenticated ? (
+            {_isAuthenticated ? (
               <>
                 <Link 
                   href="/dashboard" 
@@ -37,10 +34,10 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
                 </Link>
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-zinc-400">
-                    Welcome, {user?.name || user?.email}
+                    Welcome, _{user?.name || user?.email}
                   </span>
                   <button
-                    onClick={logout}
+                    onClick={_logout}
                     className="text-sm text-zinc-400 hover:text-white transition-colors"
                   >
                     Sign Out
@@ -66,7 +63,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </nav>
-      {children}
+      {_children}
     </>
   );
 }

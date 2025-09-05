@@ -1,61 +1,17 @@
 
 import React from "react";
-import { Card } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
 
 // Sample data for integration sync logs
-const syncLogs = [
-  {
-    id: "1",
-    integration: "Salesforce",
-    event: "contact_synced",
-    status: "success",
-    timestamp: "2024-05-20T12:30:45Z",
-    details: "Successfully synced contact data for Job #1234"
-  },
-  {
-    id: "2",
-    integration: "Greenhouse",
-    event: "applicant_created",
-    status: "success", 
-    timestamp: "2024-05-20T10:15:22Z",
-    details: "New applicant created in Greenhouse from Zion application"
-  },
-  {
-    id: "3",
-    integration: "HubSpot",
-    event: "deal_updated",
-    status: "error",
-    timestamp: "2024-05-19T16:45:12Z",
-    details: "Failed to update deal - API rate limit exceeded"
-  },
-  {
-    id: "4",
-    integration: "Zoho CRM",
-    event: "job_synced",
-    status: "warning",
-    timestamp: "2024-05-19T14:22:33Z",
-    details: "Job synced but some fields were skipped due to mapping issues"
-  },
-  {
-    id: "5",
-    integration: "Lever",
-    event: "candidate_status_changed",
-    status: "success",
-    timestamp: "2024-05-18T09:10:05Z",
-    details: "Updated candidate status to 'Interview Scheduled'"
-  }
+const _syncLogs = [
+  {_id: "1", _integration: "Salesforce", _event: "contact_synced", _status: "success", _timestamp: "2024-05-20T12:30:45Z", _details: "Successfully synced contact data for Job #1234"},
+  {_id: "2", _integration: "Greenhouse", _event: "applicant_created", _status: "success", _timestamp: "2024-05-20T10:15:22Z", _details: "New applicant created in Greenhouse from Zion application"},
+  {_id: "3", _integration: "HubSpot", _event: "deal_updated", _status: "error", _timestamp: "2024-05-19T16:45:12Z", _details: "Failed to update deal - API rate limit exceeded"},
+  {_id: "4", _integration: "Zoho CRM", _event: "job_synced", _status: "warning", _timestamp: "2024-05-19T14:22:33Z", _details: "Job synced but some fields were skipped due to mapping issues"},
+  {_id: "5", _integration: "Lever", _event: "candidate_status_changed", _status: "success", _timestamp: "2024-05-18T09:10:05Z", _details: "Updated candidate status to 'Interview Scheduled'"}
 ];
 
-export function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) => {
+export function IntegrationsSyncLog() {_const _getStatusBadge = (_status: string) => {
     switch (status) {
       case "success":
         return <Badge className="bg-green-500">Success</Badge>;
@@ -64,12 +20,10 @@ export function IntegrationsSyncLog() {
       case "warning":
         return <Badge className="bg-amber-500">Warning</Badge>;
       default:
-        return <Badge variant="outline">Unknown</Badge>;
-    }
+        return <Badge variant="outline">Unknown</Badge>;}
   };
   
-  return (
-    <Card>
+  return (_<Card>
       <div className="p-4">
         <Table>
           <TableHeader>
@@ -82,15 +36,15 @@ export function IntegrationsSyncLog() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {syncLogs.map((log) => (
+            {_syncLogs.map((log) => (
               <TableRow key={log.id}>
-                <TableCell className="font-medium">{log.integration}</TableCell>
+                <TableCell className="font-medium">{_log.integration}</TableCell>
                 <TableCell>
-                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {_log.event.replace(/_/g, _' ').replace(/\b\w/g, _l => l.toUpperCase())}
                 </TableCell>
-                <TableCell>{getStatusBadge(log.status)}</TableCell>
-                <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>
-                <TableCell className="hidden md:table-cell">{log.details}</TableCell>
+                <TableCell>{_getStatusBadge(log.status)}</TableCell>
+                <TableCell>{_new Date(log.timestamp).toLocaleString()}</TableCell>
+                <TableCell className="hidden md:table-cell">{_log.details}</TableCell>
               </TableRow>
             ))}
           </TableBody>

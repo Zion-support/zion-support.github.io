@@ -1,5 +1,4 @@
-export type CuttingEdgeAIService = {
-	id: string;
+export type CuttingEdgeAIService = {_id: string;
 	name: string;
 	description: string;
 	category:
@@ -11,7 +10,7 @@ export type CuttingEdgeAIService = {
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
 		| 'AI Quantum Computing';
-	pricing: { starter: string; professional?: string; enterprise?: string };
+	pricing: { starter: string; professional?: string; enterprise?: string};
 	features: string[];
 	integrations?: string[];
 	useCases?: string[];
@@ -22,36 +21,21 @@ export type CuttingEdgeAIService = {
 };
 
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
-	{
-		id: 'ai-emotional-support-agent',
-		name: 'AI Emotional Support Agent',
-		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
-		category: 'AI Emotional Intelligence',
-		pricing: { starter: '$99/mo' },
+	{_id: 'ai-emotional-support-agent', _name: 'AI Emotional Support Agent', _description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.', _category: 'AI Emotional Intelligence', _pricing: { starter: '$99/mo'},
 		features: ['CBT-guided prompts', 'Mood tracking', 'Crisis escalation', 'HIPAA-friendly modes'],
 		integrations: ['Twilio', 'Slack'],
 		useCases: ['Employee wellness', '24/7 support'],
 		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
 		realService: true
 	},
-	{
-		id: 'ai-product-spec-writer',
-		name: 'AI Product Spec Writer',
-		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
-		category: 'AI Business Management',
-		pricing: { starter: '$79/mo' },
+	{_id: 'ai-product-spec-writer', _name: 'AI Product Spec Writer', _description: 'Generate PRDs, _user stories, _and acceptance criteria aligned with business goals and analytics.', _category: 'AI Business Management', _pricing: { starter: '$79/mo'},
 		features: ['PRD templates', 'Story generation', 'Acceptance criteria', 'Analytics alignment'],
 		integrations: ['Jira', 'Linear'],
 		useCases: ['Faster planning', 'Better alignment'],
 		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
 		realService: true
 	},
-	{
-		id: 'ai-creative-studio',
-		name: 'AI Creative Studio',
-		description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
-		category: 'AI Creativity',
-		pricing: { starter: '$149/mo' },
+	{_id: 'ai-creative-studio', _name: 'AI Creative Studio', _description: 'Generate brand-consistent images and short-form videos with approvals and rights management.', _category: 'AI Creativity', _pricing: { starter: '$149/mo'},
 		features: ['Brand kit', 'Image & video gen', 'Review & approvals', 'Rights management'],
 		integrations: ['Canva', 'Figma'],
 		useCases: ['Marketing velocity', 'Cost savings'],

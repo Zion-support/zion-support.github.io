@@ -1,76 +1,61 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
-interface EmptyStateProps {
-  icon: React.ReactNode;
+interface EmptyStateProps {_icon: React.ReactNode;
   title: string;
   description: string;
   action?: {
     text: string;
     href?: string;
-    onClick?: () => void;
-  };
-  secondaryAction?: {
-    text: string;
+    onClick?: () => void;};
+  secondaryAction?: {_text: string;
     href?: string;
-    onClick?: () => void;
-  };
+    onClick?: () => void;};
   className?: string;
 }
 
-export function EmptyState({
-  icon,
-  title,
-  description,
-  action,
-  secondaryAction,
-  className}: EmptyStateProps) {
-  return (
+export function EmptyState(_{_icon, _title, _description, _action, _secondaryAction, _className}: EmptyStateProps) {_return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
-        className
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50", _className
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
-        {icon}
+        {_icon}
       </div>
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>
+      <h3 className="text-2xl font-semibold text-white mb-3">{_title}</h3>
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{_description}</p>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        {action && (
+        {_action && (
           action.href ? (
             <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">
-              <Link to={action.href}>{action.text}</Link>
+              <Link to={action.href}>{_action.text}</Link>
             </Button>
           ) : (
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
-              onClick={action.onClick}
+              onClick={_action.onClick}
             >
-              {action.text}
+              {_action.text}
             </Button>
           )
         )}
 
-        {secondaryAction && (
+        {_secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
-              <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
+              <Link to={secondaryAction.href}>{_secondaryAction.text}</Link>
             </Button>
           ) : (
             <Button 
               variant="outline" 
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
-              onClick={secondaryAction.onClick}
+              onClick={_secondaryAction.onClick}
             >
-              {secondaryAction.text}
+              {_secondaryAction.text}
             </Button>
           )
         )}

@@ -1,7 +1,5 @@
 import dynamic from 'next/dynamic';
 
-const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false });
+const _ExpoPage = dynamic__(() => import('../components/expo/ExpoPage'), {_ssr: false});
 
-export default function ExpoRoute() {
-  return <ExpoPage />;
-}
+export default function ExpoRoute() {_return <ExpoPage />;}

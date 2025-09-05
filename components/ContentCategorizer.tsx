@@ -1,12 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { 
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings, 
-  BarChart3, Globe, Database, Cpu, Rocket, Brain
-} from 'lucide-react';
+import React, {_useState, _useEffect, _useMemo} from 'react';
+import {_Search, _Filter, _Calendar, _Tag, _TrendingUp, _Shield, _Code, _BookOpen, _Zap, _AlertTriangle, _Lightbulb, _Settings, _BarChart3, _Globe, _Database, _Cpu, _Rocket, _Brain} from 'lucide-react';
 
-interface ContentItem {
-  id: string;
+interface ContentItem {_id: string;
   title: string;
   href: string;
   desc: string;
@@ -16,223 +11,90 @@ interface ContentItem {
   relevance: 'high' | 'medium' | 'low';
   tags: string[];
   source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-}
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';}
 
-interface ContentCategory {
-  id: string;
+interface ContentCategory {_id: string;
   name: string;
-  icon: any;
+  icon: unknown;
   description: string;
   color: string;
   count: number;
-  subcategories?: string[];
-}
+  subcategories?: string[];}
 
-const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+const ContentCategorizer: React.FC = () => {_const [searchTerm, _setSearchTerm] = useState('');
+  const [selectedCategory, _setSelectedCategory] = useState('all');
+  const [selectedSubcategory, _setSelectedSubcategory] = useState('all');
+  const [selectedType, _setSelectedType] = useState('all');
+  const [selectedDateRange, _setSelectedDateRange] = useState('all');
+  const [selectedRelevance, _setSelectedRelevance] = useState('all');
+  const [sortBy, _setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, _setSortOrder] = useState<'asc' | 'desc'>('desc');
 
-  // Sample content data - in a real implementation, this would come from an API
+  // Sample content data - in a real implementation, _this would come from an API
   const contentItems: ContentItem[] = [
     {
-      id: '1',
-      title: 'Structured Data Audit Report',
-      href: '/reports/structured-data-audit.json',
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
-      category: 'seo',
-      subcategory: 'structured-data',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['seo', 'json-ld', 'schema', 'audit'],
-      source: 'autonomous-auditor',
-      type: 'report'
-    },
-    {
-      id: '2',
-      title: 'Security Vulnerability Scan Results',
-      href: '/reports/security-scan-2025-08-19',
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
-      category: 'security',
-      subcategory: 'vulnerability-scan',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['security', 'vulnerability', 'scan', 'remediation'],
-      source: 'security-scanner',
-      type: 'security'
-    },
-    {
-      id: '3',
-      title: 'AI Model Performance Update',
-      href: '/reports/ai-model-performance-2025-08-19',
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
-      category: 'ai',
-      subcategory: 'performance',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['ai', 'performance', 'optimization', 'metrics'],
-      source: 'ai-monitor',
-      type: 'update'
-    },
-    {
-      id: '4',
-      title: 'Feature Deployment Summary',
-      href: '/reports/feature-deployment-2025-08-19',
-      desc: 'Overview of newly deployed features and their impact on user experience.',
-      category: 'features',
-      subcategory: 'deployment',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['features', 'deployment', 'ux', 'impact'],
-      source: 'deployment-tracker',
-      type: 'feature'
-    },
-    {
-      id: '5',
-      title: 'System Health Dashboard',
-      href: '/reports/system-health-2025-08-19',
-      desc: 'Real-time system performance metrics and infrastructure health status.',
-      category: 'monitoring',
-      subcategory: 'system-health',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['monitoring', 'performance', 'infrastructure', 'health'],
-      source: 'health-monitor',
-      type: 'report'
-    },
-    {
-      id: '6',
-      title: 'User Behavior Insights',
-      href: '/reports/user-behavior-2025-08-19',
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
-      category: 'analytics',
-      subcategory: 'user-behavior',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['analytics', 'user-behavior', 'engagement', 'optimization'],
-      source: 'behavior-analyzer',
-      type: 'insight'
-    }
+      id: '1', _title: 'Structured Data Audit Report', _href: '/reports/structured-data-audit.json', _desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.', _category: 'seo', _subcategory: 'structured-data', _date: '2025-08-19', _relevance: 'high', _tags: ['seo', _'json-ld', _'schema', _'audit'], _source: 'autonomous-auditor', _type: 'report'},
+    {_id: '2', _title: 'Security Vulnerability Scan Results', _href: '/reports/security-scan-2025-08-19', _desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.', _category: 'security', _subcategory: 'vulnerability-scan', _date: '2025-08-19', _relevance: 'high', _tags: ['security', _'vulnerability', _'scan', _'remediation'], _source: 'security-scanner', _type: 'security'},
+    {_id: '3', _title: 'AI Model Performance Update', _href: '/reports/ai-model-performance-2025-08-19', _desc: 'Latest performance metrics and optimization insights for deployed AI models.', _category: 'ai', _subcategory: 'performance', _date: '2025-08-19', _relevance: 'high', _tags: ['ai', _'performance', _'optimization', _'metrics'], _source: 'ai-monitor', _type: 'update'},
+    {_id: '4', _title: 'Feature Deployment Summary', _href: '/reports/feature-deployment-2025-08-19', _desc: 'Overview of newly deployed features and their impact on user experience.', _category: 'features', _subcategory: 'deployment', _date: '2025-08-19', _relevance: 'medium', _tags: ['features', _'deployment', _'ux', _'impact'], _source: 'deployment-tracker', _type: 'feature'},
+    {_id: '5', _title: 'System Health Dashboard', _href: '/reports/system-health-2025-08-19', _desc: 'Real-time system performance metrics and infrastructure health status.', _category: 'monitoring', _subcategory: 'system-health', _date: '2025-08-19', _relevance: 'medium', _tags: ['monitoring', _'performance', _'infrastructure', _'health'], _source: 'health-monitor', _type: 'report'},
+    {_id: '6', _title: 'User Behavior Insights', _href: '/reports/user-behavior-2025-08-19', _desc: 'Analysis of user interaction patterns and engagement optimization opportunities.', _category: 'analytics', _subcategory: 'user-behavior', _date: '2025-08-19', _relevance: 'high', _tags: ['analytics', _'user-behavior', _'engagement', _'optimization'], _source: 'behavior-analyzer', _type: 'insight'}
   ];
 
   const categories: ContentCategory[] = [
-    {
-      id: 'all',
-      name: 'All Content',
-      icon: Globe,
-      description: 'Complete collection of autonomous content',
-      color: 'from-blue-500 to-cyan-500',
-      count: contentItems.length
-    },
-    {
-      id: 'seo',
-      name: 'SEO & Analytics',
-      icon: BarChart3,
-      description: 'Search optimization and performance analytics',
-      color: 'from-green-500 to-emerald-500',
-      count: contentItems.filter(item => item.category === 'seo').length,
-      subcategories: ['structured-data', 'performance', 'technical-seo']
-    },
-    {
-      id: 'security',
-      name: 'Security & Compliance',
-      icon: Shield,
-      description: 'Security assessments and compliance reports',
-      color: 'from-red-500 to-orange-500',
-      count: contentItems.filter(item => item.category === 'security').length,
-      subcategories: ['vulnerability-scan', 'compliance', 'threat-detection']
-    },
-    {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      description: 'AI model performance and insights',
-      color: 'from-purple-500 to-pink-500',
-      count: contentItems.filter(item => item.category === 'ai').length,
-      subcategories: ['performance', 'training', 'deployment']
-    },
-    {
-      id: 'features',
-      name: 'Feature Updates',
-      icon: Zap,
-      description: 'New features and system updates',
-      color: 'from-yellow-500 to-orange-500',
-      count: contentItems.filter(item => item.category === 'features').length,
-      subcategories: ['deployment', 'enhancements', 'roadmap']
-    },
-    {
-      id: 'monitoring',
-      name: 'System Monitoring',
-      icon: Cpu,
-      description: 'Infrastructure and system health',
-      color: 'from-indigo-500 to-purple-500',
-      count: contentItems.filter(item => item.category === 'monitoring').length,
-      subcategories: ['system-health', 'performance', 'infrastructure']
-    },
-    {
-      id: 'analytics',
-      name: 'User Analytics',
-      icon: TrendingUp,
-      description: 'User behavior and engagement insights',
-      color: 'from-teal-500 to-cyan-500',
-      count: contentItems.filter(item => item.category === 'analytics').length,
-      subcategories: ['user-behavior', 'engagement', 'conversion']
-    }
+    {_id: 'all', _name: 'All Content', _icon: Globe, _description: 'Complete collection of autonomous content', _color: 'from-blue-500 to-cyan-500', _count: contentItems.length},
+    {_id: 'seo', _name: 'SEO & Analytics', _icon: BarChart3, _description: 'Search optimization and performance analytics', _color: 'from-green-500 to-emerald-500', _count: contentItems.filter(item => item.category === 'seo').length, _subcategories: ['structured-data', _'performance', _'technical-seo']},
+    {_id: 'security', _name: 'Security & Compliance', _icon: Shield, _description: 'Security assessments and compliance reports', _color: 'from-red-500 to-orange-500', _count: contentItems.filter(item => item.category === 'security').length, _subcategories: ['vulnerability-scan', _'compliance', _'threat-detection']},
+    {_id: 'ai', _name: 'AI & Machine Learning', _icon: Brain, _description: 'AI model performance and insights', _color: 'from-purple-500 to-pink-500', _count: contentItems.filter(item => item.category === 'ai').length, _subcategories: ['performance', _'training', _'deployment']},
+    {_id: 'features', _name: 'Feature Updates', _icon: Zap, _description: 'New features and system updates', _color: 'from-yellow-500 to-orange-500', _count: contentItems.filter(item => item.category === 'features').length, _subcategories: ['deployment', _'enhancements', _'roadmap']},
+    {_id: 'monitoring', _name: 'System Monitoring', _icon: Cpu, _description: 'Infrastructure and system health', _color: 'from-indigo-500 to-purple-500', _count: contentItems.filter(item => item.category === 'monitoring').length, _subcategories: ['system-health', _'performance', _'infrastructure']},
+    {_id: 'analytics', _name: 'User Analytics', _icon: TrendingUp, _description: 'User behavior and engagement insights', _color: 'from-teal-500 to-cyan-500', _count: contentItems.filter(item => item.category === 'analytics').length, _subcategories: ['user-behavior', _'engagement', _'conversion']}
   ];
 
-  const contentTypes = [
-    { id: 'all', name: 'All Types', icon: Globe },
-    { id: 'report', name: 'Reports', icon: BookOpen },
-    { id: 'update', name: 'Updates', icon: Zap },
-    { id: 'insight', name: 'Insights', icon: Lightbulb },
-    { id: 'guide', name: 'Guides', icon: Code },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'feature', name: 'Features', icon: TrendingUp }
+  const _contentTypes = [
+    {_id: 'all', _name: 'All Types', _icon: Globe},
+    {_id: 'report', _name: 'Reports', _icon: BookOpen},
+    {_id: 'update', _name: 'Updates', _icon: Zap},
+    {_id: 'insight', _name: 'Insights', _icon: Lightbulb},
+    {_id: 'guide', _name: 'Guides', _icon: Code},
+    {_id: 'security', _name: 'Security', _icon: Shield},
+    {_id: 'feature', _name: 'Features', _icon: TrendingUp}
   ];
 
-  const dateRanges = [
-    { id: 'all', name: 'All Time' },
-    { id: 'today', name: 'Today' },
-    { id: 'week', name: 'This Week' },
-    { id: 'month', name: 'This Month' },
-    { id: 'quarter', name: 'This Quarter' }
+  const _dateRanges = [
+    {_id: 'all', _name: 'All Time'},
+    {_id: 'today', _name: 'Today'},
+    {_id: 'week', _name: 'This Week'},
+    {_id: 'month', _name: 'This Month'},
+    {_id: 'quarter', _name: 'This Quarter'}
   ];
 
-  const relevanceLevels = [
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' },
-    { id: 'high', name: 'High Priority', color: 'text-green-400' },
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+  const _relevanceLevels = [
+    {_id: 'all', _name: 'All Relevance', _color: 'text-gray-400'},
+    {_id: 'high', _name: 'High Priority', _color: 'text-green-400'},
+    {_id: 'medium', _name: 'Medium Priority', _color: 'text-yellow-400'},
+    {_id: 'low', _name: 'Low Priority', _color: 'text-red-400'}
   ];
 
-  const filteredItems = useMemo(() => {
-    let filtered = contentItems.filter(item => {
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const _filteredItems = useMemo__(() => {_let _filtered = contentItems.filter(item => {
+      const _matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' || item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+      const _matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const _matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
+      const _matchesType = selectedType === 'all' || item.type === selectedType;
+      const _matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
       
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
-    });
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;});
 
     // Sort items
-    filtered.sort((a, b) => {
-      let comparison = 0;
+    filtered.sort(_(a, _b) => {_let _comparison = 0;
       switch (sortBy) {
         case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
         case 'relevance':
-          const relevanceOrder = { high: 3, medium: 2, low: 1 };
+          const _relevanceOrder = { high: 3, _medium: 2, _low: 1};
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
           break;
         case 'title':
@@ -245,129 +107,119 @@ const ContentCategorizer: React.FC = () => {
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
 
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Globe;
-  };
+  const _getCategoryIcon = (_category: string) => {_const _cat = categories.find(c => c.id === category);
+    return cat ? cat.icon : Globe;};
 
-  const getRelevanceColor = (relevance: string) => {
-    switch (relevance) {
+  const _getRelevanceColor = (_relevance: string) => {_switch (relevance) {
       case 'high': return 'text-green-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+      default: return 'text-gray-400';}
   };
 
-  const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type);
-    return typeInfo ? typeInfo.icon : Globe;
-  };
+  const _getTypeIcon = (_type: string) => {_const _typeInfo = contentTypes.find(t => t.id === type);
+    return typeInfo ? typeInfo.icon : Globe;};
 
-  const clearAllFilters = () => {
-    setSearchTerm('');
+  const _clearAllFilters = () => {_setSearchTerm('');
     setSelectedCategory('all');
     setSelectedSubcategory('all');
     setSelectedType('all');
     setSelectedDateRange('all');
-    setSelectedRelevance('all');
-  };
+    setSelectedRelevance('all');};
 
-  return (
-    <div className="space-y-6">
-      {/* Search and Advanced Filters */}
+  return (_<div className="space-y-6">
+      {_/* Search and Advanced Filters */}
       <div className="space-y-4">
-        {/* Search Bar */}
+        {_/* Search Bar */}
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search content by title, description, tags, or keywords..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search content by title, _description, _tags, _or keywords..."
+            value={_searchTerm}
+            onChange={_(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
           />
         </div>
 
-        {/* Advanced Filter Controls */}
+        {_/* Advanced Filter Controls */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Category Filter */}
+          {_/* Category Filter */}
           <div>
             <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
             <select
-              value={selectedCategory}
-              onChange={(e) => {
+              value={_selectedCategory}
+              onChange={_(_e) => {
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
+                setSelectedSubcategory('all');}}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
-              {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name} ({category.count})
+              {_categories.map(category => (
+                <option key={category.id} value={_category.id}>
+                  {_category.name} ({_category.count})
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Subcategory Filter */}
+          {_/* Subcategory Filter */}
           <div>
             <label className="block text-sm font-medium text-white/70 mb-2">Subcategory</label>
             <select
-              value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
+              value={_selectedSubcategory}
+              onChange={_(_e) => setSelectedSubcategory(e.target.value)}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
               <option value="all">All Subcategories</option>
-              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
-                <option key={sub} value={sub}>
-                  {sub.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+              {_selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
+                <option key={sub} value={_sub}>
+                  {_sub.replace('-', _' ').replace(/\b\w/g, _l => l.toUpperCase())}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Content Type Filter */}
+          {_/* Content Type Filter */}
           <div>
             <label className="block text-sm font-medium text-white/70 mb-2">Content Type</label>
             <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
+              value={_selectedType}
+              onChange={_(_e) => setSelectedType(e.target.value)}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
-              {contentTypes.map(type => (
-                <option key={type.id} value={type.id}>
-                  {type.name}
+              {_contentTypes.map(type => (
+                <option key={type.id} value={_type.id}>
+                  {_type.name}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Relevance Filter */}
+          {_/* Relevance Filter */}
           <div>
             <label className="block text-sm font-medium text-white/70 mb-2">Relevance</label>
             <select
-              value={selectedRelevance}
-              onChange={(e) => setSelectedRelevance(e.target.value)}
+              value={_selectedRelevance}
+              onChange={_(_e) => setSelectedRelevance(e.target.value)}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
-              {relevanceLevels.map(level => (
-                <option key={level.id} value={level.id}>
-                  {level.name}
+              {_relevanceLevels.map(level => (
+                <option key={level.id} value={_level.id}>
+                  {_level.name}
                 </option>
               ))}
             </select>
           </div>
         </div>
 
-        {/* Sort Controls and Clear Filters */}
+        {_/* Sort Controls and Clear Filters */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <label className="text-sm text-white/70">Sort by:</label>
               <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
+                value={_sortBy}
+                onChange={_(_e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
                 className="px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
               >
                 <option value="date">Date</option>
@@ -375,16 +227,16 @@ const ContentCategorizer: React.FC = () => {
                 <option value="title">Title</option>
               </select>
               <button
-                onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                onClick={_() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className="p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200"
               >
-                {sortOrder === 'asc' ? '↑' : '↓'}
+                {_sortOrder === 'asc' ? '↑' : '↓'}
               </button>
             </div>
           </div>
           
           <button
-            onClick={clearAllFilters}
+            onClick={_clearAllFilters}
             className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
           >
             Clear All Filters
@@ -392,105 +244,104 @@ const ContentCategorizer: React.FC = () => {
         </div>
       </div>
 
-      {/* Category Pills */}
+      {_/* Category Pills */}
       <div>
         <div className="flex flex-wrap gap-2">
-          {categories.map(category => (
+          {_categories.map(_category => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
+              onClick={_() => setSelectedCategory(category.id)}
+              className={_`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
                 selectedCategory === category.id
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300'
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'
-              }`}
+                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'}`}
             >
               <category.icon className="w-4 h-4" />
-              {category.name}
+              {_category.name}
               <span className="text-xs bg-white/10 px-2 py-1 rounded-full">
-                {category.count}
+                {_category.count}
               </span>
             </button>
           ))}
         </div>
       </div>
 
-      {/* Results Summary */}
+      {_/* Results Summary */}
       <div className="text-sm text-white/60">
-        Showing {filteredItems.length} of {contentItems.length} items
-        {searchTerm && ` matching "${searchTerm}"`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+        Showing {_filteredItems.length} of {_contentItems.length} items
+        {_searchTerm && ` matching "${searchTerm}"`}
+        {_selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {_selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>
 
-      {/* Content Grid */}
+      {_/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredItems.map((item) => {
-          const CategoryIcon = getCategoryIcon(item.category);
-          const TypeIcon = getTypeIcon(item.type);
-          const category = categories.find(c => c.id === item.category);
+        {_filteredItems.map(_(item) => {
+          const _CategoryIcon = getCategoryIcon(item.category);
+          const _TypeIcon = getTypeIcon(item.type);
+          const _category = categories.find(c => c.id === item.category);
           
           return (
             <div key={item.id} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               
-              {/* Header with Category and Type */}
+              {_/* Header with Category and Type */}
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
+                  <div className={_`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
                     <CategoryIcon className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-xs text-white/60 uppercase tracking-wider">
-                    {category?.name}
+                    {_category?.name}
                   </span>
                 </div>
                 <div className="flex items-center gap-1 text-xs text-white/50">
                   <TypeIcon className="w-3 h-3" />
-                  {item.type}
+                  {_item.type}
                 </div>
               </div>
 
-              {/* Title and Description */}
+              {_/* Title and Description */}
               <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
-                {item.title}
+                {_item.title}
               </h3>
               <p className="text-sm text-white/75 mb-4 leading-relaxed">
-                {item.desc}
+                {_item.desc}
               </p>
 
-              {/* Tags */}
+              {_/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
-                {item.tags.slice(0, 3).map((tag, index) => (
+                {_item.tags.slice(0, _3).map(_(tag, _index) => (
                   <span key={index} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
-                    {tag}
+                    {_tag}
                   </span>
                 ))}
-                {item.tags.length > 3 && (
+                {_item.tags.length > 3 && (
                   <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
                     +{item.tags.length - 3}
                   </span>
                 )}
               </div>
 
-              {/* Metadata */}
+              {_/* Metadata */}
               <div className="flex items-center justify-between text-xs text-white/50 mb-4">
                 <span className="flex items-center gap-1">
                   <Calendar className="w-3 h-3" />
-                  {item.date}
+                  {_item.date}
                 </span>
-                <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
+                <span className={_`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
                   <TrendingUp className="w-3 h-3" />
-                  {item.relevance} priority
+                  {_item.relevance} priority
                 </span>
               </div>
 
-              {/* Source and Action */}
+              {_/* Source and Action */}
               <div className="flex items-center justify-between">
                 <span className="text-xs text-white/40">
-                  Source: {item.source}
+                  Source: {_item.source}
                 </span>
                 <a 
-                  href={item.href} 
+                  href={_item.href} 
                   target="_blank" 
                   rel="noopener"
                   className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium"
@@ -504,8 +355,8 @@ const ContentCategorizer: React.FC = () => {
         })}
       </div>
 
-      {/* No Results */}
-      {filteredItems.length === 0 && (
+      {_/* No Results */}
+      {_filteredItems.length === 0 && (
         <div className="text-center py-12">
           <div className="text-white/40 text-6xl mb-4">🔍</div>
           <h3 className="text-xl font-semibold text-white/70 mb-2">No content found</h3>

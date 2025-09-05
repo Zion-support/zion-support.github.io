@@ -1,168 +1,79 @@
 
-import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from "date-fns";
-import { ForumPost, ForumReply } from "@/types/community";
-import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
-import { useToast } from "@/hooks/use-toast";
 
 // Mock data for a forum post
-const mockPost: ForumPost = {
-  id: "1",
-  title: "Best practices for AI model fine-tuning",
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
-  authorId: "user1",
-  authorName: "Alex Johnson",
-  authorAvatar: "https://i.pravatar.cc/150?img=3",
-  authorRole: "Verified Talent",
-  categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
-  createdAt: "2025-04-01T12:00:00Z",
-  updatedAt: "2025-04-01T12:00:00Z",
-  upvotes: 48,
-  downvotes: 2,
-  replyCount: 4,
-  isAnswered: true,
-  isFeatured: true
-};
+const mockPost: ForumPost = {_id: "1", _title: "Best practices for AI model fine-tuning", _content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, _it's important to carefully prepare your training data. Clean, _well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, _for parameter optimization, _I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, _regularization techniques like dropout and weight decay help prevent overfitting, _especially when working with smaller datasets.\n\nFinally, _evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?", _authorId: "user1", _authorName: "Alex Johnson", _authorAvatar: "https://i.pravatar.cc/150?img=3", _authorRole: "Verified Talent", _categoryId: "ai-tools", _tags: ["machine-learning", _"fine-tuning", _"gpt"], _createdAt: "2025-04-01T12:00:00Z", _updatedAt: "2025-04-01T12:00:00Z", _upvotes: 48, _downvotes: 2, _replyCount: 4, _isAnswered: true, _isFeatured: true};
 
 // Mock data for replies
 const mockReplies: ForumReply[] = [
-  {
-    id: "reply1",
-    postId: "1",
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
-    authorId: "user2",
-    authorName: "Sarah Chen",
-    authorAvatar: "https://i.pravatar.cc/150?img=5",
-    createdAt: "2025-04-01T14:30:00Z",
-    updatedAt: "2025-04-01T14:30:00Z",
-    upvotes: 12,
-    downvotes: 0
-  },
-  {
-    id: "reply2",
-    postId: "1",
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",
-    authorId: "user3",
-    authorName: "Michael Wong",
-    authorRole: "AI Engineer",
-    createdAt: "2025-04-01T16:15:00Z",
-    updatedAt: "2025-04-01T16:15:00Z",
-    upvotes: 8,
-    downvotes: 0
-  },
-  {
-    id: "reply3",
-    postId: "1",
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
-    authorId: "user4",
-    authorName: "Emma Davis",
-    authorRole: "ML Research Lead",
-    createdAt: "2025-04-02T09:45:00Z",
-    updatedAt: "2025-04-02T09:45:00Z",
-    upvotes: 15,
-    downvotes: 0,
-    isAnswer: true
-  },
-  {
-    id: "reply4",
-    postId: "1",
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
-    authorId: "user5",
-    authorName: "David Lin",
-    createdAt: "2025-04-02T11:20:00Z",
-    updatedAt: "2025-04-02T11:20:00Z",
-    upvotes: 4,
-    downvotes: 0
-  }
+  {_id: "reply1", _postId: "1", _content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.", _authorId: "user2", _authorName: "Sarah Chen", _authorAvatar: "https://i.pravatar.cc/150?img=5", _createdAt: "2025-04-01T14:30:00Z", _updatedAt: "2025-04-01T14:30:00Z", _upvotes: 12, _downvotes: 0},
+  {_id: "reply2", _postId: "1", _content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.", _authorId: "user3", _authorName: "Michael Wong", _authorRole: "AI Engineer", _createdAt: "2025-04-01T16:15:00Z", _updatedAt: "2025-04-01T16:15:00Z", _upvotes: 8, _downvotes: 0},
+  {_id: "reply3", _postId: "1", _content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, _when fine-tuning language models, _I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.", _authorId: "user4", _authorName: "Emma Davis", _authorRole: "ML Research Lead", _createdAt: "2025-04-02T09:45:00Z", _updatedAt: "2025-04-02T09:45:00Z", _upvotes: 15, _downvotes: 0, _isAnswer: true},
+  {_id: "reply4", _postId: "1", _content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?", _authorId: "user5", _authorName: "David Lin", _createdAt: "2025-04-02T11:20:00Z", _updatedAt: "2025-04-02T11:20:00Z", _upvotes: 4, _downvotes: 0}
 ];
 
-export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
+export default function ForumPostPage() {_// Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
-  const router = useRouter();
-  const postId = router.query.postId as string;
-  const { user } = useAuth();
-  const { toast } = useToast();
+  const _router = useRouter();
+  const _postId = router.query.postId as string;
+  const { user} = useAuth();
+  const {_toast} = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
   
   // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId;
+  const _isAuthor = user?.id === post?.authorId;
   
   // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const _isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
   
   // For this demo, we'll assume the post is found
-  if (!post) {
-    return (
+  if (!post) {_return (
       <div className="container py-8">
         <h1>Post not found</h1>
         <Button asChild className="mt-4">
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-    );
-  }
+    );}
 
-  const handleUpvote = () => {
-    if (!user) {
+  const _handleUpvote = () => {_if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to vote on posts"});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
+        title: "Authentication required", _description: "Please sign in to vote on posts"});
+      const _returnTo = encodeURIComponent(router.asPath);
+      router.push(`/auth/login?returnTo=${_returnTo}`);
       return;
     }
     
-    setPost({ ...post, upvotes: post.upvotes + 1 });
-    toast({
-      title: "Vote recorded",
-      description: "You upvoted this post"});
+    setPost({_...post, _upvotes: post.upvotes + 1});
+    toast({_title: "Vote recorded", _description: "You upvoted this post"});
   };
 
-  const handleDownvote = () => {
-    if (!user) {
+  const _handleDownvote = () => {_if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to vote on posts"});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
+        title: "Authentication required", _description: "Please sign in to vote on posts"});
+      const _returnTo = encodeURIComponent(router.asPath);
+      router.push(`/auth/login?returnTo=${_returnTo}`);
       return;
     }
     
-    setPost({ ...post, downvotes: post.downvotes + 1 });
-    toast({
-      title: "Vote recorded",
-      description: "You downvoted this post"});
+    setPost({_...post, _downvotes: post.downvotes + 1});
+    toast({_title: "Vote recorded", _description: "You downvoted this post"});
   };
 
-  const handleSubmitReply = async (content: string) => {
-    if (!user) {
+  const _handleSubmitReply = async (_content: string) => {_if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to reply"});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
+        title: "Authentication required", _description: "Please sign in to reply"});
+      const _returnTo = encodeURIComponent(router.asPath);
+      router.push(`/auth/login?returnTo=${_returnTo}`);
       return;
     }
     
     // Create a new reply
-    const newReply: ForumReply = {
-      id: `reply${Date.now()}`,
+    const newReply: ForumReply = {_id: `reply${Date.now()}`,
       postId: post.id,
       content,
       authorId: user.id || 'unknown',
@@ -175,83 +86,62 @@ export default function ForumPostPage() {
     };
     
     setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post.replyCount + 1 });
+    setPost({_...post, _replyCount: post.replyCount + 1});
     
-    toast({
-      title: "Reply posted",
-      description: "Your reply has been added to the discussion"});
+    toast({_title: "Reply posted", _description: "Your reply has been added to the discussion"});
   };
 
-  const handleMarkAsAnswer = (replyId: string) => {
-    // Only post author or admin can mark an answer
+  const _handleMarkAsAnswer = (_replyId: string) => {_// Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
       toast({
-        title: "Permission denied",
-        description: "Only the original poster or moderators can mark answers",
-        variant: "destructive"
-      });
+        title: "Permission denied", _description: "Only the original poster or moderators can mark answers", _variant: "destructive"});
       return;
     }
     
     // Update the replies
-    const updatedReplies = replies.map(reply => ({
-      ...reply,
-      isAnswer: reply.id === replyId
-    }));
+    const _updatedReplies = replies.map(reply => ({_...reply, _isAnswer: reply.id === replyId}));
     
     setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true });
+    setPost({_...post, _isAnswered: true});
     
-    toast({
-      title: "Answer marked",
-      description: "The reply has been marked as the accepted answer"});
+    toast({_title: "Answer marked", _description: "The reply has been marked as the accepted answer"});
   };
 
-  const handleReportPost = () => {
-    if (!user) {
+  const _handleReportPost = () => {_if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to report content"});
-      const returnTo = encodeURIComponent(router.asPath);
-      router.push(`/auth/login?returnTo=${returnTo}`);
+        title: "Authentication required", _description: "Please sign in to report content"});
+      const _returnTo = encodeURIComponent(router.asPath);
+      router.push(`/auth/login?returnTo=${_returnTo}`);
       return;
     }
     
-    toast({
-      title: "Report submitted",
-      description: "A moderator will review this content"});
+    toast({_title: "Report submitted", _description: "A moderator will review this content"});
   };
 
-  const handlePinPost = () => {
-    if (!isAdminOrMod) return;
+  const _handlePinPost = () => {_if (!isAdminOrMod) return;
     
-    setPost({ ...post, isPinned: !post.isPinned });
+    setPost({ ...post, _isPinned: !post.isPinned});
     
-    toast({
-      title: post.isPinned ? "Post unpinned" : "Post pinned",
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
+    toast({_title: post.isPinned ? "Post unpinned" : "Post pinned", _description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   };
 
-  const handleLockPost = () => {
-    if (!isAdminOrMod) return;
+  const _handleLockPost = () => {_if (!isAdminOrMod) return;
     
-    setPost({ ...post, isLocked: !post.isLocked });
+    setPost({ ...post, _isLocked: !post.isLocked});
     
-    toast({
-      title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
+    toast({_title: post.isLocked ? "Post unlocked" : "Post locked", _description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   };
   
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
+  const _timeAgo = formatDistanceToNow(new Date(post.createdAt), {_addSuffix: true});
+  const _formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
   
   return (
     <>
       <SEO
-        title={`${post.title} | Community Forum | Zion AI Marketplace`}
-        description={post.content.substring(0, 160)}
-        keywords={`community, forum, discussion, ${post.tags.join(', ')}`}
-        canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
+        title={_`${post.title} | Community Forum | Zion AI Marketplace`}
+        description={_post.content.substring(0, _160)}
+        keywords={_`community, _forum, _discussion, _${post.tags.join(', _')}`}
+        canonical={_`https://app.ziontechgroup.com/community/post/${post.id}`}
       />
       
       <div className="container py-8">
@@ -260,11 +150,11 @@ export default function ForumPostPage() {
             Forum
           </Link>
           <span className="text-muted-foreground">/</span>
-          <Link href={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+          <Link href={_`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
+            {_post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
           </Link>
           <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
+          <span className="text-sm font-medium truncate max-w-[200px]">{_post.title}</span>
         </div>
         
         <Card>
@@ -272,12 +162,12 @@ export default function ForumPostPage() {
             <div className="flex justify-between items-start mb-6">
               <div className="flex items-center gap-4">
                 <Avatar className="h-12 w-12">
-                  <AvatarImage src={post.authorAvatar} alt={post.authorName} />
-                  <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
+                  <AvatarImage src={_post.authorAvatar} alt={_post.authorName} />
+                  <AvatarFallback>{_post.authorName.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <div className="font-medium text-lg">{post.authorName}</div>
-                  {post.authorRole && (
+                  <div className="font-medium text-lg">{_post.authorName}</div>
+                  {_post.authorRole && (
                     <Badge variant="outline" className="mt-1">
                       {post.authorRole}
                     </Badge>
@@ -287,25 +177,25 @@ export default function ForumPostPage() {
               
               <div className="flex items-center text-sm text-muted-foreground">
                 <Calendar className="h-4 w-4 mr-1" />
-                <time dateTime={post.createdAt} title={formattedDate}>
-                  {timeAgo}
+                <time dateTime={_post.createdAt} title={_formattedDate}>
+                  {_timeAgo}
                 </time>
               </div>
             </div>
             
-            <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
+            <h1 className="text-2xl font-bold mb-2">{_post.title}</h1>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              {post.tags.map(tag => (
+              {_post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-                  {tag}
+                  {_tag}
                 </Badge>
               ))}
             </div>
             
             <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+              {_post.content.split('\n\n').map(_(paragraph, _i) => (
+                <p key={i}>{_paragraph}</p>
               ))}
             </div>
             
@@ -314,25 +204,25 @@ export default function ForumPostPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleUpvote}
+                  onClick={_handleUpvote}
                   className="flex items-center gap-2"
                 >
                   <ThumbsUp className="h-4 w-4" />
-                  <span>{post.upvotes}</span>
+                  <span>{_post.upvotes}</span>
                 </Button>
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleDownvote}
+                  onClick={_handleDownvote}
                   className="flex items-center gap-2"
                 >
                   <ThumbsDown className="h-4 w-4" />
-                  <span>{post.downvotes}</span>
+                  <span>{_post.downvotes}</span>
                 </Button>
               </div>
               
               <div className="flex items-center gap-2">
-                {(isAuthor || isAdminOrMod) && (
+                {_(isAuthor || isAdminOrMod) && (
                   <Button variant="ghost" size="sm" asChild>
                     <Link href={`/community/edit/${post.id}`}>
                       <Edit className="h-4 w-4 mr-1" />
@@ -341,7 +231,7 @@ export default function ForumPostPage() {
                   </Button>
                 )}
                 
-                {isAdminOrMod && (
+                {_isAdminOrMod && (
                   <>
                     <Button
                       variant="ghost"
@@ -349,15 +239,15 @@ export default function ForumPostPage() {
                       onClick={handlePinPost}
                     >
                       <Pin className="h-4 w-4 mr-1" />
-                      {post.isPinned ? "Unpin" : "Pin"}
+                      {_post.isPinned ? "Unpin" : "Pin"}
                     </Button>
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handleLockPost}
+                      onClick={_handleLockPost}
                     >
                       <Lock className="h-4 w-4 mr-1" />
-                      {post.isLocked ? "Unlock" : "Lock"}
+                      {_post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </>
                 )}
@@ -365,7 +255,7 @@ export default function ForumPostPage() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={handleReportPost}
+                  onClick={_handleReportPost}
                 >
                   <Flag className="h-4 w-4 mr-1" />
                   Report
@@ -376,21 +266,21 @@ export default function ForumPostPage() {
         </Card>
         
         <div className="mt-8">
-          <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
+          <h2 className="text-xl font-bold mb-6">Responses ({_post.replyCount})</h2>
           
-          {post.isAnswered && (
+          {_post.isAnswered && (
             <div className="mb-6">
               <h3 className="flex items-center text-green-600 font-medium mb-2">
                 <CheckCircle className="h-4 w-4 mr-2" />
                 Accepted Answer
               </h3>
               {replies.filter(reply => reply.isAnswer).map(reply => (
-                <ReplyCard key={reply.id} reply={reply} className="border-green-500" />
+                <ReplyCard key={reply.id} reply={_reply} className="border-green-500" />
               ))}
             </div>
           )}
           
-          {!post.isLocked && (
+          {_!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
               {user ? (
@@ -405,7 +295,7 @@ export default function ForumPostPage() {
             </div>
           )}
           
-          {post.isLocked && (
+          {_post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
                 <Lock className="h-4 w-4 mr-2" />
@@ -415,14 +305,14 @@ export default function ForumPostPage() {
           )}
           
           <div className="space-y-6">
-            {replies
+            {_replies
               .filter(reply => !reply.isAnswer)
-              .map(reply => (
+              .map(_reply => (
                 <ReplyCard
                   key={reply.id}
-                  reply={reply}
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                  reply={_reply}
+                  onMarkAnswer={_() => handleMarkAsAnswer(reply.id)}
+                  canMarkAnswer={_!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
               ))}
           </div>

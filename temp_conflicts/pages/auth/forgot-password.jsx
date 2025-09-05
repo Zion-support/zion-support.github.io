@@ -1,8 +1,7 @@
 
 import Head from 'next/head';
 
-const ForgotPassword = () => {
-  return (
+const _ForgotPassword = () => {_return (
     <div>
       <Head>
         <title>ForgotPassword - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const ForgotPassword = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default ForgotPassword;

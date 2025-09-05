@@ -1,63 +1,34 @@
 
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
-import { supabase } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
 
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string;
-}
+interface ModelVersionData extends ModelConfig {_trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string;}
 
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
+export function ZionGPTModelManager() {_const [models, _setModels] = useState<ModelVersionData[]>([]);
+  const [isLoading, _setIsLoading] = useState(true);
+  const [activeJobs, _setActiveJobs] = useState<{[key: string]: boolean}>({});
 
   // Fetch model data on component mount
-  useEffect(() => {
-    fetchModels();
-  }, []);
+  useEffect__(() => {_fetchModels();}, []);
 
-  const fetchModels = async () => {
-    try {
+  const _fetchModels = async () => {_try {
       setIsLoading(true);
-      const { data, error } = await supabase
+      const { data, _error} = await supabase
         .from('model_versions')
         .select('*')
-        .order('createdAt', { ascending: false });
+        .order('createdAt', {_ascending: false});
       
       if (error) throw error;
       
       // Map the data to our component state
-      setModels(data.map(model => ({
-        id: model.id,
-        version: model.version,
-        createdAt: model.created_at,
-        baseModel: model.base_model,
-        purpose: model.purpose,
-        active: model.active,
-        trainingStatus: model.training_status,
-        errorMessage: model.error_message
-      })));
-    } catch (error) {
-      console.error('Error fetching models:', error);
-    } finally {
-      setIsLoading(false);
-    }
+      setModels(data.map(model => ({_id: model.id, _version: model.version, _createdAt: model.created_at, _baseModel: model.base_model, _purpose: model.purpose, _active: model.active, _trainingStatus: model.training_status, _errorMessage: model.error_message})));
+    } catch (error) {} finally {_setIsLoading(false);}
   };
 
-  const checkTrainingStatus = async (modelId: string) => {
-    try {
-      setActiveJobs(prev => ({ ...prev, [modelId]: true }));
+  const _checkTrainingStatus = async (_modelId: string) => {_try {
+      setActiveJobs(prev => ({ ...prev, _[modelId]: true}));
       
       // Call an edge function that checks the OpenAI fine-tuning job status
-      const { data, error } = await supabase.functions.invoke('check-training-status', {
-        body: { modelId }
+      const {_data, _error} = await supabase.functions.invoke(_'check-training-status', _{_body: { modelId}
       });
       
       if (error) throw error;
@@ -66,7 +37,7 @@ export function ZionGPTModelManager() {
       setModels(prev => 
         prev.map(model => 
           model.id === modelId 
-            ? { ...model, trainingStatus: data.status, errorMessage: data.error || null } 
+            ? {_...model, _trainingStatus: data.status, _errorMessage: data.error || null} 
             : model
         )
       );
@@ -74,42 +45,33 @@ export function ZionGPTModelManager() {
       // Also update in the database
       await supabase
         .from('model_versions')
-        .update({
-          training_status: data.status,
-          error_message: data.error || null,
-          // If training succeeded, automatically set to active
-          ...(data.status === 'succeeded' ? { active: true } : {})
+        .update({_training_status: data.status, _error_message: data.error || null, _// If training succeeded, _automatically set to active
+          ...(data.status === 'succeeded' ? { active: true} : {})
         })
         .eq('id', modelId);
       
-    } catch (error) {
-      console.error(`Error checking status for model ${modelId}:`, error);
-    } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    } catch (error) {} finally {_setActiveJobs(prev => ({ ...prev, _[modelId]: false}));
     }
   };
 
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
-    try {
-      // If activating, deactivate all other models with the same purpose
+  const _toggleModelActive = async (_modelId: string, _currentActive: boolean, _purpose: string) => {_try {
+      // If activating, _deactivate all other models with the same purpose
       if (!currentActive) {
         await supabase
           .from('model_versions')
-          .update({ active: false })
+          .update({ active: false})
           .eq('purpose', purpose);
       }
       
       // Update this model
       await supabase
         .from('model_versions')
-        .update({ active: !currentActive })
+        .update({_active: !currentActive})
         .eq('id', modelId);
       
       // Refresh the model list
       fetchModels();
-    } catch (error) {
-      console.error('Error toggling model active state:', error);
-    }
+    } catch (error) {}
   };
 
   return (
@@ -121,17 +83,16 @@ export function ZionGPTModelManager() {
             Manage fine-tuned AI models for different platform features
           </CardDescription>
         </div>
-        <Button onClick={fetchModels} variant="outline" size="sm">
+        <Button onClick={_fetchModels} variant="outline" size="sm">
           <RefreshCw className="h-4 w-4 mr-2" /> Refresh
         </Button>
       </CardHeader>
       <CardContent>
-        {isLoading ? (
+        {_isLoading ? (
           <div className="flex items-center justify-center h-24">
             <Loader2 className="h-8 w-8 animate-spin text-primary" />
           </div>
-        ) : (
-          <Table>
+        ) : (_<Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Model ID</TableHead>
@@ -146,12 +107,12 @@ export function ZionGPTModelManager() {
             <TableBody>
               {models.map((model) => (
                 <TableRow key={model.id}>
-                  <TableCell className="font-medium">{model.id}</TableCell>
-                  <TableCell>v{model.version}</TableCell>
-                  <TableCell>{model.purpose}</TableCell>
-                  <TableCell>{model.baseModel}</TableCell>
+                  <TableCell className="font-medium">{_model.id}</TableCell>
+                  <TableCell>v{_model.version}</TableCell>
+                  <TableCell>{_model.purpose}</TableCell>
+                  <TableCell>{_model.baseModel}</TableCell>
                   <TableCell>
-                    {model.trainingStatus === 'succeeded' ? (
+                    {_model.trainingStatus === 'succeeded' ? (
                       <Badge className="bg-green-500">Ready</Badge>
                     ) : model.trainingStatus === 'failed' ? (
                       <Badge className="bg-red-500">Failed</Badge>
@@ -160,31 +121,29 @@ export function ZionGPTModelManager() {
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
                     )}
-                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                    {_model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
-                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell>{_new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
-                      <Button
+                    {_model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (_<Button
                         variant="ghost"
                         size="sm"
                         onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
+                        disabled={_activeJobs[model.id]}
                       >
-                        {activeJobs[model.id] ? (
+                        {_activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
                         <span className="ml-1">Check</span>
                       </Button>
-                    ) : model.trainingStatus === 'succeeded' ? (
-                      <Button
-                        variant={model.active ? "outline" : "default"}
+                    ) : model.trainingStatus === 'succeeded' ? (_<Button
+                        variant={_model.active ? "outline" : "default"}
                         size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+                        onClick={_() => toggleModelActive(model.id, _model.active, _model.purpose)}
                       >
-                        {model.active ? (
+                        {_model.active ? (
                           <>
                             <CheckCircle className="h-4 w-4 mr-1" /> Active
                           </>
@@ -199,7 +158,7 @@ export function ZionGPTModelManager() {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-                        title={model.errorMessage || "Training failed"}
+                        title={_model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>

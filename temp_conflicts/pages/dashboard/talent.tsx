@@ -1,9 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, {_useEffect, _useMemo, _useState} from "react";
 
-type JobSuggestion = {
-  id: string;
+type JobSuggestion = {_id: string;
   match_type?: "job_for_talent" | string;
   job_id: string;
   job_title: string;
@@ -18,46 +15,37 @@ type JobSuggestion = {
   status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
   score?: number;
   created_at?: string;
-  updated_at?: string;
-};
+  updated_at?: string;};
 
-const SUGGESTION_TABLE_ENV =
+const _SUGGESTION_TABLE_ENV =
   process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
 
-export default function TalentDashboardSuggestedJobs() {
-  const [userId, setUserId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [suggestions, setSuggestions] = useState<JobSuggestion[]>([]);
+export default function TalentDashboardSuggestedJobs() {_const [userId, _setUserId] = useState<string | null>(null);
+  const [loading, _setLoading] = useState(true);
+  const [suggestions, _setSuggestions] = useState<JobSuggestion[]>([]);
 
-  useEffect(() => {
-    let mounted = true;
+  useEffect__(() => {
+    let _mounted = true;
     async function init() {
       try {
-        const { data } = await supabase.auth.getUser();
-        const currentUserId = data.user?.id || null;
+        const { data} = await supabase.auth.getUser();
+        const _currentUserId = data.user?.id || null;
         if (!mounted) return;
         setUserId(currentUserId);
-        if (!currentUserId) {
-          setSuggestions([]);
+        if (!currentUserId) {_setSuggestions([]);
           setLoading(false);
-          return;
-        }
+          return;}
         await fetchSuggestions(currentUserId);
         setupRealtime(currentUserId);
-      } finally {
-        if (mounted) setLoading(false);
-      }
+      } finally {_if (mounted) setLoading(false);}
     }
     init();
-    return () => {
-      mounted = false;
-    };
+    return () => {_mounted = false;};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const fetchSuggestions = async (currentUserId: string) => {
-    setLoading(true);
-    const { data, error } = await supabase
+  const _fetchSuggestions = async (_currentUserId: string) => {_setLoading(true);
+    const { data, _error} = await supabase
       .from<JobSuggestion>(SUGGESTION_TABLE_ENV)
       .select(
         [
@@ -80,128 +68,98 @@ export default function TalentDashboardSuggestedJobs() {
       )
       .eq("talent_id", currentUserId)
       .or("match_type.eq.job_for_talent,match_type.is.null")
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: false });
+      .order("score", {_ascending: false})
+      .order("created_at", {_ascending: false});
 
-    if (error) {
-      setSuggestions([]);
+    if (error) {_setSuggestions([]);
       setLoading(false);
-      return;
-    }
+      return;}
 
     setSuggestions(data || []);
     setLoading(false);
   };
 
-  const setupRealtime = (currentUserId: string) => {
-    const channel = supabase
+  const _setupRealtime = (_currentUserId: string) => {_const _channel = supabase
       .channel(`ai-jobs-talent-${currentUserId}`)
-      .on(
-        "postgres_changes",
-        {
-          event: "INSERT",
-          schema: "public",
-          table: SUGGESTION_TABLE_ENV,
-          filter: `talent_id=eq.${currentUserId}`},
-        () => fetchSuggestions(currentUserId)
+      .on(_"postgres_changes", _{_event: "INSERT", _schema: "public", _table: SUGGESTION_TABLE_ENV, _filter: `talent_id=eq.${currentUserId}`}, _() => fetchSuggestions(currentUserId)
       )
       .subscribe();
 
     supabase
-      .channel(`ai-jobs-talent-upd-${currentUserId}`)
-      .on(
-        "postgres_changes",
-        {
-          event: "UPDATE",
-          schema: "public",
-          table: SUGGESTION_TABLE_ENV,
-          filter: `talent_id=eq.${currentUserId}`},
-        () => fetchSuggestions(currentUserId)
+      .channel(`ai-jobs-talent-upd-${_currentUserId}`)
+      .on(_"postgres_changes", _{_event: "UPDATE", _schema: "public", _table: SUGGESTION_TABLE_ENV, _filter: `talent_id=eq.${currentUserId}`}, _() => fetchSuggestions(currentUserId)
       )
       .subscribe();
 
-    return () => {
-      supabase.removeChannel(channel);
-    };
+    return () => {_supabase.removeChannel(channel);};
   };
 
-  const newMatches = useMemo(
-    () => (suggestions || []).filter((s) => (s.status || "new") === "new"),
+  const _newMatches = useMemo(_() => (suggestions || []).filter(_(s) => (s.status || "new") === "new"),
     [suggestions]
   );
-  const viewedMatches = useMemo(
-    () => (suggestions || []).filter((s) => (s.status || "new") !== "new"),
+  const _viewedMatches = useMemo(_() => (suggestions || []).filter(_(s) => (s.status || "new") !== "new"),
     [suggestions]
   );
 
-  const handleApply = async (s: JobSuggestion) => {
-    await supabase
+  const _handleApply = async (_s: JobSuggestion) => {_await supabase
       .from(SUGGESTION_TABLE_ENV)
-      .update({ status: "applied" })
+      .update({ status: "applied"})
       .eq("id", s.id);
     await fetchSuggestions(userId as string);
   };
 
-  const handleDecline = async (s: JobSuggestion) => {
-    await supabase
+  const _handleDecline = async (_s: JobSuggestion) => {_await supabase
       .from(SUGGESTION_TABLE_ENV)
-      .update({ status: "declined" })
+      .update({ status: "declined"})
       .eq("id", s.id);
     await fetchSuggestions(userId as string);
   };
 
-  const Section = ({
-    title,
-    items,
-    highlightNew}: {
-    title: string;
+  const _Section = (_{_title, _items, _highlightNew}: {_title: string;
     items: JobSuggestion[];
-    highlightNew?: boolean;
-  }) => (
-    <section className="space-y-3">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
+    highlightNew?: boolean;}) => (_<section className="space-y-3">
+      <h2 className="text-lg font-semibold text-gray-900">{_title}</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence initial={false}>
-          {items.map((s) => (
+        <AnimatePresence initial={_false}>
+          {_items.map((s) => (
             <motion.div
               key={s.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.2 }}
-              className={`relative rounded-2xl border bg-white p-4 shadow-sm hover:shadow-md ${
+              initial={_{ opacity: 0, _y: 10}}
+              animate={_{ opacity: 1, _y: 0}}
+              exit={_{ opacity: 0, _y: 10}}
+              transition={_{ duration: 0.2}}
+              className={_`relative rounded-2xl border bg-white p-4 shadow-sm hover:shadow-md ${
                 highlightNew && (s.status || "new") === "new"
                   ? "border-emerald-200 ring-1 ring-emerald-200"
-                  : "border-gray-200"
-              }`}
+                  : "border-gray-200"}`}
             >
-              {(s.status || "new") === "new" && (
+              {_(s.status || "new") === "new" && (
                 <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-emerald-600/10 px-2 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-600/20">
                   New Match
                 </span>
               )}
               <div className="mb-2 text-sm text-gray-500">
-                {s.client_name || "Client"}
+                {_s.client_name || "Client"}
               </div>
               <h3 className="text-base font-medium text-gray-900">
-                {s.job_title}
+                {_s.job_title}
               </h3>
-              {s.summary && (
+              {_s.summary && (
                 <p className="mt-2 line-clamp-3 text-sm text-gray-600">
                   {s.summary}
                 </p>
               )}
-              {!!s.skills?.length && (
+              {_!!s.skills?.length && (
                 <div className="mt-3 flex flex-wrap gap-1">
-                  {s.skills.slice(0, 6).map((skill) => (
+                  {s.skills.slice(0, _6).map(_(skill) => (
                     <span
                       key={skill}
                       className="rounded-full bg-gray-50 px-2 py-0.5 text-xs text-gray-700 ring-1 ring-inset ring-gray-200"
                     >
-                      {skill}
+                      {_skill}
                     </span>
                   ))}
-                  {s.skills.length > 6 && (
+                  {_s.skills.length > 6 && (
                     <span className="text-xs text-gray-400">
                       +{s.skills.length - 6} more
                     </span>
@@ -210,40 +168,40 @@ export default function TalentDashboardSuggestedJobs() {
               )}
               <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-sm text-gray-700">
                 <div>
-                  {s.budget_min || s.budget_max ? (
+                  {_s.budget_min || s.budget_max ? (
                     <span>
                       {s.budget_min ? `$${s.budget_min}` : ""}
-                      {s.budget_min && s.budget_max ? "–" : ""}
-                      {s.budget_max ? `$${s.budget_max}` : ""} budget
+                      {_s.budget_min && s.budget_max ? "–" : ""}
+                      {_s.budget_max ? `$${s.budget_max}` : ""} budget
                     </span>
                   ) : (
                     <span>Budget N/A</span>
                   )}
                 </div>
-                <div>{s.duration || "Duration N/A"}</div>
+                <div>{_s.duration || "Duration N/A"}</div>
               </div>
               <div className="mt-4 flex items-center justify-end gap-2">
                 <button
-                  onClick={() => handleDecline(s)}
+                  onClick={_() => handleDecline(s)}
                   className="rounded-md px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100"
                 >
                   Decline
                 </button>
                 <button
-                  onClick={() => handleApply(s)}
+                  onClick={_() => handleApply(s)}
                   className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700"
                 >
                   Apply Now
                 </button>
               </div>
-              {(s.status && s.status !== "new") && (
+              {_(s.status && s.status !== "new") && (
                 <div className="mt-2 text-right text-xs text-gray-500">
                   Status: {s.status}
                 </div>
               )}
             </motion.div>
           ))}
-          {!items.length && (
+          {_!items.length && (
             <div className="col-span-full rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
               No items here yet.
             </div>
@@ -253,15 +211,14 @@ export default function TalentDashboardSuggestedJobs() {
     </section>
   );
 
-  const content = useMemo(() => {
-    if (loading) {
+  const _content = useMemo__(() => {_if (loading) {
       return (
         <div className="space-y-4">
           <div className="h-6 w-40 animate-pulse rounded bg-gray-200" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 3 }).map((_, i) => (
+            {Array.from({ length: 3}).map(_(_, _i) => (
               <div
-                key={i}
+                key={_i}
                 className="h-48 w-full animate-pulse rounded-xl bg-gray-100"
               />
             ))}
@@ -270,18 +227,16 @@ export default function TalentDashboardSuggestedJobs() {
       );
     }
 
-    if (!userId) {
-      return (
+    if (!userId) {_return (
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">
           Please sign in to view AI-suggested jobs.
         </div>
-      );
-    }
+      );}
 
     return (
       <div className="space-y-10">
-        <Section title="New Matches" items={newMatches} highlightNew />
-        <Section title="Previously Viewed" items={viewedMatches} />
+        <Section title="New Matches" items={_newMatches} highlightNew />
+        <Section title="Previously Viewed" items={_viewedMatches} />
       </div>
     );
   }, [loading, newMatches, userId, viewedMatches]);
@@ -294,7 +249,7 @@ export default function TalentDashboardSuggestedJobs() {
           AI-recommended jobs based on your skills and availability.
         </p>
       </div>
-      {content}
+      {_content}
     </div>
   );
 }

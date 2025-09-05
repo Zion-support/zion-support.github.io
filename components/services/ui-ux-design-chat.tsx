@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const UiUxDesignChat: NextPage = () => {
-  return (
+const UiUxDesignChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const UiUxDesignChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default UiUxDesignChat;

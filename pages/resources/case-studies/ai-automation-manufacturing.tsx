@@ -2,55 +2,48 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function ResourceCaseStudyPage() {
-  const caseStudy = {
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  };
+export default function ResourceCaseStudyPage() {_const _caseStudy = {
+    id: 'ai-automation-manufacturing', _title: 'AI-Powered Manufacturing Automation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _results: '40% increase in production efficiency, _60% reduction in downtime', _description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'};
 
   return (
     <>
       <Head>
-        <title>{caseStudy.title} - Resource | Zion Tech Group</title>
-        <meta name="description" content={caseStudy.description} />
+        <title>{_caseStudy.title} - Resource | Zion Tech Group</title>
+        <meta name="description" content={_caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
-            {/* Breadcrumb */}
+            {_/* Breadcrumb */}
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Resources
               </Link>
             </nav>
 
-            {/* Header */}
+            {_/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
                 <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
+                  {_caseStudy.industry}
                 </span>
               </div>
-              <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
-              <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
+              <h1 className="text-4xl font-bold text-white mb-4">{_caseStudy.title}</h1>
+              <p className="text-xl text-cyan-400 font-semibold mb-4">{_caseStudy.company}</p>
+              <p className="text-white/80 text-lg max-w-3xl mx-auto">{_caseStudy.description}</p>
             </header>
 
-            {/* Key Results */}
+            {_/* Key Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
-                <p className="text-white/90 text-lg">{caseStudy.results}</p>
+                <p className="text-white/90 text-lg">{_caseStudy.results}</p>
               </div>
             </section>
 
-            {/* Detailed Analysis */}
+            {_/* Detailed Analysis */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -83,7 +76,7 @@ export default function ResourceCaseStudyPage() {
               </div>
             </section>
 
-            {/* Related Resources */}
+            {_/* Related Resources */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -105,7 +98,7 @@ export default function ResourceCaseStudyPage() {
               </div>
             </section>
 
-            {/* Call to Action */}
+            {_/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>

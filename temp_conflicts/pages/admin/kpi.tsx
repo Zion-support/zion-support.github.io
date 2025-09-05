@@ -1,8 +1,5 @@
 import dynamic from 'next/dynamic';
 
-const KpiDashboard = dynamic(() => import('../../components/dashboard/KpiDashboard'), {
-  ssr: false});
+const _KpiDashboard = dynamic__(() => import('../../components/dashboard/KpiDashboard'), {_ssr: false});
 
-export default function AdminKpiPage() {
-  return <KpiDashboard admin />;
-}
+export default function AdminKpiPage() {_return <KpiDashboard admin />;}

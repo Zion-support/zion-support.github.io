@@ -5,10 +5,10 @@
  * Creates or updates the main README.md file
  */
 
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
-const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
+const _README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
 
 Leading-edge technology solutions and autonomous innovation systems.
 
@@ -90,27 +90,23 @@ This project is proprietary software. All rights reserved.
 
 ---
 
-*Generated on ${new Date().toISOString()}*
+*Generated on ${_new Date().toISOString()}*
 `;
 
-function generateReadme() {
-  const outputPath = path.join(__dirname, '..', 'README.md');
+function generateReadme() {_const _outputPath = path.join(__dirname, _'..', _'README.md');
   
   // Check if README already exists and is substantial
   if (fs.existsSync(outputPath)) {
-    const existingContent = fs.readFileSync(outputPath, 'utf8');
+    const _existingContent = fs.readFileSync(outputPath, _'utf8');
     if (existingContent.length > 1000) {
-      console.log('⚠️  README.md already exists and appears substantial. Skipping generation.');
-      return;
-    }
+      
+      return;}
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE);
-  console.log(`✅ README generated at: ${outputPath}`);
+  
 }
 
-if (require.main === module) {
-  generateReadme();
-}
+if (require.main === module) {_generateReadme();}
 
-module.exports = { generateReadme };
+module.exports = {_generateReadme};

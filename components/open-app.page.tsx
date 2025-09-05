@@ -1,1 +1,1 @@
-export { default } from './open-app';
+export {_default} from './open-app';

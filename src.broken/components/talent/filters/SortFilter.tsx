@@ -1,9 +1,7 @@
 import React from 'react';
-export function SortFilter() {
-  return (
+export function SortFilter() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

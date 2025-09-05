@@ -1,104 +1,79 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Star, ArrowRight,
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Zap, Globe, Database, Lock, Cloud, BarChart3,
-  Twitter, Linkedin, Github, Youtube, Instagram
-} from 'lucide-react';
+import {_Phone, _Mail, _MapPin, _Star, _ArrowRight, _Brain, _Atom, _Shield, _Rocket, _Target, _Microscope, _Zap, _Globe, _Database, _Lock, _Cloud, _BarChart3, _Twitter, _Linkedin, _Github, _Youtube, _Instagram} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-    icon: Brain,
-    services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
+const _serviceCategories = [
+  {_title: 'AI & Consciousness', _icon: Brain, _services: [
+      { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-2029'},
+      {_name: 'Quantum AI Fusion', _href: '/quantum-ai-fusion'},
+      {_name: 'Multimodal AI Orchestrator', _href: '/multimodal-ai-orchestrator'},
+      {_name: 'AI Autonomous Ecosystem', _href: '/ai-autonomous-ecosystem'},
+      {_name: 'AI Ethics & Governance', _href: '/ai-ethics-governance'}
     ]
   },
-  {
-    title: 'Quantum & Emerging Tech',
-    icon: Atom,
-    services: [
-      { name: 'Space Mining Platform', href: '/space-mining-platform' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
+  {_title: 'Quantum & Emerging Tech', _icon: Atom, _services: [
+      { name: 'Space Mining Platform', _href: '/space-mining-platform'},
+      {_name: 'Quantum Bio-Computing', _href: '/quantum-bio-computing'},
+      {_name: 'Brain-Computer Interface', _href: '/brain-computer-interface'},
+      {_name: 'Quantum Energy Platform', _href: '/quantum-energy-platform'},
+      {_name: 'Autonomous Vehicle AI', _href: '/autonomous-vehicle-ai'}
     ]
   },
-  {
-    title: 'Enterprise IT',
-    icon: Shield,
-    services: [
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
+  {_title: 'Enterprise IT', _icon: Shield, _services: [
+      { name: 'Quantum Cloud Infrastructure', _href: '/quantum-cloud-infrastructure'},
+      {_name: 'Edge Computing Orchestrator', _href: '/edge-computing-orchestrator'},
+      {_name: 'Zero Trust Security Platform', _href: '/zero-trust-security-platform'},
+      {_name: 'Blockchain Enterprise Platform', _href: '/blockchain-enterprise-platform'},
+      {_name: 'AI-Powered DevOps', _href: '/ai-powered-devops'}
     ]
   },
-  {
-    title: 'Micro SAAS',
-    icon: Target,
-    services: [
-      { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
-      { name: 'Quantum CRM Suite', href: '/quantum-crm' },
-      { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
-      { name: 'DataVault Hub', href: '/data-vault-hub' },
-      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
+  {_title: 'Micro SAAS', _icon: Target, _services: [
+      { name: 'AI Content Factory Pro', _href: '/ai-content-factory'},
+      {_name: 'Quantum CRM Suite', _href: '/quantum-crm'},
+      {_name: 'CyberShield Pro', _href: '/cyber-shield-pro'},
+      {_name: 'DataVault Hub', _href: '/data-vault-hub'},
+      {_name: 'DevOps Automation Studio', _href: '/devops-automation-studio'}
     ]
   }
 ];
 
-const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Resources', href: '/resources' }
+const _companyLinks = [
+  {_name: 'About Us', _href: '/about'},
+  {_name: 'Careers', _href: '/careers'},
+  {_name: 'News', _href: '/news'},
+  {_name: 'Case Studies', _href: '/case-studies'},
+  {_name: 'Blog', _href: '/blog'},
+  {_name: 'Resources', _href: '/resources'}
 ];
 
-const legalLinks = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-  { name: 'GDPR Compliance', href: '/gdpr' }
+const _legalLinks = [
+  {_name: 'Privacy Policy', _href: '/privacy'},
+  {_name: 'Terms of Service', _href: '/terms'},
+  {_name: 'Cookie Policy', _href: '/cookies'},
+  {_name: 'GDPR Compliance', _href: '/gdpr'}
 ];
 
-const socialLinks = [
-  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
-  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
+const _socialLinks = [
+  {_name: 'Twitter', _href: '#', _icon: Twitter, _color: 'hover:text-blue-400'},
+  {_name: 'LinkedIn', _href: '#', _icon: Linkedin, _color: 'hover:text-blue-600'},
+  {_name: 'GitHub', _href: '#', _icon: Github, _color: 'hover:text-gray-400'},
+  {_name: 'YouTube', _href: '#', _icon: Youtube, _color: 'hover:text-red-400'},
+  {_name: 'Instagram', _href: '#', _icon: Instagram, _color: 'hover:text-pink-400'}
 ];
 
-const EnhancedFooter2025: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const EnhancedFooter2025: React.FC = () => {_const _currentYear = new Date().getFullYear();
 
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50">
+  return (_<footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       
       <div className="relative z-10">
-        {/* Main Footer Content */}
+        {_/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Company Info */}
+            {_/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
@@ -113,55 +88,54 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.
+                Leading the future with revolutionary AI, _quantum computing, _and emerging technology solutions that transform businesses worldwide.
               </p>
 
-              {/* Contact Info */}
+              {_/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
-                    {contactInfo.mobile}
+                  <a href={_`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                    {_contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.email}
+                  <a href={_`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {_contactInfo.email}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-4 h-4 text-pink-400" />
-                  <span className="text-sm">{contactInfo.address}</span>
+                  <span className="text-sm">{_contactInfo.address}</span>
                 </div>
               </div>
             </div>
 
-            {/* Service Categories */}
-            {serviceCategories.map((category, index) => (
-              <motion.div
+            {_/* Service Categories */}
+            {_serviceCategories.map((category, _index) => (_<motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="space-y-4"
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-4 h-4 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">{_category.title}</h3>
                 </div>
                 
                 <div className="space-y-2">
-                  {category.services.map((service) => (
+                  {_category.services.map((service) => (
                     <Link
                       key={service.name}
-                      href={service.href}
+                      href={_service.href}
                       className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
                     >
-                      {service.name}
+                      {_service.name}
                     </Link>
                   ))}
                 </div>
@@ -169,50 +143,50 @@ const EnhancedFooter2025: React.FC = () => {
             ))}
           </div>
 
-          {/* Additional Links */}
+          {_/* Additional Links */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
-            {/* Company Links */}
+            {_/* Company Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <div className="space-y-2">
-                {companyLinks.map((link) => (
+                {_companyLinks.map(_(link) => (
                   <Link
                     key={link.name}
-                    href={link.href}
+                    href={_link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    {link.name}
+                    {_link.name}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Legal Links */}
+            {_/* Legal Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Legal</h4>
               <div className="space-y-2">
-                {legalLinks.map((link) => (
+                {_legalLinks.map(_(link) => (
                   <Link
                     key={link.name}
-                    href={link.href}
+                    href={_link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    {link.name}
+                    {_link.name}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Social Links */}
+            {_/* Social Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {_socialLinks.map(_(social) => (
                   <a
                     key={social.name}
-                    href={social.href}
-                    className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
-                    aria-label={social.name}
+                    href={_social.href}
+                    className={_`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
+                    aria-label={_social.name}
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
@@ -222,34 +196,34 @@ const EnhancedFooter2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
+        {_/* Newsletter Section */}
         <div className="border-t border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6}}
+                viewport={_{ once: true}}
                 className="text-2xl md:text-3xl font-bold text-white mb-4"
               >
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.1}}
+                viewport={_{ once: true}}
                 className="text-gray-400 mb-6 max-w-2xl mx-auto"
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 20}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: 0.2}}
+                viewport={_{ once: true}}
                 className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
               >
                 <input
@@ -265,12 +239,12 @@ const EnhancedFooter2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {_/* Bottom Bar */}
         <div className="border-t border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
+                © {_currentYear} Zion Tech Group. All rights reserved.
               </div>
               
               <div className="flex items-center space-x-6 text-sm text-gray-400">

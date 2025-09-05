@@ -1,5 +1,4 @@
-export interface NextGenInnovation2025 {
-  id: string;
+export interface NextGenInnovation2025 {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface NextGenInnovation2025 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
-  {
-    id: "next-gen-ai-suite",
-    name: "Next-Gen AI Suite",
-    tagline: "Future-ready AI solutions",
-    price: "$179/month",
-    description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
-    features: [
-      "Next-gen AI models",
-      "Advanced capabilities",
-      "Future-ready features",
-      "Innovation platform",
-      "Expert support"
-    ],
-    link: "/services/next-gen-ai-suite",
-    category: "Next-Gen Innovations 2025",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "next-gen-ai-suite", _name: "Next-Gen AI Suite", _tagline: "Future-ready AI solutions", _price: "$179/month", _description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.", _features: [
+      "Next-gen AI models", _"Advanced capabilities", _"Future-ready features", _"Innovation platform", _"Expert support"
+    ], _link: "/services/next-gen-ai-suite", _category: "Next-Gen Innovations 2025", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

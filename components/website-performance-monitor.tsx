@@ -1,148 +1,46 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 
-export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
+export default function WebsitePerformanceMonitorPage() {_const [isAnalyzing, _setIsAnalyzing] = useState(false);
+  const [analysisResults, _setAnalysisResults] = useState(null);
 
-  const features = [
+  const _features = [
     {
-      icon: <Monitor className="w-8 h-8 text-white" />,
-      title: 'Real-Time Monitoring',
-      description: '24/7 monitoring of your website performance with instant alerts and notifications.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500'},
-    {
-      icon: <Gauge className="w-8 h-8 text-white" />,
-      title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />,
-      title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'},
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      title: 'Performance Optimization',
-      description: 'AI-powered recommendations to improve your website speed and user experience.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}];
+      icon: <Monitor className="w-8 h-8 text-white" />, _title: 'Real-Time Monitoring', _description: '24/7 monitoring of your website performance with instant alerts and notifications.', _color: 'bg-gradient-to-br from-blue-500 to-cyan-600', _gradient: 'from-blue-400 to-cyan-500'},
+    {_icon: <Gauge className="w-8 h-8 text-white" />, _title: 'Performance Metrics', _description: 'Comprehensive metrics including Core Web Vitals, _page load times, _and user experience scores.', _color: 'bg-gradient-to-br from-green-500 to-emerald-600', _gradient: 'from-green-400 to-emerald-500'},
+    {_icon: <AlertTriangle className="w-8 h-8 text-white" />, _title: 'Issue Detection', _description: 'Automatically detect and alert on performance issues, _downtime, _and bottlenecks.', _color: 'bg-gradient-to-br from-orange-500 to-red-600', _gradient: 'from-orange-400 to-red-500'},
+    {_icon: <TrendingUp className="w-8 h-8 text-white" />, _title: 'Performance Optimization', _description: 'AI-powered recommendations to improve your website speed and user experience.', _color: 'bg-gradient-to-br from-purple-500 to-indigo-600', _gradient: 'from-purple-400 to-indigo-500'}];
 
-  const metrics = [
-    {
-      name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
-      icon: '⚡',
-      color: 'text-blue-400'
-    },
-    {
-      name: 'Page Load Time',
-      description: 'Comprehensive analysis of page load performance across different devices and locations.',
-      icon: '🚀',
-      color: 'text-green-400'
-    },
-    {
-      name: 'Uptime Monitoring',
-      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
-      icon: '🔄',
-      color: 'text-purple-400'
-    },
-    {
-      name: 'Mobile Performance',
-      description: 'Mobile-first performance testing and optimization recommendations.',
-      icon: '📱',
-      color: 'text-orange-400'
-    },
-    {
-      name: 'SEO Impact',
-      description: 'Performance metrics that directly affect your search engine rankings and visibility.',
-      icon: '🔍',
-      color: 'text-cyan-400'
-    },
-    {
-      name: 'User Experience',
-      description: 'Real user experience metrics and conversion impact analysis.',
-      icon: '👥',
-      color: 'text-pink-400'
-    }
+  const _metrics = [
+    {_name: 'Core Web Vitals', _description: 'LCP, _FID, _and CLS metrics that directly impact user experience and SEO rankings.', _icon: '⚡', _color: 'text-blue-400'},
+    {_name: 'Page Load Time', _description: 'Comprehensive analysis of page load performance across different devices and locations.', _icon: '🚀', _color: 'text-green-400'},
+    {_name: 'Uptime Monitoring', _description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.', _icon: '🔄', _color: 'text-purple-400'},
+    {_name: 'Mobile Performance', _description: 'Mobile-first performance testing and optimization recommendations.', _icon: '📱', _color: 'text-orange-400'},
+    {_name: 'SEO Impact', _description: 'Performance metrics that directly affect your search engine rankings and visibility.', _icon: '🔍', _color: 'text-cyan-400'},
+    {_name: 'User Experience', _description: 'Real user experience metrics and conversion impact analysis.', _icon: '👥', _color: 'text-pink-400'}
   ];
 
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small websites and blogs',
-      features: [
-        '5 websites monitored',
-        'Basic performance metrics',
-        'Daily monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Core Web Vitals tracking'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses and e-commerce sites',
-      features: [
-        '25 websites monitored',
-        'Advanced performance metrics',
-        'Real-time monitoring',
-        'SMS & email alerts',
-        'Advanced reporting',
-        'Performance optimization tips',
-        'API access',
-        'Team collaboration'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations with critical performance requirements',
-      features: [
-        'Unlimited websites',
-        'Enterprise-grade monitoring',
-        'Custom alerting rules',
-        '24/7 support',
-        'Custom integrations',
-        'White-label reporting',
-        'SLA guarantees',
-        'On-premise options'
-      ],
-      popular: false
-    }
+  const _pricing = [
+    {_name: 'Starter', _price: '$29', _period: '/month', _description: 'Perfect for small websites and blogs', _features: [
+        '5 websites monitored', _'Basic performance metrics', _'Daily monitoring', _'Email alerts', _'Basic reporting', _'Core Web Vitals tracking'
+      ], _popular: false},
+    {_name: 'Professional', _price: '$79', _period: '/month', _description: 'Ideal for growing businesses and e-commerce sites', _features: [
+        '25 websites monitored', _'Advanced performance metrics', _'Real-time monitoring', _'SMS & email alerts', _'Advanced reporting', _'Performance optimization tips', _'API access', _'Team collaboration'
+      ], _popular: true},
+    {_name: 'Enterprise', _price: '$199', _period: '/month', _description: 'For large organizations with critical performance requirements', _features: [
+        'Unlimited websites', _'Enterprise-grade monitoring', _'Custom alerting rules', _'24/7 support', _'Custom integrations', _'White-label reporting', _'SLA guarantees', _'On-premise options'
+      ], _popular: false}
   ];
 
-  const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true);
+  const _handleAnalyzeWebsite = async () => {_setIsAnalyzing(true);
     // Simulate website analysis
-    setTimeout(() => {
+    setTimeout__(() => {
       setAnalysisResults({
-        url: 'https://example.com',
-        overallScore: 87,
-        lcp: '2.1s',
-        fid: '45ms',
-        cls: '0.08',
-        loadTime: '1.8s',
-        recommendations: [
-          'Optimize images and implement lazy loading',
-          'Minimize render-blocking resources',
-          'Enable compression and caching',
-          'Consider using a CDN for global performance'
-        ]
-      });
+        url: 'https://example.com', _overallScore: 87, _lcp: '2.1s', _fid: '45ms', _cls: '0.08', _loadTime: '1.8s', _recommendations: [
+          'Optimize images and implement lazy loading', _'Minimize render-blocking resources', _'Enable compression and caching', _'Consider using a CDN for global performance'
+        ]});
       setIsAnalyzing(false);
     }, 4000);
   };
@@ -157,7 +55,7 @@ export default function WebsitePerformanceMonitorPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]" />
@@ -177,12 +75,12 @@ export default function WebsitePerformanceMonitorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
-              onClick={handleAnalyzeWebsite}
+              onClick={_handleAnalyzeWebsite}
               size="lg"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
-              disabled={isAnalyzing}
+              disabled={_isAnalyzing}
             >
-              {isAnalyzing ? (
+              {_isAnalyzing ? (
                 <>
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
                   Analyzing...
@@ -206,7 +104,7 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {_/* Features Section */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -219,25 +117,25 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {_features.map(_(feature, _index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {feature.icon}
+                    <div className={_`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {_feature.icon}
                     </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                    <div className={_`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-4 text-white">
-                      {feature.title}
+                      {_feature.title}
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
+                      {_feature.description}
                     </p>
                   </div>
                 </div>
@@ -247,7 +145,7 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
 
-      {/* Metrics Section */}
+      {_/* Metrics Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -260,23 +158,23 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {metrics.map((metric, index) => (
+            {_metrics.map(_(metric, _index) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-4xl mb-4">{metric.icon}</div>
-                <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
+                <div className="text-4xl mb-4">{_metric.icon}</div>
+                <h3 className={_`text-xl font-bold mb-3 ${metric.color}`}>{_metric.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{_metric.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Demo Analysis Section */}
-      {analysisResults && (
+      {_/* Demo Analysis Section */}
+      {_analysisResults && (
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-12">
@@ -292,7 +190,7 @@ export default function WebsitePerformanceMonitorPage() {
               {/* Score Card */}
               <Card className="border-gradient-blue text-center">
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Performance Score</h3>
-                <div className="text-6xl font-bold text-blue-400 mb-4">{analysisResults.overallScore}/100</div>
+                <div className="text-6xl font-bold text-blue-400 mb-4">{_analysisResults.overallScore}/100</div>
                 <div className="w-32 h-32 mx-auto mb-6">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                     <path
@@ -300,7 +198,7 @@ export default function WebsitePerformanceMonitorPage() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      strokeDasharray={`${(analysisResults.overallScore / 100) * 100}, 100`}
+                      strokeDasharray={_`${(analysisResults.overallScore / 100) * 100}, 100`}
                       className="text-blue-500"
                     />
                   </svg>
@@ -308,46 +206,46 @@ export default function WebsitePerformanceMonitorPage() {
                 <p className="text-gray-400">Good performance with room for improvement</p>
               </Card>
 
-              {/* Metrics Card */}
+              {_/* Metrics Card */}
               <Card className="border-gradient-blue">
                 <h3 className="text-2xl font-bold mb-6 text-white">Core Web Vitals</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">LCP (Largest Contentful Paint)</span>
-                    <span className={`font-bold ${parseFloat(analysisResults.lcp) < 2.5 ? 'text-green-400' : 'text-orange-400'}`}>
-                      {analysisResults.lcp}
+                    <span className={_`font-bold ${parseFloat(analysisResults.lcp) < 2.5 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {_analysisResults.lcp}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">FID (First Input Delay)</span>
-                    <span className={`font-bold ${parseFloat(analysisResults.fid) < 100 ? 'text-green-400' : 'text-orange-400'}`}>
-                      {analysisResults.fid}
+                    <span className={_`font-bold ${parseFloat(analysisResults.fid) < 100 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {_analysisResults.fid}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">CLS (Cumulative Layout Shift)</span>
-                    <span className={`font-bold ${parseFloat(analysisResults.cls) < 0.1 ? 'text-green-400' : 'text-orange-400'}`}>
-                      {analysisResults.cls}
+                    <span className={_`font-bold ${parseFloat(analysisResults.cls) < 0.1 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {_analysisResults.cls}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Page Load Time</span>
-                    <span className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}>
-                      {analysisResults.loadTime}
+                    <span className={_`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {_analysisResults.loadTime}
                     </span>
                   </div>
                 </div>
               </Card>
             </div>
 
-            {/* Recommendations */}
+            {_/* Recommendations */}
             <Card className="border-gradient-blue mt-8">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((rec, index) => (
+                {_analysisResults.recommendations.map(_(rec, _index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{rec}</span>
+                    <span className="text-gray-300">{_rec}</span>
                   </div>
                 ))}
               </div>
@@ -356,7 +254,7 @@ export default function WebsitePerformanceMonitorPage() {
         </section>
       )}
 
-      {/* Pricing Section */}
+      {_/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -369,13 +267,13 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {_pricing.map(_(plan, _index) => (
               <Card
                 key={index}
-                className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={_`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
+                style={_{ animationDelay: `${index * 0.1}s` }}
               >
-                {plan.popular && (
+                {_plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -384,19 +282,19 @@ export default function WebsitePerformanceMonitorPage() {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{_plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{_plan.price}</span>
+                    <span className="text-gray-400">{_plan.period}</span>
                   </div>
-                  <p className="text-gray-400">{plan.description}</p>
+                  <p className="text-gray-400">{_plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {_plan.features.map(_(feature, _featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {_feature}
                     </li>
                   ))}
                 </ul>
@@ -404,7 +302,7 @@ export default function WebsitePerformanceMonitorPage() {
                 <Button
                   href="/contact"
                   size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                  className={_`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -415,7 +313,7 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">

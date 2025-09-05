@@ -1,298 +1,185 @@
-import type { AppProps } from 'next/app';
+import type {_AppProps} from 'next/app';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
+export default function App(_{_Component, _pageProps}: AppProps) {_return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
   );
 }
 import React from 'react';
-import { useRouter } from 'next/router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import type { AppProps } from 'next/app';
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store'; // Changed to named import
-import { useAuth } from '@/hooks/useAuth';
-import { ErrorProvider } from '@/context/ErrorContext';
+import type {_AppProps} from 'next/app';
 import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
-import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
 import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import RootErrorBoundary from '@/components/RootErrorBoundary';
-import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
 import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
 import dynamic from 'next/dynamic';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
-import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
 // Lazy load global styles to improve initial bundle size
 import '../src/index.css';
 import * as Sentry from '@sentry/nextjs';
-import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
-import {
-  validateProductionEnvironment,
-  initializeServices} from '@/utils/environmentConfig';
+import {_validateProductionEnvironment, _initializeServices} from '@/utils/environmentConfig';
 
 // ============================================================// DYNAMIC IMPORTS - Load heavy providers only when needed
 // =====================================================// Load non-critical providers dynamically to reduce initial bundle
-const WhitelabelProvider = dynamic(() => 
-  import('@/context/WhitelabelContext').then(mod => ({ default: mod.WhitelabelProvider })), {
-  ssr: true,
-  loading: () => null
-});
+const _WhitelabelProvider = dynamic__(() => 
+  import('@/context/WhitelabelContext').then(mod => ({_default: mod.WhitelabelProvider})), {_ssr: true, _loading: () => null});
 
-const WalletProvider = dynamic(() => 
-  import('@/context/WalletContext').then(mod => ({ default: mod.WalletProvider })), {
-  ssr: false, // Wallet is client-side only
-  loading: () => null
-});
+const _WalletProvider = dynamic__(() => 
+  import('@/context/WalletContext').then(mod => ({_default: mod.WalletProvider})), {_ssr: false, _// Wallet is client-side only
+  loading: () => null});
 
-const AnalyticsProvider = dynamic(() => 
-  import('@/context/AnalyticsContext').then(mod => ({ default: mod.AnalyticsProvider })), {
-  ssr: false, // Analytics is client-side only
-  loading: () => null
-});
+const _AnalyticsProvider = dynamic__(() => 
+  import('@/context/AnalyticsContext').then(mod => ({_default: mod.AnalyticsProvider})), {_ssr: false, _// Analytics is client-side only
+  loading: () => null});
 
-const CartProvider = dynamic(() => 
-  import('@/context/CartContext').then(mod => ({ default: mod.CartProvider })), {
-  ssr: true,
-  loading: () => null
-});
+const _CartProvider = dynamic__(() => 
+  import('@/context/CartContext').then(mod => ({_default: mod.CartProvider})), {_ssr: true, _loading: () => null});
 
-const FeedbackProvider = dynamic(() => 
-  import('@/context/FeedbackContext').then(mod => ({ default: mod.FeedbackProvider })), {
-  ssr: false, // Feedback is client-side only
-  loading: () => null
-});
+const _FeedbackProvider = dynamic__(() => 
+  import('@/context/FeedbackContext').then(mod => ({_default: mod.FeedbackProvider})), {_ssr: false, _// Feedback is client-side only
+  loading: () => null});
 
-const ThemeProvider = dynamic(() => 
-  import('@/components/ThemeProvider').then(mod => ({ default: mod.ThemeProvider })), {
-  ssr: true,
-  loading: () => null
-});
+const _ThemeProvider = dynamic__(() => 
+  import('@/components/ThemeProvider').then(mod => ({_default: mod.ThemeProvider})), {_ssr: true, _loading: () => null});
 
-const AppLayout = dynamic(() => 
-  import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
-  ssr: true,
-  loading: () => (
+const _AppLayout = dynamic__(() => 
+  import('@/layout/AppLayout').then(mod => ({_default: mod.AppLayout})), {_ssr: true, _loading: () => (
     <div className="flex items-center justify-center min-h-screen">
       <div className="animate-pulse text-lg">Loading layout...</div>
     </div>
-  )
-});
+  )});
 
 // Load utility components dynamically
-const ToastContainer = dynamic(() => 
-  import('@/components/ToastContainer').then(mod => ({ default: mod.ToastContainer })), {
-  ssr: false,
-  loading: () => null
-});
+const _ToastContainer = dynamic__(() => 
+  import('@/components/ToastContainer').then(mod => ({_default: mod.ToastContainer})), {_ssr: false, _loading: () => null});
 
-const OfflineIndicator = dynamic(() => 
-  import('@/components/OfflineIndicator').then(mod => ({ default: mod.OfflineIndicator })), {
-  ssr: false,
-  loading: () => null
-});
+const _OfflineIndicator = dynamic__(() => 
+  import('@/components/OfflineIndicator').then(mod => ({_default: mod.OfflineIndicator})), {_ssr: false, _loading: () => null});
 
-const RouteChangeHandler = dynamic(() => 
-  import('@/components/RouteChangeHandler').then(mod => ({ default: mod.RouteChangeHandler })), {
-  ssr: false,
-  loading: () => null
-});
+const _RouteChangeHandler = dynamic__(() => 
+  import('@/components/RouteChangeHandler').then(mod => ({_default: mod.RouteChangeHandler})), {_ssr: false, _loading: () => null});
 
-const RouteSEO = dynamic(() => 
-  import('@/components/RouteSEO'), {
-  ssr: true,
-  loading: () => null
-});
+const _RouteSEO = dynamic__(() => 
+  import('@/components/RouteSEO'), {_ssr: true, _loading: () => null});
 
 // ============================================================// FONT CONFIGURATION - Optimized loading
-// =====================================================const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-inter',
-  preload: true});
+// =====================================================const inter = Inter({_subsets: ['latin'], _weight: ['400', _'600', _'700'], _display: 'swap', _fallback: ['system-ui', _'arial'], _adjustFontFallback: true, _variable: '--font-inter', _preload: true});
 
-const poppins = Poppins({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-poppins',
-  preload: true});
+const _poppins = Poppins({_weight: ['400', _'600', _'700'], _subsets: ['latin'], _display: 'swap', _fallback: ['system-ui', _'arial'], _adjustFontFallback: true, _variable: '--font-poppins', _preload: true});
 
 // ============================================================// LIGHTWEIGHT LANGUAGE WRAPPER
-// =====================================================const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children}) => {
-  const { user, isAuthenticated } = useAuth();
+// =====================================================const LanguageProviderWrapper: React.FC<{_children: React.ReactNode}> = (_{_children}) => {_const { user, _isAuthenticated} = useAuth();
   const [isClient, setIsClient] = React.useState(false);
 
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
+  React.useEffect__(() => {_setIsClient(true);}, []);
 
-  const safeAuthState = React.useMemo(
-    () => ({
-      isAuthenticated: isClient ? !!isAuthenticated : false,
-      user: isClient ? user : null}),
+  const _safeAuthState = React.useMemo(_() => ({_isAuthenticated: isClient ? !!isAuthenticated : false, _user: isClient ? user : null}),
     [isClient, isAuthenticated, user],
   );
 
   return (
-    <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
+    <LanguageProvider authState={_safeAuthState}>{_children}</LanguageProvider>
   );
 };
 
 // ============================================================// MAIN APP COMPONENT - FIXED: Optimized with fallback safety
-// =====================================================function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const [queryClient] = React.useState(() => new QueryClient({
+// =====================================================function MyApp(_{_Component, _pageProps}: AppProps) {_const _router = useRouter();
+  const [queryClient] = React.useState__(() => new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 5 * 60 * 1000,
-        gcTime: 10 * 60 * 1000,
-        retry: false}}}));
+        staleTime: 5 * 60 * 1000, _gcTime: 10 * 60 * 1000, _retry: false}}}));
   const [isInitialized, setIsInitialized] = React.useState(false);
   const [initError, setInitError] = React.useState<string | null>(null);
 
   // CRITICAL FIX: Force initialization after timeout to prevent infinite loading
-  React.useEffect(() => {
-    const forceInitTimeout = setTimeout(() => {
+  React.useEffect__(() => {_const _forceInitTimeout = setTimeout__(() => {
       if (!isInitialized) {
-        console.warn('[App] Force initializing after timeout - preventing infinite loading');
-        setIsInitialized(true);
-      }
+        
+        setIsInitialized(true);}
     }, 3000); // Force init after 3 seconds max
 
     return () => clearTimeout(forceInitTimeout);
   }, [isInitialized]);
 
   // Simplified initialization with better error handling
-  React.useEffect(() => {
-    let isMounted = true;
+  React.useEffect__(() => {_let _isMounted = true;
 
-    const initializeApp = async () => {
+    const _initializeApp = async () => {
       try {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('[App] Starting optimized initialization...');
-        }
+        if (process.env.NODE_ENV === 'development') {}
 
         // Critical path only
-        try {
-          initializeGlobalErrorHandlers();
-        } catch (error) {
-          console.warn('[App] Global error handlers failed:', error);
-        }
+        try {_initializeGlobalErrorHandlers();} catch (error) {}
 
-        try {
-          validateProductionEnvironment();
-        } catch (error) {
-          console.warn('[App] Environment validation warning:', error);
-        }
+        try {_validateProductionEnvironment();} catch (error) {}
 
         // Mark as initialized immediately for faster render
-        if (isMounted) {
-          setTimeout(() => {
-            setIsInitialized(true);
-          }, 100); // Small delay to ensure DOM is ready
+        if (isMounted) {_setTimeout__(() => {
+            setIsInitialized(true);}, 100); // Small delay to ensure DOM is ready
         }
 
         // Defer non-critical initializations
-        setTimeout(() => {
-          if (!isMounted) return;
+        setTimeout__(() => {_if (!isMounted) return;
 
           try {
-            initializeServices().catch((err) =>
-              console.warn('Service initialization failed:', err),
-            );
-          } catch (error) {
-            console.warn('Services init error:', error);
-          }
+            initializeServices().catch(_(err) =>, _);} catch (error) {}
 
           // Lazy load performance monitoring
-          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
-            import('@/utils/performance').then(perf => {
+          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {_import('@/utils/performance').then(perf => {
               perf.initializePerformanceOptimizations();
-              perf.initializePerformance();
-            }).catch(err => console.warn('Performance monitoring failed:', err));
+              perf.initializePerformance();}).catch(err => );
           }
 
           // Lazy load development tools
-          if (process.env.NODE_ENV === 'development') {
-            import('@/utils/consoleLogCapture').then(console => {
-              console.initConsoleLogCapture();
-            }).catch(err => console.warn('Console capture failed:', err));
+          if (process.env.NODE_ENV === 'development') {_import('@/utils/consoleLogCapture').then(console => {
+              console.initConsoleLogCapture();}).catch(err => );
           }
         }, 200);
 
-      } catch (error) {
-        console.error('[App] Critical initialization error:', error);
-        setInitError('Initialization failed');
+      } catch (error) {_setInitError('Initialization failed');
 
         // Always initialize even on error to prevent infinite loading
         if (isMounted) {
-          setTimeout(() => {
-            setIsInitialized(true);
-          }, 500);
+          setTimeout__(() => {
+            setIsInitialized(true);}, 500);
         }
 
         // Deferred error reporting
-        setTimeout(() => {
-          try {
+        setTimeout__(() => {_try {
             if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-              Sentry.captureException(error);
-            }
-          } catch (sentryError) {
-            console.warn('[App] Could not send error to Sentry:', sentryError);
-          }
+              Sentry.captureException(error);}
+          } catch (sentryError) {}
         }, 0);
       }
     };
 
     initializeApp();
 
-    return () => {
-      isMounted = false;
-    };
+    return () => {_isMounted = false;};
   }, []);
 
   // Lazy Sentry context updates with error handling
-  React.useEffect(() => {
-    try {
+  React.useEffect__(() => {_try {
       if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-        Sentry.setTag('route', router.pathname);
-        Sentry.setContext('query', router.query);
-      }
-    } catch (error) {
-      console.warn('Sentry context update failed:', error);
-    }
+        Sentry.setTag('route', _router.pathname);
+        Sentry.setContext('query', _router.query);}
+    } catch (error) {}
   }, [router.pathname, router.query]);
 
   // Lazy service worker registration with error handling
-  React.useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      setTimeout(() => {
+  React.useEffect__(() => {_if (process.env.NODE_ENV === 'production') {
+      setTimeout__(() => {
         import('@/serviceWorkerRegistration').then(sw => {
-          sw.registerServiceWorker();
-        }).catch(err => console.warn('Service worker registration failed:', err));
+          sw.registerServiceWorker();}).catch(err => );
       }, 2000);
     }
   }, []);
 
   // FIXED: Enhanced loading screen with error display
-  if (!isInitialized) {
-    return (
+  if (!isInitialized) {_return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
@@ -310,60 +197,52 @@ const poppins = Poppins({
   return (
     <>
       <Head>
-        <style jsx global>{`
+        <style jsx global>{_`
           :root {
             --font-inter: ${inter.style.fontFamily};
-            --font-poppins: ${poppins.style.fontFamily};
+            --font-poppins: ${_poppins.style.fontFamily};
           }
 
-          @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial'), local('system-ui');
+          @font-face {_font-family: 'Inter Fallback';
+            src: local('Arial'), _local('system-ui');
             size-adjust: 107%;
             ascent-override: 90%;
             descent-override: 25%;
-            line-gap-override: 0%;
-          }
+            line-gap-override: 0%;}
 
-          @font-face {
-            font-family: 'Poppins Fallback';
-            src: local('Arial'), local('system-ui');
+          @font-face {_font-family: 'Poppins Fallback';
+            src: local('Arial'), _local('system-ui');
             size-adjust: 102%;
             ascent-override: 92%;
             descent-override: 24%;
-            line-gap-override: 0%;
-          }
+            line-gap-override: 0%;}
 
-          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif; }
-          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif; }
+          .font-inter {_font-family: var(--font-inter), _'Inter Fallback', _system-ui, _sans-serif;}
+          .font-poppins {_font-family: var(--font-poppins), _'Poppins Fallback', _system-ui, _sans-serif;}
         `}</style>
       </Head>
-      <div className={`${inter.variable} ${poppins.variable}`}>
+      <div className={_`${inter.variable} ${_poppins.variable}`}>
         <ProductionErrorBoundary>
           <RootErrorBoundary>
             <HydrationErrorBoundary>
               <React.Suspense
-                fallback={
-                  <div className="flex items-center justify-center min-h-screen">
+                fallback={_<div className="flex items-center justify-center min-h-screen">
                     <div className="animate-pulse text-lg">Loading app...</div>
-                  </div>
-                }
+                  </div>}
               >
                 <GlobalErrorBoundary>
-                  <QueryClientProvider client={queryClient}>
+                  <QueryClientProvider client={_queryClient}>
                     <ApiErrorBoundary>
-                      <ReduxProvider store={store}>
-                        <I18nextProvider i18n={i18n}>
+                      <ReduxProvider store={_store}>
+                        <I18nextProvider i18n={_i18n}>
                           <ErrorProvider>
                             <AuthProvider>
-                              <ErrorBoundary fallback={
-                                <div className="flex items-center justify-center min-h-screen">
+                              <ErrorBoundary fallback={_<div className="flex items-center justify-center min-h-screen">
                                   <div className="text-center">
                                     <h2 className="text-xl mb-4">Loading providers...</h2>
-                                    <p>If this takes too long, there may be a provider issue.</p>
+                                    <p>If this takes too long, _there may be a provider issue.</p>
                                   </div>
-                                </div>
-                              }>
+                                </div>}>
                                 <WhitelabelProvider>
                                   <LanguageProviderWrapper>
                                     <WalletProvider>
@@ -374,13 +253,13 @@ const poppins = Poppins({
                                               <AppLayout>
                                                 <RouteSEO />
                                                 <RouteChangeHandler
-                                                  resetScrollOnChange={true}
-                                                  forceRerender={false}
+                                                  resetScrollOnChange={_true}
+                                                  forceRerender={_false}
                                                 />
                                                 <ErrorBoundary>
                                                   <Component
-                                                    key={router.asPath}
-                                                    {...pageProps}
+                                                    key={_router.asPath}
+                                                    {_...pageProps}
                                                   />
                                                 </ErrorBoundary>
                                                 <ErrorResetOnRouteChange />
@@ -411,8 +290,6 @@ const poppins = Poppins({
   );
 }
 
-if (process.env.NODE_ENV === 'development') {
-  console.log('[App] MyApp component initialized with loading fix');
-}
+if (process.env.NODE_ENV === 'development') {}
 
 export default MyApp;

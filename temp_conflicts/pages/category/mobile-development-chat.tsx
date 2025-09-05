@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MobileDevelopmentChat = () => {
-  return (
+const _MobileDevelopmentChat = () => {_return (
     <div>
       <Head>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const MobileDevelopmentChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default MobileDevelopmentChat;

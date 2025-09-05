@@ -1,4 +1,3 @@
 // Type definitions for points;
-interface points {;
-  // TODO: Add proper type definitions;
-};
+interface points {_;
+  // TODO: Add proper type definitions;};

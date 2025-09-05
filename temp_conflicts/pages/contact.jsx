@@ -1,65 +1,27 @@
 
 import Head from 'next/head';
-import { useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+const _Contact = () => {_const [formData, _setFormData] = useState({
+    name: '', _email: '', _company: '', _phone: '', _service: '', _message: ''});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+  const _handleSubmit = (_e) => {_e.preventDefault();
+    // Handle form submission here};
+
+  const _handleChange = (_e) => {_setFormData({
+      ...formData, _[e.target.name]: e.target.value});
   };
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const contactInfo = [
-    {
-      title: "General Inquiries",
-      email: "info@ziontechgroup.com",
-      phone: "+1 (555) 123-4567"
-    },
-    {
-      title: "Sales & Partnerships",
-      email: "sales@ziontechgroup.com",
-      phone: "+1 (555) 123-4568"
-    },
-    {
-      title: "Technical Support",
-      email: "support@ziontechgroup.com",
-      phone: "+1 (555) 123-4569"
-    }
+  const _contactInfo = [
+    {_title: "General Inquiries", _email: "info@ziontechgroup.com", _phone: "+1 (555) 123-4567"},
+    {_title: "Sales & Partnerships", _email: "sales@ziontechgroup.com", _phone: "+1 (555) 123-4568"},
+    {_title: "Technical Support", _email: "support@ziontechgroup.com", _phone: "+1 (555) 123-4569"}
   ];
 
-  const offices = [
-    {
-      city: "San Francisco",
-      address: "123 Innovation Drive, San Francisco, CA 94105",
-      phone: "+1 (555) 123-4567"
-    },
-    {
-      city: "New York",
-      address: "456 Tech Avenue, New York, NY 10001",
-      phone: "+1 (555) 123-4568"
-    },
-    {
-      city: "London",
-      address: "789 Digital Street, London, UK EC1A 1BB",
-      phone: "+44 20 1234 5678"
-    }
+  const _offices = [
+    {_city: "San Francisco", _address: "123 Innovation Drive, _San Francisco, _CA 94105", _phone: "+1 (555) 123-4567"},
+    {_city: "New York", _address: "456 Tech Avenue, _New York, _NY 10001", _phone: "+1 (555) 123-4568"},
+    {_city: "London", _address: "789 Digital Street, _London, _UK EC1A 1BB", _phone: "+44 20 1234 5678"}
   ];
 
   return (
@@ -70,7 +32,7 @@ const Contact = () => {
       </Head>
       
       <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {_/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Get in Touch
@@ -82,10 +44,10 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
+          {_/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={_handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -95,8 +57,8 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={_formData.name}
+                    onChange={_handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
@@ -110,8 +72,8 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={_formData.email}
+                    onChange={_handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@company.com"
@@ -128,8 +90,8 @@ const Contact = () => {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
+                    value={_formData.company}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
@@ -142,8 +104,8 @@ const Contact = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
+                    value={_formData.phone}
+                    onChange={_handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
@@ -157,8 +119,8 @@ const Contact = () => {
                 <select
                   id="service"
                   name="service"
-                  value={formData.service}
-                  onChange={handleChange}
+                  value={_formData.service}
+                  onChange={_handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
@@ -180,10 +142,10 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={_formData.message}
+                  onChange={_handleChange}
                   required
-                  rows={5}
+                  rows={_5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or how we can help..."
                 />
@@ -198,37 +160,37 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
+          {_/* Contact Information */}
           <div className="space-y-8">
-            {/* Direct Contact */}
+            {_/* Direct Contact */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h2>
               <div className="space-y-4">
-                {contactInfo.map((info, index) => (
+                {_contactInfo.map(_(info, _index) => (
                   <div key={index} className="border-l-4 border-blue-500 pl-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
-                    <p className="text-blue-600 mb-1">{info.email}</p>
-                    <p className="text-gray-600">{info.phone}</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">{_info.title}</h3>
+                    <p className="text-blue-600 mb-1">{_info.email}</p>
+                    <p className="text-gray-600">{_info.phone}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Office Locations */}
+            {_/* Office Locations */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Offices</h2>
               <div className="space-y-4">
-                {offices.map((office, index) => (
+                {_offices.map(_(office, _index) => (
                   <div key={index} className="border-l-4 border-green-500 pl-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">{office.city}</h3>
-                    <p className="text-gray-600 mb-1">{office.address}</p>
-                    <p className="text-green-600">{office.phone}</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">{_office.city}</h3>
+                    <p className="text-gray-600 mb-1">{_office.address}</p>
+                    <p className="text-green-600">{_office.phone}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Business Hours */}
+            {_/* Business Hours */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h2>
               <div className="space-y-2 text-gray-600">
@@ -243,7 +205,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {_/* CTA Section */}
         <div className="bg-blue-900 text-white rounded-lg p-8 text-center mt-16">
           <h2 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
           <p className="text-blue-100 mb-6">

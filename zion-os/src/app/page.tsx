@@ -1,84 +1,29 @@
 import FeatureCard from './components/FeatureCard';
 
-export default function HomePage() {
-  const features = [
+export default function HomePage() {_const _features = [
     {
-      icon: "🤖",
-      title: "AI-Powered Intelligence",
-      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
-      features: [
-        "ZionGPT Core Integration",
-        "Resume Builder + Proposal AI", 
-        "Autonomous Decision Engine",
-        "AI Moderation System"
-      ],
-      gradient: "bg-gradient-to-r from-blue-600 to-purple-600"
-    },
-    {
-      icon: "🏪",
-      title: "Complete Marketplace",
-      description: "Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",
-      features: [
-        "Job & Talent Marketplace",
-        "Token System + Rewards",
-        "On-chain Contract Builder",
-        "Multi-currency Support"
-      ],
-      gradient: "bg-gradient-to-r from-green-600 to-emerald-600"
-    },
-    {
-      icon: "🗳️",
-      title: "Governance & DAO",
-      description: "Flexible governance from admin control to full DAO systems with dual governance options.",
-      features: [
-        "DAO Proposal Voting",
-        "Dual Governance (Local + Global)",
-        "Sovereign Treasury",
-        "KYC/AML + ID Verification"
-      ],
-      gradient: "bg-gradient-to-r from-purple-600 to-pink-600"
-    },
-    {
-      icon: "⚡",
-      title: "Enterprise Infrastructure",
-      description: "Built for scale with regional dashboards, partner APIs, and white-label solutions.",
-      features: [
-        "Regional Dashboards",
-        "Partner API Access",
-        "White-label Vendor Plugin",
-        "Web3 Login + DID"
-      ],
-      gradient: "bg-gradient-to-r from-orange-600 to-red-600"
-    },
-    {
-      icon: "🎓",
-      title: "Education & Growth",
-      description: "Zion Academy, incubator programs, and grants foster innovation and community growth.",
-      features: [
-        "Zion Academy",
-        "Incubator + Grants",
-        "Regional Job Categories",
-        "Wage Baselines"
-      ],
-      gradient: "bg-gradient-to-r from-teal-600 to-cyan-600"
-    },
-    {
-      icon: "🚀",
-      title: "One-Click Deployment",
-      description: "Launch your complete digital economy in minutes with our unified deployment protocol.",
-      features: [
-        "Automated Orchestration",
-        "CMS Instance Generation",
-        "Landing + Auth Flows",
-        "Blog + Roadmap Setup"
-      ],
-      gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
-    }
+      icon: "🤖", _title: "AI-Powered Intelligence", _description: "ZionGPT Core, _Resume AI, _and autonomous decision engines power your economy with cutting-edge intelligence.", _features: [
+        "ZionGPT Core Integration", _"Resume Builder + Proposal AI", _"Autonomous Decision Engine", _"AI Moderation System"
+      ], _gradient: "bg-gradient-to-r from-blue-600 to-purple-600"},
+    {_icon: "🏪", _title: "Complete Marketplace", _description: "Jobs, _talent, _projects, _and token systems create a thriving digital economy ecosystem.", _features: [
+        "Job & Talent Marketplace", _"Token System + Rewards", _"On-chain Contract Builder", _"Multi-currency Support"
+      ], _gradient: "bg-gradient-to-r from-green-600 to-emerald-600"},
+    {_icon: "🗳️", _title: "Governance & DAO", _description: "Flexible governance from admin control to full DAO systems with dual governance options.", _features: [
+        "DAO Proposal Voting", _"Dual Governance (Local + Global)", _"Sovereign Treasury", _"KYC/AML + ID Verification"
+      ], _gradient: "bg-gradient-to-r from-purple-600 to-pink-600"},
+    {_icon: "⚡", _title: "Enterprise Infrastructure", _description: "Built for scale with regional dashboards, _partner APIs, _and white-label solutions.", _features: [
+        "Regional Dashboards", _"Partner API Access", _"White-label Vendor Plugin", _"Web3 Login + DID"
+      ], _gradient: "bg-gradient-to-r from-orange-600 to-red-600"},
+    {_icon: "🎓", _title: "Education & Growth", _description: "Zion Academy, _incubator programs, _and grants foster innovation and community growth.", _features: [
+        "Zion Academy", _"Incubator + Grants", _"Regional Job Categories", _"Wage Baselines"
+      ], _gradient: "bg-gradient-to-r from-teal-600 to-cyan-600"},
+    {_icon: "🚀", _title: "One-Click Deployment", _description: "Launch your complete digital economy in minutes with our unified deployment protocol.", _features: [
+        "Automated Orchestration", _"CMS Instance Generation", _"Landing + Auth Flows", _"Blog + Roadmap Setup"
+      ], _gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"}
   ];
 
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
+  return (_<div className="min-h-screen">
+      {_/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="hero-gradient absolute inset-0 -z-10"></div>
@@ -91,7 +36,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Deploy complete AI-powered marketplaces, _governance systems, _and digital economies with one click. 
               Built for the future of decentralized business.
             </p>
             
@@ -107,7 +52,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {_/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
@@ -115,27 +60,27 @@ export default function HomePage() {
               Everything You Need to Build the Future
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              From AI-powered marketplaces to decentralized governance, _Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {_features.map((feature, _index) => (
               <FeatureCard
                 key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
+                icon={_feature.icon}
+                title={_feature.title}
+                description={_feature.description}
+                features={_feature.features}
+                gradient={_feature.gradient}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -157,7 +102,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -165,15 +110,15 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
               <div className="text-white/70">Features Available</div>
             </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+            <div className="animate-fade-in" style={_{animationDelay: '0.1s'}}>
               <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
               <div className="text-white/70">Deployment Options</div>
             </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+            <div className="animate-fade-in" style={_{animationDelay: '0.2s'}}>
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
               <div className="text-white/70">AI Orchestration</div>
             </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="animate-fade-in" style={_{animationDelay: '0.3s'}}>
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
               <div className="text-white/70">Scalability</div>
             </div>

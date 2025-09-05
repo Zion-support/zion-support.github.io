@@ -1,30 +1,25 @@
 
 import React from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-interface TalentCardAvatarProps {
-  profilePicture?: string;
-  fullName: string;
-}
+interface TalentCardAvatarProps {_profilePicture?: string;
+  fullName: string;}
 
-export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {
-  // Get initials for avatar fallback
-  const getInitials = (name: string) => {
+export function TalentCardAvatar(_{_profilePicture, _fullName}: TalentCardAvatarProps) {_// Get initials for avatar fallback
+  const _getInitials = (_name: string) => {
     return name
       .split(' ')
       .map(part => part[0])
       .join('')
-      .toUpperCase();
-  };
+      .toUpperCase();};
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage 
-        src={profilePicture || undefined} 
-        alt={fullName} 
+        src={_profilePicture || undefined} 
+        alt={_fullName} 
       />
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-        {getInitials(fullName)}
+        {_getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
   );

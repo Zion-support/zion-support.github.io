@@ -1,33 +1,28 @@
 import Image from 'next/image';
-import { Loader2 } from 'lucide-react'
-import { useState } from 'react';
 
-interface YoutubeEmbedProps {
-  videoId: string;
+interface YoutubeEmbedProps {_videoId: string;
   title: string;
-  poster: string;
-}
+  poster: string;}
 
-export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false);
-  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
+export default function YoutubeEmbed(_{_videoId, _title, _poster}: YoutubeEmbedProps) {_const [loaded, _setLoaded] = useState(false);
+  const _src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
 
   return (
     <div className="relative aspect-video max-w-3xl mx-auto">
-      {!loaded && (
+      {_!loaded && (
         <>
-          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
+          <Image src={poster} alt={_`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
       )}
       <iframe
-        className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-        src={src}
-        title={title}
+        className={_`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+        src={_src}
+        title={_title}
         loading="lazy"
-        onLoad={() => setLoaded(true)}
+        onLoad={_() => setLoaded(true)}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />

@@ -1,17 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import type {_NextApiRequest, _NextApiResponse} from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const id = String(req.query.id || '');
+export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _id = String(req.query.id || '');
   if (id) {
-    const updates = readJsonFile('updates.json', [] as any[]);
-    const idx = updates.findIndex((x: any) => x.id === id);
+    const _updates = readJsonFile('updates.json', _[] as any[]);
+    const _idx = updates.findIndex(_(x: unknown) => x.id === id);
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens || 0) + 1;
-      writeJsonFile('updates.json', updates);
-    }
+      writeJsonFile('updates.json', _updates);}
   }
-  const pixel = Buffer.from(
+  const _pixel = Buffer.from(
     'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
     'base64'
   );

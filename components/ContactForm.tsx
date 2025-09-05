@@ -1,68 +1,42 @@
-import React, { useState } from 'react';
+import React, {_useState} from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-interface FormData {
-  name: string;
+interface FormData {_name: string;
   email: string;
   company: string;
   phone: string;
   service: string;
-  message: string;
-}
+  message: string;}
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
+const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState<FormData>({
+    name: '', _email: '', _company: '', _phone: '', _service: '', _message: '', });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
 
-  const handleInputChange = (
-    e: React.ChangeEvent<
+  const _handleInputChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
+    >) => {_const { name, _value} = e.target;
+    setFormData(prev => ({_...prev, _[name]: value, }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, _2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-      });
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+        name: '', _email: '', _company: '', _phone: '', _service: '', _message: '', });
+    } catch {_setSubmitStatus('error');} finally {_setIsSubmitting(false);}
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={_handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
@@ -75,8 +49,8 @@ const ContactForm: React.FC = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleInputChange}
+            value={_formData.name}
+            onChange={_handleInputChange}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -92,8 +66,8 @@ const ContactForm: React.FC = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value={_formData.email}
+            onChange={_handleInputChange}
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -112,8 +86,8 @@ const ContactForm: React.FC = () => {
             type="text"
             id="company"
             name="company"
-            value={formData.company}
-            onChange={handleInputChange}
+            value={_formData.company}
+            onChange={_handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
@@ -128,8 +102,8 @@ const ContactForm: React.FC = () => {
             type="tel"
             id="phone"
             name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
+            value={_formData.phone}
+            onChange={_handleInputChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
@@ -145,8 +119,8 @@ const ContactForm: React.FC = () => {
         <select
           id="service"
           name="service"
-          value={formData.service}
-          onChange={handleInputChange}
+          value={_formData.service}
+          onChange={_handleInputChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select a service</option>
@@ -168,31 +142,31 @@ const ContactForm: React.FC = () => {
         <textarea
           id="message"
           name="message"
-          value={formData.message}
-          onChange={handleInputChange}
+          value={_formData.message}
+          onChange={_handleInputChange}
           required
-          rows={4}
+          rows={_4}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={_isSubmitting}
         className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
       >
-        {isSubmitting ? <LoadingSpinner /> : 'Send Message'}
+        {_isSubmitting ? <LoadingSpinner /> : 'Send Message'}
       </button>
 
-      {submitStatus === 'success' && (
+      {_submitStatus === 'success' && (
         <div className="text-green-600 text-center">
           Thank you! Your message has been sent successfully.
         </div>
       )}
 
-      {submitStatus === 'error' && (
+      {_submitStatus === 'error' && (
         <div className="text-red-600 text-center">
-          Sorry, there was an error sending your message. Please try again.
+          Sorry, _there was an error sending your message. Please try again.
         </div>
       )}
     </form>

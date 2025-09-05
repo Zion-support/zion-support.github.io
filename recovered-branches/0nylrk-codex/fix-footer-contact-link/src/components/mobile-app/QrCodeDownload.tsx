@@ -1,12 +1,9 @@
 
 import React from "react";
-import { QrCode } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
 
-export const QrCodeDownload: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = "#"; // Replace with actual App Store URL
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL
+export const QrCodeDownload: React.FC = () => {_// App store links - these would come from environment variables in production
+  const _appStoreUrl = "#"; // Replace with actual App Store window.URL
+  const _googlePlayUrl = "#"; // Replace with actual Google Play window.URL
 
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
@@ -18,13 +15,13 @@ export const QrCodeDownload: React.FC = () => {
                 Download <span className="text-zion-cyan">Zion</span> to Your Device
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
+                Scan the QR code with your phone camera to download the app instantly, _or use the buttons below to get it from your app store of choice.
               </p>
               
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+                googlePlayUrl={_googlePlayUrl}
               />
               
               <div className="flex gap-2 items-center text-sm text-gray-400">
@@ -37,7 +34,7 @@ export const QrCodeDownload: React.FC = () => {
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">
                   <QrCode className="w-full h-full p-4" />
-                  {/* This would be replaced with an actual QR code in production */}
+                  {_/* This would be replaced with an actual QR code in production */}
                 </div>
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
                   Scan to download

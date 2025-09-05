@@ -1,79 +1,52 @@
 
-import { useState, useEffect } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 
-interface HiringAnalyticsProps {
-  jobId?: string;
-}
+interface HiringAnalyticsProps {_jobId?: string;}
 
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
-  const { applications, isLoading } = useJobApplications(jobId);
-  const [analyticsData, setAnalyticsData] = useState<{
-    statusDistribution: any[];
+export function HiringAnalytics(_{_jobId}: HiringAnalyticsProps) {_const { applications, _isLoading} = useJobApplications(jobId);
+  const [analyticsData, setAnalyticsData] = useState<{_statusDistribution: unknown[];
     timeToHire: number;
     conversionRate: number;
-    funnelData: any[];
-  }>({
-    statusDistribution: [],
-    timeToHire: 0,
-    conversionRate: 0,
-    funnelData: []});
+    funnelData: unknown[];}>({_statusDistribution: [], _timeToHire: 0, _conversionRate: 0, _funnelData: []});
   
-  useEffect(() => {
-    if (applications && applications.length > 0) {
+  useEffect__(() => {_if (applications && applications.length > 0) {
       // Calculate status distribution
-      const statusCounts: Record<string, number> = {};
-      applications.forEach(app => {
-        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;
-      });
+      const statusCounts: Record<string, _number> = {};
+      applications.forEach(app => {_statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;});
       
-      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({
-        status,
-        count}));
+      const _statusDistribution = Object.entries(statusCounts).map(_([status, _count]) => ({_status, _count}));
       
       // Calculate time to hire (in days)
-      const hiredApplications = applications.filter(app => app.status === 'hired');
-      let avgTimeToHire = 0;
+      const _hiredApplications = applications.filter(app => app.status === 'hired');
+      let _avgTimeToHire = 0;
       
-      if (hiredApplications.length > 0) {
-        const totalDays = hiredApplications.reduce((sum, app) => {
-          const hireDate = new Date(app.updated_at);
-          const applyDate = new Date(app.created_at);
-          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
-          return sum + daysDiff;
-        }, 0);
+      if (hiredApplications.length > 0) {_const _totalDays = hiredApplications.reduce(_(sum, _app) => {
+          const _hireDate = new Date(app.updated_at);
+          const _applyDate = new Date(app.created_at);
+          const _daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
+          return sum + daysDiff;}, 0);
         
         avgTimeToHire = Math.round(totalDays / hiredApplications.length);
       }
       
       // Calculate conversion rate
-      const conversionRate = hiredApplications.length > 0
+      const _conversionRate = hiredApplications.length > 0
         ? Math.round((hiredApplications.length / applications.length) * 100)
         : 0;
       
       // Funnel data
-      const funnelData = [
-        { name: 'Applied', value: applications.length },
-        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length },
-        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length },
-        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }];
+      const _funnelData = [
+        {_name: 'Applied', _value: applications.length},
+        {_name: 'Shortlisted', _value: applications.filter(app => app.status === 'shortlisted').length},
+        {_name: 'Interview', _value: applications.filter(app => app.status === 'interview').length},
+        {_name: 'Hired', _value: applications.filter(app => app.status === 'hired').length}];
       
-      setAnalyticsData({
-        statusDistribution,
-        timeToHire: avgTimeToHire,
-        conversionRate,
-        funnelData});
+      setAnalyticsData({_statusDistribution, _timeToHire: avgTimeToHire, _conversionRate, _funnelData});
     }
   }, [applications]);
   
-  if (isLoading) {
-    return <div>Loading analytics data...</div>;
-  }
+  if (isLoading) {_return <div>Loading analytics data...</div>;}
   
-  if (!applications || applications.length === 0) {
-    return (
+  if (!applications || applications.length === 0) {_return (
       <Card className="text-center py-16">
         <CardContent>
           <h3 className="text-lg font-semibold mb-2">No data available</h3>
@@ -82,14 +55,12 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
           </p>
         </CardContent>
       </Card>
-    );
-  }
+    );}
   
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
+  const _COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
   
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {/* Status Distribution */}
+  return (_<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {_/* Status Distribution */}
       <Card>
         <CardHeader>
           <CardTitle>Application Status Distribution</CardTitle>
@@ -98,17 +69,17 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
-                data={analyticsData.statusDistribution}
+                data={_analyticsData.statusDistribution}
                 cx="50%"
                 cy="50%"
-                labelLine={false}
-                outerRadius={80}
+                labelLine={_false}
+                outerRadius={_80}
                 fill="#8884d8"
                 dataKey="count"
-                label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                label={_({name, _percent}) => `${_name}: ${_(percent * 100).toFixed(0)}%`}
               >
-                {analyticsData.statusDistribution.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                {_analyticsData.statusDistribution.map(_(entry, _index) => (
+                  <Cell key={`cell-${index}`} fill={_COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
               <Tooltip />
@@ -117,14 +88,14 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         </CardContent>
       </Card>
       
-      {/* Time to Hire */}
+      {_/* Time to Hire */}
       <Card>
         <CardHeader>
           <CardTitle>Time to Hire</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center h-64">
           <div className="text-5xl font-bold text-primary">
-            {analyticsData.timeToHire || "N/A"}
+            {_analyticsData.timeToHire || "N/A"}
           </div>
           <div className="text-sm text-muted-foreground mt-2">
             Average days from application to hire
@@ -132,14 +103,14 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         </CardContent>
       </Card>
       
-      {/* Conversion Rate */}
+      {_/* Conversion Rate */}
       <Card>
         <CardHeader>
           <CardTitle>Application Conversion Rate</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-center h-64">
           <div className="text-5xl font-bold text-primary">
-            {analyticsData.conversionRate}%
+            {_analyticsData.conversionRate}%
           </div>
           <div className="text-sm text-muted-foreground mt-2">
             Applications to hired ratio
@@ -147,7 +118,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         </CardContent>
       </Card>
       
-      {/* Hiring Funnel */}
+      {_/* Hiring Funnel */}
       <Card className="lg:col-span-3">
         <CardHeader>
           <CardTitle>Hiring Funnel</CardTitle>
@@ -155,15 +126,15 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         <CardContent className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={analyticsData.funnelData}
+              data={_analyticsData.funnelData}
               layout="vertical"
             >
               <XAxis type="number" />
-              <YAxis dataKey="name" type="category" width={100} />
+              <YAxis dataKey="name" type="category" width={_100} />
               <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>
-                {analyticsData.funnelData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Bar dataKey="value" fill="#8884d8" radius={_[0, _4, _4, _0]}>
+                {_analyticsData.funnelData.map(_(entry, _index) => (
+                  <Cell key={`cell-${index}`} fill={_COLORS[index % COLORS.length]} />
                 ))}
               </Bar>
             </BarChart>

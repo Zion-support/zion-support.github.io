@@ -1,154 +1,92 @@
 
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
-interface WizardStep {
-  title: string;
+interface WizardStep {_title: string;
   description: string;
   icon: React.ReactNode;
   action: {
     text: string;
-    url: string;
-  };
+    url: string;};
   skipText?: string;
 }
 
-interface OnboardingWizardProps {
-  type: 'client' | 'talent';
+interface OnboardingWizardProps {_type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
-  className?: string;
-}
+  className?: string;}
 
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const navigate = useNavigate();
-  const { user } = useAuth();
+export function OnboardingWizard(_{_type, _onComplete, _onSkip, _className}: OnboardingWizardProps) {_const [currentStep, _setCurrentStep] = useState(0);
+  const _navigate = useNavigate();
+  const { user} = useAuth();
   
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
-    {
-      title: "Post your first job",
-      description: "Describe the talent you need for your project",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Post a Job",
-        url: "/post-job"
-      },
+    {_title: "Post your first job", _description: "Describe the talent you need for your project", _icon: <FileText className="h-6 w-6 text-zion-purple" />, _action: {
+        text: "Post a Job", _url: "/post-job"},
       skipText: "I'll do this later"
     },
-    {
-      title: "View suggested matches",
-      description: "Our AI system will find the best talent matches",
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
-      action: {
-        text: "View Matches",
-        url: "/talent"
-      },
+    {_title: "View suggested matches", _description: "Our AI system will find the best talent matches", _icon: <Users className="h-6 w-6 text-zion-cyan" />, _action: {
+        text: "View Matches", _url: "/talent"},
       skipText: "Skip for now"
     },
-    {
-      title: "Contact talent",
-      description: "Reach out to the talent that fits your needs",
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Browse Talent",
-        url: "/talent"
-      }
+    {_title: "Contact talent", _description: "Reach out to the talent that fits your needs", _icon: <MessageSquare className="h-6 w-6 text-zion-purple" />, _action: {
+        text: "Browse Talent", _url: "/talent"}
     }
   ];
 
   const talentSteps: WizardStep[] = [
-    {
-      title: "Complete your profile",
-      description: "Add your skills, experience, and preferences",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Edit Profile",
-        url: "/profile"
-      },
+    {_title: "Complete your profile", _description: "Add your skills, _experience, _and preferences", _icon: <FileText className="h-6 w-6 text-zion-purple" />, _action: {
+        text: "Edit Profile", _url: "/profile"},
       skipText: "I'll do this later"
     },
-    {
-      title: "Define skills & availability",
-      description: "Let clients know when you're available and what you can do",
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
-      action: {
-        text: "Set Availability",
-        url: "/profile?tab=skills"
+    {_title: "Define skills & availability", _description: "Let clients know when you're available and what you can do", _icon: <Calendar className="h-6 w-6 text-zion-cyan" />, _action: {
+        text: "Set Availability", _url: "/profile?tab=skills"},
+      skipText: "Skip for now"
+    },
+    {_title: "Preview your profile", _description: "See how clients will view your profile", _icon: <Eye className="h-6 w-6 text-zion-purple" />, _action: {
+        text: "Preview Profile", _url: `/talent/${user?.id}`
       },
       skipText: "Skip for now"
     },
-    {
-      title: "Preview your profile",
-      description: "See how clients will view your profile",
-      icon: <Eye className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Preview Profile",
-        url: `/talent/${user?.id}`
-      },
-      skipText: "Skip for now"
-    },
-    {
-      title: "Enable AI matchmaking",
-      description: "Let our AI find the perfect opportunities for you",
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
-      action: {
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
-      }
+    {_title: "Enable AI matchmaking", _description: "Let our AI find the perfect opportunities for you", _icon: <Rocket className="h-6 w-6 text-zion-cyan" />, _action: {
+        text: "Enable Matchmaking", _url: "/talent-dashboard"}
     }
   ];
   
-  const steps = type === 'client' ? clientSteps : talentSteps;
+  const _steps = type === 'client' ? clientSteps : talentSteps;
 
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
+  // Navigate to the specified window.URL
+  const _handleAction = () => {_if (currentStep < steps.length - 1) {
       navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1);
-    } else {
-      // Last step
+      setCurrentStep(currentStep + 1);} else {_// Last step
       navigate(steps[currentStep].action.url);
-      onComplete();
-    }
+      onComplete();}
   };
   
   // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      // Last step
-      onSkip();
-    }
+  const _handleSkip = () => {_if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);} else {_// Last step
+      onSkip();}
   };
   
   return (
-    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+    <Card className={_cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", _className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
-          {type === 'client' ? 
+          {_type === 'client' ? 
             "Ready to find top IT talent?" : 
             "Let's build your professional profile"}
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="flex items-center mb-6">
-          {/* Step dots */}
+          {_/* Step dots */}
           <div className="flex items-center justify-center flex-1">
-            {steps.map((_, index) => (
+            {_steps.map(_(_, _index) => (
               <div
                 key={index}
-                className={cn(
-                  "h-2 w-2 rounded-full mx-1",
-                  index === currentStep
+                className={_cn(
+                  "h-2 w-2 rounded-full mx-1", _index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
@@ -161,27 +99,27 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
-            {steps[currentStep].icon}
+            {_steps[currentStep].icon}
           </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep].description}</p>
+          <h3 className="text-xl font-bold text-white mb-2">{_steps[currentStep].title}</h3>
+          <p className="text-zion-slate-light mb-6">{_steps[currentStep].description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-          onClick={handleAction}
+          onClick={_handleAction}
         >
-          {steps[currentStep].action.text}
+          {_steps[currentStep].action.text}
         </Button>
         
-        {steps[currentStep].skipText && (
+        {_steps[currentStep].skipText && (
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}
           >
-            {steps[currentStep].skipText}
+            {_steps[currentStep].skipText}
           </Button>
         )}
       </CardFooter>

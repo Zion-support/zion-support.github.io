@@ -1,45 +1,30 @@
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-import { useResume } from '@/hooks/useResume';
-import { BulkAddSkillsProps } from './types';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
 
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const { addSkill } = useResume();
+export const _BulkAddSkills = (_{_resumeId, _onSuccess}: BulkAddSkillsProps) => {_const [bulkSkills, _setBulkSkills] = useState('');
+  const [error, _setError] = useState<string | null>(null);
+  const { enhanceContent, _isEnhancing} = useResumeEnhancer();
+  const {_addSkill} = useResume();
 
-  const handleCategorizeSkills = async () => {
-    if (!bulkSkills || bulkSkills.trim().length === 0) {
+  const _handleCategorizeSkills = async () => {_if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize');
-      return;
-    }
+      return;}
     
     setError(null);
-    try {
-      const enhancedContent = await enhanceContent(
-        bulkSkills,
-        'skill-categorization'
+    try {_const _enhancedContent = await enhanceContent(
+        bulkSkills, _'skill-categorization'
       );
       
       if (enhancedContent) {
         try {
           // Parse the JSON response
-          const categorizedSkills = JSON.parse(enhancedContent);
+          const _categorizedSkills = JSON.parse(enhancedContent);
           
           // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
+          for (const [category, _skillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
-                  name: skillName,
-                  category: category,
-                  proficiency: 3});
+                await addSkill(resumeId, _{
+                  name: skillName, _category: category, _proficiency: 3});
               }
             }
           }
@@ -49,13 +34,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           
           // Refresh the skills
           await onSuccess();
-        } catch (err) {
-          setError('Failed to parse categorized skills. Please try again.');
-        }
+        } catch (err) {_setError('Failed to parse categorized skills. Please try again.');}
       }
-    } catch (err: any) {
-      setError(err.message || 'Failed to categorize skills');
-    }
+    } catch (err: unknown) {_setError(err.message || 'Failed to categorize skills');}
   };
 
   return (
@@ -67,17 +48,17 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           <Textarea 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
+            value={_bulkSkills}
+            onChange={_(_e) => setBulkSkills(e.target.value)}
           />
         </div>
 
         <Button 
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills.trim()}
+          onClick={_handleCategorizeSkills}
+          disabled={_isEnhancing || !bulkSkills.trim()}
           className="gap-2"
         >
-          {isEnhancing ? (
+          {_isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
             <Sparkles className="h-4 w-4" />
@@ -89,7 +70,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
         
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        {_error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   );

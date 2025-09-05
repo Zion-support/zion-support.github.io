@@ -1,28 +1,23 @@
 import Link from 'next/link';
-import { readJson } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
+import type {_HelpArticle} from '../../utils/support';
 
-export async function getStaticProps() {
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles } };
+export async function getStaticProps() {_const _articles = readJson<HelpArticle[]>('help/articles.json', _[]);
+  return { props: { articles} };
 }
 
-export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
-  const categories = Array.from(new Set(articles.map((a) => a.category)));
-  return (
-    <div className="space-y-8">
+export default function HelpIndex(_{_articles}: {_articles: HelpArticle[]}) {_const _categories = Array.from(_new Set(articles.map((a) => a.category)));
+  return (_<div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
-      {categories.map((cat) => (
-        <div key={cat} className="space-y-3">
-          <h2 className="text-xl font-medium">{cat}</h2>
+      {categories.map((cat) => (_<div key={cat} className="space-y-3">
+          <h2 className="text-xl font-medium">{_cat}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {articles
+            {_articles
               .filter((a) => a.category === (cat as any))
-              .map((a) => (
-                <Link key={a.id} href={`/help/${a.slug}`}>
+              .map(_(a) => (
+                <Link key={a.id} href={_`/help/${a.slug}`}>
                   <a className="enhanced-card hover:shadow-md">
-                    <div className="font-medium">{a.title}</div>
-                    <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
+                    <div className="font-medium">{_a.title}</div>
+                    <div className="text-xs opacity-70 mt-1">Last updated {_new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
                 </Link>
               ))}

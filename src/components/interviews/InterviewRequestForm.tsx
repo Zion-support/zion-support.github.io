@@ -1,36 +1,14 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { TalentProfile } from "@/types/talent";
-import type { UserProfile } from "@/types/auth";
-import { cn } from "@/lib/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { z } from "zod";
-import { format, addDays } from "date-fns";
-import { CalendarIcon } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import React, {_useState} from "react";
+import type {_UserProfile} from "@/types/auth";
 
 
-interface InterviewRequestFormProps {
-  talent: TalentProfile;
+interface InterviewRequestFormProps {_talent: TalentProfile;
   onClose: () => void;
-  userDetails?: UserProfile;
-}
+  userDetails?: UserProfile;}
 
-const formSchema = z.object({
-  date: z.date({
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
-    message: "Interview date must be in the future"
-  }),
+const _formSchema = z.object({_date: z.date({
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {_message: "Interview date must be in the future"}),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
@@ -38,66 +16,41 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()});
 
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews();
+export function InterviewRequestForm(_{_talent, _onClose, _userDetails}: InterviewRequestFormProps) {_const { requestInterview} = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
+  const _form = useForm<z.infer<typeof formSchema>>({_resolver: zodResolver(formSchema), _defaultValues: {
       title: `Interview with ${talent.full_name}`,
       duration: "30",
       platform: "zoom",
       notes: "",
       meetingLink: ""}});
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!userDetails?.id) {
+  async function onSubmit(_values: z.infer<typeof formSchema>) {_if (!userDetails?.id) {
       toast({
-        title: "Authentication required",
-        description: "Please log in to schedule an interview",
-        variant: "destructive"});
+        title: "Authentication required", _description: "Please log in to schedule an interview", _variant: "destructive"});
       return;
     }
 
     setIsSubmitting(true);
 
-    try {
-      // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
-      const scheduledDate = new Date(dateTimeString);
+    try {_// Combine date and time
+      const _dateTimeString = `${format(values.date, _'yyyy-MM-dd')}T${_values.time}:00`;
+      const _scheduledDate = new Date(dateTimeString);
       
       // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration);
+      const _durationMinutes = parseInt(values.duration);
 
-      await requestInterview({
-        talent_id: talent.id,
-        client_id: userDetails.id,
-        scheduled_date: scheduledDate.toISOString(),
-        duration_minutes: durationMinutes,
-        notes: values.notes,
-        meeting_platform: values.platform as any,
-        meeting_link: values.meetingLink,
-        interview_type: "video",
-        title: values.title
-      });
+      await requestInterview({_talent_id: talent.id, _client_id: userDetails.id, _scheduled_date: scheduledDate.toISOString(), _duration_minutes: durationMinutes, _notes: values.notes, _meeting_platform: values.platform as any, _meeting_link: values.meetingLink, _interview_type: "video", _title: values.title});
 
-      toast({
-        title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`});
+      toast({_title: "Interview requested", _description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose();
-    } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error });
-      toast({
-        title: "Failed to schedule interview",
-        description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive"});
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (error) {_logErrorToProduction('Failed to schedule interview:', _{ data: error});
+      toast({_title: "Failed to schedule interview", _description: "An error occurred while scheduling the interview. Please try again.", _variant: "destructive"});
+    } finally {_setIsSubmitting(false);}
   }
 
-  const timeSlots = [
+  const _timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
@@ -105,31 +58,31 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   ];
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+    <Form {_...form}>
+      <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-5">
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
-              src={talent.profile_picture_url || "/placeholder.svg"}
-              alt={talent.full_name}
+              src={_talent.profile_picture_url || "/placeholder.svg"}
+              alt={_talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
             />
           </div>
           <div>
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
-            <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
+            <h3 className="text-lg font-medium text-white">{_talent.full_name}</h3>
+            <p className="text-sm text-zion-slate-light">{_talent.professional_title}</p>
           </div>
         </div>
 
         <FormField
-          control={form.control}
+          control={_form.control}
           name="title"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
+          render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"title">}) => (
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field} />
+                <Input placeholder="Brief title for the interview" {_...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -138,9 +91,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
-            control={form.control}
+            control={_form.control}
             name="date"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
+            render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"date">}) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
                 <Popover>
@@ -148,13 +101,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <FormControl>
                       <Button
                         variant="outline"
-                        className={cn(
-                          "w-full pl-3 text-left font-normal",
-                          !field.value && "text-muted-foreground"
+                        className={_cn(
+                          "w-full pl-3 text-left font-normal", _!field.value && "text-muted-foreground"
                         )}
                       >
-                        {field.value ? (
-                          format(field.value, "PPP")
+                        {_field.value ? (
+                          format(field.value, _"PPP")
                         ) : (
                           <span>Pick a date</span>
                         )}
@@ -165,9 +117,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       mode="single"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      selected={_field.value}
+                      onSelect={_field.onChange}
+                      disabled={_(_date) => date < new Date() || date > addDays(new Date(), _90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
                     />
@@ -179,21 +131,20 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
 
           <FormField
-            control={form.control}
+            control={_form.control}
             name="time"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
-              <FormItem>
+            render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"time">}) => (_<FormItem>
                 <FormLabel>Time</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={_field.onChange} defaultValue={_field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time) => (
-                      <SelectItem key={time} value={time}>
-                        {time}
+                    {_timeSlots.map((time) => (
+                      <SelectItem key={time} value={_time}>
+                        {_time}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -206,12 +157,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
-            control={form.control}
+            control={_form.control}
             name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+            render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"duration">}) => (
               <FormItem>
                 <FormLabel>Duration</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={_field.onChange} defaultValue={_field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select duration" />
@@ -230,12 +181,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
 
           <FormField
-            control={form.control}
+            control={_form.control}
             name="platform"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
+            render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"platform">}) => (
               <FormItem>
                 <FormLabel>Platform</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={_field.onChange} defaultValue={_field.value}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select platform" />
@@ -254,17 +205,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
         </div>
 
-        {form.watch('platform') !== 'in-app' && (
-          <FormField
+        {_form.watch('platform') !== 'in-app' && (_<FormField
             control={form.control}
             name="meetingLink"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
+            render={_({ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"meetingLink">}) => (
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={`Add your ${form.watch('platform')} link here`}
-                    {...field}
+                    placeholder={_`Add your ${form.watch('platform')} link here`}
+                    {_...field}
                   />
                 </FormControl>
                 <FormMessage />
@@ -274,16 +224,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         )}
 
         <FormField
-          control={form.control}
+          control={_form.control}
           name="notes"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => (
+          render={_(_{ field}: {_field: ControllerRenderProps<z.infer<typeof formSchema>, _"notes">}) => (
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-                  {...field}
+                  {_...field}
                 />
               </FormControl>
               <FormMessage />
@@ -292,11 +242,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         />
 
         <div className="flex justify-end gap-4 pt-4">
-          <Button variant="outline" onClick={onClose} type="button">
+          <Button variant="outline" onClick={_onClose} type="button">
             Cancel
           </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+          <Button type="submit" disabled={_isSubmitting}>
+            {_isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
       </form>

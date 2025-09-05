@@ -1,5 +1,4 @@
-export interface Revolutionary2026AiService {
-  id: string;
+export interface Revolutionary2026AiService {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface Revolutionary2026AiService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
-  {
-    id: "2026-revolutionary-ai",
-    name: "2026 Revolutionary AI Platform",
-    tagline: "Revolutionary AI for 2026",
-    price: "$249/month",
-    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
-    features: [
-      "Revolutionary AI",
-      "Transformative capabilities",
-      "Advanced algorithms",
-      "Innovation platform",
-      "Future-ready AI"
-    ],
-    link: "/services/2026-revolutionary-ai",
-    category: "Revolutionary 2026 AI",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "2026-revolutionary-ai", _name: "2026 Revolutionary AI Platform", _tagline: "Revolutionary AI for 2026", _price: "$249/month", _description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.", _features: [
+      "Revolutionary AI", _"Transformative capabilities", _"Advanced algorithms", _"Innovation platform", _"Future-ready AI"
+    ], _link: "/services/2026-revolutionary-ai", _category: "Revolutionary 2026 AI", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

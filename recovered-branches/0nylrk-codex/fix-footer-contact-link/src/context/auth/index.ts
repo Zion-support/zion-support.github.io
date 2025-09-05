@@ -1,6 +1,6 @@
 
-export { AuthContext } from './AuthContext';
-export { AuthProvider } from './AuthProvider';
+export {_AuthContext} from './AuthContext';
+export {_AuthProvider} from './AuthProvider';
 
 // Re-export the context type for convenience
-export type { AuthContextType } from '@/types/auth';
+export type {_AuthContextType} from '@/types/auth';

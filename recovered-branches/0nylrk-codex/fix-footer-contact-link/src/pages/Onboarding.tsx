@@ -1,25 +1,12 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
 
-export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
+export default function Onboarding() {_const { user, _updateProfile, _isLoading} = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
-  const navigate = useNavigate();
+  const _navigate = useNavigate();
 
   // Convert our user types to match what's expected in the database
-  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
-    switch (type) {
+  const _mapUserTypeToDatabase = (_type: "serviceProvider" | "talent" | "client") => {_switch (type) {
       case "serviceProvider":
         return "creator";
       case "talent":
@@ -27,87 +14,60 @@ export default function Onboarding() {
       case "client":
         return "employer";
       default:
-        return "buyer";
-    }
+        return "buyer";}
   };
 
-  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type);
+  const _handleUserTypeSelect = (_type: "serviceProvider" | "talent" | "client") => {_setUserType(type);
     
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding');
-      return;
-    } else if (type === "talent") {
-      navigate('/talent-onboarding');
-      return;
-    }
+      return;} else if (type === "talent") {_navigate('/talent-onboarding');
+      return;}
     
     // Continue with the onboarding flow for clients
     setCurrentStep(1);
   };
 
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
-    if (!user || !userType) {
+  const _handleProfileComplete = async (_data: {_displayName: string, _bio: string, _headline: string}) => {_if (!user || !userType) {
       toast({
-        title: "Authentication Error",
-        description: "Your session may have expired. Please log in again.",
-        variant: "destructive"});
+        title: "Authentication Error", _description: "Your session may have expired. Please log in again.", _variant: "destructive"});
       navigate('/login');
       return;
     }
     
-    const dbUserType = mapUserTypeToDatabase(userType);
+    const _dbUserType = mapUserTypeToDatabase(userType);
     
-    try {
-      await updateProfile({ 
-        id: user.id,
-        displayName: data.displayName,
-        bio: data.bio, // This is now valid since we added bio to UserDetails
-        userType: dbUserType,
-        headline: data.headline,
-        profileComplete: true
-      });
+    try {_await updateProfile({ 
+        id: user.id, _displayName: data.displayName, _bio: data.bio, _// This is now valid since we added bio to UserDetails
+        userType: dbUserType, _headline: data.headline, _profileComplete: true});
       
       // Update onboarding milestone
-      await supabase.rpc('update_onboarding_milestone', {
-        _user_id: user.id,
-        _milestone: 'profile_completed',
-        _status: true
-      });
+      await supabase.rpc('update_onboarding_milestone', {_user_id: user.id, _milestone: 'profile_completed', _status: true});
       
-      toast({
-        title: 'Profile completed!',
-        description: 'Your profile has been set up successfully.'});
+      toast({_title: 'Profile completed!', _description: 'Your profile has been set up successfully.'});
       
       // Get the appropriate dashboard route based on user type
-      const dashboardRoute = userType === "client" 
+      const _dashboardRoute = userType === "client" 
         ? "/client-dashboard" 
         : "/talent-dashboard";
       
       // Redirect to dashboard
       navigate(dashboardRoute);
       
-    } catch (error) {
-      console.error('Error updating profile:', error);
-      toast({
-        title: 'Error',
-        description: 'There was a problem updating your profile. Please try again.',
-        variant: 'destructive'});
+    } catch (error) {_toast({
+        title: 'Error', _description: 'There was a problem updating your profile. Please try again.', _variant: 'destructive'});
     }
   };
 
-  const steps = [
-    { label: "Select Role", description: "Choose how you'll use the platform" },
-    { label: "Create Profile", description: "Tell us about yourself" }];
+  const _steps = [
+    {_label: "Select Role", _description: "Choose how you'll use the platform"},
+    {_label: "Create Profile", _description: "Tell us about yourself"}];
 
-  if (!user) {
-    navigate('/login');
-    return null;
-  }
+  if (!user) {_navigate('/login');
+    return null;}
 
-  return (
-    <>
+  return (_<>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -121,33 +81,30 @@ export default function Onboarding() {
           </div>
 
           <div className="mb-12">
-            <Steps currentStep={currentStep} className="max-w-xl mx-auto">
-              {steps.map((step, index) => (
+            <Steps currentStep={_currentStep} className="max-w-xl mx-auto">
+              {_steps.map((step, _index) => (
                 <Step
                   key={index}
-                  status={
-                    currentStep > index
+                  status={_currentStep > index
                       ? "complete"
                       : currentStep === index
                       ? "current"
-                      : "incomplete"
-                  }
-                  label={step.label}
-                  description={step.description}
+                      : "incomplete"}
+                  label={_step.label}
+                  description={_step.description}
                 />
               ))}
             </Steps>
           </div>
 
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
-            {currentStep === 0 ? (
-              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />
+            {_currentStep === 0 ? (
+              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={_userType} />
             ) : (
-              <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />
+              <ProfileSetup onComplete={_handleProfileComplete} userType={_userType!} />
             )}
 
-            {currentStep === 1 && (
-              <div className="mt-6">
+            {_currentStep === 1 && (_<div className="mt-6">
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"

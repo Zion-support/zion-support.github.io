@@ -1,19 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-export default function AIEvalsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+export default function AIEvalsPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-	const features = [
+	const _features = [
 		'Golden datasets and synthetic evals',
 		'Hallucination and grounding score',
 		'Toxicity, bias and safety metrics',
@@ -22,11 +16,10 @@ export default function AIEvalsPage() {
 		'Latency and cost KPIs with budgets'
 	];
 
-	return (
-		<QuantumHolographicMatrixBackground>
+	return (_<QuantumHolographicMatrixBackground>
 			<Head>
 				<title>AI Evals & Observability | Zion Tech Group</title>
-				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
+				<meta name="description" content="Ship reliable AI with continuous evaluation, _red‑teaming, _regression tests and live observability. Guardrails, _datasets, _dashboards and CI gates included." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
 
@@ -34,7 +27,7 @@ export default function AIEvalsPage() {
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-12">
 						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Evals & Observability</h1>
-						<p className="mt-4 text-xl text-gray-300">Continuous evaluation, drift detection, and quality gates to ship safe, trustworthy AI.</p>
+						<p className="mt-4 text-xl text-gray-300">Continuous evaluation, _drift detection, _and quality gates to ship safe, _trustworthy AI.</p>
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
@@ -42,8 +35,8 @@ export default function AIEvalsPage() {
 							<div className="p-6">
 								<h2 className="text-2xl font-semibold text-white mb-4">What you get</h2>
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-									{features.map((f) => (
-										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
+									{_features.map((f) => (
+										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{_f}</span></li>
 									))}
 								</ul>
 							</div>
@@ -78,9 +71,9 @@ export default function AIEvalsPage() {
 					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`}>{_contactInfo.mobile}</a></div>
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={_`mailto:${contactInfo.email}`}>{_contactInfo.email}</a></div>
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{_contactInfo.address}</a></div>
 						</div>
 						<div className="text-center mt-6">
 							<Button href="/services" variant="outline" className="border-cyan-500 text-cyan-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>

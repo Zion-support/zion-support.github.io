@@ -1,44 +1,33 @@
 import React from "react";
-import {
-  useToast as useToastHook,
-  Toast} from "@/components/ui/toast";
+import {_useToast as useToastHook, _Toast} from "@/components/ui/toast";
 
 // Extend the Toast component props with common toast options
-export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
-  description?: string;
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {_description?: string;
   title?: string;
-  variant?: "default" | "destructive" | "success";
-};
+  variant?: "default" | "destructive" | "success";};
 
-export const useToast = useToastHook;
+export const _useToast = useToastHook;
 
 // Base toast function that delegates to the implementation from `useToastHook`.
-function baseToast(props: ToastOptions) {
-  const { toast } = useToastHook();
+function baseToast(_props: ToastOptions) {_const { toast} = useToastHook();
   toast(props);
 }
 
 // Convenience helpers mirroring common toast variants.
-baseToast.title = (title: string) => {
-  baseToast({ title });
+baseToast.title = (_title: string) => {_baseToast({ title});
 };
 
-baseToast.description = (description: string) => {
-  baseToast({ description });
+baseToast.description = (_description: string) => {_baseToast({ description});
 };
 
-baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error });
+baseToast.error = (_error: string) => {_baseToast({ variant: "destructive", _title: "Error", _description: error});
 };
 
-baseToast.success = (message: string) => {
-  baseToast({ variant: "success", title: "Success", description: message });
+baseToast.success = (_message: string) => {_baseToast({ variant: "success", _title: "Success", _description: message});
 };
 
 // Export the callable toast function.
-export const toast = baseToast as typeof baseToast & {
-  title: (title: string) => void;
-  description: (description: string) => void;
-  error: (error: string) => void;
-  success: (message: string) => void;
-};
+export const _toast = baseToast as typeof baseToast & {_title: (_title: string) => void;
+  description: (_description: string) => void;
+  error: (_error: string) => void;
+  success: (_message: string) => void;};

@@ -1,122 +1,76 @@
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter } from 'next/router';
+import React, {_useState} from "react";
 import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {logErrorToProduction} from '@/utils/productionLogger';
 
-export function SignUpForm() {
-
-  const router = useRouter();
-  const { signUp, login, loginWithGoogle } = useAuth();
+export function SignUpForm() {_const _router = useRouter();
+  const { signUp, _login, _loginWithGoogle} = useAuth();
   
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    name: ""});
+  const [formData, setFormData] = useState({_email: "", _password: "", _name: ""});
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string; password?: string; name?: string }>({});
+  const [fieldErrors, setFieldErrors] = useState<{_email?: string; password?: string; name?: string}>({});
   const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement>) => {_const { name, _value} = e.target;
+    setFormData(prev => ({_...prev, _[name]: value}));
     setError("");
-    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+    setFieldErrors(prev => ({_...prev, _[name]: ""}));
   };
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
     setError("");
     setFieldErrors({});
     setIsLoading(true);
 
-    const errors: { email?: string; password?: string; name?: string } = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
+    const errors: {_email?: string; password?: string; name?: string} = {};
+    const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const _strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{_8}$/;
 
-    if (signupMode && !formData.name.trim()) {
-      errors.name = 'Full name is required';
-    }
+    if (signupMode && !formData.name.trim()) {_errors.name = 'Full name is required';}
 
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required';
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address';
-    }
+    if (!formData.email.trim()) {_errors.email = 'Email is required';} else if (!emailRegex.test(formData.email)) {_errors.email = 'Invalid email address';}
 
-    if (!formData.password) {
-      errors.password = 'Password is required';
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
-    }
+    if (!formData.password) {_errors.password = 'Password is required';} else if (!strongPasswordRegex.test(formData.password)) {_errors.password = 'Password must be at least 8 characters and include uppercase, _lowercase, _and a number.';}
 
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors);
+    if (Object.keys(errors).length > 0) {_setFieldErrors(errors);
       setIsLoading(false);
-      return;
-    }
+      return;}
     
-    try {
-      setShowVerificationMessage(false); // Reset verification message
+    try {_setShowVerificationMessage(false); // Reset verification message
       if (signupMode) {
-        const result = await signUp(formData.email, formData.password, {
+        const _result = await signUp(formData.email, _formData.password, _{
           name: formData.name});
         
-        if (result?.error) {
-          throw new Error(result.error as any); // Cast to any if type is AuthError
-        }
+        if (result?.error) {_throw new Error(result.error as any); // Cast to any if type is AuthError}
 
-        if (result?.emailVerificationRequired) {
-          setShowVerificationMessage(true);
-        } else {
-          // Only navigate if email verification is not required
-          router.push("/mobile");
-        }
-      } else {
-        const { error } = await login(formData.email, formData.password);
+        if (result?.emailVerificationRequired) {_setShowVerificationMessage(true);} else {_// Only navigate if email verification is not required
+          router.push("/mobile");}
+      } else {_const { error} = await login(formData.email, formData.password);
         
-        if (error) {
-          throw new Error(error);
-        }
+        if (error) {_throw new Error(error);}
         
         router.push("/mobile");
       }
-    } catch (err: any) {
-      logErrorToProduction('Signup/Login error:', { data: err });
+    } catch (err: unknown) {_logErrorToProduction('Signup/Login error:', _{ data: err});
       setError(err.message || 'An unexpected error occurred. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
+    } finally {_setIsLoading(false);}
   };
   
-  const handleGoogleLogin = async () => {
-    try {
-      await loginWithGoogle();
-    } catch (err: any) {
-      setError(err.message);
-    }
+  const _handleGoogleLogin = async () => {_try {
+      await loginWithGoogle();} catch (err: unknown) {_setError(err.message);}
   };
   
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
-        {signupMode ? "Create your account" : "Welcome back"}
+        {_signupMode ? "Create your account" : "Welcome back"}
       </h2>
       
       <div className="space-y-2">
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
-          onClick={handleGoogleLogin}
+          onClick={_handleGoogleLogin}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -144,16 +98,16 @@ export function SignUpForm() {
         <div className="flex-grow border-t border-border"></div>
       </div>
       
-      {/* Error Alert */}
-      {error && (
+      {_/* Error Alert */}
+      {_error && (
         <Alert variant="destructive" className="mb-4">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
 
-      {/* Verification Message */}
-      {showVerificationMessage && (
+      {_/* Verification Message */}
+      {_showVerificationMessage && (
         <Alert className="mb-4 border-blue-500 bg-blue-50">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>
@@ -162,20 +116,20 @@ export function SignUpForm() {
         </Alert>
       )}
       
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {signupMode && (
+      <form onSubmit={_handleSubmit} className="space-y-4">
+        {_signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
             <Input
               id="name"
               name="name"
               value={formData.name}
-              onChange={handleInputChange}
+              onChange={_handleInputChange}
               required
-              aria-invalid={!!fieldErrors.name}
+              aria-invalid={_!!fieldErrors.name}
               placeholder="Enter your full name"
             />
-            {fieldErrors.name && (
+            {_fieldErrors.name && (
               <p className="text-red-500 text-sm">{fieldErrors.name}</p>
             )}
           </div>
@@ -187,13 +141,13 @@ export function SignUpForm() {
             id="email"
             name="email"
             type="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value={_formData.email}
+            onChange={_handleInputChange}
             required
-            aria-invalid={!!fieldErrors.email}
+            aria-invalid={_!!fieldErrors.email}
             placeholder="Enter your email"
           />
-          {fieldErrors.email && (
+          {_fieldErrors.email && (
             <p className="text-red-500 text-sm">{fieldErrors.email}</p>
           )}
         </div>
@@ -204,14 +158,14 @@ export function SignUpForm() {
             id="password"
             name="password"
             type="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            value={_formData.password}
+            onChange={_handleInputChange}
             required
-            aria-invalid={!!fieldErrors.password}
+            aria-invalid={_!!fieldErrors.password}
             placeholder="Create a password"
           />
-          <PasswordStrengthMeter password={formData.password} />
-          {fieldErrors.password && (
+          <PasswordStrengthMeter password={_formData.password} />
+          {_fieldErrors.password && (
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
@@ -219,9 +173,9 @@ export function SignUpForm() {
         <Button
           type="submit"
           className="w-full py-6"
-          disabled={isLoading}
+          disabled={_isLoading}
         >
-          {isLoading ? (
+          {_isLoading ? (
             <>
               <LoadingSpinner size="sm" className="mr-2" />
               Please wait...
@@ -233,10 +187,9 @@ export function SignUpForm() {
       </form>
       
       <p className="text-center text-sm">
-        {signupMode
+        {_signupMode
           ? "Already have an account? "
-          : "Don't have an account? "
-        }
+          : "Don't have an account? "}
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer"

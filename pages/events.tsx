@@ -1,8 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-export default function EventsPage() {
-	return (
+export default function EventsPage() {_return (
 		<>
 			<SEO title="Events | Zion Tech Group" description="Upcoming events and conferences." canonical="/events" />
 			<div className="container mx-auto px-4 py-16">
@@ -10,5 +9,4 @@ export default function EventsPage() {
 				<p className="text-gray-300">No upcoming events at this time. Check back soon.</p>
 			</div>
 		</>
-	);
-}
+	);}

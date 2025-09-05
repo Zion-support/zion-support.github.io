@@ -1,15 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear();
+const _EnhancedFooter = () => {_const _currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {_/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -23,7 +22,7 @@ const EnhancedFooter = () => {
             </p>
           </div>
 
-          {/* Services */}
+          {_/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -34,7 +33,7 @@ const EnhancedFooter = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {_/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -47,11 +46,11 @@ const EnhancedFooter = () => {
         </div>
       </div>
 
-      {/* Bottom Footer */}
+      {_/* Bottom Footer */}
       <div className="border-t border-gray-700 py-6">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-300 text-sm">
-            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+            <p>&copy; {_currentYear} Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </div>

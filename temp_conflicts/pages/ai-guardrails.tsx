@@ -1,19 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
-import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-export default function AIGuardrailsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+export default function AIGuardrailsPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-	const features = [
+	const _features = [
 		'Prompt/output policy engine with allow/deny lists',
 		'Jailbreak and prompt injection detection',
 		'PII/PHI detection and redaction',
@@ -22,11 +16,10 @@ export default function AIGuardrailsPage() {
 		'Audit logs, alerting and exportable evidence'
 	];
 
-	return (
-		<UltraAdvancedFuturisticBackground>
+	return (_<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
-				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, _jailbreak detection, _PII/PHI controls and audit logs with SDKs and proxies." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 
@@ -42,8 +35,8 @@ export default function AIGuardrailsPage() {
 							<div className="p-6">
 								<h2 className="text-2xl font-semibold text-white mb-4">Capabilities</h2>
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-									{features.map((f) => (
-										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>
+									{_features.map((f) => (
+										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{_f}</span></li>
 									))}
 								</ul>
 							</div>
@@ -77,9 +70,9 @@ export default function AIGuardrailsPage() {
 					<div className="bg-black/20 border border-rose-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`}>{_contactInfo.mobile}</a></div>
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={_`mailto:${contactInfo.email}`}>{_contactInfo.email}</a></div>
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{_contactInfo.address}</a></div>
 						</div>
 						<div className="text-center mt-6">
 							<Button href="/services" variant="outline" className="border-rose-500 text-rose-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>

@@ -1,29 +1,14 @@
 
-import { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
-import { JobApplication } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react";
-import { Link } from "react-router-dom";
-import { StatusBadge } from "./StatusBadge";
-import { ApplicationProgress } from "./ApplicationProgress";
-import { toast } from "sonner";
 
-interface ApplicationCardProps {
-  application: JobApplication;
-}
+interface ApplicationCardProps {_application: JobApplication;}
 
-export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false);
+export function ApplicationCard(_{_application}: ApplicationCardProps) {_const [expanded, _setExpanded] = useState(false);
 
-  const handleDownloadResume = () => {
+  const _handleDownloadResume = () => {
     // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon");
-  };
+    toast.info("Resume download functionality will be implemented soon");};
 
-  const renderActionButtons = () => {
-    switch (application.status) {
+  const _renderActionButtons = () => {_switch (application.status) {
       case "shortlisted":
         return (
           <Button variant="default" size="sm">
@@ -49,8 +34,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
         );
       default:
-        return null;
-    }
+        return null;}
   };
 
   return (
@@ -58,19 +42,19 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
+            <CardTitle>{_application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {_formatDistanceToNow(new Date(application.created_at), _{ addSuffix: true})}
             </div>
           </div>
-          <StatusBadge status={application.status} />
+          <StatusBadge status={_application.status} />
         </div>
       </CardHeader>
       
       <CardContent className="pb-3">
-        <ApplicationProgress status={application.status} className="my-4" />
+        <ApplicationProgress status={_application.status} className="my-4" />
         
-        {expanded && (
+        {_expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
               <div>
@@ -79,21 +63,21 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               </div>
             )}
             
-            {application.resume && (
+            {_application.resume && (
               <div className="border rounded-md p-3 bg-muted/20">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
-                  <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
+                  <Button variant="ghost" size="sm" onClick={_handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
                   </Button>
                 </div>
               </div>
             )}
             
-            {application.match_score && (
+            {_application.match_score && (
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
@@ -110,17 +94,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
-          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
-            {expanded ? "Show Less" : "Show More"}
+          <Button variant="ghost" size="sm" onClick={_() => setExpanded(!expanded)}>
+            {_expanded ? "Show Less" : "Show More"}
           </Button>
           <div className="flex gap-2">
-            {renderActionButtons()}
+            {_renderActionButtons()}
             <Button 
               variant="outline" 
               size="sm"
               asChild
             >
-              <Link to={`/jobs/${application.job_id}`}>
+              <Link to={_`/jobs/${application.job_id}`}>
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
               </Link>
             </Button>
@@ -133,7 +117,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           className="w-full"
           asChild
         >
-          <Link to={`/messages?jobId=${application.job_id}`}>
+          <Link to={_`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
           </Link>
         </Button>

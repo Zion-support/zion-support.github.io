@@ -1,50 +1,12 @@
 import React from 'react';
-import { 
-  Zap, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Calendar, 
-  CreditCard, 
-  MessageSquare, 
-  CheckCircle, 
-  Star,
-  ExternalLink,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  TrendingUp,
-  Shield,
-  Globe,
-  Smartphone,
-  Database
-} from 'lucide-react';
+import {_Zap, _Users, _FileText, _BarChart3, _Calendar, _CreditCard, _MessageSquare, _CheckCircle, _Star, _ExternalLink, _ArrowRight, _Phone, _Mail, _MapPin, _Linkedin, _Twitter, _Github, _TrendingUp, _Shield, _Globe, _Smartphone, _Database} from 'lucide-react';
 
-export default function MicroSAASServicesPage() {
-  const microSAASServices = [
+export default function MicroSAASServicesPage() {_const _microSAASServices = [
     {
-      name: "Project Management Hub",
-      description: "Lightweight, intuitive project management tool designed for small teams and startups. Streamline workflows, track progress, and collaborate effectively.",
-      icon: <Users className="w-12 h-12 text-blue-500" />,
-      features: [
-        "Task management and assignment",
-        "Team collaboration tools",
-        "Time tracking and reporting",
-        "Project templates and workflows",
-        "File sharing and storage",
-        "Mobile app access",
-        "Integration with popular tools",
-        "Custom branding options"
-      ],
-      pricing: {
-        starter: "$29/month",
-        professional: "$59/month",
-        enterprise: "$99/month"
-      },
+      name: "Project Management Hub", _description: "Lightweight, _intuitive project management tool designed for small teams and startups. Streamline workflows, _track progress, _and collaborate effectively.", _icon: <Users className="w-12 h-12 text-blue-500" />, _features: [
+        "Task management and assignment", _"Team collaboration tools", _"Time tracking and reporting", _"Project templates and workflows", _"File sharing and storage", _"Mobile app access", _"Integration with popular tools", _"Custom branding options"
+      ], _pricing: {
+        starter: "$29/month", _professional: "$59/month", _enterprise: "$99/month"},
       marketPrice: "$50-100/month",
       useCases: ["Small teams", "Startups", "Freelancers", "Agencies", "Remote teams"],
       benefits: [
@@ -58,25 +20,10 @@ export default function MicroSAASServicesPage() {
       freeTrial: "14 days",
       setupTime: "Under 1 hour"
     },
-    {
-      name: "Invoice & Billing System",
-      description: "Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.",
-      icon: <CreditCard className="w-12 h-12 text-green-500" />,
-      features: [
-        "Automated invoice generation",
-        "Payment processing integration",
-        "Recurring billing setup",
-        "Financial reporting dashboard",
-        "Tax calculations and compliance",
-        "Client portal access",
-        "Multi-currency support",
-        "Expense tracking"
-      ],
-      pricing: {
-        starter: "$39/month",
-        professional: "$79/month",
-        enterprise: "$149/month"
-      },
+    {_name: "Invoice & Billing System", _description: "Automated invoicing and payment processing platform with recurring billing, _financial analytics, _and tax calculations.", _icon: <CreditCard className="w-12 h-12 text-green-500" />, _features: [
+        "Automated invoice generation", _"Payment processing integration", _"Recurring billing setup", _"Financial reporting dashboard", _"Tax calculations and compliance", _"Client portal access", _"Multi-currency support", _"Expense tracking"
+      ], _pricing: {
+        starter: "$39/month", _professional: "$79/month", _enterprise: "$149/month"},
       marketPrice: "$60-120/month",
       useCases: ["Freelancers", "Small businesses", "Consultants", "Service providers", "E-commerce"],
       benefits: [
@@ -90,25 +37,10 @@ export default function MicroSAASServicesPage() {
       freeTrial: "30 days",
       setupTime: "Under 2 hours"
     },
-    {
-      name: "Social Media Scheduler",
-      description: "AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.",
-      icon: <MessageSquare className="w-12 h-12 text-purple-500" />,
-      features: [
-        "Multi-platform posting (Instagram, Twitter, LinkedIn, Facebook)",
-        "AI content optimization",
-        "Content calendar management",
-        "Performance analytics dashboard",
-        "Team collaboration tools",
-        "Hashtag suggestions",
-        "Best time to post analysis",
-        "Competitor monitoring"
-      ],
-      pricing: {
-        starter: "$49/month",
-        professional: "$99/month",
-        enterprise: "$199/month"
-      },
+    {_name: "Social Media Scheduler", _description: "AI-powered social media management platform with content optimization, _multi-platform posting, _and performance analytics.", _icon: <MessageSquare className="w-12 h-12 text-purple-500" />, _features: [
+        "Multi-platform posting (Instagram, _Twitter, _LinkedIn, _Facebook)", _"AI content optimization", _"Content calendar management", _"Performance analytics dashboard", _"Team collaboration tools", _"Hashtag suggestions", _"Best time to post analysis", _"Competitor monitoring"
+      ], _pricing: {
+        starter: "$49/month", _professional: "$99/month", _enterprise: "$199/month"},
       marketPrice: "$80-150/month",
       useCases: ["Marketing teams", "Influencers", "Small businesses", "Agencies", "Content creators"],
       benefits: [
@@ -122,25 +54,10 @@ export default function MicroSAASServicesPage() {
       freeTrial: "7 days",
       setupTime: "Under 30 minutes"
     },
-    {
-      name: "Customer Relationship Manager",
-      description: "Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.",
-      icon: <BarChart3 className="w-12 h-12 text-orange-500" />,
-      features: [
-        "Lead management and scoring",
-        "Sales pipeline tracking",
-        "Contact and company profiles",
-        "Email integration and tracking",
-        "Task and follow-up reminders",
-        "Sales reporting and analytics",
-        "Mobile app access",
-        "Custom fields and workflows"
-      ],
-      pricing: {
-        starter: "$59/month",
-        professional: "$119/month",
-        enterprise: "$199/month"
-      },
+    {_name: "Customer Relationship Manager", _description: "Simple yet powerful CRM designed for growing businesses. Manage leads, _track sales, _and nurture customer relationships.", _icon: <BarChart3 className="w-12 h-12 text-orange-500" />, _features: [
+        "Lead management and scoring", _"Sales pipeline tracking", _"Contact and company profiles", _"Email integration and tracking", _"Task and follow-up reminders", _"Sales reporting and analytics", _"Mobile app access", _"Custom fields and workflows"
+      ], _pricing: {
+        starter: "$59/month", _professional: "$119/month", _enterprise: "$199/month"},
       marketPrice: "$100-200/month",
       useCases: ["Sales teams", "Small businesses", "Startups", "Consultants", "Real estate"],
       benefits: [
@@ -154,25 +71,10 @@ export default function MicroSAASServicesPage() {
       freeTrial: "21 days",
       setupTime: "Under 2 hours"
     },
-    {
-      name: "Email Marketing Platform",
-      description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign performance.",
-      icon: <Mail className="w-12 h-12 text-indigo-500" />,
-      features: [
-        "Drag-and-drop email builder",
-        "Email automation workflows",
-        "Advanced segmentation",
-        "A/B testing capabilities",
-        "Performance analytics",
-        "Template library",
-        "Integration with popular tools",
-        "Compliance and deliverability"
-      ],
-      pricing: {
-        starter: "$69/month",
-        professional: "$139/month",
-        enterprise: "$249/month"
-      },
+    {_name: "Email Marketing Platform", _description: "Professional email marketing solution with automation, _segmentation, _and advanced analytics for better campaign performance.", _icon: <Mail className="w-12 h-12 text-indigo-500" />, _features: [
+        "Drag-and-drop email builder", _"Email automation workflows", _"Advanced segmentation", _"A/B testing capabilities", _"Performance analytics", _"Template library", _"Integration with popular tools", _"Compliance and deliverability"
+      ], _pricing: {
+        starter: "$69/month", _professional: "$139/month", _enterprise: "$249/month"},
       marketPrice: "$120-250/month",
       useCases: ["E-commerce", "Marketing teams", "Small businesses", "Newsletters", "Online courses"],
       benefits: [
@@ -186,25 +88,10 @@ export default function MicroSAASServicesPage() {
       freeTrial: "14 days",
       setupTime: "Under 1 hour"
     },
-    {
-      name: "Analytics Dashboard",
-      description: "Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.",
-      icon: <TrendingUp className="w-12 h-12 text-pink-500" />,
-      features: [
-        "Real-time data visualization",
-        "Custom dashboard builder",
-        "Automated reporting",
-        "Data integration capabilities",
-        "Performance tracking",
-        "Goal setting and monitoring",
-        "Export and sharing options",
-        "Mobile-responsive design"
-      ],
-      pricing: {
-        starter: "$79/month",
-        professional: "$159/month",
-        enterprise: "$299/month"
-      },
+    {_name: "Analytics Dashboard", _description: "Comprehensive business analytics platform with real-time insights, _custom reports, _and data visualization tools.", _icon: <TrendingUp className="w-12 h-12 text-pink-500" />, _features: [
+        "Real-time data visualization", _"Custom dashboard builder", _"Automated reporting", _"Data integration capabilities", _"Performance tracking", _"Goal setting and monitoring", _"Export and sharing options", _"Mobile-responsive design"
+      ], _pricing: {
+        starter: "$79/month", _professional: "$159/month", _enterprise: "$299/month"},
       marketPrice: "$150-300/month",
       useCases: ["Business owners", "Marketing teams", "Analysts", "Startups", "E-commerce"],
       benefits: [
@@ -220,66 +107,29 @@ export default function MicroSAASServicesPage() {
     }
   ];
 
-  const additionalMicroSAAS = [
-    {
-      name: "Time Tracking Tool",
-      description: "Simple time tracking for teams and freelancers with project billing and productivity insights.",
-      pricing: "$19/month",
-      icon: <Calendar className="w-8 h-8 text-blue-400" />
-    },
-    {
-      name: "Knowledge Base Platform",
-      description: "Create and manage documentation, FAQs, and help articles for your customers and team.",
-      pricing: "$39/month",
-      icon: <FileText className="w-8 h-8 text-green-400" />
-    },
-    {
-      name: "Survey & Feedback Tool",
-      description: "Collect customer feedback, conduct surveys, and gather insights to improve your products and services.",
-      pricing: "$29/month",
-      icon: <MessageSquare className="w-8 h-8 text-purple-400" />
-    },
-    {
-      name: "Appointment Scheduler",
-      description: "Automated appointment booking system with calendar integration and reminder notifications.",
-      pricing: "$25/month",
-      icon: <Calendar className="w-8 h-8 text-orange-400" />
-    }
+  const _additionalMicroSAAS = [
+    {_name: "Time Tracking Tool", _description: "Simple time tracking for teams and freelancers with project billing and productivity insights.", _pricing: "$19/month", _icon: <Calendar className="w-8 h-8 text-blue-400" />},
+    {_name: "Knowledge Base Platform", _description: "Create and manage documentation, _FAQs, _and help articles for your customers and team.", _pricing: "$39/month", _icon: <FileText className="w-8 h-8 text-green-400" />},
+    {_name: "Survey & Feedback Tool", _description: "Collect customer feedback, _conduct surveys, _and gather insights to improve your products and services.", _pricing: "$29/month", _icon: <MessageSquare className="w-8 h-8 text-purple-400" />},
+    {_name: "Appointment Scheduler", _description: "Automated appointment booking system with calendar integration and reminder notifications.", _pricing: "$25/month", _icon: <Calendar className="w-8 h-8 text-orange-400" />}
   ];
 
-  const stats = [
-    { label: "Active Users", value: "10,000+" },
-    { label: "Cost Savings", value: "40-60%" },
-    { label: "Setup Time", value: "< 2 hours" },
-    { label: "Customer Satisfaction", value: "96%" }
+  const _stats = [
+    {_label: "Active Users", _value: "10, _000+"},
+    {_label: "Cost Savings", _value: "40-60%"},
+    {_label: "Setup Time", _value: "< 2 hours"},
+    {_label: "Customer Satisfaction", _value: "96%"}
   ];
 
-  const whyChooseUs = [
-    {
-      title: "Affordable Pricing",
-      description: "Up to 60% savings compared to enterprise solutions without compromising on features.",
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: "Quick Setup",
-      description: "Get up and running in under 2 hours with our intuitive setup wizards and templates.",
-      icon: <Zap className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Start small and scale up as your business grows. No long-term contracts or hidden fees.",
-      icon: <Globe className="w-8 h-8 text-purple-400" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock customer support to help you succeed with our platforms.",
-      icon: <Users className="w-8 h-8 text-orange-400" />
-    }
+  const _whyChooseUs = [
+    {_title: "Affordable Pricing", _description: "Up to 60% savings compared to enterprise solutions without compromising on features.", _icon: <TrendingUp className="w-8 h-8 text-green-400" />},
+    {_title: "Quick Setup", _description: "Get up and running in under 2 hours with our intuitive setup wizards and templates.", _icon: <Zap className="w-8 h-8 text-blue-400" />},
+    {_title: "Scalable Solutions", _description: "Start small and scale up as your business grows. No long-term contracts or hidden fees.", _icon: <Globe className="w-8 h-8 text-purple-400" />},
+    {_title: "24/7 Support", _description: "Round-the-clock customer support to help you succeed with our platforms.", _icon: <Users className="w-8 h-8 text-orange-400" />}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
+  return (_<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {_/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -291,7 +141,7 @@ export default function MicroSAASServicesPage() {
               Micro SAAS Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Affordable, scalable software solutions that grow with your business. Professional-grade tools at startup-friendly prices.
+              Affordable, _scalable software solutions that grow with your business. Professional-grade tools at startup-friendly prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -313,19 +163,19 @@ export default function MicroSAASServicesPage() {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {_/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {_stats.map((stat, _index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">{_stat.value}</div>
+              <div className="text-gray-300 text-sm">{_stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Why Choose Us */}
+      {_/* Why Choose Us */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -337,19 +187,19 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {whyChooseUs.map((feature, index) => (
+          {_whyChooseUs.map(_(feature, _index) => (
             <div key={index} className="text-center space-y-4">
               <div className="flex justify-center">
-                {feature.icon}
+                {_feature.icon}
               </div>
-              <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-              <p className="text-gray-300 text-sm">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-white">{_feature.title}</h3>
+              <p className="text-gray-300 text-sm">{_feature.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Micro SAAS Services Grid */}
+      {_/* Micro SAAS Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -361,24 +211,23 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {microSAASServices.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-yellow-400/50 transition-all duration-300 hover:transform hover:scale-105">
+          {_microSAASServices.map(_(service, _index) => (_<div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-yellow-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  {service.icon}
-                  <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                  {_service.icon}
+                  <h3 className="text-2xl font-bold text-white">{_service.name}</h3>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 leading-relaxed">{_service.description}</p>
                 
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {_service.features.map((feature, _featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {feature}
+                          {_feature}
                         </li>
                       ))}
                     </ul>
@@ -388,28 +237,28 @@ export default function MicroSAASServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Pricing Plans:</h4>
                       <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (
+                        {_Object.entries(service.pricing).map(_([plan, _price]) => (
                           <div key={plan} className="flex justify-between text-sm">
-                            <span className="text-gray-400 capitalize">{plan}:</span>
-                            <span className="text-green-400 font-semibold">{price}</span>
+                            <span className="text-gray-400 capitalize">{_plan}:</span>
+                            <span className="text-green-400 font-semibold">{_price}</span>
                           </div>
                         ))}
                       </div>
                       <div className="mt-2 text-xs text-gray-400">
-                        Market price: <span className="line-through">{service.marketPrice}</span>
+                        Market price: <span className="line-through">{_service.marketPrice}</span>
                       </div>
                     </div>
 
                     <div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Quick Info:</h4>
                       <div className="space-y-1 text-xs text-gray-300">
-                        <div>Free Trial: {service.freeTrial}</div>
-                        <div>Setup Time: {service.setupTime}</div>
+                        <div>Free Trial: {_service.freeTrial}</div>
+                        <div>Setup Time: {_service.setupTime}</div>
                       </div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2 mt-3">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
-                          <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
+                        {_service.useCases.map(_(useCase, _useCaseIndex) => (
+                          <li key={useCaseIndex} className="text-xs text-gray-300">• {_useCase}</li>
                         ))}
                       </ul>
                     </div>
@@ -418,8 +267,8 @@ export default function MicroSAASServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-yellow-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
+                      {_service.benefits.map(_(benefit, _benefitIndex) => (
+                        <li key={benefitIndex} className="text-xs text-gray-300">• {_benefit}</li>
                       ))}
                     </ul>
                   </div>
@@ -427,14 +276,14 @@ export default function MicroSAASServicesPage() {
                   <div className="pt-4 border-t border-white/20">
                     <div className="flex gap-3">
                       <a 
-                        href={service.website}
+                        href={_service.website}
                         className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Learn More</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
                       <a 
-                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                        href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                         className="inline-flex items-center justify-center px-4 py-2 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white rounded-lg text-sm font-medium transition-colors"
                       >
                         <span>Get Started</span>
@@ -448,7 +297,7 @@ export default function MicroSAASServicesPage() {
         </div>
       </div>
 
-      {/* Additional Micro SAAS Services */}
+      {_/* Additional Micro SAAS Services */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -460,17 +309,17 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalMicroSAAS.map((service, index) => (
+          {_additionalMicroSAAS.map(_(service, _index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-yellow-400/50 transition-all duration-300">
               <div className="text-center space-y-4">
                 <div className="flex justify-center">
-                  {service.icon}
+                  {_service.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-                <div className="text-yellow-400 font-semibold">{service.pricing}</div>
+                <h3 className="text-lg font-semibold text-white">{_service.name}</h3>
+                <p className="text-gray-300 text-sm">{_service.description}</p>
+                <div className="text-yellow-400 font-semibold">{_service.pricing}</div>
                 <a 
-                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                  href={_`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                   className="inline-block w-full px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded-lg text-sm font-medium transition-colors text-center"
                 >
                   Get Started
@@ -481,7 +330,7 @@ export default function MicroSAASServicesPage() {
         </div>
       </div>
 
-      {/* Pricing Comparison */}
+      {_/* Pricing Comparison */}
       <div className="bg-gradient-to-r from-yellow-900/50 to-orange-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-12">
@@ -551,7 +400,7 @@ export default function MicroSAASServicesPage() {
         </div>
       </div>
 
-      {/* Contact & CTA Section */}
+      {_/* Contact & CTA Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center space-y-8">
@@ -604,7 +453,7 @@ export default function MicroSAASServicesPage() {
         </div>
       </div>
 
-      {/* Footer */}
+      {_/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

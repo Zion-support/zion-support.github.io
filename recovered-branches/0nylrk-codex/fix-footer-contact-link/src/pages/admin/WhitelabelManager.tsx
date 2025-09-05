@@ -1,24 +1,13 @@
 
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import React, {_useState} from 'react';
 
-export default function WhitelabelManager() {
-  const { user } = useAuth();
+export default function WhitelabelManager() {_const { user} = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
   
   // Check if user has admin role
-  const isAdmin = user?.role === "admin";
+  const _isAdmin = user?.role === "admin";
   
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
-  }
+  if (!isAdmin) {_return <Navigate to="/unauthorized" />;}
 
   return (
     <>
@@ -36,7 +25,7 @@ export default function WhitelabelManager() {
             </p>
           </div>
 
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <Tabs value={_activeTab} onValueChange={_setActiveTab} className="w-full">
             <TabsList className="mb-8">
               <TabsTrigger value="tenants">Tenants</TabsTrigger>
               <TabsTrigger value="create">Create New</TabsTrigger>

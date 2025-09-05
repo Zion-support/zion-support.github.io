@@ -1,43 +1,25 @@
 import React from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 
-export interface Benefit {
-  title: string;
+export interface Benefit {_title: string;
   description: string;
-  icon?: React.ReactNode;
-}
+  icon?: React.ReactNode;}
 
-export interface Testimonial {
-  name: string;
+export interface Testimonial {_name: string;
   role?: string;
   text: string;
-  avatar?: string;
-}
+  avatar?: string;}
 
-interface ServiceLandingTemplateProps {
-  title: string;
+interface ServiceLandingTemplateProps {_title: string;
   subtitle: string;
   heroImage?: string;
   description: string;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-  ctaLink: string;
-}
+  ctaLink: string;}
 
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-  title,
-  subtitle,
-  heroImage,
-  description,
-  benefits,
-  testimonials,
-  ctaText,
-  ctaLink}) => {
-  return (
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = (_{_title, _subtitle, _heroImage, _description, _benefits, _testimonials, _ctaText, _ctaLink}) => {_return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
         <div className="container mx-auto">
@@ -45,13 +27,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             {title}
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            {subtitle}
+            {_subtitle}
           </p>
-          {heroImage && (
+          {_heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image
                 src={heroImage}
-                alt={title}
+                alt={_title}
                 className="object-cover rounded-lg"
                 loading="lazy"
               />
@@ -63,7 +45,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-            {description}
+            {_description}
           </p>
         </div>
       </section>
@@ -74,18 +56,18 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             Benefits
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
+            {_benefits.map(_(benefit, _idx) => (
               <div
                 key={idx}
                 className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center"
               >
-                {benefit.icon && (
+                {_benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
                   </div>
                 )}
-                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-lg font-bold mb-2">{_benefit.title}</h3>
+                <p className="text-zion-slate-light">{_benefit.description}</p>
               </div>
             ))}
           </div>
@@ -98,29 +80,29 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (
+            {_testimonials.map(_(t, _idx) => (
               <Card
                 key={idx}
                 className="bg-zion-blue-dark border-zion-purple/30"
               >
                 <CardContent className="pt-6">
-                  <p className="text-gray-200 mb-6">"{t.text}"</p>
+                  <p className="text-gray-200 mb-6">"{_t.text}"</p>
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">
                   <div className="flex items-center">
-                    {t.avatar && (
+                    {_t.avatar && (
                       <Image
                         src={t.avatar}
-                        alt={t.name}
-                        width={40}
-                        height={40}
+                        alt={_t.name}
+                        width={_40}
+                        height={_40}
                         className="rounded-full mr-4"
                         loading="lazy"
                       />
                     )}
                     <div>
-                      <p className="font-semibold text-white">{t.name}</p>
-                      {t.role && (
+                      <p className="font-semibold text-white">{_t.name}</p>
+                      {_t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
                     </div>
@@ -138,7 +120,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-          <a href={ctaLink}>{ctaText}</a>
+          <a href={_ctaLink}>{_ctaText}</a>
         </Button>
       </section>
     </div>

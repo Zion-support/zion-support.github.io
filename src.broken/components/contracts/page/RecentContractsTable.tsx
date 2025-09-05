@@ -1,9 +1,7 @@
 import React from 'react';
-export function RecentContractsTable() {
-  return (
+export function RecentContractsTable() {_return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
-}
+  );}

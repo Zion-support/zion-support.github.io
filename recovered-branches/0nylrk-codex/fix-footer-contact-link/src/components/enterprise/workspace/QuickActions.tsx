@@ -1,39 +1,12 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 
-export function QuickActions() {
-  const actions = [
+export function QuickActions() {_const _actions = [
     {
-      id: "post-job",
-      label: "Post New Job",
-      icon: <FileText className="h-5 w-5 mr-2" />,
-      description: "Create a new job posting",
-      color: "bg-blue-100 dark:bg-blue-900/20"
-    },
-    {
-      id: "add-member",
-      label: "Add Team Member",
-      icon: <Plus className="h-5 w-5 mr-2" />,
-      description: "Invite someone to your team",
-      color: "bg-green-100 dark:bg-green-900/20"
-    },
-    {
-      id: "find-talent",
-      label: "Find Talent",
-      icon: <Search className="h-5 w-5 mr-2" />,
-      description: "Search the talent pool",
-      color: "bg-purple-100 dark:bg-purple-900/20"
-    },
-    {
-      id: "schedule",
-      label: "Schedule Interview",
-      icon: <Calendar className="h-5 w-5 mr-2" />,
-      description: "Set up candidate interviews",
-      color: "bg-amber-100 dark:bg-amber-900/20"
-    }
+      id: "post-job", _label: "Post New Job", _icon: <FileText className="h-5 w-5 mr-2" />, _description: "Create a new job posting", _color: "bg-blue-100 dark:bg-blue-900/20"},
+    {_id: "add-member", _label: "Add Team Member", _icon: <Plus className="h-5 w-5 mr-2" />, _description: "Invite someone to your team", _color: "bg-green-100 dark:bg-green-900/20"},
+    {_id: "find-talent", _label: "Find Talent", _icon: <Search className="h-5 w-5 mr-2" />, _description: "Search the talent pool", _color: "bg-purple-100 dark:bg-purple-900/20"},
+    {_id: "schedule", _label: "Schedule Interview", _icon: <Calendar className="h-5 w-5 mr-2" />, _description: "Set up candidate interviews", _color: "bg-amber-100 dark:bg-amber-900/20"}
   ];
 
   return (
@@ -44,18 +17,18 @@ export function QuickActions() {
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {actions.map(action => (
+          {_actions.map(action => (
             <Button 
               key={action.id}
               variant="outline" 
-              className={`h-auto justify-start p-4 ${action.color}`}
+              className={_`h-auto justify-start p-4 ${action.color}`}
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
-                  {action.icon}
-                  <span>{action.label}</span>
+                  {_action.icon}
+                  <span>{_action.label}</span>
                 </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+                <span className="mt-1 text-xs text-muted-foreground">{_action.description}</span>
               </div>
             </Button>
           ))}

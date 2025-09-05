@@ -1,23 +1,14 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
-import { DollarSign } from 'lucide-react';
+import {_DropdownMenu, _DropdownMenuContent, _DropdownMenuItem, _DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 
-const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
-  { code: 'USD', symbol: '$' },
-  { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }];
+const SUPPORTED: {_code: SupportedCurrency; symbol: string}[] = [
+  {_code: 'USD', _symbol: '$'},
+  {_code: 'EUR', _symbol: '€'},
+  {_code: 'GBP', _symbol: '£'}];
 
-export function CurrencySelector() {
-  const { currency, setCurrency } = useCurrency();
+export function CurrencySelector() {_const { currency, _setCurrency} = useCurrency();
 
-  return (
-    <DropdownMenu>
+  return (_<DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
           <DollarSign className="h-5 w-5" />
@@ -25,13 +16,13 @@ export function CurrencySelector() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {SUPPORTED.map(c => (
+        {_SUPPORTED.map(c => (
           <DropdownMenuItem
             key={c.code}
-            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
-            onClick={() => setCurrency(c.code)}
+            className={_`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
+            onClick={_() => setCurrency(c.code)}
           >
-            {c.symbol} {c.code}
+            {_c.symbol} {_c.code}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

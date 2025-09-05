@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
-export default function TestPage() {
-  return (
+export default function TestPage() {_return (
     <>
       <Head>
         <title>Test Page - Zion App</title>
@@ -9,115 +8,77 @@ export default function TestPage() {
       </Head>
       
       <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '2rem',
-        fontFamily: 'Arial, sans-serif',
-        backgroundColor: '#f8f9fa'
-      }}>
-        <div style={{
-          textAlign: 'center',
-          maxWidth: '600px',
-          backgroundColor: 'white',
-          padding: '3rem',
-          borderRadius: '12px',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-        }}>
-          <h1 style={{ color: '#2563eb', marginBottom: '1rem' }}>
+        minHeight: '100vh', _display: 'flex', _flexDirection: 'column', _justifyContent: 'center', _alignItems: 'center', _padding: '2rem', _fontFamily: 'Arial, _sans-serif', _backgroundColor: '#f8f9fa'}}>
+        <div style={_{
+          textAlign: 'center', _maxWidth: '600px', _backgroundColor: 'white', _padding: '3rem', _borderRadius: '12px', _boxShadow: '0 4px 6px -1px rgba(0, _0, _0, _0.1)'}}>
+          <h1 style={_{ color: '#2563eb', _marginBottom: '1rem'}}>
             ✅ Zion App Test Page
           </h1>
           
-          <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: '#374151' }}>
+          <p style={_{ fontSize: '1.1rem', _marginBottom: '2rem', _color: '#374151'}}>
             This page confirms that the Zion app is working correctly.
           </p>
           
-          <div style={{ marginBottom: '2rem' }}>
-            <h3 style={{ color: '#059669', marginBottom: '1rem' }}>App Status:</h3>
-            <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+          <div style={_{ marginBottom: '2rem'}}>
+            <h3 style={_{ color: '#059669', _marginBottom: '1rem'}}>App Status:</h3>
+            <ul style={_{ textAlign: 'left', _listStyle: 'none', _padding: 0}}>
+              <li style={_{ padding: '0.5rem 0', _borderBottom: '1px solid #e5e7eb'}}>
                 ✅ Next.js: Working
               </li>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+              <li style={_{ padding: '0.5rem 0', _borderBottom: '1px solid #e5e7eb'}}>
                 ✅ React: Working
               </li>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+              <li style={_{ padding: '0.5rem 0', _borderBottom: '1px solid #e5e7eb'}}>
                 ✅ CSS: Working
               </li>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #e5e7eb' }}>
+              <li style={_{ padding: '0.5rem 0', _borderBottom: '1px solid #e5e7eb'}}>
                 ✅ Routing: Working
               </li>
-              <li style={{ padding: '0.5rem 0' }}>
+              <li style={_{ padding: '0.5rem 0'}}>
                 ✅ Build: Successful
               </li>
             </ul>
           </div>
           
-          <div style={{ marginBottom: '2rem' }}>
-            <h3 style={{ color: '#dc2626', marginBottom: '1rem' }}>If you see this page:</h3>
-            <p style={{ color: '#6b7280' }}>
+          <div style={_{ marginBottom: '2rem'}}>
+            <h3 style={_{ color: '#dc2626', _marginBottom: '1rem'}}>If you see this page:</h3>
+            <p style={_{ color: '#6b7280'}}>
               The app is working correctly! The blank screen issue has been resolved.
             </p>
           </div>
           
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={_{ display: 'flex', _gap: '1rem', _justifyContent: 'center', _flexWrap: 'wrap'}}>
             <button 
-              onClick={() => window.location.href = '/'}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#2563eb',
-                color: 'white',
-                border: 'none',
-                borderRadius: '0.5rem',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                fontWeight: '600'
-              }}
+              onClick={_() => window.location.href = '/'}
+              style={_{
+                padding: '0.75rem 1.5rem', _backgroundColor: '#2563eb', _color: 'white', _border: 'none', _borderRadius: '0.5rem', _cursor: 'pointer', _fontSize: '1rem', _fontWeight: '600'}}
             >
               Go to Home
             </button>
             
             <button 
-              onClick={() => window.location.href = '/debug'}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#6b7280',
-                color: 'white',
-                border: 'none',
-                borderRadius: '0.5rem',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                fontWeight: '600'
-              }}
+              onClick={_() => window.location.href = '/debug'}
+              style={_{
+                padding: '0.75rem 1.5rem', _backgroundColor: '#6b7280', _color: 'white', _border: 'none', _borderRadius: '0.5rem', _cursor: 'pointer', _fontSize: '1rem', _fontWeight: '600'}}
             >
               Debug Info
             </button>
             
             <button 
-              onClick={() => window.location.reload()}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#059669',
-                color: 'white',
-                border: 'none',
-                borderRadius: '0.5rem',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                fontWeight: '600'
-              }}
+              onClick={_() => window.location.reload()}
+              style={_{
+                padding: '0.75rem 1.5rem', _backgroundColor: '#059669', _color: 'white', _border: 'none', _borderRadius: '0.5rem', _cursor: 'pointer', _fontSize: '1rem', _fontWeight: '600'}}
             >
               Reload Page
             </button>
           </div>
           
-          <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#f3f4f6', borderRadius: '0.5rem' }}>
-            <p style={{ fontSize: '0.9rem', color: '#6b7280', margin: 0 }}>
-              <strong>Timestamp:</strong> {new Date().toLocaleString()}
+          <div style={_{ marginTop: '2rem', _padding: '1rem', _backgroundColor: '#f3f4f6', _borderRadius: '0.5rem'}}>
+            <p style={_{ fontSize: '0.9rem', _color: '#6b7280', _margin: 0}}>
+              <strong>Timestamp:</strong> {_new Date().toLocaleString()}
             </p>
-            <p style={{ fontSize: '0.9rem', color: '#6b7280', margin: '0.5rem 0 0 0' }}>
-              <strong>Environment:</strong> {process.env.NODE_ENV || 'development'}
+            <p style={_{ fontSize: '0.9rem', _color: '#6b7280', _margin: '0.5rem 0 0 0'}}>
+              <strong>Environment:</strong> {_process.env.NODE_ENV || 'development'}
             </p>
           </div>
         </div>

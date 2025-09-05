@@ -1,5 +1,4 @@
-export interface AiAutonomousEcosystem2029 {
-  id: string;
+export interface AiAutonomousEcosystem2029 {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,31 +10,13 @@ export interface AiAutonomousEcosystem2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string;};
 }
 
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
-  {
-    id: "2029-ai-autonomous-ecosystem",
-    name: "2029 AI Autonomous Ecosystem Platform",
-    tagline: "AI autonomous ecosystem for 2029",
-    price: "$799/month",
-    description: "Revolutionary AI autonomous ecosystem platform that operates independently with minimal human intervention.",
-    features: [
-      "Autonomous operation",
-      "Self-learning capabilities",
-      "Independent decision making",
-      "Advanced AI algorithms",
-      "24/7 operation"
-    ],
-    link: "/services/2029-ai-autonomous-ecosystem",
-    category: "AI Autonomous Ecosystem 2029",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+  {_id: "2029-ai-autonomous-ecosystem", _name: "2029 AI Autonomous Ecosystem Platform", _tagline: "AI autonomous ecosystem for 2029", _price: "$799/month", _description: "Revolutionary AI autonomous ecosystem platform that operates independently with minimal human intervention.", _features: [
+      "Autonomous operation", _"Self-learning capabilities", _"Independent decision making", _"Advanced AI algorithms", _"24/7 operation"
+    ], _link: "/services/2029-ai-autonomous-ecosystem", _category: "AI Autonomous Ecosystem 2029", _realImplementation: true, _contactInfo: {
+      mobile: "+1 302 464 0950", _email: "kleber@ziontechgroup.com", _address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];

@@ -1,7 +1,6 @@
 "use client";
 
-export default function AIAutomationPage() {
-  return (
+export default function AIAutomationPage() {_return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>
@@ -32,7 +31,7 @@ export default function AIAutomationPage() {
         </div>
       </div>
 
-      {/* Service Categories */}
+      {_/* Service Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Process Automation</h2>
@@ -119,7 +118,7 @@ export default function AIAutomationPage() {
         </div>
       </div>
 
-      {/* Implementation Process */}
+      {_/* Implementation Process */}
       <div className="bg-zinc-900 border border-white/10 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-6 text-center">Implementation Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -146,7 +145,7 @@ export default function AIAutomationPage() {
         </div>
       </div>
 
-      {/* Pricing Tiers */}
+      {_/* Pricing Tiers */}
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold text-center">Pricing Plans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -199,7 +198,7 @@ export default function AIAutomationPage() {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {_/* Contact Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to Automate Your Business?</h2>
         <p className="opacity-90 mb-6 max-w-2xl mx-auto">

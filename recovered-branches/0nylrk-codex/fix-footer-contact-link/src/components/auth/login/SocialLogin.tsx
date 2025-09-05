@@ -1,14 +1,8 @@
 
-import { Facebook, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { Web3Login } from "./Web3Login";
 
-export function SocialLogin() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+export function SocialLogin() {_const { loginWithGoogle, _loginWithFacebook, _loginWithTwitter, _isLoading} = useAuth();
 
-  return (
-    <div className="mt-6">
+  return (_<div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
@@ -23,8 +17,8 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => loginWithGoogle()}
-          disabled={isLoading}
+          onClick={_() => loginWithGoogle()}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
           <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -38,8 +32,8 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => loginWithFacebook()}
-          disabled={isLoading}
+          onClick={_() => loginWithFacebook()}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
@@ -48,8 +42,8 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => loginWithTwitter()}
-          disabled={isLoading}
+          onClick={_() => loginWithTwitter()}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />

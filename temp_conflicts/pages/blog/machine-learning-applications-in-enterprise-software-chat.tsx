@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
-  return (
+const _MachineLearningApplicationsInEnterpriseSoftwareChat = () => {_return (
     <div>
       <Head>
         <title>MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default MachineLearningApplicationsInEnterpriseSoftwareChat;

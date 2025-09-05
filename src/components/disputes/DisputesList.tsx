@@ -1,33 +1,19 @@
 
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table";
+import React, {_useState} from "react";
+import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
 import Skeleton from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
 
-type DisputesListProps = {
-  disputes: Dispute[];
-  isLoading: boolean;
-};
+type DisputesListProps = {_disputes: Dispute[];
+  isLoading: boolean;};
 
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+export function DisputesList(_{_disputes, _isLoading}: DisputesListProps) {_const [statusFilter, _setStatusFilter] = useState<DisputeStatus | "all">("all");
 
-  const filteredDisputes = statusFilter === "all" 
+  const _filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter);
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+  const _getStatusBadgeVariant = (_status: DisputeStatus) => {
     switch (status) {
       case "open":
         return "default";
@@ -38,15 +24,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case "closed":
         return "outline";
       default:
-        return "default";
-    }
+        return "default";}
   };
 
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
+  if (isLoading) {_return (_<div className="space-y-4">
         <div className="flex gap-2 mb-4">
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+          {["All", _"Open", _"Under Review", _"Resolved", _"Closed"].map((status) => (
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
@@ -63,7 +46,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[...Array(5)].map((_, i) => (
+              {_[...Array(5)].map(_(_, _i) => (
                 <TableRow key={i}>
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
@@ -80,8 +63,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     );
   }
 
-  if (disputes.length === 0) {
-    return (
+  if (disputes.length === 0) {_return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
@@ -89,43 +71,41 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    );
-  }
+    );}
 
-  return (
-    <div className="space-y-4">
+  return (_<div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
-          onClick={() => setStatusFilter("all")}
+          variant={_statusFilter === "all" ? "default" : "outline"}
+          onClick={_() => setStatusFilter("all")}
           size="sm"
         >
           All
         </Button>
         <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
-          onClick={() => setStatusFilter("open")}
+          variant={_statusFilter === "open" ? "default" : "outline"}
+          onClick={_() => setStatusFilter("open")}
           size="sm"
         >
           Open
         </Button>
         <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
-          onClick={() => setStatusFilter("under_review")}
+          variant={_statusFilter === "under_review" ? "default" : "outline"}
+          onClick={_() => setStatusFilter("under_review")}
           size="sm"
         >
           Under Review
         </Button>
         <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
-          onClick={() => setStatusFilter("resolved")}
+          variant={_statusFilter === "resolved" ? "default" : "outline"}
+          onClick={_() => setStatusFilter("resolved")}
           size="sm"
         >
           Resolved
         </Button>
         <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
-          onClick={() => setStatusFilter("closed")}
+          variant={_statusFilter === "closed" ? "default" : "outline"}
+          onClick={_() => setStatusFilter("closed")}
           size="sm"
         >
           Closed
@@ -145,35 +125,35 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredDisputes.map((dispute) => (
+            {_filteredDisputes.map(_(dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className="font-mono text-xs">
-                  {dispute.id.split('-')[0]}
+                  {_dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title || "Unknown Project"}
+                  {_dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
                   <div className="flex flex-col text-sm">
                     <span>
-                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
+                      Client: {_dispute.client_profile?.display_name || "Unknown Client"}
                     </span>
                     <span>
-                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+                      Talent: {_dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
-                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+                  {_formatDistanceToNow(new Date(dispute.created_at), _{ addSuffix: true})}
                 </TableCell>
                 <TableCell>
-                  <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                    {dispute.status.replace('_', ' ')}
+                  <Badge variant={_getStatusBadgeVariant(dispute.status)}>
+                    {_dispute.status.replace('_', _' ')}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">
                   <Button asChild size="sm">
-                    <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
+                    <Link href={_`/dashboard/disputes/${dispute.id}`}>View Details</Link>
                   </Button>
                 </TableCell>
               </TableRow>

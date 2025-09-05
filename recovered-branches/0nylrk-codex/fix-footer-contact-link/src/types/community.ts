@@ -6,16 +6,13 @@ export type ForumCategory =
   | 'feedback'
   | 'announcements';
 
-export interface ForumCategoryInfo {
-  id: ForumCategory;
+export interface ForumCategoryInfo {_id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean;
-  icon: string;
-}
+  icon: string;}
 
-export interface ForumPost {
-  id: string;
+export interface ForumPost {_id: string;
   title: string;
   content: string;
   authorId: string;
@@ -32,11 +29,9 @@ export interface ForumPost {
   isAnswered?: boolean;
   isPinned?: boolean;
   isLocked?: boolean;
-  isFeatured?: boolean;
-}
+  isFeatured?: boolean;}
 
-export interface ForumReply {
-  id: string;
+export interface ForumReply {_id: string;
   postId: string;
   parentReplyId?: string;
   content: string;
@@ -48,25 +43,19 @@ export interface ForumReply {
   updatedAt: string;
   upvotes: number;
   downvotes: number;
-  isAnswer?: boolean;
-}
+  isAnswer?: boolean;}
 
-export interface Badge {
-  id: string;
+export interface Badge {_id: string;
   name: string;
   description: string;
   icon: string;
-  color: string;
-}
+  color: string;}
 
-export interface UserBadge {
-  userId: string;
+export interface UserBadge {_userId: string;
   badgeId: string;
-  awardedAt: string;
-}
+  awardedAt: string;}
 
-export interface CommunityUser {
-  id: string;
+export interface CommunityUser {_id: string;
   name: string;
   avatar?: string;
   role: string;
@@ -75,5 +64,4 @@ export interface CommunityUser {
   replyCount: number;
   badges: Badge[];
   isVerified: boolean;
-  isModerator: boolean;
-}
+  isModerator: boolean;}

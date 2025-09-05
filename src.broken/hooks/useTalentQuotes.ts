@@ -1,5 +1,4 @@
 // Hook for useTalentQuotes;
-export const useUseTalentQuotes: unknown = () => {
-  // TODO: Implement hook logic;
+export const useUseTalentQuotes: unknown = () => {_// TODO: Implement hook logic;
   return {};
 };

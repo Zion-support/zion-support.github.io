@@ -1,48 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationButton,
-  PaginationNext,
-  PaginationPrevious} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
+import {_Pagination, _PaginationContent, _PaginationItem, _PaginationButton, _PaginationNext, _PaginationPrevious} from '@/components/ui/pagination';
 
-interface CountryTabsProps {
-  popularCountries: string[];
+interface CountryTabsProps {_popularCountries: string[];
   filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
+  handleCountrySelect: (_country: CountryPricing) => void;
+  onQuote?: (_country: CountryPricing) => void;
   searchQuery: string;
-  setSearchQuery: (query: string) => void;
-}
+  setSearchQuery: (_query: string) => void;}
 
-export function CountryTabs({
-  popularCountries,
-  filteredCountries,
-  handleCountrySelect,
-  onQuote,
-  searchQuery,
-  setSearchQuery}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
+export function CountryTabs(_{_popularCountries, _filteredCountries, _handleCountrySelect, _onQuote, _searchQuery, _setSearchQuery}: CountryTabsProps) {_const [currentPage, _setCurrentPage] = useState(1);
+  const _countriesPerPage = 50;
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery]);
+  useEffect__(() => {
+    setCurrentPage(1);}, [searchQuery]);
 
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
-  const paginatedCountries = filteredCountries.slice(
+  const _totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  const _paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
   );
-  return (
-    <Tabs defaultValue="featured" className="w-full">
+  return (_<Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
         <TabsTrigger
           value="featured"
@@ -66,15 +42,15 @@ export function CountryTabs({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCountries
+          {_filteredCountries
             .filter((country) => popularCountries.includes(country.country))
-            .map((country) => (
+            .map(_(country) => (
               <CountryServiceCard
                 key={country.country}
-                country={country}
-                onSelect={handleCountrySelect}
-                onQuote={onQuote}
-                isPopular={true}
+                country={_country}
+                onSelect={_handleCountrySelect}
+                onQuote={_onQuote}
+                isPopular={_true}
               />
             ))}
         </div>
@@ -88,58 +64,52 @@ export function CountryTabs({
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={_searchQuery}
+              onChange={_(_e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {paginatedCountries.map((country) => (
+          {_paginatedCountries.map(_(country) => (
             <CountryServiceCard
               key={country.country}
-              country={country}
-              onSelect={handleCountrySelect}
-              onQuote={onQuote}
-              isPopular={popularCountries.includes(country.country)}
+              country={_country}
+              onSelect={_handleCountrySelect}
+              onQuote={_onQuote}
+              isPopular={_popularCountries.includes(country.country)}
             />
           ))}
         </div>
 
-        {totalPages > 1 && (
-          <div className="mt-8">
+        {_totalPages > 1 && (_<div className="mt-8">
             <Pagination className="justify-center">
               <PaginationContent>
                 <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
-                    onClick={(e) => {
+                    onClick={_(e) => {
                       e.preventDefault();
-                      setCurrentPage(Math.max(1, currentPage - 1));
-                    }}
+                      setCurrentPage(Math.max(1, _currentPage - 1));}}
                   />
                 </PaginationItem>
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (page) => (
-                    <PaginationItem key={page}>
+                {_Array.from(_{ length: totalPages}, _(_, _i) => i + 1).map(_(page) => (_<PaginationItem key={_page}>
                       <PaginationButton
-                        page={page}
-                        isActive={page === currentPage}
-                        onClick={(e) => {
+                        page={_page}
+                        isActive={_page === currentPage}
+                        onClick={_(e) => {
                           e.preventDefault();
-                          setCurrentPage(page);
-                        }}
+                          setCurrentPage(page);}}
                       />
                     </PaginationItem>
                   )
                 )}
                 <PaginationItem>
                   <PaginationNext
-                    href={`?page=${currentPage + 1}`}
-                    onClick={(e) => {
+                    href={_`?page=${currentPage + 1}`}
+                    onClick={_(_e) => {
                       e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1));
-                    }}
+                      setCurrentPage(Math.min(totalPages, _currentPage + 1));}}
                   />
                 </PaginationItem>
               </PaginationContent>

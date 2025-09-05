@@ -1,74 +1,28 @@
-import { 
-  EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline'
+import {_EnvelopeIcon, _PhoneIcon, _MapPinIcon, _ClockIcon, _ChatBubbleLeftRightIcon} from '@heroicons/react/24/outline'
 
-const contactMethods = [
-  {
-    name: 'Email',
-    description: 'Get in touch with our team',
-    value: 'contact@ziontechgroup.com',
-    href: 'mailto:contact@ziontechgroup.com',
-    icon: EnvelopeIcon},
-  {
-    name: 'Phone',
-    description: 'Speak with an expert',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
-    icon: PhoneIcon},
-  {
-    name: 'Office',
-    description: 'Visit our headquarters',
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025',
-    href: '#',
-    icon: MapPinIcon}]
+const _contactMethods = [
+  {_name: 'Email', _description: 'Get in touch with our team', _value: 'contact@ziontechgroup.com', _href: 'mailto:contact@ziontechgroup.com', _icon: EnvelopeIcon},
+  {_name: 'Phone', _description: 'Speak with an expert', _value: '+1 (555) 123-4567', _href: 'tel:+15551234567', _icon: PhoneIcon},
+  {_name: 'Office', _description: 'Visit our headquarters', _value: '1234 Innovation Drive, _Silicon Valley, _CA 94025', _href: '#', _icon: MapPinIcon}]
 
-const officeLocations = [
-  {
-    name: 'Silicon Valley',
-    address: '1234 Innovation Drive, San Jose, CA 94025',
-    phone: '+1 (555) 123-4567',
-    email: 'sv@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'},
-  {
-    name: 'London',
-    address: '456 Tech Square, London, UK EC2A 4BX',
-    phone: '+44 20 1234 5678',
-    email: 'london@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'},
-  {
-    name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100-0001',
-    phone: '+81 3 1234 5678',
-    email: 'tokyo@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
+const _officeLocations = [
+  {_name: 'Silicon Valley', _address: '1234 Innovation Drive, _San Jose, _CA 94025', _phone: '+1 (555) 123-4567', _email: 'sv@ziontechgroup.com', _hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'},
+  {_name: 'London', _address: '456 Tech Square, _London, _UK EC2A 4BX', _phone: '+44 20 1234 5678', _email: 'london@ziontechgroup.com', _hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'},
+  {_name: 'Tokyo', _address: '789 Innovation Tower, _Tokyo, _Japan 100-0001', _phone: '+81 3 1234 5678', _email: 'tokyo@ziontechgroup.com', _hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
 
-const faqs = [
-  {
-    question: 'What industries do you serve?',
-    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'},
-  {
-    question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, while complex enterprise solutions typically take 3-6 months.'},
-  {
-    question: 'Do you provide ongoing support?',
-    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'},
-  {
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+const _faqs = [
+  {_question: 'What industries do you serve?', _answer: 'We serve a wide range of industries including healthcare, _finance, _manufacturing, _retail, _and technology. Our AI solutions are designed to be adaptable across different sectors.'},
+  {_question: 'How long does implementation take?', _answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, _while complex enterprise solutions typically take 3-6 months.'},
+  {_question: 'Do you provide ongoing support?', _answer: 'Yes, _we provide comprehensive ongoing support including technical assistance, _updates, _training, _and optimization services to ensure your AI solutions continue to deliver value.'},
+  {_question: 'What security measures do you have?', _answer: 'We implement enterprise-grade security including end-to-end encryption, _SOC 2 compliance, _regular security audits, _and strict access controls to protect your data and systems.'}]
 
-export default function ContactPage() {
-  return (
-    <div className="bg-black">
+export default function ContactPage() {_return (_<div className="bg-black">
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Get in{' '}
+              Get in{_' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
@@ -81,7 +35,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Contact methods */}
+      {_/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
@@ -91,20 +45,20 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {contactMethods.map((method) => (
+            {_contactMethods.map((method) => (
               <div key={method.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {method.name}
+                  {_method.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{method.description}</p>
+                  <p className="flex-auto">{_method.description}</p>
                   <p className="mt-6">
                     <a 
-                      href={method.href} 
+                      href={_method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
-                      {method.value} <span aria-hidden="true">→</span>
+                      {_method.value} <span aria-hidden="true">→</span>
                     </a>
                   </p>
                 </dd>
@@ -114,7 +68,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Contact form */}
+      {_/* Contact form */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
@@ -189,9 +143,9 @@ export default function ContactPage() {
                   <textarea
                     name="message"
                     id="message"
-                    rows={4}
+                    rows={_4}
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                    defaultValue={''}
+                    defaultValue={_''}
                   />
                 </div>
               </div>
@@ -208,7 +162,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Office locations */}
+      {_/* Office locations */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Global Presence</h2>
@@ -218,28 +172,28 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {officeLocations.map((office) => (
+            {_officeLocations.map(_(office) => (
               <div key={office.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-4">
                   <MapPinIcon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{office.name}</h3>
+                  <h3 className="text-xl font-semibold text-white">{_office.name}</h3>
                 </div>
                 <div className="space-y-3 text-gray-300">
                   <p className="flex items-start gap-2">
                     <MapPinIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    {office.address}
+                    {_office.address}
                   </p>
                   <p className="flex items-center gap-2">
                     <PhoneIcon className="h-5 w-5 text-blue-400" />
-                    {office.phone}
+                    {_office.phone}
                   </p>
                   <p className="flex items-center gap-2">
                     <EnvelopeIcon className="h-5 w-5 text-blue-400" />
-                    {office.email}
+                    {_office.email}
                   </p>
                   <p className="flex items-center gap-2">
                     <ClockIcon className="h-5 w-5 text-blue-400" />
-                    {office.hours}
+                    {_office.hours}
                   </p>
                 </div>
               </div>
@@ -248,7 +202,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* FAQ */}
+      {_/* FAQ */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
@@ -258,13 +212,13 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="space-y-8">
-            {faqs.map((faq, index) => (
+            {_faqs.map(_(faq, _index) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
-                  {faq.question}
+                  {_faq.question}
                 </dt>
                 <dd className="text-base leading-7 text-gray-300">
-                  {faq.answer}
+                  {_faq.answer}
                 </dd>
               </div>
             ))}
@@ -272,7 +226,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* CTA section */}
+      {_/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

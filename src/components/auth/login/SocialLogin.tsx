@@ -1,17 +1,10 @@
 
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Web3Login } from "./Web3Login";
-import { useState } from "react";
-import { openAuthPopup } from "@/api/authSocial";
 
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false);
+export function SocialLogin() {_const [isLoading, _setIsLoading] = useState(false);
 
-  const handleGoogle = () => {
+  const _handleGoogle = () => {
     setIsLoading(true);
-    window.location.href = '/auth/google';
-  };
+    window.location.href = '/auth/google';};
 
   return (
     <div className="mt-6">
@@ -29,11 +22,11 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={handleGoogle}
-          disabled={isLoading}
+          onClick={_handleGoogle}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-          {isLoading ? (
+          {_isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
             <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -48,8 +41,8 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => openAuthPopup('facebook')}
-          disabled={isLoading}
+          onClick={_() => openAuthPopup('facebook')}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
@@ -58,8 +51,8 @@ export function SocialLogin() {
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => openAuthPopup('twitter')}
-          disabled={isLoading}
+          onClick={_() => openAuthPopup('twitter')}
+          disabled={_isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />

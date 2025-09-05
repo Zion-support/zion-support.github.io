@@ -1,11 +1,6 @@
 
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 
-export default function CreatorDashboard() {
-  return (
+export default function CreatorDashboard() {_return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
         <AppSidebar />
@@ -18,7 +13,7 @@ export default function CreatorDashboard() {
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="bg-zion-purple/20 rounded-full p-2">
-                    {/* Only use allowed Lucide icons */}
+                    {_/* Only use allowed Lucide icons */}
                     <span className="text-zion-purple">
                       <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>
                     </span>
@@ -44,7 +39,7 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
-              {/* Placeholder for more creator-specific content */}
+              {_/* Placeholder for more creator-specific content */}
             </div>
           </main>
           <Footer />

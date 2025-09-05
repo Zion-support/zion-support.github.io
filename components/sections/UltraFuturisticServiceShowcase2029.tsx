@@ -1,53 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 
-interface Service {
-  id: string;
+interface Service {_id: string;
   name: string;
   tagline: string;
   price: string;
   description: string;
   features: string[];
-  link: string;
-}
+  link: string;}
 
-interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
+interface UltraFuturisticServiceShowcase2029Props {_services: Service[];
   title?: string;
-  subtitle?: string;
-}
+  subtitle?: string;}
 
-export default function UltraFuturisticServiceShowcase2029({ 
-  services, 
-  title = "2029 Cutting-Edge Services", 
-  subtitle = "Experience the future of technology with our revolutionary solutions" 
-}: UltraFuturisticServiceShowcase2029Props) {
-  return (
+export default function UltraFuturisticServiceShowcase2029(_{_services, _title = "2029 Cutting-Edge Services", _subtitle = "Experience the future of technology with our revolutionary solutions"}: UltraFuturisticServiceShowcase2029Props) {_return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, _y: 20}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6}}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-            {title}
+            {_title}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {subtitle}
+            {_subtitle}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 6).map((service, index) => (
+          {_services.slice(0, _6).map(_(service, _index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={_{ opacity: 0, _y: 20}}
+              whileInView={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.6, _delay: index * 0.1}}
               className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
             >
               <div className="flex items-center justify-between mb-4">
@@ -62,13 +51,13 @@ export default function UltraFuturisticServiceShowcase2029({
               </div>
 
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                {service.name}
+                {_service.name}
               </h3>
-              <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
-              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+              <p className="text-gray-400 text-sm mb-3">{_service.tagline}</p>
+              <p className="text-gray-300 mb-4 line-clamp-3">{_service.description}</p>
 
               <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                <span className="text-2xl font-bold text-cyan-400">{_service.price}</span>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-4 h-4 text-yellow-400" />
                   <Shield className="w-4 h-4 text-green-400" />
@@ -77,7 +66,7 @@ export default function UltraFuturisticServiceShowcase2029({
               </div>
 
               <Link
-                href={service.link}
+                href={_service.link}
                 className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
@@ -88,9 +77,9 @@ export default function UltraFuturisticServiceShowcase2029({
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={_{ opacity: 0, _y: 20}}
+          whileInView={_{ opacity: 1, _y: 0}}
+          transition={_{ duration: 0.6, _delay: 0.6}}
           className="text-center mt-12"
         >
           <Link

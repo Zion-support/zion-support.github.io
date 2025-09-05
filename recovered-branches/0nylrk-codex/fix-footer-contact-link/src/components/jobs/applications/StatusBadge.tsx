@@ -1,13 +1,8 @@
 
-import { ApplicationStatus } from "@/types/jobs";
-import { Badge } from "@/components/ui/badge";
 
-interface StatusBadgeProps {
-  status: ApplicationStatus;
-}
+interface StatusBadgeProps {_status: ApplicationStatus;}
 
-export function StatusBadge({ status }: StatusBadgeProps) {
-  switch (status) {
+export function StatusBadge(_{_status}: StatusBadgeProps) {_switch (status) {
     case "new":
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":

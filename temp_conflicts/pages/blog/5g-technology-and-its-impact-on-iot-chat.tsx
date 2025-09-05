@@ -2,8 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const FiveGTechnologyAndItsImpactOnIotChat = () => {
-  return (
+const _FiveGTechnologyAndItsImpactOnIotChat = () => {_return (
     <div>
       <Head>
         <title>5G Technology And Its Impact On IoT - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const FiveGTechnologyAndItsImpactOnIotChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Chat5gTechnologyAndItsImpactOnIotChat;

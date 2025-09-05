@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 
-const Verify: NextPage = () => {
-  return (
+const Verify: NextPage = () => {_return (
     <div>
       <Head>
         <title>Verify - Zion Tech Solutions</title>
@@ -14,7 +13,6 @@ const Verify: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Verify;

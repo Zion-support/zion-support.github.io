@@ -1,23 +1,17 @@
 import React from 'react';
-import { toast as sonnerToast } from 'sonner';
-import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
 
-const variantStyles = {
-  info: { background: '#1e3a8a', color: '#fff' },
-  error: { background: '#7f1d1d', color: '#fff' }};
+const _variantStyles = {_info: { background: '#1e3a8a', _color: '#fff'},
+  error: {_background: '#7f1d1d', _color: '#fff'}};
 
 // Deduplication settings
-const DEDUPE_DELAY = 3000; // 3 seconds
-let lastKey = '';
-let lastShown = 0;
+const _DEDUPE_DELAY = 3000; // 3 seconds
+let _lastKey = '';
+let _lastShown = 0;
 
-interface ToastActionProps {
-  label: string;
-  onClick: () => void;
-}
+interface ToastActionProps {_label: string;
+  onClick: () => void;}
 
-interface ToastProps {
-  title?: string;
+interface ToastProps {_title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
   action?: ToastActionProps;
@@ -25,14 +19,11 @@ interface ToastProps {
   id?: string;
   duration?: number;
   priority?: ToastPriority;
-  persistent?: boolean;
-}
+  persistent?: boolean;}
 
-const shouldShow = (key: string): boolean => {
-  const now = Date.now();
+const _shouldShow = (key: string): boolean => {_const _now = Date.now();
   if (key === lastKey && (now - lastShown) < DEDUPE_DELAY) {
-    return false;
-  }
+    return false;}
   lastKey = key;
   lastShown = now;
   return true;
@@ -41,28 +32,16 @@ const shouldShow = (key: string): boolean => {
 /**
  * Enhanced toast adapter that uses the global toast manager
  */
-const toastAdapter = (props: ToastProps | string) => {
-  if (typeof props === 'string') {
+const _toastAdapter = (_props: ToastProps | string) => {_if (typeof props === 'string') {
     return globalToastManager.showToast({
-      message: props,
-      type: ToastType.INFO});
+      message: props, _type: ToastType.INFO});
   }
 
-  const { 
-    title, 
-    description, 
-    variant = 'default', 
-    action, 
-    onRetry, 
-    duration,
-    priority,
-    persistent = false 
-  } = props;
+  const {_title, _description, _variant = 'default', _action, _onRetry, _duration, _priority, _persistent = false} = props;
 
   // Map variant to toast type
   let type: ToastType;
-  switch (variant) {
-    case 'destructive':
+  switch (variant) {_case 'destructive':
       type = ToastType.ERROR;
       break;
     case 'success':
@@ -70,58 +49,32 @@ const toastAdapter = (props: ToastProps | string) => {
       break;
     default:
       type = ToastType.INFO;
-      break;
-  }
+      break;}
 
   // Use title as message if no description, otherwise use description
-  const message = description || title || '';
-  const toastTitle = title && description ? title : undefined;
+  const _message = description || title || '';
+  const _toastTitle = title && description ? title : undefined;
 
-  return globalToastManager.showToast({
-    message,
-    title: toastTitle,
-    type,
-    priority,
-    duration,
-    persistent,
-    action,
-    onRetry});
+  return globalToastManager.showToast({_message, _title: toastTitle, _type, _priority, _duration, _persistent, _action, _onRetry});
 };
 
 // Convenience methods that use the global toast manager
-toastAdapter.success = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.success(message, options);
-};
+toastAdapter.success = (_message: string, _options?: {_id?: string; duration?: number} & Record<string, _any>) => {_return showToast.success(message, _options);};
 
-toastAdapter.error = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.error(message, options);
-};
+toastAdapter.error = (_message: string, _options?: {_id?: string; duration?: number} & Record<string, _any>) => {_return showToast.error(message, _options);};
 
-toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.info(message, options);
-};
+toastAdapter.info = (_message: string, _options?: {_id?: string; duration?: number} & Record<string, _any>) => {_return showToast.info(message, _options);};
 
-toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.warning(message, options);
-};
+toastAdapter.warning = (_message: string, _options?: {_id?: string; duration?: number} & Record<string, _any>) => {_return showToast.warning(message, _options);};
 
-toastAdapter.dismiss = (toastId?: string | number) => {
-  if (toastId) {
-    globalToastManager.dismissToast(String(toastId));
-  } else {
-    globalToastManager.dismissAll();
-  }
+toastAdapter.dismiss = (_toastId?: string | number) => {_if (toastId) {
+    globalToastManager.dismissToast(String(toastId));} else {_globalToastManager.dismissAll();}
 };
 
 // Enhanced useToast hook with global toast manager integration
-export const useToast = () => ({
-  toast: toastAdapter,
-  dismiss: (toastId?: string) => {
+export const _useToast = () => (_{_toast: toastAdapter, _dismiss: (toastId?: string) => {
     if (toastId) {
-      globalToastManager.dismissToast(toastId);
-    } else {
-      globalToastManager.dismissAll();
-    }
+      globalToastManager.dismissToast(toastId);} else {_globalToastManager.dismissAll();}
   },
   
   // Additional methods from global toast manager
@@ -140,4 +93,4 @@ export const useToast = () => ({
   validationError: showToast.validationError,
   criticalError: showToast.criticalError});
 
-export const toast = toastAdapter;
+export const _toast = toastAdapter;

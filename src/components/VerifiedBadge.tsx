@@ -1,34 +1,26 @@
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-interface VerifiedBadgeProps {
-  verified: boolean;
+interface VerifiedBadgeProps {_verified: boolean;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */
-  label?: string;
-}
+  label?: string;}
 
-export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
-  if (!verified) return null;
+export function VerifiedBadge(_{_verified, _size = 'sm', _label = 'Verified talent'}: VerifiedBadgeProps) {_if (!verified) return null;
   
-  const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5'
-  };
+  const _sizeClasses = {
+    sm: 'h-3.5 w-3.5', _md: 'h-4 w-4', _lg: 'h-5 w-5'};
   
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
           <span className="inline-flex text-blue-500">
-            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+            <CheckCircle className={_`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{label}</p>
+          <p>{_label}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

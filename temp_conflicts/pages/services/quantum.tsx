@@ -1,82 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Atom, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Shield, Cpu, Database, Globe, Star, Lock
-} from 'lucide-react';
+import {_Atom, _ArrowRight, _CheckCircle, _Zap, _Target, _Users, _TrendingUp, _Shield, _Cpu, _Database, _Globe, _Star, _Lock} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function QuantumComputingPage() {
-  const services = [
+export default function QuantumComputingPage() {_const _services = [
     {
-      title: "Quantum Cybersecurity",
-      description: "Future-proof security with quantum-resistant encryption and advanced threat detection",
-      features: [
-        "Quantum-resistant algorithms",
-        "Post-quantum cryptography",
-        "Advanced threat detection",
-        "Zero-trust architecture"
-      ],
-      price: "$1,299/month",
-      icon: Shield
-    },
-    {
-      title: "Quantum Neural Networks",
-      description: "Revolutionary quantum-powered AI with advanced consciousness capabilities",
-      features: [
-        "Quantum neural processing",
-        "Advanced consciousness AI",
-        "Quantum machine learning",
-        "Real-time optimization"
-      ],
-      price: "$2,499/month",
-      icon: Atom
-    },
-    {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems with quantum computing power",
-      features: [
-        "Combinatorial optimization",
-        "Quantum annealing",
-        "Resource allocation",
-        "Performance optimization"
-      ],
-      price: "$899/month",
-      icon: Cpu
-    }
+      title: "Quantum Cybersecurity", _description: "Future-proof security with quantum-resistant encryption and advanced threat detection", _features: [
+        "Quantum-resistant algorithms", _"Post-quantum cryptography", _"Advanced threat detection", _"Zero-trust architecture"
+      ], _price: "$1, _299/month", _icon: Shield},
+    {_title: "Quantum Neural Networks", _description: "Revolutionary quantum-powered AI with advanced consciousness capabilities", _features: [
+        "Quantum neural processing", _"Advanced consciousness AI", _"Quantum machine learning", _"Real-time optimization"
+      ], _price: "$2, _499/month", _icon: Atom},
+    {_title: "Quantum Optimization", _description: "Solve complex optimization problems with quantum computing power", _features: [
+        "Combinatorial optimization", _"Quantum annealing", _"Resource allocation", _"Performance optimization"
+      ], _price: "$899/month", _icon: Cpu}
   ];
 
-  const benefits = [
-    {
-      icon: Lock,
-      title: "Unbreakable Security",
-      description: "Quantum-resistant encryption that future-proofs your data protection"
-    },
-    {
-      icon: Zap,
-      title: "Exponential Speed",
-      description: "Solve complex problems in seconds that would take classical computers years"
-    },
-    {
-      icon: Target,
-      title: "Advanced AI",
-      description: "Quantum-powered artificial intelligence with unprecedented capabilities"
-    },
-    {
-      icon: Globe,
-      title: "Future-Ready",
-      description: "Stay ahead of the curve with cutting-edge quantum technology"
-    }
+  const _benefits = [
+    {_icon: Lock, _title: "Unbreakable Security", _description: "Quantum-resistant encryption that future-proofs your data protection"},
+    {_icon: Zap, _title: "Exponential Speed", _description: "Solve complex problems in seconds that would take classical computers years"},
+    {_icon: Target, _title: "Advanced AI", _description: "Quantum-powered artificial intelligence with unprecedented capabilities"},
+    {_icon: Globe, _title: "Future-Ready", _description: "Stay ahead of the curve with cutting-edge quantum technology"}
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+  return (_<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Quantum Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary quantum computing solutions including quantum cybersecurity, neural networks, and optimization services." />
-        <meta name="keywords" content="quantum computing, quantum cybersecurity, quantum AI, quantum neural networks, Zion Tech Group" />
+        <meta name="description" content="Revolutionary quantum computing solutions including quantum cybersecurity, _neural networks, _and optimization services." />
+        <meta name="keywords" content="quantum computing, _quantum cybersecurity, _quantum AI, _quantum neural networks, _Zion Tech Group" />
         <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary quantum computing solutions for the future." />
         <meta property="og:type" content="website" />
@@ -86,13 +38,13 @@ export default function QuantumComputingPage() {
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
+      {_/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={_{ opacity: 0, _y: 30}}
+            animate={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
           >
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-5 mx-auto mb-8">
               <Atom className="w-10 h-10 text-white" />
@@ -102,12 +54,12 @@ export default function QuantumComputingPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
               Experience the future of computing with our revolutionary quantum solutions. 
-              From unbreakable cybersecurity to advanced AI consciousness, we're building tomorrow's technology today.
+              From unbreakable cybersecurity to advanced AI consciousness, _we're building tomorrow's technology today.
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={_{ scale: 1.05}}
+              whileTap={_{ scale: 0.95}}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Explore Quantum</span>
@@ -117,14 +69,14 @@ export default function QuantumComputingPage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {_/* Services Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -136,13 +88,12 @@ export default function QuantumComputingPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
+            {_services.map((service, _index) => (_<motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _y: 30}}
+                whileInView={_{ opacity: 1, _y: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-blue-500/0 via-cyan-400/10 to-blue-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />
@@ -151,24 +102,24 @@ export default function QuantumComputingPage() {
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/70 mb-6">{service.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{_service.title}</h3>
+                <p className="text-white/70 mb-6">{_service.description}</p>
                 
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {_service.features.map((feature, _featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                      <span className="text-white/80">{feature}</span>
+                      <span className="text-white/80">{_feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
+                <div className="text-2xl font-bold text-blue-400 mb-4">{_service.price}</div>
                 
                 <motion.a
                   href="mailto:kleber@ziontechgroup.com"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={_{ scale: 1.02}}
+                  whileTap={_{ scale: 0.98}}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300"
                 >
                   Get Started
@@ -179,14 +130,14 @@ export default function QuantumComputingPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {_/* Benefits Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -198,21 +149,21 @@ export default function QuantumComputingPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {_benefits.map(_(benefit, _index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={_{ opacity: 0, _x: index % 2 === 0 ? -30 : 30}}
+                whileInView={_{ opacity: 1, _x: 0}}
+                transition={_{ duration: 0.6, _delay: index * 0.1}}
+                viewport={_{ once: true}}
                 className="flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10"
               >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-4 flex-shrink-0">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-white/70">{benefit.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{_benefit.title}</h3>
+                  <p className="text-white/70">{_benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -220,14 +171,14 @@ export default function QuantumComputingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {_/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={_{ opacity: 0, _y: 30}}
+            whileInView={_{ opacity: 1, _y: 0}}
+            transition={_{ duration: 0.8}}
+            viewport={_{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready for the Quantum Future?
@@ -237,8 +188,8 @@ export default function QuantumComputingPage() {
             </p>
             <motion.a
               href="mailto:kleber@ziontechgroup.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={_{ scale: 1.05}}
+              whileTap={_{ scale: 0.95}}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Start Quantum Journey</span>

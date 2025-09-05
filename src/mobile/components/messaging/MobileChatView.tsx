@@ -1,71 +1,52 @@
 
-import React, { useState } from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useRouter } from 'next/router';
-import { toast } from "sonner";
+import React, {_useState} from "react";
 
-interface Message {
-  id: string;
+interface Message {_id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
   sender?: string;
   avatar?: string;
-  status?: 'sent' | 'delivered' | 'read';
-}
+  status?: 'sent' | 'delivered' | 'read';}
 
-interface MobileChatViewProps {
-  contact: {
+interface MobileChatViewProps {_contact: {
     id: string;
     name: string;
     avatar?: string;
-    status?: string;
-  };
+    status?: string;};
   messages: Message[];
   onBack: () => void;
-  onSendMessage: (content: string) => void;
+  onSendMessage: (_content: string) => void;
 }
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
-  const router = useRouter();
+export function MobileChatView(_{_contact, _messages, _onBack, _onSendMessage}: MobileChatViewProps) {_const [newMessage, _setNewMessage] = useState("");
+  const _router = useRouter();
   
-  const handleSend = () => {
+  const _handleSend = () => {
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage);
-      setNewMessage("");
-    }
+      setNewMessage("");}
   };
   
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const _handleKeyDown = (_e: React.KeyboardEvent<HTMLInputElement>) => {_if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSend();
-    }
+      handleSend();}
   };
   
-  const startVideoCall = () => {
-    const roomId = `mobile-${contact.id}`;
-    toast.success("Starting video call", {
-      description: `Connecting with ${contact.name}...`
+  const _startVideoCall = () => {_const _roomId = `mobile-${contact.id}`;
+    toast.success("Starting video call", {_description: `Connecting with ${contact.name}...`
     });
     
     // Navigate to video call page
-    router.push(`/call/${roomId}`);
+    router.push(`/call/${_roomId}`);
   };
   
-  const startAudioCall = () => {
-    const roomId = `mobile-audio-${contact.id}`;
-    toast.success("Starting audio call", {
-      description: `Connecting with ${contact.name}...`
+  const _startAudioCall = () => {_const _roomId = `mobile-audio-${contact.id}`;
+    toast.success("Starting audio call", {_description: `Connecting with ${contact.name}...`
     });
     
     // Navigate to video call page with audio-only flag
-    router.push(`/call/${roomId}?audioOnly=true`);
+    router.push(`/call/${_roomId}?audioOnly=true`);
   };
   
   return (
@@ -75,7 +56,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           <Button
             variant="ghost"
             size="icon"
-            onClick={onBack}
+            onClick={_onBack}
             aria-label="Go back"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -83,13 +64,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarImage src={_contact.avatar} alt={_contact.name} />
+              <AvatarFallback>{_contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
-              <h3 className="font-medium">{contact.name}</h3>
+              <h3 className="font-medium">{_contact.name}</h3>
               <p className="text-xs text-muted-foreground">
-                {contact.status || "Online"}
+                {_contact.status || "Online"}
               </p>
             </div>
           </div>
@@ -98,7 +79,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button
               variant="ghost"
               size="icon"
-              onClick={startAudioCall}
+              onClick={_startAudioCall}
               aria-label="Start audio call"
             >
               <Phone className="h-5 w-5" />
@@ -107,7 +88,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button
               variant="ghost"
               size="icon"
-              onClick={startVideoCall}
+              onClick={_startVideoCall}
               aria-label="Start video call"
             >
               <Video className="h-5 w-5" />
@@ -121,29 +102,26 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </header>
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message) => (
+        {_messages.map(_(message) => (
           <div 
             key={message.id} 
-            className={cn(
-              "flex",
-              message.isMe ? "justify-end" : "justify-start"
+            className={_cn(
+              "flex", _message.isMe ? "justify-end" : "justify-start"
             )}
           >
             <div 
-              className={cn(
-                "max-w-[80%] rounded-2xl px-4 py-2",
-                message.isMe 
+              className={_cn(
+                "max-w-[80%] rounded-2xl px-4 py-2", _message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}
             >
-              <p>{message.content}</p>
-              <div className={cn(
-                "text-xs mt-1 flex justify-end",
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              <p>{_message.content}</p>
+              <div className={_cn(
+                "text-xs mt-1 flex justify-end", _message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
-                {message.timestamp}
-                {message.isMe && message.status && (
+                {_message.timestamp}
+                {_message.isMe && message.status && (
                   <span className="ml-1">
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
@@ -161,18 +139,18 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <Input
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
+            value={_newMessage}
+            onChange={_(_e) => setNewMessage(e.target.value)}
+            onKeyDown={_handleKeyDown}
             placeholder="Type a message..."
             className="flex-1"
           />
           
           <Button
             size="icon"
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" : ""}
+            onClick={_handleSend}
+            disabled={_!newMessage.trim()}
+            className={_!newMessage.trim() ? "opacity-50" : ""}
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />

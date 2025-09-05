@@ -6,15 +6,12 @@ export type CandidateStatus =
   | "hired"
   | "rejected";
 
-export interface TalentProfile {
-  id: string;
+export interface TalentProfile {_id: string;
   name: string;
   title?: string;
-  photoUrl?: string;
-}
+  photoUrl?: string;}
 
-export interface JobApplication {
-  id: string;
+export interface JobApplication {_id: string;
   jobId: string;
   talentId: string;
   status: CandidateStatus;
@@ -24,12 +21,9 @@ export interface JobApplication {
   createdAt?: string;
   updatedAt?: string;
   lastActivityAt?: string | null;
-  talent?: TalentProfile;
-}
+  talent?: TalentProfile;}
 
-export interface ApplicationFilters {
-  status?: CandidateStatus | "all";
+export interface ApplicationFilters {_status?: CandidateStatus | "all";
   minScore?: number;
   fromDate?: Date | null;
-  toDate?: Date | null;
-}
+  toDate?: Date | null;}

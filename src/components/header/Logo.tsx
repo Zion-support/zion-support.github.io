@@ -1,32 +1,26 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useWhitelabel } from '@/context/WhitelabelContext';
 
-interface LogoProps {
-  customLogo?: string;
-  
-}
+interface LogoProps {_customLogo?: string;}
 
-export function Logo({ customLogo }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
+export function Logo(_{_customLogo}: LogoProps) {_const { isWhitelabel, _logoUrl, _brandName} = useWhitelabel();
   
   // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
+  const _logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific _customColor is provided
-  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
+  // const _colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
   
-  if (logoToUse) {
-    return (
+  if (logoToUse) {_return (
       <Link href="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
+        <img src={logoToUse} alt={_`${brandName} Logo`} className="h-8" width={_32} height={_32} />
       </Link>
     );
   }
   
   return (
     <Link href="/" className="flex items-center">
-      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
+      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={_32} height={_32} />
     </Link>
   );
 }

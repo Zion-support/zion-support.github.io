@@ -1,87 +1,53 @@
 
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
 import z from "zod";
-import { Mail } from 'lucide-react'
 
-export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""});
+export function ContactSection() {_const [formData, _setFormData] = useState({
+    name: "", _email: "", _subject: "", _message: ""});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [errors, setErrors] = useState<{
-    name?: string;
+  const [errors, setErrors] = useState<{_name?: string;
     email?: string;
     subject?: string;
-    message?: string;
-  }>({});
+    message?: string;}>({});
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  const _handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {_const { name, _value} = e.target;
+    setFormData(_(prev) => ({_...prev, _[name]: value}));
+    setErrors(_(prev) => ({_...prev, _[name]: undefined}));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
 
-    const schema = z.object({
-      name: z.string().min(2, "Name is required"),
-      email: z.string().email("Enter a valid email"),
-      subject: z.string().min(2, "Subject is required"),
-      message: z.string().min(10, "Message must be at least 10 characters")});
+    const _schema = z.object({
+      name: z.string().min(2, _"Name is required"), _email: z.string().email("Enter a valid email"), _subject: z.string().min(2, _"Subject is required"), _message: z.string().min(10, _"Message must be at least 10 characters")});
 
-    const result = schema.safeParse(formData);
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      for (const err of result.error.errors) {
-        if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message;
-        }
+    const _result = schema.safeParse(formData);
+    if (!result.success) {_const fieldErrors: Record<string, _string> = {};
+      for (const err of result.error.errors) {_if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message;}
       }
       setErrors(fieldErrors);
-      toast({
-        title: "Form Validation Error",
-        description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"});
+      toast({_title: "Form Validation Error", _description: result.error.errors[0]?.message || "Please check your form and try again", _variant: "destructive"});
       return;
     }
 
     setErrors({});
     setIsSubmitting(true);
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    fetch("/api/contact", {_method: "POST", _headers: { "Content-Type": "application/json"},
       body: JSON.stringify(formData)})
-      .then(async (res) => {
-        setIsSubmitting(false);
+      .then(_async (res) => {_setIsSubmitting(false);
         if (!res.ok) {
-          const data = await res.json().catch(() => ({}));
+          const _data = await res.json().catch__(() => ({}));
           throw new Error(data.error || "Failed to send message");
         }
-        toast({
-          title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+        toast({_title: "Message Sent", _description: "We've received your message and will get back to you soon."});
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 2000);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout__(() => setSubmitted(false), 2000);
+        setFormData({_name: "", _email: "", _subject: "", _message: ""});
       })
-      .catch((err) => {
-        setIsSubmitting(false);
+      .catch(_(err) => {_setIsSubmitting(false);
         toast({
-          title: "Submission Error",
-          description: err.message,
-          variant: "destructive"});
+          title: "Submission Error", _description: err.message, _variant: "destructive"});
       });
   };
 
@@ -113,7 +79,7 @@ export function ContactSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
               <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={_handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
@@ -122,12 +88,12 @@ export function ContactSection() {
                     <Input
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      value={_formData.name}
+                      onChange={_handleChange}
+                      className={_`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
-                    {errors.name && (
+                    {_errors.name && (
                       <p className="mt-1 text-sm text-red-500">{errors.name}</p>
                     )}
                   </div>
@@ -139,12 +105,12 @@ export function ContactSection() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      value={_formData.email}
+                      onChange={_handleChange}
+                      className={_`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
-                    {errors.email && (
+                    {_errors.email && (
                       <p className="mt-1 text-sm text-red-500">{errors.email}</p>
                     )}
                   </div>
@@ -156,12 +122,12 @@ export function ContactSection() {
                   <Input
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    value={_formData.subject}
+                    onChange={_handleChange}
+                    className={_`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
-                  {errors.subject && (
+                  {_errors.subject && (
                     <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
                   )}
                 </div>
@@ -172,13 +138,13 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    rows={_4}
+                    value={_formData.message}
+                    onChange={_handleChange}
+                    className={_`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
-                  {errors.message && (
+                  {_errors.message && (
                     <p className="mt-1 text-sm text-red-500">{errors.message}</p>
                   )}
                 </div>
@@ -186,11 +152,11 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isSubmitting}
+                    disabled={_isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {_isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
-                  {submitted && (
+                  {_submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
                 </div>

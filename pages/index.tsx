@@ -1,33 +1,20 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
-    isLoaded: false,
-    hasError: false,
-  });
+export default function Home() {_const [animationState, _setAnimationState] = useState<AnimationState>({
+    isLoaded: false, _hasError: false, });
 
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com',
-  };
+  const contact: ContactInfo = {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _site: 'https://ziontechgroup.com', };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
+  useEffect__(() => {_const _timer = setTimeout__(() => {
+      setAnimationState(prev => ({ ...prev, _isLoaded: true}));
     }, 100);
     return () => clearTimeout(timer);
   }, []);
 
-  if (animationState.hasError) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+  if (animationState.hasError) {_return (_<div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button
@@ -58,7 +45,7 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="language" content="en-US" />
-        <link rel="canonical" href={contact.site} />
+        <link rel="canonical" href={_contact.site} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta
@@ -69,7 +56,7 @@ export default function Home() {
           property="og:description"
           content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
         />
-        <meta property="og:url" content={contact.site} />
+        <meta property="og:url" content={_contact.site} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
@@ -86,29 +73,13 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={_{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
-              url: contact.site,
-              logo: `${contact.site}/favicon.svg`,
+              '@context': 'https://schema.org', _'@type': 'Organization', _name: 'Zion Tech Group', _url: contact.site, _logo: `${contact.site}/favicon.svg`,
               description:
                 'Leading provider of micro SaaS products, AI services, and IT solutions',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '364 E Main St STE 1008',
-                addressLocality: 'Middletown',
-                addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
-              },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: contact.phone,
-                contactType: 'customer service',
-                email: contact.email,
-              },
+              address: {_'@type': 'PostalAddress', _streetAddress: '364 E Main St STE 1008', _addressLocality: 'Middletown', _addressRegion: 'DE', _postalCode: '19709', _addressCountry: 'US', },
+              contactPoint: {_'@type': 'ContactPoint', _telephone: contact.phone, _contactType: 'customer service', _email: contact.email, },
               sameAs: [contact.site],
             }),
           }}
@@ -116,12 +87,10 @@ export default function Home() {
       </Head>
       <ErrorBoundary level="page">
         <Suspense
-          fallback={
-            <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />
-          }
+          fallback={_<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}
         >
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-            {/* Hero Section */}
+            {_/* Hero Section */}
             <section
               className="py-20 px-4 text-center"
               role="banner"
@@ -130,17 +99,17 @@ export default function Home() {
               <div className="max-w-4xl mx-auto">
                 <h1
                   id="hero-title"
-                  className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 >
                   Zion Tech Group
                 </h1>
                 <p
-                  className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 >
                   Innovative Micro SaaS, AI Services & IT Solutions
                 </p>
                 <p
-                  className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 >
                   We deliver cutting-edge technology solutions with 150+ micro
                   SaaS products, 100+ advanced AI services, and 100+
@@ -149,7 +118,7 @@ export default function Home() {
                   businesses scale efficiently and securely in the digital age.
                 </p>
                 <div
-                  className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={_`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                   role="navigation"
                   aria-label="Main navigation"
                 >
@@ -157,7 +126,7 @@ export default function Home() {
                     href="/services"
                     className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                     aria-label="View all our services"
-                    tabIndex={animationState.isLoaded ? 0 : -1}
+                    tabIndex={_animationState.isLoaded ? 0 : -1}
                   >
                     View All Services
                   </Link>
@@ -165,7 +134,7 @@ export default function Home() {
                     href="/services-catalog"
                     className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                     aria-label="Browse our services catalog"
-                    tabIndex={animationState.isLoaded ? 0 : -1}
+                    tabIndex={_animationState.isLoaded ? 0 : -1}
                   >
                     Services Catalog
                   </Link>
@@ -173,13 +142,13 @@ export default function Home() {
                     href="/contact"
                     className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                     aria-label="Get a quote for our services"
-                    tabIndex={animationState.isLoaded ? 0 : -1}
+                    tabIndex={_animationState.isLoaded ? 0 : -1}
                   >
                     Get Quote
                   </Link>
                 </div>
                 <div
-                  className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  className={_`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 >
                   <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
                     <h3
@@ -211,7 +180,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
-            {/* Services Overview */}
+            {_/* Services Overview */}
             <section className="py-16 px-4" role="main">
               <div className="max-w-6xl mx-auto">
                 <h2
@@ -294,7 +263,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
-            {/* Contact Section */}
+            {_/* Contact Section */}
             <section className="py-16 px-4 bg-slate-900/40">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -307,16 +276,16 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                   <a
-                    href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
+                    href={_`tel:${contact.phone.replace(/[^\d+]/g, _'')}`}
                     className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
                   >
-                    Call {contact.phone}
+                    Call {_contact.phone}
                   </a>
                   <a
-                    href={`mailto:${contact.email}`}
+                    href={_`mailto:${contact.email}`}
                     className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                   >
-                    Email {contact.email}
+                    Email {_contact.email}
                   </a>
                   <Link
                     href="/contact"
@@ -326,14 +295,14 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="text-slate-400">
-                  <p>{contact.address}</p>
+                  <p>{_contact.address}</p>
                   <p className="mt-2">
-                    Visit us at{' '}
+                    Visit us at{_' '}
                     <a
-                      href={contact.site}
+                      href={_contact.site}
                       className="text-blue-400 hover:text-blue-300"
                     >
-                      {contact.site}
+                      {_contact.site}
                     </a>
                   </p>
                 </div>
@@ -342,11 +311,9 @@ export default function Home() {
           </main>
         </Suspense>
         <PerformanceMonitor
-          showMetrics={process.env.NODE_ENV === 'development'}
-          logMetrics={true}
-          onThresholdExceeded={metrics => {
-            console.warn('Performance thresholds exceeded:', metrics);
-          }}
+          showMetrics={_process.env.NODE_ENV === 'development'}
+          logMetrics={_true}
+          onThresholdExceeded={_metrics => {}}
         />
       </ErrorBoundary>
     </>

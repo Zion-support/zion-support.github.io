@@ -1,5 +1,4 @@
-export interface MicroSaasService {
-  id: string;
+export interface MicroSaasService {_id: string;
   name: string;
   tagline: string;
   price: string;
@@ -9,26 +8,13 @@ export interface MicroSaasService {
   popular: boolean;
   icon: string;
   category: string;
-  color: string;
-}
+  color: string;}
 
 export const microSaasServices: MicroSaasService[] = [
-  {
-    id: 'ai-content-generator',
-    name: 'AI Content Generator',
-    tagline: 'Generate high-quality content with AI',
-    price: '$29',
-    period: '/month',
-    description: 'AI-powered content generation for blogs, social media, and marketing materials.',
-    features: ['AI writing assistant', 'Multiple content types', 'SEO optimization', 'Team collaboration'],
-    popular: true,
-    icon: '🤖',
-    category: 'AI & Machine Learning',
-    color: 'blue'
-  }
+  {_id: 'ai-content-generator', _name: 'AI Content Generator', _tagline: 'Generate high-quality content with AI', _price: '$29', _period: '/month', _description: 'AI-powered content generation for blogs, _social media, _and marketing materials.', _features: ['AI writing assistant', _'Multiple content types', _'SEO optimization', _'Team collaboration'], _popular: true, _icon: '🤖', _category: 'AI & Machine Learning', _color: 'blue'}
 ];
 
-export const serviceCategories = [
+export const _serviceCategories = [
   'All',
   'AI & Machine Learning',
   'Cybersecurity',

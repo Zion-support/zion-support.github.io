@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
+import type {_NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const SystemAdministrationChat: NextPage = () => {
-  return (
+const SystemAdministrationChat: NextPage = () => {_return (
     <div>
       <Head>
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
@@ -16,7 +15,6 @@ const SystemAdministrationChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  );
-};
+  );};
 
 export default SystemAdministrationChat;

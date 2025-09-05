@@ -10,28 +10,23 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr';
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
+export interface IntegrationProviderMeta {_id: IntegrationProviderId;
   name: string;
   category: IntegrationCategory;
   description?: string;
   oauthScopes?: string[];
-  icon?: string;
-}
+  icon?: string;}
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-export interface SyncRules {
-  // CRM rules
+export interface SyncRules {_// CRM rules
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules
   autoSyncApplicants?: boolean;
-  autoUploadResumes?: boolean;
-}
+  autoUploadResumes?: boolean;}
 
-export interface ProviderConnection {
-  providerId: IntegrationProviderId;
+export interface ProviderConnection {_providerId: IntegrationProviderId;
   status: SyncStatus;
   accessToken?: string;
   refreshToken?: string;
@@ -39,34 +34,25 @@ export interface ProviderConnection {
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
-  lastError?: string | null;
-}
+  lastError?: string | null;}
 
-export interface SyncLogEntry {
-  id: string;
+export interface SyncLogEntry {_id: string;
   timestamp: number;
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-  details?: Record<string, any>;
-}
+  details?: Record<string, _any>;}
 
-export interface ManualOverride {
-  jobId: string;
+export interface ManualOverride {_jobId: string;
   disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-}
+  disableAtsSync?: boolean;}
 
-export interface ZapierEvent {
-  id: string;
+export interface ZapierEvent {_id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
-}
+  payload: Record<string, _any>;}
 
-export interface IntegrationsState {
-  connections: ProviderConnection[];
+export interface IntegrationsState {_connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-  events: ZapierEvent[];
-}
+  events: ZapierEvent[];}

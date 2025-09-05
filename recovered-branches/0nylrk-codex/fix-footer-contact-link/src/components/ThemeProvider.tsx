@@ -1,67 +1,50 @@
 
-import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"
 
-type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-}
+type ThemeProviderProps = {_children: React.ReactNode
+  defaultTheme?: Theme}
 
-type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-}
+type ThemeProviderState = {_theme: Theme
+  setTheme: (_theme: Theme) => void}
 
-const initialState: ThemeProviderState = {
-  theme: "system",
-  setTheme: () => null}
+const initialState: ThemeProviderState = {_theme: "system", _setTheme: () => null}
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+const _ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
-export function ThemeProvider({
-  children,
-  defaultTheme = "system"}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+export function ThemeProvider(_{_children, _defaultTheme = "system"}: ThemeProviderProps) {_const [theme, _setTheme] = useState<Theme>(_() => (localStorage.getItem("theme") as Theme) || defaultTheme
   )
 
-  useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
+  useEffect__(() => {
+    const _root = window.document.documentElement
+    root.classList.remove("light", _"dark")
 
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const _systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light"
 
       root.classList.add(systemTheme)
-      return
-    }
+      return}
 
     root.classList.add(theme)
   }, [theme])
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem("theme", theme)
-      setTheme(theme)
-    }}
+  const _value = {_theme, _setTheme: (_theme: Theme) => {
+      localStorage.setItem("theme", _theme)
+      setTheme(theme)}}
 
   return (
-    <ThemeProviderContext.Provider value={value}>
-      {children}
+    <ThemeProviderContext.Provider value={_value}>
+      {_children}
     </ThemeProviderContext.Provider>
   )
 }
 
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext)
+export const _useTheme = () => {_const _context = useContext(ThemeProviderContext)
 
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider")
 
-  return context
-}
+  return context}

@@ -1,59 +1,38 @@
 
-import { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage
-} from "@/components/ui/form";
-import { Card, CardContent } from "@/components/ui/card";
+import {_Form, _FormControl, _FormField, _FormItem, _FormMessage} from "@/components/ui/form";
 
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
-}
+interface ReplyFormProps {_onSubmit: (_content: string) => Promise<void>;
+  parentId?: string;}
 
-interface ReplyFormValues {
-  content: string;
-}
+interface ReplyFormValues {_content: string;}
 
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export const _ReplyForm = (_{_onSubmit, _parentId}: ReplyFormProps) => {_const [isSubmitting, _setIsSubmitting] = useState(false);
   
-  const form = useForm<ReplyFormValues>({
+  const _form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: ""
-    }
+      content: ""}
   });
 
-  const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting(true);
+  const _handleSubmit = async (_values: ReplyFormValues) => {_setIsSubmitting(true);
     try {
       await onSubmit(values.content);
-      form.reset();
-    } finally {
-      setIsSubmitting(false);
-    }
+      form.reset();} finally {_setIsSubmitting(false);}
   };
 
   return (
     <Card>
       <CardContent className="pt-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+        <Form {_...form}>
+          <form onSubmit={_form.handleSubmit(handleSubmit)}>
             <FormField
-              control={form.control}
+              control={_form.control}
               name="content"
-              render={({ field }: { field: ControllerRenderProps<ReplyFormValues, "content"> }) => (
+              render={_(_{ field}: {_field: ControllerRenderProps<ReplyFormValues, _"content">}) => (
                 <FormItem>
                   <FormControl>
                     <Textarea
                       className="min-h-[100px] resize-y"
-                      {...field}
+                      {_...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -61,8 +40,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
               )}
             />
             <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
+              <Button type="submit" disabled={_isSubmitting}>
+                {_isSubmitting ? "Submitting..." : "Post Reply"}
               </Button>
             </div>
           </form>

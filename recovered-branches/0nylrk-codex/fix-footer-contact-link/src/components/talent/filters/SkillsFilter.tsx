@@ -1,11 +1,7 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
 
 // Common skills in AI and tech
-const POPULAR_SKILLS = [
+const _POPULAR_SKILLS = [
   "Machine Learning",
   "Deep Learning",
   "Python",
@@ -24,36 +20,35 @@ const POPULAR_SKILLS = [
   "Security"
 ];
 
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
-  return (
+export function SkillsFilter(_{_selectedSkills, _toggleSkill, _expanded, _toggleSection, _isMobileFilterOpen}: SkillsFilterProps) {_return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Skills</span>
-        {expanded ? (
+        {_expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
       
-      {expanded && (
+      {_expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
               <Checkbox
-                id={`skill-${skill}`}
-                checked={selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
+                id={_`skill-${skill}`}
+                checked={_selectedSkills.includes(skill)}
+                onCheckedChange={_() => toggleSkill(skill)}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
-                htmlFor={`skill-${skill}`}
+                htmlFor={_`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-                {skill}
+                {_skill}
               </label>
             </div>
           ))}

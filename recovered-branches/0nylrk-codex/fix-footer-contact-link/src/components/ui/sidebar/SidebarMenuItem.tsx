@@ -1,19 +1,15 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
 
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
-  className?: string;
-  children?: React.ReactNode;
-}
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {_className?: string;
+  children?: React.ReactNode;}
 
-export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {
-  return (
+export function SidebarMenuItem(_{_className, _children, _...props}: SidebarMenuItemProps) {_return (
     <li 
-      className={cn("", className)} 
-      {...props}
+      className={cn("", _className)} 
+      {_...props}
     >
-      {children}
+      {_children}
     </li>
   );
 }

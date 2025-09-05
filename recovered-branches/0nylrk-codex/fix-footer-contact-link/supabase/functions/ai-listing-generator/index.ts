@@ -1,41 +1,30 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+serve(_async (req) => {_if (req.method === "OPTIONS") {
+    return new Response(null, _{ headers: corsHeaders});
   }
 
-  try {
-    const { title, category, keyFeatures, targetAudience } = await req.json();
+  try {_const { title, _category, _keyFeatures, _targetAudience} = await req.json();
 
-    if (!title || !category) {
-      return new Response(
+    if (!title || !category) {_return new Response(
         JSON.stringify({ 
-          error: "Missing required fields: title and category are required" 
-        }),
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+          error: "Missing required fields: title and category are required"}),
+        {_status: 400, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
         }
       );
     }
 
-    const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
-    const openai = new OpenAIApi(configuration);
+    const _configuration = new Configuration({_apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const _openai = new OpenAIApi(configuration);
 
-    const prompt = `Generate an optimized marketplace listing for the following product:
+    const _prompt = `Generate an optimized marketplace listing for the following product:
     
-Title: ${title}
-Category: ${category}
-Key Features: ${keyFeatures || "Not specified"}
-Target Audience: ${targetAudience || "General users"}
+Title: ${_title}
+Category: ${_category}
+Key Features: ${_keyFeatures || "Not specified"}
+Target Audience: ${_targetAudience || "General users"}
 
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
@@ -44,62 +33,40 @@ Please create:
 4. A bulleted list of 3-5 key selling points
 
 Format the response as a JSON object with the following structure:
-{
-  "description": "The optimized description here...",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-  "suggestedPrice": { "min": number, "max": number },
+{_"description": "The optimized description here...", _"tags": ["tag1", _"tag2", _"tag3", _"tag4", _"tag5"], _"suggestedPrice": { "min": number, _"max": number},
   "keyPoints": ["point1", "point2", "point3"]
 }`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
+    const _completion = await openai.chat.completions.create({_model: "gpt-4o-mini", _messages: [{ role: "user", _content: prompt}],
       temperature: 0.7});
 
-    const responseText = completion.choices[0].message.content;
+    const _responseText = completion.choices[0].message.content;
     
     // Parse the JSON from the AI response
     let parsedResponse;
-    try {
-      // Extract the JSON content if it's wrapped in markdown code blocks
-      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+    try {_// Extract the JSON content if it's wrapped in markdown code blocks
+      const _jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText];
       
-      const jsonString = jsonMatch[1].trim();
+      const _jsonString = jsonMatch[1].trim();
       parsedResponse = JSON.parse(jsonString);
-    } catch (error) {
-      console.error("Failed to parse AI response as JSON:", error);
-      console.log("Raw response:", responseText);
-      
-      // Provide a fallback structured response
+    } catch (error) {_// Provide a fallback structured response
       parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.",
-        tags: [],
-        suggestedPrice: { min: 0, max: 0 },
+        description: "An error occurred while generating the optimized description. Please try again.", _tags: [], _suggestedPrice: { min: 0, _max: 0},
         keyPoints: []
       };
     }
 
     return new Response(
-      JSON.stringify({ 
-        generated: parsedResponse
-      }),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      JSON.stringify({_generated: parsedResponse}),
+      {_headers: { ...corsHeaders, _"Content-Type": "application/json"} 
       }
     );
-  } catch (error) {
-    console.error("Error in AI listing generator:", error);
-    
-    return new Response(
+  } catch (error) {_return new Response(
       JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+        error: "Failed to generate optimized listing content", _details: error.message}),
+      {_status: 500, _headers: { ...corsHeaders, _"Content-Type": "application/json"} 
       }
     );
   }
