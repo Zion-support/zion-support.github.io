@@ -478,14 +478,8 @@ const aiServices = [
     targetUsers: 'Schools, Universities, Online education, Corporate training'
   }
 ];
-      timeline: '4–8 weeks',
-      benefits: [
-        '80% reduction in response time',
-        '60% decrease in support costs',
-        '24/7 customer availability',
-        'Improved customer satisfaction scores'
-      ]
-    },
+
+const additionalServices = [
     {
       icon: TrendingUp,
       name: 'Predictive Analytics & Forecasting',
@@ -1475,8 +1469,8 @@ const aiServices = [
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
       ]
-    }
-  ];
+      }
+];
 
 const categories = [
   { name: "All", count: aiServices.length },
