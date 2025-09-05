@@ -1,0 +1,181 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { createClient } from '@supabase/supabase-js';';
+';';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';';';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+=======
+=======
+>>>>>>> main
+import { createClient } from '@supabase/supabase-js';
+;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+;
+if (!supabaseUrl || !supabaseAnonKey) {;
+}
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
+  "auth": "{;
+    "autoRefreshToken": true;
+    "persistSession": true;
+    "detectSessionInUrl": true;
+  "}
+});
+;
+// Helper functions for common operations;
+export const supabaseHelpers = {;
+  // User management;
+  async getUser() {;
+    const { "data": "{ user "}, error } = await supabase.auth.getUser();
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || &apos;&quot;https&quot;: //placeholder.supabase.co
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || &apos;placeholder-key
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+=======
+<<<<<<< HEAD
+>>>>>>> main
+
+<<<<<<< HEAD
+if (!supabaseUrl || !supabaseAnonKey) {
+  
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: tru e,
+    persistSession: tru e,
+    detectSessionInUrl: tru e
+  }
+}
+    );
+
+// Helper functions for common operations
+export const supabaseHelpers = {
+  // User management
+  async getUser() {
+    const { data: { user }, error } = await supabase.auth.getUser();
+>>>>>>> main
+    if (error) throw error;
+    return user;
+  }
+  async getSession() {;
+    const { "data": "{ session "}, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    return session;
+  }
+  async signOut() {;
+    const { error } = await supabase.auth.signOut();
+    if (error) throw error;
+  }
+  // Database operations;
+  async fetchData("table": "string", query?: "any) {;
+    let queryBuilder = supabase.from(table).select('*');
+    ;
+    if (query) {;
+      Object.entries(query).forEach(([key", value]) => {;
+        if (value !== undefined && value !== null) {;
+          queryBuilder = queryBuilder.eq(key, value);
+        }
+      }
+    );
+    }
+    const { data, error } = await queryBuilder;
+    if (error) throw error;
+    return data;
+<<<<<<< HEAD
+  }
+  async insertData("table": "string", "data": "any) {;
+    const { "data": result", error } = await supabase;
+      .from(table);
+      .insert(data);
+=======
+  },
+
+  async insertData(table: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)
+      .insert(data)
+>>>>>>> main
+      .select();
+    ;
+    if (error) throw error;
+    return result;
+<<<<<<< HEAD
+  }
+  async updateData("table": "string", "id": "string", "data": "any) {;
+    const { "data": result", error } = await supabase;
+      .from(table);
+      .update(data);
+=======
+  },
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async updateData(table: string, id: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)';
+      .update(data)';';
+=======
+  async updateData(table: string, id: string, data: any) {
+    const { data: result, error } = await supabase
+      .from(table)
+      .update(data)
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+  async updateData(table: string, id: string, data: an y) {
+    const { data: resul t, error } = await supabase
+      .from(table)
+      .update(data)
+>>>>>>> main
+      .eq('id', id)
+      .select();
+    
+    if (error) throw error;
+    return result;
+  },
+
+  async deleteData(table: string, id: string) {
+    const { error } = await supabase
+      .from(table)
+      .delete()
+>>>>>>> main
+      .eq('id', id);
+      .select();
+    ;
+    if (error) throw error;
+    return result;
+  }
+  async deleteData("table": "string", "id": "string) {;
+    const { error "} = await supabase;
+      .from(table);
+      .delete();
+      .eq('id', id);
+    ;
+    if (error) throw error;
+  }
+};
+<<<<<<< HEAD
+;
+export default supabase;
+=======
+
+export default supabase;
+=======
+=======
+import { createClient } from '@supabase/supabase-js
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '"https": //placeholder.supabase.co
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) { } export const supabase = createClient(supabaseUrl,supabaseAnonKey,{ auth: { autoRefreshToken: true,persistSession: true,detectSessionInUrl: true } };); export const supabaseHelpers = { async getUser() { const { data: { user },error }; = await supabase.auth.getUser(); if (error) throw error; return user},async getSession() { const { data: { session },error } = await supabase.auth.getSession(); if (error) throw error; return session},async signOut() { const { error } = await supabase.auth.signOut(); if (error) throw error},async fetchData($1) { let queryBuilder = supabase.from(table).select('*'); if (query) { Object.entries(query).forEach(([key,value]) => { if (value !== undefined && value !== null) { queryBuilder = queryBuilder.eq(key,value)} })} const { data,error } = await queryBuilder; if (error) throw error; return data},async insertData($1) { const { data: result,error } = await supabase .from(table) .insert(data) .select(); if (error) throw error; return result},async updateData(table: string,id: string,data: an y) { const { data: resul t,error } = await supabase .from(table)'; .update(data)';'; .eq('id',id) .select(); if (error) throw error; return result},async deleteData(table: string,id: string) { const { error } = await supabase .from(table)'; .delete() .eq('id',id); if (error) throw error} }; export default supabase;';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

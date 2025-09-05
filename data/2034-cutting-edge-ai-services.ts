@@ -1,102 +1,69 @@
-export type CuttingEdgeAIService = {
-	id: string;
-	name: string;
-	category: string;
-	tagline: string;
-	description: string;
-	features: string[];
-	pricing: {
-		starter?: string;
-		monthly?: number;
-		professional?: string;
-		enterprise?: string;
-	};
-	status?: 'Live' | 'Beta' | 'GA';
-	rating?: number;
-	customerCount?: number;
-	demo?: string;
-	contact?: string;
-};
-
-export const cuttingEdgeAIServices = [
-  {
-    id: 'ai-evaluation-orchestrator-2034',
-    name: 'AI Evaluation Orchestrator',
-    category: 'AI Services',
-    description: 'Automate LLM evals, regression tests, red-teaming, and leaderboards across providers with dashboards and gates.',
-    pricing: { monthly: 199 },
-    features: [
-      'Evaluation harness and datasets',
-      'Multi-model matrix (OpenAI, Anthropic, Groq, local)',
-      'Safety regressions and red-team packs',
-      'Leaderboards and quality gates'
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+export interface CuttingEdgeAIService2034 {
+  "id": string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price?: { monthly?: number; yearly?: number; currency: string };
+  "features": string[];
+  link: string;
+  popular: boolean;
+  icon: string;
+  color: string;
+  launchDate?: string;
+  rating?: number}
+export const "cuttingEdgeAIServices": CuttingEdgeAIService2034[] = [{
+    id: 'llm-eval-orchestrator-2034',
+    "name": 'LLM Evaluation Orchestrator',
+    "tagline": 'Regression tests, red-teaming, and leaderboards',
+    "description": 'Automate LLM evals across providers with test suites, safety red-teaming, and dashboards. CI gate for model changes.',
+    "category": 'AI & Data',
+    "price": { monthly: 99, "yearly": 990, "currency": 'USD' },
+    "features": [
+      'Provider-agnostic runner',
+      'Dataset and prompt versioning',
+      'Guardrail and jailbreak tests',
+      'CI integration and reports',
+      'Cost and latency tracking'
     ],
-    link: 'https://ziontechgroup.com/ai-evaluation-orchestrator',
-    launchDate: '2025-09-01',
-    rating: 4.8
+    "link": 'https://ziontechgroup.com/services',
+    "popular": true,
+    "icon": '🧪',
+    "color": 'from-cyan-600 to-blue-700',
+    "launchDate": '2025-01-20',
+    "rating": 4.8
   },
   {
-    id: 'ai-red-teaming-suite-2034',
-    name: 'AI Red Teaming Suite',
-    category: 'AI Services',
-    description: 'Continuously stress-test LLM apps with curated jailbreak and prompt injection attacks and automated reporting.',
-    pricing: { monthly: 149 },
-    features: [
-      'Attack packs and mutation engines',
-      'Policy checks and safety scoring',
-      'Automated regressions and reports',
-      'CI/CD integration'
+    "id": 'hybrid-rag-starter-2034',
+    "name": 'Hybrid RAG Starter',
+    "tagline": 'Structured + unstructured retrieval with eval harness',
+    "description": 'Production RAG template combining SQL + vector stores with caching, tracing, and evaluation harness.',
+    "category": 'AI & Data',
+    "price": { monthly: 79, "yearly": 790, "currency": 'USD' },
+    "features": ['Hybrid retrieval (BM25 + vectors)',
+      'Eval harness and datasets',
+      'Prompt caching and tracing',
+      'Guardrails and redaction',
+      'SDKs for Node/Python'
     ],
-    link: 'https://ziontechgroup.com/ai-red-teaming-suite',
-    launchDate: '2025-07-01',
-    rating: 4.7
-  },
-  {
-    id: 'rag-observability-2034',
-    name: 'RAG Observability & Guardrails',
-    category: 'AI Services',
-    description: 'End-to-end observability for RAG pipelines with drift detection, evals, and guardrails.',
-    pricing: { monthly: 129 },
-    features: [
-      'Chunking/embedding quality metrics',
-      'Hallucination and toxicity checks',
-      'Latency and cost dashboards',
-      'Retrieval drift detection'
-    ],
-    link: 'https://ziontechgroup.com/rag-observability',
-    launchDate: '2025-06-20',
-    rating: 4.6
-  },
-  {
-    id: 'sales-copilot-2034',
-    name: 'Sales Copilot',
-    category: 'AI Services',
-    description: 'AI assistant for prospecting, inbox triage, call notes, and next steps integrated with your CRM.',
-    pricing: { monthly: 39 },
-    features: [
-      'Multi-channel prospecting and enrichment',
-      'Email drafting and summarization',
-      'Call note extraction and action items',
-      'CRM updates and analytics'
-    ],
-    link: 'https://ziontechgroup.com/sales-copilot',
-    launchDate: '2025-05-10',
-    rating: 4.6
-  },
-  {
-    id: 'customer-service-ai-2034',
-    name: 'Customer Service AI',
-    category: 'AI Services',
-    description: '24/7 AI agent for Tier-1 support with handoff, analytics, and multi-channel coverage.',
-    pricing: { monthly: 59 },
-    features: [
-      'Chat, email, and voice channels',
-      'Handoff and ticketing integrations',
-      'Knowledge ingestion and RAG',
-      'CSAT and KPI dashboards'
-    ],
-    link: 'https://ziontechgroup.com/customer-service-ai',
-    launchDate: '2025-04-05',
-    rating: 4.7
+    "link": 'https://ziontechgroup.com/services',
+    "popular": true,
+    "icon": '🔎',
+    "color": 'from-purple-600 to-pink-600',
+    "launchDate": '2025-01-30',
+    "rating": 4.7
   }
 ];
+<<<<<<< HEAD
+=======
+export interface CuttingEdgeAIService2034 { id: 'string; name: string; tagline: string; description: string; category: string;' } price?: { monthly?: number; yearly?: number; currency: 'string' }; features: 'string[]; link: string; popular: boolean; icon: string; color: string; launchDate?: string; rating?: number;' } export const cuttingEdgeAIServices: CuttingEdgeAIService2034[] = [ { id: 'llm-eval-orchestrator-2034',name: 'LLM Evaluation Orchestrator',tagline: 'Regression tests,red-teaming,and leaderboards',description: 'Automate LLM evals across providers with test suites,safety red-teaming,and dashboards. CI gate for model changes.',category: 'AI & Data',price: { monthly: 99,yearly: '990',currency: 'USD' },features: [ 'Provider-agnostic runner','Dataset and prompt versioning','Guardrail and jailbreak tests','CI integration and reports','Cost and latency tracking' ],link: 'https: popular: 'true',icon: '🧪',color: 'from-cyan-600 to-blue-700',launchDate: '2025-01-20',rating: '4.8' },{ id: 'hybrid-rag-starter-2034',name: 'Hybrid RAG Starter',tagline: 'Structured + unstructured retrieval with eval harness',description: 'Production RAG template combining SQL + vector stores with caching,tracing,and evaluation harness.',category: 'AI & Data',price: { monthly: 79,yearly: '790',currency: 'USD' },features: [ 'Hybrid retrieval (BM25 + vectors)','Eval harness and datasets','Prompt caching and tracing','Guardrails and redaction','SDKs for Node/Python' ],link: 'https: popular: 'true',icon: '🔎',color: 'from-purple-600 to-pink-600',launchDate: '2025-01-30',rating: '4.7' } ];
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> main
+export interface CuttingEdgeAIService2034 { id: string; name: string; tagline: string; description: string; category: string; price?: { monthly?: number; yearly?: number; currency: string }; features: string[]; link: string; popular: boolean; icon: string; color: string; launchDate?: string; rating?: number} export const cuttingEdgeAIServices: CuttingEdgeAIService2034[] = [ { id: 'llm-eval-orchestrator-2034',name: 'LLM Evaluation Orchestrator',tagline: 'Regression tests,red-teaming,and leaderboards',description: 'Automate LLM evals across providers with test suites,safety red-teaming,and dashboards. CI gate for model changes.',category: 'AI & Data',price: { monthly: 99,yearly: 990,currency: 'USD' },features: [ 'Provider-agnostic runner','Dataset and prompt versioning','Guardrail and jailbreak tests','CI integration and reports','Cost and latency tracking' ],link: 'https: popular: true,icon: '🧪',color: 'from-cyan-600 to-blue-700',launchDate: '2025-01-20',rating: 4.8 },{ id: 'hybrid-rag-starter-2034',name: 'Hybrid RAG Starter',tagline: 'Structured + unstructured retrieval with eval harness',description: 'Production RAG template combining SQL + vector stores with caching,tracing,and evaluation harness.',category: 'AI & Data',price: { monthly: 79,yearly: 790,currency: 'USD' },features: [ 'Hybrid retrieval (BM25 + vectors)','Eval harness and datasets','Prompt caching and tracing','Guardrails and redaction','SDKs for Node/Python' ],link: 'https: popular: true,icon: '🔎',color: 'from-purple-600 to-pink-600',launchDate: '2025-01-30',rating: 4.7 } ];
+>>>>>>> main

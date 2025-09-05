@@ -1,20 +1,31 @@
-import type { AppProps } from 'next/app';
-import React, { useRef } from 'react';
-import '../styles/globals.css';
-import { SEOContext } from '../components/SEOContext';
-import DefaultSEO from '../components/DefaultSEO';
-import Analytics from '../components/Analytics';
-import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+import type { AppProps } from 'next/app';';
+import '../styles/globals.css';';
+
+export default function App({ Component, pageProps }: AppProps) {;
+  return <Component {...pageProps} />;,
+=======
+<<<<<<< HEAD
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
-	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Analytics />
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-			<DefaultSEO />
-		</SEOContext.Provider>
-	);
+  return <Component {...pageProps} />;
+=======
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main className="flex-grow">
+        <Component {...pageProps} />
+      </main>
+      <EnhancedFooter />
+    </div>
+  );
+>>>>>>> main
+>>>>>>> main
 }

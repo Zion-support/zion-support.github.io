@@ -1,19 +1,45 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+<<<<<<< HEAD
+import { Html, Head, Main, NextScript } from 'next/document';';
 
-export default class MyDocument extends Document {
-	render() {
-		return (
-			<Html lang="en">
-				<Head>
-					<meta charSet="utf-8" />
-					<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<link rel="icon" href="/favicon.svg" />
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+export default function Document() {;
+  return (;
+    <Html lang="en">";
+      <Head />;
+      <body>;
+        <Main />;
+        <NextScript />;
+      </body>;
+    </Html>;
+  );,
+=======
+<<<<<<< HEAD
+import { Html, Head, Main, NextScript } from 'next/document';
+=======
+<<<<<<< HEAD
+import { Html, Head, Main, NextScript } from "next/document";
+>>>>>>> main
+
+export default function Document() {
+  return (
+    <Html lang="en">
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+<<<<<<< HEAD
+=======
+=======
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en">
+    <Head />
+    <body>
+      <Main />
+      <NextScript />
+    </body>
+  </Html>
+>>>>>>> main
+>>>>>>> main
+  );
+>>>>>>> main
 }

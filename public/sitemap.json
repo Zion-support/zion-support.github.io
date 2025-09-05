@@ -1,0 +1,90 @@
+{
+  "baseUrl": "https://ziontechgroup.com",
+  "pages": [
+    {
+      "url": "/",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "1.0",
+      "fullUrl": "https://ziontechgroup.com/"
+    },
+    {
+      "url": "/about",
+      "lastmod": "2025-09-03",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "fullUrl": "https://ziontechgroup.com/about"
+    },
+    {
+      "url": "/services",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "fullUrl": "https://ziontechgroup.com/services"
+    },
+    {
+      "url": "/services-catalog",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "fullUrl": "https://ziontechgroup.com/services-catalog"
+    },
+    {
+      "url": "/micro-saas",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "fullUrl": "https://ziontechgroup.com/micro-saas"
+    },
+    {
+      "url": "/ai-services",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "fullUrl": "https://ziontechgroup.com/ai-services"
+    },
+    {
+      "url": "/it-services",
+      "lastmod": "2025-09-03",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "fullUrl": "https://ziontechgroup.com/it-services"
+    },
+    {
+      "url": "/contact",
+      "lastmod": "2025-09-03",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "fullUrl": "https://ziontechgroup.com/contact"
+    },
+    {
+      "url": "/pricing",
+      "lastmod": "2025-09-03",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "fullUrl": "https://ziontechgroup.com/pricing"
+    },
+    {
+      "url": "/faq",
+      "lastmod": "2025-09-03",
+      "changefreq": "monthly",
+      "priority": "0.6",
+      "fullUrl": "https://ziontechgroup.com/faq"
+    },
+    {
+      "url": "/privacy",
+      "lastmod": "2025-09-03",
+      "changefreq": "yearly",
+      "priority": "0.4",
+      "fullUrl": "https://ziontechgroup.com/privacy"
+    },
+    {
+      "url": "/terms",
+      "lastmod": "2025-09-03",
+      "changefreq": "yearly",
+      "priority": "0.4",
+      "fullUrl": "https://ziontechgroup.com/terms"
+    }
+  ],
+  "generatedAt": "2025-09-03T16:26:27.667Z"
+}

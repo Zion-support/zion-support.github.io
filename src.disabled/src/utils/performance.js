@@ -1,0 +1,1 @@
+module.exports = const performance = {}; export default performance;

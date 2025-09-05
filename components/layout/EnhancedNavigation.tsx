@@ -1,342 +1,332 @@
-import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const React, { useState } from "react";"const Link from "next/link";"const { Menu, X, ChevronDown } from "lucide-react";const EnhancedNavigation: React.FC = () => { const [isOpen, setIsOpen] = useState(false); const [servicesOpen, setServicesOpen] = useState(false);" const services = [{ name: "All Services", href: "/services" }," { name: "AI Services", href: "/ai-services" }," { name: "IT Services", href: "/it-services" }," { name: "Micro SaaS", href: "/micro-saas" }, ]; return (" <nav className="bg-white shadow-lg">" <div className="container mx-auto px-4">" <div className="flex justify-between items-center py-4">'"'"
+=======
+<<<<<<< HEAD
+import _React, { useState } from 'react';,
+import Link from 'next/link';';
+import { Menu, X, ChevronDown } from 'lucide-react';,
+
+const "EnhancedNavigation": _React.FC = () => {";
+;  const [isOpen, setIsOpen] = useState(false);}
+  const [servicesOpen, setServicesOpen] = useState(false);,
+
+  const services = [{ name: 'All Services, href: '/services' },',
+    { name: 'AI Services, href: '/ai-services' },',
+    { name: 'IT Services, href: '/it-services' },',
+    { name: 'Micro SaaS, href: '/micro-saas' },',
+;  ];,
+
+  return (;
+    <nav className="bg-white shadow-lg">";
+      <div className="container mx-auto px-4">";
+        <div className="flex justify-between items-center py-4">";
+=======
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Search, 
-  Brain, Cpu, Rocket, Shield, 
-  Zap, Globe, Star, Users
-} from 'lucide-react';
-
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-}
-
-const navigationItems: NavigationItem[] = [
-  {
-    name: 'AI Services',
-    href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Cutting-edge AI solutions',
-    children: [
-      { name: 'AI Agents', href: '/ai-agents', description: 'Intelligent automation' },
-      { name: 'AI Analytics', href: '/ai-analytics', description: 'Data-driven insights' },
-      { name: 'AI Content', href: '/ai-content', description: 'Content generation' },
-      { name: 'AI Security', href: '/ai-security', description: 'Intelligent protection' }
-    ]
-  },
-  {
-    name: 'Quantum Computing',
-    href: '/quantum-computing',
-    icon: <Cpu className="w-5 h-5" />,
-    description: 'Next-generation computing',
-    children: [
-      { name: 'Quantum AI', href: '/quantum-ai', description: 'AI + Quantum fusion' },
-      { name: 'Quantum Security', href: '/quantum-security', description: 'Unbreakable encryption' },
-      { name: 'Quantum Finance', href: '/quantum-finance', description: 'Trading optimization' },
-      { name: 'Quantum Logistics', href: '/quantum-logistics', description: 'Supply chain optimization' }
-    ]
-  },
-  {
-    name: 'Space Technology',
-    href: '/space-technology',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Space exploration & operations',
-    children: [
-      { name: 'Satellite Operations', href: '/satellite-operations', description: 'Mission control' },
-      { name: 'Space Analytics', href: '/space-analytics', description: 'Data insights' },
-      { name: 'Orbital Mechanics', href: '/orbital-mechanics', description: 'Trajectory optimization' }
-    ]
-  },
-  {
-    name: 'Enterprise IT',
-    href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
-    description: 'Enterprise solutions',
-    children: [
-      { name: 'Cloud Migration', href: '/cloud-migration', description: 'Seamless transition' },
-      { name: 'Cybersecurity', href: '/cybersecurity', description: 'Advanced protection' },
-      { name: 'DevOps', href: '/devops', description: 'Automated operations' },
-      { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence' }
-    ]
-  },
-  {
-    name: 'Micro SaaS',
-    href: '/micro-saas',
-    icon: <Zap className="w-5 h-5" />,
-    description: 'Ready-to-use solutions',
-    children: [
-      { name: 'Business Tools', href: '/business-tools', description: 'Productivity boosters' },
-      { name: 'Marketing Automation', href: '/marketing-automation', description: 'Growth acceleration' },
-      { name: 'Customer Success', href: '/customer-success', description: 'Retention optimization' },
-      { name: 'Financial Planning', href: '/financial-planning', description: 'Wealth management' }
-    ]
-  },
-  {
-    name: 'Emerging Tech',
-    href: '/emerging-tech',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'Future technologies',
-    children: [
-      { name: 'Metaverse', href: '/metaverse', description: 'Virtual worlds' },
-      { name: 'Brain-Computer Interface', href: '/bci', description: 'Neural technology' },
-      { name: 'Autonomous Vehicles', href: '/autonomous-vehicles', description: 'Self-driving systems' },
-      { name: 'Blockchain', href: '/blockchain', description: 'Decentralized solutions' }
-    ]
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'All offerings and benchmarks',
-    children: [
-      { name: 'All Services', href: '/services', description: 'Browse all offerings' },
-      { name: 'Services Advertising', href: '/services-advertising', description: 'Features and benefits' },
-      { name: 'Market Pricing', href: '/market-pricing', description: 'Vendor-verified prices' }
-    ]
-  }
-];
+<<<<<<< HEAD
+>>>>>>> main
 
 const EnhancedNavigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+<<<<<<< HEAD
+=======
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+=======
+import { Menu, X, ChevronDown } from 'lucide-react';
+const "EnhancedNavigation": React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
-  const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
-
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const services = [{ name: 'All Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+  ];
+>>>>>>> main
+>>>>>>> main
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+<<<<<<< HEAD
+          <Link href="/" className="text-2xl font-bold text-gray-800">
+            Zion Tech Group
+          </Link>
+
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors">Home</span>
+            </Link>
+
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                Services
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div
+                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 ${
+                  servicesOpen ? 'opacity-100 visible' : '\'
+                }`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                {services.map((service) => (
+                  <Link key={service.name} href={service.href}>
+                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors> {service.name}
+                    </span"
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link href="/about">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors>About</span> </Link"
+            <Link href="/contact">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors">Contact</span>
+            </Link>
+=======
+<<<<<<< HEAD
+          <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
+            Zion Tech Group
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex space-x-8">
+            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+              Home
+            </Link>
+            <div className="relative group">
+              <button className="text-gray-600 hover:text-blue-600 font-medium transition-colors flex items-center">
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    All Services
+                  </Link>
+                  <Link href="/services/ai-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    AI Development
+                  </Link>
+                  <Link href="/services/cloud-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Cloud Solutions
+                  </Link>
+                  <Link href="/services/blockchain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Blockchain
+                  </Link>
+                  <Link href="/services/iot-platforms" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    IoT Platforms
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="relative group">
+              <button className="text-gray-600 hover:text-blue-600 font-medium transition-colors flex items-center">
+                Products
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="py-2">
+                  <Link href="/products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    All Products
+                  </Link>
+                  <Link href="/products/micro-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link href="/products/ai-tools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    AI Tools & Platforms
+                  </Link>
+                  <Link href="/products/automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                    Automation Tools
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+              Contact
+            </Link>
+            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+              Blog
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-600 hover:text-blue-600 focus:outline-none"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
+              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium">
+                Home
+              </Link>
+              <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium">
+                Services
+              </Link>
+              <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium">
+                Products
+              </Link>
+              <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium">
+                About
+              </Link>
+              <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium">
+                Contact
+              </Link>
+              <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium">
+                Blog
+=======
+<<<<<<< HEAD
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center space-x-3"
-          >
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
             <div>
-              <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Zion Tech Group
-              </div>
-              <div className="text-xs text-gray-400">Revolutionary Technology</div>
+              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
+              <div className="text-xs text-gray-500">Technology Solutions</div>
             </div>
-          </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
-                  onClick={() => handleDropdownToggle(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                    activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
-                </button>
-
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
-                    >
-                      <div className="p-4">
-                        <div className="mb-3">
-                          <div className="text-sm font-medium text-gray-400">{item.description}</div>
-                        </div>
-                        <div className="space-y-2">
-                          {item.children?.map((child) => (
-                            <Link
-                              key={child.name}
-                              href={child.href}
-                              onClick={closeAllDropdowns}
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                            >
-                              <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-200">
-                                <Star className="w-4 h-4 text-cyan-400" />
-                              </div>
-                              <div>
-                                <div className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors duration-200">
-                                  {child.name}
-                                </div>
-                                <div className="text-xs text-gray-400">{child.description}</div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <Link key={item.name} href={item.href}>
+                <span className="text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                  {item.name}
+                </span>
+              </Link>
             ))}
           </div>
 
-          {/* Search Bar */}
+          {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/pricing"
-              className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              Pricing
-            </Link>
-            <Link
-              href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50"
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
 
-              {/* Mobile Navigation Items */}
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
-                <div key={item.name} className="space-y-2">
-                  <button
-                    onClick={() => handleDropdownToggle(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
-                  >
-                    <div className="flex items-center space-x-3">
-                      {item.icon}
-                      <span>{item.name}</span>
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-
-                  {/* Mobile Dropdown */}
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-6 space-y-2"
-                      >
-                        {item.children?.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            onClick={closeAllDropdowns}
-                            className="block p-3 text-gray-400 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)}>
+                  <span className="block text-gray-600 hover:text-blue-600 transition-colors font-medium py-2">
+                    {item.name}
+                  </span>
+                </Link>
               ))}
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700/50 space-y-3">
-                <Link
-                  href="/pricing"
-                  onClick={closeAllDropdowns}
-                  className="block w-full px-4 py-3 text-center text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/contact"
-                  onClick={closeAllDropdowns}
-                  className="block w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 text-center"
-                >
-                  Get Started
-                </Link>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                <span className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">
+=======
+<div className="text-xl font-bold text-gray-800">Logo</div>
+          <div className="hidden md:flex space-x-8>
+            <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
+            <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
+            <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>
+            <Link href="/contact"><span className="text-gray-600 hover:text-gray-900">Contact</span></Link>
+>>>>>>> main
+          </div>
+          <div className="hidden lg:block">
+            <Link href="/contact">
+              <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                Get Started
+              </span>
+            </Link>
+          </div>
+          <button
+            className="lg:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-200>
+            <div className="space-y-2">
+              <Link href="/">
+                <span className="block py-2 text-gray-600 hover:text-blue-600">Home</span>
+              </Link>
+              <div className="space-y-2">
+                <div className="font-semibold text-gray-800 py-2">Services</div>
+                {services.map((service) => (
+                  <Link key={service.name} href={service.href}>
+                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600> {service.name}
+                    </span"
+                  </Link>
+                ))}
               </div>
+              <Link href="/about">
+                <span className="block py-2 text-gray-600 hover:text-blue-600>About</span> </Link"
+              <Link href="/contact">
+                <span className="block py-2 text-gray-600 hover:text-blue-600">Contact</span>
+              </Link>
+              <Link href="/contact">
+                <span className="block py-2 bg-blue-600 text-white text-center rounded-lg font-semibold">
+>>>>>>> main
+                  Get Started
+                </span>
+>>>>>>> main
+              </Link>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </nav>
   );
 };
-
 export default EnhancedNavigation;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

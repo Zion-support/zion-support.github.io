@@ -1,7 +1,8 @@
-import { ServiceVariant } from '../types/service-variants';
-
-export interface AdvancedAIAutomationService {
-  id: string;
+<<<<<<< HEAD
+=======
+import { ServiceVariant  } from "../types/service-variants";
+export interface AdvancedAIAutomationService {;
+  "id": string;
   name: string;
   tagline: string;
   price: string;
@@ -14,7 +15,7 @@ export interface AdvancedAIAutomationService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -26,284 +27,245 @@ export interface AdvancedAIAutomationService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: string;
-  contactInfo: {
+  contactInfo: {;
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
-  realImplementation: boolean;
+    website: string}
+  "realImplementation": boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
-
-export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
-  // AI Autonomous Code Review Platform
-  {
-    id: 'ai-autonomous-code-review',
-    name: 'AI Autonomous Code Review Platform',
-    tagline: 'Automated code quality assurance with AI-powered insights',
-    price: '$199',
-    period: '/month',
-    description: 'Advanced AI platform that automatically reviews code, identifies security vulnerabilities, suggests optimizations, and ensures compliance with best practices across multiple programming languages.',
-    features: [
-      'Multi-language code analysis (Python, JavaScript, Java, C++, Go, Rust)',
-      'AI-powered security vulnerability detection',
-      'Automated code quality scoring',
-      'Performance optimization suggestions',
-      'Compliance and best practice enforcement',
-      'Real-time code review automation',
-      'Integration with CI/CD pipelines',
-      'Custom rule configuration',
-      'Team collaboration tools',
-      'Comprehensive reporting and analytics'
-    ],
-    popular: true,
-    icon: '🔍',
-    color: 'from-emerald-600 to-teal-600',
-    textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-code-review',
-    marketPosition: 'Competes with SonarQube ($20/month), CodeClimate ($8/month). Our advantage: AI-powered analysis reduces false positives by 70% and provides actionable insights.',
-    targetAudience: 'Software development teams, DevOps engineers, Quality assurance teams, Open source projects, Enterprise development',
-    trialDays: 14,
-    setupTime: '2-4 hours',
-    category: 'AI Development Tools',
-    realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker'],
-    integrations: ['GitHub, GitLab, Bitbucket, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
-    useCases: ['Code quality assurance, Security auditing, Performance optimization, Compliance checking, Team collaboration'],
-    roi: 'Development teams report 400% ROI through reduced bugs, faster development cycles, and improved code quality.',
-    competitors: ['SonarQube, CodeClimate, Codacy, DeepCode'],
-    marketSize: '$8.2B code quality tools market',
-    growthRate: '25% annual growth',
-    variant: 'ai-code-review-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Cloud-native SaaS platform with AI algorithms for static code analysis, security scanning, and quality assessment.',
-    launchDate: '2024-10-15',
-    customers: 78,
-    rating: 4.7,
-    reviews: 45
-  },
-
-  // AI Autonomous Testing Platform
-  {
-    id: 'ai-autonomous-testing',
-    name: 'AI Autonomous Testing Platform',
-    tagline: 'Self-generating and executing test suites with AI intelligence',
-    price: '$299',
-    period: '/month',
-    description: 'Revolutionary AI platform that automatically generates, executes, and maintains comprehensive test suites. Reduces testing time by 90% while improving coverage and reliability.',
-    features: [
-      'AI-generated test case creation',
-      'Automated test execution and monitoring',
-      'Intelligent test prioritization',
-      'Cross-platform testing automation',
-      'Performance and load testing',
-      'Visual regression testing',
-      'API testing automation',
-      'Mobile app testing',
-      'Test result analysis and reporting',
-      'Continuous testing integration'
-    ],
-    popular: true,
-    icon: '🧪',
-    color: 'from-purple-600 to-indigo-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-testing',
-    marketPosition: 'Competes with Selenium ($0), Cypress ($75/month), TestComplete ($2,000/year). Our advantage: AI automation reduces manual test creation by 90% and improves coverage.',
-    targetAudience: 'QA teams, Software developers, DevOps engineers, Product managers, Enterprise organizations',
-    trialDays: 14,
-    setupTime: '1-2 days',
-    category: 'AI Testing & Quality Assurance',
-    realService: true,
-    technology: ['Python, TensorFlow, Selenium, Appium, React, Node.js, PostgreSQL'],
-    integrations: ['Jira, GitHub, GitLab, Jenkins, CircleCI, Azure DevOps, Slack'],
-    useCases: ['Automated testing, Regression testing, Performance testing, Mobile testing, API testing'],
-    roi: 'Organizations report 500% ROI through reduced testing time, improved quality, and faster releases.',
-    competitors: ['Selenium, Cypress, TestComplete, Katalon Studio'],
-    marketSize: '$4.8B testing tools market',
-    growthRate: '20% annual growth',
-    variant: 'ai-testing-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'AI-powered testing automation platform with intelligent test generation, execution, and maintenance capabilities.',
-    launchDate: '2024-09-20',
-    customers: 56,
-    rating: 4.8,
-    reviews: 32
-  },
-
-  // AI Autonomous DevOps Platform
-  {
-    id: 'ai-autonomous-devops',
-    name: 'AI Autonomous DevOps Platform',
-    tagline: 'Self-managing DevOps infrastructure with intelligent automation',
-    price: '$399',
-    period: '/month',
-    description: 'Next-generation DevOps platform that uses AI to automatically manage infrastructure, optimize deployments, and resolve issues before they impact users.',
-    features: [
-      'AI-powered infrastructure management',
-      'Automated deployment optimization',
-      'Intelligent monitoring and alerting',
-      'Self-healing infrastructure',
-      'Performance optimization',
-      'Cost optimization and resource management',
-      'Security compliance automation',
-      'Multi-cloud orchestration',
-      'Disaster recovery automation',
-      'Real-time analytics and insights'
-    ],
-    popular: true,
-    icon: '⚙️',
-    color: 'from-blue-600 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-devops',
-    marketPosition: 'Competes with GitLab ($19/month), Jenkins ($0), Azure DevOps ($6/month). Our advantage: AI automation reduces manual DevOps tasks by 80% and improves reliability.',
-    targetAudience: 'DevOps engineers, System administrators, Cloud architects, IT managers, Enterprise organizations',
-    trialDays: 14,
-    setupTime: '3-5 days',
-    category: 'AI DevOps & Infrastructure',
-    realService: true,
-    technology: ['Python, TensorFlow, Kubernetes, Docker, Terraform, Ansible, React'],
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Slack, PagerDuty, DataDog'],
-    useCases: ['Infrastructure automation, Deployment optimization, Monitoring and alerting, Cost optimization, Security compliance'],
-    roi: 'Organizations report 600% ROI through reduced downtime, faster deployments, and lower operational costs.',
-    competitors: ['GitLab, Jenkins, Azure DevOps, CircleCI, GitHub Actions'],
-    marketSize: '$12.5B DevOps tools market',
-    growthRate: '30% annual growth',
-    variant: 'ai-devops-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'AI-powered DevOps automation platform with intelligent infrastructure management and optimization capabilities.',
-    launchDate: '2024-08-10',
-    customers: 89,
-    rating: 4.9,
-    reviews: 67
-  },
-
-  // AI Autonomous Security Platform
-  {
-    id: 'ai-autonomous-security',
-    name: 'AI Autonomous Security Platform',
-    tagline: 'Proactive threat detection and response with AI intelligence',
-    price: '$499',
-    period: '/month',
-    description: 'Advanced AI security platform that continuously monitors systems, detects threats in real-time, and automatically responds to security incidents before they escalate.',
-    features: [
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-      'Automated incident response',
-      'Behavioral analysis',
-      'Vulnerability assessment',
-      'Compliance monitoring',
-      'Security automation workflows',
-      'Threat intelligence integration',
-      'Forensic analysis tools',
-      'Security reporting and analytics'
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-red-600 to-pink-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-security',
-    marketPosition: 'Competes with CrowdStrike ($8.92/month), SentinelOne ($2.50/month), Carbon Black ($6.67/month). Our advantage: AI automation reduces false positives by 85% and provides proactive protection.',
-    targetAudience: 'Security teams, IT managers, Compliance officers, Enterprise organizations, Government agencies',
-    trialDays: 14,
-    setupTime: '1-3 days',
-    category: 'AI Cybersecurity',
-    realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Elasticsearch'],
-    integrations: ['SIEM systems, Firewalls, IDS/IPS, Vulnerability scanners, Threat intelligence feeds'],
-    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance monitoring, Security automation'],
-    roi: 'Organizations report 700% ROI through reduced security incidents, faster response times, and compliance automation.',
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'],
-    marketSize: '$15.8B cybersecurity market',
-    growthRate: '35% annual growth',
-    variant: 'ai-security-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.',
-    launchDate: '2024-07-15',
-    customers: 134,
-    rating: 4.8,
-    reviews: 89
-  },
-
-  // AI Autonomous Data Platform
-  {
-    id: 'ai-autonomous-data',
-    name: 'AI Autonomous Data Platform',
-    tagline: 'Self-managing data infrastructure with intelligent automation',
-    price: '$599',
-    period: '/month',
-    description: 'Revolutionary AI platform that automatically manages data pipelines, ensures data quality, and provides intelligent insights while maintaining compliance and security.',
-    features: [
-      'AI-powered data pipeline management',
-      'Automated data quality assurance',
-      'Intelligent data governance',
-      'Real-time data processing',
-      'Predictive analytics',
-      'Data lineage tracking',
-      'Compliance automation',
-      'Multi-source data integration',
-      'Data security and privacy',
-      'Advanced analytics and reporting'
-    ],
-    popular: true,
-    icon: '📊',
-    color: 'from-cyan-600 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-data',
-    marketPosition: 'Competes with Snowflake ($25/month), Databricks ($0.40/DBU), AWS Glue ($0.44/hour). Our advantage: AI automation reduces data management overhead by 75% and improves quality.',
-    targetAudience: 'Data engineers, Data scientists, Business analysts, IT managers, Enterprise organizations',
-    trialDays: 14,
-    setupTime: '5-7 days',
-    category: 'AI Data Management',
-    realService: true,
-    technology: ['Python, TensorFlow, Apache Spark, Apache Kafka, React, Node.js, PostgreSQL'],
-    integrations: ['AWS, Azure, GCP, Snowflake, Databricks, Tableau, Power BI'],
-    useCases: ['Data pipeline automation, Data quality management, Analytics automation, Compliance automation, Business intelligence'],
-    roi: 'Organizations report 800% ROI through improved data quality, faster insights, and reduced operational costs.',
-    competitors: ['Snowflake, Databricks, AWS Glue, Azure Data Factory'],
-    marketSize: '$18.2B data management market',
-    growthRate: '40% annual growth',
-    variant: 'ai-data-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'AI-powered data management platform with autonomous pipeline management and quality assurance capabilities.',
-    launchDate: '2024-06-20',
-    customers: 67,
-    rating: 4.7,
-    reviews: 43
-  }
+const contact = {;
+  mobile: "+1 302 464 0950",;
+  "email": "kleber@ziontechgroup.com",;
+  "address": "364 E Main St STE 1008 Middletown DE 19709";
+  ;
+  ;
+  website: "https://ziontechgroup.com";}
+export const "advancedAIAutomationServices2025": AdvancedAIAutomationService[] = [;
+  {;
+    id: "ai-autonomous-customer-service",;
+    "name": "AI Autonomous Customer Service",;
+    "tagline": "24/7 intelligent customer support with human-like understanding and resolution",;
+    "price": "$899",;
+    "period": "/month",;
+    "description": "Fully autonomous AI customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention. Uses advanced NLP and machine learning for natural conversations.",;
+    features[;
+      "Natural language processing",;
+      "Multi-language support",;
+      "Emotion detection",;
+      "Intelligent routing",;
+      "Knowledge base integration",;
+      "Real-time analytics",;
+      "Seamless human handoff",;
+      "Voice and text support",;
+      "Integration with CRM systems",;
+      "Performance optimization";
+    ],;
+    "popular": true,;
+    "icon": "🤖",;
+    "color": "from-blue-600 to-cyan-600",;
+    "textColor": "text-blue-400",;
+    "link": "https://ziontechgroup.com/ai-autonomous-customer-service",;
+    "marketPosition": "Competes with Intercom ($74/month), Zendesk ($49/month). Our "advantage": 90% automation rate with 95% customer satisfaction.",;
+    targetAudience["E-commerce businesses", "SaaS companies", "Customer support teams", "Retail chains", "Service providers"],;
+    "trialDays": 21,;
+    "setupTime": "1 week",;
+    "category": "Customer Experience",;
+    "realService": true,;
+    technology["GPT-4, Claude, BERT, TensorFlow, PyTorch"],;
+    integrations["Shopify, Salesforce, HubSpot, Zendesk, Intercom"],;
+    useCases["Customer support, Order inquiries, Technical support, Product information, Complaint resolution"],;
+    "roi": "Reduce support costs by 75% and improve response time by 90%",;
+    competitors["Intercom, Zendesk, Freshdesk, Help Scout"],;
+    "marketSize": "$18B customer experience market",;
+    "growthRate": "120% YoY",;
+    "contactInfo": contact,;
+    "realImplementation": true,;
+    "implementationDetails": "Multi-tenant SaaS with AI-powered customer service automation, natural language processing, and intelligent routing",;
+    "launchDate": "2025-01-20",;
+    "customers": 89,;
+    "rating": 4.8,;
+    "reviews": 67;},;
+  {;
+    "id": "ai-predictive-maintenance-platform",;
+    "name": "AI Predictive Maintenance Platform",;
+    "tagline": "Predict equipment failures before they happen with AI-powered analytics",;
+    "price": "$1,599",;
+    "period": "/month",;
+    "description": "Advanced predictive maintenance platform that uses IoT sensors, machine learning, and AI to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.",;
+    features[;
+      "IoT sensor integration",;
+      "Machine learning algorithms",;
+      "Real-time monitoring",;
+      "Predictive analytics",;
+      "Maintenance scheduling",;
+      "Cost optimization",;
+      "Performance tracking",;
+      "Alert system",;
+      "Historical data analysis",;
+      "Mobile app access";
+    ],;
+    "popular": false,;
+    "icon": "🔧",;
+    "color": "from-orange-600 to-red-600",;
+    "textColor": "text-orange-400",;
+    "link": "https://ziontechgroup.com/ai-predictive-maintenance",;
+    "marketPosition": "Competes with Uptake ($500/month), C3.ai ($1,000/month). Our "advantage": 85% accuracy in failure prediction with 40% cost reduction.",;
+    targetAudience["Manufacturing companies", "Industrial facilities", "Energy companies", "Transportation", "Healthcare facilities"],;
+    "trialDays": 30,;
+    "setupTime": "3-4 weeks",;
+    "category": "Industrial IoT",;
+    "realService": true,;
+    technology["IoT, Machine Learning, TensorFlow, Python, Cloud Computing"],;
+    integrations["SAP, Oracle, Siemens, GE Predix, Azure IoT"],;
+    useCases["Equipment monitoring, Predictive maintenance, Cost optimization, Performance tracking, Safety compliance"],;
+    "roi": "Reduce maintenance costs by 40% and increase equipment uptime by 25%",;
+    competitors["Uptake, C3.ai, GE Digital, Siemens Mindsphere"],;
+    "marketSize": "$6.5B predictive maintenance market",;
+    "growthRate": "95% annual growth",;
+    "contactInfo": contact,;
+    "realImplementation": true,;
+    "implementationDetails": "IoT-based predictive maintenance platform with AI analytics, real-time monitoring, and predictive modeling",;
+    "launchDate": "2025-02-15",;
+    "customers": 45,;
+    "rating": 4.7,;
+    "reviews": 32;},;
+  {;
+    "id": "ai-autonomous-marketing-optimization",;
+    "name": "AI Autonomous Marketing Optimization",;
+    "tagline": "Automatically optimize campaigns, budgets, and strategies for maximum ROI",;
+    "price": "$1,299",;
+    "period": "/month",;
+    "description": "Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum performance.",;
+    features[;
+      "Campaign optimization",;
+      "Budget allocation",;
+      "A/B testing automation",;
+      "Audience targeting",;
+      "Creative optimization",;
+      "ROI tracking",;
+      "Cross-channel coordination",;
+      "Predictive analytics",;
+      "Performance reporting",;
+      "Integration capabilities";
+    ],;
+    "popular": true,;
+    "icon": "📈",;
+    "color": "from-green-600 to-emerald-600",;
+    "textColor": "text-green-400",;
+    "link": "https://ziontechgroup.com/ai-marketing-optimization",;
+    "marketPosition": "Competes with Marin Software ($500/month), Kenshoo ($1,000/month). Our "advantage": 35% better ROI through autonomous optimization.",;
+    targetAudience["Marketing agencies", "E-commerce businesses", "B2B companies", "Digital marketers", "Brand managers"],;
+    "trialDays": 14,;
+    "setupTime": "2 weeks",;
+    "category": "Digital Marketing",;
+    "realService": true,;
+    technology["Machine Learning, Python, TensorFlow, Google Ads API, Facebook Marketing API"],;
+    integrations["Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, TikTok Ads"],;
+    useCases["PPC optimization, Social media advertising, Display advertising, Retargeting campaigns, Brand awareness"],;
+    "roi": "Increase marketing ROI by 35% and reduce manual optimization time by 80%",;
+    competitors["Marin Software, Kenshoo, Acquisio, AdRoll"],;
+    "marketSize": "$12B marketing automation market",;
+    "growthRate": "110% annual growth",;
+    "contactInfo": contact,;
+    "realImplementation": true,;
+    "implementationDetails": "AI-powered marketing optimization platform with autonomous campaign management and performance analytics",;
+    "launchDate": "2025-01-25",;
+    "customers": 156,;
+    "rating": 4.9,;
+    "reviews": 98;},;
+  {;
+    "id": "ai-autonomous-financial-advisory",;
+    "name": "AI Autonomous Financial Advisory",;
+    "tagline": "Personalized financial planning and investment advice powered by AI",;
+    "price": "$799",;
+    "period": "/month",;
+    "description": "Intelligent financial advisory platform that provides personalized investment advice, portfolio management, and financial planning using advanced AI algorithms and market analysis.",;
+    features[;
+      "Portfolio analysis",;
+      "Investment recommendations",;
+      "Risk assessment",;
+      "Financial planning",;
+      "Market analysis",;
+      "Tax optimization",;
+      "Retirement planning",;
+      "Goal tracking",;
+      "Performance monitoring",;
+      "Regulatory compliance";
+    ],;
+    "popular": false,;
+    "icon": "💰",;
+    "color": "from-yellow-600 to-amber-600",;
+    "textColor": "text-yellow-400",;
+    "link": "https://ziontechgroup.com/ai-financial-advisory",;
+    "marketPosition": "Competes with Betterment ($0.25% assets), Wealthfront ($0.25% assets). Our "advantage": Fixed monthly pricing with unlimited advice.",;
+    targetAudience["Individual investors", "Financial advisors", "Wealth management firms", "Banks", "Credit unions"],;
+    "trialDays": 30,;
+    "setupTime": "1-2 weeks",;
+    "category": "FinTech",;
+    "realService": true,;
+    technology["Machine Learning, Python, TensorFlow, Financial APIs, Blockchain"],;
+    integrations["Plaid, Yodlee, TD Ameritrade, E*TRADE, Robinhood"],;
+    useCases["Investment planning, Portfolio management, Financial advice, Risk management, Tax optimization"],;
+    "roi": "Improve investment returns by 15-25% through AI-driven optimization",;
+    competitors["Betterment, Wealthfront, Personal Capital, Acorns"],;
+    "marketSize": "$8.2B robo-advisory market",;
+    "growthRate": "85% annual growth",;
+    "contactInfo": contact,;
+    "realImplementation": true,;
+    "implementationDetails": "AI-powered financial advisory platform with portfolio management, investment recommendations, and financial planning",;
+    "launchDate": "2025-02-10",;
+    "customers": 234,;
+    "rating": 4.8,;
+    "reviews": 145;},;
+  {;
+    "id": "ai-autonomous-supply-chain-optimization",;
+    "name": "AI Autonomous Supply Chain Optimization",;
+    "tagline": "Optimize supply chains with AI-powered demand forecasting and inventory management",;
+    "price": "$2,199",;
+    "period": "/month",;
+    "description": "Intelligent supply chain optimization platform that uses AI to forecast demand, optimize inventory levels, and streamline logistics operations for maximum efficiency and cost savings.",;
+    features[;
+      "Demand forecasting",;
+      "Inventory optimization",;
+      "Supplier management",;
+      "Logistics optimization",;
+      "Risk assessment",;
+      "Cost analysis",;
+      "Performance tracking",;
+      "Real-time monitoring",;
+      "Predictive analytics",;
+      "Integration capabilities";
+    ],;
+    "popular": false,;
+    "icon": "🚚",;
+    "color": "from-purple-600 to-indigo-600",;
+    "textColor": "text-purple-400",;
+    "link": "https://ziontechgroup.com/ai-supply-chain-optimization",;
+    "marketPosition": "Competes with SAP Ariba ($50/user/month), Oracle SCM ($100/user/month). Our "advantage": 30% cost reduction through AI optimization.",;
+    targetAudience["Manufacturing companies", "Retail chains", "Logistics providers", "E-commerce businesses", "Distribution centers"],;
+    "trialDays": 30,;
+    "setupTime": "4-6 weeks",;
+    "category": "Supply Chain Management",;
+    "realService": true,;
+    technology["Machine Learning, Python, TensorFlow, IoT, Cloud Computing"],;
+    integrations["SAP, Oracle, NetSuite, Shopify, Amazon FBA"],;
+    useCases["Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction"],;
+    "roi": "Reduce supply chain costs by 30% and improve delivery times by 40%",;
+    competitors["SAP Ariba, Oracle SCM, JDA Software, Manhattan Associates"],;
+    "marketSize": "$15B supply chain management market",;
+    "growthRate": "75% annual growth",;
+    "contactInfo": contact,;
+    "realImplementation": true,;
+    "implementationDetails": "AI-powered supply chain optimization platform with demand forecasting, inventory management, and logistics optimization",;
+    "launchDate": "2025-02-20",;
+    "customers": 67,;
+    "rating": 4.6,;
+    "reviews": 43;
 ];
+export default advancedAIAutomationServices2025}}
+>>>>>>> main
+import { ServiceVariant } from "../types/service-variants"; export interface AdvancedAIAutomationService {; id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string[]; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; contactInfo: {; mobile: string; email: string; address: string; website: string} realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; const contact = {; mobile: "+1 302 464 0950",; email: "kleber@ziontechgroup.com",; address: "364 E Main St STE 1008 Middletown DE 19709"; ; ; ; ; website: "https: } export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [; {; id: "ai-autonomous-customer-service",; name: "AI Autonomous Customer Service",; tagline: "24/7 intelligent customer support with human-like understanding and resolution",; price: "$899",; period: "/month",; description: "Fully autonomous AI customer service platform that handles customer inquiries,resolves issues,and provides personalized support without human intervention. Uses advanced NLP and machine learning for natural conversations.",; features[; "Natural language processing",; "Multi-language support",; "Emotion detection",; "Intelligent routing",; "Knowledge base integration",; "Real-time analytics",; "Seamless human handoff",; "Voice and text support",; "Integration with CRM systems",; "Performance optimization"; ],; popular: true,; icon: "🤖",; color: "from-blue-600 to-cyan-600",; textColor: "text-blue-400",; link: "https: marketPosition: "Competes with Intercom ($74/month),Zendesk ($49/month). Our advantage: 90% automation rate with 95% customer satisfaction.",; targetAudience["E-commerce businesses","SaaS companies","Customer support teams","Retail chains","Service providers"],; trialDays: 21,; setupTime: "1 week",; category: "Customer Experience",; realService: true,; technology["GPT-4,Claude,BERT,TensorFlow,PyTorch"],; integrations["Shopify,Salesforce,HubSpot,Zendesk,Intercom"],; useCases["Customer support,Order inquiries,Technical support,Product information,Complaint resolution"],; roi: "Reduce support costs by 75% and improve response time by 90%",; competitors["Intercom,Zendesk,Freshdesk,Help Scout"],; marketSize: "$18B customer experience market",; growthRate: "120% YoY",; contactInfo: contact,; realImplementation: true,; implementationDetails: "Multi-tenant SaaS with AI-powered customer service automation,natural language processing,and intelligent routing",; launchDate: "2025-01-20",; customers: 89,; rating: 4.8,; reviews: 67;,},; {; id: "ai-predictive-maintenance-platform",; name: "AI Predictive Maintenance Platform",; tagline: "Predict equipment failures before they happen with AI-powered analytics",; price: "$1,599",; period: "/month",; description: "Advanced predictive maintenance platform that uses IoT sensors,machine learning,and AI to predict equipment failures,optimize maintenance schedules,and reduce downtime costs.",; features[; "IoT sensor integration",; "Machine learning algorithms",; "Real-time monitoring",; "Predictive analytics",; "Maintenance scheduling",; "Cost optimization",; "Performance tracking",; "Alert system",; "Historical data analysis",; "Mobile app access"; ],; popular: false,; icon: "🔧",; color: "from-orange-600 to-red-600",; textColor: "text-orange-400",; link: "https: marketPosition: "Competes with Uptake ($500/month),C3.ai ($1,000/month). Our advantage: 85% accuracy in failure prediction with 40% cost reduction.",; targetAudience["Manufacturing companies","Industrial facilities","Energy companies","Transportation","Healthcare facilities"],; trialDays: 30,; setupTime: "3-4 weeks",; category: "Industrial IoT",; realService: true,; technology["IoT,Machine Learning,TensorFlow,Python,Cloud Computing"],; integrations["SAP,Oracle,Siemens,GE Predix,Azure IoT"],; useCases["Equipment monitoring,Predictive maintenance,Cost optimization,Performance tracking,Safety compliance"],; roi: "Reduce maintenance costs by 40% and increase equipment uptime by 25%",; competitors["Uptake,C3.ai,GE Digital,Siemens Mindsphere"],; marketSize: "$6.5B predictive maintenance market",; growthRate: "95% annual growth",; contactInfo: contact,; realImplementation: true,; implementationDetails: "IoT-based predictive maintenance platform with AI analytics,real-time monitoring,and predictive modeling",; launchDate: "2025-02-15",; customers: 45,; rating: 4.7,; reviews: 32;,},; {; id: "ai-autonomous-marketing-optimization",; name: "AI Autonomous Marketing Optimization",; tagline: "Automatically optimize campaigns,budgets,and strategies for maximum ROI",; price: "$1,299",; period: "/month",; description: "Intelligent marketing automation platform that continuously optimizes campaigns,budgets,and strategies using AI. Automatically adjusts bids,targeting,and creative elements for maximum performance.",; features[; "Campaign optimization",; "Budget allocation",; "A/B testing automation",; "Audience targeting",; "Creative optimization",; "ROI tracking",; "Cross-channel coordination",; "Predictive analytics",; "Performance reporting",; "Integration capabilities"; ],; popular: true,; icon: "📈",; color: "from-green-600 to-emerald-600",; textColor: "text-green-400",; link: "https: marketPosition: "Competes with Marin Software ($500/month),Kenshoo ($1,000/month). Our advantage: 35% better ROI through autonomous optimization.",; targetAudience["Marketing agencies","E-commerce businesses","B2B companies","Digital marketers","Brand managers"],; trialDays: 14,; setupTime: "2 weeks",; category: "Digital Marketing",; realService: true,; technology["Machine Learning,Python,TensorFlow,Google Ads API,Facebook Marketing API"],; integrations["Google Ads,Facebook Ads,LinkedIn Ads,Twitter Ads,TikTok Ads"],; useCases["PPC optimization,Social media advertising,Display advertising,Retargeting campaigns,Brand awareness"],; roi: "Increase marketing ROI by 35% and reduce manual optimization time by 80%",; competitors["Marin Software,Kenshoo,Acquisio,AdRoll"],; marketSize: "$12B marketing automation market",; growthRate: "110% annual growth",; contactInfo: contact,; realImplementation: true,; implementationDetails: "AI-powered marketing optimization platform with autonomous campaign management and performance analytics",; launchDate: "2025-01-25",; customers: 156,; rating: 4.9,; reviews: 98;,},; {; id: "ai-autonomous-financial-advisory",; name: "AI Autonomous Financial Advisory",; tagline: "Personalized financial planning and investment advice powered by AI",; price: "$799",; period: "/month",; description: "Intelligent financial advisory platform that provides personalized investment advice,portfolio management,and financial planning using advanced AI algorithms and market analysis.",; features[; "Portfolio analysis",; "Investment recommendations",; "Risk assessment",; "Financial planning",; "Market analysis",; "Tax optimization",; "Retirement planning",; "Goal tracking",; "Performance monitoring",; "Regulatory compliance"; ],; popular: false,; icon: "💰",; color: "from-yellow-600 to-amber-600",; textColor: "text-yellow-400",; link: "https: marketPosition: "Competes with Betterment ($0.25% assets),Wealthfront ($0.25% assets). Our advantage: Fixed monthly pricing with unlimited advice.",; targetAudience["Individual investors","Financial advisors","Wealth management firms","Banks","Credit unions"],; trialDays: 30,; setupTime: "1-2 weeks",; category: "FinTech",; realService: true,; technology["Machine Learning,Python,TensorFlow,Financial APIs,Blockchain"],; integrations["Plaid,Yodlee,TD Ameritrade,E*TRADE,Robinhood"],; useCases["Investment planning,Portfolio management,Financial advice,Risk management,Tax optimization"],; roi: "Improve investment returns by 15-25% through AI-driven optimization",; competitors["Betterment,Wealthfront,Personal Capital,Acorns"],; marketSize: "$8.2B robo-advisory market",; growthRate: "85% annual growth",; contactInfo: contact,; realImplementation: true,; implementationDetails: "AI-powered financial advisory platform with portfolio management,investment recommendations,and financial planning",; launchDate: "2025-02-10",; customers: 234,; rating: 4.8,; reviews: 145;,},; {; id: "ai-autonomous-supply-chain-optimization",; name: "AI Autonomous Supply Chain Optimization",; tagline: "Optimize supply chains with AI-powered demand forecasting and inventory management",; price: "$2,199",; period: "/month",; description: "Intelligent supply chain optimization platform that uses AI to forecast demand,optimize inventory levels,and streamline logistics operations for maximum efficiency and cost savings.",; features[; "Demand forecasting",; "Inventory optimization",; "Supplier management",; "Logistics optimization",; "Risk assessment",; "Cost analysis",; "Performance tracking",; "Real-time monitoring",; "Predictive analytics",; "Integration capabilities"; ],; popular: false,; icon: "🚚",; color: "from-purple-600 to-indigo-600",; textColor: "text-purple-400",; link: "https: marketPosition: "Competes with SAP Ariba ($50/user/month),Oracle SCM ($100/user/month). Our advantage: 30% cost reduction through AI optimization.",; targetAudience["Manufacturing companies","Retail chains","Logistics providers","E-commerce businesses","Distribution centers"],; trialDays: 30,; setupTime: "4-6 weeks",; category: "Supply Chain Management",; realService: true,; technology["Machine Learning,Python,TensorFlow,IoT,Cloud Computing"],; integrations["SAP,Oracle,NetSuite,Shopify,Amazon FBA"],; useCases["Demand forecasting,Inventory management,Supplier optimization,Logistics planning,Cost reduction"],; roi: "Reduce supply chain costs by 30% and improve delivery times by 40%",; competitors["SAP Ariba,Oracle SCM,JDA Software,Manhattan Associates"],; marketSize: "$15B supply chain management market",; growthRate: "75% annual growth",; contactInfo: contact,; realImplementation: true,; implementationDetails: "AI-powered supply chain optimization platform with demand forecasting,inventory management,and logistics optimization",; launchDate: "2025-02-20",; customers: 67,; rating: 4.6,; reviews: 43; ]; export default advancedAIAutomationServices2025}}
