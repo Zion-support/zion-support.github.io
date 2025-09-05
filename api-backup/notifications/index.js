@@ -19,11 +19,10 @@ export default async function handler(req, res) {
     .from('notifications')
     .select('*')
     .eq('user_id', userId)
-    .order('created_at', { ascending: false });
+    .order('created_at', { ascending: 'false' });
   if (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: 'error.message' });
     return;
   }
   res.status(200).json(data || []);
 }
-

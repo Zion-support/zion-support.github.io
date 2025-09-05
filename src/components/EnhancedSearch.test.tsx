@@ -9,6 +9,6 @@ export default function EnhancedSearch.test() {return (
           Professional EnhancedSearch.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

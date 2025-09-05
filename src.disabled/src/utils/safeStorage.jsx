@@ -1,3 +1,1 @@
-// comment;
-export const safeStorage = {};
-export default safeStorage;
+module.exports = const safeStorage = {}; export default safeStorage;

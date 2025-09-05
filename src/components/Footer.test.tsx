@@ -9,6 +9,6 @@ export default function Footer.test() {return (
           Professional Footer.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

@@ -1,0 +1,21 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('🧹 Cleaning up merge conflict artifacts...')
+    const content = fs.readFileSync(filePath, 'utf8')
+    if (!content.includes('ursor/add-new-services-and-deploy-updates-1b90')
+    let cleaned = content.replace(/ursor\/add-new-services-and-deploy-updates-1b90/g, '')
+    cleaned = cleaned.replace(/\s*,\s*$/gm, ',')
+    cleaned = cleaned.replace(/\[\s*$/gm, '[')]
+    cleaned = cleaned.replace(/\{\s*$/gm, '{'})
+    cleaned = cleaned.replace(/const\s+\w+\s*=\s*\[\s*$/gm, 'const $1 = [')]
+    cleaned = cleaned.replace(/const\s+\w+\s*=\s*\{\s*$/gm, 'const $1 = {'})
+      if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules'
+      } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')
+            const content = fs.readFileSync(filePath, 'utf8')
+            if (content.includes('ursor/add-new-services-and-deploy-updates-1b90')
+          // Skip files that can'
+  const filesWithArtifacts = findFilesWithArtifacts('.')
+  const remainingArtifacts = findFilesWithArtifacts('.')
+    console.log('� All merge artifacts cleaned!')
+  console.error(' Error during cleanup:')

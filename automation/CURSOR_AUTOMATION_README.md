@@ -78,24 +78,24 @@ Edit `cursor-automation-config.json` to customize:
 
 ### Configuration Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `interval` | Base interval between commands (ms) | 30000 |
-| `maxSessions` | Maximum number of concurrent sessions | 5 |
-| `enableLogging` | Enable/disable logging | true |
-| `autoRestart` | Auto-restart failed sessions | true |
-| `healthCheckInterval` | Health check frequency (ms) | 60000 |
+| Option                | Description                           | Default |
+| --------------------- | ------------------------------------- | ------- |
+| `interval`            | Base interval between commands (ms)   | 30000   |
+| `maxSessions`         | Maximum number of concurrent sessions | 5       |
+| `enableLogging`       | Enable/disable logging                | true    |
+| `autoRestart`         | Auto-restart failed sessions          | true    |
+| `healthCheckInterval` | Health check frequency (ms)           | 60000   |
 
 ### Session Configuration
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `id` | Unique session identifier | Required |
-| `name` | Human-readable session name | Auto-generated |
-| `interval` | Command interval for this session | Global default |
-| `autoProceed` | Enable automatic command sending | true |
-| `priority` | Session priority (high/medium/low) | medium |
-| `commands` | Array of commands to cycle through | ["proceed"] |
+| Option        | Description                        | Default        |
+| ------------- | ---------------------------------- | -------------- |
+| `id`          | Unique session identifier          | Required       |
+| `name`        | Human-readable session name        | Auto-generated |
+| `interval`    | Command interval for this session  | Global default |
+| `autoProceed` | Enable automatic command sending   | true           |
+| `priority`    | Session priority (high/medium/low) | medium         |
+| `commands`    | Array of commands to cycle through | ["proceed"]    |
 
 ## 🚀 Usage
 
@@ -160,6 +160,7 @@ The automation provides real-time status updates:
 ### Health Checks
 
 The system automatically:
+
 - Monitors session health every minute
 - Detects stuck sessions
 - Restarts failed automation
@@ -170,6 +171,7 @@ The system automatically:
 ### Common Issues
 
 1. **Permission Denied**
+
    ```bash
    chmod +x *.sh
    ```
@@ -260,6 +262,7 @@ Manage multiple sessions with different priorities:
 ### Integration with Other Tools
 
 The automation system can be integrated with:
+
 - **CI/CD pipelines**
 - **Monitoring systems**
 - **Notification services**
@@ -277,6 +280,7 @@ The automation system can be integrated with:
 ### Resource Monitoring
 
 Monitor system resources:
+
 ```bash
 # CPU and memory usage
 top -p $(cat cursor-automation.pid)
@@ -311,6 +315,7 @@ For issues and questions:
 ## 🔮 Future Enhancements
 
 Planned features:
+
 - **Web Dashboard**: Real-time monitoring interface
 - **API Integration**: REST API for remote control
 - **Advanced Scheduling**: Cron-like command scheduling

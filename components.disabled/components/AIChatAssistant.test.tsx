@@ -1,23 +1,37 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AIChatAssistant from './AIChatAssistant';
-
-describe('AIChatAssistant', () => {
-  it('renders without crashing', () => {
+<<<<<<< HEAD
+describe(\'AIChatAssistant\', () => {
+  it(\'renders without crashing\', () => {
     render(<AIChatAssistant />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByRole(\'main\')).toBeInTheDocument();
   });
-
-  it('displays correct content', () => {
+  it(\'displays correct content\', () => {
     render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality
     expect(screen.getByText(/AI Chat Assistant/i)).toBeInTheDocument();
   });
-
-  it('handles user input', () => {
+  it(\'handles user input\', () => {
     render(<AIChatAssistant />);
-    // Add input handling tests
     const input = screen.getByPlaceholderText(/type your message/i);
+=======
+<<<<<<< HEAD
+const { render, screen } from "@testing-library/react";"const { describe, it, expect } from "vitest";"const AIChatAssistant from "./AIChatAssistant";"describe("AIChatAssistant", () => {" it("renders without crashing", () => { render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument(); });" it("displays correct content", () => { render(<AIChatAssistant />); expect(screen.getByText(/AI Chat Assistant/i)).toBeInTheDocument(); });" it("handles user input", () => { render(<AIChatAssistant />); const input = screen.getByPlaceholderText(/type your message/i); expect(input).toBeInTheDocument(); });});""
+=======
+import { render, screen } from '@testing-library/react';,
+import { describe, it, expect } from 'vitest';,
+import AIChatAssistant from './AIChatAssistant';';
+describe('AIChatAssistant', () => {'}
+  it('renders without crashing', () => {'}
+    render(<AIChatAssistant />);,
+    expect(screen.getByRole('main')).toBeInTheDocument();';,
+  });,
+  it('displays correct content', () => {'}
+    render(<AIChatAssistant />);,
+    expect(screen.getByText(/AI Chat Assistant/i)).toBeInTheDocument();,
+  });,
+  it('handles user input', () => {'}
+    render(<AIChatAssistant />);,
+    const input = screen.getByPlaceholderText(/type your message/i);,
+>>>>>>> main
     expect(input).toBeInTheDocument();
   });
 });
+>>>>>>> main

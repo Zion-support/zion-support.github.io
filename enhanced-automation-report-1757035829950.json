@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-05T01:30:29.950Z",
+  "totalDuration": 75102,
+  "phases": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 54124,
+      "errors": []
+    },
+    "mergeConflictFix": {
+      "success": false,
+      "duration": 22,
+      "errors": [
+        "Command failed: node scripts/fix-merge-conflicts.cjs"
+      ]
+    },
+    "typescriptFix": {
+      "success": false,
+      "duration": 22,
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+    },
+    "lintingFix": {
+      "success": false,
+      "duration": 0,
+      "errors": [
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+      ]
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 229,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 27,
+      "errors": []
+    },
+    "buildTest": {
+      "success": true,
+      "duration": 16640,
+      "errors": []
+    },
+    "testSuite": {
+      "success": false,
+      "duration": 26,
+      "errors": [
+        "Command failed: node npm run test:smoke"
+      ]
+    }
+  },
+  "summary": {
+    "totalPhases": 8,
+    "successfulPhases": 4,
+    "failedPhases": 4,
+    "overallSuccess": false
+  }
+}
