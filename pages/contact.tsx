@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
 import Layout from "../components/Layout";
