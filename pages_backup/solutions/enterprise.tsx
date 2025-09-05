@@ -2,65 +2,56 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, Users, ArrowRight } from 'lucide-react';
+import { Building, Users, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-const apiEndpoints = [
+const enterpriseFeatures = [
   {
-    title: 'Authentication',
-    method: 'POST',
-    endpoint: '/api/auth/login',
-    description: 'Authenticate users and get access tokens'
+    title: 'Scalable Infrastructure',
+    icon: Building,
+    description: 'Enterprise-grade infrastructure that scales with your business needs'
   },
   {
-    title: 'User Management',
-    method: 'GET',
-    endpoint: '/api/users',
-    description: 'Retrieve user information and manage profiles'
+    title: 'Team Collaboration',
+    icon: Users,
+    description: 'Advanced collaboration tools for large teams and organizations'
   },
   {
-    title: 'Services',
-    method: 'GET',
-    endpoint: '/api/services',
-    description: 'Get available services and their details'
-  },
-  {
-    title: 'Analytics',
-    method: 'POST',
-    endpoint: '/api/analytics',
-    description: 'Submit analytics data and get insights'
-  }
-];
-
-const apiFeatures = [
-  {
-    title: 'RESTful API',
-    icon: Code,
-    description: 'Clean, intuitive REST API design'
-  },
-  {
-    title: 'Comprehensive Documentation',
-    icon: Book,
-    description: 'Detailed API documentation with examples'
+    title: 'Security & Compliance',
+    icon: Shield,
+    description: 'Enterprise-level security and compliance with industry standards'
   },
   {
     title: 'High Performance',
     icon: Zap,
-    description: 'Fast response times and optimized endpoints'
-  },
-  {
-    title: 'Secure',
-    icon: Shield,
-    description: 'Enterprise-grade security and authentication'
+    description: 'Optimized performance for mission-critical applications'
   }
 ];
 
-export default function APIDocumentation() {
+const enterpriseSolutions = [
+  {
+    title: 'Cloud Migration',
+    description: 'Seamless migration to cloud infrastructure with zero downtime',
+    features: ['Data Migration', 'Application Modernization', 'Security Implementation']
+  },
+  {
+    title: 'AI Integration',
+    description: 'Integrate AI capabilities into your existing enterprise systems',
+    features: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics']
+  },
+  {
+    title: 'DevOps Automation',
+    description: 'Automate your development and deployment processes',
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting']
+  }
+];
+
+export default function EnterpriseSolutions() {
   return (
     <Layout
-      title="API Documentation - Zion Tech Group"
-      description="Complete API documentation for developers"
-      keywords="API documentation, developer resources, REST API, integration"
+      title="Enterprise Solutions - Zion Tech Group"
+      description="Comprehensive enterprise solutions for large organizations"
+      keywords="enterprise solutions, business solutions, corporate services, enterprise software"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -73,13 +64,13 @@ export default function APIDocumentation() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API Documentation
+                Enterprise Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
-                Complete API documentation for developers
+                Comprehensive solutions for large organizations
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                Integrate with our services using our comprehensive REST API
+                Transform your business with our enterprise-grade technology solutions
               </p>
               <Link href="/contact">
                 <motion.button
@@ -87,7 +78,7 @@ export default function APIDocumentation() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get API Access
+                  Get Started
                 </motion.button>
               </Link>
             </motion.div>
@@ -104,15 +95,15 @@ export default function APIDocumentation() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Features
+                Enterprise Features
               </h2>
               <p className="text-xl text-gray-600">
-                Powerful, secure, and easy to use
+                Built for scale, security, and performance
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
+              {enterpriseFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div
@@ -132,7 +123,7 @@ export default function APIDocumentation() {
           </div>
         </section>
 
-        {/* API Endpoints Section */}
+        {/* Solutions Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -142,38 +133,34 @@ export default function APIDocumentation() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Endpoints
+                Our Solutions
               </h2>
               <p className="text-xl text-gray-600">
-                Explore our available API endpoints
+                Comprehensive enterprise solutions tailored to your needs
               </p>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                {apiEndpoints.map((endpoint, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 rounded-lg p-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-gray-900">{endpoint.title}</h3>
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {endpoint.method}
-                      </span>
-                    </div>
-                    <code className="text-sm text-gray-600 bg-gray-200 px-3 py-1 rounded mb-2 block">
-                      {endpoint.endpoint}
-                    </code>
-                    <p className="text-gray-600">{endpoint.description}</p>
-                  </motion.div>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {enterpriseSolutions.map((solution, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 rounded-lg p-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
+                  <p className="text-gray-600 mb-6">{solution.description}</p>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -188,10 +175,10 @@ export default function APIDocumentation() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Get Started?
+                Ready to Transform Your Enterprise?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Contact us to get API access and start building
+                Contact us today to discuss your enterprise needs
               </p>
               <Link href="/contact">
                 <motion.button

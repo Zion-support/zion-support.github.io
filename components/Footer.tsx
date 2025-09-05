@@ -28,7 +28,11 @@ const services = [
   { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
   { name: 'Data Analytics', href: '/services/data-analytics' },
-  { name: 'Quantum Computing', href: '/services/quantum-computing' }
+  { name: 'Quantum Computing', href: '/services/quantum-computing' },
+  { name: 'Edge Computing', href: '/services/edge-computing' },
+  { name: 'Blockchain Solutions', href: '/services/blockchain' },
+  { name: 'IoT Platform', href: '/services/iot' },
+  { name: 'AR/VR Solutions', href: '/services/ar-vr' }
 ]
 
 const solutions = [
@@ -39,7 +43,11 @@ const solutions = [
   { name: 'Retail', href: '/solutions/retail' },
   { name: 'Education', href: '/solutions/education' },
   { name: 'Government', href: '/solutions/government' },
-  { name: 'Startup', href: '/solutions/startup' }
+  { name: 'Startup', href: '/solutions/startup' },
+  { name: 'Manufacturing', href: '/solutions/manufacturing' },
+  { name: 'Energy & Utilities', href: '/solutions/energy' },
+  { name: 'Transportation', href: '/solutions/transportation' },
+  { name: 'Real Estate', href: '/solutions/real-estate' }
 ]
 
 const industries = [
@@ -69,7 +77,12 @@ const resources = [
   { name: 'Community', href: '/community' },
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'White Papers', href: '/white-papers' }
+  { name: 'White Papers', href: '/white-papers' },
+  { name: 'Webinars', href: '/webinars' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'News', href: '/news' },
+  { name: 'Events', href: '/events' },
+  { name: 'Guides', href: '/guides' }
 ]
 
 const legal = [

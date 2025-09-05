@@ -55,6 +55,30 @@ const navigation = [
         href: '/micro-saas',
         description: 'Software as a Service solutions',
         icon: Cloud
+      },
+      {
+        name: 'Cloud & DevOps',
+        href: '/services/cloud-devops',
+        description: 'Cloud infrastructure and DevOps solutions',
+        icon: Cloud
+      },
+      {
+        name: 'Cybersecurity',
+        href: '/services/cybersecurity',
+        description: 'Advanced security solutions',
+        icon: Shield
+      },
+      {
+        name: 'Data Analytics',
+        href: '/services/data-analytics',
+        description: 'Business intelligence and analytics',
+        icon: BarChart3
+      },
+      {
+        name: 'Quantum Computing',
+        href: '/services/quantum-computing',
+        description: 'Quantum computing solutions',
+        icon: Cpu
       }
     ]
   },
@@ -87,6 +111,21 @@ const navigation = [
         name: 'Retail',
         href: '/solutions/retail',
         description: 'Retail technology solutions'
+      },
+      {
+        name: 'Education',
+        href: '/solutions/education',
+        description: 'Educational technology solutions'
+      },
+      {
+        name: 'Government',
+        href: '/solutions/government',
+        description: 'Government and public sector solutions'
+      },
+      {
+        name: 'Startup',
+        href: '/solutions/startup',
+        description: 'Startup and SMB solutions'
       }
     ]
   },
@@ -151,6 +190,21 @@ const navigation = [
         name: 'Case Studies',
         href: '/case-studies',
         description: 'Success stories and examples'
+      },
+      {
+        name: 'Tutorials',
+        href: '/tutorials',
+        description: 'Step-by-step guides and tutorials'
+      },
+      {
+        name: 'White Papers',
+        href: '/white-papers',
+        description: 'In-depth research and insights'
+      },
+      {
+        name: 'Webinars',
+        href: '/webinars',
+        description: 'Live and recorded webinars'
       }
     ]
   },

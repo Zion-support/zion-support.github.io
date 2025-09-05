@@ -1,71 +1,92 @@
+import React from 'react';
+import {
   Eye,
   Lock,
   Globe,
   Users
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const cookieTypes = [
   {
     name: "Essential Cookies",
+    description: "These cookies are necessary for the website to function properly.",
+    icon: Lock,
+    purpose: "Authentication, security, and basic functionality"
+  },
+  {
+    name: "Analytics Cookies",
+    description: "These cookies help us understand how visitors interact with our website.",
+    icon: Eye,
+    purpose: "Website analytics and performance monitoring"
+  },
+  {
+    name: "Functional Cookies",
+    description: "These cookies enable enhanced functionality and personalization.",
+    icon: Globe,
+    purpose: "User preferences and enhanced features"
+  },
+  {
+    name: "Marketing Cookies",
+    description: "These cookies are used to deliver relevant advertisements.",
+    icon: Users,
+    purpose: "Targeted advertising and marketing campaigns"
   }
 ];
 
-const cookieDetails = [
-  {
-    duration: "Session",
-    provider: "Zion Tech Group"
-  },
-  {
+export default function CookiePolicy() {
   return (
-    <MainLayout 
+    <Layout 
       title="Cookie Policy - Zion Tech Group"
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+      description="Learn about how we use cookies on our website and your options for managing them."
+      keywords="cookie policy, privacy, data protection, cookies"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+              Cookie Policy
+            </h1>
+            
+            <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <p className="text-lg text-gray-600 mb-6">
+                This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies on our website.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#cookie-types"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Learn About Cookies
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/privacy"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                >
-                  Privacy Policy
-                </Link>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {cookieTypes.map((cookie, index) => {
+                  const IconComponent = cookie.icon;
+                  return (
+                    <div key={index} className="border border-gray-200 rounded-lg p-6">
+                      <div className="flex items-center mb-4">
+                        <IconComponent className="w-8 h-8 text-blue-600 mr-3" />
+                        <h3 className="text-xl font-semibold text-gray-900">{cookie.name}</h3>
+                      </div>
+                      <p className="text-gray-600 mb-3">{cookie.description}</p>
+                      <p className="text-sm text-gray-500">
+                        <strong>Purpose:</strong> {cookie.purpose}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
-            </motion.div>
-          </div>
-        </section>
-
+            </div>
+            
+            <div className="bg-blue-50 rounded-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies</h2>
+              <p className="text-gray-600 mb-4">
+                You can control and manage cookies through your browser settings. Most browsers allow you to:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>View and delete cookies</li>
+                <li>Block cookies from specific websites</li>
+                <li>Block all cookies</li>
+                <li>Set preferences for different types of cookies</li>
+              </ul>
             </div>
           </div>
-        </section>
-
-            </div>
-          </div>
-        </section>
-
-          </div>
-        </section>
-
-        {/* Last Updated */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-gray-600">
-              <p>Last updated: January 15, 2024</p>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

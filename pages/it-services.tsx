@@ -101,6 +101,88 @@ const itServices = [
     link: 'https://devops.ziontechgroup.com'
   },
   {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup and integration for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Quantum-Classical Integration', 'Research Support'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantuminfra.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Global Distribution'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Network,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure with GPU clusters, data pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'Data Pipeline Design', 'Model Deployment', 'MLOps Implementation'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://aiinfra.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design and implementation for enterprise and industrial applications.',
+    icon: Network,
+    features: ['5G Network Design', 'Private 5G Networks', 'IoT Connectivity', 'Performance Optimization'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Framework'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform development for industrial and smart city applications.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Synchronization', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Digital Twin',
+    link: 'https://digitaltwininfra.ziontechgroup.com'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure for enterprise and consumer applications.',
+    icon: Video,
+    features: ['AR/VR Hardware Setup', 'Content Management', 'User Tracking', 'Performance Optimization'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'AR/VR',
+    link: 'https://arvrinfra.ziontechgroup.com'
+  },
+  {
+    title: 'High-Performance Computing',
+    description: 'HPC cluster setup and optimization for scientific computing and data analysis.',
+    icon: Cpu,
+    features: ['HPC Cluster Design', 'Parallel Processing', 'Performance Tuning', 'Scientific Computing'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'HPC',
+    link: 'https://hpc.ziontechgroup.com'
+  },
+  {
     title: 'IT Consulting Services',
     description: 'Strategic IT consulting to align technology with business objectives.',
     icon: Users,
