@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BookOpen, Clock, Users, ArrowRight, Play, Code, Database, Cloud, Shield } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const tutorials = [
   {
@@ -91,7 +91,7 @@ const difficultyLevels = [
 
 export default function TutorialsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Tutorials - Zion Tech Group"
       description="Learn from our comprehensive tutorials covering web development, AI/ML, cloud computing, security, and more. Step-by-step guides for all skill levels."
       keywords="tutorials, learning, web development, AI, machine learning, cloud computing, programming, coding"
@@ -308,6 +308,6 @@ export default function TutorialsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

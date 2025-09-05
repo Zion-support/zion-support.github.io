@@ -81,11 +81,11 @@ const errorChecks = Object.values(healthCheck.checks).filter(
   check => check.status === 'error'
 ).length;
 
-console.log("📊 Health Check "Summary": ");
+console.log("📊 Health Check Summary:");
 console.log(`   - Total checks: ${totalChecks}`);
-console.log(`   - "OK": ${okChecks}`);
-console.log(`   - "Errors": ${errorChecks}`);
-console.log(`   - "Status": ${healthCheck.status.toUpperCase()}`);
+console.log(`   - OK: ${okChecks}`);
+console.log(`   - Errors: ${errorChecks}`);
+console.log(`   - Status: ${healthCheck.status.toUpperCase()}`);
 
 if (healthCheck.status === 'healthy') {
   console.log('🎉 System is healthy!');

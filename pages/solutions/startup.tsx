@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 
 const features = [
   {
@@ -49,7 +49,7 @@ const stats = [
 
 export default function StartupSolutionsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Startup Solutions - Zion Tech Group"
       description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions."
       keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions"
@@ -234,6 +234,6 @@ export default function StartupSolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
