@@ -25,13 +25,13 @@ export default function ContactPage() {
             transition={{ "duration": 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl "md": text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Get in{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Ready to transform your business with cutting-edge technology? Our expert team is here to help you succeed.
             </p>
           </motion.div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto">
           
           {/* Contact Information Cards */}
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
               initial={{ opacity: 0, "y": 30 }}
@@ -89,7 +89,7 @@ export default function ContactPage() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 "lg": grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, "x": -30 }}
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </h2>
               
               <form className="space-y-6">
-                <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name
@@ -171,7 +171,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or requirements..."
                     required
                   ></textarea>

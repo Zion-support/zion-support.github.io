@@ -421,6 +421,177 @@ const microSaaSProducts = [{
     "pricing": '$199 - $1,299/month',
     "category": 'Voice Analytics',
     "popular": true
+  },
+  {
+    "title": 'AI-Powered Content Creation Suite',
+    "description": 'Complete AI content creation platform with SEO optimization, multi-format support, and brand voice consistency.',
+    "icon": FileText,
+    "features": ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Brand Voice Training'],
+    "pricing": '$99 - $599/month',
+    "category": 'Content Creation',
+    "popular": true
+  },
+  {
+    "title": 'Smart E-commerce Return Management',
+    "description": 'Automated return processing with AI-powered fraud detection and customer satisfaction optimization.',
+    "icon": Package,
+    "features": ['Automated Returns', 'Fraud Detection', 'Customer Portal', 'Analytics Dashboard'],
+    "pricing": '$79 - $399/month',
+    "category": 'E-commerce',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Local SEO Optimizer',
+    "description": 'Intelligent local search optimization with competitor analysis and automated listing management.',
+    "icon": Search,
+    "features": ['Local Keyword Research', 'Competitor Analysis', 'Listing Management', 'Review Monitoring'],
+    "pricing": '$149 - $799/month',
+    "category": 'SEO & Marketing',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Email Campaign Optimizer',
+    "description": 'AI-driven email marketing optimization with send time prediction and content personalization.',
+    "icon": Mail,
+    "features": ['Send Time Optimization', 'Content Personalization', 'A/B Testing', 'Deliverability Monitoring'],
+    "pricing": '$49 - $299/month',
+    "category": 'Email Marketing',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Compliance Management',
+    "description": 'Automated compliance monitoring with real-time updates and risk assessment for various industries.',
+    "icon": Shield,
+    "features": ['Regulatory Updates', 'Risk Assessment', 'Document Management', 'Audit Trails'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Compliance',
+    "popular": true
+  },
+  {
+    "title": 'Smart Employee Wellness Platform',
+    "description": 'Comprehensive employee wellness tracking with AI insights and personalized health recommendations.',
+    "icon": Heart,
+    "features": ['Health Tracking', 'Wellness Challenges', 'Mental Health Support', 'Analytics Dashboard'],
+    "pricing": '$19 - $99/month per employee',
+    "category": 'Employee Wellness',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Supply Chain Optimizer',
+    "description": 'Intelligent supply chain management with demand forecasting and automated inventory optimization.',
+    "icon": Package,
+    "features": ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Management'],
+    "pricing": '$399 - $2,499/month',
+    "category": 'Supply Chain',
+    "popular": true
+  },
+  {
+    "title": 'Smart Sustainability Tracker',
+    "description": 'Environmental impact monitoring with carbon footprint calculation and sustainability reporting.',
+    "icon": Sprout,
+    "features": ['Carbon Footprint Tracking', 'Sustainability Goals', 'ESG Reporting', 'Impact Analytics'],
+    "pricing": '$99 - $599/month',
+    "category": 'Sustainability',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Remote Collaboration Hub',
+    "description": 'Advanced remote work platform with AI meeting insights, productivity tracking, and team optimization.',
+    "icon": Users,
+    "features": ['Meeting Analytics', 'Productivity Insights', 'Team Optimization', 'Virtual Workspaces'],
+    "pricing": '$29 - $199/month per user',
+    "category": 'Remote Work',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Cybersecurity Training Platform',
+    "description": 'AI-powered cybersecurity education with simulated attacks and personalized learning paths.',
+    "icon": Shield,
+    "features": ['Simulated Attacks', 'Personalized Learning', 'Progress Tracking', 'Certification Programs'],
+    "pricing": '$39 - $199/month per user',
+    "category": 'Cybersecurity Training',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Personalization Engine',
+    "description": 'Real-time personalization platform for e-commerce with behavioral analysis and recommendation optimization.',
+    "icon": Target,
+    "features": ['Behavioral Analysis', 'Real-time Personalization', 'A/B Testing', 'Conversion Optimization'],
+    "pricing": '$199 - $1,299/month',
+    "category": 'Personalization',
+    "popular": true
+  },
+  {
+    "title": 'Smart Contract Security Auditor',
+    "description": 'Automated blockchain smart contract security analysis with vulnerability detection and gas optimization.',
+    "icon": Lock,
+    "features": ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    "pricing": '$499 - $2,999/month',
+    "category": 'Blockchain Security',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Medical Image Analysis',
+    "description": 'Advanced medical imaging analysis with AI-assisted diagnosis and automated report generation.',
+    "icon": Eye,
+    "features": ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
+    "pricing": '$999 - $4,999/month',
+    "category": 'Healthcare AI',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Document Processing Suite',
+    "description": 'Advanced document automation with OCR, data extraction, and workflow optimization for various industries.',
+    "icon": FileText,
+    "features": ['OCR Processing', 'Data Extraction', 'Workflow Automation', 'Integration APIs'],
+    "pricing": '$0.10 - $0.50 per document',
+    "category": 'Document Processing',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Social Media Intelligence',
+    "description": 'Comprehensive social media monitoring with sentiment analysis, crisis detection, and competitor intelligence.',
+    "icon": MessageSquare,
+    "features": ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Intelligence'],
+    "pricing": '$199 - $1,299/month',
+    "category": 'Social Media Intelligence',
+    "popular": true
+  },
+  {
+    "title": 'Smart Agriculture IoT Platform',
+    "description": 'IoT-based agricultural monitoring with crop analysis, weather integration, and yield optimization.',
+    "icon": Sprout,
+    "features": ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'AgTech',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Financial Risk Assessment',
+    "description": 'Real-time financial risk analysis with credit scoring, fraud detection, and regulatory compliance.',
+    "icon": Shield,
+    "features": ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Regulatory Compliance'],
+    "pricing": '$499 - $2,999/month',
+    "category": 'FinTech',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Fleet Management System',
+    "description": 'AI-powered fleet optimization with route planning, driver behavior analysis, and predictive maintenance.',
+    "icon": Car,
+    "features": ['Route Optimization', 'Driver Analytics', 'Predictive Maintenance', 'Fuel Optimization'],
+    "pricing": '$199 - $999/month',
+    "category": 'Fleet Management',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Voice Assistant Platform',
+    "description": 'Custom voice assistant development with natural language processing and multi-platform integration.',
+    "icon": Mic,
+    "features": ['Voice Recognition', 'Natural Language Processing', 'Multi-platform Support', 'Custom Commands'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Voice Technology',
+    "popular": true
   }
 ];
 
@@ -551,17 +722,17 @@ export default function MicroSaaSPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md: text-6xl font-bold">
                 Micro{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                   SaaS
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your SaaS
               </Link>
@@ -583,7 +754,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -597,7 +768,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group relative ${
+                  className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ "opacity": 0, "y": 30 }}
@@ -615,7 +786,7 @@ export default function MicroSaaSPage() {
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-"hover": text-indigo-600 transition-colors">
+                    <div className="text-purple-600 group-hover: text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
@@ -648,7 +819,7 @@ export default function MicroSaaSPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-purple-600 "hover": bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-purple-600 hover: bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -670,7 +841,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Why Choose Micro SaaS?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -678,13 +849,13 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -716,7 +887,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -765,7 +936,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -773,7 +944,7 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
@@ -815,7 +986,7 @@ export default function MicroSaaSPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-                      ? 'bg-purple-600 "hover": bg-purple-700 text-white'
+                      ? 'bg-purple-600 hover: bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -837,13 +1008,13 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>

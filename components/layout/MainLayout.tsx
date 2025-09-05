@@ -10,7 +10,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-const "MainLayout": React.FC<MainLayoutProps> = ({ 
+const MainLayout: React.FC<MainLayoutProps> = ({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.",

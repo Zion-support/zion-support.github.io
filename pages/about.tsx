@@ -144,13 +144,13 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl "md": text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </h1>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
           </motion.div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Foundation
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -237,7 +237,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -251,7 +251,7 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -283,7 +283,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Meet Our Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -295,7 +295,7 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg text-center "hover": shadow-xl transition-shadow"
+                className="bg-white p-6 rounded-xl shadow-lg text-center hover: shadow-xl transition-shadow"
                 initial={{ opacity: 0, "y": 30 }}
                 whileInView={{ "opacity": 1, "y": 0 }}
                 transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -334,7 +334,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Our Achievements
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -383,7 +383,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Our Journey
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -431,7 +431,7 @@ export default function AboutPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Ready to Work With Us?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
