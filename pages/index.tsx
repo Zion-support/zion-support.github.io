@@ -2,31 +2,33 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '750+', label: 'Projects Completed' },
+  { number: '175+', label: 'Services & Solutions' },
+  { number: '75+', label: 'Expert Team Members' },
+  { number: '15+', label: 'Years Experience' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "60+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, and quantum AI",
     icon: Brain,
     href: "/ai-services",
   },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "50+ comprehensive IT services from cloud infrastructure to cybersecurity and quantum computing",
     icon: Network,
     href: "/it-services",
   },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "65+ innovative micro SaaS solutions for modern businesses across all industries",
     icon: Cloud,
     href: "/micro-saas",
   }
@@ -34,13 +36,8 @@ const services = [
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <Layout>
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -65,7 +62,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, quantum computing, blockchain, IoT, and digital transformation services. We deliver 175+ innovative solutions to transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -93,7 +90,7 @@ export default function HomePage() {
               Our Core Services
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.
+              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 175+ services cover every aspect of modern technology needs.
             </p>
           </motion.div>
 
@@ -136,7 +133,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -155,8 +152,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* Contact Information Section */}
       <section className="py-20 bg-white">
@@ -226,7 +221,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -254,12 +248,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-    </Layout>
-=======
       </div>
-    </MainLayout>
->>>>>>> cursor/add-new-services-and-deploy-updates-469e
+    </Layout>
   );
 }

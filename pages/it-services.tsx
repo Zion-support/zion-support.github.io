@@ -148,6 +148,111 @@ const itServices = [
     category: 'Support'
   },
   {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for advanced computational needs.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for real-time processing and low-latency applications.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Data Processing', 'Network Optimization', 'Security Management'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Edge Computing'
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network infrastructure design, implementation, and optimization.',
+    icon: Wifi,
+    features: ['Network Planning', 'Infrastructure Setup', 'Performance Testing', 'Optimization'],
+    pricing: '$50,000 - $250,000/project',
+    category: '5G Networks'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain infrastructure setup and management for various use cases.',
+    icon: Shield,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Node Management', 'Security Implementation'],
+    pricing: '$30,000 - $150,000/setup',
+    category: 'Blockchain'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and data analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Security Implementation'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'IoT'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI infrastructure including GPU clusters, ML pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'ML Pipeline Development', 'Model Deployment', 'Performance Optimization'],
+    pricing: '$75,000 - $350,000/setup',
+    category: 'AI Infrastructure'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient systems and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Analysis', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Green IT'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation for modern businesses.',
+    icon: TrendingUp,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation Support'],
+    pricing: '$150 - $400/hour',
+    category: 'Digital Transformation'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model for enhanced enterprise security.',
+    icon: Lock,
+    features: ['Identity Verification', 'Network Segmentation', 'Continuous Monitoring', 'Access Control'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Seamless management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Integration', 'Performance Monitoring'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cloud Management'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'Comprehensive IT compliance management and governance framework implementation.',
+    icon: CheckCircle,
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Compliance'
+  },
+  {
+    title: 'Advanced Analytics Platform',
+    description: 'Enterprise-grade analytics platform with real-time processing and machine learning capabilities.',
+    icon: BarChart3,
+    features: ['Real-time Analytics', 'Data Visualization', 'ML Integration', 'Custom Dashboards'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Analytics'
+  },
+  {
+    title: 'IT Support & Help Desk',
+    description: '24/7 IT support and help desk services for your organization.',
+    icon: Users,
+    features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base'],
+    pricing: '$1,500 - $6,000/month',
+    category: 'Support'
+  },
+  {
     title: 'Software Development Services',
     description: 'Custom software development and application modernization services.',
     icon: Code,

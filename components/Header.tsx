@@ -21,14 +21,51 @@ const navigation = [
     name: 'Services',
     href: '/services',
     children: [
-      { name: 'AI Services', href: '/ai-services', description: 'Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/it-services', description: 'Comprehensive IT solutions' },
-      { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' }
+      { name: 'AI Services', href: '/ai-services', description: '60+ Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/it-services', description: '50+ Comprehensive IT solutions' },
+      { name: 'Micro SaaS', href: '/micro-saas', description: '65+ Scalable SaaS solutions' },
+      { name: 'Solutions', href: '/solutions', description: 'Industry-specific solutions' },
+      { name: 'Industries', href: '/industries', description: 'Sector-focused services' },
+      { name: 'Pricing', href: '/pricing', description: 'Transparent pricing plans' }
     ]
   },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' }
+  {
+    name: 'Solutions',
+    href: '/solutions',
+    children: [
+      { name: 'Cloud Solutions', href: '/solutions#cloud', description: 'Cloud infrastructure & migration' },
+      { name: 'AI Solutions', href: '/solutions#ai', description: 'AI implementation & consulting' },
+      { name: 'Cybersecurity', href: '/solutions#security', description: 'Security & compliance' },
+      { name: 'Digital Transformation', href: '/solutions#digital', description: 'Business modernization' },
+      { name: 'IoT Solutions', href: '/solutions#iot', description: 'Internet of Things integration' },
+      { name: 'Blockchain Solutions', href: '/solutions#blockchain', description: 'Blockchain & Web3' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Latest insights & trends' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+      { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },
+      { name: 'API Documentation', href: '/api-docs', description: 'Technical documentation' },
+      { name: 'News', href: '/news', description: 'Industry news & updates' }
+    ]
+  },
+  {
+    name: 'Company',
+    href: '/about',
+    children: [
+      { name: 'About Us', href: '/about', description: 'Our story & mission' },
+      { name: 'Team', href: '/team', description: 'Meet our experts' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Partners', href: '/partners', description: 'Our partners' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  },
+  { name: 'Support', href: '/support' }
 ];
 
 const contactInfo = {

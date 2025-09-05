@@ -47,7 +47,8 @@ import {
   Trash2,
   Camera,
   HardDrive,
-  Database
+  Database,
+  Droplets
 } from 'lucide-react';
 
 
@@ -143,6 +144,298 @@ const microSaaSProducts = [
     features: ['Email Templates', 'Automation Workflows', 'A/B Testing', 'Analytics'],
     pricing: '$39 - $299/month',
     category: 'Marketing'
+  },
+  {
+    title: 'Inventory Management System',
+    description: 'Smart inventory tracking and management for e-commerce businesses.',
+    icon: Package,
+    features: ['Real-time Tracking', 'Automated Reordering', 'Multi-location Support', 'Analytics Dashboard'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality assurance using advanced AI analysis.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practices'],
+    pricing: '$199 - $999/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management Platform',
+    description: 'AI-powered energy optimization for buildings and facilities with real-time monitoring.',
+    icon: Zap,
+    features: ['Energy Consumption Analysis', 'Predictive Maintenance', 'Load Balancing', 'Cost Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Green Tech'
+  },
+  {
+    title: 'AI-Powered Voice Assistant Builder',
+    description: 'No-code platform for creating custom voice assistants and chatbots.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Custom Commands', 'Multi-language Support'],
+    pricing: '$149 - $799/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain analysis and monitoring for cryptocurrency and DeFi platforms.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Portfolio Tracking', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Document Intelligence',
+    description: 'Intelligent document processing with OCR, classification, and data extraction.',
+    icon: FileText,
+    features: ['OCR Technology', 'Document Classification', 'Data Extraction', 'Workflow Automation'],
+    pricing: '$199 - $999/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home management with AI optimization and voice control.',
+    icon: Home,
+    features: ['Device Integration', 'Voice Control', 'Energy Optimization', 'Security Monitoring'],
+    pricing: '$99 - $499/month',
+    category: 'IoT'
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video analysis for security, marketing, and business intelligence.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$299 - $1,499/month',
+    category: 'Video Analytics'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$499 - $2,499/month',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI-Powered Talent Acquisition',
+    description: 'Intelligent recruitment platform with AI matching and candidate assessment.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Cultural Fit Assessment', 'Interview Scheduling'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code platform for creating and deploying smart contracts on multiple blockchains.',
+    icon: Shield,
+    features: ['Visual Builder', 'Multi-blockchain Support', 'Testing Tools', 'Deployment Automation'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain Development'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation using advanced AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $1,999/month',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent contract analysis, risk assessment, and compliance monitoring for legal teams.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$499 - $2,499/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Supply Chain Optimizer',
+    description: 'AI-driven supply chain optimization with demand forecasting and logistics management.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Analysis'],
+    pricing: '$799 - $3,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system with behavioral analysis and automated remediation.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Management'],
+    pricing: '$999 - $4,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Monitoring System',
+    description: 'IoT-based agricultural monitoring with AI insights for crop optimization and yield prediction.',
+    icon: Sprout,
+    features: ['Soil Monitoring', 'Weather Analysis', 'Crop Health', 'Yield Prediction'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Financial Risk Assessment',
+    description: 'Real-time financial risk analysis and credit scoring using machine learning algorithms.',
+    icon: DollarSign,
+    features: ['Credit Scoring', 'Risk Analysis', 'Fraud Detection', 'Portfolio Optimization'],
+    pricing: '$599 - $2,999/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Smart Building Energy Optimizer',
+    description: 'AI-powered building management system for energy efficiency and cost reduction.',
+    icon: Building,
+    features: ['Energy Optimization', 'HVAC Control', 'Occupancy Detection', 'Cost Analysis'],
+    pricing: '$299 - $1,499/month',
+    category: 'PropTech'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'Advanced medical imaging analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Medical Imaging', 'Symptom Analysis', 'Diagnostic Support', 'Treatment Recommendations'],
+    pricing: '$1,999 - $9,999/month',
+    category: 'HealthTech',
+    popular: true
+  },
+  {
+    title: 'Smart Fleet Management Platform',
+    description: 'Comprehensive fleet tracking and optimization with AI-powered route planning and maintenance.',
+    icon: Car,
+    features: ['Fleet Tracking', 'Route Optimization', 'Driver Behavior', 'Maintenance Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Fleet Management'
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predictive analytics platform to identify and prevent customer churn with targeted interventions.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Customer Segmentation', 'Intervention Strategies', 'ROI Analysis'],
+    pricing: '$299 - $1,499/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT-enabled waste monitoring and optimization for cities and businesses.',
+    icon: Trash2,
+    features: ['Waste Monitoring', 'Route Optimization', 'Fill Level Detection', 'Cost Analysis'],
+    pricing: '$149 - $799/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Speech Recognition', 'Progress Tracking', 'Cultural Context'],
+    pricing: '$29 - $149/month',
+    category: 'EdTech'
+  },
+  {
+    title: 'Smart Retail Analytics Platform',
+    description: 'AI-powered retail analytics with customer behavior analysis and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Price Optimization', 'Demand Forecasting'],
+    pricing: '$399 - $1,999/month',
+    category: 'Retail Tech'
+  },
+  {
+    title: 'AI-Powered Insurance Claims Processor',
+    description: 'Automated insurance claims processing with fraud detection and damage assessment.',
+    icon: Shield,
+    features: ['Claims Processing', 'Fraud Detection', 'Damage Assessment', 'Automated Payouts'],
+    pricing: '$799 - $3,999/month',
+    category: 'InsurTech'
+  },
+  {
+    title: 'Smart Water Management System',
+    description: 'IoT-based water quality monitoring and leak detection for municipalities and industries.',
+    icon: Droplets,
+    features: ['Water Quality Monitoring', 'Leak Detection', 'Usage Analytics', 'Predictive Maintenance'],
+    pricing: '$199 - $999/month',
+    category: 'Water Tech'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI analysis of market data and property features.',
+    icon: Home,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$99 - $499/month',
+    category: 'PropTech'
+  },
+  {
+    title: 'Smart Manufacturing Quality Control',
+    description: 'AI-powered quality control system for manufacturing with real-time defect detection.',
+    icon: Settings,
+    features: ['Defect Detection', 'Quality Metrics', 'Process Optimization', 'Predictive Quality'],
+    pricing: '$599 - $2,999/month',
+    category: 'Manufacturing'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'AI-powered mental health monitoring and support with mood tracking and intervention.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Stress Analysis', 'Intervention Suggestions', 'Progress Monitoring'],
+    pricing: '$49 - $299/month',
+    category: 'HealthTech'
+  },
+  {
+    title: 'Smart Parking Management System',
+    description: 'AI-powered parking optimization with real-time availability and dynamic pricing.',
+    icon: Car,
+    features: ['Availability Tracking', 'Dynamic Pricing', 'Reservation System', 'Revenue Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Content Localization',
+    description: 'Automated content translation and localization with cultural adaptation and quality assurance.',
+    icon: Globe,
+    features: ['Multi-language Translation', 'Cultural Adaptation', 'Quality Assurance', 'SEO Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Content Management'
+  },
+  {
+    title: 'Smart Restaurant Management Platform',
+    description: 'AI-powered restaurant operations with demand forecasting, inventory management, and customer analytics.',
+    icon: ShoppingCart,
+    features: ['Demand Forecasting', 'Inventory Management', 'Customer Analytics', 'Menu Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'FoodTech'
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Personal and business financial planning with AI-powered insights and recommendations.',
+    icon: DollarSign,
+    features: ['Budget Analysis', 'Investment Recommendations', 'Risk Assessment', 'Goal Tracking'],
+    pricing: '$49 - $299/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'IoT-based agricultural monitoring with AI analysis for crop optimization.',
+    icon: Sprout,
+    features: ['Soil Monitoring', 'Weather Analysis', 'Crop Health', 'Yield Prediction'],
+    pricing: '$199 - $999/month',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal research platform with case law analysis and document review.',
+    icon: BookOpen,
+    features: ['Case Law Search', 'Document Analysis', 'Legal Research', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech'
   },
   {
     title: 'Inventory Management System',

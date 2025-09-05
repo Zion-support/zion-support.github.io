@@ -19,21 +19,46 @@ const services = {
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'AI Legal Research Assistant', href: '/ai-services#legal-research' },
+    { name: 'AI Medical Imaging Analysis', href: '/ai-services#medical-imaging' },
+    { name: 'AI Cybersecurity Analyst', href: '/ai-services#cybersecurity-ai' },
+    { name: 'AI Climate Change Predictor', href: '/ai-services#climate-predictor' },
+    { name: 'AI Autonomous Vehicle System', href: '/ai-services#autonomous-vehicles' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'System Administration', href: '/it-services#system-administration' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Edge Computing Solutions', href: '/it-services#edge-computing' },
+    { name: '5G Network Implementation', href: '/it-services#5g-networks' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain-infrastructure' },
+    { name: 'AI Infrastructure Setup', href: '/it-services#ai-infrastructure' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'Smart Energy Management', href: '/micro-saas#energy-management' },
+    { name: 'Blockchain Analytics', href: '/micro-saas#blockchain-analytics' },
+    { name: 'AI Legal Document Analyzer', href: '/micro-saas#legal-analyzer' },
+    { name: 'Smart Supply Chain Optimizer', href: '/micro-saas#supply-chain' },
+    { name: 'AI Medical Diagnosis Assistant', href: '/micro-saas#medical-diagnosis' }
+  ],
+  'Solutions': [
+    { name: 'Cloud Solutions', href: '/solutions#cloud' },
+    { name: 'AI Implementation', href: '/solutions#ai' },
+    { name: 'Cybersecurity', href: '/solutions#security' },
+    { name: 'Digital Transformation', href: '/solutions#digital' },
+    { name: 'IoT Solutions', href: '/solutions#iot' },
+    { name: 'Blockchain Solutions', href: '/solutions#blockchain' },
+    { name: 'Smart Cities', href: '/solutions#smart-cities' },
+    { name: 'Healthcare Tech', href: '/solutions#healthcare' }
   ]
 };
 
@@ -53,7 +78,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
