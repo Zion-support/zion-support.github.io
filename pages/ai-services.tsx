@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { 
   Brain, 
   Eye, 
@@ -150,6 +150,195 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'Quantum AI Solutions',
+    description: 'Next-generation quantum computing AI for solving complex optimization problems and advanced simulations.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $8,500/month',
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum optimization problems',
+      'Advanced cryptography & security',
+      'Molecular simulation & drug discovery',
+      'Financial modeling & risk analysis',
+      'Supply chain optimization',
+      'Climate modeling & prediction',
+      'Quantum neural networks'
+    ],
+    benefits: [
+      'Solve problems 1,000x faster than classical computers',
+      'Breakthrough in optimization accuracy',
+      'Revolutionary security capabilities',
+      'Unlock previously impossible calculations'
+    ],
+    marketPrice: '$12,000-25,000/month',
+    setupTime: '6-8 weeks',
+    targetUsers: 'Research institutions, Fortune 500, Government agencies'
+  },
+  {
+    id: 5,
+    title: 'Autonomous Systems AI',
+    description: 'Self-driving vehicles, drones, and robotic systems with advanced AI decision-making capabilities.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $6,500/month',
+    features: [
+      'Autonomous vehicle navigation',
+      'Drone swarm coordination',
+      'Robotic process automation',
+      'Real-time decision making',
+      'Sensor fusion & processing',
+      'Path planning & optimization',
+      'Collision avoidance systems',
+      'Predictive maintenance'
+    ],
+    benefits: [
+      'Reduce accidents by 95%',
+      'Increase operational efficiency by 300%',
+      'Enable 24/7 autonomous operations',
+      'Lower operational costs by 60%'
+    ],
+    marketPrice: '$10,000-20,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Transportation, Manufacturing, Logistics, Defense'
+  },
+  {
+    id: 6,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection, behavioral analysis, and automated security response systems.',
+    icon: Shield,
+    category: 'AI Security',
+    price: 'Starting at $4,200/month',
+    features: [
+      'Real-time threat detection',
+      'Behavioral anomaly analysis',
+      'Automated incident response',
+      'Predictive threat modeling',
+      'Zero-day attack prevention',
+      'AI-powered forensics',
+      'Adaptive security policies',
+      'Threat intelligence automation'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 90%',
+      'Prevent 99.9% of cyber attacks',
+      'Automate 80% of security tasks'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Enterprise, Government, Financial services, Healthcare'
+  },
+  {
+    id: 7,
+    title: 'Generative AI Platform',
+    description: 'Advanced content generation, creative AI, and automated content creation across multiple media types.',
+    icon: Image,
+    category: 'Generative AI',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Text generation & content creation',
+      'Image & video generation',
+      'Code generation & automation',
+      'Music & audio synthesis',
+      '3D model generation',
+      'Creative design automation',
+      'Multi-modal content creation',
+      'Custom model fine-tuning'
+    ],
+    benefits: [
+      'Generate content 100x faster',
+      'Reduce creative costs by 70%',
+      'Enable unlimited content variations',
+      'Maintain brand consistency automatically'
+    ],
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Marketing, Media, E-commerce, Creative agencies'
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Healthcare Solutions',
+    description: 'Medical diagnosis, drug discovery, personalized treatment, and healthcare automation systems.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $5,500/month',
+    features: [
+      'Medical image analysis',
+      'Drug discovery & development',
+      'Personalized treatment plans',
+      'Predictive health analytics',
+      'Clinical decision support',
+      'Patient monitoring systems',
+      'Medical record analysis',
+      'Telemedicine AI assistance'
+    ],
+    benefits: [
+      'Improve diagnosis accuracy by 40%',
+      'Reduce treatment costs by 30%',
+      'Accelerate drug discovery by 5x',
+      'Save lives through early detection'
+    ],
+    marketPrice: '$8,000-18,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Hospitals, Pharma companies, Medical research, Telehealth'
+  },
+  {
+    id: 9,
+    title: 'AI-Powered Financial Trading',
+    description: 'Algorithmic trading, risk management, fraud detection, and automated financial decision-making systems.',
+    icon: TrendingUp,
+    category: 'FinTech AI',
+    price: 'Starting at $4,800/month',
+    features: [
+      'Algorithmic trading strategies',
+      'Real-time market analysis',
+      'Risk assessment & management',
+      'Fraud detection & prevention',
+      'Credit scoring & underwriting',
+      'Portfolio optimization',
+      'Regulatory compliance automation',
+      'High-frequency trading AI'
+    ],
+    benefits: [
+      'Increase trading profits by 200%',
+      'Reduce risk exposure by 60%',
+      'Detect fraud with 99.9% accuracy',
+      'Automate 90% of trading decisions'
+    ],
+    marketPrice: '$7,000-16,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Banks, Hedge funds, Trading firms, Fintech startups'
+  },
+  {
+    id: 10,
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management, demand forecasting, and logistics optimization systems.',
+    icon: Truck,
+    category: 'Supply Chain AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Demand forecasting & planning',
+      'Inventory optimization',
+      'Route optimization & logistics',
+      'Supplier risk assessment',
+      'Quality control automation',
+      'Supply chain visibility',
+      'Cost optimization',
+      'Sustainability tracking'
+    ],
+    benefits: [
+      'Reduce inventory costs by 35%',
+      'Improve delivery times by 50%',
+      'Eliminate supply chain disruptions',
+      'Increase sustainability by 40%'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Manufacturing, Retail, Logistics, E-commerce'
   }
 ];
 
@@ -157,7 +346,14 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "AI Security", count: aiServices.filter(s => s.category === "AI Security").length },
+  { name: "Generative AI", count: aiServices.filter(s => s.category === "Generative AI").length },
+  { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length },
+  { name: "FinTech AI", count: aiServices.filter(s => s.category === "FinTech AI").length },
+  { name: "Supply Chain AI", count: aiServices.filter(s => s.category === "Supply Chain AI").length }
 ];
 
 export default function AIServicesPage() {

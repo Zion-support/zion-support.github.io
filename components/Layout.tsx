@@ -33,21 +33,25 @@ export default function Layout({ title, description, children, keywords }: Layou
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision' },
-    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity' },
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions' },
-    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs' },
-    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' }
+    { name: 'AI Services', href: '/ai-services', description: '150+ AI Solutions - ML, NLP, Computer Vision, Quantum AI' },
+    { name: 'IT Services', href: '/it-services', description: '120+ IT Solutions - Cloud, DevOps, Cybersecurity, Quantum' },
+    { name: 'Micro SaaS', href: '/micro-saas', description: '200+ SaaS Solutions - Automation, Analytics, AI-Powered' },
+    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs, Web3' },
+    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing, Smart Cities' },
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'AI-Powered Security, Zero-Trust, Compliance' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum Algorithms, Optimization, Cryptography' },
+    { name: 'Edge Computing', href: '/edge-computing', description: 'Distributed Computing, Real-time Processing' }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
-    { name: 'Startup Solutions', href: '/startup', description: 'Scalable startup platforms' },
-    { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
-    { name: 'Healthcare', href: '/healthcare', description: 'Medical technology solutions' },
-    { name: 'Finance', href: '/finance', description: 'Fintech and banking solutions' },
-    { name: 'Education', href: '/education', description: 'EdTech platforms' }
+    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale AI & IT solutions' },
+    { name: 'Startup Solutions', href: '/startup', description: 'Scalable AI-powered platforms' },
+    { name: 'E-commerce', href: '/ecommerce', description: 'AI-driven online store solutions' },
+    { name: 'Healthcare', href: '/healthcare', description: 'AI-powered medical technology' },
+    { name: 'Finance', href: '/finance', description: 'AI fintech and banking solutions' },
+    { name: 'Education', href: '/education', description: 'AI-powered EdTech platforms' },
+    { name: 'Manufacturing', href: '/manufacturing', description: 'Smart manufacturing & Industry 4.0' },
+    { name: 'Retail', href: '/retail', description: 'AI-powered retail solutions' }
   ];
 
   const quickLinks = [
@@ -56,7 +60,20 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Support', href: '/support' }
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Events', href: '/events' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' }
   ];
 
   return (
@@ -229,6 +246,9 @@ export default function Layout({ title, description, children, keywords }: Layou
                 <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                   About
                 </Link>
+                <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                  Blog
+                </Link>
                 <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                   Contact
                 </Link>
@@ -356,9 +376,9 @@ export default function Layout({ title, description, children, keywords }: Layou
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {/* Company Info */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-xl">Z</span>
@@ -370,22 +390,19 @@ export default function Layout({ title, description, children, keywords }: Layou
                 </div>
                 <p className="text-gray-400 mb-6">
                   Leading provider of AI services, IT solutions, and innovative micro SAAS platforms. 
-                  We help businesses scale, automate, and innovate with cutting-edge technology.
+                  We deliver 470+ cutting-edge solutions to transform your business with AI-powered automation and expert implementation.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    <Instagram className="w-5 h-5" />
+                  <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                    <Twitter className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                     <Github className="w-5 h-5" />
                   </a>
                 </div>
@@ -395,7 +412,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  {services.slice(0, 6).map((service, index) => (
+                  {services.slice(0, 4).map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.href} 
@@ -405,6 +422,11 @@ export default function Layout({ title, description, children, keywords }: Layou
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link href="/services" className="text-blue-400 hover:text-white transition-colors font-medium">
+                      View All Services →
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
@@ -412,7 +434,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Solutions</h3>
                 <ul className="space-y-2">
-                  {solutions.slice(0, 6).map((solution, index) => (
+                  {solutions.slice(0, 4).map((solution, index) => (
                     <li key={index}>
                       <Link 
                         href={solution.href} 
@@ -422,36 +444,52 @@ export default function Layout({ title, description, children, keywords }: Layou
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link href="/solutions" className="text-blue-400 hover:text-white transition-colors font-medium">
+                      View All Solutions →
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
-              {/* Contact Info */}
+              {/* Resources & Contact */}
               <div>
+                <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                <ul className="space-y-2 mb-6">
+                  {resources.slice(0, 4).map((resource, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={resource.href} 
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {resource.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                
                 <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <Phone className="w-5 h-5 mr-3 mt-1 text-blue-400" />
+                    <Phone className="w-4 h-4 mr-2 mt-1 text-blue-400" />
                     <div>
-                      <div className="text-gray-400">Phone</div>
-                      <a href="tel:+13024640950" className="text-white hover:text-blue-400">
+                      <a href="tel:+13024640950" className="text-white hover:text-blue-400 text-sm">
                         +1 302 464 0950
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="w-5 h-5 mr-3 mt-1 text-blue-400" />
+                    <Mail className="w-4 h-4 mr-2 mt-1 text-blue-400" />
                     <div>
-                      <div className="text-gray-400">Email</div>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400">
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 text-sm">
                         kleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 mr-3 mt-1 text-blue-400" />
+                    <MapPin className="w-4 h-4 mr-2 mt-1 text-blue-400" />
                     <div>
-                      <div className="text-gray-400">Address</div>
-                      <div className="text-white">
+                      <div className="text-white text-sm">
                         364 E Main St STE 1008<br />
                         Middletown DE 19709
                       </div>

@@ -15,94 +15,212 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Cpu,
+  Globe
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const services = [
   {
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions for modern businesses",
+    title: "Next-Gen Cloud Infrastructure",
+    description: "AI-powered cloud solutions with advanced automation and intelligent scaling",
     icon: Cloud,
     features: [
-      "AWS, Azure, GCP Migration",
-      "Container Orchestration",
-      "Serverless Architecture",
-      "Cloud Security & Compliance",
-      "Auto-scaling Solutions",
-      "Disaster Recovery"
+      "Multi-cloud Strategy & Migration",
+      "AI-Driven Auto-scaling",
+      "Serverless & Microservices",
+      "Zero-Trust Security Architecture",
+      "Edge Computing Solutions",
+      "Disaster Recovery & Backup",
+      "Cost Optimization AI",
+      "Compliance Automation"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce cloud costs by 40%", "Improve performance by 200%", "Eliminate downtime by 99.9%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Enterprise, Mid-market, Startups"
   },
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets",
+    title: "AI-Powered Cybersecurity",
+    description: "Advanced threat detection and automated security response with machine learning",
     icon: Shield,
     features: [
-      "Security Audits & Assessments",
-      "Penetration Testing",
+      "AI Threat Detection & Response",
+      "Behavioral Analytics",
       "Zero-Trust Architecture",
-      "Compliance & Risk Management",
-      "Incident Response",
-      "Security Training"
+      "Automated Compliance Management",
+      "Quantum-Safe Encryption",
+      "Real-time Security Monitoring",
+      "Incident Response Automation",
+      "Security Training & Awareness"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $3,200/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Prevent 99.9% of cyber attacks", "Reduce response time by 90%", "Automate 80% of security tasks"],
+    setupTime: "3-4 weeks",
+    targetUsers: "Enterprise, Government, Financial, Healthcare"
   },
   {
-    title: "DevOps & Automation",
-    description: "Streamline your development and deployment processes",
+    title: "Intelligent DevOps Platform",
+    description: "AI-driven development operations with predictive analytics and automated optimization",
     icon: Zap,
     features: [
-      "CI/CD Pipeline Setup",
-      "Infrastructure as Code",
-      "Monitoring & Logging",
-      "Performance Optimization",
-      "Automated Testing",
-      "Deployment Automation"
+      "AI-Powered CI/CD Pipelines",
+      "Infrastructure as Code (IaC)",
+      "Predictive Monitoring & Alerting",
+      "Automated Performance Optimization",
+      "Smart Testing & QA",
+      "Deployment Automation",
+      "Cost & Resource Optimization",
+      "DevSecOps Integration"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Deploy 5x faster", "Reduce bugs by 70%", "Improve team productivity by 150%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Development teams, DevOps engineers, CTOs"
   },
   {
-    title: "Database Management",
-    description: "Optimize and secure your data infrastructure",
+    title: "Advanced Database Solutions",
+    description: "Next-generation database management with AI optimization and real-time analytics",
     icon: Database,
     features: [
-      "Database Design & Optimization",
-      "Data Migration Services",
-      "Backup & Recovery Solutions",
-      "Performance Tuning",
+      "AI Database Optimization",
+      "Real-time Data Processing",
+      "Advanced Backup & Recovery",
+      "Performance Tuning AI",
       "Data Security & Encryption",
-      "Cloud Database Setup"
+      "Cloud Database Migration",
+      "Data Lake & Warehouse Setup",
+      "Automated Scaling"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Improve query performance by 300%", "Reduce storage costs by 50%", "Eliminate data loss"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Data teams, CTOs, Database administrators"
   },
   {
-    title: "Network Solutions",
-    description: "Robust networking infrastructure for seamless connectivity",
+    title: "Smart Network Infrastructure",
+    description: "AI-powered networking with intelligent routing and automated optimization",
     icon: Network,
     features: [
-      "Network Design & Implementation",
-      "VPN & Remote Access",
-      "Load Balancing",
-      "Network Security",
-      "Monitoring & Management",
-      "Cloud Networking"
+      "AI Network Optimization",
+      "Software-Defined Networking (SDN)",
+      "Edge Computing Networks",
+      "Zero-Trust Network Access",
+      "Intelligent Load Balancing",
+      "Network Security Automation",
+      "5G & IoT Integration",
+      "Predictive Maintenance"
     ],
-    price: "Starting at $1,000/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Improve network speed by 200%", "Reduce downtime by 95%", "Optimize costs by 35%"],
+    setupTime: "2-3 weeks",
+    targetUsers: "Network engineers, IT managers, CTOs"
   },
   {
-    title: "System Administration",
-    description: "Comprehensive system management and maintenance",
+    title: "Intelligent System Management",
+    description: "AI-driven system administration with predictive maintenance and automated optimization",
     icon: Server,
     features: [
-      "Server Setup & Configuration",
-      "System Monitoring",
-      "User Management",
-      "Backup Solutions",
-      "Performance Optimization",
-      "24/7 System Support"
+      "AI System Monitoring",
+      "Predictive Maintenance",
+      "Automated Performance Tuning",
+      "Smart Resource Allocation",
+      "Automated Backup & Recovery",
+      "User Access Management",
+      "Compliance Monitoring",
+      "24/7 AI Support"
     ],
-    price: "Starting at $800/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Reduce maintenance costs by 60%", "Prevent 90% of system failures", "Improve uptime to 99.9%"],
+    setupTime: "1-2 weeks",
+    targetUsers: "System administrators, IT managers, CTOs"
+  },
+  {
+    title: "Quantum Computing Solutions",
+    description: "Next-generation quantum computing infrastructure and optimization services",
+    icon: Cpu,
+    features: [
+      "Quantum Cloud Infrastructure",
+      "Quantum Algorithm Development",
+      "Quantum Security Implementation",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Optimization Services",
+      "Quantum Machine Learning",
+      "Quantum Cryptography",
+      "Quantum Simulation Platforms"
+    ],
+    price: "Starting at $8,000/month",
+    marketPrice: "$15,000-50,000/month",
+    benefits: ["Solve complex problems 1000x faster", "Revolutionary security capabilities", "Breakthrough optimization"],
+    setupTime: "6-8 weeks",
+    targetUsers: "Research institutions, Fortune 500, Government agencies"
+  },
+  {
+    title: "Edge Computing Platform",
+    description: "Distributed computing infrastructure for real-time processing and IoT applications",
+    icon: Globe,
+    features: [
+      "Edge Server Deployment",
+      "Real-time Data Processing",
+      "IoT Device Management",
+      "Edge AI & ML",
+      "Low-latency Applications",
+      "Distributed Storage",
+      "Edge Security",
+      "5G Integration"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce latency by 90%", "Process data 10x faster", "Enable real-time applications"],
+    setupTime: "3-4 weeks",
+    targetUsers: "IoT companies, Manufacturing, Smart cities, Autonomous vehicles"
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Secure blockchain networks and decentralized application development",
+    icon: Shield,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "DeFi Platform Development",
+      "NFT Marketplace Creation",
+      "Cryptocurrency Integration",
+      "Blockchain Security",
+      "Consensus Mechanism Implementation",
+      "Cross-chain Solutions"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Enable decentralized applications", "Increase security by 99%", "Reduce transaction costs by 80%"],
+    setupTime: "4-6 weeks",
+    targetUsers: "Fintech, Supply chain, Healthcare, Gaming, Real estate"
+  },
+  {
+    title: "AI-Powered IT Operations",
+    description: "Intelligent IT operations with automated incident response and predictive analytics",
+    icon: Settings,
+    features: [
+      "AIOps Implementation",
+      "Automated Incident Response",
+      "Predictive Analytics",
+      "Intelligent Alerting",
+      "Root Cause Analysis AI",
+      "Capacity Planning",
+      "Change Management",
+      "Service Level Optimization"
+    ],
+    price: "Starting at $2,600/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce incidents by 80%", "Improve resolution time by 70%", "Increase system reliability by 95%"],
+    setupTime: "3-4 weeks",
+    targetUsers: "IT operations teams, SREs, CTOs, IT managers"
   }
 ];
 
