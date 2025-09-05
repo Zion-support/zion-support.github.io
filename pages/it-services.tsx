@@ -28,21 +28,15 @@ import {
   Building,
   BarChart3,
   Code,
-<<<<<<< HEAD
   Rocket,
   Brain,
   Sprout,
   Car,
   Heart,
   ShoppingCart,
-=======
   Search,
-  ShoppingCart,
   BookOpen,
-  Brain,
   DollarSign,
-  Rocket,
->>>>>>> e983215a6b878036eaddc5ec4891c6ad6ea22064
   FileText
 } from 'lucide-react';
 

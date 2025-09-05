@@ -12,10 +12,7 @@ import {
   Mail,
   ChevronDown,
   Zap,
-<<<<<<< HEAD
-=======
   Brain,
->>>>>>> e983215a6b878036eaddc5ec4891c6ad6ea22064
   Shield,
   Cloud,
   Users,
@@ -24,88 +21,9 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const navigation = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Settings,
-    children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: Shield,
-    children: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
-      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
-      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: FileText,
-    children: [{ name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/company',
-    icon: Users,
-    children: [
-      {
-        name: 'About Us',
-        href: '/about',
-        icon: Users,
-        description: 'Learn about our mission and values'
-      },
-      {
-        name: 'Our Team',
-        href: '/team',
-        icon: Users,
-        description: 'Meet our expert team'
-      },
-      {
-        name: 'Careers',
-        href: '/careers',
-        icon: Award,
-        description: 'Join our growing team'
-      },
-      {
-        name: 'News',
-        href: '/news',
-        icon: MessageSquare,
-        description: 'Company news and announcements'
-      },
-      {
-        name: 'Contact',
-        href: '/contact',
-        icon: Mail,
-        description: 'Get in touch with us'
-      },
-      {
-        name: 'Partners',
-        href: '/partners',
-        icon: Users,
-        description: 'Our partner network'
-      }
-    ]
-  }
-];
-=======
 interface HeaderProps {
   className?: string;
 }
->>>>>>> e983215a6b878036eaddc5ec4891c6ad6ea22064
 
 export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);

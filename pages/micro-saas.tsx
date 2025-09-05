@@ -42,14 +42,11 @@ import {
   Package,
   Calendar,
   BookOpen,
-<<<<<<< HEAD
   Database,
-  Brain
-=======
+  Brain,
   ShoppingCart,
   Home,
   Trash2
->>>>>>> e983215a6b878036eaddc5ec4891c6ad6ea22064
 } from 'lucide-react';
 
 const microSaaSProducts = [

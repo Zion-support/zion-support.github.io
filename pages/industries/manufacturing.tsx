@@ -270,4 +270,6 @@ export default function ManufacturingPage() {
           </div>
         </section>
       </div>
-    </Layout>"
+    </Layout>
+  )
+}

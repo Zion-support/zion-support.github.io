@@ -1,25 +1,19 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-import {
-  Zap,
-  Phone,
-  Mail,
-  Clock,
-  Linkedin,
-  Twitter,
-  Github,
-  ArrowRight,
-  ExternalLink,
-  Youtube,
-  Facebook,
-  Twitter,
-  Linkedin,
+import React from 'react';
+import Link from 'next/link';
+import { 
+  Zap, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
   Instagram,
   Github,
   ArrowRight,
   ExternalLink
 } from 'lucide-react';
+
 const services = {
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
@@ -46,6 +40,7 @@ const services = {
     { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' }
   ]
 };
+
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
@@ -54,6 +49,7 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'White Papers', href: '/white-papers' }
 ];
+
 const supportLinks = [
   { name: 'Help Center', href: '/help' },
   { name: 'Documentation', href: '/docs' },
@@ -62,12 +58,14 @@ const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
   { name: 'Status Page', href: '/status' }
 ];
+
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
   { name: 'GDPR Compliance', href: '/compliance' }
 ];
+
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -75,30 +73,13 @@ const socialLinks = [
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
+
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
 };
-=======
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Zap, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  Github,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react';
-
->>>>>>> e983215a6b878036eaddc5ec4891c6ad6ea22064
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
