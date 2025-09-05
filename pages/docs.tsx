@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const categories = [
   {
@@ -64,7 +64,7 @@ const popularDocs = [
 
 export default function DocsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Documentation - Zion Tech Group"
       description="Comprehensive documentation for our services, APIs, and development tools. Get started quickly with our guides and tutorials."
       keywords="documentation, API reference, tutorials, guides, getting started, development docs"
@@ -280,6 +280,6 @@ export default function DocsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

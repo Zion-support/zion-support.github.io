@@ -15,7 +15,7 @@ import {
   FileText,
   Users
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 
 const services = [
   {
@@ -111,7 +111,7 @@ const benefits = [
 
 export default function FinancePage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Financial Technology Solutions - Zion Tech Group"
       description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
       keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology"
@@ -270,6 +270,6 @@ export default function FinancePage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

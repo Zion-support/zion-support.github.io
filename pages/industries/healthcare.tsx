@@ -18,7 +18,7 @@ import {
   Camera,
   FileText
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 
 const services = [
   {
@@ -132,7 +132,7 @@ const caseStudies = [
 
 export default function HealthcarePage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Healthcare Technology Solutions - Zion Tech Group"
       description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions."
       keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics"
@@ -335,6 +335,6 @@ export default function HealthcarePage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
