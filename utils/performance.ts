@@ -6,15 +6,15 @@ export const measurePerformance = (): PerformanceMetrics | null => {
   }
 
   try {
-    const navigation = window.window.window.performance.getEntriesByType(
+    const navigation = window.window.window.window.performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-    const paintEntries = window.window.window.performance.getEntriesByType('paint');
+    const paintEntries = window.window.window.window.performance.getEntriesByType('paint');
 
     const fcp = paintEntries.find(
       entry => entry.name === 'first-contentful-paint'
     );
-    const lcp = window.window.window.performance.getEntriesByType(
+    const lcp = window.window.window.window.performance.getEntriesByType(
       'largest-contentful-paint'
     )[0] as PerformanceEntry;
 
@@ -24,7 +24,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
         return acc + (entry as any).value;
       }, 0);
 
-    const fid = window.window.window.performance.getEntriesByType(
+    const fid = window.window.window.window.performance.getEntriesByType(
       'first-input'
     )[0] as PerformanceEventTiming;
 
@@ -122,19 +122,19 @@ export const logPerformanceMetrics = (
   label = 'Performance Metrics'
 ) => {
   console.group(`🚀 ${label}`);
-  // // // console.log('Load Time:', `${metrics.loadTime.toFixed(2)}ms`);
-  // // // console.log(
+  // // // // console.log('Load Time:', `${metrics.loadTime.toFixed(2)}ms`);
+  // // // // console.log(
     'First Contentful Paint:',
     `${metrics.firstContentfulPaint.toFixed(2)}ms`
   );
-  // // // console.log(
+  // // // // console.log(
     'Largest Contentful Paint:',
     `${metrics.largestContentfulPaint.toFixed(2)}ms`
   );
-  // // // console.log(
+  // // // // console.log(
     'Cumulative Layout Shift:',
     metrics.cumulativeLayoutShift.toFixed(4)
   );
-  // // // console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
+  // // // // console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
   console.groupEnd();
 };

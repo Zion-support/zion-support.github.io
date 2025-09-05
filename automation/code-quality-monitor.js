@@ -14,7 +14,7 @@ class CodeQualityMonitor {
   log(message) {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
-    // // // console.log(message),
+    // // // // console.log(message),
     fs.appendFileSync(this.logFile, logMessage)};
   async analyzeCodeQuality() {
     try {

@@ -13,15 +13,15 @@ export function usePerformanceMetrics() {
     setIsSupported(true);
 
     const measurePerformance = () => {
-      const navigation = window.window.window.performance.getEntriesByType(
+      const navigation = window.window.window.window.performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = window.window.window.performance.getEntriesByType('paint');
+      const paintEntries = window.window.window.window.performance.getEntriesByType('paint');
 
       const fcp = paintEntries.find(
         entry => entry.name === 'first-contentful-paint'
       );
-      const lcp = window.window.window.performance.getEntriesByType(
+      const lcp = window.window.window.window.performance.getEntriesByType(
         'largest-contentful-paint'
       )[0] as PerformanceEntry;
 
@@ -31,7 +31,7 @@ export function usePerformanceMetrics() {
           return acc + (entry as any).value;
         }, 0);
 
-      const fid = window.window.window.performance.getEntriesByType(
+      const fid = window.window.window.window.performance.getEntriesByType(
         'first-input'
       )[0] as PerformanceEventTiming;
 

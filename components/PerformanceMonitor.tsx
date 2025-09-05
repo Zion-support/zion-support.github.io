@@ -54,8 +54,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.window.window.window.performance.getEntriesByType('paint');
+      const navigation = window.window.window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.window.window.window.window.performance.getEntriesByType('paint');
       
       const performanceData: PerformanceData = {
         // Navigation timing
@@ -68,7 +68,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: window.window.window.window.performance.getEntriesByType('resource').length,
+        resourceCount: window.window.window.window.window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
         memory: (window.performance as any).memory ? {
@@ -85,7 +85,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        // // // console.log('Performance Metrics:', performanceData);
+        // // // // console.log('Performance Metrics:', performanceData);
       }
     };
     // Measure performance after page load,

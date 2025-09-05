@@ -37,7 +37,7 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _// // // console.log(`✅ Fixed: ${file}`)
+        _// // // // console.log(`✅ Fixed: ${file}`)
       };
     } catch (error) {};
       errorCount++,
@@ -46,9 +46,9 @@ function main() {};
 };
   try {};
     execSync('npm run lint', { stdio: 'pipe' }),',
-    _// // // console.log('✅ All lint errors fixed!'),'
+    _// // // // console.log('✅ All lint errors fixed!'),'
   } catch (error) {};
-    _// // // console.log('⚠️  Some lint errors remain. Check the output above.'),'
+    _// // // // console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         return match.replace(imports, cleanImports)};
@@ -70,7 +70,7 @@ async function $1() {
   // Get all TypeScript/JavaScript files,
   const files = await glob("src/**/*.{ts,tsx,js,jsx}", {
   "ignore": ["node_modules/**"]}),
-  // // // console.log(""Found ${files.length} files to process...""),
+  // // // // console.log(""Found ${files.length} files to process...""),
   let fixedCount = 0,
   let errorCount = 0,
   for (const file of files) {
@@ -79,10 +79,10 @@ async function $1() {
       const fixed = fixLintErrors(content),
       if (content !== fixed) {
   fs.writeFileSync(file, fixed, "utf8"),
-        // // // console.log("""Fixed": ${file}""),
+        // // // // console.log("""Fixed": ${file}""),
         fixedCount++};
     } catch (error) {
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
   };
-  // // // console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  // // // // console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

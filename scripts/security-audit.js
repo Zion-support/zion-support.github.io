@@ -17,7 +17,7 @@ class SecurityAuditor {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    // // // console.log(logMessage);
+    // // // // console.log(logMessage);
 
     const logFile = path.join(this.logsDir, 'security-audit.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -105,7 +105,7 @@ if (require.main === module) {
   auditor
     .start()
     .then(report => {
-      // // // console.log('Security audit completed:', report.summary);
+      // // // // console.log('Security audit completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {

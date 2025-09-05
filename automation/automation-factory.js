@@ -27,7 +27,7 @@ class CodeQualityMonitor {
   log(message) {
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
-    // // // console.log(message),
+    // // // // console.log(message),
     fs.appendFileSync(this.logFile, logMessage)};
   async analyzeCodeQuality() {
     try {
@@ -92,7 +92,7 @@ class CodeQualityMonitor {
 const monitor = new CodeQualityMonitor(),
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
-    // // // console.log("Metrics:", metrics)};
+    // // // // console.log("Metrics:", metrics)};
 }),`,
     const scriptPath = path.join(__dirname, "code-quality-monitor.js"),
     fs.writeFileSync(scriptPath, script),
@@ -117,7 +117,7 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
-    // // // console.log(message),
+    // // // // console.log(message),
     fs.appendFileSync(this.logFile, logMessage)};
   async optimizePerformance() {
     try {
@@ -191,7 +191,7 @@ class PerformanceOptimizer {
 const optimizer = new PerformanceOptimizer(),
 optimizer.optimizePerformance().then(report => {
   if (report) {
-    // // // console.log("Performance report:", report)};
+    // // // // console.log("Performance report:", report)};
 }),`,
     const scriptPath = path.join(__dirname, "performance-optimizer.js"),
     fs.writeFileSync(scriptPath, script),

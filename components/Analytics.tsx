@@ -76,7 +76,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
             if ('performance' in window) {
               window.addEventListener('load', function() {
                 setTimeout(function() {
-                  const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
+                  const perfData = window.window.window.window.performance.getEntriesByType('navigation')[0],
                   if (perfData) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
                     if (window.gtag) {
