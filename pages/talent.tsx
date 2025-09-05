@@ -3,6 +3,34 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import Layout from '../components/Layout';
+
+const values = [
+  {
+    title: "Innovation",
+    description: "We embrace cutting-edge technology and creative solutions to solve complex problems."
+  },
+  {
+    title: "Excellence",
+    description: "We strive for the highest quality in everything we do, from code to customer service."
+  },
+  {
+    title: "Collaboration",
+    description: "We believe in the power of teamwork and open communication to achieve great results."
+  },
+  {
+    title: "Growth",
+    description: "We are committed to continuous learning and professional development for our team."
+  },
+  {
+    title: "Integrity",
+    description: "We conduct business with honesty, transparency, and ethical practices."
+  },
+  {
+    title: "Impact",
+    description: "We focus on creating meaningful solutions that make a positive difference."
+  }
+];
 
 const jobOpenings = [{
     id: 1,
@@ -136,7 +164,7 @@ const $1 = [
 
 export default function TalentPage() {
   return (
-<MainLayout 
+<Layout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -235,10 +263,11 @@ export default function TalentPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-<div className="flex items-center">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-900 font-medium">{value}</span>
+                  <div className="flex items-center mb-3">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
+                    <span className="text-gray-900 font-medium">{value.title}</span>
                   </div>
+                  <p className="text-gray-600">{value.description}</p>
                   </motion.div>
               ))}
             </div>
@@ -353,6 +382,6 @@ export default function TalentPage() {
                   </div>
                   </section>
                   </div>
-                  </MainLayout>
+                  </Layout>
   );
 }
