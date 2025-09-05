@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -37,9 +39,9 @@ describe('AccessibilityEnhancer', () => {
       </AccessibilityEnhancer>
     );
     const element = screen.getByRole('button');
-    fireEvent.keyDown(element, { key: 'Enter' });
+    fireEvent.keyDown(element, { "key": 'Enter' });
     expect(handleClick).toHaveBeenCalledTimes(1);
-    fireEvent.keyDown(element, { key: ' ' });
+    fireEvent.keyDown(element, { "key": ' ' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
 
@@ -71,3 +73,4 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+>>>>>>> main
