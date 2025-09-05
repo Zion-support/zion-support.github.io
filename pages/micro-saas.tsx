@@ -33,17 +33,14 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  TrendingUp,
   Lightbulb,
   Target,
   Award,
-  Clock,
   DollarSign,
   Trash2,
   Camera,
   HardDrive,
-  Droplets,
-  Calendar
+  Droplets
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
