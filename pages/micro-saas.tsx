@@ -421,6 +421,132 @@ const microSaaSProducts = [{
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'Intelligent mental health tracking and support with AI-powered insights and interventions.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Personalized Support', 'Professional Integration'],
+    pricing: '$29 - $199/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'Smart Home Energy Optimizer',
+    description: 'AI-driven energy optimization for smart homes with predictive analytics and cost savings.',
+    icon: Zap,
+    features: ['Energy Prediction', 'Cost Optimization', 'Device Scheduling', 'Usage Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Stylist',
+    description: 'Virtual personal styling assistant with AI-powered fashion recommendations and wardrobe optimization.',
+    icon: ShoppingCart,
+    features: ['Style Analysis', 'Outfit Recommendations', 'Wardrobe Management', 'Shopping Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Fashion Tech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Learning Management System',
+    description: 'AI-powered learning platform with personalized content and adaptive assessments.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Content Personalization', 'Progress Tracking', 'Skill Assessment'],
+    pricing: '$39 - $299/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Pet Care Assistant',
+    description: 'Comprehensive pet care management with health tracking and behavioral insights.',
+    icon: Heart,
+    features: ['Health Tracking', 'Behavior Analysis', 'Vet Integration', 'Care Reminders'],
+    pricing: '$14 - $79/month',
+    category: 'Pet Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Travel Planning Platform',
+    description: 'AI-powered travel planning with personalized itineraries and real-time optimization.',
+    icon: Globe,
+    features: ['Itinerary Planning', 'Real-time Updates', 'Budget Optimization', 'Local Insights'],
+    pricing: '$19 - $99/month',
+    category: 'Travel Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Home Security System',
+    description: 'Intelligent home security with facial recognition and behavioral analysis.',
+    icon: Shield,
+    features: ['Facial Recognition', 'Behavioral Analysis', 'Smart Alerts', 'Mobile Integration'],
+    pricing: '$49 - $299/month',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Intelligent Expense Management',
+    description: 'AI-powered expense tracking and categorization with automated receipt processing.',
+    icon: DollarSign,
+    features: ['Receipt OCR', 'Auto Categorization', 'Tax Preparation', 'Budget Tracking'],
+    pricing: '$9 - $49/month',
+    category: 'Finance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning with AI-driven conversation practice and pronunciation coaching.',
+    icon: Globe,
+    features: ['Conversation Practice', 'Pronunciation Coaching', 'Adaptive Curriculum', 'Progress Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'Language Learning',
+    popular: true
+  },
+  {
+    title: 'Smart Fitness Coach Platform',
+    description: 'AI-powered personal fitness coaching with form analysis and workout optimization.',
+    icon: Heart,
+    features: ['Form Analysis', 'Workout Optimization', 'Injury Prevention', 'Progress Tracking'],
+    pricing: '$29 - $149/month',
+    category: 'Fitness Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Recipe Generator',
+    description: 'Intelligent recipe creation based on available ingredients and dietary preferences.',
+    icon: ShoppingCart,
+    features: ['Ingredient Analysis', 'Dietary Adaptation', 'Nutritional Optimization', 'Meal Planning'],
+    pricing: '$9 - $49/month',
+    category: 'Food Tech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Sleep Optimization',
+    description: 'AI-powered sleep tracking and optimization with personalized recommendations.',
+    icon: Clock,
+    features: ['Sleep Analysis', 'Optimization Tips', 'Environmental Control', 'Progress Tracking'],
+    pricing: '$14 - $79/month',
+    category: 'Health Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Plant Care Assistant',
+    description: 'Smart plant care management with species identification and care recommendations.',
+    icon: Sprout,
+    features: ['Plant Identification', 'Care Reminders', 'Problem Diagnosis', 'Growth Tracking'],
+    pricing: '$9 - $49/month',
+    category: 'Garden Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Water Quality Monitor',
+    description: 'IoT-based water quality monitoring with AI-powered analysis and alerts.',
+    icon: Shield,
+    features: ['Real-time Monitoring', 'Quality Analysis', 'Contamination Alerts', 'Health Insights'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental Tech',
+    popular: true
   }
 ];
 
@@ -586,13 +712,13 @@ export default function MicroSaaSPage() {
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
                   key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
+                  className={`bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -666,7 +792,7 @@ export default function MicroSaaSPage() {
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                     {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -709,7 +835,7 @@ export default function MicroSaaSPage() {
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -755,7 +881,7 @@ export default function MicroSaaSPage() {
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}

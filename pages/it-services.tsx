@@ -378,6 +378,132 @@ const itServices = [{
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'AI-Powered IT Service Desk',
+    description: 'Intelligent IT service management with automated ticket routing and resolution.',
+    icon: Bot,
+    features: ['Automated Routing', 'Intelligent Categorization', 'Self-Service Portal', 'Predictive Analytics'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Service Management',
+    popular: true
+  },
+  {
+    title: 'Smart Building Technology Integration',
+    description: 'IoT and AI integration for smart building management and optimization.',
+    icon: Building,
+    features: ['Building Automation', 'Energy Management', 'Occupancy Analytics', 'Predictive Maintenance'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Smart Buildings',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin creation and management for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Performance Optimization'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Autonomous IT Operations Center',
+    description: 'Fully automated IT operations with minimal human intervention.',
+    icon: Cpu,
+    features: ['Self-healing Systems', 'Automated Remediation', 'Predictive Scaling', 'Intelligent Monitoring'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Autonomous Ops',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Integration services for quantum computing applications and hybrid systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Systems', 'Quantum Security', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AR/VR Infrastructure Services',
+    description: 'Infrastructure setup and management for augmented and virtual reality applications.',
+    icon: Monitor,
+    features: ['VR/AR Hardware Setup', 'Content Management', 'User Analytics', 'Performance Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'AR/VR',
+    popular: true
+  },
+  {
+    title: 'Intelligent Data Lake Architecture',
+    description: 'AI-powered data lake design and management for big data analytics.',
+    icon: Database,
+    features: ['Data Ingestion', 'Schema Evolution', 'Data Quality', 'Automated Governance'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Data Architecture',
+    popular: true
+  },
+  {
+    title: 'Microservices Security Platform',
+    description: 'Comprehensive security solution for microservices architectures.',
+    icon: Shield,
+    features: ['Service Mesh Security', 'API Gateway', 'Zero Trust Networking', 'Threat Detection'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Microservices',
+    popular: true
+  },
+  {
+    title: 'Intelligent Network Optimization',
+    description: 'AI-driven network performance optimization and traffic management.',
+    icon: Network,
+    features: ['Traffic Analysis', 'Bandwidth Optimization', 'Quality of Service', 'Predictive Maintenance'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Network Optimization',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Comprehensive IT infrastructure for smart city initiatives and urban planning.',
+    icon: Building,
+    features: ['IoT Integration', 'Data Analytics', 'Citizen Services', 'Traffic Management'],
+    pricing: '$100,000 - $2,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Automation',
+    description: 'Automated compliance monitoring and reporting across multiple regulations.',
+    icon: Shield,
+    features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Policy Management'],
+    pricing: '$10,000 - $60,000/setup',
+    category: 'Compliance Automation',
+    popular: true
+  },
+  {
+    title: 'Intelligent Backup & Recovery',
+    description: 'AI-powered backup and disaster recovery with predictive failure prevention.',
+    icon: HardDrive,
+    features: ['Predictive Backup', 'Intelligent Recovery', 'Data Deduplication', 'Compliance Reporting'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Backup & Recovery',
+    popular: true
+  },
+  {
+    title: 'Edge AI Computing Platform',
+    description: 'Edge computing infrastructure optimized for AI workloads and real-time processing.',
+    icon: Cpu,
+    features: ['Edge AI Models', 'Real-time Processing', 'Low Latency', 'Distributed Training'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'Intelligent IT Asset Management',
+    description: 'AI-powered IT asset lifecycle management with predictive maintenance.',
+    icon: Settings,
+    features: ['Asset Tracking', 'Lifecycle Management', 'Predictive Maintenance', 'Cost Optimization'],
+    pricing: '$12,000 - $60,000/setup',
+    category: 'Asset Management',
+    popular: true
   }
 ];
 
@@ -500,13 +626,13 @@ export default function ITServicesPage() {
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+                  className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -569,7 +695,7 @@ export default function ITServicesPage() {
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (

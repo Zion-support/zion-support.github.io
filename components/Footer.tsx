@@ -17,53 +17,78 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Youtube
+  Youtube,
+  Building
 } from 'lucide-react';
 
 const services = {
-  'AI Solutions': [{ name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
+  'AI Solutions': [
+    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
     { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
     { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'AI Mental Health Assistant', href: '/ai-services#ai-mental-health' },
+    { name: 'AI Real Estate Valuation', href: '/ai-services#ai-real-estate' }
   ],
-  'IT Services': [{ name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
+  'IT Services': [
+    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
     { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
     { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' },
+    { name: 'AI-Powered IT Service Desk', href: '/it-services#ai-service-desk' },
+    { name: 'Smart Building Integration', href: '/it-services#smart-building' }
   ],
-  'Micro SaaS': [{ name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+  'Micro SaaS': [
+    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
     { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
     { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'AI Mental Health Companion', href: '/micro-saas#ai-mental-health' },
+    { name: 'Smart Home Energy Optimizer', href: '/micro-saas#smart-home-energy' }
   ]
 };
 
-const company = [{ name: 'About Us', href: '/about' },
+const company = [
+  { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/about#team' },
   { name: 'Careers', href: '/careers' },
+  { name: 'Partners', href: '/partners' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
-  { name: 'News', href: '/news' }
+  { name: 'News', href: '/news' },
+  { name: 'Press Kit', href: '/press-kit' }
 ];
 
-const resources = [{ name: 'Documentation', href: '/docs' },
+const resources = [
+  { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-docs' },
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'Guides', href: '/guides' },
+  { name: 'White Papers', href: '/white-papers' },
+  { name: 'Webinars', href: '/webinars' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Support', href: '/support' }
+];
+
+const industries = [
+  { name: 'Healthcare', href: '/industries/healthcare' },
+  { name: 'Finance', href: '/industries/finance' },
+  { name: 'Manufacturing', href: '/industries/manufacturing' },
+  { name: 'Retail', href: '/industries/retail' },
+  { name: 'Education', href: '/industries/education' },
+  { name: 'Government', href: '/industries/government' }
 ];
 
 const legal = [{ name: 'Privacy Policy', href: '/privacy' },
@@ -93,7 +118,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -188,6 +213,27 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {resources.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Building className="w-5 h-5 mr-2 text-blue-400" />
+              Industries
+            </h3>
+            <ul className="space-y-3">
+              {industries.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}

@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Home
 } from 'lucide-react';
 
 const aiServices = [{
@@ -299,6 +300,105 @@ const aiServices = [{
     popular: true
   },
   {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support using advanced AI algorithms.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Personalized Therapy', '24/7 Support'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'AI Real Estate Valuation Engine',
+    description: 'Advanced property valuation using AI and machine learning for accurate pricing.',
+    icon: Building,
+    features: ['Market Analysis', 'Property Comparison', 'Trend Prediction', 'Investment Insights'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Real Estate',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time, context-aware translation supporting 100+ languages with cultural nuances.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Processing'],
+    pricing: '$500 - $3,000/month',
+    category: 'Language Tech',
+    popular: true
+  },
+  {
+    title: 'AI Sports Performance Analytics',
+    description: 'Advanced sports analytics using AI for performance optimization and injury prevention.',
+    icon: Target,
+    features: ['Performance Tracking', 'Injury Prediction', 'Tactical Analysis', 'Biomechanical Insights'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Sports Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Advisor',
+    description: 'Intelligent personal finance management with AI-driven investment recommendations.',
+    icon: TrendingUp,
+    features: ['Portfolio Management', 'Risk Assessment', 'Tax Optimization', 'Goal Planning'],
+    pricing: '$99 - $499/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI Smart Home Automation',
+    description: 'Intelligent home automation system with predictive behavior and energy optimization.',
+    icon: Home,
+    features: ['Predictive Automation', 'Energy Optimization', 'Security Monitoring', 'Voice Control'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered E-commerce Personalization',
+    description: 'Advanced personalization engine for e-commerce with AI-driven recommendations.',
+    icon: ShoppingCart,
+    features: ['Product Recommendations', 'Dynamic Pricing', 'Customer Segmentation', 'A/B Testing'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced blockchain analysis using AI for fraud detection and compliance.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Fraud Detection', 'Compliance Monitoring', 'Risk Assessment'],
+    pricing: '$2,500 - $15,000/month',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality Training',
+    description: 'Immersive VR training solutions with AI for personalized learning experiences.',
+    icon: Monitor,
+    features: ['Immersive Training', 'Performance Tracking', 'Adaptive Learning', 'Skill Assessment'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'VR/AR',
+    popular: true
+  },
+  {
+    title: 'AI Waste Management Optimization',
+    description: 'Smart waste management using AI for collection optimization and recycling efficiency.',
+    icon: Sprout,
+    features: ['Route Optimization', 'Waste Classification', 'Recycling Efficiency', 'Cost Reduction'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Environmental',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Accessibility Solutions',
+    description: 'Advanced accessibility tools using AI to make digital content accessible to all users.',
+    icon: Eye,
+    features: ['Screen Reader Enhancement', 'Voice Navigation', 'Content Adaptation', 'Universal Design'],
+    pricing: '$1,000 - $6,000/month',
+    category: 'Accessibility',
+    popular: true
+  },
+  {
     title: 'AI-Powered Financial Trading',
     description: 'Advanced algorithmic trading systems with AI-driven market analysis.',
     icon: TrendingUp,
@@ -480,18 +580,19 @@ export default function AIServicesPage() {
               Comprehensive AI services designed to solve real business challenges and drive innovation.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {aiServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+                  className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -5 }} ">
+                  whileHover={{ y: -5 }}
+                >
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
@@ -500,10 +601,10 @@ export default function AIServicesPage() {
                       {service.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="mb-4">
@@ -549,7 +650,7 @@ export default function AIServicesPage() {
               Our AI solutions are tailored for various industries and use cases.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
@@ -589,7 +690,7 @@ export default function AIServicesPage() {
               Proven results and measurable impact for your business.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
