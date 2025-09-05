@@ -298,6 +298,177 @@ title: 'AI-Powered IT Operations (AIOps)',
     popular: true
   },
   {
+    title: 'Space Technology Infrastructure',
+    description: 'Specialized IT infrastructure for space missions, satellite operations, and space-based computing.',
+    icon: Rocket,
+    features: ['Satellite Ground Stations', 'Space Data Processing', 'Mission Control Systems', 'Radiation-Hardened Computing'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'Fusion Energy IT Systems',
+    description: 'Advanced IT infrastructure for fusion energy research and power plant operations.',
+    icon: Zap,
+    features: ['Plasma Control Systems', 'Magnetic Field Management', 'Safety Monitoring', 'Data Acquisition'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Comprehensive IT infrastructure for smart city operations and citizen services.',
+    icon: Building,
+    features: ['IoT Sensor Networks', 'Traffic Management', 'Energy Grid Integration', 'Citizen Services Platform'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Specialized infrastructure for quantum computing systems and quantum networks.',
+    icon: Cpu,
+    features: ['Quantum Processors', 'Cryogenic Systems', 'Quantum Networks', 'Error Correction Systems'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Autonomous Vehicle IT Infrastructure',
+    description: 'Complete IT infrastructure for autonomous vehicle testing and deployment.',
+    icon: Car,
+    features: ['Vehicle-to-Cloud Connectivity', 'Real-time Data Processing', 'Safety Systems', 'Fleet Management'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Autonomous Vehicles',
+    popular: true
+  },
+  {
+    title: 'AI Supercomputing Infrastructure',
+    description: 'High-performance computing infrastructure optimized for AI and machine learning workloads.',
+    icon: Brain,
+    features: ['GPU Clusters', 'Distributed Training', 'Model Serving', 'Data Pipeline Management'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise-grade blockchain infrastructure including nodes, validators, and consensus mechanisms.',
+    icon: Server,
+    features: ['Blockchain Nodes', 'Validator Services', 'Consensus Management', 'Cross-chain Bridges'],
+    pricing: '$50,000 - $500,000/setup',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'IT infrastructure for creating and managing digital twins of physical systems.',
+    icon: Monitor,
+    features: ['Real-time Data Sync', '3D Rendering', 'Simulation Engines', 'IoT Integration'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'Metaverse Infrastructure Platform',
+    description: 'Complete infrastructure for building and hosting metaverse experiences and virtual worlds.',
+    icon: Globe,
+    features: ['3D Rendering Servers', 'Avatar Systems', 'Virtual Economy', 'Social Features'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'Neural Interface IT Systems',
+    description: 'Specialized IT infrastructure for brain-computer interfaces and neural prosthetics.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Real-time Analysis', 'Safety Systems', 'Data Privacy'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'Climate Technology Infrastructure',
+    description: 'IT infrastructure for climate monitoring, carbon capture, and environmental management.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Climate Modeling', 'Carbon Tracking', 'Renewable Energy Management'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Climate Tech',
+    popular: true
+  },
+  {
+    title: 'Autonomous Drone Infrastructure',
+    description: 'Complete IT infrastructure for autonomous drone operations and air traffic management.',
+    icon: Rocket,
+    features: ['Air Traffic Control', 'Flight Planning', 'Weather Integration', 'Safety Monitoring'],
+    pricing: '$250,000 - $2,500,000/project',
+    category: 'Drone Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Precision Medicine IT Platform',
+    description: 'Specialized IT infrastructure for personalized medicine and genomic analysis.',
+    icon: Heart,
+    features: ['Genomic Data Processing', 'Clinical Decision Support', 'Patient Monitoring', 'Research Collaboration'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Precision Medicine',
+    popular: true
+  },
+  {
+    title: 'Agricultural Technology Infrastructure',
+    description: 'IoT and AI infrastructure for smart farming and agricultural automation.',
+    icon: Sprout,
+    features: ['Sensor Networks', 'Automated Systems', 'Weather Integration', 'Yield Optimization'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'Cybersecurity Operations Center',
+    description: '24/7 cybersecurity monitoring and incident response infrastructure.',
+    icon: Shield,
+    features: ['Threat Monitoring', 'Incident Response', 'Forensic Analysis', 'Compliance Management'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Network',
+    description: 'Distributed edge computing infrastructure for low-latency applications.',
+    icon: Network,
+    features: ['Edge Nodes', 'Content Delivery', 'Latency Optimization', 'Load Balancing'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Robotics IT Infrastructure',
+    description: 'IT infrastructure for industrial robotics and autonomous systems.',
+    icon: Settings,
+    features: ['Robot Control Systems', 'Safety Monitoring', 'Fleet Management', 'Human-Robot Interaction'],
+    pricing: '$250,000 - $2,500,000/project',
+    category: 'Robotics',
+    popular: true
+  },
+  {
+    title: 'Virtual Reality Infrastructure',
+    description: 'High-performance infrastructure for VR/AR applications and experiences.',
+    icon: Monitor,
+    features: ['Rendering Servers', 'Motion Tracking', 'Haptic Feedback', 'Multi-user Support'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'VR/AR',
+    popular: true
+  },
+  {
+    title: 'Financial Technology Infrastructure',
+    description: 'High-frequency trading and financial services IT infrastructure.',
+    icon: DollarSign,
+    features: ['Low-latency Networks', 'Risk Management', 'Compliance Systems', 'Real-time Processing'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'FinTech',
+    popular: true
+  },
+  {
     title: 'Digital Twin Infrastructure',
     description: 'Digital twin technology implementation for physical assets and processes.',
     icon: Monitor,
@@ -746,9 +917,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />

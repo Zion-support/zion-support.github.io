@@ -103,10 +103,10 @@ export default function BlogPage() {
         </div>
       </section>
 
-{/* Blog Posts Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      {/* Blog Posts Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               {/* Main Content */}
               <div className="lg:col-span-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

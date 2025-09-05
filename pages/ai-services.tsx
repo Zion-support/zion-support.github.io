@@ -301,6 +301,186 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
+    title: 'AI-Powered Space Debris Management',
+    description: 'Advanced AI systems for tracking, predicting, and managing space debris and satellite collisions.',
+    icon: Rocket,
+    features: ['Debris Tracking', 'Collision Prediction', 'Orbit Optimization', 'Cleanup Planning'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Space Technology',
+    popular: true
+  },
+  {
+    title: 'AI Climate Engineering Solutions',
+    description: 'AI-powered climate intervention technologies for carbon capture and geoengineering.',
+    icon: Sprout,
+    features: ['Carbon Capture Optimization', 'Weather Modification', 'Climate Modeling', 'Impact Assessment'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Climate Engineering',
+    popular: true
+  },
+  {
+    title: 'AI Neural Interface Technology',
+    description: 'Advanced AI for brain-computer interfaces and neural prosthetics with real-time processing.',
+    icon: Brain,
+    features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Applications'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Neurotechnology',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fusion Energy Control',
+    description: 'AI systems for controlling fusion reactions and optimizing plasma stability in fusion reactors.',
+    icon: Zap,
+    features: ['Plasma Control', 'Magnetic Field Optimization', 'Safety Monitoring', 'Energy Output Maximization'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Fusion Energy',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Error Correction',
+    description: 'Advanced AI algorithms for quantum error correction and fault-tolerant quantum computing.',
+    icon: Cpu,
+    features: ['Error Detection', 'Correction Algorithms', 'Fault Tolerance', 'Quantum Optimization'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI Autonomous Drone Swarms',
+    description: 'Coordinated AI systems for autonomous drone swarms with collective intelligence.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Mission Planning', 'Collision Avoidance', 'Adaptive Behavior'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Intelligence',
+    description: 'AI systems for creating intelligent virtual worlds and autonomous virtual beings.',
+    icon: Globe,
+    features: ['Virtual World Generation', 'NPC Intelligence', 'Behavioral Modeling', 'Social Dynamics'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI Digital Twin Intelligence',
+    description: 'Advanced AI for creating and managing intelligent digital twins of complex systems.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'Anomaly Detection', 'Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive AI systems for managing smart city infrastructure and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Emergency Response'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI Blockchain Intelligence',
+    description: 'AI-powered blockchain analysis, optimization, and smart contract intelligence.',
+    icon: Shield,
+    features: ['Transaction Analysis', 'Smart Contract Optimization', 'Security Monitoring', 'DeFi Intelligence'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality Intelligence',
+    description: 'AI systems for creating intelligent VR experiences and virtual assistants.',
+    icon: Monitor,
+    features: ['Virtual Assistant AI', 'Behavioral Analysis', 'Content Generation', 'Adaptive Environments'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'VR/AR',
+    popular: true
+  },
+  {
+    title: 'AI Financial Market Prediction',
+    description: 'Advanced AI for predicting financial markets, trading strategies, and risk management.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'Algorithmic Trading', 'Risk Assessment', 'Portfolio Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotics Intelligence',
+    description: 'Advanced AI for autonomous robots with learning and adaptation capabilities.',
+    icon: Settings,
+    features: ['Autonomous Navigation', 'Object Recognition', 'Learning Algorithms', 'Human-Robot Interaction'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Robotics',
+    popular: true
+  },
+  {
+    title: 'AI Mental Health Therapy',
+    description: 'AI-powered mental health assessment, therapy, and treatment optimization.',
+    icon: Heart,
+    features: ['Mental Health Assessment', 'Therapy Sessions', 'Treatment Optimization', 'Crisis Intervention'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Intelligence',
+    description: 'Advanced AI for legal research, case analysis, and automated legal services.',
+    icon: BookOpen,
+    features: ['Legal Research', 'Case Analysis', 'Document Review', 'Predictive Legal Outcomes'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'AI Educational Personalization',
+    description: 'AI systems for personalized education and adaptive learning experiences.',
+    icon: BookOpen,
+    features: ['Learning Path Optimization', 'Content Personalization', 'Progress Tracking', 'Adaptive Testing'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Intelligence',
+    description: 'Advanced AI for real estate valuation, market analysis, and investment optimization.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Optimization', 'Risk Assessment'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Real Estate',
+    popular: true
+  },
+  {
+    title: 'AI Supply Chain Intelligence',
+    description: 'Comprehensive AI for supply chain optimization, risk management, and logistics.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Risk Assessment', 'Route Optimization', 'Supplier Intelligence'],
+    pricing: '$60,000 - $600,000/project',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Energy Grid Management',
+    description: 'AI systems for smart grid management, renewable energy optimization, and power distribution.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Load Balancing', 'Predictive Maintenance'],
+    pricing: '$80,000 - $800,000/project',
+    category: 'Energy Management',
+    popular: true
+  },
+  {
+    title: 'AI Cybersecurity Intelligence',
+    description: 'Advanced AI for threat detection, incident response, and cybersecurity automation.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Automated Response', 'Behavioral Analysis', 'Zero-day Detection'],
+    pricing: '$70,000 - $700,000/project',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
     title: 'AI-Powered Financial Trading',
     description: 'Advanced algorithmic trading systems with AI-driven market analysis.',
     icon: TrendingUp,
@@ -900,9 +1080,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />

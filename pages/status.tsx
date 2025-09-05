@@ -45,8 +45,7 @@ const services = [
     uptime: '99.9%',
     responseTime: '150ms',
     lastIncident: '2024-01-07'
-  },
-  {
+  }
 ];
 
 const incidents = [
