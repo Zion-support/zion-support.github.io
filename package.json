@@ -255,7 +255,11 @@
     "improve:security": "node scripts/security-improver.cjs",
     "improve:seo": "node scripts/seo-improver.cjs",
     "improve:accessibility": "node scripts/accessibility-improver.cjs",
-    "improve:monitoring": "node scripts/monitoring-improver.cjs"
+    "improve:monitoring": "node scripts/monitoring-improver.cjs",
+    "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"

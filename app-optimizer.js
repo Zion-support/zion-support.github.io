@@ -1,6 +1,6 @@
 // App Optimizer - Fixed syntax error
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 console.log('App Optimizer - Starting optimization...');
 
