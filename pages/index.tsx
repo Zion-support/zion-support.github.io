@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
+
 import ErrorBoundary from '../components/ErrorBoundary';
+import Head from 'next/head';
+import Link from 'next/link';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-
+import { ContactInfo, AnimationState } from '../types';
+import { useState, useEffect, Suspense } from 'react';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -14,11 +14,9 @@ export default function Home() {
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }));
-    }, 100);
+      setAnimationState(prev => ({ ...prev, isLoaded: true }))}, 100);
     
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
   if (animationState.hasError) {
     return (
@@ -33,8 +31,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    );
-  }
+    )}
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
@@ -72,25 +69,25 @@ export default function Home() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
-              "address": {
+              name: "Zion Tech Group",
+              url: contact.site,
+              logo: `${contact.site}/favicon.svg`,
+              description: "Leading provider of micro SaaS products, AI services, and IT solutions",
+              address: {
                 "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
+                streetAddress: "364 E Main St STE 1008",
+                addressLocality: "Middletown",
+                addressRegion: "DE",
+                postalCode: "19709",
+                addressCountry: "US"
               },
-              "contactPoint": {
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
-                "email": contact.email
+                telephone: contact.phone,
+                contactType: "customer service",
+                email: contact.email
               },
-              "sameAs": [contact.site]
+              sameAs: [contact.site]
             })
           }}
         />
@@ -262,10 +259,8 @@ export default function Home() {
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
-            console.warn('Performance thresholds exceeded:', metrics);
-          }}
+            console.warn('Performance thresholds exceeded:', metrics)}}
         />
       </ErrorBoundary>
     </>
-  );
-}
+  )}

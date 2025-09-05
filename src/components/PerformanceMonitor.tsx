@@ -1,6 +1,4 @@
-        };
-      };
-    };
+        }}};
 ,;
     // Initial tracking,;
     trackPageLoad(),;
@@ -10,12 +8,11 @@
     // Set up periodic tracking,;
     const interval = setInterval(() => {,;
       trackMemory(),;
-      trackNetwork(),;
-    }, 10000),;
+      trackNetwork()}, 10000),;
 ,;
     // Track online/offline status,;
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true ,})),;
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false ,})),;
+    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true })),;
+    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false })),;
 ,;
     window.addEventListener('online', handleOnline),;
     window.addEventListener('offline', handleOffline),;
@@ -23,9 +20,7 @@
     return () => {,;
       clearInterval(interval),;
       window.removeEventListener('online', handleOnline),;
-      window.removeEventListener('offline', handleOffline),;
-    };
-  }, [location.pathname]),;
+      window.removeEventListener('offline', handleOffline)}}, [location.pathname]),;
 ,;
   // Show performance issues,;
   useEffect(() => {,;
@@ -38,9 +33,7 @@
       setIsVisible(true),;
       // Auto-hide after 10 seconds,;
       const timer = setTimeout(() => setIsVisible(false), 10000),;
-      return () => clearTimeout(timer),;
-    };
-  }, [metrics]),;
+      return () => clearTimeout(timer)}}, [metrics]),;
 ,;
   if (!isVisible) return null,;
 ,;

@@ -2,8 +2,7 @@
 ,;
   return (,;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,;
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent',;
-    } ${className}`}>,;
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'} ${className}`}>,;
       {/* Top Contact Bar */};
       <div className="bg-blue-900 text-white py-2 px-4 hidden lg: block">,;
         <div className="container mx-auto flex justify-between items-center text-sm">,;
@@ -56,9 +55,9 @@
                   <AnimatePresence>,;
                     {activeDropdown === item.name && (,;
                       <motion.div,;
-                        initial={{ opacity: 0, y: 10 ,}};
-                        animate={{ opacity: 1, y: 0 ,}};
-                        exit={{ opacity: 0, y: 10 ,}};
+                        initial={{ opacity: 0, y: 10 }};
+                        animate={{ opacity: 1, y: 0 }};
+                        exit={{ opacity: 0, y: 10 }};
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50",;
                         onMouseEnter={() => setActiveDropdown(item.name)};
                         onMouseLeave={() => setActiveDropdown(null)};
@@ -79,8 +78,7 @@
                                   {subItem.name};
                                 </div>,;
                                 <div className="text-sm text-gray-500">,;
-                                  {subItem.description};
-                        })};
+                                  {subItem.description}})};
                       </motion.div>,;
                     )};
                   </AnimatePresence>,;
@@ -109,9 +107,9 @@
         <AnimatePresence>,;
           {isOpen && (,;
             <motion.div,;
-              initial={{ opacity: 0, height: 0 ,}};
-              animate={{ opacity: 1, height: 'auto' ,}};
-              exit={{ opacity: 0, height: 0 ,}};
+              initial={{ opacity: 0, height: 0 }};
+              animate={{ opacity: 1, height: 'auto' }};
+              exit={{ opacity: 0, height: 0 }};
               className="lg: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",;
             >,;
               <div className="py-4">,;
@@ -138,8 +136,7 @@
                               <IconComponent className="w-4 h-4" />,;
                               <span>{subItem.name}</span>,;
                             </Link>,;
-                          ),;
-                        })};
+                          )})};
                       </div>,;
                     )};
                   </div>,;
@@ -159,5 +156,4 @@
         </AnimatePresence>,;
       </nav>,;
     </header>,;
-  ),;
-};
+  )};

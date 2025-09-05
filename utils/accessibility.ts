@@ -1,6 +1,5 @@
 export const generateId = (prefix: string = 'id'): string => {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-};
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`};
 
 export const announceToScreenReader = (message: string): void => {
   if (typeof window === 'undefined') return;
@@ -15,9 +14,7 @@ export const announceToScreenReader = (message: string): void => {
   
   // Remove after announcement
   setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
+    document.body.removeChild(announcement)}, 1000)};
 
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
@@ -33,13 +30,11 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
     if (e.shiftKey) {
       if (document.activeElement === firstElement) {
         lastElement.focus();
-        e.preventDefault();
-      }
+        e.preventDefault()}
     } else {
       if (document.activeElement === lastElement) {
         firstElement.focus();
-        e.preventDefault();
-      }
+        e.preventDefault()}
     }
   };
   
@@ -49,9 +44,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   firstElement?.focus();
   
   return () => {
-    element.removeEventListener('keydown', handleTabKey);
-  };
-};
+    element.removeEventListener('keydown', handleTabKey)}};
 
 export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
@@ -60,11 +53,9 @@ export const getContrastRatio = (color1: string, color2: string): number => {
     
     const [r, g, b] = rgb.map(c => {
       const val = parseInt(c) / 255;
-      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
-    });
+      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)});
     
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  };
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b};
   
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
@@ -72,20 +63,17 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
   
-  return (brightest + 0.05) / (darkest + 0.05);
-};
+  return (brightest + 0.05) / (darkest + 0.05)};
 
 export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio(color1, color2) >= 4.5;
-};
+  return getContrastRatio(color1, color2) >= 4.5};
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
   
-  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText;
-};
+  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText};
 
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
@@ -97,8 +85,7 @@ export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
     '[tabindex]:not([tabindex="-1"])'
   ].join(', ');
   
-  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
-};
+  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[]};
 
 export const isElementInViewport = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect();
@@ -107,12 +94,10 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     rect.left >= 0 &&
     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
+  )};
 
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
-  element.scrollIntoView({ behavior, block: 'start' });
-};
+  element.scrollIntoView({ behavior, block: 'start' })};
 
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
   const skipLink = document.createElement('a');
@@ -125,9 +110,7 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
     const target = document.getElementById(targetId);
     if (target) {
       target.focus();
-      scrollToElement(target);
-    }
+      scrollToElement(target)}
   });
   
-  return skipLink;
-};
+  return skipLink};

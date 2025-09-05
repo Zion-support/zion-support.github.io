@@ -50,9 +50,9 @@
               <AnimatePresence>,;
                 {isServicesOpen && (,;
                   <motion.div,;
-                    initial={{ opacity: 0, y: 10 ,}};
-                    animate={{ opacity: 1, y: 0 ,}};
-                    exit={{ opacity: 0, y: 10 ,}};
+                    initial={{ opacity: 0, y: 10 }};
+                    animate={{ opacity: 1, y: 0 }};
+                    exit={{ opacity: 0, y: 10 }};
                     className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50",;
                     onMouseEnter={() => setIsServicesOpen(true)};
                     onMouseLeave={() => setIsServicesOpen(false)};
@@ -64,7 +64,7 @@
                             <div className="flex items-start space-x-3 p-3 rounded-lg hover: bg-gray-50 transition-colors">,;
                               <service.icon className="w-6 h-6 text-blue-600 mt-1" />,;
                               <div>,;
-                                <h3 className="font-semibold text-gray-900 group-hover: text-blue-600">{service.title,}</h3>,;
+                                <h3 className="font-semibold text-gray-900 group-hover: text-blue-600">{service.title}</h3>,;
                                 <p className="text-sm text-gray-600">{service.description}</p>,;
                               </div>,;
                             </div>,;
@@ -81,9 +81,9 @@
               <AnimatePresence>,;
                 {isSolutionsOpen && (,;
                   <motion.div,;
-                    initial={{ opacity: 0, y: 10 ,}};
-                    animate={{ opacity: 1, y: 0 ,}};
-                    exit={{ opacity: 0, y: 10 ,}};
+                    initial={{ opacity: 0, y: 10 }};
+                    animate={{ opacity: 1, y: 0 }};
+                    exit={{ opacity: 0, y: 10 }};
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50",;
                     onMouseEnter={() => setIsSolutionsOpen(true)};
                     onMouseLeave={() => setIsSolutionsOpen(false)};
@@ -94,7 +94,7 @@
                           <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">,;
                             <solution.icon className="w-6 h-6 text-blue-600 mt-1" />,;
                             <div>,;
-                              <h3 className="font-semibold text-gray-900 group-hover: text-blue-600">{solution.title,}</h3>,;
+                              <h3 className="font-semibold text-gray-900 group-hover: text-blue-600">{solution.title}</h3>,;
                               <p className="text-sm text-gray-600">{solution.description}</p>,;
                             </div>,;
                           </div>,;
@@ -111,9 +111,9 @@
               <AnimatePresence>,;
                 {isIndustriesOpen && (,;
                   <motion.div,;
-                    initial={{ opacity: 0, y: 10 ,}};
-                    animate={{ opacity: 1, y: 0 ,}};
-                    exit={{ opacity: 0, y: 10 ,}};
+                    initial={{ opacity: 0, y: 10 }};
+                    animate={{ opacity: 1, y: 0 }};
+                    exit={{ opacity: 0, y: 10 }};
                     className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50",;
                     onMouseEnter={() => setIsIndustriesOpen(true)};
                     onMouseLeave={() => setIsIndustriesOpen(false)};
@@ -122,7 +122,7 @@
                       {industriesDropdown.map((industry) => (,;
                         <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover: bg-gray-50 transition-colors">,;
                           <industry.icon className="w-5 h-5 text-blue-600" />,;
-                          <span className="text-gray-700 group-hover: text-blue-600">{industry.name,}</span>,;
+                          <span className="text-gray-700 group-hover: text-blue-600">{industry.name}</span>,;
                         </Link>))};
           {/* Mobile Menu Button */};
           <button,;
@@ -171,9 +171,9 @@
       <AnimatePresence>,;
         {isMenuOpen && (,;
           <motion.div,;
-            initial={{ opacity: 0, height: 0 ,}};
-            animate={{ opacity: 1, height: 'auto' ,}};
-            exit={{ opacity: 0, height: 0 ,}};
+            initial={{ opacity: 0, height: 0 }};
+            animate={{ opacity: 1, height: 'auto' }};
+            exit={{ opacity: 0, height: 0 }};
         {/* Mobile Navigation */};
         {isMenuOpen && (,;
           <div className="md: hidden">,;
