@@ -1,129 +1,108 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class SyntaxFixer {
-  constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
-  }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-
-      // Fix common syntax errors
-      content = this.fixCommonErrors(content);
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`);
-        return true;
-      }
-      return false;
-    } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
-
-  fixCommonErrors(content) {
-    // Fix trailing commas in function parameters
-    content = content.replace(/,\s*\)/g, ')');
     
-    // Fix trailing commas in object properties
-    content = content.replace(/,\s*}/g, '}');
+    // Fix common syntax errors
+    // Remove extra commas and semicolons
+    content = content.replace(/;/g, ';');
+    content = content.replace(/,(\s*[;}])/g, '$1');
+    content = content.replace(/,(\s*\/\/)/g, '$1');
+    content = content.replace(/,(\s*\/\*)/g, '$1');
     
-    // Fix trailing commas in array elements
-    content = content.replace(/,\s*]/g, ']');
+    // Fix JSX syntax issues
+    content = content.replace(/,(\s*<)/g, '$1');
+    content = content.replace(/,(\s*{)/g, '$1');
+    content = content.replace(/,(\s*})/g, '$1');
     
-    // Fix semicolons instead of commas in object literals
-    content = content.replace(/;\s*}/g, '}');
+    // Fix object syntax
+    content = content.replace(/,(\s*})/g, '$1');
+    content = content.replace(/,(\s*])/g, '$1');
     
-    // Fix semicolons instead of commas in arrays
-    content = content.replace(/;\s*]/g, ']');
+    // Fix function parameters
+    content = content.replace(/,(\s*\))/g, '$1');
     
-    // Fix HTML entities in JSX
-    content = content.replace(/&amp;apos;/g, "'");
-    content = content.replace(/&amp;lt;/g, '<');
-    content = content.replace(/&amp;gt;/g, '>');
-    content = content.replace(/&amp;quot;/g, '"');
+    // Fix class names with spaces
+    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
     
-    // Fix quoted property names in object literals
-    content = content.replace(/"([a-zA-Z_$][a-zA-Z0-9_$]*)"\s*:/g, '$1:');
+    // Fix hover states
+    content = content.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
     
-    // Fix function parameter syntax
-    content = content.replace(/\(\s*"([^"]+)"\s*:\s*([^,)]+)\s*\)/g, '($1: $2)');
+    // Fix focus states
+    content = content.replace(/focus:\s+([a-zA-Z-]+)/g, 'focus:$1');
     
-    // Fix return statements
-    content = content.replace(/return\s+([^;]+);/g, 'return $1;');
+    // Fix group hover
+    content = content.replace(/group-hover:\s+([a-zA-Z-]+)/g, 'group-hover:$1');
     
-    return content;
-  }
-
-  async findAndFixFiles(dir = '.') {
-    const files = this.getTypeScriptFiles(dir);
+    // Fix not-sr-only
+    content = content.replace(/not-sr-only/g, 'not-sr-only');
     
-    this.log(`🔍 Found ${files.length} TypeScript files to check`);
-    
-    for (const file of files) {
-      this.fixFile(file);
+    // Fix missing imports
+    if (content.includes('React') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
     }
     
-    this.log(`✅ Fixed ${this.fixedFiles.length} files`);
-    this.log(`❌ ${this.errors.length} files had errors`);
-    
-    return {
-      fixed: this.fixedFiles.length,
-      errors: this.errors.length,
-      files: this.fixedFiles
-    };
-  }
-
-  getTypeScriptFiles(dir) {
-    const files = [];
-    
-    function walkDir(currentPath) {
-      const items = fs.readdirSync(currentPath);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          walkDir(fullPath);
-        } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx'))) {
-          files.push(fullPath);
-        }
+    // Fix missing export
+    if (content.includes('const ') && !content.includes('export default') && !content.includes('export ')) {
+      const componentName = content.match(/const\s+([A-Z][a-zA-Z0-9]*)/);
+      if (componentName) {
+        content += `\n\nexport default ${componentName[1]};`;
       }
     }
     
-    walkDir(dir);
-    return files;
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Run the fixer
-const fixer = new SyntaxFixer();
-fixer.findAndFixFiles().then(result => {
-  console.log('\n📊 Summary:');
-  console.log(`- Files fixed: ${result.fixed}`);
-  console.log(`- Files with errors: ${result.errors}`);
+// Function to recursively find and fix files
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  if (result.files.length > 0) {
-    console.log('\n✅ Fixed files:');
-    result.files.forEach(file => console.log(`  - ${file}`));
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixFilesInDirectory(filePath);
+    } else if (file.match(/\.(tsx?|jsx?)$/)) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
   }
   
-  process.exit(result.errors > 0 ? 1 : 0);
-}).catch(error => {
-  console.error('❌ Error:', error);
-  process.exit(1);
-});
+  return fixedCount;
+}
+
+// Main execution
+console.log('Starting syntax error fixes...');
+
+const componentsDir = path.join(__dirname, 'components');
+const hooksDir = path.join(__dirname, 'hooks');
+
+let totalFixed = 0;
+
+if (fs.existsSync(componentsDir)) {
+  console.log('Fixing components directory...');
+  totalFixed += fixFilesInDirectory(componentsDir);
+}
+
+if (fs.existsSync(hooksDir)) {
+  console.log('Fixing hooks directory...');
+  totalFixed += fixFilesInDirectory(hooksDir);
+}
+
+console.log(`Fixed ${totalFixed} files`);

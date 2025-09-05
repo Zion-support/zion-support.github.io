@@ -1,10 +1,32 @@
+};
+  ];
+;
+  const socialLinks = ['];
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'';
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'';
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
+  ];
+;
+  return (');
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
+</footer>";
+      <div className="absolute inset-0 opacity-30">";
+</div>";
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"";
+        <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"";
+        <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"";
+        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>";
+      </div>;
+";
+      <div className="relative">";
+</div>";
+        <div className="container mx-auto px-4 py-16">";
+</div>;
+          <motion.div,";
+            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"";
     };
   ],
-  const socialLinks = ['],
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
-  ],
+
   return ('),
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">",
 </footer>",
@@ -154,4 +176,4 @@
           </div>,
         </div>,
       </div>,
-    </footer>",
+

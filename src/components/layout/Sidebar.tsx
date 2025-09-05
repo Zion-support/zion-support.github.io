@@ -1,4 +1,4 @@
-  },
+
   const navigationSections = [,
     {,
       id: 'services',
@@ -11,7 +11,7 @@
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' };
-      ]
+
     },
     {,
       id: 'solutions',
@@ -24,7 +24,7 @@
         { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
         { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' };
-      ]
+
     },
     {,
       id: 'company',
@@ -37,24 +37,14 @@
         { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
         { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
         { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' };
-      ]
-    };
-  ],
+
   const quickLinks = [,
     { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
     { name: 'Download Brochure', href: '/resources', icon: ArrowRight };
   ],
-  const contactInfo = {,
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  },
-  const handleLinkClick = (href: string) => {,
-    if (onClose) onClose(),
-    router.push(href)
-  },
+
   return (,
     <motion.aside,
       initial={false};
@@ -77,7 +67,7 @@
               className="p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors",
             >,
               ×,
-            </button>)};
+
         </div>,
         {/* Quick Links */};
         <div className="mb-8">,
@@ -92,13 +82,13 @@
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,
                     link.highlight,
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: shadow-lg',
-                      : 'text-gray-700 hover: bg-gray-100'
+
                   }`};
                 >,
                   <IconComponent className="w-5 h-5" />,
                   <span className="font-medium">{link.name}</span>,
                 </button>,
-              )
+
             })};
           </div>,
         </div>,
@@ -107,6 +97,7 @@
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
+
             return (,
               <div key={section.id}>,
                 <button,
@@ -118,8 +109,7 @@
                     <span className="font-medium">{section.title}</span>,
                   </div>,
                   {isExpanded ? (,
-                    <ChevronDown className="w-4 h-4" />) : (,
-                    <ChevronRight className="w-4 h-4" />)};
+
                 </button>,
                 {isExpanded && (,
                   <motion.div,
@@ -142,12 +132,12 @@
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>,
                           </div>,
                         </button>,
-                      )
+
                     })};
                   </motion.div>,
                 )};
               </div>,
-            )
+
           })};
         </div>,
         {/* Contact Info */};
@@ -191,5 +181,4 @@
         </div>,
       </div>,
     </motion.aside>,
-  )
-};
+

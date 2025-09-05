@@ -60,6 +60,7 @@ npm run pm2:intelligent:health
 ## 🚨 Alerts & Monitoring
 
 The system will automatically:
+
 - Alert you to high CPU/memory usage
 - Fix common code issues
 - Resolve merge conflicts
@@ -71,6 +72,7 @@ The system will automatically:
 ## 📊 Reports
 
 Check these directories for detailed reports:
+
 - `logs/` - Health and performance metrics
 - `security-reports/` - Security scan results
 - `quality-reports/` - Code quality reports
@@ -80,6 +82,7 @@ Check these directories for detailed reports:
 ## 🔧 Configuration
 
 Edit `.env` file to customize:
+
 - Monitoring intervals
 - Alert thresholds
 - Auto-fix settings

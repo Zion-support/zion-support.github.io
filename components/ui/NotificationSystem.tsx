@@ -1,12 +1,4 @@
           key={notification.id};
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
-        >,
-          <div className="flex items-start justify-between">,
-            <div className="flex-1">,
-              {notification.title && (,
-                <h4 className="font-medium mb-1">{notification.title}</h4>)};
-              <p className="text-sm">{notification.message}</p>,
-            </div>,
-            {onDismiss && (,
-              <button,
+
                 onClick={() => onDismiss(notification.id)};

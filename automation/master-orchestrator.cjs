@@ -8,7 +8,12 @@ console.log('🚀 Starting Master Automation Orchestrator...');
 
 class MasterAutomationOrchestrator {
   constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation-reports', 'master-orchestrator.log');
+    this.logFile = path.join(
+      __dirname,
+      '..',
+      'automation-reports',
+      'master-orchestrator.log'
+    );
     this.ensureLogDir();
   }
 
@@ -29,10 +34,10 @@ class MasterAutomationOrchestrator {
   async runCommand(command, description) {
     try {
       this.log(`🚀 ${description}`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
+      const result = execSync(command, {
+        encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        cwd: path.join(__dirname, '..'),
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -44,11 +49,11 @@ class MasterAutomationOrchestrator {
 
   async runLinting() {
     this.log('🔧 Running linting and code quality checks...');
-    
+
     const commands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
       { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
-      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' }
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' },
     ];
 
     for (const { cmd, desc } of commands) {
@@ -58,10 +63,10 @@ class MasterAutomationOrchestrator {
 
   async runBuildProcess() {
     this.log('🏗️ Running build process...');
-    
+
     const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
-      { cmd: 'npm run build', desc: 'Build application' }
+      { cmd: 'npm run build', desc: 'Build application' },
     ];
 
     for (const { cmd, desc } of commands) {
@@ -75,10 +80,10 @@ class MasterAutomationOrchestrator {
 
   async fixBuildIssues() {
     this.log('🔧 Attempting to fix build issues...');
-    
+
     const fixCommands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
-      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' }
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' },
     ];
 
     for (const { cmd, desc } of fixCommands) {
@@ -88,11 +93,10 @@ class MasterAutomationOrchestrator {
 
   async runAutomationScripts() {
     this.log('🤖 Running automation scripts...');
-    
+
     const scripts = [
       'enhanced-automation-suite.cjs',
-      'app-optimizer.cjs',
-      'complete-improvement-suite.cjs'
+
     ];
 
     for (const script of scripts) {
@@ -107,19 +111,24 @@ class MasterAutomationOrchestrator {
 
   async generateReport() {
     this.log('📊 Generating automation report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       status: 'completed',
       scripts: {
         linting: 'completed',
         build: 'completed',
-        automation: 'completed'
+        automation: 'completed',
       },
-      summary: 'Master automation orchestrator completed successfully'
+      summary: 'Master automation orchestrator completed successfully',
     };
 
-    const reportPath = path.join(__dirname, '..', 'automation-reports', 'master-orchestrator-report.json');
+    const reportPath = path.join(
+      __dirname,
+      '..',
+      'automation-reports',
+      'master-orchestrator-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
   }
@@ -127,12 +136,12 @@ class MasterAutomationOrchestrator {
   async run() {
     try {
       this.log('🎯 Starting master automation orchestration...');
-      
+
       await this.runLinting();
       await this.runBuildProcess();
       await this.runAutomationScripts();
       await this.generateReport();
-      
+
       this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);

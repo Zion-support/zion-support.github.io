@@ -4,9 +4,8 @@
       };
     } else if (extensions.some(ext => item.endsWith(ext))) {};
       files.push(fullPath)
-    };
-  };
 };
+
 // Function to fix common syntax errors,
 function fixSyntaxErrors(content) {};
   let fixed = content,
@@ -14,7 +13,7 @@ function fixSyntaxErrors(content) {};
   fixed = fixed.replace(/([^,{}])\n/g, (match, p1) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'};
       return p1 + ',\n
-    };
+};
 };
 // Function to fix undefined variables (add basic, imports),
 function fixUndefinedVariables(content, filePath) {};
@@ -26,13 +25,12 @@ function fixUndefinedVariables(content, filePath) {};
   // Common Next.js patterns,
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
     fixed = "import { useRouter } from 'next/router',\n" + fixed,"
-  };
+};
   if (content.includes('useState') && !content.includes("import { useState }")) {"};
     fixed = "import { useState } from 'react',\n" + fixed,"
-  };
+};
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,"
-  };
 };
 // Function to remove unused variables,
 function removeUnusedVariables(content) {,
@@ -48,14 +46,14 @@ function removeUnusedVariables(content) {,
     } catch (error) {};
       errorCount++,
       _console.error(`❌ Error fixing ${file}:`, error.message)
-    };
-  };
+};
+};
   try {};
     execSync('npm run lint', { stdio: 'pipe' }),',
     _console.log('✅ All lint errors fixed!'),'
   } catch (error) {};
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
-  };
+};
 };
         return match.replace(imports, cleanImports)};
       return match,
@@ -69,8 +67,7 @@ function removeUnusedVariables(content) {,
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,
   if (!match.endsWith(",")) {,
   return match + ","};
-  fixed += "\n}".repeat(openBraces - closeBraces)},
-  return fixed},
+
 // Main function,
 async function $1() {,
   // Get all TypeScript/JavaScript files,
@@ -90,5 +87,5 @@ async function $1() {,
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
-  },
+
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
