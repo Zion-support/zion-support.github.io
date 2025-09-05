@@ -1,3 +1,3 @@
-import React, {useState} from 'react'
-        setIsSubscribed(true);';'
-export default FooterNewsletter;';'
+import React, {useState} from 'react'''
+        setIsSubscribed(true);';'''
+export default FooterNewsletter;';'''

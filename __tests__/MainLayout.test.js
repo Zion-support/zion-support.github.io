@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import MainLayout from '../components/MainLayout';
-
-describe('MainLayout', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import MainLayout from '../components/MainLayout';''
+describe('MainLayout', () => {''
+  test('renders without crashing', () => {'
     render(<MainLayout />);
-    expect(screen.getByTestId('mainlayout')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</MainLayout>
     render(<MainLayout />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</MainLayout>
     render(<MainLayout />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</MainLayout>
     render(<MainLayout />);
-    // Add styling tests here
-  });
-});
+</MainLayout>'

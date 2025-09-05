@@ -1,1 +1,1 @@
-import React from 'react' import Head from 'next/head' import { ArrowRight,Users,Award,Shield } from 'lucide-react' import Layout from '../components/Layout'
+import React from 'react' import Head from 'next/head' import { ArrowRight,Users,Award,Shield } from 'lucide-react' import Layout from '../components/Layout'''

@@ -1,1 +1,1 @@
-import React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { MessageCircle,X,Send,Bot,User } from 'lucide-react'
+import React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { MessageCircle,X,Send,Bot,User } from 'lucide-react'''

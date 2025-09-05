@@ -9,11 +9,11 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
+  children, 
+  title = "Zion Tech Group", 
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
-}: MainLayoutProps) => {
+}) => {
   return (
     <>
       <Head>

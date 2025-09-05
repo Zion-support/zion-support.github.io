@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ContactForm from '../components/ContactForm';
-
-describe('ContactForm', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import ContactForm from '../components/ContactForm';''
+describe('ContactForm', () => {''
+  test('renders without crashing', () => {'
     render(<ContactForm />);
-    expect(screen.getByTestId('contactform')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</ContactForm>
     render(<ContactForm />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</ContactForm>
     render(<ContactForm />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</ContactForm>
     render(<ContactForm />);
-    // Add styling tests here
-  });
-});
+</ContactForm>'

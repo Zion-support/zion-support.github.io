@@ -1,15 +1,12 @@
-import React from 'react';
-export const "PageLoader": React.FC = (props) => {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-gray-600">Loading...</p>
+import React from 'react';''
+export const "PageLoader": React.FC = (props) => {"
+  return ("
+    <div className="min-h-screen bg-white">"
+</div>"
+      <div className="text-center">"
+</div>"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>""
+        <p className="text-gray-600">Loading...</p>"
       </div>
-    </div>
-  );
-};';';
-import React from 'react'; export const PageLoader: React.FC = (props) => { return ( <div className="min-h-screen bg-white"> <div className="text-center"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div> <p className="text-gray-600">Loading...</p> </div> </div> )};';';
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
+    </div>)"
+import React from 'react'; export const PageLoader: React.FC = (props) => { return ( <div className="min-h-screen bg-white"> <div className="text-center"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div> <p className="text-gray-600">Loading...</p> </div> </div> )};';';''

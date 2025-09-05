@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import TestimonialsSection from '../components/TestimonialsSection';
-
-describe('TestimonialsSection', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import TestimonialsSection from '../components/TestimonialsSection';''
+describe('TestimonialsSection', () => {''
+  test('renders without crashing', () => {'
     render(<TestimonialsSection />);
-    expect(screen.getByTestId('testimonialssection')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</TestimonialsSection>
     render(<TestimonialsSection />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</TestimonialsSection>
     render(<TestimonialsSection />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</TestimonialsSection>
     render(<TestimonialsSection />);
-    // Add styling tests here
-  });
-});
+</TestimonialsSection>'

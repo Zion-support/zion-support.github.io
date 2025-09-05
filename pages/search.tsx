@@ -150,7 +150,7 @@ export default function SearchPage() {
                   className="mb-8"
                 >
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Search results for "{router.query.q}"
+                    Search results for "{router.query.q}
                   </h2>
                   <p className="text-gray-600">
                     {isLoading ? 'Searching...' : `${results.length} result${results.length !== 1 ? 's' : ''} found`}
@@ -216,7 +216,7 @@ export default function SearchPage() {
                     No results found
                   </h3>
                   <p className="text-gray-600 mb-6">
-                    We couldn't find any results for "{router.query.q}". Try searching with different keywords.
+                    We couldn't find any results for "{router.query.q}. Try searching with different keywords.
                   </p>
                   <button
                     onClick={() => {

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import React, { useState } from 'react'
+import MainLayout from '../components/layout/MainLayout'
+import { motion, AnimatePresence } from 'framer-motion
+import {
+  // TODO: Implement
+}
   ChevronDown, 
   ChevronUp, 
   HelpCircle,
@@ -9,19 +11,18 @@ import {
   Filter,
   MessageCircle,
   Phone,
-  Mail
-} from 'lucide-react';
-
-const faqCategories = [
-  { id: 'general', name: 'General Questions', count: 15 },
-  { id: 'technical', name: 'Technical Support', count: 20 },
-  { id: 'billing', name: 'Billing & Pricing', count: 10 },
-  { id: 'api', name: 'API & Integration', count: 25 }
+  Mail;'
+} from 'lucide-react
+const faqCategories = ['
+  { id: 'general', name: 'General Questions', count: 15 },''
+  { id: 'technical', name: 'Technical Support', count: 20 },''
+  { id: 'billing', name: 'Billing & Pricing', count: 10 },''
+  { id: 'api', name: 'API & Integration', count: 25 }']
 ];
 
 const faqs = {
   general: [
-    {
+    {'
       question: "What services does Zion Tech Group offer?",
       answer: "We offer comprehensive technology solutions including AI services, IT services, micro SaaS solutions, custom development, and consulting. Our services cover everything from artificial intelligence and machine learning to cloud infrastructure and cybersecurity."
     },
@@ -60,7 +61,7 @@ const faqs = {
     {
       question: "What makes Zion Tech Group different?",
       answer: "We combine deep technical expertise with business acumen, offer flexible engagement models, provide comprehensive support, and focus on delivering real business value. Our team is committed to your success."
-    }
+    }]
   ],
   technical: [
     {
@@ -102,7 +103,7 @@ const faqs = {
     {
       question: "How do you handle testing and quality assurance?",
       answer: "We implement comprehensive testing strategies including unit testing, integration testing, performance testing, and user acceptance testing to ensure high-quality deliverables."
-    }
+    }]
   ],
   billing: [
     {
@@ -144,7 +145,7 @@ const faqs = {
     {
       question: "Can I change the scope of work?",
       answer: "Yes, scope changes are common in software projects. We handle change requests through a formal process and provide updated timelines and costs before proceeding."
-    }
+    }]
   ],
   api: [
     {
@@ -186,205 +187,199 @@ const faqs = {
     {
       question: "Do you offer API support?",
       answer: "Yes, we provide comprehensive API support including documentation, code examples, integration assistance, and technical support for API-related issues."
-    }
+    }]
   ]
 };
 
 export default function FAQPage() {
-  const [activeCategory, setActiveCategory] = useState('general');
+  const [activeCategory, setActiveCategory] = useState('general');'
   const [openItems, setOpenItems] = useState<number[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
-
-  const filteredFAQs = faqs[activeCategory as keyof typeof faqs].filter(faq =>
-    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  return (
-    <MainLayout 
+</number>
+    <MainLayout;'
       title="FAQ - Zion Tech Group"
       description="Find answers to frequently asked questions about our services, pricing, technical support, and more."
     >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
+</MainLayout>"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Frequently Asked{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Questions
+</motion>"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+</h1>"
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
+</span>
                 </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Find answers to common questions about our services, pricing, and technical support.
+              </h1>"
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">"
+</p>
               </p>
             </motion.div>
           </div>
-        </section>
-
-        {/* Search and Filter */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+        </section>"
+        <section className="py-12 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>"
+            <div className="max-w-4xl mx-auto">"
+</div>"
+              <div className="flex flex-col md:flex-row gap-4 mb-8">"
+</div>"
+                <div className="flex-1 relative">"
+</div>"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
+</Search>
+                  <input;"
                     type="text"
                     placeholder="Search FAQs..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="flex gap-2">
-                  {faqCategories.map((category) => (
-                    <button
+</input>
+                </div>"
+                <div className="flex gap-2">"
+</div>
+                    <button;
                       key={category.id}
                       onClick={() => setActiveCategory(category.id)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                        activeCategory === category.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      {category.name} ({category.count})
+</button>
                     </button>
-                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </section>
-
-        {/* FAQ Content */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-4">
-                {filteredFAQs.map((faq, index) => (
-                  <motion.div
+        </section>"
+        <section className="py-12">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>"
+            <div className="max-w-4xl mx-auto">"
+</div>"
+              <div className="space-y-4">"
+</div>
+                  <motion.div;
                     key={index}
                     className="bg-white rounded-lg shadow-md overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <button
+</motion>
+                    <button;
                       onClick={() => toggleItem(index)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                    >
-                      <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                        {faq.question}
-                      </h3>
-                      {openItems.includes(index) ? (
-                        <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
-                      )}
+</button>"
+                      <h3 className="text-lg font-semibold text-gray-900 pr-4">"
+</h3>
+                      </h3>"
+                        <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />"
+</ChevronUp>"
+                        <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />"
+</ChevronDown>
                     </button>
                     <AnimatePresence>
-                      {openItems.includes(index) && (
-                        <motion.div
+</AnimatePresence>
+                        <motion.div;
                           initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
+                          animate={{ height: 'auto', opacity: 1 }}'
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.3 }}'
                           className="overflow-hidden"
                         >
-                          <div className="px-6 pb-4 text-gray-600 leading-relaxed">
-                            {faq.answer}
+</motion>"
+                          <div className="px-6 pb-4 text-gray-600 leading-relaxed">"
+</div>
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </motion.div>
                 ))}
-              </div>
-
-              {filteredFAQs.length === 0 && (
-                <div className="text-center py-12">
-                  <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    No FAQs found
-                  </h3>
-                  <p className="text-gray-600">
-                    Try adjusting your search terms or browse different categories.
+              </div>"
+                <div className="text-center py-12">"
+</div>"
+                  <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+</HelpCircle>"
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">"
+</h3>
+                  </h3>"
+                  <p className="text-gray-600">"
+</p>
                   </p>
                 </div>
-              )}
             </div>
           </div>
-        </section>
-
-        {/* Contact Support */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>"
+            <div className="max-w-4xl mx-auto text-center">"
+</div>
+              <motion.div;
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Still Have Questions?
-                </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Can't find what you're looking for? Our support team is here to help.
+</motion>"
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+                </h2>"
+                <p className="text-lg text-gray-600 mb-8">"
+</p>
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <MessageCircle className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Live Chat
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Chat with our support team in real-time
-                    </p>
-                    <button className="text-blue-600 hover:text-blue-700 font-semibold">
-                      Start Chat
+                "
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
+</div>"
+                  <div className="bg-gray-50 p-6 rounded-lg">"
+</div>"
+                    <MessageCircle className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
+</MessageCircle>"
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">"
+</h3>
+                    </h3>"
+                    <p className="text-gray-600 text-sm mb-4">"
+</p>
+                    </p>"
+                    <button className="text-blue-600 hover:text-blue-700 font-semibold">"
+</button>
                     </button>
                   </div>
-                  
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Phone Support
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Call us at +1 302 464 0950
-                    </p>
-                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      Call Now
+                  "
+                  <div className="bg-gray-50 p-6 rounded-lg">"
+</div>"
+                    <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
+</Phone>"
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">"
+</h3>
+                    </h3>"
+                    <p className="text-gray-600 text-sm mb-4">"
+</p>
+                    </p>"
+                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 font-semibold">"
+</a>
                     </a>
                   </div>
-                  
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Email Support
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Send us an email anytime
-                    </p>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      Send Email
+                  "
+                  <div className="bg-gray-50 p-6 rounded-lg">"
+</div>"
+                    <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
+</Mail>"
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">"
+</h3>
+                    </h3>"
+                    <p className="text-gray-600 text-sm mb-4">"
+</p>
+                    </p>"
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-semibold">"
+</a>
                     </a>
                   </div>
                 </div>
@@ -393,6 +388,4 @@ export default function FAQPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
-}
+    </MainLayout>"
