@@ -1,17 +1,8 @@
-export const serviceWorker = {};
+<<<<<<< HEAD
+// comment
+export const serviceWorker = {}
 
-export const registerServiceWorker = () => {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          
-        })
-        .catch((registrationError) => {
-          
-        });
-    });
-  }
-};
-
-export default serviceWorker;
+export default serviceWorker
+=======
+export const serviceWorker = {} export default serviceWorker
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

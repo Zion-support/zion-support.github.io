@@ -1,6 +1,40 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',;',';';';';
+    ';';';';';';
+import { Helmet } from 'react-helmet-async'; interface SEOProps {';';
+ title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any';';
+} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions', description = 'Leading provider of AI-powered technology solutions, cybersecurity, cloud services, and digital transformation. Expert consulting and innovative solutions for modern businesses.', keywords = ['AI', 'technology', 'cybersecurity', 'cloud computing', 'digital transformation', 'consulting'], image = 'https:"';';';';';
+</SEOProps>;';;';
+=======
+=======
+>>>>>>> main
 import React from 'react',;',';';
-    ';';';';
+<<<<<<< HEAD
+    ;
 import { Helmet } from 'react-helmet-async'; interface SEOProps {;
- title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any;
-} export const EnhancedSEOManager: React.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions', description = 'Leading provider of AI-powered technology solutions, cybersecurity, cloud services, and digital transformation. Expert consulting and innovative solutions for modern businesses.', keywords = ['AI', 'technology', 'cybersecurity', 'cloud computing', 'digital transformation', 'consulting'], image = 'https:"';';';';
+ title?: "string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any;
+"} export const "EnhancedSEOManager": "React.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions'", description = 'Leading provider of AI-powered technology solutions, cybersecurity, cloud services, and digital transformation. Expert consulting and innovative solutions for modern businesses.', keywords = ['AI', 'technology', 'cybersecurity', 'cloud computing', 'digital transformation', 'consulting'], image = '"https":";
 </SEOProps>;
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+    ';';';';
+import { Helmet } from 'react-helmet-async'; interface SEOProps {
+ title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any
+} export const EnhancedSEOManager: React.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions', description = 'Leading provider of AI-powered technology solutions, cybersecurity, cloud services, and digital transformation. Expert consulting and innovative solutions for modern businesses.', keywords = ['AI', 'technology', 'cybersecurity', 'cloud computing', 'digital transformation', 'consulting'], image = 'https:"';';';';
+</SEOProps>
+=======
+<<<<<<< HEAD
+import React from &apos;react&apos;,;&apos;,&apos;; &apos;;&apos;;&apos;;&apos;;&apos;;&apos;; import { Helmet } from &apos;react-helmet-async&apos;; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: &apos;website&apos; | &apos;article&apos; | &apos;product&apos;; structuredData? any&apos;;&apos;} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = &apos;Zion Tech Group - AI-Powered Technology Solutions&apos;,description = &apos;Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.&apos;,keywords = [&apos;AI&apos;,&apos;technology&apos;,&apos;cybersecurity&apos;,&apos;cloud computing&apos;,&apos;digital transformation&apos;,&apos;consulting&apos;],image = &apos;https:&quot;;&apos;; </SEOProps>;&apos;;&apos;;
+=======
+<<<<<<< HEAD
+const React from "react",;","; ";";";";";"; import { Helmet } from "react-helmet-async"; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: "website" | "article" | "product"; structuredData? any";"} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = "Zion Tech Group - AI-Powered Technology Solutions",description = "Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.",keywords = ["AI","technology","cybersecurity","cloud computing","digital transformation","consulting"],image = "https:";"; </SEOProps>;";";'"'"
+=======
+import _React from 'react',;'; ';';';';';'; import { Helmet } from 'react-helmet-async'; interface SEOProps { title?: string; description?: string; keywords?: string[]; image?: string; url?: string; type?: 'website' | 'article' | 'product'; structuredData? any';'} export const EnhancedSEOManager: Reac t.FC<SEOProps> = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions,description = 'Leading provider of AI-powered technology solutions,cybersecurity,cloud services,and digital transformation. Expert consulting and innovative solutions for modern businesses.',keywords = ['AI','technology','cybersecurity','cloud computing','digital transformation','consulting'],image = 'https:";'; </SEOProps>;';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
