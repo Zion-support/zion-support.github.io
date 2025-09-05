@@ -43,11 +43,17 @@ import {
   Package,
   Calendar,
   BookOpen,
+<<<<<<< HEAD
   ShoppingCart,
   Home,
   Trash2,
   Camera,
   HardDrive
+=======
+  Brain,
+  Truck,
+  ShoppingCart
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-597f
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -93,13 +99,189 @@ const microSaaSProducts = [{
     category: 'Content Safety'
   },
   {
+    title: 'Smart Inventory Optimizer',
+    description: 'AI-powered inventory management with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Stock Optimization', 'Multi-location Sync'],
+    pricing: '$199 - $999/month',
+    category: 'Inventory Management',
+    popular: true,
+    link: 'https://inventoryai.ziontechgroup.com'
+  },
+  {
+    title: 'Social Media Scheduler Pro',
+    description: 'Advanced social media management with AI-powered content optimization and scheduling.',
+    icon: Share2,
+    features: ['AI Content Optimization', 'Multi-platform Posting', 'Analytics Dashboard', 'Engagement Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'Social Media',
+    link: 'https://socialscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'Expense Tracker & Analyzer',
+    description: 'Intelligent expense tracking with receipt scanning and spending insights.',
+    icon: Receipt,
+    features: ['Receipt Scanning', 'Auto Categorization', 'Spending Analytics', 'Budget Alerts'],
+    pricing: '$29 - $149/month',
+    category: 'Finance',
+    link: 'https://expensetracker.ziontechgroup.com'
+  },
+  {
+    title: 'Meeting Assistant & Transcriber',
+    description: 'AI-powered meeting transcription, note-taking, and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Integration APIs'],
+    pricing: '$79 - $399/month',
+    category: 'Productivity',
+    popular: true,
+    link: 'https://meetingai.ziontechgroup.com'
+  },
+  {
+    title: 'Lead Scoring & Qualification',
+    description: 'Automated lead scoring and qualification using machine learning algorithms.',
+    icon: Target,
+    features: ['ML Lead Scoring', 'Behavioral Analysis', 'Qualification Rules', 'CRM Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Sales',
+    link: 'https://leadscoring.ziontechgroup.com'
+  },
+  {
+    title: 'Code Quality Analyzer',
+    description: 'Automated code review and quality analysis with security vulnerability detection.',
+    icon: Code,
+    features: ['Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    link: 'https://codeanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Employee Wellness Tracker',
+    description: 'Comprehensive employee wellness monitoring and mental health support platform.',
+    icon: Heart,
+    features: ['Wellness Surveys', 'Mental Health Support', 'Team Analytics', 'Intervention Alerts'],
+    pricing: '$99 - $499/month',
+    category: 'HR & Wellness',
+    link: 'https://wellnesstracker.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Generator',
+    description: 'AI-powered legal document generation and contract analysis platform.',
+    icon: FileText,
+    features: ['Contract Generation', 'Clause Analysis', 'Risk Assessment', 'Template Library'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    link: 'https://contractai.ziontechgroup.com'
+  },
+  {
+    title: 'Real Estate Analytics Dashboard',
+    description: 'Comprehensive real estate market analysis and property valuation tools.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Forecasting'],
+    pricing: '$199 - $999/month',
+    category: 'Real Estate',
+    link: 'https://realestateai.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Optimizer',
+    description: 'AI-driven supply chain optimization with demand planning and logistics management.',
+    icon: Truck,
+    features: ['Demand Planning', 'Route Optimization', 'Supplier Management', 'Risk Assessment'],
+    pricing: '$499 - $2,499/month',
+    category: 'Supply Chain',
+    popular: true,
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'Learning Management System (LMS)',
+    description: 'Modern LMS with AI-powered personalized learning paths and progress tracking.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Progress Tracking', 'Content Creation', 'Assessment Tools'],
+    pricing: '$149 - $799/month',
+    category: 'Education',
+    link: 'https://lmsai.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Churn Predictor',
+    description: 'Predict and prevent customer churn using advanced machine learning models.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'Retention Campaigns'],
+    pricing: '$299 - $1,499/month',
+    category: 'Customer Success',
+    link: 'https://churnpredictor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Security Monitoring', 'Voice Integration'],
+    pricing: '$199 - $999/month',
+    category: 'IoT & Smart Home',
+    link: 'https://smarthomeai.ziontechgroup.com'
+  },
+  {
+    title: 'Fitness & Nutrition Coach',
+    description: 'AI-powered personal fitness and nutrition coaching with progress tracking.',
+    icon: Heart,
+    features: ['Workout Plans', 'Nutrition Tracking', 'Progress Analysis', 'Goal Setting'],
+    pricing: '$49 - $249/month',
+    category: 'Health & Fitness',
+    link: 'https://fitnessai.ziontechgroup.com'
+  },
+  {
+    title: 'E-commerce Personalization Engine',
+    description: 'AI-driven product recommendations and personalized shopping experiences.',
+    icon: ShoppingCart,
+    features: ['Product Recommendations', 'Personalized Search', 'Dynamic Pricing', 'Behavioral Analysis'],
+    pricing: '$399 - $1,999/month',
+    category: 'E-commerce',
+    popular: true,
+    link: 'https://ecommerceai.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain transaction analysis and cryptocurrency tracking.',
+    icon: Database,
+    features: ['Transaction Analysis', 'Wallet Tracking', 'Risk Assessment', 'Compliance Reporting'],
+    pricing: '$599 - $2,999/month',
+    category: 'Blockchain',
+    link: 'https://blockchainai.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Assistant Builder',
+    description: 'Create custom voice assistants and chatbots for various business applications.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Commands'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice AI',
+    link: 'https://voiceassistant.ziontechgroup.com'
+  },
+  {
+    title: 'Data Privacy Compliance Manager',
+    description: 'Automated GDPR, CCPA, and other privacy regulation compliance management.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Data Mapping', 'Consent Management', 'Audit Reports'],
+    pricing: '$499 - $2,499/month',
+    category: 'Compliance',
+    link: 'https://privacycompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy consumption optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Consumption Optimization', 'Renewable Integration', 'Cost Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Energy',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
     title: 'Workflow Automation Engine',
     description: 'No-code workflow automation with integrations to popular business tools.',
     icon: Settings,
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
-    pricing: '$99 - $599/month',
+    pricing: '$149 - $799/month',
     category: 'Automation',
-    popular: true
+    popular: true,
+    link: 'https://workflowai.ziontechgroup.com'
   },
   {
     title: 'AI Lead Scoring & Enrichment',
@@ -107,7 +289,8 @@ const microSaaSProducts = [{
     icon: Target,
     features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration'],
     pricing: '$199 - $999/month',
-    category: 'Sales'
+    category: 'Sales',
+    link: 'https://leadscoring.ziontechgroup.com'
   },
   {
     title: 'Social Media Scheduler Pro',

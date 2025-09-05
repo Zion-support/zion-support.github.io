@@ -85,6 +85,7 @@ const itServices = [
     category: 'Administration'
   },
   {
+<<<<<<< HEAD
     title: 'IT Consulting',
     description: 'Strategic IT consulting to align technology with business objectives.',
     icon: Users,
@@ -95,6 +96,193 @@ const itServices = [
   {
     title: 'DevOps & CI/CD Implementation',
     description: 'Complete DevOps transformation with continuous integration and deployment pipelines.',
+=======
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software solutions tailored to your business requirements.',
+    icon: Code,
+    features: ['Custom Development', 'Scalable Architecture', 'Integration Services', 'Maintenance & Support'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Software Development',
+    popular: true,
+    link: 'https://enterprisesoftware.ziontechgroup.com'
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android.',
+    icon: Smartphone,
+    features: ['iOS Development', 'Android Development', 'Cross-platform', 'App Store Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Mobile Development',
+    link: 'https://mobileapps.ziontechgroup.com'
+  },
+  {
+    title: 'Web Application Development',
+    description: 'Modern web applications with responsive design and advanced functionality.',
+    icon: Monitor,
+    features: ['Responsive Design', 'Progressive Web Apps', 'API Integration', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Web Development',
+    link: 'https://webapps.ziontechgroup.com'
+  },
+  {
+    title: 'Data Center Management',
+    description: 'Complete data center infrastructure design, implementation, and management.',
+    icon: Server,
+    features: ['Infrastructure Design', 'Hardware Selection', 'Power & Cooling', 'Monitoring Systems'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Infrastructure',
+    link: 'https://datacenter.ziontechgroup.com'
+  },
+  {
+    title: 'IT Consulting & Strategy',
+    description: 'Strategic IT consulting to align technology with business objectives.',
+    icon: Users,
+    features: ['Technology Assessment', 'Digital Transformation', 'IT Strategy', 'Vendor Selection'],
+    pricing: '$200 - $500/hour',
+    category: 'Consulting',
+    popular: true,
+    link: 'https://itconsulting.ziontechgroup.com'
+  },
+  {
+    title: 'Managed IT Services',
+    description: 'Comprehensive IT management and support services for your organization.',
+    icon: Settings,
+    features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Security Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Managed Services',
+    link: 'https://managedit.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Seamless migration of applications and data to cloud platforms.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Data Transfer', 'Application Modernization', 'Performance Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Cloud Services',
+    link: 'https://cloudmigration.ziontechgroup.com'
+  },
+  {
+    title: 'API Development & Integration',
+    description: 'Custom API development and third-party system integration services.',
+    icon: Network,
+    features: ['RESTful APIs', 'GraphQL APIs', 'Third-party Integration', 'API Documentation'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'API Services',
+    link: 'https://apidevelopment.ziontechgroup.com'
+  },
+  {
+    title: 'IT Security Audit & Assessment',
+    description: 'Comprehensive security assessment and vulnerability analysis.',
+    icon: Shield,
+    features: ['Security Audit', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Review'],
+    pricing: '$5,000 - $25,000/assessment',
+    category: 'Security',
+    link: 'https://securityaudit.ziontechgroup.com'
+  },
+  {
+    title: 'Business Intelligence Solutions',
+    description: 'Data analytics and business intelligence platform development.',
+    icon: BarChart3,
+    features: ['Data Warehousing', 'Dashboard Development', 'Report Generation', 'Data Visualization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Business Intelligence',
+    popular: true,
+    link: 'https://businessintelligence.ziontechgroup.com'
+  },
+  {
+    title: 'IT Infrastructure Monitoring',
+    description: 'Advanced monitoring and alerting systems for IT infrastructure.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Metrics', 'Alert Management', 'Capacity Planning'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Monitoring',
+    link: 'https://infrastructuremonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Disaster Recovery Solutions',
+    description: 'Comprehensive disaster recovery planning and implementation.',
+    icon: Shield,
+    features: ['Recovery Planning', 'Backup Solutions', 'Failover Systems', 'Testing & Validation'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://disasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management and optimization.',
+    icon: Package,
+    features: ['Asset Tracking', 'License Management', 'Lifecycle Planning', 'Cost Optimization'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Asset Management',
+    link: 'https://assetmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security Implementation',
+    description: 'Advanced network security solutions and firewall management.',
+    icon: Shield,
+    features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Network Segmentation'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Network Security',
+    link: 'https://networksecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Training & Support',
+    description: 'Comprehensive IT training programs and ongoing technical support.',
+    icon: Users,
+    features: ['Technical Training', 'User Support', 'Documentation', 'Knowledge Transfer'],
+    pricing: '$100 - $300/hour',
+    category: 'Training & Support',
+    link: 'https://ittraining.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Cost Optimization',
+    description: 'Cloud resource optimization and cost reduction strategies.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Right-sizing', 'Reserved Instances'],
+    pricing: '$3,000 - $15,000/project',
+    category: 'Cloud Optimization',
+    popular: true,
+    link: 'https://cloudoptimization.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT governance framework implementation and compliance management.',
+    icon: FileText,
+    features: ['Compliance Framework', 'Policy Development', 'Risk Assessment', 'Audit Support'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Solutions',
+    description: 'Hybrid cloud architecture design and implementation services.',
+    icon: Cloud,
+    features: ['Hybrid Architecture', 'Multi-cloud Strategy', 'Data Synchronization', 'Security Integration'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Solutions',
+    description: 'Comprehensive IT service desk implementation and management.',
+    icon: Headphones,
+    features: ['Ticketing System', 'Knowledge Base', 'SLA Management', 'User Portal'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Service Desk',
+    link: 'https://servicedesk.ziontechgroup.com'
+  },
+  {
+    title: 'IT Support & Maintenance',
+    description: 'Comprehensive IT support and maintenance services for ongoing operations.',
+    icon: Headphones,
+    features: ['24/7 Support', 'Proactive Monitoring', 'Hardware Maintenance', 'Software Updates'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Support',
+    link: 'https://itsupport.ziontechgroup.com'
+  },
+  {
+    title: 'Data Center Services',
+    description: 'Complete data center design, implementation, and management services.',
     icon: Server,
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
     pricing: '$10,000 - $50,000/project',
