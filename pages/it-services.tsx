@@ -15,7 +15,11 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Users,
+  Package,
+  GraduationCap,
+  DollarSign
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -32,7 +36,10 @@ const services = [
       "Auto-scaling Solutions",
       "Disaster Recovery"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-8,000/month",
+    benefits: ["99.9% uptime guarantee", "50% cost reduction", "24/7 monitoring"],
+    setupTime: "2-4 weeks"
   },
   {
     title: "Cybersecurity",
@@ -46,7 +53,10 @@ const services = [
       "Incident Response",
       "Security Training"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-10,000/month",
+    benefits: ["Reduce security incidents by 90%", "Compliance ready", "24/7 threat monitoring"],
+    setupTime: "3-6 weeks"
   },
   {
     title: "DevOps & Automation",
@@ -60,7 +70,10 @@ const services = [
       "Automated Testing",
       "Deployment Automation"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Deploy 10x faster", "Reduce errors by 80%", "Automated scaling"],
+    setupTime: "2-4 weeks"
   },
   {
     title: "Database Management",
@@ -74,7 +87,10 @@ const services = [
       "Data Security & Encryption",
       "Cloud Database Setup"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["50% faster queries", "Zero data loss", "Automated backups"],
+    setupTime: "2-3 weeks"
   },
   {
     title: "Network Solutions",
@@ -88,7 +104,10 @@ const services = [
       "Monitoring & Management",
       "Cloud Networking"
     ],
-    price: "Starting at $1,000/month"
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,500/month",
+    benefits: ["99.9% network uptime", "Enhanced security", "Remote access ready"],
+    setupTime: "1-3 weeks"
   },
   {
     title: "System Administration",
@@ -102,7 +121,248 @@ const services = [
       "Performance Optimization",
       "24/7 System Support"
     ],
-    price: "Starting at $800/month"
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Proactive maintenance", "Reduced downtime", "Expert support"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT planning and digital transformation consulting",
+    icon: Settings,
+    features: [
+      "IT Strategy Development",
+      "Technology Roadmap",
+      "Digital Transformation",
+      "Cost Optimization",
+      "Vendor Management",
+      "Technology Assessment"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-12,000/month",
+    benefits: ["Strategic alignment", "Cost savings", "Future-proof technology"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Complete IT management and support services",
+    icon: Server,
+    features: [
+      "24/7 Help Desk Support",
+      "Proactive Monitoring",
+      "Patch Management",
+      "Security Updates",
+      "Performance Optimization",
+      "Incident Response"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-6,000/month",
+    benefits: ["Predictable costs", "Expert support", "Proactive maintenance"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Cloud Migration Services",
+    description: "Seamless migration to cloud platforms with zero downtime",
+    icon: Cloud,
+    features: [
+      "Migration Planning",
+      "Data Migration",
+      "Application Migration",
+      "Testing & Validation",
+      "Go-live Support",
+      "Post-migration Optimization"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-20,000/month",
+    benefits: ["Zero downtime migration", "Cost optimization", "Enhanced security"],
+    setupTime: "4-12 weeks"
+  },
+  {
+    title: "IT Security Services",
+    description: "Comprehensive security services to protect your infrastructure",
+    icon: Shield,
+    features: [
+      "Security Assessment",
+      "Vulnerability Management",
+      "Security Monitoring",
+      "Incident Response",
+      "Security Training",
+      "Compliance Auditing"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Enhanced security posture", "Compliance ready", "Reduced risk"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Backup & Disaster Recovery",
+    description: "Comprehensive backup and disaster recovery solutions",
+    icon: Database,
+    features: [
+      "Automated Backups",
+      "Disaster Recovery Planning",
+      "Data Replication",
+      "Recovery Testing",
+      "Cloud Backup Solutions",
+      "Business Continuity"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-7,000/month",
+    benefits: ["Zero data loss", "Fast recovery", "Business continuity"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "IT Infrastructure Monitoring",
+    description: "Advanced monitoring and alerting for your IT infrastructure",
+    icon: Settings,
+    features: [
+      "Real-time Monitoring",
+      "Performance Analytics",
+      "Alert Management",
+      "Capacity Planning",
+      "Trend Analysis",
+      "Custom Dashboards"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,500/month",
+    benefits: ["Proactive issue detection", "Better performance", "Reduced downtime"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Support & Helpdesk",
+    description: "Professional IT support and helpdesk services",
+    icon: Users,
+    features: [
+      "24/7 Technical Support",
+      "Remote Assistance",
+      "Issue Tracking",
+      "Knowledge Base",
+      "User Training",
+      "Service Level Agreements"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["Fast resolution times", "Expert support", "User satisfaction"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Complete IT asset lifecycle management and optimization",
+    icon: Package,
+    features: [
+      "Asset Discovery",
+      "Inventory Management",
+      "License Management",
+      "Lifecycle Planning",
+      "Cost Optimization",
+      "Compliance Tracking"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,000/month",
+    benefits: ["Cost optimization", "License compliance", "Asset visibility"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "IT Project Management",
+    description: "Professional IT project management and implementation",
+    icon: CheckCircle,
+    features: [
+      "Project Planning",
+      "Resource Management",
+      "Timeline Management",
+      "Risk Assessment",
+      "Quality Assurance",
+      "Stakeholder Communication"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["On-time delivery", "Budget control", "Quality assurance"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Training & Certification",
+    description: "Comprehensive IT training and certification programs",
+    icon: GraduationCap,
+    features: [
+      "Technical Training",
+      "Certification Programs",
+      "Skill Assessment",
+      "Custom Training",
+      "Online Learning",
+      "Hands-on Labs"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Improved skills", "Certification ready", "Better performance"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "IT compliance management and governance services",
+    icon: Shield,
+    features: [
+      "Compliance Assessment",
+      "Policy Development",
+      "Audit Preparation",
+      "Risk Management",
+      "Governance Framework",
+      "Regulatory Updates"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Compliance ready", "Risk reduction", "Audit preparation"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "IT Vendor Management",
+    description: "Strategic IT vendor management and optimization",
+    icon: Settings,
+    features: [
+      "Vendor Assessment",
+      "Contract Management",
+      "Performance Monitoring",
+      "Cost Optimization",
+      "Relationship Management",
+      "Service Level Management"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Cost savings", "Better service", "Strategic partnerships"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "IT Innovation & R&D",
+    description: "IT innovation services and emerging technology adoption",
+    icon: Zap,
+    features: [
+      "Technology Research",
+      "Proof of Concept",
+      "Innovation Labs",
+      "Emerging Tech Adoption",
+      "Digital Transformation",
+      "Future Technology Planning"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Competitive advantage", "Innovation leadership", "Future readiness"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "IT Cost Optimization",
+    description: "Strategic IT cost reduction and optimization services",
+    icon: DollarSign,
+    features: [
+      "Cost Analysis",
+      "Budget Optimization",
+      "Resource Right-sizing",
+      "Cloud Cost Management",
+      "License Optimization",
+      "ROI Analysis"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["30% cost reduction", "Better ROI", "Optimized spending"],
+    setupTime: "2-3 weeks"
   }
 ];
 
@@ -201,16 +461,52 @@ export default function ITServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
+                
+                {/* Features */}
                 <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
+                  {service.features.slice(0, 4).map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
+                  {service.features.length > 4 && (
+                    <li className="text-blue-600 font-medium">
+                      +{service.features.length - 4} more features
+                    </li>
+                  )}
                 </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+
+                {/* Benefits */}
+                {service.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <ArrowRight className="w-3 h-3 text-blue-500 mr-1" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Pricing */}
+                <div className="border-t pt-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-lg font-bold text-blue-600">{service.price}</span>
+                    {service.setupTime && (
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        {service.setupTime}
+                      </span>
+                    )}
+                  </div>
+                  {service.marketPrice && (
+                    <p className="text-xs text-gray-500">
+                      Market rate: {service.marketPrice}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
