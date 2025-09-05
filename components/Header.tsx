@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function Header() {
   return (
     <header className="w-full border-b border-gray-200 bg-white">

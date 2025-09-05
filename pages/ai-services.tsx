@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-
-const services = [
-  {
+const services = [{
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning.',
     pricing: '$2,000 - $8,000 setup',
@@ -19,9 +17,7 @@ const services = [
     description: 'AI-powered customer support with natural conversation.',
     pricing: '$1,000 - $6,000/month',
     category: 'Customer Service'
-  }
-]
-
+  }]
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
