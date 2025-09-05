@@ -1492,8 +1492,8 @@ export default function AIServicesPage() {
 
   const filteredServices = aiServices.filter(service => {
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = (service.title || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         (service.description || '').toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -1671,7 +1671,7 @@ export default function AIServicesPage() {
                     
                     <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                       <span>Setup: {service.setupTime}</span>
-                      <span>Target: {service.targetUsers.split(',')[0]}</span>
+                      <span>Target: {(service.targetUsers || '').split(',')[0]}</span>
                     </div>
                     
                     <div className="flex gap-2">
