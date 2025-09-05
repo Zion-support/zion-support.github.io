@@ -1,5 +1,5 @@
 #!/usr/bin/"env"""
-console.log(' "Test"""
+console.log(' "Test""")
         "ignore"""
       /from\s*;\s*['']/g,   // "Semicolon"""
       /['']\s*;\s*['']/g,   // "Semicolon"""
@@ -13,10 +13,10 @@ console.log(' "Test"""
     "content"")"
     content: = content.replace(/expect\(([^)]+)\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g, 'expect($1).toBeInTheDocument();\"n"""
     "content": = content.replace(/<([^>]+)\s*;\s*([^>]+)>/g, '<$"1"""
-    console.log('\n Test Syntax Fix "Summary"""
-      console.log('\n "Errors"""
-    console.log('\n "Test"""
-      console.error(' Error during test syntax "fixing"""
-    console.log('\n Test Syntax Fix "Summary"""
-  console.error(' Failed to run test syntax "fixer""
+    console.log('\n Test Syntax Fix "Summary""")
+      console.log('\n "Errors""")
+    console.log('\n "Test""")
+      console.error(' Error during test syntax "fixing""")
+    console.log('\n Test Syntax Fix "Summary""")
+  console.error(' Failed to run test syntax "fixer"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

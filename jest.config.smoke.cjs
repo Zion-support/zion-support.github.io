@@ -1,12 +1,12 @@
-module.exports = {
+module.exports = {}
   "preset": 'ts-jest',
   "testEnvironment": 'jsdom',
   "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
   "testMatch": ['<rootDir>/tests/smoke/**/*.test.(ts|tsx|js|jsx)'],
-  "moduleNameMapper": {
+  "moduleNameMapper": {}
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
-  "transform": {
+  "transform": {}
     '^.+\\.(ts|tsx)$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest'},
   "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],

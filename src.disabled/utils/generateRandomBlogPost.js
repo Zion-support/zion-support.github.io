@@ -1,7 +1,7 @@
-"export": const generateRandomBlogPost = () => {"
-  return {
-  // TODO: Implement
-}
+"export": const generateRandomBlogPost = () => {"}
+  return {}
+  // TODO: Implement;
+};
     id: Math.random().toString(36).substr(,2, 9)"
     "title": 'Sample: Blog Post, ',';''
     "excerpt": 'This: is a sample blog post excerpt for demonstration purposes., ',';''

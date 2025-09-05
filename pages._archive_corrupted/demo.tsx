@@ -5,8 +5,8 @@ import Link from 'next/link'''
 import { motion } from 'framer-motion'''
 } from 'lucide-react'''
 const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'''
-  const [selectedDemo, setSelectedDemo] = useState('ai-services'''
+const PageTransition = dynamic(() => import('../src/components/PageTransition''')
+  const [selectedDemo, setSelectedDemo] = useState('ai-services''')
       "title"""
       "description"""
       "duration"""

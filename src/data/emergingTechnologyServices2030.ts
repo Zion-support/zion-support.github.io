@@ -1,9 +1,9 @@
 import { ProductListing  } from '@/types/listings';'
 // Emerging Technology Services 2030 - Zion Tech Group;
 // Next-generation technology solutions for the future;'
-export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
+export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"]
   // Quantum Internet Infrastructure;
-  {"
+  {"}
     id: "quantum-internet-infrastructure",""
     "title": "Quantum Internet Infrastructure",""
     "description": "Revolutionary quantum internet infrastructure that enables ultra-secure communication using quantum entanglement. Provides unbreakable encryption and quantum teleportation capabilities.",""
@@ -21,7 +21,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "16-20 Weeks",""
     "aiScore": 100,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/quantum-internet",""
@@ -33,7 +33,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "16-20 weeks",""
     integrations["Quantum Computers", "Fiber Networks", "Quantum Repeaters", "Quantum Memory", "Classical Networks"]},"
   // Neuromorphic Computing Platform;
-  {"
+  {"}
     "id": "neuromorphic-computing-platform",""
     "title": "Neuromorphic Computing Platform",""
     "description": "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional computing.",""
@@ -51,7 +51,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "14-18 Weeks",""
     "aiScore": 98,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/neuromorphic-computing",""
@@ -63,7 +63,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "14-18 weeks",""
     integrations["AI Frameworks", "Neural Networks", "IoT Devices", "Edge Computing", "Cloud Platforms"]},"
   // DNA Data Storage Platform;
-  {"
+  {"}
     "id": "dna-data-storage-platform",""
     "title": "DNA Data Storage Platform",""
     "description": "Revolutionary DNA data storage platform that encodes digital information into synthetic DNA molecules. Provides ultra-dense storage with 1 billion times more capacity than traditional methods.",""
@@ -81,7 +81,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "12-16 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/dna-storage",""
@@ -93,7 +93,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "12-16 weeks",""
     integrations["DNA Synthesizers", "Sequencing Machines", "Data Encoding", "Storage Systems", "Retrieval Tools"]},"
   // Fusion Energy Management Platform;
-  {"
+  {"}
     "id": "fusion-energy-management-platform",""
     "title": "Fusion Energy Management Platform",""
     "description": "Advanced fusion energy management platform that optimizes fusion reactor operations and energy distribution. Enables clean, unlimited energy with zero carbon emissions.",""
@@ -111,7 +111,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "20-24 Weeks",""
     "aiScore": 99,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/fusion-energy",""
@@ -123,7 +123,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "20-24 weeks",""
     integrations["Fusion Reactors", "Power Grids", "Energy Storage", "Monitoring Systems", "Control Systems"]},"
   // Holographic Display Technology;
-  {"
+  {"}
     "id": "holographic-display-technology",""
     "title": "Holographic Display Technology",""
     "description": "Revolutionary holographic display technology that creates true 3D holographic images without special glasses. Enables immersive experiences for entertainment, education, and business applications.",""
@@ -141,7 +141,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "10-14 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/holographic-display",""
@@ -153,7 +153,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "10-14 weeks",""
     integrations["3D Content", "Display Systems", "Content Creation Tools", "Streaming Platforms", "VR/AR Systems"]},"
   // Biometric Authentication Platform;
-  {"
+  {"}
     "id": "biometric-authentication-platform",""
     "title": "Biometric Authentication Platform",""
     "description": "Advanced biometric authentication platform that uses multiple biometric factors for ultra-secure identity verification. Provides 99.99% accuracy with zero false positives.",""
@@ -171,7 +171,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 95,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/biometric-authentication",""
@@ -183,7 +183,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "setupTime": "6-8 weeks",""
     integrations["Mobile Devices", "Access Control Systems", "Identity Management", "Security Systems", "Biometric Sensors"]},"
   // Autonomous Drone Fleet Management;
-  {"
+  {"}
     "id": "autonomous-drone-fleet-management",""
     "title": "Autonomous Drone Fleet Management",""
     "description": "Intelligent autonomous drone fleet management platform that coordinates multiple drones for delivery, surveillance, and inspection tasks. Reduces operational costs by 60% and improves efficiency by 80%.",""
@@ -201,7 +201,7 @@ export const "EMERGING_TECHNOLOGY_SERVICES_2030": ProductListing[] = [;"
     "location": "Global",""
     "availability": "8-12 Weeks",""
     "aiScore": 94,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/autonomous-drones",""

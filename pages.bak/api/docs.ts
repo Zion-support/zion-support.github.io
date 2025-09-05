@@ -6,7 +6,7 @@ type HttpMethod = 'get' | 'post' | 'put' | 'patch' | 'delete'''
         "description"""
           "description"""
               "statusCode"""
-              "timestamp": { type: 'string', "format"""
+              "timestamp": { type: 'string', "format"""}
           "data"""
           "message""
 cursor/fix-lint-push-and-merge-to-main-f3c1;"

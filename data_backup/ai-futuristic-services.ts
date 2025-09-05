@@ -1,6 +1,6 @@
-export interface AIFuturisticService {
-  // TODO: Implement
-}
+export interface AIFuturisticService {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "period"""

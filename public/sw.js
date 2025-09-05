@@ -2,108 +2,108 @@ const CACHE_NAME = 'zion-tech-group-v1';''
 const STATIC_CACHE = 'static-v1';''
 const DYNAMIC_CACHE = 'dynamic-v1';'
 // Assets to cache on install;'
-const STATIC_ASSETS = ['/',''
+const STATIC_ASSETS = ['/','']
   '/favicon.ico',''
   '/favicon.svg',''
   '/og-image.svg',''
   '/manifest.json',''
-  '/offline.html'']
+  '/offline.html''];
 ];
 // Install event - cache static assets;'
-self.addEventListener('install', (event) => {''
+self.addEventListener('install', (event) => {''}
   console.log('Service Worker installing...');'
-  event.waitUntil()
-    caches.open(STATIC_CACHE)
-      .then((cache) => {'
+  event.waitUntil();
+    caches.open(STATIC_CACHE);
+      .then((cache) => {'}
         console.log('Caching static assets');'
-        return cache.addAll(STATIC_ASSETS)})
-      .then(() => {'
+        return cache.addAll(STATIC_ASSETS)});
+      .then(() => {'}
         console.log('Service Worker installed');'
-        return self.skipWaiting()})
+        return self.skipWaiting()});
   )});
 // Activate event - clean up old caches;'
-self.addEventListener('activate', (event) => {''
+self.addEventListener('activate', (event) => {''}
   console.log('Service Worker activating...');'
-  event.waitUntil()
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all()
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {'
+  event.waitUntil();
+    caches.keys();
+      .then((cacheNames) => {}
+        return Promise.all();
+          cacheNames.map((cacheName) => {}
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {'}
               console.log('Deleting old "cache": ', cacheName);'
-              return caches.delete(cacheName)}
-          })
-        )})
-      .then(() => {'
+              return caches.delete(cacheName)};
+          });
+        )});
+      .then(() => {'}
         console.log('Service Worker activated');'
-        return self.clients.claim()})
+        return self.clients.claim()});
   )});
 // Fetch event - serve from cache, fallback to network;'
-self.addEventListener('fetch', (event) => {'
+self.addEventListener('fetch', (event) => {'}
   const { request } = event;
   const url = new URL(request.url);
   // Skip non-GET requests;'
-  if (request.method !== 'GET') {'
-    return}
+  if (request.method !== 'GET') {'}
+    return};
   // Skip external requests;
-  if (url.origin !== location.origin) {
-    return}
-  event.respondWith()
-    caches.match(request)
-      .then((cachedResponse) => {
+  if (url.origin !== location.origin) {}
+    return};
+  event.respondWith();
+    caches.match(request);
+      .then((cachedResponse) => {}
         // Return cached version if available;
-        if (cachedResponse) {
-          return cachedResponse}
+        if (cachedResponse) {}
+          return cachedResponse};
         // Otherwise, fetch from network;
-        return fetch(request)
-          .then((networkResponse) => {'
+        return fetch(request);
+          .then((networkResponse) => {'}
             // Don't cache non-successful responses;''
-            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {'
-              return networkResponse}
+            if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {'}
+              return networkResponse};
             // Clone the response;
             const responseToCache = networkResponse.clone();
             // Cache the response;
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
+            caches.open(DYNAMIC_CACHE);
+              .then((cache) => {}
                 cache.put(request, responseToCache)});
-            return networkResponse})
-          .catch(() => {
+            return networkResponse});
+          .catch(() => {}
             // If network fails, return offline page for navigation requests;'
-            if (request.destination === 'document') {''
+            if (request.destination === 'document') {''}
               return caches.match('/offline.html')}'
-          })})
+          })});
   )});
 // Background sync for offline form submissions;'
-self.addEventListener('sync', (event) => {''
-  if (event.tag === 'contact-form') {'
-    event.waitUntil(
-      // Handle offline form submissions;)
-      handleOfflineFormSubmissions()
-    )}
+self.addEventListener('sync', (event) => {''}
+  if (event.tag === 'contact-form') {'}
+    event.waitUntil()
+      // Handle offline form submissions;);
+      handleOfflineFormSubmissions();
+    )};
 });
-async function handleOfflineFormSubmissions() {
+async function handleOfflineFormSubmissions() {}
   // This would handle queued form submissions when back online;'
   console.log('Handling offline form submissions...')}'
 // Push notifications (if needed in the future)'
-self.addEventListener('push', (event) => {'
-  if (event.data) {
+self.addEventListener('push', (event) => {'}
+  if (event.data) {}
     const data = event.data.json();
-    const options = {'
+    const options = {'}
       "body": data.body,""
       "icon": '/favicon.svg',''
       "badge": '/favicon.svg',''
       "vibrate": [100, 50, 100],""
-      "data": {"
+      "data": {"}
         dateOfArrival: Date.now(),"
         "primaryKey": 1;"
-      }
+      };
     };
-    event.waitUntil()
-      self.registration.showNotification(data.title, options)
-    )}
+    event.waitUntil();
+      self.registration.showNotification(data.title, options);
+    )};
 });
 // Notification click handler;"
-self.addEventListener('notificationclick', (event) => {'
+self.addEventListener('notificationclick', (event) => {'}
   event.notification.close();
   event.waitUntil()'
     clients.openWindow('/')'

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';''
 import { useNavigate } from 'react-router-dom';''
 import { motion } from 'framer-motion';''
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';'
-function ErrorFallback({ error, resetError }) {
+function ErrorFallback({ error, resetError }) {}
   const navigate = useNavigate();
 
-  return ('
+  return (')
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">"
 </div>"
       <div className="max-w-md w-full text-center">"
@@ -45,8 +45,8 @@ function ErrorFallback({ error, resetError }) {
 </RefreshCw>
           </button>
 
-          <button;)
-            onClick={() => navigate(-1)}
+          <button;);
+            onClick={() => navigate(-1)};
 </button>"
             <ArrowLeft className="w-4 h-4 mr-2" />"
 </ArrowLeft>

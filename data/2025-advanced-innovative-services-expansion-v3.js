@@ -1,6 +1,6 @@
-export const advancedAIServices2025 = [;
+export const advancedAIServices2025 = [;]
     // AI-Powered Business Intelligence;
-    {;
+    {;}
         "id": "ai-business-intelligence"""
         "name": "AI-Powered Business Intelligence"""
         "category": "AI & Analytics"""
@@ -24,24 +24,24 @@ export const advancedAIServices2025 = [;
             "Automated reporting"""
             "Better decision making"""
             "Cost savings"""
-        targetAudience["Enterprises", "Data analysts", "Business users", "Executives", "Consultants"""
+        targetAudience["Enterprises", "Data analysts", "Business users", "Executives", "Consultants"""]
         "contactInfo"""
             mobile: "+1 302 464 0950"""
             "email": "kleber@ziontechgroup.com"""
             "address": "364 E Main St STE 1008 Middletown DE 19709"""
             "website": "https://ziontechgroup.com"""
         "marketPrice": "$3,000 - $5,000/month"""
-        aiModels["GPT-4", "BERT", "Transformer models", "Custom ML models"""
+        aiModels["GPT-4", "BERT", "Transformer models", "Custom ML models"""]
         "accuracy": "95% accuracy rate"""
         "trainingData": "Enterprise datasets, industry benchmarks, real-time data"""
-        compliance["GDPR", "SOC 2", "HIPAA", "ISO 27001"""
+        compliance["GDPR", "SOC 2", "HIPAA", "ISO 27001"""]
         "aiScore"""
-        useCases["Business analytics", "Performance monitoring", "Trend analysis", "Forecasting", "KPI tracking"""
+        useCases["Business analytics", "Performance monitoring", "Trend analysis", "Forecasting", "KPI tracking"""]
         "realService"""
-        technology["Machine Learning", "Natural Language Processing", "Data Analytics", "Cloud Computing", "Big Data"""
-        integrations["ERP systems", "CRM platforms", "Data warehouses", "Cloud databases", "Business applications"""
+        technology["Machine Learning", "Natural Language Processing", "Data Analytics", "Cloud Computing", "Big Data"""]
+        integrations["ERP systems", "CRM platforms", "Data warehouses", "Cloud databases", "Business applications"""]
         "roi": "Companies report 400% ROI through improved decision making and operational efficiency."""
-        competitors["Tableau", "Power BI", "Qlik", "Looker"""
+        competitors["Tableau", "Power BI", "Qlik", "Looker"""]
         "marketSize": "$4.8B business intelligence market"""
         "growthRate": "30% annual growth"""
         "id": "ai-customer-service-automation"""
@@ -67,24 +67,24 @@ export const advancedAIServices2025 = [;
             "Cost reduction"""
             "Improved satisfaction"""
             "Scalable support"""
-        targetAudience["E-commerce businesses", "SaaS companies", "Customer service teams", "Support organizations", "Enterprises"""
+        targetAudience["E-commerce businesses", "SaaS companies", "Customer service teams", "Support organizations", "Enterprises"""]
         "contactInfo"""
             mobile: "+1 302 464 0950"""
             "email": "kleber@ziontechgroup.com"""
             "address": "364 E Main St STE 1008 Middletown DE 19709"""
             "website": "https://ziontechgroup.com"""
         "marketPrice": "$0.20 - $0.50 per interaction"""
-        aiModels["GPT-4", "BERT", "Custom NLP models", "Intent classification models"""
+        aiModels["GPT-4", "BERT", "Custom NLP models", "Intent classification models"""]
         "accuracy": "92% accuracy rate"""
         "trainingData": "Customer service conversations, product knowledge, FAQ databases"""
-        compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"""
+        compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"""]
         "aiScore"""
-        useCases["Customer support", "FAQ automation", "Order tracking", "Product inquiries", "Technical support"""
+        useCases["Customer support", "FAQ automation", "Order tracking", "Product inquiries", "Technical support"""]
         "realService"""
-        technology["Natural Language Processing", "Machine Learning", "Chatbot Development", "API Integration", "Cloud Computing"""
-        integrations["CRM systems", "Help desk platforms", "E-commerce platforms", "Social media", "Messaging apps"""
+        technology["Natural Language Processing", "Machine Learning", "Chatbot Development", "API Integration", "Cloud Computing"""]
+        integrations["CRM systems", "Help desk platforms", "E-commerce platforms", "Social media", "Messaging apps"""]
         "roi": "Companies report 300% ROI through reduced support costs and improved customer satisfaction."""
-        competitors["Intercom", "Zendesk", "Freshdesk", "Help Scout"""
+        competitors["Intercom", "Zendesk", "Freshdesk", "Help Scout"""]
         "marketSize": "$2.8B customer service automation market"""
         "growthRate": "40% annual growth""
 cursor/fix-lint-push-and-merge-to-main-f3c1;]"

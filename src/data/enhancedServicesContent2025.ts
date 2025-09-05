@@ -1,8 +1,8 @@
 // Enhanced Services Content 2025 - Zion Tech Group;
 // Premium quality content with market-competitive pricing and comprehensive features;
-export interface EnhancedService {
-  // TODO: Implement
-}
+export interface EnhancedService {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "category"""
@@ -162,10 +162,10 @@ export interface EnhancedService {
   "email"""
   "website"""
   "address"""
-export const serviceCategories = [{ "id": 'all', "name"""
-  { "id": 'ai', "name": 'AI Services', "count"""
-  { "id": 'it', "name": 'IT Services', "count"""
-  { "id": 'microsaas', "name": 'Micro SaaS', "count"""
-  { "id": 'consulting', "name": 'Consulting', "count"""
-  { "id": 'support', "name": 'Support', "count""
+export const serviceCategories = [{ "id": 'all', "name"""}]
+  { "id": 'ai', "name": 'AI Services', "count"""}
+  { "id": 'it', "name": 'IT Services', "count"""}
+  { "id": 'microsaas', "name": 'Micro SaaS', "count"""}
+  { "id": 'consulting', "name": 'Consulting', "count"""}
+  { "id": 'support', "name": 'Support', "count""}
 cursor/fix-lint-push-and-merge-to-main-f3c1;]"

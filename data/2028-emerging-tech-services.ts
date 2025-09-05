@@ -23,16 +23,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-blue-400"""
     "link": "https://ziontechgroup.com/biometric-authentication"""
     "marketPosition": "Leading biometric authentication platform with the highest accuracy rates and security standards. Used by financial institutions, healthcare organizations, and government agencies."""
-    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies", "Retail chains", "Educational institutions"""
+    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies", "Retail chains", "Educational institutions"""]
     "trialDays"""
     "setupTime": "2 weeks"""
     "category": "Biometric Technology"""
     "realService"""
-    technology["Python", "TensorFlow", "Computer Vision", "NLP", "AWS", "Docker", "React", "Node.js"""
-    integrations["Identity providers", "SSO systems", "Mobile apps", "Web applications", "Security tools"""
-    useCases["User authentication", "Access control", "Identity verification", "Fraud prevention", "Compliance management"""
+    technology["Python", "TensorFlow", "Computer Vision", "NLP", "AWS", "Docker", "React", "Node.js"""]
+    integrations["Identity providers", "SSO systems", "Mobile apps", "Web applications", "Security tools"""]
+    useCases["User authentication", "Access control", "Identity verification", "Fraud prevention", "Compliance management"""]
     "roi": "Financial institutions report 400% ROI through reduced fraud and improved security."""
-    competitors["Face ID", "Touch ID", "Windows Hello"""
+    competitors["Face ID", "Touch ID", "Windows Hello"""]
     "marketSize": "$18B biometric market"""
     "growthRate": "30% annual growth"""
     "variant": "biometric-futuristic"""
@@ -69,16 +69,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-yellow-400"""
     "link": "https://ziontechgroup.com/edge-computing-orchestration"""
     "marketPosition": "Leading edge computing orchestration platform with the most advanced AI-driven optimization algorithms. Used by major cloud providers and enterprise companies."""
-    targetAudience["Cloud providers", "Enterprise companies", "IoT companies", "Telecommunications", "Manufacturing", "Retail chains"""
+    targetAudience["Cloud providers", "Enterprise companies", "IoT companies", "Telecommunications", "Manufacturing", "Retail chains"""]
     "trialDays"""
     "setupTime": "3 weeks"""
     "category": "Edge Computing"""
     "realService"""
-    technology["Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP", "React", "Node.js"""
-    integrations["Cloud platforms", "IoT devices", "Edge servers", "Monitoring tools", "Security systems"""
-    useCases["IoT applications", "Real-time processing", "Content delivery", "Industrial automation", "Smart cities"""
+    technology["Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP", "React", "Node.js"""]
+    integrations["Cloud platforms", "IoT devices", "Edge servers", "Monitoring tools", "Security systems"""]
+    useCases["IoT applications", "Real-time processing", "Content delivery", "Industrial automation", "Smart cities"""]
     "roi": "Enterprise companies report 500% ROI through improved performance and reduced latency."""
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"""
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"""]
     "marketSize": "$22B edge computing market"""
     "growthRate": "35% annual growth"""
     "variant": "edge-futuristic"""
@@ -115,16 +115,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/5g-network-optimization"""
     "marketPosition": "Leading 5G network optimization platform with the most advanced AI algorithms. Used by major telecommunications companies and network operators."""
-    targetAudience["Telecommunications companies", "Network operators", "Mobile carriers", "Infrastructure providers", "Government agencies", "Enterprise companies"""
+    targetAudience["Telecommunications companies", "Network operators", "Mobile carriers", "Infrastructure providers", "Government agencies", "Enterprise companies"""]
     "trialDays"""
     "setupTime": "4 weeks"""
     "category": "5G Technology"""
     "realService"""
-    technology["Python", "TensorFlow", "5G protocols", "AWS", "Docker", "React", "Node.js", "PostgreSQL"""
-    integrations["5G core networks", "Radio access networks", "Network management systems", "Monitoring tools", "Analytics platforms"""
-    useCases["Network optimization", "Performance monitoring", "Quality management", "Traffic optimization", "Energy efficiency"""
+    technology["Python", "TensorFlow", "5G protocols", "AWS", "Docker", "React", "Node.js", "PostgreSQL"""]
+    integrations["5G core networks", "Radio access networks", "Network management systems", "Monitoring tools", "Analytics platforms"""]
+    useCases["Network optimization", "Performance monitoring", "Quality management", "Traffic optimization", "Energy efficiency"""]
     "roi": "Telecommunications companies report 600% ROI through improved network performance and reduced operational costs."""
-    competitors["Ericsson", "Nokia", "Huawei"""
+    competitors["Ericsson", "Nokia", "Huawei"""]
     "marketSize": "$35B 5G infrastructure market"""
     "growthRate": "40% annual growth"""
     "variant": "5g-futuristic"""
@@ -161,16 +161,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-400"""
     "link": "https://ziontechgroup.com/blockchain-supply-chain"""
     "marketPosition": "Leading blockchain supply chain platform with the most comprehensive tracking and transparency features. Used by major logistics companies and manufacturers."""
-    targetAudience["Logistics companies", "Manufacturers", "Retail chains", "Food companies", "Pharmaceutical companies", "Automotive industry"""
+    targetAudience["Logistics companies", "Manufacturers", "Retail chains", "Food companies", "Pharmaceutical companies", "Automotive industry"""]
     "trialDays"""
     "setupTime": "3 weeks"""
     "category": "Blockchain Technology"""
     "realService"""
-    technology["Ethereum", "Hyperledger", "Python", "Solidity", "AWS", "Docker", "React", "Node.js"""
-    integrations["ERP systems", "WMS systems", "Logistics platforms", "Quality management", "Compliance systems"""
-    useCases["Product tracking", "Quality assurance", "Compliance management", "Fraud prevention", "Supply chain optimization"""
+    technology["Ethereum", "Hyperledger", "Python", "Solidity", "AWS", "Docker", "React", "Node.js"""]
+    integrations["ERP systems", "WMS systems", "Logistics platforms", "Quality management", "Compliance systems"""]
+    useCases["Product tracking", "Quality assurance", "Compliance management", "Fraud prevention", "Supply chain optimization"""]
     "roi": "Logistics companies report 400% ROI through improved transparency and reduced fraud."""
-    competitors["IBM Food Trust", "VeChain", "Walmart Blockchain"""
+    competitors["IBM Food Trust", "VeChain", "Walmart Blockchain"""]
     "marketSize": "$20B blockchain supply chain market"""
     "growthRate": "45% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -207,16 +207,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-blue-400"""
     "link": "https://ziontechgroup.com/ai-content-creation"""
     "marketPosition": "Leading AI content creation platform with the most advanced natural language processing and multimedia generation capabilities. Used by marketing agencies and content creators."""
-    targetAudience["Marketing agencies", "Content creators", "Businesses", "Publishers", "E-commerce companies", "Social media managers"""
+    targetAudience["Marketing agencies", "Content creators", "Businesses", "Publishers", "E-commerce companies", "Social media managers"""]
     "trialDays"""
     "setupTime": "1 week"""
     "category": "AI Content Creation"""
     "realService"""
-    technology["Python", "GPT-4", "DALL-E", "Stable Diffusion", "AWS", "Docker", "React", "Node.js"""
-    integrations["CMS platforms", "Social media APIs", "Marketing tools", "Analytics platforms", "SEO tools"""
-    useCases["Content marketing", "Social media management", "Blog creation", "Video production", "Image generation"""
+    technology["Python", "GPT-4", "DALL-E", "Stable Diffusion", "AWS", "Docker", "React", "Node.js"""]
+    integrations["CMS platforms", "Social media APIs", "Marketing tools", "Analytics platforms", "SEO tools"""]
+    useCases["Content marketing", "Social media management", "Blog creation", "Video production", "Image generation"""]
     "roi": "Marketing agencies report 500% ROI through increased content production and improved engagement."""
-    competitors["Jasper", "Copy.ai", "Writesonic"""
+    competitors["Jasper", "Copy.ai", "Writesonic"""]
     "marketSize": "$15B AI content creation market"""
     "growthRate": "50% annual growth"""
     "variant": "ai-content"""
@@ -253,16 +253,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-indigo-400"""
     "link": "https://ziontechgroup.com/quantum-machine-learning"""
     "marketPosition": "First-to-market quantum machine learning platform. Provides quantum computing capabilities for complex ML problems with unprecedented speed."""
-    targetAudience["Research institutions", "Pharmaceutical companies", "Financial institutions", "Technology companies", "Government agencies", "Universities"""
+    targetAudience["Research institutions", "Pharmaceutical companies", "Financial institutions", "Technology companies", "Government agencies", "Universities"""]
     "trialDays"""
     "setupTime": "4 weeks"""
     "category": "Quantum Machine Learning"""
     "realService"""
-    technology["Qiskit", "Cirq", "Python", "TensorFlow Quantum", "AWS", "Docker", "React", "Node.js"""
-    integrations["Quantum computers", "Classical ML frameworks", "Data platforms", "Research tools", "Analytics platforms"""
-    useCases["Drug discovery", "Financial modeling", "Climate modeling", "Optimization problems", "Scientific research"""
+    technology["Qiskit", "Cirq", "Python", "TensorFlow Quantum", "AWS", "Docker", "React", "Node.js"""]
+    integrations["Quantum computers", "Classical ML frameworks", "Data platforms", "Research tools", "Analytics platforms"""]
+    useCases["Drug discovery", "Financial modeling", "Climate modeling", "Optimization problems", "Scientific research"""]
     "roi": "Research institutions report 800% ROI through accelerated discoveries and breakthrough research."""
-    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"""
+    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"""]
     "marketSize": "$12B quantum computing market"""
     "growthRate": "60% annual growth"""
     "variant": "quantum-futuristic"""
@@ -299,16 +299,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-red-400"""
     "link": "https://ziontechgroup.com/autonomous-vehicle-fleet"""
     "marketPosition": "Leading autonomous vehicle fleet management platform with the most advanced AI optimization and safety features. Used by transportation companies and logistics providers."""
-    targetAudience["Transportation companies", "Logistics providers", "Ride-sharing companies", "Delivery services", "Public transit", "Automotive manufacturers"""
+    targetAudience["Transportation companies", "Logistics providers", "Ride-sharing companies", "Delivery services", "Public transit", "Automotive manufacturers"""]
     "trialDays"""
     "setupTime": "4 weeks"""
     "category": "Autonomous Vehicles"""
     "realService"""
-    technology["Python", "TensorFlow", "Computer Vision", "ROS", "AWS", "Docker", "React", "Node.js"""
-    integrations["Vehicle APIs", "GPS systems", "Traffic data", "Weather services", "Maintenance systems"""
-    useCases["Fleet optimization", "Route planning", "Safety monitoring", "Maintenance management", "Performance tracking"""
+    technology["Python", "TensorFlow", "Computer Vision", "ROS", "AWS", "Docker", "React", "Node.js"""]
+    integrations["Vehicle APIs", "GPS systems", "Traffic data", "Weather services", "Maintenance systems"""]
+    useCases["Fleet optimization", "Route planning", "Safety monitoring", "Maintenance management", "Performance tracking"""]
     "roi": "Transportation companies report 600% ROI through improved efficiency and reduced operational costs."""
-    competitors["Waymo", "Tesla", "Cruise"""
+    competitors["Waymo", "Tesla", "Cruise"""]
     "marketSize": "$28B autonomous vehicle market"""
     "growthRate": "55% annual growth"""
     "variant": "autonomous-futuristic"""
@@ -345,16 +345,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-teal-400"""
     "link": "https://ziontechgroup.com/digital-twin-platform"""
     "marketPosition": "Leading digital twin platform with the most advanced 3D modeling and real-time monitoring capabilities. Used by manufacturing, energy, and infrastructure companies."""
-    targetAudience["Manufacturing companies", "Energy companies", "Infrastructure companies", "Utilities", "Transportation", "Healthcare"""
+    targetAudience["Manufacturing companies", "Energy companies", "Infrastructure companies", "Utilities", "Transportation", "Healthcare"""]
     "trialDays"""
     "setupTime": "6 weeks"""
     "category": "Digital Twin Technology"""
     "realService"""
-    technology["Unity3D", "Unreal Engine", "Python", "TensorFlow", "AWS", "Docker", "React", "Node.js"""
-    integrations["IoT sensors", "SCADA systems", "ERP systems", "Maintenance systems", "Analytics platforms"""
-    useCases["Asset monitoring", "Predictive maintenance", "Performance optimization", "Process simulation", "Quality control"""
+    technology["Unity3D", "Unreal Engine", "Python", "TensorFlow", "AWS", "Docker", "React", "Node.js"""]
+    integrations["IoT sensors", "SCADA systems", "ERP systems", "Maintenance systems", "Analytics platforms"""]
+    useCases["Asset monitoring", "Predictive maintenance", "Performance optimization", "Process simulation", "Quality control"""]
     "roi": "Manufacturing companies report 700% ROI through improved efficiency and reduced downtime."""
-    competitors["Siemens", "GE Digital", "PTC"""
+    competitors["Siemens", "GE Digital", "PTC"""]
     "marketSize": "$32B digital twin market"""
     "growthRate": "40% annual growth"""
     "variant": "digital-twin-futuristic"""

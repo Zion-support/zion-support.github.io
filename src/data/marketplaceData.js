@@ -1,5 +1,5 @@
 // Marketplace data and search suggestions for Zion Tech Group;
-export const generateSearchSuggestions = () => [// Services;
+export const generateSearchSuggestions = () => [// Services;]
   'AI Services', 'Cloud Migration'''
   'Cybersecurity', 'Digital Transformation'''
   'IT Infrastructure', 'DevOps'''

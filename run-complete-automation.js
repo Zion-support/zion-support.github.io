@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-const { execSync } = require('child_process'''
-const fs = require('fs'''
-const path = require('path'''
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports'''
+const { execSync } = require('child_process''')
+const fs = require('fs''')
+const path = require('path''')
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports''')
           "encoding"""
           "stdio"""
-        return { "success": false, "error"""
+        return { "success": false, "error"""}
         "name"""
         "script"""
         "description"""
@@ -18,6 +18,6 @@ const path = require('path'''
       "completedTasks"""
       "scriptsCreated"""
       "issuesFixed"""
-      console.log('� "Summary"""
-      console.error(' Complete automation "failed""
+      console.log('� "Summary""")
+      console.error(' Complete automation "failed"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

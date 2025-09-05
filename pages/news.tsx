@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Calendar, 
   User, 
   Tag, 
@@ -15,9 +15,9 @@ import {
   Globe,
   Zap,
   Building;'
-} from 'lucide-react
-const newsArticles = [
-  {
+} from 'lucide-react;
+const newsArticles = []
+  {}
     id: 1,'
     title: "Zion Tech Group Launches New AI-Powered Analytics Platform",
     excerpt: "We're excited to announce the launch of our next-generation AI analytics platform that helps businesses make data-driven decisions with unprecedented accuracy.",
@@ -27,10 +27,10 @@ const newsArticles = [
     date: "2024-01-15",
     category: "Product Launch",
     image: "/images/news/ai-platform.jpg",
-    featured: true,]
-    tags: [AI", "Analytics", "Product Launch", "Innovation"]
+    featured: true,];
+    tags: [AI", "Analytics", "Product Launch", "Innovation"];
   },
-  {
+  {}
     id: 2,
     title: "Company Expands to European Market with New Office in London",
     excerpt: "Zion Tech Group announces the opening of its first European office in London, marking a significant milestone in our global expansion strategy.",
@@ -41,9 +41,9 @@ const newsArticles = [
     category: "Company News",
     image: "/images/news/london-office.jpg",
     featured: true,
-    tags: [Expansion", "International", "Europe", "Growth"]
+    tags: [Expansion", "International", "Europe", "Growth"];
   },
-  {
+  {}
     id: 3,
     title: "Zion Tech Group Achieves SOC 2 Type II Certification",
     excerpt: "We're proud to announce that Zion Tech Group has successfully achieved SOC 2 Type II certification, demonstrating our commitment to the highest security standards.",
@@ -54,9 +54,9 @@ const newsArticles = [
     category: "Security",
     image: "/images/news/soc2-certification.jpg",
     featured: false,
-    tags: [Security", "Certification", "Compliance", "Trust"]
+    tags: [Security", "Certification", "Compliance", "Trust"];
   },
-  {
+  {}
     id: 4,
     title: "New Partnership with Leading Cloud Provider Accelerates Innovation",
     excerpt: "Strategic partnership with a major cloud provider enables us to offer enhanced scalability and performance to our enterprise clients.",
@@ -67,9 +67,9 @@ const newsArticles = [
     category: "Partnerships",
     image: "/images/news/cloud-partnership.jpg",
     featured: false,
-    tags: [Partnership", "Cloud", "Innovation", "Enterprise"]
+    tags: [Partnership", "Cloud", "Innovation", "Enterprise"];
   },
-  {
+  {}
     id: 5,
     title: "Zion Tech Group Named 'Best AI Solutions Provider' by Tech Industry Awards",
     excerpt: "We're honored to receive the 'Best AI Solutions Provider' award at the annual Tech Industry Awards, recognizing our innovation and excellence in artificial intelligence.",
@@ -80,9 +80,9 @@ const newsArticles = [
     category: "Awards",
     image: "/images/news/ai-award.jpg",
     featured: false,
-    tags: [Award", "AI", "Recognition", "Excellence"]
+    tags: [Award", "AI", "Recognition", "Excellence"];
   },
-  {
+  {}
     id: 6,
     title: "Company Announces $10M Series A Funding Round",
     excerpt: "Zion Tech Group secures $10M in Series A funding to accelerate product development and market expansion.",
@@ -93,25 +93,25 @@ const newsArticles = [
     category: "Funding",
     image: "/images/news/funding-round.jpg",
     featured: false,
-    tags: [Funding", "Growth", "Investment", "Expansion"]
-  }
+    tags: [Funding", "Growth", "Investment", "Expansion"];
+  };
 ];
 
-const categories = [
+const categories = []
   { name: "All", count: newsArticles.length, active: true },
   { name: "Product Launch", count: 1, active: false },
   { name: "Company News", count: 1, active: false },
   { name: "Security", count: 1, active: false },
   { name: "Partnerships", count: 1, active: false },
   { name: "Awards", count: 1, active: false },
-  { name: "Funding", count: 1, active: false }]
+  { name: "Funding", count: 1, active: false }];
 ];
 
 const featuredArticle = newsArticles.find(article => article.featured);
 const regularArticles = newsArticles.filter(article => !article.featured);
 
-export default function NewsPage() {
-  return (
+export default function NewsPage() {}
+  return ()
     <MainLayout;"
       title="News - Zion Tech Group"
       description="Latest news, announcements, and updates from Zion Tech Group. Stay informed about our products, partnerships, and company developments."
@@ -124,9 +124,9 @@ export default function NewsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -149,28 +149,28 @@ export default function NewsPage() {
             <div className="flex flex-wrap gap-2 justify-center">"
 </div>
                 <button;
-                  key={index}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    category.active;"
+                  key={index};
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${`}
+                    category.active;``
                       ? 'bg-blue-600 text-white'''
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200''
-                  }`}
+                  }`};`
                 >
 </button>
                 </button>
             </div>
           </div>
-        </section>'
+        </section>``
           <section className="py-16 bg-white">"
 </section>"
             <div className="container mx-auto px-4">"
 </div>
               <motion.div;"
                 className="max-w-6xl mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8 }};
+                viewport={{ once: true }};
               >
 </motion>"
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg mb-6 inline-block">"
@@ -236,7 +236,7 @@ export default function NewsPage() {
                       </div>
                       
                       <Link;
-                        href={`/news/${featuredArticle.id}`}
+                        href={`/news/${featuredArticle.id}`};`
                         className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
                       >
 </Link>
@@ -256,10 +256,10 @@ export default function NewsPage() {
 </div>
             <motion.div;"
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent News</h2>"
@@ -269,12 +269,12 @@ export default function NewsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.article;
-                  key={article.id}
+                  key={article.id};
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">"
@@ -329,7 +329,7 @@ export default function NewsPage() {
                     </div>
                     
                     <Link;
-                      href={`/news/${article.id}`}
+                      href={`/news/${article.id}`};`
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-blue-700"
                     >
 </Link>
@@ -338,8 +338,8 @@ export default function NewsPage() {
 </ArrowRight>
                     </Link>
                   </div>
-                </motion.article>)
-              ))}
+                </motion.article>);
+              ))};
             </div>
           </div>
         </section>"
@@ -348,10 +348,10 @@ export default function NewsPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

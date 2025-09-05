@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react
-const whitePapers = [
-  {
+import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react;
+const whitePapers = []
+  {}
     id: 1,'
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
     description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.",
@@ -16,7 +16,7 @@ const whitePapers = [
     featured: true,
     pdfUrl: "/whitepapers/ai-enterprise-guide.pdf"
   },
-  {
+  {}
     id: 2,
     title: "Cloud Security Best Practices for Modern Businesses",
     description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.",
@@ -28,7 +28,7 @@ const whitePapers = [
     featured: false,
     pdfUrl: "/whitepapers/cloud-security-best-practices.pdf"
   },
-  {
+  {}
     id: 3,
     title: "Quantum Computing: The Next Frontier in Technology",
     description: "Understanding quantum computing's potential impact on various industries and how to prepare for the quantum revolution.",
@@ -40,7 +40,7 @@ const whitePapers = [
     featured: false,
     pdfUrl: "/whitepapers/quantum-computing-frontier.pdf"
   },
-  {
+  {}
     id: 4,
     title: "Digital Transformation Strategies for Healthcare",
     description: "How healthcare organizations can leverage technology to improve patient outcomes and operational efficiency.",
@@ -52,7 +52,7 @@ const whitePapers = [
     featured: false,
     pdfUrl: "/whitepapers/healthcare-digital-transformation.pdf"
   },
-  {
+  {}
     id: 5,
     title: "The Economics of Micro SaaS: Building Profitable Solutions",
     description: "A comprehensive guide to building, launching, and scaling micro SaaS applications for sustainable business growth.",
@@ -64,7 +64,7 @@ const whitePapers = [
     featured: false,
     pdfUrl: "/whitepapers/micro-saas-economics.pdf"
   },
-  {
+  {}
     id: 6,
     title: "Data Privacy in the Age of AI: Compliance and Best Practices",
     description: "Navigating the complex landscape of data privacy regulations while implementing AI solutions effectively.",
@@ -75,21 +75,21 @@ const whitePapers = [
     downloadCount: "1,123",
     featured: false,
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf"
-  }]
+  }];
 ];
 
-const categories = [
+const categories = []
   "All Papers",
   "Artificial Intelligence",
   "Cybersecurity",
   "Quantum Computing",
   "Healthcare Technology",
   "SaaS",
-  "Data Privacy"]
+  "Data Privacy"];
 ];
 
-export default function WhitePapersPage() {
-  return ("
+export default function WhitePapersPage() {}
+  return (")
     <div className="min-h-screen bg-gray-50">"
 </div>
       <Head>
@@ -123,11 +123,11 @@ export default function WhitePapersPage() {
 </div>"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured White Paper</h2>"
               <motion.article;
-                key={paper.id}
+                key={paper.id};
                 className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }};
               >
 </motion>"
                 <div className="md:flex">"
@@ -188,7 +188,7 @@ export default function WhitePapersPage() {
                     <div className="flex gap-4">"
 </div>
                       <a;
-                        href={paper.pdfUrl}
+                        href={paper.pdfUrl};
                         download;"
                         className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                       >
@@ -204,8 +204,8 @@ export default function WhitePapersPage() {
                     </div>
                   </div>
                 </div>
-              </motion.article>)
-            ))}
+              </motion.article>);
+            ))};
           </div>
         </div>
       </section>"
@@ -218,19 +218,19 @@ export default function WhitePapersPage() {
             <div className="flex flex-wrap gap-4 justify-center">"
 </div>
                 <button;
-                  key={index}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                    index === 0;"
+                  key={index};
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${`}
+                    index === 0;``
                       ? 'bg-blue-600 text-white'''
                       : 'bg-gray-100 text-gray-700 hover:bg-blue-50''
-                  }`}
+                  }`};`
                 >
 </button>
                 </button>
             </div>
           </div>
         </div>
-      </section>'
+      </section>``
       <section className="py-16">"
 </section>"
         <div className="container mx-auto px-4">"
@@ -241,12 +241,12 @@ export default function WhitePapersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.article;
-                  key={paper.id}
+                  key={paper.id};
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ delay: index * 0.1 }};
+                  whileHover={{ y: -5 }};
                 >
 </motion>"
                   <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
@@ -302,7 +302,7 @@ export default function WhitePapersPage() {
                     <div className="flex gap-2">"
 </div>
                       <a;
-                        href={paper.pdfUrl}
+                        href={paper.pdfUrl};
                         download;"
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                       >
@@ -316,7 +316,7 @@ export default function WhitePapersPage() {
                     </div>
                   </div>
                 </motion.article>
-              ))}
+              ))};
             </div>"
             <div className="text-center mt-12">"
 </div>"

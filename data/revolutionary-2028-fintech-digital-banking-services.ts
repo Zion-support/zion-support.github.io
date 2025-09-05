@@ -23,16 +23,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/ai-digital-banking-platform-2028"""
     "marketPosition": "Competes with Chime ($0/month), Revolut ($0-16/month), and N26 ($0-16/month). Our "advantage": AI-powered insights, comprehensive banking, and competitive pricing."""
-    targetAudience["Banks", "Credit unions", "Fintech companies", "Financial institutions", "Digital banks"""
+    targetAudience["Banks", "Credit unions", "Fintech companies", "Financial institutions", "Digital banks"""]
     "trialDays"""
     "setupTime": "3 months"""
     "category": "Digital Banking"""
     "realService"""
-    technology["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Blockchain", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Payment processors", "Banking systems", "Investment platforms", "Insurance systems", "Credit bureaus", "Regulatory platforms"""
-    useCases["Digital banking", "Investment management", "Risk assessment", "Fraud prevention", "Financial planning", "Compliance management"""
+    technology["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Blockchain", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Payment processors", "Banking systems", "Investment platforms", "Insurance systems", "Credit bureaus", "Regulatory platforms"""]
+    useCases["Digital banking", "Investment management", "Risk assessment", "Fraud prevention", "Financial planning", "Compliance management"""]
     "roi": "Financial institutions report 520% ROI through improved customer experience and operational efficiency."""
-    competitors["Chime", "Revolut", "N26", "Monzo", "Starling Bank"""
+    competitors["Chime", "Revolut", "N26", "Monzo", "Starling Bank"""]
     "marketSize": "$45.8B market"""
     "growthRate": "310% annual growth"""
     "variant": "fintech-futuristic"""
@@ -69,16 +69,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-blue-400"""
     "link": "https://ziontechgroup.com/ai-investment-management-platform-2028"""
     "marketPosition": "Competes with Betterment ($0.25-0.40%/year), Wealthfront ($0.25%/year), and Robinhood ($0/month). Our "advantage": AI-powered insights, automated trading, and comprehensive investment management."""
-    targetAudience["Investment firms", "Wealth managers", "Financial advisors", "Individual investors", "Institutional investors"""
+    targetAudience["Investment firms", "Wealth managers", "Financial advisors", "Individual investors", "Institutional investors"""]
     "trialDays"""
     "setupTime": "2 months"""
     "category": "Investment Management"""
     "realService"""
-    technology["Machine Learning", "Deep Learning", "Predictive Analytics", "Algorithmic Trading", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Trading platforms", "Market data providers", "Custodian banks", "Tax platforms", "Compliance systems", "Portfolio management tools"""
-    useCases["Portfolio management", "Automated trading", "Risk management", "Market analysis", "Tax optimization", "Compliance management"""
+    technology["Machine Learning", "Deep Learning", "Predictive Analytics", "Algorithmic Trading", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Trading platforms", "Market data providers", "Custodian banks", "Tax platforms", "Compliance systems", "Portfolio management tools"""]
+    useCases["Portfolio management", "Automated trading", "Risk management", "Market analysis", "Tax optimization", "Compliance management"""]
     "roi": "Investment firms report 480% ROI through improved returns and reduced management costs."""
-    competitors["Betterment", "Wealthfront", "Robinhood", "Acorns", "Stash"""
+    competitors["Betterment", "Wealthfront", "Robinhood", "Acorns", "Stash"""]
     "marketSize": "$38.7B market"""
     "growthRate": "285% annual growth"""
     "variant": "fintech-futuristic"""
@@ -115,13 +115,13 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-400"""
     "link": "https://ziontechgroup.com/blockchain-payment-platform-2028"""
     "marketPosition": "Competes with Ripple ($0.00001/transaction), Stellar ($0.00001/transaction), and Circle ($0.30/transaction). Our "advantage": AI fraud detection, smart contracts, and comprehensive payment solutions."""
-    targetAudience["Payment processors", "Banks", "E-commerce businesses", "Financial institutions", "Cross-border companies"""
+    targetAudience["Payment processors", "Banks", "E-commerce businesses", "Financial institutions", "Cross-border companies"""]
     "trialDays"""
     "setupTime": "1 month"""
     "category": "Blockchain Payments"""
     "realService"""
     "roi": "DeFi platforms report 580% ROI through improved lending efficiency and risk management."""
-    competitors["Aave", "Compound", "MakerDAO", "dYdX", "Synthetix"""
+    competitors["Aave", "Compound", "MakerDAO", "dYdX", "Synthetix"""]
     "marketSize": "$18.7B market"""
     "growthRate": "350% annual growth"""
     "variant": "defi-futuristic"""

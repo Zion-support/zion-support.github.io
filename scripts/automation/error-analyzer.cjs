@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
-const { execSync, spawn } = require('child_process'
-const fs = require('fs'
-const path = require('path'
-    console.log(' Starting comprehensive error analysis...'
-      console.log(' Error analysis completed successfully'
-      console.error(' Error during "analysis"
+#!/usr/bin/env node;
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    console.log(' Starting comprehensive error analysis...')
+      console.log(' Error analysis completed successfully')
+      console.error(' Error during "analysis")
         "encoding"
         "stdio"
         "encoding"
@@ -14,7 +13,7 @@ const path = require('path'
             "severity"
         "encoding"
         "stdio"
-      if (line.includes('"Error"
+      if (line.includes('"Error")
           "severity"
           "category"
         "encoding"
@@ -36,7 +35,7 @@ const path = require('path'
         "type"
         "priority"
         "action"
-    console.log('\nError "Categories"
-    console.log('\nPriority "Errors"
-    console.log('\"nRecommendations"
-    console.error(' Error analyzer "failed"
+    console.log('\nError "Categories")
+    console.log('\nPriority "Errors")
+    console.log('\"nRecommendations")
+    console.error(' Error analyzer "failed")

@@ -1,4 +1,4 @@
-/** @type {import('next'''
+/** @type {import('next'''})
   "reactStrictMode"""
   "compress"""
   "poweredByHeader"""
@@ -8,8 +8,8 @@
     "deviceSizes"""
     "imageSizes"""
         "source"""
-          { key: 'X-Content-Type-Options', "value"""
-          { "key": 'X-Frame-Options', "value"""
-          { "key": 'X-XSS-Protection', "value"""
-          { "key": 'Referrer-Policy', "value""
+          { key: 'X-Content-Type-Options', "value"""}
+          { "key": 'X-Frame-Options', "value"""}
+          { "key": 'X-XSS-Protection', "value"""}
+          { "key": 'Referrer-Policy', "value""}
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

@@ -1,9 +1,9 @@
 import React from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';'
-import {
-  // TODO: Implement
-}
+import {}
+  // TODO: Implement;
+};
   Phone, 
   Mail, 
   MapPin, 
@@ -13,80 +13,80 @@ import {
   Award,
   Zap;'
 } from 'lucide-react';'
-const FuturisticFooter: React.FC = () => {
+const FuturisticFooter: React.FC = () => {}
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {'
+  const footerSections = []
+    {'}
       title: 'Services','
-      links: ['
+      links: [']
         { name: 'AI Services', href: '/ai-services' },''
         { name: 'IT Services', href: '/it-services' },''
         { name: 'Micro SaaS', href: '/micro-saas' },''
-        { name: 'All Services', href: '/services' }']
-      ]
+        { name: 'All Services', href: '/services' }'];
+      ];
     },
-    {'
+    {'}
       title: 'Solutions','
-      links: ['
+      links: [']
         { name: 'Enterprise Solutions', href: '/solutions' },''
         { name: 'Industry Solutions', href: '/industries' },''
         { name: 'Custom Development', href: '/custom-development' },''
-        { name: 'Consulting', href: '/consulting' }']
-      ]
+        { name: 'Consulting', href: '/consulting' }'];
+      ];
     },
-    {'
+    {'}
       title: 'Company','
-      links: ['
+      links: [']
         { name: 'About Us', href: '/about' },''
         { name: 'Our Team', href: '/team' },''
         { name: 'Careers', href: '/careers' },''
-        { name: 'Partners', href: '/partners' }']
-      ]
+        { name: 'Partners', href: '/partners' }'];
+      ];
     },
-    {'
+    {'}
       title: 'Resources','
-      links: ['
+      links: [']
         { name: 'Blog', href: '/blog' },''
         { name: 'Case Studies', href: '/case-studies' },''
         { name: 'White Papers', href: '/white-papers' },''
-        { name: 'Documentation', href: '/docs' }']
-      ]
+        { name: 'Documentation', href: '/docs' }'];
+      ];
     },
-    {'
+    {'}
       title: 'Support','
-      links: ['
+      links: [']
         { name: 'Help Center', href: '/help' },''
         { name: 'Contact Us', href: '/contact' },''
         { name: 'FAQ', href: '/faq' },''
-        { name: 'Support Center', href: '/support' }']
-      ]
+        { name: 'Support Center', href: '/support' }'];
+      ];
     },
-    {'
+    {'}
       title: 'Legal','
-      links: ['
+      links: [']
         { name: 'Privacy Policy', href: '/privacy' },''
         { name: 'Terms of Service', href: '/terms' },''
         { name: 'Cookie Policy', href: '/cookies' },''
-        { name: 'Security', href: '/security' }']
-      ]
-    }
+        { name: 'Security', href: '/security' }'];
+      ];
+    };
   ];
 
-  const socialLinks = ['
+  const socialLinks = [']
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },''
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },''
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
   ];
 
-  const stats = ['
+  const stats = [']
     { value: '500+', label: 'Projects Completed', icon: CheckCircle },''
     { value: '99.9%', label: 'Uptime Guarantee', icon: Shield },''
     { value: '24/7', label: 'Support Available', icon: Award },''
-    { value: '50+', label: 'Expert Team', icon: Zap }']
+    { value: '50+', label: 'Expert Team', icon: Zap }'];
   ];
 
-  return ('
+  return (')
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
 </footer>"
       <div className="absolute inset-0 opacity-30">"
@@ -103,19 +103,19 @@ const FuturisticFooter: React.FC = () => {
 </div>
           <motion.div;"
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16""
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            viewport={{ once: true }};
+            transition={{ duration: 0.6, staggerChildren: 0.1 }};
           >
 </motion>
               <motion.div;
                 key={stat.label}"
                 className="text-center""
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                viewport={{ once: true }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
               >
 </motion>"
                 <div className="flex justify-center mb-3">"
@@ -128,8 +128,8 @@ const FuturisticFooter: React.FC = () => {
                 </div>"
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""
                 <div className="text-slate-400 text-sm">{stat.label}</div>"
-              </motion.div>)
-            ))}
+              </motion.div>);
+            ))};
           </motion.div>
 
           {/* Main Footer Content */}"
@@ -138,8 +138,8 @@ const FuturisticFooter: React.FC = () => {
             <div className="lg:col-span-2">"
 </div>
               <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6 }}"
                 className="flex items-center space-x-3 mb-6""
               >

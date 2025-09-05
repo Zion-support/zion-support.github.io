@@ -1,4 +1,4 @@
-export interface AdvancedITService {;
+export interface AdvancedITService {;}
   "id"""
   "realImplementation"""
     id: "quantum-cloud-platform"""
@@ -28,11 +28,11 @@ export interface AdvancedITService {;
     "setupTime": "1 month"""
     "category": "Quantum Computing"""
     "realService"""
-    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "AI/ML", "Quantum Cryptography"""
-    integrations["AWS", "Azure", "Google Cloud", "Research platforms", "Financial systems"""
-    useCases["Drug discovery", "Financial modeling", "Cryptography", "Optimization problems"""
+    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "AI/ML", "Quantum Cryptography"""]
+    integrations["AWS", "Azure", "Google Cloud", "Research platforms", "Financial systems"""]
+    useCases["Drug discovery", "Financial modeling", "Cryptography", "Optimization problems"""]
     "roi": "1000% ROI within 12 months through breakthrough discoveries and competitive advantage"""
-    competitors["IBM Quantum ($1000+/month)", "AWS Braket ($5000+/month)", "Google Quantum AI"""
+    competitors["IBM Quantum ($1000+/month)", "AWS Braket ($5000+/month)", "Google Quantum AI"""]
     "marketSize": "$500M quantum computing market"""
     "growthRate": "500% annual growth"""
     "variant": "quantum-cloud"""
@@ -74,11 +74,11 @@ export interface AdvancedITService {;
     "setupTime": "2 weeks"""
     "category": "Edge Computing"""
     "realService"""
-    technology["Edge Computing", "AI/ML", "IoT", "Container Orchestration", "Real-time Analytics"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"""
-    useCases["IoT management", "Real-time analytics", "Edge AI", "Smart manufacturing"""
+    technology["Edge Computing", "AI/ML", "IoT", "Container Orchestration", "Real-time Analytics"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"""]
+    useCases["IoT management", "Real-time analytics", "Edge AI", "Smart manufacturing"""]
     "roi": "300% ROI within 6 months through reduced latency and improved performance"""
-    competitors["AWS Greengrass ($1000+/month)", "Azure IoT Edge ($2000+/month)", "Google Cloud IoT"""
+    competitors["AWS Greengrass ($1000+/month)", "Azure IoT Edge ($2000+/month)", "Google Cloud IoT"""]
     "marketSize": "$50B edge computing market"""
     "growthRate": "250% annual growth"""
     "variant": "edge-futuristic"""
@@ -120,11 +120,11 @@ export interface AdvancedITService {;
     "setupTime": "1 month"""
     "category": "Cybersecurity"""
     "realService"""
-    technology["Zero Trust Architecture", "AI/ML", "Identity Management", "Network Security", "Threat Intelligence"""
-    integrations["Active Directory", "Okta", "Palo Alto Networks", "CrowdStrike", "SIEM systems"""
-    useCases["Enterprise security", "Government compliance", "Financial security", "Healthcare compliance"""
+    technology["Zero Trust Architecture", "AI/ML", "Identity Management", "Network Security", "Threat Intelligence"""]
+    integrations["Active Directory", "Okta", "Palo Alto Networks", "CrowdStrike", "SIEM systems"""]
+    useCases["Enterprise security", "Government compliance", "Financial security", "Healthcare compliance"""]
     "roi": "400% ROI within 12 months through security improvements and compliance benefits"""
-    competitors["Palo Alto Networks ($10000+/month)", "CrowdStrike ($5000+/month)", "Zscaler"""
+    competitors["Palo Alto Networks ($10000+/month)", "CrowdStrike ($5000+/month)", "Zscaler"""]
     "marketSize": "$30B zero trust market"""
     "growthRate": "200% annual growth"""
     "variant": "zero-trust-futuristic"""
@@ -166,11 +166,11 @@ export interface AdvancedITService {;
     "setupTime": "2 weeks"""
     "category": "DevOps & Automation"""
     "realService"""
-    technology["AI/ML", "DevOps", "CI/CD", "Container Orchestration", "Cloud Computing"""
-    integrations["GitHub", "GitLab", "Jenkins", "Kubernetes", "Docker", "AWS", "Azure"""
-    useCases["CI/CD automation", "DevOps optimization", "Performance monitoring", "Security automation"""
+    technology["AI/ML", "DevOps", "CI/CD", "Container Orchestration", "Cloud Computing"""]
+    integrations["GitHub", "GitLab", "Jenkins", "Kubernetes", "Docker", "AWS", "Azure"""]
+    useCases["CI/CD automation", "DevOps optimization", "Performance monitoring", "Security automation"""]
     "roi": "350% ROI within 6 months through automation and performance improvements"""
-    competitors["GitLab ($99+/month)", "GitHub Actions ($1000+/month)", "Jenkins"""
+    competitors["GitLab ($99+/month)", "GitHub Actions ($1000+/month)", "Jenkins"""]
     "marketSize": "$8B DevOps market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-devops-futuristic"""
@@ -212,11 +212,11 @@ export interface AdvancedITService {;
     "setupTime": "1 month"""
     "category": "Blockchain & Web3"""
     "realService"""
-    technology["Blockchain", "Smart Contracts", "Web3", "Cryptography", "Distributed Systems"""
-    integrations["Ethereum", "Hyperledger", "Corda", "Enterprise systems", "Payment platforms"""
-    useCases["Supply chain tracking", "Financial transactions", "Digital identity", "Smart contracts"""
+    technology["Blockchain", "Smart Contracts", "Web3", "Cryptography", "Distributed Systems"""]
+    integrations["Ethereum", "Hyperledger", "Corda", "Enterprise systems", "Payment platforms"""]
+    useCases["Supply chain tracking", "Financial transactions", "Digital identity", "Smart contracts"""]
     "roi": "500% ROI within 18 months through efficiency improvements and new business models"""
-    competitors["IBM Blockchain ($10000+/month)", "ConsenSys ($5000+/month)", "R3 Corda"""
+    competitors["IBM Blockchain ($10000+/month)", "ConsenSys ($5000+/month)", "R3 Corda"""]
     "marketSize": "$20B enterprise blockchain market"""
     "growthRate": "300% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -258,11 +258,11 @@ export interface AdvancedITService {;
     "setupTime": "2 months"""
     "category": "Data Center & Infrastructure"""
     "realService"""
-    technology["Quantum Computing", "AI/ML", "Data Center Infrastructure", "Cloud Computing", "Quantum Networks"""
-    integrations["AWS", "Azure", "Google Cloud", "On-premises systems", "Quantum computers"""
-    useCases["High-performance computing", "Quantum research", "Enterprise applications", "Research computing"""
+    technology["Quantum Computing", "AI/ML", "Data Center Infrastructure", "Cloud Computing", "Quantum Networks"""]
+    integrations["AWS", "Azure", "Google Cloud", "On-premises systems", "Quantum computers"""]
+    useCases["High-performance computing", "Quantum research", "Enterprise applications", "Research computing"""]
     "roi": "800% ROI within 18 months through performance improvements and competitive advantage"""
-    competitors["AWS ($50000+/month)", "Azure ($40000+/month)", "Google Cloud ($45000+/month)"""
+    competitors["AWS ($50000+/month)", "Azure ($40000+/month)", "Google Cloud ($45000+/month)"""]
     "marketSize": "$200B data center market"""
     "growthRate": "150% annual growth"""
     "variant": "quantum-infrastructure"""
@@ -304,11 +304,11 @@ export interface AdvancedITService {;
     "setupTime": "2 weeks"""
     "category": "Network Security"""
     "realService"""
-    technology["AI/ML", "Network Security", "Threat Intelligence", "Behavioral Analytics", "Automation"""
-    integrations["Cisco", "Palo Alto Networks", "Fortinet", "SIEM systems", "Firewalls"""
-    useCases["Network protection", "Threat detection", "Compliance", "Security monitoring"""
+    technology["AI/ML", "Network Security", "Threat Intelligence", "Behavioral Analytics", "Automation"""]
+    integrations["Cisco", "Palo Alto Networks", "Fortinet", "SIEM systems", "Firewalls"""]
+    useCases["Network protection", "Threat detection", "Compliance", "Security monitoring"""]
     "roi": "400% ROI within 12 months through threat prevention and security improvements"""
-    competitors["Cisco ($8000+/month)", "Palo Alto Networks ($10000+/month)", "Fortinet ($5000+/month)"""
+    competitors["Cisco ($8000+/month)", "Palo Alto Networks ($10000+/month)", "Fortinet ($5000+/month)"""]
     "marketSize": "$25B network security market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-network-futuristic"""
@@ -350,11 +350,11 @@ export interface AdvancedITService {;
     "setupTime": "2 weeks"""
     "category": "Quantum IoT"""
     "realService"""
-    technology["Quantum Computing", "IoT", "AI/ML", "Quantum Encryption", "Edge Computing"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Device manufacturers", "Analytics platforms"""
-    useCases["Smart cities", "Industrial IoT", "Healthcare monitoring", "Transportation tracking"""
+    technology["Quantum Computing", "IoT", "AI/ML", "Quantum Encryption", "Edge Computing"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Device manufacturers", "Analytics platforms"""]
+    useCases["Smart cities", "Industrial IoT", "Healthcare monitoring", "Transportation tracking"""]
     "roi": "450% ROI within 12 months through security improvements and operational efficiency"""
-    competitors["AWS IoT ($1000+/month)", "Azure IoT ($2000+/month)", "Google Cloud IoT ($1500+/month)"""
+    competitors["AWS IoT ($1000+/month)", "Azure IoT ($2000+/month)", "Google Cloud IoT ($1500+/month)"""]
     "marketSize": "$100B IoT market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-iot-futuristic"""
@@ -396,11 +396,11 @@ export interface AdvancedITService {;
     "setupTime": "1 month"""
     "category": "Cloud Migration"""
     "realService"""
-    technology["AI/ML", "Cloud Computing", "Migration Tools", "Performance Analysis", "Cost Optimization"""
-    integrations["AWS", "Azure", "Google Cloud", "On-premises systems", "Monitoring tools"""
-    useCases["Cloud migration", "Cost optimization", "Performance improvement", "Security enhancement"""
+    technology["AI/ML", "Cloud Computing", "Migration Tools", "Performance Analysis", "Cost Optimization"""]
+    integrations["AWS", "Azure", "Google Cloud", "On-premises systems", "Monitoring tools"""]
+    useCases["Cloud migration", "Cost optimization", "Performance improvement", "Security enhancement"""]
     "roi": "600% ROI within 12 months through cost savings and performance improvements"""
-    competitors["Accenture ($50000+/month)", "Deloitte ($40000+/month)", "AWS Migration Hub"""
+    competitors["Accenture ($50000+/month)", "Deloitte ($40000+/month)", "AWS Migration Hub"""]
     "marketSize": "$15B cloud migration market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-migration-futuristic"""

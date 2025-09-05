@@ -1,6 +1,6 @@
-export interface NewITService {
-  // TODO: Implement
-}
+export interface NewITService {}
+  // TODO: Implement;
+};
   "id"""
 export const "NEW_IT_SERVICES_2025"""
     id: "cloud-migration-specialist"""
@@ -22,22 +22,22 @@ export const "NEW_IT_SERVICES_2025"""
       "Compliance validation"""
       "Training & documentation"""
       "24/7 support"""
-    "benefits": ["Reduce infrastructure costs by 40%"""
+    "benefits": ["Reduce infrastructure costs by 40%"""]
       "Improve scalability and flexibility"""
       "Enhance security posture"""
       "Increase system reliability"""
       "Future-proof your infrastructure"""
-    "useCases": ["AWS migration"""
+    "useCases": ["AWS migration"""]
       "Azure cloud adoption"""
       "Google Cloud Platform setup"""
       "Hybrid cloud solutions"""
       "Legacy system modernization"""
-    "targetAudience": ["Enterprise organizations"""
+    "targetAudience": ["Enterprise organizations"""]
       "Mid-size businesses"""
       "Startups scaling up"""
       "Government agencies"""
       "Healthcare providers"""
-    "tags": ["Cloud", "Migration", "AWS", "Azure", "DevOps"""
+    "tags": ["Cloud", "Migration", "AWS", "Azure", "DevOps"""]
     "estimatedDelivery": "4-8 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,500 - $15,000/project"""

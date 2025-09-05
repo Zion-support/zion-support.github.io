@@ -3,7 +3,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 import { setupServer } from 'msw/node';''
 import { rest } from 'msw';'
 const server = setupServer()'
-  rest.get('/api/*', (req, res, ctx) => {''
+  rest.get('/api/*', (req, res, ctx) => {''}
     return res(ctx.json({ "message": 'Mock response' }))})'
 );
 beforeAll(() => server.listen());

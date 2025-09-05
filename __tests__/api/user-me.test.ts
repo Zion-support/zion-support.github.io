@@ -4,24 +4,22 @@ import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/m
   json: vi.Mock<[unknown], MockApiResponse>;
   setHeader: vi.Mock<[string, string | string[]], void>;
   end: vi.Mock<[(cb?: () => void) => void], void>;
-}
-
-function mockReq(method: string, body?: unknown): NextApiRequest {
-  // TODO: Implement
-}
-  return {
-  // TODO: Implement
-}
+};
+function mockReq(method: string, body?: unknown): NextApiRequest {}
+  // TODO: Implement;
+};
+  return {}
+  // TODO: Implement;
+};
     method,
     body,
     headers: {},
     query: {},
-    cookies: {}
+    cookies: {};
   } as NextApiRequest;
-}
-
-function mockRes(): MockApiResponse {
-  // TODO: Implement
-}
+};
+function mockRes(): MockApiResponse {}
+  // TODO: Implement;
+};
   const res: Partial<MockApiResponse> = {};
 </MockApiResponse>'

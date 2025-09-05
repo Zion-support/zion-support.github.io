@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";""
-export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Quantum AI Trading Platform;"
-  {"
+export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Quantum AI Trading Platform;"]
+  {"}
     id: "quantum-ai-trading-platform",""
     "title": "Quantum AI Trading Platform",""
     "description": "Revolutionary quantum computing-powered trading platform that processes market data at quantum speeds. Achieves 40% better trading performance and 99.9% uptime with quantum encryption security.",""
@@ -18,7 +18,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "8-12 Weeks",""
     "aiScore": 99,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/quantum-ai-trading",""
@@ -31,7 +31,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Bloomberg Terminal", "Reuters", "TradingView", "MetaTrader", "Interactive Brokers", "TD Ameritrade"]"
   },
   // Neural Interface Development Platform;
-  {"
+  {"}
     "id": "neural-interface-development-platform",""
     "title": "Neural Interface Development Platform",""
     "description": "Advanced neural interface development platform for brain-computer interfaces and neural prosthetics. Enables direct brain-to-computer communication with 95% accuracy and real-time processing.",""
@@ -49,7 +49,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "12-16 Weeks",""
     "aiScore": 98,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/neural-interface",""
@@ -62,7 +62,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["MATLAB", "Python", "TensorFlow", "PyTorch", "Neuroscience APIs", "Medical Device APIs"]"
   },
   // Holographic Workspace Platform;
-  {"
+  {"}
     "id": "holographic-workspace-platform",""
     "title": "Holographic Workspace Platform",""
     "description": "Immersive holographic workspace platform that creates 3D virtual environments for collaboration and productivity. Increases team productivity by 60% and reduces travel costs by 80%.",""
@@ -80,7 +80,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "10-14 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/holographic-workspace",""
@@ -93,7 +93,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Microsoft Teams", "Zoom", "Slack", "Unity", "Unreal Engine", "3D Modeling Software"]"
   },
   // BioDigital Twin Platform;
-  {"
+  {"}
     "id": "biodigital-twin-platform",""
     "title": "BioDigital Twin Platform",""
     "description": "Revolutionary biodigital twin platform that creates virtual replicas of biological systems for research and healthcare. Accelerates drug discovery by 70% and improves treatment outcomes by 50%.",""
@@ -111,7 +111,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "16-20 Weeks",""
     "aiScore": 99,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/biodigital-twin",""
@@ -124,7 +124,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Lab Information Systems", "Electronic Health Records", "Genomics APIs", "Medical Imaging APIs", "Research Databases"]"
   },
   // Space Debris Tracking System;
-  {"
+  {"}
     "id": "space-debris-tracking-system",""
     "title": "Space Debris Tracking System",""
     "description": "Advanced space debris tracking and collision avoidance system using AI and satellite networks. Provides real-time monitoring of 99.9% of trackable space objects with predictive collision warnings.",""
@@ -142,7 +142,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "20-24 Weeks",""
     "aiScore": 98,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/space-debris-tracking",""
@@ -155,7 +155,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Satellite APIs", "Ground Station Networks", "Space Agencies", "Aerospace Companies", "Orbital Mechanics Software"]"
   },
   // AI Ethics Guardian Platform;
-  {"
+  {"}
     "id": "ai-ethics-guardian-platform",""
     "title": "AI Ethics Guardian Platform",""
     "description": "Comprehensive AI ethics and governance platform that ensures responsible AI development and deployment. Monitors AI systems for bias, fairness, and compliance with ethical guidelines.",""
@@ -173,7 +173,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "6-8 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/ai-ethics-guardian",""
@@ -186,7 +186,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["AI Model APIs", "Data Platforms", "Compliance Tools", "Audit Systems", "Governance Frameworks"]"
   },
   // Metaverse Builder Platform;
-  {"
+  {"}
     "id": "metaverse-builder-platform",""
     "title": "Metaverse Builder Platform",""
     "description": "Comprehensive metaverse development platform for creating immersive virtual worlds and experiences. Enables rapid development of 3D environments with AI-powered content generation.",""
@@ -204,7 +204,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "12-16 Weeks",""
     "aiScore": 96,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/metaverse-builder",""
@@ -217,7 +217,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Unity", "Unreal Engine", "Blender", "3D Modeling APIs", "Blockchain Networks", "VR/AR Platforms"]"
   },
   // Autonomous Drone Fleet Management;
-  {"
+  {"}
     "id": "autonomous-drone-fleet-management",""
     "title": "Autonomous Drone Fleet Management",""
     "description": "AI-powered autonomous drone fleet management system for delivery, surveillance, and inspection. Manages up to 1000 drones simultaneously with 99.9% safety record and optimal route optimization.",""
@@ -235,7 +235,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "10-14 Weeks",""
     "aiScore": 97,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/autonomous-drones",""
@@ -248,7 +248,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "integrations": ["Drone APIs", "Weather Services", "Traffic Management", "Logistics Platforms", "Security Systems"]"
   },
   // Quantum Cybersecurity Platform;
-  {"
+  {"}
     "id": "quantum-cybersecurity-platform",""
     "title": "Quantum Cybersecurity Platform",""
     "description": "Next-generation quantum-resistant cybersecurity platform that protects against quantum computing attacks. Uses post-quantum cryptography and quantum key distribution for unbreakable security.",""
@@ -266,7 +266,7 @@ export const "EMERGING_TECH_INNOVATIVE_SERVICES_2028": ProductListing[] = [// Qu
     "location": "Global",""
     "availability": "16-20 Weeks",""
     "aiScore": 99,""
-    "contactInfo": {""
+    "contactInfo": {""}
       phone: "+1 302 464 0950",""
       "email": "kleber@ziontechgroup.com",""
       "website": "https://ziontechgroup.com/quantum-cybersecurity",""

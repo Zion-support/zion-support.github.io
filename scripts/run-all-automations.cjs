@@ -1,9 +1,8 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-    this.reportsDir = path.join(this.projectRoot, 'all-automations-reports'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot, 'all-automations-reports')
         "encoding"
         "name"
         "script"

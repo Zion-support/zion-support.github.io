@@ -1,5 +1,5 @@
-origin/merge-pr-10635
-module.exports = {
+origin/merge-pr-10635;
+module.exports = {}
   "apps"
       "script"
       "max_memory_restart"
@@ -94,4 +94,4 @@ module.exports = {
       "ref"
       "repo"
       "path"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+cursor/fix-lint-push-and-merge-to-main-f3c1;

@@ -1,22 +1,22 @@
-#!/usr/bin/env node
-const fs = require("child_process"
-const path = require("child_process"
-const { execSync } = require("child_process"
-    this.log(" Starting comprehensive merge conflict resolution..."
-      const conflictedFiles = execSync("git diff --name-only --diff-filter=U", {"cwd": this.projectRoot,"encoding": "utf8"}).trim().split("\n"
-        this.log(` ${this.errors.length} errors "encountered"
-      return {"resolvedFiles": this.resolvedFiles,"errors"
-      this.log(` Error during merge conflict "resolution"
-      return { "resolvedFiles": [], "errors": [{ file: "general", "error"
-        this.log(`⚠ File not "found"
-      let content = fs.readFileSync(filePath, "utf8"
-      content = content.replace(/\n/g, ""
-      content = content.replace(/\n/g, ""
-        fs.writeFileSync(filePath, content, "utf8"
-      this.errors.push({ "file": filePath, "error"
-    this.log("🧹 Cleaning up build artifacts..."
-    const artifactsToRemove = [".next","node_modules/.cache","dist"
+#!/usr/bin/env node;
+const fs = require("child_process")
+const path = require("child_process")
+const { execSync } = require("child_process")
+    this.log(" Starting comprehensive merge conflict resolution...")
+      const conflictedFiles = execSync("git diff --name-only --diff-filter=U", {"cwd": this.projectRoot,"encoding": "utf8"}).trim().split("\n")
+        this.log(` ${this.errors.length} errors "encountered"`)
+      return {"resolvedFiles": this.resolvedFiles,"errors"}
+      this.log(` Error during merge conflict "resolution"`)
+      return { "resolvedFiles": [], "errors": [{ file: "general", "error"}]
+        this.log(`⚠ File not "found"`)
+      let content = fs.readFileSync(filePath, "utf8")
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+        fs.writeFileSync(filePath, content, "utf8")
+      this.errors.push({ "file": filePath, "error"})
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [".next","node_modules/.cache","dist"]
       "build"
       "*.log"
       "package-lock.json"
-          execSync(`rm -rf ${artifact}`, { "cwd"
+          execSync(`rm -rf ${artifact}`, { "cwd"`})

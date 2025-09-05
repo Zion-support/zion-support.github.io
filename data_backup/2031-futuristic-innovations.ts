@@ -1,6 +1,6 @@
-export interface FuturisticInnovation2031 {
-  // TODO: Implement
-}
+export interface FuturisticInnovation2031 {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "patentStatus"""

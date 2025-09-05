@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
+<<<<<<< HEAD
 import { motion } from 'framer-motion'
 import {
+=======
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   BarChart3, 
   Search, 
   Filter,
@@ -18,20 +25,30 @@ import {
   Shield,
   Zap,
   Award,
+<<<<<<< HEAD
   ChevronRight
 } from 'lucide-react'
 
 const caseStudyCategories = [
+=======
+  ChevronRight;'
+} from 'lucide-react;
+const caseStudyCategories = [']
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   { name: "All", count: 25, active: true },
   { name: "AI Solutions", count: 8, active: false },
   { name: "IT Services", count: 6, active: false },
   { name: "Micro SaaS", count: 5, active: false },
   { name: "Enterprise", count: 4, active: false },
+<<<<<<< HEAD
   { name: "Startup", count: 2, active: false }
+=======
+  { name: "Startup", count: 2, active: false }];
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const caseStudies = [
-  {
+const caseStudies = []
+  {}
     id: 1,
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
@@ -41,22 +58,35 @@ const caseStudies = [
     results: "60% reduction in support costs, 40% faster response times",
     category: "AI Solutions",
     duration: "3 months",
+<<<<<<< HEAD
     teamSize: "8 developers",
     technologies: ["AI/ML", "NLP", "Python", "AWS"],
     featured: true,
     metrics: {
       costReduction: "60%",
+=======
+    teamSize: "8 developers",];
+    technologies: [AI/ML", "NLP", "Python", "AWS"],
+    featured: true,
+    metrics: {,}
+  costReduction: "60%",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       responseTime: "40%",
       customerSatisfaction: "85%",
       roi: "300%"
     },
+<<<<<<< HEAD
     testimonial: {
       quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+=======
+    testimonial: {,}
+  quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       author: "Sarah Johnson",
       role: "VP of Customer Experience"
-    }
+    };
   },
-  {
+  {}
     id: 2,
     title: "Cloud Infrastructure Migration and Optimization",
     client: "Financial Services Company",
@@ -69,19 +99,29 @@ const caseStudies = [
     teamSize: "12 developers",
     technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
     featured: true,
+<<<<<<< HEAD
     metrics: {
       costReduction: "50%",
+=======
+    metrics: {,}
+  costReduction: "50%",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       uptime: "99.9%",
       performance: "300%",
       roi: "250%"
     },
+<<<<<<< HEAD
     testimonial: {
       quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+=======
+    testimonial: {,}
+  quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       author: "Michael Chen",
       role: "CTO"
-    }
+    };
   },
-  {
+  {}
     id: 3,
     title: "Micro SaaS Platform for Project Management",
     client: "Tech Startup",
@@ -94,19 +134,29 @@ const caseStudies = [
     teamSize: "6 developers",
     technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
     featured: false,
+<<<<<<< HEAD
     metrics: {
       users: "10,000+",
+=======
+    metrics: {,}
+  users: "10,000+",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       mrr: "$50K",
       satisfaction: "95%",
       growth: "400%"
     },
+<<<<<<< HEAD
     testimonial: {
       quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
+=======
+    testimonial: {,}
+  quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       author: "Emily Rodriguez",
       role: "Founder & CEO"
-    }
+    };
   },
-  {
+  {}
     id: 4,
     title: "Enterprise Security Implementation",
     client: "Healthcare Organization",
@@ -119,19 +169,29 @@ const caseStudies = [
     teamSize: "10 developers",
     technologies: ["Security", "Compliance", "Monitoring", "Encryption"],
     featured: false,
+<<<<<<< HEAD
     metrics: {
       compliance: "100%",
+=======
+    metrics: {,}
+  compliance: "100%",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       incidents: "0",
       auditScore: "A+",
       roi: "200%"
     },
+<<<<<<< HEAD
     testimonial: {
       quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
+=======
+    testimonial: {,}
+  quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       author: "Dr. James Wilson",
       role: "Chief Information Officer"
-    }
+    };
   },
-  {
+  {}
     id: 5,
     title: "AI-Powered Inventory Management",
     client: "Manufacturing Company",
@@ -144,19 +204,29 @@ const caseStudies = [
     teamSize: "7 developers",
     technologies: ["Machine Learning", "Python", "TensorFlow", "APIs"],
     featured: false,
+<<<<<<< HEAD
     metrics: {
       costReduction: "30%",
+=======
+    metrics: {,}
+  costReduction: "30%",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       accuracy: "95%",
       efficiency: "45%",
       roi: "180%"
     },
+<<<<<<< HEAD
     testimonial: {
       quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
+=======
+    testimonial: {,}
+  quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
       author: "Lisa Thompson",
       role: "Operations Director"
-    }
+    };
   },
-  {
+  {}
     id: 6,
     title: "Custom CRM Development",
     client: "Real Estate Agency",
@@ -169,28 +239,28 @@ const caseStudies = [
     teamSize: "5 developers",
     technologies: [Vue.js", "Laravel", "MySQL", "APIs"],
     featured: false,
-    metrics: {,
+    metrics: {,}
   conversion: "200%",
       timeSavings: "50%",
       userAdoption: "90%",
       roi: "150%"
     },
-    testimonial: {,
+    testimonial: {,}
   quote: "The custom CRM has transformed our business. Our team is more efficient and our conversion rates have skyrocketed.",
       author: "Robert Davis",
       role: "Managing Partner"
-    }
-  }
+    };
+  };
 ];
 
 const featuredCaseStudies = caseStudies.filter(caseStudy => caseStudy.featured);
 const regularCaseStudies = caseStudies.filter(caseStudy => !caseStudy.featured);
 
-export default function CaseStudiesPage() {
+export default function CaseStudiesPage() {}
   const [selectedCategory, setSelectedCategory] = useState('All');''
   const [searchQuery, setSearchQuery] = useState('');'
-  const filteredCaseStudies = caseStudies.filter(caseStudy => {'
-    const matchesCategory = selectedCategory === 'All' || caseStudy.category === selectedCategory;')
+  const filteredCaseStudies = caseStudies.filter(caseStudy => {'})
+    const matchesCategory = selectedCategory === 'All' || caseStudy.category === selectedCategory;');
     const matchesSearch = caseStudy.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          caseStudy.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          caseStudy.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -198,10 +268,10 @@ export default function CaseStudiesPage() {
     return matchesCategory && matchesSearch;
   });
 
-  return (
+  return ()
     <MainLayout;'
       title="Case Studies - Zion Tech Group"
-      description="Real-world success stories and case studies showcasing how we've helped businesses achieve their goals with technology solutions."
+      description="Real-world success stories and case studies showcasing how we've helped businesses achieve their goals with technology solutions.'
     >
 </MainLayout>"
       <div className="min-h-screen bg-gray-50">"
@@ -211,9 +281,9 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -244,15 +314,15 @@ export default function CaseStudiesPage() {
                   <input;"
                     type="text"
                     placeholder="Search case studies..."
-                    value={searchQuery})
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    value={searchQuery});
+                    onChange={(e) => setSearchQuery(e.target.value)};
 </input>
                 </div>"
                 <div className="flex gap-2 overflow-x-auto">"
 </div>
                     <button;
-                      key={category.name}
-                      onClick={() => setSelectedCategory(category.name)}
+                      key={category.name};
+                      onClick={() => setSelectedCategory(category.name)};
 </button>
                     </button>
                 </div>
@@ -266,10 +336,10 @@ export default function CaseStudiesPage() {
 </div>
             <motion.div;"
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>"
@@ -279,12 +349,12 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
 </div>
                 <motion.div;
-                  key={caseStudy.id}
+                  key={caseStudy.id};
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-emerald-100"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="p-8">"
@@ -357,7 +427,7 @@ export default function CaseStudiesPage() {
 </div>
                       </div>
                       <Link;
-                        href={`/case-studies/${caseStudy.id}`}
+                        href={`/case-studies/${caseStudy.id}`};`
                         className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold"
                       >
 </Link>
@@ -368,7 +438,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -378,10 +448,10 @@ export default function CaseStudiesPage() {
 </div>
             <motion.div;"
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">All Case Studies</h2>"
@@ -393,12 +463,12 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.article;
-                  key={caseStudy.id}
+                  key={caseStudy.id};
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="p-6">"
@@ -448,7 +518,7 @@ export default function CaseStudiesPage() {
 </div>
                       </div>
                       <Link;
-                        href={`/case-studies/${caseStudy.id}`}
+                        href={`/case-studies/${caseStudy.id}`};`
                         className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold group-hover:text-emerald-700"
                       >
 </Link>
@@ -459,7 +529,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
                 </motion.article>
-              ))}
+              ))};
             </div>"
               <div className="text-center py-12">"
 </div>"
@@ -479,10 +549,10 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

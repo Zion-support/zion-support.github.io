@@ -1,6 +1,6 @@
-export interface ZionEmergingTechService2029 {
-  // TODO: Implement
-}
+export interface ZionEmergingTechService2029 {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "tagline"""

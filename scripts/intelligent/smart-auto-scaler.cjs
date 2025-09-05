@@ -1,18 +1,18 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
- * Smart Auto-Scaler
- * Intelligent scaling based on load, performance metrics, and predictive analytics
+ * Smart Auto-Scaler;
+ * Intelligent scaling based on load, performance metrics, and predictive analytics;
  */
 
-const pm2 = require('pm2'
-const fs = require('fs'
-const path = require('path'
-const os = require('os'
+const pm2 = require('pm2')
+const fs = require('fs')
+const path = require('path')
+const os = require('os')
     this.reportDir = path.join(process.cwd(), 'scaling-reports'
       await fs.mkdir(path.join(process.cwd(), 'logs'
-      console.log('Directories already exist or created'
-          console.error(' Failed to connect to "PM2"
-      console.error(' Error evaluating scaling "conditions"
+      console.log('Directories already exist or created')
+          console.error(' Failed to connect to "PM2")
+      console.error(' Error evaluating scaling "conditions")
         "type"
         "reason"
         "type"
@@ -29,8 +29,8 @@ const os = require('os'
         "reason"
         "type"
         "reason"
-    console.log(` Performance "Trends"
+    console.log(` Performance "Trends"`)
       "Memory"
       Response "Time"
       Error "Rate"
-    console.error(' Smart Auto-Scaler "failed"
+    console.error(' Smart Auto-Scaler "failed")

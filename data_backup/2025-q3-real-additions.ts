@@ -1,6 +1,6 @@
-export interface RealAdditionService2025Q3 {
-  // TODO: Implement
-}
+export interface RealAdditionService2025Q3 {}
+  // TODO: Implement;
+};
 	"id": string;"
 	name: string;,
   tagline: string;
@@ -24,7 +24,7 @@ export interface RealAdditionService2025Q3 {
 	launchDate?: string;
 	customers?: number;
 	rating?: number;
-reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{,
+reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [{,}]
   id:,"
   ai-email-copilot',''
 		"name": 'AI Email Responder Copilot,'
@@ -36,12 +36,12 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'AI Assistants,'
-		features['
+		features[']
   'Priority inbox and intent detection',''
   'Policy-aware auto-drafting with approvals',''
   'CRM sync and follow-up reminders',''
   'Tone and brand voice controls',''
-  'Analytics and SLA tracking'']
+  'Analytics and SLA tracking''];
 		],'
 		"popular": true,"
 		link:,"
@@ -49,19 +49,19 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '30 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',''
   'OpenAI',']'
   'PostgreSQL'],''
-		integrations['Gmail',''
+		integrations['Gmail','']
   'Outlook',''
   'HubSpot',']'
   'Salesforce'],''
-		useCases['Shared inboxes',''
+		useCases['Shared inboxes','']
   'Lead response',']'
   'Support triage'],''
 		"roi": 'Cut average first response by 60%,'
-		competitors[,'
+		competitors[,']
   Superhuman AI',']'
   'Gmail HelpMeWrite'],''
 		"marketSize": '$10B+ email productivity,'
@@ -72,7 +72,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.7,""
 		"reviews": 62;"
 	},
-	{
+	{}
 		id:,"
   affiliate-tracking-lite',''
 		"name": 'Affiliate Tracking Lite,'
@@ -84,11 +84,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Sales & Marketing,''
-		features['Link generation and UTM tagging',''
+		features['Link generation and UTM tagging','']
   'Fraud and self-referral checks',''
   'Conversion webhooks and API',''
   'Payout ledger and exports',''
-  'GDPR/CCPA friendly tracking'']
+  'GDPR/CCPA friendly tracking''];
 		],'
 		"popular": false,"
 		link:,"
@@ -96,17 +96,17 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '20 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',''
   'Node.js',']'
   'PostgreSQL'],''
-		integrations['Shopify',''
+		integrations['Shopify','']
   'Stripe',']'
   'WooCommerce'],''
 		useCases['Partner programs',']'
   'Referral campaigns'],''
 		"roi": 'Grow referral revenue 10–25%,'
-		competitors[,'
+		competitors[,']
   Rewardful',']'
   'ReferralCandy'],''
 		"marketSize": '$1.5B affiliate tooling,'
@@ -117,7 +117,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 33;"
 	},
-	{
+	{}
 		id:,"
   smb-analytics-starter',''
 		"name": 'SMB Analytics Starter,'
@@ -129,11 +129,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Analytics & Business Intelligence,''
-		features['Prebuilt KPI templates',''
+		features['Prebuilt KPI templates','']
   'AI explanations for spikes and dips',''
   'Weekly email digests',''
   'Goal tracking and alerts',''
-  'CSV and API export'']
+  'CSV and API export''];
 		],'
 		"popular": true,"
 		link:,"
@@ -141,17 +141,17 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '45 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',''
   'DuckDB',']'
   'PostgreSQL'],''
-		integrations['Stripe',''
+		integrations['Stripe','']
   'GA4',']'
   'HubSpot'],''
 		useCases['Founder dashboards',']'
   'Investor updates'],''
 		"roi": 'Save 4–8 hrs/week on reporting,'
-		competitors[,'
+		competitors[,']
   Geckoboard',']'
   'Databox'],''
 		"marketSize": '$30B+ BI,'
@@ -162,7 +162,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.5,""
 		"reviews": 28;"
 	},
-	{
+	{}
 		id:,"
   it-helpdesk-suite',''
 		"name": 'IT Helpdesk Suite,'
@@ -174,11 +174,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'IT Operations,''
-		features['Email-to-ticket with SLA timers',''
+		features['Email-to-ticket with SLA timers','']
   'Asset discovery (agentless + agent)',''
   'Knowledge base and macros',''
   'AI reply suggestions',''
-  'Reports and CSAT'']
+  'Reports and CSAT''];
 		],'
 		"popular": true,"
 		link:,"
@@ -186,16 +186,16 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '1 hour',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Node.js',']'
   'Next.js'],''
-		integrations['Okta',''
+		integrations['Okta','']
   'Google Workspace',']'
   'Microsoft 365'],''
 		useCases['MSPs',']'
   'Internal IT'],''
 		"roi": 'Reduce resolution time 25–40%,'
-		competitors[,'
+		competitors[,']
   Freshservice',']'
   'Zendesk'],''
 		"marketSize": '$10B ITSM,'
@@ -206,7 +206,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 21;"
 	},
-	{
+	{}
 		id:,"
   meeting-minutes-ai',''
 		"name": 'Meeting Minutes AI,'
@@ -218,11 +218,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Productivity,''
-		features['Auto-join major meeting apps',''
+		features['Auto-join major meeting apps','']
   'Topic segmentation and speakers',''
   'Action items with owners',''
   'Email and Slack summaries',''
-  'Templates (standups, reviews)'']
+  'Templates (standups, reviews)''];
 		],'
 		"popular": false,"
 		link:,"
@@ -230,19 +230,19 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 7,""
 		"setupTime": '10 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Whisper',']'
   'Next.js'],''
-		integrations['Zoom',''
+		integrations['Zoom','']
   'Meet',''
   'Teams',''
   'Slack',']'
   'Jira'],''
-		useCases['Standups',''
+		useCases['Standups','']
   'Client calls',']'
   'Hiring'],''
 		"roi": 'Save 3–5 hrs/person/month,'
-		competitors[,'
+		competitors[,']
   Grain',']'
   'Fathom'],''
 		"marketSize": '$5B+ meeting AI,'
@@ -253,7 +253,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.5,""
 		"reviews": 45;"
 	},
-	{
+	{}
 		id:,"
   data-quality-guard',''
 		"name": 'Data Quality Guard,'
@@ -265,11 +265,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Data & Analytics,''
-		features['Freshness and volume checks',''
+		features['Freshness and volume checks','']
   'Anomaly detection on KPIs',''
   'Schema drift alerts',''
   'Ownership and runbooks',''
-  'Insights and RCA templates'']
+  'Insights and RCA templates''];
 		],'
 		"popular": true,"
 		link:,"
@@ -277,18 +277,18 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '45 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Node.js',''
   'SQL',']'
   'OpenAI'],''
-		integrations['BigQuery',''
+		integrations['BigQuery','']
   'Snowflake',''
   'Redshift',']'
   'Slack'],''
 		useCases['Prevent bad dashboards',']'
   'Catch pipeline breaks'],''
 		"roi": 'Reduce bad data incidents 50%,'
-		competitors[,'
+		competitors[,']
   Monte Carlo',']'
   'Bigeye'],''
 		"marketSize": '$3B data observability,'
@@ -299,7 +299,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 19;"
 	},
-	{
+	{}
 		id:,"
   landing-page-ai-tester',''
 		"name": 'Landing Page AI Tester,'
@@ -311,11 +311,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Growth & Optimization,''
-		features['On-brand AI text and images',''
+		features['On-brand AI text and images','']
   'Visual editor and rollback',''
   'Holdout and sample sizing',''
   'Consent-aware analytics',''
-  'Insights and next-step recs'']
+  'Insights and next-step recs''];
 		],'
 		"popular": false,"
 		link:,"
@@ -323,17 +323,17 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '30 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',''
   'Tailwind',']'
   'OpenAI'],''
-		integrations['Segment',''
+		integrations['Segment','']
   'GA4',']'
   'Vercel'],''
 		useCases['Landing pages',']'
   'Pricing pages'],''
 		"roi": 'Increase conversion 5–20%,'
-		competitors[,'
+		competitors[,']
   VWO',']'
   'Optimizely'],''
 		"marketSize": '$2B experimentation,'
@@ -344,7 +344,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.5,""
 		"reviews": 31;"
 	},
-	{
+	{}
 		id:,"
   ai-brand-copilot',''
 		"name": 'AI Brand Copilot,'
@@ -356,11 +356,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Content & Compliance,''
-		features['Brand policy linting for text and images',''
+		features['Brand policy linting for text and images','']
   'Inline suggestions and fixes',''
   'Asset library and approvals',''
   'Org-wide policies and roles',''
-  'Weekly compliance score'']
+  'Weekly compliance score''];
 		],'
 		"popular": false,"
 		link:,"
@@ -368,16 +368,16 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '25 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   OpenAI',']'
   'Next.js'],''
-		integrations['Google Docs',''
+		integrations['Google Docs','']
   'Notion',']'
   'Figma'],''
 		useCases['Content ops',']'
   'Agency delivery'],''
 		"roi": 'Reduce brand review cycles 50%,'
-		competitors[,'
+		competitors[,']
   Writer',']'
   'Grammarly Business'],''
 		"marketSize": '$2B brand management,'
@@ -388,7 +388,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 17;"
 	},
-	{
+	{}
 		id:,"
   security-changelog-bot',''
 		"name": 'Security Changelog Bot,'
@@ -400,11 +400,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Security & Compliance,''
-		features['SBOM generation and diff',''
+		features['SBOM generation and diff','']
   'PR scanner for risky changes',''
   'Weekly security digest',''
   'Auto-created fix tickets',''
-  'Policy exceptions workflow'']
+  'Policy exceptions workflow''];
 		],'
 		"popular": false,"
 		link:,"
@@ -412,17 +412,17 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 7,""
 		"setupTime": '15 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Node.js',']'
   'CycloneDX'],''
-		integrations['GitHub',''
+		integrations['GitHub','']
   'GitLab',''
   'Jira',']'
   'Slack'],''
 		useCases['AppSec hygiene',']'
   'Audit support'],''
 		"roi": 'Reduce vuln MTTR 30–50%,'
-		competitors[,'
+		competitors[,']
   Snyk',']'
   'Dependabot (partial)'],''
 		"marketSize": '$6B AppSec,'
@@ -433,7 +433,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.5,""
 		"reviews": 26;"
 	},
-	{
+	{}
 		id:,"
   vendor-risk-lite',''
 		"name": 'Vendor Risk Lite,'
@@ -445,11 +445,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Compliance Automation,''
-		features['Questionnaire templates (SOC2/ISO/NIST)',''
+		features['Questionnaire templates (SOC2/ISO/NIST)','']
   'Evidence upload and mapping',''
   'Automated reminders and tasks',''
   'Risk scoring and approvals',''
-  'Executive summary reports'']
+  'Executive summary reports''];
 		],'
 		"popular": true,"
 		link:,"
@@ -457,16 +457,16 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '1 hour',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',']'
   'PostgreSQL'],''
-		integrations['Google Drive',''
+		integrations['Google Drive','']
   'OneDrive',']'
   'Jira'],''
 		useCases['Third-party risk',']'
   'Annual reviews'],''
 		"roi": 'Shorten cycle time 40–70%,'
-		competitors[,'
+		competitors[,']
   OneTrust',']'
   'Whistic'],''
 		"marketSize": '$4B vendor risk,'
@@ -477,7 +477,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 24;"
 	},
-	{
+	{}
 		id:,"
   incident-comms-assistant',''
 		"name": 'Incident Comms Assistant,'
@@ -489,11 +489,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Reliability & SRE,''
-		features['Channel orchestration (Slack/PagerDuty)',''
+		features['Channel orchestration (Slack/PagerDuty)','']
   'Templates per severity',''
   'Timeline auto-build from events',''
   'Customer-ready summaries',''
-  'Follow-up tracker'']
+  'Follow-up tracker''];
 		],'
 		"popular": false,"
 		link:,"
@@ -501,10 +501,10 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '20 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   OpenAI',']'
   'Next.js'],''
-		integrations['PagerDuty',''
+		integrations['PagerDuty','']
   'Opsgenie',''
   'Slack',']'
   'Statuspage'],''
@@ -521,7 +521,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.5,""
 		"reviews": 16;"
 	},
-	{
+	{}
 		id:,"
   policy-privacy-scanner',''
 		"name": 'Policy & Privacy Scanner,'
@@ -533,11 +533,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Privacy & Legal,''
-		features['Cookie and tracker inventory',''
+		features['Cookie and tracker inventory','']
   'Regional banners and consent logs',''
   'Policy generator with diffs',''
   'Weekly audits and alerts',''
-  'Exportable evidence packs'']
+  'Exportable evidence packs''];
 		],'
 		"popular": false,"
 		link:,"
@@ -545,16 +545,16 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 14,""
 		"setupTime": '15 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Puppeteer',']'
   'Node.js'],''
-		integrations['Webflow',''
+		integrations['Webflow','']
   'Shopify',']'
   'WordPress'],''
 		useCases['GDPR/CCPA compliance',']'
   'Cookie audits'],''
 		"roi": 'Reduce legal risk and fines,'
-		competitors[,'
+		competitors[,']
   OneTrust',']'
   'Cookiebot'],''
 		"marketSize": '$4B privacy tech,'
@@ -565,7 +565,7 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"rating": 4.6,""
 		"reviews": 29;"
 	},
-	{
+	{}
 		id:,"
   ai-proposal-writer',''
 		"name": 'AI Proposal Writer,'
@@ -577,11 +577,11 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		period:,'
   /month',''
 		"category": 'Professional Services,''
-		features['On-brand templates and styles',''
+		features['On-brand templates and styles','']
   'Library of scopes and clauses',''
   'Auto pricing table suggestions',''
   'E-sign and PDF export',''
-  'Collaboration and approvals'']
+  'Collaboration and approvals''];
 		],'
 		"popular": true,"
 		link:,"
@@ -589,16 +589,16 @@ reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] =
 		"trialDays": 7,""
 		"setupTime": '10 minutes',''
 		"realService": true,"
-		technology[,"
+		technology[,"]
   Next.js',']'
   'OpenAI'],''
-		integrations['DocuSign',''
+		integrations['DocuSign','']
   'HubSpot',']'
   'Stripe'],''
 		useCases['Agencies',']'
   'Consultancies'],''
 		"roi": 'Ship proposals 3x faster,'
-		competitors[,'
+		competitors[,']
   PandaDoc',']'
   'Proposify'],''
 		"marketSize": '$1B+ proposal tools,'

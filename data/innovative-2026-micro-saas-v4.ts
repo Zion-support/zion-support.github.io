@@ -15,11 +15,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Blockchain Loyalty"""
     "realService"""
-    technology["Ethereum", "Polygon", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Shopify", "WooCommerce", "Square", "Stripe", "PayPal", "Mobile wallets"""
-    useCases["Customer retention", "Brand loyalty", "Cross-selling", "Data analytics", "Partnership marketing"""
+    technology["Ethereum", "Polygon", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Shopify", "WooCommerce", "Square", "Stripe", "PayPal", "Mobile wallets"""]
+    useCases["Customer retention", "Brand loyalty", "Cross-selling", "Data analytics", "Partnership marketing"""]
     "roi": "Increase customer retention by 60%, boost repeat purchases by 45%, reduce customer acquisition costs by 25%"""
-    competitors["Bond", "FiveStars", "Perkville"""
+    competitors["Bond", "FiveStars", "Perkville"""]
     "marketSize": "$4B customer loyalty market"""
     "growthRate": "30% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -61,11 +61,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "24 hours"""
     "category": "AI Video Marketing"""
     "realService"""
-    technology["Computer Vision", "Natural Language Processing", "React", "Python", "PostgreSQL", "Redis", "AWS"""
-    integrations["YouTube", "Vimeo", "Facebook", "Instagram", "TikTok", "LinkedIn"""
-    useCases["Video SEO optimization", "Content discovery", "Audience growth", "Brand visibility", "Traffic generation"""
+    technology["Computer Vision", "Natural Language Processing", "React", "Python", "PostgreSQL", "Redis", "AWS"""]
+    integrations["YouTube", "Vimeo", "Facebook", "Instagram", "TikTok", "LinkedIn"""]
+    useCases["Video SEO optimization", "Content discovery", "Audience growth", "Brand visibility", "Traffic generation"""]
     "roi": "Increase video views by 200%, improve search rankings by 150%, boost organic traffic by 300%"""
-    competitors["TubeBuddy", "VidIQ", "Morningfame"""
+    competitors["TubeBuddy", "VidIQ", "Morningfame"""]
     "marketSize": "$100B video marketing market"""
     "growthRate": "40% annual growth"""
     "variant": "ai-futuristic"""
@@ -107,11 +107,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum Supply Chain"""
     "realService"""
-    technology["Quantum Computing", "Machine Learning", "React", "Python", "PostgreSQL", "Redis", "AWS"""
-    integrations["SAP", "Oracle", "Salesforce", "Shopify", "WooCommerce", "ERP systems"""
-    useCases["Supply chain optimization", "Inventory management", "Route planning", "Demand forecasting", "Cost reduction"""
+    technology["Quantum Computing", "Machine Learning", "React", "Python", "PostgreSQL", "Redis", "AWS"""]
+    integrations["SAP", "Oracle", "Salesforce", "Shopify", "WooCommerce", "ERP systems"""]
+    useCases["Supply chain optimization", "Inventory management", "Route planning", "Demand forecasting", "Cost reduction"""]
     "roi": "Reduce inventory costs by 30%, improve delivery times by 40%, increase efficiency by 50%"""
-    competitors["SAP", "Oracle", "Manhattan Associates"""
+    competitors["SAP", "Oracle", "Manhattan Associates"""]
     "marketSize": "$25B supply chain analytics market"""
     "growthRate": "45% annual growth"""
     "variant": "quantum-futuristic"""
@@ -153,11 +153,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "48 hours"""
     "category": "AI Social Media"""
     "realService"""
-    technology["GPT-4", "Claude 3", "Computer Vision", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube", "Pinterest"""
-    useCases["Social media management", "Brand building", "Community engagement", "Lead generation", "Customer service"""
+    technology["GPT-4", "Claude 3", "Computer Vision", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube", "Pinterest"""]
+    useCases["Social media management", "Brand building", "Community engagement", "Lead generation", "Customer service"""]
     "roi": "Save 25+ hours per week, increase engagement by 200%, grow followers by 150%"""
-    competitors["Hootsuite", "Buffer", "Sprout Social"""
+    competitors["Hootsuite", "Buffer", "Sprout Social"""]
     "marketSize": "$15B social media management market"""
     "growthRate": "35% annual growth"""
     "variant": "ai-autonomous"""
@@ -199,11 +199,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 weeks"""
     "category": "Metaverse Business"""
     "realService"""
-    technology["Unity", "Unreal Engine", "WebGL", "React", "Node.js", "PostgreSQL", "Blockchain", "AWS"""
-    integrations["Meta", "Roblox", "Decentraland", "Sandbox", "VR platforms", "Payment gateways"""
-    useCases["Virtual retail", "Digital events", "Virtual real estate", "Educational experiences", "Brand engagement"""
+    technology["Unity", "Unreal Engine", "WebGL", "React", "Node.js", "PostgreSQL", "Blockchain", "AWS"""]
+    integrations["Meta", "Roblox", "Decentraland", "Sandbox", "VR platforms", "Payment gateways"""]
+    useCases["Virtual retail", "Digital events", "Virtual real estate", "Educational experiences", "Brand engagement"""]
     "roi": "Create new revenue streams, reach global audiences, increase customer engagement by 300%"""
-    competitors["Spatial", "AltspaceVR", "VRChat"""
+    competitors["Spatial", "AltspaceVR", "VRChat"""]
     "marketSize": "$800B metaverse market by 2030"""
     "growthRate": "100% annual growth"""
     "variant": "metaverse-futuristic"""
@@ -245,11 +245,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI Legal Tech"""
     "realService"""
-    technology["GPT-4", "Claude 3", "Legal AI", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["DocuSign", "Adobe Sign", "Legal databases", "Court systems", "Payment gateways"""
-    useCases["Contract generation", "Legal compliance", "Document automation", "Risk management", "Legal research"""
+    technology["GPT-4", "Claude 3", "Legal AI", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["DocuSign", "Adobe Sign", "Legal databases", "Court systems", "Payment gateways"""]
+    useCases["Contract generation", "Legal compliance", "Document automation", "Risk management", "Legal research"""]
     "roi": "Save 80% on legal document costs, reduce review time by 70%, improve compliance by 90%"""
-    competitors["LegalZoom", "Rocket Lawyer", "DocuSign"""
+    competitors["LegalZoom", "Rocket Lawyer", "DocuSign"""]
     "marketSize": "$25B legal tech market"""
     "growthRate": "30% annual growth"""
     "variant": "ai-futuristic"""

@@ -1,12 +1,12 @@
 import { toast } from 'react-hot-toast''
-interface ToastOptions {
-  // TODO: Implement
-}
+interface ToastOptions {}
+  // TODO: Implement;
+};
   duration?: number;'
   position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";"
-}
-export function useToast() {"
-  const showToast = ("message": string, options?: ToastOptions) => {"
+};
+export function useToast() {"}
+  const showToast = ("message": string, options?: ToastOptions) => {"}
     return toast(message, options);
   };
   return { showToast };

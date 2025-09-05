@@ -29,19 +29,19 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-200"""
     "link": "https://ziontechgroup.com/services/ai-autonomous-business-operations"""
     "marketPosition": "First truly autonomous business operations platform with advanced AI decision-making."""
-    "targetAudience": ["Operations", "IT", "Management"""
+    "targetAudience": ["Operations", "IT", "Management"""]
     "trialDays"""
     "setupTime": "2-3 weeks"""
     "realService"""
-    "technology": ["Advanced AI/ML", "Process Mining", "RPA", "Decision Trees"""
-    "integrations": ["ERP Systems", "CRM Platforms", "Workflow Tools", "Analytics Platforms"""
-    "useCases": ["Manufacturing Operations", "Supply Chain Management", "Customer Service", "Financial Operations"""
+    "technology": ["Advanced AI/ML", "Process Mining", "RPA", "Decision Trees"""]
+    "integrations": ["ERP Systems", "CRM Platforms", "Workflow Tools", "Analytics Platforms"""]
+    "useCases": ["Manufacturing Operations", "Supply Chain Management", "Customer Service", "Financial Operations"""]
     "roi": "ROI achieved in 6-8 months"""
-    "competitors": ["UiPath", "Automation Anywhere", "Blue Prism"""
+    "competitors": ["UiPath", "Automation Anywhere", "Blue Prism"""]
     "marketSize": "$15B RPA market"""
     "growthRate": "23% CAGR"""
     "variant": "saas-real"""
-    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""
+    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""}
     "realImplementation"""
     "implementationDetails": "Custom AI models, process mapping, integration setup, training."""
     "launchDate": "2029-01-15"""
@@ -76,19 +76,19 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-cyan-200"""
     "link": "https://ziontechgroup.com/services/quantum-ai-hybrid-platform"""
     "marketPosition": "First commercial quantum-AI hybrid platform accessible to businesses."""
-    "targetAudience": ["Research", "Finance", "Pharmaceuticals", "Logistics"""
+    "targetAudience": ["Research", "Finance", "Pharmaceuticals", "Logistics"""]
     "trialDays"""
     "setupTime": "4-6 weeks"""
     "realService"""
-    "technology": ["Quantum Computing", "AI/ML", "Quantum Algorithms", "Hybrid Systems"""
-    "integrations": ["Cloud Platforms", "AI Frameworks", "Research Tools", "Enterprise Systems"""
-    "useCases": ["Drug Discovery", "Financial Modeling", "Supply Chain Optimization", "Climate Modeling"""
+    "technology": ["Quantum Computing", "AI/ML", "Quantum Algorithms", "Hybrid Systems"""]
+    "integrations": ["Cloud Platforms", "AI Frameworks", "Research Tools", "Enterprise Systems"""]
+    "useCases": ["Drug Discovery", "Financial Modeling", "Supply Chain Optimization", "Climate Modeling"""]
     "roi": "ROI in 12-18 months for research applications"""
-    "competitors": ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"""
+    "competitors": ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"""]
     "marketSize": "$65B quantum computing market"""
     "growthRate": "30% CAGR"""
     "variant": "saas-real"""
-    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""
+    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""}
     "realImplementation"""
     "implementationDetails": "Quantum hardware access, algorithm development, integration setup."""
     "launchDate": "2029-02-01"""
@@ -123,19 +123,19 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-red-200"""
     "link": "https://ziontechgroup.com/services/ai-cybersecurity-platform"""
     "marketPosition": "AI-first cybersecurity with highest detection rates in the market."""
-    "targetAudience": ["Security", "IT", "Compliance"""
+    "targetAudience": ["Security", "IT", "Compliance"""]
     "trialDays"""
     "setupTime": "1-2 weeks"""
     "realService"""
-    "technology": ["Machine Learning", "Behavioral Analytics", "Threat Intelligence", "Automation"""
-    "integrations": ["SIEM Systems", "EDR Platforms", "Cloud Security", "Identity Management"""
-    "useCases": ["Enterprise Security", "Cloud Protection", "Compliance Management", "Incident Response"""
+    "technology": ["Machine Learning", "Behavioral Analytics", "Threat Intelligence", "Automation"""]
+    "integrations": ["SIEM Systems", "EDR Platforms", "Cloud Security", "Identity Management"""]
+    "useCases": ["Enterprise Security", "Cloud Protection", "Compliance Management", "Incident Response"""]
     "roi": "ROI achieved in 4-6 months"""
-    "competitors": ["CrowdStrike", "SentinelOne", "Darktrace"""
+    "competitors": ["CrowdStrike", "SentinelOne", "Darktrace"""]
     "marketSize": "$200B cybersecurity market"""
     "growthRate": "13% CAGR"""
     "variant": "saas-real"""
-    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""
+    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""}
     "realImplementation"""
     "implementationDetails": "Security assessment, AI model training, integration setup."""
     "launchDate": "2029-01-20"""
@@ -170,19 +170,19 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-200"""
     "link": "https://ziontechgroup.com/services/ai-content-marketing-suite"""
     "marketPosition": "Most comprehensive AI content marketing platform with highest engagement rates."""
-    "targetAudience": ["Marketing", "Content Creators", "Agencies"""
+    "targetAudience": ["Marketing", "Content Creators", "Agencies"""]
     "trialDays"""
     "setupTime": "1 week"""
     "realService"""
-    "technology": ["Natural Language Processing", "Machine Learning", "SEO Tools", "Analytics"""
-    "integrations": ["WordPress", "HubSpot", "Mailchimp", "Social Media Platforms"""
-    "useCases": ["Content Marketing", "Social Media Management", "Email Marketing", "SEO"""
+    "technology": ["Natural Language Processing", "Machine Learning", "SEO Tools", "Analytics"""]
+    "integrations": ["WordPress", "HubSpot", "Mailchimp", "Social Media Platforms"""]
+    "useCases": ["Content Marketing", "Social Media Management", "Email Marketing", "SEO"""]
     "roi": "ROI achieved in 2-3 months"""
-    "competitors": ["Jasper", "Copy.ai", "Writesonic"""
+    "competitors": ["Jasper", "Copy.ai", "Writesonic"""]
     "marketSize": "$400B content marketing market"""
     "growthRate": "16% CAGR"""
     "variant": "saas-real"""
-    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""
+    "contactInfo": { mobile: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "address": "364 E Main St STE 1008 Middletown DE 19709"""}
     "realImplementation"""
     "implementationDetails": "Brand voice training, content strategy, integration setup."""
     "launchDate": "2029-01-10"""

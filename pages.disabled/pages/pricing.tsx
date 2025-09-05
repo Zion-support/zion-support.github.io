@@ -1,8 +1,8 @@
 import React from 'react';''
 import Head from 'next/head';''
 import Link from 'next/link';'
-const PricingPage: React.FC = () => {
-  return (
+const PricingPage: React.FC = () => {}
+  return ()
     <>
       <Head>
 </Head>
@@ -114,7 +114,7 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>)
+    </>);
   );
 };
 

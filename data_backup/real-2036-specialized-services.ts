@@ -1,4 +1,4 @@
-export type Real2036SpecializedService = {;
+export type Real2036SpecializedService = {;}
   "id": string;"
   name: string;,
   tagline: string;
@@ -16,8 +16,8 @@ export type Real2036SpecializedService = {;
   integration?: string[];
   useCases?: string[];
   technology?: string[]};"
-export const "real2036SpecializedServices": Real2036SpecializedService[] = [// Neuromorphic Computing Platform;"
-  {
+export const "real2036SpecializedServices": Real2036SpecializedService[] = [// Neuromorphic Computing Platform;"]
+  {}
     id:,"
   neuromorphic-computing-platform',''
     "name": 'Neuromorphic Computing Platform,'
@@ -29,7 +29,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $3,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Brain-inspired neural architecture',''
   'Ultra-low power consumption',''
   'Real-time learning capabilities',''
@@ -37,7 +37,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Edge computing optimization',''
   'Custom neural models',''
   'Performance benchmarking',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/neuromorphic-computing-platform,''
     "launchDate": '2036-04-01',''
@@ -48,21 +48,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Brain-inspired architecture, Ultra-efficiency, Real-time learning,"
   ,"
-    integration['AI frameworks',''
+    integration['AI frameworks','']
   'Edge devices',''
   'IoT platforms',']'
   'Cloud services'],''
-    useCases['Edge AI processing',''
+    useCases['Edge AI processing','']
   'Autonomous systems',''
   'Cognitive computing',']'
   'Energy-efficient AI'],''
-    technology['Neuromorphic chips',''
+    technology['Neuromorphic chips','']
   'Spiking neural networks',''
   'Analog computing',']'
   'Bio-inspired algorithms']'
   },
   // Synthetic Biology Platform;
-  {'
+  {'}
     "id": 'synthetic-biology-platform,'
     name:,'
   Synthetic Biology Platform',''
@@ -73,7 +73,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $5,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   AI-powered DNA design',''
   'Biological system simulation',''
   'Automated lab protocols',''
@@ -81,7 +81,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Safety and compliance tools',''
   'Real-time monitoring',''
   'Custom organism design',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/synthetic-biology-platform,''
     "launchDate": '2036-04-05',''
@@ -92,21 +92,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": AI integration, Automated protocols, Safety focus,"
   ,"
-    integration['Lab automation systems',''
+    integration['Lab automation systems','']
   'DNA synthesis platforms',''
   'Sequencing services',']'
   'Cloud platforms'],''
-    useCases['Drug discovery',''
+    useCases['Drug discovery','']
   'Biofuel production',''
   'Environmental remediation',']'
   'Agricultural optimization'],''
-    technology['CRISPR',''
+    technology['CRISPR','']
   'Gene editing',''
   'DNA synthesis',']'
   'Bioinformatics']'
   },
   // Quantum Internet Protocol Suite;
-  {'
+  {'}
     "id": 'quantum-internet-protocol-suite,'
     name:,'
   Quantum Internet Protocol Suite',''
@@ -117,7 +117,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $2,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Quantum network protocols',''
   'Interoperability standards',''
   'Security frameworks',''
@@ -125,7 +125,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Performance optimization',''
   'Compliance certification',''
   'Custom protocol development',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/quantum-internet-protocol-suite,''
     "launchDate": '2036-04-10',''
@@ -136,21 +136,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Quantum protocols, Interoperability, Security focus,"
   ,"
-    integration['Quantum networks',''
+    integration['Quantum networks','']
   'Internet infrastructure',''
   'Security systems',']'
   'Cloud platforms'],''
-    useCases['Quantum networks',''
+    useCases['Quantum networks','']
   'Secure communications',''
   'Internet infrastructure',']'
   'Government networks'],''
-    technology['Quantum protocols',''
+    technology['Quantum protocols','']
   'Network standards',''
   'Security frameworks',']'
   'Interoperability']'
   },
   // Brain-Computer Interface Platform;
-  {'
+  {'}
     "id": 'brain-computer-interface-platform,'
     name:,'
   Brain-Computer Interface Platform',''
@@ -161,7 +161,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $4,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Neural signal processing',''
   'Real-time brain monitoring',''
   'Custom interface design',''
@@ -169,7 +169,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Performance optimization',''
   'User training tools',''
   'Custom applications',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/brain-computer-interface-platform,''
     "launchDate": '2036-04-15',''
@@ -180,21 +180,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Direct neural interface, Real-time processing, Safety focus,"
   ,"
-    integration['Medical devices',''
+    integration['Medical devices','']
   'Accessibility tools',''
   'Gaming platforms',']'
   'Research systems'],''
-    useCases['Assistive technology',''
+    useCases['Assistive technology','']
   'Medical research',''
   'Gaming and entertainment',']'
   'Human augmentation'],''
-    technology['EEG',''
+    technology['EEG','']
   'Neural implants',''
   'Signal processing',']'
   'Machine learning']'
   },
   // Metaverse Development Studio Pro;
-  {'
+  {'}
     "id": 'metaverse-development-studio-pro,'
     name:,'
   Metaverse Development Studio Pro',''
@@ -205,7 +205,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $1,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   3D world building tools',''
   'AI-powered NPCs',''
   'Blockchain integration',''
@@ -213,7 +213,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'VR/AR support',''
   'Performance optimization',''
   'Custom development',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/metaverse-development-studio-pro,''
     "launchDate": '2036-04-20',''
@@ -224,21 +224,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": 3D tools, AI integration, Blockchain support,"
   ,"
-    integration['VR headsets',''
+    integration['VR headsets','']
   'AR devices',''
   'Blockchain platforms',']'
   '3D engines'],''
-    useCases['Virtual worlds',''
+    useCases['Virtual worlds','']
   'Digital real estate',''
   'Educational experiences',']'
   'Social platforms'],''
-    technology['3D graphics',''
+    technology['3D graphics','']
   'Virtual reality',''
   'Augmented reality',']'
   'Blockchain']'
   },
   // Autonomous Vehicle AI Platform;
-  {'
+  {'}
     "id": 'autonomous-vehicle-ai-platform,'
     name:,'
   Autonomous Vehicle AI Platform',''
@@ -249,7 +249,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $3,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Computer vision systems',''
   'Sensor fusion algorithms',''
   'Path planning and navigation',''
@@ -257,7 +257,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Real-time processing',''
   'Performance optimization',''
   'Custom vehicle integration',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform,''
     "launchDate": '2036-04-25',''
@@ -268,21 +268,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Advanced AI, Safety focus, Real-time processing,"
   ,"
-    integration['Vehicle systems',''
+    integration['Vehicle systems','']
   'Sensor arrays',''
   'Navigation systems',']'
   'Cloud platforms'],''
-    useCases['Self-driving cars',''
+    useCases['Self-driving cars','']
   'Autonomous trucks',''
   'Delivery robots',']'
   'Public transportation'],''
-    technology['Computer vision',''
+    technology['Computer vision','']
   'Machine learning',''
   'Sensor fusion',']'
   'Control systems']'
   },
   // Quantum Materials Discovery Platform;
-  {'
+  {'}
     "id": 'quantum-materials-discovery-platform,'
     name:,'
   Quantum Materials Discovery Platform',''
@@ -293,7 +293,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $4,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Quantum material simulation',''
   'AI-powered discovery',''
   'Property prediction',''
@@ -301,7 +301,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Performance testing',''
   'Custom material design',''
   'Expert consultation',''
-  'Research collaboration'']
+  'Research collaboration''];
     ],'
     "link": 'https://ziontechgroup.com/services/quantum-materials-discovery-platform,''
     "launchDate": '2036-04-30',''
@@ -312,21 +312,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Quantum simulation, AI discovery, Custom design,"
   ,"
-    integration['Quantum computers',''
+    integration['Quantum computers','']
   'AI platforms',''
   'Lab systems',']'
   'Research databases'],''
-    useCases['New materials',''
+    useCases['New materials','']
   'Energy storage',''
   'Electronics',']'
   'Manufacturing'],''
-    technology['Quantum computing',''
+    technology['Quantum computing','']
   'Machine learning',''
   'Materials science',']'
   'Simulation']'
   },
   // AI-Powered Climate Modeling Platform;
-  {'
+  {'}
     "id": 'ai-climate-modeling-platform,'
     name:,'
   AI Climate Modeling Platform',''
@@ -337,7 +337,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $2,499',''
     "period": '/month,'
-    features[,'
+    features[,']
   AI climate models',''
   'Real-time data analysis',''
   'Predictive modeling',''
@@ -345,7 +345,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Data visualization',''
   'Custom analysis',''
   'Expert consultation',''
-  'Research collaboration'']
+  'Research collaboration''];
     ],'
     "link": 'https://ziontechgroup.com/services/ai-climate-modeling-platform,''
     "launchDate": '2036-05-05',''
@@ -356,21 +356,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": AI modeling, Real-time analysis, Predictive capabilities,"
   ,"
-    integration['Climate sensors',''
+    integration['Climate sensors','']
   'Satellite data',''
   'Weather services',']'
   'Research databases'],''
-    useCases['Climate prediction',''
+    useCases['Climate prediction','']
   'Policy planning',''
   'Environmental research',']'
   'Risk assessment'],''
-    technology['Machine learning',''
+    technology['Machine learning','']
   'Climate models',''
   'Data analysis',']'
   'Simulation']'
   },
   // Quantum Neural Network Platform;
-  {'
+  {'}
     "id": 'quantum-neural-network-platform,'
     name:,'
   Quantum Neural Network Platform',''
@@ -381,7 +381,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $3,499',''
     "period": '/month,'
-    features[,'
+    features[,']
   Quantum neural networks',''
   'Hybrid quantum-classical AI',''
   'Advanced optimization',''
@@ -389,7 +389,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Custom model development',''
   'Expert consultation',''
   'Research collaboration',''
-  'Training and support'']
+  'Training and support''];
     ],'
     "link": 'https://ziontechgroup.com/services/quantum-neural-network-platform,''
     "launchDate": '2036-05-10',''
@@ -400,21 +400,21 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Quantum enhancement, Advanced AI, Performance optimization,"
   ,"
-    integration['Quantum computers',''
+    integration['Quantum computers','']
   'AI frameworks',''
   'Cloud platforms',']'
   'Research tools'],''
-    useCases['Advanced AI',''
+    useCases['Advanced AI','']
   'Research applications',''
   'Commercial AI',']'
   'Scientific computing'],''
-    technology['Quantum computing',''
+    technology['Quantum computing','']
   'Neural networks',''
   'Machine learning',']'
   'Optimization']'
   },
   // Space Tourism Platform;
-  {'
+  {'}
     "id": 'space-tourism-platform,'
     name:,'
   Space Tourism Platform',''
@@ -425,7 +425,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
     price:,'
   $6,999',''
     "period": '/month,'
-    features[,'
+    features[,']
   Tourism management system',''
   'Safety protocols',''
   'Training programs',''
@@ -433,7 +433,7 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   'Customer management',''
   'Compliance tools',''
   'Custom development',''
-  'Expert consultation'']
+  'Expert consultation''];
     ],'
     "link": 'https://ziontechgroup.com/services/space-tourism-platform,''
     "launchDate": '2036-05-15',''
@@ -444,17 +444,17 @@ export const "real2036SpecializedServices": Real2036SpecializedService[] = [// N
   ,"
     "competitiveAdvantage": Space expertise, Safety focus, Comprehensive management,"
   ,"
-"integration": ['Spacecraft systems,'
+"integration": ['Spacecraft systems,']
 ,'
   Training facilities',''
   'Booking systems',']'
   'Safety systems'],''
-    "useCases": ['Space tourism,'
+    "useCases": ['Space tourism,']
 ,'
   Training programs',''
   'Safety management',']'
   'Customer experience'],''
-    "technology": ['Space systems,''
+    "technology": ['Space systems,'']
   'Safety protocols',''
   'Training technology',']'
   'Customer management']'

@@ -1,5 +1,5 @@
 import {cn} from '@/lib/utils';'
-export function Skeleton($1) {'
+export function Skeleton($1) {'}
     return (<div className={cn("animate-pulse rounded-md bg-zion-slate/20", className)} {...props} />);"
 </div>"
     <div className="min-h-screen bg-white">"

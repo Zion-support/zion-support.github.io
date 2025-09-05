@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   BookOpen, 
   Brain, 
   Users, 
@@ -16,101 +16,101 @@ import {
   Globe,
   Database;'
 } from 'lucide-react'
-import Layout from '../../components/Layout
-const services = [
-  {'
+import Layout from '../../components/Layout;
+const services = []
+  {'}
     title: 'Learning Management Systems',''
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.','
     icon: BookOpen,
-    features: ['
+    features: [']
       'Course management',''
       'Student tracking',''
       'Assessment tools',''
-      'Progress analytics'']
-    ]
+      'Progress analytics''];
+    ];
   },
-  {'
+  {'}
     title: 'Virtual Classrooms',''
     description: 'Advanced virtual learning environments with interactive features.','
     icon: Video,
-    features: ['
+    features: [']
       'Live video streaming',''
       'Interactive whiteboards',''
       'Breakout rooms',''
-      'Recording capabilities'']
-    ]
+      'Recording capabilities''];
+    ];
   },
-  {'
+  {'}
     title: 'Educational AI Tutors',''
     description: 'AI-powered tutoring systems for personalized learning experiences.','
     icon: Brain,
-    features: ['
+    features: [']
       'Adaptive learning paths',''
       'Intelligent tutoring',''
       'Progress monitoring',''
-      'Personalized feedback'']
-    ]
+      'Personalized feedback''];
+    ];
   },
-  {'
+  {'}
     title: 'Student Analytics',''
     description: 'Data-driven insights into student performance and engagement.','
     icon: BarChart3,
-    features: ['
+    features: [']
       'Performance tracking',''
       'Engagement metrics',''
       'Predictive analytics',''
-      'Intervention recommendations'']
-    ]
+      'Intervention recommendations''];
+    ];
   },
-  {'
+  {'}
     title: 'Online Assessment Tools',''
     description: 'Secure and comprehensive online testing and evaluation systems.','
     icon: FileText,
-    features: ['
+    features: [']
       'Automated grading',''
       'Plagiarism detection',''
       'Secure testing',''
-      'Performance reports'']
-    ]
+      'Performance reports''];
+    ];
   },
-  {'
+  {'}
     title: 'Content Management Systems',''
     description: 'Digital content creation and management platforms for educators.','
     icon: Database,
-    features: ['
+    features: [']
       'Content creation tools',''
       'Resource libraries',''
       'Version control',''
-      'Collaboration features'']
-    ]
-  }
+      'Collaboration features''];
+    ];
+  };
 ];
 
-const benefits = [
-  {'
+const benefits = []
+  {'}
     title: 'Improved Learning Outcomes',''
     description: 'Personalized learning experiences lead to better student performance.','
     icon: GraduationCap;
   },
-  {'
+  {'}
     title: 'Enhanced Engagement',''
     description: 'Interactive tools and gamification increase student participation.','
     icon: Users;
   },
-  {'
+  {'}
     title: 'Better Accessibility',''
     description: 'Online platforms make education accessible to more students.','
     icon: Globe;
   },
-  {'
+  {'}
     title: 'Data-Driven Insights',''
     description: 'Analytics help educators make informed decisions about teaching methods.','
     icon: BarChart3;
-  }]
+  }];
 ];
 
-export default function EducationPage() {
-  return (
+export default function EducationPage() {}
+  return ()
     <Layout;'
       title="Education Technology Solutions - Zion Tech Group"
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
@@ -131,9 +131,9 @@ export default function EducationPage() {
           <div className="container mx-auto px-4 relative z-10">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -168,9 +168,9 @@ export default function EducationPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -185,10 +185,10 @@ export default function EducationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={service.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -208,8 +208,8 @@ export default function EducationPage() {
 </CheckCircle>
                       </li>
                   </ul>
-                </motion.div>)
-              ))}
+                </motion.div>);
+              ))};
             </div>
           </div>
         </section>"
@@ -218,9 +218,9 @@ export default function EducationPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -235,10 +235,10 @@ export default function EducationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={benefit.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="text-center"
                 >
 </motion>"
@@ -250,7 +250,7 @@ export default function EducationPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -259,9 +259,9 @@ export default function EducationPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

@@ -1,6 +1,6 @@
-export interface EnterpriseITSolution2034 {
-  // TODO: Implement
-}
+export interface EnterpriseITSolution2034 {}
+  // TODO: Implement;
+};
   "id"""
   "features"""
 export const "enterpriseITSolutions"""
@@ -8,7 +8,7 @@ export const "enterpriseITSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 1999, "yearly": 19990, "currency"""
+    "price": { monthly: 1999, "yearly": 19990, "currency"""}
     "link"""
     "icon"""
     "color"""
@@ -19,7 +19,7 @@ export const "enterpriseITSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 1499, "yearly": 14990, "currency"""
+    "price": { monthly: 1499, "yearly": 14990, "currency"""}
     "features"""
     "link"""
     "icon"""
@@ -31,7 +31,7 @@ export const "enterpriseITSolutions"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 1299, "yearly": 12990, "currency"""
+    "price": { monthly: 1299, "yearly": 12990, "currency"""}
     "features"""
     "link"""
     "icon"""

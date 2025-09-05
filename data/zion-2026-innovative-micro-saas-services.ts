@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI & Automation"""
     "realService"""
-    technology["OpenAI GPT-4", "Anthropic Claude", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Kubernetes"""
-    integrations["Salesforce", "SAP", "Oracle", "Microsoft Dynamics", "Slack", "Microsoft Teams", "Zapier", "Workato"""
-    useCases["End-to-end process automation", "Autonomous decision making", "Business process optimization", "Resource management", "Performance monitoring", "Strategic planning"""
+    technology["OpenAI GPT-4", "Anthropic Claude", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Kubernetes"""]
+    integrations["Salesforce", "SAP", "Oracle", "Microsoft Dynamics", "Slack", "Microsoft Teams", "Zapier", "Workato"""]
+    useCases["End-to-end process automation", "Autonomous decision making", "Business process optimization", "Resource management", "Performance monitoring", "Strategic planning"""]
     "roi": "Average customer sees 800% ROI within 12 months through complete operational automation and optimization."""
-    competitors["UiPath", "Automation Anywhere", "Blue Prism", "Pega", "Appian"""
+    competitors["UiPath", "Automation Anywhere", "Blue Prism", "Pega", "Appian"""]
     "marketSize": "$19.6B market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 days"""
     "category": "Cybersecurity & Quantum"""
     "realService"""
-    technology["IBM Qiskit", "Google Cirq", "OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "AWS", "Docker"""
-    integrations["Splunk", "QRadar", "CrowdStrike", "SentinelOne", "Slack", "Microsoft Teams", "Jira", "ServiceNow"""
-    useCases["Advanced threat detection", "Quantum encryption", "Incident response automation", "Compliance management", "Security orchestration", "Threat hunting"""
+    technology["IBM Qiskit", "Google Cirq", "OpenAI GPT-4", "TensorFlow", "React", "Node.js", "PostgreSQL", "AWS", "Docker"""]
+    integrations["Splunk", "QRadar", "CrowdStrike", "SentinelOne", "Slack", "Microsoft Teams", "Jira", "ServiceNow"""]
+    useCases["Advanced threat detection", "Quantum encryption", "Incident response automation", "Compliance management", "Security orchestration", "Threat hunting"""]
     "roi": "Average customer sees 600% ROI within 8 months through enhanced security posture and reduced incident response time."""
-    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance", "Sophos"""
+    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance", "Sophos"""]
     "marketSize": "$173.5B market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Healthcare & AI"""
     "realService"""
-    technology["OpenAI GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "HIPAA-compliant"""
-    integrations["Epic", "Cerner", "Allscripts", "HL7 FHIR", "DICOM", "Slack", "Microsoft Teams", "Jira"""
-    useCases["Patient outcome prediction", "Operational efficiency", "Clinical decision support", "Population health", "Risk assessment", "Resource optimization"""
+    technology["OpenAI GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "HIPAA-compliant"""]
+    integrations["Epic", "Cerner", "Allscripts", "HL7 FHIR", "DICOM", "Slack", "Microsoft Teams", "Jira"""]
+    useCases["Patient outcome prediction", "Operational efficiency", "Clinical decision support", "Population health", "Risk assessment", "Resource optimization"""]
     "roi": "Average customer sees 400% ROI within 10 months through improved patient outcomes and operational efficiency."""
-    competitors["Epic", "Cerner", "Allscripts", "Athenahealth", "eClinicalWorks"""
+    competitors["Epic", "Cerner", "Allscripts", "Athenahealth", "eClinicalWorks"""]
     "marketSize": "$96.5B market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Blockchain & Supply Chain"""
     "realService"""
-    technology["Ethereum", "Hyperledger Fabric", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"""
-    integrations["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems", "ERP systems", "Slack", "Microsoft Teams"""
-    useCases["Product traceability", "Supply chain transparency", "Compliance management", "Quality assurance", "Risk management", "Sustainability tracking"""
+    technology["Ethereum", "Hyperledger Fabric", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"""]
+    integrations["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems", "ERP systems", "Slack", "Microsoft Teams"""]
+    useCases["Product traceability", "Supply chain transparency", "Compliance management", "Quality assurance", "Risk management", "Sustainability tracking"""]
     "roi": "Average customer sees 350% ROI within 6 months through improved transparency and compliance automation."""
-    competitors["SAP Ariba", "Oracle Procurement", "Coupa", "Jaggaer", "Basware"""
+    competitors["SAP Ariba", "Oracle Procurement", "Coupa", "Jaggaer", "Basware"""]
     "marketSize": "$15.8B market"""
     "growthRate": "220% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 days"""
     "category": "Fintech & AI"""
     "realService"""
-    technology["OpenAI GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood", "Slack", "Microsoft Teams"""
-    useCases["Algorithmic trading", "Portfolio optimization", "Risk management", "Market analysis", "Automated execution", "Performance tracking"""
+    technology["OpenAI GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood", "Slack", "Microsoft Teams"""]
+    useCases["Algorithmic trading", "Portfolio optimization", "Risk management", "Market analysis", "Automated execution", "Performance tracking"""]
     "roi": "Average customer sees 500% ROI within 8 months through improved trading performance and risk management."""
-    competitors["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood"""
+    competitors["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood"""]
     "marketSize": "$12.4B market"""
     "growthRate": "190% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "IoT & Edge Computing"""
     "realService"""
-    technology["TensorFlow Lite", "OpenVINO", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "Slack", "Microsoft Teams", "Jira"""
-    useCases["Industrial IoT", "Smart cities", "Energy monitoring", "Transportation tracking", "Healthcare monitoring", "Predictive maintenance"""
+    technology["TensorFlow Lite", "OpenVINO", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "Slack", "Microsoft Teams", "Jira"""]
+    useCases["Industrial IoT", "Smart cities", "Energy monitoring", "Transportation tracking", "Healthcare monitoring", "Predictive maintenance"""]
     "roi": "Average customer sees 400% ROI within 7 months through improved operational efficiency and predictive maintenance."""
-    competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager", "VMware Edge"""
+    competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager", "VMware Edge"""]
     "marketSize": "$8.9B market"""
     "growthRate": "240% annual growth"""
     "variant": "iot-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 day"""
     "category": "AI & Content Creation"""
     "realService"""
-    technology["OpenAI GPT-4", "Anthropic Claude", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social media platforms", "Slack", "Microsoft Teams"""
-    useCases["Blog content creation", "Social media posts", "Email marketing", "Product descriptions", "SEO content", "Brand messaging"""
+    technology["OpenAI GPT-4", "Anthropic Claude", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social media platforms", "Slack", "Microsoft Teams"""]
+    useCases["Blog content creation", "Social media posts", "Email marketing", "Product descriptions", "SEO content", "Brand messaging"""]
     "roi": "Average customer sees 300% ROI within 4 months through improved content quality and increased engagement."""
-    competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Peppertype"""
+    competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Peppertype"""]
     "marketSize": "$6.8B market"""
     "growthRate": "160% annual growth"""
     "variant": "ai-futuristic"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Quantum & Machine Learning"""
     "realService"""
-    technology["IBM Qiskit", "Google Cirq", "TensorFlow Quantum", "React", "Node.js", "PostgreSQL", "AWS", "Docker"""
-    integrations["IBM Watson", "Google AI Platform", "AWS SageMaker", "Jupyter", "Slack", "Microsoft Teams", "Jira"""
-    useCases["Drug discovery", "Financial modeling", "Climate prediction", "Optimization problems", "Pattern recognition", "Complex simulations"""
+    technology["IBM Qiskit", "Google Cirq", "TensorFlow Quantum", "React", "Node.js", "PostgreSQL", "AWS", "Docker"""]
+    integrations["IBM Watson", "Google AI Platform", "AWS SageMaker", "Jupyter", "Slack", "Microsoft Teams", "Jira"""]
+    useCases["Drug discovery", "Financial modeling", "Climate prediction", "Optimization problems", "Pattern recognition", "Complex simulations"""]
     "roi": "Average customer sees 800% ROI within 12 months through accelerated research and development capabilities."""
-    competitors["IBM Watson", "Google AI Platform", "AWS SageMaker", "Azure Machine Learning", "DataRobot"""
+    competitors["IBM Watson", "Google AI Platform", "AWS SageMaker", "Azure Machine Learning", "DataRobot"""]
     "marketSize": "$21.5B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 days"""
     "category": "AI & Customer Service"""
     "realService"""
-    technology["OpenAI GPT-4", "Anthropic Claude", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Zendesk", "Freshdesk", "Intercom", "Slack", "Microsoft Teams", "Salesforce", "HubSpot", "Shopify"""
-    useCases["Customer support automation", "Ticket management", "Chatbot implementation", "Performance tracking", "Customer satisfaction", "Support optimization"""
+    technology["OpenAI GPT-4", "Anthropic Claude", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Zendesk", "Freshdesk", "Intercom", "Slack", "Microsoft Teams", "Salesforce", "HubSpot", "Shopify"""]
+    useCases["Customer support automation", "Ticket management", "Chatbot implementation", "Performance tracking", "Customer satisfaction", "Support optimization"""]
     "roi": "Average customer sees 400% ROI within 6 months through improved customer satisfaction and reduced support costs."""
-    competitors["Zendesk", "Freshdesk", "Intercom", "Help Scout", "Kayako"""
+    competitors["Zendesk", "Freshdesk", "Intercom", "Help Scout", "Kayako"""]
     "marketSize": "$18.9B market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""
@@ -442,11 +442,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Space Technology"""
     "realService"""
-    technology["Python", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes", "Satellite APIs"""
-    integrations["Maxar", "Planet Labs", "Spire", "NASA APIs", "ESA APIs", "Slack", "Microsoft Teams", "Jira"""
-    useCases["Satellite operations", "Space data analysis", "Launch planning", "Mission control", "Research applications", "Commercial space"""
+    technology["Python", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes", "Satellite APIs"""]
+    integrations["Maxar", "Planet Labs", "Spire", "NASA APIs", "ESA APIs", "Slack", "Microsoft Teams", "Jira"""]
+    useCases["Satellite operations", "Space data analysis", "Launch planning", "Mission control", "Research applications", "Commercial space"""]
     "roi": "Average customer sees 600% ROI within 18 months through improved operational efficiency and cost optimization."""
-    competitors["Maxar", "Planet Labs", "Spire", "BlackSky", "Capella Space"""
+    competitors["Maxar", "Planet Labs", "Spire", "BlackSky", "Capella Space"""]
     "marketSize": "$4.7B market"""
     "growthRate": "280% annual growth"""
     "variant": "space-futuristic"""

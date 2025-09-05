@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-12 months"""
     "category": "Space Colonization & Mining"""
     "realService"""
-    technology["AI & Robotics", "Space Technology", "Autonomous Systems", "3D Printing", "Life Support Systems", "Satellite Communication"""
-    integrations["NASA systems", "SpaceX platforms", "Satellite networks", "Ground control systems", "Research databases", "Space monitoring tools"""
-    useCases["Mars colonization", "Space habitat construction", "Resource extraction", "Life support management", "Colony expansion", "Space research"""
+    technology["AI & Robotics", "Space Technology", "Autonomous Systems", "3D Printing", "Life Support Systems", "Satellite Communication"""]
+    integrations["NASA systems", "SpaceX platforms", "Satellite networks", "Ground control systems", "Research databases", "Space monitoring tools"""]
+    useCases["Mars colonization", "Space habitat construction", "Resource extraction", "Life support management", "Colony expansion", "Space research"""]
     "roi": "Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development."""
-    competitors["Space infrastructure platforms", "Space research tools", "Government space programs"""
+    competitors["Space infrastructure platforms", "Space research tools", "Government space programs"""]
     "marketSize": "$100B space economy market"""
     "growthRate": "500% annual growth"""
     "variant": "space-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 months"""
     "category": "Space Colonization & Mining"""
     "realService"""
-    technology["Quantum Communication", "Satellite Technology", "AI Routing", "Network Management", "Space Communication", "Advanced Encryption"""
-    integrations["Satellite systems", "Ground stations", "Spacecraft communication", "Research platforms", "Government networks", "Commercial platforms"""
-    useCases["Interplanetary communication", "Satellite network management", "Space mission communication", "Research collaboration", "Commercial space operations", "Emergency communications"""
+    technology["Quantum Communication", "Satellite Technology", "AI Routing", "Network Management", "Space Communication", "Advanced Encryption"""]
+    integrations["Satellite systems", "Ground stations", "Spacecraft communication", "Research platforms", "Government networks", "Commercial platforms"""]
+    useCases["Interplanetary communication", "Satellite network management", "Space mission communication", "Research collaboration", "Commercial space operations", "Emergency communications"""]
     "roi": "Space agencies report 1200% ROI through improved mission communication. Commercial companies see 800% ROI in space operations efficiency."""
-    competitors["Satellite communication networks", "Space communication platforms", "Government space networks"""
+    competitors["Satellite communication networks", "Space communication platforms", "Government space networks"""]
     "marketSize": "$80B satellite communication market"""
     "growthRate": "400% annual growth"""
     "variant": "space-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5-10 months"""
     "category": "Space Colonization & Mining"""
     "realService"""
-    technology["AI & Robotics", "Mining Technology", "Space Equipment", "Resource Processing", "Autonomous Systems", "Satellite Technology"""
-    integrations["Mining equipment", "Satellite systems", "Processing facilities", "Transport systems", "Research platforms", "Analytics tools"""
-    useCases["Asteroid mining", "Lunar resource extraction", "Space resource processing", "Mining fleet management", "Resource optimization", "Safety monitoring"""
+    technology["AI & Robotics", "Mining Technology", "Space Equipment", "Resource Processing", "Autonomous Systems", "Satellite Technology"""]
+    integrations["Mining equipment", "Satellite systems", "Processing facilities", "Transport systems", "Research platforms", "Analytics tools"""]
+    useCases["Asteroid mining", "Lunar resource extraction", "Space resource processing", "Mining fleet management", "Resource optimization", "Safety monitoring"""]
     "roi": "Mining companies report 1000% ROI through automated operations. Investment firms see 800% ROI in space resource development."""
-    competitors["Terrestrial mining platforms", "Space research tools", "Resource extraction platforms"""
+    competitors["Terrestrial mining platforms", "Space research tools", "Resource extraction platforms"""]
     "marketSize": "$60B space mining market"""
     "growthRate": "600% annual growth"""
     "variant": "space-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 months"""
     "category": "Space Architecture & Energy"""
     "realService"""
-    technology["AI Design", "3D Modeling", "Environmental Simulation", "Material Science", "Structural Analysis", "Space Technology"""
-    integrations["Design software", "3D modeling tools", "Simulation platforms", "Engineering tools", "Construction platforms", "Research databases"""
-    useCases["Space habitat design", "Planetary architecture", "Environmental optimization", "Material selection", "Structural planning", "Habitat expansion"""
+    technology["AI Design", "3D Modeling", "Environmental Simulation", "Material Science", "Structural Analysis", "Space Technology"""]
+    integrations["Design software", "3D modeling tools", "Simulation platforms", "Engineering tools", "Construction platforms", "Research databases"""]
+    useCases["Space habitat design", "Planetary architecture", "Environmental optimization", "Material selection", "Structural planning", "Habitat expansion"""]
     "roi": "Architecture firms report 600% ROI through space design projects. Engineering companies see 500% ROI in space construction planning."""
-    competitors["Architectural design platforms", "Engineering design tools", "Space research platforms"""
+    competitors["Architectural design platforms", "Engineering design tools", "Space research platforms"""]
     "marketSize": "$45B architectural design market"""
     "growthRate": "300% annual growth"""
     "variant": "space-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 months"""
     "category": "Space Architecture & Energy"""
     "realService"""
-    technology["Energy Harvesting", "Solar Technology", "Energy Storage", "AI Optimization", "Power Systems", "Space Technology"""
-    integrations["Solar panels", "Energy storage systems", "Power distribution", "Monitoring systems", "Research platforms", "Analytics tools"""
-    useCases["Space power generation", "Energy optimization", "Power distribution", "Energy storage", "Grid management", "Backup power systems"""
+    technology["Energy Harvesting", "Solar Technology", "Energy Storage", "AI Optimization", "Power Systems", "Space Technology"""]
+    integrations["Solar panels", "Energy storage systems", "Power distribution", "Monitoring systems", "Research platforms", "Analytics tools"""]
+    useCases["Space power generation", "Energy optimization", "Power distribution", "Energy storage", "Grid management", "Backup power systems"""]
     "roi": "Energy companies report 800% ROI through space energy harvesting. Space agencies see 600% ROI in mission power efficiency."""
-    competitors["Renewable energy platforms", "Power management systems", "Space research platforms"""
+    competitors["Renewable energy platforms", "Power management systems", "Space research platforms"""]
     "marketSize": "$70B renewable energy market"""
     "growthRate": "350% annual growth"""
     "variant": "space-futuristic"""

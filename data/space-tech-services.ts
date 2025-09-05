@@ -1,4 +1,4 @@
-export interface SpaceTechService {;
+export interface SpaceTechService {;}
   "id"""
   "realImplementation"""
     id: "space-mission-management-platform"""
@@ -28,11 +28,11 @@ export interface SpaceTechService {;
     "setupTime": "2 weeks"""
     "category": "Space Technology"""
     "realService"""
-    technology["Orbital Mechanics", "Satellite Tracking", "Space Weather", "React", "Node.js", "PostgreSQL", "Real-time Data"""
-    integrations["Satellite networks", "Launch providers", "Ground stations", "Weather services", "Regulatory databases", "Tracking systems"""
-    useCases["Mission planning", "Satellite operations", "Launch coordination", "Space monitoring", "Regulatory compliance", "Performance optimization"""
+    technology["Orbital Mechanics", "Satellite Tracking", "Space Weather", "React", "Node.js", "PostgreSQL", "Real-time Data"""]
+    integrations["Satellite networks", "Launch providers", "Ground stations", "Weather services", "Regulatory databases", "Tracking systems"""]
+    useCases["Mission planning", "Satellite operations", "Launch coordination", "Space monitoring", "Regulatory compliance", "Performance optimization"""]
     "roi": "Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams."""
-    competitors["SpaceX Starlink", "OneWeb", "Basic satellite services"""
+    competitors["SpaceX Starlink", "OneWeb", "Basic satellite services"""]
     "marketSize": "$469B space economy"""
     "growthRate": "400% annual growth"""
     "variant": "space-futuristic"""
@@ -74,11 +74,11 @@ export interface SpaceTechService {;
     "setupTime": "1 week"""
     "category": "Space Technology"""
     "realService"""
-    technology["AI Optimization", "Satellite Networks", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Systems"""
-    integrations["Satellite networks", "Ground stations", "Internet infrastructure", "Telecom systems", "Monitoring tools"""
-    useCases["Constellation management", "Coverage optimization", "Performance monitoring", "Maintenance planning", "Traffic management", "Efficiency optimization"""
+    technology["AI Optimization", "Satellite Networks", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Systems"""]
+    integrations["Satellite networks", "Ground stations", "Internet infrastructure", "Telecom systems", "Monitoring tools"""]
+    useCases["Constellation management", "Coverage optimization", "Performance monitoring", "Maintenance planning", "Traffic management", "Efficiency optimization"""]
     "roi": "Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality."""
-    competitors["Traditional satellite management", "Basic monitoring tools"""
+    competitors["Traditional satellite management", "Basic monitoring tools"""]
     "marketSize": "$150B satellite services market"""
     "growthRate": "300% annual growth"""
     "variant": "space-futuristic"""
@@ -120,11 +120,11 @@ export interface SpaceTechService {;
     "setupTime": "1 week"""
     "category": "Space Technology"""
     "realService"""
-    technology["AI Risk Assessment", "Debris Tracking", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Data"""
-    integrations["Satellite networks", "Tracking systems", "Launch providers", "Insurance platforms", "Research databases"""
-    useCases["Debris monitoring", "Collision avoidance", "Risk assessment", "Insurance underwriting", "Research analysis", "Safety planning"""
+    technology["AI Risk Assessment", "Debris Tracking", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Data"""]
+    integrations["Satellite networks", "Tracking systems", "Launch providers", "Insurance platforms", "Research databases"""]
+    useCases["Debris monitoring", "Collision avoidance", "Risk assessment", "Insurance underwriting", "Research analysis", "Safety planning"""]
     "roi": "Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection."""
-    competitors["Basic debris tracking", "Manual monitoring"""
+    competitors["Basic debris tracking", "Manual monitoring"""]
     "marketSize": "$50B space safety market"""
     "growthRate": "250% annual growth"""
     "variant": "space-futuristic"""
@@ -166,11 +166,11 @@ export interface SpaceTechService {;
     "setupTime": "1 week"""
     "category": "Space Technology"""
     "realService"""
-    technology["AI Forecasting", "Space Weather", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Monitoring"""
-    integrations["Solar observatories", "Satellite networks", "Power grids", "Telecom systems", "Aviation systems"""
-    useCases["Weather forecasting", "Impact assessment", "Risk mitigation", "Operational planning", "Research analysis", "Safety planning"""
+    technology["AI Forecasting", "Space Weather", "Machine Learning", "React", "Node.js", "PostgreSQL", "Real-time Monitoring"""]
+    integrations["Solar observatories", "Satellite networks", "Power grids", "Telecom systems", "Aviation systems"""]
+    useCases["Weather forecasting", "Impact assessment", "Risk mitigation", "Operational planning", "Research analysis", "Safety planning"""]
     "roi": "Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity."""
-    competitors["Basic weather data", "Manual monitoring"""
+    competitors["Basic weather data", "Manual monitoring"""]
     "marketSize": "$30B space weather market"""
     "growthRate": "200% annual growth"""
     "variant": "space-futuristic"""
@@ -212,11 +212,11 @@ export interface SpaceTechService {;
     "setupTime": "2 weeks"""
     "category": "Space Technology"""
     "realService"""
-    technology["Launch Coordination", "Orbital Mechanics", "Precision Timing", "React", "Node.js", "PostgreSQL", "Real-time Systems"""
-    integrations["Launch vehicles", "Ground stations", "Tracking systems", "Mission control", "Satellite networks"""
-    useCases["Launch coordination", "Mission planning", "Timing optimization", "Trajectory planning", "Mission tracking", "Performance analysis"""
+    technology["Launch Coordination", "Orbital Mechanics", "Precision Timing", "React", "Node.js", "PostgreSQL", "Real-time Systems"""]
+    integrations["Launch vehicles", "Ground stations", "Tracking systems", "Mission control", "Satellite networks"""]
+    useCases["Launch coordination", "Mission planning", "Timing optimization", "Trajectory planning", "Mission tracking", "Performance analysis"""]
     "roi": "Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success."""
-    competitors["Basic coordination", "Manual planning"""
+    competitors["Basic coordination", "Manual planning"""]
     "marketSize": "$20B launch services market"""
     "growthRate": "180% annual growth"""
     "variant": "space-futuristic"""
@@ -258,11 +258,11 @@ export interface SpaceTechService {;
     "setupTime": "1 week"""
     "category": "Space Technology"""
     "realService"""
-    technology["Network Management", "Global Coordination", "AI Optimization", "React", "Node.js", "PostgreSQL", "Real-time Systems"""
-    integrations["Ground stations", "Satellite networks", "Telecom systems", "Monitoring tools", "Control systems"""
-    useCases["Network management", "Traffic optimization", "Performance monitoring", "Maintenance planning", "Failover management", "Global coordination"""
+    technology["Network Management", "Global Coordination", "AI Optimization", "React", "Node.js", "PostgreSQL", "Real-time Systems"""]
+    integrations["Ground stations", "Satellite networks", "Telecom systems", "Monitoring tools", "Control systems"""]
+    useCases["Network management", "Traffic optimization", "Performance monitoring", "Maintenance planning", "Failover management", "Global coordination"""]
     "roi": "Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability."""
-    competitors["Basic management", "Manual coordination"""
+    competitors["Basic management", "Manual coordination"""]
     "marketSize": "$25B ground station market"""
     "growthRate": "220% annual growth"""
     "variant": "space-futuristic"""
@@ -304,11 +304,11 @@ export interface SpaceTechService {;
     "setupTime": "1 hour"""
     "category": "Space Technology"""
     "realService"""
-    technology["Data Analytics", "AI Analysis", "Satellite Data", "React", "Node.js", "PostgreSQL", "Machine Learning"""
-    integrations["Satellite networks", "Research databases", "Educational platforms", "Media systems", "Government databases"""
-    useCases["Research analysis", "Educational content", "Media reporting", "Policy development", "Scientific discovery", "Data exploration"""
+    technology["Data Analytics", "AI Analysis", "Satellite Data", "React", "Node.js", "PostgreSQL", "Machine Learning"""]
+    integrations["Satellite networks", "Research databases", "Educational platforms", "Media systems", "Government databases"""]
+    useCases["Research analysis", "Educational content", "Media reporting", "Policy development", "Scientific discovery", "Data exploration"""]
     "roi": "Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights."""
-    competitors["Basic data access", "Manual research"""
+    competitors["Basic data access", "Manual research"""]
     "marketSize": "$15B space research market"""
     "growthRate": "180% annual growth"""
     "variant": "space-futuristic"""
@@ -350,11 +350,11 @@ export interface SpaceTechService {;
     "setupTime": "1 week"""
     "category": "Space Technology"""
     "realService"""
-    technology["Blockchain", "Smart Contracts", "Trading Platform", "React", "Node.js", "PostgreSQL", "Security"""
-    integrations["Payment systems", "Blockchain networks", "Space services", "Financial systems", "Compliance platforms"""
-    useCases["Asset trading", "Service procurement", "Capacity trading", "Investment trading", "Insurance trading", "Market making"""
+    technology["Blockchain", "Smart Contracts", "Trading Platform", "React", "Node.js", "PostgreSQL", "Security"""]
+    integrations["Payment systems", "Blockchain networks", "Space services", "Financial systems", "Compliance platforms"""]
+    useCases["Asset trading", "Service procurement", "Capacity trading", "Investment trading", "Insurance trading", "Market making"""]
     "roi": "Create new revenue streams through space asset trading and reduce transaction costs by 50%."""
-    competitors["Manual contracts", "Traditional procurement"""
+    competitors["Manual contracts", "Traditional procurement"""]
     "marketSize": "$100B space services market"""
     "growthRate": "300% annual growth"""
     "variant": "space-futuristic"""
@@ -396,11 +396,11 @@ export interface SpaceTechService {;
     "setupTime": "1 hour"""
     "category": "Space Technology"""
     "realService"""
-    technology["Interactive Learning", "Virtual Reality", "AI Tutoring", "React", "Node.js", "PostgreSQL", "Simulation Engine"""
-    integrations["Educational platforms", "VR systems", "Learning management", "Career platforms", "Social networks"""
-    useCases["Space education", "Career training", "Skill development", "Professional certification", "Academic learning", "Personal development"""
+    technology["Interactive Learning", "Virtual Reality", "AI Tutoring", "React", "Node.js", "PostgreSQL", "Simulation Engine"""]
+    integrations["Educational platforms", "VR systems", "Learning management", "Career platforms", "Social networks"""]
+    useCases["Space education", "Career training", "Skill development", "Professional certification", "Academic learning", "Personal development"""]
     "roi": "Accelerate space education and career development through interactive learning. ROI through skill development and career advancement."""
-    competitors["Basic education", "Traditional courses"""
+    competitors["Basic education", "Traditional courses"""]
     "marketSize": "$8B space education market"""
     "growthRate": "200% annual growth"""
     "variant": "space-futuristic"""

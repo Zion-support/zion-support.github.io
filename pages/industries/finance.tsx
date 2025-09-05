@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   DollarSign, 
   Brain, 
   Shield, 
@@ -17,101 +17,101 @@ import {
   FileText,
   Users;'
 } from 'lucide-react'
-import Layout from '../../components/Layout
-const services = [
-  {'
+import Layout from '../../components/Layout;
+const services = []
+  {'}
     title: 'Blockchain Solutions',''
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.','
     icon: Shield,
-    features: ['
+    features: [']
       'Smart contract development',''
       'Cryptocurrency integration',''
       'Decentralized finance (DeFi)',''
-      'Digital identity management'']
-    ]
+      'Digital identity management''];
+    ];
   },
-  {'
+  {'}
     title: 'AI Trading Algorithms',''
     description: 'Advanced machine learning algorithms for automated trading and investment strategies.','
     icon: Brain,
-    features: ['
+    features: [']
       'Algorithmic trading systems',''
       'Risk management AI',''
       'Market prediction models',''
-      'Portfolio optimization'']
-    ]
+      'Portfolio optimization''];
+    ];
   },
-  {'
+  {'}
     title: 'Digital Payment Systems',''
     description: 'Secure, scalable payment processing solutions for modern financial transactions.','
     icon: CreditCard,
-    features: ['
+    features: [']
       'Payment gateway integration',''
       'Mobile payment solutions',''
       'Cross-border payments',''
-      'Fraud detection systems'']
-    ]
+      'Fraud detection systems''];
+    ];
   },
-  {'
+  {'}
     title: 'Risk Management AI',''
     description: 'AI-powered risk assessment and management tools for financial institutions.','
     icon: TrendingUp,
-    features: ['
+    features: [']
       'Credit risk analysis',''
       'Market risk modeling',''
       'Operational risk assessment',''
-      'Regulatory compliance monitoring'']
-    ]
+      'Regulatory compliance monitoring''];
+    ];
   },
-  {'
+  {'}
     title: 'Fraud Detection Systems',''
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.','
     icon: Lock,
-    features: ['
+    features: [']
       'Real-time transaction monitoring',''
       'Behavioral analysis',''
       'Pattern recognition',''
-      'Automated alert systems'']
-    ]
+      'Automated alert systems''];
+    ];
   },
-  {'
+  {'}
     title: 'Regulatory Compliance Tools',''
     description: 'Automated compliance monitoring and reporting for financial regulations.','
     icon: FileText,
-    features: ['
+    features: [']
       'KYC/AML automation',''
       'Regulatory reporting',''
       'Audit trail management',''
-      'Compliance dashboards'']
-    ]
-  }
+      'Compliance dashboards''];
+    ];
+  };
 ];
 
-const benefits = [
-  {'
+const benefits = []
+  {'}
     title: 'Enhanced Security',''
     description: 'Bank-grade security measures protect sensitive financial data and transactions.','
     icon: Shield;
   },
-  {'
+  {'}
     title: 'Improved Efficiency',''
     description: 'Automated processes reduce manual work and increase operational efficiency.','
     icon: BarChart3;
   },
-  {'
+  {'}
     title: 'Better Risk Management',''
     description: 'AI-powered risk assessment helps make informed financial decisions.','
     icon: TrendingUp;
   },
-  {'
+  {'}
     title: 'Regulatory Compliance',''
     description: 'Built-in compliance tools ensure adherence to financial regulations.','
     icon: FileText;
-  }]
+  }];
 ];
 
-export default function FinancePage() {
-  return (
+export default function FinancePage() {}
+  return ()
     <Layout;'
       title="Financial Technology Solutions - Zion Tech Group"
       description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
@@ -132,9 +132,9 @@ export default function FinancePage() {
           <div className="container mx-auto px-4 relative z-10">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -169,9 +169,9 @@ export default function FinancePage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -186,10 +186,10 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={service.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -209,8 +209,8 @@ export default function FinancePage() {
 </CheckCircle>
                       </li>
                   </ul>
-                </motion.div>)
-              ))}
+                </motion.div>);
+              ))};
             </div>
           </div>
         </section>"
@@ -219,9 +219,9 @@ export default function FinancePage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -236,10 +236,10 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={benefit.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="text-center"
                 >
 </motion>"
@@ -251,7 +251,7 @@ export default function FinancePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -260,9 +260,9 @@ export default function FinancePage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

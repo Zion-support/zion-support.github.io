@@ -1,4 +1,4 @@
-export interface RealMarketService {;
+export interface RealMarketService {;}
   "id"""
     id: "market-analysis-platform"""
     "name": "Market Analysis Platform"""
@@ -40,11 +40,11 @@ export interface RealMarketService {;
     "setupTime": "1–3 days"""
     "category": "E‑commerce"""
     "realService"""
-    technology["Shopify", "WooCommerce", "Stripe", "Shippo"""
-    integrations["Shopify", "WooCommerce", "Shippo", "UPS/FedEx"""
-    useCases["Reduce refunds", "Increase exchanges", "Shorten RMA cycle"""
+    technology["Shopify", "WooCommerce", "Stripe", "Shippo"""]
+    integrations["Shopify", "WooCommerce", "Shippo", "UPS/FedEx"""]
+    useCases["Reduce refunds", "Increase exchanges", "Shorten RMA cycle"""]
     "roi": "Reduce return handling time by 40% and logistics costs by 10–20%."""
-    competitors["Loop", "Returnly", "Happy Returns"""
+    competitors["Loop", "Returnly", "Happy Returns"""]
     "marketSize": "$9B returns tech"""
     "growthRate": "18% YoY"""
     "variant": "growth-futuristic" as , "contactInfo"""
@@ -81,11 +81,11 @@ export interface RealMarketService {;
     "setupTime": "1 day"""
     "category": "Growth & Marketing"""
     "realService"""
-    technology["Next.js", "IMAP/SMTP", "Calendars"""
-    integrations["HubSpot", "Pipedrive", "Google/Outlook"""
-    useCases["Lead nurturing", "Onboarding nudges", "Renewal reminders"""
+    technology["Next.js", "IMAP/SMTP", "Calendars"""]
+    integrations["HubSpot", "Pipedrive", "Google/Outlook"""]
+    useCases["Lead nurturing", "Onboarding nudges", "Renewal reminders"""]
     "roi": "Lift reply rates by 15–35% and shorten sales cycles."""
-    competitors["Mailshake", "Lemlist", "Apollo"""
+    competitors["Mailshake", "Lemlist", "Apollo"""]
     "marketSize": "$6B sales engagement"""
     "growthRate": "20% YoY"""
     "variant": "growth-futuristic" as , "contactInfo"""
@@ -122,11 +122,11 @@ export interface RealMarketService {;
     "setupTime": "Same day"""
     "category": "Creator Tools"""
     "realService"""
-    technology["ASR", "NLP", "FFmpeg"""
-    integrations["Spotify for Podcasters", "Buzzsprout", "Riverside"""
-    useCases["SEO, accessibility, repurposing clips"""
+    technology["ASR", "NLP", "FFmpeg"""]
+    integrations["Spotify for Podcasters", "Buzzsprout", "Riverside"""]
+    useCases["SEO, accessibility, repurposing clips"""]
     "roi": "Cut post‑production time by 50–70% and improve SEO traffic."""
-    competitors["Descript", "Castmagic", "Capsho"""
+    competitors["Descript", "Castmagic", "Capsho"""]
     "marketSize": "$2B podcast tooling"""
     "growthRate": "19% YoY"""
     "variant": "ai-futuristic" as , "contactInfo"""
@@ -163,11 +163,11 @@ export interface RealMarketService {;
     "setupTime": "15 minutes"""
     "category": "Creator Tools"""
     "realService"""
-    technology["Next.js", "Forms", "SEO"""
-    integrations["Calendly", "HubSpot", "GA4"""
-    useCases["Showcase work", "Capture leads", "Book meetings"""
+    technology["Next.js", "Forms", "SEO"""]
+    integrations["Calendly", "HubSpot", "GA4"""]
+    useCases["Showcase work", "Capture leads", "Book meetings"""]
     "roi": "Increase inbound leads by 10–25% with polished case studies."""
-    competitors["Webflow", "Squarespace", "Wix"""
+    competitors["Webflow", "Squarespace", "Wix"""]
     "marketSize": "$4B creator sites"""
     "growthRate": "11% YoY"""
     "variant": "growth-futuristic" as , "contactInfo"""
@@ -204,11 +204,11 @@ export interface RealMarketService {;
     "setupTime": "Same day"""
     "category": "CRM"""
     "realService"""
-    technology["Next.js", "SQLite/Postgres"""
-    integrations["Gmail/Outlook", "Twilio"""
-    useCases["Track customers", "Follow‑ups", "Close more deals"""
+    technology["Next.js", "SQLite/Postgres"""]
+    integrations["Gmail/Outlook", "Twilio"""]
+    useCases["Track customers", "Follow‑ups", "Close more deals"""]
     "roi": "Reduce no‑shows and lost leads; +10–20% revenue lift."""
-    competitors["HubSpot Starter", "Pipedrive Essentials"""
+    competitors["HubSpot Starter", "Pipedrive Essentials"""]
     "marketSize": "$20B SMB CRM"""
     "growthRate": "10% YoY"""
     "variant": "analytics-futuristic" as , "contactInfo"""
@@ -245,11 +245,11 @@ export interface RealMarketService {;
     "setupTime": "Same day"""
     "category": "AI & Marketing"""
     "realService"""
-    technology["NLP/LLM", "ESP APIs"""
-    integrations["Mailchimp", "Klaviyo", "SendGrid"""
-    useCases["Boost open rates", "Faster copy iteration"""
+    technology["NLP/LLM", "ESP APIs"""]
+    integrations["Mailchimp", "Klaviyo", "SendGrid"""]
+    useCases["Boost open rates", "Faster copy iteration"""]
     "roi": "Improve opens by 5–15% and reduce time‑to‑send."""
-    competitors["Copy.ai", "Jasper", "Headline analyzers"""
+    competitors["Copy.ai", "Jasper", "Headline analyzers"""]
     "marketSize": "$3B marketing AI"""
     "growthRate": "24% YoY"""
     "variant": "ai-futuristic" as , "contactInfo"""
@@ -286,11 +286,11 @@ export interface RealMarketService {;
     "setupTime": "3 days"""
     "category": "Dev Productivity"""
     "realService"""
-    technology["GitHub/GitLab APIs", "CI logs"""
-    integrations["GitHub", "GitLab", "Jira", "Linear"""
-    useCases["Improve code review", "Reduce cycle time", "Stabilize CI"""
+    technology["GitHub/GitLab APIs", "CI logs"""]
+    integrations["GitHub", "GitLab", "Jira", "Linear"""]
+    useCases["Improve code review", "Reduce cycle time", "Stabilize CI"""]
     "roi": "Shorten cycle time by 10–25% and cut flaky tests."""
-    competitors["LinearB", "Swarmia", "Velocity"""
+    competitors["LinearB", "Swarmia", "Velocity"""]
     "marketSize": "$5B dev analytics"""
     "growthRate": "21% YoY"""
     "variant": "analytics-futuristic" as , "contactInfo"""
@@ -325,11 +325,11 @@ export interface RealMarketService {;
     "setupTime": "1–2 days"""
     "category": "Enterprise IT"""
     "realService"""
-    technology["Intune, ABM/DEP, Android Enterprise"""
-    integrations["Azure AD, Microsoft 365"""
-    useCases["Device compliance, App protection, Zero‑touch rollout"""
+    technology["Intune, ABM/DEP, Android Enterprise"""]
+    integrations["Azure AD, Microsoft 365"""]
+    useCases["Device compliance, App protection, Zero‑touch rollout"""]
     "roi": "Reduce manual enrollments and improve compliance posture."""
-    competitors["Jamf, Kandji, Intune turnkey partners"""
+    competitors["Jamf, Kandji, Intune turnkey partners"""]
     "marketSize": "$6B+ MDM"""
     "growthRate": "18% YoY"""
     "variant": "cloud-futuristic" as , "contactInfo"""
@@ -364,11 +364,11 @@ export interface RealMarketService {;
     "setupTime": "1 hour"""
     "category": "AI & Data"""
     "realService"""
-    technology["OpenAI STT, Embeddings, Jira/GitHub APIs"""
-    integrations["Google Meet, Zoom, Jira, GitHub"""
-    useCases["Reduce manual note‑taking, Faster follow‑ups, Better accountability"""
+    technology["OpenAI STT, Embeddings, Jira/GitHub APIs"""]
+    integrations["Google Meet, Zoom, Jira, GitHub"""]
+    useCases["Reduce manual note‑taking, Faster follow‑ups, Better accountability"""]
     "roi": "Save hours/week per team; fewer missed actions."""
-    competitors["Supernormal, Tactiq + custom flows"""
+    competitors["Supernormal, Tactiq + custom flows"""]
     "marketSize": "$3B productivity AI"""
     "growthRate": "25% YoY"""
     "variant": "ai-futuristic" as , "contactInfo"""
@@ -403,11 +403,11 @@ export interface RealMarketService {;
     "setupTime": "1 day"""
     "category": "Developer Tools"""
     "realService"""
-    technology["Static analysis, SDK hooks, CI"""
-    integrations["LaunchDarkly, Flagsmith, Split.io"""
-    useCases["Reduce tech debt, Safer rollouts, Faster cleanups"""
+    technology["Static analysis, SDK hooks, CI"""]
+    integrations["LaunchDarkly, Flagsmith, Split.io"""]
+    useCases["Reduce tech debt, Safer rollouts, Faster cleanups"""]
     "roi": "Cut incidents from stale flags; improve developer velocity."""
-    competitors["Native vendor hygiene, manual audits"""
+    competitors["Native vendor hygiene, manual audits"""]
     "marketSize": "$2B experimentation"""
     "growthRate": "18% YoY"""
     "variant": "devops-futuristic" as , "contactInfo"""

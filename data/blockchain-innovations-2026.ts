@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Blockchain & Infrastructure"""
     "realService"""
-    technology["Ethereum", "Polygon", "Solana", "Hyperledger Fabric", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Salesforce", "SAP", "Oracle", "Microsoft Dynamics", "Slack", "Microsoft Teams", "Zapier", "Custom APIs"""
-    useCases["Supply chain tracking", "Digital identity management", "Financial transactions", "Asset tokenization", "Voting systems", "Data integrity"""
+    technology["Ethereum", "Polygon", "Solana", "Hyperledger Fabric", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Salesforce", "SAP", "Oracle", "Microsoft Dynamics", "Slack", "Microsoft Teams", "Zapier", "Custom APIs"""]
+    useCases["Supply chain tracking", "Digital identity management", "Financial transactions", "Asset tokenization", "Voting systems", "Data integrity"""]
     "roi": "Enterprise customers see 500% ROI within 18 months through improved transparency and operational efficiency."""
-    competitors["Alchemy", "Infura", "QuickNode", "Chainstack", "Blockdaemon", "ConsenSys"""
+    competitors["Alchemy", "Infura", "QuickNode", "Chainstack", "Blockdaemon", "ConsenSys"""]
     "marketSize": "$19.9B market"""
     "growthRate": "280% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "24 hours"""
     "category": "DeFi & Finance"""
     "realService"""
-    technology["Ethereum", "Polygon", "Solana", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["MetaMask", "WalletConnect", "Coinbase Wallet", "Trezor", "Ledger", "DeFi protocols", "DEX aggregators"""
-    useCases["Yield farming optimization", "Portfolio management", "Risk management", "Tax optimization", "DeFi strategy automation", "Investment analysis"""
+    technology["Ethereum", "Polygon", "Solana", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["MetaMask", "WalletConnect", "Coinbase Wallet", "Trezor", "Ledger", "DeFi protocols", "DEX aggregators"""]
+    useCases["Yield farming optimization", "Portfolio management", "Risk management", "Tax optimization", "DeFi strategy automation", "Investment analysis"""]
     "roi": "Users see 200-500% higher yields compared to manual DeFi strategies."""
-    competitors["Yearn Finance", "Harvest Finance", "Beefy Finance", "Pickle Finance", "Badger DAO", "Convex Finance"""
+    competitors["Yearn Finance", "Harvest Finance", "Beefy Finance", "Pickle Finance", "Badger DAO", "Convex Finance"""]
     "marketSize": "$8.5B market"""
     "growthRate": "350% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "NFT & Digital Assets"""
     "realService"""
-    technology["Ethereum", "Polygon", "Solana", "IPFS", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["MetaMask", "WalletConnect", "OpenSea API", "Discord", "Twitter", "Instagram", "Shopify", "WordPress"""
-    useCases["Digital art sales", "Gaming assets", "Sports collectibles", "Music NFTs", "Fashion NFTs", "Virtual real estate"""
+    technology["Ethereum", "Polygon", "Solana", "IPFS", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["MetaMask", "WalletConnect", "OpenSea API", "Discord", "Twitter", "Instagram", "Shopify", "WordPress"""]
+    useCases["Digital art sales", "Gaming assets", "Sports collectibles", "Music NFTs", "Fashion NFTs", "Virtual real estate"""]
     "roi": "Creators see 300% ROI within 6 months through new revenue streams and increased engagement."""
-    competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway", "Magic Eden"""
+    competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway", "Magic Eden"""]
     "marketSize": "$13.6B market"""
     "growthRate": "400% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Web3 & Identity"""
     "realService"""
-    technology["Ethereum", "Polygon", "Zero-knowledge proofs", "DID standards", "React", "Node.js", "PostgreSQL", "Redis"""
-    integrations["MetaMask", "WalletConnect", "Discord", "Slack", "Microsoft Teams", "Custom applications", "Web3 wallets"""
-    useCases["User authentication", "Identity verification", "KYC/AML compliance", "Access control", "Privacy protection", "Cross-platform identity"""
+    technology["Ethereum", "Polygon", "Zero-knowledge proofs", "DID standards", "React", "Node.js", "PostgreSQL", "Redis"""]
+    integrations["MetaMask", "WalletConnect", "Discord", "Slack", "Microsoft Teams", "Custom applications", "Web3 wallets"""]
+    useCases["User authentication", "Identity verification", "KYC/AML compliance", "Access control", "Privacy protection", "Cross-platform identity"""]
     "roi": "Web3 applications see 400% ROI within 8 months through improved security and user experience."""
-    competitors["Auth0", "Okta", "Microsoft Azure AD", "Cognito", "Firebase Auth", "Supabase Auth"""
+    competitors["Auth0", "Okta", "Microsoft Azure AD", "Cognito", "Firebase Auth", "Supabase Auth"""]
     "marketSize": "$15.8B market"""
     "growthRate": "220% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Blockchain & Supply Chain"""
     "realService"""
-    technology["Hyperledger Fabric", "Ethereum", "IoT integration", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis"""
-    integrations["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Slack", "Microsoft Teams", "IoT platforms", "ERP systems"""
-    useCases["Product traceability", "Quality assurance", "Compliance management", "Supply chain optimization", "Counterfeit prevention", "Sustainability tracking"""
+    technology["Hyperledger Fabric", "Ethereum", "IoT integration", "Machine learning", "React", "Node.js", "PostgreSQL", "Redis"""]
+    integrations["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Slack", "Microsoft Teams", "IoT platforms", "ERP systems"""]
+    useCases["Product traceability", "Quality assurance", "Compliance management", "Supply chain optimization", "Counterfeit prevention", "Sustainability tracking"""]
     "roi": "Manufacturing companies see 600% ROI within 12 months through improved transparency and operational efficiency."""
-    competitors["IBM Food Trust", "SAP Blockchain", "Oracle Blockchain", "VeChain", "Walmart Blockchain", "Maersk TradeLens"""
+    competitors["IBM Food Trust", "SAP Blockchain", "Oracle Blockchain", "VeChain", "Walmart Blockchain", "Maersk TradeLens"""]
     "marketSize": "$9.8B market"""
     "growthRate": "250% annual growth"""
     "variant": "blockchain-futuristic"""

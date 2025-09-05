@@ -1,1 +1,1 @@
-import { Route,Routes } from "react-router-dom";";";"; "export": default function Page() {; export default function Page() {;";"""
+import { Route,Routes } from "react-router-dom";";";"; "export": default function Page() {; export default function Page() {;";"""}

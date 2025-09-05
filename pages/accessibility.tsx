@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -15,159 +15,180 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-const accessibilityFeatures = [
-  {
+const accessibilityFeatures = []
+  {}
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
-    features: [
+    features: []
       "High contrast color schemes",
       "Scalable text and interface elements",
       "Screen reader compatibility",
       "Alternative text for images",
       "Keyboard navigation support"
-    ]
+    ];
   },
-  {
+  {}
     title: "Auditory Accessibility",
     description: "Support for users with hearing impairments",
     icon: Ear,
-    features: [
+    features: []
       "Video captions and transcripts",
       "Visual indicators for audio cues",
       "Text-based communication options",
       "Volume controls and audio descriptions",
+<<<<<<< HEAD
       "Sign language support where applicable"
     ]
+=======
+      "Sign language support where applicable"];
+    ];
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   },
-  {
+  {}
     title: "Motor Accessibility",
     description: "Features for users with motor impairments",
     icon: Hand,
-    features: [
+    features: []
       "Keyboard-only navigation",
       "Voice control compatibility",
       "Large click targets",
       "Customizable interaction timing",
+<<<<<<< HEAD
       "Switch control support"
     ]
+=======
+      "Switch control support"];
+    ];
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   },
-  {
+  {}
     title: "Cognitive Accessibility",
     description: "Support for users with cognitive differences",
     icon: Brain,
-    features: [
+    features: []
       "Clear and simple language",
       "Consistent navigation patterns",
       "Error prevention and recovery",
       "Progress indicators",
+<<<<<<< HEAD
       "Customizable interface complexity"
     ]
   }
+=======
+      "Customizable interface complexity"];
+    ];
+  };
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const standardsCompliance = [
-  {
+const standardsCompliance = []
+  {}
     standard: "WCAG 2.1 AA",
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
     status: "Compliant",
     coverage: "95%",
     icon: Shield
   },
-  {
+  {}
     standard: "Section 508",
     description: "U.S. federal accessibility requirements",
     status: "Compliant",
     coverage: "100%",
     icon: FileText
   },
-  {
+  {}
     standard: "ADA",
     description: "Americans with Disabilities Act compliance",
     status: "Compliant",
     coverage: "100%",
     icon: Users
   },
-  {
+  {}
     standard: "EN 301 549",
     description: "European accessibility standard for ICT products",
     status: "Compliant",
     coverage: "90%",
+<<<<<<< HEAD
     icon: Globe
   }
+=======
+    icon: Globe;
+  }];
+>>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const accessibilityTools = [
-  {
+const accessibilityTools = []
+  {}
     name: "Screen Reader Testing",
     description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",
     frequency: "Monthly"
   },
-  {
+  {}
     name: "Keyboard Navigation",
     description: "Comprehensive keyboard navigation testing for all interactive elements",
     frequency: "Weekly"
   },
-  {
+  {}
     name: "Color Contrast Analysis",
     description: "Automated and manual color contrast testing to ensure readability",
     frequency: "With each design update"
   },
-  {
+  {}
     name: "User Testing",
     description: "Regular testing with users who have disabilities to identify barriers",
     frequency: "Quarterly"
-  }]
+  }];
 ];
 
-const accessibilityGuidelines = [
-  {
+const accessibilityGuidelines = []
+  {}
     category: "Content",
-    guidelines: [
+    guidelines: []
       "Use clear and simple language",
       "Provide alternative text for images",
       "Use proper heading structure",
       "Ensure sufficient color contrast",
-      "Provide captions for videos"]
-    ]
+      "Provide captions for videos"];
+    ];
   },
-  {
+  {}
     category: "Navigation",
-    guidelines: [
+    guidelines: []
       "Logical tab order",
       "Skip links for main content",
       "Consistent navigation patterns",
       "Breadcrumb navigation",
-      "Search functionality"]
-    ]
+      "Search functionality"];
+    ];
   },
-  {
+  {}
     category: "Forms",
-    guidelines: [
+    guidelines: []
       "Clear labels and instructions",
       "Error messages and validation",
       "Required field indicators",
       "Logical grouping of related fields",
-      "Multiple input methods"]
-    ]
+      "Multiple input methods"];
+    ];
   },
-  {
+  {}
     category: "Interactive Elements",
-    guidelines: [
+    guidelines: []
       "Keyboard accessible",
       "Focus indicators",
       "Adequate target sizes",
       "No seizure-inducing content",
-      "Customizable timing"]
-    ]
-  }
+      "Customizable timing"];
+    ];
+  };
 ];
 
-export default function AccessibilityPage() {
-  return (
+export default function AccessibilityPage() {}
+  return ()
     <MainLayout;"
       title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards.'
     >
 </MainLayout>"
       <div className="min-h-screen bg-gray-50">"
@@ -177,9 +198,9 @@ export default function AccessibilityPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -201,10 +222,10 @@ export default function AccessibilityPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -218,12 +239,12 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -251,9 +272,9 @@ export default function AccessibilityPage() {
                         </ul>
                       </div>
                     </div>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -263,10 +284,10 @@ export default function AccessibilityPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -280,12 +301,12 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -301,19 +322,19 @@ export default function AccessibilityPage() {
                     </p>"
                     <div className="space-y-2">"
 </div>
-                      <span className={`px-3 py-1 text-xs rounded-full ${
+                      <span className={`px-3 py-1 text-xs rounded-full ${`}
                         standard.status === 'Compliant' ? 'bg-green-100 text-green-800' :''
                         'bg-yellow-100 text-yellow-800''
-                      }`}>
+                      }`}>`
 </span>
-                      </span>'
+                      </span>``
                       <div className="text-sm text-gray-500">"
 </div>
                       </div>
                     </div>
                   </motion.div>
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -323,10 +344,10 @@ export default function AccessibilityPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -340,12 +361,12 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="flex items-start space-x-4">"
@@ -372,7 +393,7 @@ export default function AccessibilityPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -382,10 +403,10 @@ export default function AccessibilityPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -399,12 +420,12 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <h3 className="text-lg font-bold text-gray-900 mb-4">"
@@ -419,7 +440,7 @@ export default function AccessibilityPage() {
                       </li>
                   </ul>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -431,10 +452,10 @@ export default function AccessibilityPage() {
 </div>
               <motion.div;"
                 className="bg-white p-8 rounded-xl shadow-lg"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8 }};
+                viewport={{ once: true }};
               >
 </motion>"
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">"
@@ -461,10 +482,10 @@ export default function AccessibilityPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

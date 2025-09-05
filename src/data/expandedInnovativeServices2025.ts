@@ -1,6 +1,6 @@
-export interface ExpandedInnovativeService {
-  // TODO: Implement
-}
+export interface ExpandedInnovativeService {}
+  // TODO: Implement;
+};
   "id"""
     "technology"""
 export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
@@ -37,7 +37,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "IT security teams"""
       "Financial institutions"""
       "Healthcare organizations"""
-    tags["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"""
+    tags["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"""]
     "estimatedDelivery": "8-10 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,499 - $7,999/month"""
@@ -48,11 +48,11 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "email": "kleber@ziontechgroup.com"""
       "website": "https://ziontechgroup.com"""
     "technicalSpecs"""
-      technology["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"""
-      integrations["AWS", "Azure", "GCP", "Splunk", "QRadar"""
+      technology["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"""]
+      integrations["AWS", "Azure", "GCP", "Splunk", "QRadar"""]
       "apiEndpoints"""
       "uptime": "99.99%"""
-      security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"""
+      security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"""]
     "id": "ai-sales-copilot-smb"""
     "title": "AI Sales Co‑pilot for SMBs"""
     "description": "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically. Trains on your deals and playbooks for on‑brand outreach."""
@@ -81,8 +81,8 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Post‑demo follow‑ups"""
       "Quarterly pipeline reviews"""
       "Manager coaching"""
-    targetAudience["SMB sales teams", "RevOps", "Founders doing sales"""
-    tags["AI", "Sales", "CRM", "Email", "Automation"""
+    targetAudience["SMB sales teams", "RevOps", "Founders doing sales"""]
+    tags["AI", "Sales", "CRM", "Email", "Automation"""]
     "estimatedDelivery": "1–2 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$499 – $1,499/month"""
@@ -93,11 +93,11 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "email": "kleber@ziontechgroup.com"""
       "website": "https://ziontechgroup.com"""
     "technicalSpecs"""
-      technology["LLM", "Vector DB", "RAG", "Webhooks"""
-      integrations["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"""
+      technology["LLM", "Vector DB", "RAG", "Webhooks"""]
+      integrations["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "GDPR", "SAML SSO"""
+      security["SOC 2", "GDPR", "SAML SSO"""]
     "id": "cloud-finops-optimizer"""
     "title": "Cloud FinOps Optimizer"""
     "description": "Automated rightsizing, commitment planning, and anomaly detection across AWS, Azure, and GCP with policy‑driven savings actions and executive reporting."""
@@ -121,21 +121,21 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Predictable spend"""
       "Cleaner tagging and governance"""
       "Fewer surprise bills"""
-    useCases["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"""
-    targetAudience["FinOps", "Platform Engineering", "CFOs"""
-    tags["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"""
+    useCases["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"""]
+    targetAudience["FinOps", "Platform Engineering", "CFOs"""]
+    tags["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"""]
     "estimatedDelivery": "2–4 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$1,200 – $5,000/month"""
     "roi": "200–500%"""
     "innovationLevel": "Professional"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["AWS CUR", "BigQuery", "Athena", "Prometheus"""
-      integrations["AWS", "Azure", "GCP", "Datadog", "PagerDuty"""
+      technology["AWS CUR", "BigQuery", "Athena", "Prometheus"""]
+      integrations["AWS", "Azure", "GCP", "Datadog", "PagerDuty"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "ISO 27001", "SSO"""
+      security["SOC 2", "ISO 27001", "SSO"""]
     "id": "managed-mlops-platform"""
     "title": "Managed MLOps Platform"""
     "description": "End‑to‑end model lifecycle with experiment tracking, feature store, CI/CD for ML, drift monitoring, and governance—fully managed by Zion Tech Group."""
@@ -159,21 +159,21 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Improved model quality"""
       "Compliance‑ready"""
       "Scalable across teams"""
-    useCases["Churn models", "LTV scoring", "Quality inspection", "Forecasting"""
-    targetAudience["Data Science", "ML Engineers", "Risk & Compliance"""
-    tags["MLOps", "Feature Store", "Monitoring", "Compliance"""
+    useCases["Churn models", "LTV scoring", "Quality inspection", "Forecasting"""]
+    targetAudience["Data Science", "ML Engineers", "Risk & Compliance"""]
+    tags["MLOps", "Feature Store", "Monitoring", "Compliance"""]
     "estimatedDelivery": "4–8 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,500 – $8,000/month"""
     "roi": "250–400%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"""
-      integrations["SageMaker", "Vertex AI", "Databricks", "Snowflake"""
+      technology["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"""]
+      integrations["SageMaker", "Vertex AI", "Databricks", "Snowflake"""]
       "apiEndpoints"""
       "uptime": "99.95%"""
-      security["SOC 2", "HIPAA", "GDPR"""
+      security["SOC 2", "HIPAA", "GDPR"""]
     "id": "ecommerce-personalization-engine"""
     "title": "eCommerce Personalization Engine"""
     "description": "Plug‑and‑play recommendations, bundles, and on‑site search tuning that lift AOV and conversion without heavy dev work."""
@@ -197,15 +197,15 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Less merch ops overhead"""
       "Faster experimentation"""
       "No heavy integration"""
-    useCases["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"""
-    targetAudience["DTC brands", "Retailers", "Marketplaces"""
-    tags["eCommerce", "Personalization", "Shopify", "Search", "CDP"""
+    useCases["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"""]
+    targetAudience["DTC brands", "Retailers", "Marketplaces"""]
+    tags["eCommerce", "Personalization", "Shopify", "Search", "CDP"""]
     "estimatedDelivery": "3–7 days"""
     "supportLevel": "professional"""
     "marketPrice": "$299 – $1,999/month"""
     "roi": "300–700%"""
     "innovationLevel": "Professional"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "id": "soc2-in-a-box"""
     "title": "SOC 2‑in‑a‑Box Compliance Automation"""
     "description": "Prebuilt controls, evidence collection, risk register, and auditor‑ready reports with integrations to your cloud and tooling."""
@@ -229,15 +229,15 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Reduced compliance toil"""
       "Improved security posture"""
       "Board‑ready reporting"""
-    useCases["SOC 2", "ISO 27001", "HIPAA readiness"""
-    targetAudience["Startups", "Scaleups", "Security & GRC"""
-    tags["Compliance", "Security", "Audit", "GRC"""
+    useCases["SOC 2", "ISO 27001", "HIPAA readiness"""]
+    targetAudience["Startups", "Scaleups", "Security & GRC"""]
+    tags["Compliance", "Security", "Audit", "GRC"""]
     "estimatedDelivery": "2–3 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$700 – $3,500/month"""
     "roi": "200–400%"""
     "innovationLevel": "Professional"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "id": "modern-data-platform-week"""
     "title": "Modern Data Platform in a Week"""
     "description": "Fixed‑scope build of ingestion, warehouse, metrics layer, and BI with dbt, a cloud warehouse, and a production‑grade CI/CD."""
@@ -261,21 +261,21 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Reliable, testable models"""
       "Self‑serve metrics"""
       "Future‑proof architecture"""
-    useCases["Executive KPIs", "Marketing attribution", "RevOps metrics"""
-    targetAudience["Founders", "Data leaders", "Ops"""
-    tags["Data", "dbt", "Snowflake", "BigQuery", "Metrics"""
+    useCases["Executive KPIs", "Marketing attribution", "RevOps metrics"""]
+    targetAudience["Founders", "Data leaders", "Ops"""]
+    tags["Data", "dbt", "Snowflake", "BigQuery", "Metrics"""]
     "estimatedDelivery": "1 week"""
     "supportLevel": "professional"""
     "marketPrice": "$15,000 – $45,000 one‑time"""
     "roi": "150–300%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"""
-      integrations["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"""
+      technology["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"""]
+      integrations["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SSO", "Row‑level security"""
+      security["SSO", "Row‑level security"""]
     "id": "blockchain-supply-chain-transparency"""
     "title": "Blockchain Supply Chain Transparency Platform"""
     "description": "End-to-end supply chain transparency solution using blockchain technology to track products from source to consumer, ensuring authenticity, compliance, and ethical sourcing."""
@@ -309,7 +309,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Compliance officers"""
       "Retailers"""
       "Manufacturers"""
-    tags["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"""
+    tags["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance"""]
     "estimatedDelivery": "12-16 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$1,899 - $5,999/month"""
@@ -352,7 +352,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Facility managers"""
       "City planners"""
       "Industrial companies"""
-    tags["IoT", "Edge Computing", "Analytics", "Real-time", "Industrial"""
+    tags["IoT", "Edge Computing", "Analytics", "Real-time", "Industrial"""]
     "estimatedDelivery": "10-14 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,799 - $8,999/month"""
@@ -395,7 +395,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Compliance officers"""
       "Contract managers"""
       "Legal professionals"""
-    tags["AI", "Legal Tech", "Document Analysis", "Compliance", "Automation"""
+    tags["AI", "Legal Tech", "Document Analysis", "Compliance", "Automation"""]
     "estimatedDelivery": "6-8 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$1,599 - $4,999/month"""
@@ -438,7 +438,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Healthcare organizations"""
       "Defense contractors"""
       "Security-conscious enterprises"""
-    tags["Quantum", "Cryptography", "Cybersecurity", "Future-proof", "Compliance"""
+    tags["Quantum", "Cryptography", "Cybersecurity", "Future-proof", "Compliance"""]
     "estimatedDelivery": "16-20 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$3,999 - $12,999/month"""
@@ -481,7 +481,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Radiologists"""
       "Pathologists"""
       "Healthcare providers"""
-    tags["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"""
+    tags["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"""]
     "estimatedDelivery": "12-16 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$3,299 - $9,999/month"""
@@ -524,7 +524,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Energy managers"""
       "Building owners"""
       "Corporate sustainability teams"""
-    tags["Sustainability", "Energy Management", "Renewable Energy", "Carbon Tracking", "Optimization"""
+    tags["Sustainability", "Energy Management", "Renewable Energy", "Carbon Tracking", "Optimization"""]
     "estimatedDelivery": "10-12 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,199 - $6,999/month"""
@@ -567,7 +567,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Insurance companies"""
       "Fintech companies"""
       "E-commerce platforms"""
-    tags["AI", "Fraud Detection", "Financial Services", "Machine Learning", "Security"""
+    tags["AI", "Fraud Detection", "Financial Services", "Machine Learning", "Security"""]
     "estimatedDelivery": "8-12 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,899 - $8,999/month"""
@@ -610,7 +610,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Transportation providers"""
       "Delivery services"""
       "Public transit agencies"""
-    tags["Autonomous Vehicles", "Fleet Management", "IoT", "Safety", "Optimization"""
+    tags["Autonomous Vehicles", "Fleet Management", "IoT", "Safety", "Optimization"""]
     "estimatedDelivery": "16-20 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$4,499 - $14,999/month"""
@@ -653,7 +653,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Agencies"""
       "E-commerce businesses"""
       "Publishers"""
-    tags["AI", "Content Creation", "Marketing", "Automation", "SEO"""
+    tags["AI", "Content Creation", "Marketing", "Automation", "SEO"""]
     "estimatedDelivery": "4-6 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$1,299 - $3,999/month"""
@@ -671,7 +671,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
     "price"""
     "currency": "$"""
     "pricingModel": "monthly"""
-    "features": ["Multi-channel intake (Slack/Teams/Email)"""
+    "features": ["Multi-channel intake (Slack/Teams/Email)"""]
       "RAG over KBs and runbooks"""
       "Automated ticket classification & routing"""
       "Action execution via secure connectors"""
@@ -681,28 +681,28 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "PII redaction & policy guardrails"""
       "SSO + RBAC"""
       "Admin dashboard"""
-    "benefits": ["25–45% reduction in ticket volume"""
+    "benefits": ["25–45% reduction in ticket volume"""]
       "Faster MTTR and fewer escalations"""
       "Consistent policy-compliant responses"""
       "Lower support costs"""
-    "useCases": ["Password and access requests"""
+    "useCases": ["Password and access requests"""]
       "VPN and device troubleshooting"""
       "Software requests and approvals"""
       "Knowledge discovery"""
-    "targetAudience": ["IT Operations", "Service Desk Managers", "Platform Engineering"""
-    "tags": ["ITSM", "LLM", "RAG", "Automation", "Service Desk"""
+    "targetAudience": ["IT Operations", "Service Desk Managers", "Platform Engineering"""]
+    "tags": ["ITSM", "LLM", "RAG", "Automation", "Service Desk"""]
     "estimatedDelivery": "2–4 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$1,200 – $4,000/month"""
     "roi": "200–400%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"""
-      "integrations": ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"""
+      technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"""]
+      "integrations": ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      "security": ["SOC 2", "GDPR", "SAML SSO"""
+      "security": ["SOC 2", "GDPR", "SAML SSO"""]
     "id": "data-governance-quality-aas"""
     "title": "Data Governance & Quality as a Service"""
     "description": "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows. We implement metrics layer, contracts, and alerting across your stack."""
@@ -711,7 +711,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
     "price"""
     "currency": "$"""
     "pricingModel": "monthly"""
-    "features": ["End-to-end lineage and impact analysis"""
+    "features": ["End-to-end lineage and impact analysis"""]
       "Quality checks & anomaly detection"""
       "Data SLAs and ownership"""
       "Semantic/metrics layer"""
@@ -721,25 +721,25 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Role-based policies"""
       "Cost and performance guardrails"""
       "Executive reporting"""
-    "benefits": ["Fewer data incidents"""
+    "benefits": ["Fewer data incidents"""]
       "Trustworthy dashboards"""
       "Reduced time-to-insight"""
       "Audit-ready governance"""
-    "useCases": ["Revenue reporting", "Regulatory analytics", "Marketing attribution"""
-    "targetAudience": ["Data Platform", "Analytics Engineering", "Compliance"""
-    "tags": ["Data Governance", "Lineage", "Quality", "Observability"""
+    "useCases": ["Revenue reporting", "Regulatory analytics", "Marketing attribution"""]
+    "targetAudience": ["Data Platform", "Analytics Engineering", "Compliance"""]
+    "tags": ["Data Governance", "Lineage", "Quality", "Observability"""]
     "estimatedDelivery": "4–8 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,000 – $7,000/month"""
     "roi": "200–350%"""
     "innovationLevel": "Professional"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"""
-      "integrations": ["Snowflake", "BigQuery", "Redshift", "Looker"""
+      technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"""]
+      "integrations": ["Snowflake", "BigQuery", "Redshift", "Looker"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      "security": ["SSO", "Row-level security"""
+      "security": ["SSO", "Row-level security"""]
     "id": "cloud-landing-zone-10-days"""
     "title": "Cloud Landing Zone in 10 Days"""
     "description": "Secure, compliant, and cost-governed multi-account cloud landing zone with network, IAM, logging, and guardrails—delivered fast."""
@@ -748,7 +748,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
     "price"""
     "currency": "$"""
     "pricingModel": "one-time"""
-    "features": ["Multi-account org and SSO"""
+    "features": ["Multi-account org and SSO"""]
       "Network hub/spoke & transit"""
       "Logging and audit baseline"""
       "CIS/NIST guardrails"""
@@ -758,25 +758,25 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "IaC with GitOps"""
       "Runbook and enablement"""
       "Handoff workshop"""
-    "benefits": ["Production-ready foundation"""
+    "benefits": ["Production-ready foundation"""]
       "Faster app onboarding"""
       "Lower security risk"""
       "Predictable costs"""
-    "useCases": ["Greenfield cloud", "Migrations", "Subsidiary onboarding"""
-    "targetAudience": ["Platform Engineering", "Security", "IT"""
-    "tags": ["Landing Zone", "Security", "IaC", "Governance"""
+    "useCases": ["Greenfield cloud", "Migrations", "Subsidiary onboarding"""]
+    "targetAudience": ["Platform Engineering", "Security", "IT"""]
+    "tags": ["Landing Zone", "Security", "IaC", "Governance"""]
     "estimatedDelivery": "2 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$20,000 – $60,000 one-time"""
     "roi": "150–300%"""
     "innovationLevel": "Professional"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"""
-      "integrations": ["Okta", "Datadog", "PagerDuty"""
+      technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"""]
+      "integrations": ["Okta", "Datadog", "PagerDuty"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      "security": ["CIS", "NIST", "SSO"""
+      "security": ["CIS", "NIST", "SSO"""]
     "id": "marketing-content-ops-copilot"""
     "title": "Marketing Content Ops Co‑pilot"""
     "description": "Workflow and AI generation for briefs, calendars, assets, and approvals with brand voice controls and analytics."""
@@ -785,7 +785,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
     "price"""
     "currency": "$"""
     "pricingModel": "monthly"""
-    "features": ["Brief generation and planning"""
+    "features": ["Brief generation and planning"""]
       "Brand voice and style guides"""
       "Multi-channel publishing"""
       "Asset versioning and review"""
@@ -795,19 +795,19 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Webhook/API integrations"""
       "SSO and permissions"""
       "Audit and archives"""
-    "benefits": ["Faster content throughput"""
+    "benefits": ["Faster content throughput"""]
       "Higher quality and consistency"""
       "Measurable campaign ROI"""
       "Lower production costs"""
-    "useCases": ["Blog + social", "Product launches", "Lifecycle campaigns"""
-    "targetAudience": ["Marketing Ops", "Content Teams", "Agencies"""
-    "tags": ["LLM", "Content", "Workflow", "SEO"""
+    "useCases": ["Blog + social", "Product launches", "Lifecycle campaigns"""]
+    "targetAudience": ["Marketing Ops", "Content Teams", "Agencies"""]
+    "tags": ["LLM", "Content", "Workflow", "SEO"""]
     "estimatedDelivery": "1–2 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$499 – $1,999/month"""
     "roi": "250–500%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "id": "cloud-cost-optimizer-ai"""
     "title": "Cloud Cost Optimizer AI"""
     "description": "Autonomous cloud cost optimization that rightsizes, schedules, and negotiates waste across AWS, Azure, and GCP using reinforcement learning and business policies."""
@@ -841,7 +841,7 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "CIO/CTO"""
       "CFO/Finance"""
       "DevOps"""
-    tags["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"""
+    tags["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"""]
     "estimatedDelivery": "2-4 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$1,499 - $6,999/month"""
@@ -852,11 +852,11 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "email": "kleber@ziontechgroup.com"""
       "website": "https://ziontechgroup.com"""
     "technicalSpecs"""
-      technology["Python", "dbt", "BigQuery", "Athena", "K8s"""
-      integrations["AWS", "Azure", "GCP", "Datadog", "Snowflake"""
+      technology["Python", "dbt", "BigQuery", "Athena", "K8s"""]
+      integrations["AWS", "Azure", "GCP", "Datadog", "Snowflake"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "ISO 27001"""
+      security["SOC 2", "ISO 27001"""]
     "id": "soc2-iso-compliance-copilot"""
     "title": "Compliance Copilot for SOC 2 & ISO 27001"""
     "description": "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack."""
@@ -880,9 +880,9 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Always-on readiness"""
       "Lower security risk"""
       "Faster enterprise deals"""
-    useCases["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"""
-    targetAudience["Security", "GRC", "Legal", "Founders", "Ops"""
-    tags["Compliance", "Security", "Audit", "GRC", "Automation"""
+    useCases["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"""]
+    targetAudience["Security", "GRC", "Legal", "Founders", "Ops"""]
+    tags["Compliance", "Security", "Audit", "GRC", "Automation"""]
     "estimatedDelivery": "3-6 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$1,999 - $7,999/month"""
@@ -893,11 +893,11 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "email": "kleber@ziontechgroup.com"""
       "website": "https://ziontechgroup.com"""
     "technicalSpecs"""
-      technology["Node.js", "PostgreSQL", "OpenAPI", "LLM"""
-      integrations["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"""
+      technology["Node.js", "PostgreSQL", "OpenAPI", "LLM"""]
+      integrations["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "ISO 27001", "SAML", "SCIM"""
+      security["SOC 2", "ISO 27001", "SAML", "SCIM"""]
     "id": "data-pipeline-observability"""
     "title": "Data Pipeline Observability Platform"""
     "description": "End-to-end data quality, freshness, and lineage monitoring for modern data stacks with incident auto-remediation."""
@@ -921,21 +921,21 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Faster incident resolution"""
       "Fewer false positives"""
       "Better SLA adherence"""
-    useCases["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"""
-    targetAudience["Data engineering", "Analytics", "Platform"""
-    tags["DataOps", "Observability", "LLM", "dbt", "Lineage"""
+    useCases["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"""]
+    targetAudience["Data engineering", "Analytics", "Platform"""]
+    tags["DataOps", "Observability", "LLM", "dbt", "Lineage"""]
     "estimatedDelivery": "3-5 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$1,290 - $5,999/month"""
     "roi": "200-350%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["Python", "Airflow", "dbt", "Spark"""
-      integrations["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"""
+      technology["Python", "Airflow", "dbt", "Spark"""]
+      integrations["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "Row-level security"""
+      security["SOC 2", "Row-level security"""]
     "id": "ai-customer-support-agent"""
     "title": "AI Customer Support Agent Platform"""
     "description": "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context."""
@@ -959,21 +959,21 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Faster resolution"""
       "Lower support costs"""
       "24/7 coverage"""
-    useCases["Support deflection", "Agent assist", "Self-service", "Onboarding"""
-    targetAudience["CX leaders", "Support ops", "Founders"""
-    tags["RAG", "LLM", "CX", "Zendesk", "Intercom"""
+    useCases["Support deflection", "Agent assist", "Self-service", "Onboarding"""]
+    targetAudience["CX leaders", "Support ops", "Founders"""]
+    tags["RAG", "LLM", "CX", "Zendesk", "Intercom"""]
     "estimatedDelivery": "2-4 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$899 - $3,999/month"""
     "roi": "200-600%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["Typescript", "Vector DB", "LLM", "gRPC"""
-      integrations["Zendesk", "Intercom", "Salesforce", "HubSpot"""
+      technology["Typescript", "Vector DB", "LLM", "gRPC"""]
+      integrations["Zendesk", "Intercom", "Salesforce", "HubSpot"""]
       "apiEndpoints"""
       "uptime": "99.9%"""
-      security["SOC 2", "PII redaction"""
+      security["SOC 2", "PII redaction"""]
     "id": "privacy-request-automation"""
     "title": "Privacy Request Automation (DSAR)"""
     "description": "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes."""
@@ -997,15 +997,15 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Improve accuracy"""
       "Meet SLA requirements"""
       "Improve trust"""
-    useCases["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"""
-    targetAudience["Legal", "Privacy", "Security", "Data"""
-    tags["Privacy", "Compliance", "DSAR", "Automation"""
+    useCases["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"""]
+    targetAudience["Legal", "Privacy", "Security", "Data"""]
+    tags["Privacy", "Compliance", "DSAR", "Automation"""]
     "estimatedDelivery": "3-6 weeks"""
     "supportLevel": "professional"""
     "marketPrice": "$1,090 - $4,999/month"""
     "roi": "200-400%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "id": "mlops-continuous-delivery"""
     "title": "MLOps Continuous Delivery Platform"""
     "description": "Feature store, model registry, canary deployments, drift detection, and governance for reliable AI delivery."""
@@ -1029,19 +1029,19 @@ export const "EXPANDED_INNOVATIVE_SERVICES_2025"""
       "Improve accuracy"""
       "Lower ops costs"""
       "Meet compliance"""
-    useCases["Personalization", "Forecasting", "Fraud", "NLP", "Vision"""
-    targetAudience["ML engineers", "Data science", "Platform"""
-    tags["MLOps", "LLMOps", "Feature Store", "Registry"""
+    useCases["Personalization", "Forecasting", "Fraud", "NLP", "Vision"""]
+    targetAudience["ML engineers", "Data science", "Platform"""]
+    tags["MLOps", "LLMOps", "Feature Store", "Registry"""]
     "estimatedDelivery": "4-8 weeks"""
     "supportLevel": "enterprise"""
     "marketPrice": "$2,490 - $9,999/month"""
     "roi": "200-500%"""
     "innovationLevel": "Advanced"""
-    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""
+    "contactInfo": { phone: "+1 302 464 0950", "email": "kleber@ziontechgroup.com", "website": "https://ziontechgroup.com"""}
     "technicalSpecs"""
-      technology["Kubernetes", "Kafka", "Ray", "Feast"""
-      integrations["SageMaker", "Vertex AI", "Databricks", "MLflow"""
+      technology["Kubernetes", "Kafka", "Ray", "Feast"""]
+      integrations["SageMaker", "Vertex AI", "Databricks", "MLflow"""]
       "apiEndpoints"""
       "uptime": "99.95%"""
-      security["SOC 2", "RBAC", "IAM""
+      security["SOC 2", "RBAC", "IAM""]
 cursor/fix-lint-push-and-merge-to-main-f3c1;]"

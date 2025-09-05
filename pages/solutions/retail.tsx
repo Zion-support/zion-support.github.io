@@ -1,35 +1,35 @@
-import React from 'react'
+import React from "react";
 import Layout from '../../components/Layout'
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react
-const features = [
-  {
+import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react;
+const features = []
+  {}
     icon: ShoppingCart,'
     title: 'E-commerce Platforms',''
     description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.''
   },
-  {
+  {}
     icon: Users,'
     title: 'Customer Analytics',''
     description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.''
   },
-  {
+  {}
     icon: BarChart,'
     title: 'Inventory Management',''
     description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.''
   },
-  {
+  {}
     icon: Smartphone,'
     title: 'Mobile Commerce',''
     description: 'Mobile-first shopping experiences with native apps and progressive web applications.''
   },
-  {
+  {}
     icon: Package,'
     title: 'Supply Chain Optimization',''
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.''
-  }]
+  }];
 ];
 
-const solutions = ['
+const solutions = [']
   'E-commerce Platform Development',''
   'Mobile Commerce Applications',''
   'Inventory Management Systems',''
@@ -39,11 +39,11 @@ const solutions = ['
   'Retail Analytics & BI',''
   'Personalization Engines',''
   'Omnichannel Solutions',''
-  'Retail Mobile Applications'']
+  'Retail Mobile Applications''];
 ];
 
-export default function RetailSolutionsPage() {
-  return (
+export default function RetailSolutionsPage() {}
+  return ()
     <Layout;'
       title="Retail Solutions - Zion Tech Group"
       description="Transform retail operations with our comprehensive e-commerce, inventory management, customer analytics, and omnichannel solutions."

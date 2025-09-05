@@ -1,30 +1,30 @@
 import Head from "next/head"""
 import React, { useState } from "react"""
-const Head = dynamic(() => import("next/head"), { "ssr"""
-const Link = dynamic(() => import("next/link"), { "ssr"""
-const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr"""
-const Footer = dynamic(() => import("../src/components/Footer"), { "ssr"""
-const Demo = () => {"""
-  const [selectedDemo, setSelectedDemo] = useState("ai-services"""
-    {"""
+const Head = dynamic(() => import("next/head"), { "ssr"""}
+const Link = dynamic(() => import("next/link"), { "ssr"""}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr"""}
+const Footer = dynamic(() => import("../src/components/Footer"), { "ssr"""}
+const Demo = () => {"""}
+  const [selectedDemo, setSelectedDemo] = useState("ai-services""")
+    {"""}
       "id": "it-services","""
       "title": "IT Services Demo","""
       "description": "Explore our comprehensive IT infrastructure and support solutions","""
       "duration": "20 minutes"""
       "icon"""
-      "features": ["""
+      "features": ["""]
         "Cloud Migration","""
         "Network Security","""
         "System Monitoring","""
         "Backup Solutions","""
         "Performance Optimization"""
-    {"""
+    {"""}
       "id": "micro-saas","""
       "title": "Micro SaaS Demo","""
       "description": "Discover our scalable software-as-a-service development capabilities","""
       "duration": "25 minutes"""
       "icon"""
-      "features": ["""
+      "features": ["""]
         "Custom SaaS Development","""
         "API Integration","""
         "User Management","""
@@ -71,7 +71,7 @@ const Demo = () => {"""
               <p className="text-lg text-gray-600">""
 </p>"
             <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-12"")"
-              {demos.map((demo) => (""
+              {demos.map((demo) => (""})
 </div>"
                 <div key="{demo.id}""")"
                   onClick="{()" => setSelectedDemo(demo.id)}""

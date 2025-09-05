@@ -1,6 +1,6 @@
-export interface SpecializedInnovativeService2027 {
-  // TODO: Implement
-}
+export interface SpecializedInnovativeService2027 {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
 export const "specializedInnovativeServices2027"""

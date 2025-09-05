@@ -1,14 +1,14 @@
 #!/usr/bin/env node;
-const { execSync } = // // require('child_process'''
-const fs = // // require('fs'''
-const path = // // require('path'''
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports'''
-    this.logFile = path.join(this.reportsDir, 'test-automation.log'''
-  log(message, level = 'INFO'''
-    fs.appendFileSync(this.logFile, logMessage + '\n'''
+const { execSync } = // // require('child_process''')
+const fs = // // require('fs''')
+const path = // // require('path''')
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports''')
+    this.logFile = path.join(this.reportsDir, 'test-automation.log''')
+  log(message, level = 'INFO''')
+    fs.appendFileSync(this.logFile, logMessage + '\n''')
         "encoding"""
         "status"""
-      this.log(` "Failed"""
+      this.log(` "Failed"""`)
         "status"""
         "command"""
         "description"""
@@ -28,5 +28,5 @@ const path = // // require('path'''
         "description"""
         "command"""
         "description"""
-      this.log(`� Fatal "error""
+      this.log(`� Fatal "error""`)
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

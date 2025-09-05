@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Quantum-Secure Infrastructure"""
     "realService"""
-    technology["Post-quantum cryptography, Quantum key distribution, Kubernetes, Docker, AWS, Azure, GCP"""
-    integrations["AWS, Azure, Google Cloud, VMware, OpenStack, Custom enterprise systems"""
-    useCases["Secure cloud migration, Compliance requirements, Data protection, Government contracts, Financial services"""
+    technology["Post-quantum cryptography, Quantum key distribution, Kubernetes, Docker, AWS, Azure, GCP"""]
+    integrations["AWS, Azure, Google Cloud, VMware, OpenStack, Custom enterprise systems"""]
+    useCases["Secure cloud migration, Compliance requirements, Data protection, Government contracts, Financial services"""]
     "roi": "Organizations achieve 400% ROI through enhanced security and reduced compliance costs."""
-    competitors["AWS, Azure, Google Cloud, IBM Cloud"""
+    competitors["AWS, Azure, Google Cloud, IBM Cloud"""]
     "marketSize": "$45.2B cloud infrastructure market"""
     "growthRate": "28% annual growth"""
     "variant": "quantum-secure-enterprise"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 weeks"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Kubernetes Edge, Docker Edge, MQTT, WebSocket, Redis, PostgreSQL, Node.js, Python"""
-    integrations["AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, Custom IoT platforms"""
-    useCases["IoT deployment, Smart manufacturing, Retail analytics, Healthcare monitoring, Smart cities"""
+    technology["Kubernetes Edge, Docker Edge, MQTT, WebSocket, Redis, PostgreSQL, Node.js, Python"""]
+    integrations["AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, Custom IoT platforms"""]
+    useCases["IoT deployment, Smart manufacturing, Retail analytics, Healthcare monitoring, Smart cities"""]
     "roi": "IoT deployments achieve 300% ROI through reduced latency and improved performance."""
-    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry"""
+    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry"""]
     "marketSize": "$15.8B edge computing market"""
     "growthRate": "35% annual growth"""
     "variant": "edge-computing-enterprise"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 weeks"""
     "category": "Neuromorphic Computing"""
     "realService"""
-    technology["Spiking neural networks, Neuromorphic chips, FPGA, ASIC, Python, C++, Custom neural frameworks"""
-    integrations["TensorFlow, PyTorch, Custom AI frameworks, Robotics platforms, Autonomous systems"""
-    useCases["Autonomous vehicles, Robotics, Healthcare AI, Defense systems, Research applications"""
+    technology["Spiking neural networks, Neuromorphic chips, FPGA, ASIC, Python, C++, Custom neural frameworks"""]
+    integrations["TensorFlow, PyTorch, Custom AI frameworks, Robotics platforms, Autonomous systems"""]
+    useCases["Autonomous vehicles, Robotics, Healthcare AI, Defense systems, Research applications"""]
     "roi": "AI applications achieve 800% ROI through energy efficiency and real-time processing capabilities."""
-    competitors["Intel Loihi, IBM TrueNorth, BrainChip, Custom solutions"""
+    competitors["Intel Loihi, IBM TrueNorth, BrainChip, Custom solutions"""]
     "marketSize": "$2.1B neuromorphic computing market"""
     "growthRate": "65% annual growth"""
     "variant": "neuromorphic-enterprise"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 weeks"""
     "category": "Hybrid Quantum Computing"""
     "realService"""
-    technology["Qiskit, Cirq, PennyLane, Python, C++, Quantum simulators, Classical computing frameworks"""
-    integrations["IBM Quantum, Google Quantum, Microsoft Azure Quantum, Custom quantum processors"""
-    useCases["Quantum algorithm development, Financial modeling, Drug discovery, Optimization problems, Research applications"""
+    technology["Qiskit, Cirq, PennyLane, Python, C++, Quantum simulators, Classical computing frameworks"""]
+    integrations["IBM Quantum, Google Quantum, Microsoft Azure Quantum, Custom quantum processors"""]
+    useCases["Quantum algorithm development, Financial modeling, Drug discovery, Optimization problems, Research applications"""]
     "roi": "Quantum applications achieve 500% ROI through faster development and improved resource utilization."""
-    competitors["IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave"""
+    competitors["IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave"""]
     "marketSize": "$3.2B quantum computing market"""
     "growthRate": "55% annual growth"""
     "variant": "hybrid-quantum-enterprise"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Autonomous Infrastructure"""
     "realService"""
-    technology["AI/ML, IoT sensors, Predictive analytics, Automation frameworks, Real-time monitoring, Control systems"""
-    integrations["Building management systems, Power management systems, Security systems, Monitoring platforms"""
-    useCases["Data center automation, Energy optimization, Predictive maintenance, Security automation, Capacity planning"""
+    technology["AI/ML, IoT sensors, Predictive analytics, Automation frameworks, Real-time monitoring, Control systems"""]
+    integrations["Building management systems, Power management systems, Security systems, Monitoring platforms"""]
+    useCases["Data center automation, Energy optimization, Predictive maintenance, Security automation, Capacity planning"""]
     "roi": "Data center operators achieve 400% ROI through reduced operational costs and improved efficiency."""
-    competitors["Schneider Electric, Siemens, Johnson Controls, Custom solutions"""
+    competitors["Schneider Electric, Siemens, Johnson Controls, Custom solutions"""]
     "marketSize": "$18.5B data center management market"""
     "growthRate": "22% annual growth"""
     "variant": "autonomous-infrastructure-enterprise"""

@@ -1,35 +1,35 @@
-import React from 'react'
+import React from "react";
 import Layout from '../../components/Layout'
-import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react
-const features = [
-  {
+import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react;
+const features = []
+  {}
     icon: Shield,'
     title: 'Cybersecurity & Compliance',''
     description: 'FISMA, FedRAMP, and other government security standards compliance solutions.''
   },
-  {
+  {}
     icon: Users,'
     title: 'Citizen Services',''
     description: 'Digital platforms for citizen engagement, service delivery, and government transparency.''
   },
-  {
+  {}
     icon: FileText,'
     title: 'Document Management',''
     description: 'Secure document management and workflow systems for government operations.''
   },
-  {
+  {}
     icon: Globe,'
     title: 'Open Data Platforms',''
     description: 'Public data portals and open government initiatives for transparency and accountability.''
   },
-  {
+  {}
     icon: Database,'
     title: 'Data Analytics',''
     description: 'Government data analytics and business intelligence for informed decision making.''
-  }]
+  }];
 ];
 
-const solutions = ['
+const solutions = [']
   'Citizen Portal Development',''
   'Government Data Analytics',''
   'Cybersecurity Solutions',''
@@ -39,11 +39,11 @@ const solutions = ['
   'Digital Identity Solutions',''
   'Government Mobile Applications',''
   'Compliance Management',''
-  'Public Sector Cloud Solutions'']
+  'Public Sector Cloud Solutions''];
 ];
 
-export default function GovernmentSolutionsPage() {
-  return (
+export default function GovernmentSolutionsPage() {}
+  return ()
     <Layout;'
       title="Government Solutions - Zion Tech Group"
       description="Transform government operations with our secure, compliant solutions including citizen portals, cybersecurity, document management, and open data platforms."

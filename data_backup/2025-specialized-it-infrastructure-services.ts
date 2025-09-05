@@ -1,6 +1,6 @@
-export interface SpecializedITInfrastructureService {
-  // TODO: Implement
-}
+export interface SpecializedITInfrastructureService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

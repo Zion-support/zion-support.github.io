@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Globe, 
   ArrowRight, 
   ExternalLink,
@@ -21,43 +21,43 @@ import {
   Shield,
   Lock,
   Search;'
-} from 'lucide-react
-const siteStructure = [
-  {'
+} from 'lucide-react;
+const siteStructure = []
+  {'}
     category: "Main Pages",
     icon: Home,
-    pages: [
+    pages: []
       { name: "Home", url: "/", description: "Main landing page with company overview" },
       { name: "About Us", url: "/about", description: "Company information, team, and mission" },
-      { name: "Contact", url: "/contact", description: "Contact information and inquiry form" }]
-    ]
+      { name: "Contact", url: "/contact", description: "Contact information and inquiry form" }];
+    ];
   },
-  {
+  {}
     category: "Services",
     icon: Settings,
-    pages: [
+    pages: []
       { name: "All Services", url: "/services", description: "Overview of all our services" },
       { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },
       { name: "IT Services", url: "/it-services", description: "Information technology services" },
       { name: "Micro SaaS", url: "/micro-saas", description: "Software as a Service solutions" },
-      { name: "Talent Solutions", url: "/talent", description: "Hiring and talent acquisition" }]
-    ]
+      { name: "Talent Solutions", url: "/talent", description: "Hiring and talent acquisition" }];
+    ];
   },
-  {
+  {}
     category: "Solutions",
     icon: BarChart3,
-    pages: [
+    pages: []
       { name: "All Solutions", url: "/solutions", description: "Overview of our solution categories" },
       { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Solutions for large organizations" },
       { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups and small businesses" },
       { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" },
-      { name: "Custom Development", url: "/solutions/custom", description: "Bespoke software development" }]
-    ]
+      { name: "Custom Development", url: "/solutions/custom", description: "Bespoke software development" }];
+    ];
   },
-  {
+  {}
     category: "Resources",
     icon: BookOpen,
-    pages: [
+    pages: []
       { name: "All Resources", url: "/resources", description: "Overview of all resources" },
       { name: "Documentation", url: "/docs", description: "Technical documentation and guides" },
       { name: "Case Studies", url: "/case-studies", description: "Client success stories and case studies" },
@@ -65,52 +65,52 @@ const siteStructure = [
       { name: "API Reference", url: "/api-docs", description: "API documentation and integration guides" },
       { name: "Tutorials", url: "/tutorials", description: "Step-by-step learning tutorials" },
       { name: "Guides", url: "/guides", description: "Comprehensive implementation guides" },
-      { name: "FAQ", url: "/faq", description: "Frequently asked questions" }]
-    ]
+      { name: "FAQ", url: "/faq", description: "Frequently asked questions" }];
+    ];
   },
-  {
+  {}
     category: "Company",
     icon: Users,
-    pages: [
+    pages: []
       { name: "About Us", url: "/about", description: "Company information and team" },
       { name: "Careers", url: "/careers", description: "Job opportunities and company culture" },
       { name: "News", url: "/news", description: "Company news and announcements" },
-      { name: "Support", url: "/support", description: "Technical support and help center" }]
-    ]
+      { name: "Support", url: "/support", description: "Technical support and help center" }];
+    ];
   },
-  {
+  {}
     category: "Legal",
     icon: Shield,
-    pages: [
+    pages: []
       { name: "Privacy Policy", url: "/privacy", description: "Data privacy and protection policy" },
       { name: "Terms of Service", url: "/terms", description: "Terms and conditions of service" },
       { name: "Cookie Policy", url: "/cookies", description: "Cookie usage and management" },
       { name: "Security", url: "/security", description: "Security measures and compliance" },
       { name: "Compliance", url: "/compliance", description: "Regulatory compliance information" },
-      { name: "Accessibility", url: "/accessibility", description: "Accessibility statement and features" }]
-    ]
-  }
+      { name: "Accessibility", url: "/accessibility", description: "Accessibility statement and features" }];
+    ];
+  };
 ];
 
-const quickLinks = [
+const quickLinks = []
   { name: "Get Started", url: "/contact", icon: ArrowRight },
   { name: "View Services", url: "/services", icon: Settings },
   { name: "Read Blog", url: "/blog", icon: MessageSquare },
   { name: "Browse Careers", url: "/careers", icon: Users },
   { name: "API Docs", url: "/api-docs", icon: Code },
-  { name: "Support", url: "/support", icon: HelpCircle }]
+  { name: "Support", url: "/support", icon: HelpCircle }];
 ];
 
-const externalLinks = [
+const externalLinks = []
   { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: ExternalLink },
   { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: ExternalLink },
   { name: "GitHub", url: "https://github.com/ziontechgroup", icon: ExternalLink },
   { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: ExternalLink },
-  { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: ExternalLink }]
+  { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: ExternalLink }];
 ];
 
-export default function SitemapPage() {
-  return (
+export default function SitemapPage() {}
+  return ()
     <MainLayout;"
       title="Sitemap - Zion Tech Group"
       description="Complete sitemap of all pages and resources available on the Zion Tech Group website."
@@ -123,9 +123,9 @@ export default function SitemapPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -147,10 +147,10 @@ export default function SitemapPage() {
 </div>
             <motion.div;"
               className="text-center mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Links</h2>"
@@ -160,15 +160,15 @@ export default function SitemapPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">"
 </div>
                   <motion.div;
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    key={index};
+                    initial={{ opacity: 0, y: 20 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.5, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>
                     <Link;
-                      href={link.url}
+                      href={link.url};
                       className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
                     >
 </Link>"
@@ -178,9 +178,9 @@ export default function SitemapPage() {
 </span>
                       </span>
                     </Link>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -190,10 +190,10 @@ export default function SitemapPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -207,12 +207,12 @@ export default function SitemapPage() {
             <div className="space-y-12">"
 </div>
                   <motion.div;
-                    key={categoryIndex}
+                    key={categoryIndex};
                     className="bg-white rounded-xl shadow-lg p-8"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: categoryIndex * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="flex items-center mb-6">"
@@ -230,16 +230,16 @@ export default function SitemapPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
                         <motion.div;
-                          key={pageIndex}
+                          key={pageIndex};
                           className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group"
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: pageIndex * 0.05 }}
-                          viewport={{ once: true }}
+                          initial={{ opacity: 0, x: -20 }};
+                          whileInView={{ opacity: 1, x: 0 }};
+                          transition={{ duration: 0.5, delay: pageIndex * 0.05 }};
+                          viewport={{ once: true }};
                         >
 </motion>
                           <Link;
-                            href={page.url}
+                            href={page.url};
                             className="block group-hover:text-blue-600 transition-colors"
                           >
 </Link>"
@@ -254,11 +254,11 @@ export default function SitemapPage() {
                             </div>
                           </Link>
                         </motion.div>
-                      ))}
+                      ))};
                     </div>
                   </motion.div>
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -268,10 +268,10 @@ export default function SitemapPage() {
 </div>
             <motion.div;"
               className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">"
@@ -285,15 +285,15 @@ export default function SitemapPage() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">"
 </div>
                   <motion.a;
-                    key={index}
-                    href={link.url}
+                    key={index};
+                    href={link.url};
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.5, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
@@ -303,7 +303,7 @@ export default function SitemapPage() {
                     </span>
                   </motion.a>
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -312,10 +312,10 @@ export default function SitemapPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

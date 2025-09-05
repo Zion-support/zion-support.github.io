@@ -1,4 +1,4 @@
-export interface InnovativeITService {;
+export interface InnovativeITService {;}
   "id"""
   "realImplementation"""
     id: "quantum-cloud-orchestrator"""
@@ -28,11 +28,11 @@ export interface InnovativeITService {;
     "setupTime": "2 weeks"""
     "category": "Quantum AI & Cloud Infrastructure"""
     "realService"""
-    technology["Quantum Computing", "AI/ML", "Cloud Orchestration", "Infrastructure as Code", "Multi-cloud Management", "Automation"""
-    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins"""
-    useCases["Cloud optimization", "Cost reduction", "Performance improvement", "Security enhancement", "Compliance automation", "Resource management"""
+    technology["Quantum Computing", "AI/ML", "Cloud Orchestration", "Infrastructure as Code", "Multi-cloud Management", "Automation"""]
+    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform", "Ansible", "Jenkins"""]
+    useCases["Cloud optimization", "Cost reduction", "Performance improvement", "Security enhancement", "Compliance automation", "Resource management"""]
     "roi": "Average customer sees 700% ROI within 12 months through cost optimization and operational efficiency."""
-    competitors["HashiCorp", "Terraform Cloud", "AWS CloudFormation", "Azure Resource Manager", "Google Cloud Deployment Manager"""
+    competitors["HashiCorp", "Terraform Cloud", "AWS CloudFormation", "Azure Resource Manager", "Google Cloud Deployment Manager"""]
     "marketSize": "$500B cloud infrastructure market"""
     "growthRate": "200% annual growth"""
     "variant": "quantum-cloud-advanced"""
@@ -74,11 +74,11 @@ export interface InnovativeITService {;
     "setupTime": "1 week"""
     "category": "AI & DevOps Automation"""
     "realService"""
-    technology["AI/ML", "Machine Learning", "CI/CD", "DevOps", "Automation", "Container Orchestration"""
-    integrations["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure", "Google Cloud"""
-    useCases["Continuous integration", "Automated deployment", "Quality assurance", "Security testing", "Performance optimization", "Team collaboration"""
+    technology["AI/ML", "Machine Learning", "CI/CD", "DevOps", "Automation", "Container Orchestration"""]
+    integrations["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure", "Google Cloud"""]
+    useCases["Continuous integration", "Automated deployment", "Quality assurance", "Security testing", "Performance optimization", "Team collaboration"""]
     "roi": "Average customer sees 500% ROI within 9 months through deployment automation and issue prevention."""
-    competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions", "Azure DevOps"""
+    competitors["GitLab", "Jenkins", "CircleCI", "Travis CI", "GitHub Actions", "Azure DevOps"""]
     "marketSize": "$8B DevOps market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-devops-advanced"""
@@ -120,11 +120,11 @@ export interface InnovativeITService {;
     "setupTime": "1 month"""
     "category": "Quantum AI & Data Center Management"""
     "realService"""
-    technology["Quantum Computing", "AI/ML", "Data Center Management", "Energy Optimization", "Predictive Analytics", "Automation"""
-    integrations["VMware", "Nutanix", "Cisco", "Dell", "HP", "IBM", "Monitoring tools", "Energy management systems"""
-    useCases["Energy optimization", "Performance improvement", "Cost reduction", "Predictive maintenance", "Resource optimization", "Compliance management"""
+    technology["Quantum Computing", "AI/ML", "Data Center Management", "Energy Optimization", "Predictive Analytics", "Automation"""]
+    integrations["VMware", "Nutanix", "Cisco", "Dell", "HP", "IBM", "Monitoring tools", "Energy management systems"""]
+    useCases["Energy optimization", "Performance improvement", "Cost reduction", "Predictive maintenance", "Resource optimization", "Compliance management"""]
     "roi": "Average customer sees 800% ROI within 18 months through energy savings and operational efficiency."""
-    competitors["VMware", "Nutanix", "Cisco UCS", "Dell PowerEdge", "HP ProLiant", "IBM Power Systems"""
+    competitors["VMware", "Nutanix", "Cisco UCS", "Dell PowerEdge", "HP ProLiant", "IBM Power Systems"""]
     "marketSize": "$200B data center market"""
     "growthRate": "150% annual growth"""
     "variant": "quantum-infrastructure-advanced"""
@@ -166,11 +166,11 @@ export interface InnovativeITService {;
     "setupTime": "2 weeks"""
     "category": "AI & Network Security"""
     "realService"""
-    technology["AI/ML", "Machine Learning", "Network Security", "Threat Intelligence", "Behavioral Analysis", "Automation"""
-    integrations["Firewalls", "IDS/IPS", "SIEM systems", "Network devices", "Security tools", "Cloud platforms"""
-    useCases["Threat detection", "Incident response", "Network monitoring", "Compliance management", "Security automation", "Risk assessment"""
+    technology["AI/ML", "Machine Learning", "Network Security", "Threat Intelligence", "Behavioral Analysis", "Automation"""]
+    integrations["Firewalls", "IDS/IPS", "SIEM systems", "Network devices", "Security tools", "Cloud platforms"""]
+    useCases["Threat detection", "Incident response", "Network monitoring", "Compliance management", "Security automation", "Risk assessment"""]
     "roi": "Average customer sees 600% ROI within 12 months through threat prevention and security automation."""
-    competitors["Palo Alto Networks", "Fortinet", "Cisco", "Check Point", "Juniper", "SonicWall"""
+    competitors["Palo Alto Networks", "Fortinet", "Cisco", "Check Point", "Juniper", "SonicWall"""]
     "marketSize": "$200B cybersecurity market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-security-advanced"""
@@ -212,11 +212,11 @@ export interface InnovativeITService {;
     "setupTime": "2 weeks"""
     "category": "Quantum AI & Storage Management"""
     "realService"""
-    technology["Quantum Computing", "AI/ML", "Storage Management", "Data Optimization", "Predictive Analytics", "Automation"""
-    integrations["NetApp", "Pure Storage", "Dell EMC", "IBM", "HPE", "Cloud storage", "Backup systems"""
-    useCases["Storage optimization", "Performance improvement", "Cost reduction", "Data tiering", "Compliance management", "Capacity planning"""
+    technology["Quantum Computing", "AI/ML", "Storage Management", "Data Optimization", "Predictive Analytics", "Automation"""]
+    integrations["NetApp", "Pure Storage", "Dell EMC", "IBM", "HPE", "Cloud storage", "Backup systems"""]
+    useCases["Storage optimization", "Performance improvement", "Cost reduction", "Data tiering", "Compliance management", "Capacity planning"""]
     "roi": "Average customer sees 700% ROI within 15 months through storage optimization and cost reduction."""
-    competitors["NetApp", "Pure Storage", "Dell EMC", "IBM Storage", "HPE Storage", "Hitachi Vantara"""
+    competitors["NetApp", "Pure Storage", "Dell EMC", "IBM Storage", "HPE Storage", "Hitachi Vantara"""]
     "marketSize": "$100B storage market"""
     "growthRate": "120% annual growth"""
     "variant": "quantum-storage-advanced"""
@@ -258,11 +258,11 @@ export interface InnovativeITService {;
     "setupTime": "2 weeks"""
     "category": "AI & Disaster Recovery"""
     "realService"""
-    technology["AI/ML", "Machine Learning", "Disaster Recovery", "Backup Management", "Predictive Analytics", "Automation"""
-    integrations["Veeam", "Zerto", "Commvault", "Backup systems", "Cloud platforms", "Storage systems"""
-    useCases["Backup automation", "Disaster recovery", "Business continuity", "Compliance management", "Testing automation", "Risk assessment"""
+    technology["AI/ML", "Machine Learning", "Disaster Recovery", "Backup Management", "Predictive Analytics", "Automation"""]
+    integrations["Veeam", "Zerto", "Commvault", "Backup systems", "Cloud platforms", "Storage systems"""]
+    useCases["Backup automation", "Disaster recovery", "Business continuity", "Compliance management", "Testing automation", "Risk assessment"""]
     "roi": "Average customer sees 500% ROI within 12 months through recovery automation and downtime prevention."""
-    competitors["Veeam", "Zerto", "Commvault", "Rubrik", "Cohesity", "Druva"""
+    competitors["Veeam", "Zerto", "Commvault", "Rubrik", "Cohesity", "Druva"""]
     "marketSize": "$50B disaster recovery market"""
     "growthRate": "150% annual growth"""
     "variant": "ai-recovery-advanced"""

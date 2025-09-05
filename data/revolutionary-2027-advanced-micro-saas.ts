@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "30 minutes"""
     "category": "AI Content & Marketing"""
     "realService"""
-    technology["OpenAI GPT-4", "Claude 3.5", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["WordPress", "Shopify", "Mailchimp", "Buffer", "Hootsuite", "Google Analytics", "SEMrush"""
-    useCases["Blog content creation", "Social media posts", "Email marketing", "Product descriptions", "SEO content", "Brand messaging"""
+    technology["OpenAI GPT-4", "Claude 3.5", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["WordPress", "Shopify", "Mailchimp", "Buffer", "Hootsuite", "Google Analytics", "SEMrush"""]
+    useCases["Blog content creation", "Social media posts", "Email marketing", "Product descriptions", "SEO content", "Brand messaging"""]
     "roi": "Average customer sees 280% ROI through increased content output and improved SEO rankings."""
-    competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Peppertype"""
+    competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot", "Peppertype"""]
     "marketSize": "$15.8B market"""
     "growthRate": "165% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "AI Customer Success"""
     "realService"""
-    technology["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Salesforce", "HubSpot", "Pipedrive", "Intercom", "Zendesk", "Slack", "Microsoft Teams"""
-    useCases["Churn prevention", "Customer onboarding", "Upsell identification", "Success metric tracking", "Customer health monitoring"""
+    technology["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Salesforce", "HubSpot", "Pipedrive", "Intercom", "Zendesk", "Slack", "Microsoft Teams"""]
+    useCases["Churn prevention", "Customer onboarding", "Upsell identification", "Success metric tracking", "Customer health monitoring"""]
     "roi": "Companies report 320% ROI through reduced churn and increased customer lifetime value."""
-    competitors["Gainsight", "Totango", "ChurnZero", "ClientSuccess", "Planhat"""
+    competitors["Gainsight", "Totango", "ChurnZero", "ClientSuccess", "Planhat"""]
     "marketSize": "$8.2B market"""
     "growthRate": "145% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI Financial Analytics"""
     "realService"""
-    technology["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["QuickBooks", "Xero", "Sage", "NetSuite", "Microsoft Dynamics", "Excel", "Google Sheets"""
-    useCases["Financial forecasting", "Budget planning", "Variance analysis", "Cash flow management", "Financial reporting", "Scenario modeling"""
+    technology["Machine Learning", "Predictive Analytics", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["QuickBooks", "Xero", "Sage", "NetSuite", "Microsoft Dynamics", "Excel", "Google Sheets"""]
+    useCases["Financial forecasting", "Budget planning", "Variance analysis", "Cash flow management", "Financial reporting", "Scenario modeling"""]
     "roi": "Businesses report 400% ROI through improved financial planning and reduced manual work."""
-    competitors["Adaptive Insights", "Anaplan", "Planful", "Vena", "Host Analytics"""
+    competitors["Adaptive Insights", "Anaplan", "Planful", "Vena", "Host Analytics"""]
     "marketSize": "$12.5B market"""
     "growthRate": "185% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI HR & Talent"""
     "realService"""
-    technology["Machine Learning", "Natural Language Processing", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["LinkedIn", "Indeed", "Glassdoor", "Slack", "Microsoft Teams", "Google Workspace", "Microsoft 365"""
-    useCases["Recruitment automation", "Employee onboarding", "Performance management", "Workforce analytics", "Compliance tracking"""
+    technology["Machine Learning", "Natural Language Processing", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["LinkedIn", "Indeed", "Glassdoor", "Slack", "Microsoft Teams", "Google Workspace", "Microsoft 365"""]
+    useCases["Recruitment automation", "Employee onboarding", "Performance management", "Workforce analytics", "Compliance tracking"""]
     "roi": "Companies report 280% ROI through reduced hiring time and improved employee retention."""
-    competitors["Workday", "BambooHR", "Greenhouse", "Lever", "SmartRecruiters"""
+    competitors["Workday", "BambooHR", "Greenhouse", "Lever", "SmartRecruiters"""]
     "marketSize": "$18.7B market"""
     "growthRate": "195% annual growth"""
     "variant": "ai-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI Supply Chain"""
     "realService"""
-    technology["Machine Learning", "Optimization Algorithms", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["SAP", "Oracle", "NetSuite", "Shopify", "WooCommerce", "FedEx", "UPS", "DHL"""
-    useCases["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier management", "Risk assessment", "Cost optimization"""
+    technology["Machine Learning", "Optimization Algorithms", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["SAP", "Oracle", "NetSuite", "Shopify", "WooCommerce", "FedEx", "UPS", "DHL"""]
+    useCases["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier management", "Risk assessment", "Cost optimization"""]
     "roi": "Companies report 350% ROI through reduced inventory costs and improved operational efficiency."""
-    competitors["SAP SCM", "Oracle SCM", "Manhattan Associates", "JDA Software", "Blue Yonder"""
+    competitors["SAP SCM", "Oracle SCM", "Manhattan Associates", "JDA Software", "Blue Yonder"""]
     "marketSize": "$22.3B market"""
     "growthRate": "210% annual growth"""
     "variant": "ai-futuristic"""

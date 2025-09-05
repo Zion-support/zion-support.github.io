@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "AI & Multimodal Fusion"""
     "realService"""
-    technology["Advanced AI", "Multimodal Learning", "Computer Vision", "Natural Language Processing", "Audio Processing", "Video Analysis"""
-    integrations["Tech platforms", "Research databases", "Media systems", "Healthcare systems", "Government platforms", "Educational tools"""
-    useCases["Content creation", "Research analysis", "Media processing", "Healthcare diagnostics", "Government intelligence", "Educational content"""
+    technology["Advanced AI", "Multimodal Learning", "Computer Vision", "Natural Language Processing", "Audio Processing", "Video Analysis"""]
+    integrations["Tech platforms", "Research databases", "Media systems", "Healthcare systems", "Government platforms", "Educational tools"""]
+    useCases["Content creation", "Research analysis", "Media processing", "Healthcare diagnostics", "Government intelligence", "Educational content"""]
     "roi": "Tech companies see 600% ROI through improved content creation and user experience."""
-    competitors["Single-modal AI tools", "Custom multimodal solutions", "Research platforms"""
+    competitors["Single-modal AI tools", "Custom multimodal solutions", "Research platforms"""]
     "marketSize": "$30B market"""
     "growthRate": "320% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 weeks"""
     "category": "AI & Business Automation"""
     "realService"""
-    technology["Advanced AI", "Business Intelligence", "Process Automation", "Decision Making", "Machine Learning", "Predictive Analytics"""
-    integrations["ERP systems", "CRM platforms", "Financial systems", "Supply chain tools", "Marketing platforms", "HR systems"""
-    useCases["Business process automation", "Strategic decision making", "Customer service automation", "Financial management", "Supply chain optimization"""
+    technology["Advanced AI", "Business Intelligence", "Process Automation", "Decision Making", "Machine Learning", "Predictive Analytics"""]
+    integrations["ERP systems", "CRM platforms", "Financial systems", "Supply chain tools", "Marketing platforms", "HR systems"""]
+    useCases["Business process automation", "Strategic decision making", "Customer service automation", "Financial management", "Supply chain optimization"""]
     "roi": "Large enterprises see 800% ROI through complete automation and improved efficiency."""
-    competitors["Partial automation tools", "Custom AI solutions", "Traditional business software"""
+    competitors["Partial automation tools", "Custom AI solutions", "Traditional business software"""]
     "marketSize": "$50B market"""
     "growthRate": "400% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 weeks"""
     "category": "AI & Creative Content"""
     "realService"""
-    technology["Advanced AI", "Creative Generation", "Computer Vision", "Audio Processing", "Natural Language Generation", "Video Generation"""
-    integrations["Creative tools", "Media platforms", "Marketing systems", "Educational platforms", "Social media", "Content management systems"""
-    useCases["Content creation", "Marketing materials", "Educational content", "Entertainment production", "Brand development", "Creative collaboration"""
+    technology["Advanced AI", "Creative Generation", "Computer Vision", "Audio Processing", "Natural Language Generation", "Video Generation"""]
+    integrations["Creative tools", "Media platforms", "Marketing systems", "Educational platforms", "Social media", "Content management systems"""]
+    useCases["Content creation", "Marketing materials", "Educational content", "Entertainment production", "Brand development", "Creative collaboration"""]
     "roi": "Creative agencies see 500% ROI through unlimited content generation and reduced production time."""
-    competitors["Specialized creative AI", "Traditional creative tools", "Custom AI solutions"""
+    competitors["Specialized creative AI", "Traditional creative tools", "Custom AI solutions"""]
     "marketSize": "$25B market"""
     "growthRate": "350% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-5 weeks"""
     "category": "AI & Healthcare"""
     "realService"""
-    technology["Advanced AI", "Healthcare AI", "Medical Diagnostics", "Health Monitoring", "Predictive Analytics", "Compliance Systems"""
-    integrations["Electronic health records", "Medical devices", "Insurance systems", "Telemedicine platforms", "Government health systems"""
-    useCases["Patient monitoring", "Diagnosis assistance", "Health recommendations", "Emergency response", "Preventive care", "Chronic disease management"""
+    technology["Advanced AI", "Healthcare AI", "Medical Diagnostics", "Health Monitoring", "Predictive Analytics", "Compliance Systems"""]
+    integrations["Electronic health records", "Medical devices", "Insurance systems", "Telemedicine platforms", "Government health systems"""]
+    useCases["Patient monitoring", "Diagnosis assistance", "Health recommendations", "Emergency response", "Preventive care", "Chronic disease management"""]
     "roi": "Healthcare providers see 600% ROI through improved patient outcomes and reduced costs."""
-    competitors["Basic health apps", "Telemedicine platforms", "Custom healthcare AI"""
+    competitors["Basic health apps", "Telemedicine platforms", "Custom healthcare AI"""]
     "marketSize": "$40B market"""
     "growthRate": "380% annual growth"""
     "variant": "ai-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Quantum & Logistics"""
     "realService"""
-    technology["Quantum Computing", "Logistics Optimization", "Supply Chain Management", "Route Planning", "Predictive Analytics", "Real-time Processing"""
-    integrations["Logistics systems", "E-commerce platforms", "Manufacturing systems", "Retail platforms", "Government systems", "Transportation systems"""
-    useCases["Supply chain optimization", "Route planning", "Inventory management", "Delivery scheduling", "Cost optimization", "Performance monitoring"""
+    technology["Quantum Computing", "Logistics Optimization", "Supply Chain Management", "Route Planning", "Predictive Analytics", "Real-time Processing"""]
+    integrations["Logistics systems", "E-commerce platforms", "Manufacturing systems", "Retail platforms", "Government systems", "Transportation systems"""]
+    useCases["Supply chain optimization", "Route planning", "Inventory management", "Delivery scheduling", "Cost optimization", "Performance monitoring"""]
     "roi": "Logistics companies see 700% ROI through optimized operations and reduced costs."""
-    competitors["Traditional logistics software", "Custom optimization solutions", "Basic route planning tools"""
+    competitors["Traditional logistics software", "Custom optimization solutions", "Basic route planning tools"""]
     "marketSize": "$35B market"""
     "growthRate": "300% annual growth"""
     "variant": "quantum-futuristic"""

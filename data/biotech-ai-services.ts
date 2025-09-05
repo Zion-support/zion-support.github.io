@@ -1,4 +1,4 @@
-export interface BiotechAIService {;
+export interface BiotechAIService {;}
   "id"""
   "realImplementation"""
     id: "ai-drug-discovery-platform"""
@@ -28,11 +28,11 @@ export interface BiotechAIService {;
     "setupTime": "2 weeks"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Drug Discovery", "Machine Learning", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Cloud Computing"""
-    integrations["Research databases", "Laboratory systems", "Clinical trial platforms", "Regulatory databases", "Scientific literature"""
-    useCases["Drug discovery", "Target identification", "Lead optimization", "Clinical trial design", "Regulatory compliance", "Research collaboration"""
+    technology["AI Drug Discovery", "Machine Learning", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Cloud Computing"""]
+    integrations["Research databases", "Laboratory systems", "Clinical trial platforms", "Regulatory databases", "Scientific literature"""]
+    useCases["Drug discovery", "Target identification", "Lead optimization", "Clinical trial design", "Regulatory compliance", "Research collaboration"""]
     "roi": "Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings."""
-    competitors["Insitro", "Recursion", "Basic research tools"""
+    competitors["Insitro", "Recursion", "Basic research tools"""]
     "marketSize": "$150B AI in healthcare market"""
     "growthRate": "250% annual growth"""
     "variant": "biotech-futuristic"""
@@ -74,11 +74,11 @@ export interface BiotechAIService {;
     "setupTime": "2 weeks"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Gene Editing", "Synthetic Biology", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""
-    integrations["Laboratory systems", "DNA sequencing", "Gene synthesis", "Research databases", "Regulatory platforms"""
-    useCases["Gene editing", "Synthetic biology", "Genetic optimization", "Agricultural improvement", "Medical research", "Industrial biotechnology"""
+    technology["AI Gene Editing", "Synthetic Biology", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""]
+    integrations["Laboratory systems", "DNA sequencing", "Gene synthesis", "Research databases", "Regulatory platforms"""]
+    useCases["Gene editing", "Synthetic biology", "Genetic optimization", "Agricultural improvement", "Medical research", "Industrial biotechnology"""]
     "roi": "Revolutionize genetic engineering with AI precision. ROI through innovation and new product development."""
-    competitors["Manual methods", "Basic tools"""
+    competitors["Manual methods", "Basic tools"""]
     "marketSize": "$50B genetic engineering market"""
     "growthRate": "300% annual growth"""
     "variant": "biotech-futuristic"""
@@ -120,11 +120,11 @@ export interface BiotechAIService {;
     "setupTime": "1 week"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Protein Design", "Machine Learning", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Cloud Computing"""
-    integrations["Laboratory systems", "Protein databases", "Expression systems", "Research platforms", "Analytical tools"""
-    useCases["Therapeutic proteins", "Industrial enzymes", "Research tools", "Food proteins", "Biomaterials", "Drug delivery"""
+    technology["AI Protein Design", "Machine Learning", "Bioinformatics", "React", "Node.js", "PostgreSQL", "Cloud Computing"""]
+    integrations["Laboratory systems", "Protein databases", "Expression systems", "Research platforms", "Analytical tools"""]
+    useCases["Therapeutic proteins", "Industrial enzymes", "Research tools", "Food proteins", "Biomaterials", "Drug delivery"""]
     "roi": "Design novel proteins faster and more efficiently. ROI through new product development and research acceleration."""
-    competitors["Basic tools", "Manual design"""
+    competitors["Basic tools", "Manual design"""]
     "marketSize": "$30B protein engineering market"""
     "growthRate": "280% annual growth"""
     "variant": "biotech-futuristic"""
@@ -166,11 +166,11 @@ export interface BiotechAIService {;
     "setupTime": "2 weeks"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Optimization", "Clinical Trials", "Machine Learning", "React", "Node.js", "PostgreSQL", "Analytics"""
-    integrations["Clinical trial systems", "Patient databases", "Regulatory platforms", "Analytical tools", "Healthcare systems"""
-    useCases["Trial optimization", "Patient recruitment", "Data analysis", "Risk management", "Compliance monitoring", "Performance tracking"""
+    technology["AI Optimization", "Clinical Trials", "Machine Learning", "React", "Node.js", "PostgreSQL", "Analytics"""]
+    integrations["Clinical trial systems", "Patient databases", "Regulatory platforms", "Analytical tools", "Healthcare systems"""]
+    useCases["Trial optimization", "Patient recruitment", "Data analysis", "Risk management", "Compliance monitoring", "Performance tracking"""]
     "roi": "Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals."""
-    competitors["Basic tools", "Manual management"""
+    competitors["Basic tools", "Manual management"""]
     "marketSize": "$45B clinical trial market"""
     "growthRate": "220% annual growth"""
     "variant": "biotech-futuristic"""
@@ -212,11 +212,11 @@ export interface BiotechAIService {;
     "setupTime": "1 week"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Discovery", "Biomarkers", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""
-    integrations["Laboratory systems", "Clinical databases", "Research platforms", "Analytical tools", "Data sources"""
-    useCases["Disease diagnosis", "Treatment response", "Prognosis prediction", "Drug development", "Personalized medicine", "Research discovery"""
+    technology["AI Discovery", "Biomarkers", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""]
+    integrations["Laboratory systems", "Clinical databases", "Research platforms", "Analytical tools", "Data sources"""]
+    useCases["Disease diagnosis", "Treatment response", "Prognosis prediction", "Drug development", "Personalized medicine", "Research discovery"""]
     "roi": "Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development."""
-    competitors["Manual methods", "Basic tools"""
+    competitors["Manual methods", "Basic tools"""]
     "marketSize": "$25B biomarker market"""
     "growthRate": "240% annual growth"""
     "variant": "biotech-futuristic"""
@@ -258,11 +258,11 @@ export interface BiotechAIService {;
     "setupTime": "2 weeks"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Genomics", "Personalized Medicine", "Machine Learning", "React", "Node.js", "PostgreSQL", "Healthcare"""
-    integrations["Healthcare systems", "Genomic databases", "Electronic health records", "Laboratory systems", "Clinical platforms"""
-    useCases["Treatment optimization", "Drug selection", "Risk assessment", "Preventive medicine", "Clinical trials", "Healthcare research"""
+    technology["AI Genomics", "Personalized Medicine", "Machine Learning", "React", "Node.js", "PostgreSQL", "Healthcare"""]
+    integrations["Healthcare systems", "Genomic databases", "Electronic health records", "Laboratory systems", "Clinical platforms"""]
+    useCases["Treatment optimization", "Drug selection", "Risk assessment", "Preventive medicine", "Clinical trials", "Healthcare research"""]
     "roi": "Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings."""
-    competitors["Basic analysis", "Limited tools"""
+    competitors["Basic analysis", "Limited tools"""]
     "marketSize": "$60B personalized medicine market"""
     "growthRate": "260% annual growth"""
     "variant": "biotech-futuristic"""
@@ -304,11 +304,11 @@ export interface BiotechAIService {;
     "setupTime": "1 week"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Repurposing", "Drug Discovery", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""
-    integrations["Drug databases", "Clinical databases", "Research platforms", "Analytical tools", "Market data"""
-    useCases["New indications", "Combination therapy", "Rare diseases", "Cost reduction", "Faster approval", "Research discovery"""
+    technology["AI Repurposing", "Drug Discovery", "Machine Learning", "React", "Node.js", "PostgreSQL", "Bioinformatics"""]
+    integrations["Drug databases", "Clinical databases", "Research platforms", "Analytical tools", "Market data"""]
+    useCases["New indications", "Combination therapy", "Rare diseases", "Cost reduction", "Faster approval", "Research discovery"""]
     "roi": "Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings."""
-    competitors["Manual research", "Basic tools"""
+    competitors["Manual research", "Basic tools"""]
     "marketSize": "$20B drug repurposing market"""
     "growthRate": "200% annual growth"""
     "variant": "biotech-futuristic"""
@@ -350,11 +350,11 @@ export interface BiotechAIService {;
     "setupTime": "1 week"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Bioinformatics", "Multi-omics", "Machine Learning", "React", "Node.js", "PostgreSQL", "Cloud Computing"""
-    integrations["Laboratory systems", "Research databases", "Analytical tools", "Cloud platforms", "Data sources"""
-    useCases["Genomic analysis", "Proteomic analysis", "Metabolomic analysis", "Research discovery", "Data processing", "Statistical analysis"""
+    technology["AI Bioinformatics", "Multi-omics", "Machine Learning", "React", "Node.js", "PostgreSQL", "Cloud Computing"""]
+    integrations["Laboratory systems", "Research databases", "Analytical tools", "Cloud platforms", "Data sources"""]
+    useCases["Genomic analysis", "Proteomic analysis", "Metabolomic analysis", "Research discovery", "Data processing", "Statistical analysis"""]
     "roi": "Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration."""
-    competitors["Basic tools", "Manual analysis"""
+    competitors["Basic tools", "Manual analysis"""]
     "marketSize": "$35B bioinformatics market"""
     "growthRate": "230% annual growth"""
     "variant": "biotech-futuristic"""
@@ -396,11 +396,11 @@ export interface BiotechAIService {;
     "setupTime": "2 weeks"""
     "category": "Biotech AI"""
     "realService"""
-    technology["AI Optimization", "Biomanufacturing", "Machine Learning", "React", "Node.js", "PostgreSQL", "IoT Integration"""
-    integrations["Manufacturing systems", "Laboratory systems", "Quality control", "Automation systems", "Monitoring tools"""
-    useCases["Process optimization", "Yield improvement", "Quality control", "Cost reduction", "Automation", "Performance monitoring"""
+    technology["AI Optimization", "Biomanufacturing", "Machine Learning", "React", "Node.js", "PostgreSQL", "IoT Integration"""]
+    integrations["Manufacturing systems", "Laboratory systems", "Quality control", "Automation systems", "Monitoring tools"""]
+    useCases["Process optimization", "Yield improvement", "Quality control", "Cost reduction", "Automation", "Performance monitoring"""]
     "roi": "Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings."""
-    competitors["Basic optimization", "Manual processes"""
+    competitors["Basic optimization", "Manual processes"""]
     "marketSize": "$40B biomanufacturing market"""
     "growthRate": "210% annual growth"""
     "variant": "biotech-futuristic"""

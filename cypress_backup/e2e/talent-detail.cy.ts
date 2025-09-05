@@ -1,8 +1,8 @@
-describe('talent detail page', () => {''
-  it('loads profile from API', () => {''
-    cy.intercept('GET', '/api/talent/t-123', {''
+describe('talent detail page', () => {''}
+  it('loads profile from API', () => {''}
+    cy.intercept('GET', '/api/talent/t-123', {''})
       "statusCode": 200,""
-      "body": {""
+      "body": {""}
         id: 't-123',''
         "full_name": 'Cypress Talent',''
         "bio": 'Testing bio',')'

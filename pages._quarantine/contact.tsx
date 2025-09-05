@@ -3,5 +3,5 @@ import dynamic from 'next/dynamic'''
 import { motion } from 'framer-motion'''
 import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'''
 const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition''
+const PageTransition = dynamic(() => import('../src/components/PageTransition'')
 cursor/fix-lint-push-and-merge-to-main-f3c1;)'

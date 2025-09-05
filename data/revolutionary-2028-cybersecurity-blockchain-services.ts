@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI Cybersecurity"""
     "realService"""
-    technology["Machine Learning", "Deep Learning", "Natural Language Processing", "Behavioral Analysis", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["SIEM systems", "EDR platforms", "Firewalls", "Email security", "Web security", "Cloud security platforms"""
-    useCases["Threat detection", "Incident response", "Vulnerability management", "Security monitoring", "Compliance reporting", "Threat hunting"""
+    technology["Machine Learning", "Deep Learning", "Natural Language Processing", "Behavioral Analysis", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["SIEM systems", "EDR platforms", "Firewalls", "Email security", "Web security", "Cloud security platforms"""]
+    useCases["Threat detection", "Incident response", "Vulnerability management", "Security monitoring", "Compliance reporting", "Threat hunting"""]
     "roi": "Organizations report 480% ROI through reduced security incidents and improved threat response times."""
-    competitors["CrowdStrike", "Palo Alto Networks", "FireEye", "Symantec", "Trend Micro"""
+    competitors["CrowdStrike", "Palo Alto Networks", "FireEye", "Symantec", "Trend Micro"""]
     "marketSize": "$52.8B market"""
     "growthRate": "285% annual growth"""
     "variant": "cybersecurity"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "Quantum Blockchain"""
     "realService"""
-    technology["Post-Quantum Cryptography", "Blockchain", "Machine Learning", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Ethereum", "Solana", "Polkadot", "DeFi protocols", "NFT marketplaces", "Wallet providers", "Oracle services"""
-    useCases["DeFi applications", "NFT platforms", "Supply chain tracking", "Digital identity", "Cross-border payments", "Smart contracts"""
+    technology["Post-Quantum Cryptography", "Blockchain", "Machine Learning", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Ethereum", "Solana", "Polkadot", "DeFi protocols", "NFT marketplaces", "Wallet providers", "Oracle services"""]
+    useCases["DeFi applications", "NFT platforms", "Supply chain tracking", "Digital identity", "Cross-border payments", "Smart contracts"""]
     "roi": "Platforms report 520% ROI through improved security, scalability, and user adoption."""
-    competitors["Ethereum", "Solana", "Polkadot", "Cardano", "Avalanche"""
+    competitors["Ethereum", "Solana", "Polkadot", "Cardano", "Avalanche"""]
     "marketSize": "$19.8B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "AI Identity"""
     "realService"""
-    technology["Computer Vision", "Machine Learning", "Biometric Authentication", "Natural Language Processing", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Banking systems", "E-commerce platforms", "Healthcare systems", "Government databases", "CRM systems", "Payment processors"""
-    useCases["Customer onboarding", "Account verification", "Fraud prevention", "Compliance verification", "Access control", "Digital identity"""
+    technology["Computer Vision", "Machine Learning", "Biometric Authentication", "Natural Language Processing", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Banking systems", "E-commerce platforms", "Healthcare systems", "Government databases", "CRM systems", "Payment processors"""]
+    useCases["Customer onboarding", "Account verification", "Fraud prevention", "Compliance verification", "Access control", "Digital identity"""]
     "roi": "Companies report 380% ROI through reduced fraud and improved customer experience."""
-    competitors["Onfido", "Jumio", "ID.me", "Veriff", "AuthenticID"""
+    competitors["Onfido", "Jumio", "ID.me", "Veriff", "AuthenticID"""]
     "marketSize": "$18.5B market"""
     "growthRate": "245% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "Blockchain Security"""
     "realService"""
-    technology["Blockchain", "IoT Sensors", "Machine Learning", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["ERP systems", "WMS platforms", "IoT devices", "QR codes", "RFID systems", "Mobile apps"""
-    useCases["Product authentication", "Supply chain transparency", "Counterfeit prevention", "Compliance verification", "Sustainability tracking", "Quality assurance"""
+    technology["Blockchain", "IoT Sensors", "Machine Learning", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["ERP systems", "WMS platforms", "IoT devices", "QR codes", "RFID systems", "Mobile apps"""]
+    useCases["Product authentication", "Supply chain transparency", "Counterfeit prevention", "Compliance verification", "Sustainability tracking", "Quality assurance"""]
     "roi": "Companies report 420% ROI through reduced fraud, improved compliance, and enhanced customer trust."""
-    competitors["IBM Food Trust", "SAP Blockchain", "Oracle Blockchain", "VeChain", "Walmart Blockchain"""
+    competitors["IBM Food Trust", "SAP Blockchain", "Oracle Blockchain", "VeChain", "Walmart Blockchain"""]
     "marketSize": "$25.3B market"""
     "growthRate": "285% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "AI Privacy"""
     "realService"""
-    technology["Federated Learning", "Homomorphic Encryption", "Differential Privacy", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Data platforms", "Analytics tools", "ML frameworks", "Privacy tools", "Compliance platforms", "Research platforms"""
-    useCases["Healthcare analytics", "Financial modeling", "Research collaboration", "Privacy-compliant insights", "Cross-organizational analytics", "Regulatory compliance"""
+    technology["Federated Learning", "Homomorphic Encryption", "Differential Privacy", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Data platforms", "Analytics tools", "ML frameworks", "Privacy tools", "Compliance platforms", "Research platforms"""]
+    useCases["Healthcare analytics", "Financial modeling", "Research collaboration", "Privacy-compliant insights", "Cross-organizational analytics", "Regulatory compliance"""]
     "roi": "Organizations report 380% ROI through improved insights while maintaining privacy compliance."""
-    competitors["OpenMined", "Privacera", "BigID", "OneTrust", "TrustArc"""
+    competitors["OpenMined", "Privacera", "BigID", "OneTrust", "TrustArc"""]
     "marketSize": "$12.8B market"""
     "growthRate": "265% annual growth"""
     "variant": "ai-futuristic"""

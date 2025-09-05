@@ -1,12 +1,12 @@
 :src/data/comprehensiveServicesCatalog2025.tsx;
 ;
-export interface ComprehensiveService2025 {
-  // TODO: Implement
-}
+export interface ComprehensiveService2025 {}
+  // TODO: Implement;
+};
   "id"""
     "technology"""
 export const "COMPREHENSIVE_SERVICES_CATALOG_2025"""
-export const SERVICE_CATEGORIES = ["""
+export const SERVICE_CATEGORIES = ["""]
   "AI & Analytics","""
   "AI & Customer Experience","""
   "AI & FinTech","""
@@ -45,11 +45,11 @@ export const SERVICE_CATEGORIES = ["""
   "Energy",;"""
   "Transportation",;"""
   "Logistics"""
-  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count"""
-  { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count"""
-  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count": 0 }, { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count": 0 }, { "id": 'enterprise', "name": 'Enterprise', "range"""
-export   { "id": 'advanced', "name": 'Advanced', "count": 0 }, { "id": 'cutting-edge', "name": 'Cutting-edge', "count": 0 }, { "id": 'revolutionary', "name"""
-  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name"""
-  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name"""
+  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count"""}
+  { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count"""}
+  { "id": 'budget', "name": 'Budget', "range": '$100 - $1,000/month', "count": 0 }, { "id": 'mid-range', "name": 'Mid-Range', "range": '$1,000 - $5,000/month', "count": 0 }, { "id": 'enterprise', "name": 'Enterprise', "range"""}
+export   { "id": 'advanced', "name": 'Advanced', "count": 0 }, { "id": 'cutting-edge', "name": 'Cutting-edge', "count": 0 }, { "id": 'revolutionary', "name"""}
+  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name"""}
+  { "id": 'standard', "name": 'Standard', "count": 0 }, { "id": 'premium', "name": 'Premium', "count": 0 }, { "id": 'enterprise', "name"""}
   "count""
 cursor/fix-lint-push-and-merge-to-main-f3c1;]"

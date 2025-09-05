@@ -1,5 +1,5 @@
 import { z } from 'zod';'
-const envSchema = z.object({)'
+const envSchema = z.object({)'}
   "NODE_ENV": z.enum(['development', 'production', 'test']),''
   "NEXT_PUBLIC_APP_URL": z.string().url(),""
   "DATABASE_URL": z.string().url().optional(),""

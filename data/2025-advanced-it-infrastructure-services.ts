@@ -23,16 +23,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-indigo-400"""
     "link": "https://ziontechgroup.com/quantum-enhanced-cloud-infrastructure"""
     "marketPosition": "Competes with AWS ($0.10/hour), Azure ($0.10/hour), GCP ($0.10/hour). Our "advantage": Quantum processing capabilities provide 1000x performance for specific workloads."""
-    targetAudience["Research institutions", "AI companies", "Financial services", "Pharmaceutical companies", "Government agencies"""
+    targetAudience["Research institutions", "AI companies", "Financial services", "Pharmaceutical companies", "Government agencies"""]
     "trialDays"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum Cloud Computing"""
     "realService"""
-    technology["Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform"""
-    integrations["AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins"""
-    useCases["Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance"""
+    technology["Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform"""]
+    integrations["AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins"""]
+    useCases["Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance"""]
     "roi": "Organizations report 400% ROI through reduced cloud costs and improved efficiency."""
-    competitors["HashiCorp, Terraform Cloud, CloudBolt, RightScale"""
+    competitors["HashiCorp, Terraform Cloud, CloudBolt, RightScale"""]
     "marketSize": "$25B multi-cloud management market"""
     "growthRate": "35% annual growth"""
     "variant": "multi-cloud-enterprise"""
@@ -69,16 +69,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/autonomous-edge-computing-network"""
     "marketPosition": "Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), GCP Edge TPU ($0.50/hour). Our "advantage": Autonomous optimization reduces operational overhead by 70%."""
-    targetAudience["IoT companies", "Telecommunications", "Manufacturing", "Healthcare", "Smart cities"""
+    targetAudience["IoT companies", "Telecommunications", "Manufacturing", "Healthcare", "Smart cities"""]
     "trialDays"""
     "setupTime": "3-5 days"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Kubernetes, Docker, React, Node.js, PostgreSQL, Redis, TensorFlow"""
-    integrations["AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices"""
-    useCases["IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing"""
+    technology["Kubernetes, Docker, React, Node.js, PostgreSQL, Redis, TensorFlow"""]
+    integrations["AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices"""]
+    useCases["IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing"""]
     "roi": "Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs."""
-    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry"""
+    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry"""]
     "marketSize": "$12.8B edge computing market"""
     "growthRate": "45% annual growth"""
     "variant": "edge-computing-enterprise"""
@@ -115,16 +115,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-red-400"""
     "link": "https://ziontechgroup.com/zero-trust-security-architecture"""
     "marketPosition": "Competes with Palo Alto ($50/month), Cisco ($100/month), Fortinet ($200/month). Our "advantage": AI-powered continuous verification reduces security incidents by 90%."""
-    targetAudience["Enterprise organizations", "Government agencies", "Financial services", "Healthcare", "Education"""
+    targetAudience["Enterprise organizations", "Government agencies", "Financial services", "Healthcare", "Education"""]
     "trialDays"""
     "setupTime": "2-4 weeks"""
     "category": "Cybersecurity"""
     "realService"""
-    technology["Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes"""
-    integrations["Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls"""
-    useCases["Network security, Access control, Compliance, Threat protection, Audit reporting"""
+    technology["Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes"""]
+    integrations["Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls"""]
+    useCases["Network security, Access control, Compliance, Threat protection, Audit reporting"""]
     "roi": "Organizations report 350% ROI through improved security posture and reduced incidents."""
-    competitors["Traditional network security vendors, Zero-trust startups"""
+    competitors["Traditional network security vendors, Zero-trust startups"""]
     "marketSize": "$40B network security market"""
     "growthRate": "30% annual growth in zero-trust segment"""
     "variant": "zero-trust-enterprise"""
@@ -161,16 +161,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-yellow-400"""
     "link": "https://ziontechgroup.com/ai-devops-automation"""
     "marketPosition": "Competes with GitLab ($99/user/month), GitHub Actions ($4/month), Jenkins (free). Our "advantage": AI-powered optimization and comprehensive automation."""
-    targetAudience["Development teams", "DevOps engineers", "IT operations", "Software companies", "Enterprises"""
+    targetAudience["Development teams", "DevOps engineers", "IT operations", "Software companies", "Enterprises"""]
     "trialDays"""
     "setupTime": "1-2 weeks"""
     "category": "DevOps & Automation"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes"""
-    integrations["GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Travis CI, AWS, Azure"""
-    useCases["CI/CD automation, Infrastructure management, Testing automation, Performance optimization, Incident management"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes"""]
+    integrations["GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Travis CI, AWS, Azure"""]
+    useCases["CI/CD automation, Infrastructure management, Testing automation, Performance optimization, Incident management"""]
     "roi": "Teams report 300% ROI through reduced deployment time and improved reliability."""
-    competitors["GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI"""
+    competitors["GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI"""]
     "marketSize": "$8B DevOps market"""
     "growthRate": "28% annual growth"""
     "variant": "ai-devops-enterprise"""
@@ -207,16 +207,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/quantum-resistant-storage"""
     "marketPosition": "Leading edge in quantum-resistant storage. Competes with traditional storage but offers future-proof security."""
-    targetAudience["Financial institutions", "Government agencies", "Healthcare organizations", "Defense contractors", "Critical infrastructure"""
+    targetAudience["Financial institutions", "Government agencies", "Healthcare organizations", "Defense contractors", "Critical infrastructure"""]
     "trialDays"""
     "setupTime": "3-4 weeks"""
     "category": "Data Storage & Security"""
     "realService"""
-    technology["Post-quantum algorithms, Python, React, Node.js, PostgreSQL, Docker"""
-    integrations["AWS S3, Azure Blob, Google Cloud Storage, On-premise storage"""
-    useCases["Secure data storage, Compliance management, Disaster recovery, Data protection, Archive storage"""
+    technology["Post-quantum algorithms, Python, React, Node.js, PostgreSQL, Docker"""]
+    integrations["AWS S3, Azure Blob, Google Cloud Storage, On-premise storage"""]
+    useCases["Secure data storage, Compliance management, Disaster recovery, Data protection, Archive storage"""]
     "roi": "Organizations report 400% ROI through improved security and compliance benefits."""
-    competitors["Traditional storage vendors, Quantum-resistant startups"""
+    competitors["Traditional storage vendors, Quantum-resistant startups"""]
     "marketSize": "$50B data storage market"""
     "growthRate": "40% annual growth in quantum-resistant segment"""
     "variant": "quantum-storage-enterprise"""
@@ -253,16 +253,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-indigo-400"""
     "link": "https://ziontechgroup.com/intelligent-data-center"""
     "marketPosition": "Competes with Schneider Electric ($500/month), Siemens ($800/month). Our "advantage": AI-powered optimization and comprehensive monitoring."""
-    targetAudience["Data centers", "Colocation facilities", "Enterprise IT", "Cloud providers", "Infrastructure companies"""
+    targetAudience["Data centers", "Colocation facilities", "Enterprise IT", "Cloud providers", "Infrastructure companies"""]
     "trialDays"""
     "setupTime": "2-3 weeks"""
     "category": "Data Center Management"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, IoT"""
-    integrations["IoT sensors, Building management systems, Power monitoring, Cooling systems"""
-    useCases["Energy optimization, Environmental monitoring, Predictive maintenance, Resource management, Cost reduction"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, IoT"""]
+    integrations["IoT sensors, Building management systems, Power monitoring, Cooling systems"""]
+    useCases["Energy optimization, Environmental monitoring, Predictive maintenance, Resource management, Cost reduction"""]
     "roi": "Data centers report 500% ROI through energy savings and improved efficiency."""
-    competitors["Schneider Electric, Siemens, Honeywell, Johnson Controls"""
+    competitors["Schneider Electric, Siemens, Honeywell, Johnson Controls"""]
     "marketSize": "$12B data center management market"""
     "growthRate": "32% annual growth"""
     "variant": "intelligent-datacenter-enterprise"""
@@ -299,16 +299,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-400"""
     "link": "https://ziontechgroup.com/federated-learning"""
     "marketPosition": "Leading edge in federated learning. Competes with traditional AI platforms but offers superior privacy protection."""
-    targetAudience["Healthcare organizations", "Financial institutions", "Research institutions", "Government agencies", "Privacy-conscious companies"""
+    targetAudience["Healthcare organizations", "Financial institutions", "Research institutions", "Government agencies", "Privacy-conscious companies"""]
     "trialDays"""
     "setupTime": "4-6 weeks"""
     "category": "AI & Privacy"""
     "realService"""
-    technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Docker"""
-    integrations["AI frameworks, Data platforms, Cloud services, Edge devices"""
-    useCases["Privacy-preserving AI, Distributed learning, Healthcare AI, Financial AI, Research collaboration"""
+    technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Docker"""]
+    integrations["AI frameworks, Data platforms, Cloud services, Edge devices"""]
+    useCases["Privacy-preserving AI, Distributed learning, Healthcare AI, Financial AI, Research collaboration"""]
     "roi": "Organizations report 600% ROI through improved AI capabilities while maintaining privacy."""
-    competitors["Traditional AI platforms, Federated learning startups"""
+    competitors["Traditional AI platforms, Federated learning startups"""]
     "marketSize": "$3B federated learning market"""
     "growthRate": "50% annual growth"""
     "variant": "federated-learning-enterprise"""
@@ -345,16 +345,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-indigo-400"""
     "link": "https://ziontechgroup.com/quantum-cloud-infrastructure-platform"""
     "marketPosition": "First-to-market quantum cloud infrastructure platform with hybrid quantum-classical computing and quantum-secured cloud services."""
-    targetAudience["Research institutions", "Technology companies", "Financial institutions", "Government agencies", "Quantum computing researchers"""
+    targetAudience["Research institutions", "Technology companies", "Financial institutions", "Government agencies", "Quantum computing researchers"""]
     "trialDays"""
     "setupTime": "12-16 weeks"""
     "category": "Quantum Cloud Computing"""
     "realService"""
-    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "Hybrid Computing", "Python", "Qiskit", "Quantum SDKs"""
-    integrations["AWS", "Azure", "Google Cloud", "Quantum computers", "Research platforms", "Cloud platforms"""
-    useCases["Quantum research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography"""
+    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "Hybrid Computing", "Python", "Qiskit", "Quantum SDKs"""]
+    integrations["AWS", "Azure", "Google Cloud", "Quantum computers", "Research platforms", "Cloud platforms"""]
+    useCases["Quantum research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography"""]
     "roi": "Research institutions report 1000%+ ROI with access to quantum computing power and breakthrough research capabilities."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$50B+ potential market"""
     "growthRate": "800%+ annual growth"""
     "variant": "quantum-cloud"""
@@ -391,16 +391,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/edge-computing-orchestration-platform"""
     "marketPosition": "Leading edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud integration capabilities."""
-    targetAudience["IoT companies", "Telecommunications", "Manufacturing companies", "Smart city initiatives", "Edge computing providers"""
+    targetAudience["IoT companies", "Telecommunications", "Manufacturing companies", "Smart city initiatives", "Edge computing providers"""]
     "trialDays"""
     "setupTime": "6-8 weeks"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Edge Computing", "Distributed Systems", "Container Orchestration", "Kubernetes", "Python", "Docker", "React"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker", "Edge devices", "Cloud platforms"""
-    useCases["IoT deployment", "Edge computing management", "Distributed applications", "Real-time processing", "Latency optimization"""
+    technology["Edge Computing", "Distributed Systems", "Container Orchestration", "Kubernetes", "Python", "Docker", "React"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker", "Edge devices", "Cloud platforms"""]
+    useCases["IoT deployment", "Edge computing management", "Distributed applications", "Real-time processing", "Latency optimization"""]
     "roi": "IoT companies report 450% ROI with 70% reduction in latency and 55% improvement in edge computing efficiency."""
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "Kubernetes Edge"""
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "Kubernetes Edge"""]
     "marketSize": "$12.5B edge computing market"""
     "growthRate": "35% annual growth"""
     "variant": "edge-computing"""
@@ -437,16 +437,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-red-400"""
     "link": "https://ziontechgroup.com/zero-trust-security-architecture-platform"""
     "marketPosition": "Advanced zero trust security architecture platform with comprehensive security implementation, continuous verification, and enterprise-grade protection capabilities."""
-    targetAudience["Large enterprises", "Government agencies", "Financial institutions", "Healthcare organizations", "Technology companies"""
+    targetAudience["Large enterprises", "Government agencies", "Financial institutions", "Healthcare organizations", "Technology companies"""]
     "trialDays"""
     "setupTime": "8-10 weeks"""
     "category": "Zero Trust Security"""
     "realService"""
-    technology["Zero Trust Security", "Identity Management", "Access Control", "Threat Detection", "Python", "React", "Node.js"""
-    integrations["Active Directory", "LDAP", "SAML", "OAuth", "Security tools", "Monitoring systems", "Cloud platforms"""
-    useCases["Identity verification", "Access control", "Threat prevention", "Compliance management", "Security monitoring"""
+    technology["Zero Trust Security", "Identity Management", "Access Control", "Threat Detection", "Python", "React", "Node.js"""]
+    integrations["Active Directory", "LDAP", "SAML", "OAuth", "Security tools", "Monitoring systems", "Cloud platforms"""]
+    useCases["Identity verification", "Access control", "Threat prevention", "Compliance management", "Security monitoring"""]
     "roi": "Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores."""
-    competitors["Okta", "Ping Identity", "ForgeRock", "CyberArk"""
+    competitors["Okta", "Ping Identity", "ForgeRock", "CyberArk"""]
     "marketSize": "$12.8B zero trust security market"""
     "growthRate": "38% annual growth"""
     "variant": "zero-trust"""
@@ -483,16 +483,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-blue-400"""
     "link": "https://ziontechgroup.com/autonomous-data-center-platform"""
     "marketPosition": "Competes with Equinix ($500/month), Digital Realty ($1000/month), CyrusOne ($800/month). Our "advantage": AI automation reduces operational costs by 60% and improves reliability."""
-    targetAudience["Enterprise organizations", "Cloud providers", "Telecommunications", "Financial services", "Government"""
+    targetAudience["Enterprise organizations", "Cloud providers", "Telecommunications", "Financial services", "Government"""]
     "trialDays"""
     "setupTime": "4-6 weeks"""
     "category": "Data Center Infrastructure"""
     "realService"""
-    technology["Artificial Intelligence", "Machine Learning", "Data Center Management", "Infrastructure Automation", "Python", "TensorFlow", "React"""
-    integrations["Data center management systems", "Monitoring tools", "Power management systems", "Cooling systems", "Security systems"""
-    useCases["Data center automation", "Infrastructure optimization", "Energy efficiency", "Performance monitoring", "Maintenance automation"""
+    technology["Artificial Intelligence", "Machine Learning", "Data Center Management", "Infrastructure Automation", "Python", "TensorFlow", "React"""]
+    integrations["Data center management systems", "Monitoring tools", "Power management systems", "Cooling systems", "Security systems"""]
+    useCases["Data center automation", "Infrastructure optimization", "Energy efficiency", "Performance monitoring", "Maintenance automation"""]
     "roi": "Data center operators report 600% ROI with 70% reduction in operational costs and 80% improvement in energy efficiency."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$35B+ potential market"""
     "growthRate": "500%+ annual growth"""
     "variant": "autonomous-infrastructure"""
@@ -529,16 +529,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-400"""
     "link": "https://ziontechgroup.com/quantum-networking-platform"""
     "marketPosition": "Competes with Cisco ($500/month), Juniper ($400/month), Arista ($600/month). Our "advantage": Quantum encryption provides unbreakable security and quantum optimization."""
-    targetAudience["Government agencies", "Financial services", "Healthcare", "Telecommunications", "Defense contractors"""
+    targetAudience["Government agencies", "Financial services", "Healthcare", "Telecommunications", "Defense contractors"""]
     "trialDays"""
     "setupTime": "3-5 weeks"""
     "category": "Quantum Networking"""
     "realService"""
-    technology["Quantum Computing", "Quantum Key Distribution", "Quantum Cryptography", "Network Security", "Python", "Quantum SDKs"""
-    integrations["Existing network infrastructure", "Security systems", "Monitoring tools", "Cloud platforms", "API services"""
-    useCases["Secure communications", "Government networks", "Financial transactions", "Defense applications", "Research networks"""
+    technology["Quantum Computing", "Quantum Key Distribution", "Quantum Cryptography", "Network Security", "Python", "Quantum SDKs"""]
+    integrations["Existing network infrastructure", "Security systems", "Monitoring tools", "Cloud platforms", "API services"""]
+    useCases["Secure communications", "Government networks", "Financial transactions", "Defense applications", "Research networks"""]
     "roi": "Government agencies report 900% ROI with 100% security compliance and unbreakable communication channels."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$45B+ potential market"""
     "growthRate": "700%+ annual growth"""
     "variant": "quantum-networking"""
@@ -575,16 +575,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-indigo-400"""
     "link": "https://ziontechgroup.com/quantum-cloud-infrastructure-platform"""
     "marketPosition": "First-to-market quantum cloud infrastructure platform with hybrid quantum-classical computing and quantum-secured cloud services."""
-    targetAudience["Research institutions", "Technology companies", "Financial institutions", "Government agencies", "Quantum computing researchers"""
+    targetAudience["Research institutions", "Technology companies", "Financial institutions", "Government agencies", "Quantum computing researchers"""]
     "trialDays"""
     "setupTime": "12-16 weeks"""
     "category": "Quantum Cloud Computing"""
     "realService"""
-    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "Hybrid Computing", "Python", "Qiskit", "Quantum SDKs"""
-    integrations["AWS", "Azure", "Google Cloud", "Quantum computers", "Research platforms", "Cloud platforms"""
-    useCases["Quantum research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography"""
+    technology["Quantum Computing", "Cloud Infrastructure", "Quantum Algorithms", "Hybrid Computing", "Python", "Qiskit", "Quantum SDKs"""]
+    integrations["AWS", "Azure", "Google Cloud", "Quantum computers", "Research platforms", "Cloud platforms"""]
+    useCases["Quantum research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography"""]
     "roi": "Research institutions report 1000%+ ROI with access to quantum computing power and breakthrough research capabilities."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$50B+ potential market"""
     "growthRate": "800%+ annual growth"""
     "variant": "quantum-cloud"""
@@ -621,16 +621,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-green-400"""
     "link": "https://ziontechgroup.com/edge-computing-orchestration-platform"""
     "marketPosition": "Leading edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud integration capabilities."""
-    targetAudience["IoT companies", "Telecommunications", "Manufacturing companies", "Smart city initiatives", "Edge computing providers"""
+    targetAudience["IoT companies", "Telecommunications", "Manufacturing companies", "Smart city initiatives", "Edge computing providers"""]
     "trialDays"""
     "setupTime": "6-8 weeks"""
     "category": "Edge Computing & IoT"""
     "realService"""
-    technology["Edge Computing", "Distributed Systems", "Container Orchestration", "Kubernetes", "Python", "Docker", "React"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker", "Edge devices", "Cloud platforms"""
-    useCases["IoT deployment", "Edge computing management", "Distributed applications", "Real-time processing", "Latency optimization"""
+    technology["Edge Computing", "Distributed Systems", "Container Orchestration", "Kubernetes", "Python", "Docker", "React"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker", "Edge devices", "Cloud platforms"""]
+    useCases["IoT deployment", "Edge computing management", "Distributed applications", "Real-time processing", "Latency optimization"""]
     "roi": "IoT companies report 450% ROI with 70% reduction in latency and 55% improvement in edge computing efficiency."""
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "Kubernetes Edge"""
+    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "Kubernetes Edge"""]
     "marketSize": "$12.5B edge computing market"""
     "growthRate": "35% annual growth"""
     "variant": "edge-computing"""
@@ -667,16 +667,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-red-400"""
     "link": "https://ziontechgroup.com/zero-trust-security-architecture-platform"""
     "marketPosition": "Advanced zero trust security architecture platform with comprehensive security implementation, continuous verification, and enterprise-grade protection capabilities."""
-    targetAudience["Large enterprises", "Government agencies", "Financial institutions", "Healthcare organizations", "Technology companies"""
+    targetAudience["Large enterprises", "Government agencies", "Financial institutions", "Healthcare organizations", "Technology companies"""]
     "trialDays"""
     "setupTime": "8-10 weeks"""
     "category": "Zero Trust Security"""
     "realService"""
-    technology["Zero Trust Security", "Identity Management", "Access Control", "Threat Detection", "Python", "React", "Node.js"""
-    integrations["Active Directory", "LDAP", "SAML", "OAuth", "Security tools", "Monitoring systems", "Cloud platforms"""
-    useCases["Identity verification", "Access control", "Threat prevention", "Compliance management", "Security monitoring"""
+    technology["Zero Trust Security", "Identity Management", "Access Control", "Threat Detection", "Python", "React", "Node.js"""]
+    integrations["Active Directory", "LDAP", "SAML", "OAuth", "Security tools", "Monitoring systems", "Cloud platforms"""]
+    useCases["Identity verification", "Access control", "Threat prevention", "Compliance management", "Security monitoring"""]
     "roi": "Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores."""
-    competitors["Okta", "Ping Identity", "ForgeRock", "CyberArk"""
+    competitors["Okta", "Ping Identity", "ForgeRock", "CyberArk"""]
     "marketSize": "$12.8B zero trust security market"""
     "growthRate": "38% annual growth"""
     "variant": "zero-trust"""
@@ -713,16 +713,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-blue-400"""
     "link": "https://ziontechgroup.com/autonomous-data-center-platform"""
     "marketPosition": "First-to-market autonomous data center platform with AI-powered management, optimization, and comprehensive infrastructure automation capabilities."""
-    targetAudience["Data center operators", "Cloud providers", "Large enterprises", "Technology companies", "Infrastructure providers"""
+    targetAudience["Data center operators", "Cloud providers", "Large enterprises", "Technology companies", "Infrastructure providers"""]
     "trialDays"""
     "setupTime": "10-12 weeks"""
     "category": "Autonomous Infrastructure"""
     "realService"""
-    technology["Artificial Intelligence", "Machine Learning", "Data Center Management", "Infrastructure Automation", "Python", "TensorFlow", "React"""
-    integrations["Data center management systems", "Monitoring tools", "Power management systems", "Cooling systems", "Security systems"""
-    useCases["Data center automation", "Infrastructure optimization", "Energy efficiency", "Performance monitoring", "Maintenance automation"""
+    technology["Artificial Intelligence", "Machine Learning", "Data Center Management", "Infrastructure Automation", "Python", "TensorFlow", "React"""]
+    integrations["Data center management systems", "Monitoring tools", "Power management systems", "Cooling systems", "Security systems"""]
+    useCases["Data center automation", "Infrastructure optimization", "Energy efficiency", "Performance monitoring", "Maintenance automation"""]
     "roi": "Data center operators report 600% ROI with 70% reduction in operational costs and 80% improvement in energy efficiency."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$35B+ potential market"""
     "growthRate": "500%+ annual growth"""
     "variant": "autonomous-infrastructure"""
@@ -759,16 +759,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-cyan-400"""
     "link": "https://ziontechgroup.com/quantum-networking-infrastructure"""
     "marketPosition": "First-to-market quantum networking infrastructure with quantum key distribution and unbreakable communication capabilities."""
-    targetAudience["Government agencies", "Defense contractors", "Financial institutions", "Telecommunications", "Research institutions"""
+    targetAudience["Government agencies", "Defense contractors", "Financial institutions", "Telecommunications", "Research institutions"""]
     "trialDays"""
     "setupTime": "16-20 weeks"""
     "category": "Quantum Networking"""
     "realService"""
-    technology["Quantum Computing", "Quantum Key Distribution", "Quantum Cryptography", "Network Security", "Python", "Quantum SDKs"""
-    integrations["Existing network infrastructure", "Security systems", "Monitoring tools", "Cloud platforms", "API services"""
-    useCases["Secure communications", "Government networks", "Financial transactions", "Defense applications", "Research networks"""
+    technology["Quantum Computing", "Quantum Key Distribution", "Quantum Cryptography", "Network Security", "Python", "Quantum SDKs"""]
+    integrations["Existing network infrastructure", "Security systems", "Monitoring tools", "Cloud platforms", "API services"""]
+    useCases["Secure communications", "Government networks", "Financial transactions", "Defense applications", "Research networks"""]
     "roi": "Government agencies report 900% ROI with 100% security compliance and unbreakable communication channels."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "$45B+ potential market"""
     "growthRate": "700%+ annual growth"""
     "variant": "quantum-networking"""
@@ -805,16 +805,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-purple-400"""
     "link": "https://ziontechgroup.com/ai-powered-infrastructure-management"""
     "marketPosition": "Advanced AI-powered infrastructure management platform with intelligent monitoring, optimization, and comprehensive infrastructure automation capabilities."""
-    targetAudience["Infrastructure engineers", "Cloud architects", "DevOps teams", "IT operations", "Technology companies"""
+    targetAudience["Infrastructure engineers", "Cloud architects", "DevOps teams", "IT operations", "Technology companies"""]
     "trialDays"""
     "setupTime": "6-8 weeks"""
     "category": "AI Infrastructure Management"""
     "realService"""
-    technology["Artificial Intelligence", "Machine Learning", "Infrastructure Management", "Monitoring", "Python", "TensorFlow", "React"""
-    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Monitoring tools", "Infrastructure platforms"""
-    useCases["Infrastructure monitoring", "Resource optimization", "Performance optimization", "Cost management", "Automation"""
+    technology["Artificial Intelligence", "Machine Learning", "Infrastructure Management", "Monitoring", "Python", "TensorFlow", "React"""]
+    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Monitoring tools", "Infrastructure platforms"""]
+    useCases["Infrastructure monitoring", "Resource optimization", "Performance optimization", "Cost management", "Automation"""]
     "roi": "Infrastructure teams report 480% ROI with 65% reduction in management time and 55% improvement in resource utilization."""
-    competitors["ServiceNow", "BMC Helix", "BMC TrueSight", "IBM Tivoli"""
+    competitors["ServiceNow", "BMC Helix", "BMC TrueSight", "IBM Tivoli"""]
     "marketSize": "$15.2B infrastructure management market"""
     "growthRate": "32% annual growth"""
     "variant": "ai-infrastructure"""
@@ -851,16 +851,16 @@ import { ServiceVariant  } from "../types/service-variants"""
     "textColor": "text-teal-400"""
     "link": "https://ziontechgroup.com/hybrid-cloud-orchestration-platform"""
     "marketPosition": "Advanced hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud integration capabilities."""
-    targetAudience["Cloud architects", "DevOps teams", "Infrastructure engineers", "Technology companies", "Multi-cloud organizations"""
+    targetAudience["Cloud architects", "DevOps teams", "Infrastructure engineers", "Technology companies", "Multi-cloud organizations"""]
     "trialDays"""
     "setupTime": "6-8 weeks"""
     "category": "Hybrid Cloud Management"""
     "realService"""
-    technology["Cloud Orchestration", "Multi-Cloud Management", "Container Orchestration", "Kubernetes", "Python", "Terraform", "Ansible"""
-    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Cloud platforms", "Infrastructure tools"""
-    useCases["Multi-cloud management", "Workload distribution", "Cost optimization", "Performance monitoring", "Cloud integration"""
+    technology["Cloud Orchestration", "Multi-Cloud Management", "Container Orchestration", "Kubernetes", "Python", "Terraform", "Ansible"""]
+    integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Cloud platforms", "Infrastructure tools"""]
+    useCases["Multi-cloud management", "Workload distribution", "Cost optimization", "Performance monitoring", "Cloud integration"""]
     "roi": "Multi-cloud organizations report 420% ROI with 60% reduction in cloud management complexity and 50% improvement in cost efficiency."""
-    competitors["Terraform", "Ansible", "Kubernetes", "Cloud Foundry"""
+    competitors["Terraform", "Ansible", "Kubernetes", "Cloud Foundry"""]
     "marketSize": "$18.5B hybrid cloud market"""
     "growthRate": "28% annual growth"""
     "variant": "hybrid-cloud"""

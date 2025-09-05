@@ -1,6 +1,6 @@
 import AICodeGenerator from './AICodeGenerator;''
-describe('AICodeGenerator', () => {;''
-  it('renders without crashing', () => {;'
+describe('AICodeGenerator', () => {;''}
+  it('renders without crashing', () => {;'}
     render(<AICodeGenerator />);
 </AICodeGenerator>
     render(<AICodeGenerator />);

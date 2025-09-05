@@ -1,26 +1,24 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';''
 import { motion } from 'framer-motion';''
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';'
-interface Props {
-  // TODO: Implement
-}
+interface Props {}
+  // TODO: Implement;
+};
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface State {
-  // TODO: Implement
-}
+};
+interface State {}
+  // TODO: Implement;
+};
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
+};
+export class ErrorBoundary extends Component<Props, State> {}
 </Props>
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }};
           animate={{ opacity: 1, y: 0 }}'
           className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4""
         >
@@ -54,14 +52,14 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">"
 </div>
               <button;
-                onClick={() => window.location.reload()}
+                onClick={() => window.location.reload()};
 </button>"
                 <RefreshCw className="w-4 h-4 mr-2" />"
 </RefreshCw>
               </button>
 
               <button;
-                onClick={() => window.history.back()}
+                onClick={() => window.history.back()};
 </button>"
                 <Bug className="w-4 h-4 mr-2" />"
 </Bug>
@@ -87,8 +85,7 @@ export class ErrorBoundary extends Component<Props, State> {
           </div>
         </motion.div>
       );
-    }
-
+    };
     return this.props.children;
-  }
+  };
 }"

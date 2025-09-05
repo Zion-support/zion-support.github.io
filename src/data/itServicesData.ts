@@ -1,6 +1,6 @@
-export interface ITService {
-  // TODO: Implement
-}
+export interface ITService {}
+  // TODO: Implement;
+};
   id: string;,
   title: string;
   description: string;,
@@ -19,22 +19,21 @@ export interface ITService {
   marketPrice: string;
   roi: string;,
   innovationLevel: string;
-  contactInfo: {,
+  contactInfo: {,}
   phone: string;
     email: string;,
   website: string};
-  technicalSpecs?: {
+  technicalSpecs?: {}
     technology: string[];,
   integrations: string[];
     apiEndpoints: number;,
   uptime: string;
     security: string[]};
   competitors?: string[];
-  marketSize?: string}
-
-export const IT_SERVICES: ITService[] = [
+  marketSize?: string};
+export const IT_SERVICES: ITService[] = []
   // Cloud Infrastructure Migration & Management;
-  {
+  {}
     id: "cloud-infrastructure-migration",""
     title: "Cloud Infrastructure Migration & Management",""
     description: "Comprehensive cloud migration and management services that help businesses seamlessly transition to cloud platforms while optimizing costs and performance.",""
@@ -43,7 +42,7 @@ export const IT_SERVICES: ITService[] = [
     price: 15000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Multi-cloud strategy planning",""
       "Legacy system migration",""
       "Data migration and synchronization",""
@@ -53,28 +52,28 @@ export const IT_SERVICES: ITService[] = [
       "Disaster recovery planning",""
       "24/7 cloud management",""
       "Automated scaling",""
-      "Backup and recovery""]
+      "Backup and recovery""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce infrastructure costs by 40%",""
       "Improve scalability and flexibility",""
       "Enhance security and compliance",""
       "Increase system reliability",""
-      "Enable remote work capabilities""]
+      "Enable remote work capabilities""];
     ],
-    useCases: ["
+    useCases: ["]
       "Enterprise cloud migration",""
       "Hybrid cloud implementation",""
       "Cloud cost optimization",""
       "Disaster recovery setup",""
-      "Legacy system modernization""]
+      "Legacy system modernization""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise companies",""
       "Mid-size businesses",""
       "Government agencies",""
       "Healthcare organizations",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Cloud", "Migration", "AWS", "Azure", "GCP", "Infrastructure"],""
     estimatedDelivery: "8-16 weeks",""
@@ -82,13 +81,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$15,000 - $100,000/project",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker"],""
       integrations: ["On-premise systems", "SaaS applications", "Monitoring tools", "Security platforms"],"
       apiEndpoints: 500,"
@@ -100,7 +99,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Cybersecurity Assessment & Implementation;
-  {"
+  {"}
     id: "cybersecurity-assessment-implementation",""
     title: "Cybersecurity Assessment & Implementation",""
     description: "Comprehensive cybersecurity services including risk assessment, security implementation, monitoring, and incident response to protect businesses from cyber threats.",""
@@ -109,7 +108,7 @@ export const IT_SERVICES: ITService[] = [
     price: 25000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Security risk assessment",""
       "Penetration testing",""
       "Security architecture design",""
@@ -119,28 +118,28 @@ export const IT_SERVICES: ITService[] = [
       "Security monitoring (SOC)",""
       "Incident response planning",""
       "Security training",""
-      "Compliance auditing""]
+      "Compliance auditing""];
     ],
-    benefits: ["
+    benefits: ["]
       "Protect against cyber threats",""
       "Meet compliance requirements",""
       "Reduce security risks by 80%",""
       "Improve security posture",""
-      "Minimize breach impact""]
+      "Minimize breach impact""];
     ],
-    useCases: ["
+    useCases: ["]
       "Security posture assessment",""
       "Compliance implementation",""
       "Incident response setup",""
       "Security training programs",""
-      "Ongoing security monitoring""]
+      "Ongoing security monitoring""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "All business sizes",""
       "Government agencies",""
       "Healthcare organizations",""
       "Financial institutions",""
-      "Critical infrastructure""]
+      "Critical infrastructure""];
     ],"
     tags: ["Cybersecurity", "Risk Assessment", "Compliance", "SOC", "Incident Response"],""
     estimatedDelivery: "4-12 weeks",""
@@ -148,13 +147,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$25,000 - $150,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["SIEM", "EDR", "XDR", "IAM", "PAM", "Zero Trust"],""
       integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response tools"],"
       apiEndpoints: 200,"
@@ -166,7 +165,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Digital Transformation Consulting;
-  {"
+  {"}
     id: "digital-transformation-consulting",""
     title: "Digital Transformation Consulting",""
     description: "Strategic digital transformation services that help businesses modernize their operations, processes, and technology stack to stay competitive in the digital age.",""
@@ -175,7 +174,7 @@ export const IT_SERVICES: ITService[] = [
     price: 50000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Digital strategy development",""
       "Process automation",""
       "Technology modernization",""
@@ -185,28 +184,28 @@ export const IT_SERVICES: ITService[] = [
       "Workflow digitization",""
       "Integration planning",""
       "Training and support",""
-      "Performance measurement""]
+      "Performance measurement""];
     ],
-    benefits: ["
+    benefits: ["]
       "Increase operational efficiency by 50%",""
       "Improve customer satisfaction",""
       "Reduce operational costs",""
       "Enable data-driven decisions",""
-      "Future-proof business operations""]
+      "Future-proof business operations""];
     ],
-    useCases: ["
+    useCases: ["]
       "Business process automation",""
       "Legacy system modernization",""
       "Customer experience enhancement",""
       "Data-driven decision making",""
-      "Remote work enablement""]
+      "Remote work enablement""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise companies",""
       "Mid-size businesses",""
       "Government agencies",""
       "Healthcare organizations",""
-      "Manufacturing companies""]
+      "Manufacturing companies""];
     ],"
     tags: ["Digital Transformation", "Process Automation", "Modernization", "Strategy", "Change Management"],""
     estimatedDelivery: "12-24 weeks",""
@@ -214,13 +213,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$50,000 - $500,000/project",""
     roi: "200-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["RPA", "AI/ML", "Cloud platforms", "APIs", "Data analytics", "Mobile solutions"],""
       integrations: ["ERP systems", "CRM platforms", "Legacy systems", "Cloud services", "Third-party APIs"],"
       apiEndpoints: 1000,"
@@ -232,7 +231,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Enterprise Application Development;
-  {"
+  {"}
     id: "enterprise-application-development",""
     title: "Enterprise Application Development",""
     description: "Custom enterprise application development services that create scalable, secure, and high-performance applications tailored to specific business needs.",""
@@ -241,7 +240,7 @@ export const IT_SERVICES: ITService[] = [
     price: 75000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Custom application development",""
       "Microservices architecture",""
       "API development and integration",""
@@ -251,28 +250,28 @@ export const IT_SERVICES: ITService[] = [
       "Performance optimization",""
       "Security implementation",""
       "Testing and quality assurance",""
-      "Deployment and maintenance""]
+      "Deployment and maintenance""];
     ],
-    benefits: ["
+    benefits: ["]
       "Streamline business processes",""
       "Improve operational efficiency",""
       "Enhance user experience",""
       "Reduce manual work",""
-      "Enable data-driven decisions""]
+      "Enable data-driven decisions""];
     ],
-    useCases: ["
+    useCases: ["]
       "ERP system development",""
       "CRM application creation",""
       "Workflow management systems",""
       "Data analytics platforms",""
-      "Mobile business applications""]
+      "Mobile business applications""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise companies",""
       "Mid-size businesses",""
       "Government agencies",""
       "Healthcare organizations",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Application Development", "Enterprise", "Custom Software", "Microservices", "API Development"],""
     estimatedDelivery: "16-32 weeks",""
@@ -280,13 +279,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$75,000 - $500,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["React", "Node.js", "Python", "Java", "PostgreSQL", "MongoDB", "Docker", "Kubernetes"],""
       integrations: ["Third-party APIs", "Legacy systems", "Cloud services", "Mobile platforms", "Analytics tools"],"
       apiEndpoints: 2000,"
@@ -298,7 +297,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Data Analytics & Business Intelligence;
-  {"
+  {"}
     id: "data-analytics-business-intelligence",""
     title: "Data Analytics & Business Intelligence",""
     description: "Comprehensive data analytics and business intelligence services that transform raw data into actionable insights for better business decision-making.",""
@@ -307,7 +306,7 @@ export const IT_SERVICES: ITService[] = [
     price: 30000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Data warehouse design",""
       "ETL/ELT processes",""
       "Data visualization dashboards",""
@@ -317,28 +316,28 @@ export const IT_SERVICES: ITService[] = [
       "Data governance",""
       "Data quality management",""
       "Self-service analytics",""
-      "Mobile BI access""]
+      "Mobile BI access""];
     ],
-    benefits: ["
+    benefits: ["]
       "Make data-driven decisions",""
       "Identify business opportunities",""
       "Improve operational efficiency",""
       "Reduce costs through insights",""
-      "Enhance competitive advantage""]
+      "Enhance competitive advantage""];
     ],
-    useCases: ["
+    useCases: ["]
       "Sales performance analysis",""
       "Customer behavior insights",""
       "Financial reporting automation",""
       "Operational efficiency tracking",""
-      "Market trend analysis""]
+      "Market trend analysis""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise companies",""
       "Mid-size businesses",""
       "Government agencies",""
       "Healthcare organizations",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Machine Learning", "Reporting"],""
     estimatedDelivery: "8-16 weeks",""
@@ -346,13 +345,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$30,000 - $200,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark", "Hadoop", "Snowflake"],""
       integrations: ["ERP systems", "CRM platforms", "Cloud data sources", "APIs", "Real-time data streams"],"
       apiEndpoints: 500,"
@@ -364,7 +363,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // IT Infrastructure Management;
-  {"
+  {"}
     id: "it-infrastructure-management",""
     title: "IT Infrastructure Management",""
     description: "Comprehensive IT infrastructure management services that ensure optimal performance, security, and reliability of your IT systems and networks.",""
@@ -373,7 +372,7 @@ export const IT_SERVICES: ITService[] = [
     price: 20000,"
     currency: "$",""
     pricingModel: "monthly","
-    features: ["
+    features: ["]
       "24/7 infrastructure monitoring",""
       "Proactive maintenance",""
       "Performance optimization",""
@@ -383,28 +382,28 @@ export const IT_SERVICES: ITService[] = [
       "Capacity planning",""
       "Vendor management",""
       "Compliance monitoring",""
-      "Incident response""]
+      "Incident response""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce downtime by 90%",""
       "Improve system performance",""
       "Lower operational costs",""
       "Enhance security posture",""
-      "Ensure business continuity""]
+      "Ensure business continuity""];
     ],
-    useCases: ["
+    useCases: ["]
       "Server and network management",""
       "Cloud infrastructure optimization",""
       "Security monitoring and response",""
       "Disaster recovery planning",""
-      "Compliance maintenance""]
+      "Compliance maintenance""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "All business sizes",""
       "Government agencies",""
       "Healthcare organizations",""
       "Financial institutions",""
-      "Educational institutions""]
+      "Educational institutions""];
     ],"
     tags: ["Infrastructure", "Monitoring", "Maintenance", "Security", "Compliance"],""
     estimatedDelivery: "2-4 weeks",""
@@ -412,13 +411,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$20,000 - $100,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Monitoring tools", "Automation platforms", "Security tools", "Backup systems", "Cloud platforms"],""
       integrations: ["IT systems", "Security platforms", "Monitoring tools", "Cloud services", "Third-party tools"],"
       apiEndpoints: 300,"
@@ -430,7 +429,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // DevOps & CI/CD Implementation;
-  {"
+  {"}
     id: "devops-cicd-implementation",""
     title: "DevOps & CI/CD Implementation",""
     description: "Complete DevOps transformation services that implement continuous integration, continuous deployment, and automation to accelerate software delivery and improve quality.",""
@@ -439,7 +438,7 @@ export const IT_SERVICES: ITService[] = [
     price: 40000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "CI/CD pipeline setup",""
       "Automated testing",""
       "Infrastructure as Code",""
@@ -449,28 +448,28 @@ export const IT_SERVICES: ITService[] = [
       "Release management",""
       "Environment management",""
       "Team training",""
-      "Process optimization""]
+      "Process optimization""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce deployment time by 80%",""
       "Improve code quality",""
       "Increase deployment frequency",""
       "Reduce manual errors",""
-      "Enable faster time to market""]
+      "Enable faster time to market""];
     ],
-    useCases: ["
+    useCases: ["]
       "Software development acceleration",""
       "Quality assurance automation",""
       "Infrastructure automation",""
       "Release management optimization",""
-      "Team productivity improvement""]
+      "Team productivity improvement""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Software development companies",""
       "Enterprise IT departments",""
       "Startups and scale-ups",""
       "Government agencies",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["DevOps", "CI/CD", "Automation", "Docker", "Kubernetes", "Jenkins"],""
     estimatedDelivery: "8-16 weeks",""
@@ -478,13 +477,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$40,000 - $200,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform", "Ansible"],""
       integrations: ["Version control", "Testing tools", "Monitoring platforms", "Security scanners", "Cloud platforms"],"
       apiEndpoints: 400,"
@@ -496,7 +495,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Network Security & Firewall Management;
-  {"
+  {"}
     id: "network-security-firewall-management",""
     title: "Network Security & Firewall Management",""
     description: "Comprehensive network security services including firewall configuration, network monitoring, threat detection, and security policy implementation.",""
@@ -505,7 +504,7 @@ export const IT_SERVICES: ITService[] = [
     price: 18000,"
     currency: "$",""
     pricingModel: "monthly","
-    features: ["
+    features: ["]
       "Firewall configuration and management",""
       "Network monitoring and analysis",""
       "Threat detection and prevention",""
@@ -515,28 +514,28 @@ export const IT_SERVICES: ITService[] = [
       "Security policy implementation",""
       "Compliance monitoring",""
       "Incident response",""
-      "Security training""]
+      "Security training""];
     ],
-    benefits: ["
+    benefits: ["]
       "Protect against network threats",""
       "Ensure network compliance",""
       "Improve network performance",""
       "Reduce security risks",""
-      "Enable secure remote access""]
+      "Enable secure remote access""];
     ],
-    useCases: ["
+    useCases: ["]
       "Network security hardening",""
       "Remote access security",""
       "Compliance implementation",""
       "Threat monitoring",""
-      "Network optimization""]
+      "Network optimization""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "All business sizes",""
       "Government agencies",""
       "Healthcare organizations",""
       "Financial institutions",""
-      "Educational institutions""]
+      "Educational institutions""];
     ],"
     tags: ["Network Security", "Firewall", "VPN", "Threat Detection", "Compliance"],""
     estimatedDelivery: "2-6 weeks",""
@@ -544,13 +543,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$18,000 - $80,000/month",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Palo Alto", "Cisco", "Fortinet", "Check Point", "pfSense", "OpenVPN"],""
       integrations: ["SIEM platforms", "Monitoring tools", "Identity management", "Security scanners"],"
       apiEndpoints: 200,"
@@ -562,7 +561,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Database Administration & Optimization;
-  {"
+  {"}
     id: "database-administration-optimization",""
     title: "Database Administration & Optimization",""
     description: "Professional database administration services that ensure optimal performance, security, and reliability of your database systems.",""
@@ -571,7 +570,7 @@ export const IT_SERVICES: ITService[] = [
     price: 12000,"
     currency: "$",""
     pricingModel: "monthly","
-    features: ["
+    features: ["]
       "Database performance tuning",""
       "Backup and recovery management",""
       "Security hardening",""
@@ -581,28 +580,28 @@ export const IT_SERVICES: ITService[] = [
       "Monitoring and alerting",""
       "Patch management",""
       "Disaster recovery planning",""
-      "24/7 support""]
+      "24/7 support""];
     ],
-    benefits: ["
+    benefits: ["]
       "Improve database performance",""
       "Ensure data security",""
       "Reduce downtime",""
       "Optimize storage costs",""
-      "Enable business continuity""]
+      "Enable business continuity""];
     ],
-    useCases: ["
+    useCases: ["]
       "Database performance optimization",""
       "Security hardening",""
       "Backup and recovery setup",""
       "Capacity planning",""
-      "Migration and upgrades""]
+      "Migration and upgrades""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise companies",""
       "Mid-size businesses",""
       "Government agencies",""
       "Healthcare organizations",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Database", "Performance", "Security", "Backup", "Optimization"],""
     estimatedDelivery: "1-4 weeks",""
@@ -610,13 +609,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$12,000 - $60,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["PostgreSQL", "MySQL", "SQL Server", "Oracle", "MongoDB", "Redis"],""
       integrations: ["Applications", "Backup systems", "Monitoring tools", "Security platforms"],"
       apiEndpoints: 100,"
@@ -628,7 +627,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // IT Support & Help Desk Services;
-  {"
+  {"}
     id: "it-support-help-desk-services",""
     title: "IT Support & Help Desk Services",""
     description: "Comprehensive IT support and help desk services that provide technical assistance, troubleshooting, and user support to ensure smooth IT operations.",""
@@ -637,7 +636,7 @@ export const IT_SERVICES: ITService[] = [
     price: 8000,"
     currency: "$",""
     pricingModel: "monthly","
-    features: ["
+    features: ["]
       "24/7 technical support",""
       "Remote desktop assistance",""
       "Hardware and software troubleshooting",""
@@ -647,28 +646,28 @@ export const IT_SERVICES: ITService[] = [
       "Email and communication support",""
       "Mobile device support",""
       "Network connectivity issues",""
-      "Training and documentation""]
+      "Training and documentation""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce IT downtime",""
       "Improve user productivity",""
       "Lower IT support costs",""
       "Enhance user satisfaction",""
-      "Enable faster issue resolution""]
+      "Enable faster issue resolution""];
     ],
-    useCases: ["
+    useCases: ["]
       "End-user technical support",""
       "Hardware troubleshooting",""
       "Software installation",""
       "Account management",""
-      "Training and onboarding""]
+      "Training and onboarding""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "All business sizes",""
       "Government agencies",""
       "Healthcare organizations",""
       "Educational institutions",""
-      "Non-profit organizations""]
+      "Non-profit organizations""];
     ],"
     tags: ["IT Support", "Help Desk", "Technical Support", "Troubleshooting", "User Support"],""
     estimatedDelivery: "1-2 weeks",""
@@ -676,13 +675,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$8,000 - $40,000/month",""
     roi: "150-300%",""
     innovationLevel: "Standard","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Remote desktop", "Ticketing systems", "Monitoring tools", "Asset management", "Knowledge base"],""
       integrations: ["Active Directory", "Email systems", "Cloud services", "Security tools"],"
       apiEndpoints: 50,"
@@ -694,7 +693,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Cloud Migration & Modernization Services;
-  {"
+  {"}
     id: "cloud-migration-modernization",""
     title: "Cloud Migration & Modernization Services",""
     description: "Comprehensive cloud migration services that help organizations move their infrastructure, applications, and data to the cloud while modernizing legacy systems for optimal performance and cost efficiency.",""
@@ -703,7 +702,7 @@ export const IT_SERVICES: ITService[] = [
     price: 15000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Cloud readiness assessment",""
       "Migration strategy planning",""
       "Application modernization",""
@@ -713,28 +712,28 @@ export const IT_SERVICES: ITService[] = [
       "Performance optimization",""
       "Cost optimization",""
       "Training and documentation",""
-      "Ongoing support and monitoring""]
+      "Ongoing support and monitoring""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce infrastructure costs by 40%",""
       "Improve scalability and flexibility",""
       "Enhanced security and compliance",""
       "Faster time to market",""
-      "Reduced maintenance overhead""]
+      "Reduced maintenance overhead""];
     ],
-    useCases: ["
+    useCases: ["]
       "Legacy system modernization",""
       "Data center consolidation",""
       "Hybrid cloud implementation",""
       "Disaster recovery setup",""
-      "Application containerization""]
+      "Application containerization""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise organizations",""
       "Mid-market companies",""
       "Government agencies",""
       "Healthcare systems",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Cloud Migration", "Modernization", "AWS", "Azure", "Google Cloud", "DevOps"],""
     estimatedDelivery: "8-16 weeks",""
@@ -742,13 +741,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$15,000 - $150,000/project",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],""
       integrations: ["VMware", "Hyper-V", "On-premises systems", "SaaS applications"],"
       apiEndpoints: 200,"
@@ -760,7 +759,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Cybersecurity Assessment & Implementation;
-  {"
+  {"}
     id: "cybersecurity-assessment-implementation",""
     title: "Cybersecurity Assessment & Implementation Services",""
     description: "Comprehensive cybersecurity services including security assessments, penetration testing, compliance audits, and implementation of security solutions to protect organizations from cyber threats.",""
@@ -769,7 +768,7 @@ export const IT_SERVICES: ITService[] = [
     price: 12000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Security risk assessment",""
       "Penetration testing",""
       "Vulnerability scanning",""
@@ -779,28 +778,28 @@ export const IT_SERVICES: ITService[] = [
       "Incident response planning",""
       "Security tool implementation",""
       "Ongoing monitoring setup",""
-      "Security documentation""]
+      "Security documentation""];
     ],
-    benefits: ["
+    benefits: ["]
       "Identify and mitigate security risks",""
       "Ensure regulatory compliance",""
       "Protect against cyber attacks",""
       "Improve security posture",""
-      "Reduce security incidents""]
+      "Reduce security incidents""];
     ],
-    useCases: ["
+    useCases: ["]
       "SOC 2 compliance",""
       "HIPAA compliance",""
       "PCI DSS compliance",""
       "Security posture improvement",""
-      "Incident response preparation""]
+      "Incident response preparation""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Healthcare organizations",""
       "Financial institutions",""
       "E-commerce businesses",""
       "Government agencies",""
-      "Educational institutions""]
+      "Educational institutions""];
     ],"
     tags: ["Cybersecurity", "Compliance", "Penetration Testing", "Risk Assessment", "Security Audit"],""
     estimatedDelivery: "4-8 weeks",""
@@ -808,13 +807,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$12,000 - $75,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "SIEM tools", "Firewall management"],""
       integrations: ["Active Directory", "Email systems", "Network infrastructure", "Cloud platforms"],"
       apiEndpoints: 100,"
@@ -826,7 +825,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // DevOps & CI/CD Implementation;
-  {"
+  {"}
     id: "devops-cicd-implementation",""
     title: "DevOps & CI/CD Implementation Services",""
     description: "Complete DevOps transformation services including CI/CD pipeline setup, infrastructure automation, monitoring implementation, and team training to accelerate software delivery and improve reliability.",""
@@ -835,7 +834,7 @@ export const IT_SERVICES: ITService[] = [
     price: 18000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "CI/CD pipeline setup",""
       "Infrastructure as Code",""
       "Container orchestration",""
@@ -845,28 +844,28 @@ export const IT_SERVICES: ITService[] = [
       "Deployment automation",""
       "Team training and coaching",""
       "Documentation and best practices",""
-      "Ongoing optimization""]
+      "Ongoing optimization""];
     ],
-    benefits: ["
+    benefits: ["]
       "Reduce deployment time by 80%",""
       "Improve code quality and reliability",""
       "Faster time to market",""
       "Reduced manual errors",""
-      "Better team collaboration""]
+      "Better team collaboration""];
     ],
-    useCases: ["
+    useCases: ["]
       "Application modernization",""
       "Microservices architecture",""
       "Cloud-native development",""
       "Legacy system integration",""
-      "Multi-environment management""]
+      "Multi-environment management""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Software development companies",""
       "Enterprise IT departments",""
       "Startups and scale-ups",""
       "E-commerce platforms",""
-      "SaaS companies""]
+      "SaaS companies""];
     ],"
     tags: ["DevOps", "CI/CD", "Automation", "Kubernetes", "Docker", "Jenkins"],""
     estimatedDelivery: "6-12 weeks",""
@@ -874,13 +873,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$18,000 - $120,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Kubernetes", "Docker", "Terraform"],""
       integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"],"
       apiEndpoints: 300,"
@@ -892,7 +891,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Data Analytics & Business Intelligence Implementation;
-  {"
+  {"}
     id: "data-analytics-bi-implementation",""
     title: "Data Analytics & Business Intelligence Implementation",""
     description: "Comprehensive data analytics and BI services including data warehouse design, ETL pipeline development, dashboard creation, and advanced analytics implementation to drive data-driven decision making.",""
@@ -901,7 +900,7 @@ export const IT_SERVICES: ITService[] = [
     price: 20000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Data warehouse design",""
       "ETL pipeline development",""
       "Dashboard and visualization creation",""
@@ -911,28 +910,28 @@ export const IT_SERVICES: ITService[] = [
       "Real-time analytics",""
       "Mobile BI applications",""
       "User training and adoption",""
-      "Ongoing maintenance and support""]
+      "Ongoing maintenance and support""];
     ],
-    benefits: ["
+    benefits: ["]
       "Improve decision making with data insights",""
       "Increase operational efficiency",""
       "Identify new business opportunities",""
       "Reduce manual reporting time",""
-      "Enhance competitive advantage""]
+      "Enhance competitive advantage""];
     ],
-    useCases: ["
+    useCases: ["]
       "Sales performance analysis",""
       "Customer behavior insights",""
       "Financial reporting automation",""
       "Operational efficiency tracking",""
-      "Predictive analytics implementation""]
+      "Predictive analytics implementation""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Enterprise organizations",""
       "Mid-market companies",""
       "E-commerce businesses",""
       "Healthcare systems",""
-      "Financial institutions""]
+      "Financial institutions""];
     ],"
     tags: ["Data Analytics", "Business Intelligence", "Data Warehouse", "ETL", "Machine Learning"],""
     estimatedDelivery: "10-16 weeks",""
@@ -940,13 +939,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$20,000 - $200,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],""
       integrations: ["ERP systems", "CRM platforms", "Cloud data sources", "APIs"],"
       apiEndpoints: 400,"
@@ -958,7 +957,7 @@ export const IT_SERVICES: ITService[] = [
   },
 
   // Network Infrastructure & Security;
-  {"
+  {"}
     id: "network-infrastructure-security",""
     title: "Network Infrastructure & Security Services",""
     description: "Complete network infrastructure design, implementation, and security services including network architecture, firewall configuration, VPN setup, and ongoing network monitoring and management.",""
@@ -967,7 +966,7 @@ export const IT_SERVICES: ITService[] = [
     price: 14000,"
     currency: "$",""
     pricingModel: "project","
-    features: ["
+    features: ["]
       "Network architecture design",""
       "Firewall configuration and management",""
       "VPN and remote access setup",""
@@ -977,28 +976,28 @@ export const IT_SERVICES: ITService[] = [
       "Load balancing configuration",""
       "Disaster recovery planning",""
       "Network documentation",""
-      "24/7 monitoring and support""]
+      "24/7 monitoring and support""];
     ],
-    benefits: ["
+    benefits: ["]
       "Improve network performance and reliability",""
       "Enhanced security posture",""
       "Better remote access capabilities",""
       "Reduced downtime and outages",""
-      "Scalable network infrastructure""]
+      "Scalable network infrastructure""];
     ],
-    useCases: ["
+    useCases: ["]
       "Office network setup",""
       "Remote work infrastructure",""
       "Data center networking",""
       "Branch office connectivity",""
-      "Cloud network integration""]
+      "Cloud network integration""];
     ],
-    targetAudience: ["
+    targetAudience: ["]
       "Small to medium businesses",""
       "Enterprise organizations",""
       "Healthcare facilities",""
       "Educational institutions",""
-      "Government agencies""]
+      "Government agencies""];
     ],"
     tags: ["Network Infrastructure", "Security", "Firewall", "VPN", "Monitoring", "Cisco"],""
     estimatedDelivery: "4-8 weeks",""
@@ -1006,13 +1005,13 @@ export const IT_SERVICES: ITService[] = [
     marketPrice: "$14,000 - $80,000/project",""
     roi: "200-400%",""
     innovationLevel: "Standard","
-    contactInfo: {,"
+    contactInfo: {,"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"
+    technicalSpecs: {,"}
   technology: ["Cisco", "Fortinet", "Palo Alto", "Ubiquiti", "Meraki", "SNMP"],""
       integrations: ["Active Directory", "Email systems", "Cloud services", "Security tools"],"
       apiEndpoints: 150,"
@@ -1021,5 +1020,5 @@ export const IT_SERVICES: ITService[] = [
     },"
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],""
     marketSize: "$25.6 billion by 2025""
-  }
+  };
 ];"

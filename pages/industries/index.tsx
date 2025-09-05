@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Heart, 
   DollarSign, 
   Settings, 
@@ -17,9 +17,9 @@ import {
   Cloud,
   Brain;'
 } from 'lucide-react'
-import Layout from '../../components/Layout
-const industries = [
-  {'
+import Layout from '../../components/Layout;
+const industries = []
+  {'}
     name: 'Healthcare',''
     description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.','
     icon: Heart,'
@@ -27,7 +27,7 @@ const industries = [
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],''
     color: 'from-red-500 to-pink-500''
   },
-  {'
+  {'}
     name: 'Finance',''
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.','
     icon: DollarSign,'
@@ -35,7 +35,7 @@ const industries = [
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],''
     color: 'from-green-500 to-emerald-500''
   },
-  {'
+  {'}
     name: 'Manufacturing',''
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.','
     icon: Settings,'
@@ -43,7 +43,7 @@ const industries = [
     features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],''
     color: 'from-blue-500 to-cyan-500''
   },
-  {'
+  {'}
     name: 'Retail',''
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.','
     icon: ShoppingCart,'
@@ -51,7 +51,7 @@ const industries = [
     features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],''
     color: 'from-purple-500 to-violet-500''
   },
-  {'
+  {'}
     name: 'Education',''
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.','
     icon: BookOpen,'
@@ -59,25 +59,25 @@ const industries = [
     features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],''
     color: 'from-orange-500 to-yellow-500''
   },
-  {'
+  {'}
     name: 'Government',''
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.','
     icon: Building,'
     href: '/industries/government',''
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],''
     color: 'from-gray-500 to-slate-500''
-  }
+  };
 ];
 
-const stats = ['
+const stats = [']
   { number: '500+', label: 'Industry Projects' },''
   { number: '50+', label: 'Fortune 500 Clients' },''
   { number: '99.9%', label: 'Uptime Guarantee' },''
-  { number: '24/7', label: 'Industry Support' }']
+  { number: '24/7', label: 'Industry Support' }'];
 ];
 
-export default function IndustriesPage() {
-  return (
+export default function IndustriesPage() {}
+  return ()
     <Layout;'
       title="Industry Solutions - Zion Tech Group"
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
@@ -98,9 +98,9 @@ export default function IndustriesPage() {
           <div className="container mx-auto px-4 relative z-10">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center"
             >
 </motion>"
@@ -131,10 +131,10 @@ export default function IndustriesPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
@@ -148,17 +148,17 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
+                    whileHover={{ y: -5 }};
                   >
 </motion>
-                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-</div>"
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>`
+</div>``
                       <IconComponent className="w-8 h-8 text-white" />"
 </IconComponent>
                     </div>
@@ -177,7 +177,7 @@ export default function IndustriesPage() {
                       <div className="flex flex-wrap gap-2">"
 </div>
                           <span;
-                            key={idx}
+                            key={idx};
                             className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
                           >
 </span>
@@ -186,7 +186,7 @@ export default function IndustriesPage() {
                     </div>
                     
                     <Link;
-                      href={industry.href}
+                      href={industry.href};
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                     >
 </Link>
@@ -194,9 +194,9 @@ export default function IndustriesPage() {
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"
 </ArrowRight>
                     </Link>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -206,10 +206,10 @@ export default function IndustriesPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
@@ -224,10 +224,10 @@ export default function IndustriesPage() {
 </div>
               <motion.div;"
                 className="text-center p-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.1 }};
+                viewport={{ once: true }};
               >
 </motion>"
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -243,10 +243,10 @@ export default function IndustriesPage() {
 
               <motion.div;"
                 className="text-center p-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.2 }};
+                viewport={{ once: true }};
               >
 </motion>"
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -262,10 +262,10 @@ export default function IndustriesPage() {
 
               <motion.div;"
                 className="text-center p-8"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 30 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.3 }};
+                viewport={{ once: true }};
               >
 </motion>"
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -288,12 +288,12 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">"
@@ -301,7 +301,7 @@ export default function IndustriesPage() {
                   </div>"
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -310,10 +310,10 @@ export default function IndustriesPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
-const fs = // // require('fs'''
+const fs = // // require('fs''')
     this.branch = 'main'''
       // Check if we'''
-      if (!fs.existsSync('.git'''
-        console.log(' Not in a git repository'''
-      console.log(' Git repository found'''
-      console.log(' Error checking git "status"""
+      if (!fs.existsSync('.git''')
+        console.log(' Not in a git repository''')
+      console.log(' Git repository found''')
+      console.log(' Error checking git "status""")
       "recommendations"""
         'Run git commit -m "Automated improvements"")"
-#!/usr/bin/env node const fs = class GitWorkflow { constructor() { this.branch = 'main'; this.changes = []} checkGitStatus() { try { if (!fs.existsSync('.git')) { console.log(' Not in a git repository'); return false} console.log(' Git repository found'); return true} catch (error) { console.log(' Error checking git status:',error.message); return false} } generateCommitMessage() { const timestamp = new Date().toISOString(); return `Automated improvements and optimizations - ${timestamp}`} createGitHooks() { const preCommitHook = `#!/bin/sh # Pre-commit hook echo "Running pre-commit checks..." # Run linting npm run lint:check # Run type checking npm run type-check # Run tests npm test echo "Pre-commit checks completed" `; this.writeFile('.git/hooks/pre-commit',preCommitHook); console.log(' Created pre-commit hook')} generateReport() { const report = { timestamp: new Date().toISOString(),gitRepository: this.checkGitStatus(),commitMessage: this.generateCommitMessage(),recommendations: [ 'Run git add . to stage changes','Run git commit -m "Automated improvements""
+#!/usr/bin/env node const fs = class GitWorkflow { constructor() { this.branch = 'main'; this.changes = []} checkGitStatus() { try { if (!fs.existsSync('.git')) { console.log(' Not in a git repository'); return false} console.log(' Git repository found'); return true} catch (error) { console.log(' Error checking git status:',error.message); return false} } generateCommitMessage() { const timestamp = new Date().toISOString(); return `Automated improvements and optimizations - ${timestamp}`} createGitHooks() { const preCommitHook = `#!/bin/sh # Pre-commit hook echo "Running pre-commit checks..." # Run linting npm run lint:check # Run type checking npm run type-check # Run tests npm test echo "Pre-commit checks completed" `; this.writeFile('.git/hooks/pre-commit',preCommitHook); console.log(' Created pre-commit hook')} generateReport() { const report = { timestamp: new Date().toISOString(),gitRepository: this.checkGitStatus(),commitMessage: this.generateCommitMessage(),recommendations: [ 'Run git add . to stage changes','Run git commit -m "Automated improvements""`}]
 cursor/fix-lint-push-and-merge-to-main-f3c1;]"

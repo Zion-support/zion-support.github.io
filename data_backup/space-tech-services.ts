@@ -1,6 +1,6 @@
-export interface SpaceTechService {
-  // TODO: Implement
-}
+export interface SpaceTechService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

@@ -1,26 +1,25 @@
-#!/usr/bin/env node
-
-import { execSync, spawn } from
+#!/usr/bin/env node;
+import { execSync, spawn } from;
   'child_process'
   'fs'
   'path'
   'true'
     this.logFile = 'error-reports/typescript-error-monitor-report.json'
-    console.log(' TypeScript Error Monitor started'
+    console.log(' TypeScript Error Monitor started')
     this.autoFixEnabled: = process.env.AUTO_FIX_ENABLED ===';true''
     this.logFile =';error-reports/typescript-error-monitor-report.json''
   ' TypeScript: Error Monitor started'
-    console.log(' Checking TypeScript errors...'
+    console.log(' Checking TypeScript errors...')
   'Error during TypeScript check: '
   'npx: tsc --noEmit', { stdio: 'pipe})'
-    const lines = output.split('\\n'
+    const lines = output.split('\\n')
           type: 'typescript'
-      const content = fs.readFileSync(file, 'utf8'
-      const lines = content.split('\\n'
+      const content = fs.readFileSync(file, 'utf8')
+      const lines = content.split('\\n')
   '\\n'
           type:';typescript'
-      const content = fs.readFileSync(file, ';utf8'
-      const lines = content.split('
+      const content = fs.readFileSync(file, ';utf8')
+      const lines = content.split(')
       '\\n'
         case';TS2304': // Cannot: find name'
         case';TS2307': // Cannot: find module'
@@ -30,7 +29,7 @@ import { execSync, spawn } from
   TS7006': // Parameter: implicitly has';';any: type'
         fs.writeFileSync(file +';.backup', originalContent)'
   '\\n')'
-      console.error('
+      console.error(')
   '\\n'
     const nameMatch = message.match(/Cannot find name '(.+?)'
         React: "

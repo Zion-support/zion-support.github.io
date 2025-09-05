@@ -1,6 +1,6 @@
-export interface InnovativeService {
-  // TODO: Implement
-}
+export interface InnovativeService {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "tagline"""

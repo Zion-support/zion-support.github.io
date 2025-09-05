@@ -1,6 +1,5 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
+#!/usr/bin/env node;
+const fs = require('fs')
       "features"
         "tablet"
         "desktop"

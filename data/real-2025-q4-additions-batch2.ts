@@ -1,4 +1,4 @@
-export interface AdditionalQ42025Service {;
+export interface AdditionalQ42025Service {;}
 	"id": string;"
 	name: string;,
   tagline: string;
@@ -14,8 +14,8 @@ export interface AdditionalQ42025Service {;
 	useCases?: string[];
 	integrations?: string[];
 	trialDays?: number;
-export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
-	{;"
+export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;]
+	{;"}
 		id: "devsecops-copilot",;""
 		"name": "DevSecOps Copilot",;""
 		"tagline": "Security checks, SBOM, IaC drift and CI/CD policy gates",;""
@@ -32,7 +32,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["GitHub", "GitLab", "Bitbucket", "Terraform"],;""
 		"trialDays": 14,;""
 		"setupTime": "Same day";},;"
-	{;"
+	{;"}
 		"id": "internal-linking-automation",;""
 		"name": "Internal Linking Automation",;""
 		"tagline": "SEO internal links with semantic relevance and guardrails",;""
@@ -49,7 +49,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["Next.js", "WordPress", "Webflow"],;""
 		"trialDays": 7,;""
 		"setupTime": "1 day";},;"
-	{;"
+	{;"}
 		"id": "ai-contract-redaction",;""
 		"name": "AI Contract Redaction",;""
 		"tagline": "PII/PHI/secret redaction and clause labeling for documents",;""
@@ -64,7 +64,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["Google Drive", "SharePoint", "Box"],;""
 		"trialDays": 7,;""
 		"setupTime": "1 day";},;"
-	{;"
+	{;"}
 		"id": "browser-performance-optimizer",;""
 		"name": "Browser Performance Optimizer",;""
 		"tagline": "CLS/LCP diagnostics with page-level recommendations and PR diffs",;""
@@ -79,7 +79,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["GitHub", "GitLab", "Vercel", "Netlify"],;""
 		"trialDays": 7,;""
 		"setupTime": "Same day";},;"
-	{;"
+	{;"}
 		"id": "tenant-permissions-auditor",;""
 		"name": "Tenant Permissions Auditor",;""
 		"tagline": "Detects over-privileged SaaS/user permissions and expired access",;""
@@ -94,7 +94,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["Okta", "Azure AD", "Google Workspace"],;""
 		"trialDays": 14,;""
 		"setupTime": "2–3 days";},;"
-	{;"
+	{;"}
 		"id": "data-quality-guardrails",;""
 		"name": "Data Quality Guardrails",;""
 		"tagline": "Automated tests for pipelines with anomaly detection and SLAs",;""
@@ -109,7 +109,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["Snowflake", "BigQuery", "Redshift", "dbt"],;""
 		"trialDays": 14,;""
 		"setupTime": "1–2 days";},;"
-	{;"
+	{;"}
 		"id": "release-notes-automation",;""
 		"name": "Release Notes Automation",;""
 		"tagline": "Generate human-ready release notes from commits/issues/PRs",;""
@@ -124,7 +124,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["GitHub", "Linear", "Jira"],;""
 		"trialDays": 7,;""
 		"setupTime": "Same day";},;"
-	{;"
+	{;"}
 		"id": "seo-schema-studio",;""
 		"name": "SEO Schema Studio",;""
 		"tagline": "Generate and validate rich structured data at scale",;""
@@ -139,7 +139,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["Next.js", "Gatsby", "WordPress"],;""
 		"trialDays": 7,;""
 		"setupTime": "Same day";},;"
-	{;"
+	{;"}
 		"id": "ai-rubric-evaluator",;""
 		"name": "AI Rubric Evaluator",;""
 		"tagline": "Team-defined rubrics to score LLM outputs and prevent regressions",;""
@@ -154,7 +154,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		integrations["OpenAI", "Anthropic", "GitHub Actions"],;""
 		"trialDays": 7,;""
 		"setupTime": "1 day";},;"
-	{;"
+	{;"}
 		"id": "api-deprecation-watcher",;""
 		"name": "API Deprecation Watcher",;""
 		"tagline": "Tracks vendor API deprecations and creates migration tickets",;""

@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 weeks"""
     "category": "Enterprise IT & Security"""
     "realService"""
-    technology["Zero Trust Security", "Network Security", "Advanced Authentication", "Threat Detection", "Real-time Monitoring", "AI Security"""
-    integrations["Enterprise systems", "Government platforms", "Financial systems", "Healthcare systems", "Tech infrastructure", "Defense systems"""
-    useCases["Network security", "Access control", "Threat prevention", "Compliance management", "Security monitoring", "Incident response"""
+    technology["Zero Trust Security", "Network Security", "Advanced Authentication", "Threat Detection", "Real-time Monitoring", "AI Security"""]
+    integrations["Enterprise systems", "Government platforms", "Financial systems", "Healthcare systems", "Tech infrastructure", "Defense systems"""]
+    useCases["Network security", "Access control", "Threat prevention", "Compliance management", "Security monitoring", "Incident response"""]
     "roi": "Large enterprises see 500% ROI through improved security and reduced breach risks."""
-    competitors["Traditional network security", "Custom security solutions", "Government security systems"""
+    competitors["Traditional network security", "Custom security solutions", "Government security systems"""]
     "marketSize": "$40B market"""
     "growthRate": "300% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Enterprise IT & Edge Computing"""
     "realService"""
-    technology["Edge Computing", "AI Orchestration", "Distributed Systems", "Real-time Processing", "Performance Optimization", "Resource Management"""
-    integrations["Cloud platforms", "IoT systems", "Manufacturing systems", "Retail platforms", "Government systems", "Edge devices"""
-    useCases["Edge computing management", "Performance optimization", "Resource management", "IoT orchestration", "Real-time analytics", "Load balancing"""
+    technology["Edge Computing", "AI Orchestration", "Distributed Systems", "Real-time Processing", "Performance Optimization", "Resource Management"""]
+    integrations["Cloud platforms", "IoT systems", "Manufacturing systems", "Retail platforms", "Government systems", "Edge devices"""]
+    useCases["Edge computing management", "Performance optimization", "Resource management", "IoT orchestration", "Real-time analytics", "Load balancing"""]
     "roi": "Tech companies see 600% ROI through optimized edge computing and improved performance."""
-    competitors["Traditional cloud management", "Custom orchestration solutions", "Basic edge computing tools"""
+    competitors["Traditional cloud management", "Custom orchestration solutions", "Basic edge computing tools"""]
     "marketSize": "$30B market"""
     "growthRate": "350% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 weeks"""
     "category": "Enterprise IT & 5G Networks"""
     "realService"""
-    technology["5G Technology", "Private Networks", "Network Security", "Real-time Monitoring", "Custom Configurations", "Advanced Analytics"""
-    integrations["Enterprise systems", "Manufacturing platforms", "Healthcare systems", "Government platforms", "Tech infrastructure", "Research systems"""
-    useCases["Private network deployment", "High-speed connectivity", "Low-latency applications", "Network security", "Custom configurations", "Performance monitoring"""
+    technology["5G Technology", "Private Networks", "Network Security", "Real-time Monitoring", "Custom Configurations", "Advanced Analytics"""]
+    integrations["Enterprise systems", "Manufacturing platforms", "Healthcare systems", "Government platforms", "Tech infrastructure", "Research systems"""]
+    useCases["Private network deployment", "High-speed connectivity", "Low-latency applications", "Network security", "Custom configurations", "Performance monitoring"""]
     "roi": "Large enterprises see 700% ROI through improved network performance and reduced latency."""
-    competitors["Traditional network providers", "Custom network solutions", "Government network systems"""
+    competitors["Traditional network providers", "Custom network solutions", "Government network systems"""]
     "marketSize": "$45B market"""
     "growthRate": "400% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Enterprise IT & Blockchain"""
     "realService"""
-    technology["Blockchain Technology", "Smart Contracts", "Advanced Security", "Scalable Infrastructure", "Real-time Processing", "Custom Development"""
-    integrations["Financial platforms", "Tech systems", "Government platforms", "Healthcare systems", "Manufacturing platforms", "Retail systems"""
-    useCases["Financial transactions", "Supply chain tracking", "Identity verification", "Smart contracts", "Decentralized applications", "Asset management"""
+    technology["Blockchain Technology", "Smart Contracts", "Advanced Security", "Scalable Infrastructure", "Real-time Processing", "Custom Development"""]
+    integrations["Financial platforms", "Tech systems", "Government platforms", "Healthcare systems", "Manufacturing platforms", "Retail systems"""]
+    useCases["Financial transactions", "Supply chain tracking", "Identity verification", "Smart contracts", "Decentralized applications", "Asset management"""]
     "roi": "Financial institutions see 500% ROI through improved security and reduced transaction costs."""
-    competitors["Specialized blockchain solutions", "Custom blockchain development", "Traditional financial systems"""
+    competitors["Specialized blockchain solutions", "Custom blockchain development", "Traditional financial systems"""]
     "marketSize": "$35B market"""
     "growthRate": "320% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-5 weeks"""
     "category": "Enterprise IT & AI Operations"""
     "realService"""
-    technology["Advanced AI", "IT Automation", "Predictive Analytics", "Real-time Monitoring", "Machine Learning", "Process Optimization"""
-    integrations["Enterprise systems", "Tech platforms", "Government systems", "Healthcare platforms", "Financial systems", "Manufacturing platforms"""
-    useCases["IT process automation", "Predictive maintenance", "Incident response", "Performance optimization", "Infrastructure management", "Real-time monitoring"""
+    technology["Advanced AI", "IT Automation", "Predictive Analytics", "Real-time Monitoring", "Machine Learning", "Process Optimization"""]
+    integrations["Enterprise systems", "Tech platforms", "Government systems", "Healthcare platforms", "Financial systems", "Manufacturing platforms"""]
+    useCases["IT process automation", "Predictive maintenance", "Incident response", "Performance optimization", "Infrastructure management", "Real-time monitoring"""]
     "roi": "Large enterprises see 600% ROI through automated IT operations and improved efficiency."""
-    competitors["Traditional IT management", "Custom automation solutions", "Basic monitoring tools"""
+    competitors["Traditional IT management", "Custom automation solutions", "Basic monitoring tools"""]
     "marketSize": "$40B market"""
     "growthRate": "350% annual growth"""
     "variant": "enterprise-futuristic"""

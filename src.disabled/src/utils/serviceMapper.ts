@@ -1,9 +1,9 @@
 // Service mapper utility;
 export const serviceMapper = {};
 // Interface for the existing service structure;
-interface Service {
-  // TODO: Implement
-}
+interface Service {}
+  // TODO: Implement;
+};
     "id": string;"
     title: string;,
   description: string;

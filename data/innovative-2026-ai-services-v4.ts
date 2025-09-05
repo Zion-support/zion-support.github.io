@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-12 weeks"""
     "category": "AI Consciousness"""
     "realService"""
-    technology["Large Language Models", "Neural Networks", "Cognitive Science", "React", "Python", "PostgreSQL", "Custom AI Models"""
-    integrations["Research platforms", "Academic databases", "AI development tools", "Custom research systems"""
-    useCases["Consciousness research", "Psychology studies", "AI development", "Cognitive science", "Behavioral analysis"""
+    technology["Large Language Models", "Neural Networks", "Cognitive Science", "React", "Python", "PostgreSQL", "Custom AI Models"""]
+    integrations["Research platforms", "Academic databases", "AI development tools", "Custom research systems"""]
+    useCases["Consciousness research", "Psychology studies", "AI development", "Cognitive science", "Behavioral analysis"""]
     "roi": "Investment in consciousness research opens new frontiers in AI and human understanding."""
-    competitors["Basic AI models", "Research AI platforms", "Custom consciousness solutions"""
+    competitors["Basic AI models", "Research AI platforms", "Custom consciousness solutions"""]
     "marketSize": "$8B AI research market"""
     "growthRate": "300% annual growth"""
     "variant": "ai-consciousness"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 weeks"""
     "category": "AI Autonomous"""
     "realService"""
-    technology["Machine Learning", "Autonomous Systems", "React", "Python", "PostgreSQL", "Redis", "AWS Lambda"""
-    integrations["Zapier", "Make.com", "Custom APIs", "Business systems", "Cloud platforms"""
-    useCases["Process automation", "Customer service", "Data analysis", "Workflow optimization", "Business intelligence"""
+    technology["Machine Learning", "Autonomous Systems", "React", "Python", "PostgreSQL", "Redis", "AWS Lambda"""]
+    integrations["Zapier", "Make.com", "Custom APIs", "Business systems", "Cloud platforms"""]
+    useCases["Process automation", "Customer service", "Data analysis", "Workflow optimization", "Business intelligence"""]
     "roi": "Average customer sees 400% ROI through automation and improved efficiency."""
-    competitors["Basic automation tools", "RPA platforms", "Custom AI solutions"""
+    competitors["Basic automation tools", "RPA platforms", "Custom AI solutions"""]
     "marketSize": "$12B AI automation market"""
     "growthRate": "250% annual growth"""
     "variant": "ai-autonomous"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Healthcare"""
     "realService"""
-    technology["AI/ML", "Health Analytics", "IoT Integration", "React", "Python", "PostgreSQL", "Health APIs"""
-    integrations["Apple Health", "Google Fit", "Fitbit", "Electronic Health Records", "Health devices"""
-    useCases["Personal health monitoring", "Medication management", "Health coaching", "Remote patient monitoring", "Preventive healthcare"""
+    technology["AI/ML", "Health Analytics", "IoT Integration", "React", "Python", "PostgreSQL", "Health APIs"""]
+    integrations["Apple Health", "Google Fit", "Fitbit", "Electronic Health Records", "Health devices"""]
+    useCases["Personal health monitoring", "Medication management", "Health coaching", "Remote patient monitoring", "Preventive healthcare"""]
     "roi": "Average customer improves health outcomes by 30% and reduces healthcare costs by 25%."""
-    competitors["Basic health apps", "Fitness trackers", "Custom health solutions"""
+    competitors["Basic health apps", "Fitness trackers", "Custom health solutions"""]
     "marketSize": "$18B digital health market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-healthcare"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "5 minutes"""
     "category": "AI Content Creation"""
     "realService"""
-    technology["OpenAI GPT-4", "Claude 3", "DALL-E", "React", "Python", "PostgreSQL", "AWS"""
-    integrations["WordPress", "Shopify", "Social media platforms", "CMS systems", "Marketing tools"""
-    useCases["Blog content creation", "Social media posts", "Marketing materials", "Product descriptions", "Video scripts"""
+    technology["OpenAI GPT-4", "Claude 3", "DALL-E", "React", "Python", "PostgreSQL", "AWS"""]
+    integrations["WordPress", "Shopify", "Social media platforms", "CMS systems", "Marketing tools"""]
+    useCases["Blog content creation", "Social media posts", "Marketing materials", "Product descriptions", "Video scripts"""]
     "roi": "Average customer saves 20+ hours per week on content creation and increases engagement by 300%."""
-    competitors["Basic AI writers", "Content creation tools", "Custom AI solutions"""
+    competitors["Basic AI writers", "Content creation tools", "Custom AI solutions"""]
     "marketSize": "$15B content creation market"""
     "growthRate": "220% annual growth"""
     "variant": "ai-creative"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 weeks"""
     "category": "AI Emotional Intelligence"""
     "realService"""
-    technology["Computer Vision", "Natural Language Processing", "Emotion AI", "React", "Python", "PostgreSQL", "AWS"""
-    integrations["CRM systems", "Customer service platforms", "Mental health apps", "HR systems", "Custom platforms"""
-    useCases["Customer emotion analysis", "Mental health support", "HR emotional intelligence", "Educational support", "Human-AI interaction"""
+    technology["Computer Vision", "Natural Language Processing", "Emotion AI", "React", "Python", "PostgreSQL", "AWS"""]
+    integrations["CRM systems", "Customer service platforms", "Mental health apps", "HR systems", "Custom platforms"""]
+    useCases["Customer emotion analysis", "Mental health support", "HR emotional intelligence", "Educational support", "Human-AI interaction"""]
     "roi": "Average customer improves customer satisfaction by 40% and reduces emotional distress by 30%."""
-    competitors["Basic sentiment analysis", "Emotion detection tools", "Custom emotional AI"""
+    competitors["Basic sentiment analysis", "Emotion detection tools", "Custom emotional AI"""]
     "marketSize": "$10B emotional AI market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-emotional"""

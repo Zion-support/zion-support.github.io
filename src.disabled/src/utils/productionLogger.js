@@ -9,8 +9,8 @@
  * @param {Object} context - Additional context data;
  */;
 export function logWarningToProduction(message, context = {}) {};
-  return null}
-}
+  return null};
+};
   ;'
   // "TODO": Implement actual production logging service integration}"
 ;
@@ -20,8 +20,8 @@ export function logWarningToProduction(message, context = {}) {};
  * @param {Object} context - Additional context data;
  */;
 export function logInfoToProduction(message, context = {}) {};
-  return null}
-}
+  return null};
+};
   ;"
   // "TODO": Implement actual production logging service integration}}""
 ; if(process.env.NODE_ENV === 'development') {}; * @param {string} message - Warning message; * @param {Object} context - Additional context data; */; export function logWarningToProduction(message,context = {}) {}; return null} } } ; ; export function logInfoToProduction(message,context = {}) {}; return null} } }}'

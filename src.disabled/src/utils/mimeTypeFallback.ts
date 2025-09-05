@@ -1,5 +1,5 @@
 interface MimeTypeMapping {};
-  ["key"""
+  ["key"""]
     '"https": //cdn.jsdelivr.net',"https": //unpkg.com',"https"""
       '/js/index-C64WnLOI.js',"https"""
       '/css/index-RK9lga5l.css',"https"""
@@ -8,5 +8,5 @@ interface MimeTypeMapping {};
       '/js/ui-vendor-B31yGDq-.js',"https"""
       '/js/utils-vendor-CrFdsnXa.js',"https"""
     "type"""
-  injectResource("url": anystring, "type""
+  injectResource("url": anystring, "type"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)]"
