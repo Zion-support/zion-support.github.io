@@ -1,11 +1,9 @@
-import React from "react";
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Eye, Ear, Hand, Brain, Shield, FileText, Users, Globe } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
-const accessibilityFeatures = [
-  {
+import React from "react"
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import { Eye, Ear, Hand, Brain, Shield, FileText, Users, Globe } from 'lucide-react'
+import MainLayout from '../components/layout/MainLayout'
+const accessibilityFeatures = [{
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -52,11 +50,8 @@ const accessibilityFeatures = [
       "Progress indicators",
       "Customizable interface complexity"
     ]
-  }
-];
-
-const standardsCompliance = [
-  {
+  }]
+const standardsCompliance = [{
     standard: "WCAG 2.1 AA",
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
     status: "Compliant",
@@ -83,9 +78,7 @@ const standardsCompliance = [
     status: "Compliant",
     coverage: "90%",
     icon: Globe
-  }
-];
-
+  }]
 export default function AccessibilityPage() {
   return (
     <MainLayout
@@ -112,7 +105,6 @@ export default function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
-
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -129,7 +121,6 @@ export default function AccessibilityPage() {
                 We implement comprehensive accessibility features to ensure our platform is usable by everyone.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {accessibilityFeatures.map((feature, index) => (
                 <motion.div
@@ -162,7 +153,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         <section className="py-20 bg-gray-100">
           <div className="container mx-auto px-4">
             <motion.div
@@ -179,7 +169,6 @@ export default function AccessibilityPage() {
                 We maintain compliance with international accessibility standards.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standardsCompliance.map((standard, index) => (
                 <motion.div
@@ -209,5 +198,5 @@ export default function AccessibilityPage() {
         </section>
       </div>
     </MainLayout>
-  );
+  )
 }

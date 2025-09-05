@@ -110,7 +110,7 @@ const contactInfo = {}
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
 }
-export default function Footer() {}
+export default function AIServicesPage() {
   const currentYear = new Date().getFullYear()
   const footerSections = []
     {}
@@ -191,7 +191,7 @@ export default function Footer() {}
     { label: 'Terms of Service', href: '/terms' },
     { label: 'Cookie Policy', href: '/cookies' },
     { label: 'Sitemap', href: '/sitemap' }]
-  return ()
+  return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">

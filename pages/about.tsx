@@ -131,9 +131,11 @@ export default function AboutPage() {
               viewport={{ once:true }}>
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-blue-600" />
-              <h3Our Mission></h3>
-              <p
-                To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation in the digital age.></p>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p className="text-gray-600">
+                To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation in the digital age.
+              </p>
             </motion.div>
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg text-center"
@@ -143,9 +145,11 @@ export default function AboutPage() {
               viewport={{ once:true }}>
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Rocket className="w-8 h-8 text-purple-600" />
-              <h3Our Vision></h3>
-              <p
-                To be the global leader in AI-powered technology solutions, setting the standard for innovation and excellence.></p>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                  <p className="text-gray-600">
+                    To be the global leader in AI-powered technology solutions, setting the standard for innovation and excellence.
+                  </p>
             </motion.div>
             <motion.div
               className="bg-white p-8 rounded-xl shadow-lg text-center"
