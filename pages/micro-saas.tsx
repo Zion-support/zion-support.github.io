@@ -27,18 +27,14 @@ import {
   Brain,
   Video,
   Smartphone,
-  Cpu,
-  Atom,
-  Eye,
-  Car,
-  Building,
-  Bot,
+  Calculator,
+  Receipt,
   Heart,
-  TreePine,
-  Mic,
-  Monitor
+  Target,
+  Lock,
+  MessageSquare
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
@@ -484,242 +480,242 @@ const microSaasSolutions = [
     setupTime: "3-5 weeks"
   },
   {
-    title: "AI-Powered Content Creation",
-    description: "Automated content generation and optimization platform",
-    icon: FileText,
+    title: "AI-Powered Social Media Scheduler",
+    description: "Intelligent social media management with AI content optimization",
+    icon: Globe,
     features: [
-      "AI Content Writing",
-      "SEO Optimization",
-      "Multi-language Support",
-      "Content Templates",
-      "Brand Voice Training",
-      "Performance Analytics"
+      "AI Content Generation",
+      "Optimal Post Timing",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Multi-platform Publishing",
+      "Brand Voice Training"
     ],
     price: "Starting at $1,800/month",
-    marketPrice: "$3,000-7,000/month",
-    benefits: ["10x faster content creation", "Consistent brand voice", "SEO optimized"],
-    setupTime: "2-3 weeks"
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["40% increase in engagement", "Save 15+ hours/week", "AI-driven optimization"],
+    setupTime: "1-2 weeks"
   },
   {
-    title: "Smart Contract Development",
-    description: "Blockchain smart contract creation and deployment platform",
-    icon: Shield,
+    title: "Subscription Cancellation Service",
+    description: "Automated subscription management and cancellation platform",
+    icon: DollarSign,
     features: [
-      "Contract Templates",
-      "Automated Testing",
-      "Security Auditing",
-      "Deployment Tools",
-      "Monitoring Dashboard",
-      "Gas Optimization"
+      "Subscription Discovery",
+      "One-click Cancellation",
+      "Spending Analytics",
+      "Renewal Alerts",
+      "Cost Optimization",
+      "Multi-provider Support"
     ],
-    price: "Starting at $3,000/month",
-    marketPrice: "$5,000-12,000/month",
-    benefits: ["Secure contracts", "Faster deployment", "Cost optimization"],
-    setupTime: "3-4 weeks"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save $200+/month per user", "Automated management", "Spending insights"],
+    setupTime: "1-2 weeks"
   },
   {
-    title: "Real-time Collaboration Suite",
-    description: "Advanced team collaboration and productivity platform",
-    icon: Users,
+    title: "AI Meeting Cost Calculator",
+    description: "Real-time meeting cost analysis and optimization tool",
+    icon: Calculator,
     features: [
-      "Real-time Editing",
-      "Video Conferencing",
-      "File Sharing",
-      "Task Management",
-      "Whiteboard Tools",
-      "Integration Hub"
+      "Real-time Cost Tracking",
+      "ROI Analysis",
+      "Meeting Optimization",
+      "Productivity Metrics",
+      "Cost Alerts",
+      "Team Analytics"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Reduce meeting costs by 30%", "Better time management", "ROI visibility"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI-Powered Expense Tracker",
+    description: "Smart expense tracking with receipt scanning and categorization",
+    icon: Receipt,
+    features: [
+      "Receipt OCR Scanning",
+      "AI Categorization",
+      "Tax Preparation",
+      "Spending Insights",
+      "Multi-currency Support",
+      "Integration with Accounting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["90% faster expense entry", "Automated categorization", "Tax-ready reports"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Mental Health Support App",
+    description: "AI-powered mental wellness and support platform",
+    icon: Heart,
+    features: [
+      "AI Chat Support",
+      "Mood Tracking",
+      "Meditation Guides",
+      "Crisis Intervention",
+      "Progress Analytics",
+      "Professional Referrals"
     ],
     price: "Starting at $2,200/month",
     marketPrice: "$3,500-8,000/month",
-    benefits: ["Improved productivity", "Seamless collaboration", "All-in-one solution"],
-    setupTime: "2-4 weeks"
+    benefits: ["24/7 support availability", "Personalized care", "Privacy-focused"],
+    setupTime: "3-4 weeks"
   },
   {
-    title: "Predictive Maintenance System",
-    description: "AI-powered equipment maintenance and failure prediction",
-    icon: Settings,
+    title: "AI Content Repurposing Tool",
+    description: "Transform content across multiple formats using AI",
+    icon: FileText,
     features: [
-      "IoT Integration",
-      "Predictive Analytics",
-      "Maintenance Scheduling",
-      "Cost Optimization",
-      "Alert System",
-      "Performance Tracking"
+      "Blog to Video Conversion",
+      "Podcast Transcription",
+      "Social Media Adaptation",
+      "Multi-language Translation",
+      "SEO Optimization",
+      "Brand Consistency"
     ],
-    price: "Starting at $2,800/month",
-    marketPrice: "$4,500-10,000/month",
-    benefits: ["Reduce downtime by 60%", "Lower maintenance costs", "Extended equipment life"],
-    setupTime: "3-5 weeks"
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,800-6,000/month",
+    benefits: ["10x content output", "Consistent branding", "Multi-format reach"],
+    setupTime: "2-3 weeks"
   },
   {
-    title: "Digital Twin Platform",
-    description: "Create and manage digital replicas of physical assets",
-    icon: Monitor,
+    title: "AI-Powered Lead Scoring",
+    description: "Intelligent lead qualification and prioritization system",
+    icon: Target,
     features: [
-      "3D Modeling",
-      "Real-time Simulation",
-      "Performance Monitoring",
-      "Predictive Analysis",
-      "Virtual Testing",
-      "Integration APIs"
-    ],
-    price: "Starting at $4,500/month",
-    marketPrice: "$7,000-20,000/month",
-    benefits: ["Virtual testing", "Optimized operations", "Risk reduction"],
-    setupTime: "4-8 weeks"
-  },
-  {
-    title: "Edge Computing Platform",
-    description: "Distributed computing infrastructure for IoT and real-time processing",
-    icon: Cpu,
-    features: [
-      "Edge Node Management",
-      "Data Processing",
-      "Latency Optimization",
-      "Offline Capabilities",
-      "Security Protocols",
-      "Monitoring Dashboard"
-    ],
-    price: "Starting at $3,200/month",
-    marketPrice: "$5,000-15,000/month",
-    benefits: ["Ultra-low latency", "Reduced bandwidth", "Enhanced security"],
-    setupTime: "3-6 weeks"
-  },
-  {
-    title: "Quantum Computing Interface",
-    description: "Quantum computing access and algorithm development platform",
-    icon: Atom,
-    features: [
-      "Quantum Algorithm Development",
-      "Simulation Environment",
-      "Hardware Access",
-      "Performance Optimization",
-      "Educational Resources",
-      "API Integration"
-    ],
-    price: "Starting at $5,000/month",
-    marketPrice: "$8,000-25,000/month",
-    benefits: ["Quantum advantage", "Future-proof technology", "Competitive edge"],
-    setupTime: "4-8 weeks"
-  },
-  {
-    title: "AR/VR Development Platform",
-    description: "Complete augmented and virtual reality application development",
-    icon: Eye,
-    features: [
-      "3D Content Creation",
-      "Cross-platform Support",
-      "Real-time Rendering",
-      "Gesture Recognition",
-      "Spatial Audio",
-      "Analytics Dashboard"
-    ],
-    price: "Starting at $3,500/month",
-    marketPrice: "$6,000-18,000/month",
-    benefits: ["Immersive experiences", "Multi-platform deployment", "Advanced interactions"],
-    setupTime: "4-6 weeks"
-  },
-  {
-    title: "Autonomous Vehicle Management",
-    description: "Fleet management and monitoring for autonomous vehicles",
-    icon: Car,
-    features: [
-      "Fleet Tracking",
-      "Route Optimization",
-      "Safety Monitoring",
-      "Predictive Maintenance",
+      "Behavioral Analysis",
+      "Predictive Scoring",
+      "Lead Nurturing",
+      "CRM Integration",
       "Performance Analytics",
-      "Remote Control"
-    ],
-    price: "Starting at $4,000/month",
-    marketPrice: "$6,500-20,000/month",
-    benefits: ["Optimized operations", "Enhanced safety", "Cost reduction"],
-    setupTime: "4-8 weeks"
-  },
-  {
-    title: "Smart City Infrastructure",
-    description: "IoT platform for smart city management and optimization",
-    icon: Building,
-    features: [
-      "Traffic Management",
-      "Energy Optimization",
-      "Waste Management",
-      "Environmental Monitoring",
-      "Citizen Services",
-      "Data Analytics"
-    ],
-    price: "Starting at $5,000/month",
-    marketPrice: "$8,000-30,000/month",
-    benefits: ["Improved efficiency", "Better citizen services", "Environmental benefits"],
-    setupTime: "6-12 weeks"
-  },
-  {
-    title: "Robotic Process Automation",
-    description: "Intelligent automation for repetitive business processes",
-    icon: Bot,
-    features: [
-      "Process Discovery",
-      "Bot Development",
-      "Workflow Automation",
-      "Exception Handling",
-      "Performance Monitoring",
-      "Integration Hub"
+      "Custom Scoring Models"
     ],
     price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["80% process automation", "Error reduction", "Cost savings"],
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["35% higher conversion", "Better lead quality", "Automated prioritization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Cloud Cost Optimization Tool",
+    description: "AI-driven cloud infrastructure cost analysis and optimization",
+    icon: Cloud,
+    features: [
+      "Cost Analysis",
+      "Resource Optimization",
+      "Waste Detection",
+      "Right-sizing Recommendations",
+      "Budget Alerts",
+      "Multi-cloud Support"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Save 25-40% on cloud costs", "Automated optimization", "Real-time monitoring"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Email Follow-up",
+    description: "Intelligent email automation and follow-up system",
+    icon: Mail,
+    features: [
+      "Smart Follow-up Timing",
+      "Personalized Templates",
+      "A/B Testing",
+      "Response Prediction",
+      "CRM Integration",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["60% higher response rates", "Automated nurturing", "Personalized outreach"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI Meeting Summarizer",
+    description: "Automatic meeting transcription and intelligent summarization",
+    icon: Video,
+    features: [
+      "Real-time Transcription",
+      "AI Summarization",
+      "Action Item Extraction",
+      "Multi-language Support",
+      "Integration with Calendars",
+      "Searchable Archive"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save 2+ hours per meeting", "Never miss key points", "Searchable history"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI-Powered Password Manager",
+    description: "Advanced password security with AI-powered breach detection",
+    icon: Lock,
+    features: [
+      "Secure Password Generation",
+      "Breach Monitoring",
+      "Dark Web Scanning",
+      "Family Sharing",
+      "2FA Integration",
+      "Security Analytics"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-3,500/month",
+    benefits: ["Enhanced security", "Proactive breach alerts", "Family protection"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI Local SEO Optimizer",
+    description: "Automated local search optimization and reputation management",
+    icon: MapPin,
+    features: [
+      "Google My Business Optimization",
+      "Review Management",
+      "Local Keyword Tracking",
+      "Competitor Analysis",
+      "Citation Building",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["50% more local visibility", "Automated optimization", "Better local rankings"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Invoice Processing",
+    description: "Intelligent invoice automation and payment processing",
+    icon: FileText,
+    features: [
+      "OCR Invoice Reading",
+      "Automated Data Extraction",
+      "Approval Workflows",
+      "Payment Processing",
+      "Compliance Checking",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["90% faster processing", "Reduced errors", "Automated workflows"],
     setupTime: "2-4 weeks"
   },
   {
-    title: "Digital Health Platform",
-    description: "Comprehensive digital health and telemedicine solution",
-    icon: Heart,
+    title: "AI Customer Sentiment Analyzer",
+    description: "Real-time customer feedback analysis and sentiment tracking",
+    icon: MessageSquare,
     features: [
-      "Patient Management",
-      "Telemedicine",
-      "Health Monitoring",
-      "Prescription Management",
-      "Appointment Scheduling",
-      "Compliance Tracking"
+      "Multi-channel Monitoring",
+      "Sentiment Analysis",
+      "Trend Detection",
+      "Alert System",
+      "Custom Dashboards",
+      "Integration APIs"
     ],
-    price: "Starting at $3,000/month",
-    marketPrice: "$5,000-15,000/month",
-    benefits: ["Improved patient care", "Reduced costs", "Better outcomes"],
-    setupTime: "4-6 weeks"
-  },
-  {
-    title: "Sustainable Technology Platform",
-    description: "Environmental monitoring and sustainability management system",
-    icon: TreePine,
-    features: [
-      "Carbon Footprint Tracking",
-      "Energy Monitoring",
-      "Waste Management",
-      "Sustainability Reporting",
-      "Green Certification",
-      "Impact Analytics"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,000-10,000/month",
-    benefits: ["Environmental compliance", "Cost reduction", "Brand enhancement"],
-    setupTime: "3-5 weeks"
-  },
-  {
-    title: "Voice Commerce Platform",
-    description: "Voice-activated shopping and commerce solution",
-    icon: Mic,
-    features: [
-      "Voice Recognition",
-      "Natural Language Processing",
-      "Payment Integration",
-      "Order Management",
-      "Customer Support",
-      "Analytics Dashboard"
-    ],
-    price: "Starting at $2,800/month",
-    marketPrice: "$4,500-12,000/month",
-    benefits: ["Hands-free shopping", "Better accessibility", "Increased engagement"],
-    setupTime: "3-5 weeks"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
+    setupTime: "2-3 weeks"
   }
 ];
 

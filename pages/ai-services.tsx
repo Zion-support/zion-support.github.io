@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
+import Layout from './components/Layout';
 import { 
   Brain, 
   Eye, 
@@ -60,8 +60,7 @@ import {
   PieChart,
   ClipboardList,
   TreePine,
-  Droplets,
-  Atom
+  Droplets
 } from 'lucide-react';
 
 const contactInfo = {
@@ -613,273 +612,273 @@ const aiServices = [
   },
   {
     id: 21,
-    title: 'AI-Powered Quantum Computing',
-    description: 'Quantum machine learning and quantum-enhanced AI algorithms for complex problem solving.',
-    icon: Atom,
-    category: 'Quantum AI',
-    price: 'Starting at $10,000/month',
+    title: 'AI-Powered Code Generation',
+    description: 'Intelligent code generation, debugging, and software development assistance.',
+    icon: Code,
+    category: 'Development AI',
+    price: 'Starting at $2,800/month',
     features: [
-      'Quantum machine learning',
-      'Quantum optimization',
-      'Quantum neural networks',
-      'Quantum data processing',
-      'Hybrid classical-quantum algorithms',
-      'Quantum simulation',
-      'Performance benchmarking',
-      'Research collaboration'
+      'Automated code generation',
+      'Bug detection & fixing',
+      'Code optimization',
+      'Documentation generation',
+      'Test case creation',
+      'Code review assistance',
+      'Refactoring suggestions',
+      'Multi-language support'
     ],
     benefits: [
-      'Exponential speedup for specific problems',
-      'Breakthrough computational capabilities',
-      'Future-proof technology',
-      'Competitive advantage'
+      'Reduce development time by 60%',
+      'Improve code quality',
+      'Faster bug resolution',
+      'Better documentation'
     ],
-    marketPrice: '$15,000-50,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Research, Finance, Pharmaceuticals, Defense'
+    marketPrice: '$4,500-12,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Software Development, IT Services, Tech Companies'
   },
   {
     id: 22,
-    title: 'AI-Powered Edge Intelligence',
-    description: 'On-device AI processing for real-time decision making at the edge.',
-    icon: Cpu,
-    category: 'Edge AI',
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy optimization and sustainability solutions for businesses.',
+    icon: Droplets,
+    category: 'Energy AI',
     price: 'Starting at $3,500/month',
     features: [
-      'Edge model optimization',
-      'Real-time inference',
-      'Offline processing',
-      'Bandwidth optimization',
-      'Privacy-preserving AI',
-      'Device management',
-      'Performance monitoring',
-      'Cloud synchronization'
+      'Energy consumption analysis',
+      'Predictive maintenance',
+      'Load optimization',
+      'Renewable energy integration',
+      'Carbon footprint tracking',
+      'Cost optimization',
+      'Real-time monitoring',
+      'Sustainability reporting'
     ],
     benefits: [
-      'Ultra-low latency processing',
-      'Reduced bandwidth costs',
-      'Enhanced privacy',
-      'Offline capabilities'
+      'Reduce energy costs by 25%',
+      'Improve sustainability',
+      'Optimize energy usage',
+      'Better environmental compliance'
     ],
-    marketPrice: '$5,000-15,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'IoT, Manufacturing, Healthcare, Automotive'
+    marketPrice: '$5,500-15,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Manufacturing, Real Estate, Utilities, Data Centers'
   },
   {
     id: 23,
-    title: 'AI-Powered Metaverse Solutions',
-    description: 'AI-driven virtual worlds, avatars, and immersive experiences.',
-    icon: Globe,
-    category: 'Metaverse AI',
-    price: 'Starting at $6,000/month',
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Intelligent legal document processing, contract analysis, and compliance monitoring.',
+    icon: FileText,
+    category: 'Legal AI',
+    price: 'Starting at $4,200/month',
     features: [
-      'Virtual avatar creation',
-      'Natural language interaction',
-      'Emotion recognition',
-      'Gesture understanding',
-      'Virtual environment generation',
-      'Social AI interactions',
-      'Content personalization',
-      'Cross-platform integration'
+      'Contract analysis',
+      'Legal document review',
+      'Compliance monitoring',
+      'Risk assessment',
+      'Due diligence automation',
+      'Legal research assistance',
+      'Document classification',
+      'Clause extraction'
     ],
     benefits: [
-      'Immersive user experiences',
-      'Natural virtual interactions',
-      'Scalable virtual worlds',
-      'Enhanced engagement'
+      'Reduce review time by 80%',
+      'Improve accuracy by 95%',
+      'Lower legal costs',
+      'Better risk management'
     ],
-    marketPrice: '$10,000-30,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Gaming, Education, Real Estate, Entertainment'
+    marketPrice: '$6,500-18,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Law Firms, Corporate Legal, Compliance, Insurance'
   },
   {
     id: 24,
-    title: 'AI-Powered Climate Solutions',
-    description: 'Environmental AI for climate monitoring, prediction, and sustainability optimization.',
-    icon: TreePine,
-    category: 'Climate AI',
-    price: 'Starting at $4,500/month',
-    features: [
-      'Climate modeling & prediction',
-      'Carbon footprint analysis',
-      'Renewable energy optimization',
-      'Environmental monitoring',
-      'Sustainability reporting',
-      'Green technology recommendations',
-      'Emission tracking',
-      'Compliance monitoring'
-    ],
-    benefits: [
-      'Accurate climate predictions',
-      'Optimized sustainability efforts',
-      'Reduced environmental impact',
-      'Regulatory compliance'
-    ],
-    marketPrice: '$7,000-20,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Energy, Manufacturing, Government, NGOs'
-  },
-  {
-    id: 25,
-    title: 'AI-Powered Space Technology',
-    description: 'AI solutions for space exploration, satellite management, and aerospace applications.',
-    icon: Rocket,
-    category: 'Space AI',
-    price: 'Starting at $8,500/month',
-    features: [
-      'Satellite data analysis',
-      'Space mission planning',
-      'Orbital mechanics optimization',
-      'Space weather prediction',
-      'Autonomous spacecraft control',
-      'Planetary exploration AI',
-      'Space debris tracking',
-      'Communication optimization'
-    ],
-    benefits: [
-      'Enhanced space mission success',
-      'Optimized satellite operations',
-      'Improved space safety',
-      'Advanced exploration capabilities'
-    ],
-    marketPrice: '$12,000-40,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Aerospace, Defense, Research, Telecommunications'
-  },
-  {
-    id: 26,
-    title: 'AI-Powered Digital Twins',
-    description: 'Intelligent digital replicas for simulation, monitoring, and optimization.',
-    icon: Monitor,
-    category: 'Digital Twin AI',
-    price: 'Starting at $5,500/month',
-    features: [
-      'Real-time synchronization',
-      'Predictive maintenance',
-      'Performance optimization',
-      'Virtual testing',
-      'Anomaly detection',
-      'What-if analysis',
-      'Integration APIs',
-      'Visualization dashboards'
-    ],
-    benefits: [
-      'Reduced testing costs',
-      'Optimized operations',
-      'Predictive insights',
-      'Risk mitigation'
-    ],
-    marketPrice: '$8,000-25,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Manufacturing, Healthcare, Smart Cities, Energy'
-  },
-  {
-    id: 27,
-    title: 'AI-Powered Cybersecurity',
-    description: 'Advanced AI-driven security solutions for threat detection and prevention.',
-    icon: Shield,
-    category: 'Cybersecurity AI',
-    price: 'Starting at $4,200/month',
-    features: [
-      'Threat detection & analysis',
-      'Behavioral anomaly detection',
-      'Automated incident response',
-      'Vulnerability assessment',
-      'Security orchestration',
-      'Zero-trust implementation',
-      'Compliance monitoring',
-      'Forensic analysis'
-    ],
-    benefits: [
-      'Real-time threat protection',
-      'Reduced false positives',
-      'Automated response',
-      'Enhanced security posture'
-    ],
-    marketPrice: '$6,500-20,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Finance, Healthcare, Government, Enterprise'
-  },
-  {
-    id: 28,
     title: 'AI-Powered Personalization Engine',
-    description: 'Hyper-personalized experiences and recommendations across all touchpoints.',
+    description: 'Advanced personalization and recommendation systems for enhanced user experience.',
     icon: Target,
     category: 'Personalization AI',
     price: 'Starting at $3,000/month',
     features: [
-      'Real-time personalization',
-      'Cross-channel consistency',
-      'Behavioral analysis',
-      'Content adaptation',
+      'User behavior analysis',
+      'Personalized content delivery',
+      'Dynamic pricing optimization',
+      'Cross-channel personalization',
       'A/B testing automation',
-      'Privacy-preserving personalization',
-      'Performance optimization',
-      'Integration capabilities'
+      'Real-time adaptation',
+      'Privacy-compliant tracking',
+      'Performance analytics'
     ],
     benefits: [
-      'Increased engagement by 40%',
-      'Higher conversion rates',
-      'Improved customer satisfaction',
-      'Better retention'
+      'Increase engagement by 40%',
+      'Boost conversion rates by 35%',
+      'Improve customer satisfaction',
+      'Better user experience'
     ],
-    marketPrice: '$5,000-15,000/month',
-    setupTime: '3-6 weeks',
+    marketPrice: '$4,800-12,000/month',
+    setupTime: '3-5 weeks',
     targetUsers: 'E-commerce, Media, SaaS, Retail'
   },
   {
-    id: 29,
-    title: 'AI-Powered Drug Discovery',
-    description: 'Accelerated drug discovery and development using AI and machine learning.',
-    icon: Heart,
-    category: 'Pharma AI',
-    price: 'Starting at $12,000/month',
+    id: 25,
+    title: 'AI-Powered Quality Assurance',
+    description: 'Intelligent quality control and testing automation for products and services.',
+    icon: CheckCircle,
+    category: 'Quality AI',
+    price: 'Starting at $2,500/month',
     features: [
-      'Molecular design',
-      'Drug-target interaction prediction',
-      'Clinical trial optimization',
-      'Side effect prediction',
-      'Drug repurposing',
-      'Biomarker discovery',
-      'Regulatory compliance',
-      'Research collaboration'
+      'Automated testing',
+      'Defect detection',
+      'Quality prediction',
+      'Process optimization',
+      'Statistical analysis',
+      'Root cause analysis',
+      'Performance monitoring',
+      'Compliance checking'
     ],
     benefits: [
-      'Faster drug development',
-      'Reduced R&D costs',
-      'Higher success rates',
-      'Better patient outcomes'
+      'Improve quality by 50%',
+      'Reduce defects by 70%',
+      'Lower testing costs',
+      'Faster time to market'
     ],
-    marketPrice: '$20,000-100,000/month',
-    setupTime: '12-24 weeks',
-    targetUsers: 'Pharmaceuticals, Biotech, Research, Healthcare'
+    marketPrice: '$4,000-10,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Manufacturing, Software, Healthcare, Food & Beverage'
+  },
+  {
+    id: 26,
+    title: 'AI-Powered Talent Acquisition',
+    description: 'Intelligent recruitment, candidate screening, and HR optimization solutions.',
+    icon: Users,
+    category: 'HR AI',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Resume screening',
+      'Candidate matching',
+      'Interview scheduling',
+      'Skills assessment',
+      'Bias detection',
+      'Performance prediction',
+      'Retention analysis',
+      'Diversity optimization'
+    ],
+    benefits: [
+      'Reduce hiring time by 50%',
+      'Improve candidate quality',
+      'Reduce bias in hiring',
+      'Better retention rates'
+    ],
+    marketPrice: '$3,500-8,500/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'HR Departments, Recruitment Agencies, Enterprises'
+  },
+  {
+    id: 27,
+    title: 'AI-Powered Real Estate Analytics',
+    description: 'Property valuation, market analysis, and real estate investment insights.',
+    icon: Home,
+    category: 'Real Estate AI',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Property valuation',
+      'Market trend analysis',
+      'Investment recommendations',
+      'Risk assessment',
+      'Price prediction',
+      'Neighborhood analysis',
+      'Rental yield optimization',
+      'Market forecasting'
+    ],
+    benefits: [
+      'Improve investment decisions',
+      'Reduce valuation errors',
+      'Better market insights',
+      'Optimize portfolio performance'
+    ],
+    marketPrice: '$6,000-16,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Real Estate, Investment, Property Management, Developers'
+  },
+  {
+    id: 28,
+    title: 'AI-Powered Gaming Intelligence',
+    description: 'Intelligent game development, player behavior analysis, and gaming optimization.',
+    icon: Gamepad2,
+    category: 'Gaming AI',
+    price: 'Starting at $4,500/month',
+    features: [
+      'Procedural content generation',
+      'Player behavior analysis',
+      'Difficulty balancing',
+      'Cheat detection',
+      'Personalized experiences',
+      'Matchmaking optimization',
+      'Monetization optimization',
+      'Performance analytics'
+    ],
+    benefits: [
+      'Increase player engagement',
+      'Reduce development costs',
+      'Improve game balance',
+      'Better monetization'
+    ],
+    marketPrice: '$7,000-20,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Game Development, Gaming Companies, Esports, Mobile Games'
+  },
+  {
+    id: 29,
+    title: 'AI-Powered Climate Analytics',
+    description: 'Climate data analysis, environmental monitoring, and sustainability insights.',
+    icon: TreePine,
+    category: 'Climate AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Climate data analysis',
+      'Environmental monitoring',
+      'Carbon footprint tracking',
+      'Weather prediction',
+      'Sustainability metrics',
+      'Risk assessment',
+      'Compliance reporting',
+      'Trend analysis'
+    ],
+    benefits: [
+      'Improve sustainability',
+      'Reduce environmental impact',
+      'Better compliance',
+      'Cost optimization'
+    ],
+    marketPrice: '$5,000-14,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Environmental, Agriculture, Energy, Government'
   },
   {
     id: 30,
-    title: 'AI-Powered Legal Technology',
-    description: 'Intelligent legal research, document analysis, and case prediction.',
-    icon: BookOpen,
-    category: 'Legal AI',
-    price: 'Starting at $3,800/month',
+    title: 'AI-Powered Voice Cloning',
+    description: 'Advanced voice synthesis, cloning, and audio generation for various applications.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $3,500/month',
     features: [
-      'Legal document analysis',
-      'Case law research',
-      'Contract review',
-      'Risk assessment',
-      'Compliance monitoring',
-      'Legal prediction models',
-      'Document generation',
-      'Client communication'
+      'Voice cloning',
+      'Text-to-speech synthesis',
+      'Voice conversion',
+      'Emotion synthesis',
+      'Multi-language support',
+      'Real-time processing',
+      'Voice authentication',
+      'Audio enhancement'
     ],
     benefits: [
-      'Faster legal research',
-      'Reduced review time',
-      'Better risk assessment',
-      'Improved accuracy'
+      'Create realistic voice content',
+      'Improve accessibility',
+      'Reduce production costs',
+      'Enable new applications'
     ],
-    marketPrice: '$6,000-18,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Law Firms, Corporate Legal, Government, Compliance'
+    marketPrice: '$5,500-15,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Media, Entertainment, Education, Accessibility'
   }
 ];
 
@@ -903,16 +902,15 @@ const categories = [
   { name: "Image AI", count: aiServices.filter(s => s.category === "Image AI").length },
   { name: "Finance AI", count: aiServices.filter(s => s.category === "Finance AI").length },
   { name: "Autonomous AI", count: aiServices.filter(s => s.category === "Autonomous AI").length },
-  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
-  { name: "Edge AI", count: aiServices.filter(s => s.category === "Edge AI").length },
-  { name: "Metaverse AI", count: aiServices.filter(s => s.category === "Metaverse AI").length },
-  { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length },
-  { name: "Space AI", count: aiServices.filter(s => s.category === "Space AI").length },
-  { name: "Digital Twin AI", count: aiServices.filter(s => s.category === "Digital Twin AI").length },
-  { name: "Cybersecurity AI", count: aiServices.filter(s => s.category === "Cybersecurity AI").length },
+  { name: "Development AI", count: aiServices.filter(s => s.category === "Development AI").length },
+  { name: "Energy AI", count: aiServices.filter(s => s.category === "Energy AI").length },
+  { name: "Legal AI", count: aiServices.filter(s => s.category === "Legal AI").length },
   { name: "Personalization AI", count: aiServices.filter(s => s.category === "Personalization AI").length },
-  { name: "Pharma AI", count: aiServices.filter(s => s.category === "Pharma AI").length },
-  { name: "Legal AI", count: aiServices.filter(s => s.category === "Legal AI").length }
+  { name: "Quality AI", count: aiServices.filter(s => s.category === "Quality AI").length },
+  { name: "HR AI", count: aiServices.filter(s => s.category === "HR AI").length },
+  { name: "Real Estate AI", count: aiServices.filter(s => s.category === "Real Estate AI").length },
+  { name: "Gaming AI", count: aiServices.filter(s => s.category === "Gaming AI").length },
+  { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length }
 ];
 
 export default function AIServicesPage() {

@@ -36,19 +36,15 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision' },
     { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity' },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions', description: 'AWS, Azure, GCP Migration' },
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business Intelligence, Big Data' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' },
-    { name: 'Automation', href: '/automation', description: 'Process Automation, RPA' },
-    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum Algorithms, Optimization' }
+    { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs' },
+    { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing' },
+    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' }
   ];
 
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' },
+    { name: 'Enterprise Solutions', href: '/enterprise', description: 'Large-scale business solutions' },
     { name: 'Startup Solutions', href: '/solutions/startup', description: 'Scalable startup platforms' },
-    { name: 'Custom Solutions', href: '/solutions/custom', description: 'Tailored technology solutions' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration', description: 'Seamless cloud transitions' },
-    { name: 'Industry Solutions', href: '/solutions/industry', description: 'Industry-specific solutions' },
+    { name: 'E-commerce', href: '/ecommerce', description: 'Online store solutions' },
     { name: 'Healthcare', href: '/industries/healthcare', description: 'Medical technology solutions' },
     { name: 'Finance', href: '/industries/finance', description: 'Fintech and banking solutions' },
     { name: 'Education', href: '/industries/education', description: 'EdTech platforms' }
@@ -60,13 +56,7 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'News', href: '/news' },
-    { name: 'Events', href: '/events' },
-    { name: 'Support', href: '/support' },
-    { name: 'API Docs', href: '/api-docs' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -366,7 +356,7 @@ export default function Layout({ title, description, children, keywords }: Layou
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Company Info */}
               <div className="lg:col-span-1">
                 <div className="flex items-center space-x-2 mb-4">
@@ -405,7 +395,7 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  {services.map((service, index) => (
+                  {services.slice(0, 6).map((service, index) => (
                     <li key={index}>
                       <Link 
                         href={service.href} 
@@ -422,30 +412,13 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Solutions</h3>
                 <ul className="space-y-2">
-                  {solutions.map((solution, index) => (
+                  {solutions.slice(0, 6).map((solution, index) => (
                     <li key={index}>
                       <Link 
                         href={solution.href} 
                         className="text-gray-400 hover:text-white transition-colors"
                       >
                         {solution.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Quick Links */}
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul className="space-y-2">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={link.href} 
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        {link.name}
                       </Link>
                     </li>
                   ))}
@@ -494,7 +467,10 @@ export default function Layout({ title, description, children, keywords }: Layou
                 <div className="text-gray-400 text-sm mb-4 md:mb-0">
                   © 2025 Zion Tech Group. All rights reserved.
                 </div>
-                <div className="flex space-x-6 text-sm">
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors">
+                    Sitemap
+                  </Link>
                   <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
                   </Link>
