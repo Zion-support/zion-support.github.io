@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 
 const complianceFrameworks = [
   {

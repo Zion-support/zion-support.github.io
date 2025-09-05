@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Handshake, Award, Globe, Users, Zap, Shield, Cloud } from 'lucide-react';
 
