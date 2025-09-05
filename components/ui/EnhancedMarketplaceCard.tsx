@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface EnhancedMarketplaceCardProps {
   title: string;
@@ -23,9 +22,9 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
       <p className="text-sm text-gray-600 mb-4">{description}</p>
       <div className="mt-auto flex items-center justify-between">
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-        <Link href="/contact" className="text-sm text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">
+        <a href="/contact" className="text-sm text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">
           Get started
-        </Link>
+        </a>
       </div>
     </div>
   );

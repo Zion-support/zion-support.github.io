@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
+import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, Globe, ArrowRight, CheckCircle, Star, Server, Users, Building2, FileText, Rocket, Target, Atom, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle, ShoppingBag } from 'lucide-react';
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -10,42 +10,69 @@ const servicesDropdown = [
     title: 'AI & Machine Learning',
     description: 'Intelligent solutions for business automation',
     href: '/ai-services',
+    features: ['Custom ML Models', 'NLP Solutions', 'Computer Vision', 'Predictive Analytics'],
+  },
+  {
+    icon: Server,
+    title: 'IT Services',
+    description: 'Comprehensive technology infrastructure',
+    href: '/it-services',
+    features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'System Integration'],
+  },
+  {
+    icon: Rocket,
+    title: 'Micro SaaS',
+    description: 'Scalable software solutions',
+    href: '/micro-saas',
+    features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance'],
   },
   {
     icon: Shield,
     title: 'Cybersecurity',
-    description: 'Advanced security and threat protection',
-    href: '/it-services',
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions and migration',
-    href: '/it-services',
-  },
-  {
-    icon: Code,
-    title: 'Custom Software Development',
-    description: 'Tailored applications to meet your specific business needs',
-    href: '/services',
-  },
-  {
-    icon: Network,
-    title: 'System Integration',
-    description: 'Seamless integration of existing systems',
-    href: '/services',
-  },
-  {
-    icon: Zap,
-    title: 'Digital Transformation',
-    description: 'Complete digital overhaul of your business processes',
-    href: '/services',
+    description: 'Protect your digital assets',
+    href: '/cybersecurity',
+    features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
   },
 ];
 
-const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+const solutionsDropdown = [
+  {
+    icon: Building2,
+    title: 'Enterprise Solutions',
+    description: 'Large-scale business transformation',
+    href: '/enterprise',
+    features: ['Digital Transformation', 'Process Automation', 'Data Analytics', 'Cloud Strategy'],
+  },
+  {
+    icon: Target,
+    title: 'Startup Solutions',
+    description: 'Rapid growth and scaling',
+    href: '/solutions/startup',
+    features: ['MVP Development', 'Tech Stack Selection', 'Growth Strategy', 'Funding Support'],
+  },
+  {
+    icon: Globe,
+    title: 'E-commerce',
+    description: 'Online store optimization',
+    href: '/ecommerce',
+    features: ['Platform Development', 'Payment Integration', 'SEO Optimization', 'Analytics'],
+  },
+];
+
+const industriesDropdown = [
+  { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+  { name: 'Finance', href: '/industries/finance', icon: DollarSign },
+  { name: 'Education', href: '/industries/education', icon: BookOpen },
+  { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
+  { name: 'Retail', href: '/industries/retail', icon: ShoppingBag },
+  { name: 'Government', href: '/industries/government', icon: Building2 },
+];
+
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
@@ -60,14 +87,13 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (onMenuClick) {
-      onMenuClick();
-    }
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsIndustriesOpen(false);
   };
 
   const handleServiceClick = (href: string) => {
@@ -79,22 +105,49 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      {/* Top Bar */}
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className="text-blue-200">24/7 Support Available</span>
+              <div className="flex space-x-2">
+                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="h-6 w-6 text-white" />
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <span className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Zion Tech Group
-            </span>
+            <div>
+              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
+              <div className="text-xs text-gray-500">Technology Solutions</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
               className={`font-medium transition-colors duration-200 ${
@@ -103,17 +156,15 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
             >
               Home
             </Link>
-            <div className="relative">
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
               <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors duration-200 ${
-                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-                }`}
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
-                  isServicesOpen ? 'rotate-180' : ''
-                }`} />
+                Services <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               <AnimatePresence>
                 {isServicesOpen && (
@@ -144,23 +195,83 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                 )}
               </AnimatePresence>
             </div>
-            <Link
-              href="/about"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsSolutionsOpen(true)}
+                onMouseLeave={() => setIsSolutionsOpen(false)}
+              >
+                Solutions <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsSolutionsOpen(true)}
+                    onMouseLeave={() => setIsSolutionsOpen(false)}
+                  >
+                    <div className="p-6">
+                      {solutionsDropdown.map((solution) => (
+                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
+                          <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <solution.icon className="w-6 h-6 text-blue-600 mt-1" />
+                            <div>
+                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
+                              <p className="text-sm text-gray-600">{solution.description}</p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                Industries <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isIndustriesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsIndustriesOpen(true)}
+                    onMouseLeave={() => setIsIndustriesOpen(false)}
+                  >
+                    <div className="p-4">
+                      {industriesDropdown.map((industry) => (
+                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                          <industry.icon className="w-5 h-5 text-blue-600" />
+                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               About
             </Link>
-            <Link
-              href="/contact"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Contact
             </Link>
-          </nav>
+          </div>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -262,13 +373,25 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                     Get Started
                   </Link>
                 </div>
+                <div className="pt-4 border-t border-gray-200">
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    +1 302 464 0950
+                  </div>
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <Mail className="h-4 w-4 mr-2" />
+                    kleber@ziontechgroup.com
+                  </div>
+                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    364 E Main St STE 1008, Middletown DE 19709
+                  </div>
+                </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </nav>
     </header>
   );
-};
-
-export default Header;
+}

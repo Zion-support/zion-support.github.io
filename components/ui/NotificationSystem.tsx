@@ -9,15 +9,11 @@ interface Notification {
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onDismiss?: (_id: string) => void;
+  onDismiss?: (id: string) => void;
   className?: string;
 }
 
-const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onDismiss,
-  className,
-}) => {
+export default function NotificationSystem({ notifications, onDismiss, className }: NotificationSystemProps) {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
       case 'success':
@@ -62,6 +58,4 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
       ))}
     </div>
   );
-};
-
-export default NotificationSystem;
+}

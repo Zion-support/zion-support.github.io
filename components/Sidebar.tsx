@@ -1,16 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import {
   X,
   ChevronDown,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
+  FileText,
+  HelpCircle,
   LogOut,
+  User,
+  Search,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Network,
+  Zap,
   Phone,
   Mail,
   MapPin,
   Building2,
 } from 'lucide-react';
-
+,
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -59,7 +74,7 @@ const navigation = {
     { name: 'Privacy Policy', href: '/privacy' },
   ],
 };
-
+,
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
@@ -88,7 +103,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
-
+,
   return (
     <AnimatePresence>
       {isOpen && (
