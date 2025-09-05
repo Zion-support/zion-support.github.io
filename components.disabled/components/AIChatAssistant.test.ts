@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { render, screen  } from "@testing-library/react";
     render(<AIChatAssistant />);
@@ -25,5 +27,6 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
     // Add interaction tests based on component functionality})});
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

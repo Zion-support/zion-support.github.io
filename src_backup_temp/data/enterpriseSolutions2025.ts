@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/enterpriseSolutions2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const ENTERPRISE_SOLUTIONS_2025 = [
@@ -399,3 +401,4 @@ export const ENTERPRISE_SOLUTIONS_2025 = [ { id: 'digital-transformation-consult
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/enterpriseSolutions2025.ts

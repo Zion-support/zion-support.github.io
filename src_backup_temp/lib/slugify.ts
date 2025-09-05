@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/lib/slugify.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -55,3 +57,4 @@ export function slugify(text: unknownstring): string { return text .toLowerCase(
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/lib/slugify.ts

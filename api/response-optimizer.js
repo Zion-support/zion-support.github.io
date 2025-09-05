@@ -7,7 +7,6 @@ export class ResponseOptimizer {
   optimizeResponse(data, options = {}) {
     const {
       compress = true,
-      minify = true,
       cache = true,
       ttl = 3600
     } = options;
