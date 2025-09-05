@@ -21,32 +21,35 @@ import {
 } from 'lucide-react';
 
 const services = {
-  'AI Solutions': [{ "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
-    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
-    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
-    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
-    { "name": 'AI Content Generation', "href": '/ai-services#ai-content-generation' },
-    { "name": 'Voice AI Assistant', "href": '/ai-services#voice-ai-assistant' },
-    { "name": 'AI Fraud Detection', "href": '/ai-services#ai-fraud-detection' },
-    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' }
+  'AI Solutions': [
+    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
+    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
+    { "name": 'AI Space Exploration', "href": '/ai-services#ai-space-exploration' },
+    { "name": 'AI Quantum Computing', "href": '/ai-services#ai-quantum-computing' },
+    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
+    { "name": 'AI Brain-Computer Interface', "href": '/ai-services#ai-brain-computer-interface' },
+    { "name": 'AI Metaverse Development', "href": '/ai-services#ai-metaverse-development' },
+    { "name": 'AI Explainable AI (XAI)', "href": '/ai-services#ai-explainable-ai' }
   ],
-  'IT Services': [{ "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
-    { "name": 'Cybersecurity Solutions', "href": '/it-services#cybersecurity' },
-    { "name": 'Network Infrastructure', "href": '/it-services#network-infrastructure' },
-    { "name": 'Database Management', "href": '/it-services#database-management' },
-    { "name": 'DevOps & CI/CD', "href": '/it-services#devops-cicd' },
-    { "name": 'Data Center Migration', "href": '/it-services#data-center-migration' },
-    { "name": 'IT Asset Management', "href": '/it-services#it-asset-management' },
-    { "name": 'Backup & Disaster Recovery', "href": '/it-services#backup-disaster-recovery' }
+  'IT Services': [
+    { "name": 'AI-Powered IT Operations', "href": '/it-services#ai-powered-it-operations' },
+    { "name": 'Quantum Computing Integration', "href": '/it-services#quantum-computing-integration' },
+    { "name": 'Edge Computing Infrastructure', "href": '/it-services#edge-computing-infrastructure' },
+    { "name": '5G Network Implementation', "href": '/it-services#5g-network-implementation' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
+    { "name": 'IoT Platform Development', "href": '/it-services#iot-platform-development' },
+    { "name": 'AR/VR Enterprise Solutions', "href": '/it-services#arvr-enterprise-solutions' },
+    { "name": 'Zero Trust Security Architecture', "href": '/it-services#zero-trust-security-architecture' }
   ],
-  'Micro SaaS': [{ "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
-    { "name": 'LLM Evaluation Suite', "href": '/micro-saas#llm-evaluation' },
-    { "name": 'Customer Feedback App', "href": '/micro-saas#customer-feedback' },
-    { "name": 'API Rate Limiting', "href": '/micro-saas#api-rate-limiting' },
-    { "name": 'Content Moderation AI', "href": '/micro-saas#content-moderation' },
-    { "name": 'Workflow Automation', "href": '/micro-saas#workflow-automation' },
-    { "name": 'AI Lead Scoring', "href": '/micro-saas#ai-lead-scoring' },
-    { "name": 'Social Media Scheduler', "href": '/micro-saas#social-media-scheduler' }
+  'Micro SaaS': [
+    { "name": 'AI-Powered Legal Document Generator', "href": '/micro-saas#ai-legal-document-generator' },
+    { "name": 'Smart Home Automation Hub', "href": '/micro-saas#smart-home-automation-hub' },
+    { "name": 'AI-Powered HR Management', "href": '/micro-saas#ai-powered-hr-management' },
+    { "name": 'Blockchain Document Verification', "href": '/micro-saas#blockchain-document-verification' },
+    { "name": 'AI-Powered Video Editor', "href": '/micro-saas#ai-powered-video-editor' },
+    { "name": 'Smart Agriculture Monitoring', "href": '/micro-saas#smart-agriculture-monitoring' },
+    { "name": 'Voice Commerce Platform', "href": '/micro-saas#voice-commerce-platform' },
+    { "name": 'AI-Powered Mental Health Assistant', "href": '/micro-saas#ai-powered-mental-health-assistant' }
   ]
 };
 

@@ -398,6 +398,178 @@ const microSaaSProducts = [
     link: 'https://cryptotracker.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Legal Document Generator',
+    description: 'Automated legal document creation with contract templates and compliance checking.',
+    icon: FileText,
+    features: ['Contract Templates', 'Compliance Checking', 'E-signature Integration', 'Legal Updates'],
+    pricing: '$199 - $999/month',
+    category: 'Legal Tech',
+    popular: true,
+    link: 'https://legaldocs.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'AI Automation', 'Energy Optimization', 'Voice Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Home',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered HR Management',
+    description: 'Complete HR solution with AI recruitment, performance tracking, and employee analytics.',
+    icon: Users,
+    features: ['AI Recruitment', 'Performance Tracking', 'Employee Analytics', 'Payroll Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Human Resources',
+    link: 'https://hrmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Document Verification',
+    description: 'Secure document verification and authentication using blockchain technology.',
+    icon: Shield,
+    features: ['Blockchain Verification', 'Document Authentication', 'Tamper Detection', 'API Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain',
+    link: 'https://blockchainverify.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-powered content creation and optimization.',
+    icon: Video,
+    features: ['Auto Editing', 'Content Creation', 'Video Optimization', 'Template Library'],
+    pricing: '$79 - $399/month',
+    category: 'Video Production',
+    link: 'https://videoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'IoT-based farm monitoring with crop analysis, weather tracking, and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Tracking', 'Yield Prediction', 'IoT Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Agriculture',
+    link: 'https://smartagri.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Service',
+    description: 'Real-time translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'API Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Translation',
+    link: 'https://aitranslation.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Asset Management',
+    description: 'Secure digital asset storage with AI-powered organization and search capabilities.',
+    icon: HardDrive,
+    features: ['Secure Storage', 'AI Organization', 'Advanced Search', 'Version Control'],
+    pricing: '$49 - $299/month',
+    category: 'Asset Management',
+    link: 'https://digitalassets.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Marketing',
+    description: 'Intelligent email marketing with AI-driven personalization and campaign optimization.',
+    icon: Mail,
+    features: ['AI Personalization', 'Campaign Optimization', 'A/B Testing', 'Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'Email Marketing',
+    link: 'https://aiemailmarketing.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation with testing, deployment, and monitoring tools.',
+    icon: Code,
+    features: ['No-code Creation', 'Testing Tools', 'Deployment', 'Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development',
+    link: 'https://smartcontracts.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Onboarding',
+    description: 'Automated customer onboarding with personalized experiences and progress tracking.',
+    icon: Rocket,
+    features: ['Personalized Onboarding', 'Progress Tracking', 'Automated Workflows', 'Analytics'],
+    pricing: '$149 - $799/month',
+    category: 'Customer Success',
+    link: 'https://aionboarding.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Commerce Platform',
+    description: 'Voice-activated e-commerce with AI-powered product recommendations and ordering.',
+    icon: Mic,
+    features: ['Voice Commands', 'AI Recommendations', 'Order Processing', 'Payment Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'E-commerce',
+    link: 'https://voicecommerce.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using machine learning for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Content Safety',
+    link: 'https://aicontentmod.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'IoT-based energy monitoring and optimization for homes and businesses.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Energy Management',
+    link: 'https://smartenergy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Personalized financial planning with AI-driven investment recommendations and budgeting.',
+    icon: DollarSign,
+    features: ['Financial Planning', 'Investment Advice', 'Budgeting Tools', 'Goal Tracking'],
+    pricing: '$49 - $299/month',
+    category: 'Personal Finance',
+    link: 'https://aifinancial.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification with privacy-preserving authentication.',
+    icon: Shield,
+    features: ['Decentralized Identity', 'Privacy Protection', 'Multi-factor Auth', 'API Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Identity Management',
+    link: 'https://blockchainid.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and route optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Analysis'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    link: 'https://aisupplychain.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Waste Management',
+    description: 'IoT-based waste monitoring and optimization for cities and businesses.',
+    icon: Package,
+    features: ['Waste Monitoring', 'Route Optimization', 'Cost Reduction', 'Environmental Impact'],
+    pricing: '$299 - $1,499/month',
+    category: 'Environmental',
+    link: 'https://smartwaste.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'AI-driven mental health support with mood tracking and personalized recommendations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'AI Recommendations', 'Crisis Support', 'Professional Integration'],
+    pricing: '$29 - $149/month',
+    category: 'Healthcare',
+    link: 'https://aihealth.ziontechgroup.com'
+  },
+  {
     title: 'Smart Home Automation',
     description: 'IoT platform for smart home device management and automation rules.',
     icon: Home,

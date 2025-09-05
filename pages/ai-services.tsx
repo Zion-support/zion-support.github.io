@@ -390,6 +390,178 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Machine learning algorithms for drug discovery, molecular design, and pharmaceutical research.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Discovery', 'Clinical Trials', 'Biomarker Analysis'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceutical AI',
+    popular: true,
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact', 'Weather Forecasting', 'Carbon Tracking'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Climate AI',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI Space Exploration',
+    description: 'AI solutions for space exploration, satellite data analysis, and astronomical research.',
+    icon: Rocket,
+    features: ['Satellite Analysis', 'Space Data Processing', 'Mission Planning', 'Astronomical Research'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space AI',
+    link: 'https://aispace.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing',
+    description: 'Quantum machine learning algorithms and quantum computing optimization solutions.',
+    icon: Cpu,
+    features: ['Quantum ML', 'Optimization', 'Quantum Algorithms', 'Research Support'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI Autonomous Vehicles',
+    description: 'Self-driving vehicle AI with computer vision, sensor fusion, and decision making.',
+    icon: Car,
+    features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Safety Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Vehicles',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Robotics Control',
+    description: 'Intelligent robotics control systems with machine learning and adaptive behavior.',
+    icon: Settings,
+    features: ['Robot Control', 'Adaptive Learning', 'Object Manipulation', 'Human-Robot Interaction'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Robotics AI',
+    link: 'https://airobotics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Brain-Computer Interface',
+    description: 'Neural interface AI for brain-computer communication and neurotechnology applications.',
+    icon: Brain,
+    features: ['Neural Decoding', 'Brain Signals', 'Motor Control', 'Cognitive Enhancement'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Neurotechnology',
+    link: 'https://aibci.ziontechgroup.com'
+  },
+  {
+    title: 'AI Metaverse Development',
+    description: 'AI-powered virtual worlds, avatars, and immersive experiences for the metaverse.',
+    icon: Globe,
+    features: ['Virtual Worlds', 'AI Avatars', 'Immersive Experiences', 'Social AI'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Metaverse AI',
+    link: 'https://aimetaverse.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Intelligence',
+    description: 'Edge AI solutions for real-time processing and decision making at the edge.',
+    icon: Server,
+    features: ['Edge Processing', 'Real-time AI', 'Low Latency', 'Distributed Intelligence'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI Explainable AI (XAI)',
+    description: 'Explainable AI solutions for transparent and interpretable machine learning models.',
+    icon: Eye,
+    features: ['Model Interpretability', 'Transparency', 'Bias Detection', 'Explainable Decisions'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Explainable AI',
+    link: 'https://aixai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Federated Learning',
+    description: 'Distributed machine learning with privacy-preserving federated learning algorithms.',
+    icon: Network,
+    features: ['Privacy Preservation', 'Distributed Learning', 'Secure Aggregation', 'Decentralized AI'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Federated Learning',
+    link: 'https://aifederated.ziontechgroup.com'
+  },
+  {
+    title: 'AI Synthetic Data Generation',
+    description: 'AI-generated synthetic data for training and testing machine learning models.',
+    icon: Database,
+    features: ['Data Generation', 'Privacy Protection', 'Model Training', 'Quality Assurance'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Synthetic Data',
+    link: 'https://aisynthetic.ziontechgroup.com'
+  },
+  {
+    title: 'AI Adversarial Defense',
+    description: 'AI security solutions for defending against adversarial attacks and model robustness.',
+    icon: Shield,
+    features: ['Adversarial Defense', 'Model Robustness', 'Attack Detection', 'Security Testing'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'AI Security',
+    link: 'https://aiadversarial.ziontechgroup.com'
+  },
+  {
+    title: 'AI Multi-Modal Learning',
+    description: 'Advanced multi-modal AI that processes text, images, audio, and video simultaneously.',
+    icon: FileText,
+    features: ['Multi-modal Processing', 'Cross-modal Learning', 'Unified Representations', 'Fusion Techniques'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Multi-modal AI',
+    link: 'https://aimultimodal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Reinforcement Learning',
+    description: 'Advanced reinforcement learning solutions for autonomous decision making and optimization.',
+    icon: Target,
+    features: ['Autonomous Learning', 'Decision Making', 'Reward Optimization', 'Policy Learning'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Reinforcement Learning',
+    link: 'https://aireinforcement.ziontechgroup.com'
+  },
+  {
+    title: 'AI Transfer Learning',
+    description: 'Transfer learning solutions for adapting pre-trained models to new domains and tasks.',
+    icon: ArrowRight,
+    features: ['Model Adaptation', 'Domain Transfer', 'Few-shot Learning', 'Knowledge Transfer'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Transfer Learning',
+    link: 'https://aitransfer.ziontechgroup.com'
+  },
+  {
+    title: 'AI Continual Learning',
+    description: 'Continual learning AI that adapts and learns from new data without forgetting previous knowledge.',
+    icon: Brain,
+    features: ['Continual Adaptation', 'Catastrophic Forgetting Prevention', 'Incremental Learning', 'Memory Management'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Continual Learning',
+    link: 'https://aicontinual.ziontechgroup.com'
+  },
+  {
+    title: 'AI Neuromorphic Computing',
+    description: 'Brain-inspired AI computing with spiking neural networks and neuromorphic hardware.',
+    icon: Cpu,
+    features: ['Spiking Networks', 'Neuromorphic Hardware', 'Energy Efficiency', 'Brain-like Processing'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Neuromorphic AI',
+    link: 'https://aineuromorphic.ziontechgroup.com'
+  },
+  {
+    title: 'AI Swarm Intelligence',
+    description: 'Distributed AI systems with swarm intelligence for collective problem solving.',
+    icon: Users,
+    features: ['Swarm Algorithms', 'Collective Intelligence', 'Distributed Systems', 'Emergent Behavior'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Swarm AI',
+    link: 'https://aiswarm.ziontechgroup.com'
   }
 ];
 
