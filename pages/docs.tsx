@@ -1,3 +1,4 @@
+>>>>>>> main
 const categories = [
   {
     title: 'Getting Started',
@@ -10,6 +11,7 @@ const categories = [
       { title: 'Configuration, description: 'Configure your environment, time: '15 min read' },',
       { title: 'First Project, description: 'Create your first project, time: '20 min read' }',
     ];
+>>>>>>> main
   },
   {
     title: 'API Reference',
@@ -95,6 +97,7 @@ ursor/website-audit-and-update-with-deployment-9cae
         </section>
 
 ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Search Section */}
 
               className="max-w-2xl mx-auto"
@@ -112,7 +115,9 @@ ursor/website-audit-and-update-with-deployment-9cae
         </section>
 
 ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Popular Docs */}
+>>>>>>> main
                   key={doc.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +128,9 @@ ursor/website-audit-and-update-with-deployment-9cae
         </section>
 
 ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* Categories Section */}
+>>>>>>> main
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -156,6 +163,7 @@ ursor/website-audit-and-update-with-deployment-9cae
         </section>
 
 ursor/website-audit-and-update-with-deployment-9cae
+>>>>>>> main
         {/* CTA Section */}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -186,6 +194,7 @@ ursor/website-audit-and-update-with-deployment-9cae
     </MainLayout>
     </Layout>
     </SimpleLayout>
+>>>>>>> main
   );
 }
 

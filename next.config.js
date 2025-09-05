@@ -1,20 +1,18 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Performance optimizations
+  swcMinify: true,
   experimental: {
+<<<<<<< HEAD
     scrollRestoration: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+=======
+    appDir: true,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
   },
-  
-  // Image optimization
   images: {
+<<<<<<< HEAD
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -26,33 +24,33 @@ const nextConfig = {
   
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+    domains: ['localhost', 'ziontechgroup.com'],
+    unoptimized: true,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
   },
-  
-  // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\/]node_modules[\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
+  trailingSlash: true,
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
       };
     }
     return config;
   },
-  
-  // Headers for security and performance
   async headers() {
     return [
       {
@@ -87,6 +85,7 @@ const nextConfig = {
       },
     ];
   },
+<<<<<<< HEAD
   
   // Redirects for SEO
   async redirects() {
@@ -107,6 +106,8 @@ const nextConfig = {
       },
     ];
   },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
 };
 
-export default nextConfig;
+module.exports = nextConfig;

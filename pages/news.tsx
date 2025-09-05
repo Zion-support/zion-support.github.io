@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
 
+>>>>>>> main
+>>>>>>> main
 const newsArticles = [
   {
     id: 1,
@@ -249,8 +255,17 @@ export default function NewsPage() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+        </div>
+      </section>
+    </div>
+<<<<<<< HEAD
+=======
+=======
         </section>
       </div>
     </>
+>>>>>>> main
+>>>>>>> main
   );
 }

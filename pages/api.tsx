@@ -1,7 +1,35 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
+
+const apiServices = [
+  {
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API design',
+    icon: Globe,
+    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
+  },
+  {
+    title: 'GraphQL API',
+    description: 'Flexible query language for APIs',
+    icon: Database,
+    features: ['Single Endpoint', 'Real-time Subscriptions', 'Type Safety', 'Introspection']
+  },
+  {
+    title: 'WebSocket API',
+    description: 'Real-time bidirectional communication',
+    icon: Zap,
+    features: ['Real-time Updates', 'Low Latency', 'Persistent Connections', 'Event-driven']
+  }
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
 export default function APIPage() {
   const apiFeatures = [
     {

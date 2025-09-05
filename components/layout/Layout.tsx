@@ -1,5 +1,17 @@
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="pt-20">
+        {children}
+      </main>
+      <Footer />
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-55cb
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
