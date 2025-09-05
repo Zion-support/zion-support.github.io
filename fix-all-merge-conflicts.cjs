@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 function fixMergeConflicts(filePath) {;
   try {;
@@ -22,24 +23,32 @@ function fixMergeConflicts(filePath) {;
 =======
     
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+=======
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     // Check if file has merge conflict markers
     if (
-<<<<<<< HEAD
-=======
-      content.includes('
-      content.includes('') ||
+      content.includes('<<<<<<< HEAD') ||
+      content.includes('=======') ||
       content.includes('>>>>>>>')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     ) {
-      console.log(`Fixing merge conflicts: in: ${filePath}`);
+      console.log(`Fixing merge conflicts in: ${filePath}`);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       // Remove merge conflict markers and keep the content after 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      // Remove merge conflict markers and keep the content after =======
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       const lines = content.split('\n');
-      const fixedLines = [];
+      let fixedLines = [];
       let inConflict = false;
       let keepContent = false;
 ;
@@ -51,10 +60,14 @@ function fixMergeConflicts(filePath) {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         if (line.includes('
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        if (line.includes('<<<<<<< HEAD')) {
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           inConflict = true;
           keepContent = false;
           continue;
@@ -69,16 +82,17 @@ function fixMergeConflicts(filePath) {;
         if (line.includes('>>>>>>>')) {;
 =======
 
-<<<<<<< HEAD
-=======
-        if (line.includes('')) {
+        if (line.includes('=======')) {
           keepContent = true;
           continue;
         }
 
         if (line.includes('>>>>>>>')) {
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           inConflict = false;
           keepContent = false;
           continue;

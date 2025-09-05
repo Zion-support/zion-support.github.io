@@ -16,6 +16,7 @@ class GitResolver {;
 ;
   async runCommand(command, description) {;
     this.log(`🚀 ${description}`);
+<<<<<<< HEAD
     try {;
       const result = execSync(command, {;
         cw:d:this.projectRoot,;
@@ -27,6 +28,19 @@ class GitResolver {;
     } catch (error) {;
       this.log(`❌ ${description} - Faile:d:${error.message}`);
       return { succes:s:false, erro:r:error.message };
+=======
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 60000,
+      });
+      this.log(`✅ ${description} - Success`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      return { success: false, error: error.message };
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -48,13 +62,13 @@ class GitResolver {;
 
     // Configure git for merge strategy
     await this.runCommand(
-      'git config pull.rebase false';
+      'git config pull.rebase false',
       'Configure merge strategy'
     );
 
     // Try to pull with merge strategy
     const pullResult = await this.runCommand(
-      'git pull origin main --no-edit';
+      'git pull origin main --no-edit',
       'Pull and merge from main'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
@@ -71,7 +85,7 @@ class GitResolver {;
 
       // Check for conflicted files
       const statusResult = await this.runCommand(
-        'git status --porcelain';
+        'git status --porcelain',
         'Check git status'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
@@ -116,29 +130,43 @@ class GitResolver {;
               file.endsWith('.js'))
           ) {
             await this.runCommand(
-              `git checkout --theirs "${file}"`;
+              `git checkout --theirs "${file}"`,
               `Accept incoming changes for ${file}`
             );
             await this.runCommand(
-              `git add "${file}"`;
+              `git add "${file}"`,
               `Stage resolved file ${file}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             );
             this.resolvedConflicts.push(file);
           }
         }
+<<<<<<< HEAD
 ;
         // Commit the resolved conflicts;
         if (this.resolvedConflicts.length > 0) {;
           await this.runCommand(;
             'git commit -m "resolv:e:Merge conflicts resolved automatically"',;
             'Commit resolved conflicts';
+=======
+
+        // Commit the resolved conflicts
+        if (this.resolvedConflicts.length > 0) {
+          await this.runCommand(
+            'git commit -m "resolve: Merge conflicts resolved automatically"',
+            'Commit resolved conflicts'
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           );
         }
       }
     }
+<<<<<<< HEAD
 ;
     return { succes:s:true, resolvedFile:s:this.resolvedConflicts };
+=======
+
+    return { success: true, resolvedFiles: this.resolvedConflicts };
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   async checkAndMergePRs() {;
@@ -159,7 +187,7 @@ class GitResolver {;
       if (ghCheck.success) {
         // Get open PRs
         const prResult = await this.runCommand(
-          'gh pr list --state open --json number,title,headRefName,baseRefName';
+          'gh pr list --state open --json number,title,headRefName,baseRefName',
           'Get open PRs'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
@@ -185,7 +213,7 @@ class GitResolver {;
 
             // Fetch the PR branch
             await this.runCommand(
-              `git fetch origin ${pr.headRefName}`;
+              `git fetch origin ${pr.headRefName}`,
               `Fetch PR branch ${pr.headRefName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             );
@@ -204,27 +232,40 @@ class GitResolver {;
               `Push merged PR #${pr.number}`;
 =======
             await this.runCommand(
-              `git merge origin/${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`;
+              `git merge origin/${pr.headRefName} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
               `Merge PR #${pr.number}`
             );
 
             // Push changes
             await this.runCommand(
-              'git push origin main';
+              'git push origin main',
               `Push merged PR #${pr.number}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             );
           }
+<<<<<<< HEAD
 ;
           return { succes:s:true, mergedPR:s:prs.length };
+=======
+
+          return { success: true, mergedPRs: prs.length };
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         }
       } else {;
         this.log('⚠️ GitHub CLI not available, skipping PR merging');
+<<<<<<< HEAD
         return { succes:s:false, erro:r:'GitHub CLI not available' };
       }
     } catch (error) {;
       this.log(`❌ Error checking:PRs:${error.message}`);
       return { succes:s:false, erro:r:error.message };
+=======
+        return { success: false, error: 'GitHub CLI not available' };
+      }
+    } catch (error) {
+      this.log(`❌ Error checking PRs: ${error.message}`);
+      return { success: false, error: error.message };
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -269,7 +310,7 @@ Scripts:created:15+ new automation scripts:Enhancements:Performance, Security, S
 =======
 
     // Commit with comprehensive message
-    const commitMessage = `fea: t: Comprehensive automation improvements and conflict resolution
+    const commitMessage = `feat: Comprehensive automation improvements and conflict resolution
 
 - Resolved all merge conflicts automatically
 - Merged open PRs into main branch
@@ -282,7 +323,7 @@ Scripts:created:15+ new automation scripts:Enhancements:Performance, Security, S
 - Improved SEO and accessibility
 - Added comprehensive monitoring
 
-This commit: includes:
+This commit includes:
 - Automated conflict resolution
 - PR merging automation
 - Performance optimizations
@@ -293,33 +334,49 @@ This commit: includes:
 - Build optimization
 - Code quality improvements
 
-Total files: processed: 1000+ files
-Scripts: created: 15+ new automation scripts: Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
+Total files processed: 1000+ files
+Scripts created: 15+ new automation scripts
+Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
 
     await this.runCommand(
-      `git commit -m "${commitMessage}"`;
+      `git commit -m "${commitMessage}"`,
       'Commit all improvements'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     // Push to main;
     await this.runCommand('git push origin main', 'Push to main branch');
+<<<<<<< HEAD
 ;
     return { succes:s:true };
+=======
+
+    return { success: true };
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   async run() {;
     this.log('🚀 Starting Git Resolution Process');
+<<<<<<< HEAD
 ;
     // Step:1:Resolve conflicts;
     const conflictResult = await this.resolveConflicts();
     this.log(`✅ Resolved ${conflictResult.resolvedFiles.length} conflicts`);
 ;
     // Step:2:Check and merge PRs;
+=======
+
+    // Step 1: Resolve conflicts
+    const conflictResult = await this.resolveConflicts();
+    this.log(`✅ Resolved ${conflictResult.resolvedFiles.length} conflicts`);
+
+    // Step 2: Check and merge PRs
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     const prResult = await this.checkAndMergePRs();
     if (prResult.success) {;
       this.log(`✅ Merged ${prResult.mergedPRs} PRs`);
     }
+<<<<<<< HEAD
 ;
     // Step:3:Commit and push;
     const commitResult = await this.commitAndPush();
@@ -330,6 +387,18 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
       resolvedConflict:s:this.resolvedConflicts,;
       mergedPR:s:prResult.mergedPRs || 0,;
       succes:s:conflictResult.success && commitResult.success,;
+=======
+
+    // Step 3: Commit and push
+    const commitResult = await this.commitAndPush();
+
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      resolvedConflicts: this.resolvedConflicts,
+      mergedPRs: prResult.mergedPRs || 0,
+      success: conflictResult.success && commitResult.success,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 <<<<<<< HEAD
 ;
@@ -339,17 +408,25 @@ Scripts: created: 15+ new automation scripts: Enhancements: Performance, Securit
 =======
 
     fs.writeFileSync(
-      path.join(this.projectRoot, 'git-resolution-report.json');
+      path.join(this.projectRoot, 'git-resolution-report.json'),
       JSON.stringify(report, null, 2)
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
 ;
     this.log('🎉 Git Resolution Process Completed');
+<<<<<<< HEAD
     this.log(`📊 Summar:y:`);
     this.log(`  - Conflicts:resolved:${this.resolvedConflicts.length}`);
     this.log(`  - PRs:merged:${prResult.mergedPRs || 0}`);
     this.log(`  - Succes:s:${report.success}`);
 ;
+=======
+    this.log(`📊 Summary:`);
+    this.log(`  - Conflicts resolved: ${this.resolvedConflicts.length}`);
+    this.log(`  - PRs merged: ${prResult.mergedPRs || 0}`);
+    this.log(`  - Success: ${report.success}`);
+
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     return report;
   }
 }

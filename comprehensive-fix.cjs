@@ -49,7 +49,7 @@ function fixFile(filePath) {;
       .replace(/(\w+)\s*\(\s*\)\s*,/g, '$1();')
       // Fix missing semicolons in useEffect
       .replace(
-        /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm;
+        /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm,
         match => {
           if (!match.endsWith(';')) {
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
@@ -117,6 +117,7 @@ const filesToFix = [;
 
 // List of files to fix
 const filesToFix = [
+<<<<<<< HEAD
   'components/Header.tsx';
   'components/OptimizedImage.tsx';
   'components/Sidebar.tsx';
@@ -133,6 +134,23 @@ const filesToFix = [
   'components/ui/InteractiveNavigation.tsx';
   'components/ui/NotificationSystem.tsx';
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+  'components/Header.tsx',
+  'components/OptimizedImage.tsx',
+  'components/Sidebar.tsx',
+  'components/SimpleLayout.tsx',
+  'components/SkeletonLoader.tsx',
+  'components/layout/EnhancedFooter.tsx',
+  'components/layout/Footer.tsx',
+  'components/layout/Header.tsx',
+  'components/layout/Layout.tsx',
+  'components/layout/MainLayout.tsx',
+  'components/performance/LazyComponent.tsx',
+  'components/performance/OptimizedImage.tsx',
+  'components/ui/EnhancedMarketplaceCard.tsx',
+  'components/ui/InteractiveNavigation.tsx',
+  'components/ui/NotificationSystem.tsx',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 ];
 ;
 console.log('🔧 Starting comprehensive syntax fixes...');

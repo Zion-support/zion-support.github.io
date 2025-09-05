@@ -2,6 +2,7 @@
 ;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 /**;
  * Generate sitemap for the website;
@@ -9,6 +10,15 @@ const path = require('path');
 class SitemapGenerator {;
   constructor() {;
     this.baseUrl = 'http:s://zion.app';
+=======
+
+/**
+ * Generate sitemap for the website
+ */
+class SitemapGenerator {
+  constructor() {
+    this.baseUrl = 'https://zion.app';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     this.pages = [];
     this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
   }
@@ -30,12 +40,18 @@ class SitemapGenerator {;
 ;
       // Ensure public directory exists;
       const publicDir = path.dirname(this.outputFile);
+<<<<<<< HEAD
       if (!fs.existsSync(publicDir)) {;
         fs.mkdirSync(publicDir, { recursiv:e:true });
+=======
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       }
 ;
       // Write sitemap;
       fs.writeFileSync(this.outputFile, xml);
+<<<<<<< HEAD
 ;
       console.log(`✅ Sitemap:generated:${this.outputFile}`);
       console.log(`📊 Total:pages:${this.pages.length}`);
@@ -66,6 +82,38 @@ class SitemapGenerator {;
     const header = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="htt:p://www.sitemaps.org/schemas/sitemap/0.9">`;
 ;
+=======
+
+      console.log(`✅ Sitemap generated: ${this.outputFile}`);
+      console.log(`📊 Total pages: ${this.pages.length}`);
+
+      return {
+        success: true,
+        pages: this.pages.length,
+        outputFile: this.outputFile,
+      };
+    } catch (error) {
+      console.error('❌ Error generating sitemap:', error.message);
+      return {
+        success: false,
+        error: error.message,
+      };
+    }
+  }
+
+  addPage(url, lastmod, priority) {
+    this.pages.push({
+      url: `${this.baseUrl}${url}`,
+      lastmod,
+      priority,
+    });
+  }
+
+  generateXML() {
+    const header = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     const footer = `</urlset>`;
 ;
     const urlEntries = this.pages;

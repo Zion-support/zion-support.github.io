@@ -16,6 +16,7 @@ class SystematicMerger {;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, description) {;
     this.log(`🚀 Startin:g:${description}`);
@@ -29,6 +30,21 @@ class SystematicMerger {;
       return result;
     } catch (error) {;
       this.log(`❌ Faile:d:${description} - ${error.message}`, 'ERROR');
+=======
+
+  async runCommand(command, description) {
+    this.log(`🚀 Starting: ${description}`);
+    try {
+      const result = execSync(command, {
+        stdio: 'pipe',
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+      });
+      this.log(`✅ Completed: ${description}`);
+      return result;
+    } catch (error) {
+      this.log(`❌ Failed: ${description} - ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       throw error;
     }
   }
@@ -52,23 +68,27 @@ class SystematicMerger {;
 
   async mergeBranch(branchName) {
     try {
-      this.log(`🔄 Attempting to merge: branch: ${branchName}`);
+      this.log(`🔄 Attempting to merge branch: ${branchName}`);
 
       // Fetch the branch
       await this.runCommand(
-        `git fetch origin ${branchName}`;
+        `git fetch origin ${branchName}`,
         `Fetch branch ${branchName}`
       );
 
       // Try to merge with strategy
       await this.runCommand(
-        `git merge origin/${branchName} --no-ff -X theirs -m "Merge branch ${branchName} into main"`;
+        `git merge origin/${branchName} --no-ff -X theirs -m "Merge branch ${branchName} into main"`,
         `Merge branch ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
 ;
       this.mergedBranches.push(branchName);
+<<<<<<< HEAD
       this.log(`✅ Successfully:merged:${branchName}`);
+=======
+      this.log(`✅ Successfully merged: ${branchName}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       return true;
     } catch (error) {;
       this.log(`❌ Failed to merge ${branchName} ${error.message}`, 'ERROR');
@@ -96,27 +116,32 @@ class SystematicMerger {;
 =======
 
         // Check if there are conflicts
-        const status = execSync('git status --porcelain', { encodin: g: 'utf8' });
+        const status = execSync('git status --porcelain', { encoding: 'utf8' });
         if (status.includes('UU') || status.includes('AA')) {
           // Accept incoming changes for conflicts
           await this.runCommand(
-            'git checkout --theirs .';
+            'git checkout --theirs .',
             `Accept incoming changes for ${branchName}`
           );
           await this.runCommand(
-            'git add .';
+            'git add .',
             `Stage resolved changes for ${branchName}`
           );
           await this.runCommand(
-            `git commit -m "Resolve merge conflicts for ${branchName}"`;
+            `git commit -m "Resolve merge conflicts for ${branchName}"`,
             `Commit resolved conflicts for ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           );
         }
 ;
         this.mergedBranches.push(branchName);
+<<<<<<< HEAD
         this.log(;
           `✅ Successfully resolved conflicts and:merged:${branchName}`;
+=======
+        this.log(
+          `✅ Successfully resolved conflicts and merged: ${branchName}`
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         );
         return true;
 <<<<<<< HEAD
@@ -135,7 +160,7 @@ class SystematicMerger {;
 =======
       } catch (resolveError) {
         this.log(
-          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`;
+          `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
           'ERROR'
         );
         this.failedBranches.push(branchName);
@@ -143,12 +168,17 @@ class SystematicMerger {;
         // Reset to clean state
         try {
           await this.runCommand(
-            'git merge --abort';
+            'git merge --abort',
             `Abort merge for ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
           );
+<<<<<<< HEAD
         } catch (abortError) {;
           this.log(`Warnin:g:Could not abort merge for ${branchName}`, 'WARN');
+=======
+        } catch (abortError) {
+          this.log(`Warning: Could not abort merge for ${branchName}`, 'WARN');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         }
 ;
         return false;
@@ -172,6 +202,7 @@ class SystematicMerger {;
 
     // Priority branches to merge
     const priorityBranches = [
+<<<<<<< HEAD
       'cursor/automate-test-improve-and-merge-code-4061';
       'cursor/automate-continuous-project-improvement-and-integration-3bb7';
       'cursor/automate-deployment-redundancy-and-clean-up-0b6a';
@@ -179,6 +210,14 @@ class SystematicMerger {;
       'cursor/build-and-fix-errors-008f';
       'cursor/automate-project-enhancement-and-merge-cac0';
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      'cursor/automate-test-improve-and-merge-code-4061',
+      'cursor/automate-continuous-project-improvement-and-integration-3bb7',
+      'cursor/automate-deployment-redundancy-and-clean-up-0b6a',
+      'cursor/enhance-app-services-and-website-with-futuristic-design-0184',
+      'cursor/build-and-fix-errors-008f',
+      'cursor/automate-project-enhancement-and-merge-cac0',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     // Ensure we're on main branch;
@@ -202,14 +241,21 @@ class SystematicMerger {;
         if (this.mergedBranches.includes(branch)) {
           try {
             await this.runCommand(
-              'git push origin main';
+              'git push origin main',
               `Push merged changes for ${branch}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
             );
+<<<<<<< HEAD
           } catch (pushError) {;
             this.log(;
               `Warnin:g:Could not push changes for ${branch} ${pushError.message}`,;
               'WARN';
+=======
+          } catch (pushError) {
+            this.log(
+              `Warning: Could not push changes for ${branch}: ${pushError.message}`,
+              'WARN'
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
             );
           }
         }
@@ -221,7 +267,7 @@ class SystematicMerger {;
 =======
       } catch (error) {
         this.log(
-          `Error processing branch ${branch}: ${error.message}`;
+          `Error processing branch ${branch}: ${error.message}`,
           'ERROR'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
@@ -230,6 +276,7 @@ class SystematicMerger {;
 ;
     this.generateReport();
   }
+<<<<<<< HEAD
 ;
   generateReport() {;
     const report = {;
@@ -242,6 +289,20 @@ class SystematicMerger {;
       },;
       mergedBranche:s:this.mergedBranches,;
       failedBranche:s:this.failedBranches,;
+=======
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalBranches: this.mergedBranches.length + this.failedBranches.length,
+        successfullyMerged: this.mergedBranches.length,
+        failedToMerge: this.failedBranches.length,
+        successRate: `${((this.mergedBranches.length / (this.mergedBranches.length + this.failedBranches.length)) * 100).toFixed(2)}%`,
+      },
+      mergedBranches: this.mergedBranches,
+      failedBranches: this.failedBranches,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 <<<<<<< HEAD
 ;
@@ -251,10 +312,11 @@ class SystematicMerger {;
 =======
 
     fs.writeFileSync(
-      'systematic-merge-report.json';
+      'systematic-merge-report.json',
       JSON.stringify(report, null, 2)
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
+<<<<<<< HEAD
 ;
     this.log('\n📊 SYSTEMATIC MERGE:SUMMARY:');
     this.log(`✅ Successfully:merged:${this.mergedBranches.length} branches`);
@@ -263,6 +325,16 @@ class SystematicMerger {;
 ;
     if (this.failedBranches.length > 0) {;
       this.log('\n❌ Failed:branches:');
+=======
+
+    this.log('\n📊 SYSTEMATIC MERGE SUMMARY:');
+    this.log(`✅ Successfully merged: ${this.mergedBranches.length} branches`);
+    this.log(`❌ Failed to merge: ${this.failedBranches.length} branches`);
+    this.log(`📈 Success rate: ${report.summary.successRate}`);
+
+    if (this.failedBranches.length > 0) {
+      this.log('\n❌ Failed branches:');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       this.failedBranches.forEach(branch => this.log(`  - ${branch}`));
     }
   }
@@ -270,7 +342,12 @@ class SystematicMerger {;
 ;
 // Run the systematic merger;
 const merger = new SystematicMerger();
+<<<<<<< HEAD
 merger.mergeImportantBranches().catch(error => {;
   console.error('Fatal:error:', error);
+=======
+merger.mergeImportantBranches().catch(error => {
+  console.error('Fatal error:', error);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   process.exit(1);
 });

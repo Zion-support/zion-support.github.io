@@ -37,11 +37,15 @@ const config = {
   verbose: true,
   testTimeout: 10000,
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+<<<<<<< HEAD
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 };
 ;
 module.exports = createJestConfig(config);

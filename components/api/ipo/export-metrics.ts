@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { requireSuperadminApi } from '../../../utils/api/auth',;
-;
-export default function handler(req:NextApiRequest, res:NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return,;
-  const rows = [;
-    ['MetricValue','Trend%'],;
-    ['Monthly Recurring Revenue (MRR)$220,450','8.2'],;
-    ['GMV$4,800,000','5.1'],;
-    ['Active users (monthly)18452','3.9'],;
-    ['Active users (TTM)162340','12.4'],;
-    ['Churn rate2.4%','-0.3'],;
-    ['CAC/LTV ratio1:5.6','0.4']],;
-  const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),;
-  res.setHeader('Content-Typetext/csv'),;
-  res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"'),;
-  res.status(200).send(csv),;
-}
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { requireSuperadminApi } from '../../../utils/api/auth',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,4 +23,3 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_i
   res.setHeader('Content-Type', _'text/csv');
   res.setHeader('Content-Disposition', _'attachment; filename="ipo-metrics.csv"');
   res.status(200).send(csv);}
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

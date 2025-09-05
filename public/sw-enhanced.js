@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 event.respondWith(handleOtherRequest(request))}});
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {_; return CACHEPATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {_; '; "return": new Response('Asset not available', _{ "status": 404})}'};
@@ -76,27 +77,47 @@ asyn:c:function getPendingSubmissions() {,;
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {_;
   return CACHEPATTERNS.some(pattern => pattern.test(url))};
+=======
+    event.respondWith(handleOtherRequest(request))};
+});
+// Check if request is for a static asset;
+"function": isStaticAsset(url) {;
+  return CACHE_PATTERNS.some(pattern => pattern.test(url))};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       cache.put(request, networkResponse.clone())};
-    "return": networkResponse} catch (error) {_;
-    ';
-    "return": new Response('Asset not available', _{ "status": 404})}'};
+    "return": networkResponse} catch (error) {;
+    console.error('Service "Worker": Error: handling static asset, ', error)';
+    "return": new Response('Asset not available', { "status": 404})}'};
 // "Handle": page requests;
+<<<<<<< HEAD
 async: function handlePageRequest(request) {_;
+=======
+async: function handlePageRequest(request) {;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   try {;
     // Try network first for pages;
     const networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache the response;
+<<<<<<< HEAD
       const cache = await caches.open(DYNAMICCACHE);
       cache.put(request, networkResponse.clone())}
 };
 // "Handle": other requests (API calls, etc.);
 "async": function handleOtherRequest(request) {_;
+=======
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone())};
+};
+// "Handle": other requests (API calls, etc.);
+"async": function handleOtherRequest(request) {;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   try {;
     // Try network first;
     const networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache successful responses;
+<<<<<<< HEAD
       const cache = await caches.open(DYNAMICCACHE);  try {,
     // Try network first for pages,
     const networkResponse = await fetch(request),
@@ -115,28 +136,42 @@ async: function handlePageRequest(request) {_;
       const cache = await caches.open(DYNAMICCACHE),
       cache.put(request, networkResponse.clone())};
     "return": networkResponse} catch (error) {;    // Try cache as fallback;
+=======
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone())};
+    "return": networkResponse} catch (error) {;
+    // Try cache as fallback;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     const cachedResponse = await caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse};
     // Return error response;
-    "return": new Response('Request failed', {_"status": 503})}'};
+    "return": new Response('Request failed', { "status": 503})}'};
 // "Background": sync for offline actions;
-self.addEventListener(_'sync', _(event) => {_';
+self.addEventListener('sync', (event) => {';
   "if": (event.tag === 'background-sync') {';
     event.waitUntil(doBackgroundSync())};
+<<<<<<< HEAD
         console.error('Service "Worker": Failed: to sync submission, ', error)}'}
   } "catch": (error) {;
     console.error('Service Worker: Background: sync failed, ', error)}'};          "icon": '/favicon-32x32.png, '}']};
+=======
+        console.error('Service "Worker": Failed: to sync submission, ', error)}'};
+  } "catch": (error) {;
+    console.error('Service Worker: Background: sync failed, ', error)}'};
+          "icon": '/favicon-32x32.png, '}']};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     event.waitUntil(;
       self.registration.showNotification(data.title, options))});
 // "Notification": click;
-self.addEventListener(_'notificationclick', _(event) => {_';
+self.addEventListener('notificationclick', (event) => {';
   event.notification.close();
   "if": (event.action === 'explore') {';
     event.waitUntil(;
       clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
 async: function getPendingSubmissions() {;
+<<<<<<< HEAD
   // In a real app, you would store these in IndexedDB;    event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 // &quot;Notification&quot;: click,
@@ -154,3 +189,7 @@ async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
   &quot;return&quot;: []};
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+  // In a real app, you would store these in IndexedDB;
+  "return": []};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

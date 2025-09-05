@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Type definitions index;
 ;
 export interface ContactInfo {;
@@ -107,29 +108,40 @@ export interface SEOProps {;
 =======
 export interface ContactInfo {
 export interface ContactInfo {;  phone: string;
+=======
+export interface ContactInfo {;
+  phone: string;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   email: string;
   address: string;
-  site: string;}
-
-export interface Service {_title: string;
+  site: string;
+;
+;
+export interface Service {;
+  title: string;
   description: string;
   features: string[];
   href: string;
   icon: string;
-  color: string;}
-
-export interface ServiceCategory {_title: string;
+  color: string;
+;
+;
+export interface ServiceCategory {;
+  title: string;
   description: string;
   count: number;
   features: string[];
   href: string;
-  color: string;}
-
-export interface SEOProps {_title: string;
+  color: string;
+;
+;
+export interface SEOProps {;
+  title: string;
   description: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+<<<<<<< HEAD
   noindex?: boolean;}
 
 export interface LoadingState {_isLoading: boolean;
@@ -141,3 +153,17 @@ export interface AnimationState {
 export interface AnimationState {_isLoaded: boolean;
   hasError: boolean;}
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+  noindex?: boolean;
+;
+;
+export interface LoadingState {;
+  isLoading: boolean;
+  error?: string;
+;
+;
+export interface AnimationState {;
+  isLoaded: boolean;
+  hasError: boolean;
+;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

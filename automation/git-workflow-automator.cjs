@@ -13,8 +13,13 @@ class GitWorkflowAutomator {;
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
+<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -24,6 +29,7 @@ class GitWorkflowAutomator {;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
+<<<<<<< HEAD
 ;
   async runCommand(command, description) {;
     this.log(`Runnin:g:${description}`);
@@ -41,6 +47,25 @@ class GitWorkflowAutomator {;
         succes:s:false,;
         erro:r:error.message,;
         outpu:t:error.stdout || error.stderr,;
+=======
+
+  async runCommand(command, description) {
+    this.log(`Running: ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -51,9 +76,15 @@ class GitWorkflowAutomator {;
     try {;
       // Check current branch;
       const currentBranch = await this.getCurrentBranch();
+<<<<<<< HEAD
       this.log(`Current:branch:${currentBranch}`);
 ;
       // Add all changes;
+=======
+      this.log(`Current branch: ${currentBranch}`);
+
+      // Add all changes
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       await this.runCommand('git add .', 'Add all changes');
 <<<<<<< HEAD
 ;
@@ -65,7 +96,7 @@ class GitWorkflowAutomator {;
 
       // Check if there are changes to commit
       const statusResult = await this.runCommand(
-        'git status --porcelain';
+        'git status --porcelain',
         'Check git status'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
@@ -83,9 +114,9 @@ class GitWorkflowAutomator {;
 =======
 
       // Commit changes
-      const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;
+      const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(
-        `git commit -m "${commitMessage}"`;
+        `git commit -m "${commitMessage}"`,
         'Commit changes'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
@@ -99,6 +130,7 @@ class GitWorkflowAutomator {;
       }
 ;
       this.log('Git workflow automation completed');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     }
@@ -128,6 +160,33 @@ class GitWorkflowAutomator {;
       // For now, just log the intention;
     } catch (error) {;
       this.log(`Could not create:PR:${error.message}`, 'WARNING');
+=======
+    } catch (error) {
+      this.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async getCurrentBranch() {
+    try {
+      const result = execSync('git branch --show-current', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+      });
+      return result.trim();
+    } catch (error) {
+      return 'unknown';
+    }
+  }
+
+  async createPullRequest(branchName) {
+    try {
+      // This would typically use GitHub CLI or API
+      this.log(`Would create PR for branch: ${branchName}`);
+      // For now, just log the intention
+    } catch (error) {
+      this.log(`Could not create PR: ${error.message}`, 'WARNING');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -151,7 +210,7 @@ class GitWorkflowAutomator {;
 =======
       if (currentBranch !== 'main') {
         await this.runCommand(
-          `git merge ${currentBranch}`;
+          `git merge ${currentBranch}`,
           `Merge ${currentBranch} into main`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
@@ -161,8 +220,13 @@ class GitWorkflowAutomator {;
       await this.runCommand('git push origin main', 'Push to main');
 ;
       this.log('Merge to main completed');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Merge to main:failed:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Merge to main failed: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 }

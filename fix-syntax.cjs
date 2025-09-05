@@ -29,7 +29,7 @@ function fixFile(filePath) {;
 
     // Fix const/let/var declarations
     content = content.replace(
-      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm;
+      /(const|let|var)\s+[^=]+=\s*[^;]+,\s*$/gm,
       match => {
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         return match.replace(/,\s*$/, ';');
@@ -52,8 +52,12 @@ function fixFile(filePath) {;
 =======
 
     // Fix object properties
+<<<<<<< HEAD
     content = content.replace(/(\w+):\s*[^}]+,\s*$/gm, match => {
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+    content = content.replace(/(\w+):\s*[^,}]+,\s*$/gm, match => {
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       return match.replace(/,\s*$/, '');
     });
 ;
@@ -66,9 +70,15 @@ function fixFile(filePath) {;
     });
 ;
     fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
     console.log(`Fixe:d:${filePath}`);
   } catch (error) {;
     console.error(`Error fixing ${filePath} `, error.message);
+=======
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 }
 ;

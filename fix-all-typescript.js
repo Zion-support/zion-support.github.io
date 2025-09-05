@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,;
@@ -32,18 +33,26 @@ function fixTypeScriptFiles(_dir) {_; if (!fs.existsSync(dir)) return; const _it
 const _fs = require('fs');
 const _path = require('path');
 function fixTypeScriptFiles(_dir) {_;
+=======
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ;
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+function fixTypeScriptFiles(dir) {;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   if (!fs.existsSync(dir)) return;
-  const _items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir);
   items.forEach(item => {;
-    const _fullPath = path.join(dir, _item);
-    const _stat = fs.statSync(fullPath);
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {_;
+      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
       try {;
-        const _content = fs.readFileSync(fullPath, _'utf8');
+        const content = fs.readFileSync(fullPath, 'utf8');
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {;
           console.log(`Fixing "file": ${fullPath}`);
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
+<<<<<<< HEAD
       } catch (error) {;        console.log(`Error processing ${fullPath}: ${error.message}`)};
         // console.log(`Error processing ${fullPath}: ${error.message}`)};
           
@@ -53,3 +62,9 @@ function fixTypeScriptFiles(_dir) {_;
 };
   })};
 ;
+=======
+      } catch (error) {;
+        console.log(`Error processing ${fullPath}: ${error.message}`)};
+};
+  })};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

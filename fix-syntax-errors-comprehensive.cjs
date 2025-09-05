@@ -30,7 +30,7 @@ function fixSyntaxErrors(filePath) {;
 =======
 
     // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
 
     // Fix missing closing braces
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
@@ -93,10 +93,10 @@ function fixSyntaxErrors(filePath) {;
 =======
 
     // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
 
     // Fix semicolons in array elements
-    content = content.replace(/([^}]);/g, '$1,');
+    content = content.replace(/([^,}]);/g, '$1,');
 
     // Fix semicolons in function parameters
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d

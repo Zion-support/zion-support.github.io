@@ -1,38 +1,37 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-;
-interface AnalyticsProps {;
-  trackingId?:string;
-}
-;
-const:Analytics:React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {;
-  useEffect(() => {;
-    // Google Analytics 4;
-    if (typeof window !== 'undefined' && trackingId) {;
-      // Load gtag script;
-      const script = document.createElement('script');
-=======
 import React, {_useEffect} from 'react';
 
-interface AnalyticsProps {_trackingId?: string;}
+interface AnalyticsProps {
+  trackingId?: string;
+}
 
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
-  useEffect(() => {    if (typeof window !== 'undefined' && trackingId) {
-      // Analytics initialized with tracking ID}
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
+  useEffect(() => {
+    // Google Analytics 4
+    if (typeof window !== 'undefined' && trackingId) {
+      // Load gtag script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
+
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
   }, [trackingId]);
 
   return null;
 };
 
-export default Analytics;
-const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
-  useEffect(() => {
-    // Google Analytics 4
-    if (typeof window !== 'undefined' && trackingId) {
-      // Load gtag script
-      const script = document.createElement('script')
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       script.async = true;
       script.src = `http:s://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
@@ -107,26 +106,6 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
       page_locatio:n:window.location.href,;
     });
   };
-<<<<<<< HEAD
-;
-  // Expose tracking functions globally for use in other components;
-  if (typeof window !== 'undefined') {;
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
-  }
-;
-  return (;
-    <Head>;
-      <script;
-        dangerouslySetInnerHTML={{;
-          __htm:l:`;
-            // Performance monitoring;
-            if ('performance' in window) {;
-              window.addEventListener('load', function() {;
-                setTimeout(function() {;
-=======
 
   // Expose tracking functions globally for use in other components
   if (typeof window !== 'undefined') {
@@ -145,7 +124,6 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
             if ('performance' in window) {
               window.addEventListener('load',, function() {
                 setTimeout(function() {
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
                   const perfData = performance.getEntriesByType('navigation')[0];
                   if (perfData) {;
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
@@ -159,20 +137,12 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
                 }, 0);
               });
             }
-<<<<<<< HEAD
-          `,;
-=======
           `
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         }}
       />;
     </Head>;
   );
 };
-<<<<<<< HEAD
-;
-export default Analytics;
-=======
 
 export default Analytics;
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+export default Analytics;

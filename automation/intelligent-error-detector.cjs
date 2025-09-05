@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 ;
 class IntelligentErrorDetector {;
   constructor() {;
@@ -13,6 +14,18 @@ class IntelligentErrorDetector {;
       impor:t:/Cannot resolve module|Import error/gi,;
       buil:d:/Build failed|Compilation error/gi,;
       runtim:e:/Runtime error|Uncaught exception/gi,;
+=======
+
+class IntelligentErrorDetector {
+  constructor() {
+    this.errorPatterns = {
+      syntax: /SyntaxError|ParseError|Unexpected token/gi,
+      type: /TypeError|ReferenceError/gi,
+      module: /Cannot find module|Module not found/gi,
+      import: /Cannot resolve module|Import error/gi,
+      build: /Build failed|Compilation error/gi,
+      runtime: /Runtime error|Uncaught exception/gi,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
     this.ensureLogDirectory();
@@ -20,8 +33,13 @@ class IntelligentErrorDetector {;
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
+<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -34,6 +52,7 @@ class IntelligentErrorDetector {;
 ;
   async detectErrors() {;
     this.log('🔍 Starting intelligent error detection...');
+<<<<<<< HEAD
 ;
     const errors = {;
       synta:x:await this.detectSyntaxErrors(),;
@@ -42,6 +61,16 @@ class IntelligentErrorDetector {;
       impor:t:await this.detectImportErrors(),;
       buil:d:await this.detectBuildErrors(),;
       runtim:e:await this.detectRuntimeErrors(),;
+=======
+
+    const errors = {
+      syntax: await this.detectSyntaxErrors(),
+      type: await this.detectTypeErrors(),
+      module: await this.detectModuleErrors(),
+      import: await this.detectImportErrors(),
+      build: await this.detectBuildErrors(),
+      runtime: await this.detectRuntimeErrors(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 <<<<<<< HEAD
 ;
@@ -51,7 +80,7 @@ class IntelligentErrorDetector {;
 =======
 
     const totalErrors = Object.values(errors).reduce(
-      (sum, arr) => sum + arr.length;
+      (sum, arr) => sum + arr.length,
       0
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
@@ -64,12 +93,21 @@ class IntelligentErrorDetector {;
 ;
     return errors;
   }
+<<<<<<< HEAD
 ;
   async detectSyntaxErrors() {;
     try {;
       const result = execSync('npx eslint . --format json', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+  async detectSyntaxErrors() {
+    try {
+      const result = execSync('npx eslint . --format json', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue =>;
@@ -79,12 +117,21 @@ class IntelligentErrorDetector {;
       return [];
     }
   }
+<<<<<<< HEAD
 ;
   async detectTypeErrors() {;
     try {;
       const result = execSync('npx tsc --noEmit --skipLibCheck', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+  async detectTypeErrors() {
+    try {
+      const result = execSync('npx tsc --noEmit --skipLibCheck', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
       return [];
     } catch (error) {;
@@ -92,12 +139,21 @@ class IntelligentErrorDetector {;
       return lines.filter(line => this.errorPatterns.type.test(line));
     }
   }
+<<<<<<< HEAD
 ;
   async detectModuleErrors() {;
     try {;
       const result = execSync('npm run build', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+  async detectModuleErrors() {
+    try {
+      const result = execSync('npm run build', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
       return [];
     } catch (error) {;
@@ -105,6 +161,7 @@ class IntelligentErrorDetector {;
       return lines.filter(line => this.errorPatterns.module.test(line));
     }
   }
+<<<<<<< HEAD
 ;
   async detectImportErrors() {;
     try {;
@@ -113,6 +170,16 @@ class IntelligentErrorDetector {;
         {;
           stdi:o:'pipe',;
           cw:d:process.cwd(),;
+=======
+
+  async detectImportErrors() {
+    try {
+      const result = execSync(
+        'npx eslint . --rule "import/no-unresolved: error"',
+        {
+          stdio: 'pipe',
+          cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         }
       );
       return [];
@@ -121,12 +188,21 @@ class IntelligentErrorDetector {;
       return lines.filter(line => this.errorPatterns.import.test(line));
     }
   }
+<<<<<<< HEAD
 ;
   async detectBuildErrors() {;
     try {;
       const result = execSync('npm run build', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+  async detectBuildErrors() {
+    try {
+      const result = execSync('npm run build', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
       return [];
     } catch (error) {;
@@ -156,11 +232,15 @@ class IntelligentErrorDetector {;
         if (this.errorPatterns.runtime.test(content)) {
           runtimeErrors.push({
             file,
-            lin: e:
+            line:
               content
                 .split('\n')
+<<<<<<< HEAD
                 .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
         }
       } catch (error) {;
@@ -203,6 +283,7 @@ class IntelligentErrorDetector {;
     walkDir(process.cwd());
     return files;
   }
+<<<<<<< HEAD
 ;
   async generateErrorReport(errors) {;
     const report = {;
@@ -223,6 +304,24 @@ class IntelligentErrorDetector {;
         {}
       ),;
       detail:s:errors,;
+=======
+
+  async generateErrorReport(errors) {
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalErrors: Object.values(errors).reduce(
+        (sum, arr) => sum + arr.length,
+        0
+      ),
+      errorsByCategory: Object.entries(errors).reduce(
+        (acc, [category, errorList]) => {
+          acc[category] = errorList.length;
+          return acc;
+        },
+        {}
+      ),
+      details: errors,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 <<<<<<< HEAD
 ;
@@ -233,15 +332,22 @@ class IntelligentErrorDetector {;
 =======
 
     const reportFile = path.join(
-      __dirname;
-      'reports';
+      __dirname,
+      'reports',
       'error-detection-report.json'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
+<<<<<<< HEAD
     fs.mkdirSync(path.dirname(reportFile), { recursiv:e:true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`Error report:generated:${reportFile}`);
+=======
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`Error report generated: ${reportFile}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   async suggestFixes(errors) {;
@@ -272,10 +378,17 @@ class IntelligentErrorDetector {;
     if (errors.runtime.length > 0) {;
       suggestions.push('Add proper error handling and validation');
     }
+<<<<<<< HEAD
 ;
     if (suggestions.length > 0) {;
       this.log('💡 Suggested:fixes:');
       suggestions.forEach((suggestion, index) => {;
+=======
+
+    if (suggestions.length > 0) {
+      this.log('💡 Suggested fixes:');
+      suggestions.forEach((suggestion, index) => {
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         this.log(`   ${index + 1}. ${suggestion}`);
       });
     }

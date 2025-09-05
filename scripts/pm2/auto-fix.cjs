@@ -18,8 +18,13 @@ class AutoFixer {;
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
+<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -32,8 +37,13 @@ class AutoFixer {;
       if (level === 'ERROR') {;
         fs.appendFileSync(this.errorFile, logMessage);
       }
+<<<<<<< HEAD
     } catch (err) {;
       console.error('Failed to write to log:file:', err.message);
+=======
+    } catch (err) {
+      console.error('Failed to write to log file:', err.message);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -57,8 +67,13 @@ class AutoFixer {;
       await this.optimizeImports();
 ;
       this.log('Auto-fix process completed successfully');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Auto-fix:failed:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       throw error;
     }
   }
@@ -66,43 +81,77 @@ class AutoFixer {;
   async fixLintingIssues() {;
     try {;
       this.log('Fixing linting issues...');
+<<<<<<< HEAD
 ;
       // Run ESLint with --fix;
       execSync('npm run:lint:fix', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+      // Run ESLint with --fix
+      execSync('npm run lint:fix', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 ;
       this.log('Linting issues fixed');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Failed to fix linting:issues:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
   async fixTypeScriptIssues() {;
     try {;
       this.log('Checking TypeScript issues...');
+<<<<<<< HEAD
 ;
       // Run TypeScript check;
       execSync('npx tsc --noEmit', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+      // Run TypeScript check
+      execSync('npx tsc --noEmit', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 ;
       this.log('TypeScript check passed');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`TypeScript issues:found:${error.message}`, 'WARN');
+=======
+    } catch (error) {
+      this.log(`TypeScript issues found: ${error.message}`, 'WARN');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
   async fixDependencyIssues() {;
     try {;
       this.log('Checking dependency issues...');
+<<<<<<< HEAD
 ;
       // Check for outdated dependencies;
       const outdated = execSync('npm outdated --json', {;
         stdi:o:'pipe',;
         cw:d:process.cwd(),;
+=======
+
+      // Check for outdated dependencies
+      const outdated = execSync('npm outdated --json', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 ;
       const outdatedDeps = JSON.parse(outdated.toString());
@@ -131,6 +180,7 @@ class AutoFixer {;
 =======
 
       const tempFiles = [
+<<<<<<< HEAD
         '.next/cache';
         'node_modules/.cache';
         '*.log';
@@ -145,6 +195,21 @@ class AutoFixer {;
           execSync(`find . -name "${pattern}" -type f -delete`, {;
             stdi:o:'pipe',;
             cw:d:process.cwd(),;
+=======
+        '.next/cache',
+        'node_modules/.cache',
+        '*.log',
+        '*.tmp',
+        '.DS_Store',
+        'Thumbs.db',
+      ];
+
+      for (const pattern of tempFiles) {
+        try {
+          execSync(`find . -name "${pattern}" -type f -delete`, {
+            stdio: 'pipe',
+            cwd: process.cwd(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
         } catch (err) {;
           // Ignore errors for file cleanup;
@@ -152,8 +217,13 @@ class AutoFixer {;
       }
 ;
       this.log('Temporary files cleaned up');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Failed to cleanup temp:files:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -164,8 +234,13 @@ class AutoFixer {;
       // This would typically use a tool like organize-imports-cli;
       // For now, we'll just log that we're checking;
       this.log('Import optimization check completed');
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Failed to optimize:imports:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Failed to optimize imports: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 }
@@ -177,8 +252,13 @@ async function main() {;
   try {;
     await autoFixer.runAutoFix();
     process.exit(0);
+<<<<<<< HEAD
   } catch (error) {;
     autoFixer.log(`Auto-fix:failed:${error.message}`, 'ERROR');
+=======
+  } catch (error) {
+    autoFixer.log(`Auto-fix failed: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     process.exit(1);
   }
 }

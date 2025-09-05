@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }};
 ; async analyzeFile(filePath) {_; try {; const content = fs.readFileSync(filePath, _'utf8'); const stats = fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats.size; lines: content.split('\n').length; issues: []};
@@ -61,6 +62,21 @@ monitor.run().catch(error = > {_; process.exit(1)})
         siz:e:stats.size;
         line:s:content.split('\n').length;
         issue:s:[];
+=======
+};
+};
+;
+  async analyzeFile(filePath) {;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      const stats = fs.statSync(filePath);
+;
+      const analysis = {;
+        file: filePath;
+        size: stats.size;
+        lines: content.split('\n').length;
+        issues: [];
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 ;
 =======
@@ -79,10 +95,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
         if (line.match(/[ \t]+$/)) {;
           analysis.issues.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
             lin:e:lineNum;
             typ:e:'trailing-spaces';
             messag:e:'Trailing spaces found';
             severit:y:'low';
+=======
+            line: lineNum;
+            type: 'trailing-spaces';
+            message: 'Trailing spaces found';
+            severity: 'low';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
 =======
             line: lineNum,
@@ -96,10 +119,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
         if (line.length > 120) {_;
           analysis.issues.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
             lin:e:lineNum;
             typ:e:'long-line';
             messag:e:`Line is ${line.length} characters long (ma:x:120)`;
             severit:y:'medium';
+=======
+            line: lineNum;
+            type: 'long-line';
+            message: `Line is ${line.length} characters long (max: 120)`;
+            severity: 'medium';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
 =======
             line: lineNum,
@@ -114,10 +144,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
         if (line.match(/console\.(log|warn|error|info|debug)/)) {_;
           analysis.issues.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
             lin:e:lineNum;
             typ:e:'console-statement';
             messag:e:'Console statement found - should be removed in production';
             severit:y:'medium';
+=======
+            line: lineNum;
+            type: 'console-statement';
+            message: 'Console statement found - should be removed in production';
+            severity: 'medium';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
 =======
             line: lineNum,
@@ -131,10 +168,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
         if (line.match(/TODO|FIXME|HACK|XXX/)) {_;
           analysis.issues.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
             lin:e:lineNum;
             typ:e:'todo-comment';
             messag:e:'TODO/FIXME comment found';
             severit:y:'low';
+=======
+            line: lineNum;
+            type: 'todo-comment';
+            message: 'TODO/FIXME comment found';
+            severity: 'low';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
 =======
             line: lineNum,
@@ -152,10 +196,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
             if (importName !== 'React' && !content.includes(importName)) {;
               analysis.issues.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 lin:e:lineNum;
                 typ:e:'unused-import';
                 messag:e:`Potentially unused import ${importName}`;
                 severit:y:'medium';
+=======
+                line: lineNum;
+                type: 'unused-import';
+                message: `Potentially unused import ${importName}`;
+                severity: 'medium';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
               });
             };
           };
@@ -238,10 +289,14 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
     const issuesByType = {};
 <<<<<<< HEAD
+<<<<<<< HEAD
     const issuesBySeverity = { lo:w:0, mediu:m:0, hig:h:0 ;
 =======
     const issuesBySeverity = {low: 0, medium: 0, high: 0 ;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+    const issuesBySeverity = { low: 0, medium: 0, high: 0 ;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 ;
     analyses.forEach(analysis => {;
       analysis.issues.forEach(issue => {;
@@ -254,13 +309,19 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
 <<<<<<< HEAD
     const report = {;
+<<<<<<< HEAD
       timestam:p:new Date().toISOString();
       summar:y:{;
+=======
+      timestamp: new Date().toISOString();
+      summary: {;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         totalFiles;
         totalIssues;
         issuesByType;
         issuesBySeverity;
       };
+<<<<<<< HEAD
       file:s:analyses.filter(analysis => analysis.issues.length > 0);
       recommendation:s:this.generateRecommendations(issuesByType, totalIssues);
 =======
@@ -274,6 +335,10 @@ monitor.run().catch(error = > {_; process.exit(1)})
       files: analyses.filter(analysis => analysis.issues.length > 0);
       recommendations: this.generateRecommendations(issuesByType, totalIssues)
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      files: analyses.filter(analysis => analysis.issues.length > 0);
+      recommendations: this.generateRecommendations(issuesByType, totalIssues);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 };
 ;
     return report
@@ -285,10 +350,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
     if (issuesByType['trailing-spaces'] > 0) {;
       recommendations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         typ:e:'trailing-spaces';
         priorit:y:'low';
         messag:e:'Remove trailing spaces from files';
         actio:n:'Run the lint-fixer to automatically remove trailing spaces';
+=======
+        type: 'trailing-spaces';
+        priority: 'low';
+        message: 'Remove trailing spaces from files';
+        action: 'Run the lint-fixer to automatically remove trailing spaces';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         type: 'trailing-spaces';
@@ -301,10 +373,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
     if (issuesByType['console-statement'] > 0) {_;
       recommendations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         typ:e:'console-statement';
         priorit:y:'medium';
         messag:e:'Remove console statements from production code';
         actio:n:'Replace console statements with proper logging or remove them';
+=======
+        type: 'console-statement';
+        priority: 'medium';
+        message: 'Remove console statements from production code';
+        action: 'Replace console statements with proper logging or remove them';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         type: 'console-statement';
@@ -317,10 +396,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
     if (issuesByType['unused-import'] > 0) {_;
       recommendations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         typ:e:'unused-import';
         priorit:y:'medium';
         messag:e:'Remove unused imports';
         actio:n:'Clean up unused imports to reduce bundle size';
+=======
+        type: 'unused-import';
+        priority: 'medium';
+        message: 'Remove unused imports';
+        action: 'Clean up unused imports to reduce bundle size';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         type: 'unused-import';
@@ -333,10 +419,17 @@ monitor.run().catch(error = > {_; process.exit(1)})
     if (totalIssues > 100) {_;
       recommendations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         typ:e:'general';
         priorit:y:'high';
         messag:e:'High number of code quality issues detected';
         actio:n:'Run comprehensive code cleanup and establish coding standards';
+=======
+        type: 'general';
+        priority: 'high';
+        message: 'High number of code quality issues detected';
+        action: 'Run comprehensive code cleanup and establish coding standards';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         type: 'general';
@@ -354,6 +447,7 @@ monitor.run().catch(error = > {_; process.exit(1)})
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursiv:e:true });
       };
 ;
@@ -364,6 +458,28 @@ monitor.run().catch(error = > {_; process.exit(1)})
 };
 =======
         fs.mkdirSync(reportDir, _{ recursive: true})
+=======
+        fs.mkdirSync(reportDir, { recursive: true });
+      };
+;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {;
+      this.log(`Error saving report: ${error.message}`);
+};
+};
+;
+  async checkGitStatus() {;
+    try {;
+      const status = execSync('git status --porcelain', {;
+        cwd: this.projectRoot;
+        encoding: 'utf8';
+      });
+;
+      if (status.trim()) {;
+        this.log('⚠️  Uncommitted changes detected');
+        return false;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -394,7 +510,11 @@ monitor.run().catch(error = > {_; process.exit(1)})
 <<<<<<< HEAD
       return true;
     } catch (error) {;
+<<<<<<< HEAD
       this.log(`Error checking git:status:${error.message}`);
+=======
+      this.log(`Error checking git status: ${error.message}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       return false;
 };
 =======
@@ -409,20 +529,28 @@ monitor.run().catch(error = > {_; process.exit(1)})
   async run() {_;
     this.log('🔍 Starting Code Quality Monitor...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.log(`Project:root:${this.projectRoot}`);
 =======
     this.log(`Project root: ${this.projectRoot}`);
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+    this.log(`Project root: ${this.projectRoot}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 ;
     try {_;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursiv:e:true });
 =======
         fs.mkdirSync(logsDir, _{ recursive: true})
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        fs.mkdirSync(logsDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
 ;
       // Check git status;
@@ -443,6 +571,7 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
       // Log summary;
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.log('\n📊 Code Quality Report:Summary:');
       this.log(`Files:analyzed:${report.summary.totalFiles}`);
       this.log(`Total:issues:${report.summary.totalIssues}`);
@@ -450,14 +579,30 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
       if (report.summary.totalIssues > 0) {;
         this.log('\n🚨 Issues by:type:');
+=======
+      this.log('\n📊 Code Quality Report Summary: ');
+      this.log(`Files analyzed: ${report.summary.totalFiles}`);
+      this.log(`Total issues: ${report.summary.totalIssues}`);
+      this.log(`Duration: ${duration}ms`);
+;
+      if (report.summary.totalIssues > 0) {;
+        this.log('\n🚨 Issues by type: ');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {;
           this.log(`  ${type} ${count}`);
         });
 ;
+<<<<<<< HEAD
         this.log('\n💡 Recommendation:s:');
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Actio:n:${rec.action}`);
+=======
+        this.log('\n💡 Recommendations: ');
+        report.recommendations.forEach(rec => {;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+          this.log(`    Action: ${rec.action}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
 ;
         // If there are many issues and git is clean, suggest running the lint fixer;
@@ -469,7 +614,11 @@ monitor.run().catch(error = > {_; process.exit(1)})
       };
 ;
     } catch (error) {;
+<<<<<<< HEAD
       this.log(`❌ Error running code quality:monitor:${error.message}`);
+=======
+      this.log(`❌ Error running code quality monitor: ${error.message}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       process.exit(1);
 };
 };
@@ -510,6 +659,7 @@ const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {;
 <<<<<<< HEAD
   process.exit(1);
+<<<<<<< HEAD
 });
     };
   };
@@ -812,3 +962,6 @@ monitor.run().catch(error => {,;
 monitor.run().catch(error => {_;
   process.exit(1)});
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+});
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

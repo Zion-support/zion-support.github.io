@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',;
-;
-type EnhancedLoadingProps = {;
-  lines?:number,;
-},;
-;
-export default function EnhancedLoading({ lines = 3 } EnhancedLoadingProps) {;
-  return (;
-    <div className="space-y-2">;
-      {Array.from({ length:lines }).map((_, idx) => (;
-        <div key={idx} className="skeleton h-4 rounded" />;
-      ))}
-    </div>;
-  ),;
-=======
 import React from 'react',
 type EnhancedLoadingProps = {
   lines?: number
@@ -26,5 +10,4 @@ export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
         <div key={idx} className=&quot;skeleton h-4 rounded&quot; />      ))}
     </div>
   )
->>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
 }

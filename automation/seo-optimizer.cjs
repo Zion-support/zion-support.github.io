@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🔍 Starting SEO Optimizer...');
+<<<<<<< HEAD
 ;
 class SEOOptimizer {;
   constructor() {;
@@ -13,6 +14,17 @@ class SEOOptimizer {;
       issue:s:[],;
       recommendation:s:[],;
       metric:s:{},;
+=======
+
+class SEOOptimizer {
+  constructor() {
+    this.results = {
+      timestamp: new Date().toISOString(),
+      seoScore: 0,
+      issues: [],
+      recommendations: [],
+      metrics: {},
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
   }
 ;
@@ -86,6 +98,7 @@ class SEOOptimizer {;
   async analyzePage(pagePath) {;
     try {;
       const content = fs.readFileSync(pagePath, 'utf8');
+<<<<<<< HEAD
 ;
       // Check for meta tags;
       if (!content.includes('<title>') && !content.includes('titl:e:')) {;
@@ -104,16 +117,44 @@ class SEOOptimizer {;
           typ:e:'missing_description',;
           fil:e:pagePath,;
           severit:y:'medium',;
+=======
+
+      // Check for meta tags
+      if (!content.includes('<title>') && !content.includes('title:')) {
+        this.results.issues.push({
+          type: 'missing_title',
+          file: pagePath,
+          severity: 'high',
+        });
+      }
+
+      if (
+        !content.includes('description') &&
+        !content.includes('meta name="description"')
+      ) {
+        this.results.issues.push({
+          type: 'missing_description',
+          file: pagePath,
+          severity: 'medium',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       }
 ;
       // Check for heading structure;
       const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
+<<<<<<< HEAD
       if (h1Count === 0) {;
         this.results.issues.push({;
           typ:e:'missing_h1',;
           fil:e:pagePath,;
           severit:y:'medium',;
+=======
+      if (h1Count === 0) {
+        this.results.issues.push({
+          type: 'missing_h1',
+          file: pagePath,
+          severity: 'medium',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       }
     } catch (error) {;
@@ -123,6 +164,7 @@ class SEOOptimizer {;
 ;
   async generateRecommendations() {;
     console.log('💡 Generating SEO recommendations...');
+<<<<<<< HEAD
 ;
     this.results.recommendations = [;
       {;
@@ -146,6 +188,31 @@ class SEOOptimizer {;
         priorit:y:'low',;
         descriptio:n:'Generate and submit XML sitemap to search engines',;
       },;
+=======
+
+    this.results.recommendations = [
+      {
+        type: 'meta_tags',
+        priority: 'high',
+        description:
+          'Add proper meta tags including title, description, and keywords',
+      },
+      {
+        type: 'heading_structure',
+        priority: 'medium',
+        description: 'Ensure proper heading hierarchy (H1, H2, H3)',
+      },
+      {
+        type: 'alt_text',
+        priority: 'medium',
+        description: 'Add alt text to all images for accessibility and SEO',
+      },
+      {
+        type: 'sitemap',
+        priority: 'low',
+        description: 'Generate and submit XML sitemap to search engines',
+      },
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
   }
 ;
@@ -169,8 +236,13 @@ class SEOOptimizer {;
 ;
   async saveReport() {;
     const logsDir = path.join(process.cwd(), 'logs');
+<<<<<<< HEAD
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
 <<<<<<< HEAD
 ;
@@ -180,12 +252,16 @@ class SEOOptimizer {;
 =======
 
     const reportPath = path.join(
-      logsDir;
+      logsDir,
       `seo-optimization-${Date.now()}.json`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
+<<<<<<< HEAD
     console.log(`📊 Report saved:to:${reportPath}`);
+=======
+    console.log(`📊 Report saved to: ${reportPath}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   async run() {;
@@ -195,9 +271,15 @@ class SEOOptimizer {;
     await this.generateRecommendations();
     this.calculateSEOScore();
     await this.saveReport();
+<<<<<<< HEAD
 ;
     console.log(;
       `✅ SEO optimization completed! Scor:e:${this.results.seoScore}/100`;
+=======
+
+    console.log(
+      `✅ SEO optimization completed! Score: ${this.results.seoScore}/100`
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     );
   }
 }

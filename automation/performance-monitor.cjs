@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 ;
 class PerformanceMonitor {;
   constructor() {;
@@ -12,6 +13,17 @@ class PerformanceMonitor {;
       memoryUsag:e:0,;
       cpuUsag:e:0,;
       lastUpdate:d:new Date().toISOString(),;
+=======
+
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      buildTime: 0,
+      bundleSize: 0,
+      memoryUsage: 0,
+      cpuUsage: 0,
+      lastUpdated: new Date().toISOString(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
@@ -19,8 +31,13 @@ class PerformanceMonitor {;
 ;
   ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
+<<<<<<< HEAD
     if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
   }
 ;
@@ -58,16 +75,26 @@ class PerformanceMonitor {;
 ;
       this.log('Performance monitoring completed');
       return this.metrics;
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Performance monitoring:failed:${error.message}`, 'ERROR');
+=======
+    } catch (error) {
+      this.log(`Performance monitoring failed: ${error.message}`, 'ERROR');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       return null;
     }
   }
 ;
   async measureBuildTime() {;
     const startTime = Date.now();
+<<<<<<< HEAD
     try {;
       execSync('npm run build', { stdi:o:'pipe', cw:d:process.cwd() });
+=======
+    try {
+      execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       return Date.now() - startTime;
     } catch (error) {;
       return -1; // Build failed;
@@ -115,11 +142,12 @@ class PerformanceMonitor {;
 
   async saveMetrics() {
     const metricsFile = path.join(
-      __dirname;
-      'reports';
+      __dirname,
+      'reports',
       'performance-metrics.json'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
+<<<<<<< HEAD
     fs.mkdirSync(path.dirname(metricsFile), { recursiv:e:true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
@@ -128,6 +156,16 @@ class PerformanceMonitor {;
     const report = {;
       ...this.metrics,;
       recommendation:s:this.generateRecommendations(),;
+=======
+    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+  }
+
+  async generatePerformanceReport() {
+    const report = {
+      ...this.metrics,
+      recommendations: this.generateRecommendations(),
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 <<<<<<< HEAD
 ;
@@ -138,14 +176,19 @@ class PerformanceMonitor {;
 =======
 
     const reportFile = path.join(
-      __dirname;
-      'reports';
+      __dirname,
+      'reports',
       'performance-report.json'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 ;
     this.log(`Performance report:generated:${reportFile}`);
+=======
+
+    this.log(`Performance report generated: ${reportFile}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   generateRecommendations() {;

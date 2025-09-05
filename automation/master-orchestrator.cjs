@@ -54,7 +54,7 @@ class MasterAutomationOrchestrator {;
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        cwd: path.join(__dirname, '..'),
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -78,8 +78,12 @@ class MasterAutomationOrchestrator {;
     const commands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
       { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
+<<<<<<< HEAD
       { cmd: 'npm run test:smoke', desc: 'Run smoke tests' }
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' },
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const { cmd, desc } of commands) {;
@@ -98,8 +102,12 @@ class MasterAutomationOrchestrator {;
 
     const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
+<<<<<<< HEAD
       { cmd: 'npm run build', desc: 'Build application' }
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      { cmd: 'npm run build', desc: 'Build application' },
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const { cmd, desc } of commands) {;
@@ -122,8 +130,12 @@ class MasterAutomationOrchestrator {;
 
     const fixCommands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
+<<<<<<< HEAD
       { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' }
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' },
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const { cmd, desc } of fixCommands) {;
@@ -141,8 +153,14 @@ class MasterAutomationOrchestrator {;
 =======
 
     const scripts = [
+<<<<<<< HEAD
       'enhanced-automation-suite.cjs'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      'enhanced-automation-suite.cjs',
+      'app-optimizer.js',
+      'complete-improvement-suite.cjs',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const script of scripts) {;
@@ -181,10 +199,14 @@ class MasterAutomationOrchestrator {;
       scripts: {
         linting: 'completed',
         build: 'completed',
-        automation: 'completed'
+        automation: 'completed',
       },
+<<<<<<< HEAD
       summary: 'Master automation orchestrator completed successfully'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      summary: 'Master automation orchestrator completed successfully',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
 ;
     const reportPath = path.join(;

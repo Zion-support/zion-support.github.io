@@ -65,7 +65,7 @@ class ImportCleaner {;
 
       // Replace the old import
       content = content.replace(
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
         newImportStatement
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
       );
@@ -91,10 +91,16 @@ class ImportCleaner {;
 =======
 
     const filesToClean = [
+<<<<<<< HEAD
       'pages/components/Navigation.tsx';
       'pages/it-services.tsx';
       'pages/components/Footer.tsx';
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      'pages/components/Navigation.tsx',
+      'pages/it-services.tsx',
+      'pages/components/Footer.tsx',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     for (const file of filesToClean) {;

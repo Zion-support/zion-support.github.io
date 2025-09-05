@@ -39,27 +39,28 @@ class EnhancedAutomationSuite {;
       deploymen:t:{ succes:s:false, duratio:n:0, error:s:[], warning:s:[] },;
 =======
     this.results = {
-      codeQuality: { success: false, duration: 0, errors: [], warnings: [] };
-      securityAudit: { success: false, duration: 0, errors: [], warnings: [] };
+      codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
+      securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
       performanceOptimization: {
-        success: false;
-        duration: 0;
-        errors: [];
-        warnings: [];
-      };
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
       seoOptimization: {
-        success: false;
-        duration: 0;
-        errors: [];
-        warnings: [];
-      };
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
       accessibilityImprovements: {
-        success: false;
-        duration: 0;
-        errors: [];
-        warnings: [];
-      };
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
       buildOptimization: {
+<<<<<<< HEAD
         success: false;
         duration: 0;
         errors: [];
@@ -67,6 +68,14 @@ class EnhancedAutomationSuite {;
       };
       deployment: { success: false, duration: 0, errors: [], warnings: [] };
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
+      deployment: { success: false, duration: 0, errors: [], warnings: [] },
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
   }
 ;
@@ -107,20 +116,26 @@ class EnhancedAutomationSuite {;
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot;
-        stdio: 'pipe';
-        encoding: 'utf8';
-        ...options;
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+        ...options,
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
+<<<<<<< HEAD
         success: false;
         error: error.message;
         output: error.stdout || error.stderr;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -163,32 +178,39 @@ class EnhancedAutomationSuite {;
     try {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
-        'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"';
+        'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"',
         'Remove unused imports'
       );
 
       // Fix common code issues
       const codeFixesResult = await this.runCommand(
-        'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"';
+        'npx eslint . --fix --rule "prefer-const: error" --rule "no-var: error"',
         'Apply code quality fixes'
       );
 
       this.results.codeQuality = {
-        success: unusedImportsResult.success && codeFixesResult.success;
-        duration: Date.now() - startTime;
+        success: unusedImportsResult.success && codeFixesResult.success,
+        duration: Date.now() - startTime,
         errors: [
-          ...(unusedImportsResult.success ? [] : [unusedImportsResult.error]);
-          ...(codeFixesResult.success ? [] : [codeFixesResult.error]);
-        ];
-        warnings: [];
+          ...(unusedImportsResult.success ? [] : [unusedImportsResult.error]),
+          ...(codeFixesResult.success ? [] : [codeFixesResult.error]),
+        ],
+        warnings: [],
       };
     } catch (error) {
       this.results.codeQuality = {
+<<<<<<< HEAD
         success: false;
         duration: Date.now() - startTime;
         errors: [error.message];
         warnings: [];
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -237,38 +259,45 @@ class EnhancedAutomationSuite {;
     try {
       // Run npm audit
       const auditResult = await this.runCommand(
-        'npm audit --audit-level moderate';
+        'npm audit --audit-level moderate',
         'Security Audit'
       );
 
       // Check for security vulnerabilities in dependencies
       const vulnerabilityCheck = await this.runCommand(
-        'npm audit --json';
+        'npm audit --json',
         'Vulnerability Check'
       );
 
       // Scan for common security issues
       const securityScan = await this.runCommand(
-        'npx eslint . --rule "no-eva: error" --rule "no-implied-eva: error"',
+        'npx eslint . --rule "no-eval: error" --rule "no-implied-eval: error"',
         'Security Code Scan'
       );
 
       this.results.securityAudit = {
-        succes: auditResult.success,
-        duratio: Date.now() - startTime,
-        error: [
+        success: auditResult.success,
+        duration: Date.now() - startTime,
+        errors: [
           ...(auditResult.success ? [] : [auditResult.error]),
           ...(securityScan.success ? [] : [securityScan.error]),
         ],
-        warning: [],
+        warnings: [],
       };
     } catch (error) {
       this.results.securityAudit = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -276,12 +305,21 @@ class EnhancedAutomationSuite {;
   async optimizePerformance() {;
     const startTime = Date.now();
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
+<<<<<<< HEAD
 ;
     try {;
       // Analyze bundle size;
       const bundleAnalysis = await this.runCommand(;
         'npm run:build:analyze',;
         'Bundle Analysis';
+=======
+
+    try {
+      // Analyze bundle size
+      const bundleAnalysis = await this.runCommand(
+        'npm run build:analyze',
+        'Bundle Analysis'
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       );
 <<<<<<< HEAD
 ;
@@ -313,29 +351,36 @@ class EnhancedAutomationSuite {;
 
       // Optimize images
       const imageOptimization = await this.runCommand(
-        'npx next-optimized-images';
+        'npx next-optimized-images',
         'Image Optimization'
       );
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
-        'npx lighthouse: http://localhos: 3000 --output=json',
+        'npx lighthouse http://localhost:3000 --output=json',
         'Performance Check'
       );
 
       this.results.performanceOptimization = {
-        succes: bundleAnalysis.success,
-        duratio: Date.now() - startTime,
-        error: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
-        warning: [],
+        success: bundleAnalysis.success,
+        duration: Date.now() - startTime,
+        errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
+        warnings: [],
       };
     } catch (error) {
       this.results.performanceOptimization = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -343,6 +388,7 @@ class EnhancedAutomationSuite {;
   async optimizeSEO() {;
     const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
+<<<<<<< HEAD
 ;
     try {;
       // Generate sitemap;
@@ -355,6 +401,20 @@ class EnhancedAutomationSuite {;
       const searchIndexResult = await this.runCommand(;
         'npm run:search:index',;
         'Generate Search Index';
+=======
+
+    try {
+      // Generate sitemap
+      const sitemapResult = await this.runCommand(
+        'npm run sitemap:generate',
+        'Generate Sitemap'
+      );
+
+      // Generate search index
+      const searchIndexResult = await this.runCommand(
+        'npm run search:index',
+        'Generate Search Index'
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       );
 <<<<<<< HEAD
 ;
@@ -383,26 +443,33 @@ class EnhancedAutomationSuite {;
 
       // Check for SEO issues
       const seoCheck = await this.runCommand(
-        'npx eslint . --rule "jsx-a11y/alt-tex: error" --rule "jsx-a11y/heading-has-conten: error"',
+        'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/heading-has-content: error"',
         'SEO Code Check'
       );
 
       this.results.seoOptimization = {
-        succes: sitemapResult.success && searchIndexResult.success,
-        duratio: Date.now() - startTime,
-        error: [
+        success: sitemapResult.success && searchIndexResult.success,
+        duration: Date.now() - startTime,
+        errors: [
           ...(sitemapResult.success ? [] : [sitemapResult.error]),
           ...(searchIndexResult.success ? [] : [searchIndexResult.error]),
         ],
-        warning: [],
+        warnings: [],
       };
     } catch (error) {
       this.results.seoOptimization = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -444,31 +511,38 @@ class EnhancedAutomationSuite {;
     try {
       // Run accessibility checks
       const accessibilityCheck = await this.runCommand(
-        'npx eslint . --rule "jsx-a11y/alt-tex: error" --rule "jsx-a11y/aria-rol: error"',
+        'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/aria-role: error"',
         'Accessibility Check'
       );
 
       // Check for keyboard navigation
       const keyboardCheck = await this.runCommand(
-        'npx eslint . --rule "jsx-a11y/tabindex-no-positiv: error"',
+        'npx eslint . --rule "jsx-a11y/tabindex-no-positive: error"',
         'Keyboard Navigation Check'
       );
 
       this.results.accessibilityImprovements = {
-        succes: accessibilityCheck.success,
-        duratio: Date.now() - startTime,
-        error: [
+        success: accessibilityCheck.success,
+        duration: Date.now() - startTime,
+        errors: [
           ...(accessibilityCheck.success ? [] : [accessibilityCheck.error]),
         ],
-        warning: [],
+        warnings: [],
       };
     } catch (error) {
       this.results.accessibilityImprovements = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -480,6 +554,7 @@ class EnhancedAutomationSuite {;
     try {;
       // Clean build;
       const cleanBuild = await this.runCommand('npm run clean', 'Clean Build');
+<<<<<<< HEAD
 ;
       // Production build;
       const productionBuild = await this.runCommand(;
@@ -491,6 +566,19 @@ class EnhancedAutomationSuite {;
       const buildAnalysis = await this.runCommand(;
         'npm run:build:analyze',;
         'Build Analysis';
+=======
+
+      // Production build
+      const productionBuild = await this.runCommand(
+        'npm run build:production',
+        'Production Build'
+      );
+
+      // Build analysis
+      const buildAnalysis = await this.runCommand(
+        'npm run build:analyze',
+        'Build Analysis'
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       );
 <<<<<<< HEAD
 ;
@@ -512,21 +600,28 @@ class EnhancedAutomationSuite {;
 =======
 
       this.results.buildOptimization = {
-        succes: cleanBuild.success && productionBuild.success,
-        duratio: Date.now() - startTime,
-        error: [
+        success: cleanBuild.success && productionBuild.success,
+        duration: Date.now() - startTime,
+        errors: [
           ...(cleanBuild.success ? [] : [cleanBuild.error]),
           ...(productionBuild.success ? [] : [productionBuild.error]),
         ],
-        warning: [],
+        warnings: [],
       };
     } catch (error) {
       this.results.buildOptimization = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -538,9 +633,15 @@ class EnhancedAutomationSuite {;
     try {;
       // Add all changes;
       await this.runCommand('git add .', 'Git Add');
+<<<<<<< HEAD
 ;
       // Commit changes;
       const commitMessage = `Enhanced automation:improvements:${new Date().toISOString()}`;
+=======
+
+      // Commit changes
+      const commitMessage = `Enhanced automation improvements: ${new Date().toISOString()}`;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
 ;
       // Push changes;
@@ -562,18 +663,25 @@ class EnhancedAutomationSuite {;
 =======
 
       this.results.deployment = {
-        succes: true,
-        duratio: Date.now() - startTime,
-        error: [],
-        warning: [],
+        success: true,
+        duration: Date.now() - startTime,
+        errors: [],
+        warnings: [],
       };
     } catch (error) {
       this.results.deployment = {
+<<<<<<< HEAD
         succes: false,
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
     }
   }
@@ -587,8 +695,13 @@ class EnhancedAutomationSuite {;
 ;
     this.log('\n📊 ENHANCED AUTOMATION REPORT');
     this.log('='.repeat(60));
+<<<<<<< HEAD
     this.log(`Total:Duration:${totalDuration}ms`);
     this.log(`Successful:Tasks:${successfulTasks}/${totalTasks}`);
+=======
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log(`Successful Tasks: ${successfulTasks}/${totalTasks}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     this.log('');
 ;
     Object.entries(this.results).forEach(([task, result]) => {;
@@ -622,10 +735,10 @@ class EnhancedAutomationSuite {;
       this.log(`${status} ${task}: ${duration}`);
 
       if (result.errors.length > 0) {
-        result.errors.forEach(error => this.log(`   Erro: ${error}`));
+        result.errors.forEach(error => this.log(`   Error: ${error}`));
       }
       if (result.warnings.length > 0) {
-        result.warnings.forEach(warning => this.log(`   Warnin: ${warning}`));
+        result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
       }
     });
 
@@ -635,12 +748,12 @@ class EnhancedAutomationSuite {;
       totalDuration,
       successfulTasks,
       totalTasks,
-      result: this.results,
-      recommendation: this.generateRecommendations(),
+      results: this.results,
+      recommendations: this.generateRecommendations(),
     };
 
     fs.writeFileSync(
-      'enhanced-automation-report.json';
+      'enhanced-automation-report.json',
       JSON.stringify(report, null, 2)
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
@@ -681,9 +794,15 @@ class EnhancedAutomationSuite {;
       await this.improveAccessibility();
       await this.optimizeBuild();
       await this.deployChanges();
+<<<<<<< HEAD
     } catch (error) {;
       this.log(`Fatal:error:${error.message}`, 'ERROR');
     } finally {;
+=======
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       this.generateDetailedReport();
     }
   }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return css.replace(/expression\s*(/gi, '')};
 ;
@@ -10,3 +11,7 @@ export function sanitizeHtml(html: string): string { let sanitized = html.replac
 export function sanitizeHtml(html: string): string { let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi,''), sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g,''), sanitized = sanitized.replace(/javascript:/gi,''), sanitized = sanitized.replace(/data:text\/html/gi,''), return sanitized} export function sanitizeUrl(url: string): string { return url.replace(/javascript:/gi,'')} export function sanitizeCss(css: string): string { return css.replace(/expression\s*(/gi,'')};)));export function sanitizeHtml(_html: string): string {_let _sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, _''), _sanitized = sanitized.replace(/\s*on\w+\s* = \s*['"][^'"]*['"]/g, _''), _sanitized = sanitized.replace(/javascript: /gi, _''), _sanitized = sanitized.replace(/data: text\/html/gi, _''), _return sanitized} export function sanitizeUrl(_url: string): string {_return url.replace(/javascript: /gi, _'')} export function sanitizeCss(_css: string): string {_return css.replace(/expression\s*(/gi, _'')};)));
 export function sanitizeHtml(_html: string): string {_let _sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, _''), _sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, _''), _sanitized = sanitized.replace(/javascript:/gi, _''), _sanitized = sanitized.replace(/data:text\/html/gi, _''), _return sanitized} export function sanitizeUrl(_url: string): string {_return url.replace(/javascript:/gi, _'')} export function sanitizeCss(_css: string): string {_return css.replace(/expression\s*(/gi, _'')};)));
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+  return css.replace(/expression\s*(/gi, '')};
+export function sanitizeHtml(html: string): string { let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi,''), sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g,''), sanitized = sanitized.replace(/javascript:/gi,''), sanitized = sanitized.replace(/data:text\/html/gi,''), return sanitized} export function sanitizeUrl(url: string): string { return url.replace(/javascript:/gi,'')} export function sanitizeCss(css: string): string { return css.replace(/expression\s*(/gi,'')};)));
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

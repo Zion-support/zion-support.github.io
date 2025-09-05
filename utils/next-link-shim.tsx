@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
   };
@@ -24,3 +25,13 @@
 };
 };
 ;
+=======
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

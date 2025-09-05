@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }};
 ; async analyzeBuild() {_; try {; this.log('🏗️ Analyzing current build...');
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', _{; cwd: this.projectRoot; stdio: 'pipe'})};
@@ -44,9 +45,12 @@
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
 optimizer.run().catch(error = > {; process.exit(1)})}
+=======
+};
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 };
 ;
-  async analyzeBuild() {_;
+  async analyzeBuild() {;
     try {;
       this.log('🏗️  Analyzing current build...');
 ;
@@ -54,12 +58,18 @@ optimizer.run().catch(error = > {; process.exit(1)})}
         this.log('📦 Building project first...');
         execSync('npm run build', {;
 <<<<<<< HEAD
+<<<<<<< HEAD
           cw:d:this.projectRoot;
           stdi:o:'pipe';
+=======
+          cwd: this.projectRoot;
+          stdio: 'pipe';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       };
 ;
       const buildStats = {;
+<<<<<<< HEAD
         totalSiz:e:0;
         fileCoun:t:0;
         largestFile:s:[];
@@ -76,11 +86,20 @@ optimizer.run().catch(error = > {; process.exit(1)})}
       const buildStats = {_;
         totalSize: 0,
         fileCount: 0,
+=======
+        totalSize: 0;
+        fileCount: 0;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         largestFiles: [];
         jsFiles: [];
         cssFiles: [];
         assetFiles: [];
+<<<<<<< HEAD
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      ;
+;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       const analyzeDirectory = (dir) => {;
         const items = fs.readdirSync(dir);
         items.forEach(item => {;
@@ -91,9 +110,15 @@ optimizer.run().catch(error = > {; process.exit(1)})}
             analyzeDirectory(fullPath)} else {_;
             const fileInfo = {;
 <<<<<<< HEAD
+<<<<<<< HEAD
               pat:h:fullPath.replace(this.projectRoot + '/dist/', '');
               siz:e:stat.size;
               sizeK:B:Math.round(stat.size / 1024 * 100) / 100;
+=======
+              path: fullPath.replace(this.projectRoot + '/dist/', '');
+              size: stat.size;
+              sizeKB: Math.round(stat.size / 1024 * 100) / 100;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
             ;
 ;
 =======
@@ -128,6 +153,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}
       } catch (error) {_;
       return {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         succes:s:true;
         stat:s:buildStats;
       ;
@@ -136,6 +162,16 @@ optimizer.run().catch(error = > {; process.exit(1)})}
         succes:s:false;
         erro:r:error.message;
         stat:s:null;
+=======
+        success: true;
+        stats: buildStats;
+      ;
+    } catch (error) {;
+      return {;
+        success: false;
+        error: error.message;
+        stats: null;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 };
 =======
@@ -157,15 +193,26 @@ optimizer.run().catch(error = > {; process.exit(1)})}
 ;
       return {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         availabl:e:hasAnalyzer;
         packag:e:hasAnalyzer ?;
           (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' :'@next/bundle-analyzer') :;
+=======
+        available: hasAnalyzer;
+        package: hasAnalyzer ?;
+          (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           null;
       ;
     } catch (error) {;
       return {;
+<<<<<<< HEAD
         availabl:e:false;
         erro:r:error.message;
+=======
+        available: false;
+        error: error.message;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 };
 =======
@@ -187,17 +234,29 @@ optimizer.run().catch(error = > {; process.exit(1)})}
 ;
       const settings = {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         treeShakin:g:false;
         minificatio:n:false;
         codeSplittin:g:false;
         compressio:n:false;
+=======
+        treeShaking: false;
+        minification: false;
+        codeSplitting: false;
+        compression: false;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 ;
       // Check Next.js config;
       if (fs.existsSync('next.config.js')) {;
         const nextConfig = fs.readFileSync('next.config.js', 'utf8');
+<<<<<<< HEAD
         settings.minification = nextConfig.includes('swcMinif:y:true') || nextConfig.includes('swcMinif:y:true');
         settings.compression = nextConfig.includes('compres:s:true') || nextConfig.includes('compres:s:true');
+=======
+        settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify:true');
+        settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true');
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 ;
 =======
@@ -224,6 +283,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}
       } catch (error) {_;
       return {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         succes:s:true;
         setting:s:settings;
       ;
@@ -232,6 +292,16 @@ optimizer.run().catch(error = > {; process.exit(1)})}
         succes:s:false;
         erro:r:error.message;
         setting:s:null;
+=======
+        success: true;
+        settings: settings;
+      ;
+    } catch (error) {;
+      return {;
+        success: false;
+        error: error.message;
+        settings: null;
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       ;
 };
 =======
@@ -244,6 +314,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}
 ;
   async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {_;
     const report = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       timestam:p:new Date().toISOString();
       summar:y:{;
@@ -258,6 +329,21 @@ optimizer.run().catch(error = > {; process.exit(1)})}
         setting:s:settingsInfo;
       ;
       optimization:s:[];
+=======
+      timestamp: new Date().toISOString();
+      summary: {;
+        buildSize: buildStats?.stats?.totalSizeMB || 0;
+        fileCount: buildStats?.stats?.fileCount || 0;
+        optimizationScore: 0;
+        recommendations: [];
+      ;
+      details: {;
+        build: buildStats;
+        analyzer: analyzerInfo;
+        settings: settingsInfo;
+      ;
+      optimizations: [];
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ;
 ;
 =======
@@ -295,11 +381,19 @@ optimizer.run().catch(error = > {; process.exit(1)})}
     if (buildStats?.stats?.totalSizeMB > 5) {;
       report.optimizations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         priorit:y:'high';
         typ:e:'bundle-size';
         messag:e:'Bundle size is large';
         actio:n:'Implement code splitting and tree shaking';
         impac:t:'high';
+=======
+        priority: 'high';
+        type: 'bundle-size';
+        message: 'Bundle size is large';
+        action: 'Implement code splitting and tree shaking';
+        impact: 'high';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         priority: 'high';
@@ -313,11 +407,19 @@ optimizer.run().catch(error = > {; process.exit(1)})}
     if (!settingsInfo?.settings?.minification) {_;
       report.optimizations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         priorit:y:'high';
         typ:e:'minification';
         messag:e:'Minification not enabled';
         actio:n:'Enable SWC minification in Next.js config';
         impac:t:'high';
+=======
+        priority: 'high';
+        type: 'minification';
+        message: 'Minification not enabled';
+        action: 'Enable SWC minification in Next.js config';
+        impact: 'high';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         priority: 'high';
@@ -331,11 +433,19 @@ optimizer.run().catch(error = > {; process.exit(1)})}
     if (!settingsInfo?.settings?.compression) {_;
       report.optimizations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         priorit:y:'medium';
         typ:e:'compression';
         messag:e:'Compression not enabled';
         actio:n:'Enable gzip compression';
         impac:t:'medium';
+=======
+        priority: 'medium';
+        type: 'compression';
+        message: 'Compression not enabled';
+        action: 'Enable gzip compression';
+        impact: 'medium';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         priority: 'medium';
@@ -349,11 +459,19 @@ optimizer.run().catch(error = > {; process.exit(1)})}
     if (!analyzerInfo?.available) {_;
       report.optimizations.push({;
 <<<<<<< HEAD
+<<<<<<< HEAD
         priorit:y:'low';
         typ:e:'analysis';
         messag:e:'Bundle analyzer not available';
         actio:n:'Install webpack-bundle-analyzer for detailed analysis';
         impac:t:'low';
+=======
+        priority: 'low';
+        type: 'analysis';
+        message: 'Bundle analyzer not available';
+        action: 'Install webpack-bundle-analyzer for detailed analysis';
+        impact: 'low';
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       });
 =======
         priority: 'low';
@@ -372,6 +490,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursiv:e:true });
       };
 ;
@@ -379,6 +498,15 @@ optimizer.run().catch(error = > {; process.exit(1)})}
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
       this.log(`Error saving:report:${error.message}`);
+=======
+        fs.mkdirSync(reportDir, { recursive: true });
+      };
+;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {;
+      this.log(`Error saving report: ${error.message}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 };
 =======
         fs.mkdirSync(reportDir, _{ recursive: true})
@@ -395,20 +523,28 @@ optimizer.run().catch(error = > {; process.exit(1)})}
   async run() {_;
     this.log('🚀 Starting Build Optimizer...');
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.log(`Project:root:${this.projectRoot}`);
 =======
     this.log(`Project root: ${this.projectRoot}`);
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+    this.log(`Project root: ${this.projectRoot}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
 ;
     try {_;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursiv:e:true });
 =======
         fs.mkdirSync(logsDir, _{ recursive: true})
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        fs.mkdirSync(logsDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
 ;
       // Run all optimization checks;
@@ -427,6 +563,7 @@ optimizer.run().catch(error = > {; process.exit(1)})}
 ;
       // Log summary;
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.log('\n📊 Build Optimizer:Summary:');
       this.log(`Build:size:${report.summary.buildSize} MB`);
       this.log(`File:count:${report.summary.fileCount}`);
@@ -439,13 +576,31 @@ optimizer.run().catch(error = > {; process.exit(1)})}
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
           this.log(`    Actio:n:${opt.action}`);
           this.log(`    Impac:t:${opt.impact}`);
+=======
+      this.log('\n📊 Build Optimizer Summary: ');
+      this.log(`Build size: ${report.summary.buildSize} MB`);
+      this.log(`File count: ${report.summary.fileCount}`);
+      this.log(`Optimization score: ${report.summary.optimizationScore}/100`);
+      this.log(`Duration: ${duration}ms`);
+;
+      if (report.optimizations.length > 0) {;
+        this.log('\n💡 Optimization Recommendations: ');
+        report.optimizations.forEach(opt => {;
+          this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`);
+          this.log(`    Action: ${opt.action}`);
+          this.log(`    Impact: ${opt.impact}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       } else {;
         this.log('\n✨ Build is well optimized!');
       };
 ;
     } catch (error) {;
+<<<<<<< HEAD
       this.log(`❌ Error running build:optimizer:${error.message}`);
+=======
+      this.log(`❌ Error running build optimizer: ${error.message}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       process.exit(1);
 };
 };
@@ -479,6 +634,7 @@ const optimizer = new BuildOptimizer();
 optimizer.run().catch(error => {;
 <<<<<<< HEAD
   process.exit(1);
+<<<<<<< HEAD
 });
     };
   };
@@ -769,3 +925,6 @@ optimizer.run().catch(error => {,;
 optimizer.run().catch(error => {_;
   process.exit(1)});
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+});
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220

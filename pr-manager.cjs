@@ -8,7 +8,11 @@ console.log('🚀 Starting comprehensive PR management...\n');
 function runGitCommand(command, description) {;
   try {;
     console.log(`📋 ${description}...`);
+<<<<<<< HEAD
     const result = execSync(command, { encodin:g:'utf8', stdi:o:'pipe' });
+=======
+    const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     console.log(`✅ ${description} completed`);
     return result.trim();
   } catch (error) {;
@@ -16,6 +20,7 @@ function runGitCommand(command, description) {;
     throw error;
   }
 }
+<<<<<<< HEAD
 ;
 // Function to get open PRs;
 function getOpenPRs() {;
@@ -35,6 +40,27 @@ function getOpenPRs() {;
     }));
   } catch (error) {;
     console.log(`❌ Failed to fetch:PRs:${error.message}`);
+=======
+
+// Function to get open PRs
+function getOpenPRs() {
+  try {
+    const result = execSync(
+      'curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"',
+      { encoding: 'utf8' }
+    );
+    const prs = JSON.parse(result);
+    return prs.map(pr => ({
+      number: pr.number,
+      title: pr.title,
+      head: pr.head.ref,
+      user: pr.user.login,
+      draft: pr.draft,
+      mergeable: pr.mergeable,
+    }));
+  } catch (error) {
+    console.log(`❌ Failed to fetch PRs: ${error.message}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     return [];
   }
 }
@@ -56,7 +82,7 @@ function mergePR(prNumber, branchName) {
 
   // Checkout the PR branch
   const checkoutResult = runGitCommand(
-    `git checkout ${branchName}`;
+    `git checkout ${branchName}`,
     `Checking out branch ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
@@ -72,7 +98,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge with main
   const mergeResult = runGitCommand(
-    'git merge main';
+    'git merge main',
     `Merging main into ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
@@ -90,7 +116,7 @@ function mergePR(prNumber, branchName) {
 
     // Get list of conflicted files
     const conflictedFiles = runGitCommand(
-      'git diff --name-only --diff-filter=U';
+      'git diff --name-only --diff-filter=U',
       'Getting conflicted files'
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
     );
@@ -109,7 +135,7 @@ function mergePR(prNumber, branchName) {
       // Accept main branch changes for all conflicts
       for (const file of files) {
         runGitCommand(
-          `git checkout --theirs "${file}"`;
+          `git checkout --theirs "${file}"`,
           `Resolving conflict in ${file}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
         );
@@ -136,7 +162,7 @@ function mergePR(prNumber, branchName) {
 =======
 - Resolved all merge conflicts by accepting main branch changes
 - PR #${prNumber} merged successfully
-- Ready for deployment"`;
+- Ready for deployment"`,
         `Committing merge resolution for PR #${prNumber}`
       );
     }
@@ -144,7 +170,7 @@ function mergePR(prNumber, branchName) {
 
   // Push the updated branch
   runGitCommand(
-    `git push origin ${branchName}`;
+    `git push origin ${branchName}`,
     `Pushing updated ${branchName}`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
@@ -161,7 +187,7 @@ function mergePR(prNumber, branchName) {
 
   // Merge the PR into main
   const finalMerge = runGitCommand(
-    `git merge ${branchName}`;
+    `git merge ${branchName}`,
     `Merging ${branchName} into main`
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
   );
@@ -186,10 +212,17 @@ async function main() {;
     console.log('✅ No open PRs found');
     return;
   }
+<<<<<<< HEAD
 ;
   console.log(`📋 Found ${prs.length} open:PRs:`);
   prs.forEach(pr => {;
     console.log(`  - PR #${pr.number} ${pr.title} (${pr.head})`);
+=======
+
+  console.log(`📋 Found ${prs.length} open PRs:`);
+  prs.forEach(pr => {
+    console.log(`  - PR #${pr.number}: ${pr.title} (${pr.head})`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   });
 ;
   console.log('\n🔄 Starting PR processing...');
@@ -210,6 +243,7 @@ async function main() {;
       failCount++;
     }
   }
+<<<<<<< HEAD
 ;
   console.log('\n📊 PR Processing:Summary:');
   console.log(`✅ Successfully:merged:${successCount}`);
@@ -217,6 +251,15 @@ async function main() {;
   console.log(`📋 Total:processed:${prs.length}`);
 ;
   if (successCount > 0) {;
+=======
+
+  console.log('\n📊 PR Processing Summary:');
+  console.log(`✅ Successfully merged: ${successCount}`);
+  console.log(`❌ Failed to merge: ${failCount}`);
+  console.log(`📋 Total processed: ${prs.length}`);
+
+  if (successCount > 0) {
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     console.log('\n🎉 PR management completed successfully!');
   } else {;
     console.log('\n⚠️  No PRs were successfully merged');

@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🔒 Starting Security Scanner...');
+<<<<<<< HEAD
 ;
 class SecurityScanner {;
   constructor() {;
@@ -13,6 +14,17 @@ class SecurityScanner {;
       vulnerabilitie:s:[],;
       recommendation:s:[],;
       metric:s:{},;
+=======
+
+class SecurityScanner {
+  constructor() {
+    this.results = {
+      timestamp: new Date().toISOString(),
+      securityScore: 0,
+      vulnerabilities: [],
+      recommendations: [],
+      metrics: {},
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     };
   }
 ;
@@ -83,15 +95,23 @@ class SecurityScanner {;
 
   checkForHardcodedSecrets(content, filePath) {
     const secretPatterns = [
+<<<<<<< HEAD
       /password\s*=\s*['"][^'"]+['"]/gi;
       /api[_-]?key\s*=\s*['"][^'"]+['"]/gi;
       /secret\s*=\s*['"][^'"]+['"]/gi;
       /token\s*=\s*['"][^'"]+['"]/gi;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      /password\s*=\s*['"][^'"]+['"]/gi,
+      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
+      /secret\s*=\s*['"][^'"]+['"]/gi,
+      /token\s*=\s*['"][^'"]+['"]/gi,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     secretPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
+<<<<<<< HEAD
       if (matches) {;
         this.results.vulnerabilities.push({;
           typ:e:'hardcoded_secret',;
@@ -99,6 +119,15 @@ class SecurityScanner {;
           fil:e:filePath,;
           descriptio:n:'Potential hardcoded secret detected',;
           matche:s:matches,;
+=======
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'hardcoded_secret',
+          severity: 'high',
+          file: filePath,
+          description: 'Potential hardcoded secret detected',
+          matches: matches,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       }
     });
@@ -113,13 +142,19 @@ class SecurityScanner {;
 
   checkForSQLInjection(content, filePath) {
     const sqlPatterns = [
+<<<<<<< HEAD
       /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
       /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
+      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     sqlPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
+<<<<<<< HEAD
       if (matches) {;
         this.results.vulnerabilities.push({;
           typ:e:'sql_injection',;
@@ -127,6 +162,15 @@ class SecurityScanner {;
           fil:e:filePath,;
           descriptio:n:'Potential SQL injection vulnerability',;
           matche:s:matches,;
+=======
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'sql_injection',
+          severity: 'high',
+          file: filePath,
+          description: 'Potential SQL injection vulnerability',
+          matches: matches,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       }
     });
@@ -142,14 +186,21 @@ class SecurityScanner {;
 
   checkForXSS(content, filePath) {
     const xssPatterns = [
+<<<<<<< HEAD
       /dangerouslySetInnerHTML/gi;
       /innerHTML\s*=/gi;
       /document\.write/gi;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+      /dangerouslySetInnerHTML/gi,
+      /innerHTML\s*=/gi,
+      /document\.write/gi,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     ];
 ;
     xssPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
+<<<<<<< HEAD
       if (matches) {;
         this.results.vulnerabilities.push({;
           typ:e:'xss_vulnerability',;
@@ -157,6 +208,15 @@ class SecurityScanner {;
           fil:e:filePath,;
           descriptio:n:'Potential XSS vulnerability',;
           matche:s:matches,;
+=======
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'xss_vulnerability',
+          severity: 'medium',
+          file: filePath,
+          description: 'Potential XSS vulnerability',
+          matches: matches,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
         });
       }
     });
@@ -171,13 +231,19 @@ class SecurityScanner {;
         ...packageJson.devDependencies,;
 =======
       const dependencies = {
+<<<<<<< HEAD
         ...packageJson.dependencies;
         ...packageJson.devDependencies;
 >>>>>>> 44ad963ad5fd406e68f84735bc739a2e0258901d
+=======
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
       };
 ;
       // Check for known vulnerable packages;
       const vulnerablePackages = ['lodash', 'moment', 'jquery'];
+<<<<<<< HEAD
 ;
       vulnerablePackages.forEach(pkg => {;
         if (dependencies[pkg]) {;
@@ -187,6 +253,17 @@ class SecurityScanner {;
             fil:e:filePath,;
             descriptio:n:`Potentially vulnerable:dependency:${pkg}`,;
             packag:e:pkg,;
+=======
+
+      vulnerablePackages.forEach(pkg => {
+        if (dependencies[pkg]) {
+          this.results.vulnerabilities.push({
+            type: 'vulnerable_dependency',
+            severity: 'medium',
+            file: filePath,
+            description: `Potentially vulnerable dependency: ${pkg}`,
+            package: pkg,
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
           });
         }
       });
@@ -217,6 +294,7 @@ class SecurityScanner {;
     const highSeverityVulns = this.results.vulnerabilities.filter(;
       v => v.severity === 'high';
     );
+<<<<<<< HEAD
 ;
     if (highSeverityVulns.length > 0) {;
       this.results.recommendations.push({;
@@ -242,18 +320,54 @@ class SecurityScanner {;
       typ:e:'code_review',;
       priorit:y:'medium',;
       descriptio:n:'Implement security-focused code review process',;
+=======
+
+    if (highSeverityVulns.length > 0) {
+      this.results.recommendations.push({
+        type: 'immediate_fix',
+        priority: 'critical',
+        description: 'Fix high severity vulnerabilities immediately',
+      });
+    }
+
+    this.results.recommendations.push({
+      type: 'security_audit',
+      priority: 'high',
+      description: 'Run regular security audits with npm audit',
+    });
+
+    this.results.recommendations.push({
+      type: 'dependency_update',
+      priority: 'medium',
+      description: 'Keep dependencies updated to latest secure versions',
+    });
+
+    this.results.recommendations.push({
+      type: 'code_review',
+      priority: 'medium',
+      description: 'Implement security-focused code review process',
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     });
   }
 ;
   async saveReport() {;
     const logsDir = path.join(process.cwd(), 'logs');
+<<<<<<< HEAD
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursiv:e:true });
+=======
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     }
 ;
     const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
+<<<<<<< HEAD
     console.log(`📊 Report saved:to:${reportPath}`);
+=======
+    console.log(`📊 Report saved to: ${reportPath}`);
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
   }
 ;
   async run() {;
@@ -263,9 +377,15 @@ class SecurityScanner {;
     this.calculateSecurityScore();
     await this.generateRecommendations();
     await this.saveReport();
+<<<<<<< HEAD
 ;
     console.log(;
       `✅ Security scan completed! Scor:e:${this.results.securityScore}/100`;
+=======
+
+    console.log(
+      `✅ Security scan completed! Score: ${this.results.securityScore}/100`
+>>>>>>> dd4771918e1828cabc889a89f71cd19694beb220
     );
   }
 }
