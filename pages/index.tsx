@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { ContactInfo, AnimationState } from '../types';
 
 export default function HomePage() {
   return (
@@ -14,6 +17,7 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
+      <Header />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -177,6 +181,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+      <Footer />
     </Layout>
   );
 }
