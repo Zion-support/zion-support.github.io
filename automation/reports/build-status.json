@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-09-05T21:39:40.800Z",
+  "build": {
+    "status": "success",
+    "duration": 11491,
+    "errors": []
+  },
+  "lint": {
+    "status": "failed",
+    "issues": []
+  },
+  "typeCheck": {
+    "status": "unknown",
+    "errors": []
+  },
+  "dependencies": {
+    "status": "unknown",
+    "outdated": []
+  },
+  "trends": {
+    "consecutiveFailures": 0,
+    "improvementSinceLastRun": false,
+    "degradationSinceLastRun": false
+  },
+  "healthScore": 80,
+  "recommendations": [
+    "Address linting issues",
+    "Consider running auto-formatter"
+  ]
+}

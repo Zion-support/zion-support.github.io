@@ -1,5 +1,5 @@
 };
-export const lazyLoadImage = ("img": HTMLImageElemen t) => {,
+export const lazyLoadImage = (img: HTMLImageElemen t) => {,
   const observer = new IntersectionObserver((entries) => {,
     entries.forEach((entry) => {,
       if (entry.isIntersecting) {,

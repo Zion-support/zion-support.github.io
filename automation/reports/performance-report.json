@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-09-05T21:47:20.510Z",
+  "metrics": {
+    "bundleSize": 89.4,
+    "buildTime": 5725,
+    "testResults": {
+      "smoke": {
+        "passed": false,
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Can't find a root directory while resolving a config file path.\nProvided path to resolve: jest.config.smoke.cjs\ncwd: /workspace\n    at resolveConfigPath (/workspace/node_modules/jest-config/build/index.js:2448:11)\n    at readInitialOptions (/workspace/node_modules/jest-config/build/index.js:1138:55)\n    at readConfig (/workspace/node_modules/jest-config/build/index.js:918:13)\n    at readConfigs (/workspace/node_modules/jest-config/build/index.js:1168:32)\n    at runCLI (/workspace/node_modules/@jest/core/build/index.js:1397:43)\n    at Object.run (/workspace/node_modules/jest-cli/build/index.js:656:34)\n"
+      }
+    },
+    "performanceScore": 75
+  },
+  "performanceScore": 75,
+  "recommendations": [
+    "Fix failing tests to improve reliability"
+  ]
+}

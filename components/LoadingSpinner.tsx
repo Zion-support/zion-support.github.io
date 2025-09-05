@@ -9,19 +9,19 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'blue',
-  className = '',
+  className = ''
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    xl: 'w-16 h-16'
   };
 
   const colorClasses = {
     blue: 'text-blue-600',
     white: 'text-white',
-    gray: 'text-gray-600',
+    gray: 'text-gray-600'
   };
 
   return (
