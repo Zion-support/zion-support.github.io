@@ -23,6 +23,7 @@ import {
   Mic, 
   Code, 
   Settings, 
+  Cog,
   Monitor, 
   Smartphone, 
   Cloud, 
@@ -475,14 +476,12 @@ const aiServices = [
     ],
     marketPrice: '$3,000-6,000/month',
     setupTime: '4-8 weeks',
-    targetUsers: 'Schools, Universities, Online education, Corporate training'
-  }
-];
-      timeline: '4–8 weeks',
-      benefits: [
-        '80% reduction in response time',
-        '60% decrease in support costs',
-        '24/7 customer availability',
+    targetUsers: 'Schools, Universities, Online education, Corporate training',
+    timeline: '4–8 weeks',
+    benefits: [
+      '80% reduction in response time',
+      '60% decrease in support costs',
+      '24/7 customer availability',
         'Improved customer satisfaction scores'
       ]
     },
@@ -1499,6 +1498,7 @@ export default function AIServicesPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredServices = aiServices.filter(service => {
+    if (!service || !service.title || !service.description) return false;
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
