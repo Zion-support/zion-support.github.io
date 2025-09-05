@@ -1,7 +1,3 @@
-import Layout from '../../components/Layout';
-=======
-import Layout from '../components/Layout';
-=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
