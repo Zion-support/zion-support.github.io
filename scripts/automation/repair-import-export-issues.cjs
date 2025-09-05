@@ -55,7 +55,7 @@ function run() {
 	let total = 0;
 	let changed = 0;
 	for (const pattern of patterns) {
-		const files = glob.sync(pattern, { cwd: projectRoot, nodir: true });
+		const files = glob.sync(pattern, { "cwd": projectRoot, "nodir": true });
 		for (const rel of files) {
 			total++;
 			const fp = path.resolve(projectRoot, rel);

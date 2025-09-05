@@ -13,7 +13,7 @@ const EXTENSIONS = new Set(['.ts', '.tsx']);
 
 function listFiles(dir) {
   const out = [];
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       out.push(...listFiles(full))} else if (EXTENSIONS.has(path.extname(entry.name))) {
@@ -23,9 +23,9 @@ function listFiles(dir) {
 
 function stripConflictMarkers(content) {
   // Prefer the right side of conflicts (after =======) since HEAD often contains broken text
-  // Pattern: <<<<<<< ... \n(left)\n=======\n(right)\n>>>>>>> ...
+  // "Pattern": <<<<<<< ... \n(left)\n=======\n(right)\n>>>>>>> ...
   return content.replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, left, right) => {
-    // Heuristic: choose the side with more balanced braces/quotes; default to right
+    // "Heuristic": choose the side with more balanced braces/quotes; default to right
     const score = (s) => {
       const open = (s.match(/[{(\[]/g) || []).length;
       const close = (s.match(/[})\]]/g) || []).length;
@@ -39,7 +39,7 @@ function stripConflictMarkers(content) {
 
 function fixCommonMangles(content) {
   let c = content;
-  // Type literal string corruption: label: 'string; -> label: string;
+  // Type literal string "corruption": label: 'string; -> label: string;
   c = c.replace(/:\s*'string;?/g, ': string;');
   c = c.replace(/\?:\s*string;'/g, '?: string;');
   // Remove dangling commit hashes appended to code lines like "} abcdef123..."
@@ -48,21 +48,21 @@ function fixCommonMangles(content) {
   c = c.replace(/^\s*[0-9a-f]{40}\s*$/gm, '');
   // Remove stray lone braces/semicolons caused by corruption
   c = c.replace(/^}\s*$/gm, '');
-  // JSX prop expression accidentally quoted: href: 'isLast ? undefined : currentPath' -> expression
-  c = c.replace(/href:\s*'([^']*)isLast\s*\?\s*undefined\s*:\s*currentPath'?/g, 'href: isLast ? undefined : currentPath');
+  // JSX prop expression accidentally "quoted": href: 'isLast ? undefined : currentPath' -> expression
+  c = c.replace(/href:\s*'([^']*)isLast\s*\?\s*undefined\s*:\s*currentPath'?/g, '"href": isLast ? undefined : currentPath');
   // Broken property lines with random semicolons inside identifiers
   c = c.replace(/lengt;h/g, 'length');
   c = c.replace(/startTi;m;e/g, 'startTime');
   // Double semicolons near braces
   c = c.replace(/;\s*;\s*}/g, '}');
   c = c.replace(/;\s*;\s*\)/g, ')');
-  // Fix obviously unterminated string attributes like meta property names (og: title -> og:title)
-  c = c.replace(/og:\s*title/g, 'og:title');
-  c = c.replace(/og:\s*description/g, 'og:description');
-  c = c.replace(/og:\s*url/g, 'og:url');
-  c = c.replace(/twitter:\s*description/g, 'twitter:description');
+  // Fix obviously unterminated string attributes like meta property names ("og": title -> og:title)
+  c = c.replace(/og:\s*title/g, '"og": title');
+  c = c.replace(/og:\s*description/g, '"og": description');
+  c = c.replace(/og:\s*url/g, '"og": url');
+  c = c.replace(/twitter:\s*description/g, '"twitter": description');
   // Fix space in meta property name attribute values
-  c = c.replace(/property=\"og:\s*type\"/g, 'property="og:type"');
+  c = c.replace(/property=\"og:\s*type\"/g, 'property=""og": type"');
   // Remove trailing unmatched syntax artifacts
   c = c.replace(/^\)\s*}\s*;?\s*$/gm, '');
   return c}

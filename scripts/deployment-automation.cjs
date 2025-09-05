@@ -24,7 +24,7 @@ class DeploymentAutomation {
     console.log(`${icons[type]} ${message}`)}
 
   createDockerfile() {
-    const dockerfile = `FROM node:18-alpine AS base
+    const dockerfile = "FROM "node": 18-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -57,7 +57,7 @@ COPY --from=builder /app/public ./public
 
 # Set the correct permission for prerender cache
 RUN mkdir .next
-RUN chown nextjs:nodejs .next
+RUN chown "nextjs": nodejs .next
 
 # Automatically leverage output traces to reduce image size
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
@@ -69,14 +69,14 @@ EXPOSE 3000
 
 ENV PORT 3000
 
-CMD ["node", "server.js"];`;
+CMD ["node", "server.js"];";
 
     fs.writeFileSync('Dockerfile', dockerfile);
     this.deployments.push('Created Dockerfile');
     this.log('Created Dockerfile', 'SUCCESS')}
 
   createDockerCompose() {
-    const dockerCompose = `version: '3.8'
+    const dockerCompose = ""version": '3.8'
 
 services:
   app:
@@ -97,7 +97,7 @@ services:
       - ./ssl:/etc/nginx/ssl
     depends_on:
       - app
-    restart: unless-stoppe;d;`;
+    restart: unless-stoppe;d;";
 
     fs.writeFileSync('docker-compose.yml', dockerCompose);
     this.deployments.push('Created docker-compose.yml');
@@ -106,7 +106,7 @@ services:
   createKubernetesManifests() {
     this.ensureDirectory('k8s');
     
-    const deployment = `apiVersion: apps/v1
+    const deployment = ""apiVersion": apps/v1
 kind: Deployment
 metadata:
   name: zion-tech-app
@@ -134,9 +134,9 @@ spec:
             cpu: "250m"
           limits:
             memory: "512Mi"
-            cpu: "500m;";`;
+            cpu: "500m;";";
 
-    const service = `apiVersion: v1
+    const service = "apiVersion: v1
 kind: Service
 metadata:
   name: zion-tech-service
@@ -147,7 +147,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 3000
-  type: LoadBalance;r;`;
+  type: LoadBalance;r;";
 
     fs.writeFileSync('k8s/deployment.yaml', deployment);
     fs.writeFileSync('k8s/service.yaml', service);
@@ -157,13 +157,13 @@ spec:
   createGitHubActions() {
     this.ensureDirectory('.github/workflows');
     
-    const workflow = `name: CI/CD Pipeline
+    const workflow = ""name": CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main ]
   pull_request:
-    branches: [ main ]
+    branches: [main ]
 
 jobs:
   test:
@@ -208,7 +208,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - name: Deploy to production
-      run: echo "Deploying to production...;";`;
+      run: echo "Deploying to production...;";";
 
     fs.writeFileSync('.github/workflows/ci-cd.yml', workflow);
     this.deployments.push('Created GitHub Actions workflow');
@@ -216,22 +216,22 @@ jobs:
 
   ensureDirectory(dirPath) {
     if () {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   generateReport() {
     const duration = Date.now() - this.startTim) {
     ) {
-      fs.mkdirSync(dirPath, { recursive: true })}
+      fs.mkdirSync(dirPath, { "recursive": true })}
   }
 
   generateReport() {
     const duration = Date.now() - this.startTim}e;
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
-      deployments: this.deployments,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": `${Math.round(duration / 1000)}s`,
+      "deployments": this.deployments,
+      "summary": {
         totalDeployments: this.deployments.length
       }
    };
@@ -257,7 +257,7 @@ if ( {
      {
   const automation = new DeploymentAutomation}(;);
   automation.run().catch(error => {
-    console.error('Deployment automation failed:', error);
+    console.error('Deployment automation "failed": ', error);
     process.exit(1)})}
 
 module.exports = DeploymentAutomation;

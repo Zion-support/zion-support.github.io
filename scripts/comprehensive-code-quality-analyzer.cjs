@@ -8,27 +8,27 @@ console.log('🔍 Comprehensive Code Quality Analyzer v2.0');
 console.log('==========================================');
 
 const qualityReport = {
-  timestamp: new Date().toISOString(),
-  sessionId: Date.now().toString(),
-  metrics: {
+  "timestamp": new Date().toISOString(),
+  "sessionId": Date.now().toString(),
+  "metrics": {
     complexity: 0,
-    maintainability: 0,
-    reliability: 0,
-    security: 0,
-    performance: 0,
-    testability: 0
+    "maintainability": 0,
+    "reliability": 0,
+    "security": 0,
+    "performance": 0,
+    "testability": 0
   },
-  issues: [],
-  recommendations: [],
-  summary: {
+  "issues": [],
+  "recommendations": [],
+  "summary": {
     totalFiles: 0,
-    totalLines: 0,
-    totalIssues: 0,
-    critical: 0,
-    high: 0,
-    medium: 0,
-    low: 0,
-    qualityScore: 0
+    "totalLines": 0,
+    "totalIssues": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "qualityScore": 0
   }
 };
 
@@ -68,16 +68,16 @@ function analyzeFile(filePath) {
     const testabilityIssues = analyzeTestability(content, filePath);
     
     return {
-      file: filePath,
-      metrics: {
+      "file": filePath,
+      "metrics": {
         totalLines,
         codeLines,
         commentLines,
         emptyLines,
         complexity,
-        commentRatio: commentLines / codeLines
+        "commentRatio": commentLines / codeLines
       },
-      issues: [...securityIssues, ...performanceIssues, ...maintainabilityIssues, ...testabilityIssues]
+      "issues": [...securityIssues, ...performanceIssues, ...maintainabilityIssues, ...testabilityIssues]
     }} catch (error) {
     log('warn', `Failed to analyze file ${filePath}`, error.message);
     return null}
@@ -87,8 +87,7 @@ function analyzeComplexity(content) {
   let complexity = 1; // Base complexity
   
   // Count control structures
-  const controlStructures = [
-    /if\s*\(/g,
+  const controlStructures = [/if\s*\(/g,
     /else\s+if\s*\(/g,
     /for\s*\(/g,
     /while\s*\(/g,
@@ -108,8 +107,7 @@ function analyzeComplexity(content) {
   });
   
   // Count nested structures
-  const nestedPatterns = [
-    /{[\s\S]*?}/g,
+  const nestedPatterns = [/{[\s\S]*?}/g,
     /\([\s\S]*?\)/g
   ];
   
@@ -123,42 +121,41 @@ function analyzeComplexity(content) {
 
 function analyzeSecurity(content, filePath) {
   const issues = [];
-  const securityPatterns = [
-    {
-      pattern: /eval\s*\(/g,
-      severity: 'high',
-      message: 'Use of eval() detected',
-      recommendation: 'Avoid eval() as it can lead to code injection vulnerabilities'
+  const securityPatterns = [{
+      "pattern": /eval\s*\(/g,
+      "severity": 'high',
+      "message": 'Use of eval() detected',
+      "recommendation": 'Avoid eval() as it can lead to code injection vulnerabilities'
     },
     {
-      pattern: /innerHTML\s*=/g,
-      severity: 'medium',
-      message: 'Direct innerHTML assignment detected',
-      recommendation: 'Use textContent or sanitize HTML to prevent XSS attacks'
+      "pattern": /innerHTML\s*=/g,
+      "severity": 'medium',
+      "message": 'Direct innerHTML assignment detected',
+      "recommendation": 'Use textContent or sanitize HTML to prevent XSS attacks'
     },
     {
-      pattern: /document\.write\s*\(/g,
-      severity: 'medium',
-      message: 'Use of document.write() detected',
-      recommendation: 'Avoid document.write() as it can lead to XSS vulnerabilities'
+      "pattern": /document\.write\s*\(/g,
+      "severity": 'medium',
+      "message": 'Use of document.write() detected',
+      "recommendation": 'Avoid document.write() as it can lead to XSS vulnerabilities'
     },
     {
-      pattern: /password\s*=\s*['"][^'"]+['"]/g,
-      severity: 'high',
-      message: 'Hardcoded password detected',
-      recommendation: 'Move passwords to environment variables or secure configuration'
+      "pattern": /password\s*=\s*['"][^'"]+['"]/g,
+      "severity": 'high',
+      "message": 'Hardcoded password detected',
+      "recommendation": 'Move passwords to environment variables or secure configuration'
     },
     {
-      pattern: /api[_-]?key\s*=\s*['"][^'"]+['"]/g,
-      severity: 'high',
-      message: 'Hardcoded API key detected',
-      recommendation: 'Move API keys to environment variables'
+      "pattern": /api[_-]?key\s*=\s*['"][^'"]+['"]/g,
+      "severity": 'high',
+      "message": 'Hardcoded API key detected',
+      "recommendation": 'Move API keys to environment variables'
     },
     {
-      pattern: /http:\/\//g,
-      severity: 'medium',
-      message: 'HTTP protocol detected',
-      recommendation: 'Use HTTPS for secure communication'
+      "pattern": /http:\/\//g,
+      "severity": 'medium',
+      "message": 'HTTP protocol detected',
+      "recommendation": 'Use HTTPS for secure communication'
     }
   ];
   
@@ -167,12 +164,12 @@ function analyzeSecurity(content, filePath) {
     if (matches) {
       matches.forEach(match => {
         issues.push({
-          type: 'security',
+          "type": 'security',
           severity,
           message,
           recommendation,
-          line: content.substring(0, content.indexOf(match)).split('\n').length,
-          code: match.substring(0, 50)
+          "line": content.substring(0, content.indexOf(match)).split('\n').length,
+          "code": match.substring(0, 50)
         })})}
   });
   
@@ -180,30 +177,29 @@ function analyzeSecurity(content, filePath) {
 
 function analyzePerformance(content, filePath) {
   const issues = [];
-  const performancePatterns = [
-    {
-      pattern: /for\s*\(\s*var\s+\w+\s*=\s*0\s*;\s*\w+\s*<\s*array\.length\s*;\s*\w+\+\+\s*\)/g,
-      severity: 'medium',
-      message: 'Inefficient array iteration detected',
-      recommendation: 'Use forEach, map, or for...of for better performance'
+  const performancePatterns = [{
+      "pattern": /for\s*\(\s*var\s+\w+\s*=\s*0\s*;\s*\w+\s*<\s*array\.length\s*;\s*\w+\+\+\s*\)/g,
+      "severity": 'medium',
+      "message": 'Inefficient array iteration detected',
+      "recommendation": 'Use forEach, map, or for...of for better performance'
     },
     {
-      pattern: /document\.getElementById\s*\(/g,
-      severity: 'low',
-      message: 'Multiple getElementById calls detected',
-      recommendation: 'Cache DOM elements to avoid repeated queries'
+      "pattern": /document\.getElementById\s*\(/g,
+      "severity": 'low',
+      "message": 'Multiple getElementById calls detected',
+      "recommendation": 'Cache DOM elements to avoid repeated queries'
     },
     {
-      pattern: /setTimeout\s*\(\s*function\s*\(/g,
-      severity: 'low',
-      message: 'Anonymous function in setTimeout detected',
-      recommendation: 'Use arrow functions or named functions for better performance'
+      "pattern": /setTimeout\s*\(\s*function\s*\(/g,
+      "severity": 'low',
+      "message": 'Anonymous function in setTimeout detected',
+      "recommendation": 'Use arrow functions or named functions for better performance'
     },
     {
-      pattern: /console\.log\s*\(/g,
-      severity: 'low',
-      message: 'Console.log statements detected',
-      recommendation: 'Remove console.log statements from production code'
+      "pattern": /console\.log\s*\(/g,
+      "severity": 'low',
+      "message": 'Console.log statements detected',
+      "recommendation": 'Remove console.log statements from production code'
     }
   ];
   
@@ -212,12 +208,12 @@ function analyzePerformance(content, filePath) {
     if (matches) {
       matches.forEach(match => {
         issues.push({
-          type: 'performance',
+          "type": 'performance',
           severity,
           message,
           recommendation,
-          line: content.substring(0, content.indexOf(match)).split('\n').length,
-          code: match.substring(0, 50)
+          "line": content.substring(0, content.indexOf(match)).split('\n').length,
+          "code": match.substring(0, 50)
         })})}
   });
   
@@ -225,36 +221,35 @@ function analyzePerformance(content, filePath) {
 
 function analyzeMaintainability(content, filePath) {
   const issues = [];
-  const maintainabilityPatterns = [
-    {
-      pattern: /function\s+\w+\s*\([^)]*\)\s*{[\s\S]{200,}/g,
-      severity: 'medium',
-      message: 'Long function detected',
-      recommendation: 'Break down long functions into smaller, more manageable functions'
+  const maintainabilityPatterns = [{
+      "pattern": /function\s+\w+\s*\([^)]*\)\s*{[\s\S]{200}/g,
+      "severity": 'medium',
+      "message": 'Long function detected',
+      "recommendation": 'Break down long functions into smaller, more manageable functions'
     },
     {
-      pattern: /if\s*\([^)]*\)\s*{[\s\S]{100,}/g,
-      severity: 'low',
-      message: 'Long if block detected',
-      recommendation: 'Consider extracting complex conditions into separate functions'
+      "pattern": /if\s*\([^)]*\)\s*{[\s\S]{100}/g,
+      "severity": 'low',
+      "message": 'Long if block detected',
+      "recommendation": 'Consider extracting complex conditions into separate functions'
     },
     {
-      pattern: /\/\/\s*TODO/g,
-      severity: 'low',
-      message: 'TODO comments detected',
-      recommendation: 'Address TODO comments or create issues to track them'
+      "pattern": /\/\/\s*TODO/g,
+      "severity": 'low',
+      "message": 'TODO comments detected',
+      "recommendation": 'Address TODO comments or create issues to track them'
     },
     {
-      pattern: /\/\/\s*FIXME/g,
-      severity: 'medium',
-      message: 'FIXME comments detected',
-      recommendation: 'Address FIXME comments as they indicate known issues'
+      "pattern": /\/\/\s*FIXME/g,
+      "severity": 'medium',
+      "message": 'FIXME comments detected',
+      "recommendation": 'Address FIXME comments as they indicate known issues'
     },
     {
-      pattern: /\/\/\s*HACK/g,
-      severity: 'high',
-      message: 'HACK comments detected',
-      recommendation: 'Replace hacky solutions with proper implementations'
+      "pattern": /\/\/\s*HACK/g,
+      "severity": 'high',
+      "message": 'HACK comments detected',
+      "recommendation": 'Replace hacky solutions with proper implementations'
     }
   ];
   
@@ -263,12 +258,12 @@ function analyzeMaintainability(content, filePath) {
     if (matches) {
       matches.forEach(match => {
         issues.push({
-          type: 'maintainability',
+          "type": 'maintainability',
           severity,
           message,
           recommendation,
-          line: content.substring(0, content.indexOf(match)).split('\n').length,
-          code: match.substring(0, 50)
+          "line": content.substring(0, content.indexOf(match)).split('\n').length,
+          "code": match.substring(0, 50)
         })})}
   });
   
@@ -276,30 +271,29 @@ function analyzeMaintainability(content, filePath) {
 
 function analyzeTestability(content, filePath) {
   const issues = [];
-  const testabilityPatterns = [
-    {
-      pattern: /export\s+default\s+function/g,
-      severity: 'low',
-      message: 'Default export detected',
-      recommendation: 'Use named exports for better testability'
+  const testabilityPatterns = [{
+      "pattern": /export\s+default\s+function/g,
+      "severity": 'low',
+      "message": 'Default export detected',
+      "recommendation": 'Use named exports for better testability'
     },
     {
-      pattern: /new\s+Date\s*\(/g,
-      severity: 'medium',
-      message: 'Direct Date instantiation detected',
-      recommendation: 'Use dependency injection for Date objects to improve testability'
+      "pattern": /new\s+Date\s*\(/g,
+      "severity": 'medium',
+      "message": 'Direct Date instantiation detected',
+      "recommendation": 'Use dependency injection for Date objects to improve testability'
     },
     {
-      pattern: /Math\.random\s*\(/g,
-      severity: 'medium',
-      message: 'Math.random() usage detected',
-      recommendation: 'Use dependency injection for random number generation'
+      "pattern": /Math\.random\s*\(/g,
+      "severity": 'medium',
+      "message": 'Math.random() usage detected',
+      "recommendation": 'Use dependency injection for random number generation'
     },
     {
-      pattern: /global\./g,
-      severity: 'high',
-      message: 'Global variable usage detected',
-      recommendation: 'Avoid global variables as they make testing difficult'
+      "pattern": /global\./g,
+      "severity": 'high',
+      "message": 'Global variable usage detected',
+      "recommendation": 'Avoid global variables as they make testing difficult'
     }
   ];
   
@@ -308,12 +302,12 @@ function analyzeTestability(content, filePath) {
     if (matches) {
       matches.forEach(match => {
         issues.push({
-          type: 'testability',
+          "type": 'testability',
           severity,
           message,
           recommendation,
-          line: content.substring(0, content.indexOf(match)).split('\n').length,
-          code: match.substring(0, 50)
+          "line": content.substring(0, content.indexOf(match)).split('\n').length,
+          "code": match.substring(0, 50)
         })})}
   });
   
@@ -346,42 +340,42 @@ function generateRecommendations() {
   
   if (critical > 0) {
     recommendations.push({
-      priority: 'critical',
-      message: `${critical} critical issues found`,
-      action: 'Address critical issues immediately'
+      "priority": 'critical',
+      "message": `${critical} critical issues found`,
+      "action": 'Address critical issues immediately'
     })}
   
   if (high > 0) {
     recommendations.push({
-      priority: 'high',
-      message: `${high} high severity issues found`,
-      action: 'Address high severity issues within 24 hours'
+      "priority": 'high',
+      "message": `${high} high severity issues found`,
+      "action": 'Address high severity issues within 24 hours'
     })}
   
   if (medium > 0) {
     recommendations.push({
-      priority: 'medium',
-      message: `${medium} medium severity issues found`,
-      action: 'Address medium severity issues within a week'
+      "priority": 'medium',
+      "message": `${medium} medium severity issues found`,
+      "action": 'Address medium severity issues within a week'
     })}
   
   if (low > 0) {
     recommendations.push({
-      priority: 'low',
-      message: `${low} low severity issues found`,
-      action: 'Address low severity issues during regular maintenance'
+      "priority": 'low',
+      "message": `${low} low severity issues found`,
+      "action": 'Address low severity issues during regular maintenance'
     })}
   
   recommendations.push({
-    priority: 'medium',
-    message: 'Implement automated code quality checks',
-    action: 'Set up CI/CD pipeline with automated code quality analysis'
+    "priority": 'medium',
+    "message": 'Implement automated code quality checks',
+    "action": 'Set up CI/CD pipeline with automated code quality analysis'
   });
   
   recommendations.push({
-    priority: 'low',
-    message: 'Regular code reviews',
-    action: 'Implement peer code review process'
+    "priority": 'low',
+    "message": 'Regular code reviews',
+    "action": 'Implement peer code review process'
   });
   
   return recommendations}
@@ -446,31 +440,31 @@ async function main() {
     // Display summary
     log('info', 'Comprehensive Code Quality Analysis Summary');
     log('info', '==========================================');
-    log('info', `Total files: ${qualityReport.summary.totalFiles}`);
-    log('info', `Total lines: ${qualityReport.summary.totalLines}`);
-    log('info', `Total issues: ${qualityReport.summary.totalIssues}`);
-    log('info', `Critical: ${qualityReport.summary.critical}`);
-    log('info', `High: ${qualityReport.summary.high}`);
-    log('info', `Medium: ${qualityReport.summary.medium}`);
-    log('info', `Low: ${qualityReport.summary.low}`);
-    log('info', `Quality score: ${qualityReport.summary.qualityScore}/100`);
+    log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
+    log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
+    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
+    log('info', `"Critical": ${qualityReport.summary.critical}`);
+    log('info', `"High": ${qualityReport.summary.high}`);
+    log('info', `"Medium": ${qualityReport.summary.medium}`);
+    log('info', `"Low": ${qualityReport.summary.low}`);
+    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
     
     if (qualityReport.issues.length > 0) {
-      log('warn', 'Issues found:');
+      log('warn', 'Issues "found": ');
       qualityReport.issues.forEach(issue => {
         log('warn', `- [${issue.severity.toUpperCase()}] ${issue.message} (${issue.file}:${issue.line})`)})}
     
     if (qualityReport.recommendations.length > 0) {
-      log('info', 'Quality Recommendations:');
+      log('info', 'Quality "Recommendations": ');
       qualityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`)})}
+        log('info', `  "Action": ${rec.action}`)})}
     
     // Save quality report
     const reportPath = path.join(process.cwd(), `comprehensive-quality-report-${qualityReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(qualityReport, null, 2));
     
-    log('info', `Comprehensive quality report saved to: comprehensive-quality-report-${qualityReport.sessionId}.json`);
+    log('info', `Comprehensive quality report saved "to": comprehensive-quality-report-${qualityReport.sessionId}.json`);
     
     // Exit with appropriate status
     if (qualityReport.summary.critical > 0) {

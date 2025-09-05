@@ -10,15 +10,14 @@ function analyzeBundle() {
   try {
     // Run Next.js bundle analyzer
     console.log('🔍 Analyzing bundle size...');
-    execSync('npx @next/bundle-analyzer', { stdio: 'inherit' });
+    execSync('npx @next/bundle-analyzer', { "stdio": 'inherit' });
     
     // Generate bundle report
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         bundleSize: 'Check bundle-analyzer output',
-        recommendations: [
-          'Use dynamic imports for large components',
+        "recommendations": ['Use dynamic imports for large components',
           'Implement code splitting',
           'Optimize images and assets',
           'Remove unused dependencies',
@@ -29,7 +28,7 @@ function analyzeBundle() {
     
     fs.writeFileSync('bundle-analysis-report.json', JSON.stringify(report, null, 2));
     console.log('📄 Bundle analysis report saved to bundle-analysis-report.json')} catch (error) {
-    console.error('❌ Bundle analysis failed:', error.message)}
+    console.error('❌ Bundle analysis "failed": ', error.message)}
 }
 
 analyzeBundle();

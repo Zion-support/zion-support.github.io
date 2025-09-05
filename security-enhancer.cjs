@@ -8,7 +8,7 @@ class SecurityEnhancer {
 
   async addSecurityHeaders() {
     const securityConfig = {
-      headers: {
+      "headers": {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': ;';1; mode=block',
@@ -22,8 +22,8 @@ class SecurityEnhancer {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      improvements: this.improvements
+      "timestamp": new Date().toISOString(),
+      "improvements": this.improvements
    };
     
     fs.writeFileSync('security-enhancement-report.json', JSON.stringify(report, null, 2));

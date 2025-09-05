@@ -11,9 +11,9 @@ class WorkingAutomationSuite {
     this.startTime = Date.now();
     this.projectRoot = process.cwd();
     this.results = {
-      success: [],
-      errors: [],
-      warnings: []
+      "success": [],
+      "errors": [],
+      "warnings": []
     }}
 
   log(message, type = 'info') {
@@ -23,25 +23,24 @@ class WorkingAutomationSuite {
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`"Running": ${description}`);
       const result = execSync(command, { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        timeout: 300000 
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "timeout": 300000 
       });
       this.results.success.push(`${description} completed successfully`);
       this.log(`${description} completed successfully`, 'success');
-      return { success: true, output: result }} catch (error) {
-      this.results.errors.push(`${description} failed: ${error.message}`);
-      this.log(`${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message }}
+      return { "success": true, "output": result }} catch (error) {
+      this.results.errors.push(`${description} "failed": ${error.message}`);
+      this.log(`${description} "failed": ${error.message}`, 'error');
+      return { "success": false, "error": error.message }}
   }
 
   async runLinting() {
     this.log('🔍 Running linting checks...');
-    const lintCommands = [
-      { cmd: 'npm run lint', desc: 'ESLint Check' },
-      { cmd: 'npm run type-check', desc: 'TypeScript Check' }
+    const lintCommands = [{ "cmd": 'npm run lint', "desc": 'ESLint Check' },
+      { "cmd": 'npm run type-check', "desc": 'TypeScript Check' }
     ];
 
     for (const { cmd, desc } of lintCommands) {
@@ -63,17 +62,16 @@ class WorkingAutomationSuite {
   async generateReport() {
     this.log('📊 Generating automation report...');
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": Date.now() - this.startTime,
+      "summary": {
         total: this.results.success.length + this.results.errors.length + this.results.warnings.length,
-        successful: this.results.success.length,
-        errors: this.results.errors.length,
-        warnings: this.results.warnings.length
+        "successful": this.results.success.length,
+        "errors": this.results.errors.length,
+        "warnings": this.results.warnings.length
       },
-      results: this.results,
-      recommendations: [
-        'Review and fix any failed operations',
+      "results": this.results,
+      "recommendations": ['Review and fix any failed operations',
         'Run automation suite regularly',
         'Monitor application performance',
         'Keep dependencies updated'
@@ -82,7 +80,7 @@ class WorkingAutomationSuite {
 
     const reportPath = path.join(this.projectRoot, 'automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Report saved to: ${reportPath}`, 'success');
+    this.log(`Report saved "to": ${reportPath}`, 'success');
     return report}
 
   async runAll() {
@@ -97,13 +95,13 @@ class WorkingAutomationSuite {
       const report = await this.generateReport();
       
       this.log('🎉 Automation suite completed!');
-      this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} operations successful`);
+      this.log(`📊 "Summary": ${report.summary.successful}/${report.summary.total} operations successful`);
       
       if (report.summary.errors > 0) {
         this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`)}
       
     } catch (error) {
-      this.log(`❌ Automation suite failed: ${error.message}`, 'error');
+      this.log(`❌ Automation suite "failed": ${error.message}`, 'error');
       process.exit(1)}
   }
 }

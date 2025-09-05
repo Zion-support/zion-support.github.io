@@ -15,78 +15,78 @@ class TypeScriptFixer {
 
   async createTypeDeclarations() {
   this.log("📝 Creating comprehensive type declarations...");
-    const typeDeclarations = `// Global type declarations;
+    const typeDeclarations = `// Global type declarations
 declare module "*.svg" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.png" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.jpg" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.jpeg" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.gif" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.webp" {
   const content: string;
-  export default content,
+  export default content;
 }
 
 declare module "*.css" {
-  const content: { [className: string]: string }
-  export default content,
+  const content: { [className: string]: string };
+  export default content;
 }
 
 declare module "*.scss" {
-  const content: { [className: string]: string }
-  export default content,
+  const content: { [className: string]: string };
+  export default content;
 }
 
 declare module "*.module.css" {
-  const content: { [className: string]: string }
-  export default content,
+  const content: { [className: string]: string };
+  export default content;
 }
 
 declare module "*.module.scss" {
-  const content: { [className: string]: string }
-  export default content,
+  const content: { [className: string]: string };
+  export default content;
 }
 
-// Next.js specific types;
+// Next.js specific types
 declare namespace NodeJS {
   interface ProcessEnv {
-  NODE_ENV: "development" | "production" | "test";
+    NODE_ENV: "development" | "production" | "test";
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string,
-}
+    SUPABASE_SERVICE_ROLE_KEY?: string;
+  }
 }
 
-// Global window extensions;
+// Global window extensions
 declare global {
   interface Window {
-  gtag?: (...args: any[]) => void,
-}
+    gtag?: (...args: any[]) => void;
+  }
 }
 
-export {};`;
+export {};";
     const typesDir = path.join(this.projectRoot, "types");
     if (!fs.existsSync(typesDir)) {
-  fs.mkdirSync(typesDir, { recursive: true })}
+  fs.mkdirSync(typesDir, { "recursive": true })}
 
     const globalTypesPath = path.join(typesDir, "global.d.ts");
     fs.writeFileSync(globalTypesPath, typeDeclarations);
@@ -96,42 +96,38 @@ export {};`;
   async fixTsConfig() {
   this.log("⚙️  Fixing tsconfig.json...");
     const tsConfig = {
-  compilerOptions: {
+  "compilerOptions": {
   target: "ES2020",
-        lib: ["dom", "dom.iterable", "es6"],
-        allowJs: true,
-        skipLibCheck: true,
-        strict: true,
-        forceConsistentCasingInFileNames: true,
-        noEmit: true,
-        esModuleInterop: true,
-        module: "esnext",
-        moduleResolution: "node",
-        resolveJsonModule: true,
-        isolatedModules: true,
-        jsx: "preserve",
-        incremental: true,
-        plugins: [
-  {
-  name: "next",
-}
+        "lib": ["dom", "dom.iterable", "es6"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [{
+  name: "next"}
         ],
-        baseUrl: ".",
-        paths: {
+        "baseUrl": ".",
+        "paths": {
   "@/*": ["./*"],
           "@/components/*": ["./components/*"],
           "@/utils/*": ["./utils/*"],
           "@/hooks/*": ["./hooks/*"],
           "@/types/*": ["./types/*"]}
       },
-      include: [
-  "next-env.d.ts",
+      "include": ["next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
         "types/**/*.d.ts"],
-      exclude: [
-  "node_modules"]}
+      "exclude": ["node_modules"]}
     const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
     this.fixes.push("Fixed tsconfig.json configuration");
@@ -139,8 +135,7 @@ export {};`;
 
   async fixCommonTypeErrors() {
   this.log("🔧 Fixing common TypeScript errors...");
-    const filesToFix = [
-  "components",
+    const filesToFix = ["components",
       "pages",
       "utils",
       "hooks"];
@@ -173,42 +168,36 @@ export {};`;
           /import React from "react"/g,
           "import React from \"react\"";
         );
-        modified = true,
-}
+        modified = true}
 
       // Add missing React import for JSX;
       if (content.includes("<") && content.includes(">") && !content.includes("import React")) {
   if (!content.includes("import React")) {
   content = "import React from \"react\";\\n" + content;
-          modified = true,
-}
+          modified = true}
       }
 
       // Fix any type issues;
       if (content.includes(": any")) {
   content = content.replace(/: any/g, ": unknown");
-        modified = true,
-}
+        modified = true}
 
       // Remove unused imports (basic cleanup);
       const lines = content.split("\\n");
       const cleanedLines = lines.filter(line => {
   // Remove empty import statements;
         if (line.trim().startsWith("import") && line.trim().endsWith(";") && line.includes("{}")) {
-  return false,
-}
-        return true,
-});
+  return false}
+        return true});
       if (cleanedLines.length !== lines.length) {
   content = cleanedLines.join("\\n");
-        modified = true,
-}
+        modified = true}
 
       if (modified) {
-  fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`)}
-      ,
-} catch (error) {
+        fs.writeFileSync(filePath, content);
+        this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
+      }
+    } catch (error) {
   this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN")}
   }
 
@@ -216,17 +205,14 @@ export {};`;
   this.log("🔍 Running TypeScript type check...");
     try {
   execSync("npx tsc --noEmit", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
       this.fixes.push("TypeScript type check passed");
       this.log("✅ TypeScript type check passed");
-      return true,
-} catch (error) {
-  this.log(`❌ TypeScript type check failed: ${error.message}`, "ERROR");
+      return true} catch (error) {
+  this.log(`❌ TypeScript type check "failed": ${error.message}`, "ERROR");
       this.errors.push(error.message);
-      return false,
-}
+      return false}
   }
 
   async run() {
@@ -239,21 +225,20 @@ export {};`;
       await this.runTypeCheck();
       this.log("\\n📊 TYPESCRIPT FIXING REPORT");
       this.log("======");
-      this.log(`Fixes Applied: ${this.fixes.length}`);
-      this.log(`Errors Found: ${this.errors.length}`);
+      this.log(`Fixes "Applied": ${this.fixes.length}`);
+      this.log(`Errors "Found": ${this.errors.length}`);
       if (this.fixes.length > 0) {
-  this.log("\\n✅ Fixes Applied:");
+  this.log("\\n✅ Fixes "Applied": ");
         this.fixes.forEach((fix, index) => {
   this.log(`  ${index + 1}. ${fix}`)})}
 
       if (this.errors.length > 0) {
-  this.log("\\n❌ Errors:");
+  this.log("\\n❌ "Errors": ");
         this.errors.forEach((error, index) => {
   this.log(`  ${index + 1}. ${error}`)})}
 
-      this.log("\\n🎉 TypeScript fixing completed!"),
-} catch (error) {
-  this.log(`💥 Fatal error: ${error.message}`, "ERROR");
+      this.log("\\n🎉 TypeScript fixing completed!")} catch (error) {
+  this.log(`💥 Fatal "error": ${error.message}`, "ERROR");
       process.exit(1)}
   }
 }

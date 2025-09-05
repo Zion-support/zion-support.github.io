@@ -6,55 +6,53 @@ const path = require('path');
 console.log('🔧 Fixing String Quote Issues...');
 console.log('================================');
 
-const filesToFix = [
-  'pages/api/docs.ts',
+const filesToFix = ['pages/api/docs.ts',
   'pages/api/health.ts', 
   'components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'pages/docs/api-quick-start.tsx'
 ];
 
-const fixes = [
-  // Fix malformed string types in interfaces
+const fixes = [// Fix malformed string types in interfaces
   {
-    pattern: /(\w+):\s*'string;/g,
-    replacement: '$1: string;'
+    "pattern": /(\w+):\s*'string;/g,
+    "replacement": '$1: string;'
   },
   {
-    pattern: /(\w+):\s*'ReactNode;/g,
-    replacement: '$1: ReactNode;'
+    "pattern": /(\w+):\s*'ReactNode;/g,
+    "replacement": '$1: ReactNode;'
   },
   {
-    pattern: /(\w+):\s*'boolean;/g,
-    replacement: '$1: boolean;'
+    "pattern": /(\w+):\s*'boolean;/g,
+    "replacement": '$1: boolean;'
   },
   {
-    pattern: /(\w+):\s*'number;/g,
-    replacement: '$1: number;'
+    "pattern": /(\w+):\s*'number;/g,
+    "replacement": '$1: number;'
   },
   // Fix malformed closing braces
   {
-    pattern: /;\s*'\s*}\s*}/g,
-    replacement: ';\n}'
+    "pattern": /;\s*'\s*}\s*}/g,
+    "replacement": ';\n}'
   },
   // Fix malformed string literals in JSX
   {
-    pattern: /`([^`]*?)\$\{([^}]*?)\}([^`]*?)`\s*`}/g,
-    replacement: '`$1${$2}$3`'
+    "pattern": /"([^"]*?)\$\{([^}]*?)\}([^"]*?)"\s*"}/g,
+    "replacement": '"$1${$2}$3"'
   },
   // Fix broken template literals
   {
-    pattern: /`([^`]*?)\\\\`\s*([^`]*?)`/g,
-    replacement: '`$1\\\\\n  $2`'
+    "pattern": /"([^"]*?)\\\\"\s*([^"]*?)"/g,
+    "replacement": '"$1\\\\\n  $2"'
   }
 ];
 
 filesToFix.forEach(filePath => {
   try {
-    console.log(`\n🔍 Fixing: ${filePath}`);
+    console.log(`\n🔍 "Fixing": ${filePath}`);
     
     if (!fs.existsSync(filePath)) {
-      console.log(`   ⚠️  File not found: ${filePath}`);
+      console.log(`   ⚠️  File not "found": ${filePath}`);
       return}
     
     let content = fs.readFileSync(filePath, 'utf8');

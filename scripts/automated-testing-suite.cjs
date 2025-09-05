@@ -12,95 +12,82 @@ function createUnitTestTemplates() {
   
   const testDir = path.join(process.cwd(), '__tests__;';);
   if () {
-    fs.mkdirSync(testDir, { recursive: true })}
+    fs.mkdirSync(testDir, { "recursive": true })}
 
   // Create test configuration
-  const jestConfig = `module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-  },
-  collectCoverageFrom: [
-    'pages/**/*.{js,jsx,ts,tsx}',
+  const jestConfig = "module.exports = {
+  "testEnvironment": 'jsdom',
+  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
+  "moduleNameMapping": {
+    '^@/(.*)$': '<rootDir>/$1'},
+  "collectCoverageFrom": ['pages/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**'],
-  coverageThreshold: {
+  "coverageThreshold": {
     global: {
       branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },) {
+      "functions": 70,
+      "lines": 70,
+      "statements": 70}}) {
     ) {
-    fs.mkdirSync(testDir, { recursive: true })}
+    fs.mkdirSync(testDir, { "recursive": true })}
 
   // Create test configuration
-  const jestConfig = `module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-  },
-  collectCoverageFrom: [
-    'pages/**/*.{js,jsx,ts,tsx}',
+  const jestConfig = "module.exports = {
+  "testEnvironment": 'jsdom',
+  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
+  "moduleNameMapping": {
+    '^@/(.*)$': '<rootDir>/$1'},
+  "collectCoverageFrom": ['pages/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**'],
-  coverageThreshold: {
+  "coverageThreshold": {
     global: {
       branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },
-  }
+      "functions": 70,
+      "lines": 70,
+      "statements": 70}}}
 };
-`;
+";
 
   fs.writeFileSync('jest.config.js', jestConfig);
 
   // Create Jest setup file
-  const jestSetup = `import '@testing-library/jest-do;m;';
+  const jestSetup = "import '@testing-library/jest-do;m;';
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
     return {;
-      route: '/',
-      pathname: '/',
-      query: {},
-      asPath: '/',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
-      events: {
+      "route": '/',
+      "pathname": '/',
+      "query": {},
+      "asPath": '/',
+      "push": jest.fn(),
+      "pop": jest.fn(),
+      "reload": jest.fn(),
+      "back": jest.fn(),
+      "prefetch": jest.fn().mockResolvedValue(undefined),
+      "beforePopState": jest.fn(),
+      "events": {
         on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-    }},
-}));
+        "off": jest.fn(),
+        "emit": jest.fn()}}}}));
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
+  "__esModule": true,
+  "default": (props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />},
-}));
-`;
+    return <img {...props} />}}));
+";
 
   fs.writeFileSync('jest.setup.js', jestSetup);
 
   // Create component test template
-  const componentTestTemplate = `import React from 'reac;t;';
+  const componentTestTemplate = "import React from 'reac;t;';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -119,12 +106,12 @@ describe('ComponentName', () => {
   it('displays correct content', () => {
     // Test content display
   })});
-`;
+";
 
   fs.writeFileSync('__tests__/component.test.tsx', componentTestTemplate);
 
   // Create page test template
-  const pageTestTemplate = `import React from 'reac;t;';
+  const pageTestTemplate = "import React from 'reac;t;';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -143,7 +130,7 @@ describe('HomePage', () => {
   it('shows hero section', () => {
     // Test hero section
   })});
-`;
+";
 
   fs.writeFileSync('__tests__/page.test.tsx', pageTestTemplate);
 
@@ -155,22 +142,21 @@ function createIntegrationTestTemplates() {
   
   const integrationTestDir = path.join(process.cwd(), '__tests__/integration;';);
   if () {
-    fs.mkdirSync(integrationTestDir, { recursive: true })}
+    fs.mkdirSync(integrationTestDir, { "recursive": true })}
 
   // Create API test template
-  const apiTestTemplate = \`import { createMocks } from 'node-mocks-htt) {
+  const apiTestTemplate = \"import { createMocks } from 'node-mocks-htt) {
     ) {
-    fs.mkdirSync(integrationTestDir, { recursive: true })}
+    fs.mkdirSync(integrationTestDir, { "recursive": true })}
 
   // Create API test template
-  const apiTestTemplate = \`import { createMocks } from 'node-mocks-htt}p;';
+  const apiTestTemplate = \"import { createMocks } from 'node-mocks-htt}p;';
 import handler from '../../pages/api/example';
 
 describe('/api/example', () => {
   it('should return 200 status', async () => {;
     const { req, res } = createMocks({
-      method: 'GET',
-    });
+      "method": 'GET'});
 
     await handler(req, res);
 
@@ -178,21 +164,19 @@ describe('/api/example', () => {
 
   it('should handle POST requests', async () => {
     const { req, res } = createMocks({
-      method: 'POST',
-      body: {
-        data: 'test',
-      },
-    });
+      "method": 'POST',
+      "body": {
+        data: 'test'}});
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(200)})});
-`;
+";
 
   fs.writeFileSync('__tests__/integration/api.test.ts', apiTestTemplate);
 
   // Create E2E test template
-  const e2eTestTemplate = \`import { test, expect } from '@playwright/tes;t;';
+  const e2eTestTemplate = \"import { test, expect } from '@playwright/tes;t;';
 
 test.describe('Homepage', () => {
   test('should load homepage successfully', async ({ page }) => {
@@ -216,7 +200,7 @@ test.describe('Homepage', () => {
     // Check if we're on the services page
     await expect(page).toHaveURL('/services');
     await expect(page.locator('h1')).toContainText('Services')})});
-`;
+";
 
   fs.writeFileSync('__tests__/integration/e2e.spec.ts', e2eTestTemplate);
 
@@ -224,7 +208,7 @@ test.describe('Homepage', () => {
 
 // Function to create test automation script
 function createTestAutomationScript() {
-  const testAutomationScript = \`#!/usr/bin/env node
+  const testAutomationScript = \"#!/usr/bin/env node
 
 const { execSync } = require('child_process';);
 const fs = require('fs')
@@ -234,28 +218,28 @@ console.log('🚀 Starting Test Automation...');
 function runTests() {
   try {
     console.log('🧪 Running unit tests...');
-    execSync('npm test -- --coverage --watchAll=false', { stdio: 'inherit' });
+    execSync('npm test -- --coverage --watchAll=false', { "stdio": 'inherit' });
     
     console.log('🔗 Running integration tests...');
-    execSync('npm run test:integration', { stdio: 'inherit' });
+    execSync('npm run "test": integration', { "stdio": 'inherit' });
     
     console.log('🌐 Running E2E tests...');
-    execSync('npx playwright test', { stdio: 'inherit' });
+    execSync('npx playwright test', { "stdio": 'inherit' });
     
     console.log('✅ All tests passed!')} catch (error) {
-    console.error('❌ Tests failed:', error.message);
+    console.error('❌ Tests "failed": ', error.message);
     process.exit(1)}
 }
 
 function generateTestReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    testResults: {
+    "timestamp": new Date().toISOString(),
+    "testResults": {
       unit: 'Check coverage report',
-      integration: 'Check integration test results',
-      e2e: 'Check E2E test results'
+      "integration": 'Check integration test results',
+      "e2e": 'Check E2E test results'
     },
-    coverage: 'Check coverage/lcov-report/index.html'
+    "coverage": 'Check coverage/lcov-report/index.html'
  };
   
   fs.writeFileSync('test-automation-report.json', JSON.stringify(report, null, 2));
@@ -263,7 +247,7 @@ function generateTestReport() {
 
 runTests();
 generateTestReport();
-`;
+";
 
   fs.writeFileSync('scripts/run-all-tests.cjs', testAutomationScript);
   console.log('✅ Test automation script created')}
@@ -282,11 +266,11 @@ function updatePackageJson() {
     packageJson.scripts = {
       ...packageJson.scripts,
       'test': 'jest',
-      'test:watch': 'jest --watch',
-      'test:coverage': 'jest --coverage',
-      'test:integration': 'jest --testPathPattern=integration',
-      'test:e2e': 'playwright test',
-      'test:all': 'node scripts/run-all-tests.cjs'
+      '"test": watch': 'jest --watch',
+      '"test": coverage': 'jest --coverage',
+      '"test": integration': 'jest --testPathPattern=integration',
+      '"test": e2e': 'playwright test',
+      '"test": all': 'node scripts/run-all-tests.cjs'
     };
     
     // Add test dependencies
@@ -308,21 +292,19 @@ function updatePackageJson() {
 // Function to generate testing report
 function generateTestingReport() {
   const report = {
-    timestamp: new Date().toISOString(),
-    testingSuite: {
+    "timestamp": new Date().toISOString(),
+    "testingSuite": {
       unitTests: 'Jest configuration and component test templates',
-      integrationTests: 'API and E2E test templates',
-      testAutomation: 'Automated test runner script',
-      coverage: 'Code coverage configuration'
+      "integrationTests": 'API and E2E test templates',
+      "testAutomation": 'Automated test runner script',
+      "coverage": 'Code coverage configuration'
     },
-    testTypes: [
-      'Unit tests for components and utilities',
+    "testTypes": ['Unit tests for components and utilities',
       'Integration tests for API endpoints',
       'E2E tests for user workflows',
       'Performance tests for Core Web Vitals'
     ],
-    nextSteps: [
-      'Install test dependencies: npm install',
+    "nextSteps": ['Install test dependencies: npm install',
       'Write unit tests for existing components',
       'Create integration tests for API endpoints',
       'Set up E2E tests for critical user flows',
@@ -342,7 +324,7 @@ try {
   generateTestingReport();
   
   console.log('🎉 Automated testing suite created successfully!');
-  console.log('📋 Testing infrastructure created:');
+  console.log('📋 Testing infrastructure "created": ');
   console.log('   ✅ Jest configuration and setup');
   console.log('   ✅ Unit test templates');
   console.log('   ✅ Integration test templates');
@@ -355,5 +337,5 @@ try {
   console.log('   2. Write tests for existing components');
   console.log('   3. Run: npm test');
   console.log('   4. Set up CI/CD pipeline')} catch (error) {
-  console.error('❌ Automated testing suite creation failed:', error.message);
+  console.error('❌ Automated testing suite creation "failed": ', error.message);
   process.exit(1)}

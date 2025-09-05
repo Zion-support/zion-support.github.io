@@ -6,7 +6,8 @@
     "importErrorsFixed": 0,
     "jsxErrorsFixed": 0,
     "dependencyErrorsFixed": 0,
-    "configurationErrorsFixed": 0},
+    "configurationErrorsFixed": 0
+  },
   "details": [],
   "recommendations": [
     "TypeScript errors still exist - manual review may be needed",

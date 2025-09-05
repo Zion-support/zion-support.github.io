@@ -19,12 +19,12 @@ class HealthDashboard {
     this.port = parseInt(process.env.DASHBOARD_PORT) || 3001;
     
     this.dashboardData = {
-      timestamp: null,
-      processes: [],
-      system: {},
-      alerts: [],
-      metrics: {},
-      healthScore: 0
+      "timestamp": null,
+      "processes": [],
+      "system": {},
+      "alerts": [],
+      "metrics": {},
+      "healthScore": 0
     };
     
     this.server = null;
@@ -33,7 +33,7 @@ class HealthDashboard {
 
   async ensureLogsDirectory() {
     try {
-      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Logs directory already exists');
     }
@@ -53,7 +53,7 @@ class HealthDashboard {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          this.log(`❌ Failed to connect to PM2: ${err.message}`, 'ERROR');
+          this.log(`❌ Failed to connect to "PM2": ${err.message}`, 'ERROR');
           reject(err);
           return;
         }
@@ -87,19 +87,19 @@ class HealthDashboard {
       const alerts = await this.getActiveAlerts();
       
       this.dashboardData = {
-        timestamp: new Date().toISOString(),
-        processes: processes.map(process => this.formatProcessData(process)),
-        system: systemMetrics,
-        alerts: alerts,
-        metrics: await this.calculateMetrics(processes, systemMetrics),
-        healthScore: await this.calculateHealthScore(processes, systemMetrics)
+        "timestamp": new Date().toISOString(),
+        "processes": processes.map(process => this.formatProcessData(process)),
+        "system": systemMetrics,
+        "alerts": alerts,
+        "metrics": await this.calculateMetrics(processes, systemMetrics),
+        "healthScore": await this.calculateHealthScore(processes, systemMetrics)
       };
       
       await this.saveDashboardData();
-      this.log(`📊 Dashboard updated: ${processes.length} processes, Health Score: ${this.dashboardData.healthScore}`);
+      this.log(`📊 Dashboard "updated": ${processes.length} processes, Health "Score": ${this.dashboardData.healthScore}`);
       
     } catch (error) {
-      this.log(`❌ Dashboard update failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Dashboard update "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -117,17 +117,17 @@ class HealthDashboard {
 
   formatProcessData(process) {
     return {
-      name: process.name,
-      status: process.pm2_env.status,
-      pid: process.pid,
-      memory: process.monit.memory || 0,
-      cpu: process.monit.cpu || 0,
-      uptime: process.pm2_env.pm_uptime,
-      restarts: process.pm2_env.restart_time || 0,
-      instances: process.pm2_env.instances || 1,
-      memoryFormatted: this.formatBytes(process.monit.memory || 0),
-      uptimeFormatted: this.formatUptime(process.pm2_env.pm_uptime),
-      healthStatus: this.getProcessHealthStatus(process)
+      "name": process.name,
+      "status": process.pm2_env.status,
+      "pid": process.pid,
+      "memory": process.monit.memory || 0,
+      "cpu": process.monit.cpu || 0,
+      "uptime": process.pm2_env.pm_uptime,
+      "restarts": process.pm2_env.restart_time || 0,
+      "instances": process.pm2_env.instances || 1,
+      "memoryFormatted": this.formatBytes(process.monit.memory || 0),
+      "uptimeFormatted": this.formatUptime(process.pm2_env.pm_uptime),
+      "healthStatus": this.getProcessHealthStatus(process)
     };
   }
 
@@ -137,22 +137,22 @@ class HealthDashboard {
     const restarts = process.pm2_env.restart_time || 0;
     
     if (process.pm2_env.status !== 'online') {
-      return { status: 'offline', color: 'red', message: 'Process is offline' };
+      return { "status": 'offline', "color": 'red', "message": 'Process is offline' };
     }
     
     if (restarts > 5) {
-      return { status: 'unstable', color: 'orange', message: 'High restart count' };
+      return { "status": 'unstable', "color": 'orange', "message": 'High restart count' };
     }
     
     if (memory > 1024 * 1024 * 1024) { // 1GB
-      return { status: 'warning', color: 'yellow', message: 'High memory usage' };
+      return { "status": 'warning', "color": 'yellow', "message": 'High memory usage' };
     }
     
     if (cpu > 90) {
-      return { status: 'warning', color: 'yellow', message: 'High CPU usage' };
+      return { "status": 'warning', "color": 'yellow', "message": 'High CPU usage' };
     }
     
-    return { status: 'healthy', color: 'green', message: 'Process is healthy' };
+    return { "status": 'healthy', "color": 'green', "message": 'Process is healthy' };
   }
 
   async getSystemMetrics() {
@@ -167,66 +167,66 @@ class HealthDashboard {
         cpu,
         disk,
         load,
-        timestamp: new Date().toISOString()
+        "timestamp": new Date().toISOString()
       };
     } catch (error) {
-      this.log(`❌ Failed to get system metrics: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to get system "metrics": ${error.message}`, 'ERROR');
       return {};
     }
   }
 
   async getMemoryInfo() {
     try {
-      const result = execSync('free -m', { encoding: 'utf8' });
+      const result = execSync('free -m', { "encoding": 'utf8' });
       const lines = result.split('\n');
       const memLine = lines[1].split(/\s+/);
       
       return {
-        total: parseInt(memLine[1]),
-        used: parseInt(memLine[2]),
-        free: parseInt(memLine[3]),
-        available: parseInt(memLine[6]) || parseInt(memLine[3]),
-        usagePercent: Math.round((parseInt(memLine[2]) / parseInt(memLine[1])) * 100)
+        "total": parseInt(memLine[1]),
+        "used": parseInt(memLine[2]),
+        "free": parseInt(memLine[3]),
+        "available": parseInt(memLine[6]) || parseInt(memLine[3]),
+        "usagePercent": Math.round((parseInt(memLine[2]) / parseInt(memLine[1])) * 100)
       };
     } catch (error) {
-      return { total: 0, used: 0, free: 0, available: 0, usagePercent: 0 };
+      return { "total": 0, "used": 0, "free": 0, "available": 0, "usagePercent": 0 };
     }
   }
 
   async getCPUInfo() {
     try {
-      const result = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+      const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding": 'utf8' });
       const cpuMatch = result.match(/(\d+\.\d+)%us/);
       return {
-        usage: cpuMatch ? parseFloat(cpuMatch[1]) : 0,
-        cores: require('os').cpus().length
+        "usage": cpuMatch ? parseFloat(cpuMatch[1]) : 0,
+        "cores": require('os').cpus().length
       };
     } catch (error) {
-      return { usage: 0, cores: 0 };
+      return { "usage": 0, "cores": 0 };
     }
   }
 
   async getDiskInfo() {
     try {
-      const result = execSync('df -h /', { encoding: 'utf8' });
+      const result = execSync('df -h /', { "encoding": 'utf8' });
       const lines = result.split('\n');
       const diskLine = lines[1].split(/\s+/);
       
       return {
-        total: diskLine[1],
-        used: diskLine[2],
-        available: diskLine[3],
-        usagePercent: parseInt(diskLine[4].replace('%', ''))
+        "total": diskLine[1],
+        "used": diskLine[2],
+        "available": diskLine[3],
+        "usagePercent": parseInt(diskLine[4].replace('%', ''))
       };
     } catch (error) {
-      return { total: '0', used: '0', available: '0', usagePercent: 0 };
+      return { "total": '0', "used": '0', "available": '0', "usagePercent": 0 };
     }
   }
 
   async getLoadAverage() {
     try {
-      const result = execSync('uptime', { encoding: 'utf8' });
-      const loadMatch = result.match(/load average: ([\d.]+), ([\d.]+), ([\d.]+)/);
+      const result = execSync('uptime', { "encoding": 'utf8' });
+      const loadMatch = result.match(/load "average": ([\d.]+), ([\d.]+), ([\d.]+)/);
       return loadMatch ? {
         '1min': parseFloat(loadMatch[1]),
         '5min': parseFloat(loadMatch[2]),
@@ -254,17 +254,17 @@ class HealthDashboard {
     const totalRestarts = onlineProcesses.reduce((sum, p) => sum + (p.pm2_env.restart_time || 0), 0);
     
     return {
-      totalProcesses: processes.length,
-      onlineProcesses: onlineProcesses.length,
-      offlineProcesses: processes.length - onlineProcesses.length,
-      totalMemory: this.formatBytes(totalMemory),
-      totalCPU: Math.round(totalCPU * 100) / 100,
+      "totalProcesses": processes.length,
+      "onlineProcesses": onlineProcesses.length,
+      "offlineProcesses": processes.length - onlineProcesses.length,
+      "totalMemory": this.formatBytes(totalMemory),
+      "totalCPU": Math.round(totalCPU * 100) / 100,
       totalRestarts,
-      averageMemory: this.formatBytes(totalMemory / onlineProcesses.length || 0),
-      averageCPU: Math.round((totalCPU / onlineProcesses.length || 0) * 100) / 100,
-      systemMemoryUsage: systemMetrics.memory?.usagePercent || 0,
-      systemCPUUsage: systemMetrics.cpu?.usage || 0,
-      systemDiskUsage: systemMetrics.disk?.usagePercent || 0
+      "averageMemory": this.formatBytes(totalMemory / onlineProcesses.length || 0),
+      "averageCPU": Math.round((totalCPU / onlineProcesses.length || 0) * 100) / 100,
+      "systemMemoryUsage": systemMetrics.memory?.usagePercent || 0,
+      "systemCPUUsage": systemMetrics.cpu?.usage || 0,
+      "systemDiskUsage": systemMetrics.disk?.usagePercent || 0
     };
   }
 
@@ -326,35 +326,35 @@ class HealthDashboard {
     try {
       await fs.writeFile(this.dashboardFile, JSON.stringify(this.dashboardData, null, 2));
     } catch (error) {
-      this.log(`❌ Failed to save dashboard data: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to save dashboard "data": ${error.message}`, 'ERROR');
     }
   }
 
   async generateHealthReport() {
     try {
       const report = {
-        timestamp: new Date().toISOString(),
-        summary: {
+        "timestamp": new Date().toISOString(),
+        "summary": {
           healthScore: this.dashboardData.healthScore,
-          totalProcesses: this.dashboardData.metrics.totalProcesses,
-          onlineProcesses: this.dashboardData.metrics.onlineProcesses,
-          systemHealth: this.getSystemHealthStatus()
+          "totalProcesses": this.dashboardData.metrics.totalProcesses,
+          "onlineProcesses": this.dashboardData.metrics.onlineProcesses,
+          "systemHealth": this.getSystemHealthStatus()
         },
-        processes: this.dashboardData.processes.map(p => ({
+        "processes": this.dashboardData.processes.map(p => ({
           name: p.name,
-          status: p.status,
-          healthStatus: p.healthStatus.status,
-          memory: p.memoryFormatted,
-          cpu: p.cpu,
-          uptime: p.uptimeFormatted
+          "status": p.status,
+          "healthStatus": p.healthStatus.status,
+          "memory": p.memoryFormatted,
+          "cpu": p.cpu,
+          "uptime": p.uptimeFormatted
         })),
-        system: {
+        "system": {
           memory: this.dashboardData.system.memory,
-          cpu: this.dashboardData.system.cpu,
-          disk: this.dashboardData.system.disk
+          "cpu": this.dashboardData.system.cpu,
+          "disk": this.dashboardData.system.disk
         },
-        alerts: this.dashboardData.alerts,
-        recommendations: this.generateRecommendations()
+        "alerts": this.dashboardData.alerts,
+        "recommendations": this.generateRecommendations()
       };
       
       const reportFile = path.join(this.projectRoot, 'logs', 'health-report.json');
@@ -363,7 +363,7 @@ class HealthDashboard {
       this.log('📊 Health report generated and saved');
       
     } catch (error) {
-      this.log(`❌ Health report generation failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Health report generation "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -383,41 +383,41 @@ class HealthDashboard {
     
     if (metrics.offlineProcesses > 0) {
       recommendations.push({
-        type: 'critical',
-        message: `${metrics.offlineProcesses} processes are offline`,
-        action: 'Check process logs and restart failed processes'
+        "type": 'critical',
+        "message": `${metrics.offlineProcesses} processes are offline`,
+        "action": 'Check process logs and restart failed processes'
       });
     }
     
     if (metrics.systemMemoryUsage > 90) {
       recommendations.push({
-        type: 'warning',
-        message: 'System memory usage is very high',
-        action: 'Consider scaling down or optimizing memory usage'
+        "type": 'warning',
+        "message": 'System memory usage is very high',
+        "action": 'Consider scaling down or optimizing memory usage'
       });
     }
     
     if (metrics.systemCPUUsage > 90) {
       recommendations.push({
-        type: 'warning',
-        message: 'System CPU usage is very high',
-        action: 'Consider scaling up or optimizing CPU usage'
+        "type": 'warning',
+        "message": 'System CPU usage is very high',
+        "action": 'Consider scaling up or optimizing CPU usage'
       });
     }
     
     if (metrics.totalRestarts > 10) {
       recommendations.push({
-        type: 'warning',
-        message: 'High number of process restarts detected',
-        action: 'Investigate and fix underlying issues'
+        "type": 'warning',
+        "message": 'High number of process restarts detected',
+        "action": 'Investigate and fix underlying issues'
       });
     }
     
     if (this.dashboardData.healthScore < 70) {
       recommendations.push({
-        type: 'info',
-        message: 'Overall system health is below optimal',
-        action: 'Review all recommendations and take corrective actions'
+        "type": 'info',
+        "message": 'Overall system health is below optimal',
+        "action": 'Review all recommendations and take corrective actions'
       });
     }
     
@@ -430,12 +430,12 @@ class HealthDashboard {
     });
     
     this.server.listen(this.port, () => {
-      this.log(`🌐 Health Dashboard running on http://localhost:${this.port}`);
+      this.log(`🌐 Health Dashboard running on "http": //localhost:${this.port}`);
     });
   }
 
   async handleRequest(req, res) {
-    const url = new URL(req.url, `http://${req.headers.host}`);
+    const url = new URL(req.url, `"http": //${req.headers.host}`);
     
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -461,20 +461,20 @@ class HealthDashboard {
         await this.handleDashboard(res);
       } else {
         res.writeHead(404, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Not found' }));
+        res.end(JSON.stringify({ "error": 'Not found' }));
       }
     } catch (error) {
       res.writeHead(500, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ error: error.message }));
+      res.end(JSON.stringify({ "error": error.message }));
     }
   }
 
   async handleHealthAPI(res) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
-      healthScore: this.dashboardData.healthScore,
-      status: this.getSystemHealthStatus(),
-      timestamp: this.dashboardData.timestamp
+      "healthScore": this.dashboardData.healthScore,
+      "status": this.getSystemHealthStatus(),
+      "timestamp": this.dashboardData.timestamp
     }));
   }
 
@@ -500,7 +500,7 @@ class HealthDashboard {
   }
 
   generateDashboardHTML() {
-    return `
+    return "
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -508,37 +508,37 @@ class HealthDashboard {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM2 Health Dashboard</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .health-score { font-size: 2em; font-weight: bold; margin: 10px 0; }
-        .score-excellent { color: #10b981; }
-        .score-good { color: #3b82f6; }
-        .score-fair { color: #f59e0b; }
-        .score-poor { color: #ef4444; }
-        .score-critical { color: #dc2626; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .card h3 { margin-bottom: 15px; color: #374151; }
-        .process-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
-        .process-item:last-child { border-bottom: none; }
-        .status { padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
-        .status-online { background: #d1fae5; color: #065f46; }
-        .status-offline { background: #fee2e2; color: #991b1b; }
-        .status-errored { background: #fef3c7; color: #92400e; }
-        .health-status { padding: 4px 8px; border-radius: 4px; font-size: 0.8em; }
-        .health-healthy { background: #d1fae5; color: #065f46; }
-        .health-warning { background: #fef3c7; color: #92400e; }
-        .health-unstable { background: #fed7aa; color: #9a3412; }
-        .health-offline { background: #fee2e2; color: #991b1b; }
-        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .metric { text-align: center; }
-        .metric-value { font-size: 1.5em; font-weight: bold; color: #374151; }
-        .metric-label { color: #6b7280; font-size: 0.9em; }
-        .refresh-btn { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
-        .refresh-btn:hover { background: #2563eb; }
-        .auto-refresh { margin-left: 10px; }
+        * { "margin": 0; padding: 0; box-sizing: border-box; }
+        body { font-"family": -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; "background": #f5f5f5; }
+        .container { max-"width": 1200px; margin: 0 auto; padding: 20px; }
+        .header { "background": white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .health-score { font-"size": 2em; font-weight: bold; margin: 10px 0; }
+        .score-excellent { "color": #10b981; }
+        .score-good { "color": #3b82f6; }
+        .score-fair { "color": #f59e0b; }
+        .score-poor { "color": #ef4444; }
+        .score-critical { "color": #dc2626; }
+        .grid { "display": grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); "gap": 20px; }
+        .card { "background": white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card h3 { margin-"bottom": 15px; color: #374151; }
+        .process-item { "display": flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+        .process-"item": last-child { border-bottom: none; }
+        .status { "padding": 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+        .status-online { "background": #d1fae5; color: #065f46; }
+        .status-offline { "background": #fee2e2; color: #991b1b; }
+        .status-errored { "background": #fef3c7; color: #92400e; }
+        .health-status { "padding": 4px 8px; border-radius: 4px; font-size: 0.8em; }
+        .health-healthy { "background": #d1fae5; color: #065f46; }
+        .health-warning { "background": #fef3c7; color: #92400e; }
+        .health-unstable { "background": #fed7aa; color: #9a3412; }
+        .health-offline { "background": #fee2e2; color: #991b1b; }
+        .metrics { "display": grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); "gap": 15px; }
+        .metric { text-"align": center; }
+        .metric-value { font-"size": 1.5em; font-weight: bold; color: #374151; }
+        .metric-label { "color": #6b7280; font-size: 0.9em; }
+        .refresh-btn { "background": #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+        .refresh-"btn": hover { background: #2563eb; }
+        .auto-refresh { margin-"left": 10px; }
     </style>
 </head>
 <body>
@@ -580,7 +580,7 @@ class HealthDashboard {
         
         function updateHealthScore(score) {
             const element = document.getElementById('healthScore');
-            element.textContent = \`Health Score: \${score}\`;
+            element.textContent = \"Health "Score": \${score}\";
             
             element.className = 'health-score';
             if (score >= 90) element.classList.add('score-excellent');
@@ -592,25 +592,25 @@ class HealthDashboard {
         
         function updateProcesses(processes) {
             const container = document.getElementById('processesList');
-            container.innerHTML = processes.map(p => \`
+            container.innerHTML = processes.map(p => \"
                 <div class="process-item">
                     <div>
                         <strong>\${p.name}</strong><br>
                         <span class="status status-\${p.status}">\${p.status}</span>
                         <span class="health-status health-\${p.healthStatus.status}">\${p.healthStatus.status}</span>
                     </div>
-                    <div style="text-align: right;">
+                    <div style="text-"align": right;">
                         <div>\${p.memoryFormatted}</div>
                         <div>\${p.cpu}% CPU</div>
                         <div>\${p.uptimeFormatted}</div>
                     </div>
                 </div>
-            \`).join('');
+            \").join('');
         }
         
         function updateSystemMetrics(system) {
             const container = document.getElementById('systemMetrics');
-            container.innerHTML = \`
+            container.innerHTML = \"
                 <div class="metric">
                     <div class="metric-value">\${system.memory?.usagePercent || 0}%</div>
                     <div class="metric-label">Memory Usage</div>
@@ -627,12 +627,12 @@ class HealthDashboard {
                     <div class="metric-value">\${system.load?.['1min'] || 0}</div>
                     <div class="metric-label">Load Average</div>
                 </div>
-            \`;
+            \";
         }
         
         function updateProcessMetrics(metrics) {
             const container = document.getElementById('processMetrics');
-            container.innerHTML = \`
+            container.innerHTML = \"
                 <div class="metric">
                     <div class="metric-value">\${metrics.onlineProcesses}/\${metrics.totalProcesses}</div>
                     <div class="metric-label">Online Processes</div>
@@ -649,33 +649,32 @@ class HealthDashboard {
                     <div class="metric-value">\${metrics.totalRestarts}</div>
                     <div class="metric-label">Total Restarts</div>
                 </div>
-            \`;
+            \";
         }
         
         function updateAlerts(alerts) {
             const container = document.getElementById('alertsList');
             if (alerts.length === 0) {
-                container.innerHTML = '<div style="color: #6b7280;">No recent alerts</div>';
+                container.innerHTML = '<div style=""color": #6b7280;">No recent alerts</div>';
                 return;
             }
             
-            container.innerHTML = alerts.map(alert => \`
+            container.innerHTML = alerts.map(alert => \"
                 <div class="process-item">
                     <div>
                         <strong>\${alert.type}</strong><br>
-                        <span style="color: #6b7280; font-size: 0.9em;">\${new Date(alert.timestamp).toLocaleString()}</span>
+                        <span style=""color": #6b7280; font-size: 0.9em;">\${new Date(alert.timestamp).toLocaleString()}</span>
                     </div>
-                    <div style="color: #6b7280; font-size: 0.9em;">
+                    <div style=""color": #6b7280; font-size: 0.9em;">
                         \${alert.data?.message || alert.message || 'Alert'}
                     </div>
                 </div>
-            \`).join('');
+            \").join('');
         }
         
         async function refreshData() {
             try {
-                const [healthRes, processesRes, systemRes, alertsRes] = await Promise.all([
-                    fetch('/api/health'),
+                const [healthRes, processesRes, systemRes, alertsRes] = await Promise.all([fetch('/api/health'),
                     fetch('/api/processes'),
                     fetch('/api/system'),
                     fetch('/api/alerts')
@@ -690,16 +689,16 @@ class HealthDashboard {
                 updateProcesses(processes);
                 updateSystemMetrics(system);
                 updateProcessMetrics({
-                    onlineProcesses: processes.filter(p => p.status === 'online').length,
-                    totalProcesses: processes.length,
-                    totalMemory: processes.reduce((sum, p) => sum + p.memory, 0),
-                    totalCPU: processes.reduce((sum, p) => sum + p.cpu, 0),
-                    totalRestarts: processes.reduce((sum, p) => sum + p.restarts, 0)
+                    "onlineProcesses": processes.filter(p => p.status === 'online').length,
+                    "totalProcesses": processes.length,
+                    "totalMemory": processes.reduce((sum, p) => sum + p.memory, 0),
+                    "totalCPU": processes.reduce((sum, p) => sum + p.cpu, 0),
+                    "totalRestarts": processes.reduce((sum, p) => sum + p.restarts, 0)
                 });
                 updateAlerts(alerts);
                 
             } catch (error) {
-                console.error('Failed to refresh data:', error);
+                console.error('Failed to refresh "data": ', error);
             }
         }
         
@@ -729,7 +728,7 @@ class HealthDashboard {
     </script>
 </body>
 </html>
-    `;
+    ";
   }
 
   async run() {
@@ -748,7 +747,7 @@ class HealthDashboard {
       });
       
     } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+      this.log(`❌ Fatal "error": ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }

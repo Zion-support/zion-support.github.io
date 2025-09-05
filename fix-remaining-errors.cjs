@@ -6,10 +6,10 @@ const path = require('path');
 // Function to fix remaining syntax errors
 function fixRemainingErrors(content) {
   // Fix incomplete object properties
-  content = content.replace(/(\w+):\s*$/gm, '$1: \'\'');
+  content = content.replace(/(\w+):\s*$/gm, '$"1": \'\'');
   
   // Fix missing commas in object literals
-  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: \'value\',\n    $2:');
+  content = content.replace(/(\w+):\s*['""][^'""]*['""]\s*\n\s*(\w+):/g, '$"1": \'value\',\n    $"2": ');
   
   // Fix missing semicolons after function declarations
   content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
@@ -21,7 +21,7 @@ function fixRemainingErrors(content) {
   content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n    $2');
   
   // Fix missing commas in function parameters
-  content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $2:');
+  content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2": ');
   
   return content}
 
@@ -33,9 +33,9 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`)}
+      console.log(""Fixed": ${filePath}")}
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)}
+    console.error("Error processing ${filePath}:`, error.message)}
 }
 
 // Function to recursively find and process files

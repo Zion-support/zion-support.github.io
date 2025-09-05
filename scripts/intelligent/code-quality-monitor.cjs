@@ -7,10 +7,10 @@ const path = require('path')
 class CodeQualityMonitor {
   constructor() {
     this.config = {
-      qualityCheckInterval: parseInt(process.env.QUALITY_CHECK_INTERVAL) || 7200000, // 2 hours
-      autoFixEnabled: process.env.AUTO_FIX_ENABLED === 'true',
-      qualityThreshold: parseFloat(process.env.QUALITY_THRESHOLD) || 0.8,
-      metricsEnabled: true
+      "qualityCheckInterval": parseInt(process.env.QUALITY_CHECK_INTERVAL) || 7200000, // 2 hours
+      "autoFixEnabled": process.env.AUTO_FIX_ENABLED === 'true',
+      "qualityThreshold": parseFloat(process.env.QUALITY_THRESHOLD) || 0.8,
+      "metricsEnabled": true
     };
     
     this.qualityMetrics = [];
@@ -27,12 +27,12 @@ class CodeQualityMonitor {
       await this.performInitialQualityCheck();
       this.startContinuousMonitoring();
       console.log('✅ Code Quality Monitor started successfully')} catch (error) {
-      console.error('❌ Failed to start Code Quality Monitor:', error)}
+      console.error('❌ Failed to start Code Quality "Monitor": ', error)}
   }
 
   async initialize() {
-    await fs.mkdir('./logs', { recursive: true });
-    await fs.mkdir('./quality-reports', { recursive: true });
+    await fs.mkdir('./logs', { "recursive": true });
+    await fs.mkdir('./quality-reports', { "recursive": true });
     
     console.log('📊 Code Quality Monitor initialized')}
 
@@ -43,19 +43,19 @@ class CodeQualityMonitor {
       const qualityReport = await this.generateQualityReport(;);
       await this.saveQualityReport(qualityReport);
       console.log('✅ Initial quality check completed')} catch (error) {
-      console.error('❌ Initial quality check failed:', error)}
+      console.error('❌ Initial quality check "failed": ', error)}
   }
 
   async generateQualityReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      eslint: await this.runESLint(),
-      prettier: await this.runPrettier(),
-      typeScript: await this.runTypeScriptCheck(),
-      testCoverage: await this.runTestCoverage(),
-      complexity: await this.analyzeComplexity(),
-      maintainability: await this.analyzeMaintainability(),
-      security: await this.runSecurityScan()
+      "timestamp": new Date().toISOString(),
+      "eslint": await this.runESLint(),
+      "prettier": await this.runPrettier(),
+      "typeScript": await this.runTypeScriptCheck(),
+      "testCoverage": await this.runTestCoverage(),
+      "complexity": await this.analyzeComplexity(),
+      "maintainability": await this.analyzeMaintainability(),
+      "security": await this.runSecurityScan()
    };
     
     report.overallScore = this.calculateOverallScore(report);
@@ -63,153 +63,153 @@ class CodeQualityMonitor {
 
   async runESLint() {
     try {
-      const eslintResult = execSync('npx eslint . --format json', { encoding: 'utf8' };);
+      const eslintResult = execSync('npx eslint . --format json', { "encoding": 'utf8' };);
       const eslint = JSON.parse(eslintResult;);
       
       const issues = eslint.flatMap(file => 
         file.messages.map(message => ({
-          file: file.filePath,
-          rule: message.ruleId,
-          severity: message.severity,
-          message: message.message,
-          line: message.line,
-          column: message.column
+          "file": file.filePath,
+          "rule": message.ruleId,
+          "severity": message.severity,
+          "message": message.message,
+          "line": message.line,
+          "column": message.column
         }))
-     ; ;);
+     ;);
       
       return {;
-        success: issues.length === 0,
+        "success": issues.length === 0,
         issues,
-        totalIssues: issues.length,
-        errors: issues.filter(i => i.severity === 2).length,
-        warnings: issues.filter(i => i.severity === 1).length
+        "totalIssues": issues.length,
+        "errors": issues.filter(i => i.severity === 2).length,
+        "warnings": issues.filter(i => i.severity === 1).length
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message,
-        issues: [],
-        totalIssues: 0
+        "success": false,
+        "error": error.message,
+        "issues": [],
+        "totalIssues": 0
       }}
   }
 
   async runPrettier() {
     try {
-      const prettierResult = execSync('npx prettier --check .', { encoding: 'utf8' };);
+      const prettierResult = execSync('npx prettier --check .', { "encoding": 'utf8' };);
       return {;
-        success: true,
-        message: 'All files are properly formatted'
+        "success": true,
+        "message": 'All files are properly formatted'
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async runTypeScriptCheck() {
     try {
-      execSync('npx tsc --noEmit', { stdio: 'pipe' });
+      execSync('npx tsc --noEmit', { "stdio": 'pipe' });
       return {;
-        success: true,
-        message: 'No TypeScript errors found'
+        "success": true,
+        "message": 'No TypeScript errors found'
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async runTestCoverage() {
     try {
-      const coverageResult = execSync('npm run test:coverage', { encoding: 'utf8' };);
+      const coverageResult = execSync('npm run "test": coverage', { "encoding": 'utf8' };);
       
       // Parse coverage from output
       const coverageMatch = coverageResult.match(/All files\s+\|\s+(\d+\.\d+);/;);
-      const coverage = coverageMatch ? parseFloat(coverageMatch[1]) :; ;0;
+      const coverage = coverageMatch ? parseFloat(coverageMatch[1]) :;0;
       
       return {;
-        success: coverage >= 80,
+        "success": coverage >= 80,
         coverage,
-        threshold: 80
+        "threshold": 80
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message,
-        coverage: 0
+        "success": false,
+        "error": error.message,
+        "coverage": 0
       }}
   }
 
   async analyzeComplexity() {
     try {
-      const complexityResult = execSync('npx complexity-report --format json', { encoding: 'utf8' };);
+      const complexityResult = execSync('npx complexity-report --format json', { "encoding": 'utf8' };);
       const complexity = JSON.parse(complexityResult;);
       
       const highComplexity = complexity.filter(c => c.complexity > 10;);
       
       return {;
-        success: highComplexity.length === 0,
-        averageComplexity: complexity.reduce((sum, c) => sum + c.complexity, 0) / complexity.length,
-        highComplexityFiles: highComplexity.length,
-        files: complexity
+        "success": highComplexity.length === 0,
+        "averageComplexity": complexity.reduce((sum, c) => sum + c.complexity, 0) / complexity.length,
+        "highComplexityFiles": highComplexity.length,
+        "files": complexity
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async analyzeMaintainability() {
     try {
-      const maintainabilityResult = execSync('npx eslint . --format json --config .eslintrc.maintainability.js', { encoding: 'utf8' };);
+      const maintainabilityResult = execSync('npx eslint . --format json --config .eslintrc.maintainability.js', { "encoding": 'utf8' };);
       const maintainability = JSON.parse(maintainabilityResult;);
       
       const maintainabilityIssues = maintainability.flatMap(file => 
         file.messages.filter(message => 
           message.ruleId && message.ruleId.includes('maintainability')
         )
-     ; ;);
+     ;);
       
       return {;
-        success: maintainabilityIssues.length === 0,
-        issues: maintainabilityIssues.length,
-        score: Math.max(0, 100 - maintainabilityIssues.length * 5)
+        "success": maintainabilityIssues.length === 0,
+        "issues": maintainabilityIssues.length,
+        "score": Math.max(0, 100 - maintainabilityIssues.length * 5)
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   async runSecurityScan() {
     try {
-      const securityResult = execSync('npx eslint . --format json --config .eslintrc.security.js', { encoding: 'utf8' };);
+      const securityResult = execSync('npx eslint . --format json --config .eslintrc.security.js', { "encoding": 'utf8' };);
       const security = JSON.parse(securityResult;);
       
       const securityIssues = security.flatMap(file => 
         file.messages.filter(message => 
           message.ruleId && message.ruleId.includes('security')
         )
-     ; ;);
+     ;);
       
       return {;
-        success: securityIssues.length === 0,
-        issues: securityIssues.length,
-        critical: securityIssues.filter(i => i.severity === 2).length
+        "success": securityIssues.length === 0,
+        "issues": securityIssues.length,
+        "critical": securityIssues.filter(i => i.severity === 2).length
       }} catch (error) {
       return {;
-        success: false,
-        error: error.message
+        "success": false,
+        "error": error.message
       }}
   }
 
   calculateOverallScore(report) {
     const weights = {
-      eslint: 0.25,
-      prettier: 0.15,
-      typeScript: 0.20,
-      testCoverage: 0.20,
-      complexity: 0.10,
-      maintainability: 0.05,
-      security: 0.05
+      "eslint": 0.25,
+      "prettier": 0.15,
+      "typeScript": 0.20,
+      "testCoverage": 0.20,
+      "complexity": 0.10,
+      "maintainability": 0.05,
+      "security": 0.05
    };
     
     let score = ;0;
@@ -235,7 +235,7 @@ class CodeQualityMonitor {
     try {
       const filename = `./quality-reports/quality-report-${new Date().toISOString().split('T')[0]}.json;`;
       await fs.writeFile(filename, JSON.stringify(report, null, 2))} catch (error) {
-      console.error('Error saving quality report:', error)}
+      console.error('Error saving quality "report": ', error)}
   }
 
   startContinuousMonitoring() {
@@ -245,7 +245,7 @@ class CodeQualityMonitor {
       
       try {
         await this.performQualityCheck()} catch (error) {
-        console.error('Error in quality check:', error)}
+        console.error('Error in quality "check": ', error)}
     }, this.config.qualityCheckInterval)}
 
   async performQualityCheck() {
@@ -255,21 +255,21 @@ class CodeQualityMonitor {
       const report = await this.generateQualityReport(;);
       
       if ( {
-        console.log(`⚠️ Quality score below threshold: ${report.overallScore}/100`)) {
+        console.log(`⚠️ Quality score below "threshold": ${report.overallScore}/100`)) {
      {
-        console.log(`⚠️ Quality score below threshold: ${report.overallScore}/100`)}
+        console.log(`⚠️ Quality score below "threshold": ${report.overallScore}/100`)}
         
         if ( {
           await this.autoFixIssues(report)}
       } else {
-        console.log(`✅ Quality score acceptable: ${report.overallScore}/100`)) {
+        console.log(`✅ Quality score "acceptable": ${report.overallScore}/100`)) {
      {
           await this.autoFixIssues(report)}
       } else {
-        console.log(`✅ Quality score acceptable: ${report.overallScore}/100`)}}
+        console.log(`✅ Quality score "acceptable": ${report.overallScore}/100`)}}
       
       await this.saveQualityReport(report)} catch (error) {
-      console.error('Error in quality check:', error)}
+      console.error('Error in quality "check": ', error)}
   }
 
   async autoFixIssues(report) {
@@ -301,28 +301,28 @@ class CodeQualityMonitor {
         await this.fixTypeScriptIssues()}
       
       console.log('✅ Auto-fix completed')}} catch (error) {
-      console.error('Error in auto-fix:', error)}
+      console.error('Error in auto-"fix": ', error)}
   }
 
   async fixESLintIssues() {
     try {
-      execSync('npx eslint . --fix', { stdio: 'pipe' });
+      execSync('npx eslint . --fix', { "stdio": 'pipe' });
       console.log('✅ ESLint issues fixed')} catch (error) {
-      console.error('Error fixing ESLint issues:', error)}
+      console.error('Error fixing ESLint "issues": ', error)}
   }
 
   async fixPrettierIssues() {
     try {
-      execSync('npx prettier --write .', { stdio: 'pipe' });
+      execSync('npx prettier --write .', { "stdio": 'pipe' });
       console.log('✅ Prettier issues fixed')} catch (error) {
-      console.error('Error fixing Prettier issues:', error)}
+      console.error('Error fixing Prettier "issues": ', error)}
   }
 
   async fixTypeScriptIssues() {
     try {
       // TypeScript issues usually require manual intervention
       console.log('⚠️ TypeScript issues require manual review')} catch (error) {
-      console.error('Error fixing TypeScript issues:', error)}
+      console.error('Error fixing TypeScript "issues": ', error)}
   }
 }
 

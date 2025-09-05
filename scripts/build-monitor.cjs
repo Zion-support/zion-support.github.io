@@ -12,7 +12,7 @@ class BuildMonitor {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -24,24 +24,24 @@ class BuildMonitor {
     try {
       const startTime = Date.now();
       const result = execSync('npm run build', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000 // 5 minutes
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 300000 // 5 minutes
       });
       const buildTime = Date.now() - startTime;
       
       this.log(`✅ Build completed in ${buildTime}ms`);
       
       return {
-        success: true,
+        "success": true,
         buildTime,
-        output: result
+        "output": result
       }} catch (error) {
-      this.log(`❌ Build failed: ${error.message}`);
+      this.log(`❌ Build "failed": ${error.message}`);
       return {
-        success: false,
-        error: error.message,
-        buildTime: 0
+        "success": false,
+        "error": error.message,
+        "buildTime": 0
       }}
   }
 
@@ -53,19 +53,19 @@ class BuildMonitor {
         throw new Error('Build output directory not found')}
 
       const buildStats = this.getDirectoryStats(nextDir);
-      this.log(`📁 Build output size: ${this.formatBytes(buildStats.size)}`);
-      this.log(`📁 Build output files: ${buildStats.files}`);
+      this.log(`📁 Build output "size": ${this.formatBytes(buildStats.size)}`);
+      this.log(`📁 Build output "files": ${buildStats.files}`);
 
       return {
-        exists: true,
-        size: buildStats.size,
-        files: buildStats.files,
-        status: buildStats.size > 0 ? 'success' : 'empty'
+        "exists": true,
+        "size": buildStats.size,
+        "files": buildStats.files,
+        "status": buildStats.size > 0 ? 'success' : 'empty'
       }} catch (error) {
-      this.log(`❌ Build output check failed: ${error.message}`);
+      this.log(`❌ Build output check "failed": ${error.message}`);
       return {
-        exists: false,
-        error: error.message
+        "exists": false,
+        "error": error.message
       }}
   }
 
@@ -86,7 +86,7 @@ class BuildMonitor {
       })};
 
     scanDirectory(dirPath);
-    return { size: totalSize, files: fileCount }}
+    return { "size": totalSize, "files": fileCount }}
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
@@ -99,24 +99,24 @@ class BuildMonitor {
     this.log('🔍 Checking TypeScript errors...');
     try {
       const result = execSync('npx tsc --noEmit', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
       });
       
       this.log('✅ No TypeScript errors found');
       return {
-        errors: 0,
-        status: 'success'
+        "errors": 0,
+        "status": 'success'
       }} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       const errorCount = (errorOutput.match(/error TS/g) || []).length;
       
       this.log(`❌ Found ${errorCount} TypeScript errors`);
       return {
-        errors: errorCount,
-        status: 'failed',
-        output: errorOutput
+        "errors": errorCount,
+        "status": 'failed',
+        "output": errorOutput
       }}
   }
 
@@ -124,24 +124,24 @@ class BuildMonitor {
     this.log('🔍 Checking linting errors...');
     try {
       const result = execSync('npm run lint', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 60000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
       });
       
       this.log('✅ No linting errors found');
       return {
-        errors: 0,
-        status: 'success'
+        "errors": 0,
+        "status": 'success'
       }} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       const errorCount = (errorOutput.match(/error/g) || []).length;
       
       this.log(`❌ Found ${errorCount} linting errors`);
       return {
-        errors: errorCount,
-        status: 'failed',
-        output: errorOutput
+        "errors": errorCount,
+        "status": 'failed',
+        "output": errorOutput
       }}
   }
 
@@ -149,21 +149,21 @@ class BuildMonitor {
     this.log('🧪 Checking test results...');
     try {
       const result = execSync('npm test', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 120000
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
       });
       
       this.log('✅ All tests passed');
       return {
-        passed: true,
-        status: 'success'
+        "passed": true,
+        "status": 'success'
       }} catch (error) {
-      this.log(`❌ Tests failed: ${error.message}`);
+      this.log(`❌ Tests "failed": ${error.message}`);
       return {
-        passed: false,
-        status: 'failed',
-        error: error.message
+        "passed": false,
+        "status": 'failed',
+        "error": error.message
       }}
   }
 
@@ -171,13 +171,13 @@ class BuildMonitor {
     this.log('📊 Generating build report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      analysis: {
+      "timestamp": new Date().toISOString(),
+      "analysis": {
         build: await this.runBuild(),
-        buildOutput: await this.checkBuildOutput(),
-        typeScript: await this.checkTypeScriptErrors(),
-        linting: await this.checkLintingErrors(),
-        tests: await this.checkTestResults()
+        "buildOutput": await this.checkBuildOutput(),
+        "typeScript": await this.checkTypeScriptErrors(),
+        "linting": await this.checkLintingErrors(),
+        "tests": await this.checkTestResults()
       }
     };
 
@@ -187,7 +187,7 @@ class BuildMonitor {
     const reportFile = path.join(this.reportsDir, `build-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📄 Build report generated: ${reportFile}`);
+    this.log(`📄 Build report "generated": ${reportFile}`);
     
     return report}
 
@@ -196,42 +196,42 @@ class BuildMonitor {
 
     if (!analysis.build.success) {
       recommendations.push({
-        type: 'build_failure',
-        priority: 'high',
-        message: 'Build failed. Check build logs and fix errors.',
-        impact: 'Prevents deployment'
+        "type": 'build_failure',
+        "priority": 'high',
+        "message": 'Build failed. Check build logs and fix errors.',
+        "impact": 'Prevents deployment'
       })}
 
     if (analysis.typeScript.errors > 0) {
       recommendations.push({
-        type: 'typescript_errors',
-        priority: 'high',
-        message: `Found ${analysis.typeScript.errors} TypeScript errors. Fix them before deployment.`,
-        impact: 'Improves code quality'
+        "type": 'typescript_errors',
+        "priority": 'high',
+        "message": `Found ${analysis.typeScript.errors} TypeScript errors. Fix them before deployment.`,
+        "impact": 'Improves code quality'
       })}
 
     if (analysis.linting.errors > 0) {
       recommendations.push({
-        type: 'linting_errors',
-        priority: 'medium',
-        message: `Found ${analysis.linting.errors} linting errors. Consider fixing them.`,
-        impact: 'Improves code quality'
+        "type": 'linting_errors',
+        "priority": 'medium',
+        "message": `Found ${analysis.linting.errors} linting errors. Consider fixing them.`,
+        "impact": 'Improves code quality'
       })}
 
     if (!analysis.tests.passed) {
       recommendations.push({
-        type: 'test_failures',
-        priority: 'high',
-        message: 'Tests failed. Fix failing tests before deployment.',
-        impact: 'Ensures code reliability'
+        "type": 'test_failures',
+        "priority": 'high',
+        "message": 'Tests failed. Fix failing tests before deployment.',
+        "impact": 'Ensures code reliability'
       })}
 
     if (analysis.buildOutput.size > 10 * 1024 * 1024) { // 10MB
       recommendations.push({
-        type: 'bundle_size',
-        priority: 'medium',
-        message: 'Build output is large. Consider optimizing bundle size.',
-        impact: 'Improves performance'
+        "type": 'bundle_size',
+        "priority": 'medium',
+        "message": 'Build output is large. Consider optimizing bundle size.',
+        "impact": 'Improves performance'
       })}
 
     return recommendations}
@@ -243,14 +243,14 @@ class BuildMonitor {
       const report = await this.generateBuildReport();
       
       this.log('🎉 Build monitoring completed!');
-      this.log(`🔨 Build status: ${report.analysis.build.success ? 'success' : 'failed'}`);
-      this.log(`🔍 TypeScript errors: ${report.analysis.typeScript.errors || 0}`);
-      this.log(`🔍 Linting errors: ${report.analysis.linting.errors || 0}`);
-      this.log(`🧪 Tests: ${report.analysis.tests.passed ? 'passed' : 'failed'}`);
-      this.log(`💡 Recommendations: ${report.recommendations.length}`);
+      this.log(`🔨 Build "status": ${report.analysis.build.success ? 'success' : 'failed'}`);
+      this.log(`🔍 TypeScript "errors": ${report.analysis.typeScript.errors || 0}`);
+      this.log(`🔍 Linting "errors": ${report.analysis.linting.errors || 0}`);
+      this.log(`🧪 "Tests": ${report.analysis.tests.passed ? 'passed' : 'failed'}`);
+      this.log(`💡 "Recommendations": ${report.recommendations.length}`);
       
       return report} catch (error) {
-      this.log(`💥 Build monitoring failed: ${error.message}`);
+      this.log(`💥 Build monitoring "failed": ${error.message}`);
       throw error}
   }
 }
@@ -261,11 +261,11 @@ if (require.main === module) {
   monitor.run()
     .then((report) => {
       console.log('\n🎉 Build Monitor completed successfully!');
-      console.log(`🔨 Build status: ${report.analysis.build.success ? 'success' : 'failed'}`);
-      console.log(`💡 Recommendations: ${report.recommendations.length}`);
+      console.log(`🔨 Build "status": ${report.analysis.build.success ? 'success' : 'failed'}`);
+      console.log(`💡 "Recommendations": ${report.recommendations.length}`);
       process.exit(0)})
     .catch((error) => {
-      console.error('\n💥 Build Monitor failed:', error.message);
+      console.error('\n💥 Build Monitor "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = BuildMonitor;

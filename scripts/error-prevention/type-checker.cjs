@@ -28,8 +28,8 @@ class TypeChecker {
       console.log('Running TypeScript type check...');
       
       const child = spawn('npm', ['run', 'type-check'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -47,23 +47,23 @@ class TypeChecker {
      {
           console.log('Type check passed ✓')}} else {
           console.log('Type check failed ✗');
-          console.log('Output:', output);
-          console.log('Errors:', errorOutput);
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
           
           // Log type errors for manual review
           this.logTypeErrors(output + errorOutput)}
       })} catch (error) {
-      console.error('Error running type check:', error.message)}
+      console.error('Error running type "check": ', error.message)}
   }
 
   logTypeErrors(errorOutput) {
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => 
       line.includes('error TS') || line.includes('Type error')
-   ; ;);
+   ;);
     
     if ( {
-      console.log('TypeScript errors found:')) {
+      console.log('TypeScript errors "found": ')) {
      {
       console.log('TypeScript errors found:')}
       typeErrors.forEach(error => {

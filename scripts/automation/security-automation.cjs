@@ -18,65 +18,65 @@ class $1 {
     this.ensureDirectories()}
 ;
   ensureDirectories() {
-  const dirs = [""this."projectRoot/security-reports"", ""this."projectRoot/security-scan-results"", ``];
+  const dirs = [""this."projectRoot/security-reports"", ""this."projectRoot/security-scan-results"", ""];
     dirs.forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true })}
+  fs.mkdirSync(dir, { "recursive": true })}
     })}
 ;
-  log(message, level = `INFO`) {
-  const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logEntry);
-    // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + `\n`);
-
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logEntry);
+    console.log("logEntry);
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logEntry + "\n");
+
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    console.log("logEntry);
 
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")}
 ;
   async runCommand(command, cwd = this.projectRoot) {
   // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + "\n");`)}`);
-`);
-  async runCommand(command, cwd = this.projectRoot) {`);
-    return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
+    fs.appendFileSync(this.logFile, logEntry + "\n");")}");
+");
+  async runCommand(command, cwd = this.projectRoot) {");
+    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
       const child = spawn(command, [], {
-  shell: true,
+  "shell": true,
         cwd,
-        stdio: [`pipe`, `pipe`, "pipe"]});
+        "stdio": ["pipe", "pipe", "pipe"]});
       let stdout = "";
-      let stderr = ``;
-      child.stdout.on(`data`, data => {
-  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`)});
-      child.stderr.on(`data`, data => {
-  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`)});
-      child.on(`close`, code => {
-  if (code === 0) {this.log(`Command completed successfully with code ${code}`);
-          resolve({ code, stdout, stderr })} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`))}
+      let stderr = "";
+      child.stdout.on("data", data => {
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")});
+      child.stderr.on("data", data => {
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")});
+      child.on("close", code => {
+  if (code === 0) {this.log("Command completed successfully with code ${code}");
+          resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))}
       });
-      child.on(`error`, error => {this.log(`Command error: ${error.message}`, `ERROR`);
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 
-      child.on("error", error => {this.log(`Command error: ${error.message}`, "ERROR");
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
         reject(error)})})}
 ;
   async installDependencies() {
-  this.log(`Installing dependencies...`);
+  this.log("Installing dependencies...");
     try {
-  await this.runCommand(`npm ci`);
-      this.log(`Dependencies installed successfully`);
-      return true} catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
+  await this.runCommand("npm ci");
+      this.log("Dependencies installed successfully");
+      return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");
       return false}
   }
 ;
   async runNpmAudit() {
-  this.log(`Running npm audit...`);
+  this.log("Running npm audit...");
     try {
-  const result = await this.runCommand(npm audit --audit-level=moderate --json`;
+  const result = await this.runCommand(npm audit --audit-level=moderate --json";
       );
       // Parse the JSON output;
       const auditData = JSON.parse(result.stdout);
@@ -90,8 +90,8 @@ class $1 {
       );
       // Save detailed audit report;
       const auditReportFile = path.join(;
-        this.projectRoot,security-reports`,
-        `npm-audit-report.json`;
+        this.projectRoot,security-reports",
+        "npm-audit-report.json";
 
   async runNpmAudit() {
   this.log("Running npm audit...");
@@ -109,7 +109,7 @@ class $1 {
         0;
       );
 
-      this.log( `NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";
+      this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";
       );
 
       // Save detailed audit report;
@@ -120,36 +120,34 @@ class $1 {
       fs.writeFileSync(auditReportFile, JSON.stringify(auditData, null, 2));
 
       return {
-  success: totalVulnerabilities === 0,
+  "success": totalVulnerabilities === 0,
         totalVulnerabilities,
         vulnerabilities,
-        reportFile: auditReportFile,
-}
+        "reportFile": auditReportFile}
     } catch (error) {
-  this.log(`NPM audit failed: ${error.message  }`, `ERROR`);
+  this.log(`NPM audit "failed": ${error.message  }`, "ERROR");
       return {
-  success: false,
-        error: error.message}
+  "success": false,
+        "error": error.message}
     }
   }
 ;
   async checkOutdatedPackages() {
-  this.log(`Checking for outdated packages...`);
+  this.log("Checking for outdated packages...");
     try {
-  const result = await this.runCommand(`npm outdated --json`);
+  const result = await this.runCommand("npm outdated --json");
       // Parse the JSON output;
       const outdatedData = JSON.parse(result.stdout);
       const outdatedCount = Object.keys(outdatedData).length;
 this.log(`Found ${outdatedCount} outdated packages`);
       // Save outdated packages report;
       const outdatedReportFile = path.join(;
-        this.projectRoot,security-reports`,
-        `outdated-packages.json"} catch (error) {
-  this.log(`NPM audit failed: ${error.message}`, "ERROR");
+        this.projectRoot,security-reports",
+        "outdated-packages.json"} catch (error) {
+  this.log(`NPM audit "failed": ${error.message}`, "ERROR");
       return {
-  success: false,
-        error: error.message,
-}
+  "success": false,
+        "error": error.message}
     }
   }
 ;
@@ -176,11 +174,10 @@ fs.writeFileSync(;
       );
 
       return {
-  success: true,
+  "success": true,
         outdatedCount,
-        packages: outdatedData,
-        reportFile: outdatedReportFile,
-}
+        "packages": outdatedData,
+        "reportFile": outdatedReportFile}
     } catch (error) {
   // npm outdated returns exit code 1 when there are outdated packages, which is not an error;
       if (error.message.includes("exit code 1")) {
@@ -188,20 +185,20 @@ fs.writeFileSync(;
           "WARN";
         );
         return {
-  success: true,
-          outdatedCount: `unknown`,
-          note: `Some packages are outdated`}
+  "success": true,
+          "outdatedCount": "unknown",
+          "note": "Some packages are outdated"}
       }
 ;
-      this.log(`NPM outdated check failed: ${error.message}`, `ERROR`);
+      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");
       return {
-  success: false,
-        error: error.message}
+  "success": false,
+        "error": error.message}
     }
   }
 ;
   async runSecurityScan() {
-  this.log(`Running comprehensive security scan...`);
+  this.log("Running comprehensive security scan...");
     const results = []} catch (error) {
   // npm outdated returns exit code 1 when there are outdated packages, which is not an error;
       if (error.message.includes("exit code 1")) {
@@ -209,17 +206,15 @@ fs.writeFileSync(;
           "WARN";
         );
         return {
-  success: true,
-          outdatedCount: "unknown",
-          note: "Some packages are outdated",
-}
+  "success": true,
+          "outdatedCount": "unknown",
+          "note": "Some packages are outdated"}
       }
 ;
-      this.log(`NPM outdated check failed: ${error.message}`, "ERROR");
+      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");
       return {
-  success: false,
-        error: error.message,
-}
+  "success": false,
+        "error": error.message}
     }
   }
 ;
@@ -231,36 +226,32 @@ fs.writeFileSync(;
     // Run npm audit;
     const auditResult = await this.runNpmAudit();
     results.push({
-  step: "npm-audit",
-      success: auditResult.success,
-      details: auditResult,
-      timestamp: new Date().toISOString(),
-});
+  "step": "npm-audit",
+      "success": auditResult.success,
+      "details": auditResult,
+      "timestamp": new Date().toISOString()});
     // Check outdated packages;
     const outdatedResult = await this.checkOutdatedPackages();
     results.push({
-  step: "outdated-packages",
-      success: outdatedResult.success,
-      details: outdatedResult,
-      timestamp: new Date().toISOString(),
-});
+  "step": "outdated-packages",
+      "success": outdatedResult.success,
+      "details": outdatedResult,
+      "timestamp": new Date().toISOString()});
 
     return results}
 ;
   async generateSecurityReport(results) {
   const report = {
-  timestamp: new Date().toISOString(),
-      status: results.every(r => r.success);
+  "timestamp": new Date().toISOString(),
+      "status": results.every(r => r.success);
         ? "SECURE";
         : "VULNERABILITIES_FOUND",
-      results: results,
-      summary: {
+      "results": results,
+      "summary": {
   total: results.length,
-        secure: results.filter(r => r.success).length,
-        vulnerable: results.filter(r => !r.success).length,
-},
-      recommendations: [],
-}
+        "secure": results.filter(r => r.success).length,
+        "vulnerable": results.filter(r => !r.success).length},
+      "recommendations": []}
     // Generate recommendations based on results;
     results.forEach(result => {
   if (!result.success) {
@@ -268,14 +259,14 @@ fs.writeFileSync(;
   case "npm-audit":;
             if (result.details.totalVulnerabilities > 0) {
   report.recommendations.push({
-  priority: `HIGH`,
-                action: `Update vulnerable packages`,details: `Found ${result.details.totalVulnerabilities} security vulnerabilities`})}
+  "priority": "HIGH",
+                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})}
             break;
-          case `outdated-packages`:;
+          case "outdated-packages":;
             report.recommendations.push({
-  priority: `MEDIUM`,
-              action: "Update outdated packages",
-              details: "Some packages have newer versions available",
+  "priority": "MEDIUM",
+              "action": "Update outdated packages",
+              "details": "Some packages have newer versions available",
 
     // Generate recommendations based on results;
     results.forEach(result => {
@@ -284,37 +275,34 @@ fs.writeFileSync(;
   case "npm-audit":;
             if (result.details.totalVulnerabilities > 0) {
   report.recommendations.push({
-  priority: "HIGH",
-                action: "Update vulnerable packages",details: `Found ${result.details.totalVulnerabilities} security vulnerabilities`,
-})}
+  "priority": "HIGH",
+                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})}
             break;
           case "outdated-packages":;
             report.recommendations.push({
-  priority: "MEDIUM",
-              action: "Update outdated packages",
-              details: "Some packages have newer versions available",
-});
+  "priority": "MEDIUM",
+              "action": "Update outdated packages",
+              "details": "Some packages have newer versions available"});
             break}
       }
     });
     // Add general security recommendations;
     report.recommendations.push({
-  priority: "LOW",
-      action: `Regular security audits`,
-      details: `Run security scans weekly to maintain security posture`,
-});
+  "priority": "LOW",
+      "action": "Regular security audits",
+      "details": "Run security scans weekly to maintain security posture"});
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report generated: ${this.reportFile}`);
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);
 
     return report}
 ;
   async run() {
-  this.log(`Starting security automation...`);
+  this.log("Starting security automation...");
     // Install dependencies first;
     const depsResult = await this.installDependencies();
     if (!depsResult) {
-  this.log(Skipping security scan due to dependency installation failure`,
-        `ERROR`;
+  this.log(Skipping security scan due to dependency installation failure",
+        "ERROR";
       );
       return}
 ;
@@ -322,10 +310,10 @@ fs.writeFileSync(;
     const scanResults = await this.runSecurityScan();
     // Generate final report;
     const report = await this.generateSecurityReport(scanResults);
-this.log(`Security automation completed. Status: ${report.status}`);this.log(`Secure checks: ${report.summary.secure}/${report.summary.total}`);
-    if (report.status === `VULNERABILITIES_FOUND`) {
-  this.log(Security vulnerabilities detected. Check the report for details.`,
-        `WARN`;
+this.log("Security automation completed. "Status": ${report.status}");this.log("Secure "checks": ${report.summary.secure}/${report.summary.total}");
+    if (report.status === "VULNERABILITIES_FOUND") {
+  this.log(Security vulnerabilities detected. Check the report for details.",
+        "WARN";
 
   async run() {
   this.log("Starting security automation...");
@@ -343,15 +331,15 @@ this.log(`Security automation completed. Status: ${report.status}`);this.log(`Se
 
     // Generate final report;
     const report = await this.generateSecurityReport(scanResults);
-this.log(`Security automation completed. Status: ${report.status}`);this.log(`Secure checks: ${report.summary.secure}/${report.summary.total}`);
+this.log(`Security automation completed. "Status": ${report.status}`);this.log(`Secure "checks": ${report.summary.secure}/${report.summary.total}`);
 
     if (report.status === "VULNERABILITIES_FOUND") {
   this.log(Security vulnerabilities detected. Check the report for details.",
         "WARN";
       );
-      this.log(`Recommendations:`);
+      this.log(""Recommendations": ");
       report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`)})} else {
-  this.log(`No security vulnerabilities found. System is secure.`, `INFO`)}
+  this.log("No security vulnerabilities found. System is secure.", "INFO")}
   }
 }
 ;
@@ -369,7 +357,7 @@ if (require.main === module) {
 if (require.main === module) {
   const security = new SecurityAutomation();
 security.run().catch(error => {
-  console.error("Security automation failed: ', error);
+  console.error("Security automation "failed": ', error);
     process.exit(1)})}
 ;
 module.exports = SecurityAutomation

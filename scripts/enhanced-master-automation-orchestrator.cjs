@@ -10,47 +10,47 @@ console.log('================================================');
 
 // Enhanced configuration
 const config = {
-  timeout: 600000, // 10 minutes timeout
-  maxRetries: 3,
-  parallelTasks: 4,
-  logLevel: process.env.LOG_LEVEL || 'info',
-  enableMetrics: true,
-  enableNotifications: true,
-  enableCaching: true,
-  cacheDir: '.automation-cache'
+  "timeout": 600000, // 10 minutes timeout
+  "maxRetries": 3,
+  "parallelTasks": 4,
+  "logLevel": process.env.LOG_LEVEL || 'info',
+  "enableMetrics": true,
+  "enableNotifications": true,
+  "enableCaching": true,
+  "cacheDir": '.automation-cache'
 };
 
 // Enhanced master report structure
 const masterReport = {
-  version: '2.0',
-  timestamp: new Date().toISOString(),
-  sessionId: Date.now().toString(),
-  systemInfo: {
+  "version": '2.0',
+  "timestamp": new Date().toISOString(),
+  "sessionId": Date.now().toString(),
+  "systemInfo": {
     platform: os.platform(),
-    arch: os.arch(),
-    nodeVersion: process.version,
-    memory: os.totalmem(),
-    cpus: os.cpus().length
+    "arch": os.arch(),
+    "nodeVersion": process.version,
+    "memory": os.totalmem(),
+    "cpus": os.cpus().length
   },
-  phases: [],
-  summary: {
+  "phases": [],
+  "summary": {
     totalTasks: 0,
-    successful: 0,
-    failed: 0,
-    warnings: 0,
-    skipped: 0,
-    retries: 0
+    "successful": 0,
+    "failed": 0,
+    "warnings": 0,
+    "skipped": 0,
+    "retries": 0
   },
-  recommendations: [],
-  metrics: {
+  "recommendations": [],
+  "metrics": {
     startTime: Date.now(),
-    endTime: null,
-    totalDuration: 0,
-    successRate: 0,
-    performanceScore: 0
+    "endTime": null,
+    "totalDuration": 0,
+    "successRate": 0,
+    "performanceScore": 0
   },
-  cache: {},
-  errors: []
+  "cache": {},
+  "errors": []
 };
 
 // Enhanced task queue with priority
@@ -74,7 +74,7 @@ function log(level, message, data = null) {
 
 function createCacheDir() {
   if (config.enableCaching && !fs.existsSync(config.cacheDir)) {
-    fs.mkdirSync(config.cacheDir, { recursive: true })}
+    fs.mkdirSync(config.cacheDir, { "recursive": true })}
 }
 
 function getCacheKey(taskName, command) {
@@ -111,30 +111,30 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
     if (Date.now() - cached.timestamp < 300000) { // 5 minutes cache
       log('info', `Using cached result for ${name}`);
       masterReport.summary.skipped++;
-      return { success: true, output: cached.output, duration: 0, cached: true }}
+      return { "success": true, "output": cached.output, "duration": 0, "cached": true }}
   }
   
   const task = {
-    id: taskId,
+    "id": taskId,
     name,
     command,
     phase,
     critical,
     priority,
     retries,
-    startTime: new Date().toISOString(),
-    status: 'running'
+    "startTime": new Date().toISOString(),
+    "status": 'running'
   };
   
-  log('info', `Running: ${name} (Priority: ${priority})`);
+  log('info', `"Running": ${name} ("Priority": ${priority})`);
   
   const startTime = Date.now();
   
   try {
     // Use spawn for better control over long-running processes
     const child = spawn('sh', ['-c', command], {
-      stdio: ['pipe', 'pipe', 'pipe'],
-      timeout: config.timeout
+      "stdio": ['pipe', 'pipe', 'pipe'],
+      "timeout": config.timeout
     });
     
     let output = '';
@@ -159,14 +159,14 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
           // Cache successful results
           if (config.enableCaching) {
             masterReport.cache[cacheKey] = {
-              timestamp: Date.now(),
-              output: task.output,
+              "timestamp": Date.now(),
+              "output": task.output,
               duration
             }}
           
           masterReport.summary.successful++;
           log('info', `${name} completed successfully (${duration}ms)`);
-          resolve({ success: true, output: task.output, duration, taskId })} else {
+          resolve({ "success": true, "output": task.output, duration, taskId })} else {
           task.status = 'failed';
           task.duration = duration;
           task.error = errorOutput || `Process exited with code ${code}`;
@@ -178,12 +178,12 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
             log('warn', `${name} failed (non-critical) (${duration}ms)`)}
           
           masterReport.errors.push({
-            task: name,
-            error: task.error,
-            timestamp: new Date().toISOString()
+            "task": name,
+            "error": task.error,
+            "timestamp": new Date().toISOString()
           });
           
-          resolve({ success: false, error: task.error, duration, taskId })}
+          resolve({ "success": false, "error": task.error, duration, taskId })}
       });
       
       child.on('error', (error) => {
@@ -198,12 +198,12 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
         log('error', `${name} failed with error (${duration}ms)`, error.message);
         
         masterReport.errors.push({
-          task: name,
-          error: error.message,
-          timestamp: new Date().toISOString()
+          "task": name,
+          "error": error.message,
+          "timestamp": new Date().toISOString()
         });
         
-        resolve({ success: false, error: error.message, duration, taskId })})});
+        resolve({ "success": false, "error": error.message, duration, taskId })})});
     
     masterReport.summary.totalTasks++;
     masterReport.phases.push(task);
@@ -220,25 +220,25 @@ async function runCommand(name, command, phase, critical = false, priority = 0, 
     log('error', `${name} failed with exception (${duration}ms)`, error.message);
     
     masterReport.errors.push({
-      task: name,
-      error: error.message,
-      timestamp: new Date().toISOString()
+      "task": name,
+      "error": error.message,
+      "timestamp": new Date().toISOString()
     });
     
     masterReport.summary.totalTasks++;
     masterReport.phases.push(task);
     
-    return { success: false, error: error.message, duration, taskId }}
+    return { "success": false, "error": error.message, duration, taskId }}
 }
 
 // Enhanced phase execution with parallel processing
 async function executePhase(phaseName, tasks, parallel = false) {
-  log('info', `Starting phase: ${phaseName}`);
+  log('info', `Starting "phase": ${phaseName}`);
   
   const phase = {
-    name: phaseName,
-    startTime: new Date().toISOString(),
-    tasks: [],
+    "name": phaseName,
+    "startTime": new Date().toISOString(),
+    "tasks": [],
     parallel
   };
   
@@ -251,7 +251,7 @@ async function executePhase(phaseName, tasks, parallel = false) {
     const results = await Promise.allSettled(promises);
     phase.tasks = results.map((result, index) => ({
       ...tasks[index],
-      result: result.status === 'fulfilled' ? result.value : { success: false, error: result.reason }
+      "result": result.status === 'fulfilled' ? result.value : { success: false, "error": result.reason }
     }))} else {
     // Execute tasks sequentially
     for (const task of tasks) {
@@ -262,7 +262,7 @@ async function executePhase(phaseName, tasks, parallel = false) {
   phase.endTime = new Date().toISOString();
   masterReport.phases.push(phase);
   
-  log('info', `Completed phase: ${phaseName}`);
+  log('info', `Completed "phase": ${phaseName}`);
   return phase}
 
 // Enhanced performance monitoring
@@ -289,57 +289,57 @@ function generateRecommendations() {
   // Performance recommendations
   if (successRate < 90) {
     recommendations.push({
-      type: 'performance',
-      priority: 'high',
-      message: 'Success rate is below 90% - review and optimize automation scripts',
-      action: 'Analyze failed tasks and improve error handling'
+      "type": 'performance',
+      "priority": 'high',
+      "message": 'Success rate is below 90% - review and optimize automation scripts',
+      "action": 'Analyze failed tasks and improve error handling'
     })}
   
   if (failed > 0) {
     recommendations.push({
-      type: 'reliability',
-      priority: 'high',
-      message: `${failed} critical tasks failed - address immediately`,
-      action: 'Check error logs and fix underlying issues'
+      "type": 'reliability',
+      "priority": 'high',
+      "message": `${failed} critical tasks failed - address immediately`,
+      "action": 'Check error logs and fix underlying issues'
     })}
   
   if (warnings > 0) {
     recommendations.push({
-      type: 'maintenance',
-      priority: 'medium',
-      message: `${warnings} tasks completed with warnings`,
-      action: 'Review warning messages and improve task reliability'
+      "type": 'maintenance',
+      "priority": 'medium',
+      "message": `${warnings} tasks completed with warnings`,
+      "action": 'Review warning messages and improve task reliability'
     })}
   
   // System recommendations
   if (masterReport.systemInfo.memory < 4 * 1024 * 1024 * 1024) { // Less than 4GB
     recommendations.push({
-      type: 'infrastructure',
-      priority: 'medium',
-      message: 'System memory is limited - consider upgrading',
-      action: 'Monitor memory usage and optimize resource-intensive tasks'
+      "type": 'infrastructure',
+      "priority": 'medium',
+      "message": 'System memory is limited - consider upgrading',
+      "action": 'Monitor memory usage and optimize resource-intensive tasks'
     })}
   
   // Automation recommendations
   recommendations.push({
-    type: 'automation',
-    priority: 'low',
-    message: 'Implement continuous integration pipeline',
-    action: 'Set up automated testing and deployment workflows'
+    "type": 'automation',
+    "priority": 'low',
+    "message": 'Implement continuous integration pipeline',
+    "action": 'Set up automated testing and deployment workflows'
   });
   
   recommendations.push({
-    type: 'monitoring',
-    priority: 'medium',
-    message: 'Set up automated monitoring and alerting',
-    action: 'Implement real-time monitoring for critical systems'
+    "type": 'monitoring',
+    "priority": 'medium',
+    "message": 'Set up automated monitoring and alerting',
+    "action": 'Implement real-time monitoring for critical systems'
   });
   
   recommendations.push({
-    type: 'security',
-    priority: 'high',
-    message: 'Regular security audits and dependency updates',
-    action: 'Schedule automated security scans and dependency updates'
+    "type": 'security',
+    "priority": 'high',
+    "message": 'Regular security audits and dependency updates',
+    "action": 'Schedule automated security scans and dependency updates'
   });
   
   return recommendations}
@@ -352,49 +352,44 @@ async function main() {
     
     log('info', 'Starting enhanced automation orchestration');
     
-    // Phase 1: System Health & Dependencies (Parallel)
-    const phase1Tasks = [
-      { name: 'Health Check', command: 'node automation/health-check.cjs', critical: true, priority: 1 },
-      { name: 'Dependency Installation', command: 'npm install', critical: true, priority: 1 },
-      { name: 'Security Scan', command: 'node automation/security-scanner.cjs', critical: false, priority: 2 },
-      { name: 'System Info', command: 'echo "System check completed"', critical: false, priority: 3 }
+    // Phase "1": System Health & Dependencies (Parallel)
+    const phase1Tasks = [{ name: 'Health Check', "command": 'node automation/health-check.cjs', "critical": true, "priority": 1 },
+      { "name": 'Dependency Installation', "command": 'npm install', "critical": true, "priority": 1 },
+      { "name": 'Security Scan', "command": 'node automation/security-scanner.cjs', "critical": false, "priority": 2 },
+      { "name": 'System Info', "command": 'echo "System check completed"', "critical": false, "priority": 3 }
     ];
     
     await executePhase('System Health & Dependencies', phase1Tasks, true);
     
-    // Phase 2: Code Quality & Optimization (Sequential)
-    const phase2Tasks = [
-      { name: 'Syntax Error Fixing', command: 'node scripts/fix-syntax-errors.cjs', critical: false, priority: 1 },
-      { name: 'Code Quality Monitor', command: 'node scripts/code-quality-monitor.cjs', critical: false, priority: 2 },
-      { name: 'Performance Monitor', command: 'node scripts/performance-monitor.cjs', critical: false, priority: 2 },
-      { name: 'App Optimizer', command: 'node scripts/app-optimizer.cjs', critical: false, priority: 3 }
+    // Phase "2": Code Quality & Optimization (Sequential)
+    const phase2Tasks = [{ name: 'Syntax Error Fixing', "command": 'node scripts/fix-syntax-errors.cjs', "critical": false, "priority": 1 },
+      { "name": 'Code Quality Monitor', "command": 'node scripts/code-quality-monitor.cjs', "critical": false, "priority": 2 },
+      { "name": 'Performance Monitor', "command": 'node scripts/performance-monitor.cjs', "critical": false, "priority": 2 },
+      { "name": 'App Optimizer', "command": 'node scripts/app-optimizer.cjs', "critical": false, "priority": 3 }
     ];
     
     await executePhase('Code Quality & Optimization', phase2Tasks, false);
     
-    // Phase 3: SEO & Content Optimization (Parallel)
-    const phase3Tasks = [
-      { name: 'SEO Optimizer', command: 'node scripts/seo-optimizer.cjs', critical: false, priority: 2 },
-      { name: 'Dependency Update Check', command: 'node scripts/dependency-updater.cjs', critical: false, priority: 3 },
-      { name: 'Content Analysis', command: 'echo "Content analysis completed"', critical: false, priority: 4 }
+    // Phase "3": SEO & Content Optimization (Parallel)
+    const phase3Tasks = [{ name: 'SEO Optimizer', "command": 'node scripts/seo-optimizer.cjs', "critical": false, "priority": 2 },
+      { "name": 'Dependency Update Check', "command": 'node scripts/dependency-updater.cjs', "critical": false, "priority": 3 },
+      { "name": 'Content Analysis', "command": 'echo "Content analysis completed"', "critical": false, "priority": 4 }
     ];
     
     await executePhase('SEO & Content Optimization', phase3Tasks, true);
     
-    // Phase 4: Build & Test (Sequential)
-    const phase4Tasks = [
-      { name: 'TypeScript Type Check', command: 'npx tsc --noEmit', critical: false, priority: 1 },
-      { name: 'ESLint Linting', command: 'npm run lint', critical: false, priority: 2 },
-      { name: 'Application Build', command: 'npm run build', critical: true, priority: 1 },
-      { name: 'Test Suite', command: 'npm test || echo "No tests configured"', critical: false, priority: 3 }
+    // Phase "4": Build & Test (Sequential)
+    const phase4Tasks = [{ name: 'TypeScript Type Check', "command": 'npx tsc --noEmit', "critical": false, "priority": 1 },
+      { "name": 'ESLint Linting', "command": 'npm run lint', "critical": false, "priority": 2 },
+      { "name": 'Application Build', "command": 'npm run build', "critical": true, "priority": 1 },
+      { "name": 'Test Suite', "command": 'npm test || echo "No tests configured"', "critical": false, "priority": 3 }
     ];
     
     await executePhase('Build & Test', phase4Tasks, false);
     
-    // Phase 5: Final Analysis & Recommendations
-    const phase5Tasks = [
-      { name: 'Metrics Generation', command: 'echo "Generating final metrics..."', critical: false, priority: 1 },
-      { name: 'Report Generation', command: 'echo "Generating comprehensive report..."', critical: false, priority: 2 }
+    // Phase "5": Final Analysis & Recommendations
+    const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."', "critical": false, "priority": 1 },
+      { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."', "critical": false, "priority": 2 }
     ];
     
     await executePhase('Final Analysis & Recommendations', phase5Tasks, true);
@@ -416,26 +411,26 @@ async function main() {
     // Final Summary
     log('info', 'Enhanced Master Automation Orchestrator Summary');
     log('info', '===============================================');
-    log('info', `Total tasks: ${masterReport.summary.totalTasks}`);
-    log('info', `Successful: ${masterReport.summary.successful}`);
-    log('info', `Failed: ${masterReport.summary.failed}`);
-    log('info', `Warnings: ${masterReport.summary.warnings}`);
+    log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
+    log('info', `"Successful": ${masterReport.summary.successful}`);
+    log('info', `"Failed": ${masterReport.summary.failed}`);
+    log('info', `"Warnings": ${masterReport.summary.warnings}`);
     log('info', `Skipped (cached): ${masterReport.summary.skipped}`);
-    log('info', `Success rate: ${masterReport.metrics.successRate}%`);
-    log('info', `Performance score: ${masterReport.metrics.performanceScore}/100`);
-    log('info', `Total duration: ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
+    log('info', `Success "rate": ${masterReport.metrics.successRate}%`);
+    log('info', `Performance "score": ${masterReport.metrics.performanceScore}/100`);
+    log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
     
     if (masterReport.recommendations.length > 0) {
-      log('info', 'Recommendations:');
+      log('info', '"Recommendations": ');
       masterReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`)})}
+        log('info', `  "Action": ${rec.action}`)})}
     
     // Save comprehensive report
     const reportPath = path.join(process.cwd(), `enhanced-master-automation-report-${masterReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(masterReport, null, 2));
     
-    log('info', `Enhanced automation report saved to: enhanced-master-automation-report-${masterReport.sessionId}.json`);
+    log('info', `Enhanced automation report saved "to": enhanced-master-automation-report-${masterReport.sessionId}.json`);
     
     // Determine exit status
     if (masterReport.summary.failed > 0) {

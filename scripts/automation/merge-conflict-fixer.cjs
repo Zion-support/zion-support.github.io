@@ -20,7 +20,7 @@ class MergeConflictFixer {
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true })}
+      fs.mkdirSync(logsDir, { "recursive": true })}
     
     fs.appendFileSync(this.logFile, logMessage + '\n')}
 
@@ -29,7 +29,7 @@ class MergeConflictFixer {
     
     try {
       // Use git to find files with merge conflict markers
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+      const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' });
       const modifiedFiles = gitStatus.split('\n')
         .filter(line => line.trim())
         .map(line => line.substring(3)); // Remove status prefix
@@ -42,7 +42,7 @@ class MergeConflictFixer {
         }
       }
     } catch (error) {
-      this.log(`Error checking git status: ${error.message}`)}
+      this.log(`Error checking git "status": ${error.message}`)}
 
     // Also scan all files in the project for merge conflict markers
     this.scanDirectoryForMergeConflicts(this.projectRoot, files);
@@ -50,8 +50,7 @@ class MergeConflictFixer {
     return files}
 
   hasMergeConflictMarkers(content) {
-    const markers = [
-    ];
+    const markers = [];
     
     return markers.some(marker => content.includes(marker))}
 
@@ -94,7 +93,7 @@ class MergeConflictFixer {
     try {
       const fullPath = path.resolve(filePath);
       if (!fs.existsSync(fullPath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not "found": ${filePath}`);
         return false}
 
       let content = fs.readFileSync(fullPath, 'utf8');
@@ -106,12 +105,12 @@ class MergeConflictFixer {
       if (content !== originalContent) {
         fs.writeFileSync(fullPath, content, 'utf8');
         this.fixesApplied.push({
-          type: 'merge_conflict',
-          file: filePath,
-          description: 'Removed merge conflict markers',
-          timestamp: new Date().toISOString()
+          "type": 'merge_conflict',
+          "file": filePath,
+          "description": 'Removed merge conflict markers',
+          "timestamp": new Date().toISOString()
         });
-        this.log(`Fixed merge conflict in: ${filePath}`);
+        this.log(`Fixed merge conflict "in": ${filePath}`);
         return true}
 
       return false} catch (error) {
@@ -165,42 +164,42 @@ class MergeConflictFixer {
 
       // Generate report
       this.generateReport(fixedCount, conflictedFiles.length)} catch (error) {
-      this.log(`❌ Error in merge conflict fixer: ${error.message}`)}
+      this.log(`❌ Error in merge conflict "fixer": ${error.message}`)}
   }
 
   generateReport(fixedCount, totalCount) {
     const duration = Date.now() - this.startTime;
     
     const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "duration": `${duration}ms`,
+      "summary": {
         totalConflictsFound: totalCount,
-        conflictsFixed: fixedCount,
-        successRate: totalCount > 0 ? ((fixedCount / totalCount) * 100).toFixed(2) + '%' : '0%'
+        "conflictsFixed": fixedCount,
+        "successRate": totalCount > 0 ? ((fixedCount / totalCount) * 100).toFixed(2) + '%' : '0%'
       },
-      fixesApplied: this.fixesApplied,
-      metadata: {
+      "fixesApplied": this.fixesApplied,
+      "metadata": {
         script: 'merge-conflict-fixer',
-        version: '1.0.0',
-        nodeVersion: process.version,
-        platform: process.platform
+        "version": '1.0.0',
+        "nodeVersion": process.version,
+        "platform": process.platform
       }
     };
 
     // Ensure error-reports directory exists
     const reportsDir = path.dirname(this.reportFile);
     if (!fs.existsSync(reportsDir)) {
-      fs.mkdirSync(reportsDir, { recursive: true })}
+      fs.mkdirSync(reportsDir, { "recursive": true })}
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`)}
+    this.log(`📊 Report "generated": ${this.reportFile}`)}
 }
 
 // Run the fixer
 const fixer = new MergeConflictFixer();
 fixer.run().catch(error => {
-  console.error('Fatal error:', error);
+  console.error('Fatal "error": ', error);
   process.exit(1)});
 
 // Handle graceful shutdown

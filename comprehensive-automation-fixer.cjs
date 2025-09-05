@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // List of automation files to fix
-const automationFiles = [
-  'automation/dependency-fixer.cjs',
+const automationFiles = ['automation/dependency-fixer.cjs',
   'automation/typescript-fixer.cjs',
   'automation/health-check.cjs',
   'automation/security-scanner.cjs',
@@ -52,10 +51,10 @@ function fixAutomationFile(filePath) {
       .replace(/\),/g, ');')
       .replace(/\],/g, '];')
       // Remove extra semicolons after closing braces
-      .replace(/\[\];;/g, '[];')
-      .replace(/\{\};;/g, '{};')
-      .replace(/\);;/g, ');')
-      .replace(/\];;/g, '];')
+      .replace(/\[\];/g, '[];')
+      .replace(/\{\};/g, '{};')
+      .replace(/\);/g, ');')
+      .replace(/\];/g, '];')
       // Fix malformed regex patterns
       .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, ''))
       // Fix malformed function calls
@@ -69,10 +68,10 @@ function fixAutomationFile(filePath) {
       .replace(/\(\s*\[\],/g, '([];')
       .replace(/\(\s*\{\},/g, '({};')
       // Fix malformed assignments
-      .replace(/script1\.async: = true/g, 'script1.async = true')
-      .replace(/script1\.src: =/g, 'script1.src =')
+      .replace(/script1\."async": = true/g, 'script1.async = true')
+      .replace(/script1\."src": =/g, 'script1.src =')
       // Remove extra semicolons
-      .replace(/;;+/g, ';')
+      .replace(/;+/g, ';')
       // Fix malformed quotes
       .replace(/['"]react;['"]/g, "'react'")
       .replace(/['"]framer-motion;['"]/g, "'framer-motion'")

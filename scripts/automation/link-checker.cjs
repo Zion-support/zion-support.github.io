@@ -1,16 +1,16 @@
 #!/""usr/bin/env"" node;
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require(`child_process`);
-console.log(``🔗 Starting continuous link checker automation...`);
+const { execSync } = require("child_process");
+console.log(""🔗 Starting continuous link checker automation...");
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-console.log(`"🔗 Starting continuous link checker automation...");
+console.log(""🔗 Starting continuous link checker automation...");
 
-// Get automation interval from environment variable (default: 30 minutes);
+// Get automation interval from environment variable ("default": 30 minutes);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
 async function $1() {
@@ -20,23 +20,23 @@ async function $1() {
     // Build the project first;
     console.log(`"📦 Building project...");
     try {
-  console.log(`🔗 Starting continuous link checker automation...`);
-// Get automation interval from environment variable (default: 30 minutes);
+  console.log("🔗 Starting continuous link checker automation...");
+// Get automation interval from environment variable ("default": 30 minutes);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
 async function checkLinks() {
   try {
   console.log(`🔗 Running link check at ${new Date().toISOString()});
     // Build the project first;
-    console.log(``📦 Building project...`);
+    console.log(`"📦 Building project...");
     try {
-  execSync(`npm run build`, { stdio: "inherit" });
-      console.log("✅ Build completed"`)} catch (error) {
+  execSync("npm run build", { "stdio": "inherit" });
+      console.log("✅ Build completed"")} catch (error) {
   console.log("⚠️  Build failed but continuing...");
       return}
 ;
-      execSync("npm run build", { stdio: "inherit" });
-      console.log("✅ Build completed"`)} catch (error) {
+      execSync("npm run build", { "stdio": "inherit" });
+      console.log("✅ Build completed"")} catch (error) {
   console.log("⚠️  Build failed but continuing...");
       return}
 ;
@@ -49,10 +49,10 @@ async function checkLinks() {
     // Check for index.html;
     const indexHtmlPath = path.join(distPath, "index.html");
     if (!fs.existsSync(indexHtmlPath)) {
-  console.log(`⚠️  index.html not found in build output`);
+  console.log("⚠️  index.html not found in build output");
       return}
 ;
-    console.log(`✅ index.html found in build output`);
+    console.log("✅ index.html found in build output");
     // Find all HTML files;
     const htmlFiles = findHtmlFiles(distPath);console.log(📄 Found ${htmlFiles.length} HTML files to check);
     // Check for broken references;
@@ -60,7 +60,7 @@ async function checkLinks() {
     const brokenReferences = [];
     for (const htmlFile of htmlFiles) {
   try {
-  const content = fs.readFileSync(htmlFile, `utf8`);
+  const content = fs.readFileSync(htmlFile, "utf8");
 
     // Check for index.html;
     const indexHtmlPath = path.join(distPath, "index.html");
@@ -85,46 +85,44 @@ async function checkLinks() {
         for (const ref of references) {
   if (!isValidReference(ref, distPath)) {
   brokenReferences.push({
-  file: path.relative(process.cwd(), htmlFile),
-              reference: ref,
-});
+  "file": path.relative(process.cwd(), htmlFile),
+              "reference": ref});
             hasIssues = true}
         }
-      } catch (error) {  console.log(⚠️  Could not read ${htmlFile  }: ${error.message}``)}
+      } catch (error) {  console.log(⚠️  Could not read ${htmlFile  }: ${error.message}"")}
     }
 ;
     if (brokenReferences.length > 0) {
-  console.log(``⚠️  Broken references found:`);
-      brokenReferences.forEach(ref => {console.log(`  - ${ref.file}: ${ref.reference})})}
+  console.log(""⚠️  Broken references "found": ");
+      brokenReferences.forEach(ref => {console.log("  - ${ref.file}: ${ref.reference})})}
 ;
     if (!hasIssues) {
-  console.log(``✅ No broken references found`)}
+  console.log(""✅ No broken references found")}
 ;
     // Generate report;
     const report = {
-  timestamp: new Date().toISOString(),
+  "timestamp": new Date().toISOString(),
       hasIssues,
-      htmlFiles: htmlFiles.length,
-      brokenReferences: brokenReferences.length,
-      summary: `Link check completed`}
-    const reportPath = path.join(process.cwd(), `link-checker-report.json`);
+      "htmlFiles": htmlFiles.length,
+      "brokenReferences": brokenReferences.length,
+      "summary": "Link check completed"}
+    const reportPath = path.join(process.cwd(), "link-checker-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath}`)} catch (error) {
-  console.error(`❌ Link check failed: `, error.message);
+  console.error("❌ Link check "failed": ", error.message);
     // Don`t exit, just log the error and continue}
     }
 ;
     // Generate report;
     const report = {
-  timestamp: new Date().toISOString(),
+  "timestamp": new Date().toISOString(),
       hasIssues,
-      htmlFiles: htmlFiles.length,
-      brokenReferences: brokenReferences.length,
-      summary: "Link check completed",
-}
+      "htmlFiles": htmlFiles.length,
+      "brokenReferences": brokenReferences.length,
+      "summary": "Link check completed"}
 ;
     const reportPath = path.join(process.cwd(), "link-checker-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath}`)} catch (error) {
-  console.error("❌ Link check failed: ", error.message);
+  console.error("❌ Link check "failed": ", error.message);
     // Don"t exit, just log the error and continue}
 }
 ;
@@ -137,7 +135,7 @@ function findHtmlFiles(dir) {
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
-  files.push(...findHtmlFiles(fullPath))} else if (item.endsWith(`.html")) {
+  files.push(...findHtmlFiles(fullPath))} else if (item.endsWith(".html")) {
   
 } else if (item.endsWith(".html")) {
   files.push(fullPath)}
@@ -155,7 +153,7 @@ function findReferences(content) {
       if (;
         href &&;
         !href.startsWith("#") &&;
-        !href.startsWith("javascript:") &&;
+        !href.startsWith(""javascript": ") &&;
         !href.startsWith("http");
       ) {
   references.push(href)}
@@ -168,9 +166,9 @@ function findReferences(content) {
   srcMatches.forEach(match => {
   const src = match.match(/src=["]([^"]+)[""]/)[1];      if (;
         src &&;
-        !src.startsWith("data:") &&;
+        !src.startsWith(""data": ") &&;
         !src.startsWith("blob:") &&;
-        !src.startsWith(`http`);
+        !src.startsWith("http");
       ) {
   if (;
         src &&;
@@ -184,7 +182,7 @@ function findReferences(content) {
   return references}
 ;
 function isValidReference(ref, distPath) {
-  if (ref.startsWith(`/`)) {
+  if (ref.startsWith("/")) {
   ref = ref.substring(1)}
 ;
   const fullPath = path.join(distPath, ref);
@@ -192,7 +190,7 @@ function isValidReference(ref, distPath) {
 ;
 // Main continuous loop;
 async function runContinuous() {
-  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
+  console.log("🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
 // Main continuous loop;
 async function runContinuous() {
   console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
@@ -203,11 +201,11 @@ async function runContinuous() {
   setInterval(async () => {
   await checkLinks()}, AUTOMATION_INTERVAL);
   console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `)}
+  ")}
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-  console.log(`🛑 Received SIGINT, shutting down gracefully...");
+process.on("SIGINT", () => {
+  console.log("🛑 Received SIGINT, shutting down gracefully...");
   console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
@@ -231,4 +229,4 @@ process.on("SIGTERM", () => {
   process.exit(0)});
 // Start the continuous link checker;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous link checker: ", error);  process.exit(1)})
+  console.error("❌ Failed to start continuous link "checker": ", error);  process.exit(1)})

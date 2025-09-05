@@ -19,13 +19,13 @@ class SmartDeploymentAutomation {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -38,10 +38,10 @@ class SmartDeploymentAutomation {
         this.log('Running pre-deployment checks...');
         
         const checks = {
-            lint: this.runLintCheck(),
-            typeCheck: this.runTypeCheck(),
-            build: this.runBuildCheck(),
-            test: this.runTestCheck()
+            "lint": this.runLintCheck(),
+            "typeCheck": this.runTypeCheck(),
+            "build": this.runBuildCheck(),
+            "test": this.runTestCheck()
        };
         
         const allPassed = Object.values(checks).every(check => check.status === 'success';);
@@ -52,42 +52,42 @@ class SmartDeploymentAutomation {
     runLintCheck() {
         try {
             execSync('npm run lint', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
-            return { status: 'success', message: 'Lint check passed' }} catch (error) {
-            return { status: 'failed', message: error.message }}
+            return { "status": 'success', "message": 'Lint check passed' }} catch (error) {
+            return { "status": 'failed', "message": error.message }}
     }
 
     runTypeCheck() {
         try {
             execSync('npm run type-check', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
-            return { status: 'success', message: 'Type check passed' }} catch (error) {
-            return { status: 'failed', message: error.message }}
+            return { "status": 'success', "message": 'Type check passed' }} catch (error) {
+            return { "status": 'failed', "message": error.message }}
     }
 
     runBuildCheck() {
         try {
             execSync('npm run build', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
-            return { status: 'success', message: 'Build check passed' }} catch (error) {
-            return { status: 'failed', message: error.message }}
+            return { "status": 'success', "message": 'Build check passed' }} catch (error) {
+            return { "status": 'failed', "message": error.message }}
     }
 
     runTestCheck() {
         try {
             execSync('npm test', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
-            return { status: 'success', message: 'Test check passed' }} catch (error) {
+            return { "status": 'success', "message": 'Test check passed' }} catch (error) {
             // Tests might not be configured, so we'll mark as warning
-            return { status: 'warning', message: 'No tests configured or tests failed' }}
+            return { "status": 'warning', "message": 'No tests configured or tests failed' }}
     }
 
     generateBuild() {
@@ -95,14 +95,14 @@ class SmartDeploymentAutomation {
         
         try {
             execSync('npm run build', { 
-                cwd: this.projectRoot, 
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "stdio": 'pipe'
             });
             
             this.log('Production build generated successfully');
-            return { status: 'success', message: 'Build completed' }} catch (error) {
-            this.log(`Build failed: ${error.message}`);
-            return { status: 'failed', message: error.message }}
+            return { "status": 'success', "message": 'Build completed' }} catch (error) {
+            this.log(`Build "failed": ${error.message}`);
+            return { "status": 'failed', "message": error.message }}
     }
 
     optimizeBuild() {
@@ -113,49 +113,49 @@ class SmartDeploymentAutomation {
             const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
             
             if ( {
-                execSync('npm run build:production', { 
-                    cwd: this.projectRoot, 
-                    stdio: 'pipe'
+                execSync('npm run "build": production', { 
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
                 })) {
      {
-                execSync('npm run build:production', { 
-                    cwd: this.projectRoot, 
-                    stdio: 'pipe'
+                execSync('npm run "build": production', { 
+                    "cwd": this.projectRoot, 
+                    "stdio": 'pipe'
                 })}
                 this.log('Production build optimization completed')} else {
                 this.log('No production build optimization script found')}
             
-            return { status: 'success', message: 'Build optimization completed' }} catch (error) {
-            this.log(`Build optimization failed: ${error.message}`);
-            return { status: 'failed', message: error.message }}
+            return { "status": 'success', "message": 'Build optimization completed' }} catch (error) {
+            this.log(`Build optimization "failed": ${error.message}`);
+            return { "status": 'failed', "message": error.message }}
     }
 
     checkDeploymentReadiness() {
         this.log('Checking deployment readiness...');
         
         const readiness = {
-            buildExists: fs.existsSync(path.join(this.projectRoot, '.next')),
-            packageJsonExists: fs.existsSync(path.join(this.projectRoot, 'package.json')),
-            nodeModulesExists: fs.existsSync(path.join(this.projectRoot, 'node_modules')),
-            logsDirectoryExists: fs.existsSync(path.join(this.projectRoot, 'logs'))
+            "buildExists": fs.existsSync(path.join(this.projectRoot, '.next')),
+            "packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),
+            "nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),
+            "logsDirectoryExists": fs.existsSync(path.join(this.projectRoot, 'logs'))
        };
         
         const isReady = Object.values(readiness).every(Boolean;);
         
-        this.log(`Deployment readiness: ${isReady ? 'ready' : 'not ready'}`);
+        this.log(`Deployment "readiness": ${isReady ? 'ready' : 'not ready'}`);
         return { ...readiness, isReady }}
 
     generateDeploymentReport() {
         this.log('Generating deployment automation report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            preDeploymentChecks: this.preDeploymentChecks(),
-            build: this.generateBuild(),
-            optimization: this.optimizeBuild(),
-            readiness: this.checkDeploymentReadiness(),
-            recommendations: this.generateDeploymentRecommendations()
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "preDeploymentChecks": this.preDeploymentChecks(),
+            "build": this.generateBuild(),
+            "optimization": this.optimizeBuild(),
+            "readiness": this.checkDeploymentReadiness(),
+            "recommendations": this.generateDeploymentRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -181,7 +181,7 @@ class SmartDeploymentAutomation {
             const report = this.generateDeploymentReport(;);
             this.log('Smart Deployment Automation completed successfully');
             return report} catch (error) {
-            this.log(`Smart Deployment Automation failed: ${error.message}`);
+            this.log(`Smart Deployment Automation "failed": ${error.message}`);
             throw error}
     }
 }

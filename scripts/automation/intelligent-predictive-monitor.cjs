@@ -15,23 +15,20 @@ const path = require("path");
 class $1 {
   constructor() {
   this.metrics = {
-  memoryUsage: [],
-      cpuUsage: [],
-      errorRates: [],
-      responseTimes: [],
-      uptime: [],
-}
+  "memoryUsage": [],
+      "cpuUsage": [],
+      "errorRates": [],
+      "responseTimes": [],
+      "uptime": []}
     this.predictions = {
-  failureProbability: 0,
-      performanceScore: 0,
-      optimizationSuggestions: [],
-      nextMaintenance: null,
-}
+  "failureProbability": 0,
+      "performanceScore": 0,
+      "optimizationSuggestions": [],
+      "nextMaintenance": null}
     this.mlModel = {
-  failureThreshold: 0.7,
-      performanceThreshold: 0.6,
-      learningRate: 0.1,
-}
+  "failureThreshold": 0.7,
+      "performanceThreshold": 0.6,
+      "learningRate": 0.1}
     this.reportDir = path.join(process.cwd(), "predictive-reports")}
 ;
   async initialize() {
@@ -42,14 +39,14 @@ class $1 {
   console.error("❌ Failed to connect to PM2");
           reject(err);
           return}
-        console.log(`✅ Connected to PM2 for predictive monitoring`);
+        console.log("✅ Connected to PM2 for predictive monitoring");
         this.startMonitoring();
         resolve()})})}
 ;
   async ensureReportDirectory() {
   try {
-  await fs.mkdir(this.reportDir, { recursive: true })} catch (error) {
-  console.log(``Report directory already exists`)}
+  await fs.mkdir(this.reportDir, { "recursive": true })} catch (error) {
+  console.log(""Report directory already exists")}
     }
   }
 ;
@@ -69,16 +66,14 @@ class $1 {
           return}
 ;
         const currentMetrics = {
-  timestamp: Date.now(),
-          processes: processes.map(process => ({
+  "timestamp": Date.now(),
+          "processes": processes.map(process => ({
   name: process.name,
-            memory: process.monit.memory,
-            cpu: process.monit.cpu,
-            status: process.pm2_env.status,
-            uptime: process.pm2_env.pm_uptime,
-            restarts: process.pm2_env.restart_time,
-})),
-}
+            "memory": process.monit.memory,
+            "cpu": process.monit.cpu,
+            "status": process.pm2_env.status,
+            "uptime": process.pm2_env.pm_uptime,
+            "restarts": process.pm2_env.restart_time}))}
         // Store metrics for analysis;
         this.metrics.memoryUsage.push(;
           currentMetrics.processes.reduce((sum, p) => sum + p.memory, 0);
@@ -91,7 +86,7 @@ class $1 {
           currentMetrics.processes.reduce((sum, p) => sum + p.cpu, 0);
         );
         this.metrics.errorRates.push(;
-          currentMetrics.processes.filter(p => p.status === `errored`).length;
+          currentMetrics.processes.filter(p => p.status === "errored").length;
         );
         this.metrics.uptime.push(;
           currentMetrics.processes.reduce((sum, p) => sum + p.uptime, 0);
@@ -119,10 +114,10 @@ class $1 {
     const cpuAnomaly = this.detectAnomaly(this.metrics.cpuUsage);
     const errorAnomaly = this.detectAnomaly(this.metrics.errorRates);
 
-    console.log(`📊 Pattern Analysis:;
+    console.log("📊 Pattern "Analysis": ;
       Memory Trend: ${memoryTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}
-      CPU Trend: ${cpuTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}
-      Error Trend: ${errorTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly})}
+      CPU "Trend": ${cpuTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}
+      Error "Trend": ${errorTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}"Anomalies": Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly})}
 ;
   calculateTrend(data) {
   if (data.length < 2) return 0;
@@ -174,10 +169,10 @@ class $1 {
     this.predictions.optimizationSuggestions =;
       this.generateOptimizationSuggestions();
     this.predictions.nextMaintenance = this.predictNextMaintenance();
-    console.log(🔮 Predictions:;
+    console.log(🔮 "Predictions": ;
       Failure Probability: ${(this.predictions.failureProbability * 100).toFixed(2)}%;
-      Performance Score: ${(this.predictions.performanceScore * 100).toFixed(2)}%;
-      Next Maintenance: ${this.predictions.nextMaintenance}`)}
+      Performance "Score": ${(this.predictions.performanceScore * 100).toFixed(2)}%;
+      Next "Maintenance": ${this.predictions.nextMaintenance}")}
 ;
   calculateFailureProbability(errorRate, memoryUsage, cpuUsage) {
   // Weighted factors for failure prediction;
@@ -229,8 +224,8 @@ class $1 {
 ;
     if (cpuUsage > 80) {
   suggestions.push(;
-        `High CPU usage detected - consider process optimization`;
-        "High CPU usage detected - consider process optimization`);
+        "High CPU usage detected - consider process optimization";
+        "High CPU usage detected - consider process optimization");
       )}
 ;
     if (this.metrics.errorRates[this.metrics.errorRates.length - 1] > 2) {
@@ -247,7 +242,7 @@ class $1 {
   return "Immediate attention required"} else if (failureProb > 0.6) {
   return "Within 24 hours"} else if (errorRate > 1) {
   return "Within 48 hours"} else {
-  return "Within 1 week`}
+  return "Within 1 week"}
   }
 ;
   async optimizePerformance() {
@@ -255,12 +250,12 @@ class $1 {
   console.log(🚨 High failure probability detected - initiating preventive measures";
   async optimizePerformance() {
   if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-  console.log(🚨 High failure probability detected - initiating preventive measures`;
-      `);
+  console.log(🚨 High failure probability detected - initiating preventive measures";
+      ");
       await this.initiatePreventiveMeasures()}
 ;
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
-  console.log(`⚡ Low performance detected - initiating optimization`);
+  console.log("⚡ Low performance detected - initiating optimization`);
       await this.initiatePerformanceOptimization()}
   }
 ;
@@ -271,8 +266,8 @@ class $1 {
       processes.forEach(process => {
   if (process.pm2_env.restart_time > 5) {
   console.log(🔄 Restarting ${process.name} due to high restart count`;
-    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {`);
-      console.log(🚨 High failure probability detected - initiating preventive measures"`);
+    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {");
+      console.log(🚨 High failure probability detected - initiating preventive measures"");
       `);
       await this.initiatePreventiveMeasures()}
 ;
@@ -305,27 +300,23 @@ class $1 {
 ;
   async generateReport() {
   const report = {
-  timestamp: new Date().toISOString(),
-      metrics: {
+  "timestamp": new Date().toISOString(),
+      "metrics": {
   currentMemory:;
           this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1] || 0,
-        currentCPU: ;
+        "currentCPU": ;
           this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1] || 0,
-        currentErrors: ;
-          this.metrics.errorRates[this.metrics.errorRates.length - 1] || 0,
-},
-      predictions: this.predictions,
-      trends: {
+        "currentErrors": ;
+          this.metrics.errorRates[this.metrics.errorRates.length - 1] || 0},
+      "predictions": this.predictions,
+      "trends": {
   memoryTrend: this.calculateTrend(this.metrics.memoryUsage),
-        cpuTrend: this.calculateTrend(this.metrics.cpuUsage),
-        errorTrend: this.calculateTrend(this.metrics.errorRates),
-},
-      anomalies: {
+        "cpuTrend": this.calculateTrend(this.metrics.cpuUsage),
+        "errorTrend": this.calculateTrend(this.metrics.errorRates)},
+      "anomalies": {
   memory: this.detectAnomaly(this.metrics.memoryUsage),
-        cpu: this.detectAnomaly(this.metrics.cpuUsage),
-        errors: this.detectAnomaly(this.metrics.errorRates),
-},
-}
+        "cpu": this.detectAnomaly(this.metrics.cpuUsage),
+        "errors": this.detectAnomaly(this.metrics.errorRates)}}
     const reportPath = path.join(;
       this.reportDir,predictive-report-${Date.now()}.json`;
 
@@ -334,7 +325,7 @@ class $1 {
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(📊 Predictive report saved to ${reportPath}``)}
+    console.log(📊 Predictive report saved to ${reportPath}`")}
 }
 ;
 // Main execution;
@@ -342,12 +333,12 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000;
 // Main execution;
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
 async function $1() {
-  console.log(`🧠 Starting Intelligent Predictive Monitor...`);
+  console.log("🧠 Starting Intelligent Predictive Monitor...");
   const monitor = new IntelligentPredictiveMonitor();
 
   try {
   await monitor.initialize();
-    console.log(`✅ Intelligent Predictive Monitor initialized successfully");
+    console.log("✅ Intelligent Predictive Monitor initialized successfully");
     // Run continuously;
     setInterval(async () => {
   console.log("✅ Intelligent Predictive Monitor initialized successfully");
@@ -361,9 +352,9 @@ async function $1() {
       await monitor.generateReport()}, AUTOMATION_INTERVAL)} catch (error) {
   
 } catch (error) {
-  console.error("❌ Intelligent Predictive Monitor failed: ", error.message)}
+  console.error("❌ Intelligent Predictive Monitor "failed": ", error.message)}
   } catch (error) {
-  console.error("❌ Intelligent Predictive Monitor failed: ", error.message)}
+  console.error("❌ Intelligent Predictive Monitor "failed": ", error.message)}
 }
 ;
 runPredictiveMonitor()

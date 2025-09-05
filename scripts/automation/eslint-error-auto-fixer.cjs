@@ -15,7 +15,7 @@ class ESLintErrorAutoFixer {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.fixesApplied = 0;
@@ -28,26 +28,26 @@ class ESLintErrorAutoFixer {
   async runESLintCheck() {
     try {
       this.log('Running ESLint check...');
-      execSync('npm run lint', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 }} catch (error) {
+      execSync('npm run lint', { "stdio": 'pipe' });
+      return { "success": true, "errors": [], "count": 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseESLintErrors(output);
       this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length }}
+      return { "success": false, errors, "count": errors.length }}
   }
 
   async runESLintFix() {
     try {
       this.log('Running ESLint auto-fix...');
-      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { stdio: 'pipe' });
-      return { success: true, fixed: true }} catch (error) {
-      this.log(`ESLint auto-fix failed: ${error.message}`, 'ERROR');
-      return { success: false, fixed: false }}
+      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' });
+      return { "success": true, "fixed": true }} catch (error) {
+      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR');
+      return { "success": false, "fixed": false }}
   }
 
   parseESLintErrors(output) {
     const errorLines = output.split('\n').filter(line => 
-      line.includes('error') || line.includes('Error:')
+      line.includes('error') || line.includes('"Error": ')
     );
     
     const errors = [];
@@ -60,11 +60,11 @@ class ESLintErrorAutoFixer {
           if (currentError) {
             errors.push(currentError)}
           currentError = {
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: line.split(' - ')[1] || line,
-            type: 'eslint'
+            "file": match[1].trim(),
+            "line": parseInt(match[2]),
+            "column": parseInt(match[3]),
+            "message": line.split(' - ')[1] || line,
+            "type": 'eslint'
           }}
       } else if (currentError && line.trim()) {
         currentError.message += ' ' + line.trim()}
@@ -96,8 +96,7 @@ class ESLintErrorAutoFixer {
     const lines = content.split('\n');
     
     // Apply common ESLint fixes
-    const fixes = [
-      this.fixUnusedVariables.bind(this),
+    const fixes = [this.fixUnusedVariables.bind(this),
       this.fixMissingSemicolons.bind(this),
       this.fixUnusedImports.bind(this),
       this.fixConsoleStatements.bind(this),
@@ -138,14 +137,14 @@ class ESLintErrorAutoFixer {
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;
           
           return {
-            modified: true,
-            content: lines.join('\n'),
-            description: `Commented out unused variable ${varName}`
+            "modified": true,
+            "content": lines.join('\n'),
+            "description": `Commented out unused variable ${varName}`
           }}
       }
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixMissingSemicolons(lines, error) {
     if (error.message.includes('Missing semicolon')) {
@@ -156,13 +155,13 @@ class ESLintErrorAutoFixer {
         lines[lineIndex] = line + ';';
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added missing semicolon'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added missing semicolon'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixUnusedImports(lines, error) {
     if (error.message.includes('is defined but never used')) {
@@ -176,15 +175,15 @@ class ESLintErrorAutoFixer {
             lines[i] = `// ${lines[i]} // eslint-disable-line no-unused-vars`;
             
             return {
-              modified: true,
-              content: lines.join('\n'),
-              description: `Commented out unused import ${importName}`
+              "modified": true,
+              "content": lines.join('\n'),
+              "description": `Commented out unused import ${importName}`
             }}
         }
       }
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixConsoleStatements(lines, error) {
     if (error.message.includes('Unexpected console statement')) {
@@ -195,13 +194,13 @@ class ESLintErrorAutoFixer {
         lines[lineIndex] = `// ${line} // eslint-disable-line no-console`;
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Commented out console statement'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Commented out console statement'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixPreferConst(lines, error) {
     if (error.message.includes('Use const instead of let')) {
@@ -212,13 +211,13 @@ class ESLintErrorAutoFixer {
         lines[lineIndex] = line.replace('let ', 'const ');
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Changed let to const'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Changed let to const'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixNoVar(lines, error) {
     if (error.message.includes('Unexpected var, use let or const instead')) {
@@ -229,13 +228,13 @@ class ESLintErrorAutoFixer {
         lines[lineIndex] = line.replace('var ', 'const ');
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Changed var to const'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Changed var to const'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixTrailingSpaces(lines, error) {
     if (error.message.includes('Trailing spaces not allowed')) {
@@ -246,13 +245,13 @@ class ESLintErrorAutoFixer {
         lines[lineIndex] = line.trimEnd();
         
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Removed trailing spaces'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Removed trailing spaces'
         }}
     }
     
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   async runAutoFix() {
     if (!this.autoFixEnabled) {
@@ -286,12 +285,12 @@ class ESLintErrorAutoFixer {
       const postCheckResult = await this.runESLintCheck();
       
       const report = {
-        timestamp: new Date().toISOString(),
-        initialErrors: checkResult.errors.length,
-        autoFixApplied: autoFixResult.success,
-        customFixesApplied: fixesApplied,
-        remainingErrors: postCheckResult.errors.length,
-        success: postCheckResult.success
+        "timestamp": new Date().toISOString(),
+        "initialErrors": checkResult.errors.length,
+        "autoFixApplied": autoFixResult.success,
+        "customFixesApplied": fixesApplied,
+        "remainingErrors": postCheckResult.errors.length,
+        "success": postCheckResult.success
       };
       
       // Save report
@@ -299,7 +298,7 @@ class ESLintErrorAutoFixer {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
       this.log(`ESLint auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
-      this.log(`ESLint auto-fix failed: ${error.message}`, 'ERROR')}
+      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR')}
   }
 
   async startAutoFixer() {
@@ -312,7 +311,7 @@ class ESLintErrorAutoFixer {
     setInterval(async () => {
       try {
         await this.runAutoFix()} catch (error) {
-        this.log(`Error in periodic fix: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')}
     }, this.fixInterval);
 
     this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
@@ -333,7 +332,7 @@ if (require.main === module) {
 
   // Start auto-fixer
   fixer.startAutoFixer().catch(error => {
-    fixer.log(`Failed to start auto-fixer: ${error.message}`, 'ERROR');
+    fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
 module.exports = ESLintErrorAutoFixer;

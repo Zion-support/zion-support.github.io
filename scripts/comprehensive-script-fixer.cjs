@@ -47,16 +47,16 @@ class ComprehensiveScriptFixer {
       const fixedContent = this.fixSyntaxErrors(content)
       if (fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent)
-        this.log(`✅ Fixed: ${path.basename(filePath)}`)
+        this.log(`✅ "Fixed": ${path.basename(filePath)}`)
         this.fixedCount++
         return true
       } else {
-        this.log(`✅ No fixes needed: ${path.basename(filePath)}`)
+        this.log(`✅ No fixes "needed": ${path.basename(filePath)}`)
         return false
       }
     } catch (error) {
       this.log(`❌ Failed to fix ${path.basename(filePath)}: ${error.message}`, 'error')
-      this.errors.push({ file: filePath, error: error.message })
+      this.errors.push({ "file": filePath, "error": error.message })
       return false
     }
   }
@@ -76,19 +76,19 @@ class ComprehensiveScriptFixer {
     }
     this.log(`🔧 Script fixing completed. Fixed ${this.fixedCount} files.`)
     if (this.errors.length > 0) {
-      this.log(`⚠️ ${this.errors.length} files had errors:`, 'warning')
+      this.log(`⚠️ ${this.errors.length} files had "errors": `, 'warning')
       this.errors.forEach(error => {
         this.log(`  - ${path.basename(error.file)}: ${error.error}`, 'warning')
       })
     }
-    return { fixedCount: this.fixedCount, errors: this.errors }
+    return { "fixedCount": this.fixedCount, "errors": this.errors }
   }
   displaySummary() {
     console.log('\n' + '='.repeat(60))
     console.log('🔧 COMPREHENSIVE SCRIPT FIXER SUMMARY')
     console.log('='.repeat(60))
-    console.log(`Files Fixed: ${this.fixedCount}`)
-    console.log(`Errors: ${this.errors.length}`)
+    console.log(`Files "Fixed": ${this.fixedCount}`)
+    console.log(`"Errors": ${this.errors.length}`)
     console.log('='.repeat(60))
   }
   async run() {
@@ -96,11 +96,11 @@ class ComprehensiveScriptFixer {
       await this.fixAllScripts()
       this.displaySummary()
       this.log('🎉 Comprehensive script fixing completed successfully')
-      return { success: true, fixedCount: this.fixedCount, errors: this.errors }
+      return { "success": true, "fixedCount": this.fixedCount, "errors": this.errors }
     } catch (error) {
-      this.log(`💥 Script fixing failed: ${error.message}`, 'error')
+      this.log(`💥 Script fixing "failed": ${error.message}`, 'error')
       this.displaySummary()
-      return { success: false, error: error.message }
+      return { "success": false, "error": error.message }
     }
   }
 }

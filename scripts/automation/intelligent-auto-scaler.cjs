@@ -17,14 +17,14 @@ class IntelligentAutoScaler {
     this.configFile = path.join(this.projectRoot, 'logs', 'scaling-config.json');
     
     this.scalingConfig = {
-      cpuThreshold: parseFloat(process.env.CPU_THRESHOLD) || 70,
-      memoryThreshold: parseFloat(process.env.MEMORY_THRESHOLD) || 80,
-      minInstances: parseInt(process.env.MIN_INSTANCES) || 1,
-      maxInstances: parseInt(process.env.MAX_INSTANCES) || 5,
-      scalingStrategy: process.env.SCALING_STRATEGY || 'intelligent',
-      cooldownPeriod: 300000, // 5 minutes
-      scaleUpThreshold: 0.8,
-      scaleDownThreshold: 0.3
+      "cpuThreshold": parseFloat(process.env.CPU_THRESHOLD) || 70,
+      "memoryThreshold": parseFloat(process.env.MEMORY_THRESHOLD) || 80,
+      "minInstances": parseInt(process.env.MIN_INSTANCES) || 1,
+      "maxInstances": parseInt(process.env.MAX_INSTANCES) || 5,
+      "scalingStrategy": process.env.SCALING_STRATEGY || 'intelligent',
+      "cooldownPeriod": 300000, // 5 minutes
+      "scaleUpThreshold": 0.8,
+      "scaleDownThreshold": 0.3
     };
     
     this.scalingHistory = [];
@@ -35,7 +35,7 @@ class IntelligentAutoScaler {
 
   async ensureLogsDirectory() {
     try {
-      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { "recursive": true });
       await this.loadScalingConfig();
     } catch (error) {
       console.log('Logs directory already exists');
@@ -64,7 +64,7 @@ class IntelligentAutoScaler {
     try {
       await fs.writeFile(this.configFile, JSON.stringify(this.scalingConfig, null, 2));
     } catch (error) {
-      this.log(`❌ Failed to save scaling config: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to save scaling "config": ${error.message}`, 'ERROR');
     }
   }
 
@@ -74,7 +74,7 @@ class IntelligentAutoScaler {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          this.log(`❌ Failed to connect to PM2: ${err.message}`, 'ERROR');
+          this.log(`❌ Failed to connect to "PM2": ${err.message}`, 'ERROR');
           reject(err);
           return;
         }
@@ -120,7 +120,7 @@ class IntelligentAutoScaler {
       return scalingNeeds;
       
     } catch (error) {
-      this.log(`❌ Scaling analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Scaling analysis "failed": ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -139,21 +139,21 @@ class IntelligentAutoScaler {
 
   async analyzeProcessScalingNeeds(process) {
     const metrics = {
-      name: process.name,
-      cpu: process.monit.cpu || 0,
-      memory: process.monit.memory || 0,
-      instances: process.pm2_env.instances || 1,
-      uptime: process.pm2_env.pm_uptime,
-      restarts: process.pm2_env.restart_time || 0
+      "name": process.name,
+      "cpu": process.monit.cpu || 0,
+      "memory": process.monit.memory || 0,
+      "instances": process.pm2_env.instances || 1,
+      "uptime": process.pm2_env.pm_uptime,
+      "restarts": process.pm2_env.restart_time || 0
     };
     
     const scalingDecision = {
-      process: process.name,
-      action: 'none',
-      reason: '',
-      priority: 'medium',
-      currentInstances: metrics.instances,
-      recommendedInstances: metrics.instances
+      "process": process.name,
+      "action": 'none',
+      "reason": '',
+      "priority": 'medium',
+      "currentInstances": metrics.instances,
+      "recommendedInstances": metrics.instances
     };
     
     // Check if scaling is needed
@@ -166,7 +166,7 @@ class IntelligentAutoScaler {
         metrics.instances + 1,
         this.scalingConfig.maxInstances
       );
-      scalingDecision.reason = `High resource usage: CPU ${metrics.cpu}%, Memory ${Math.round(metrics.memory / 1024 / 1024)}MB`;
+      scalingDecision.reason = `High resource "usage": CPU ${metrics.cpu}%, Memory ${Math.round(metrics.memory / 1024 / 1024)}MB`;
       scalingDecision.priority = this.calculatePriority(metrics);
     } else if (shouldScaleDown) {
       scalingDecision.action = 'scale_down';
@@ -174,7 +174,7 @@ class IntelligentAutoScaler {
         metrics.instances - 1,
         this.scalingConfig.minInstances
       );
-      scalingDecision.reason = `Low resource usage: CPU ${metrics.cpu}%, Memory ${Math.round(metrics.memory / 1024 / 1024)}MB`;
+      scalingDecision.reason = `Low resource "usage": CPU ${metrics.cpu}%, Memory ${Math.round(metrics.memory / 1024 / 1024)}MB`;
       scalingDecision.priority = 'low';
     }
     
@@ -224,7 +224,7 @@ class IntelligentAutoScaler {
     
     // Sort by priority
     const sortedNeeds = scalingNeeds.sort((a, b) => {
-      const priorityOrder = { high: 3, medium: 2, low: 1 };
+      const priorityOrder = { "high": 3, "medium": 2, "low": 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     });
     
@@ -290,13 +290,13 @@ class IntelligentAutoScaler {
 
   recordScalingAction(scalingDecision, action) {
     const scalingRecord = {
-      timestamp: new Date().toISOString(),
-      process: scalingDecision.process,
+      "timestamp": new Date().toISOString(),
+      "process": scalingDecision.process,
       action,
-      fromInstances: scalingDecision.currentInstances,
-      toInstances: scalingDecision.recommendedInstances,
-      reason: scalingDecision.reason,
-      priority: scalingDecision.priority
+      "fromInstances": scalingDecision.currentInstances,
+      "toInstances": scalingDecision.recommendedInstances,
+      "reason": scalingDecision.reason,
+      "priority": scalingDecision.priority
     };
     
     this.scalingHistory.push(scalingRecord);
@@ -315,7 +315,7 @@ class IntelligentAutoScaler {
       const historyFile = path.join(this.projectRoot, 'logs', 'scaling-history.json');
       await fs.writeFile(historyFile, JSON.stringify(this.scalingHistory, null, 2));
     } catch (error) {
-      this.log(`❌ Failed to save scaling history: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to save scaling "history": ${error.message}`, 'ERROR');
     }
   }
 
@@ -324,11 +324,11 @@ class IntelligentAutoScaler {
     
     try {
       const analysis = {
-        timestamp: new Date().toISOString(),
-        scalingHistory: this.scalingHistory.length,
-        currentInstances: this.currentInstances,
-        scalingEfficiency: this.calculateScalingEfficiency(),
-        recommendations: this.generateScalingRecommendations()
+        "timestamp": new Date().toISOString(),
+        "scalingHistory": this.scalingHistory.length,
+        "currentInstances": this.currentInstances,
+        "scalingEfficiency": this.calculateScalingEfficiency(),
+        "recommendations": this.generateScalingRecommendations()
       };
       
       const reportFile = path.join(this.projectRoot, 'logs', 'scaling-analysis-report.json');
@@ -337,13 +337,13 @@ class IntelligentAutoScaler {
       this.log('📊 Scaling analysis completed and saved');
       
     } catch (error) {
-      this.log(`❌ Scaling analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Scaling analysis "failed": ${error.message}`, 'ERROR');
     }
   }
 
   calculateScalingEfficiency() {
     if (this.scalingHistory.length < 5) {
-      return { score: 0.5, message: 'Insufficient data for efficiency calculation' };
+      return { "score": 0.5, "message": 'Insufficient data for efficiency calculation' };
     }
     
     const recentScaling = this.scalingHistory.slice(-20);
@@ -356,10 +356,10 @@ class IntelligentAutoScaler {
     const efficiency = 1 - balance; // Higher efficiency when actions are balanced
     
     return {
-      score: efficiency,
-      level: efficiency > 0.8 ? 'excellent' : efficiency > 0.6 ? 'good' : 'needs_improvement',
-      scaleUpRatio: scaleUpActions / totalActions,
-      scaleDownRatio: scaleDownActions / totalActions
+      "score": efficiency,
+      "level": efficiency > 0.8 ? 'excellent' : efficiency > 0.6 ? 'good' : 'needs_improvement',
+      "scaleUpRatio": scaleUpActions / totalActions,
+      "scaleDownRatio": scaleDownActions / totalActions
     };
   }
 
@@ -370,9 +370,9 @@ class IntelligentAutoScaler {
     
     if (efficiency.score < 0.6) {
       recommendations.push({
-        type: 'threshold_adjustment',
-        message: 'Consider adjusting scaling thresholds for better balance',
-        action: 'Review CPU and memory thresholds'
+        "type": 'threshold_adjustment',
+        "message": 'Consider adjusting scaling thresholds for better balance',
+        "action": 'Review CPU and memory thresholds'
       });
     }
     
@@ -382,9 +382,9 @@ class IntelligentAutoScaler {
       
       if (frequentScaling) {
         recommendations.push({
-          type: 'cooldown_adjustment',
-          message: 'Frequent scaling detected, consider increasing cooldown period',
-          action: 'Increase cooldown period to reduce scaling frequency'
+          "type": 'cooldown_adjustment',
+          "message": 'Frequent scaling detected, consider increasing cooldown period',
+          "action": 'Increase cooldown period to reduce scaling frequency'
         });
       }
     }
@@ -396,9 +396,9 @@ class IntelligentAutoScaler {
     
     if (nonScalingProcesses.length > 0) {
       recommendations.push({
-        type: 'process_optimization',
-        message: `Processes ${nonScalingProcesses.join(', ')} never scale - consider optimization`,
-        action: 'Review process configuration and resource usage'
+        "type": 'process_optimization',
+        "message": `Processes ${nonScalingProcesses.join(', ')} never scale - consider optimization`,
+        "action": 'Review process configuration and resource usage'
       });
     }
     
@@ -420,12 +420,12 @@ class IntelligentAutoScaler {
           // Too many scale-ups, increase thresholds
           this.scalingConfig.cpuThreshold = Math.min(95, this.scalingConfig.cpuThreshold + 5);
           this.scalingConfig.memoryThreshold = Math.min(95, this.scalingConfig.memoryThreshold + 5);
-          this.log(`📊 Increased scaling thresholds: CPU ${this.scalingConfig.cpuThreshold}%, Memory ${this.scalingConfig.memoryThreshold}%`);
+          this.log(`📊 Increased scaling "thresholds": CPU ${this.scalingConfig.cpuThreshold}%, Memory ${this.scalingConfig.memoryThreshold}%`);
         } else if (scaleUpRatio < 0.3) {
           // Too few scale-ups, decrease thresholds
           this.scalingConfig.cpuThreshold = Math.max(50, this.scalingConfig.cpuThreshold - 5);
           this.scalingConfig.memoryThreshold = Math.max(50, this.scalingConfig.memoryThreshold - 5);
-          this.log(`📊 Decreased scaling thresholds: CPU ${this.scalingConfig.cpuThreshold}%, Memory ${this.scalingConfig.memoryThreshold}%`);
+          this.log(`📊 Decreased scaling "thresholds": CPU ${this.scalingConfig.cpuThreshold}%, Memory ${this.scalingConfig.memoryThreshold}%`);
         }
         
         await this.saveScalingConfig();
@@ -444,20 +444,20 @@ class IntelligentAutoScaler {
       await this.saveScalingConfig();
       
     } catch (error) {
-      this.log(`❌ Strategy optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Strategy optimization "failed": ${error.message}`, 'ERROR');
     }
   }
 
   async getScalingStatus() {
     const processes = await this.getProcessList();
     const status = {
-      timestamp: new Date().toISOString(),
-      totalProcesses: processes.length,
-      onlineProcesses: processes.filter(p => p.pm2_env.status === 'online').length,
-      currentInstances: this.currentInstances,
-      scalingConfig: this.scalingConfig,
-      recentScaling: this.scalingHistory.slice(-5),
-      efficiency: this.calculateScalingEfficiency()
+      "timestamp": new Date().toISOString(),
+      "totalProcesses": processes.length,
+      "onlineProcesses": processes.filter(p => p.pm2_env.status === 'online').length,
+      "currentInstances": this.currentInstances,
+      "scalingConfig": this.scalingConfig,
+      "recentScaling": this.scalingHistory.slice(-5),
+      "efficiency": this.calculateScalingEfficiency()
     };
     
     return status;
@@ -476,7 +476,7 @@ class IntelligentAutoScaler {
       });
       
     } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+      this.log(`❌ Fatal "error": ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }

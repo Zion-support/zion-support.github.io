@@ -19,13 +19,13 @@ class TypeScriptSyntaxFixer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -39,22 +39,22 @@ class TypeScriptSyntaxFixer {
         
         try {
             const result = execSync('npm run type-check', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             this.log('TypeScript type check passed');
             return {;
-                status: 'success',
-                output: result,
-                errors: 0
+                "status": 'success',
+                "output": result,
+                "errors": 0
             }} catch (error) {
-            this.log(`TypeScript type check failed: ${error.message}`);
+            this.log(`TypeScript type check "failed": ${error.message}`);
             return {;
-                status: 'failed',
-                output: error.stdout || error.message,
-                errors: this.extractErrorCount(error.stdout || error.message)
+                "status": 'failed',
+                "output": error.stdout || error.message,
+                "errors": this.extractErrorCount(error.stdout || error.message)
             }}
     }
 
@@ -66,23 +66,23 @@ class TypeScriptSyntaxFixer {
         this.log('Running ESLint with auto-fix...');
         
         try {
-            const result = execSync('npm run lint:fix', { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
-                stdio: 'pipe'
+            const result = execSync('npm run "lint": fix', { 
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
             };);
             
             this.log('ESLint auto-fix completed');
             return {;
-                status: 'success',
-                output: result,
-                fixed: true
+                "status": 'success',
+                "output": result,
+                "fixed": true
             }} catch (error) {
-            this.log(`ESLint auto-fix failed: ${error.message}`);
+            this.log(`ESLint auto-fix "failed": ${error.message}`);
             return {;
-                status: 'failed',
-                output: error.stdout || error.message,
-                fixed: false
+                "status": 'failed',
+                "output": error.stdout || error.message,
+                "fixed": false
             }}
     }
 
@@ -140,8 +140,8 @@ class TypeScriptSyntaxFixer {
                     fs.writeFileSync(file, content)}
                     fixedCount++;
                     fixes.push({
-                        file: file,
-                        fixes: ['trailing-commas', 'semicolons', 'quotes', 'indentation']
+                        "file": file,
+                        "fixes": ['trailing-commas', 'semicolons', 'quotes', 'indentation']
                     })}
             } catch (error) {
                 this.log(`Error fixing file ${file}: ${error.message}`)}
@@ -152,7 +152,7 @@ class TypeScriptSyntaxFixer {
 
     fixTrailingCommas(content) {
         // Add trailing commas in objects and arrays
-        return content.replace(/([^,}\]])\s*([}\]])\s*$/gm, '$1,$2')}
+        return content.replace(/([^}\]])\s*([}\]])\s*$/gm, '$1,$2')}
 
     fixSemicolons(content) {
         // Add missing semicolons
@@ -171,7 +171,7 @@ class TypeScriptSyntaxFixer {
     return '}';
             
             const indent = line.length - line.trimStart().lengt;h;
-            const spaces = Math.floor(indent / 2) *; ;2;
+            const spaces = Math.floor(indent / 2) *;2;
             return ' '.repeat(spaces) + trimmed}).join('\n')}
 
     generateSyntaxReport() {
@@ -182,14 +182,14 @@ class TypeScriptSyntaxFixer {
         const syntaxFixes = this.fixCommonSyntaxIssues(;);
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            fixes: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "fixes": {
                 typeCheck: typeCheck,
-                eslintFix: eslintFix,
-                syntaxFixes: syntaxFixes
+                "eslintFix": eslintFix,
+                "syntaxFixes": syntaxFixes
             },
-            recommendations: this.generateSyntaxRecommendations()
+            "recommendations": this.generateSyntaxRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -215,7 +215,7 @@ class TypeScriptSyntaxFixer {
             const report = this.generateSyntaxReport(;);
             this.log('TypeScript Syntax Fixer completed successfully');
             return report} catch (error) {
-            this.log(`TypeScript Syntax Fixer failed: ${error.message}`);
+            this.log(`TypeScript Syntax Fixer "failed": ${error.message}`);
             throw error}
     }
 }

@@ -19,7 +19,7 @@ class ImportErrorFixer {
   async fixImportErrors() {
     this.log('Fixing import errors...');
     
-    const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
+    const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { "cwd": this.projectRoot });
     
     for (const file of files) {
       const filePath = path.join(this.projectRoot, file);
@@ -76,7 +76,7 @@ class ImportErrorFixer {
   async fixExportErrors() {
     this.log('Fixing export errors...');
     
-    const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
+    const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { "cwd": this.projectRoot });
     
     for (const file of files) {
       const filePath = path.join(this.projectRoot, file);
@@ -103,18 +103,18 @@ class ImportErrorFixer {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      errorsFound: this.errorsFound,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied,
+      "errorsFound": this.errorsFound,
+      "summary": {
         totalFixes: this.fixesApplied.length,
-        totalErrors: this.errorsFound.length,
-        success: this.errorsFound.length === 0
+        "totalErrors": this.errorsFound.length,
+        "success": this.errorsFound.length === 0
       }
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`)}
+    this.log(`Report "generated": ${this.reportFile}`)}
 
   async run() {
     this.log('Starting import error fixing...');
@@ -128,11 +128,11 @@ class ImportErrorFixer {
       this.log(`Import error fixing completed. Applied ${this.fixesApplied.length} fixes.`);
       
       if (this.errorsFound.length > 0) {
-        this.log(`Remaining errors: ${this.errorsFound.length}`, 'warn');
+        this.log(`Remaining "errors": ${this.errorsFound.length}`, 'warn');
         this.errorsFound.forEach(error => this.log(`- ${error}`, 'warn'))}
       
     } catch (error) {
-      this.log(`Error during import fixing process: ${error.message}`, 'error');
+      this.log(`Error during import fixing "process": ${error.message}`, 'error');
       throw error}
   }
 }

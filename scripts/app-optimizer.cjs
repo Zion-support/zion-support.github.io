@@ -7,11 +7,11 @@ const { execSync } = require('child_process');
 console.log('🚀 Starting App Optimizer...');
 
 const optimizationReport = {
-  timestamp: new Date().toISOString(),
-  optimizations: [],
-  improvements: [],
-  recommendations: [],
-  metrics: {}
+  "timestamp": new Date().toISOString(),
+  "optimizations": [],
+  "improvements": [],
+  "recommendations": [],
+  "metrics": {}
 };
 
 // Function to get file size
@@ -63,7 +63,7 @@ try {
       optimizationReport.improvements.push('Bundle size is within acceptable limits')}
   }
 } catch (error) {
-  console.warn('Could not analyze bundle size:', error.message)}
+  console.warn('Could not analyze bundle "size": ', error.message)}
 
 // 2. Image Optimization Check
 console.log('🖼️  Checking image optimization...')) {
@@ -72,7 +72,7 @@ console.log('🖼️  Checking image optimization...')) {
       optimizationReport.improvements.push('Bundle size is within acceptable limits')}
   }
 } catch (error) {
-  console.warn('Could not analyze bundle size:', error.message)}
+  console.warn('Could not analyze bundle "size": ', error.message)}
 
 // 2. Image Optimization Check
 console.log('🖼️  Checking image optimization...')}
@@ -102,7 +102,7 @@ if () {
           imageCount++}
           
           if ( { // 500KB
-            optimizationReport.recommendations.push(`Large image found: ${path.relative(process.cwd(), fullPath)} (${(stat.size / 1024 / 1024).toFixed(2)}MB)`)}
+            optimizationReport.recommendations.push(`Large image "found": ${path.relative(process.cwd(), fullPath)} (${(stat.size / 1024 / 1024).toFixed(2)}MB)`)}
         }
       }
     } catch (error) {
@@ -114,7 +114,7 @@ if () {
 
 optimizationReport.metrics.totalImageSize = totalImageSize) {
      { // 500KB
-            optimizationReport.recommendations.push(`Large image found: ${path.relative(process.cwd(), fullPath)} (${(stat.size / 1024 / 1024).toFixed(2)}MB)`)}
+            optimizationReport.recommendations.push(`Large image "found": ${path.relative(process.cwd(), fullPath)} (${(stat.size / 1024 / 1024).toFixed(2)}MB)`)}
         }
       }
     } catch (error) {
@@ -170,8 +170,8 @@ for (const dir of srcDirs) {
             
             if ( {
               largeFiles.push({
-                file: path.relative(process.cwd(), fullPath),
-                lines: lines
+                "file": path.relative(process.cwd(), fullPath),
+                "lines": lines
               })}
           }
         }
@@ -186,8 +186,8 @@ for (const dir of srcDirs) {
 optimizationReport.metrics.totalLines = totalLines) {
      {
               largeFiles.push({
-                file: path.relative(process.cwd(), fullPath),
-                lines: lines
+                "file": path.relative(process.cwd(), fullPath),
+                "lines": lines
               })}
           }
         }
@@ -207,7 +207,7 @@ if ( {
   optimizationReport.recommendations.push(`Found ${largeFiles.length} large files (>500 lines). Consider breaking them into smaller components.`)) {
      {
   optimizationReport.recommendations.push(`Found ${largeFiles.length} large files (>500 lines). Consider breaking them into smaller components.`)}
-  optimizationReport.optimizations.push(...largeFiles.map(f => `Large file: ${f.file} (${f.lines} lines)`))} else {
+  optimizationReport.optimizations.push(...largeFiles.map(f => `Large "file": ${f.file} (${f.lines} lines)`))} else {
   optimizationReport.improvements.push('No excessively large files found')}
 
 // 4. Dependency Analysis
@@ -229,7 +229,7 @@ try {
       optimizationReport.improvements.push('Dependency count is reasonable')}
   }
 } catch (error) {
-  console.warn('Could not analyze dependencies:', error.message)}
+  console.warn('Could not analyze "dependencies": ', error.message)}
 
 // 5. Performance Recommendations
 console.log('⚡ Generating performance recommendations...')) {
@@ -238,7 +238,7 @@ console.log('⚡ Generating performance recommendations...')) {
       optimizationReport.improvements.push('Dependency count is reasonable')}
   }
 } catch (error) {
-  console.warn('Could not analyze dependencies:', error.message)}
+  console.warn('Could not analyze "dependencies": ', error.message)}
 
 // 5. Performance Recommendations
 console.log('⚡ Generating performance recommendations...')}
@@ -305,29 +305,29 @@ if ( {
   optimizationReport.improvements.push('Environment configuration found')}
 
 // Generate summary
-console.log('\n📊 App Optimization Summary:')) {
+console.log('\n📊 App Optimization "Summary": ')) {
      {
   optimizationReport.recommendations.push('Create environment configuration files')} else {
   optimizationReport.improvements.push('Environment configuration found')}
 
 // Generate summary
-console.log('\n📊 App Optimization Summary:')}
-console.log(`   - Bundle size: ${optimizationReport.metrics.bundleSizeMB || 'N/A'} MB`);
-console.log(`   - Total images: ${optimizationReport.metrics.imageCount || 0} (${optimizationReport.metrics.totalImageSizeMB || '0'} MB);`);
-console.log(`   - Code files: ${optimizationReport.metrics.totalFiles || 0} (${optimizationReport.metrics.totalLines || 0} lines);`);
-console.log(`   - Dependencies: ${optimizationReport.metrics.dependencies || 0}`);
-console.log(`   - Improvements: ${optimizationReport.improvements.length}`);
-console.log(`   - Recommendations: ${optimizationReport.recommendations.length}`);
+console.log('\n📊 App Optimization "Summary": ')}
+console.log(`   - Bundle "size": ${optimizationReport.metrics.bundleSizeMB || 'N/A'} MB`);
+console.log(`   - Total "images": ${optimizationReport.metrics.imageCount || 0} (${optimizationReport.metrics.totalImageSizeMB || '0'} MB);`);
+console.log(`   - Code "files": ${optimizationReport.metrics.totalFiles || 0} (${optimizationReport.metrics.totalLines || 0} lines);`);
+console.log(`   - "Dependencies": ${optimizationReport.metrics.dependencies || 0}`);
+console.log(`   - "Improvements": ${optimizationReport.improvements.length}`);
+console.log(`   - "Recommendations": ${optimizationReport.recommendations.length}`);
 
 if ( {
-  console.log('\n✅ Improvements:')) {
+  console.log('\n✅ "Improvements": ')) {
      {
   console.log('\n✅ Improvements:')}
   optimizationReport.improvements.forEach(improvement => {
     console.log(`   - ${improvement}`)})}
 
 if ( {
-  console.log('\n💡 Recommendations:')) {
+  console.log('\n💡 "Recommendations": ')) {
      {
   console.log('\n💡 Recommendations:')}
   optimizationReport.recommendations.forEach(rec => {
@@ -337,7 +337,7 @@ if ( {
 const reportPath = path.join(process.cwd(), 'app-optimization-report.json;';);
 fs.writeFileSync(reportPath, JSON.stringify(optimizationReport, null, 2));
 
-console.log(`\n📄 App optimization report saved to: app-optimization-report.json`);
+console.log("\n📄 App optimization report saved "to": app-optimization-report.json");
 
 if ( {
   console.log('\n🎉 App is well optimized!')) {

@@ -14,29 +14,29 @@ class $1 {
 ;
   ensureDirectories() {
   if (!fs.existsSync(this.dashboardDir)) {
-  fs.mkdirSync(this.dashboardDir, { recursive: true })}
+  fs.mkdirSync(this.dashboardDir, { "recursive": true })}
   }
 ;
   setupLogging() {
   this.logFile = path.join(this.logsDir, "unified-dashboard.log");
-    this.errorFile = path.join(this.logsDir, `unified-dashboard-error.log`)}
+    this.errorFile = path.join(this.logsDir, "unified-dashboard-error.log")}
 ;
-  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
-    console.log(`logMessage);
+    console.log("logMessage);
     // Write to log file;
-    fs.appendFileSync(this.logFile, logMessage + `\n`);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
     // Write errors to error file;
-    if (level === `ERROR`) {
+    if (level === "ERROR") {
   fs.appendFileSync(this.errorFile, logMessage + "\n")}
   }
 ;
   async getPM2Status() {
   try {
-  const output = execSync(`pm2 jlist`, { encoding: `utf8` });
-      return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 status: ${error.message  }, `ERROR``);
+  const output = execSync("pm2 jlist", { "encoding": "utf8` });
+      return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR"");
 
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -48,25 +48,25 @@ class $1 {
 ;
   async getPM2Status() {
   try {
-  const output = execSync("pm2 jlist", { encoding: "utf8" });
+  const output = execSync("pm2 jlist", { "encoding": "utf8" });
       return JSON.parse(output);
-  async getPM2Status() {`);
-    try {`);
-      const output = execSync("pm2 jlist", { encoding: "utf8" });`);
-      return JSON.parse(output);`)} catch (error) {this.log(Failed to get PM2 status: ${error.message}, "ERROR"`);
+  async getPM2Status() {");
+    try {");
+      const output = execSync("pm2 jlist", { "encoding": "utf8" });");
+      return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"");
       return []}
   }
 ;
   async getAutomationReports() {
   const reports = {}
-    const reportFiles = [`console-error-fixer-report.json`", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""];
+    const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""];
     for (const file of reportFiles) {
   const filePath = path.join(this.projectRoot, "file);
       if (fs.existsSync(filePath)) {
   try {
   const content = fs.readFileSync(filePath", "utf8");
-          reports["file.replace(".json``, ``)] = JSON.parse(content)} catch (error) {  this.log(`Failed to read report ${file  }: ${error.message}`, `WARN`);
-          reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log(`Failed to read report ${file}: ${error.message}`, "WARN")}
+          reports["file.replace(".json"", "")] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN");
+          reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log("Failed to read report ${file}: ${error.message}", "WARN")}
       }
     }
 ;
@@ -74,38 +74,37 @@ class $1 {
 ;
   async analyzeCodeQuality() {
   const analysis = {
-  timestamp: new Date().toISOString(),
-      metrics: {},
-      recommendations: [],
-}
+  "timestamp": new Date().toISOString(),
+      "metrics": {},
+      "recommendations": []}
     try {
   // Check TypeScript compilation;
       try {
-  execSync(`npm run type-check`, { stdio: "pipe" });
-        analysis.metrics.typescript = { status: "passed", errors: 0 }
+  execSync("npm run type-check", { "stdio": "pipe" });
+        analysis.metrics.typescript = { "status": "passed", "errors": 0 }
       } catch (error) {
   const errorOutput = error.message;
         const errorCount = (errorOutput.match(/error TS\d+/g) || []).length;
-        analysis.metrics.typescript = { status: "failed", errors: errorCount   }
+        analysis.metrics.typescript = { "status": "failed", "errors": errorCount   }
         analysis.recommendations.push("Fix TypeScript compilation errors")}
 ;
       // Check ESLint;
       try {
-  execSync("npm run lint", { stdio: "pipe" });
-        analysis.metrics.eslint = { status: "passed", issues: 0 }
+  execSync("npm run lint", { "stdio": "pipe" });
+        analysis.metrics.eslint = { "status": "passed", "issues": 0 }
       } catch (error) {
   // Check ESLint;
       try {
-  execSync("npm run lint", { stdio: "pipe" });
-        analysis.metrics.eslint = { status: "passed", issues: 0 }
+  execSync("npm run lint", { "stdio": "pipe" });
+        analysis.metrics.eslint = { "status": "passed", "issues": 0 }
       } catch (error) {
   const errorOutput = error.message;
         const issueCount = (errorOutput.match(/error\s+/g) || []).length;
-        analysis.metrics.eslint = { status: "failed", issues: issueCount   }
-        analysis.recommendations.push(`Fix ESLint issues`)}
+        analysis.metrics.eslint = { "status": "failed", "issues": issueCount   }
+        analysis.recommendations.push("Fix ESLint issues")}
 ;
       // Check bundle size;
-      const distDir = path.join(this.projectRoot, `dist`);
+      const distDir = path.join(this.projectRoot, "dist");
       if (fs.existsSync(distDir)) {
   const files = fs.readdirSync(distDir);
         let totalSize = 0;
@@ -114,15 +113,14 @@ class $1 {
           const stats = fs.statSync(filePath);
           totalSize += stats.size});
         analysis.metrics.bundleSize = {
-  totalFiles: files.length,totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,
-}
+  "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"}
       }
-    } catch (error) {  this.log(`Code quality analysis failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")}
 ;
     return analysis}
 ;
   async generateDashboard() {
-  this.log(`Generating unified automation dashboard...`);
+  this.log("Generating unified automation dashboard...");
     try {
   async generateDashboard() {
   this.log("Generating unified automation dashboard...");
@@ -133,44 +131,40 @@ class $1 {
       const codeQuality = await this.analyzeCodeQuality();
 
       const dashboard = {
-  timestamp: new Date().toISOString(),
-        pm2Status: {
+  "timestamp": new Date().toISOString(),
+        "pm2Status": {
   totalProcesses: pm2Status.length,
-          online: pm2Status.filter(p => p.pm2_env.status === "online").length,
-          errored: pm2Status.filter(p => p.pm2_env.status === "errored").length,
-          stopped: pm2Status.filter(p => p.pm2_env.status === "stopped").length,
-          processes: pm2Status.map(p => ({
+          "online": pm2Status.filter(p => p.pm2_env.status === "online").length,
+          "errored": pm2Status.filter(p => p.pm2_env.status === "errored").length,
+          "stopped": pm2Status.filter(p => p.pm2_env.status === "stopped").length,
+          "processes": pm2Status.map(p => ({
   name: p.name,
-            status: p.pm2_env.status,
-            memory: p.monit.memory,
-            cpu: p.monit.cpu,
-            uptime: p.pm2_env.pm_uptime,
-            restarts: p.pm2_env.restart_time,
-})),
-},
-        automationReports: reports,
-        codeQuality: codeQuality,
-        summary: {
+            "status": p.pm2_env.status,
+            "memory": p.monit.memory,
+            "cpu": p.monit.cpu,
+            "uptime": p.pm2_env.pm_uptime,
+            "restarts": p.pm2_env.restart_time}))},
+        "automationReports": reports,
+        "codeQuality": codeQuality,
+        "summary": {
   totalIssues: this.calculateTotalIssues(reports, codeQuality),
-          criticalIssues: this.identifyCriticalIssues(reports, codeQuality),
-          nextActions: this.generateNextActions(reports, codeQuality),
-},
-}
+          "criticalIssues": this.identifyCriticalIssues(reports, codeQuality),
+          "nextActions": this.generateNextActions(reports, codeQuality)}}
       // Save dashboard data;
-      const dashboardPath = path.join(this.dashboardDir, `dashboard-data.json`);
+      const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json");
       fs.writeFileSync(dashboardPath, JSON.stringify(dashboard, null, 2));
       // Generate HTML dashboard;
       const htmlDashboard = this.generateHTMLDashboard(dashboard);
-      const htmlPath = path.join(this.dashboardDir, `index.html`);
+      const htmlPath = path.join(this.dashboardDir, "index.html");
       fs.writeFileSync(htmlPath, htmlDashboard);
-this.log(`Dashboard generated successfully at ${htmlPath}`);
-      return dashboard} catch (error) {  this.log(`Dashboard generation failed: ${error.message  }`, `ERROR`);
+this.log("Dashboard generated successfully at ${htmlPath}");
+      return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR");
       throw error}
   }
 ;
   calculateTotalIssues(reports, codeQuality) {
   let total = 0;
-    if (reports[`console-error-fixer`]) {
+    if (reports["console-error-fixer"]) {
   if (reports["console-error-fixer"]) {
   total += reports["console-error-fixer"].consoleErrors || 0;
       total += reports["console-error-fixer"].throwStatements || 0}
@@ -230,18 +224,18 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 ;
     return actions}
 ;
-  generateHTMLDashboard(dashboard) {return `<!DOCTYPE html>;
+  generateHTMLDashboard(dashboard) {return "<!DOCTYPE html>;
 <html lang="en>;
 <head>;
     <meta charset=UTF-8>;
     <meta name=viewport content=width=device-width, initial-scale=1.0">;
     <title>Zion Tech Group - Automation Dashboard</title>;
-    <script src="https: //cdn.tailwindcss.com"></script>;
+    <script src=""https": //cdn.tailwindcss.com"></script>;
     <script>;
         tailwind.config = {
   theme: {
   extend: {
-  colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6`,neon-pink`: `#ec4899`;
+  colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6",neon-pink": "#ec4899";
 
   generateHTMLDashboard(dashboard) {return `<!DOCTYPE html>;
 <html lang=en>;
@@ -249,7 +243,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
     <meta charset="UTF-8">;
     <meta name=viewport content="width=device-width, initial-scale=1.0">;
     <title>Zion Tech Group - Automation Dashboard</title>;
-    <script src=https: //cdn.tailwindcss.com"></script>;
+    <script src="https": //cdn.tailwindcss.com"></script>;
     <script>;
         tailwind.config = {
   theme: {
@@ -267,10 +261,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 🚀 Zion Tech Group Automation Dashboard;
             </h1>;
             <p class=text-gray-400 mt-2>Real-time monitoring of all PM2 automations and code quality</p>;
-            <p class=text-sm text-gray-500 mt-1">Last updated: ${new Date(dashboard.timestamp).toLocaleString()}</p>;
+            <p class=text-sm text-gray-500 mt-1">Last "updated": ${new Date(dashboard.timestamp).toLocaleString()}</p>;
         </header>;
         <!-- Status Overview -->;
-        <div class=grid grid-cols-1 md:grid-cols-4 gap-6 mb-8>;
+        <div class=grid grid-cols-1 "md": grid-cols-4 gap-6 mb-8>;
             <div class="bg-gray-800 rounded-lg p-6 border border-gray-700>;
                 <div class=flex items-center>;
                     <div class=p-2 bg-green-500 rounded-lg">;
@@ -347,11 +341,11 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                                 <td class="py-2 font-medium>${process.name}</td>;
                                 <td class=py-2>;
                                     <span class=px-2 py-1 rounded text-xs font-medium ${
-  process.status === `online`;
-                                        ? `bg-green-500 text-white`;
+  process.status === "online";
+                                        ? "bg-green-500 text-white";
                                         : process.status === "errored";
-                                          ? `bg-red-500 text-white`;
-                                          : `bg-yellow-500 text-black`}">${process.status}</span>;
+                                          ? "bg-red-500 text-white";
+                                          : "bg-yellow-500 text-black"}">${process.status}</span>;
                                 </td>;
                                 <td class=py-2>${(process.memory / 1024 / 1024).toFixed(1)} MB</td>;
                                 <td class="py-2>${process.cpu}%</td>;
@@ -359,7 +353,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                                 <td class=py-2`>${process.restarts}</td>;
                             </tr>;
                           );
-                          .join(``)}
+                          .join(`")}
                     </tbody>;
                 </table>;
             </div>;
@@ -368,11 +362,11 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
         <!-- Code Quality -->;
         <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8>;
             <h2 class=text-2xl font-bold mb-4 text-neon-purple">🔍 Code Quality Analysis</h2>;
-            <div class=grid grid-cols-1 md:grid-cols-2 gap-6>;
+            <div class=grid grid-cols-1 "md": grid-cols-2 gap-6>;
                 <div>;
                     <h3 class=text-lg font-semibold mb-3>TypeScript</h3>;
                     <div class="flex items-center>;
-                        <span class=`px-3 py-1 rounded text-sm font-medium ${
+                        <span class="px-3 py-1 rounded text-sm font-medium ${
   dashboard.codeQuality.metrics.typescript.status ===passed";
                             ? "bg-green-500 text-white";
                             : "bg-red-500 text-white"}">${dashboard.codeQuality.metrics.typescript.status}</span>;
@@ -385,10 +379,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                     <div class="flex items-center">;
                         <span class=`px-3 py-1 rounded text-sm font-medium ${
   dashboard.codeQuality.metrics.eslint.status ===passed`;
-                            ? `bg-green-500 text-white`;
-                            : `bg-red-500 text-white`}>${dashboard.codeQuality.metrics.eslint.status}</span>;
+                            ? "bg-green-500 text-white";
+                            : "bg-red-500 text-white"}>${dashboard.codeQuality.metrics.eslint.status}</span>;
                         <span class=ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>;
-                            : `bg-red-500 text-white`}>${dashboard.codeQuality.metrics.eslint.status}</span>;
+                            : "bg-red-500 text-white"}>${dashboard.codeQuality.metrics.eslint.status}</span>;
                         <span class=ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>;
 </div>;
                 </div>;
@@ -400,13 +394,13 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
             <h2 class=text-2xl font-bold mb-4 text-neon-pink>⚡ Next Actions</h2>;
             <div class="space-y-3>;
                 ${dashboard.summary.nextActions;
-                  .map(action => `;
+                  .map(action => ";
                     <div class=flex items-start">;
                         <div class=w-2 h-2 bg-neon-pink rounded-full mt-2 mr-3></div>;
-                        <p class=text-gray-300`>${action}</p>;
+                        <p class=text-gray-300">${action}</p>;
                     </div>;
                   );
-                  .join(``)}
+                  .join("")}
             </div>;
         </div>;
 
@@ -424,10 +418,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                             <p class=text-red-300`>${issue}</p>;
                         </div>;
                       );
-                      .join(``)}
+                      .join(`")}
                 </div>;
             </div>;
-            : ``;
+            : "`;
         <!-- Process Status -->;
         <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8>;
             <h2 class=text-2xl font-bold mb-4 text-neon-blue">🔄 PM2 Process Status</h2>;
@@ -471,7 +465,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
         <!-- Code Quality -->;
         <div class=bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8>;
             <h2 class="text-2xl font-bold mb-4 text-neon-purple">🔍 Code Quality Analysis</h2>;
-            <div class=grid grid-cols-1 md:grid-cols-2 gap-6>;
+            <div class=grid grid-cols-1 "md": grid-cols-2 gap-6>;
                 <div>;
                     <h3 class="text-lg font-semibold mb-3">TypeScript</h3>;
                     <div class=flex items-center>;
@@ -549,7 +543,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 </html>`}
 ;
   async start() {
-  this.log(`Starting unified automation dashboard...`);
+  this.log("Starting unified automation dashboard...");
     try {
   // Generate initial dashboard;
       await this.generateDashboard();
@@ -557,21 +551,21 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
       setInterval(;
         async () => {
   try {
-  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update failed: ${error.message  }`, `ERROR`)}
+  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }`, "ERROR")}
         },
         5 * 60 * 1000;
       ); // Every 5 minutes;
-      this.log(`Unified automation dashboard started successfully`);
+      this.log("Unified automation dashboard started successfully");
       // Keep the process running;
       setInterval(() => {
-  this.log(`Dashboard heartbeat...`)}, 60000); // Every minute} catch (error) {  this.log(`Failed to start dashboard: ${error.message  }`, `ERROR`)},
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start "dashboard": ${error.message  }`, "ERROR")},
         5 * 60 * 1000;
       ); // Every 5 minutes;
       this.log("Unified automation dashboard started successfully");
 
       // Keep the process running;
       setInterval(() => {
-  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start dashboard: ${error.message}`, "ERROR");
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start "dashboard": ${error.message}`, "ERROR");
       throw error}
   }
 }
@@ -580,13 +574,13 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 if (require.main === module) {
   const dashboard = new UnifiedAutomationDashboard();
   // Handle graceful shutdown;
-  process.on(`SIGINT`, () => {
+  process.on("SIGINT", () => {
   dashboard.log("Shutting down gracefully...");
     process.exit(0)});
   process.on("SIGTERM", () => {
-  dashboard.log(`Shutting down gracefully...`);
+  dashboard.log("Shutting down gracefully...");
     process.exit(0)});
-  dashboard.start().catch(error => {dashboard.log(`Fatal error: ${error.message}`, `ERROR`);
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})}
 ;
 module.exports = UnifiedAutomationDashboard

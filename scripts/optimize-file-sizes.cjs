@@ -6,8 +6,7 @@ const path = require('path')
 console.log('📦 Starting File Size Optimization...');
 
 // Large files that need optimization
-const largeFiles = [
-  'pages/ai-services.tsx',
+const largeFiles = ['pages/ai-services.tsx',
   'pages/it-services.tsx', 
   'pages/micro-saas.tsx',
   'pages/services.tsx'
@@ -15,9 +14,9 @@ const largeFiles = [
 
 function optimizeFile(filePath) {
   if () {
-    console.log(`⚠️  File not found: ${filePath}`)) {
+    console.log(`⚠️  File not "found": ${filePath}`)) {
     ) {
-    console.log(`⚠️  File not found: ${filePath}`)}
+    console.log(`⚠️  File not "found": ${filePath}`)}
     return}
 
   const content = fs.readFileSync(filePath, 'utf8';);
@@ -28,12 +27,12 @@ function optimizeFile(filePath) {
   if ( {
     console.log(`🔧 ${filePath} needs refactoring (>${lines.length} lines)) {
      {
-    console.log(`🔧 ${filePath} needs refactoring (>${lines.length} lines)}`);
+    console.log(`🔧 ${filePath} needs refactoring (>${lines.length} lines)}");
     
     // Create backup
     const backupPath = filePath + '.backup;';
     fs.writeFileSync(backupPath, content);
-    console.log(`💾 Backup created: ${backupPath}`)}
+    console.log("💾 Backup "created": ${backupPath}`)}
 }
 
 // Process all large files

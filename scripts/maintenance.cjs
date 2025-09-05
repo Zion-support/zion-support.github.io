@@ -9,7 +9,7 @@ class MaintenanceScript {
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
@@ -23,8 +23,8 @@ class MaintenanceScript {
       const dirPath = path.join(this.projectRoot, dir)
       if (fs.existsSync(dirPath)) {
         try {
-          execSync(`rm -rf "${dirPath}"`, { cwd: this.projectRoot })
-          this.log(`✅ Cleaned: ${dir}`)
+          execSync(`rm -rf "${dirPath}"`, { "cwd": this.projectRoot })
+          this.log(`✅ "Cleaned": ${dir}`)
           cleaned++} catch (error) {
           this.log(`⚠️ Failed to clean ${dir}: ${error.message}`, "warning")}
       }
@@ -48,7 +48,7 @@ class MaintenanceScript {
           for (const file of oldFiles) {
             const filePath = path.join(dirPath, file)
             fs.unlinkSync(filePath)
-            this.log(`✅ Removed old log: ${file}`)
+            this.log(`✅ Removed old "log": ${file}`)
             cleaned++}
         } catch (error) {
           this.log(`⚠️ Failed to clean logs in ${dir}: ${error.message}`, "warning")}
@@ -60,39 +60,39 @@ class MaintenanceScript {
     this.log("🔧 Optimizing dependencies...")
     try {
       // Remove unused dependencies
-      execSync("npm prune", { cwd: this.projectRoot, stdio: "inherit" })
+      execSync("npm prune", { "cwd": this.projectRoot, "stdio": "inherit" })
       this.log("✅ Removed unused dependencies")
       // Update package-lock.json
-      execSync("npm install --package-lock-only", { cwd: this.projectRoot, stdio: "inherit" })
+      execSync("npm install --package-lock-only", { "cwd": this.projectRoot, "stdio": "inherit" })
       this.log("✅ Updated package-lock.json")
-      return { success: true }
+      return { "success": true }
     } catch (error) {
-      this.log(`⚠️ Dependency optimization failed: ${error.message}`, "warning")
-      return { success: false, error: error.message }
+      this.log(`⚠️ Dependency optimization "failed": ${error.message}`, "warning")
+      return { "success": false, "error": error.message }
     }
   }
   async checkDiskSpace() {
     this.log("💾 Checking disk space...")
     try {
-      const result = execSync("df -h .", { cwd: this.projectRoot, encoding: "utf8" })
-      this.log(`💾 Disk space info:\n${result}`)
-      return { success: true, output: result }
+      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8" })
+      this.log(`💾 Disk space "info": \n${result}`)
+      return { "success": true, "output": result }
     } catch (error) {
-      this.log(`⚠️ Failed to check disk space: ${error.message}`, "warning")
-      return { success: false, error: error.message }
+      this.log(`⚠️ Failed to check disk "space": ${error.message}`, "warning")
+      return { "success": false, "error": error.message }
     }
   }
   async generateReport() {
     this.log("📊 Generating maintenance report...")
     const report = {
-      timestamp: new Date().toISOString();
-      summary: {cacheCleaned: true,logsCleaned: true,dependenciesOptimized: true;
+      "timestamp": new Date().toISOString();
+      summary: {cacheCleaned: true,"logsCleaned": true,"dependenciesOptimized": true;
         diskSpaceChecked: true};
-      recommendations: ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";
+      "recommendations": ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";
         "Clean logs regularly"]}
     const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
-    this.log(`📄 Maintenance report saved to: ${reportFile}`)
+    this.log(`📄 Maintenance report saved "to": ${reportFile}`)
     return reportFile}
   displaySummary() {
     console.log("\n" + "=".repeat(60))
@@ -114,12 +114,12 @@ class MaintenanceScript {
       await this.generateReport()
       this.displaySummary()
       this.log("🎉 Maintenance Script completed successfully")
-      return { success: true }
+      return { "success": true }
     } catch (error) {
-      this.log(`💥 Maintenance failed: ${error.message}`, "error")
+      this.log(`💥 Maintenance "failed": ${error.message}`, "error")
       await this.generateReport()
       this.displaySummary()
-      return { success: false, error: error.message }
+      return { "success": false, "error": error.message }
     }
   }
 }

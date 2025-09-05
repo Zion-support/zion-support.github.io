@@ -58,17 +58,16 @@ class ComprehensiveErrorFixer {
       let content = fs.readFileSync(filePath, "utf8")
       let modified = false
       // Fix common syntax errors
-      const fixes = [
-        // Fix semicolons in object properties
-        { pattern: /(\w+):\s*([^}]+);/g, replacement: "$1: $2," };
+      const fixes = [// Fix semicolons in object properties
+        { "pattern": /(\w+):\s*([^}]+);/g, "replacement": "$1: $2," };
         // Fix missing commas in arrays
-        { pattern: /(\w+)\s*\n\s*(\w+)/g, replacement: "$1,\n$2" };
+        { "pattern": /(\w+)\s*\n\s*(\w+)/g, "replacement": "$1,\n$2" };
         // Fix duplicate catch blocks
-        { pattern: /}\s*catch\s*\([^)]+\)\s*{[^}]*}\s*catch\s*\([^)]+\)\s*{/g, replacement: "} catch (error) {" };
+        { "pattern": /}\s*catch\s*\([^)]+\)\s*{[^}]*}\s*catch\s*\([^)]+\)\s*{/g, "replacement": "} catch (error) {" };
         // Fix malformed function declarations
-        { pattern: /function\s+(\w+)\s*\(\s*\)\s*{/g, replacement: "function $1() {" };
+        { "pattern": /function\s+(\w+)\s*\(\s*\)\s*{/g, "replacement": "function $1() {" };
         // Fix template literal issues
-        { pattern: /`([^`]*)\$\{([^}]+)\}`/g, replacement: "`$1${$2}`" }
+        { "pattern": /"([^"]*)\$\{([^}]+)\}"/g, "replacement": ""$1${$2}"" }
       ]
       for (const fix of fixes) {
         const newContent = content.replace(fix.pattern, fix.replacement)
@@ -78,41 +77,41 @@ class ComprehensiveErrorFixer {
       }
       if (modified) {
         fs.writeFileSync(filePath, content)
-        this.log(`Fixed syntax errors in ${filePath}`, "success")
-        this.fixes.push(`fixed_${path.basename(filePath)}`)}
+        this.log("Fixed syntax errors in ${filePath}", "success")
+        this.fixes.push("fixed_${path.basename(filePath)}")}
     } catch (error) {
-      this.log(`Error fixing ${filePath}: ${error.message}`, "error")
-      this.errors.push({ file: filePath, error: error.message })}
+      this.log("Error fixing ${filePath}: ${error.message}", "error")
+      this.errors.push({ "file": filePath, "error": error.message })}
   }
   async runTypeScriptCheck() {
     try {
       this.log("Running TypeScript check...")
-      execSync("npx tsc --noEmit", { cwd: this.projectRoot, stdio: "pipe" })
+      execSync("npx tsc --noEmit", { "cwd": this.projectRoot, "stdio": "pipe" })
       this.log("TypeScript check passed", "success")
       this.fixes.push("typescript_check")} catch (error) {
       this.log("TypeScript check failed", "error")
-      this.errors.push({ check: "typescript", error: error.message })}
+      this.errors.push({ "check": "typescript", "error": error.message })}
   }
   async runLinting() {
     try {
       this.log("Running ESLint...")
-      execSync("npx eslint . --fix", { cwd: this.projectRoot, stdio: "pipe" })
+      execSync("npx eslint . --fix", { "cwd": this.projectRoot, "stdio": "pipe" })
       this.log("ESLint passed", "success")
       this.fixes.push("eslint_fix")} catch (error) {
       this.log("ESLint failed", "error")
-      this.errors.push({ check: "eslint", error: error.message })}
+      this.errors.push({ "check": "eslint", "error": error.message })}
   }
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString();
-      summary: {totalFixes: this.fixes.length,totalErrors: this.errors.length;
+      "timestamp": new Date().toISOString();
+      summary: {totalFixes: this.fixes.length,"totalErrors": this.errors.length;
         totalLogs: this.logs.length};
-      fixes: this.fixes;
+      "fixes": this.fixes;
       errors: this.errors;
       logs: this.logs}
     const reportPath = path.join(this.projectRoot, "comprehensive-error-fixer-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`Report saved to ${reportPath}`, "success")
+    this.log("Report saved to ${reportPath}", "success")
     return report}
   async run() {
     this.log("Starting Comprehensive Error Fixer")
@@ -122,9 +121,9 @@ class ComprehensiveErrorFixer {
       await this.runLinting()
       const report = await this.generateReport()
       this.log("Comprehensive Error Fixer completed")
-      this.log(`Summary: ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found`)
+      this.log(""Summary": ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found")
       return report} catch (error) {
-      this.log(`Error fixer failed: ${error.message}`, "error")
+      this.log("Error fixer "failed": ${error.message}`, "error")
       throw error}
   }
 }

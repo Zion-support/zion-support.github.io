@@ -21,15 +21,17 @@ class GitAutomation {
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
-        cwd: this.repoPath,
-        timeout: 60000,
-        ...options
-      });
-      
-      return { success: true, stdout, stderr };
+        "cwd": this.repoPath,
+        "timeout": 60000,
+        ...options});
+
+      return { "success": true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
-      return { success: false, stdout: error.stdout || '', stderr: error.stderr || error.message };
+      this.log(`Command "failed": ${command} - ${error.message}`);
+      return {
+        "success": false,
+        "stdout": error.stdout || '',
+        "stderr": error.stderr || error.message};
     }
   }
 
@@ -55,13 +57,13 @@ class GitAutomation {
   }
 
   async commitChanges(message) {
-    this.log(`Committing changes: ${message}`);
+    this.log(`Committing "changes": ${message}`);
     const result = await this.runCommand(`git commit -m "${message}"`);
     return result.success;
   }
 
   async pushChanges(branch = null) {
-    const currentBranch = branch || await this.getCurrentBranch();
+    const currentBranch = branch || (await this.getCurrentBranch());
     if (!currentBranch) {
       this.log('No current branch found');
       return false;
@@ -86,16 +88,20 @@ class GitAutomation {
     }
 
     this.log(`Merging main into ${currentBranch}...`);
-    
+
     // First pull main
-    const pullResult = await this.runCommand('git checkout main && git pull origin main');
+    const pullResult = await this.runCommand(
+      'git checkout main && git pull origin main'
+    );
     if (!pullResult.success) {
       this.log('Failed to pull main branch');
       return false;
     }
 
     // Switch back to current branch
-    const checkoutResult = await this.runCommand(`git checkout ${currentBranch}`);
+    const checkoutResult = await this.runCommand(
+      `git checkout ${currentBranch}`
+    );
     if (!checkoutResult.success) {
       this.log('Failed to switch back to current branch');
       return false;
@@ -112,8 +118,8 @@ class GitAutomation {
   }
 
   async createPullRequest(title, body) {
-    this.log(`Creating pull request: ${title}`);
-    
+    this.log(`Creating pull "request": ${title}`);
+
     // Push changes first
     const pushResult = await this.pushChanges();
     if (!pushResult) {
@@ -124,13 +130,15 @@ class GitAutomation {
     // Create PR using GitHub CLI if available
     const prCommand = `gh pr create --title "${title}" --body "${body}"`;
     const result = await this.runCommand(prCommand);
-    
+
     if (result.success) {
       this.log('Pull request created successfully');
     } else {
-      this.log('Failed to create pull request (GitHub CLI may not be available)');
+      this.log(
+        'Failed to create pull request (GitHub CLI may not be available)'
+      );
     }
-    
+
     return result.success;
   }
 
@@ -150,7 +158,7 @@ class GitAutomation {
 
     // Commit with timestamp
     const timestamp = new Date().toISOString();
-    const commitMessage = `Auto-commit: Error fixes and improvements - ${timestamp}`;
+    const commitMessage = `Auto-"commit": Error fixes and improvements - ${timestamp}`;
     const commitResult = await this.commitChanges(commitMessage);
     if (!commitResult) {
       this.log('Failed to commit changes');
@@ -170,7 +178,7 @@ class GitAutomation {
 
   async syncWithMain() {
     this.log('Syncing with main branch...');
-    
+
     const currentBranch = await this.getCurrentBranch();
     if (!currentBranch) {
       this.log('No current branch found');
@@ -188,7 +196,7 @@ class GitAutomation {
 
   async performDailySync() {
     this.log('Performing daily sync...');
-    
+
     // Pull latest changes
     const pullResult = await this.pullChanges();
     if (!pullResult) {
@@ -216,20 +224,26 @@ class GitAutomation {
 
   async start() {
     this.log('Git Automation started');
-    
+
     // Perform initial sync
     await this.performDailySync();
-    
+
     // Set up periodic sync every 6 hours
-    setInterval(async () => {
-      await this.performDailySync();
-    }, 6 * 60 * 60 * 1000);
-    
+    setInterval(
+      async () => {
+        await this.performDailySync();
+      },
+      6 * 60 * 60 * 1000
+    );
+
     // Set up daily full sync
-    setInterval(async () => {
-      this.log('Running daily full sync...');
-      await this.performDailySync();
-    }, 24 * 60 * 60 * 1000);
+    setInterval(
+      async () => {
+        this.log('Running daily full sync...');
+        await this.performDailySync();
+      },
+      24 * 60 * 60 * 1000
+    );
   }
 }
 
@@ -237,7 +251,7 @@ class GitAutomation {
 if (require.main === module) {
   const automation = new GitAutomation();
   automation.start().catch(error => {
-    console.error('Git Automation failed:', error);
+    console.error('Git Automation "failed": ', error);
     process.exit(1);
   });
 }

@@ -1,27 +1,28 @@
+<<<<<<< HEAD
 import {motion} from 'framer-motion';
-export function PerformanceOptimizedLoader(props: any) {';
-    const sizeClasses = {';';
-  sm: 'w-6 h-6',';';
-        md: 'w-12 h-12',';';
-  lg: 'w-16 h-16'
-    
-';
+export function PerformanceOptimizedLoader($1) {
+    const sizeClasses = {
+  "sm": 'w-6 h-6',
+        "md": 'w-12 h-12',
+  "lg": 'w-16 h-16'
 };';';
-    const colorClasses = {primary: 'text-zion-purple',';';
-        secondary: 'text-zion-cyan',';';
-  white: 'text-white'};
+    const colorClasses = {"primary": 'text-zion-purple',
+        "secondary": 'text-zion-cyan',
+  "white": 'text-white'};
     const spinnerVariants = {
-  animate: {
+  "animate": {
             rotate: 360,
-            transition: {
+            "transition": {
                 duration: 1,
-                repeat: Infinity,
-  ease: "linear"
+                "repeat": Infinity,
+  "ease": "linear"
             
 
 }
         }
     };
     const pulseVariants = {
-';
-export default PerformanceOptimizedLoader;;';;';
+export default PerformanceOptimizedLoader;';';
+=======
+import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

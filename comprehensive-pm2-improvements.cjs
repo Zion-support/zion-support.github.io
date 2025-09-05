@@ -23,7 +23,7 @@ class ComprehensivePM2Improvements {
         dirs.forEach(dir => {
             const fullPath = path.join(this.projectRoot, dir);
             if (!fs.existsSync(fullPath)) {
-                fs.mkdirSync(fullPath, { recursive: true });
+                fs.mkdirSync(fullPath, { "recursive": true });
             }
         });
     }
@@ -37,16 +37,16 @@ class ComprehensivePM2Improvements {
 
     async runCommand(command, options = {}) {
         try {
-            this.log(`Running: ${command}`);
+            this.log(`"Running": ${command}`);
             const result = execSync(command, { 
-                cwd: this.projectRoot, 
-                encoding: 'utf8',
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
                 ...options 
             });
-            this.log(`Command completed successfully`);
+            this.log("Command completed successfully");
             return result;
         } catch (error) {
-            this.log(`Command failed: ${error.message}`);
+            this.log(`Command "failed": ${error.message}`);
             throw error;
         }
     }
@@ -63,28 +63,28 @@ class ComprehensivePM2Improvements {
             const ecosystemFiles = fs.readdirSync(this.projectRoot)
                 .filter(file => file.startsWith('ecosystem') && file.endsWith('.cjs'))
                 .map(file => ({
-                    name: file,
-                    size: fs.statSync(path.join(this.projectRoot, file)).size,
-                    modified: fs.statSync(path.join(this.projectRoot, file)).mtime
+                    "name": file,
+                    "size": fs.statSync(path.join(this.projectRoot, file)).size,
+                    "modified": fs.statSync(path.join(this.projectRoot, file)).mtime
                 }));
 
             // Check automation scripts
             const automationScripts = fs.readdirSync(path.join(this.projectRoot, 'scripts'))
                 .filter(file => file.endsWith('.cjs') || file.endsWith('.js'))
                 .map(file => ({
-                    name: file,
-                    path: path.join(this.projectRoot, 'scripts', file),
-                    size: fs.statSync(path.join(this.projectRoot, 'scripts', file)).size
+                    "name": file,
+                    "path": path.join(this.projectRoot, 'scripts', file),
+                    "size": fs.statSync(path.join(this.projectRoot, 'scripts', file)).size
                 }));
 
             return {
                 pm2Processes,
                 ecosystemFiles,
                 automationScripts,
-                timestamp: new Date().toISOString()
+                "timestamp": new Date().toISOString()
             };
         } catch (error) {
-            this.log(`Error analyzing PM2 setup: ${error.message}`);
+            this.log(`Error analyzing PM2 "setup": ${error.message}`);
             return null;
         }
     }
@@ -93,185 +93,184 @@ class ComprehensivePM2Improvements {
         this.log('⚙️ Creating optimal ecosystem configuration...');
         
         const optimalConfig = `module.exports = {
-  apps: [
-    // Main Application
+  "apps": [// Main Application
     {
       name: 'ziontechgroup-web',
-      script: 'npm',
-      args: 'start',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
+      "script": 'npm',
+      "args": 'start',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {
         NODE_ENV: 'production',
-        PORT: 3000
+        "PORT": 3000
       },
-      env_development: {
+      "env_development": {
         NODE_ENV: 'development',
-        PORT: 3000,
-        DEBUG: 'true'
+        "PORT": 3000,
+        "DEBUG": 'true'
       },
-      log_file: './logs/pm2/web.log',
-      out_file: './logs/pm2/web-out.log',
-      error_file: './logs/pm2/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/web.log',
+      "out_file": './logs/pm2/web-out.log',
+      "error_file": './logs/pm2/web-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z',
+      "merge_logs": true,
+      "time": true
     },
     
     // AI-Powered Code Analysis & Auto-Fixing
     {
-      name: 'ai-code-analyzer',
-      script: 'node',
-      args: 'scripts/automation/ai-intelligent-orchestrator.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      max_memory_restart: '512M',
-      restart_delay: 10000,
-      env: {
+      "name": 'ai-code-analyzer',
+      "script": 'node',
+      "args": 'scripts/automation/ai-intelligent-orchestrator.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": '0 */2 * * *', // Every 2 hours
+      "max_memory_restart": '512M',
+      "restart_delay": 10000,
+      "env": {
         NODE_ENV: 'production',
-        AI_ANALYSIS_MODE: 'comprehensive',
-        AUTO_FIX: 'true'
+        "AI_ANALYSIS_MODE": 'comprehensive',
+        "AUTO_FIX": 'true'
       },
-      log_file: './logs/pm2/ai-code-analyzer.log',
-      out_file: './logs/pm2/ai-code-analyzer-out.log',
-      error_file: './logs/pm2/ai-code-analyzer-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/ai-code-analyzer.log',
+      "out_file": './logs/pm2/ai-code-analyzer-out.log',
+      "error_file": './logs/pm2/ai-code-analyzer-error.log',
+      "merge_logs": true,
+      "time": true
     },
     
     // Intelligent Performance Monitor
     {
-      name: 'intelligent-performance-monitor',
-      script: 'node',
-      args: 'scripts/automation/predictive-analytics-engine.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      max_memory_restart: '256M',
-      env: {
+      "name": 'intelligent-performance-monitor',
+      "script": 'node',
+      "args": 'scripts/automation/predictive-analytics-engine.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": '*/5 * * * *', // Every 5 minutes
+      "max_memory_restart": '256M',
+      "env": {
         NODE_ENV: 'production',
-        MONITORING_MODE: 'intelligent'
+        "MONITORING_MODE": 'intelligent'
       },
-      log_file: './logs/pm2/performance-monitor.log',
-      out_file: './logs/pm2/performance-monitor-out.log',
-      error_file: './logs/pm2/performance-monitor-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/performance-monitor.log',
+      "out_file": './logs/pm2/performance-monitor-out.log',
+      "error_file": './logs/pm2/performance-monitor-error.log',
+      "merge_logs": true,
+      "time": true
     },
     
     // Smart Auto-Scaler
     {
-      name: 'smart-auto-scaler',
-      script: 'node',
-      args: 'scripts/automation/intelligent-auto-scaler.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      max_memory_restart: '256M',
-      env: {
+      "name": 'smart-auto-scaler',
+      "script": 'node',
+      "args": 'scripts/automation/intelligent-auto-scaler.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": '*/10 * * * *', // Every 10 minutes
+      "max_memory_restart": '256M',
+      "env": {
         NODE_ENV: 'production',
-        SCALING_MODE: 'intelligent'
+        "SCALING_MODE": 'intelligent'
       },
-      log_file: './logs/pm2/auto-scaler.log',
-      out_file: './logs/pm2/auto-scaler-out.log',
-      error_file: './logs/pm2/auto-scaler-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/auto-scaler.log',
+      "out_file": './logs/pm2/auto-scaler-out.log',
+      "error_file": './logs/pm2/auto-scaler-error.log',
+      "merge_logs": true,
+      "time": true
     },
     
     // Health Dashboard
     {
-      name: 'health-dashboard',
-      script: 'node',
-      args: 'scripts/automation/health-dashboard.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
+      "name": 'health-dashboard',
+      "script": 'node',
+      "args": 'scripts/automation/health-dashboard.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '256M',
+      "env": {
         NODE_ENV: 'production',
-        DASHBOARD_PORT: 3001
+        "DASHBOARD_PORT": 3001
       },
-      log_file: './logs/pm2/health-dashboard.log',
-      out_file: './logs/pm2/health-dashboard-out.log',
-      error_file: './logs/pm2/health-dashboard-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/health-dashboard.log',
+      "out_file": './logs/pm2/health-dashboard-out.log',
+      "error_file": './logs/pm2/health-dashboard-error.log',
+      "merge_logs": true,
+      "time": true
     },
     
     // Security Scanner
     {
-      name: 'security-scanner',
-      script: 'node',
-      args: 'scripts/automation/security-scanner.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      max_memory_restart: '256M',
-      env: {
+      "name": 'security-scanner',
+      "script": 'node',
+      "args": 'scripts/automation/security-scanner.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": '0 */6 * * *', // Every 6 hours
+      "max_memory_restart": '256M',
+      "env": {
         NODE_ENV: 'production',
-        SECURITY_MODE: 'comprehensive'
+        "SECURITY_MODE": 'comprehensive'
       },
-      log_file: './logs/pm2/security-scanner.log',
-      out_file: './logs/pm2/security-scanner-out.log',
-      error_file: './logs/pm2/security-scanner-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/security-scanner.log',
+      "out_file": './logs/pm2/security-scanner-out.log',
+      "error_file": './logs/pm2/security-scanner-error.log',
+      "merge_logs": true,
+      "time": true
     },
     
     // Dependency Monitor
     {
-      name: 'dependency-monitor',
-      script: 'node',
-      args: 'scripts/automation/dependency-monitor.cjs',
-      cwd: '${this.projectRoot}',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      max_memory_restart: '256M',
-      env: {
+      "name": 'dependency-monitor',
+      "script": 'node',
+      "args": 'scripts/automation/dependency-monitor.cjs',
+      "cwd": '${this.projectRoot}',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": '0 2 * * *', // Daily at 2 AM
+      "max_memory_restart": '256M',
+      "env": {
         NODE_ENV: 'production',
-        AUTO_UPDATE: 'true'
+        "AUTO_UPDATE": 'true'
       },
-      log_file: './logs/pm2/dependency-monitor.log',
-      out_file: './logs/pm2/dependency-monitor-out.log',
-      error_file: './logs/pm2/dependency-monitor-error.log',
-      merge_logs: true,
-      time: true
+      "log_file": './logs/pm2/dependency-monitor.log',
+      "out_file": './logs/pm2/dependency-monitor-out.log',
+      "error_file": './logs/pm2/dependency-monitor-error.log',
+      "merge_logs": true,
+      "time": true
     }
   ],
   
-  deploy: {
+  "deploy": {
     production: {
       user: 'ubuntu',
-      host: 'your-server.com',
-      ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/ziontechgroup',
+      "host": 'your-server.com',
+      "ref": 'origin/main',
+      "repo": 'https://github.com/Zion-Holdings/zion.app.git',
+      "path": '/var/www/ziontechgroup',
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     },
-    staging: {
+    "staging": {
       user: 'ubuntu',
-      host: 'staging-server.com',
-      ref: 'origin/develop',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/ziontechgroup-staging',
+      "host": 'staging-server.com',
+      "ref": 'origin/develop',
+      "repo": 'https://github.com/Zion-Holdings/zion.app.git',
+      "path": '/var/www/ziontechgroup-staging',
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env staging',
       'pre-setup': ''
@@ -281,13 +280,13 @@ class ComprehensivePM2Improvements {
 
         const configPath = path.join(this.projectRoot, 'ecosystem.optimal.cjs');
         fs.writeFileSync(configPath, optimalConfig);
-        this.log(`✅ Created optimal ecosystem config: ${configPath}`);
+        this.log(`✅ Created optimal ecosystem "config": ${configPath}`);
         
         this.improvements.push({
-            type: 'ecosystem_config',
-            description: 'Created optimal ecosystem configuration with intelligent automations',
-            file: configPath,
-            timestamp: new Date().toISOString()
+            "type": 'ecosystem_config',
+            "description": 'Created optimal ecosystem configuration with intelligent automations',
+            "file": configPath,
+            "timestamp": new Date().toISOString()
         });
     }
 
@@ -295,7 +294,7 @@ class ComprehensivePM2Improvements {
         this.log('🤖 Creating advanced automation scripts...');
         
         // Create intelligent error recovery script
-        const errorRecoveryScript = `#!/usr/bin/env node
+        const errorRecoveryScript = "#!/usr/bin/env node
 
 /**
  * Intelligent Error Recovery System
@@ -316,15 +315,15 @@ class IntelligentErrorRecovery {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs');
         if (!fs.existsSync(logsDir)) {
-            fs.mkdirSync(logsDir, { recursive: true });
+            fs.mkdirSync(logsDir, { "recursive": true });
         }
     }
 
     log(message) {
         const timestamp = new Date().toISOString();
-        const logMessage = \`[\${timestamp}] \${message}\\n\`;
+        const logMessage = \"[\${timestamp}] \${message}\\n\";
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(\`[\${timestamp}] \${message}\`);
+        console.log(\"[\${timestamp}] \${message}\");
     }
 
     async detectErrors() {
@@ -334,34 +333,34 @@ class IntelligentErrorRecovery {
         
         try {
             // Check for syntax errors
-            const syntaxCheck = execSync('npm run type-check', { cwd: this.projectRoot, encoding: 'utf8' });
+            const syntaxCheck = execSync('npm run type-check', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'syntax',
-                message: error.message,
-                severity: 'high'
+                "type": 'syntax',
+                "message": error.message,
+                "severity": 'high'
             });
         }
 
         try {
             // Check for linting errors
-            const lintCheck = execSync('npm run lint', { cwd: this.projectRoot, encoding: 'utf8' });
+            const lintCheck = execSync('npm run lint', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'linting',
-                message: error.message,
-                severity: 'medium'
+                "type": 'linting',
+                "message": error.message,
+                "severity": 'medium'
             });
         }
 
         try {
             // Check for build errors
-            const buildCheck = execSync('npm run build', { cwd: this.projectRoot, encoding: 'utf8' });
+            const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'build',
-                message: error.message,
-                severity: 'high'
+                "type": 'build',
+                "message": error.message,
+                "severity": 'high'
             });
         }
 
@@ -369,7 +368,7 @@ class IntelligentErrorRecovery {
     }
 
     async recoverFromErrors(errors) {
-        this.log(\`🛠️ Recovering from \${errors.length} errors...\`);
+        this.log(\"🛠️ Recovering from \${errors.length} errors...\");
         
         for (const error of errors) {
             switch (error.type) {
@@ -389,20 +388,20 @@ class IntelligentErrorRecovery {
     async fixSyntaxErrors() {
         this.log('🔧 Fixing syntax errors...');
         try {
-            execSync('npm run lint:fix', { cwd: this.projectRoot });
+            execSync('npm run "lint": fix', { "cwd": this.projectRoot });
             this.log('✅ Syntax errors fixed');
         } catch (error) {
-            this.log(\`❌ Failed to fix syntax errors: \${error.message}\`);
+            this.log(\"❌ Failed to fix syntax "errors": \${error.message}\");
         }
     }
 
     async fixLintingErrors() {
         this.log('🔧 Fixing linting errors...');
         try {
-            execSync('npm run lint:fix', { cwd: this.projectRoot });
+            execSync('npm run "lint": fix', { "cwd": this.projectRoot });
             this.log('✅ Linting errors fixed');
         } catch (error) {
-            this.log(\`❌ Failed to fix linting errors: \${error.message}\`);
+            this.log(\"❌ Failed to fix linting "errors": \${error.message}\");
         }
     }
 
@@ -410,11 +409,11 @@ class IntelligentErrorRecovery {
         this.log('🔧 Fixing build errors...');
         try {
             // Clean and rebuild
-            execSync('rm -rf dist', { cwd: this.projectRoot });
-            execSync('npm run build', { cwd: this.projectRoot });
+            execSync('rm -rf dist', { "cwd": this.projectRoot });
+            execSync('npm run build', { "cwd": this.projectRoot });
             this.log('✅ Build errors fixed');
         } catch (error) {
-            this.log(\`❌ Failed to fix build errors: \${error.message}\`);
+            this.log(\"❌ Failed to fix build "errors": \${error.message}\");
         }
     }
 
@@ -436,26 +435,26 @@ class IntelligentErrorRecovery {
 
 // Run the error recovery system
 const errorRecovery = new IntelligentErrorRecovery();
-errorRecovery.run().catch(console.error);`;
+errorRecovery.run().catch(console.error);";
 
         const errorRecoveryPath = path.join(this.projectRoot, 'scripts', 'automation', 'intelligent-error-recovery.cjs');
         fs.writeFileSync(errorRecoveryPath, errorRecoveryScript);
         fs.chmodSync(errorRecoveryPath, '755');
         
-        this.log(`✅ Created intelligent error recovery script: ${errorRecoveryPath}`);
+        this.log(`✅ Created intelligent error recovery "script": ${errorRecoveryPath}`);
         
         this.improvements.push({
-            type: 'automation_script',
-            description: 'Created intelligent error recovery system',
-            file: errorRecoveryPath,
-            timestamp: new Date().toISOString()
+            "type": 'automation_script',
+            "description": 'Created intelligent error recovery system',
+            "file": errorRecoveryPath,
+            "timestamp": new Date().toISOString()
         });
     }
 
     async createMonitoringDashboard() {
         this.log('📊 Creating monitoring dashboard...');
         
-        const dashboardScript = `#!/usr/bin/env node
+        const dashboardScript = "#!/usr/bin/env node
 
 /**
  * Advanced Monitoring Dashboard
@@ -482,9 +481,9 @@ class MonitoringDashboard {
         // Health check endpoint
         this.app.get('/api/health', (req, res) => {
             res.json({
-                status: 'healthy',
-                timestamp: new Date().toISOString(),
-                uptime: process.uptime()
+                "status": 'healthy',
+                "timestamp": new Date().toISOString(),
+                "uptime": process.uptime()
             });
         });
 
@@ -492,7 +491,7 @@ class MonitoringDashboard {
         this.app.get('/api/processes', (req, res) => {
             pm2.list((err, processes) => {
                 if (err) {
-                    res.status(500).json({ error: err.message });
+                    res.status(500).json({ "error": err.message });
                     return;
                 }
                 res.json(processes);
@@ -502,17 +501,17 @@ class MonitoringDashboard {
         // System metrics endpoint
         this.app.get('/api/metrics', (req, res) => {
             const metrics = {
-                memory: process.memoryUsage(),
-                cpu: process.cpuUsage(),
-                uptime: process.uptime(),
-                timestamp: new Date().toISOString()
+                "memory": process.memoryUsage(),
+                "cpu": process.cpuUsage(),
+                "uptime": process.uptime(),
+                "timestamp": new Date().toISOString()
             };
             res.json(metrics);
         });
 
         // Dashboard HTML
         this.app.get('/', (req, res) => {
-            const dashboardHTML = \`
+            const dashboardHTML = \"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -520,17 +519,17 @@ class MonitoringDashboard {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM2 Monitoring Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .status { padding: 4px 8px; border-radius: 4px; color: white; font-size: 12px; }
-        .status.online { background: #27ae60; }
-        .status.offline { background: #e74c3c; }
-        .status.stopping { background: #f39c12; }
-        .metric { display: flex; justify-content: space-between; margin: 10px 0; }
-        .refresh-btn { background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+        body { font-"family": Arial, sans-serif; "margin": 0; padding: 20px; background: #f5f5f5; }
+        .container { max-"width": 1200px; margin: 0 auto; }
+        .header { "background": #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .grid { "display": grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); "gap": 20px; }
+        .card { "background": white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .status { "padding": 4px 8px; border-radius: 4px; color: white; font-size: 12px; }
+        .status.online { "background": #27ae60; }
+        .status.offline { "background": #e74c3c; }
+        .status.stopping { "background": #f39c12; }
+        .metric { "display": flex; justify-content: space-between; margin: 10px 0; }
+        .refresh-btn { "background": #3498db; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -565,7 +564,7 @@ class MonitoringDashboard {
                 const response = await fetch(url);
                 return await response.json();
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error fetching "data": ', error);
                 return null;
             }
         }
@@ -575,15 +574,15 @@ class MonitoringDashboard {
             if (health) {
                 document.getElementById('system-health').innerHTML = \`
                     <div class="metric">
-                        <span>Status:</span>
+                        <span>"Status": </span>
                         <span class="status online">\${health.status}</span>
                     </div>
                     <div class="metric">
-                        <span>Uptime:</span>
+                        <span>"Uptime": </span>
                         <span>\${Math.floor(health.uptime / 3600)}h \${Math.floor((health.uptime % 3600) / 60)}m</span>
                     </div>
                     <div class="metric">
-                        <span>Last Update:</span>
+                        <span>Last "Update": </span>
                         <span>\${new Date(health.timestamp).toLocaleString()}</span>
                     </div>
                 \`;
@@ -608,15 +607,15 @@ class MonitoringDashboard {
             if (metrics) {
                 document.getElementById('metrics').innerHTML = \`
                     <div class="metric">
-                        <span>Memory Usage:</span>
+                        <span>Memory "Usage": </span>
                         <span>\${Math.round(metrics.memory.heapUsed / 1024 / 1024)} MB</span>
                     </div>
                     <div class="metric">
-                        <span>CPU Usage:</span>
+                        <span>CPU "Usage": </span>
                         <span>\${Math.round(metrics.cpu.user / 1000000)}%</span>
                     </div>
                     <div class="metric">
-                        <span>Uptime:</span>
+                        <span>"Uptime": </span>
                         <span>\${Math.floor(metrics.uptime / 3600)}h \${Math.floor((metrics.uptime % 3600) / 60)}m</span>
                     </div>
                 \`;
@@ -624,8 +623,7 @@ class MonitoringDashboard {
         }
 
         async function refreshData() {
-            await Promise.all([
-                updateSystemHealth(),
+            await Promise.all([updateSystemHealth(),
                 updateProcesses(),
                 updateMetrics()
             ]);
@@ -637,33 +635,33 @@ class MonitoringDashboard {
     </script>
 </body>
 </html>
-            \`;
+            \";
             res.send(dashboardHTML);
         });
     }
 
     start() {
         this.app.listen(this.port, () => {
-            console.log(\`📊 Monitoring dashboard running on http://localhost:\${this.port}\`);
+            console.log(\"📊 Monitoring dashboard running on "http": //localhost:\${this.port}\");
         });
     }
 }
 
 // Start the dashboard
 const dashboard = new MonitoringDashboard();
-dashboard.start();`;
+dashboard.start();";
 
         const dashboardPath = path.join(this.projectRoot, 'scripts', 'automation', 'monitoring-dashboard.cjs');
         fs.writeFileSync(dashboardPath, dashboardScript);
         fs.chmodSync(dashboardPath, '755');
         
-        this.log(`✅ Created monitoring dashboard: ${dashboardPath}`);
+        this.log(`✅ Created monitoring "dashboard": ${dashboardPath}`);
         
         this.improvements.push({
-            type: 'monitoring_dashboard',
-            description: 'Created advanced monitoring dashboard',
-            file: dashboardPath,
-            timestamp: new Date().toISOString()
+            "type": 'monitoring_dashboard',
+            "description": 'Created advanced monitoring dashboard',
+            "file": dashboardPath,
+            "timestamp": new Date().toISOString()
         });
     }
 
@@ -671,16 +669,15 @@ dashboard.start();`;
         this.log('📝 Generating improvement report...');
         
         const report = {
-            timestamp: new Date().toISOString(),
-            improvements: this.improvements,
-            summary: {
+            "timestamp": new Date().toISOString(),
+            "improvements": this.improvements,
+            "summary": {
                 total_improvements: this.improvements.length,
-                ecosystem_configs: this.improvements.filter(i => i.type === 'ecosystem_config').length,
-                automation_scripts: this.improvements.filter(i => i.type === 'automation_script').length,
-                monitoring_tools: this.improvements.filter(i => i.type === 'monitoring_dashboard').length
+                "ecosystem_configs": this.improvements.filter(i => i.type === 'ecosystem_config').length,
+                "automation_scripts": this.improvements.filter(i => i.type === 'automation_script').length,
+                "monitoring_tools": this.improvements.filter(i => i.type === 'monitoring_dashboard').length
             },
-            recommendations: [
-                'Use ecosystem.optimal.cjs as your main PM2 configuration',
+            "recommendations": ['Use ecosystem.optimal.cjs as your main PM2 configuration',
                 'Start the monitoring dashboard for real-time insights',
                 'Enable intelligent error recovery for automatic issue resolution',
                 'Monitor system health regularly through the dashboard',
@@ -689,7 +686,7 @@ dashboard.start();`;
         };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`✅ Improvement report generated: ${this.reportFile}`);
+        this.log(`✅ Improvement report "generated": ${this.reportFile}`);
     }
 
     async run() {
@@ -715,14 +712,14 @@ dashboard.start();`;
             await this.generateImprovementReport();
 
             this.log('🎉 Comprehensive PM2 improvements completed successfully!');
-            this.log('📋 Next steps:');
+            this.log('📋 Next "steps": ');
             this.log('   1. Review the generated ecosystem.optimal.cjs configuration');
             this.log('   2. Start the monitoring dashboard: node scripts/automation/monitoring-dashboard.cjs');
             this.log('   3. Use PM2 with the optimal config: pm2 start ecosystem.optimal.cjs');
             this.log('   4. Check the improvement report for detailed recommendations');
 
         } catch (error) {
-            this.log(`❌ Error during improvements: ${error.message}`);
+            this.log(`❌ Error during "improvements": ${error.message}`);
             throw error;
         }
     }

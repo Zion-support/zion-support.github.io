@@ -53,11 +53,15 @@ test_individual_processes() {
     log "Testing individual automation processes..."
     
     local processes=(
-        "ai-code-analyzer"
-        "smart-performance-optimizer"
-        "intelligent-dependency-manager"
-        "project-health-monitor"
-        "enhanced-security-automation"
+        "ci-cd-automation"
+        "continuous-improvement"
+        "daily-build-test"
+        "quality-checks"
+        "security-audit"
+        "performance-monitor"
+        "link-checker"
+        "dependency-updates"
+        "health-monitor"
     )
     
     local all_healthy=true

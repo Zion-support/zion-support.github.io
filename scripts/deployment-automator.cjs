@@ -3,22 +3,21 @@ const fs = require('fs');
 
 console.log('🚀 Deployment Automator Starting...');
 
-const deploymentSteps = [
-    {
-        name: 'Pre-deployment checks',
-        command: 'npm run lint'
+const deploymentSteps = [{
+        "name": 'Pre-deployment checks',
+        "command": 'npm run lint'
     },
     {
-        name: 'Type checking',
-        command: 'npm run type-check'
+        "name": 'Type checking',
+        "command": 'npm run type-check'
     },
     {
-        name: 'Build application',
-        command: 'npm run build'
+        "name": 'Build application',
+        "command": 'npm run build'
     },
     {
-        name: 'Run tests',
-        command: 'npm test'
+        "name": 'Run tests',
+        "command": 'npm test'
     }
 ];
 
@@ -27,9 +26,9 @@ let allPassed = true;
 deploymentSteps.forEach(step => {
     try {
         console.log(`📋 ${step.name}...`);
-        execSync(step.command, { stdio: 'inherit' });
+        execSync(step.command, { "stdio": 'inherit' });
         console.log(`✅ ${step.name} completed`)} catch (error) {
-        console.error(`❌ ${step.name} failed:`, error.message);
+        console.error(`❌ ${step.name} "failed": `, error.message);
         allPassed = false}
 });
 
