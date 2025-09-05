@@ -82,7 +82,7 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col "sm": flex-row justify-between items-center text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -116,12 +116,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden "lg": flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
@@ -146,7 +146,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                           >
                             <div className="flex items-center space-x-3">
                               <child.icon className="w-4 h-4" />
@@ -168,7 +168,7 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden "lg": flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
               className="px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
@@ -186,7 +186,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className=""lg": hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -199,14 +199,14 @@ export default function Header() {
               initial={{ "opacity": 0, "height": 0 }}
               animate={{ "opacity": 1, "height": 'auto' }}
               exit={{ "opacity": 0, "height": 0 }}
-              className=""lg": hidden border-t border-gray-200 bg-white"
+              className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 "hover": bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                      className="flex items-center space-x-2 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
                       onClick={closeMenu}
                     >
                       <item.icon className="w-4 h-4" />
@@ -218,7 +218,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 "hover": bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="flex items-center justify-between px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             onClick={closeMenu}
                           >
                             <div className="flex items-center space-x-2">
@@ -241,14 +241,14 @@ export default function Header() {
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg "hover": bg-blue-50 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Get Quote
                   </Link>
                   <Link
                     href="/contact"
-                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg "hover": bg-blue-700 transition-colors font-medium"
+                    className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
                     Free Consultation

@@ -421,6 +421,87 @@ const microSaaSProducts = [{
     "pricing": '$199 - $1,299/month',
     "category": 'Voice Analytics',
     "popular": true
+  },
+  {
+    "title": 'AI-Powered Code Generation Platform',
+    "description": 'Automated code generation from natural language descriptions with multiple language support.',
+    "icon": Code,
+    "features": ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Documentation Generation'],
+    "pricing": '$99 - $599/month',
+    "category": 'Developer Tools',
+    "popular": true
+  },
+  {
+    "title": 'Smart Contract Development Suite',
+    "description": 'Complete platform for smart contract development, testing, and deployment across multiple blockchains.',
+    "icon": Lock,
+    "features": ['Visual Contract Builder', 'Multi-chain Support', 'Security Testing', 'Gas Optimization'],
+    "pricing": '$199 - $1,499/month',
+    "category": 'Blockchain Development',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Market Research Platform',
+    "description": 'Automated market research with competitor analysis, trend prediction, and consumer insights.',
+    "icon": Search,
+    "features": ['Competitor Analysis', 'Trend Prediction', 'Consumer Insights', 'Market Reports'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Market Research',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Email Security Gateway',
+    "description": 'AI-powered email security with advanced threat detection and zero-day protection.',
+    "icon": Shield,
+    "features": ['Threat Detection', 'Phishing Prevention', 'Malware Scanning', 'Zero-day Protection'],
+    "pricing": '$2.50 - $8.00 per user/month',
+    "category": 'Email Security',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Video Content Moderation',
+    "description": 'Automated video content moderation with real-time analysis and policy enforcement.',
+    "icon": Video,
+    "features": ['Real-time Analysis', 'Content Classification', 'Policy Enforcement', 'Manual Review Queue'],
+    "pricing": '$0.05 - $0.25 per minute',
+    "category": 'Content Moderation',
+    "popular": true
+  },
+  {
+    "title": 'Smart Contract Audit Platform',
+    "description": 'Automated smart contract security auditing with comprehensive vulnerability detection.',
+    "icon": Search,
+    "features": ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    "pricing": '$499 - $2,999 per audit',
+    "category": 'Blockchain Security',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Customer Churn Prediction',
+    "description": 'Predictive analytics platform to identify and prevent customer churn with actionable insights.',
+    "icon": TrendingUp,
+    "features": ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
+    "pricing": '$199 - $1,299/month',
+    "category": 'Customer Analytics',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Document Workflow Automation',
+    "description": 'AI-powered document processing with intelligent routing and approval workflows.',
+    "icon": FileText,
+    "features": ['Document Classification', 'Intelligent Routing', 'Approval Workflows', 'Compliance Tracking'],
+    "pricing": '$149 - $899/month',
+    "category": 'Workflow Automation',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Price Optimization Engine',
+    "description": 'Dynamic pricing optimization using machine learning for maximum revenue and competitiveness.',
+    "icon": DollarSign,
+    "features": ['Dynamic Pricing', 'Competitor Analysis', 'Demand Forecasting', 'A/B Testing'],
+    "pricing": '$299 - $1,999/month',
+    "category": 'Pricing Intelligence',
+    "popular": true
   }
 ];
 
@@ -551,17 +632,17 @@ export default function MicroSaaSPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
                   SaaS
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your SaaS
               </Link>
@@ -583,7 +664,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -615,7 +696,7 @@ export default function MicroSaaSPage() {
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-"hover": text-indigo-600 transition-colors">
+                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
@@ -648,7 +729,7 @@ export default function MicroSaaSPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-purple-600 "hover": bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -670,7 +751,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Micro SaaS?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -678,13 +759,13 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -716,7 +797,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -765,7 +846,7 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -773,7 +854,7 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
@@ -837,13 +918,13 @@ export default function MicroSaaSPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>

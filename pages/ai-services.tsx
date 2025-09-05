@@ -378,6 +378,123 @@ const aiServices = [{
     "pricing": '$15,000 - $100,000/setup',
     "category": 'Industrial AI',
     "popular": true
+  },
+  {
+    "title": 'AI-Powered Cybersecurity Threat Intelligence',
+    "description": 'Advanced threat intelligence platform using AI for proactive cybersecurity defense.',
+    "icon": Shield,
+    "features": ['Threat Hunting', 'Behavioral Analysis', 'Zero-day Detection', 'Automated Response'],
+    "pricing": '$5,000 - $25,000/month',
+    "category": 'Cybersecurity',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Drug Discovery Platform',
+    "description": 'Accelerated drug discovery using AI for molecular design and clinical trial optimization.',
+    "icon": Heart,
+    "features": ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Design'],
+    "pricing": '$50,000 - $500,000/project',
+    "category": 'Pharmaceutical AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Autonomous Trading System',
+    "description": 'Fully automated trading system with AI-driven market analysis and execution.',
+    "icon": TrendingUp,
+    "features": ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Execution'],
+    "pricing": '$10,000 - $100,000/setup + 1-3% of profits',
+    "category": 'FinTech AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Content Creation Suite',
+    "description": 'Comprehensive AI content creation platform for text, images, videos, and audio.',
+    "icon": FileText,
+    "features": ['Multi-modal Generation', 'Brand Consistency', 'SEO Optimization', 'Multi-language Support'],
+    "pricing": '$299 - $2,999/month',
+    "category": 'Content AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Customer Service Automation',
+    "description": 'Intelligent customer service automation with natural language understanding and resolution.',
+    "icon": MessageSquare,
+    "features": ['Natural Language Processing', 'Intent Recognition', 'Automated Resolution', 'Escalation Management'],
+    "pricing": '$1,000 - $8,000/month',
+    "category": 'Customer Service AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Language Translation & Localization',
+    "description": 'Advanced AI translation with cultural context and industry-specific terminology.',
+    "icon": Globe,
+    "features": ['100+ Languages', 'Cultural Context', 'Industry Terms', 'Real-time Translation'],
+    "pricing": '$0.01 - $0.10 per word',
+    "category": 'Language AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Video Analytics Platform',
+    "description": 'Comprehensive video analysis platform for security, marketing, and business intelligence.',
+    "icon": Video,
+    "features": ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    "pricing": '$2,000 - $15,000/month',
+    "category": 'Video AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Supply Chain Optimization',
+    "description": 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    "icon": Network,
+    "features": ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Assessment'],
+    "pricing": '$20,000 - $150,000/project',
+    "category": 'Supply Chain AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Personal Assistant Platform',
+    "description": 'Advanced personal assistant with voice recognition, task automation, and learning capabilities.',
+    "icon": Bot,
+    "features": ['Voice Recognition', 'Task Automation', 'Learning Capabilities', 'Multi-platform Integration'],
+    "pricing": '$99 - $599/month',
+    "category": 'Personal AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Energy Grid Optimization',
+    "description": 'Smart grid management using AI for energy distribution and consumption optimization.',
+    "icon": Zap,
+    "features": ['Load Balancing', 'Demand Response', 'Renewable Integration', 'Grid Stability'],
+    "pricing": '$50,000 - $500,000/project',
+    "category": 'Energy AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Legal Research Assistant',
+    "description": 'Intelligent legal research platform with case law analysis and precedent identification.',
+    "icon": BookOpen,
+    "features": ['Case Law Analysis', 'Precedent Identification', 'Legal Research', 'Document Analysis'],
+    "pricing": '$199 - $1,999/month',
+    "category": 'Legal AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Mental Health Support',
+    "description": 'AI-powered mental health monitoring and support with personalized interventions.',
+    "icon": Heart,
+    "features": ['Mood Tracking', 'Crisis Detection', 'Personalized Interventions', 'Professional Referrals'],
+    "pricing": '$29 - $199/month',
+    "category": 'Health AI',
+    "popular": true
+  },
+  {
+    "title": 'AI-Powered Smart City Management',
+    "description": 'Comprehensive smart city platform with traffic optimization and resource management.',
+    "icon": Building,
+    "features": ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Environmental Monitoring'],
+    "pricing": '$100,000 - $2,000,000/project',
+    "category": 'Smart City AI',
+    "popular": true
   }
 ];
 
@@ -440,17 +557,17 @@ export default function AIServicesPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Brain className="h-16 w-16 text-blue-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 AI{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Services
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get AI Consultation
               </Link>
@@ -472,7 +589,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our AI Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -486,7 +603,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -494,7 +611,7 @@ export default function AIServicesPage() {
                   whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600 group-"hover": text-purple-600 transition-colors">
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
@@ -527,7 +644,7 @@ export default function AIServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -549,7 +666,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -563,7 +680,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -595,7 +712,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -643,7 +760,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
