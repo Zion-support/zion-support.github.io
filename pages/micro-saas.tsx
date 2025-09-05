@@ -45,7 +45,10 @@ import {
   ShoppingCart,
   Home,
   Database,
-  Vote
+  Vote,
+  Music,
+  CreditCard,
+  Headphones
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -602,6 +605,267 @@ const microSaaSProducts = [
     features: ['Portfolio Optimization', 'Risk Assessment', 'Goal Planning', 'Tax Optimization'],
     pricing: '$99 - $599/month',
     category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Meeting Cost Calculator & Optimizer',
+    description: 'Track meeting costs, analyze productivity, and suggest cost-cutting alternatives for better ROI.',
+    icon: Clock,
+    features: ['Cost Tracking', 'Productivity Analysis', 'ROI Optimization', 'Meeting Insights'],
+    pricing: '$15 - $99/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Habit Streak Tracker Pro',
+    description: 'Gamified habit building with streaks, rewards, and social accountability features.',
+    icon: Target,
+    features: ['Streak Tracking', 'Gamification', 'Social Accountability', 'Progress Analytics'],
+    pricing: '$5 - $29/month',
+    category: 'Personal Development',
+    popular: true
+  },
+  {
+    title: 'Email Triage Assistant',
+    description: 'AI-powered email prioritization and smart reply suggestions to manage inbox overload.',
+    icon: Mail,
+    features: ['Smart Prioritization', 'Auto-categorization', 'Reply Suggestions', 'Inbox Zero'],
+    pricing: '$10 - $49/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Abandoned Cart SMS Recovery',
+    description: 'Automated SMS reminders with discount nudges to recover lost e-commerce sales.',
+    icon: ShoppingCart,
+    features: ['SMS Automation', 'Discount Nudges', 'Cart Recovery', 'Analytics Dashboard'],
+    pricing: '$29 - $199/month + $0.01/SMS',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'Subscription Box Curator',
+    description: 'Complete logistics and billing support for subscription box businesses.',
+    icon: Package,
+    features: ['Inventory Management', 'Billing Cycles', 'Customer Preferences', 'Analytics'],
+    pricing: '$99 - $499/month + 2% transaction fees',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'Product Review Aggregator',
+    description: 'Unified dashboard for reviews from Amazon, Shopify, and other platforms with sentiment analysis.',
+    icon: Star,
+    features: ['Multi-platform Reviews', 'Sentiment Analysis', 'Review Management', 'Competitor Analysis'],
+    pricing: '$49 - $299/month',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'Freelance Contract Generator',
+    description: 'Customizable contract templates with e-signature integration for freelancers.',
+    icon: FileText,
+    features: ['Contract Templates', 'E-signature Integration', 'Legal Compliance', 'Payment Terms'],
+    pricing: '$49 one-time or $9/month for updates',
+    category: 'Freelance Tools',
+    popular: true
+  },
+  {
+    title: 'Portfolio Website Builder',
+    description: 'No-code platform with drag-and-drop templates for creators and freelancers.',
+    icon: Monitor,
+    features: ['Drag-and-Drop Builder', 'Professional Templates', 'SEO Optimization', 'Mobile Responsive'],
+    pricing: '$15/month hosting + premium themes',
+    category: 'Web Development',
+    popular: true
+  },
+  {
+    title: 'Client Feedback Tool',
+    description: 'Central hub for creative project feedback with annotation and collaboration features.',
+    icon: MessageSquare,
+    features: ['Project Annotations', 'Collaboration Tools', 'Version Control', 'Client Approval'],
+    pricing: 'Free solo plan; $29/month for teams',
+    category: 'Creative Tools',
+    popular: true
+  },
+  {
+    title: 'Time Zone Scheduler',
+    description: 'Auto-detect overlapping hours and book meetings across global teams.',
+    icon: Globe,
+    features: ['Auto Time Zone Detection', 'Meeting Scheduling', 'Calendar Integration', 'Team Coordination'],
+    pricing: 'Freemium + $12/month for team features',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Daily Standup Bot',
+    description: 'Slack/Teams bot that collects and summarizes team progress updates.',
+    icon: Users,
+    features: ['Progress Collection', 'Team Summaries', 'Slack Integration', 'Analytics'],
+    pricing: '$10/month for analytics',
+    category: 'Team Management',
+    popular: true
+  },
+  {
+    title: 'Virtual Office Platform',
+    description: '2D office space with avatars for casual chats and spontaneous interactions.',
+    icon: Building,
+    features: ['2D Office Space', 'Avatar System', 'Voice Chat', 'Screen Sharing'],
+    pricing: '$8/user/month',
+    category: 'Remote Work',
+    popular: true
+  },
+  {
+    title: 'Personalized Meal Planner',
+    description: 'AI-generated weekly meal plans based on dietary needs, allergies, and budget.',
+    icon: Heart,
+    features: ['Dietary Customization', 'Allergy Management', 'Budget Planning', 'Grocery Lists'],
+    pricing: '$9/month + grocery list integration',
+    category: 'Health & Wellness',
+    popular: true
+  },
+  {
+    title: 'Sleep Cycle Analyzer',
+    description: 'Track sleep patterns and sync with smart alarms for optimal rest.',
+    icon: Clock,
+    features: ['Sleep Tracking', 'Pattern Analysis', 'Smart Alarms', 'Sleep Reports'],
+    pricing: '$19 one-time for detailed reports',
+    category: 'Health & Wellness',
+    popular: true
+  },
+  {
+    title: '7-Minute Workout Generator',
+    description: 'Customize quick workouts with animations and progress tracking.',
+    icon: Heart,
+    features: ['Custom Workouts', 'Exercise Animations', 'Progress Tracking', 'Workout Plans'],
+    pricing: 'Free with ads; $7/month for premium packs',
+    category: 'Health & Fitness',
+    popular: true
+  },
+  {
+    title: 'Blog Headline Analyzer',
+    description: 'SEO tool that scores headlines for readability and keyword optimization.',
+    icon: Search,
+    features: ['Headline Scoring', 'SEO Analysis', 'Readability Check', 'AI Suggestions'],
+    pricing: 'Freemium + $12/month for AI suggestions',
+    category: 'Content Marketing',
+    popular: true
+  },
+  {
+    title: 'Royalty-Free Music Library',
+    description: 'Curated music tracks sorted by mood, genre, and length for content creators.',
+    icon: Music,
+    features: ['Curated Library', 'Mood-based Search', 'Genre Filtering', 'Commercial License'],
+    pricing: '$29/month subscription',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Social Media Caption Generator',
+    description: 'AI-generated captions with hashtags and emojis for social media posts.',
+    icon: MessageSquare,
+    features: ['AI Caption Generation', 'Hashtag Suggestions', 'Emoji Integration', 'Platform Optimization'],
+    pricing: '$15/month for unlimited use',
+    category: 'Social Media',
+    popular: true
+  },
+  {
+    title: 'Subscription Cancellation Service',
+    description: 'App that identifies and cancels unused subscriptions automatically.',
+    icon: CreditCard,
+    features: ['Subscription Discovery', 'Auto Cancellation', 'Cost Tracking', 'Savings Reports'],
+    pricing: '$3/cancellation fee',
+    category: 'Personal Finance',
+    popular: true
+  },
+  {
+    title: 'Receipt Scanner for Expenses',
+    description: 'Scan, categorize, and export receipts to accounting tools for expense management.',
+    icon: FileText,
+    features: ['Receipt Scanning', 'Auto Categorization', 'Accounting Integration', 'PDF Export'],
+    pricing: 'Freemium + $8/month for PDF exports',
+    category: 'Finance',
+    popular: true
+  },
+  {
+    title: 'Local Business Review Manager',
+    description: 'Respond to Google, Yelp, and Facebook reviews from one centralized platform.',
+    icon: Star,
+    features: ['Multi-platform Management', 'Review Monitoring', 'Response Templates', 'Analytics'],
+    pricing: '$49/month per location',
+    category: 'Local Business',
+    popular: true
+  },
+  {
+    title: 'Flashcard App with Spaced Repetition',
+    description: 'Schedule reviews based on memory retention science for effective learning.',
+    icon: BookOpen,
+    features: ['Spaced Repetition', 'Memory Science', 'Cross-device Sync', 'Progress Tracking'],
+    pricing: '$6/month for cross-device sync',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'Micro-Course Platform',
+    description: 'Host 15-minute bite-sized courses for quick skill development.',
+    icon: BookOpen,
+    features: ['Short Course Format', 'Progress Tracking', 'Certificates', 'Revenue Sharing'],
+    pricing: '20% revenue share per sale',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'Homework Help Community',
+    description: 'Q&A forum where experts charge per question for student assistance.',
+    icon: Users,
+    features: ['Expert Q&A', 'Per-question Pricing', 'Subject Specialists', 'Quality Control'],
+    pricing: '15% commission on transactions',
+    category: 'Education',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Meeting Summarizer',
+    description: 'Auto-generate meeting summaries and action items from recorded sessions.',
+    icon: FileText,
+    features: ['Auto Summarization', 'Action Item Extraction', 'Meeting Transcription', 'Follow-up Reminders'],
+    pricing: '$15/user/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'Cloud Cost Optimization Tool',
+    description: 'Reduce cloud expenses by optimizing server usage and shutting down idle resources.',
+    icon: Cloud,
+    features: ['Cost Analysis', 'Resource Optimization', 'Idle Detection', 'Savings Reports'],
+    pricing: '$199 - $999/month',
+    category: 'Cloud Management',
+    popular: true
+  },
+  {
+    title: 'Lead Scoring and Prioritization SaaS',
+    description: 'Score and prioritize leads based on behavior and interaction data for sales teams.',
+    icon: Target,
+    features: ['Behavioral Scoring', 'Lead Prioritization', 'CRM Integration', 'Predictive Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Sales',
+    popular: true
+  },
+  {
+    title: 'Niche Customer Support System',
+    description: 'Simple ticketing and live chat for specific industries like e-commerce and freelancers.',
+    icon: Headphones,
+    features: ['Ticket Management', 'Live Chat', 'Knowledge Base', 'Industry Templates'],
+    pricing: '$29 - $149/month',
+    category: 'Customer Support',
+    popular: true
+  },
+  {
+    title: 'Local SEO Tracking for Small Businesses',
+    description: 'Track local keyword performance, Google My Business, and competitor analysis.',
+    icon: Search,
+    features: ['Local Keyword Tracking', 'GMB Management', 'Competitor Analysis', 'Ranking Reports'],
+    pricing: '$49 - $299/month',
+    category: 'Local SEO',
     popular: true
   }
 ];

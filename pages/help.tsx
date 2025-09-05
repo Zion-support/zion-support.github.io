@@ -14,7 +14,8 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  ArrowRight
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -153,7 +154,7 @@ const supportChannels = [
     name: 'Email Support',
     description: 'Get help via email within 24 hours',
     icon: Mail,
-    contact: 'support@ziontechgroup.com',
+    contact: 'kleber@ziontechgroup.com',
     responseTime: '24 hours'
   },
   {

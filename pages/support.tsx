@@ -25,7 +25,7 @@ const supportChannels = [
     name: 'Email Support',
     description: 'Get help via email within 24 hours',
     icon: Mail,
-    contact: 'support@ziontechgroup.com',
+    contact: 'kleber@ziontechgroup.com',
     responseTime: '24 hours',
     color: 'from-blue-600 to-purple-600'
   },

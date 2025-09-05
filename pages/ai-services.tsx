@@ -41,7 +41,10 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Headphones,
+  Package,
+  DollarSign
 } from 'lucide-react';
 
 const aiServices = [
@@ -639,6 +642,177 @@ const aiServices = [
     features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
     pricing: '$5,000 - $40,000/month',
     category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Meeting Summarizer',
+    description: 'Automated meeting transcription, summarization, and action item extraction.',
+    icon: FileText,
+    features: ['Real-time Transcription', 'Smart Summarization', 'Action Item Extraction', 'Follow-up Reminders'],
+    pricing: '$15 - $50/user/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
+    title: 'AI Customer Service Automation',
+    description: 'End-to-end customer service automation with intelligent routing and resolution.',
+    icon: Headphones,
+    features: ['Intelligent Routing', 'Auto Resolution', 'Sentiment Analysis', 'Escalation Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Customer Service',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Document Processing',
+    description: 'Intelligent document extraction, classification, and data processing automation.',
+    icon: FileText,
+    features: ['Document Classification', 'Data Extraction', 'OCR Processing', 'Workflow Automation'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'AI Sales Forecasting & Analytics',
+    description: 'Predictive sales analytics and forecasting using machine learning algorithms.',
+    icon: TrendingUp,
+    features: ['Sales Forecasting', 'Lead Scoring', 'Pipeline Analysis', 'Revenue Prediction'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Sales',
+    popular: true
+  },
+  {
+    title: 'AI-Powered HR & Recruitment',
+    description: 'Intelligent candidate screening, resume analysis, and recruitment automation.',
+    icon: Users,
+    features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Bias Detection'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'HR',
+    popular: true
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Automated legal document review, contract analysis, and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Legal',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Marketing',
+    description: 'Intelligent email marketing with personalization, optimization, and automation.',
+    icon: Mail,
+    features: ['Personalization', 'Send Time Optimization', 'Content Generation', 'Performance Analytics'],
+    pricing: '$500 - $3,000/month',
+    category: 'Marketing',
+    popular: true
+  },
+  {
+    title: 'AI Inventory Management',
+    description: 'Smart inventory optimization with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Automated Reordering', 'Stock Optimization', 'Supplier Analytics'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Inventory',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Quality Control',
+    description: 'Automated quality inspection and defect detection using computer vision.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Scoring', 'Real-time Monitoring', 'Predictive Maintenance'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Manufacturing',
+    popular: true
+  },
+  {
+    title: 'AI Language Translation Services',
+    description: 'Real-time language translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
+    pricing: '$0.01 - $0.10 per 1K characters',
+    category: 'Language Services',
+    popular: true
+  },
+  {
+    title: 'AI-Powered SEO Optimization',
+    description: 'Intelligent SEO analysis and optimization with automated content suggestions.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'],
+    pricing: '$500 - $2,500/month',
+    category: 'SEO',
+    popular: true
+  },
+  {
+    title: 'AI Video Content Generation',
+    description: 'Automated video creation from text, images, and audio with professional editing.',
+    icon: Video,
+    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
+    pricing: '$200 - $1,500/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Lead Generation',
+    description: 'Intelligent lead identification, qualification, and nurturing automation.',
+    icon: Target,
+    features: ['Lead Identification', 'Qualification Scoring', 'Nurture Sequences', 'CRM Integration'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Lead Generation',
+    popular: true
+  },
+  {
+    title: 'AI Data Analysis & Insights',
+    description: 'Automated data analysis with intelligent insights and visualization generation.',
+    icon: BarChart3,
+    features: ['Data Processing', 'Insight Generation', 'Visualization', 'Trend Analysis'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Pricing Optimization',
+    description: 'Dynamic pricing optimization using machine learning and market analysis.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Monitoring', 'Revenue Optimization'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Pricing',
+    popular: true
+  },
+  {
+    title: 'AI Customer Churn Prediction',
+    description: 'Predictive analytics to identify and prevent customer churn before it happens.',
+    icon: Users,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'Retention Campaigns'],
+    pricing: '$2,000 - $8,000/month',
+    category: 'Customer Retention',
+    popular: true
+  },
+  {
+    title: 'AI-Powered A/B Testing',
+    description: 'Intelligent A/B testing with automated optimization and statistical analysis.',
+    icon: Settings,
+    features: ['Automated Testing', 'Statistical Analysis', 'Optimization', 'Performance Tracking'],
+    pricing: '$500 - $2,500/month',
+    category: 'Testing',
+    popular: true
+  },
+  {
+    title: 'AI Voice Analytics & Insights',
+    description: 'Advanced voice analysis for customer interactions, sentiment, and performance insights.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Voice Quality Metrics', 'Performance Insights', 'Trend Analysis'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Voice Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting across multiple regulations.',
+    icon: Shield,
+    features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Compliance',
     popular: true
   }
 ];

@@ -1,660 +1,73 @@
 import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  Globe, 
-  ArrowRight, 
-=======
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Map, 
-  ArrowRight,
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
   ExternalLink,
   Home,
   Settings,
   Users,
   FileText,
-<<<<<<< HEAD
-  BarChart3,
-  MessageSquare,
-  Code,
-  BookOpen,
-  HelpCircle,
-  Shield,
-  Lock,
-  Search
-} from 'lucide-react';
-
-const siteStructure = [
-  {
-    category: "Main Pages",
-    icon: Home,
-    pages: [
-      { name: "Home", url: "/", description: "Main landing page with company overview" },
-      { name: "About Us", url: "/about", description: "Company information, team, and mission" },
-      { name: "Contact", url: "/contact", description: "Contact information and inquiry form" }
-    ]
-  },
-  {
-    category: "Services",
-    icon: Settings,
-    pages: [
-      { name: "All Services", url: "/services", description: "Overview of all our services" },
-      { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },
-      { name: "IT Services", url: "/it-services", description: "Information technology services" },
-      { name: "Micro SaaS", url: "/micro-saas", description: "Software as a Service solutions" },
-      { name: "Talent Solutions", url: "/talent", description: "Hiring and talent acquisition" }
-    ]
-  },
-  {
-    category: "Solutions",
-    icon: Code,
-    pages: [
-      { name: "Custom Solutions", url: "/solutions/custom", description: "Tailored software solutions" },
-      { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Large-scale enterprise systems" },
-      { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups and small businesses" },
-      { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" }
-    ]
-  },
-  {
-    category: "Resources",
-    icon: BookOpen,
-    pages: [
-      { name: "Blog", url: "/blog", description: "Latest insights and articles" },
-      { name: "Case Studies", url: "/case-studies", description: "Success stories and project examples" },
-      { name: "Documentation", url: "/docs", description: "Technical documentation and guides" },
-      { name: "API Documentation", url: "/api-docs", description: "API reference and integration guides" },
-      { name: "Tutorials", url: "/tutorials", description: "Step-by-step tutorials and how-tos" },
-      { name: "Guides", url: "/guides", description: "Comprehensive guides and best practices" }
-    ]
-  },
-  {
-    category: "Company",
-    icon: Users,
-    pages: [
-      { name: "Careers", url: "/careers", description: "Join our team and career opportunities" },
-      { name: "Partners", url: "/partners", description: "Our technology and business partners" }
-    ]
-  },
-  {
-    category: "Support",
-    icon: HelpCircle,
-    pages: [
-      { name: "Help Center", url: "/help", description: "Get help and find answers" },
-      { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
-      { name: "Support", url: "/support", description: "Technical support and assistance" }
-    ]
-  },
-  {
-    category: "Legal",
-    icon: Shield,
-    pages: [
-      { name: "Privacy Policy", url: "/privacy", description: "How we handle your privacy" },
-      { name: "Cookie Policy", url: "/cookies", description: "Information about our cookie usage" },
-      { name: "Security", url: "/security", description: "Our security practices and policies" },
-      { name: "Accessibility", url: "/accessibility", description: "Accessibility features and compliance" }
-    ]
-  },
-  {
-    category: "User Account",
-    icon: Lock,
-    pages: [
-      { name: "Login", url: "/login", description: "Sign in to your account" },
-      { name: "Register", url: "/register", description: "Create a new account" }
-    ]
-  },
-  {
-    category: "Tools",
-    icon: Search,
-    pages: [
-      { name: "Search", url: "/search", description: "Search our website and resources" },
-      { name: "Pricing", url: "/pricing", description: "View our pricing plans and options" }
-=======
-  Globe,
-  Phone,
-  Mail,
-  MapPin
+  Brain,
+  Cloud,
+  Shield
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
-const siteStructure = [
-  {
-    title: "Main Pages",
-    pages: [
-      { name: "Home", url: "/", description: "Main landing page" },
-      { name: "About Us", url: "/about", description: "Company information and team" },
-      { name: "Contact", url: "/contact", description: "Contact information and form" },
-      { name: "News", url: "/news", description: "Latest news and updates" },
-      { name: "Careers", url: "/careers", description: "Job opportunities" },
-      { name: "Partners", url: "/partners", description: "Partnership information" }
-    ]
-  },
-  {
-    title: "Services",
-    pages: [
-      { name: "All Services", url: "/services", description: "Overview of all services" },
-      { name: "AI Services", url: "/ai-services", description: "Artificial intelligence solutions" },
-      { name: "IT Services", url: "/it-services", description: "Information technology services" },
-      { name: "Micro SaaS", url: "/micro-saas", description: "Software as a service solutions" },
-      { name: "Talent", url: "/talent", description: "Talent acquisition services" }
-    ]
-  },
-  {
-    title: "Solutions",
-    pages: [
-      { name: "All Solutions", url: "/solutions", description: "Overview of all solutions" },
-      { name: "Enterprise Solutions", url: "/solutions/enterprise", description: "Enterprise-grade solutions" },
-      { name: "Startup Solutions", url: "/solutions/startup", description: "Solutions for startups" },
-      { name: "Industry Solutions", url: "/solutions/industry", description: "Industry-specific solutions" },
-      { name: "Custom Development", url: "/solutions/custom", description: "Custom software development" },
-      { name: "Digital Transformation", url: "/solutions/digital-transformation", description: "Digital transformation services" },
-      { name: "Cloud Migration", url: "/solutions/cloud-migration", description: "Cloud migration services" }
-    ]
-  },
-  {
-    title: "Industries",
-    pages: [
-      { name: "Healthcare", url: "/industries/healthcare", description: "Healthcare industry solutions" },
-      { name: "Finance", url: "/industries/finance", description: "Financial services solutions" },
-      { name: "Manufacturing", url: "/industries/manufacturing", description: "Manufacturing solutions" },
-      { name: "Retail", url: "/industries/retail", description: "Retail industry solutions" },
-      { name: "Education", url: "/industries/education", description: "Education sector solutions" },
-      { name: "Government", url: "/industries/government", description: "Government solutions" }
-    ]
-  },
-  {
-    title: "Resources",
-    pages: [
-      { name: "Documentation", url: "/docs", description: "Technical documentation" },
-      { name: "API Reference", url: "/api-docs", description: "API documentation" },
-      { name: "Case Studies", url: "/case-studies", description: "Success stories and case studies" },
-      { name: "Blog", url: "/blog", description: "Company blog and insights" },
-      { name: "Tutorials", url: "/tutorials", description: "Step-by-step tutorials" },
-      { name: "Guides", url: "/guides", description: "User guides and documentation" },
-      { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
-      { name: "Support", url: "/support", description: "Customer support center" }
-    ]
-  },
-  {
-    title: "Legal",
-    pages: [
-      { name: "Privacy Policy", url: "/privacy", description: "Privacy policy and data protection" },
-      { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
-      { name: "Cookie Policy", url: "/cookies", description: "Cookie usage policy" },
-      { name: "Security", url: "/security", description: "Security information" },
-      { name: "Compliance", url: "/compliance", description: "Compliance and certifications" }
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
-    ]
-  }
+const sitePages = [
+  { title: 'Home', href: '/', icon: Home },
+  { title: 'About', href: '/about', icon: Users },
+  { title: 'Services', href: '/services', icon: Settings },
+  { title: 'Contact', href: '/contact', icon: FileText }
 ];
 
-<<<<<<< HEAD
-export default function SitemapPage() {
+export default function Sitemap() {
   return (
     <MainLayout
-=======
-const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "info@ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown, DE 19709",
-  website: "https://ziontechgroup.com"
-};
-
-export default function SitemapPage() {
-  return (
-    <MainLayout 
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
       title="Sitemap - Zion Tech Group"
       description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources organized by category."
       keywords="sitemap, website map, navigation, pages, services, resources"
     >
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Sitemap
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Navigate our website easily with this comprehensive sitemap
+            </p>
+          </motion.div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-<<<<<<< HEAD
-              <div className="flex items-center justify-center mb-6">
-                <Globe className="w-16 h-16 text-blue-400 mr-4" />
-                <h1 className="text-4xl md:text-6xl font-bold">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Sitemap
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Navigate through all pages and resources on our website
-=======
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Sitemap</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Navigate our website easily with our comprehensive sitemap. 
-                Find all pages, services, and resources organized by category.
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#site-structure"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Browse Sitemap
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Sitemap Content */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sitePages.map((page, index) => (
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Complete Website Structure
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Find all pages, resources, and sections organized by category
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {siteStructure.map((section, sectionIndex) => (
-                  <motion.div
-                    key={section.category}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
-                  >
-                    <div className="flex items-center mb-4">
-                      <section.icon className="w-8 h-8 text-blue-600 mr-3" />
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {section.category}
-                      </h3>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      {section.pages.map((page, pageIndex) => (
-                        <div key={page.url} className="border-l-2 border-gray-100 pl-4">
-                          <Link
-                            href={page.url}
-                            className="group block hover:bg-gray-50 p-2 rounded-lg transition-colors"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div className="flex-1">
-                                <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                                  {page.name}
-                                </h4>
-                                <p className="text-sm text-gray-600 mt-1">
-                                  {page.description}
-                                </p>
-                              </div>
-                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all ml-2" />
-                            </div>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-=======
-        {/* Site Structure */}
-        <section id="site-structure" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Site Structure
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                All pages on our website organized by category for easy navigation.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {siteStructure.map((category, categoryIndex) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6"
-                >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Map className="w-6 h-6 text-blue-600 mr-3" />
-                    {category.title}
-                  </h3>
-                  <div className="space-y-3">
-                    {category.pages.map((page, pageIndex) => (
-                      <div key={pageIndex} className="flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
-                        <div className="flex-1">
-                          <Link
-                            href={page.url}
-                            className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
-                          >
-                            {page.name}
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </Link>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {page.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Links */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Quick Links
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Most popular pages and resources for quick access.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link
-                href="/"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Home className="w-12 h-12 text-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    Home
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Main landing page
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/services"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Settings className="w-12 h-12 text-green-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                    Services
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Our technology services
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/about"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Users className="w-12 h-12 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    About Us
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Company information
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/contact"
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <div className="text-center">
-                  <Phone className="w-12 h-12 text-orange-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                    Contact
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    Get in touch
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Contact Information
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with us through any of these channels.
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gray-50 rounded-xl p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div className="flex items-center">
-                      <Phone className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Phone</div>
-                        <div className="text-gray-600">{contactInfo.phone}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Email</div>
-                        <div className="text-gray-600">{contactInfo.email}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Address</div>
-                        <div className="text-gray-600">{contactInfo.address}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <Globe className="w-6 h-6 text-blue-600 mr-4" />
-                      <div>
-                        <div className="font-semibold text-gray-900">Website</div>
-                        <div className="text-gray-600">{contactInfo.website}</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">
-                      Need Help Finding Something?
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Can't find what you're looking for? Our team is here to help you navigate our website and find the information you need.
-                    </p>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Contact Support
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Now that you've explored our website, let's discuss how we can help you achieve your technology goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-                >
-                  Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-                >
-                  Learn More About Us
-                </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Links Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="bg-white rounded-lg shadow-lg p-6"
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Quick Access
-                </h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Jump to the most popular sections of our website
-                </p>
-                
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {[
-                    { name: "Services", url: "/services", icon: Settings },
-                    { name: "Contact", url: "/contact", icon: Phone },
-                    { name: "Case Studies", url: "/case-studies", icon: BarChart3 },
-                    { name: "Blog", url: "/blog", icon: MessageSquare }
-                  ].map((link, index) => (
-                    <Link
-                      key={link.url}
-                      href={link.url}
-                      className="group bg-gray-50 hover:bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:shadow-md"
-                    >
-                      <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                        {link.name}
-                      </h3>
-                    </Link>
-                  ))}
+                <div className="flex items-center mb-4">
+                  <page.icon className="h-6 w-6 text-blue-600 mr-3" />
+                  <h3 className="text-lg font-semibold">{page.title}</h3>
                 </div>
+                <Link
+                  href={page.href}
+                  className="text-blue-600 hover:text-blue-700 flex items-center"
+                >
+                  Visit Page
+                  <ExternalLink className="h-4 w-4 ml-1" />
+                </Link>
               </motion.div>
-            </div>
+            ))}
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-4">
-                  Need Help Finding Something?
-                </h2>
-                <p className="text-xl text-blue-100 mb-8">
-                  Can't find what you're looking for? We're here to help.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/search"
-                    className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-                  >
-                    <Search className="w-5 h-5 mr-2" />
-                    Search Website
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
-                  >
-                    Contact Support
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </MainLayout>
   );

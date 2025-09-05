@@ -19,7 +19,14 @@ import {
   Star, 
   Phone, 
   MapPin,
-  ShoppingCart
+  ShoppingCart,
+  Target,
+  Code,
+  BarChart3,
+  BookOpen,
+  Package,
+  Settings,
+  Users
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -131,6 +138,141 @@ const itServices = [
     pricing: '$50,000 - $250,000/project',
     category: 'Quantum',
     popular: false
+  },
+  {
+    title: 'Cloud Migration & Strategy Consulting',
+    description: 'Expert cloud migration planning and execution with cost optimization and security best practices.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Cost Optimization', 'Security Assessment', 'Performance Tuning'],
+    pricing: '$150 - $350/hour',
+    category: 'Cloud Consulting',
+    popular: true
+  },
+  {
+    title: 'Cybersecurity Risk Assessment',
+    description: 'Comprehensive security audits and vulnerability assessments for businesses of all sizes.',
+    icon: Shield,
+    features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Compliance Review'],
+    pricing: '$200 - $500/hour',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'ERP & CRM Implementation',
+    description: 'Complete ERP and CRM system selection, implementation, and customization services.',
+    icon: Database,
+    features: ['System Selection', 'Custom Configuration', 'Data Migration', 'User Training'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Enterprise Software',
+    popular: true
+  },
+  {
+    title: 'IT Strategy & Digital Transformation',
+    description: 'Strategic IT planning and digital transformation consulting for modern businesses.',
+    icon: Target,
+    features: ['IT Roadmap Planning', 'Digital Strategy', 'Technology Assessment', 'Change Management'],
+    pricing: '$250 - $500/hour',
+    category: 'Strategy',
+    popular: true
+  },
+  {
+    title: 'Software Development Consulting',
+    description: 'Custom software development and architecture consulting for complex business needs.',
+    icon: Code,
+    features: ['Custom Development', 'System Architecture', 'Code Review', 'Technical Leadership'],
+    pricing: '$125 - $300/hour',
+    category: 'Development',
+    popular: true
+  },
+  {
+    title: 'Business Intelligence & Analytics',
+    description: 'Data analytics and business intelligence solutions for data-driven decision making.',
+    icon: BarChart3,
+    features: ['Data Warehousing', 'Dashboard Development', 'Predictive Analytics', 'Reporting Systems'],
+    pricing: '$175 - $300/hour',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'Project Management & PMO Services',
+    description: 'IT project management and PMO services for complex technology implementations.',
+    icon: Settings,
+    features: ['Project Planning', 'Resource Management', 'Risk Assessment', 'Quality Assurance'],
+    pricing: '$100 - $200/hour',
+    category: 'Project Management',
+    popular: true
+  },
+  {
+    title: 'Managed IT Services',
+    description: 'Comprehensive managed IT services including helpdesk, monitoring, and maintenance.',
+    icon: Server,
+    features: ['24/7 Monitoring', 'Help Desk Support', 'Proactive Maintenance', 'Security Management'],
+    pricing: '$100 - $300/user/month',
+    category: 'Managed Services',
+    popular: true
+  },
+  {
+    title: 'DevOps & CI/CD Implementation',
+    description: 'DevOps culture implementation with automated CI/CD pipelines and infrastructure as code.',
+    icon: Settings,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring Setup'],
+    pricing: '$150 - $300/hour',
+    category: 'DevOps',
+    popular: true
+  },
+  {
+    title: 'Data Center Design & Migration',
+    description: 'Data center design, migration, and optimization services for enterprise infrastructure.',
+    icon: Server,
+    features: ['Data Center Design', 'Migration Planning', 'Capacity Planning', 'Disaster Recovery'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Infrastructure',
+    popular: true
+  },
+  {
+    title: 'IT Staff Augmentation',
+    description: 'On-demand IT professionals for temporary projects and skill gaps.',
+    icon: Users,
+    features: ['Temporary Staffing', 'Skill Matching', 'Project Support', 'Knowledge Transfer'],
+    pricing: '$80 - $200/hour',
+    category: 'Staffing',
+    popular: true
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification preparation for teams.',
+    icon: BookOpen,
+    features: ['Custom Training Programs', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$200 - $500/day per instructor',
+    category: 'Training',
+    popular: true
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management including procurement, tracking, and disposal.',
+    icon: Package,
+    features: ['Asset Tracking', 'Procurement Management', 'License Management', 'Disposal Services'],
+    pricing: '$50 - $150/asset/month',
+    category: 'Asset Management',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning and business continuity solutions.',
+    icon: Shield,
+    features: ['DR Planning', 'Backup Solutions', 'Recovery Testing', 'Business Continuity'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'IT governance framework implementation and risk management consulting.',
+    icon: Lock,
+    features: ['Governance Framework', 'Risk Assessment', 'Policy Development', 'Compliance Monitoring'],
+    pricing: '$200 - $400/hour',
+    category: 'Governance',
+    popular: true
   }
 ];
 

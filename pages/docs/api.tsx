@@ -74,19 +74,14 @@ const codeExamples = [{
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-}
 })
-const data = await response.json()
-<<<<<<< HEAD
-`},
-=======
-`
+const data = await response.json()`
   },
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
   {
     language: 'Python',
     title: 'Submit Contact Form',
     code: `import requests
+
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -98,45 +93,34 @@ data = {
     'message': 'Interested in AI services',
     'company': 'Tech Corp'
 }
-response = requests.post(url, json=data, headers=headers)
-<<<<<<< HEAD
-print(response.json())
-`}
+response = requests.post(url, json=data, headers=headers)`
+  }
 ]
 
-=======
-print(response.json())`
-  },
-  {
-    language: 'cURL',
-    title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
-  }]
 const sdkLibraries = [
   {
-    name: 'JavaScript SDK',
-    description: 'Official JavaScript SDK for easy integration',
-    version: '1.2.0',
-    install: 'npm install @ziontechgroup/sdk',
-    documentation: '/docs/sdk/javascript'
+    name: 'JavaScript/Node.js',
+    description: 'Full-featured SDK for JavaScript and Node.js applications',
+    installCommand: 'npm install @ziontechgroup/api-sdk',
+    documentation: '/docs/sdk/javascript',
+    version: 'v2.1.0'
   },
   {
-    name: 'Python SDK',
-    description: 'Python SDK with full API support',
-    version: '1.1.5',
-    install: 'pip install ziontechgroup-sdk',
-    documentation: '/docs/sdk/python'
+    name: 'Python',
+    description: 'Comprehensive Python SDK with async support',
+    installCommand: 'pip install ziontechgroup-api',
+    documentation: '/docs/sdk/python',
+    version: 'v1.8.2'
   },
   {
-    name: 'PHP SDK',
-    description: 'PHP SDK for server-side integration',
-    version: '1.0.8',
-    install: 'composer require ziontechgroup/sdk',
-    documentation: '/docs/sdk/php'
-  }]
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
+    name: 'PHP',
+    description: 'Easy-to-use PHP SDK with Laravel integration',
+    installCommand: 'composer require ziontechgroup/api-sdk',
+    documentation: '/docs/sdk/php',
+    version: 'v1.5.1'
+  }
+];
+
 export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
