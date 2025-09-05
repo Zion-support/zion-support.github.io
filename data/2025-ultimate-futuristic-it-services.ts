@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Quantum Cybersecurity"""
     "realService"""
-    technology["Quantum Cryptography, Zero-Trust Architecture, AI/ML, Advanced Threat Detection"""
-    integrations["Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls"""
-    useCases["Government security, Financial data protection, Healthcare compliance, Military communications, Corporate espionage prevention"""
+    technology["Quantum Cryptography, Zero-Trust Architecture, AI/ML, Advanced Threat Detection"""]
+    integrations["Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls"""]
+    useCases["Government security, Financial data protection, Healthcare compliance, Military communications, Corporate espionage prevention"""]
     "roi": "Organizations report 600% ROI through enhanced security and reduced breach risks."""
-    competitors["CrowdStrike, Palo Alto Networks, Fortinet, Check Point"""
+    competitors["CrowdStrike, Palo Alto Networks, Fortinet, Check Point"""]
     "marketSize": "$45B cybersecurity market"""
     "growthRate": "35% annual growth"""
     "variant": "quantum-security-enterprise"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-3 weeks"""
     "category": "Autonomous DevOps"""
     "realService"""
-    technology["AI/ML, Kubernetes, Docker, Terraform, Ansible, Jenkins"""
-    integrations["AWS, Azure, Google Cloud, GitHub, GitLab, Bitbucket, Slack"""
-    useCases["Continuous deployment, Infrastructure automation, Performance optimization, Cost reduction, System reliability"""
+    technology["AI/ML, Kubernetes, Docker, Terraform, Ansible, Jenkins"""]
+    integrations["AWS, Azure, Google Cloud, GitHub, GitLab, Bitbucket, Slack"""]
+    useCases["Continuous deployment, Infrastructure automation, Performance optimization, Cost reduction, System reliability"""]
     "roi": "Companies report 400% ROI through automated operations and reduced downtime."""
-    competitors["Jenkins, GitLab CI/CD, CircleCI, GitHub Actions"""
+    competitors["Jenkins, GitLab CI/CD, CircleCI, GitHub Actions"""]
     "marketSize": "$8B DevOps market"""
     "growthRate": "25% annual growth"""
     "variant": "autonomous-devops-enterprise"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum Cloud Computing"""
     "realService"""
-    technology["Quantum Computing, Quantum Networks, Quantum Cryptography, Post-Quantum Algorithms"""
-    integrations["Traditional cloud APIs, Quantum simulators, Research tools, Scientific applications"""
-    useCases["Scientific research, AI training, Financial modeling, Drug discovery, Complex simulations"""
+    technology["Quantum Computing, Quantum Networks, Quantum Cryptography, Post-Quantum Algorithms"""]
+    integrations["Traditional cloud APIs, Quantum simulators, Research tools, Scientific applications"""]
+    useCases["Scientific research, AI training, Financial modeling, Drug discovery, Complex simulations"""]
     "roi": "Research institutions report 800% ROI through accelerated research and development."""
-    competitors["AWS, Microsoft Azure, Google Cloud, IBM Cloud"""
+    competitors["AWS, Microsoft Azure, Google Cloud, IBM Cloud"""]
     "marketSize": "$480B cloud computing market"""
     "growthRate": "25% annual growth"""
     "variant": "quantum-cloud-enterprise"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "IT Asset Management"""
     "realService"""
-    technology["AI/ML, Computer Vision, IoT Integration, RFID, Barcode Scanning"""
-    integrations["ServiceNow, BMC Remedy, Jira, Confluence, Active Directory, LDAP"""
-    useCases["Asset tracking, License management, Compliance reporting, Cost optimization, Maintenance scheduling"""
+    technology["AI/ML, Computer Vision, IoT Integration, RFID, Barcode Scanning"""]
+    integrations["ServiceNow, BMC Remedy, Jira, Confluence, Active Directory, LDAP"""]
+    useCases["Asset tracking, License management, Compliance reporting, Cost optimization, Maintenance scheduling"""]
     "roi": "Organizations report 300% ROI through improved asset utilization and cost reduction."""
-    competitors["ServiceNow ITAM, BMC Helix, Ivanti, Flexera"""
+    competitors["ServiceNow ITAM, BMC Helix, Ivanti, Flexera"""]
     "marketSize": "$2B IT asset management market"""
     "growthRate": "20% annual growth"""
     "variant": "ai-itam-enterprise"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Autonomous Networking"""
     "realService"""
-    technology["AI/ML, Software-Defined Networking, Network Automation, IoT Integration"""
-    integrations["Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes"""
-    useCases["Network monitoring, Performance optimization, Traffic management, Security management, Cost reduction"""
+    technology["AI/ML, Software-Defined Networking, Network Automation, IoT Integration"""]
+    integrations["Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes"""]
+    useCases["Network monitoring, Performance optimization, Traffic management, Security management, Cost reduction"""]
     "roi": "Organizations report 350% ROI through automated network management and improved performance."""
-    competitors["Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX"""
+    competitors["Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX"""]
     "marketSize": "$12B network management market"""
     "growthRate": "30% annual growth"""
     "variant": "autonomous-networking-enterprise"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Quantum Data Centers"""
     "realService"""
-    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security, High-Performance Computing"""
-    integrations["Traditional data center APIs, Quantum networks, Research tools, Government systems"""
-    useCases["Government data storage, Financial data protection, Healthcare compliance, Military applications, Research computing"""
+    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Trust Security, High-Performance Computing"""]
+    integrations["Traditional data center APIs, Quantum networks, Research tools, Government systems"""]
+    useCases["Government data storage, Financial data protection, Healthcare compliance, Military applications, Research computing"""]
     "roi": "Organizations report 700% ROI through enhanced security and compliance benefits."""
-    competitors["Equinix, Digital Realty, CoreSite, CyrusOne"""
+    competitors["Equinix, Digital Realty, CoreSite, CyrusOne"""]
     "marketSize": "$50B data center market"""
     "growthRate": "20% annual growth"""
     "variant": "quantum-datacenter-enterprise"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI IT Service Management"""
     "realService"""
-    technology["AI/ML, Natural Language Processing, Machine Learning, Workflow Automation"""
-    integrations["ServiceNow, BMC Remedy, Jira Service Desk, Zendesk, Freshdesk"""
-    useCases["IT support automation, Ticket management, Knowledge management, Workflow automation, Performance analytics"""
+    technology["AI/ML, Natural Language Processing, Machine Learning, Workflow Automation"""]
+    integrations["ServiceNow, BMC Remedy, Jira Service Desk, Zendesk, Freshdesk"""]
+    useCases["IT support automation, Ticket management, Knowledge management, Workflow automation, Performance analytics"""]
     "roi": "IT departments report 250% ROI through automated issue resolution and improved efficiency."""
-    competitors["ServiceNow, BMC Remedy, Jira Service Desk, Zendesk"""
+    competitors["ServiceNow, BMC Remedy, Jira Service Desk, Zendesk"""]
     "marketSize": "$8B IT service management market"""
     "growthRate": "25% annual growth"""
     "variant": "ai-itsm-enterprise"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum Data Protection"""
     "realService"""
-    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Knowledge Encryption, Advanced Compression"""
-    integrations["AWS S3, Azure Blob, Google Cloud Storage, On-premises storage, Hybrid solutions"""
-    useCases["Data backup, Disaster recovery, Compliance backup, Long-term archiving, Cross-platform backup"""
+    technology["Quantum Cryptography, Post-Quantum Algorithms, Zero-Knowledge Encryption, Advanced Compression"""]
+    integrations["AWS S3, Azure Blob, Google Cloud Storage, On-premises storage, Hybrid solutions"""]
+    useCases["Data backup, Disaster recovery, Compliance backup, Long-term archiving, Cross-platform backup"""]
     "roi": "Organizations report 400% ROI through enhanced security and improved recovery times."""
-    competitors["Veeam, Commvault, Veritas, Acronis"""
+    competitors["Veeam, Commvault, Veritas, Acronis"""]
     "marketSize": "$15B backup and recovery market"""
     "growthRate": "20% annual growth"""
     "variant": "quantum-backup-enterprise"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Autonomous Compliance"""
     "realService"""
-    technology["AI/ML, Regulatory Intelligence, Automated Monitoring, Risk Assessment"""
-    integrations["GRC platforms, ITSM tools, Security tools, HR systems, Legal databases"""
-    useCases["Regulatory compliance, Audit preparation, Risk management, Policy management, Training tracking"""
+    technology["AI/ML, Regulatory Intelligence, Automated Monitoring, Risk Assessment"""]
+    integrations["GRC platforms, ITSM tools, Security tools, HR systems, Legal databases"""]
+    useCases["Regulatory compliance, Audit preparation, Risk management, Policy management, Training tracking"""]
     "roi": "Organizations report 500% ROI through automated compliance and reduced audit costs."""
-    competitors["MetricStream, LogicManager, RSA Archer, ServiceNow GRC"""
+    competitors["MetricStream, LogicManager, RSA Archer, ServiceNow GRC"""]
     "marketSize": "$5B GRC market"""
     "growthRate": "15% annual growth"""
     "variant": "autonomous-compliance-enterprise"""

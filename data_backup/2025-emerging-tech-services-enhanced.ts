@@ -1,6 +1,6 @@
-export interface EmergingTechService {
-  // TODO: Implement
-}
+export interface EmergingTechService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

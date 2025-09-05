@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Enterprise Blockchain"""
     "realService"""
-    technology["Hyperledger Fabric", "Ethereum Enterprise", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["ERP systems", "CRM platforms", "Financial systems", "Supply chain platforms", "Custom applications", "IoT devices"""
-    useCases["Supply chain tracking", "Financial transactions", "Identity management", "Asset tokenization", "Smart contracts", "Decentralized applications"""
+    technology["Hyperledger Fabric", "Ethereum Enterprise", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["ERP systems", "CRM platforms", "Financial systems", "Supply chain platforms", "Custom applications", "IoT devices"""]
+    useCases["Supply chain tracking", "Financial transactions", "Identity management", "Asset tokenization", "Smart contracts", "Decentralized applications"""]
     "roi": "Average customer sees 400% ROI within 12 months through operational efficiency and transparency."""
-    competitors["Hyperledger Fabric", "Corda", "Ethereum Enterprise", "Quorum", "Custom solutions"""
+    competitors["Hyperledger Fabric", "Corda", "Ethereum Enterprise", "Quorum", "Custom solutions"""]
     "marketSize": "$67B blockchain market"""
     "growthRate": "300% annual growth"""
     "variant": "quantum-cyberpunk"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Enterprise DeFi"""
     "realService"""
-    technology["Ethereum", "Polygon", "Solana", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis"""
-    integrations["Trading platforms", "Custody solutions", "Risk management systems", "Compliance platforms", "Financial APIs", "Custom applications"""
-    useCases["Liquidity provision", "Yield farming", "Lending and borrowing", "Asset management", "Trading automation", "Portfolio optimization"""
+    technology["Ethereum", "Polygon", "Solana", "Smart Contracts", "React", "Node.js", "PostgreSQL", "Redis"""]
+    integrations["Trading platforms", "Custody solutions", "Risk management systems", "Compliance platforms", "Financial APIs", "Custom applications"""]
+    useCases["Liquidity provision", "Yield farming", "Lending and borrowing", "Asset management", "Trading automation", "Portfolio optimization"""]
     "roi": "Average customer sees 300% ROI within 8 months through DeFi yield generation."""
-    competitors["Traditional DeFi protocols", "Centralized finance platforms", "Custom solutions"""
+    competitors["Traditional DeFi protocols", "Centralized finance platforms", "Custom solutions"""]
     "marketSize": "$80B DeFi market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-financial"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Enterprise NFTs"""
     "realService"""
-    technology["Ethereum", "Polygon", "Solana", "IPFS", "React", "Node.js", "PostgreSQL", "Redis"""
-    integrations["Gaming platforms", "E-commerce systems", "Social media", "Payment gateways", "Analytics platforms", "Custom applications"""
-    useCases["Digital collectibles", "Gaming assets", "Digital art", "Music NFTs", "Sports memorabilia", "Virtual real estate"""
+    technology["Ethereum", "Polygon", "Solana", "IPFS", "React", "Node.js", "PostgreSQL", "Redis"""]
+    integrations["Gaming platforms", "E-commerce systems", "Social media", "Payment gateways", "Analytics platforms", "Custom applications"""]
+    useCases["Digital collectibles", "Gaming assets", "Digital art", "Music NFTs", "Sports memorabilia", "Virtual real estate"""]
     "roi": "Average customer sees 250% ROI within 6 months through NFT sales and engagement."""
-    competitors["OpenSea Pro", "Rarible", "Foundation", "Custom solutions"""
+    competitors["OpenSea Pro", "Rarible", "Foundation", "Custom solutions"""]
     "marketSize": "$35B NFT market"""
     "growthRate": "500% annual growth"""
     "variant": "holographic-advanced"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-12 weeks"""
     "category": "Blockchain Supply Chain"""
     "realService"""
-    technology["Hyperledger Fabric", "Ethereum", "Smart Contracts", "IoT Integration", "React", "Node.js", "PostgreSQL", "AWS"""
-    integrations["ERP systems", "WMS platforms", "IoT devices", "Quality management systems", "Payment platforms", "Custom applications"""
-    useCases["Product traceability", "Quality assurance", "Supplier management", "Compliance tracking", "Payment automation", "Inventory management"""
+    technology["Hyperledger Fabric", "Ethereum", "Smart Contracts", "IoT Integration", "React", "Node.js", "PostgreSQL", "AWS"""]
+    integrations["ERP systems", "WMS platforms", "IoT devices", "Quality management systems", "Payment platforms", "Custom applications"""]
+    useCases["Product traceability", "Quality assurance", "Supplier management", "Compliance tracking", "Payment automation", "Inventory management"""]
     "roi": "Average customer sees 350% ROI within 10 months through supply chain optimization."""
-    competitors["SAP SCM", "Oracle SCM", "IBM Blockchain", "Custom solutions"""
+    competitors["SAP SCM", "Oracle SCM", "IBM Blockchain", "Custom solutions"""]
     "marketSize": "$28B supply chain market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-cyberpunk"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Blockchain Identity"""
     "realService"""
-    technology["Ethereum", "Zero-Knowledge Proofs", "DID Standards", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["SSO platforms", "Identity providers", "Access management systems", "Compliance tools", "Custom applications", "IoT devices"""
-    useCases["User authentication", "Identity verification", "Access control", "Compliance management", "Privacy protection", "Digital credentials"""
+    technology["Ethereum", "Zero-Knowledge Proofs", "DID Standards", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["SSO platforms", "Identity providers", "Access management systems", "Compliance tools", "Custom applications", "IoT devices"""]
+    useCases["User authentication", "Identity verification", "Access control", "Compliance management", "Privacy protection", "Digital credentials"""]
     "roi": "Average customer sees 300% ROI within 8 months through enhanced security and compliance."""
-    competitors["Okta", "Auth0", "Ping Identity", "Custom solutions"""
+    competitors["Okta", "Auth0", "Ping Identity", "Custom solutions"""]
     "marketSize": "$22B identity management market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-cyberpunk"""

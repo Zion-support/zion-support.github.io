@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 days"""
     "category": "AI Content Intelligence"""
     "realService"""
-    technology["Machine Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js"""
-    integrations["WordPress, Shopify, HubSpot, Mailchimp, Google Analytics, Social media platforms"""
-    useCases["Content marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling"""
+    technology["Machine Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js"""]
+    integrations["WordPress, Shopify, HubSpot, Mailchimp, Google Analytics, Social media platforms"""]
+    useCases["Content marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling"""]
     "roi": "Average 300% ROI through improved content performance and conversion rates."""
-    competitors["Clearscope, MarketMuse, Frase, SurferSEO"""
+    competitors["Clearscope, MarketMuse, Frase, SurferSEO"""]
     "marketSize": "$15B+ content marketing market"""
     "growthRate": "150%+ annual growth"""
     "variant": "ai-creative"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-12 weeks"""
     "category": "Quantum Security"""
     "realService"""
-    technology["Quantum Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++"""
-    integrations["Government systems, Financial platforms, Healthcare networks, Enterprise infrastructure"""
-    useCases["Government communications, Financial transactions, Healthcare data, Military communications, Corporate secrets"""
+    technology["Quantum Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++"""]
+    integrations["Government systems, Financial platforms, Healthcare networks, Enterprise infrastructure"""]
+    useCases["Government communications, Financial transactions, Healthcare data, Military communications, Corporate secrets"""]
     "roi": "Critical infrastructure protection with 1000%+ ROI through security breach prevention."""
-    competitors["ID Quantique, Toshiba Quantum, Quantum Xchange"""
+    competitors["ID Quantique, Toshiba Quantum, Quantum Xchange"""]
     "marketSize": "$8B+ quantum security market"""
     "growthRate": "400%+ annual growth"""
     "variant": "quantum-security"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 weeks"""
     "category": "AI Operations"""
     "realService"""
-    technology["Machine Learning, AI Agents, Automation, Kubernetes, Python, Go, React"""
-    integrations["AWS, Azure, GCP, Kubernetes, Docker, Monitoring tools, CI/CD pipelines"""
-    useCases["Data center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading"""
+    technology["Machine Learning, AI Agents, Automation, Kubernetes, Python, Go, React"""]
+    integrations["AWS, Azure, GCP, Kubernetes, Docker, Monitoring tools, CI/CD pipelines"""]
+    useCases["Data center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading"""]
     "roi": "Average 500% ROI through reduced operational costs and improved efficiency."""
-    competitors["PagerDuty, DataDog, New Relic, Splunk"""
+    competitors["PagerDuty, DataDog, New Relic, Splunk"""]
     "marketSize": "$25B+ AI operations market"""
     "growthRate": "200%+ annual growth"""
     "variant": "ai-autonomous"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 weeks"""
     "category": "Blockchain Supply Chain"""
     "realService"""
-    technology["Blockchain, Smart Contracts, AI/ML, IoT, Python, Solidity, React"""
-    integrations["ERP systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers"""
-    useCases["Product tracking, Quality assurance, Compliance, Sustainability, Risk management"""
+    technology["Blockchain, Smart Contracts, AI/ML, IoT, Python, Solidity, React"""]
+    integrations["ERP systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers"""]
+    useCases["Product tracking, Quality assurance, Compliance, Sustainability, Risk management"""]
     "roi": "Average 400% ROI through improved efficiency, reduced waste, and better compliance."""
-    competitors["IBM Food Trust, VeChain, WaltonChain, OriginTrail"""
+    competitors["IBM Food Trust, VeChain, WaltonChain, OriginTrail"""]
     "marketSize": "$18B+ blockchain supply chain market"""
     "growthRate": "250%+ annual growth"""
     "variant": "supply-chain-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Metaverse Development"""
     "realService"""
-    technology["3D Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python"""
-    integrations["VR headsets, AR devices, Gaming platforms, Social media, Payment systems"""
-    useCases["Virtual events, Digital twins, Gaming, Education, Healthcare, Real estate"""
+    technology["3D Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python"""]
+    integrations["VR headsets, AR devices, Gaming platforms, Social media, Payment systems"""]
+    useCases["Virtual events, Digital twins, Gaming, Education, Healthcare, Real estate"""]
     "roi": "Average 350% ROI through virtual event hosting and digital experience monetization."""
-    competitors["Roblox, Decentraland, The Sandbox, Meta"""
+    competitors["Roblox, Decentraland, The Sandbox, Meta"""]
     "marketSize": "$12B+ metaverse market"""
     "growthRate": "300%+ annual growth"""
     "variant": "metaverse-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "10-12 weeks"""
     "category": "Quantum Finance"""
     "realService"""
-    technology["Quantum Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms"""
-    integrations["Trading exchanges, Market data providers, Risk management systems, Compliance platforms"""
-    useCases["Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Compliance"""
+    technology["Quantum Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms"""]
+    integrations["Trading exchanges, Market data providers, Risk management systems, Compliance platforms"""]
+    useCases["Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Compliance"""]
     "roi": "Average 800% ROI through improved trading performance and risk management."""
-    competitors["Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv"""
+    competitors["Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv"""]
     "marketSize": "$35B+ financial technology market"""
     "growthRate": "500%+ annual growth"""
     "variant": "quantum-ai-finance"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-10 weeks"""
     "category": "AI Healthcare"""
     "realService"""
-    technology["Deep Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch"""
-    integrations["EMR systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems"""
-    useCases["Medical imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety"""
+    technology["Deep Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch"""]
+    integrations["EMR systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems"""]
+    useCases["Medical imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety"""]
     "roi": "Average 600% ROI through improved diagnostic accuracy and reduced medical errors."""
-    competitors["IBM Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara"""
+    competitors["IBM Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara"""]
     "marketSize": "$45B+ AI healthcare market"""
     "growthRate": "350%+ annual growth"""
     "variant": "ai-healthcare"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 weeks"""
     "category": "Edge Computing"""
     "realService"""
-    technology["Edge Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go"""
-    integrations["IoT platforms, Cloud providers, Monitoring tools, Security systems, Network equipment"""
-    useCases["IoT management, Edge AI, Smart cities, Manufacturing automation, Telecommunications"""
+    technology["Edge Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go"""]
+    integrations["IoT platforms, Cloud providers, Monitoring tools, Security systems, Network equipment"""]
+    useCases["IoT management, Edge AI, Smart cities, Manufacturing automation, Telecommunications"""]
     "roi": "Average 450% ROI through improved performance and reduced infrastructure costs."""
-    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge"""
+    competitors["AWS Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge"""]
     "marketSize": "$20B+ edge computing market"""
     "growthRate": "280%+ annual growth"""
     "variant": "edge-futuristic"""

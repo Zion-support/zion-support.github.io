@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Settings, 
   Brain, 
   Shield, 
@@ -17,101 +17,101 @@ import {
   FileText,
   Users;'
 } from 'lucide-react'
-import Layout from '../../components/Layout
-const services = [
-  {'
+import Layout from '../../components/Layout;
+const services = []
+  {'}
     title: 'Smart Factory Solutions',''
     description: 'IoT-enabled manufacturing systems for intelligent production management.','
     icon: Settings,
-    features: ['
+    features: [']
       'Real-time production monitoring',''
       'Automated quality control',''
       'Predictive maintenance',''
-      'Supply chain integration'']
-    ]
+      'Supply chain integration''];
+    ];
   },
-  {'
+  {'}
     title: 'Predictive Maintenance AI',''
     description: 'AI-powered systems to predict and prevent equipment failures.','
     icon: Brain,
-    features: ['
+    features: [']
       'Equipment health monitoring',''
       'Failure prediction algorithms',''
       'Maintenance scheduling',''
-      'Cost optimization'']
-    ]
+      'Cost optimization''];
+    ];
   },
-  {'
+  {'}
     title: 'IoT Sensor Networks',''
     description: 'Connected sensor systems for comprehensive factory monitoring.','
     icon: Cpu,
-    features: ['
+    features: [']
       'Environmental monitoring',''
       'Equipment status tracking',''
       'Data collection systems',''
-      'Real-time alerts'']
-    ]
+      'Real-time alerts''];
+    ];
   },
-  {'
+  {'}
     title: 'Quality Control Systems',''
     description: 'Automated quality assurance using computer vision and AI.','
     icon: Shield,
-    features: ['
+    features: [']
       'Visual inspection systems',''
       'Defect detection algorithms',''
       'Quality metrics tracking',''
-      'Automated reporting'']
-    ]
+      'Automated reporting''];
+    ];
   },
-  {'
+  {'}
     title: 'Supply Chain Optimization',''
     description: 'AI-driven supply chain management for improved efficiency.','
     icon: BarChart3,
-    features: ['
+    features: [']
       'Demand forecasting',''
       'Inventory optimization',''
       'Supplier management',''
-      'Logistics coordination'']
-    ]
+      'Logistics coordination''];
+    ];
   },
-  {'
+  {'}
     title: 'Digital Twin Technology',''
     description: 'Virtual replicas of physical manufacturing systems for simulation.','
     icon: Database,
-    features: ['
+    features: [']
       '3D factory modeling',''
       'Process simulation',''
       'Performance optimization',''
-      'Scenario planning'']
-    ]
-  }
+      'Scenario planning''];
+    ];
+  };
 ];
 
-const benefits = [
-  {'
+const benefits = []
+  {'}
     title: 'Increased Efficiency',''
     description: 'Automated processes and AI optimization improve production efficiency.','
     icon: Activity;
   },
-  {'
+  {'}
     title: 'Reduced Downtime',''
     description: 'Predictive maintenance prevents unexpected equipment failures.','
     icon: Wrench;
   },
-  {'
+  {'}
     title: 'Better Quality',''
     description: 'Automated quality control ensures consistent product quality.','
     icon: Shield;
   },
-  {'
+  {'}
     title: 'Cost Savings',''
     description: 'Optimized operations and reduced waste lower manufacturing costs.','
     icon: BarChart3;
-  }]
+  }];
 ];
 
-export default function ManufacturingPage() {
-  return (
+export default function ManufacturingPage() {}
+  return ()
     <Layout;'
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
@@ -132,9 +132,9 @@ export default function ManufacturingPage() {
           <div className="container mx-auto px-4 relative z-10">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -169,9 +169,9 @@ export default function ManufacturingPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -186,10 +186,10 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={service.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -209,8 +209,8 @@ export default function ManufacturingPage() {
 </CheckCircle>
                       </li>
                   </ul>
-                </motion.div>)
-              ))}
+                </motion.div>);
+              ))};
             </div>
           </div>
         </section>"
@@ -219,9 +219,9 @@ export default function ManufacturingPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -236,10 +236,10 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={benefit.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="text-center"
                 >
 </motion>"
@@ -251,7 +251,7 @@ export default function ManufacturingPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -260,9 +260,9 @@ export default function ManufacturingPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

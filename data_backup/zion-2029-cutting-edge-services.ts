@@ -1,6 +1,6 @@
-export interface ZionCuttingEdgeService2029 {
-  // TODO: Implement
-}
+export interface ZionCuttingEdgeService2029 {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "tagline"""

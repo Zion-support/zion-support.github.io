@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "AI & Analytics"""
     "realService"""
-    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS"""
-    integrations["Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier"""
-    useCases["Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis"""
+    technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS"""]
+    integrations["Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier"""]
+    useCases["Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis"""]
     "roi": "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency."""
-    competitors["Tableau, Power BI, Looker, Qlik, Sisense"""
+    competitors["Tableau, Power BI, Looker, Qlik, Sisense"""]
     "marketSize": "$29.48B market"""
     "growthRate": "15.7% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 day"""
     "category": "Customer Success"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, SendGrid"""
-    integrations["Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack"""
-    useCases["Customer onboarding automation, Churn prevention, Customer health monitoring, Success playbook execution, Customer feedback management"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, SendGrid"""]
+    integrations["Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack"""]
+    useCases["Customer onboarding automation, Churn prevention, Customer health monitoring, Success playbook execution, Customer feedback management"""]
     "roi": "Average customer sees 300% ROI within 4 months through reduced churn and increased customer lifetime value."""
-    competitors["Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat"""
+    competitors["Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat"""]
     "marketSize": "$1.5B market"""
     "growthRate": "25% annual growth"""
     "variant": "micro-saas-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 hours"""
     "category": "Security & DevOps"""
     "realService"""
-    technology["Go, React, Node.js, PostgreSQL, Redis, Kubernetes, AWS"""
-    integrations["GitHub, GitLab, Jenkins, CircleCI, AWS, Azure, GCP"""
-    useCases["API security hardening, Performance monitoring, Compliance reporting, Developer experience improvement, API lifecycle management"""
+    technology["Go, React, Node.js, PostgreSQL, Redis, Kubernetes, AWS"""]
+    integrations["GitHub, GitLab, Jenkins, CircleCI, AWS, Azure, GCP"""]
+    useCases["API security hardening, Performance monitoring, Compliance reporting, Developer experience improvement, API lifecycle management"""]
     "roi": "Average customer sees 250% ROI within 3 months through improved security posture and reduced API downtime."""
-    competitors["Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints"""
+    competitors["Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints"""]
     "marketSize": "$4.5B market"""
     "growthRate": "18.5% annual growth"""
     "variant": "enterprise-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "E-commerce"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, Stripe, PayPal"""
-    integrations["Shopify, WooCommerce, BigCommerce, Magento, Amazon, eBay, Facebook Shop"""
-    useCases["Inventory automation, Order processing, Customer service, Marketing automation, Multi-channel selling"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, Stripe, PayPal"""]
+    integrations["Shopify, WooCommerce, BigCommerce, Magento, Amazon, eBay, Facebook Shop"""]
+    useCases["Inventory automation, Order processing, Customer service, Marketing automation, Multi-channel selling"""]
     "roi": "Average customer sees 350% ROI within 5 months through increased sales and reduced operational costs."""
-    competitors["Shopify Plus, BigCommerce Enterprise, WooCommerce Enterprise, Magento Commerce"""
+    competitors["Shopify Plus, BigCommerce Enterprise, WooCommerce Enterprise, Magento Commerce"""]
     "marketSize": "$18.2B market"""
     "growthRate": "22% annual growth"""
     "variant": "micro-saas-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "HR & Recruitment"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""
-    integrations["ADP, Paychex, QuickBooks, Slack, Microsoft Teams, Zoom"""
-    useCases["Recruitment automation, Employee onboarding, Performance management, Compliance reporting, Employee engagement"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""]
+    integrations["ADP, Paychex, QuickBooks, Slack, Microsoft Teams, Zoom"""]
+    useCases["Recruitment automation, Employee onboarding, Performance management, Compliance reporting, Employee engagement"""]
     "roi": "Average customer sees 280% ROI within 4 months through improved HR efficiency and reduced administrative costs."""
-    competitors["BambooHR, Workday, ADP, Paychex, Gusto"""
+    competitors["BambooHR, Workday, ADP, Paychex, Gusto"""]
     "marketSize": "$15.6B market"""
     "growthRate": "12.8% annual growth"""
     "variant": "hr-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "Finance & Accounting"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, Python, TensorFlow"""
-    integrations["QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs"""
-    useCases["Financial planning, Cash flow management, Budget tracking, Investment analysis, Compliance reporting"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, Python, TensorFlow"""]
+    integrations["QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs"""]
+    useCases["Financial planning, Cash flow management, Budget tracking, Investment analysis, Compliance reporting"""]
     "roi": "Average customer sees 320% ROI within 4 months through improved financial decision-making and cost optimization."""
-    competitors["QuickBooks Online, Xero, FreshBooks, Sage, NetSuite"""
+    competitors["QuickBooks Online, Xero, FreshBooks, Sage, NetSuite"""]
     "marketSize": "$11.9B market"""
     "growthRate": "16.2% annual growth"""
     "variant": "micro-saas-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 day"""
     "category": "Project Management"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""
-    integrations["Slack, Microsoft Teams, Jira, GitHub, GitLab, Trello"""
-    useCases["Project planning, Team collaboration, Resource management, Risk assessment, Progress tracking"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""]
+    integrations["Slack, Microsoft Teams, Jira, GitHub, GitLab, Trello"""]
+    useCases["Project planning, Team collaboration, Resource management, Risk assessment, Progress tracking"""]
     "roi": "Average customer sees 290% ROI within 3 months through improved project efficiency and better resource utilization."""
-    competitors["Asana, Monday.com, ClickUp, Trello, Jira"""
+    competitors["Asana, Monday.com, ClickUp, Trello, Jira"""]
     "marketSize": "$6.68B market"""
     "growthRate": "14.3% annual growth"""
     "variant": "micro-saas-futuristic"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Marketing"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""
-    integrations["Salesforce, HubSpot, Mailchimp, Facebook, Instagram, LinkedIn, Google Ads"""
-    useCases["Email marketing, Social media management, Lead generation, Campaign automation, Marketing analytics"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""]
+    integrations["Salesforce, HubSpot, Mailchimp, Facebook, Instagram, LinkedIn, Google Ads"""]
+    useCases["Email marketing, Social media management, Lead generation, Campaign automation, Marketing analytics"""]
     "roi": "Average customer sees 380% ROI within 4 months through improved marketing efficiency and increased lead generation."""
-    competitors["HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign"""
+    competitors["HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign"""]
     "marketSize": "$25.1B market"""
     "growthRate": "19.8% annual growth"""
     "variant": "marketing-futuristic"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 week"""
     "category": "Legal Tech"""
     "realService"""
-    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""
-    integrations["DocuSign, Adobe Sign, Salesforce, QuickBooks, Clio, PracticePanther"""
-    useCases["Contract generation, Document review, Legal workflow automation, Compliance management, Client collaboration"""
+    technology["React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms"""]
+    integrations["DocuSign, Adobe Sign, Salesforce, QuickBooks, Clio, PracticePanther"""]
+    useCases["Contract generation, Document review, Legal workflow automation, Compliance management, Client collaboration"""]
     "roi": "Average customer sees 420% ROI within 5 months through improved efficiency and reduced legal costs."""
-    competitors["DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort"""
+    competitors["DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort"""]
     "marketSize": "$2.8B market"""
     "growthRate": "28.5% annual growth"""
     "variant": "legal-futuristic"""

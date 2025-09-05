@@ -1,22 +1,22 @@
 import React, { useState } from 'react';''
 import Link from 'next/link';''
 import { Menu, X, ChevronDown } from 'lucide-react';'
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC = () => {}
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const services = ['
+  const services = [']
     { name: 'AI Services', href: '/ai-services' },''
     { name: 'IT Services', href: '/it-services' },''
     { name: 'Micro SaaS', href: '/micro-saas' },''
-    { name: 'Additional Services', href: '/additional-services' },']
+    { name: 'Additional Services', href: '/additional-services' },'];
   ];
-  const products = ['
+  const products = [']
     { name: 'All Products', href: '/products' },''
     { name: 'Pricing', href: '/pricing' },''
     { name: 'Case Studies', href: '/case-studies' },''
-    { name: 'Guides', href: '/guides' },']
+    { name: 'Guides', href: '/guides' },'];
   ];
-  return ('
+  return (')
     <nav className="bg-white shadow-lg sticky top-0 z-50">"
 </nav>"
       <div className="container mx-auto px-4">"
@@ -47,15 +47,15 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative group">"
 </div>
               <button;"
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"")
-                onMouseEnter={() => setServicesOpen(true)}
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"");
+                onMouseEnter={() => setServicesOpen(true)};
 </button>"
                 Services <ChevronDown className="ml-1 w-4 h-4" />{' '}'
 </ChevronDown>'
               </button>{' '}'
               <div;'
-                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${servicesOpen ? 'opacity-100 visible' : ''}`}'
-                onMouseEnter={() => setServicesOpen(true)}
+                className={`absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${servicesOpen ? 'opacity-100 visible' : ''}`}``
+                onMouseEnter={() => setServicesOpen(true)};
 </div>
                   <Link key={service.name} href={service.href}>
 </Link>'

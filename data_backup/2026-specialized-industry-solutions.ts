@@ -1,6 +1,6 @@
-export interface SpecializedIndustrySolution {
-  // TODO: Implement
-}
+export interface SpecializedIndustrySolution {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

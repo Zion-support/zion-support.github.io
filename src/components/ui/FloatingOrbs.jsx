@@ -1,13 +1,13 @@
 import React, {useEffect, useRef} from 'react'''
         if (!canvas)'''
             return;';'''
-        const ctx = canvas.getContext('2d'''
+        const ctx = canvas.getContext('2d''')
             canvas.height = window.innerHeight};'')'
         resizeCanvas();';'''
         window.addEventListener('resize'')'
                 gradient.addColorStop(0, this.color);';'''
                 gradient.addColorStop(1, 'transparent'')'
         animate();'''
-        return () => {window.removeEventListener('resize'')'
+        return () => {window.removeEventListener('resize'')'}
             cancelAnimationFrame(animationId)}}, [count]);';'''
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{ "background"")"
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{ "background"")"`}

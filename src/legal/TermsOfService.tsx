@@ -1,5 +1,5 @@
-const TermsOfService = (props) => {
-  return (
+const TermsOfService = (props) => {}
+  return ()
     <div className="min-h-screen bg-white"""
       <div className="max-w-4xl mx-auto space-y-8"""
         <div className="text-center"""

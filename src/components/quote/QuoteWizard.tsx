@@ -7,12 +7,12 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';''
 import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';''
 type WizardStep = 'Services' | 'Details' | 'Success';';''
 const "WIZARD_STEPS": WizardSte p[] = ['Services', 'Details', 'Success'];'
-function StepIndicator($1) {
+function StepIndicator($1) {}
   const index = WIZARD_STEPS.indexOf(step);
-  return ('
+  return (')
     <div className="min-h-screen bg-white">"
 </div>
-    </div>)
+    </div>);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
 </string>"
   const [message, setMessage] = useState<any>(");"
@@ -36,15 +36,15 @@ function StepIndicator($1) {
           <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">"
 </div>
               <Card;
-                data-testid={`service-card-${item.id}`}
-                key={item.id}"
-                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : '"hover": borde r-purple-500/50'}`}'
-                onClick={() => setSelectedItem(item.id)}
+                data-testid={`service-card-${item.id}`};`
+                key={item.id}``
+                className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : '"hover": borde r-purple-500/50'}`}``
+                onClick={() => setSelectedItem(item.id)};
 </Card>
               </Card>
               </div>
         <Button;
-          onClick={() => selectedItem && selectService(selectedItem)}
+          onClick={() => selectedItem && selectService(selectedItem)};
 </Button>
         </Button>
       </div>'
@@ -53,8 +53,8 @@ function StepIndicator($1) {
         <StepIndicator step={step}  />
 </StepIndicator>
         <Textarea;
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          value={message};
+          onChange={(e) => setMessage(e.target.value)};
 </Textarea>
         <Button onClick={() => submitQuote(message)}>Submit</Button>
       </div>"
@@ -67,4 +67,4 @@ function StepIndicator($1) {
 </Textarea>
 </any>"
 </string>;';';''
-import React,{ useState } from 'react'; import { Loader2, Button } from 'lucide-react'; import { Card, Textarea } from 'lucide-react'; import { Alert, AlertDescription, AlertTitle, useRequestQuoteWizard } from 'lucide-react'; type WizardStep = 'Services' | 'Details' | 'Success';'; const WIZARD_STEPS: WizardSte p[] = ['Services','Details','Success']; function StepIndicator($1) { const index = WIZARD_STEPS.indexOf(step); return ( <div className="min-h-screen bg-white"> Step {index + 1} of {WIZARD_STEPS.length} </div> )} export function QuoteWizard($1) { const { step,selectService,submitQuote } = useRequestQuoteWizard(); const [selectedItem,setSelectedItem] = useState<string | null>(null); const [message,setMessage] = useState<any>("); const services = [ { id: '1',title: 'Web Development' },{ id: '2',title: 'Mobile App Development' },{ id: '3',title: 'UI/UX Design' },{ id: '4',title: 'Consulting' }; ]; const loading = false; const error = null; if (step === 'Services') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> {loading && ( <div className="flex justify-center py-12"> <Loader2 className="h-6 w-6 animate-spin" /> </div> )} {error && ( <Alert variant="destructive" data-testid="service-fetch-error-alert"> <AlertTitle>Network Error</AlertTitle> <AlertDescription> There was a problem fetching the services. Please check your internet connection and try again. </AlertDescription> </Alert> )} {services.length > 0 && ( <div className="grid grid-cols-1 md: gri d-cols-2 gap-4"> {services.map((item) => ( <Card data-testid={`service-card-${item.id}`} key={item.id} className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover: borde r-purple-500/50'}`} onClick={() => setSelectedItem(item.id)} > {item.title} </Card> ))} </div> )} <Button onClick={() => selectedItem && selectService(selectedItem)} disabled={!selectedItem || loading || !!error} > Continue </Button> </div> )} if (step === 'Details') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> <Textarea value={message} onChange={(e) => setMessage(e.target.value)} data-testid="message-input" placeholder="Your message" /> <Button onClick={() => submitQuote(message)}>Submit</Button> </div> )} if (step === 'Success') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> <div>Quote Submitted</div> </div> )} return null} </Textarea> </any> </string>;';';''
+import React,{ useState } from 'react'; import { Loader2, Button } from 'lucide-react'; import { Card, Textarea } from 'lucide-react'; import { Alert, AlertDescription, AlertTitle, useRequestQuoteWizard } from 'lucide-react'; type WizardStep = 'Services' | 'Details' | 'Success';'; const WIZARD_STEPS: WizardSte p[] = ['Services','Details','Success']; function StepIndicator($1) { const index = WIZARD_STEPS.indexOf(step); return ( <div className="min-h-screen bg-white"> Step {index + 1} of {WIZARD_STEPS.length} </div> )} export function QuoteWizard($1) { const { step,selectService,submitQuote } = useRequestQuoteWizard(); const [selectedItem,setSelectedItem] = useState<string | null>(null); const [message,setMessage] = useState<any>("); const services = [ { id: '1',title: 'Web Development' },{ id: '2',title: 'Mobile App Development' },{ id: '3',title: 'UI/UX Design' },{ id: '4',title: 'Consulting' }; ]; const loading = false; const error = null; if (step === 'Services') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> {loading && ( <div className="flex justify-center py-12"> <Loader2 className="h-6 w-6 animate-spin" /> </div> )} {error && ( <Alert variant="destructive" data-testid="service-fetch-error-alert"> <AlertTitle>Network Error</AlertTitle> <AlertDescription> There was a problem fetching the services. Please check your internet connection and try again. </AlertDescription> </Alert> )} {services.length > 0 && ( <div className="grid grid-cols-1 md: gri d-cols-2 gap-4"> {services.map((item) => ( <Card data-testid={`service-card-${item.id}`} key={item.id} className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : 'hover: borde r-purple-500/50'}`} onClick={() => setSelectedItem(item.id)} > {item.title} </Card> ))} </div> )} <Button onClick={() => selectedItem && selectService(selectedItem)} disabled={!selectedItem || loading || !!error} > Continue </Button> </div> )} if (step === 'Details') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> <Textarea value={message} onChange={(e) => setMessage(e.target.value)} data-testid="message-input" placeholder="Your message" /> <Button onClick={() => submitQuote(message)}>Submit</Button> </div> )} if (step === 'Success') { return ( <div className="min-h-screen bg-white"> <StepIndicator step={step} /> <div>Quote Submitted</div> </div> )} return null} </Textarea> </any> </string>;';';''`

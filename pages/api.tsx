@@ -1,36 +1,36 @@
-import React from 'react';
+import React from "react";
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-export default function APIPage() {
-  const apiFeatures = [
-    {
+export default function APIPage() {}
+  const apiFeatures = []
+    {}
       title: "RESTful APIs",
       description: "Clean, intuitive REST API endpoints for easy integration",
       icon: Code,
-      features: [JSON Responses", "HTTP Status Codes", "Rate Limiting"]
+      features: [JSON Responses", "HTTP Status Codes", "Rate Limiting"];
     },
-    {
+    {}
       title: "Comprehensive Documentation",
       description: "Detailed API documentation with examples and guides",
       icon: Book,
-      features: [Interactive Docs", "Code Examples", "SDK Libraries"]
+      features: [Interactive Docs", "Code Examples", "SDK Libraries"];
     },
-    {
+    {}
       title: "High Performance",
       description: "Fast, reliable APIs built for scale and speed",
       icon: Zap,
-      features: [Low Latency", "High Throughput", "Global CDN"]
+      features: [Low Latency", "High Throughput", "Global CDN"];
     },
-    {
+    {}
       title: "Enterprise Security",
       description: "Bank-level security with authentication and encryption",
       icon: Shield,
-      features: [OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
-    }
+      features: [OAuth 2.0", "API Keys", "SSL/TLS Encryption"];
+    };
   ];
 
-  return (
+  return ()
     <Layout;"
       title="API Reference - Zion Tech Group"
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
@@ -43,9 +43,9 @@ export default function APIPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center"
             >
 </motion>"
@@ -65,12 +65,12 @@ export default function APIPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="text-indigo-600 mb-4">"
@@ -92,9 +92,9 @@ export default function APIPage() {
 </CheckCircle>
                         </li>
                     </ul>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -104,10 +104,10 @@ export default function APIPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -204,7 +204,7 @@ export default function APIPage() {
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
             >
 </motion>"
               <ArrowRight className="w-5 h-5 ml-2" />"

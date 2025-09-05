@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Shield, 
   Rocket, 
   BarChart3, 
@@ -17,76 +17,76 @@ import {
   Zap,
   Target,
   Award;'
-} from 'lucide-react
-const solutions = [
-  {'
+} from 'lucide-react;
+const solutions = []
+  {'}
     title: "Enterprise Solutions",
     description: "Comprehensive technology solutions for large organizations with complex requirements and enterprise-grade security.",
     icon: Building,
-    href: "/solutions/enterprise",]
+    href: "/solutions/enterprise",];
     features: [Scalable Architecture", "Enterprise Security", "24/7 Support", "Custom Integration"],
-    benefits: [Reduced IT Costs", "Improved Efficiency", "Enhanced Security", "Better Compliance"]
+    benefits: [Reduced IT Costs", "Improved Efficiency", "Enhanced Security", "Better Compliance"];
   },
-  {
+  {}
     title: "Startup Solutions",
     description: "Cost-effective technology solutions designed to help startups scale quickly and efficiently.",
     icon: Rocket,
     href: "/solutions/startup",
     features: [Rapid Deployment", "Cost Optimization", "Scalable Growth", "Expert Guidance"],
-    benefits: [Faster Time to Market", "Lower Initial Costs", "Flexible Scaling", "Competitive Advantage"]
+    benefits: [Faster Time to Market", "Lower Initial Costs", "Flexible Scaling", "Competitive Advantage"];
   },
-  {
+  {}
     title: "Industry Solutions",
     description: "Specialized solutions tailored for specific industries with deep domain expertise.",
     icon: BarChart3,
     href: "/solutions/industry",
     features: [Industry Expertise", "Compliance Ready", "Best Practices", "Proven Results"],
-    benefits: [Industry Compliance", "Faster Implementation", "Reduced Risk", "Better ROI"]
+    benefits: [Industry Compliance", "Faster Implementation", "Reduced Risk", "Better ROI"];
   },
-  {
+  {}
     title: "Custom Development",
     description: "Bespoke software solutions built specifically for your unique business requirements.",
     icon: Settings,
     href: "/solutions/custom",
     features: [Tailored Solutions", "Full Ownership", "Ongoing Support", "Future-Proof Design"],
-    benefits: [Perfect Fit", "Competitive Edge", "Full Control", "Long-term Value"]
-  }
+    benefits: [Perfect Fit", "Competitive Edge", "Full Control", "Long-term Value"];
+  };
 ];
 
-const industries = [
+const industries = []
   { name: "Healthcare", icon: Shield, description: "HIPAA-compliant solutions for healthcare providers" },
   { name: "Finance", icon: BarChart3, description: "Secure financial technology solutions" },
   { name: "E-commerce", icon: Globe, description: "Scalable online retail platforms" },
   { name: "Manufacturing", icon: Settings, description: "IoT and automation solutions" },
   { name: "Education", icon: Users, description: "Learning management and student systems" },
-  { name: "Real Estate", icon: Building, description: "Property management and listing platforms" }]
+  { name: "Real Estate", icon: Building, description: "Property management and listing platforms" }];
 ];
 
-const process = [
-  {
+const process = []
+  {}
     step: "01",
     title: "Discovery & Analysis",
     description: "We analyze your business requirements, challenges, and goals to understand your needs."
   },
-  {
+  {}
     step: "02",
     title: "Solution Design",
     description: "Our experts design a tailored solution architecture that meets your specific requirements."
   },
-  {
+  {}
     step: "03",
     title: "Development & Testing",
     description: "We build and thoroughly test your solution using industry best practices and standards."
   },
-  {
+  {}
     step: "04",
     title: "Deployment & Support",
     description: "We deploy your solution and provide ongoing support to ensure optimal performance."
-  }]
+  }];
 ];
 
-export default function SolutionsPage() {
-  return (
+export default function SolutionsPage() {}
+  return ()
     <MainLayout;"
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industry-specific needs. Custom development and consulting services."
@@ -99,9 +99,9 @@ export default function SolutionsPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -132,10 +132,10 @@ export default function SolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -149,13 +149,13 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
+                    whileHover={{ y: -5 }};
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -206,7 +206,7 @@ export default function SolutionsPage() {
                         </div>
 
                         <Link;
-                          href={solution.href}
+                          href={solution.href};
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                         >
 </Link>
@@ -216,9 +216,9 @@ export default function SolutionsPage() {
                         </Link>
                       </div>
                     </div>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -228,10 +228,10 @@ export default function SolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -245,12 +245,12 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-gray-50 p-6 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="flex items-center space-x-3 mb-3">"
@@ -266,7 +266,7 @@ export default function SolutionsPage() {
                     </p>
                   </motion.div>
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -276,10 +276,10 @@ export default function SolutionsPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -293,12 +293,12 @@ export default function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -312,7 +312,7 @@ export default function SolutionsPage() {
 </p>
                   </p>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -321,10 +321,10 @@ export default function SolutionsPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

@@ -1,4 +1,4 @@
-export interface SpecializedInnovativeService2027 {;
+export interface SpecializedInnovativeService2027 {;}
   "id"""
   "realImplementation"""
 export const "specializedInnovativeServices2027"""
@@ -29,11 +29,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "6-8 weeks"""
     "category": "Space Technology & Earth Observation"""
     "realService"""
-    technology["AI/ML", "Satellite Imagery", "Computer Vision", "Geospatial Analysis", "Cloud Computing"""
-    integrations["Satellite APIs", "GIS Systems", "Weather Services", "Agricultural Platforms"""
-    useCases["Environmental monitoring", "Precision agriculture", "Urban planning", "Disaster response"""
+    technology["AI/ML", "Satellite Imagery", "Computer Vision", "Geospatial Analysis", "Cloud Computing"""]
+    integrations["Satellite APIs", "GIS Systems", "Weather Services", "Agricultural Platforms"""]
+    useCases["Environmental monitoring", "Precision agriculture", "Urban planning", "Disaster response"""]
     "roi": "500% ROI through improved decision-making and resource optimization"""
-    competitors["Planet Labs", "Maxar Technologies", "Airbus Defence and Space"""
+    competitors["Planet Labs", "Maxar Technologies", "Airbus Defence and Space"""]
     "marketSize": "$12B satellite monitoring market"""
     "growthRate": "35% annual growth"""
     "contactInfo"""
@@ -74,11 +74,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "3-4 weeks"""
     "category": "AR/VR & Immersive Technology"""
     "realService"""
-    technology["AR/VR", "Unity3D", "Unreal Engine", "Computer Vision", "3D Modeling"""
-    integrations["Enterprise Systems", "CAD Software", "Training Platforms", "Communication Tools"""
-    useCases["Employee training", "Design collaboration", "Remote assistance", "Customer engagement"""
+    technology["AR/VR", "Unity3D", "Unreal Engine", "Computer Vision", "3D Modeling"""]
+    integrations["Enterprise Systems", "CAD Software", "Training Platforms", "Communication Tools"""]
+    useCases["Employee training", "Design collaboration", "Remote assistance", "Customer engagement"""]
     "roi": "300% ROI through improved training efficiency and reduced travel costs"""
-    competitors["Microsoft HoloLens", "Magic Leap", "PTC Vuforia"""
+    competitors["Microsoft HoloLens", "Magic Leap", "PTC Vuforia"""]
     "marketSize": "$45B AR/VR market"""
     "growthRate": "28% annual growth"""
     "contactInfo"""
@@ -119,11 +119,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "8-12 weeks"""
     "category": "Robotics & Automation"""
     "realService"""
-    technology["AI/ML", "Robotics", "Computer Vision", "IoT", "Edge Computing"""
-    integrations["Robot Controllers", "Manufacturing Systems", "Warehouse Management", "Quality Control Systems"""
-    useCases["Manufacturing automation", "Warehouse optimization", "Quality control", "Logistics automation"""
+    technology["AI/ML", "Robotics", "Computer Vision", "IoT", "Edge Computing"""]
+    integrations["Robot Controllers", "Manufacturing Systems", "Warehouse Management", "Quality Control Systems"""]
+    useCases["Manufacturing automation", "Warehouse optimization", "Quality control", "Logistics automation"""]
     "roi": "400% ROI through increased productivity and reduced operational costs"""
-    competitors["ABB Robotics", "KUKA Robotics", "FANUC"""
+    competitors["ABB Robotics", "KUKA Robotics", "FANUC"""]
     "marketSize": "$75B robotics market"""
     "growthRate": "20% annual growth"""
     "contactInfo"""
@@ -164,11 +164,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "3-5 weeks"""
     "category": "Green Technology & Sustainability"""
     "realService"""
-    technology["AI/ML", "IoT", "Energy Management", "Predictive Analytics", "Cloud Computing"""
-    integrations["Energy Management Systems", "Smart Meters", "Building Automation", "Renewable Energy Systems"""
-    useCases["Energy optimization", "Carbon reduction", "Cost savings", "Sustainability compliance"""
+    technology["AI/ML", "IoT", "Energy Management", "Predictive Analytics", "Cloud Computing"""]
+    integrations["Energy Management Systems", "Smart Meters", "Building Automation", "Renewable Energy Systems"""]
+    useCases["Energy optimization", "Carbon reduction", "Cost savings", "Sustainability compliance"""]
     "roi": "250% ROI through energy cost reduction and sustainability improvements"""
-    competitors["Schneider Electric", "Siemens", "Honeywell"""
+    competitors["Schneider Electric", "Siemens", "Honeywell"""]
     "marketSize": "$35B energy management market"""
     "growthRate": "18% annual growth"""
     "contactInfo"""
@@ -209,11 +209,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "4-6 weeks"""
     "category": "Supply Chain & Logistics"""
     "realService"""
-    technology["AI/ML", "Supply Chain Analytics", "Predictive Modeling", "IoT", "Blockchain"""
-    integrations["ERP Systems", "WMS Platforms", "Transportation Management", "Supplier Portals"""
-    useCases["Demand forecasting", "Inventory optimization", "Cost reduction", "Risk management"""
+    technology["AI/ML", "Supply Chain Analytics", "Predictive Modeling", "IoT", "Blockchain"""]
+    integrations["ERP Systems", "WMS Platforms", "Transportation Management", "Supplier Portals"""]
+    useCases["Demand forecasting", "Inventory optimization", "Cost reduction", "Risk management"""]
     "roi": "300% ROI through cost reduction and operational efficiency improvements"""
-    competitors["SAP Ariba", "Oracle SCM", "JDA Software"""
+    competitors["SAP Ariba", "Oracle SCM", "JDA Software"""]
     "marketSize": "$28B supply chain management market"""
     "growthRate": "16% annual growth"""
     "contactInfo"""
@@ -254,11 +254,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "2-3 weeks"""
     "category": "Human Resources & Talent Management"""
     "realService"""
-    technology["AI/ML", "Natural Language Processing", "Predictive Analytics", "Machine Learning"""
-    integrations["ATS Systems", "HRIS Platforms", "Learning Management Systems", "Communication Tools"""
-    useCases["Recruitment optimization", "Employee engagement", "Performance management", "Workforce planning"""
+    technology["AI/ML", "Natural Language Processing", "Predictive Analytics", "Machine Learning"""]
+    integrations["ATS Systems", "HRIS Platforms", "Learning Management Systems", "Communication Tools"""]
+    useCases["Recruitment optimization", "Employee engagement", "Performance management", "Workforce planning"""]
     "roi": "250% ROI through improved hiring efficiency and employee retention"""
-    competitors["Workday", "BambooHR", "Zenefits"""
+    competitors["Workday", "BambooHR", "Zenefits"""]
     "marketSize": "$22B HR technology market"""
     "growthRate": "12% annual growth"""
     "contactInfo"""
@@ -299,11 +299,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "3-4 weeks"""
     "category": "Legal Technology & Compliance"""
     "realService"""
-    technology["AI/ML", "Natural Language Processing", "Document Analysis", "Machine Learning"""
-    integrations["Legal Research Databases", "Document Management Systems", "Case Management Tools", "Compliance Platforms"""
-    useCases["Legal research", "Contract analysis", "Compliance management", "Risk assessment"""
+    technology["AI/ML", "Natural Language Processing", "Document Analysis", "Machine Learning"""]
+    integrations["Legal Research Databases", "Document Management Systems", "Case Management Tools", "Compliance Platforms"""]
+    useCases["Legal research", "Contract analysis", "Compliance management", "Risk assessment"""]
     "roi": "300% ROI through time savings and improved legal outcomes"""
-    competitors["LexisNexis", "Westlaw", "Thomson Reuters"""
+    competitors["LexisNexis", "Westlaw", "Thomson Reuters"""]
     "marketSize": "$18B legal technology market"""
     "growthRate": "15% annual growth"""
     "contactInfo"""
@@ -344,11 +344,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "3-4 weeks"""
     "category": "Real Estate & Property Technology"""
     "realService"""
-    technology["AI/ML", "IoT", "Building Automation", "Predictive Analytics", "Cloud Computing"""
-    integrations["Property Management Systems", "Building Automation", "IoT Devices", "Financial Systems"""
-    useCases["Property management", "Tenant experience", "Building optimization", "Investment analysis"""
+    technology["AI/ML", "IoT", "Building Automation", "Predictive Analytics", "Cloud Computing"""]
+    integrations["Property Management Systems", "Building Automation", "IoT Devices", "Financial Systems"""]
+    useCases["Property management", "Tenant experience", "Building optimization", "Investment analysis"""]
     "roi": "250% ROI through increased property value and operational efficiency"""
-    competitors["Yardi", "RealPage", "AppFolio"""
+    competitors["Yardi", "RealPage", "AppFolio"""]
     "marketSize": "$25B PropTech market"""
     "growthRate": "20% annual growth"""
     "contactInfo"""
@@ -389,11 +389,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "3-4 weeks"""
     "category": "Sports Technology & Analytics"""
     "realService"""
-    technology["AI/ML", "Computer Vision", "Wearable Technology", "Predictive Analytics", "IoT"""
-    integrations["Wearable Devices", "Video Systems", "Training Platforms", "Performance Tracking Tools"""
-    useCases["Performance analysis", "Training optimization", "Injury prevention", "Strategy development"""
+    technology["AI/ML", "Computer Vision", "Wearable Technology", "Predictive Analytics", "IoT"""]
+    integrations["Wearable Devices", "Video Systems", "Training Platforms", "Performance Tracking Tools"""]
+    useCases["Performance analysis", "Training optimization", "Injury prevention", "Strategy development"""]
     "roi": "300% ROI through improved performance and reduced injuries"""
-    competitors["Catapult Sports", "STATS Perform", "Second Spectrum"""
+    competitors["Catapult Sports", "STATS Perform", "Second Spectrum"""]
     "marketSize": "$15B sports analytics market"""
     "growthRate": "25% annual growth"""
     "contactInfo"""
@@ -434,11 +434,11 @@ export const "specializedInnovativeServices2027"""
     "setupTime": "2-3 weeks"""
     "category": "Entertainment & Media Technology"""
     "realService"""
-    technology["AI/ML", "Content Analysis", "Recommendation Engines", "Natural Language Processing"""
-    integrations["Content Management Systems", "Streaming Platforms", "Social Media", "Analytics Tools"""
-    useCases["Content optimization", "User engagement", "Content discovery", "Monetization"""
+    technology["AI/ML", "Content Analysis", "Recommendation Engines", "Natural Language Processing"""]
+    integrations["Content Management Systems", "Streaming Platforms", "Social Media", "Analytics Tools"""]
+    useCases["Content optimization", "User engagement", "Content discovery", "Monetization"""]
     "roi": "250% ROI through increased engagement and monetization"""
-    competitors["Netflix", "Spotify", "YouTube"""
+    competitors["Netflix", "Spotify", "YouTube"""]
     "marketSize": "$30B entertainment technology market"""
     "growthRate": "18% annual growth"""
     "contactInfo"""
@@ -452,8 +452,8 @@ export const "specializedInnovativeServices2027"""
     "customers"""
     "rating"""
     "reviews"""
-export const getSpecializedServicesByCategory = ("category"""
-export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice""]"
-    const price = parseInt(service.price.replace(/[^0-9]/g, """"
-export const searchSpecializedServices = ("query""
+export const getSpecializedServicesByCategory = ("category""")
+export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice""]")
+    const price = parseInt(service.price.replace(/[^0-9]/g, """")
+export const searchSpecializedServices = ("query"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

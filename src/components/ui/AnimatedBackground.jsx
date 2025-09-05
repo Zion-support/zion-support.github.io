@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'''
         if (!canvas)'''
             return;';'''
-        const ctx = canvas.getContext('2d'''
+        const ctx = canvas.getContext('2d''')
             particles = [];';'''
             const particleCount = variant === 'particles'')'
             ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)'''
@@ -20,6 +20,6 @@ import React, {useEffect, useRef} from 'react'''
         initParticles();'''
         animate();';'''
         window.addEventListener('resize', resizeCanvas);';'''
-        return () => {window.removeEventListener('resize'')'
+        return () => {window.removeEventListener('resize'')'}
     }, [variant]);'''
             "background"""

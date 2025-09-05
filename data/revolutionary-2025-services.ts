@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "AI & Consciousness Research"""
     "realService"""
-    technology["Quantum computing", "Advanced neural networks", "Consciousness mapping algorithms", "Ethical AI frameworks", "Real-time monitoring systems"""
-    integrations["Research databases", "Academic platforms", "Government systems", "AI safety protocols", "Ethics frameworks"""
-    useCases["AI consciousness research", "Ethical AI development", "Safety protocol testing", "Regulatory compliance", "Academic research"""
+    technology["Quantum computing", "Advanced neural networks", "Consciousness mapping algorithms", "Ethical AI frameworks", "Real-time monitoring systems"""]
+    integrations["Research databases", "Academic platforms", "Government systems", "AI safety protocols", "Ethics frameworks"""]
+    useCases["AI consciousness research", "Ethical AI development", "Safety protocol testing", "Regulatory compliance", "Academic research"""]
     "roi": "Research institutions report 500% ROI through accelerated AI safety research and regulatory compliance."""
-    competitors["No direct competitors", "Academic research tools", "AI safety platforms"""
+    competitors["No direct competitors", "Academic research tools", "AI safety platforms"""]
     "marketSize": "$500M emerging market"""
     "growthRate": "300% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "Quantum AI & Mental Health"""
     "realService"""
-    technology["Quantum computing", "Emotion AI", "Real-time processing", "Machine learning", "Natural language processing"""
-    integrations["Healthcare systems", "CRM platforms", "Mental health apps", "Educational platforms", "AI assistants"""
-    useCases["Mental health monitoring", "Customer service automation", "Educational assessment", "Therapeutic support", "Emotional AI development"""
+    technology["Quantum computing", "Emotion AI", "Real-time processing", "Machine learning", "Natural language processing"""]
+    integrations["Healthcare systems", "CRM platforms", "Mental health apps", "Educational platforms", "AI assistants"""]
+    useCases["Mental health monitoring", "Customer service automation", "Educational assessment", "Therapeutic support", "Emotional AI development"""]
     "roi": "Healthcare providers see 400% ROI through improved patient outcomes and automated mental health monitoring."""
-    competitors["Affectiva", "Emotient", "Realeyes", "Traditional emotion AI"""
+    competitors["Affectiva", "Emotient", "Realeyes", "Traditional emotion AI"""]
     "marketSize": "$2.8B market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Neural Interface & BCI"""
     "realService"""
-    technology["Neural signal processing", "AI algorithms", "Hardware integration", "Medical device protocols", "Real-time systems"""
-    integrations["Medical devices", "Research platforms", "Healthcare systems", "Consumer electronics", "Academic tools"""
-    useCases["Medical device development", "Research applications", "Consumer BCI devices", "Therapeutic applications", "Academic research"""
+    technology["Neural signal processing", "AI algorithms", "Hardware integration", "Medical device protocols", "Real-time systems"""]
+    integrations["Medical devices", "Research platforms", "Healthcare systems", "Consumer electronics", "Academic tools"""]
+    useCases["Medical device development", "Research applications", "Consumer BCI devices", "Therapeutic applications", "Academic research"""]
     "roi": "Medical device companies achieve 600% ROI through accelerated BCI development and regulatory compliance."""
-    competitors["Neuralink", "Kernel", "Academic research tools", "Medical device platforms"""
+    competitors["Neuralink", "Kernel", "Academic research tools", "Medical device platforms"""]
     "marketSize": "$1.2B market"""
     "growthRate": "400% annual growth"""
     "variant": "neural-quantum"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Quantum Cloud & IT"""
     "realService"""
-    technology["Quantum computing", "Cloud orchestration", "AI optimization", "Multi-cloud APIs", "Real-time monitoring"""
-    integrations["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "Private clouds"""
-    useCases["Multi-cloud management", "Cost optimization", "Performance optimization", "Resource allocation", "Compliance management"""
+    technology["Quantum computing", "Cloud orchestration", "AI optimization", "Multi-cloud APIs", "Real-time monitoring"""]
+    integrations["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "Private clouds"""]
+    useCases["Multi-cloud management", "Cost optimization", "Performance optimization", "Resource allocation", "Compliance management"""]
     "roi": "Enterprise users achieve 800% ROI through reduced cloud costs and improved performance optimization."""
-    competitors["Terraform", "Ansible", "Traditional cloud management", "Multi-cloud platforms"""
+    competitors["Terraform", "Ansible", "Traditional cloud management", "Multi-cloud platforms"""]
     "marketSize": "$8.5B market"""
     "growthRate": "180% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-3 weeks"""
     "category": "AI Cybersecurity & Defense"""
     "realService"""
-    technology["AI/ML", "Quantum computing", "Behavioral analysis", "Real-time monitoring", "Threat intelligence"""
-    integrations["SIEM systems", "EDR platforms", "Firewalls", "Identity management", "Compliance tools"""
-    useCases["Threat detection", "Incident response", "Vulnerability management", "Compliance monitoring", "Security automation"""
+    technology["AI/ML", "Quantum computing", "Behavioral analysis", "Real-time monitoring", "Threat intelligence"""]
+    integrations["SIEM systems", "EDR platforms", "Firewalls", "Identity management", "Compliance tools"""]
+    useCases["Threat detection", "Incident response", "Vulnerability management", "Compliance monitoring", "Security automation"""]
     "roi": "Organizations achieve 500% ROI through reduced security incidents and automated threat response."""
-    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Traditional security tools"""
+    competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Traditional security tools"""]
     "marketSize": "$15.2B market"""
     "growthRate": "220% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Metaverse & AI Development"""
     "realService"""
-    technology["AI/ML", "Virtual reality", "Blockchain", "Real-time rendering", "3D modeling"""
-    integrations["VR headsets", "Blockchain networks", "Social platforms", "Payment systems", "Analytics tools"""
-    useCases["Virtual world creation", "Gaming experiences", "Educational simulations", "Corporate training", "Virtual events"""
+    technology["AI/ML", "Virtual reality", "Blockchain", "Real-time rendering", "3D modeling"""]
+    integrations["VR headsets", "Blockchain networks", "Social platforms", "Payment systems", "Analytics tools"""]
+    useCases["Virtual world creation", "Gaming experiences", "Educational simulations", "Corporate training", "Virtual events"""]
     "roi": "Gaming companies achieve 700% ROI through AI-powered content generation and enhanced user experiences."""
-    competitors["Unity", "Unreal Engine", "Roblox", "Traditional game engines"""
+    competitors["Unity", "Unreal Engine", "Roblox", "Traditional game engines"""]
     "marketSize": "$3.2B market"""
     "growthRate": "350% annual growth"""
     "variant": "metaverse-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Quantum IoT & Connectivity"""
     "realService"""
-    technology["Quantum encryption", "IoT protocols", "AI security", "Edge computing", "5G networks"""
-    integrations["IoT devices", "Cloud platforms", "Security systems", "Analytics tools", "Management platforms"""
-    useCases["Smart city infrastructure", "Industrial monitoring", "Healthcare monitoring", "Consumer devices", "Security systems"""
+    technology["Quantum encryption", "IoT protocols", "AI security", "Edge computing", "5G networks"""]
+    integrations["IoT devices", "Cloud platforms", "Security systems", "Analytics tools", "Management platforms"""]
+    useCases["Smart city infrastructure", "Industrial monitoring", "Healthcare monitoring", "Consumer devices", "Security systems"""]
     "roi": "Smart city projects achieve 600% ROI through secure IoT infrastructure and automated monitoring."""
-    competitors["AWS IoT", "Azure IoT", "Traditional IoT platforms", "Security solutions"""
+    competitors["AWS IoT", "Azure IoT", "Traditional IoT platforms", "Security solutions"""]
     "marketSize": "$4.8B market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1-2 weeks"""
     "category": "AI Business & Strategy"""
     "realService"""
-    technology["AI/ML", "Predictive analytics", "Market intelligence", "Data analysis", "Strategic modeling"""
-    integrations["CRM systems", "Analytics platforms", "Market data sources", "Financial systems", "Business intelligence tools"""
-    useCases["Strategic planning", "Market analysis", "Competitive intelligence", "Risk assessment", "Business optimization"""
+    technology["AI/ML", "Predictive analytics", "Market intelligence", "Data analysis", "Strategic modeling"""]
+    integrations["CRM systems", "Analytics platforms", "Market data sources", "Financial systems", "Business intelligence tools"""]
+    useCases["Strategic planning", "Market analysis", "Competitive intelligence", "Risk assessment", "Business optimization"""]
     "roi": "Companies achieve 400% ROI through improved strategic decision-making and market positioning."""
-    competitors["McKinsey", "BCG", "Traditional consulting", "Business intelligence tools"""
+    competitors["McKinsey", "BCG", "Traditional consulting", "Business intelligence tools"""]
     "marketSize": "$12.5B market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Quantum Finance & Investment"""
     "realService"""
-    technology["Quantum computing", "Financial algorithms", "Risk modeling", "Market data analysis", "Portfolio optimization"""
-    integrations["Trading platforms", "Market data feeds", "Risk management systems", "Compliance tools", "Reporting systems"""
-    useCases["Portfolio optimization", "Risk management", "Algorithmic trading", "Asset allocation", "Performance optimization"""
+    technology["Quantum computing", "Financial algorithms", "Risk modeling", "Market data analysis", "Portfolio optimization"""]
+    integrations["Trading platforms", "Market data feeds", "Risk management systems", "Compliance tools", "Reporting systems"""]
+    useCases["Portfolio optimization", "Risk management", "Algorithmic trading", "Asset allocation", "Performance optimization"""]
     "roi": "Investment firms achieve 900% ROI through improved portfolio performance and risk optimization."""
-    competitors["Bloomberg", "Thomson Reuters", "Traditional financial tools", "Portfolio management systems"""
+    competitors["Bloomberg", "Thomson Reuters", "Traditional financial tools", "Portfolio management systems"""]
     "marketSize": "$18.5B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""

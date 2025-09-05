@@ -1,4 +1,4 @@
-export interface ResearchDevelopmentService2029 {;
+export interface ResearchDevelopmentService2029 {;}
   "id": string;"
   name: string;,
   description: string;
@@ -32,18 +32,18 @@ export interface ResearchDevelopmentService2029 {;
   partnership: string;
   funding: string;,
   exit: string;
-  contact: {;,
+  contact: {;,}
   mobile: string;
     email: string;,
   website: string;
-export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
-  {;"
+export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;]
+  {;"}
     id: "advanced-research-automation",;""
     "name": "Advanced Research Automation",;""
     "description": "Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.",;"]"
     category["Research", "Automation", "AI", "Data Science", "Scientific Computing"],;""
     "price": "$4,999/month",;"
-    features[;"
+    features[;"]
       "Automated data collection",;""
       "Research workflow automation",;""
       "Literature review automation",;""
@@ -51,23 +51,23 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       "Report generation",;""
       "Collaboration tools",;""
       "Research tracking",;""
-      "Knowledge management";"]
+      "Knowledge management";"];
     ],;
-    benefits[;"
+    benefits[;"]
       "Accelerate research by 5x",;""
       "Reduce manual errors by 90%",;""
       "Improve research quality",;""
       "Enhance collaboration",;""
       "Streamline workflows",;""
-      "Increase productivity";"]
+      "Increase productivity";"];
     ],;
-    useCases[;"
+    useCases[;"]
       "Academic research",;""
       "Corporate R&D",;""
       "Government research",;""
       "Pharmaceutical research",;""
       "Market research",;""
-      "Scientific studies";"]
+      "Scientific studies";"];
     ],;"
     "marketSize": "$12.8B by 2029",;""
     competitors["LabVantage", "Benchling", "LabArchives", "SciNote"],;""
@@ -94,18 +94,18 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     "partnership": "Research institution partnerships",;""
     "funding": "Series A funding, $60M valuation",;""
     "exit": "Acquisition by major research platform",;""
-    "contact": {;""
+    "contact": {;""}
       mobile: "+1 302 464 0950",;""
       "email": "kleber@ziontechgroup.com",;""
       "website": "https://ziontechgroup.com",;""
       "address": "364 E Main St STE 1008 Middletown DE 19709";},;"
-  {;"
+  {;"}
     "id": "quantum-research-platform",;""
     "name": "Quantum Research Platform",;""
     "description": "Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.",;""
     category["Quantum Computing", "Research", "Scientific Computing", "Technology Development"],;""
     "price": "$8,999/month",;"
-    features[;"
+    features[;"]
       "Quantum computing access",;""
       "Quantum algorithm library",;""
       "Quantum simulation tools",;""
@@ -113,23 +113,23 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       "Quantum education resources",;""
       "Performance analytics",;""
       "Research project management",;""
-      "Publication tools";"]
+      "Publication tools";"];
     ],;
-    benefits[;"
+    benefits[;"]
       "Access to quantum computing",;""
       "Accelerate quantum research",;""
       "Collaborate with quantum experts",;""
       "Learn quantum technologies",;""
       "Publish quantum research",;""
-      "Advance quantum science";"]
+      "Advance quantum science";"];
     ],;
-    useCases[;"
+    useCases[;"]
       "Quantum physics research",;""
       "Quantum algorithm development",;""
       "Quantum cryptography research",;""
       "Quantum materials science",;""
       "Quantum chemistry",;""
-      "Quantum machine learning";"]
+      "Quantum machine learning";"];
     ],;"
     "marketSize": "$18.5B by 2029",;""
     competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],;""
@@ -156,18 +156,18 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     "partnership": "Quantum research partnerships",;""
     "funding": "Series B funding, $150M valuation",;""
     "exit": "IPO or quantum acquisition",;""
-    "contact": {;""
+    "contact": {;""}
       mobile: "+1 302 464 0950",;""
       "email": "kleber@ziontechgroup.com",;""
       "website": "https://ziontechgroup.com",;""
       "address": "364 E Main St STE 1008 Middletown DE 19709";},;"
-  {;"
+  {;"}
     "id": "ai-research-assistant",;""
     "name": "AI Research Assistant",;""
     "description": "Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.",;""
     category["AI", "Research", "Data Analysis", "Scientific Computing", "Knowledge Management"],;""
     "price": "$2,999/month",;"
-    features[;"
+    features[;"]
       "Intelligent literature review",;""
       "Data analysis assistance",;""
       "Hypothesis generation",;""
@@ -175,23 +175,23 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       "Knowledge synthesis",;""
       "Citation management",;""
       "Research collaboration",;""
-      "Progress tracking";"]
+      "Progress tracking";"];
     ],;
-    benefits[;"
+    benefits[;"]
       "Accelerate research by 3x",;""
       "Improve research quality",;""
       "Reduce research time",;""
       "Enhance collaboration",;""
       "Generate new insights",;""
-      "Streamline workflows";"]
+      "Streamline workflows";"];
     ],;
-    useCases[;"
+    useCases[;"]
       "Academic research",;""
       "Corporate research",;""
       "Government research",;""
       "Market research",;""
       "Scientific studies",;""
-      "Literature reviews";"]
+      "Literature reviews";"];
     ],;"
     "marketSize": "$15.2B by 2029",;""
     competitors["Grammarly", "Mendeley", "Zotero", "EndNote"],;""
@@ -218,18 +218,18 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     "partnership": "AI research partnerships",;""
     "funding": "Series A funding, $80M valuation",;""
     "exit": "Acquisition by major research platform",;""
-    "contact": {;""
+    "contact": {;""}
       mobile: "+1 302 464 0950",;""
       "email": "kleber@ziontechgroup.com",;""
       "website": "https://ziontechgroup.com",;""
       "address": "364 E Main St STE 1008 Middletown DE 19709";},;"
-  {;"
+  {;"}
     "id": "biotech-research-suite",;""
     "name": "Biotech Research Suite",;""
     "description": "Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.",;""
     category["Biotechnology", "Research", "Healthcare", "Drug Discovery", "Clinical Trials"],;""
     "price": "$6,999/month",;"
-    features[;"
+    features[;"]
       "Genetic research tools",;""
       "Drug discovery platform",;""
       "Clinical trial management",;""
@@ -237,23 +237,23 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       "Research collaboration",;""
       "Data visualization",;""
       "Regulatory compliance",;""
-      "Publication tools";"]
+      "Publication tools";"];
     ],;
-    benefits[;"
+    benefits[;"]
       "Accelerate biotech research",;""
       "Improve drug discovery",;""
       "Streamline clinical trials",;""
       "Enhance collaboration",;""
       "Ensure compliance",;""
-      "Reduce research costs";"]
+      "Reduce research costs";"];
     ],;
-    useCases[;"
+    useCases[;"]
       "Pharmaceutical research",;""
       "Genetic research",;""
       "Clinical trials",;""
       "Biotech development",;""
       "Medical research",;""
-      "Agricultural biotech";"]
+      "Agricultural biotech";"];
     ],;"
     "marketSize": "$22.8B by 2029",;""
     competitors["Benchling", "LabVantage", "SciNote", "LabArchives"],;""
@@ -280,7 +280,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     "partnership": "Biotech research partnerships",;""
     "funding": "Series B funding, $120M valuation",;""
     "exit": "IPO or biotech acquisition",;""
-    "contact": {;""
+    "contact": {;""}
       mobile: "+1 302 464 0950",;""
       "email": "kleber@ziontechgroup.com",;""
       "website": "https://ziontechgroup.com",;""

@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 month"""
     "category": "AI Healthcare & Biotech"""
     "realService"""
-    technology["Deep Learning", "Molecular Dynamics", "Quantum Chemistry", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Lab management systems", "Chemical databases", "Clinical trial platforms", "Regulatory databases", "Research platforms"""
-    useCases["Drug discovery", "Target identification", "Lead optimization", "Toxicity prediction", "Clinical trial design", "Regulatory compliance"""
+    technology["Deep Learning", "Molecular Dynamics", "Quantum Chemistry", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Lab management systems", "Chemical databases", "Clinical trial platforms", "Regulatory databases", "Research platforms"""]
+    useCases["Drug discovery", "Target identification", "Lead optimization", "Toxicity prediction", "Clinical trial design", "Regulatory compliance"""]
     "roi": "Companies report 500% ROI through accelerated drug discovery and reduced research costs."""
-    competitors["Schrödinger", "Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia"""
+    competitors["Schrödinger", "Atomwise", "Insilico Medicine", "BenevolentAI", "Exscientia"""]
     "marketSize": "$35.8B market"""
     "growthRate": "285% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 weeks"""
     "category": "AI Climate & Environment"""
     "realService"""
-    technology["Machine Learning", "Satellite Data Analysis", "Climate Modeling", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Satellite data providers", "Weather APIs", "Environmental databases", "Sustainability platforms", "Reporting tools"""
-    useCases["Climate monitoring", "Risk assessment", "Sustainability reporting", "Environmental compliance", "Stakeholder communication", "Policy development"""
+    technology["Machine Learning", "Satellite Data Analysis", "Climate Modeling", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Satellite data providers", "Weather APIs", "Environmental databases", "Sustainability platforms", "Reporting tools"""]
+    useCases["Climate monitoring", "Risk assessment", "Sustainability reporting", "Environmental compliance", "Stakeholder communication", "Policy development"""]
     "roi": "Organizations report 320% ROI through improved sustainability practices and reduced environmental risks."""
-    competitors["Planet Labs", "Descartes Labs", "Climate Engine", "Carbon Trust", "CDP"""
+    competitors["Planet Labs", "Descartes Labs", "Climate Engine", "Carbon Trust", "CDP"""]
     "marketSize": "$12.3B market"""
     "growthRate": "195% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 months"""
     "category": "AI Autonomous Systems"""
     "realService"""
-    technology["Computer Vision", "Machine Learning", "Sensor Fusion", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Vehicle systems", "Sensor hardware", "Simulation platforms", "Testing environments", "Safety systems"""
-    useCases["Autonomous driving", "Fleet management", "Logistics automation", "Safety testing", "Research and development", "Regulatory compliance"""
+    technology["Computer Vision", "Machine Learning", "Sensor Fusion", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Vehicle systems", "Sensor hardware", "Simulation platforms", "Testing environments", "Safety systems"""]
+    useCases["Autonomous driving", "Fleet management", "Logistics automation", "Safety testing", "Research and development", "Regulatory compliance"""]
     "roi": "Companies report 450% ROI through accelerated autonomous vehicle development and improved safety."""
-    competitors["Waymo", "Cruise", "Tesla", "Aurora", "Argo AI"""
+    competitors["Waymo", "Cruise", "Tesla", "Aurora", "Argo AI"""]
     "marketSize": "$65.3B market"""
     "growthRate": "320% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 months"""
     "category": "AI Quantum Computing"""
     "realService"""
-    technology["Quantum Computing", "Machine Learning", "Quantum Algorithms", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Quantum hardware", "Classical computing", "Research platforms", "Development tools", "Simulation environments"""
-    useCases["Scientific research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography", "Machine learning"""
+    technology["Quantum Computing", "Machine Learning", "Quantum Algorithms", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Quantum hardware", "Classical computing", "Research platforms", "Development tools", "Simulation environments"""]
+    useCases["Scientific research", "Financial modeling", "Drug discovery", "Optimization problems", "Cryptography", "Machine learning"""]
     "roi": "Organizations report 600% ROI through quantum computing capabilities and AI optimization."""
-    competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Rigetti", "D-Wave"""
+    competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Rigetti", "D-Wave"""]
     "marketSize": "$18.7B market"""
     "growthRate": "350% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 months"""
     "category": "AI Space Technology"""
     "realService"""
-    technology["Machine Learning", "Space Technology", "Satellite Operations", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""
-    integrations["Satellite systems", "Ground stations", "Space databases", "Mission control systems", "Research platforms"""
-    useCases["Satellite operations", "Mission planning", "Space debris tracking", "Communication optimization", "Research missions", "Commercial space"""
+    technology["Machine Learning", "Space Technology", "Satellite Operations", "React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"""]
+    integrations["Satellite systems", "Ground stations", "Space databases", "Mission control systems", "Research platforms"""]
+    useCases["Satellite operations", "Mission planning", "Space debris tracking", "Communication optimization", "Research missions", "Commercial space"""]
     "roi": "Organizations report 480% ROI through improved satellite operations and mission success."""
-    competitors["Maxar", "Planet Labs", "SpaceX", "Blue Origin", "Virgin Galactic"""
+    competitors["Maxar", "Planet Labs", "SpaceX", "Blue Origin", "Virgin Galactic"""]
     "marketSize": "$28.9B market"""
     "growthRate": "265% annual growth"""
     "variant": "space-futuristic"""

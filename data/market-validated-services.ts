@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";"
-export interface MarketValidatedService {;"
+export interface MarketValidatedService {;"}
 	"id": string;"
 	name: string;,
   tagline: string;
@@ -14,31 +14,31 @@ export interface MarketValidatedService {;"
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-	contactInfo: {;,
+	contactInfo: {;,}
   mobile: string;
 		email: string;,
   address: string;
-const contactInfo = {;"
+const contactInfo = {;"}
   mobile: "+1 302 464 0950",;""
 	"email": "kleber@ziontechgroup.com",;""
 	"address": "364 E Main St STE 1008 Middletown DE 19709";"
   ;
   ;"
   website: "https://ziontechgroup.com";}""
-export const "marketValidatedServices": MarketValidatedService[] = [;"
+export const "marketValidatedServices": MarketValidatedService[] = [;"]
 	// AI and Assistants;
-	{;"
+	{;"}
 		id: "ai-assistant-pro",;""
 		"name": "AI Assistant Pro",;""
 		"tagline": "Branded copilot with RAG, guardrails, and analytics",;""
 		"price": "$149",;""
 		"period": "/month",;""
 		"description": "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",;"
-		features[;"
+		features[;"]
 			"RAG over your docs with hybrid search",;""
 			""Guardrails": PII/PHI redaction, jailbreak detection",;""
 			"Human handoff + conversation analytics",;""
-			"Slack/Teams/Widget channels",;"]
+			"Slack/Teams/Widget channels",;"];
 		],;"
 		"category": "AI & Assistants",;""
 		"link": "https://ziontechgroup.com/ai-assistant",;""
@@ -48,18 +48,18 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "30 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "ai-evals-observability",;""
 		"name": "AI Evals & Observability",;""
 		"tagline": "Regression testing, safety checks, and live metrics for LLM features",;""
 		"price": "$99",;""
 		"period": "/month",;""
 		"description": "Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.",;"
-		features[;"
+		features[;"]
 			"Eval datasets/versioning",;""
 			"Policy and toxicity checks",;""
 			"Latency and cost KPIs",;""
-			"Prompt/version diff and alerts",;"]
+			"Prompt/version diff and alerts",;"];
 		],;"
 		"category": "AI & MLOps",;""
 		"link": "https://ziontechgroup.com/ai-evals",;""
@@ -69,18 +69,18 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "1 hour",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "agentic-rag-platform",;""
 		"name": "Agentic RAG Platform",;""
 		"tagline": "Production RAG with hybrid search, chunking, tools, and evals",;""
 		"price": "$179",;""
 		"period": "/month",;""
 		"description": "Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.",;"
-		features[;"
+		features[;"]
 			"Hybrid vector+BM25 + reranker",;""
 			"Chunking strategies + citations",;""
 			"Toolformer-style agents",;""
-			"Eval suite and drift monitoring",;"]
+			"Eval suite and drift monitoring",;"];
 		],;"
 		"category": "AI & Search",;""
 		"link": "https://ziontechgroup.com/agentic-rag",;""
@@ -91,7 +91,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "2 hours",;"
 		contactInfo;},;
 	// Security and APIs;
-	{;"
+	{;"}
 		"id": "api-security-scanner",;""
 		"name": "API Security Scanner",;""
 		"tagline": "OpenAPI/GraphQL scanning, auth/Z checks, dependency audit",;""
@@ -107,7 +107,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "20 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "api-observability",;""
 		"name": "API Observability & SLA Guard",;""
 		"tagline": "OTel tracing, SLOs, and error budgets for services",;""
@@ -124,7 +124,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "40 minutes",;"
 		contactInfo;},;
 	// Cloud and Infra;
-	{;"
+	{;"}
 		"id": "cloud-cost-optimizer-pro",;""
 		"name": "Cloud Cost Optimizer Pro",;""
 		"tagline": "Rightsizing, lifecycle, anomaly detection, and k8s bin-packing",;""
@@ -140,7 +140,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "1 hour",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "database-performance-monitor",;""
 		"name": "Database Performance Monitor",;""
 		"tagline": "Slow query capture, AI index suggestions, capacity forecasting",;""
@@ -156,7 +156,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "45 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "managed-postgres-ha",;""
 		"name": "Managed Postgres HA",;""
 		"tagline": "Highly-available Postgres with backups, failover, and guardrails",;""
@@ -173,7 +173,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "1 day",;"
 		contactInfo;},;
 	// Reliability & Monitoring;
-	{;"
+	{;"}
 		"id": "uptime-slo-monitor",;""
 		"name": "Uptime & SLO Monitor",;""
 		"tagline": "Synthetic checks, error budgets, and incident automation",;""
@@ -189,7 +189,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "25 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "tls-certificate-monitor",;""
 		"name": "TLS Certificate Monitor",;""
 		"tagline": "Auto-renewal checks and expiry alerts across your fleet",;""
@@ -205,7 +205,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "10 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "domain-dns-monitor",;""
 		"name": "Domain & DNS Monitor",;""
 		"tagline": "Track DNS changes, TTLs, and misconfigurations",;""
@@ -222,7 +222,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "15 minutes",;"
 		contactInfo;},;
 	// Dev & Productivity;
-	{;"
+	{;"}
 		"id": "pdf-render-api",;""
 		"name": "PDF Render API",;""
 		"tagline": "High-fidelity serverless PDF rendering and watermarking",;""
@@ -238,7 +238,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 7,;""
 		"setupTime": "10 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "browser-performance-monitor",;""
 		"name": "Browser Performance Monitor",;""
 		"tagline": "RUM metrics, Core Web Vitals, and UX waterfall analysis",;""
@@ -254,7 +254,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "20 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "feature-flags-edge",;""
 		"name": "Feature Flags at the Edge",;""
 		"tagline": "Targeting, rollouts, and experiments at CDN edge",;""
@@ -270,7 +270,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "30 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "serverless-cron-manager",;""
 		"name": "Serverless Cron Manager",;""
 		"tagline": "Reliable scheduled jobs with retries and observability",;""
@@ -287,7 +287,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "15 minutes",;"
 		contactInfo;},;
 	// Compliance & Risk;
-	{;"
+	{;"}
 		"id": "soc2-evidence-automation",;""
 		"name": "SOC 2 Evidence Automation",;""
 		"tagline": "Collect and map controls with change tracking",;""
@@ -303,7 +303,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 7,;""
 		"setupTime": "1 day",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "vendor-risk-automation",;""
 		"name": "Vendor Risk Automation",;""
 		"tagline": "Automate VRM workflows, DDQs, and risk scoring",;""
@@ -320,7 +320,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "2 hours",;"
 		contactInfo;},;
 	// Developer and Ops Utilities;
-	{;"
+	{;"}
 		"id": "webhook-relay-replay",;""
 		"name": "Webhook Relay & Replay",;""
 		"tagline": "Capture, inspect, and replay webhooks reliably",;""
@@ -336,7 +336,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"trialDays": 14,;""
 		"setupTime": "10 minutes",;"
 		contactInfo;},;
-	{;"
+	{;"}
 		"id": "audit-log-vault",;""
 		"name": "Audit Log Vault",;""
 		"tagline": "Tamper-evident logs with retention and export",;""
@@ -353,7 +353,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "30 minutes",;"
 		contactInfo;},;
 	// AI Channels;
-	{;"
+	{;"}
 		"id": "ai-phone-agent",;""
 		"name": "AI Phone Agent",;""
 		"tagline": "Voice IVR and call handling with CRM handoff",;""
@@ -370,7 +370,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [;"
 		"setupTime": "1 hour",;"
 		contactInfo;},;
 	// Search and Knowledge;
-	{;"
+	{;"}
 		"id": "vector-search-starter",;""
 		"name": "Vector Search Starter",;""
 		"tagline": "Deploy a production-grade vector database and APIs",;""

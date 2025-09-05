@@ -1,6 +1,6 @@
-export interface Service {
-  // TODO: Implement
-}
+export interface Service {}
+  // TODO: Implement;
+};
   "id"""
     "name"""
     "benefits"""
@@ -946,5 +946,5 @@ export interface Service {
     "useCases"""
     "technologies"""
     "link"""
-export const getServicesByCategory = ("category""
+export const getServicesByCategory = ("category"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

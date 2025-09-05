@@ -3,7 +3,7 @@ import fs from "fs"""
 import path from "path"""
 import { fileURLToPath  } from "url"""
   let content = fs.readFileSync(filePath, "utf8"")"
-    if (content.includes("href="/") && !content.includes("import Link"""
+    if (content.includes("href="/") && !content.includes("import Link""")
         /import React from "react"""
         "import React from "react"""
 import Link from "next/link";"""

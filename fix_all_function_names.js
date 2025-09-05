@@ -7,5 +7,5 @@ import { glob } from "glob"""
           "2": "Two"""
           "1": "One"""
           "0": "Zero"""
-        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&""
+        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&""`
 cursor/fix-lint-push-and-merge-to-main-f3c1;"

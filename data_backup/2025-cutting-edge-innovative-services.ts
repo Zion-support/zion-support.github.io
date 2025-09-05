@@ -1,6 +1,6 @@
-export interface CuttingEdgeInnovativeService {
-  // TODO: Implement
-}
+export interface CuttingEdgeInnovativeService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

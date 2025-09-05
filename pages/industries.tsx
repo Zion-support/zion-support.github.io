@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Heart, 
   Building, 
   ShoppingCart, 
@@ -21,153 +21,153 @@ import {
   Brain,
   Network,
   Cloud;'
-} from 'lucide-react
-const industries = [
-  {'
+} from 'lucide-react;
+const industries = []
+  {'}
     title: 'Healthcare','
     icon: Heart,'
     description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.',''
     color: 'from-red-500 to-pink-500','
-    services: ['
+    services: [']
       'AI Medical Imaging Analysis',''
       'Drug Discovery Platform',''
       'Patient Data Analytics',''
       'Telemedicine Solutions',''
       'Clinical Decision Support',''
-      'Healthcare IoT Management'']
+      'Healthcare IoT Management''];
     ],
-    benefits: ['
+    benefits: [']
       'Improved Patient Outcomes',''
       'Reduced Diagnostic Time',''
       'Enhanced Treatment Accuracy',''
-      'Cost-effective Care Delivery'']
+      'Cost-effective Care Delivery''];
     ],'
     caseStudy: 'Reduced diagnostic time by 60% for a major hospital network',''
     pricing: 'Starting at $15,000/project''
   },
-  {'
+  {'}
     title: 'Finance','
     icon: Building,'
     description: 'Fraud detection, risk assessment, algorithmic trading, and financial planning solutions.',''
     color: 'from-green-500 to-emerald-500','
-    services: ['
+    services: [']
       'AI Fraud Detection',''
       'Algorithmic Trading',''
       'Risk Assessment Models',''
       'Financial Planning Tools',''
       'Regulatory Compliance',''
-      'Blockchain Solutions'']
+      'Blockchain Solutions''];
     ],
-    benefits: ['
+    benefits: [']
       'Enhanced Security',''
       'Reduced Financial Risk',''
       'Improved Compliance',''
-      'Automated Trading'']
+      'Automated Trading''];
     ],'
     caseStudy: 'Prevented $2M+ in fraudulent transactions for a major bank',''
     pricing: 'Starting at $10,000/setup''
   },
-  {'
+  {'}
     title: 'E-commerce','
     icon: ShoppingCart,'
     description: 'Personalized recommendations, inventory optimization, and customer experience enhancement.',''
     color: 'from-blue-500 to-cyan-500','
-    services: ['
+    services: [']
       'AI Recommendation Engine',''
       'Inventory Optimization',''
       'Customer Analytics',''
       'Price Optimization',''
       'Chatbot Support',''
-      'Visual Search'']
+      'Visual Search''];
     ],
-    benefits: ['
+    benefits: [']
       'Increased Sales',''
       'Better Customer Experience',''
       'Optimized Inventory',''
-      'Reduced Cart Abandonment'']
+      'Reduced Cart Abandonment''];
     ],'
     caseStudy: 'Increased conversion rates by 35% for an online retailer',''
     pricing: 'Starting at $3,000/setup''
   },
-  {'
+  {'}
     title: 'Manufacturing','
     icon: Settings,'
     description: 'Predictive maintenance, quality control, supply chain optimization, and smart factory solutions.',''
     color: 'from-orange-500 to-yellow-500','
-    services: ['
+    services: [']
       'Predictive Maintenance',''
       'Quality Control AI',''
       'Supply Chain Optimization',''
       'Smart Factory Solutions',''
       'IoT Integration',''
-      'Energy Optimization'']
+      'Energy Optimization''];
     ],
-    benefits: ['
+    benefits: [']
       'Reduced Downtime',''
       'Improved Quality',''
       'Cost Optimization',''
-      'Enhanced Efficiency'']
+      'Enhanced Efficiency''];
     ],'
     caseStudy: 'Reduced equipment downtime by 40% for a manufacturing plant',''
     pricing: 'Starting at $20,000/project''
   },
-  {'
+  {'}
     title: 'Education','
     icon: BookOpen,'
     description: 'Personalized learning, automated assessment, and educational content generation.',''
     color: 'from-purple-500 to-indigo-500','
-    services: ['
+    services: [']
       'Personalized Learning',''
       'Automated Assessment',''
       'Content Generation',''
       'Student Analytics',''
       'Virtual Tutoring',''
-      'Learning Management'']
+      'Learning Management''];
     ],
-    benefits: ['
+    benefits: [']
       'Personalized Education',''
       'Improved Learning Outcomes',''
       'Automated Grading',''
-      'Enhanced Engagement'']
+      'Enhanced Engagement''];
     ],'
     caseStudy: 'Improved student performance by 25% in a university program',''
     pricing: 'Starting at $5,000/setup''
   },
-  {'
+  {'}
     title: 'Government','
     icon: Shield,'
     description: 'Citizen services, data analytics, cybersecurity, and digital transformation solutions.',''
     color: 'from-gray-600 to-slate-600','
-    services: ['
+    services: [']
       'Citizen Services Portal',''
       'Data Analytics Platform',''
       'Cybersecurity Solutions',''
       'Digital Transformation',''
       'Compliance Management',''
-      'Public Safety AI'']
+      'Public Safety AI''];
     ],
-    benefits: ['
+    benefits: [']
       'Improved Citizen Services',''
       'Enhanced Security',''
       'Better Data Insights',''
-      'Streamlined Operations'']
+      'Streamlined Operations''];
     ],'
     caseStudy: 'Streamlined citizen services for a state government',''
     pricing: 'Starting at $25,000/project''
-  }
+  };
 ];
 
-const technologies = ['
+const technologies = [']
   { name: 'AI & Machine Learning', icon: Brain, description: 'Advanced AI solutions for every industry' },''
   { name: 'Cloud Infrastructure', icon: Cloud, description: 'Scalable and secure cloud solutions' },''
   { name: 'Cybersecurity', icon: Shield, description: 'Enterprise-grade security solutions' },''
   { name: 'Data Analytics', icon: BarChart3, description: 'Insights-driven decision making' },''
   { name: 'IoT & Edge Computing', icon: Network, description: 'Connected and intelligent systems' },''
-  { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }']
+  { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }'];
 ];
 
-export default function IndustriesPage() {
-  return ('
+export default function IndustriesPage() {}
+  return (')
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 </div>
       <Head>
@@ -189,9 +189,9 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4 relative z-10">"
 </div>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
             className="text-center"
           >
 </motion>"
@@ -222,10 +222,10 @@ export default function IndustriesPage() {
 </div>
           <motion.div;"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
 </motion>"
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
@@ -239,17 +239,17 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
+                  whileHover={{ y: -5 }};
                 >
 </motion>
-                  <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-</div>"
+                  <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>`
+</div>``
                     <IconComponent className="w-8 h-8 text-white" />"
 </IconComponent>
                   </div>
@@ -292,7 +292,7 @@ export default function IndustriesPage() {
 </div>"
                     <p className="text-sm text-gray-600 italic">"
 </p>
-                      <strong>Case Study:</strong> {industry.caseStudy}
+                      <strong>Case Study:</strong> {industry.caseStudy};
                     </p>
                   </div>
 "
@@ -309,9 +309,9 @@ export default function IndustriesPage() {
 </ArrowRight>
                     </Link>
                   </div>
-                </motion.div>)
+                </motion.div>);
               );
-            })}
+            })};
           </div>
         </div>
       </section>"
@@ -321,10 +321,10 @@ export default function IndustriesPage() {
 </div>
           <motion.div;"
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
 </motion>"
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
@@ -338,12 +338,12 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -359,7 +359,7 @@ export default function IndustriesPage() {
                   </p>
                 </motion.div>
               );
-            })}
+            })};
           </div>
         </div>
       </section>"
@@ -368,10 +368,10 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4 text-center">"
 </div>
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
 </motion>"
             <h2 className="text-3xl md:text-4xl font-bold mb-6">"

@@ -1,8 +1,8 @@
-#!/usr/bin/env node
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-console.log(' Starting comprehensive syntax fixer...'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Starting comprehensive syntax fixer...')
   'src/components/Footer.tsx'
   'src/components/Header.tsx'
   'src/components/Layout.tsx'
@@ -34,11 +34,11 @@ console.log(' Starting comprehensive syntax fixer...'
   'pages/micro-saas.tsx'
   'pages/services.tsx'
   'pages/talent.tsx'
-    .replace(/[\s\S]*?[\s\S]*?[^\n]+/g, ''
-    .replace(/[\s\S]*?[^\n]+/g, ''
-    .replace(/[\s\S]*?[^\n]+/g, ''
-  fixed = fixed.replace(/'([^']*)$/gm, "
+    .replace(/[\s\S]*?[\s\S]*?[^\n]+/g, '')
+    .replace(/[\s\S]*?[^\n]+/g, '')
+    .replace(/[\s\S]*?[^\n]+/g, '')
+  fixed = fixed.replace(/'([^']*)$/gm, '
   fixed = fixed.replace(/"([^"]*)$/gm, '"$1"
   fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+cursor/fix-lint-push-and-merge-to-main-f3c1;

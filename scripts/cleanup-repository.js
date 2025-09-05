@@ -70,53 +70,53 @@ import { glob } from 'glob'''
   'api/**'''
   // Don'''
   const scriptsDir = 'scripts'''
-  const scriptFiles = glob.sync('scripts/**/*'''
-      file.includes('fix-'''
-      file.includes('resolve-'''
-      file.includes('final-'''
-      file.includes('comprehensive-'''
-      file.includes('aggressive-'''
-      file.includes('targeted-'''
-  const rootFiles = glob.sync('*'''
-      file.includes('fix-'''
-      file.includes('resolve-'''
-      file.includes('final-'''
-      file.includes('comprehensive-'''
-      file.includes('aggressive-'''
-      file.includes('targeted-'''
-      file.includes('merge-'''
-      file.includes('smart-merge-'''
-      file.includes('quick-conflict-'''
-      file.includes('process_'''
-      file.includes('resolve_'''
-      file.includes('fix_'''
-      file.includes('final_'''
-      file.includes('comprehensive_'''
-      file.includes('aggressive_'''
-      file.includes('targeted_'''
-      file.includes('merge_'''
-      file.includes('smart_merge_'''
-      file.includes('quick_conflict_'''
-      file.includes('process-'''
-      file.includes('resolve-'''
-      file.includes('fix-'''
-      file.includes('final-'''
-      file.includes('comprehensive-'''
-      file.includes('aggressive-'''
-      file.includes('targeted-'''
-      file.includes('merge-'''
-      file.includes('smart-merge-'''
-      file.includes('quick-conflict-'''
-      file.endsWith('.txt'''
-      file.endsWith('.log'''
-      file.endsWith('.cjs'''
-      file.endsWith('.js'''
-      file.endsWith('.sh'''
-  const reportFiles = glob.sync('**/*-report.json'''
-      !file.includes('performance-report.json'''
-      !file.includes('quality-report.json'''
-      !file.includes('security-audit-report.json'''
-  console.log('🧹 Starting repository cleanup...'''
-  console.log('\n✨ Repository cleanup completed!'''
-  console.log('\n� Next "steps""
+  const scriptFiles = glob.sync('scripts/**/*''')
+      file.includes('fix-''')
+      file.includes('resolve-''')
+      file.includes('final-''')
+      file.includes('comprehensive-''')
+      file.includes('aggressive-''')
+      file.includes('targeted-''')
+  const rootFiles = glob.sync('*''')
+      file.includes('fix-''')
+      file.includes('resolve-''')
+      file.includes('final-''')
+      file.includes('comprehensive-''')
+      file.includes('aggressive-''')
+      file.includes('targeted-''')
+      file.includes('merge-''')
+      file.includes('smart-merge-''')
+      file.includes('quick-conflict-''')
+      file.includes('process_''')
+      file.includes('resolve_''')
+      file.includes('fix_''')
+      file.includes('final_''')
+      file.includes('comprehensive_''')
+      file.includes('aggressive_''')
+      file.includes('targeted_''')
+      file.includes('merge_''')
+      file.includes('smart_merge_''')
+      file.includes('quick_conflict_''')
+      file.includes('process-''')
+      file.includes('resolve-''')
+      file.includes('fix-''')
+      file.includes('final-''')
+      file.includes('comprehensive-''')
+      file.includes('aggressive-''')
+      file.includes('targeted-''')
+      file.includes('merge-''')
+      file.includes('smart-merge-''')
+      file.includes('quick-conflict-''')
+      file.endsWith('.txt''')
+      file.endsWith('.log''')
+      file.endsWith('.cjs''')
+      file.endsWith('.js''')
+      file.endsWith('.sh''')
+  const reportFiles = glob.sync('**/*-report.json''')
+      !file.includes('performance-report.json''')
+      !file.includes('quality-report.json''')
+      !file.includes('security-audit-report.json''')
+  console.log('🧹 Starting repository cleanup...''')
+  console.log('\n✨ Repository cleanup completed!''')
+  console.log('\n� Next "steps"")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

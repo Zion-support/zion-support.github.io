@@ -3,6 +3,6 @@
         ]},"is"""
         "type"""
         "type"""
-      console.error('Error finding source "files"""
+      console.error('Error finding source "files""")
           "if""
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

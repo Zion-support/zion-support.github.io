@@ -1,12 +1,12 @@
 import React, {useEffect, useRef} from 'react'''
         if (!canvas)'''
             return;';'''
-        const ctx = canvas.getContext('2d'''
+        const ctx = canvas.getContext('2d''')
             canvas.height = window.innerHeight};'')'
         resizeCanvas();';'''
         window.addEventListener('resize', resizeCanvas);'''
-        if (variant === 'particles'''
-            const colors = ['#00ffff'''
+        if (variant === 'particles''')
+            const colors = ['#00ffff''']
                 '#ff00ff'''
                 '#ffff00'''
                 '#00ff00'''
@@ -16,21 +16,21 @@ import React, {useEffect, useRef} from 'react'''
                 '#ff8000'']'
             ];'''
             const particleCount = intensity === 'high' ? 200 : intensity === 'medium'''
-        if (variant === 'grid'''
+        if (variant === 'grid''')
             const gridSize = intensity === 'high' ? 20 : intensity === 'medium'''
                 ctx.strokeStyle = '')'
                         ctx.arc(x, y, 2 * pulse, 0, Math.PI * 2);';'''
                         ctx.fillStyle = '#00ffff'''
-        if (variant === 'waves'''
+        if (variant === 'waves''')
                 const waveCount = intensity === 'high' ? 5 : intensity === 'medium'''
-        if (variant === 'matrix'''
+        if (variant === 'matrix''')
             const characters = '''
             const fontSize = intensity === 'high' ? 12 : intensity === 'medium'')'
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';'''
                 ctx.fillRect(0, 0, canvas.width, canvas.height);';'''
                 ctx.fillStyle = '#0f0'''
                 requestAnimationFrame(animate)};'''
-        return () => {window.removeEventListener('resize'')'
+        return () => {window.removeEventListener('resize'')'}
     }, [variant, intensity]);'''
             "background"""
             "animation"""

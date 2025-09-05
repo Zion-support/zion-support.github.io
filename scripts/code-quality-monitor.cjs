@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-console.log(' Starting code quality monitoring...'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log(' Starting code quality monitoring...')
     "name"
     "message"
     "name"
@@ -11,7 +10,7 @@ console.log(' Starting code quality monitoring...'
     "message"
     "name"
     "message"
-console.log('\n Code Quality "Report"
-  console.log('\n⚠  Quality "Issues"
-  console.log('\n "Recommendations"
-  console.log('\n "Recommendations"
+console.log('\n Code Quality "Report")
+  console.log('\n⚠  Quality "Issues")
+  console.log('\n "Recommendations")
+  console.log('\n "Recommendations")

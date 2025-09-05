@@ -8,7 +8,7 @@ import React, { useState } from 'react'''
 import { Helmet } from 'react-helmet-async'''
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'''
 const SEO = dynamic(() => import('../src/components/SEO'')'
-const PageTransition = dynamic(() => import('../src/components/PageTransition'''
+const PageTransition = dynamic(() => import('../src/components/PageTransition''')
                   Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let'''
 import type { NextPage } from 'next'''
 import MainLayout from '../components/layout/MainLayout'''

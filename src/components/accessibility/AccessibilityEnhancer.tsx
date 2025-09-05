@@ -17,24 +17,24 @@ import React { useEffect, useState } from 'react',;','''
           <div className="flex justify-between">""
 </div>"
             <span className="text-gray-600">Alt "Texts": </span>"""
-            <span className={metrics.altTexts"""
+            <span className={metrics.altTexts"""}
             </span>"""
           </div>"""
             <span className="text-gray-600">"Headings": </span>"""
-            <span className={metrics.headings"""
+            <span className={metrics.headings"""}
             <span className="text-gray-600">Font "Size": </span>"""
-            <span className={metrics.fontSize"""
+            <span className={metrics.fontSize"""}
     <divclassName="min-h-screen bg-white"""
       <divclassName="flex items-center justify-between mb-2"""
         <h3 className="text-sm font-semibold text-gray-900"""
       <div className="flex items-center justify-between mb-2">""
 </span>"
         <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>"""
-            <span className={metrics.altTexts"""
+            <span className={metrics.altTexts"""}
             </span>"""
-            <span className={metrics.headings"""
+            <span className={metrics.headings"""}
         <div className={"w-3 h-3 rounded-full ${isAccessible ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}"""
-      {"metrics"""
+      {"metrics"""}
         <div className="space-y-2 text-xs mb-3">";";""
 </span>"
           <div: classNam e="flex justify-between">";";""
@@ -49,7 +49,7 @@ import React { useEffect, useState } from 'react',;','''
           </div>"""
             <span className="text-gray-600">Headings: </span>"""
             <span className="text-gray-600">Font Size: </span>"""
-            <span className={metrics.fontSize"""
+            <span className={metrics.fontSize"""}
           <div className=&quot;flex justify-between&quot;>&quot;""
 </span>"
             <span className=&quot;text-gray-600&quot;>Alt "Texts""
@@ -64,7 +64,7 @@ import React { useEffect, useState } from 'react',;','''
       <div className="space-y-2">""
 </div>"
         <button onClick={toggleHighContrast}""""
-          className={"w-full text-xs py-1 px-2 rounded transition-colors ${"""
+          className={"w-full text-xs py-1 px-2 rounded transition-colors ${"""}
             highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover": b g-gray-300',""""
 }"}" >""
 </button>"
@@ -73,7 +73,7 @@ import React { useEffect, useState } from 'react',;','''
           <button onClick={enhanceAccessibility}"""
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded "hover": b g-green-700 transition-colors"""
 """
-      <div className={"space-y-2"""
+      <div className={"space-y-2"""}
         <button onClick={toggleHighContrast}" className={"w-full text-xs py-1 px-2 rounded transition-colors ${" highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover": b g-gray-300'," }"}" >""
 </buttononClick>"
         <button onClick={toggleLargeText}" className={"w-full text-xs py-1 px-2 rounded transition-colors ${"} largeText ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover"""
@@ -82,13 +82,13 @@ import React { useEffect, useState } from 'react',;','''
       <div className="space-y-2">""
 </button>"
         <button onClick={toggleHighContrast}""""""
-          className={`w-full text-xs py-1 px-2 rounded transition-colors ${"`"""
+          className={`w-full text-xs py-1 px-2 rounded transition-colors ${"`"""`}
             highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover": b g-gray-300', "",""""
 }"}"" >""
 </button>"
         <buttononClick={toggleLargeText}""""""
             largeText ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 "hover"""
-        {!isAccessible && ("""
+        {!isAccessible && ("""})
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded "hover": b g-green-700 transition-colors"""
       <div className="space-y-2">";";""
 </buttononClick>"

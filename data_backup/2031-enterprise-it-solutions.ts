@@ -1,6 +1,6 @@
-export interface EnterpriseITSolution2031 {
-  // TODO: Implement
-}
+export interface EnterpriseITSolution2031 {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "patentStatus"""

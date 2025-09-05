@@ -1,9 +1,8 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-    this.logPath = path.join(this.projectRoot, 'logs'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.logPath = path.join(this.projectRoot, 'logs')
         "name"
         "script"
         "name"
@@ -29,6 +28,6 @@ const { execSync } = require('child_process'
         "dependencies"
         "encoding"
         "stdio"
-        this.log(` ${fixer.name} "failed"
-      this.log(` ${fixer.name} "crashed"
-      this.log(`Error processing fixer "queue"
+        this.log(` ${fixer.name} "failed"`)
+      this.log(` ${fixer.name} "crashed"`)
+      this.log(`Error processing fixer "queue"`)

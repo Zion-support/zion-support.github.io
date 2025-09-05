@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Building, 
   Shield, 
   Users, 
@@ -17,101 +17,101 @@ import {
   Phone,
   Mail;'
 } from 'lucide-react'
-import Layout from '../../components/Layout
-const services = [
-  {'
+import Layout from '../../components/Layout;
+const services = []
+  {'}
     title: 'Citizen Service Portals',''
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.','
     icon: Globe,
-    features: ['
+    features: [']
       'Online service applications',''
       'Digital document submission',''
       'Status tracking systems',''
-      'Multi-language support'']
-    ]
+      'Multi-language support''];
+    ];
   },
-  {'
+  {'}
     title: 'Secure Data Management',''
     description: 'Government-grade data security and management systems for sensitive information.','
     icon: Shield,
-    features: ['
+    features: [']
       'Encrypted data storage',''
       'Access control systems',''
       'Audit trail management',''
-      'Compliance monitoring'']
-    ]
+      'Compliance monitoring''];
+    ];
   },
-  {'
+  {'}
     title: 'Digital Identity Solutions',''
     description: 'Secure digital identity verification and management systems for citizens.','
     icon: Users,
-    features: ['
+    features: [']
       'Biometric authentication',''
       'Digital ID cards',''
       'Identity verification',''
-      'Fraud prevention'']
-    ]
+      'Fraud prevention''];
+    ];
   },
-  {'
+  {'}
     title: 'Public Safety Systems',''
     description: 'Advanced systems for emergency response and public safety management.','
     icon: Phone,
-    features: ['
+    features: [']
       'Emergency dispatch systems',''
       'Real-time monitoring',''
       'Incident management',''
-      'Resource coordination'']
-    ]
+      'Resource coordination''];
+    ];
   },
-  {'
+  {'}
     title: 'Government Analytics',''
     description: 'Data analytics platforms for informed policy-making and resource allocation.','
     icon: BarChart3,
-    features: ['
+    features: [']
       'Performance metrics',''
       'Trend analysis',''
       'Predictive modeling',''
-      'Resource optimization'']
-    ]
+      'Resource optimization''];
+    ];
   },
-  {'
+  {'}
     title: 'Compliance Management',''
     description: 'Automated systems for regulatory compliance and policy enforcement.','
     icon: FileText,
-    features: ['
+    features: [']
       'Regulatory tracking',''
       'Compliance reporting',''
       'Policy management',''
-      'Audit automation'']
-    ]
-  }
+      'Audit automation''];
+    ];
+  };
 ];
 
-const benefits = [
-  {'
+const benefits = []
+  {'}
     title: 'Enhanced Security',''
     description: 'Government-grade security measures protect sensitive citizen and government data.','
     icon: Shield;
   },
-  {'
+  {'}
     title: 'Improved Efficiency',''
     description: 'Digital processes streamline government operations and reduce administrative burden.','
     icon: BarChart3;
   },
-  {'
+  {'}
     title: 'Better Citizen Experience',''
     description: 'User-friendly digital services make government more accessible to citizens.','
     icon: Users;
   },
-  {'
+  {'}
     title: 'Transparency & Accountability',''
     description: 'Digital systems provide transparency and enable better accountability.','
     icon: Globe;
-  }]
+  }];
 ];
 
-export default function GovernmentPage() {
-  return (
+export default function GovernmentPage() {}
+  return ()
     <Layout;'
       title="Government Technology Solutions - Zion Tech Group"
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
@@ -132,9 +132,9 @@ export default function GovernmentPage() {
           <div className="container mx-auto px-4 relative z-10">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -169,9 +169,9 @@ export default function GovernmentPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -186,10 +186,10 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={service.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -209,8 +209,8 @@ export default function GovernmentPage() {
 </CheckCircle>
                       </li>
                   </ul>
-                </motion.div>)
-              ))}
+                </motion.div>);
+              ))};
             </div>
           </div>
         </section>"
@@ -219,9 +219,9 @@ export default function GovernmentPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center mb-16"
             >
 </motion>"
@@ -236,10 +236,10 @@ export default function GovernmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                 <motion.div;
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={benefit.title};
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                   className="text-center"
                 >
 </motion>"
@@ -251,7 +251,7 @@ export default function GovernmentPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -260,9 +260,9 @@ export default function GovernmentPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

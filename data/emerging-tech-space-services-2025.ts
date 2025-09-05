@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-6 weeks"""
     "category": "Space Technology & Mining"""
     "realService"""
-    technology["Quantum Computing", "AI & Machine Learning", "Space Technology", "Robotics", "Advanced Sensors", "Satellite Systems"""
-    integrations["Satellite Networks", "Ground Stations", "Mining Equipment", "Supply Chain Systems", "Financial Platforms", "Regulatory Systems"""
-    useCases["Asteroid mining", "Lunar resource extraction", "Space resource mapping", "Mining optimization", "Supply chain management", "Investment analysis"""
+    technology["Quantum Computing", "AI & Machine Learning", "Space Technology", "Robotics", "Advanced Sensors", "Satellite Systems"""]
+    integrations["Satellite Networks", "Ground Stations", "Mining Equipment", "Supply Chain Systems", "Financial Platforms", "Regulatory Systems"""]
+    useCases["Asteroid mining", "Lunar resource extraction", "Space resource mapping", "Mining optimization", "Supply chain management", "Investment analysis"""]
     "roi": "Space mining companies report 2000% ROI through quantum-powered resource detection. Investment firms see 1500% ROI in space ventures."""
-    competitors["No direct competitors", "Space mining "tools": $50,000+/month", "Satellite "services": $25,000+/month"""
+    competitors["No direct competitors", "Space mining "tools": $50,000+/month", "Satellite "services": $25,000+/month"""]
     "marketSize": "$3.8B space mining market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-5 weeks"""
     "category": "Space Communication"""
     "realService"""
-    technology["Quantum Computing", "Quantum Communication", "Satellite Technology", "Quantum Encryption", "Space Networks", "Quantum Key Distribution"""
-    integrations["Satellite Systems", "Ground Stations", "Space Missions", "Communication Networks", "Security Systems", "Monitoring Tools"""
-    useCases["Space mission communication", "Satellite networks", "Interplanetary communication", "Secure data transmission", "Emergency communications", "Research collaboration"""
+    technology["Quantum Computing", "Quantum Communication", "Satellite Technology", "Quantum Encryption", "Space Networks", "Quantum Key Distribution"""]
+    integrations["Satellite Systems", "Ground Stations", "Space Missions", "Communication Networks", "Security Systems", "Monitoring Tools"""]
+    useCases["Space mission communication", "Satellite networks", "Interplanetary communication", "Secure data transmission", "Emergency communications", "Research collaboration"""]
     "roi": "Space agencies report 800% ROI through secure communication. Satellite companies see 600% ROI in network reliability."""
-    competitors["Traditional space "communication": $30,000+/month", "Satellite "services": $25,000+/month", "Quantum "communication": $50,000+/month"""
+    competitors["Traditional space "communication": $30,000+/month", "Satellite "services": $25,000+/month", "Quantum "communication": $50,000+/month"""]
     "marketSize": "$12B space communication market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-8 weeks"""
     "category": "Space Colony Technology"""
     "realService"""
-    technology["AI & Machine Learning", "Robotics", "Automation Systems", "Life Support Technology", "Environmental Control", "Resource Management"""
-    integrations["Life Support Systems", "Robotic Systems", "Environmental Controls", "Monitoring Systems", "Communication Networks", "Data Analysis Platforms"""
-    useCases["Lunar base automation", "Mars habitat management", "Space station automation", "Colony expansion", "Research facility automation", "Emergency response"""
+    technology["AI & Machine Learning", "Robotics", "Automation Systems", "Life Support Technology", "Environmental Control", "Resource Management"""]
+    integrations["Life Support Systems", "Robotic Systems", "Environmental Controls", "Monitoring Systems", "Communication Networks", "Data Analysis Platforms"""]
+    useCases["Lunar base automation", "Mars habitat management", "Space station automation", "Colony expansion", "Research facility automation", "Emergency response"""]
     "roi": "Space agencies report 1500% ROI through automation. Research institutions see 1000% ROI in colony efficiency."""
-    competitors["No direct competitors", "Industrial "automation": $100,000+/month", "Life support "systems": $50,000+/month"""
+    competitors["No direct competitors", "Industrial "automation": $100,000+/month", "Life support "systems": $50,000+/month"""]
     "marketSize": "$2.5B space habitat market"""
     "growthRate": "350% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-12 weeks"""
     "category": "Space Propulsion Technology"""
     "realService"""
-    technology["Quantum Physics", "Propulsion Engineering", "Space Technology", "Energy Systems", "Quantum Mechanics", "Advanced Materials"""
-    integrations["Spacecraft Systems", "Mission Control", "Energy Management", "Safety Systems", "Monitoring Tools", "Analytics Platforms"""
-    useCases["Deep space missions", "Interplanetary travel", "Space exploration", "Satellite propulsion", "Space station propulsion", "Research missions"""
+    technology["Quantum Physics", "Propulsion Engineering", "Space Technology", "Energy Systems", "Quantum Mechanics", "Advanced Materials"""]
+    integrations["Spacecraft Systems", "Mission Control", "Energy Management", "Safety Systems", "Monitoring Tools", "Analytics Platforms"""]
+    useCases["Deep space missions", "Interplanetary travel", "Space exploration", "Satellite propulsion", "Space station propulsion", "Research missions"""]
     "roi": "Space agencies report 2000% ROI through revolutionary propulsion. Aerospace companies see 1500% ROI in mission capabilities."""
-    competitors["Traditional "propulsion": $100,000+/month", "Advanced "propulsion": $75,000+/month", "Research "propulsion": $50,000+/month"""
+    competitors["Traditional "propulsion": $100,000+/month", "Advanced "propulsion": $75,000+/month", "Research "propulsion": $50,000+/month"""]
     "marketSize": "$8B space propulsion market"""
     "growthRate": "250% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-4 weeks"""
     "category": "Space Research & Development"""
     "realService"""
-    technology["AI & Machine Learning", "Data Analysis", "Automation Systems", "Research Tools", "Collaboration Platforms", "Analytics Systems"""
-    integrations["Research Databases", "Satellite Systems", "Ground Stations", "Collaboration Tools", "Data Sources", "Publication Platforms"""
-    useCases["Space research", "Mission planning", "Data analysis", "Collaborative research", "Publication assistance", "Resource optimization"""
+    technology["AI & Machine Learning", "Data Analysis", "Automation Systems", "Research Tools", "Collaboration Platforms", "Analytics Systems"""]
+    integrations["Research Databases", "Satellite Systems", "Ground Stations", "Collaboration Tools", "Data Sources", "Publication Platforms"""]
+    useCases["Space research", "Mission planning", "Data analysis", "Collaborative research", "Publication assistance", "Resource optimization"""]
     "roi": "Research institutions report 800% ROI through automation. Government agencies see 600% ROI in research efficiency."""
-    competitors["Traditional research "tools": $20,000+/month", "AI "platforms": $10,000+/month", "Research "automation": $15,000+/month"""
+    competitors["Traditional research "tools": $20,000+/month", "AI "platforms": $10,000+/month", "Research "automation": $15,000+/month"""]
     "marketSize": "$5B space research market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""

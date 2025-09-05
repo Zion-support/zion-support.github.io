@@ -1,55 +1,55 @@
 #!/usr/bin/env node;
 const fs = require('fs');''
 const path = require('path');'
-const {
-  // TODO: Implement
+const {}
+  // TODO: Implement;
 }'
   execSync} = // // require('child_process');'
   /**
    * Intelligent Error Fixer - Automatically detects and fixes common project errors;
    * Designed to run as a PM2 automation process;
    */
-  class IntelligentErrorFixer {
-  // TODO: Implement
-}
-    constructor() {'
+  class IntelligentErrorFixer {}
+  // TODO: Implement;
+};
+    constructor() {'}
       this.logFile = path.join(__dirname, 'logs', 'error-fixer.log');'
-      this.reportFile = path.join(
+      this.reportFile = path.join()
         __dirname,'
         'reports',''
-        'error-fixer-report.json'')
+        'error-fixer-report.json'');
       );
       this.errorPatterns = this.initializeErrorPatterns();
       // Ensure directories exist;'
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });""
       fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });"
     }"
-    log(message, level = 'INFO') {'
+    log(message, level = 'INFO') {'}
       const timestamp = new Date().toISOString();
-      const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+      const logMessage = `[${timestamp}] [${level}] ${message}\n`;`
       console.log(logMessage.trim());
       fs.appendFileSync(this.logFile, logMessage);
-    }
-    initializeErrorPatterns() {
-      return {
-  // TODO: Implement
-}
-        // Syntax errors;'
-        "missingBraces": {"
+    };
+    initializeErrorPatterns() {}
+      return {}
+  // TODO: Implement;
+};
+        // Syntax errors;``
+        "missingBraces": {"}
           pattern: /return\(\s*$/m,)"
           "fix": content => content.replace(/return\(\s*$/gm, 'return (')},''
-        "extraSemicolons": {"
+        "extraSemicolons": {"}
           pattern: /}\s*;\s*$/m,"
           "fix": content => content.replace(/}\s*;\s*$/gm, '}')},''
-        "unterminatedStrings": {""
+        "unterminatedStrings": {""}
           pattern: /["'][\w\s]*$/m,''
-          "fix": (content, match) => {"
+          "fix": (content, match) => {"}
             // Simple fix for unterminated strings - add closing quote;
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},"
-        "mergeConflicts": {"
+        "mergeConflicts": {"}
           pattern: /||[a-f0-9]+/g,"
-          "fix": content => {"
+          "fix": content => {"}
 cursor/fix-lint-push-and-merge-to-main-f3c1;
             // Remove merge conflict markers;
             return content;"
@@ -58,275 +58,275 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
               .replace(/[a-f0-9]+\n?/g, '');'
           }},
 cursor/fix-lint-push-and-merge-to-main-f3c1;'
-        "invalidJSX": {"
+        "invalidJSX": {"}
           pattern: /return\(\)\s*</gm,"
           "fix": content =>""
             content.replace(/return\(\)\s*</gm, 'return (\n    <')},''
-        "missingImports": {"
+        "missingImports": {"}
           pattern: /React\./g,"
-          "fix": content => {""
-            if (!content.includes('import React')) {''
-              return `import React from 'react';\n${content}`;'
-            }
+          "fix": content => {""}
+            if (!content.includes('import React')) {''}
+              return `import React from 'react';\n${content}`;``
+            };
             return content;
           }}};
-    }
-    async runBuildCheck() {
-      try {
-  // TODO: Implement
+    };
+    async runBuildCheck() {}
+      try {}
+  // TODO: Implement;
 }'
         this.log('Running build check...');''
-        const result = execSync('yarn build', {''
+        const result = execSync('yarn build', {''})
           "encoding": 'utf8',''
           "stdio": 'pipe',')'
           "cwd": process.cwd()});""
         this.log('Build successful');''
         return { "success": true, "output": result };"
-      } catch (error) {"
+      } catch (error) {"}
         this.log('Build "failed": ' + error.message, 'ERROR');''
         return { "success": false, "output": error.stdout || error.message };"
-      }
-    }
-    async runLintCheck() {
-      try {
-  // TODO: Implement
+      };
+    };
+    async runLintCheck() {}
+      try {}
+  // TODO: Implement;
 }"
         this.log('Running lint check...');''
-        const result = execSync('yarn lint --format=json', {''
+        const result = execSync('yarn lint --format=json', {''})
           "encoding": 'utf8',''
           "stdio": 'pipe',')'
           "cwd": process.cwd()});""
         this.log('Lint check completed');''
         return { "success": true, "output": result };"
-      } catch (error) {"
+      } catch (error) {"}
         this.log('Lint check found "issues": ' + error.message, 'WARN');''
         return { "success": false, "output": error.stdout || error.message };"
-      }
-    }
-    async runTypeCheck() {
-      try {
-  // TODO: Implement
+      };
+    };
+    async runTypeCheck() {}
+      try {}
+  // TODO: Implement;
 }"
         this.log('Running TypeScript check...');''
-        const result = execSync('npx tsc --noEmit --skipLibCheck', {''
+        const result = execSync('npx tsc --noEmit --skipLibCheck', {''})
           "encoding": 'utf8',''
           "stdio": 'pipe',')'
           "cwd": process.cwd()});""
         this.log('TypeScript check passed');''
         return { "success": true, "output": result };"
-      } catch (error) {"
+      } catch (error) {"}
         this.log('TypeScript check found "errors": ' + error.message, 'WARN');''
         return { "success": false, "output": error.stdout || error.message };"
-      }
-    }
-    extractErrorInfo(buildOutput) {
+      };
+    };
+    extractErrorInfo(buildOutput) {}
       const errors = [];"
       const lines = buildOutput.split('\n');'
-      lines.forEach((line, index) => {
+      lines.forEach((line, index) => {}
         // Extract file paths and error messages;
         const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);'
         const errorMatch = line.match(/"Error": |SyntaxError:|TypeError:/);"
-        if (fileMatch && errorMatch) {
-          errors.push({
+        if (fileMatch && errorMatch) {}
+          errors.push({})
             file: fileMatch[1],"
             "line": line,")"
             "context": lines.slice(Math.max(0, index - 2), index + 3)});"
-        }
+        };
       });
       return errors;
-    }
-    async fixFile(filePath) {
-      if (!fs.existsSync(filePath)) {"
-        this.log(`File not "found": ${filePath}`, 'ERROR');'
+    };
+    async fixFile(filePath) {}
+      if (!fs.existsSync(filePath)) {"}
+        this.log(`File not "found": ${filePath}`, 'ERROR');'`
         return false;
-      }
-      try {
-  // TODO: Implement
+      };
+      try {}
+  // TODO: Implement;
 }'
-        this.log(`Attempting to fix "file": ${filePath}`);""
+        this.log(`Attempting to fix "file": ${filePath}`);""`
         let content = fs.readFileSync(filePath, 'utf8');'
         let modified = false;
         // Apply error pattern fixes;
-        for (const [patternName, pattern] of Object.entries(
-          this.errorPatterns;)
-        )) {
+        for (const [patternName, pattern] of Object.entries()
+          this.errorPatterns;);
+        )) {}
           const matches = content.match(pattern.pattern);
-          if (matches) {
-            this.log(`Found ${patternName} pattern in ${filePath}`);
+          if (matches) {}
+            this.log(`Found ${patternName} pattern in ${filePath}`);`
             const newContent = pattern.fix(content, matches);
-            if (newContent !== content) {
+            if (newContent !== content) {}
               content = newContent;
               modified = true;
-              this.log(`Applied ${patternName} fix to ${filePath}`);
-            }
-          }
-        }
-        // Specific fixes for common issues;'
-        if (content.includes('return()')) {''
+              this.log(`Applied ${patternName} fix to ${filePath}`);`
+            };
+          };
+        };
+        // Specific fixes for common issues;``
+        if (content.includes('return()')) {''}
           content = content.replace(/return\(\)/g, 'return (');'
           modified = true;
         }'
-        if (content.includes('};')) {''
+        if (content.includes('};')) {''}
           content = content.replace(/}\s*;\s*$/gm, '}');'
           modified = true;
-        }
+        };
         // Fix import statements;'
-        if (content.includes('React.') && !content.includes('import React')) {''
-          content = `import React from 'react';\n${content}`;'
+        if (content.includes('React.') && !content.includes('import React')) {''}
+          content = `import React from 'react';\n${content}`;``
           modified = true;
-        }
-        if (modified) {
+        };
+        if (modified) {}
           // Create backup;
-          const backupPath = `${filePath}.backup.${Date.now()}`;
+          const backupPath = `${filePath}.backup.${Date.now()}`;`
           fs.copyFileSync(filePath, backupPath);
           // Write fixed content;
-          fs.writeFileSync(filePath, content);'
-          this.log(`Successfully fixed and "saved": ${filePath}`);"
+          fs.writeFileSync(filePath, content);``
+          this.log(`Successfully fixed and "saved": ${filePath}`);``
           return true;
-        }
+        };
         return false;
-      } catch (error) {"
-        this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');'
+      } catch (error) {"}
+        this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');'`
         return false;
-      }
-    }
-    async cleanupDuplicateFiles() {'
+      };
+    };
+    async cleanupDuplicateFiles() {'}
       this.log('Checking for duplicate page files...');''
       const pagesDir = path.join(process.cwd(), 'pages');'
-      if (!fs.existsSync(pagesDir)) {
+      if (!fs.existsSync(pagesDir)) {}
         return;
-      }
+      };
       const duplicates = [];
       const seen = new Set();
-      function scanDirectory(dir) {'
+      function scanDirectory(dir) {'}
         const files = fs.readdirSync(dir, { "withFileTypes": true });"
-        files.forEach(file => {)
-          if (file.isDirectory()) {
+        files.forEach(file => {);}
+          if (file.isDirectory()) {}
             scanDirectory(path.join(dir, file.name));"
-          } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {''
+          } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {''}
             const baseName = file.name.replace(/\.(js|tsx)$/, '');'
-            const relativePath = path.relative(
-              pagesDir,)
-              path.join(dir, baseName)
+            const relativePath = path.relative()
+              pagesDir,);
+              path.join(dir, baseName);
             );
-            if (seen.has(relativePath)) {
+            if (seen.has(relativePath)) {}
               duplicates.push(path.join(dir, file.name));
-            } else {
-  // TODO: Implement
-}
+            } else {}
+  // TODO: Implement;
+};
               seen.add(relativePath);
-            }
-          }
+            };
+          };
         });
-      }
+      };
       scanDirectory(pagesDir);
       // Remove duplicate .js files if .tsx exists;
-      for (const duplicate of duplicates) {'
-        if (duplicate.endsWith('.js')) {''
+      for (const duplicate of duplicates) {'}
+        if (duplicate.endsWith('.js')) {''}
           const tsxVersion = duplicate.replace('.js', '.tsx');'
-          if (fs.existsSync(tsxVersion)) {'
-            this.log(`Removing duplicate JS "file": ${duplicate}`);"
+          if (fs.existsSync(tsxVersion)) {'}
+            this.log(`Removing duplicate JS "file": ${duplicate}`);``
             fs.unlinkSync(duplicate);
-          }
-        }
-      }
-    }
-    async installMissingDependencies() {"
+          };
+        };
+      };
+    };
+    async installMissingDependencies() {"}
       this.log('Checking for missing dependencies...');''
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
-      const dependencies = {
+      const dependencies = {}
         ...packageJson.dependencies,
         ...packageJson.devDependencies};'
       const commonMissing = ['web3modal', 'ethers', 'react-is'];'
       const toInstall = commonMissing.filter(dep => !dependencies[dep]);
-      if (toInstall.length > 0) {'
-        this.log(`Installing missing "dependencies": ${toInstall.join(', ')}`);'
-        try {
-  // TODO: Implement
+      if (toInstall.length > 0) {'}
+        this.log(`Installing missing "dependencies": ${toInstall.join(', ')}`);``
+        try {}
+  // TODO: Implement;
 }'
-          execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' });''
+          execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' });''`
           this.log('Successfully installed missing dependencies');'
-        } catch (error) {'
-          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');'
-        }
-      }
-    }
-    async generateReport(errors, fixes) {
-      const report = {'
+        } catch (error) {'}
+          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');'`
+        };
+      };
+    };
+    async generateReport(errors, fixes) {}
+      const report = {'}
         "timestamp": new Date().toISOString(),""
         "totalErrors": errors.length,""
         "fixesApplied": fixes.length,""
         "errors": errors,""
         "fixes": fixes,""
-        "summary": {""
+        "summary": {""}
           buildStatus: 'checking',''
           "criticalErrors": errors.filter(e => e.critical).length,""
           "warningsResolved": fixes.filter(f => f.type === 'warning').length,''
           "syntaxErrorsFixed": fixes.filter(f => f.type === 'syntax').length}};'
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));'
-      this.log(`Report "generated": ${this.reportFile}`);"
+      this.log(`Report "generated": ${this.reportFile}`);``
       return report;
-    }
-    async run() {"
+    };
+    async run() {"}
       this.log('Starting Intelligent Error Fixer...');'
       const errors = [];
       const fixes = [];
-      try {
-  // TODO: Implement
-}
+      try {}
+  // TODO: Implement;
+};
         // 1. Clean up duplicate files;
         await this.cleanupDuplicateFiles();
         // 2. Install missing dependencies;
         await this.installMissingDependencies();
         // 3. Run initial build check;
         const buildResult = await this.runBuildCheck();
-        if (!buildResult.success) {
+        if (!buildResult.success) {}
           // Extract error information;
           const buildErrors = this.extractErrorInfo(buildResult.output);
           errors.push(...buildErrors);
           // Attempt to fix files;
           const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
-          for (const file of uniqueFiles) {
+          for (const file of uniqueFiles) {}
             const filePath = path.join(process.cwd(), file);
             const fixed = await this.fixFile(filePath);
-            if (fixed) {
-              fixes.push({'
+            if (fixed) {}
+              fixes.push({'})
                 "type": 'syntax',''
                 "file": file,")"
                 "timestamp": new Date().toISOString()});"
-            }
-          }
+            };
+          };
           // Run build again after fixes;
-          if (fixes.length > 0) {"
+          if (fixes.length > 0) {"}
             this.log('Re-running build after fixes...');'
             const secondBuildResult = await this.runBuildCheck();
-            if (secondBuildResult.success) {'
+            if (secondBuildResult.success) {'}
               this.log('Build successful after applying fixes!', 'SUCCESS');'
-            } else {
-  // TODO: Implement
+            } else {}
+  // TODO: Implement;
 }'
               this.log('Build still failing after fixes', 'WARN');'
-            }
-          }
-        }
+            };
+          };
+        };
         // 4. Run other checks;
         await this.runLintCheck();
         await this.runTypeCheck();
         // 5. Generate report;
         await this.generateReport(errors, fixes);
-        this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`);
-      } catch (error) {'
-        this.log(`Error in main "execution": ${error.message}`, 'ERROR');'
-      }
-    }
+        this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`);`
+      } catch (error) {``}
+        this.log(`Error in main "execution": ${error.message}`, 'ERROR');'`
+      };
+    };
   };
 // Main execution;
-if (require.main === module) {
+if (require.main === module) {}
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
-}
+};
 module.exports = IntelligentErrorFixer;'
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||[a-f0-9]+/g,fix: content => { return content .replace(/\n?/g,'') .replace(/\n?/g,'') .replace(/[a-f0-9]+\n?/g,'')},},invalidJSX: { pattern: /return\(\)\s*</gm,fix: content => content.replace(/return\(\)\s*</gm,'return (\n <'),},missingImports: { pattern: /React\./g,fix: content => { if (!content.includes('import React')) { return `import React from 'react';\n${content}`} return content},},}} async runBuildCheck() { try { this.log('Running build check...'); const result = execSync('yarn build',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('Build successful'); return { success: true,output: result }} catch (error) { this.log('Build failed: ' + error.message,'ERROR'); return { success: false,output: error.stdout || error.message }} } async runLintCheck() { try { this.log('Running lint check...'); const result = execSync('yarn lint --format=json',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('Lint check completed'); return { success: true,output: result }} catch (error) { this.log('Lint check found issues: ' + error.message,'WARN'); return { success: false,output: error.stdout || error.message }} } async runTypeCheck() { try { this.log('Running TypeScript check...'); const result = execSync('npx tsc --noEmit --skipLibCheck',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('TypeScript check passed'); return { success: true,output: result }} catch (error) { this.log('TypeScript check found errors: ' + error.message,'WARN'); return { success: false,output: error.stdout || error.message }} } extractErrorInfo(buildOutput) { const errors = []; const lines = buildOutput.split('\n'); lines.forEach((line,index) => { const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/); const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/); if (fileMatch && errorMatch) { errors.push({ file: fileMatch[1],line: line,context: lines.slice(Math.max(0,index - 2),index + 3),})} }); return errors} async fixFile(filePath) { if (!fs.existsSync(filePath)) { this.log(`File not found: ${filePath}`,'ERROR'); return false} try { this.log(`Attempting to fix file: ${filePath}`); let content = fs.readFileSync(filePath,'utf8'); let modified = false; for (const [patternName,pattern] of Object.entries( this.errorPatterns )) { const matches = content.match(pattern.pattern); if (matches) { this.log(`Found ${patternName} pattern in ${filePath}`); const newContent = pattern.fix(content,matches); if (newContent !== content) { content = newContent; modified = true; this.log(`Applied ${patternName} fix to ${filePath}`)} } } if (content.includes('return()')) { content = content.replace(/return\(\)/g,'return ('); modified = true} if (content.includes('};')) { content = content.replace(/}\s*;\s*$/gm,'}'); modified = true} if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true} if (modified) { const backupPath = `${filePath}.backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Successfully fixed and saved: ${filePath}`); return true} return false} catch (error) { this.log(`Error fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async cleanupDuplicateFiles() { this.log('Checking for duplicate page files...'); const pagesDir = path.join(process.cwd(),'pages'); if (!fs.existsSync(pagesDir)) { return} const duplicates = []; const seen = new Set(); function scanDirectory(dir) { const files = fs.readdirSync(dir,{ withFileTypes: true }); files.forEach(file => { if (file.isDirectory()) { scanDirectory(path.join(dir,file.name))} else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) { const baseName = file.name.replace(/\.(js|tsx)$/,''); const relativePath = path.relative( pagesDir,path.join(dir,baseName) ); if (seen.has(relativePath)) { duplicates.push(path.join(dir,file.name))} else { seen.add(relativePath)} } })} scanDirectory(pagesDir); for (const duplicate of duplicates) { if (duplicate.endsWith('.js')) { const tsxVersion = duplicate.replace('.js','.tsx'); if (fs.existsSync(tsxVersion)) { this.log(`Removing duplicate JS file: ${duplicate}`); fs.unlinkSync(duplicate)} } } } async installMissingDependencies() { this.log('Checking for missing dependencies...'); const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = { ...packageJson.dependencies,...packageJson.devDependencies,}; const commonMissing = ['web3modal','ethers','react-is']; const toInstall = commonMissing.filter(dep => !dependencies[dep]); if (toInstall.length > 0) { this.log(`Installing missing dependencies: ${toInstall.join(',')}`); try { execSync(`yarn add ${toInstall.join(' ')}`,{ stdio: 'pipe' }); this.log('Successfully installed missing dependencies')} catch (error) { this.log(`Failed to install dependencies: ${error.message}`,'ERROR')} } } async generateReport(errors,fixes) { const report = { timestamp: new Date().toISOString(),totalErrors: errors.length,fixesApplied: fixes.length,errors: errors,fixes: fixes,summary: { buildStatus: 'checking',criticalErrors: errors.filter(e => e.critical).length,warningsResolved: fixes.filter(f => f.type === 'warning').length,syntaxErrorsFixed: fixes.filter(f => f.type === 'syntax').length,},}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`); return report} async run() { this.log('Starting Intelligent Error Fixer...'); const errors = []; const fixes = []; try { await this.cleanupDuplicateFiles(); await this.installMissingDependencies(); const buildResult = await this.runBuildCheck(); if (!buildResult.success) { const buildErrors = this.extractErrorInfo(buildResult.output); errors.push(...buildErrors); const uniqueFiles = [...new Set(buildErrors.map(e => e.file))]; for (const file of uniqueFiles) { const filePath = path.join(process.cwd(),file); const fixed = await this.fixFile(filePath); if (fixed) { fixes.push({ type: 'syntax',file: file,timestamp: new Date().toISOString(),})} } if (fixes.length > 0) { this.log('Re-running build after fixes...'); const secondBuildResult = await this.runBuildCheck(); if (secondBuildResult.success) { this.log('Build successful after applying fixes!','SUCCESS')} else { this.log('Build still failing after fixes','WARN')} } } await this.runLintCheck(); await this.runTypeCheck(); await this.generateReport(errors,fixes); this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`)} catch (error) { this.log(`Error in main execution: ${error.message}`,'ERROR')} } }; if (require.main === module) { const fixer = new IntelligentErrorFixer(); fixer.run().catch(console.error)} module.exports = IntelligentErrorFixer;'
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||[a-f0-9]+/g,fix: content => { return content .replace(/\n?/g,'') .replace(/\n?/g,'') .replace(/[a-f0-9]+\n?/g,'')},},invalidJSX: { pattern: /return\(\)\s*</gm,fix: content => content.replace(/return\(\)\s*</gm,'return (\n <'),},missingImports: { pattern: /React\./g,fix: content => { if (!content.includes('import React')) { return `import React from 'react';\n${content}`} return content},},}} async runBuildCheck() { try { this.log('Running build check...'); const result = execSync('yarn build',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('Build successful'); return { success: true,output: result }} catch (error) { this.log('Build failed: ' + error.message,'ERROR'); return { success: false,output: error.stdout || error.message }} } async runLintCheck() { try { this.log('Running lint check...'); const result = execSync('yarn lint --format=json',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('Lint check completed'); return { success: true,output: result }} catch (error) { this.log('Lint check found issues: ' + error.message,'WARN'); return { success: false,output: error.stdout || error.message }} } async runTypeCheck() { try { this.log('Running TypeScript check...'); const result = execSync('npx tsc --noEmit --skipLibCheck',{ encoding: 'utf8',stdio: 'pipe',cwd: process.cwd(),}); this.log('TypeScript check passed'); return { success: true,output: result }} catch (error) { this.log('TypeScript check found errors: ' + error.message,'WARN'); return { success: false,output: error.stdout || error.message }} } extractErrorInfo(buildOutput) { const errors = []; const lines = buildOutput.split('\n'); lines.forEach((line,index) => { const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/); const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/); if (fileMatch && errorMatch) { errors.push({ file: fileMatch[1],line: line,context: lines.slice(Math.max(0,index - 2),index + 3),})} }); return errors} async fixFile(filePath) { if (!fs.existsSync(filePath)) { this.log(`File not found: ${filePath}`,'ERROR'); return false} try { this.log(`Attempting to fix file: ${filePath}`); let content = fs.readFileSync(filePath,'utf8'); let modified = false; for (const [patternName,pattern] of Object.entries( this.errorPatterns )) { const matches = content.match(pattern.pattern); if (matches) { this.log(`Found ${patternName} pattern in ${filePath}`); const newContent = pattern.fix(content,matches); if (newContent !== content) { content = newContent; modified = true; this.log(`Applied ${patternName} fix to ${filePath}`)} } } if (content.includes('return()')) { content = content.replace(/return\(\)/g,'return ('); modified = true} if (content.includes('};')) { content = content.replace(/}\s*;\s*$/gm,'}'); modified = true} if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true} if (modified) { const backupPath = `${filePath}.backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Successfully fixed and saved: ${filePath}`); return true} return false} catch (error) { this.log(`Error fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async cleanupDuplicateFiles() { this.log('Checking for duplicate page files...'); const pagesDir = path.join(process.cwd(),'pages'); if (!fs.existsSync(pagesDir)) { return} const duplicates = []; const seen = new Set(); function scanDirectory(dir) { const files = fs.readdirSync(dir,{ withFileTypes: true }); files.forEach(file => { if (file.isDirectory()) { scanDirectory(path.join(dir,file.name))} else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) { const baseName = file.name.replace(/\.(js|tsx)$/,''); const relativePath = path.relative( pagesDir,path.join(dir,baseName) ); if (seen.has(relativePath)) { duplicates.push(path.join(dir,file.name))} else { seen.add(relativePath)} } })} scanDirectory(pagesDir); for (const duplicate of duplicates) { if (duplicate.endsWith('.js')) { const tsxVersion = duplicate.replace('.js','.tsx'); if (fs.existsSync(tsxVersion)) { this.log(`Removing duplicate JS file: ${duplicate}`); fs.unlinkSync(duplicate)} } } } async installMissingDependencies() { this.log('Checking for missing dependencies...'); const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); const dependencies = { ...packageJson.dependencies,...packageJson.devDependencies,}; const commonMissing = ['web3modal','ethers','react-is']; const toInstall = commonMissing.filter(dep => !dependencies[dep]); if (toInstall.length > 0) { this.log(`Installing missing dependencies: ${toInstall.join(',')}`); try { execSync(`yarn add ${toInstall.join(' ')}`,{ stdio: 'pipe' }); this.log('Successfully installed missing dependencies')} catch (error) { this.log(`Failed to install dependencies: ${error.message}`,'ERROR')} } } async generateReport(errors,fixes) { const report = { timestamp: new Date().toISOString(),totalErrors: errors.length,fixesApplied: fixes.length,errors: errors,fixes: fixes,summary: { buildStatus: 'checking',criticalErrors: errors.filter(e => e.critical).length,warningsResolved: fixes.filter(f => f.type === 'warning').length,syntaxErrorsFixed: fixes.filter(f => f.type === 'syntax').length,},}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`); return report} async run() { this.log('Starting Intelligent Error Fixer...'); const errors = []; const fixes = []; try { await this.cleanupDuplicateFiles(); await this.installMissingDependencies(); const buildResult = await this.runBuildCheck(); if (!buildResult.success) { const buildErrors = this.extractErrorInfo(buildResult.output); errors.push(...buildErrors); const uniqueFiles = [...new Set(buildErrors.map(e => e.file))]; for (const file of uniqueFiles) { const filePath = path.join(process.cwd(),file); const fixed = await this.fixFile(filePath); if (fixed) { fixes.push({ type: 'syntax',file: file,timestamp: new Date().toISOString(),})} } if (fixes.length > 0) { this.log('Re-running build after fixes...'); const secondBuildResult = await this.runBuildCheck(); if (secondBuildResult.success) { this.log('Build successful after applying fixes!','SUCCESS')} else { this.log('Build still failing after fixes','WARN')} } } await this.runLintCheck(); await this.runTypeCheck(); await this.generateReport(errors,fixes); this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`)} catch (error) { this.log(`Error in main execution: ${error.message}`,'ERROR')} } }; if (require.main === module) { const fixer = new IntelligentErrorFixer(); fixer.run().catch(console.error)} module.exports = IntelligentErrorFixer;'`
 origin/cursor/automate-test-improve-and-merge-code-eafe;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;'

@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Autonomous DevOps Platform 2030"""
     "realService"""
-    technology["Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code"""
-    integrations["Cloud platforms, CI/CD tools, Monitoring systems, Security tools"""
-    useCases["DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization"""
+    technology["Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code"""]
+    integrations["Cloud platforms, CI/CD tools, Monitoring systems, Security tools"""]
+    useCases["DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization"""]
     "roi": "Revolutionary DevOps technology with potential for massive efficiency gains and operational excellence."""
-    competitors["Limited competition in autonomous DevOps"""
+    competitors["Limited competition in autonomous DevOps"""]
     "marketSize": "Growing market - $250B+ potential"""
     "growthRate": "1500%+ annual growth potential"""
     "variant": "it-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "Zero Trust Network Architecture 2030"""
     "realService"""
-    technology["Zero Trust Security, Network Security, Identity Management, Threat Detection"""
-    integrations["Security platforms, Identity systems, Network tools, Monitoring systems"""
-    useCases["Network security, Identity verification, Threat detection, Security automation"""
+    technology["Zero Trust Security, Network Security, Identity Management, Threat Detection"""]
+    integrations["Security platforms, Identity systems, Network tools, Monitoring systems"""]
+    useCases["Network security, Identity verification, Threat detection, Security automation"""]
     "roi": "Revolutionary security technology with potential for complete network protection."""
-    competitors["Limited competition in zero trust security"""
+    competitors["Limited competition in zero trust security"""]
     "marketSize": "Growing market - $180B+ potential"""
     "growthRate": "1200%+ annual growth potential"""
     "variant": "security-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "Edge Computing Orchestration 2030"""
     "realService"""
-    technology["Edge Computing, Distributed Systems, IoT, Real-time Processing"""
-    integrations["IoT platforms, Edge devices, Cloud systems, Monitoring tools"""
-    useCases["Edge computing, IoT processing, Real-time analytics, Distributed computing"""
+    technology["Edge Computing, Distributed Systems, IoT, Real-time Processing"""]
+    integrations["IoT platforms, Edge devices, Cloud systems, Monitoring tools"""]
+    useCases["Edge computing, IoT processing, Real-time analytics, Distributed computing"""]
     "roi": "Revolutionary edge computing technology with potential for massive performance improvements."""
-    competitors["Limited competition in edge orchestration"""
+    competitors["Limited competition in edge orchestration"""]
     "marketSize": "Growing market - $150B+ potential"""
     "growthRate": "1000%+ annual growth potential"""
     "variant": "edge-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "AI-Powered IT Operations Center 2030"""
     "realService"""
-    technology["Advanced AI, IT Operations, Machine Learning, Predictive Analytics"""
-    integrations["IT platforms, Monitoring systems, Automation tools, Analytics platforms"""
-    useCases["IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization"""
+    technology["Advanced AI, IT Operations, Machine Learning, Predictive Analytics"""]
+    integrations["IT platforms, Monitoring systems, Automation tools, Analytics platforms"""]
+    useCases["IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization"""]
     "roi": "Revolutionary IT technology with potential for massive efficiency gains and operational excellence."""
-    competitors["Limited competition in AI IT operations"""
+    competitors["Limited competition in AI IT operations"""]
     "marketSize": "Growing market - $200B+ potential"""
     "growthRate": "1300%+ annual growth potential"""
     "variant": "ai-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-3 months"""
     "category": "Quantum-Secure Infrastructure 2030"""
     "realService"""
-    technology["Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption"""
-    integrations["Infrastructure platforms, Security systems, Quantum computers, Encryption tools"""
-    useCases["Infrastructure security, Quantum encryption, Critical systems protection, Security validation"""
+    technology["Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption"""]
+    integrations["Infrastructure platforms, Security systems, Quantum computers, Encryption tools"""]
+    useCases["Infrastructure security, Quantum encryption, Critical systems protection, Security validation"""]
     "roi": "Revolutionary quantum security technology with potential for complete infrastructure protection."""
-    competitors["None - First to market"""
+    competitors["None - First to market"""]
     "marketSize": "Emerging market - $300B+ potential"""
     "growthRate": "2000%+ annual growth potential"""
     "variant": "quantum-futuristic"""

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'''
   showViewAllButton = true;'''
-}) => {;';'''
-  const [activeTab, setActiveTab] = useState<any>('featured''
+}) => {;';'''}
+  const [activeTab, setActiveTab] = useState<any>('featured'')
 </any>'
           <pclassName="text-xl text-gray-600 max-w-3xl mx-auto mb-8"""
                       : 'bg-white text-gray-700 "hover"""

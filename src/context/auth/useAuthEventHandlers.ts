@@ -1,6 +1,6 @@
 import { useCallback  } from 'react';'
-interface User {
-  // TODO: Implement
+interface User {}
+  // TODO: Implement;
 }'
   "id": string;"
   email: string;
@@ -9,22 +9,22 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string}
+  updatedAt?: string};
 export const useAuthEventHandlers = ()"
   "setUser": (user: Use r | null)  => void,""
   "setOnboardingStep": (step: number)  => void;"
-) => {;
-  const handleSignedIn = useCallback((user: Use r)  => {;
+) => {;}
+  const handleSignedIn = useCallback((user: Use r)  => {;}
     setUser(user);
     setOnboardingStep(1); // Start onboarding process;
   }, [setUser, setOnboardingStep]);
-  const handleSignedOut = useCallback(() => {;
+  const handleSignedOut = useCallback(() => {;}
     setUser(null);
     setOnboardingStep(0); // Reset onboarding;
   }, [setUser, setOnboardingStep]);
-  return {
-  // TODO: Implement
-}
+  return {}
+  // TODO: Implement;
+};
     handleSignedIn,
     handleSignedOut;"
   }};';';''

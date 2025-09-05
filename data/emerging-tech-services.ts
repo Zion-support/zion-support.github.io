@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-16 weeks"""
     "category": "Quantum & Cybersecurity"""
     "realService"""
-    technology["Quantum Key Distribution", "Post-Quantum Cryptography", "React", "Node.js", "PostgreSQL", "Quantum Computing APIs"""
-    integrations["Custom security protocols", "Government standards", "Enterprise security systems", "Quantum networks", "Blockchain platforms"""
-    useCases["Government communications", "Financial transactions", "Healthcare data protection", "Defense communications", "Critical infrastructure security"""
+    technology["Quantum Key Distribution", "Post-Quantum Cryptography", "React", "Node.js", "PostgreSQL", "Quantum Computing APIs"""]
+    integrations["Custom security protocols", "Government standards", "Enterprise security systems", "Quantum networks", "Blockchain platforms"""]
+    useCases["Government communications", "Financial transactions", "Healthcare data protection", "Defense communications", "Critical infrastructure security"""]
     "roi": "Average customer sees 500% ROI within 18 months through enhanced security and compliance benefits."""
-    competitors["No direct competitors", "Traditional encryption vendors", "Custom solutions"""
+    competitors["No direct competitors", "Traditional encryption vendors", "Custom solutions"""]
     "marketSize": "$15B quantum security market"""
     "growthRate": "800% annual growth"""
     "variant": "quantum-advanced"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Neural & Brain-Computer Interface"""
     "realService"""
-    technology["TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "EEG Processing", "ML Algorithms"""
-    integrations["Unity", "Unreal Engine", "Medical devices", "Research platforms", "Custom applications", "IoT devices"""
-    useCases["Medical diagnostics", "Gaming control", "Productivity enhancement", "Assistive technology", "Research applications", "Entertainment"""
+    technology["TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "EEG Processing", "ML Algorithms"""]
+    integrations["Unity", "Unreal Engine", "Medical devices", "Research platforms", "Custom applications", "IoT devices"""]
+    useCases["Medical diagnostics", "Gaming control", "Productivity enhancement", "Assistive technology", "Research applications", "Entertainment"""]
     "roi": "Average customer sees 400% ROI within 12 months through innovative product development."""
-    competitors["Neuralink", "CTRL-labs", "OpenBCI", "Custom solutions"""
+    competitors["Neuralink", "CTRL-labs", "OpenBCI", "Custom solutions"""]
     "marketSize": "$8B neural interface market"""
     "growthRate": "600% annual growth"""
     "variant": "neural-quantum"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "12-24 weeks"""
     "category": "Autonomous & Transportation"""
     "realService"""
-    technology["TensorFlow", "PyTorch", "Computer Vision", "LIDAR Processing", "React", "Node.js", "PostgreSQL", "AWS"""
-    integrations["Vehicle control systems", "Sensor arrays", "Mapping platforms", "Traffic systems", "Custom hardware", "Simulation environments"""
-    useCases["Passenger vehicles", "Delivery vehicles", "Logistics automation", "Public transportation", "Research and development", "Military applications"""
+    technology["TensorFlow", "PyTorch", "Computer Vision", "LIDAR Processing", "React", "Node.js", "PostgreSQL", "AWS"""]
+    integrations["Vehicle control systems", "Sensor arrays", "Mapping platforms", "Traffic systems", "Custom hardware", "Simulation environments"""]
+    useCases["Passenger vehicles", "Delivery vehicles", "Logistics automation", "Public transportation", "Research and development", "Military applications"""]
     "roi": "Average customer sees 300% ROI within 24 months through autonomous vehicle deployment."""
-    competitors["Waymo", "Cruise", "Tesla Autopilot", "Custom solutions"""
+    competitors["Waymo", "Cruise", "Tesla Autopilot", "Custom solutions"""]
     "marketSize": "$65B autonomous vehicle market"""
     "growthRate": "450% annual growth"""
     "variant": "neural-cyberpunk"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "16-32 weeks"""
     "category": "Space & Aerospace"""
     "realService"""
-    technology["AI/ML Algorithms", "Materials Science", "Orbital Mechanics", "React", "Node.js", "PostgreSQL", "AWS", "Custom APIs"""
-    integrations["Launch vehicles", "Ground stations", "Satellite systems", "Space weather data", "Regulatory databases", "Custom hardware"""
-    useCases["Satellite deployment", "Space exploration", "Earth observation", "Communications infrastructure", "Research missions", "Commercial space"""
+    technology["AI/ML Algorithms", "Materials Science", "Orbital Mechanics", "React", "Node.js", "PostgreSQL", "AWS", "Custom APIs"""]
+    integrations["Launch vehicles", "Ground stations", "Satellite systems", "Space weather data", "Regulatory databases", "Custom hardware"""]
+    useCases["Satellite deployment", "Space exploration", "Earth observation", "Communications infrastructure", "Research missions", "Commercial space"""]
     "roi": "Average customer sees 600% ROI within 36 months through space technology deployment."""
-    competitors["SpaceX", "Blue Origin", "Rocket Lab", "Custom solutions"""
+    competitors["SpaceX", "Blue Origin", "Rocket Lab", "Custom solutions"""]
     "marketSize": "$450B space economy"""
     "growthRate": "700% annual growth"""
     "variant": "quantum-space"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8-16 weeks"""
     "category": "Biotechnology & Healthcare"""
     "realService"""
-    technology["TensorFlow", "PyTorch", "Computational Biology", "Molecular Dynamics", "React", "Node.js", "PostgreSQL", "AWS"""
-    integrations["Lab equipment", "Research databases", "Clinical systems", "Regulatory platforms", "Custom applications", "Collaboration tools"""
-    useCases["Drug discovery", "Protein engineering", "Genetic research", "Clinical trials", "Biomarker research", "Personalized medicine"""
+    technology["TensorFlow", "PyTorch", "Computational Biology", "Molecular Dynamics", "React", "Node.js", "PostgreSQL", "AWS"""]
+    integrations["Lab equipment", "Research databases", "Clinical systems", "Regulatory platforms", "Custom applications", "Collaboration tools"""]
+    useCases["Drug discovery", "Protein engineering", "Genetic research", "Clinical trials", "Biomarker research", "Personalized medicine"""]
     "roi": "Average customer sees 400% ROI within 18 months through accelerated research and development."""
-    competitors["Insitro", "Recursion", "Atomwise", "Custom solutions"""
+    competitors["Insitro", "Recursion", "Atomwise", "Custom solutions"""]
     "marketSize": "$95B biotech market"""
     "growthRate": "350% annual growth"""
     "variant": "neural-quantum"""

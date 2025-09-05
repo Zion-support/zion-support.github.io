@@ -1,9 +1,9 @@
-export const quantumBreakthroughServices2025 = [{
+export const quantumBreakthroughServices2025 = [{}]
     id:,
   quantum-internet-security-platform',''
     "name": 'Quantum Internet Security Platform,''
     "description": 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography for secure enterprise communications.','
-    features['
+    features[']
   'Quantum key distribution (QKD) with 99.99% security',''
   'Post-quantum cryptography algorithms and protocols',''
   'Quantum entanglement-based security infrastructure',''
@@ -13,47 +13,47 @@ export const quantumBreakthroughServices2025 = [{
   'Government compliance (FIPS 140-3, NIST standards)',''
   'Quantum network monitoring and analytics',''
   'API for enterprise integration and automation',''
-  '24/7 quantum security operations center'']
+  '24/7 quantum security operations center''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 12999,
         period:,"
   month',''
-        "features": ['Basic quantum security,''
+        "features": ['Basic quantum security,'']
   'Up to 1000 secure connections',''
   'Standard monitoring',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 24999,
         period:,"
   month',''
-        "features": ['Advanced quantum security,''
+        "features": ['Advanced quantum security,'']
   'Unlimited connections',''
   'Custom protocols',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 49999,
         period:,"
   month',''
-        "features": ['Full quantum platform,'
+        "features": ['Full quantum platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'Quantum Internet & Security,'
-    tags[,'
+    tags[,']
   Quantum Computing',''
   'Internet Security',''
   'Cryptography',''
   'Network Security',']'
   'Government Compliance'],''
     "website": 'https://ziontechgroup.com/quantum-internet-security-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -64,29 +64,29 @@ starter: {,
   ,"
     "competitiveAdvantage": First-to-market quantum internet security platform, quantum-level protection, government compliance,"
   ,"
-    useCases['Secure government communications',''
+    useCases['Secure government communications','']
   'Military command systems',''
   'Financial transactions and banking',''
   'Healthcare data exchange',''
-  'Critical infrastructure protection'']
+  'Critical infrastructure protection''];
     ],'
-    integrations['Government systems',''
+    integrations['Government systems','']
   'Military networks',''
   'Financial platforms',''
   'Healthcare systems',']'
   'Energy grids'],''
-    compliance['FIPS 140-3',''
+    compliance['FIPS 140-3','']
   'NIST standards',''
   'SOC2',''
   'ISO 27001',']'
   'Government security standards']'
   },
-  {'
+  {'}
     "id": 'quantum-bio-computing-platform,'
     name:,'
   Quantum Bio-Computing Platform',''
     "description": Breakthrough platform combining quantum computing with biological systems for unprecedented drug discovery, protein folding, and medical research capabilities.',''
-    features['Quantum molecular simulation and modeling',''
+    features['Quantum molecular simulation and modeling','']
   'AI-powered drug screening and discovery',''
   'Protein folding prediction with quantum accuracy',''
   'Drug interaction modeling and optimization',''
@@ -95,47 +95,47 @@ starter: {,
   'Real-time molecular dynamics simulation',''
   'Integration with medical research databases',''
   'Custom quantum bio-algorithms',''
-  'API access for research institutions'']
+  'API access for research institutions''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 8999,
         period:,"
   month',''
-        "features": ['Basic bio-computing,''
+        "features": ['Basic bio-computing,'']
   'Up to 100 simulations/month',''
   'Standard models',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 19999,
         period:,"
   month',''
-        "features": ['Advanced bio-computing,''
+        "features": ['Advanced bio-computing,'']
   'Unlimited simulations',''
   'Custom models',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 39999,
         period:,"
   month',''
-        "features": ['Full bio-computing platform,'
+        "features": ['Full bio-computing platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'Quantum Biology,'
-    tags[,'
+    tags[,']
   Quantum Computing',''
   'Biology',''
   'Drug Discovery',''
   'Medical Research',']'
   'Protein Folding'],''
     "website": 'https://ziontechgroup.com/quantum-bio-computing-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -146,29 +146,29 @@ starter: {,
   ,"
     "competitiveAdvantage": First quantum bio-computing platform, quantum accuracy in molecular simulation, accelerated drug discovery,"
   ,"
-    useCases['Drug discovery and development',''
+    useCases['Drug discovery and development','']
   'Protein structure prediction',''
   'Medical research and clinical trials',''
   'Genetic analysis and personalized medicine',''
-  'Biotechnology innovation'']
+  'Biotechnology innovation''];
     ],'
-    integrations['Medical databases',''
+    integrations['Medical databases','']
   'Research platforms',''
   'Laboratory systems',''
   'Clinical trial platforms',']'
   'Genetic databases'],''
-    compliance['HIPAA',''
+    compliance['HIPAA','']
   'FDA regulations',''
   'SOC2',''
   'ISO 27001',']'
   'Medical research standards']'
   },
-  {'
+  {'}
     "id": 'brain-computer-interface-platform,'
     name:,'
   Brain-Computer Interface Platform',''
     "description": Revolutionary platform for developing neural interfaces that connect human brains directly to computers, enabling next-generation human-AI collaboration.',''
-    features['Neural signal processing and interpretation',''
+    features['Neural signal processing and interpretation','']
   'Brain activity monitoring and analysis',''
   'AI-powered brain-computer communication',''
   'Real-time neural feedback systems',''
@@ -177,47 +177,47 @@ starter: {,
   'Integration with AI systems and platforms',''
   'Advanced neural analytics and insights',''
   'Research and development tools',''
-  'API for custom applications'']
+  'API for custom applications''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 15999,
         period:,"
   month',''
-        "features": ['Basic neural interface,''
+        "features": ['Basic neural interface,'']
   'Up to 10 users',''
   'Standard monitoring',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 29999,
         period:,"
   month',''
-        "features": ['Advanced neural interface,''
+        "features": ['Advanced neural interface,'']
   'Up to 100 users',''
   'Custom development',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 59999,
         period:,"
   month',''
-        "features": ['Full neural platform,'
+        "features": ['Full neural platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'Neural Interfaces,'
-    tags[,'
+    tags[,']
   Brain-Computer Interface',''
   'Neural Networks',''
   'AI',''
   'Medical Technology',']'
   'Human-AI Collaboration'],''
     "website": 'https://ziontechgroup.com/brain-computer-interface-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -228,29 +228,29 @@ starter: {,
   ,"
     "competitiveAdvantage": First comprehensive neural interface platform, advanced AI integration, safety-focused development,"
   ,"
-    useCases['Medical research and treatment',''
+    useCases['Medical research and treatment','']
   'Human-AI collaboration',''
   'Assistive technology development',''
   'Neuroscience research',''
-  'Next-generation computing interfaces'']
+  'Next-generation computing interfaces''];
     ],'
-    integrations['Medical systems',''
+    integrations['Medical systems','']
   'AI platforms',''
   'Research tools',''
   'Monitoring systems',']'
   'Safety protocols'],''
-    compliance['FDA regulations',''
+    compliance['FDA regulations','']
   'Medical device standards',''
   'SOC2',''
   'ISO 27001',']'
   'Research ethics standards']'
   },
-  {'
+  {'}
     "id": 'space-mining-platform,'
     name:,'
   Space Mining Platform',''
     "description": Advanced platform for autonomous space mining operations, resource extraction, and space resource management with AI-powered optimization.',''
-    features['Autonomous space mining operations',''
+    features['Autonomous space mining operations','']
   'AI-powered resource detection and mapping',''
   'Robotic mining equipment control',''
   'Resource extraction optimization',''
@@ -259,47 +259,47 @@ starter: {,
   'Real-time mission control and monitoring',''
   'Integration with space agencies',''
   'Custom mining mission planning',''
-  'API for space operations'']
+  'API for space operations''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 19999,
         period:,"
   month',''
-        "features": ['Basic space mining,''
+        "features": ['Basic space mining,'']
   'Up to 5 mining missions',''
   'Standard monitoring',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 39999,
         period:,"
   month',''
-        "features": ['Advanced space mining,''
+        "features": ['Advanced space mining,'']
   'Unlimited missions',''
   'Custom planning',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 79999,
         period:,"
   month',''
-        "features": ['Full space mining platform,'
+        "features": ['Full space mining platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'Space Technology,'
-    tags[,'
+    tags[,']
   Space Mining',''
   'Autonomous Systems',''
   'AI',''
   'Robotics',']'
   'Resource Extraction'],''
     "website": 'https://ziontechgroup.com/space-mining-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -310,29 +310,29 @@ starter: {,
   ,"
     "competitiveAdvantage": First autonomous space mining platform, AI-powered optimization, comprehensive mission control,"
   ,"
-    useCases['Asteroid mining operations',''
+    useCases['Asteroid mining operations','']
   'Lunar resource extraction',''
   'Space resource management',''
   'Autonomous space operations',''
-  'Resource transportation logistics'']
+  'Resource transportation logistics''];
     ],'
-    integrations['Space agency systems',''
+    integrations['Space agency systems','']
   'Satellite networks',''
   'Ground control systems',''
   'AI platforms',']'
   'Robotic systems'],''
-    compliance['Space regulations',''
+    compliance['Space regulations','']
   'International space law',''
   'SOC2',''
   'ISO 27001',']'
   'Space safety standards']'
   },
-  {'
+  {'}
     "id": 'quantum-energy-platform,'
     name:,'
   Quantum Energy Platform',''
     "description": Revolutionary platform leveraging quantum computing for energy optimization, grid management, and renewable energy integration with unprecedented efficiency.',''
-    features['Quantum energy optimization algorithms',''
+    features['Quantum energy optimization algorithms','']
   'Smart grid management and control',''
   'Renewable energy integration optimization',''
   'Energy storage optimization and management',''
@@ -341,47 +341,47 @@ starter: {,
   'Grid stability and reliability management',''
   'Integration with energy infrastructure',''
   'Custom energy optimization models',''
-  'API for energy management systems'']
+  'API for energy management systems''];
     ],'
-    "pricing": {"
-starter: {,
+    "pricing": {"}
+starter: {,}
   price: 7999,
         period:,"
   month',''
-        "features": ['Basic energy optimization,''
+        "features": ['Basic energy optimization,'']
   'Up to 1000 connections',''
   'Standard monitoring',']'
   'Email support']'
       },'
-      "professional": {"
+      "professional": {"}
         price: 15999,
         period:,"
   month',''
-        "features": ['Advanced energy optimization,''
+        "features": ['Advanced energy optimization,'']
   'Unlimited connections',''
   'Custom models',''
   'Priority support',']'
   'API access']'
       },'
-      "enterprise": {"
+      "enterprise": {"}
         price: 29999,
         period:,"
   month',''
-        "features": ['Full energy platform,'
+        "features": ['Full energy platform,']
 ,'
   White-label solution',''
   'Dedicated support',''
   'Custom development',']'
   '24/7 monitoring']},''
     "category": 'Quantum Energy,'
-    tags[,'
+    tags[,']
   Quantum Computing',''
   'Energy Management',''
   'Smart Grid',''
   'Renewable Energy',']'
   'Optimization'],''
     "website": 'https://ziontechgroup.com/quantum-energy-platform,''
-    "contact": {"
+    "contact": {"}
       phone:,"
   +1 302 464 0950',''
       "email": 'kleber@ziontechgroup.com;'
@@ -392,19 +392,19 @@ starter: {,
   ,"
     "competitiveAdvantage": First quantum energy optimization platform, quantum accuracy in energy management, comprehensive grid optimization,"
   ,"
-    useCases['Smart grid optimization',''
+    useCases['Smart grid optimization','']
   'Renewable energy integration',''
   'Energy storage management',''
   'Demand response optimization',''
-  'Grid stability management'']
+  'Grid stability management''];
     ],'
-"integrations": ['Energy management systems,'
+"integrations": ['Energy management systems,']
 ,'
   Smart grid infrastructure',''
   'Renewable energy systems',''
   'Utility platforms',']'
   'Monitoring systems'],''
-    "compliance": ['Energy regulations,''
+    "compliance": ['Energy regulations,'']
   'Grid standards',''
   'SOC2',''
   'ISO 27001',']'

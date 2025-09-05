@@ -1,35 +1,35 @@
-import React from 'react'
+import React from "react";
 import Layout from '../../components/Layout'
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react
-const features = [
-  {
+import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react;
+const features = []
+  {}
     icon: Cloud,'
     title: 'Cloud Migration',''
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.''
   },
-  {
+  {}
     icon: Server,'
     title: 'Infrastructure as Code',''
     description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.''
   },
-  {
+  {}
     icon: Database,'
     title: 'Database Management',''
     description: 'Optimize database performance, implement backup strategies, and ensure data integrity.''
   },
-  {
+  {}
     icon: Shield,'
     title: 'Security & Compliance',''
     description: 'Implement robust security measures and maintain compliance with industry standards.''
   },
-  {
+  {}
     icon: Zap,'
     title: 'CI/CD Pipelines',''
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.''
-  }]
+  }];
 ];
 
-const services = ['
+const services = [']
   'Cloud Architecture Design',''
   'Container Orchestration (Kubernetes)',''
   'Microservices Implementation',''
@@ -37,11 +37,11 @@ const services = ['
   'Disaster Recovery Planning',''
   'Performance Optimization',''
   'Cost Optimization',''
-  'Security Hardening'']
+  'Security Hardening''];
 ];
 
-export default function CloudDevOpsPage() {
-  return (
+export default function CloudDevOpsPage() {}
+  return ()
     <Layout;'
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."

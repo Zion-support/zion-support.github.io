@@ -1,6 +1,6 @@
-export interface CuttingEdgeMicroSAASService {
-  // TODO: Implement
-}
+export interface CuttingEdgeMicroSAASService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "email"""

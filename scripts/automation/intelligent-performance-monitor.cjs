@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs"
-const path = require("path"
-const { execSync, spawn } = require("child_process"
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
       this.projectRoot,logs"
       "performance-monitor.log"
       this.projectRoot,logs"
@@ -24,9 +24,9 @@ const { execSync, spawn } = require("child_process"
       "memoryUsage"
       "cpuUsage"
       "errorRate"
-  console.log("" Intelligent Performance Monitor Initialized"
-  fs.mkdirSync(logDir, { "recursive"
-  const data = fs.readFileSync(this.performanceHistory, "utf8"
+  console.log("" Intelligent Performance Monitor Initialized")
+  fs.mkdirSync(logDir, { "recursive"})
+  const data = fs.readFileSync(this.performanceHistory, "utf8")
   "totalMeasurements"
           "averageBuildTime"
           "averageBundleSize"
@@ -34,7 +34,7 @@ const { execSync, spawn } = require("child_process"
           "performanceTrends"
           "bottlenecks"
           "optimizations"
-  console.error("Error loading performance "history": "
+  console.error("Error loading performance "history": ")
   "totalMeasurements"
         "averageBuildTime"
         "averageBundleSize"
@@ -42,7 +42,7 @@ const { execSync, spawn } = require("child_process"
         "performanceTrends"
         "bottlenecks"
         "optimizations"
-  console.error("Error loading performance "history": "
+  console.error("Error loading performance "history": ")
   "totalMeasurements"
         "averageBuildTime"
         "averageBundleSize"
@@ -50,10 +50,10 @@ const { execSync, spawn } = require("child_process"
         "performanceTrends"
         "bottlenecks"
         "optimizations"
-  console.log("" Starting continuous performance monitoring..."
-  console.log("" Measuring application performance..."
-  console.log("" Measuring application performance..."
-    console.log(" Measuring application performance..."
+  console.log("" Starting continuous performance monitoring...")
+  console.log("" Measuring application performance...")
+  console.log("" Measuring application performance...")
+    console.log(" Measuring application performance...")
   "timestamp"
       "buildTime"
       "bundleSize"
@@ -62,29 +62,29 @@ const { execSync, spawn } = require("child_process"
       "cpuUsage"
       "errorRate"
       "recommendations"
-  console.error(" Error during performance "measurement": "
-  console.error(" Error during performance "measurement": "
-this.logError("Performance measurement failed"
-  console.error(" Error during performance "measurement": "
-      this.logError("Performance measurement failed"
-  console.log("� Measuring build performance..."
+  console.error(" Error during performance "measurement": ")
+  console.error(" Error during performance "measurement": ")
+this.logError("Performance measurement failed")
+  console.error(" Error during performance "measurement": ")
+      this.logError("Performance measurement failed")
+  console.log("� Measuring build performance...")
   "type": "build"
           "severity": "warning","message"
           "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"}"
-  console.error("Error measuring build "performance"
+  console.error("Error measuring build "performance")
   "type": "build"
           "severity": "warning","message"
           "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"
-  console.error("Error measuring build "performance": "
-  console.error("Error measuring build "performance": "
+  console.error("Error measuring build "performance": ")
+  console.error("Error measuring build "performance": ")
   // Check if it"
-      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs"
-        execSync("npm run build"
+      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")
+        execSync("npm run build")
   "cwd"
           "stdio": "pipe"
   // Check if it"
-      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs"
-        execSync("npm run build"
+      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")
+        execSync("npm run build")
   "cwd"
           "stdio": "pipe"
           "timeout"
@@ -92,8 +92,8 @@ this.logError("Performance measurement failed"
           "duration"
           "errors"
       // Check if it"
-      if (fs.existsSync("vite.config.js") || fs.existsSync("vite.config.ts"
-        execSync("npm run build"
+      if (fs.existsSync("vite.config.js") || fs.existsSync("vite.config.ts")
+        execSync("npm run build")
   "cwd"
           "stdio": "pipe"
           "timeout"
@@ -112,44 +112,44 @@ this.logError("Performance measurement failed"
   "success"
         "duration"
         "errors"
-  console.log(""� Measuring bundle size..."
-      const buildDirs = ["dist", "build", ".next", "out"
+  console.log(""� Measuring bundle size...")
+      const buildDirs = ["dist", "build", ".next", "out"]
   "type": "bundle"
-          "severity": "warning`,"message"
-          "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"
-  console.error("Error measuring bundle "size": "
+          "severity": "warning`,"message"`
+          "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"`
+  console.error("Error measuring bundle "size": ")
   "type": "bundle"
           "severity": "warning","message"
           "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"
-  console.error("Error measuring bundle "size": "
-  console.error("Error measuring bundle "size": "
-  const fullPath = path.join(dirPath, "
-  const fullPath = path.join(dirPath, "
-    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:`"
+  console.error("Error measuring bundle "size": ")
+  console.error("Error measuring bundle "size": ")
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
   if (bytes === 0) return "0 Bytes"
-    const sizes = ["Bytes", "KB", "MB", "GB"
+    const sizes = ["Bytes", "KB", "MB", "GB"]
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
-  console.log(""⚡ Measuring runtime performance..."
-  console.log("⚡ Measuring runtime performance..."
+  console.log(""⚡ Measuring runtime performance...")
+  console.log("⚡ Measuring runtime performance...")
   "type": "memory"
           "severity": "warning","message"
           "suggestion": "Check for memory leaks, optimize data structures, or increase memory limits"}"
   "type": "cpu"
           "severity": "warning","message": "CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)"
           "suggestion": "Optimize algorithms, implement caching, or use worker threads for heavy operations"
-  console.error("Error measuring runtime "performance"
+  console.error("Error measuring runtime "performance")
   "type": "memory"
           "severity": "warning","message"
           "suggestion": "Check for memory leaks, optimize data structures, or increase memory limits"
   "type": "cpu"
           "severity": "warning","message"
           "suggestion": "Optimize algorithms, implement caching, or use worker threads for heavy operations"
-  console.error("Error measuring runtime "performance": "
-  console.error("Error measuring runtime "performance": "
-  console.error("Error getting system "metrics": "
-      return { "memory": 0, "cpu"
-  console.error("Error getting system "metrics": ", error);      return { "memory": 0, "cpu"
-  console.log("🧠 Analyzing performance data..."
+  console.error("Error measuring runtime "performance": ")
+  console.error("Error measuring runtime "performance": ")
+  console.error("Error getting system "metrics": ")
+      return { "memory": 0, "cpu"}
+  console.error("Error getting system "metrics": ", error);      return { "memory": 0, "cpu"}
+  console.log("🧠 Analyzing performance data...")
   "type": "trend"
             "severity": "info"
             "message": "Build time is trending upward"
@@ -208,7 +208,7 @@ this.logError("Performance measurement failed"
       "loadTime"
       "memoryUsage"
       "cpuUsage"
-  console.error("Error saving performance "history": "
+  console.error("Error saving performance "history": ")
   "timestamp"
       "metrics"
         "bundleSize"
@@ -227,28 +227,28 @@ this.logError("Performance measurement failed"
       "bottlenecks"
       "optimizations"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
-  console.error("Error logging performance "results": "
-  console.error("Error logging performance "results": "
+  console.error("Error logging performance "results": ")
+  console.error("Error logging performance "results": ")
   "timestamp"
       "error"
   "timestamp"
       "error"
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
-  console.error("Error logging "error": "
-  console.error("Error logging "error": "
-  console.log("� Setting up build monitoring..."
-    process.on("message"
-  if (message && message.type === "build"
-    process.on("message"
-  if (message && message.type === "build"
-  console.log(" Build started - monitoring performance..."
-  console.log("⚡ Setting up runtime monitoring..."
-    process.on("exit"
-    process.on("uncaughtException"
-    process.on("unhandledRejection"
-  console.log("� Process exiting - saving final performance data..."
-  console.error("� Uncaught "exception": "
-    this.logError("Uncaught exception"
-  console.error("� Unhandled "rejection": "
-    this.logError("Unhandled rejection"
+  console.error("Error logging "error": ")
+  console.error("Error logging "error": ")
+  console.log("� Setting up build monitoring...")
+    process.on("message")
+  if (message && message.type === "build")
+    process.on("message")
+  if (message && message.type === "build")
+  console.log(" Build started - monitoring performance...")
+  console.log("⚡ Setting up runtime monitoring...")
+    process.on("exit")
+    process.on("uncaughtException")
+    process.on("unhandledRejection")
+  console.log("� Process exiting - saving final performance data...")
+  console.error("� Uncaught "exception": ")
+    this.logError("Uncaught exception")
+  console.error("� Unhandled "rejection": ")
+    this.logError("Unhandled rejection")

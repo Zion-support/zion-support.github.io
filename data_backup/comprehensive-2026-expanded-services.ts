@@ -1,6 +1,6 @@
-export interface ComprehensiveService {
-  // TODO: Implement
-}
+export interface ComprehensiveService {}
+  // TODO: Implement;
+};
   "id"""
   "link"""
   "mobile": "+1 302 464 0950"""
@@ -215,5 +215,5 @@ export const "comprehensiveExpandedServices"""
     "icon"""
     "name"""
     "color"""
-export interface ComprehensiveService { id: string; name: string; tagline: string; price: string; period?: string; description: string; features: string[]; category: string; subcategory: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string}; link: string; icon: string; color: string; textColor: string; popular?: boolean; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; launchDate: string; customers: number; rating: number; reviews: number} const contact = { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709""
+export interface ComprehensiveService { id: string; name: string; tagline: string; price: string; period?: string; description: string; features: string[]; category: string; subcategory: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string}; link: string; icon: string; color: string; textColor: string; popular?: boolean; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; launchDate: string; customers: number; rating: number; reviews: number} const contact = { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709""}
 cursor/fix-lint-push-and-merge-to-main-f3c1;"

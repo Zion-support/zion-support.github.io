@@ -6,148 +6,148 @@ import { execSync } from';child_process'';''
 import { fileURLToPath } from';url'';'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);'
-"class": HealthChecker {"
-  // TODO: Implement
-}
-  constructor() {
+"class": HealthChecker {"}
+  // TODO: Implement;
+};
+  constructor() {}
     this.projectRoot = path.join(__dirname;)"
   '..')';'
     this.logDir: = path.join(this.projectRoot;)'
   'logs')';'
     this.port: = process.env.PORT || 3000;
-    this.healthEndpoint: = `http: //localhost:${this.por,t}/health`;'
+    this.healthEndpoint: = `http: //localhost:${this.por,t}/health`;``
     this."maxResponseTime": = 5000 // 5 seconds;"
     this.checks: = [];
-    this.ensureDirectories()}
-  ensureDirectories() {"
-    "if": (!fs.existsSync(this.logDir)) {""
+    this.ensureDirectories()};
+  ensureDirectories() {"}
+    "if": (!fs.existsSync(this.logDir)) {""}
       fs.mkdirSync(this.logDir, { "recursive": true})}"
   }"
-  log(level, message, "data": = null) {"
+  log(level, message, "data": = null) {"}
     const timestamp = new Date().toISOString();
-    const logEntry = {
+    const logEntry = {}
 const __dirname = path.dirname(__filename);
-class HealthChecker {;
-  constructor() {;"
+class HealthChecker {;}
+  constructor() {;"}
     this.projectRoot = path.join(__dirname, ';..');''
     this.logDir = path.join(this.projectRoot, ';logs');'
     this.port = process.env.PORT || 3000;'
-    this.healthEndpoint = `"http": //localhos;"
-    t:${this.port}/health`;
+    this.healthEndpoint = `"http": //localhos;"`
+    t:${this.port}/health`;`
     this.maxResponseTime = 5000 // 5 seconds;
     this.checks = [];
-    this.ensureDirectories()}
-  ensureDirectories() {;
-    if (!fs.existsSync(this.logDir)) {;"
+    this.ensureDirectories()};
+  ensureDirectories() {;}
+    if (!fs.existsSync(this.logDir)) {;``}
       fs.mkdirSync(this.logDir, { "recursive": true })}"
-  }
-  log(level, message, data = null) {;
+  };
+  log(level, message, data = null) {;}
     const timestamp = new Date().toISOString();
-    const logEntry = {
+    const logEntry = {}
       timestamp;
       level;
       message;"
       data}"""
     console.log("[${timestamp}] ${level.toUpperCase()}: ${message}");""
-    "if": (data) {"
-      console.log(JSON.stringify(data, null, 2))}
+    "if": (data) {"}
+      console.log(JSON.stringify(data, null, 2))};
     // Write to log file;
     const logFile = path.join(this.logDir;)"
   health-checker.log')';''
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}';''
-  "async": checkApplicationHealth() {"
-    return new Promise(resolve => {)
+  "async": checkApplicationHealth() {"}
+    return new Promise(resolve => {);}
       const startTime = Date.now();
-      const req = http.get(this.healthEndpoint, res => {)
+      const req = http.get(this.healthEndpoint, res => {);}
         const responseTime = Date.now() - startTime;"
-        "if": (res.statusCode === 200) {"
-          this.log("
+        "if": (res.statusCode === 200) {"}
+          this.log(")
             'info'')'
             "Application health check passed (${responseTime}ms)""
           );
-          resolve({"
+          resolve({"})
             "status": 'healthy;'
             responseTime;
-            statusCode: res.statusCode;)
-          })} else {
-  // TODO: Implement
-}
-          this.log('
+            statusCode: res.statusCode;);
+          })} else {}
+  // TODO: Implement;
+};
+          this.log(')
             'warning'''
-            "Application health check failed with status ${res.statusCode}"")
+            "Application health check failed with status ${res.statusCode}"");
           );
-          resolve({"
+          resolve({"})
             "status": 'unhealthy;'
             responseTime;
             statusCode: res.statusCode;,'
-  reason: "HTTP ${res.statusCode}"")
-          })}
+  reason: "HTTP ${res.statusCode}"");
+          })};
       });"
-      req.on('error', error => {')
+      req.on('error', error => {');}
         const responseTime = Date.now() - startTime;'
-        this.log('error', 'Application health check failed', {''
-          "error": error.message;")
+        this.log('error', 'Application health check failed', {''})
+          "error": error.message;");
         });
-        resolve({"
+        resolve({"})
           "status": 'unhealthy','
           responseTime;'
-          "reason": error.message;")
+          "reason": error.message;");
         })});
-      req.setTimeout(this.maxResponseTime, () => {
+      req.setTimeout(this.maxResponseTime, () => {}
     // Write to log file;
-    const logFile = path.join(this.logDir,
-,)
+    const logFile = path.join(this.logDir,)
+,);
         req.destroy();
         const responseTime = Date.now() - startTime;"
-        this.log();  error', '';Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;''
+        this.log();  error', '';Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;''}
       const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';      const diskInfo = lines[1].split(/\s+/);'
       const usage = diskInfo[4];'
-      const usagePercent = parseInt(usage.replace(';%', '';';))';      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';      this.log('info, "Disk "usage": ${usage}", { status, usagePercent })';            return {";        status, ';        "usage": usage,";        usagePercent,""
-        "available": diskInfo[3],";        "total": diskInfo[1]}"} catch (error) {;""
+      const usagePercent = parseInt(usage.replace(';%', '';';))';      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';      this.log('info, "Disk "usage": ${usage}", { status, usagePercent })';            return {";        status, ';        "usage": usage,";        usagePercent,""}
+        "available": diskInfo[3],";        "total": diskInfo[1]}"} catch (error) {;""}
       this.log();  error', 'Failed to check disk space';', error)';      return {';        "status": 'unknown, ';        "reason": error.message      }"}""
   health-checker.log');''
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}'
-  async checkApplicationHealth() {;
-    return new Promise(resolve => {;)
+  async checkApplicationHealth() {;}
+    return new Promise(resolve => {;);}
       const startTime = Date.now();
-      const req = http.get(this.healthEndpoint, res => {;)
+      const req = http.get(this.healthEndpoint, res => {;);}
         const responseTime = Date.now() - startTime;
-        if (res.statusCode === 200) {'
+        if (res.statusCode === 200) {'}
           this.log(',')'
-      'info', `Application health check passed (${responseTime}ms)`)          resolve({"""
+      'info', `Application health check passed (${responseTime}ms)`)          resolve({"""`})
             "status": 'healthy;'
             responseTime;)'
-            statusCode: res.statusCod,e})} "else": {"
+            statusCode: res.statusCod,e})} "else": {"}
           this.log()"
-  warning', "Application health check failed with status ${res.statusCode}")          resolve({""
+  warning', "Application health check failed with status ${res.statusCode}")          resolve({""})
             "status": 'unhealth,y, ';'
             responseTime;'
             "statusCode": res.statusCod,e;")"
             "reason": "HTTP: ${res.statusCod,e}"})}"
-      })
+      });
       req.on()"
-  'error', (error) => {';'
+  'error', (error) => {';'}
         const responseTime = Date.now() - startTime;
         this.log()'
-  'error', '';"Application": health check failed', { "error": error.message})        resolve({';''
+  'error', '';"Application": health check failed', { "error": error.message})        resolve({';''})
           "status": ';unhealthy, ',';'
           responseTime;)'
           "reason": error.messag,e})})"
-      req.setTimeout(this.maxResponseTime, () => {
+      req.setTimeout(this.maxResponseTime, () => {}
         req.destroy();
         const responseTime = Date.now() - startTime;
         this.log()"
   error', '';"Application": health check timed out')';'
-        resolve({'
+        resolve({'})
           status: 'unhealth,y, ';'
           responseTime;)'
           "reason": ';Timeout'       })})})}';''
-  "async": checkDiskSpace() {"
-    try {
-  // TODO: Implement
-}
-      const result = execSync("
-  'df -h .', {';''
+  "async": checkDiskSpace() {"}
+    try {}
+  // TODO: Implement;
+};
+      const result = execSync(")
+  'df -h .', {';''}
         "cwd": this.projectRoo,t;")"
         "encoding": utf8'})';'
       const lines = result.trim().split()'
@@ -157,16 +157,16 @@ class HealthChecker {;
       const usagePercent = parseInt(usage.replace()'
   '%', '';';))';''
       const status = usagePercent > 90 ? 'critical';';: "usagePercent": > 80 ? 'warning';'; : 'healthy';';';''
-      this.log('info, ""Disk": usage: ${usag,e}`, { status, "usagePercent":  })""
+      this.log('info, ""Disk": usage: ${usag,e}`, { status, "usagePercent":  })""`
           "status": ';unhealthy','
           responseTime,'
           "reason": error.message})});"
-      req.setTimeout(this.maxResponseTime, () => {;
+      req.setTimeout(this.maxResponseTime, () => {;}
         req.destroy();
         const responseTime = Date.now() - startTime;
         this.log(,)"
   error', ';Application health check timed out');''
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import http from';http'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class: HealthChecker { constructor() { this.projectRoot = path.join(__dirname '..')';; this.logDir: = path.join(this.projectRoot 'logs')';; this.port: = process.env.PORT || 3000; this.healthEndpoint: = `http: this.maxResponseTime: = 5000 this.checks: = []; this.ensureDirectories()} ensureDirectories() { if: (!fs.existsSync(this.logDir)) { fs.mkdirSync(this.logDir,{ recursive: true})} } log(level,message,data: = null) { const timestamp = new Date().toISOString(); const logEntry = { const __dirname = path.dirname(__filename); class HealthChecker {; constructor() {; this.projectRoot = path.join(__dirname,';..'); this.logDir = path.join(this.projectRoot,';logs'); this.port = process.env.PORT || 3000; this.healthEndpoint = `http: t:${this.port}/health`; this.maxResponseTime = 5000 this.checks = []; this.ensureDirectories()} ensureDirectories() {; if (!fs.existsSync(this.logDir)) {; fs.mkdirSync(this.logDir,{ recursive: true })} } log(level,message,data = null) {; const timestamp = new Date().toISOString(); const logEntry = { timestamp level message data}` console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`); if: (data) { console.log(JSON.stringify(data,null,2))} const logFile = path.join(this.logDir health-checker.log')';; fs.appendFileSync(logFile,JSON.stringify(logEntry) +';\n')}'; async: checkApplicationHealth() { return new Promise(resolve => { const startTime = Date.now(); const req = http.get(this.healthEndpoint,res => { const responseTime = Date.now() - startTime; if: (res.statusCode === 200) { this.log( 'info' `Application health check passed (${responseTime}ms)` ); resolve({ status: 'healthy responseTime statusCode: res.statusCode })} else { this.log( 'warning' `Application health check failed with status ${res.statusCode}` ); resolve({ status: 'unhealthy responseTime statusCode: res.statusCode reason: `HTTP ${res.statusCode}` })} }); req.on('error',error => { const responseTime = Date.now() - startTime; this.log('error','Application health check failed',{ error: error.message }); resolve({ status: 'unhealthy',responseTime reason: error.message })}); req.setTimeout(this.maxResponseTime,() => { const logFile = path.join(this.logDir,,req.destroy(); const responseTime = Date.now() - startTime; this.log(,); error','';Application health check timed out')';; resolve({;); "status": 'unhealthy,'; responseTime,';; "reason":;"';Timeout' })})})}'; async checkDiskSpace() {';; try {; const result = execSync(;)';df -h .',{'; "cwd": this.projectRoot,"; "encoding": ;"; utf8'})'; const lines = result.trim().split(;)';\n')';; const diskInfo = lines[1].split(/\s+/); const usage = diskInfo[4]; const usagePercent = parseInt(usage.replace(';%','';';))';; const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';; this.log('info,`Disk "usage": ${usage}`,{ status,usagePercent })'; return {`; status,';; "usage": usage,"; usagePercent,"available": diskInfo[3],"; "total": diskInfo[1]}"} catch (error) {; this.log(,); error','Failed to check disk space';',error)';; return {';; "status": 'unknown,'; "reason": error.message }"} health-checker.log'); fs.appendFileSync(logFile,JSON.stringify(logEntry) +';\n')} async checkApplicationHealth() {; return new Promise(resolve => {; const startTime = Date.now(); const req = http.get(this.healthEndpoint,res => {; const responseTime = Date.now() - startTime; if (res.statusCode === 200) { this.log(','info',`Application health check passed (${responseTime}ms)`) resolve({` status: 'healthy responseTime statusCode: res.statusCod,e})} else: { this.log( warning',`Application health check failed with status ${res.statusCode}`) resolve({ status: 'unhealth,y,'; responseTime statusCode: res.statusCod,e reason: `HTTP: ${res.statusCod,e}`})} }) req.on( 'error',(error) => {'; const responseTime = Date.now() - startTime; this.log( 'error','';Application: health check failed',{ error: error.message}) resolve({'; status: ';unhealthy,','; responseTime reason: error.messag,e})}) req.setTimeout(this.maxResponseTime,() => { req.destroy(); const responseTime = Date.now() - startTime; this.log( error','';Application: health check timed out')';; resolve({ status: 'unhealth,y,'; responseTime reason: ';Timeout' })})})}'; async: checkDiskSpace() { try { const result = execSync( 'df -h .',{'; cwd: this.projectRoo,t encoding: utf8'})'; const lines = result.trim().split( '\n')';; const diskInfo = lines[1].split(/\s+/); const usage = diskInfo[4]; const usagePercent = parseInt(usage.replace( '%','';';))';; const status = usagePercent > 90 ? 'critical';';: usagePercent: > 80 ? 'warning';'; : 'healthy';';';; this.log('info,`Disk: usage: ${usag,e}`,{ status,usagePercent: }) status:';unhealthy',responseTime,reason: error.message})}); req.setTimeout(this.maxResponseTime,() => {; req.destroy(); const responseTime = Date.now() - startTime; this.log(,error',';Application health check timed out');'
+#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import http from';http'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class: HealthChecker { constructor() { this.projectRoot = path.join(__dirname '..')';; this.logDir: = path.join(this.projectRoot 'logs')';; this.port: = process.env.PORT || 3000; this.healthEndpoint: = `http: this.maxResponseTime: = 5000 this.checks: = []; this.ensureDirectories()} ensureDirectories() { if: (!fs.existsSync(this.logDir)) { fs.mkdirSync(this.logDir,{ recursive: true})} } log(level,message,data: = null) { const timestamp = new Date().toISOString(); const logEntry = { const __dirname = path.dirname(__filename); class HealthChecker {; constructor() {; this.projectRoot = path.join(__dirname,';..'); this.logDir = path.join(this.projectRoot,';logs'); this.port = process.env.PORT || 3000; this.healthEndpoint = `http: t:${this.port}/health`; this.maxResponseTime = 5000 this.checks = []; this.ensureDirectories()} ensureDirectories() {; if (!fs.existsSync(this.logDir)) {; fs.mkdirSync(this.logDir,{ recursive: true })} } log(level,message,data = null) {; const timestamp = new Date().toISOString(); const logEntry = { timestamp level message data}` console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`); if: (data) { console.log(JSON.stringify(data,null,2))} const logFile = path.join(this.logDir health-checker.log')';; fs.appendFileSync(logFile,JSON.stringify(logEntry) +';\n')}'; async: checkApplicationHealth() { return new Promise(resolve => { const startTime = Date.now(); const req = http.get(this.healthEndpoint,res => { const responseTime = Date.now() - startTime; if: (res.statusCode === 200) { this.log( 'info' `Application health check passed (${responseTime}ms)` ); resolve({ status: 'healthy responseTime statusCode: res.statusCode })} else { this.log( 'warning' `Application health check failed with status ${res.statusCode}` ); resolve({ status: 'unhealthy responseTime statusCode: res.statusCode reason: `HTTP ${res.statusCode}` })} }); req.on('error',error => { const responseTime = Date.now() - startTime; this.log('error','Application health check failed',{ error: error.message }); resolve({ status: 'unhealthy',responseTime reason: error.message })}); req.setTimeout(this.maxResponseTime,() => { const logFile = path.join(this.logDir,,req.destroy(); const responseTime = Date.now() - startTime; this.log(,); error','';Application health check timed out')';; resolve({;); "status": 'unhealthy,'; responseTime,';; "reason":;"';Timeout' })})})}'; async checkDiskSpace() {';; try {; const result = execSync(;)';df -h .',{'; "cwd": this.projectRoot,"; "encoding": ;"; utf8'})'; const lines = result.trim().split(;)';\n')';; const diskInfo = lines[1].split(/\s+/); const usage = diskInfo[4]; const usagePercent = parseInt(usage.replace(';%','';';))';; const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';; this.log('info,`Disk "usage": ${usage}`,{ status,usagePercent })'; return {`; status,';; "usage": usage,"; usagePercent,"available": diskInfo[3],"; "total": diskInfo[1]}"} catch (error) {; this.log(,); error','Failed to check disk space';',error)';; return {';; "status": 'unknown,'; "reason": error.message }"} health-checker.log'); fs.appendFileSync(logFile,JSON.stringify(logEntry) +';\n')} async checkApplicationHealth() {; return new Promise(resolve => {; const startTime = Date.now(); const req = http.get(this.healthEndpoint,res => {; const responseTime = Date.now() - startTime; if (res.statusCode === 200) { this.log(','info',`Application health check passed (${responseTime}ms)`) resolve({` status: 'healthy responseTime statusCode: res.statusCod,e})} else: { this.log( warning',`Application health check failed with status ${res.statusCode}`) resolve({ status: 'unhealth,y,'; responseTime statusCode: res.statusCod,e reason: `HTTP: ${res.statusCod,e}`})} }) req.on( 'error',(error) => {'; const responseTime = Date.now() - startTime; this.log( 'error','';Application: health check failed',{ error: error.message}) resolve({'; status: ';unhealthy,','; responseTime reason: error.messag,e})}) req.setTimeout(this.maxResponseTime,() => { req.destroy(); const responseTime = Date.now() - startTime; this.log( error','';Application: health check timed out')';; resolve({ status: 'unhealth,y,'; responseTime reason: ';Timeout' })})})}'; async: checkDiskSpace() { try { const result = execSync( 'df -h .',{'; cwd: this.projectRoo,t encoding: utf8'})'; const lines = result.trim().split( '\n')';; const diskInfo = lines[1].split(/\s+/); const usage = diskInfo[4]; const usagePercent = parseInt(usage.replace( '%','';';))';; const status = usagePercent > 90 ? 'critical';';: usagePercent: > 80 ? 'warning';'; : 'healthy';';';; this.log('info,`Disk: usage: ${usag,e}`,{ status,usagePercent: }) status:';unhealthy',responseTime,reason: error.message})}); req.setTimeout(this.maxResponseTime,() => {; req.destroy(); const responseTime = Date.now() - startTime; this.log(,error',';Application health check timed out');'`}
 origin/cursor/automate-test-improve-and-merge-code-eafe;
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;'

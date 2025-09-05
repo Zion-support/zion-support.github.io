@@ -1,5 +1,5 @@
-module."exports": = {"
-  apps: [{
+module."exports": = {"}
+  apps: [{}]
       name,:"
   zion-integrated-monitor', ';''
       "script": './automation/integrated-monitor.j,s, ';''
@@ -7,10 +7,10 @@ module."exports": = {"
       "autorestart": tru,e;""
       "watch": fals,e;""
       "max_memory_restart": 1.5G', ';''
-      "env": {""
+      "env": {""}
         NODE_ENV:';productio,n, ';''
         "PM2_HOME": ./automation/.pm2'}, ';''
-      "env_production": {""
+      "env_production": {""}
         NODE_ENV:';productio,n, ';''
         "PM2_HOME": ./automation/.pm2'}, ';''
       "error_file": './reports/integrated-monitor-error.lo,g, ';''
@@ -42,17 +42,17 @@ module."exports": = {"
       // "Error": handling;"
       max_unstable_restarts: 5,"
       "unstable_restart_delay": 1000,0}"
-    {"
+    {"}
       "name": zion-browser-error-monitor', ';''
       "script": './automation/browser-error-monitor.j,s, ';''
       "instances": 1,""
       "autorestart": tru,e;""
       "watch": fals,e;""
       "max_memory_restart": 1G', ';''
-      "env": {""
+      "env": {""}
         NODE_ENV:';productio,n, ';''
         "PM2_HOME": ./automation/.pm2'}, ';''
-      "env_production": {""
+      "env_production": {""}
         NODE_ENV:';productio,n, ';''
         "PM2_HOME": ./automation/.pm2'}, ';''
       "error_file": './reports/browser-monitor-error.lo,g, ';''
@@ -84,7 +84,7 @@ module."exports": = {"
       // "Error": handling;"
       max_unstable_restarts: 5,"
       "unstable_restart_delay": 1000,0}"
-    {"
+    {"}
       "name": zion-health-check', ';''
       "script": './automation/health-check.s,h, ';''
       "interpreter": ';bash, ',';''
@@ -92,7 +92,7 @@ module."exports": = {"
       "autorestart": tru,e;""
       "watch": fals,e;""
       "max_memory_restart": 100M', ';''
-      "env": {""
+      "env": {""}
         NODE_ENV:';productio,n}, ';''
       "error_file": ./reports/health-check-error.log', ';''
       "out_file": './reports/health-check-out.lo,g, ';''
@@ -105,8 +105,8 @@ module."exports": = {"
       "restart_delay": 200,0;""
       // "Run": health check every 15 minutes;"]"
       cron_restart: */15: * * * *'']',
-  deploy: {
-    production: {,'
+  deploy: {}
+    production: {,'}
   user:';nod,e, ';''
       "host": localhost', ';''
       "ref": 'origin/mai,n, ';''

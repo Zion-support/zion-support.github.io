@@ -13,15 +13,15 @@ import {AspectRatio} from "@/components/ui/aspect-ratio"""
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs"""
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator"""
     "title": z.string().min(3, "Title must be at least 3 characters"")"
-    "description": z.string().min(10, "Description must be at least 10 characters"""
+    "description": z.string().min(10, "Description must be at least 10 characters""")
     "price"""
         "message": "Price must be a valid number"")"
-    "category": z.string().min(1, "Please select a category"""
+    "category": z.string().min(1, "Please select a category""")
     "image"""
     "video"""
     "model"""
     "tags"""
-    const [activeTab, setActiveTab] = React.useState("manual"""
+    const [activeTab, setActiveTab] = React.useState("manual""")
         "resolver"""
         "defaultValues"""
             title: """
@@ -31,13 +31,13 @@ import {AIListingGenerator} from "@/components/listing/AIListingGenerator"""
             "video"""
             "model"""
             "tags": """
-            form.setValue("image"""
-            form.setValue("video"""
+            form.setValue("image""")
+            form.setValue("video""")
             form.setValue("model"")"
-    const handleApplyGenerated = (props) => {form.setValue("description"""
-        form.setValue("tags", content.tags.join(", """
-        form.setValue("price"""
-        setActiveTab("manual"""
+    const handleApplyGenerated = (props) => {form.setValue("description"""})
+        form.setValue("tags", content.tags.join(", """)
+        form.setValue("price""")
+        setActiveTab("manual""")
                 "title": "Authentication Required"""
                 "description": "You must be logged in to publish products"""
                 "variant": "destructive"""
@@ -48,11 +48,11 @@ import {AIListingGenerator} from "@/components/listing/AIListingGenerator"""
                 "currency": "USD"""
                 "tags"""
                 "createdAt"""
-                const {"error"""
-                const {"data"""
-                const {"error"""
-                const {"data"""
-                    .update({"video_url"""
-                const {"error"""
-                const {"data"""
-                    .update({"model_url"")"
+                const {"error"""}
+                const {"data"""}
+                const {"error"""}
+                const {"data"""}
+                    .update({"video_url"""})
+                const {"error"""}
+                const {"data"""}
+                    .update({"model_url"")"}

@@ -1,5 +1,5 @@
-export const emergingTechInnovations2025 = [// Quantum Computing Services;
-    {
+export const emergingTechInnovations2025 = [// Quantum Computing Services;]
+    {}
         id:,
   quantum-computing-as-a-service'''
         "name"""

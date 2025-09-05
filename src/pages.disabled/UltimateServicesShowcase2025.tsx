@@ -7,12 +7,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'''
 } from '../data/ultimateComprehensiveServices2025'''
 } from 'lucide-react'''
-  const [selectedCategory, setSelectedCategory] = useState('all'''
-  const [selectedType, setSelectedType] = useState('all'''
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'''
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'''
-  const [selectedSupportLevel, setSelectedSupportLevel] = useState('all'''
-    if (selectedCategory !== 'all'''
-    if (selectedType !== 'all'''
+  const [selectedCategory, setSelectedCategory] = useState('all''')
+  const [selectedType, setSelectedType] = useState('all''')
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all''')
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all''')
+  const [selectedSupportLevel, setSelectedSupportLevel] = useState('all''')
+    if (selectedCategory !== 'all''')
+    if (selectedType !== 'all''')
       const "serviceTypeMap""
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

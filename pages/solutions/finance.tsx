@@ -1,35 +1,35 @@
-import React from 'react'
+import React from "react";
 import Layout from '../../components/Layout'
-import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react
-const features = [
-  {
+import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react;
+const features = []
+  {}
     icon: DollarSign,'
     title: 'Financial Data Management',''
     description: 'Secure, real-time financial data processing and analytics for informed decision making.''
   },
-  {
+  {}
     icon: Shield,'
     title: 'Regulatory Compliance',''
     description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.''
   },
-  {
+  {}
     icon: TrendingUp,'
     title: 'Risk Management',''
     description: 'Advanced risk assessment and management tools powered by AI and machine learning.''
   },
-  {
+  {}
     icon: Users,'
     title: 'Customer Experience',''
     description: 'Digital banking and financial services platforms that enhance customer engagement.''
   },
-  {
+  {}
     icon: Database,'
     title: 'Fraud Detection',''
     description: 'Real-time fraud detection and prevention systems using advanced analytics.''
-  }]
+  }];
 ];
 
-const solutions = ['
+const solutions = [']
   'Digital Banking Platforms',''
   'Payment Processing Systems',''
   'Risk Management Solutions',''
@@ -39,11 +39,11 @@ const solutions = ['
   'Trading Platforms',''
   'Insurance Technology',''
   'Cryptocurrency Solutions',''
-  'Financial Mobile Applications'']
+  'Financial Mobile Applications''];
 ];
 
-export default function FinanceSolutionsPage() {
-  return (
+export default function FinanceSolutionsPage() {}
+  return ()
     <Layout;'
       title="Financial Services Solutions - Zion Tech Group"
       description="Transform financial services with our secure, compliant solutions including digital banking, payment processing, risk management, and fraud detection."

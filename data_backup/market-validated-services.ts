@@ -1,6 +1,6 @@
 import { ServiceVariant } from "../types/service-variants";"
-export interface MarketValidatedService {
-  // TODO: Implement
+export interface MarketValidatedService {}
+  // TODO: Implement;
 }"
 	"id": string;"
 	name: string;,
@@ -16,11 +16,11 @@ export interface MarketValidatedService {
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-	contactInfo: {,
+	contactInfo: {,}
   mobile: string;
 		email: string;,
   address: string;
-website?: string};const contactInfo = {
+website?: string};const contactInfo = {}
   mobile:,"
   +1 302 464 0950',''
 	"email": 'kleber@ziontechgroup.com,'
@@ -29,8 +29,8 @@ website?: string};const contactInfo = {
   ;
   ;'
   "website": 'https://ziontechgroup.com};''
-export const "marketValidatedServices": MarketValidatedService[] = [// AI and Assistants;"
-	{
+export const "marketValidatedServices": MarketValidatedService[] = [// AI and Assistants;"]
+	{}
 		id:,"
   ai-assistant-pro',''
 		"name": 'AI Assistant Pro,'
@@ -40,12 +40,12 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		period:,'
   /month',''
 		"description": Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.','
-		features['
+		features[']
   'RAG over your docs with hybrid search',''
   '"Guardrails": PII/PHI redaction, jailbreak detection,"
   ,"
   'Human handoff + conversation analytics',''
-  'Slack/Teams/Widget channels',']
+  'Slack/Teams/Widget channels','];
 		],'
 		"category": 'AI & Assistants,'
 		link:,'
@@ -58,7 +58,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   30 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'ai-evals-observability,'
 		name:,'
   AI Evals & Observability',''
@@ -69,10 +69,10 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.,"
   ,"
-		features['Eval datasets/versioning',''
+		features['Eval datasets/versioning','']
   'Policy and toxicity checks',''
   'Latency and cost KPIs',''
-  'Prompt/version diff and alerts',']
+  'Prompt/version diff and alerts','];
 		],'
 		"category": 'AI & MLOps,'
 		link:,'
@@ -85,7 +85,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   1 hour','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'agentic-rag-platform,'
 		name:,'
   Agentic RAG Platform',''
@@ -96,10 +96,10 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.,"
   ,"
-		features['Hybrid vector+BM25 + reranker',''
+		features['Hybrid vector+BM25 + reranker','']
   'Chunking strategies + citations',''
   'Toolformer-style agents',''
-  'Eval suite and drift monitoring',']
+  'Eval suite and drift monitoring','];
 		],'
 		"category": 'AI & Search,'
 		link:,'
@@ -113,7 +113,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Security and APIs;
-	{'
+	{'}
 		"id": 'api-security-scanner,'
 		name:,'
   API Security Scanner',''
@@ -124,7 +124,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.,"
   ,"
-		features['Auth/Z misconfig checks',''
+		features['Auth/Z misconfig checks','']
   'OWASP Top 10 tests',''
   'CI gate',']'
   'Fix guidance'],''
@@ -139,7 +139,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   20 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'api-observability,'
 		name:,'
   API Observability & SLA Guard',''
@@ -150,7 +150,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.,"
   ,"
-		features['OTel traces/metrics/logs',''
+		features['OTel traces/metrics/logs','']
   'SLOs & error budgets',''
   'Alerting',']'
   'Dashboards'],''
@@ -166,7 +166,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Cloud and Infra;
-	{'
+	{'}
 		"id": 'cloud-cost-optimizer-pro,'
 		name:,'
   Cloud Cost Optimizer Pro',''
@@ -177,7 +177,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.,"
   ,"
-		features['Auto rightsizing',''
+		features['Auto rightsizing','']
   'Idle cleanup',''
   'Spot orchestration',']'
   'Anomaly detection'],''
@@ -192,7 +192,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   1 hour','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'database-performance-monitor,'
 		name:,'
   Database Performance Monitor',''
@@ -203,7 +203,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.,"
   ,"
-		features['Slow query ranking',''
+		features['Slow query ranking','']
   'AI index advice',''
   'Pool tuning',']'
   'SLA/SLO dashboards'],''
@@ -218,7 +218,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   45 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'managed-postgres-ha,'
 		name:,'
   Managed Postgres HA',''
@@ -229,7 +229,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.,"
   ,"
-		features['Automated backups',''
+		features['Automated backups','']
   'Failover & replication',''
   'Performance tuning',']'
   'SLA & support'],''
@@ -245,7 +245,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Reliability & Monitoring;
-	{'
+	{'}
 		"id": 'uptime-slo-monitor,'
 		name:,'
   Uptime & SLO Monitor',''
@@ -256,7 +256,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.,"
   ,"
-		features['Global synthetic checks',''
+		features['Global synthetic checks','']
   'Error budgets & burn rates',''
   'On-call & escalations',']'
   'Incident runbooks'],''
@@ -271,7 +271,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   25 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'tls-certificate-monitor,'
 		name:,'
   TLS Certificate Monitor',''
@@ -281,7 +281,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Monitor certificates across domains and environments, get renewal reminders and failure alerts.',''
-		features['Expiry alerts',''
+		features['Expiry alerts','']
   'Issuer checks',''
   'Auto-renew validation',']'
   'Inventory export'],''
@@ -296,7 +296,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   10 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'domain-dns-monitor,'
 		name:,'
   Domain & DNS Monitor',''
@@ -306,7 +306,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		period:,'
   /month',''
 		"description": 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.,'
-		features[,'
+		features[,']
   Change detection',''
   'Misconfig alerts',''
   'TTL insights',']'
@@ -323,7 +323,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Dev & Productivity;
-	{'
+	{'}
 		"id": 'pdf-render-api,'
 		name:,'
   PDF Render API',''
@@ -333,7 +333,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.',''
-		features['HTML/Markdown to PDF',''
+		features['HTML/Markdown to PDF','']
   'Headers/footers',''
   'Watermarks',']'
   'Async webhooks'],''
@@ -348,7 +348,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   10 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'browser-performance-monitor,'
 		name:,'
   Browser Performance Monitor',''
@@ -359,7 +359,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.,"
   ,"
-		features['RUM collection',''
+		features['RUM collection','']
   'CWV dashboards',''
   'Waterfall analysis',']'
   'Alerts & webhooks'],''
@@ -374,7 +374,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   20 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'feature-flags-edge,'
 		name:,'
   Feature Flags at the Edge',''
@@ -385,7 +385,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.,"
   ,"
-		features['Edge evaluation',''
+		features['Edge evaluation','']
   'Targeting & segments',''
   'Experiments',']'
   'SDKs & audit'],''
@@ -400,7 +400,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   30 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'serverless-cron-manager,'
 		name:,'
   Serverless Cron Manager',''
@@ -410,7 +410,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',''
-		features['Cron & schedules',''
+		features['Cron & schedules','']
   'Retries & DLQs',''
   'Logs & traces',']'
   'Alerts & webhooks'],''
@@ -426,7 +426,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Compliance & Risk;
-	{'
+	{'}
 		"id": 'soc2-evidence-automation,'
 		name:,'
   SOC 2 Evidence Automation',''
@@ -436,7 +436,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',''
-		features['Control mapping',''
+		features['Control mapping','']
   'Evidence collection',''
   'Change tracking',']'
   'Export & auditor access'],''
@@ -451,7 +451,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   1 day','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'vendor-risk-automation,'
 		name:,'
   Vendor Risk Automation',''
@@ -462,7 +462,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.,"
   ,"
-		features['DDQs and questionnaires',''
+		features['DDQs and questionnaires','']
   'Risk scoring',''
   'Continuous monitoring',']'
   'Dashboards & export'],''
@@ -478,7 +478,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Developer and Ops Utilities;
-	{'
+	{'}
 		"id": 'webhook-relay-replay,'
 		name:,'
   Webhook Relay & Replay',''
@@ -489,7 +489,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   /month',''
 		"description": Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.,"
   ,"
-		features['Capture & inspect',''
+		features['Capture & inspect','']
   'Replay with backoff',''
   'Signature verification',']'
   'Forwarding rules'],''
@@ -504,7 +504,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
   10 minutes','
 		contactInfo;
 	},
-	{'
+	{'}
 		"id": 'audit-log-vault,'
 		name:,'
   Audit Log Vault',''
@@ -514,7 +514,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.',''
-		features['WORM retention',''
+		features['WORM retention','']
   'Export APIs',''
   'Fine-grained access',']'
   'Tamper evidence'],''
@@ -530,7 +530,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// AI Channels;
-	{'
+	{'}
 		"id": 'ai-phone-agent,'
 		name:,'
   AI Phone Agent',''
@@ -540,7 +540,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',''
-		features['Natural TTS/ASR',''
+		features['Natural TTS/ASR','']
   'Routing & handoff',''
   'CRM sync',']'
   'Analytics'],''
@@ -556,7 +556,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		contactInfo;
 	},
 	// Search and Knowledge;
-	{'
+	{'}
 		"id": 'vector-search-starter,'
 		name:,'
   Vector Search Starter',''
@@ -566,7 +566,7 @@ export const "marketValidatedServices": MarketValidatedService[] = [// AI and As
 		"period": '/month,'
 		description:,'
   Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',''
-		features['Managed vector DB',''
+		features['Managed vector DB','']
   'Ingestion pipelines',''
   'Metadata filters',']'
   'Access controls'],''

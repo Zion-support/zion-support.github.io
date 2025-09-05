@@ -1,8 +1,8 @@
 import {GradientHeading} from "@/components/GradientHeading";""
 import {Button} from "@/components/ui/button";""
 import {Card, CardContent, CardFooter} from "@/components/ui/card";"
-export const ServiceLandingTemplate = (props) => {
-    return ("
+export const ServiceLandingTemplate = (props) => {}
+    return (")
     <div className="min-h-screen bg-white">"
 </div>"
       <section className="bg-zion-blue py-16 px-4 text-center">"
@@ -37,14 +37,14 @@ export const ServiceLandingTemplate = (props) => {
           </h2>"
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>"
-            {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">"
+            {benefits.map((benefit, idx) => (<div key={idx} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center">")
 </div>"
-                {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">"
+                {benefit.icon && (<div className="mb-4 flex justify-center text-zion-cyan">"})
 </div>
                       </div>"
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>""
-                <p className="text-zion-slate-light">{benefit.description}</p>")
-              </div>))}
+                <p className="text-zion-slate-light">{benefit.description}</p>");
+              </div>))};
           </div>
         </div>
       </section>"
@@ -57,7 +57,7 @@ export const ServiceLandingTemplate = (props) => {
           </h2>"
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">"
 </div>"
-            {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">"
+            {testimonials.map((t, idx) => (<Card key={idx} className="bg-zion-blue-dark border-zion-purple/30">")
 </Card>"
                 <CardContent className="pt-6">"
 </CardContent>"
@@ -76,7 +76,7 @@ export const ServiceLandingTemplate = (props) => {
                     </div>
                   </div>
                 </CardFooter>
-              </Card>))}
+              </Card>))};
           </div>
         </div>
       </section>"

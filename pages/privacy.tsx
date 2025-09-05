@@ -1,24 +1,24 @@
-import React from 'react';
+import React from "react";
 import { motion } from 'framer-motion';
 import { Shield, Eye, Lock, Database, Mail, Phone } from 'lucide-react';
 import Layout from '../components/Layout';
 
-export default function PrivacyPage() {
-  return (
-    <Layout
+export default function PrivacyPage() {}
+  return ()
+    <Layout;
       title="Privacy Policy - Zion Tech Group"
       description="Learn how Zion Tech Group protects your privacy and handles your personal information in accordance with applicable laws and regulations."
       keywords="privacy policy, data protection, personal information, GDPR, privacy rights"
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+              <motion.div;
+                initial={{ opacity: 0, y: 30 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8 }};
                 className="mb-8"
               >
                 <div className="flex justify-center mb-6">
@@ -27,28 +27,28 @@ export default function PrivacyPage() {
                   </div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                  Privacy Policy
+                  Privacy Policy;
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8">
                   Your privacy is important to us. Learn how we protect and handle your information.
                 </p>
                 <p className="text-sm text-gray-400">
-                  Last updated: January 15, 2024
+                  Last updated: January 15, 2024;
                 </p>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Content Section */}
+        {/* Content Section */};
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                <motion.div;
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6 }};
                 >
                   <h2 className="text-3xl font-bold text-gray-900 mb-8">Information We Collect</h2>
                   
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
                       <div>
                         <h3 className="text-xl font-semibold text-gray-900 mb-2">Usage Information</h3>
                         <p className="text-gray-600">
-                          We automatically collect certain information about your use of our services, including 
+                          We automatically collect certain information about your use of our services, including;
                           your IP address, browser type, device information, and how you interact with our website.
                         </p>
                       </div>
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-8">Information Sharing</h2>
                   
                   <p className="text-gray-600 mb-6">
-                    We do not sell, trade, or otherwise transfer your personal information to third parties without 
+                    We do not sell, trade, or otherwise transfer your personal information to third parties without;
                     your consent, except as described in this policy. We may share your information in the following circumstances:
                   </p>
 
@@ -146,8 +146,8 @@ export default function PrivacyPage() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-8">Data Security</h2>
                   
                   <p className="text-gray-600 mb-6">
-                    We implement appropriate technical and organizational measures to protect your personal information 
-                    against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission 
+                    We implement appropriate technical and organizational measures to protect your personal information;
+                    against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission;
                     over the internet is 100% secure.
                   </p>
 
@@ -192,8 +192,8 @@ export default function PrivacyPage() {
 
                   <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
                     <p className="text-yellow-800">
-                      <strong>Note:</strong> This Privacy Policy may be updated from time to time. We will notify 
-                      you of any material changes by posting the new Privacy Policy on this page and updating 
+                      <strong>Note:</strong> This Privacy Policy may be updated from time to time. We will notify;
+                      you of any material changes by posting the new Privacy Policy on this page and updating;
                       the "Last updated" date.
                     </p>
                   </div>
@@ -205,4 +205,4 @@ export default function PrivacyPage() {
       </div>
     </Layout>
   );
-}
+};

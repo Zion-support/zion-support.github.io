@@ -6,6 +6,6 @@ import {cn} from '@/lib/utils'''
     "md"""
     "lg"""
     "xl"""
-  const colorClasses = {"primary"""
+  const colorClasses = {"primary"""}
     "secondary"""
     "white"""

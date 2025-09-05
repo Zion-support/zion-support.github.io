@@ -1,22 +1,21 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
-console.log(' Starting Comprehensive Fix Script...'
-    let content = fs.readFileSync(filePath, 'utf8'
-    if (: State {'
-        !content.includes('  }'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Starting Comprehensive Fix Script...')
+    let content = fs.readFileSync(filePath, 'utf8')
+    if (: State {'})
+        !content.includes('  }')
         '
-    : State {'
-        !content.includes('  }'
-        'public static getDerivedStateFromError("error"
-        'public static getDerivedStateFromError("error"
-        '          if ( {\n            console.log(\'"LCP"
-     {\n            console.log(\'"LCP"
-        '          if ( {\n            console.log(\'"LCP"
-     {\n            console.log(\'"LCP"
-    execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { "stdio"
-  console.log('� Phase "1"
-  console.log('� Phase "2"
-    execSync('npm run build', { "stdio"
+    : State {'}
+        !content.includes('  }')
+        'public static getDerivedStateFromError("error")
+        'public static getDerivedStateFromError("error")
+        '          if ( {\n            console.log(\'"LCP"})
+     {\n            console.log(\'"LCP"})
+        '          if ( {\n            console.log(\'"LCP"})
+     {\n            console.log(\'"LCP"})
+    execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { "stdio"})
+  console.log('� Phase "1")
+  console.log('� Phase "2")
+    execSync('npm run build', { "stdio"})

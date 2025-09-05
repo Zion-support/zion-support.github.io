@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Calendar, 
   Clock, 
   User, 
@@ -16,9 +16,9 @@ import {
   Users,
   Award,
   CheckCircle;'
-} from 'lucide-react
-const webinars = [
-  {
+} from 'lucide-react;
+const webinars = []
+  {}
     id: 1,'
     title: "The Future of AI in Business: 2025 Trends and Predictions",
     description: "Join our experts as they discuss the latest AI trends, emerging technologies, and how businesses can prepare for the future of artificial intelligence.",
@@ -33,7 +33,7 @@ const webinars = [
     status: "upcoming",
     registrationUrl: "/webinars/register/ai-future-2025"
   },
-  {
+  {}
     id: 2,
     title: "Cloud Migration Best Practices: A Complete Guide",
     description: "Learn the essential strategies and best practices for successful cloud migration, including planning, execution, and optimization.",
@@ -48,7 +48,7 @@ const webinars = [
     status: "upcoming",
     registrationUrl: "/webinars/register/cloud-migration-guide"
   },
-  {
+  {}
     id: 3,
     title: "Cybersecurity in the Age of AI: Threats and Solutions",
     description: "Explore the evolving cybersecurity landscape and how AI is both creating new threats and providing innovative solutions.",
@@ -63,7 +63,7 @@ const webinars = [
     status: "recorded",
     recordingUrl: "/webinars/recordings/cybersecurity-ai-age"
   },
-  {
+  {}
     id: 4,
     title: "Building Scalable Micro SaaS Applications",
     description: "Discover how to design, develop, and scale micro SaaS applications for maximum growth and profitability.",
@@ -78,7 +78,7 @@ const webinars = [
     status: "recorded",
     recordingUrl: "/webinars/recordings/micro-saas-scalable"
   },
-  {
+  {}
     id: 5,
     title: "Data Analytics and Business Intelligence: Advanced Techniques",
     description: "Learn advanced data analytics techniques and how to turn data into actionable business insights.",
@@ -93,7 +93,7 @@ const webinars = [
     status: "recorded",
     recordingUrl: "/webinars/recordings/data-analytics-bi"
   },
-  {
+  {}
     id: 6,
     title: "Digital Transformation: A Strategic Approach",
     description: "Understand the key principles of digital transformation and how to successfully lead organizational change.",
@@ -107,29 +107,29 @@ const webinars = [
     featured: false,
     status: "recorded",
     recordingUrl: "/webinars/recordings/digital-transformation-strategy"
-  }]
+  }];
 ];
 
-const categories = [
+const categories = []
   "All Webinars",
   "Artificial Intelligence",
   "Cloud Computing",
   "Cybersecurity",
   "SaaS",
   "Data Analytics",
-  "Digital Transformation"]
+  "Digital Transformation"];
 ];
 
-const statuses = [
+const statuses = []
   "All Status",
   "Upcoming",
-  "Recorded"]
+  "Recorded"];
 ];
 
-export default function WebinarsPage() {
+export default function WebinarsPage() {}
   const [selectedCategory, setSelectedCategory] = useState("All Webinars");"
   const [selectedStatus, setSelectedStatus] = useState("All Status");"
-  const filteredWebinars = webinars.filter(webinar => {
+  const filteredWebinars = webinars.filter(webinar => {})
     const categoryMatch = selectedCategory === "All Webinars" || webinar.category === selectedCategory;"
     const statusMatch = selectedStatus === "All Status" ||")"
       (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||"
@@ -137,7 +137,7 @@ export default function WebinarsPage() {
     return categoryMatch && statusMatch;
   });
 
-  return ("
+  return (")
     <div className="min-h-screen bg-gray-50">"
 </div>
       <Head>
@@ -169,11 +169,11 @@ export default function WebinarsPage() {
 </div>"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Webinar</h2>"
               <motion.article;
-                key={webinar.id}
+                key={webinar.id};
                 className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }};
               >
 </motion>"
                 <div className="md:flex">"
@@ -195,15 +195,15 @@ export default function WebinarsPage() {
                       <span className="text-sm text-blue-600 font-medium">"
 </span>
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
+                      <span className={`text-xs px-2 py-1 rounded-full ${`}
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
-                      }`}>
+                      }`}>`
 </span>
                       </span>
                     </div>
-                    '
+                    ``
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">"
 </h2>
                     </h2>
@@ -247,7 +247,7 @@ export default function WebinarsPage() {
                       </div>
                     </div>
                       <Link;
-                        href={webinar.registrationUrl}
+                        href={webinar.registrationUrl};
                         className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                       >
 </Link>"
@@ -257,7 +257,7 @@ export default function WebinarsPage() {
                       <div className="flex gap-4">"
 </div>
                         <Link;
-                          href={webinar.recordingUrl}
+                          href={webinar.recordingUrl};
                           className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                         >
 </Link>"
@@ -272,8 +272,8 @@ export default function WebinarsPage() {
                       </div>
                   </div>
                 </div>
-              </motion.article>)
-            ))}
+              </motion.article>);
+            ))};
           </div>
         </div>
       </section>"
@@ -289,8 +289,8 @@ export default function WebinarsPage() {
 </div>"
                 <label className="block text-sm font-medium text-gray-700 mb-2">Category:</label>"
                 <select;
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  value={selectedCategory};
+                  onChange={(e) => setSelectedCategory(e.target.value)};
 </select>
                     <option key={category} value={category}>{category}</option>
                 </select>
@@ -299,8 +299,8 @@ export default function WebinarsPage() {
 </div>"
                 <label className="block text-sm font-medium text-gray-700 mb-2">Status:</label>"
                 <select;
-                  value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  value={selectedStatus};
+                  onChange={(e) => setSelectedStatus(e.target.value)};
 </select>
                     <option key={status} value={status}>{status}</option>
                 </select>
@@ -319,12 +319,12 @@ export default function WebinarsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                 <motion.article;
-                  key={webinar.id}
+                  key={webinar.id};
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 20 }};
+                  animate={{ opacity: 1, y: 0 }};
+                  transition={{ delay: index * 0.1 }};
+                  whileHover={{ y: -5 }};
                 >
 </motion>"
                   <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">"
@@ -341,15 +341,15 @@ export default function WebinarsPage() {
                       <span className="text-sm text-blue-600 font-medium">"
 </span>
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
+                      <span className={`text-xs px-2 py-1 rounded-full ${`}
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
                           : 'bg-gray-100 text-gray-800''
-                      }`}>
+                      }`}>`
 </span>
                       </span>
                     </div>
-                    '
+                    ``
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
 </h3>
                     </h3>
@@ -389,7 +389,7 @@ export default function WebinarsPage() {
                     <div className="flex gap-2">"
 </div>
                         <Link;
-                          href={webinar.registrationUrl}
+                          href={webinar.registrationUrl};
                           className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                         >
 </Link>"
@@ -398,7 +398,7 @@ export default function WebinarsPage() {
                         </Link>
                         <>
                           <Link;
-                            href={webinar.recordingUrl}
+                            href={webinar.recordingUrl};
                             className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                           >
 </Link>"
@@ -411,11 +411,11 @@ export default function WebinarsPage() {
 </Download>
                           </button>
                         </>
-                      )}
+                      )};
                     </div>
                   </div>
                 </motion.article>
-              ))}
+              ))};
             </div>"
             <div className="text-center mt-12">"
 </div>"

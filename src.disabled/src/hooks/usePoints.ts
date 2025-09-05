@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react'; // Added useCallback;'
 import { supabase } from '@/integrations/supabase/client';''
 import { useAuth } from '@/hooks/useAuth';''
  from '@/types/points';'
-export function usePoints() {;
+export function usePoints() {;}
   const { user } = useAuth();
   const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
 </PointsLedgerEntry>'

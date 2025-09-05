@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2-4 weeks"""
     "category": "AI & Machine Learning"""
     "realService"""
-    technology["Natural Language Processing", "Computer Vision", "Emotional AI", "Machine Learning", "Sentiment Analysis", "Neural Networks"""
-    integrations["CRM systems", "Chat platforms", "Healthcare systems", "Educational platforms", "HR software", "Communication tools"""
-    useCases["Customer service enhancement", "Mental health support", "Educational assistance", "HR interactions", "AI companionship", "Emotional health monitoring"""
+    technology["Natural Language Processing", "Computer Vision", "Emotional AI", "Machine Learning", "Sentiment Analysis", "Neural Networks"""]
+    integrations["CRM systems", "Chat platforms", "Healthcare systems", "Educational platforms", "HR software", "Communication tools"""]
+    useCases["Customer service enhancement", "Mental health support", "Educational assistance", "HR interactions", "AI companionship", "Emotional health monitoring"""]
     "roi": "Customer service companies report 400% ROI through improved customer satisfaction. Healthcare providers see 600% ROI in patient care quality."""
-    competitors["Sentiment analysis tools", "Basic emotion detection", "Customer service AI", "Mental health chatbots"""
+    competitors["Sentiment analysis tools", "Basic emotion detection", "Customer service AI", "Mental health chatbots"""]
     "marketSize": "$35B emotional AI market"""
     "growthRate": "280% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 weeks"""
     "category": "AI & Machine Learning"""
     "realService"""
-    technology["Multimodal AI", "Deep Learning", "Computer Vision", "Natural Language Processing", "Audio Processing", "Neural Networks"""
-    integrations["AI platforms", "Media processing tools", "Research platforms", "Healthcare systems", "Educational tools", "Development platforms"""
-    useCases["Media analysis", "Research studies", "Healthcare diagnostics", "Educational content", "AI development", "Data analysis"""
+    technology["Multimodal AI", "Deep Learning", "Computer Vision", "Natural Language Processing", "Audio Processing", "Neural Networks"""]
+    integrations["AI platforms", "Media processing tools", "Research platforms", "Healthcare systems", "Educational tools", "Development platforms"""]
+    useCases["Media analysis", "Research studies", "Healthcare diagnostics", "Educational content", "AI development", "Data analysis"""]
     "roi": "AI companies report 500% ROI through unified multimodal capabilities. Research institutions see 700% ROI in comprehensive data analysis."""
-    competitors["Specialized AI tools", "Single-modal platforms", "Research AI platforms", "Media analysis tools"""
+    competitors["Specialized AI tools", "Single-modal platforms", "Research AI platforms", "Media analysis tools"""]
     "marketSize": "$45B multimodal AI market"""
     "growthRate": "320% annual growth"""
     "variant": "ai-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4-8 weeks"""
     "category": "Blockchain & Web3"""
     "realService"""
-    technology["Quantum Computing", "Blockchain Technology", "Cryptography", "Smart Contracts", "Distributed Systems", "Quantum Cryptography"""
-    integrations["Financial systems", "Government platforms", "Healthcare systems", "Supply chain platforms", "Development tools", "Analytics platforms"""
-    useCases["Financial transactions", "Government records", "Healthcare data", "Supply chain tracking", "Smart contracts", "Decentralized applications"""
+    technology["Quantum Computing", "Blockchain Technology", "Cryptography", "Smart Contracts", "Distributed Systems", "Quantum Cryptography"""]
+    integrations["Financial systems", "Government platforms", "Healthcare systems", "Supply chain platforms", "Development tools", "Analytics platforms"""]
+    useCases["Financial transactions", "Government records", "Healthcare data", "Supply chain tracking", "Smart contracts", "Decentralized applications"""]
     "roi": "Financial institutions report 800% ROI through enhanced security. Government agencies see 1000% ROI in data protection."""
-    competitors["Enterprise blockchain", "Traditional blockchain", "Government blockchain", "Financial blockchain"""
+    competitors["Enterprise blockchain", "Traditional blockchain", "Government blockchain", "Financial blockchain"""]
     "marketSize": "$60B blockchain market"""
     "growthRate": "400% annual growth"""
     "variant": "blockchain-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6-12 weeks"""
     "category": "Healthcare & Biotech"""
     "realService"""
-    technology["AI & Machine Learning", "Genomics", "Medical Data Analysis", "Drug Discovery", "Precision Medicine", "Clinical Analytics"""
-    integrations["Electronic health records", "Genetic testing platforms", "Clinical systems", "Research databases", "Pharmaceutical platforms", "Analytics tools"""
-    useCases["Personalized treatment", "Drug discovery", "Clinical trials", "Genetic analysis", "Treatment optimization", "Research collaboration"""
+    technology["AI & Machine Learning", "Genomics", "Medical Data Analysis", "Drug Discovery", "Precision Medicine", "Clinical Analytics"""]
+    integrations["Electronic health records", "Genetic testing platforms", "Clinical systems", "Research databases", "Pharmaceutical platforms", "Analytics tools"""]
+    useCases["Personalized treatment", "Drug discovery", "Clinical trials", "Genetic analysis", "Treatment optimization", "Research collaboration"""]
     "roi": "Healthcare providers report 600% ROI through improved treatment outcomes. Pharmaceutical companies see 800% ROI in drug discovery efficiency."""
-    competitors["Medical AI tools", "Genetic analysis platforms", "Drug discovery tools", "Clinical research platforms"""
+    competitors["Medical AI tools", "Genetic analysis platforms", "Drug discovery tools", "Clinical research platforms"""]
     "marketSize": "$80B personalized medicine market"""
     "growthRate": "350% annual growth"""
     "variant": "ai-healthcare"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3-6 months"""
     "category": "Smart City & Infrastructure"""
     "realService"""
-    technology["AI & Machine Learning", "IoT Integration", "Big Data Analytics", "Predictive Analytics", "Smart Infrastructure", "Urban Planning"""
-    integrations["City systems", "IoT devices", "Infrastructure platforms", "Government systems", "Analytics platforms", "Monitoring tools"""
-    useCases["City management", "Infrastructure optimization", "Traffic management", "Energy optimization", "Public services", "Emergency response"""
+    technology["AI & Machine Learning", "IoT Integration", "Big Data Analytics", "Predictive Analytics", "Smart Infrastructure", "Urban Planning"""]
+    integrations["City systems", "IoT devices", "Infrastructure platforms", "Government systems", "Analytics platforms", "Monitoring tools"""]
+    useCases["City management", "Infrastructure optimization", "Traffic management", "Energy optimization", "Public services", "Emergency response"""]
     "roi": "City governments report 1000% ROI through infrastructure optimization. Municipal agencies see 800% ROI in operational efficiency."""
-    competitors["City management platforms", "Infrastructure tools", "Urban planning software", "Government platforms"""
+    competitors["City management platforms", "Infrastructure tools", "Urban planning software", "Government platforms"""]
     "marketSize": "$100B smart city market"""
     "growthRate": "450% annual growth"""
     "variant": "it-futuristic"""

@@ -1,6 +1,6 @@
-export interface AddedRealService2025 {
-  // TODO: Implement
-}
+export interface AddedRealService2025 {}
+  // TODO: Implement;
+};
   "id"""
   "features"""
 export const "addedRealServices2025"""
@@ -8,7 +8,7 @@ export const "addedRealServices2025"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 299, "currency"""
+    "price": { monthly: 299, "currency"""}
     "link"""
     "icon"""
     "color"""
@@ -18,7 +18,7 @@ export const "addedRealServices2025"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 12, "currency"""
+    "price": { monthly: 12, "currency"""}
     "features"""
     "link"""
     "icon"""
@@ -29,7 +29,7 @@ export const "addedRealServices2025"""
     "tagline"""
     "description"""
     "category"""
-    "price": { monthly: 39, "currency"""
+    "price": { monthly: 39, "currency"""}
     "features"""
     "link"""
     "icon"""

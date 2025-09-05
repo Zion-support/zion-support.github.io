@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
-import {
-  // TODO: Implement
-}
+import { motion } from 'framer-motion;
+import {}
+  // TODO: Implement;
+};
   Users, 
   MapPin, 
   Clock, 
@@ -18,179 +18,179 @@ import {
   Laptop,
   BookOpen,
   Target;'
-} from 'lucide-react
-const benefits = [
-  {'
+} from 'lucide-react;
+const benefits = []
+  {'}
     title: "Competitive Compensation",
     description: "Above-market salaries and performance bonuses",
     icon: Award;
   },
-  {
+  {}
     title: "Health & Wellness",
     description: "Comprehensive health, dental, and vision insurance",
     icon: Heart;
   },
-  {
+  {}
     title: "Flexible Work",
     description: "Remote work options and flexible schedules",
     icon: Laptop;
   },
-  {
+  {}
     title: "Learning & Development",
     description: "Professional development budget and training programs",
     icon: BookOpen;
   },
-  {
+  {}
     title: "Team Building",
     description: "Regular team events and company retreats",
     icon: Users;
   },
-  {
+  {}
     title: "Innovation Time",
     description: "Dedicated time for personal projects and innovation",
     icon: Zap;
-  }]
+  }];
 ];
 
-const openPositions = [
-  {
+const openPositions = []
+  {}
     title: "Senior Full-Stack Developer",
     department: "Engineering",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "5+ years",
     description: "Lead development of web applications using React, Node.js, and cloud technologies.",
-    requirements: [
+    requirements: []
       "5+ years of full-stack development experience",
       "Expertise in React, Node.js, and TypeScript",
       "Experience with cloud platforms (AWS, Azure, or GCP)",
-      "Strong problem-solving and communication skills"]
+      "Strong problem-solving and communication skills"];
     ],
     featured: true;
   },
-  {
+  {}
     title: "AI/ML Engineer",
     department: "AI Services",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Develop and deploy machine learning models and AI solutions for enterprise clients.",
-    requirements: [
+    requirements: []
       "3+ years of ML/AI development experience",
       "Proficiency in Python, TensorFlow, and PyTorch",
       "Experience with MLOps and model deployment",
-      "Knowledge of cloud ML services"]
+      "Knowledge of cloud ML services"];
     ],
     featured: true;
   },
-  {
+  {}
     title: "DevOps Engineer",
     department: "Infrastructure",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "4+ years",
     description: "Manage cloud infrastructure, CI/CD pipelines, and deployment automation.",
-    requirements: [
+    requirements: []
       "4+ years of DevOps experience",
       "Expertise in AWS, Docker, and Kubernetes",
       "Experience with CI/CD tools (Jenkins, GitLab CI)",
-      "Infrastructure as Code (Terraform, CloudFormation)"]
+      "Infrastructure as Code (Terraform, CloudFormation)"];
     ],
     featured: false;
   },
-  {
+  {}
     title: "Product Manager",
     department: "Product",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Lead product strategy and roadmap for our AI and SaaS solutions.",
-    requirements: [
+    requirements: []
       "3+ years of product management experience",
       "Experience with B2B SaaS products",
       "Strong analytical and communication skills",
-      "Technical background preferred"]
+      "Technical background preferred"];
     ],
     featured: false;
   },
-  {
+  {}
     title: "Sales Engineer",
     department: "Sales",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "2+ years",
     description: "Support sales team with technical expertise and client demonstrations.",
-    requirements: [
+    requirements: []
       "2+ years of technical sales experience",
       "Strong technical background",
       "Excellent presentation and communication skills",
-      "Experience with enterprise software sales"]
+      "Experience with enterprise software sales"];
     ],
     featured: false;
   },
-  {
+  {}
     title: "UX/UI Designer",
     department: "Design",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Design user experiences and interfaces for our web and mobile applications.",
-    requirements: [
+    requirements: []
       "3+ years of UX/UI design experience",
       "Proficiency in Figma, Sketch, or Adobe XD",
       "Experience with design systems",
-      "Portfolio demonstrating B2B product design"]
+      "Portfolio demonstrating B2B product design"];
     ],
     featured: false;
-  }
+  };
 ];
 
-const culture = [
-  {
+const culture = []
+  {}
     title: "Innovation First",
     description: "We encourage experimentation and innovative thinking in everything we do.",
     icon: Zap;
   },
-  {
+  {}
     title: "Collaborative Environment",
     description: "Open communication and teamwork are at the heart of our culture.",
     icon: Users;
   },
-  {
+  {}
     title: "Continuous Learning",
     description: "We invest in our team's growth with learning opportunities and development programs.",
     icon: BookOpen;
   },
-  {
+  {}
     title: "Work-Life Balance",
     description: "We believe in sustainable work practices and supporting our team's well-being.",
     icon: Heart;
-  }]
+  }];
 ];
 
-const testimonials = [
-  {
+const testimonials = []
+  {}
     name: "Sarah Chen",
     role: "Senior Developer",
     content: "Working at Zion Tech Group has been incredible. The team is supportive, the projects are challenging, and I've grown tremendously in my career.",
     avatar: "SC"
   },
-  {
+  {}
     name: "Michael Rodriguez",
     role: "AI Engineer",
     content: "The opportunity to work on cutting-edge AI projects while having the flexibility to work remotely has been perfect for me.",
     avatar: "MR"
   },
-  {
+  {}
     name: "Emily Johnson",
     role: "Product Manager",
     content: "The collaborative culture and focus on innovation make this an amazing place to work. I love being part of building solutions that make a real impact.",
     avatar: "EJ"
-  }]
+  }];
 ];
 
-export default function CareersPage() {
-  return (
+export default function CareersPage() {}
+  return ()
     <MainLayout;"
       title="Careers - Zion Tech Group"
       description="Join our team of innovative technologists. Explore career opportunities at Zion Tech Group and help us build the future of technology."
@@ -203,9 +203,9 @@ export default function CareersPage() {
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -265,10 +265,10 @@ export default function CareersPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -282,12 +282,12 @@ export default function CareersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -301,9 +301,9 @@ export default function CareersPage() {
                     <p className="text-gray-600">"
 </p>
                     </p>
-                  </motion.div>)
+                  </motion.div>);
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -313,10 +313,10 @@ export default function CareersPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -330,12 +330,12 @@ export default function CareersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
                   <motion.div;
-                    key={index}
+                    key={index};
                     className="bg-gray-50 p-6 rounded-lg hover:bg-blue-50 transition-colors"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }};
+                    whileInView={{ opacity: 1, y: 0 }};
+                    transition={{ duration: 0.8, delay: index * 0.1 }};
+                    viewport={{ once: true }};
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -357,7 +357,7 @@ export default function CareersPage() {
                     </div>
                   </motion.div>
                 );
-              })}
+              })};
             </div>
           </div>
         </section>"
@@ -367,10 +367,10 @@ export default function CareersPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -384,16 +384,16 @@ export default function CareersPage() {
             <div className="space-y-6">"
 </div>
                 <motion.div;
-                  key={index}
-                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
+                  key={index};
+                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${`}
                     position.featured ? 'ring-2 ring-blue-500' : '''
-                  }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  }`};`
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
-</motion>'
+</motion>``
                     <div className="mb-4">"
 </div>"
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">"
@@ -461,7 +461,7 @@ export default function CareersPage() {
                     </ul>
                   </div>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -471,10 +471,10 @@ export default function CareersPage() {
 </div>
             <motion.div;"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -488,12 +488,12 @@ export default function CareersPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
                 <motion.div;
-                  key={index}
+                  key={index};
                   className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
                 >
 </motion>"
                   <p className="text-gray-600 mb-4 italic">"
@@ -514,7 +514,7 @@ export default function CareersPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ))};
             </div>
           </div>
         </section>"
@@ -523,10 +523,10 @@ export default function CareersPage() {
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }};
+              whileInView={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

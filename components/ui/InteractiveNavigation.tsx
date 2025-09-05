@@ -1,6 +1,6 @@
 import Link from 'next/link';'
-const InteractiveNavigation = () => {
-  return ('
+const InteractiveNavigation = () => {}
+  return (')
     <nav className="bg-white shadow-lg">"
 </nav>"
       <div className="container mx-auto px-4">"

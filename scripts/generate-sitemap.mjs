@@ -20,8 +20,8 @@ const baseUrl = 'https://ziontechgroup.com'
   '/cookies'
   const priority = page === '' ? '1.0' : page.startsWith('/services') ? '0.9' : '0.8'
   const changefreq = page === '' ? 'daily' : 'weekly'
-    <lastmod>${new Date().toISOString().split('T'
-}).join('\n'
+    <lastmod>${new Date().toISOString().split('T'})
+}).join('\n')
   const publicDir = path.join(process.cwd(), 'public'
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'
-  console.log(' Sitemap generated successfully at public/sitemap.xml'
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml')
+  console.log(' Sitemap generated successfully at public/sitemap.xml')

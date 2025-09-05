@@ -2,10 +2,10 @@ import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 
-export default [
+export default []
   js.configs.recommended,
-  {
-    ignores: [
+  {}
+    ignores: []
       '**/__tests__/**',
       '**/tests/**',
       '**/*.test.*',
@@ -18,12 +18,12 @@ export default [
       '**/tools/**',
       '**/automation/**',
       '**/test_build/**'
-    ]
+    ];
   },
-  {
+  {}
     files: ['**/*.js'],
-    languageOptions: {
-      globals: {
+    languageOptions: {}
+      globals: {}
         process: 'readonly',
         console: 'readonly',
         Buffer: 'readonly',
@@ -41,12 +41,12 @@ export default [
         clearImmediate: 'readonly',
         URL: 'readonly',
         fetch: 'readonly'
-      }
-    }
+      };
+    };
   },
-  {
+  {}
     files: ['src/**/*.{js,jsx}'],
-    ignores: [
+    ignores: []
       'node_modules/**',
       'dist/**',
       'build/**',
@@ -81,15 +81,15 @@ export default [
       '**/automation/**',
       '**/test_build/**'
     ],
-    languageOptions: {
+    languageOptions: {}
       ecmaVersion: 2022,
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
+      parserOptions: {}
+        ecmaFeatures: {}
+          jsx: true;
+        };
       },
-      globals: {
+      globals: {}
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -114,17 +114,17 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-      }
+      };
     },
-    rules: {
+    rules: {}
       'no-unused-vars': 'warn',
       'no-console': 'off',
       'no-undef': 'warn'
-    }
+    };
   },
-  {
+  {}
     files: ['src/**/*.{ts,tsx}'],
-    ignores: [
+    ignores: []
       'node_modules/**',
       'dist/**',
       'build/**',
@@ -159,16 +159,16 @@ export default [
       '**/automation/**',
       '**/test_build/**'
     ],
-    languageOptions: {
+    languageOptions: {}
       parser: typescriptParser,
       ecmaVersion: 2022,
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
+      parserOptions: {}
+        ecmaFeatures: {}
+          jsx: true;
+        };
       },
-      globals: {
+      globals: {}
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -193,17 +193,17 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-      }
+      };
     },
-    plugins: {
-      '@typescript-eslint': typescript
+    plugins: {}
+      '@typescript-eslint': typescript;
     },
-    rules: {
+    rules: {}
       ...typescript.configs.recommended.rules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'off',
       'no-undef': 'off'
-    }
-  }
+    };
+  };
 ];

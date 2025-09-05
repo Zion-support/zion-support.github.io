@@ -1,6 +1,6 @@
-export interface InnovativeMicroSaas2031 {
-  // TODO: Implement
-}
+export interface InnovativeMicroSaas2031 {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
   "patentStatus"""

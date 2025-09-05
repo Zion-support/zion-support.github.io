@@ -3,108 +3,79 @@
  * Automatically disables logging in production builds;
  */
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';'
-interface LoggerConfig {
-  // TODO: Implement
+interface LoggerConfig {}
+  // TODO: Implement;
 }'
   "level": LogLevel;"
   enableConsole: boolean;,
-  enableRemote: boolean}
-class Logger {
-  // TODO: Implement
+  enableRemote: boolean};
+class Logger {}
+  // TODO: Implement;
 }"
   private "config": LoggerConfig;"
   private isProduction: boolean;
-  constructor() {"
+  constructor() {"}
     this.isProduction = process.env.NODE_ENV === 'production';';'
-    this.config = {'
+    this.config = {'}
       level: this.isProduction ? 'error' : 'debug',''
       "enableConsole": !this.isProduction,""
       "enableRemote": false;"
     }}"
-  private shouldLog("level": LogLevel): boolean {"
-  // TODO: Implement
+  private shouldLog("level": LogLevel): boolean {"}
+  // TODO: Implement;
 }"
     const levels = ['debug', 'info', 'warn', 'error'];'
     return levels.indexOf(level) >= levels.indexOf(this.config.level)}'
-  private formatMessage("level": LogLevel, "message": string, ..."args": any[]): string {"
-  // TODO: Implement
-}
+  private formatMessage("level": LogLevel, "message": string, ..."args": any[]): string {"}
+  // TODO: Implement;
+};
     const timestamp = new Date().toISOString();
-    return `[${timestamp}] [${level.toUpperCase()}] ${message}`}"
-  debug("message": string, ..."args": any[]): void {"
-  // TODO: Implement
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`}``
+  debug("message": string, ..."args": any[]): void {"}
+  // TODO: Implement;
 }"
-    if (this.shouldLog('debug') && this.config.enableConsole) {'
-    }
+    if (this.shouldLog('debug') && this.config.enableConsole) {'}
+    };
   }'
-  info("message": string, ..."args": any[]): void {"
-  // TODO: Implement
+  info("message": string, ..."args": any[]): void {"}
+  // TODO: Implement;
 }"
-    if (this.shouldLog('info') && this.config.enableConsole) {'
-    }
+    if (this.shouldLog('info') && this.config.enableConsole) {'}
+    };
   }'
-  warn("message": string, ..."args": any[]): void {"
-  // TODO: Implement
+  warn("message": string, ..."args": any[]): void {"}
+  // TODO: Implement;
 }"
-    if (this.shouldLog('warn') && this.config.enableConsole) {'
-    }
+    if (this.shouldLog('warn') && this.config.enableConsole) {'}
+    };
   }'
-  error("message": string, ..."args": any[]): void {"
-  // TODO: Implement
+  error("message": string, ..."args": any[]): void {"}
+  // TODO: Implement;
 }"
-    if (this.shouldLog('error') && this.config.enableConsole) {''
+    if (this.shouldLog('error') && this.config.enableConsole) {''}
       console.error(this.formatMessage('error', message), ...args)}'
-  }
-<<<<<<< HEAD
-  error("message": string, ..."args": any[]): void {
-    if (this.shouldLog('error') && this.config.enableConsole) {
-      , ...args)}
-  }
-  // Performance logging
-  time("label": string): void {
-=======
-  // Performance logging;'
-  time("label": string): void {"
-  // TODO: Implement
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-10c5
-    if (this.config.enableConsole) {
-      console.time(label)}
+  };
+
+    if (this.config.enableConsole) {}
+      console.time(label)};
   }"
-  timeEnd("label": string): void {"
-  // TODO: Implement
-}
-    if (this.config.enableConsole) {
-      console.timeEnd(label)}
-  }
+  timeEnd("label": string): void {"}
+  // TODO: Implement;
+};
+    if (this.config.enableConsole) {}
+      console.timeEnd(label)};
+  };
   // Group logging;"
-  group("label": string): void {"
-  // TODO: Implement
-}
-    if (this.config.enableConsole) {
-      console.group(label)}
-  }
-  groupEnd(): void {
-  // TODO: Implement
-}
-    if (this.config.enableConsole) {
-      console.groupEnd()}
-  }
-}
-<<<<<<< HEAD
-// Export singleton instance
-export const logger = new Logger();
-// Export for default import export default logger;';';
-type LogLevel = 'debug' | 'info' | 'warn' | 'error'; interface LoggerConfig { level: LogLevel; enableConsole: boolean; enableRemote: boolean} class Logger { private config: LoggerConfig; private isProduction: boolean; constructor() { this.isProduction = process.env.NODE_ENV === 'production';'; this.config = { level: this.isProduction ? 'error' : 'debug',enableConsole: !this.isProduction,enableRemote: false }} private shouldLog(level: LogLevel): boolean { const levels = ['debug','info','warn','error']; return levels.indexOf(level) >= levels.indexOf(this.config.level)} private formatMessage(level: LogLevel,message: string,...args: any[]): string { const timestamp = new Date().toISOString(); return `[${timestamp}] [${level.toUpperCase()}] ${message}`} debug(message: string,...args: any[]): void { if (this.shouldLog('debug') && this.config.enableConsole) { } } info(message: string,...args: any[]): void { if (this.shouldLog('info') && this.config.enableConsole) { } } warn(message: string,...args: any[]): void { if (this.shouldLog('warn') && this.config.enableConsole) { } } error(message: string,...args: any[]): void { if (this.shouldLog('error') && this.config.enableConsole) { ,...args)} } time(label: string): void { if (this.config.enableConsole) { console.time(label)} } timeEnd(label: string): void { if (this.config.enableConsole) { console.timeEnd(label)} } group(label: string): void { if (this.config.enableConsole) { console.group(label)} } groupEnd(): void { if (this.config.enableConsole) { console.groupEnd()} } } export const logger = new Logger();
-origin/cursor/automate-test-improve-and-merge-code-eafe
-cursor/website-audit-and-update-with-deployment-76dc
-cursor/fix-lint-push-and-merge-to-main-f3c1
-=======
-// Export singleton instance;
-export const logger = new Logger();"
-// Export for default import export default logger;';';''
-type LogLevel = 'debug' | 'info' | 'warn' | 'error'; interface LoggerConfig { level: LogLevel; enableConsole: boolean; enableRemote: boolean} class Logger { private config: LoggerConfig; private isProduction: boolean; constructor() { this.isProduction = process.env.NODE_ENV === 'production';'; this.config = { level: this.isProduction ? 'error' : 'debug',enableConsole: !this.isProduction,enableRemote: false }} private shouldLog(level: LogLevel): boolean { const levels = ['debug','info','warn','error']; return levels.indexOf(level) >= levels.indexOf(this.config.level)} private formatMessage(level: LogLevel,message: string,...args: any[]): string { const timestamp = new Date().toISOString(); return `[${timestamp}] [${level.toUpperCase()}] ${message}`} debug(message: string,...args: any[]): void { if (this.shouldLog('debug') && this.config.enableConsole) { } } info(message: string,...args: any[]): void { if (this.shouldLog('info') && this.config.enableConsole) { } } warn(message: string,...args: any[]): void { if (this.shouldLog('warn') && this.config.enableConsole) { } } error(message: string,...args: any[]): void { if (this.shouldLog('error') && this.config.enableConsole) { console.error(this.formatMessage('error',message),...args)} } time(label: string): void { if (this.config.enableConsole) { console.time(label)} } timeEnd(label: string): void { if (this.config.enableConsole) { console.timeEnd(label)} } group(label: string): void { if (this.config.enableConsole) { console.group(label)} } groupEnd(): void { if (this.config.enableConsole) { console.groupEnd()} } } export const logger = new Logger();'
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
->>>>>>> cursor/automate-test-improve-and-merge-code-10c5
+  group("label": string): void {"}
+  // TODO: Implement;
+};
+    if (this.config.enableConsole) {}
+      console.group(label)};
+  };
+  groupEnd(): void {}
+  // TODO: Implement;
+};
+    if (this.config.enableConsole) {}
+      console.groupEnd()};
+  };
+};

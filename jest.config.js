@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = {}
   "testEnvironment": 'jsdom',''
   "setupFilesAfterEnv": ['<rootDir>/tests/setup.t,s'],'
 </rootDir>'

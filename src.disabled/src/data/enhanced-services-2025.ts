@@ -1,13 +1,13 @@
-export interface EnhancedService {
-  // TODO: Implement
-}
+export interface EnhancedService {}
+  // TODO: Implement;
+};
   "id"""
   "website"""
         "name"""
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$199/month', "yearly": '$1,999/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$199/month', "yearly": '$1,999/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -26,7 +26,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$299/month', "yearly": '$2,999/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$299/month', "yearly": '$2,999/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -41,7 +41,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$79/month', "yearly": '$799/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$79/month', "yearly": '$799/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -54,7 +54,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$149/month', "yearly": '$1,499/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$149/month', "yearly": '$1,499/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -67,7 +67,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$199/month', "yearly": '$1,999/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$199/month', "yearly": '$1,999/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -80,7 +80,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$1,500/month', "yearly": '$15,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$1,500/month', "yearly": '$15,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -93,7 +93,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$800/month', "yearly": '$8,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$800/month', "yearly": '$8,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -106,7 +106,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$500/month', "yearly": '$5,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$500/month', "yearly": '$5,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -119,7 +119,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$2,000/month', "yearly": '$20,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$2,000/month', "yearly": '$20,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -132,7 +132,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$3,500/month', "yearly": '$35,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$3,500/month', "yearly": '$35,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -145,7 +145,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$4,000/month', "yearly": '$40,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$4,000/month', "yearly": '$40,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -158,7 +158,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$10,000/month', "yearly": '$100,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$10,000/month', "yearly": '$100,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -171,7 +171,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$5,000/month', "yearly": '$50,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$5,000/month', "yearly": '$50,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -184,7 +184,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$129/month', "yearly": '$1,290/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$129/month', "yearly": '$1,290/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -197,7 +197,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$99/month', "yearly": '$990/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$99/month', "yearly": '$990/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -210,7 +210,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$600/month', "yearly": '$6,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$600/month', "yearly": '$6,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -223,7 +223,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$1,200/month', "yearly": '$12,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$1,200/month', "yearly": '$12,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -236,7 +236,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$1,500/month', "yearly": '$15,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$1,500/month', "yearly": '$15,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""
@@ -249,7 +249,7 @@ export interface EnhancedService {
         "tagline"""
         "description"""
         "category"""
-        "pricing": { monthly: '$1,000/month', "yearly": '$10,000/year', "enterprise": 'Custom', "setup"""
+        "pricing": { monthly: '$1,000/month', "yearly": '$10,000/year', "enterprise": 'Custom', "setup"""}
         "features"""
         "benefits"""
         "roi"""

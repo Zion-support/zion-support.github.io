@@ -28,11 +28,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "AI & Business Intelligence"""
     "realService"""
-    technology["Quantum AI", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL", "Redis", "AWS Quantum"""
-    integrations["Salesforce", "HubSpot", "Slack", "Microsoft Teams", "Zapier", "Tableau", "Power BI"""
-    useCases["Market trend prediction", "Customer churn prevention", "Investment decision support", "Strategic planning", "Risk management", "Competitive analysis"""
+    technology["Quantum AI", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL", "Redis", "AWS Quantum"""]
+    integrations["Salesforce", "HubSpot", "Slack", "Microsoft Teams", "Zapier", "Tableau", "Power BI"""]
+    useCases["Market trend prediction", "Customer churn prevention", "Investment decision support", "Strategic planning", "Risk management", "Competitive analysis"""]
     "roi": "Average enterprise customer achieves 500% ROI within 6 months through improved decision-making and market timing."""
-    competitors["Tableau", "Power BI", "Qlik", "Looker", "Domo"""
+    competitors["Tableau", "Power BI", "Qlik", "Looker", "Domo"""]
     "marketSize": "$29.5B market"""
     "growthRate": "250% annual growth"""
     "variant": "ai-futuristic"""
@@ -74,11 +74,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "4 hours"""
     "category": "Quantum Security & Communication"""
     "realService"""
-    technology["Quantum Computing", "Post-Quantum Cryptography", "React Native", "Node.js", "Quantum Key Distribution", "Zero-Knowledge Proofs"""
-    integrations["Active Directory", "LDAP", "SAML", "OAuth 2.0", "REST API", "WebRTC", "SIP"""
-    useCases["Secure government communications", "Financial transaction security", "Healthcare data protection", "Legal document sharing", "Military communications", "Research collaboration"""
+    technology["Quantum Computing", "Post-Quantum Cryptography", "React Native", "Node.js", "Quantum Key Distribution", "Zero-Knowledge Proofs"""]
+    integrations["Active Directory", "LDAP", "SAML", "OAuth 2.0", "REST API", "WebRTC", "SIP"""]
+    useCases["Secure government communications", "Financial transaction security", "Healthcare data protection", "Legal document sharing", "Military communications", "Research collaboration"""]
     "roi": "Financial institutions report 800% ROI through reduced security incidents and compliance cost savings."""
-    competitors["Signal", "Wickr", "Telegram", "WhatsApp Business", "Microsoft Teams"""
+    competitors["Signal", "Wickr", "Telegram", "WhatsApp Business", "Microsoft Teams"""]
     "marketSize": "$15.2B market"""
     "growthRate": "300% annual growth"""
     "variant": "quantum-futuristic"""
@@ -120,11 +120,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "1 hour"""
     "category": "AI & Legal Technology"""
     "realService"""
-    technology["OpenAI GPT-4", "BERT Legal", "Python", "React", "Node.js", "PostgreSQL", "Elasticsearch", "AWS"""
-    integrations["Clio", "MyCase", "PracticePanther", "Microsoft Office", "Google Workspace", "Dropbox", "Box"""
-    useCases["Legal research automation", "Contract review and analysis", "Case preparation", "Compliance monitoring", "Document generation", "Legal risk assessment"""
+    technology["OpenAI GPT-4", "BERT Legal", "Python", "React", "Node.js", "PostgreSQL", "Elasticsearch", "AWS"""]
+    integrations["Clio", "MyCase", "PracticePanther", "Microsoft Office", "Google Workspace", "Dropbox", "Box"""]
+    useCases["Legal research automation", "Contract review and analysis", "Case preparation", "Compliance monitoring", "Document generation", "Legal risk assessment"""]
     "roi": "Law firms report 400% ROI through reduced research time and improved case outcomes."""
-    competitors["LexisNexis", "Westlaw", "Casetext", "Ravel Law", "Fastcase"""
+    competitors["LexisNexis", "Westlaw", "Casetext", "Ravel Law", "Fastcase"""]
     "marketSize": "$8.7B market"""
     "growthRate": "180% annual growth"""
     "variant": "ai-futuristic"""
@@ -166,11 +166,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 hours"""
     "category": "Quantum AI & Finance"""
     "realService"""
-    technology["Quantum Computing", "Deep Learning", "Python", "C++", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""
-    integrations["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Interactive Brokers API", "Alpaca API"""
-    useCases["Algorithmic trading", "Portfolio management", "Risk assessment", "Market analysis", "Arbitrage trading", "Quantitative research"""
+    technology["Quantum Computing", "Deep Learning", "Python", "C++", "React", "Node.js", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Interactive Brokers API", "Alpaca API"""]
+    useCases["Algorithmic trading", "Portfolio management", "Risk assessment", "Market analysis", "Arbitrage trading", "Quantitative research"""]
     "roi": "Professional traders achieve 1000%+ ROI through improved trading accuracy and reduced losses."""
-    competitors["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood Pro"""
+    competitors["Alpaca", "Interactive Brokers", "TD Ameritrade", "E*TRADE", "Robinhood Pro"""]
     "marketSize": "$45.2B market"""
     "growthRate": "400% annual growth"""
     "variant": "quantum-futuristic"""
@@ -212,11 +212,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "6 hours"""
     "category": "AI & Healthcare"""
     "realService"""
-    technology["TensorFlow", "PyTorch", "Computer Vision", "Natural Language Processing", "React Native", "Python", "PostgreSQL", "AWS"""
-    integrations["Epic EHR", "Cerner", "Allscripts", "Practice Fusion", "DICOM systems", "HL7 FHIR"""
-    useCases["Medical image analysis", "Patient diagnosis", "Treatment planning", "Drug safety monitoring", "Medical research", "Clinical decision support"""
+    technology["TensorFlow", "PyTorch", "Computer Vision", "Natural Language Processing", "React Native", "Python", "PostgreSQL", "AWS"""]
+    integrations["Epic EHR", "Cerner", "Allscripts", "Practice Fusion", "DICOM systems", "HL7 FHIR"""]
+    useCases["Medical image analysis", "Patient diagnosis", "Treatment planning", "Drug safety monitoring", "Medical research", "Clinical decision support"""]
     "roi": "Healthcare providers report 300% ROI through improved diagnostic accuracy and reduced misdiagnosis costs."""
-    competitors["IBM Watson Health", "Google Health AI", "Microsoft Healthcare", "Amazon Comprehend Medical", "Nuance"""
+    competitors["IBM Watson Health", "Google Health AI", "Microsoft Healthcare", "Amazon Comprehend Medical", "Nuance"""]
     "marketSize": "$67.8B market"""
     "growthRate": "220% annual growth"""
     "variant": "ai-futuristic"""
@@ -258,11 +258,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 hours"""
     "category": "Quantum Security & Cybersecurity"""
     "realService"""
-    technology["Post-Quantum Cryptography", "Quantum Key Distribution", "Machine Learning", "React", "Node.js", "Python", "PostgreSQL", "AWS"""
-    integrations["Active Directory", "LDAP", "SAML", "OAuth 2.0", "SIEM systems", "EDR platforms", "Firewall systems"""
-    useCases["Network security", "Data protection", "Identity management", "Threat detection", "Incident response", "Compliance management"""
+    technology["Post-Quantum Cryptography", "Quantum Key Distribution", "Machine Learning", "React", "Node.js", "Python", "PostgreSQL", "AWS"""]
+    integrations["Active Directory", "LDAP", "SAML", "OAuth 2.0", "SIEM systems", "EDR platforms", "Firewall systems"""]
+    useCases["Network security", "Data protection", "Identity management", "Threat detection", "Incident response", "Compliance management"""]
     "roi": "Enterprises achieve 600% ROI through reduced security incidents and future-proof protection."""
-    competitors["CrowdStrike", "Palo Alto Networks", "Fortinet", "Cisco", "Symantec"""
+    competitors["CrowdStrike", "Palo Alto Networks", "Fortinet", "Cisco", "Symantec"""]
     "marketSize": "$182.3B market"""
     "growthRate": "280% annual growth"""
     "variant": "quantum-futuristic"""
@@ -304,11 +304,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "3 hours"""
     "category": "AI & Marketing"""
     "realService"""
-    technology["Machine Learning", "Natural Language Processing", "React", "Node.js", "Python", "PostgreSQL", "Redis", "AWS"""
-    integrations["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "Shopify", "WooCommerce"""
-    useCases["Customer segmentation", "Campaign automation", "Content personalization", "Lead nurturing", "Email marketing", "Social media management"""
+    technology["Machine Learning", "Natural Language Processing", "React", "Node.js", "Python", "PostgreSQL", "Redis", "AWS"""]
+    integrations["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "Shopify", "WooCommerce"""]
+    useCases["Customer segmentation", "Campaign automation", "Content personalization", "Lead nurturing", "Email marketing", "Social media management"""]
     "roi": "Marketing teams achieve 400% ROI through improved conversion rates and reduced manual work."""
-    competitors["HubSpot", "Marketo", "Pardot", "ActiveCampaign", "ConvertKit"""
+    competitors["HubSpot", "Marketo", "Pardot", "ActiveCampaign", "ConvertKit"""]
     "marketSize": "$25.1B market"""
     "growthRate": "200% annual growth"""
     "variant": "ai-futuristic"""
@@ -350,11 +350,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "12 hours"""
     "category": "Quantum Blockchain & Web3"""
     "realService"""
-    technology["Quantum Computing", "Blockchain", "Smart Contracts", "React", "Node.js", "Rust", "PostgreSQL", "AWS"""
-    integrations["MetaMask", "WalletConnect", "Web3.js", "Ethers.js", "Hardhat", "Truffle", "OpenZeppelin"""
-    useCases["DeFi applications", "Supply chain tracking", "Digital identity", "Asset tokenization", "Gaming platforms", "Voting systems"""
+    technology["Quantum Computing", "Blockchain", "Smart Contracts", "React", "Node.js", "Rust", "PostgreSQL", "AWS"""]
+    integrations["MetaMask", "WalletConnect", "Web3.js", "Ethers.js", "Hardhat", "Truffle", "OpenZeppelin"""]
+    useCases["DeFi applications", "Supply chain tracking", "Digital identity", "Asset tokenization", "Gaming platforms", "Voting systems"""]
     "roi": "Enterprises achieve 800% ROI through improved efficiency and new revenue streams."""
-    competitors["Ethereum", "Solana", "Polygon", "Cardano", "Polkadot"""
+    competitors["Ethereum", "Solana", "Polygon", "Cardano", "Polkadot"""]
     "marketSize": "$19.9B market"""
     "growthRate": "350% annual growth"""
     "variant": "quantum-futuristic"""
@@ -396,11 +396,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "2 hours"""
     "category": "AI & Education"""
     "realService"""
-    technology["Machine Learning", "Natural Language Processing", "React", "React Native", "Node.js", "Python", "PostgreSQL", "AWS"""
-    integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams", "Zoom", "LTI standards"""
-    useCases["K-12 education", "Higher education", "Corporate training", "Skill development", "Test preparation", "Language learning"""
+    technology["Machine Learning", "Natural Language Processing", "React", "React Native", "Node.js", "Python", "PostgreSQL", "AWS"""]
+    integrations["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams", "Zoom", "LTI standards"""]
+    useCases["K-12 education", "Higher education", "Corporate training", "Skill development", "Test preparation", "Language learning"""]
     "roi": "Educational institutions report 300% ROI through improved student performance and reduced dropout rates."""
-    competitors["Coursera", "Udemy", "Khan Academy", "edX", "Skillshare"""
+    competitors["Coursera", "Udemy", "Khan Academy", "edX", "Skillshare"""]
     "marketSize": "$89.1B market"""
     "growthRate": "190% annual growth"""
     "variant": "ai-futuristic"""
@@ -442,11 +442,11 @@ import { ServiceVariant  } from "../types/service-variants"""
     "setupTime": "8 hours"""
     "category": "Quantum IoT & Edge Computing"""
     "realService"""
-    technology["Quantum Computing", "Edge Computing", "IoT Protocols", "React", "Node.js", "Python", "PostgreSQL", "AWS"""
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "HTTP/HTTPS", "LoRaWAN"""
-    useCases["Smart manufacturing", "Smart cities", "Energy management", "Transportation monitoring", "Healthcare monitoring", "Agricultural monitoring"""
+    technology["Quantum Computing", "Edge Computing", "IoT Protocols", "React", "Node.js", "Python", "PostgreSQL", "AWS"""]
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "HTTP/HTTPS", "LoRaWAN"""]
+    useCases["Smart manufacturing", "Smart cities", "Energy management", "Transportation monitoring", "Healthcare monitoring", "Agricultural monitoring"""]
     "roi": "Manufacturing companies achieve 600% ROI through improved efficiency and predictive maintenance."""
-    competitors["AWS IoT", "Microsoft Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Siemens Mindsphere"""
+    competitors["AWS IoT", "Microsoft Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Siemens Mindsphere"""]
     "marketSize": "$384.7B market"""
     "growthRate": "320% annual growth"""
     "variant": "quantum-futuristic"""

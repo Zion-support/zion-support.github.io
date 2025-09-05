@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from;
-  "next"";"export": default function handler(req: NextApiReques,t, "res": NextApiResponse) {"""
+  "next"";"export": default function handler(req: NextApiReques,t, "res": NextApiResponse) {"""}
   "https"""
-  ""  const: staticPages = [,","""
+  ""  const: staticPages = [,","""]
   /about","""
   "    """
   ", """
@@ -19,7 +19,7 @@ import { NextApiRequest, NextApiResponse } from;
   "/auth/forgot-password","""
   "/auth/reset-password","""
   "    ""]"
-  "]"  "const": blogPages = [";/blog/5g-technology-and-its-impact-on-iot-chat","""
+  "]"  "const": blogPages = [";/blog/5g-technology-and-its-impact-on-iot-chat","""]
   "/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat","""
   "    """
   ", """
@@ -37,7 +37,7 @@ import { NextApiRequest, NextApiResponse } from;
   "/blog/quantum-computing-implications-for-business-chat","""
   "/blog/sustainable-technology-green-computing-solutions-chat","""
   "    ""]"
-  "]"  "const": servicePages = [";/services/ai-model-development-chat","""
+  "]"  "const": servicePages = [";/services/ai-model-development-chat","""]
   "/services/api-development-chat","""
   "    """
   ", """
@@ -55,7 +55,7 @@ import { NextApiRequest, NextApiResponse } from;
   "/services/technical-documentation-chat","""
   "/services/ui-ux-design-chat","""
   "    ""]"
-  "]"  "const": categoryPages = [";/category/ai-consulting-chat","""
+  "]"  "const": categoryPages = [";/category/ai-consulting-chat","""]
   "/category/business-intelligence-chat","""
   "    """
   ", """
@@ -73,7 +73,7 @@ import { NextApiRequest, NextApiResponse } from;
   "/category/technical-writing-chat","""
   "/category/ui-ux-design-chat","""
   "    ""]"
-  "]"  "const": chatContentPages = [";/chat-content/ai-powered-business-solutions-discussion","""
+  "]"  "const": chatContentPages = [";/chat-content/ai-powered-business-solutions-discussion","""]
   "/chat-content/cloud-computing-strategies","""
   "    """
   ", """
@@ -87,11 +87,11 @@ import { NextApiRequest, NextApiResponse } from;
   "/chat-content/technology-implementation-strategies",""]"
   "  ]"""
   "const"""
-  "const": sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">"  ${allPages"    .map((page) => {`      const: priority = page === ""
+  "const": sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">"  ${allPages"    .map((page) => {`      const: priority = page === ""`}
 </urlset>"
     </url>"""
   "</urlset>"""""
-  const sitemap = "<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9>  ${allPages"    .map((page) => {"      const priority = page === ""
+  const sitemap = "<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9>  ${allPages"    .map((page) => {"      const priority = page === ""}
 </urlset>"
     </url>"    })"""
   "</urlset>"""  res.setHeader("")"

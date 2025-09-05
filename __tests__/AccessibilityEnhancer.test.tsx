@@ -2,9 +2,9 @@ import React from 'react';''
 import { render, screen, fireEvent } from '@testing-library/react';''
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';''
 import { describe, it, expect, vi } from 'vitest';''
-describe('AccessibilityEnhancer', () => {''
-  it('renders children correctly', () => {'
-    render(
+describe('AccessibilityEnhancer', () => {''}
+  it('renders children correctly', () => {'}
+    render()
       <AccessibilityEnhancer>
 </AccessibilityEnhancer>'
         <div data-testid="test-child">Test Content</div>"
@@ -12,7 +12,7 @@ describe('AccessibilityEnhancer', () => {''
       <AccessibilityEnhancer;"
         role="button"""
         aria-label="Test Button""
-        tabIndex={0}
+        tabIndex={0};
       >
 </AccessibilityEnhancer>
         <span>Button Text</span>

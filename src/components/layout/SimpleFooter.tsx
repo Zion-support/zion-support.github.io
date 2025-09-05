@@ -1,9 +1,9 @@
 import React from 'react';''
 import { Link } from 'react-router-dom';''
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';'
-export function SimpleFooter($1) {
+export function SimpleFooter($1) {}
   const currentYear = new Date().getFullYear();
-  return ('
+  return (')
     <footer className="bg-gray-900 text-white">"
 </footer>"
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">"

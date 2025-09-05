@@ -1,7 +1,6 @@
-#!/usr/bin/env node
-
-const fs = require('fs'
-const path = require('path'
-const glob = require('glob'
-  log(message, type = 'INFO'
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob')
+  log(message, type = 'INFO')
       const fixedQuoted = quoted.replace(/"([a-z]+)"

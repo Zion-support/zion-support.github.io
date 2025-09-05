@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react
-export default function Custom404() {
-  return ('
+import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react;
+export default function Custom404() {}
+  return (')
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
 </div>
       <Head>
@@ -17,24 +17,24 @@ export default function Custom404() {
       <div className="max-w-4xl mx-auto px-4 text-center">"
 </div>
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }};
+          animate={{ opacity: 1, y: 0 }};
+          transition={{ duration: 0.6 }};
         >
 </motion>"
           <div className="mb-8">"
 </div>
             <motion.div;"
               className="text-9xl font-bold text-blue-600 mb-4"
-              animate={{ 
+              animate={{ }
                 scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
+                rotate: [0, 5, -5, 0];
+              }};
+              transition={{ }
                 duration: 2,
                 repeat: Infinity,
                 repeatType: "reverse"
-              }}
+              }};
             >
 </motion>
             </motion.div>"
@@ -55,8 +55,8 @@ export default function Custom404() {
               <Home className="w-5 h-5" />"
 </Home>
             </Link>
-            <button;)
-              onClick={() => window.history.back()}
+            <button;);
+              onClick={() => window.history.back()};
 </button>"
               <ArrowLeft className="w-5 h-5" />"
 </ArrowLeft>

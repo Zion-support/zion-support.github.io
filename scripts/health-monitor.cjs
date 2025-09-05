@@ -1,8 +1,8 @@
-#!/usr/bin/env node
-const { execSync } = require('child_process'
-const fs = require('fs'
-    this.checks = [{ "name": 'Memory Usage', "command"
-      { "name": 'Disk Space', "command"
-      { "name": 'Process Status', "command"
-        const result = execSync(check.command, { "encoding"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+const fs = require('fs')
+    this.checks = [{ "name": 'Memory Usage', "command"}]
+      { "name": 'Disk Space', "command"}
+      { "name": 'Process Status', "command"}
+        const result = execSync(check.command, { "encoding"})
+cursor/fix-lint-push-and-merge-to-main-f3c1;

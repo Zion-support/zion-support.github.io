@@ -3,6 +3,6 @@
  * @param text - The text to convert to a slug;
  * @returns A URL-friendly slug;
  */
-export function slugify("text"""
-    .replace(/[^\w\s-]/g, ""
+export function slugify("text""")
+    .replace(/[^\w\s-]/g, "")
 cursor/fix-lint-push-and-merge-to-main-f3c1;)"

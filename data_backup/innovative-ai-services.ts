@@ -1,6 +1,6 @@
-export interface InnovativeAIService {
-  // TODO: Implement
-}
+export interface InnovativeAIService {}
+  // TODO: Implement;
+};
   "id"""
   "realImplementation"""
     "name"""

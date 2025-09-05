@@ -1,19 +1,19 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 /**
- * Smart Resource Manager
- * Intelligent resource optimization and management
+ * Smart Resource Manager;
+ * Intelligent resource optimization and management;
  */
 
-const pm2 = require('pm2'
-const fs = require('fs'
-const path = require('path'
-const os = require('os'
+const pm2 = require('pm2')
+const fs = require('fs')
+const path = require('path')
+const os = require('os')
       "memory"
       "cpu"
       "disk"
-          console.error(' Failed to connect to "PM2"
-      console.error(' Error monitoring "resources"
-      const output = execSync('df -h /', { "encoding"
+          console.error(' Failed to connect to "PM2")
+      console.error(' Error monitoring "resources")
+      const output = execSync('df -h /', { "encoding"})
         "percentage"
         "total"
         "used"
@@ -34,25 +34,25 @@ const os = require('os'
           "severity"
           "type"
           "severity"
-      execSync('node -e "if (global.gc) global.gc()"', { "stdio"
+      execSync('node -e "if (global.gc) global.gc()"', { "stdio"}
             "action"
-              console.error(' Failed to scale "down"
+              console.error(' Failed to scale "down")
                 "action"
                 "reason"
-      console.error(' Error scaling down "processes"
-              console.error(' Failed to scale "up"
+      console.error(' Error scaling down "processes")
+              console.error(' Failed to scale "up")
                 "action"
                 "reason"
-      console.error(' Error scaling up "processes"
-      execSync('find logs -name "*.log" -mtime +7 -delete', { "stdio"
-      execSync('find logs -name "*.log" -mtime +1 -exec gzip {} \\;', { "stdio"
+      console.error(' Error scaling up "processes")
+      execSync('find logs -name "*.log" -mtime +7 -delete', { "stdio"})
+      execSync('find logs -name "*.log" -mtime +1 -exec gzip {} \\;', { "stdio"})
         "action"
-      console.error(' Error cleaning log "files"
-      execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio"
-      execSync('find . -name "*.tmp" -mtime +1 -delete', { "stdio"
+      console.error(' Error cleaning log "files")
+      execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio"})
+      execSync('find . -name "*.tmp" -mtime +1 -delete', { "stdio"})
         "action"
-      console.error(' Error cleaning temp "files"
-      execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio"
+      console.error(' Error cleaning temp "files")
+      execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio"})
         "action"
-      console.error(' Error compressing "files"
-    console.error(' Smart Resource Manager "failed"
+      console.error(' Error compressing "files")
+    console.error(' Smart Resource Manager "failed")
