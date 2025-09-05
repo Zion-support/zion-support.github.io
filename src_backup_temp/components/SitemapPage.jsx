@@ -1,0 +1,17 @@
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {SEO} from "./SEO";
+;
+export default function SitemapPage("props": "any) {;
+    const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
+    const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;
+        route.requiredRoles &&;
+        (route.requiredRoles.includes('jobSeeker') ||;
+            route.requiredRoles.includes('creator')));
+    const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&;
+        route.requiredRoles &&;
+        (route.requiredRoles.includes('employer') ||;
+            route.requiredRoles.includes('buyer')));
+    const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;
+        route.requiredRoles &&;
+        route.requiredRoles.includes('admin'));

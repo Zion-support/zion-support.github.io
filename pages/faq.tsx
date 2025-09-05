@@ -105,6 +105,6 @@
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

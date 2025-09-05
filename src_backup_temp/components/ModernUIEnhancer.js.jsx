@@ -1,0 +1,21 @@
+import React, {useEffect, useState, useRef} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+;
+export default function Page("props": "any) {;
+        "};
+        updateDeviceType();
+        window.addEventListener('resize', updateDeviceType);
+        return () => window.removeEventListener('resize', updateDeviceType)}, []);
+    // Scroll effects;
+    useEffect(() => {// "TODO": "Add dependencies if needed"}, []);
+        if(!enableScrollEffects) return;
+        const handleScroll = ("props": "any) => {;
+            const scrollTop = window.pageYOffset;
+            setShowScrollToTop(scrollTop > 300) ;
+            // Parallax effect for background elements;
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('[data-parallax]');
+            parallaxElements.forEach((element) => {;
+
+                const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
+                const yPos = -(scrolled * speed);

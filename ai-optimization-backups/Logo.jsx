@@ -1,10 +1,8 @@
 import React from 'react';
 
-interface LogoProps {
-  // Add props here as needed
-}
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE';
 
-export default function Logo({ }: LogoProps) {
   return (
   );
 }

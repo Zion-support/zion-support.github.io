@@ -1,14 +1,29 @@
-import React from 'react';
-
-interface OptimizedImageProps {
-  // Add props here as needed
+  alt: string
+  width?: number
+  height?: number
+  priority?: boolean
+  className?: string
+  sizes?: string
 }
-
-export default function OptimizedImage({ }: OptimizedImageProps) {
+export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+}) => {
   return (
-    <div>
-      <h1>OptimizedImage</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      className={className}
+      sizes={sizes}
+      quality={85}
+    />
+  )
 }
+export default OptimizedImage

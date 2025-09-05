@@ -1,0 +1,60 @@
+import React from "react";
+import {useState} from "react";
+import {BookOpen, Terminal} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
+import CodeBlock from "CodeBlock.jsx";
+export function ApiDocumentation("props": "any) {;
+    return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
+      <CardHeader>;
+        <CardTitle className="text-xl flex items-center">;
+          <BookOpen className="mr-2" size={20"} /> API Documentation;
+        </CardTitle>;
+        <CardDescription className="text-zinc-400">;
+          Reference documentation for integrating with the Zion Marketplace API.;
+        </CardDescription>;
+      </CardHeader>;
+      ;
+      <CardContent>;
+        <Alert className="bg-blue-900/30 border-blue-800 mb-6">;
+          <Terminal className="h-4 w-4" />;
+          <AlertDescription>;
+            Make sure to include your API key in all requests as a Bearer token in the Authorization header.;
+          </AlertDescription>;
+        </Alert>;
+
+        <Tabs defaultValue="jobs" className="space-y-4">;
+          <TabsList className="bg-zinc-800 border-zinc-700">;
+            <TabsTrigger value="jobs">Jobs</TabsTrigger>;
+            <TabsTrigger value="talent">Talent</TabsTrigger>;
+            <TabsTrigger value="quotes">Quotes</TabsTrigger>;
+            <TabsTrigger value="webhooks">Webhooks</TabsTrigger>;
+            <TabsTrigger value="errors">Errors</TabsTrigger>;
+          </TabsList>;
+          ;
+          <TabsContent value="jobs" className="space-y-6">;
+            <EndpointSection method="GET" endpoint="/api/jobs" description="List all available jobs with optional filtering." note="" params = {;
+  [;
+            { "name": "page", "type": "integer",;
+  "description": "Page number for pagination ("default": "1)" ;
+
+"},;
+            {"name": "limit", "type": "integer", "description": "Number of results per page ("default": "20", "max": "100)""},;
+            {"name": "category", "type": "string", "description": "Filter by job category"},;
+            {"name": "skills", "type": "string[]", "description": "Filter by required skills (comma-separated)"},;
+            {"name": "status", "type": "string", "description": "Filter by job status (new, active, closed)"}
+        ]} codeExamples = {;
+  {;
+            "curl": "`curl -X GET ""https"://ziontechgroup.com/api/v1/jobs?limit=10&category=development" \\;
+  -H ""Authorization": Bearer YOUR_API_KEY" \\;
+  -H "Content-"Type": application/json"`",;
+            "javascript": "`const response = await fetch('"https"://ziontechgroup.com/api/v1/jobs?limit=10&category=development'", {;
+  "method": 'GET',;
+  "headers": "{;
+    'Authorization': 'Bearer YOUR_API_KEY'",;
+  'Content-Type': 'application/json';
+  ;
+
+}

@@ -1,0 +1,14 @@
+import React, {useState} from 'react';
+import {useAuth} from '../hooks/useAuth';
+import {useWishlist} from '../hooks/useWishlist';
+import {useRouter} from 'next/router';
+import {useSnackbar} from 'notistack';
+import {useDispatch} from 'react-redux';
+import {captureException} from '@sentry/nextjs';
+;
+export default function ProductCard("props": "any) {;
+  const { isAuthenticated "} = useAuth();
+  const {isWishlisted, toggle} = useWishlist();
+  const [imageError, setImageError] = useState(false);
+  const router = useRouter();
+  const {enqueueSnackbar} = useSnackbar();

@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface ModernLayout.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function ModernLayout.dynamic.test({ }: ModernLayout.dynamic.testProps) {
-  return (
-    <div>
-      <h1>ModernLayout.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});

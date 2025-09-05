@@ -15,7 +15,7 @@ import {
   Clock,
   Star
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const resources = [
   {
@@ -112,7 +112,7 @@ const featuredContent = [
 
 export default function ResourcesPage() {
   return (
-    <MainLayout
+    <Layout
       title="Resources - Zion Tech Group"
       description="Comprehensive resources including documentation, case studies, blog posts, tutorials, and API reference for developers and businesses."
       keywords="resources, documentation, case studies, blog, API reference, tutorials, guides, support"
@@ -367,6 +367,6 @@ export default function ResourcesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

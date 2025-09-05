@@ -1,14 +1,52 @@
-import React from 'react';
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
-interface ShippingratesProps {
-  // Add props here as needed
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { fromAddress, toAddress, parcel } = req.body || {};
+    
+    if (!fromAddress || !toAddress || !parcel) {
+      res.statusCode = 400;
+      res.json({ error: 'Missing required fields' });
+      return;
+    }
+
+    // TODO: Implement actual shipping rate calculation
+    // This is a placeholder implementation
+    const shippingRates = [
+      {
+        service: 'Standard',
+        rate: 9.99,
+        days: '3-5 business days'
+      },
+      {
+        service: 'Express',
+        rate: 19.99,
+        days: '1-2 business days'
+      },
+      {
+        service: 'Overnight',
+        rate: 39.99,
+        days: 'Next business day'
+      }
+    ];
+
+    res.statusCode = 200;
+    res.json({ 
+      success: true, 
+      rates: shippingRates 
+    });
+  } catch (err) {
+    // console.error('Shipping rates API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Failed to calculate shipping rates' });
+  }
 }
 
-export default function Shippingrates({ }: ShippingratesProps) {
-  return (
-    <div>
-      <h1>Shippingrates</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+module.exports = withErrorLogging(handler);

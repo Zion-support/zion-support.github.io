@@ -1,0 +1,13 @@
+import React, {useState} from "react";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+export function OnChainExport("props": "any) {;
+    const [isConnected", setIsConnected] = useState(false);
+    const [isExporting, setIsExporting] = useState(false);
+    const [exportStatus, setExportStatus] = useState('idle');
+    const { toast } = useToast();
+    const {user} = useAuth();
+    const handleConnectWallet = async () => {;
+        try {;
+            // Check if wallet is available;
+            const ethereum = window.ethereum;

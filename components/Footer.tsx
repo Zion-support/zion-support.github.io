@@ -1,23 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
+  MapPin, 
   Phone, 
   Mail, 
-  MapPin, 
-  Clock,
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  Users,
-  Globe,
-  Settings,
-  Facebook,
-  Twitter,
-  Linkedin,
+  Clock, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
   Github,
-  Youtube
+  ExternalLink
 } from 'lucide-react';
 
 const services = {
@@ -65,42 +58,18 @@ const services = {
   ]
 };
 
-const company = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Our Team', href: '/about#team' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Events', href: '/events' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'News', href: '/news' }
-];
-
-const resources = [
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-docs' },
-  { name: 'Tutorials', href: '/tutorials' },
-  { name: 'Guides', href: '/guides' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Support', href: '/support' },
-  { name: 'Sitemap', href: '/sitemap' }
-];
-
-const legal = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-  { name: 'Security', href: '/security' },
-  { name: 'Compliance', href: '/compliance' },
-  { name: 'Sitemap', href: '/sitemap' }
-];
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown DE 19709'
+};
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
 
 const contactInfo = {
@@ -111,44 +80,42 @@ const contactInfo = {
 };
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg mr-3">
+                <ExternalLink className="w-8 h-8 text-white" />
               </div>
-              <div>
-                <div className="text-xl font-bold">Zion Tech Group</div>
-                <div className="text-xs text-gray-400">Technology Solutions</div>
-              </div>
-            </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider specializing in AI, cloud services, 
-              and digital transformation. Empowering businesses with innovative technology.
+              <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI solutions, cloud services, and technology consulting.
+              We help businesses transform and grow through innovative technology.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-sm">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.phone}</span>
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3" />
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                  {contactInfo.phone}
+                </a>
               </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <Mail className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.email}</span>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                  {contactInfo.email}
+                </a>
               </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <MapPin className="w-4 h-4 text-blue-400" />
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-4 h-4 mr-3" />
                 <span>{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <Clock className="w-4 h-4 text-blue-400" />
-                <span>{contactInfo.hours}</span>
               </div>
             </div>
           </div>

@@ -1,18 +1,25 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  BarChart3, 
-  ArrowRight,
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Award, 
+  Building, 
   TrendingUp,
   Award,
   Clock,
   Target,
   Zap,
   Shield,
-  Cloud
+  Cloud,
+  Brain,
+  Search
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const caseStudies = [
   {
@@ -23,40 +30,38 @@ const industries = [
 ];
 
 export default function CaseStudiesPage() {
+  const [selectedIndustry, setSelectedIndustry] = React.useState("All");
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  const filteredCaseStudies = caseStudies.filter(caseStudy => {
+    const matchesIndustry = selectedIndustry === "All" || caseStudy.industry === selectedIndustry;
+    const matchesSearch = caseStudy.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         caseStudy.client.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         caseStudy.industry.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesIndustry && matchesSearch;
+  });
+
+  const featuredCaseStudies = filteredCaseStudies.filter(cs => cs.featured);
+  const regularCaseStudies = filteredCaseStudies.filter(cs => !cs.featured);
+
   return (
-    <MainLayout 
+    <Layout
       title="Case Studies - Zion Tech Group"
-      description="Explore our successful projects and client transformations. Real case studies showcasing our expertise in AI, cloud, and digital transformation."
-      keywords="case studies, success stories, client projects, digital transformation, AI implementation, cloud migration"
+      description="Explore our successful projects and see how we've helped businesses transform with innovative technology solutions."
+      keywords="case studies, projects, success stories, AI solutions, technology implementation"
     >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Discover how we've helped businesses transform and achieve their goals through innovative technology solutions. 
-                Real projects, real results, real impact.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform with innovative technology solutions and achieve remarkable results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#case-studies"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  View Case Studies
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                >
-                  Start Your Project
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -102,6 +107,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

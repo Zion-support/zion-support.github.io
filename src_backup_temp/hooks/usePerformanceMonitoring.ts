@@ -1,0 +1,11 @@
+import { useEffect } from 'react';';';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+;
+export function usePerformanceMonitoring() {;
+  useEffect(() => {;
+    const sendToAnalytics = (metric) => {;
+      // Send to your analytics service;
+;
+      ;';
+      // "Example": "Send to Google Analytics;';';
+      if (typeof gtag !== 'undefined') {;';';

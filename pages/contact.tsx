@@ -1,12 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <MainLayout 
+    <Layout
       title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
+      description="Get in touch with our team for inquiries, support, or to discuss your project needs."
+      keywords="contact, support, inquiry, project, consultation"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
@@ -37,8 +39,7 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           
-          {/* Contact Information Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 text-center"
             >
@@ -72,6 +73,7 @@ export default function ContactPage() {
               </p>
             </motion.div>
           </div>
+        </section>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
@@ -84,134 +86,83 @@ export default function ContactPage() {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
-                      required
+                      type="email"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="your.email@example.com"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your.email@company.com"
-                      required
+                      type="text"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your company name"
                     />
                   </div>
-                </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="What can we help you with?"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <textarea
+                      rows={6}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Tell us about your project or inquiry..."
+                    ></textarea>
+                  </div>
+                  
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center"
+                    >
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-services">AI Services</option>
-                    <option value="it-services">IT Services</option>
-                    <option value="micro-saas">Micro SaaS</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or requirements..."
-                    required
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Send Message
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </form>
-            </motion.div>
-
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
               className="bg-white rounded-lg shadow-lg p-8"
             >
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                Why Choose Zion Tech Group?
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
               </h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">24/7 Support</h3>
-                    <p className="text-gray-600 text-sm">Round-the-clock technical support and assistance</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Expert Consultation</h3>
-                    <p className="text-gray-600 text-sm">Free consultation with our technology experts</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <ArrowRight className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Rapid Response</h3>
-                    <p className="text-gray-600 text-sm">Quick response time and fast project delivery</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Business Hours</h3>
-                <p className="text-gray-600 text-sm mb-2">Monday - "Friday": 9:00 AM - 6:00 PM EST</p>
-                <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
-                <p className="text-gray-600 text-sm">Sunday: Emergency support only</p>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss your project and see how we can help you achieve your goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:+13024640950"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email Us
+                </a>
               </div>
             </motion.div>
           </div>

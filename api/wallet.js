@@ -1,14 +1,27 @@
-import React from 'react';
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
-interface WalletProps {
-  // Add props here as needed
+async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'GET');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    // Authentication would normally be checked here
+    // This is a placeholder implementation
+    res.statusCode = 200;
+    res.json({ 
+      points: 0, 
+      history: [],
+      message: 'Wallet data retrieved successfully'
+    });
+  } catch (err) {
+    // console.error('Wallet API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Failed to fetch wallet' });
+  }
 }
 
-export default function Wallet({ }: WalletProps) {
-  return (
-    <div>
-      <h1>Wallet</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+module.exports = withErrorLogging(handler);
