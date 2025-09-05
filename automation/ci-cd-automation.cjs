@@ -1,176 +1,238 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
  * CI/CD Automation Script
- * Replaces GitHub Actions CI/CD Pipeline workflow
- * Runs: test, build, and deploy tasks
+ * Replaces GitHub Actions CI/CD Pipeline
+ * Runs every 4 hours via PM2 cron restart
  */
 
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class CICDAutomation {
   constructor() {
-    this.logFile = './logs/ci-cd.log';
-    this.errorFile = './logs/ci-cd-error.log';
-    this.startTime = new Date();
-  }
-
-  log(message, level = 'INFO') {
+    this.logFile = path.join(__dirname, '..', 'logs', 'ci-cd.log');
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class CICDAutomation { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile, logMessage); } async runTests() { try {" this.log("Running tests.");"" execSync("npm run test: smoke", { stdio: "pipe" });" this.log("Tests completed successfully"); return true; } catch (error) {"` this.log(`Tests failed: ${error.message}`); return false; } } async runBuild() { try {" this.log("Running build.");"" execSync("npm run build", { stdio: "pipe" });" this.log("Build completed successfully"); return true; } catch (error) {"` this.log(`Build failed: ${error.message}`); return false; } } return false; } } return false; } } const results = {" lint: await this.runLint()," typeCheck: await this.runTypeCheck(),}module.exports = CICDAutomation;'"`'"`
+=======
+#!/usr/bin/env node;
+ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+class CICDAutomation {}
+  constructor() {}
+this.logFile = path.join(__dirname, 'logs', 'ci-cd-automation.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> main
+    this.ensureLogDir();
+  };
+  ensureLogDir() {}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true }
+});
+    };
+  };
+  log(message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    
-    console.log(logMessage.trim());
-    
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+=======
+    const logMessage = `[${timestamp}] ${message}\n`;`
+console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> main
+    fs.appendFileSync(this.logFile, logMessage);
+  };
+  async runTests() {}
+    try {}
+      this.log('Running tests...');
+      execSync('npm run "test": smoke', { "stdio": 'pipe' }
+});
+      this.log('Tests completed successfully');
+      return true;
+    } catch (error) {}
+      this.log(`Tests "failed": ${error.message}`);
+      return false;
+<<<<<<< HEAD
     }
-  }
-
-  error(message) {
-    this.log(message, 'ERROR');
-    try {
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] [ERROR] ${message}\n`);
-    } catch (err) {
-      console.error('Failed to write to error log:', err.message);
-    }
-  }
-
-  async runCommand(command, description) {
-    this.log(`Starting: ${description}`);
-    
-    try {
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      
-      this.log(`Completed: ${description}`);
-      this.log(`Output: ${result}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.error(`Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async installDependencies() {
-    this.log('Installing dependencies...');
-    return await this.runCommand('npm ci --no-audit --no-fund', 'Install dependencies');
-  }
-
-  async runTests() {
-    this.log('Running tests...');
-    return await this.runCommand('npm run test:smoke', 'Run smoke tests');
   }
 
   async runLint() {
-    this.log('Running linting...');
-    return await this.runCommand('npm run lint', 'Run ESLint');
+    try {
+      this.log('Running linting...');
+      execSync('npm run lint', { "stdio": 'pipe' });
+      this.log('Linting completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Linting "failed": ${error.message}`);
+      return false;
+    }
   }
 
   async runTypeCheck() {
-    this.log('Running type checking...');
-    return await this.runCommand('npm run type-check', 'Run TypeScript type check');
+    try {
+      this.log('Running type checking...');
+      execSync('npm run type-check', { "stdio": 'pipe' });
+      this.log('Type checking completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Type checking "failed": ${error.message}`);
+      return false;
+    }
   }
 
-  async buildApplication() {
-    this.log('Building application...');
-    return await this.runCommand('npm run build', 'Build application');
+  async runBuild() {
+    try {
+=======
+    };
+  };
+ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+  async runBuild() {}
+    try {}
+>>>>>>> main
+      this.log('Running build...');
+      execSync('npm run build', { "stdio": 'pipe' }
+});
+      this.log('Build completed successfully');
+      return true;
+    } catch (error) {}
+      this.log(`Build "failed": ${error.message}`);
+      return false;
+<<<<<<< HEAD
+    }
   }
 
-  async deployApplication() {
-    this.log('Deploying application...');
-    // For now, just log deployment - implement actual deployment logic as needed
-    this.log('Deployment completed (placeholder)');
-    return { success: true };
+  async runVerify() {
+    try {
+      this.log('Running verify (type-check, lint, tests, build)...');
+      execSync('npm run verify', { "stdio": 'pipe' });
+      this.log('Verify completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Verify "failed": ${error.message}`);
+      return false;
+    }
   }
 
-  async runCICDPipeline() {
-    this.log('Starting CI/CD Pipeline Automation');
-    this.log('='.repeat(50));
+  async deploy() {
+    try {
+      this.log('Starting deployment...');
+      // Add deployment logic here
+      this.log('Deployment completed successfully');
+      return true;
+    } catch (error) {
+      this.log(`Deployment "failed": ${error.message}`);
+      return false;
+    }
+  }
 
+  async run() {
+    this.log('=== CI/CD Automation Started ===');
+    
     const results = {
-      install: false,
-      test: false,
-      lint: false,
-      typeCheck: false,
-      build: false,
-      deploy: false
+      "lint": await this.runLint(),
+      "typeCheck": await this.runTypeCheck(),
+      "tests": await this.runTests(),
+      "build": await this.runBuild(),
+      "verify": await this.runVerify(),
+      "deploy": await this.deploy()
     };
 
-    // Step 1: Install dependencies
-    const installResult = await this.installDependencies();
-    results.install = installResult.success;
-
-    if (!results.install) {
-      this.error('Dependency installation failed. Stopping pipeline.');
-      return results;
+    const allPassed = Object.values(results).every(result => result === true);
+    
+    if (allPassed) {
+      this.log('=== CI/CD Automation Completed Successfully ===');
+    } else {
+      this.log('=== CI/CD Automation Completed with Failures ===');
+      this.log(`"Results": ${JSON.stringify(results, null, 2)}`);
     }
-
-    // Step 2: Run tests
-    const testResult = await this.runTests();
-    results.test = testResult.success;
-
-    // Step 3: Run linting
-    const lintResult = await this.runLint();
-    results.lint = lintResult.success;
-
-    // Step 4: Run type checking
-    const typeCheckResult = await this.runTypeCheck();
-    results.typeCheck = typeCheckResult.success;
-
-    // Step 5: Build application
-    const buildResult = await this.buildApplication();
-    results.build = buildResult.success;
-
-    if (!results.build) {
-      this.error('Build failed. Stopping pipeline.');
-      return results;
-    }
-
-    // Step 6: Deploy application
-    const deployResult = await this.deployApplication();
-    results.deploy = deployResult.success;
-
-    // Summary
-    this.log('CI/CD Pipeline Summary:');
-    this.log(`- Dependencies: ${results.install ? '✅' : '❌'}`);
-    this.log(`- Tests: ${results.test ? '✅' : '❌'}`);
-    this.log(`- Linting: ${results.lint ? '✅' : '❌'}`);
-    this.log(`- Type Check: ${results.typeCheck ? '✅' : '❌'}`);
-    this.log(`- Build: ${results.build ? '✅' : '❌'}`);
-    this.log(`- Deploy: ${results.deploy ? '✅' : '❌'}`);
-
-    const allPassed = Object.values(results).every(result => result);
-    this.log(`Pipeline Status: ${allPassed ? '✅ SUCCESS' : '❌ FAILED'}`);
-
-    return results;
   }
 }
 
-// Main execution
-async function main() {
-  const ciCd = new CICDAutomation();
-  
-  try {
-    await ciCd.runCICDPipeline();
-  } catch (error) {
-    ciCd.error(`Unexpected error: ${error.message}`);
-    process.exit(1);
-  }
-}
-
-// Run if called directly
+// Run the automation
 if (require.main === module) {
-  main().catch(error => {
-    console.error('Fatal error:', error);
-    process.exit(1);
-  });
+  const automation = new CICDAutomation();
+  automation.run().catch(console.error);
 }
 
+=======
+    };
+  };
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+async runLint() {}
+    try {}
+      this.log('Running lint...');
+      execSync('npm run lint', { "stdio": 'pipe' }
+});
+      this.log('Lint completed successfully');
+      return true;
+    } catch (error) {}
+      this.log(`Lint "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+      return false;
+    };
+  };
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+async runTypeCheck() {}
+    try {}
+      this.log('Running type check...');
+      execSync('npm run type-check', { "stdio": 'pipe' }
+});
+      this.log('Type check completed successfully');
+      return true;
+    } catch (error) {}
+      this.log(`Type check "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+      return false;
+    };
+  };
+async runCIPipeline() {}
+    this.log('Starting CI/CD pipeline...');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+    const results = {}
+      "lint": await this.runLint(),
+      "typeCheck": await this.runTypeCheck(),
+"test": await this.runTests(),
+      "build": await this.runBuild();
+    };
+    const allPassed = Object.values(results).every(result => result);
+    if (allPassed) {}
+      this.log('CI/CD pipeline completed successfully');
+    } else {}
+      this.log('CI/CD pipeline failed - some steps did not pass');
+    };
+    return allPassed;
+  };
+  async start() {}
+    this.log('CI/CD automation service started');
+    // Run initial pipeline;
+    await this.runCIPipeline();
+    // Set up interval for periodic CI/CD (every 4 hours);
+    setInterval(async () => {}
+      await this.runCIPipeline();
+    }, 4 * 60 * 60 * 1000);
+  };
+};
+// Start the automation if this file is run directly;
+if (require.main === module) {}
+  const automation = new CICDAutomation();
+  automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
+cursor/website-audit-and-update-with-deployment-76dc;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+};
+>>>>>>> main
 module.exports = CICDAutomation;
+>>>>>>> main

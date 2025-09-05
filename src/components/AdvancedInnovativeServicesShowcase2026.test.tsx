@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport AdvancedInnovativeServicesShowcase2026 from ./AdvancedInnovativeServicesShowcase2026describe(AdvancedInnovativeServicesShowcase2026, () => {it(renders without crashing, () => {render(<AdvancedInnovativeServicesShowcase2026  />)';
     expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it(displays expected content';, () => {
     render(<AdvancedInnovativeServicesShowcase2026  />)';
     // Add specific test assertions based on component content})});';;';
+=======
+import { render,screen } from '@testing-library/reactimport AdvancedInnovativeServicesShowcase2026 from ./AdvancedInnovativeServicesShowcase2026describe(AdvancedInnovativeServicesShowcase2026,() => {it(renders without crashing,() => {render(<AdvancedInnovativeServicesShowcase2026 />) expect(screen.getByRole(main) || screen.getByText(/.*/)).toBeInTheDocument()}) it(displays expected content';,() => { render(<AdvancedInnovativeServicesShowcase2026 />)
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b

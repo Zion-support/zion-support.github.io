@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings'; ; export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;'',"}),"})';';';';
 import { ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [';'';';';';
 import { ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;""';';';';
@@ -5,3 +7,33 @@ import {ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INN
 import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;';';';';
 import { ProductListing }  from '@/types/listings';export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;"';';';
 "';';;';;';
+=======
+import { ProductListing } from '@/types/listings'; ; export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;'',"});,"})';'; import { ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [';'';'; import { ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;';'; import {ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;"';'; import { ProductListing } from &apos;@/types/listings&apos;&apos;' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;';'; import { ProductListing } from '@/types/listings';export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;"'; "';';
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+import { ProductListing } from '@/types/listings'; ; export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [;''","});,"})';'; import { ProductListing } from '@/types/listings' export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [';'';'; import { ProductListing "} from '@/types/listings' export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [;';'; import {ProductListing "} from '@/types/listings' export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [;"';'; import { ProductListing "} from &apos;@/types/listings&apos;&apos;' export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [;';'; import { ProductListing "} from '@/types/listings';export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": "ProductListin g[] = [;"'; "';';"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'; ; export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;'',"}
+    );,"})';';
+import { ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [';'';';
+import { ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;""';';
+import {ProductListing } from '@/types/listings'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;"';';
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;';';
+import { ProductListing }  from '@/types/listings';export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;"';
+"';';
+=======
+<<<<<<< HEAD
+=======
+import { ProductListing } from '@/types/listings'; export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [;","}),"})';';';';
+import { ProductListing } from '@/types/listings'  export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [";
+import { ProductListing } from '@/types/listings'  export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [;";';';';
+import {ProductListing } from '@/types/listings'  export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [;";';';';
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [;';
+import { ProductListing }  from '@/types/listings';export const "COMPREHENSIVE_INNOVATIVE_SERVICES_2031": ProductListin g[] = [;";';';
+";';';';
+import { ProductListing } from '@/types/listings'; ; export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;","}),"})';';';'; import { ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = ["; import { ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;";';';'; import {ProductListing } from '@/types/listings' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;";';';'; import { ProductListing } from &apos;@/types/listings&apos;&apos;' export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;'; import { ProductListing } from '@/types/listings';export const COMPREHENSIVE_INNOVATIVE_SERVICES_2031: ProductListin g[] = [;";';'; ";';';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

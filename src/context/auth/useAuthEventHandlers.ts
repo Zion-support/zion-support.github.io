@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useCallback } from 'react'; interface User { "id": 'string; "email": "string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string;' "} updatedAt?: "string"} export const useAuthEventHandlers = ( "setUser": "("user": Use r | null) => void","setOnboardingStep": "("step": number) => void ) => {; const handleSignedIn = useCallback(("user": Use r) => {; setUser(user); setOnboardingStep(1)"},[setUser,setOnboardingStep]); const handleSignedOut = useCallback(() => {; setUser(null); setOnboardingStep(0)},[setUser,setOnboardingStep]); return { handleSignedIn,handleSignedOut }};
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 import { useCallback  } from 'react';
-
 interface User {
-
-  id: string;
+  "id": string;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -10,23 +16,30 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string}
-
 export const useAuthEventHandlers = (
-  setUser: (user: Use r | null)  => void,
-  setOnboardingStep: (step: number)  => void
+  "setUser": (user: Use r | null)  => void,
+  "setOnboardingStep": (step: number)  => void
 ) => {;
   const handleSignedIn = useCallback((user: Use r)  => {;
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);
-
   const handleSignedOut = useCallback(() => {;
     setUser(null);
     setOnboardingStep(0); // Reset onboarding
   }, [setUser, setOnboardingStep]);
-
   return {
     handleSignedIn,
     handleSignedOut
+<<<<<<< HEAD
   }};';
 ;';;';
+=======
+import { useCallback } from 'react'; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string;' } updatedAt?: string} export const useAuthEventHandlers = ( setUser: (user: Use r | null) => void,setOnboardingStep: (step: number) => void ) => {; const handleSignedIn = useCallback((user: Use r) => {; setUser(user); setOnboardingStep(1)},[setUser,setOnboardingStep]); const handleSignedOut = useCallback(() => {; setUser(null); setOnboardingStep(0)},[setUser,setOnboardingStep]); return { handleSignedIn,handleSignedOut }};
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+  }};';';
+import { useCallback } from 'react'; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string} export const useAuthEventHandlers = ( setUser: (user: Use r | null) => void,setOnboardingStep: (step: number) => void ) => {; const handleSignedIn = useCallback((user: Use r) => {; setUser(user); setOnboardingStep(1)},[setUser,setOnboardingStep]); const handleSignedOut = useCallback(() => {; setUser(null); setOnboardingStep(0)},[setUser,setOnboardingStep]); return { handleSignedIn,handleSignedOut }}; ;';';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

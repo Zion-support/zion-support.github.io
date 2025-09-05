@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function advancedAIServices2030() {return (
@@ -9,5 +10,23 @@ export default function advancedAIServices2030() {return (
           Professional advancedAIServices2030 services to help your business grow.
         </p>
       </div>
+<<<<<<< HEAD
   );"}"
 ;;
+=======
+import React from "react" import { SEO } from "@/components/SEO" export default function advancedAIServices2030() {return ( <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">" <SEO title="advancedAIServices2030 - Zion Tech Group" description="Professional advancedAIServices2030 services by Zion Tech Group" />" <div className="container mx-auto px-4 py-20">" <h1 className="text-4xl font-bold text-white mb-8">advancedAIServices2030</h1>" <p className="text-gray-300 text-lg"> Professional advancedAIServices2030 services to help your business grow. </p> </div> );"}"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    );"}"
+=======
+<<<<<<< HEAD
+import React from &quot;react&quot; import { SEO } from &quot;@/components/SEO&quot; export default function advancedAIServices2030() {return ( <div className = &quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950&quot;>&quot; <SEO title=&quot;advancedAIServices2030 - Zion Tech Group&quot; description=&quot;Professional advancedAIServices2030 services by Zion Tech Group&quot; />&quot; <div className=&quot;container mx-auto px-4 py-20&quot;>&quot; <h1 className=&quot;text-4xl font-bold text-white mb-8&quot;>advancedAIServices2030</h1>&quot; <p className=&quot;text-gray-300 text-lg&quot;> Professional advancedAIServices2030 services to help your business grow. </p> </div> );&quot;}&quot; ;
+=======
+<<<<<<< HEAD
+const React from "react" import { SEO } from "@/components/SEO" export default function advancedAIServices2030() {return ( <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">" <SEO title="advancedAIServices2030 - Zion Tech Group" description="Professional advancedAIServices2030 services by Zion Tech Group" />" <div className="container mx-auto px-4 py-20">" <h1 className="text-4xl font-bold text-white mb-8">advancedAIServices2030</h1>" <p className="text-gray-300 text-lg"> Professional advancedAIServices2030 services to help your business grow. </p> </div> );"}" ;""
+=======
+import _React from "react" import { SEO } from "@/components/SEO" export default function advancedAIServices2030() {return ( <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">" <SEO title="advancedAIServices2030 - Zion Tech Group" description="Professional advancedAIServices2030 services by Zion Tech Group" />" <div className="container mx-auto px-4 py-20">" <h1 className="text-4xl font-bold text-white mb-8">advancedAIServices2030</h1>" <p className="text-gray-300 text-lg"> Professional advancedAIServices2030 services to help your business grow. </p> </div> );"}" ;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
