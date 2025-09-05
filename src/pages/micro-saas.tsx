@@ -21,8 +21,7 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Layers,
-  Server
+  Layers
 } from 'lucide-react';
 
 const microSaasServices = [
