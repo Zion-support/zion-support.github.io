@@ -4,18 +4,21 @@ interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
+// Extend the Window interface to include performance
+declare global {
+  interface Window {
+    performance: Performance;
   }
+}
 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
       
       const performanceData = {
         // Navigation timing
@@ -28,13 +31,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
         // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
+        resourceCount: window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
+        memory: (window.performance as any).memory ? {
+          used: (window.performance as any).memory.usedJSHeapSize,
+          total: (window.performance as any).memory.totalJSHeapSize,
+          limit: (window.performance as any).memory.jsHeapSizeLimit
         } : null
       };
 

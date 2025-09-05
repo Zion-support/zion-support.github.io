@@ -3023,17 +3023,11 @@ aria-hidden@^1.2.4:
   dependencies:
     tslib "^2.0.0"
 
-<<<<<<< HEAD
-aria-query@^5.3.2:
-=======
-aria-query@^5.0.0:
->>>>>>> dee69f7abb748a793666f5594a9924708a24cc59
+aria-query@^5.0.0, aria-query@^5.3.2:
   version "5.3.2"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz"
   integrity sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==
 
-<<<<<<< HEAD
-=======
 aria-query@5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.0.tgz"
@@ -3041,7 +3035,6 @@ aria-query@5.3.0:
   dependencies:
     dequal "^2.0.3"
 
->>>>>>> dee69f7abb748a793666f5594a9924708a24cc59
 array-buffer-byte-length@^1.0.1, array-buffer-byte-length@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz"
