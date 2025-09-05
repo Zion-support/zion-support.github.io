@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/types/listings.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: number}; location: string,"}),"})
@@ -36,6 +38,7 @@ module.exports = interface Listing { id: string; title: string; description: str
 =======
 import React from 'react';
 >>>>>>> main
+>>>>>>> main:src_backup_temp/types/listings.ts
 
 interface ListingsProps {
   // Add props here as needed

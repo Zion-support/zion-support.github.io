@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/hooks/useAccessibility.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +142,7 @@ activeElements.forEach(element:  > {;
 activeElements.forEach("element": > {;';';
       element.classList.remove('active')});
 >>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/useAccessibility.ts
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);
   // Screen reader announcements

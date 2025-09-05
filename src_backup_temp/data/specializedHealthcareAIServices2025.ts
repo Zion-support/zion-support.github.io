@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedHealthcareAIServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,3 +304,4 @@ export default specializedHealthcareAIServices2025}}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedHealthcareAIServices2025.ts
