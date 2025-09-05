@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-      },
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -165,16 +164,46 @@ export default [{
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tseslint,
       react: react,
-      'jsx-a11y': jsxA11y,
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
+    }
   },
   {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      '*.min.js',
+      'build/',
+      'coverage/',
       'src/**',
       'automation/**',
       'automation_backup/**',
@@ -306,41 +335,6 @@ export default [{
       '*.ear',
       '*.sar',
       '*.nar'
-    ]
-  }
-];
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      globals: {
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        fireEvent: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-    },
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      '*.min.js',
-      'build/',
-      'coverage/',
     ],
   },
 ];
