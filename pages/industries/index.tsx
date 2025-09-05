@@ -1,14 +1,12 @@
-import React from 'react';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
-  // TODO: Implement
-}
-  Heart, 
-  DollarSign, 
-  Settings, 
-  ShoppingCart, 
-  BookOpen, 
+  Heart,
+  DollarSign,
+  Settings,
+  ShoppingCart,
+  BookOpen,
   Building,
   ArrowRight,
   CheckCircle,
@@ -16,7 +14,7 @@ import {
   Shield,
   Cloud,
   Brain;'
-} from 'lucide-react';''
+} from 'lucide-react';
 import Layout from '../../components/Layout';'
 const industries = [
   {'
@@ -78,21 +76,21 @@ const stats = ['
 
 export default function IndustriesPage() {
   return (
-    <Layout;'
-      title="Industry Solutions - Zion Tech Group"""
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
+    <Layout'
+      title="Industry Solutions - Zion Tech Group"
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >
-</Layout>"
+</$1>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-</div>"
+</div>
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-</section>"
+</section>
           <div className="absolute inset-0">"
-</div>"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>""
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>"
+</div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
 "
           <div className="container mx-auto px-4 relative z-10">"
@@ -101,45 +99,45 @@ export default function IndustriesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center""
+              className="text-center"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">"
+</h1>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
 </span>
                 </span>
-              </h1>"
+              </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
 </p>
-              </p>"
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">"
 </Link>
-                </Link>"
+                </$1>
                 <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
                 </Link>
               </div>
             </motion.div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gray-50">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
-              className="text-center mb-16""
+            <motion.div,"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">"
 </p>
               </p>
@@ -147,9 +145,9 @@ export default function IndustriesPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                  <motion.div;
+                  <motion.div,
                     key={index}"
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -158,7 +156,7 @@ export default function IndustriesPage() {
                   >
 </motion>
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-</div>"
+</div>
                       <IconComponent className="w-8 h-8 text-white" />"
 </IconComponent>
                     </div>
@@ -172,49 +170,49 @@ export default function IndustriesPage() {
                     </p>
                     "
                     <div className="mb-6">"
-</div>"
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>""
+</div>
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions: </h4>""
                       <div className="flex flex-wrap gap-2">"
 </div>
-                          <span;
+                          <span,
                             key={idx}"
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
                           >
 </span>
                           </span>
                       </div>
                     </div>
                     
-                    <Link;
+                    <Link
                       href={industry.href}"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                     >
 </Link>
-                      <span>Learn More</span>"
+                      <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"
 </ArrowRight>
                     </Link>
                   </motion.div>)
-                );
+                ),
               })}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">"
 </p>
               </p>
@@ -222,8 +220,8 @@ export default function IndustriesPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
-              <motion.div;"
-                className="text-center p-8""
+              <motion.div,"
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -231,18 +229,18 @@ export default function IndustriesPage() {
               >
 </motion>"
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
+</div>
                   <Users className="w-8 h-8 text-blue-600" />"
 </Users>
-                </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>""
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>
                 <p className="text-gray-600">"
 </p>
                 </p>
               </motion.div>
 
               <motion.div;"
-                className="text-center p-8""
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -250,18 +248,18 @@ export default function IndustriesPage() {
               >
 </motion>"
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
+</div>
                   <Shield className="w-8 h-8 text-green-600" />"
 </Shield>
-                </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>""
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>
                 <p className="text-gray-600">"
 </p>
                 </p>
               </motion.div>
 
               <motion.div;"
-                className="text-center p-8""
+                className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -269,27 +267,27 @@ export default function IndustriesPage() {
               >
 </motion>"
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
+</div>
                   <Cloud className="w-8 h-8 text-purple-600" />"
 </Cloud>
-                </div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>""
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
                 <p className="text-gray-600">"
 </p>
                 </p>
               </motion.div>
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gray-50">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
-</div>"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+</div>
+                <motion.div,
                   key={index}"
-                  className="text-center""
+                  className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -298,15 +296,15 @@ export default function IndustriesPage() {
 </motion>"
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">"
 </div>
-                  </div>"
-                  <div className="text-gray-600 font-medium">{stat.label}</div>"
+                  </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
@@ -318,15 +316,15 @@ export default function IndustriesPage() {
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">"
 </p>
-              </p>"
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
-                </Link>"
+                </$1>
                 <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 </Link>
                 </Link>
@@ -335,4 +333,5 @@ export default function IndustriesPage() {
           </div>
         </section>
       </div>
-    </Layout>"
+    </$1>
+}

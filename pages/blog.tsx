@@ -118,8 +118,8 @@ export default function BlogPage() {
               {/* Main Content */}
               <div className="lg:col-span-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {blogPosts.map((post, index) => (
-                    <motion.article
+                  {blogPosts.map((post, index) => (}
+                    <motion.article}
                       key={post.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       initial={{ opacity: 0, y: 20 }}
@@ -164,7 +164,7 @@ export default function BlogPage() {
                           <span>{post.readTime}</span>
                         </div>
                         <Link
-                          href={`/blog/${post.id}`}
+                          href={`/blog/${post.id}}
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group"
                         >
                           Read More
@@ -202,10 +202,10 @@ export default function BlogPage() {
                       Categories
                     </h3>
                     <div className="space-y-2">
-                      {categories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      {categories.map((category) => (}
+                        <Link}`
+                          key={category.name}`
+                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}}
                           className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <span className="text-gray-700">{category.name}</span>
@@ -227,7 +227,7 @@ export default function BlogPage() {
                       <input
                         type="email"
                         placeholder="Enter your email"
-                        className="w-full px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        className="w-full px-3 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focus:ring-white/50"
                       />
                       <button className="w-full bg-white text-blue-600 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                         Subscribe
@@ -235,11 +235,10 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+              </div>`
+            </div>`
+          </div>`
+        </section>`
+      </div>`
+    </Layout>`
 }

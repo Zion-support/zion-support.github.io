@@ -200,7 +200,7 @@ export default function TermsPage() {
 
                   <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded">
                     <p className="text-yellow-800">
-                      <strong>Note:</strong> These Terms of Service are effective as of the date listed above and will 
+                      <strong>Note: </strong> These Terms of Service are effective as of the date listed above and will 
                       remain in effect until modified or terminated in accordance with the provisions herein.
                     </p>
                   </div>
@@ -211,5 +211,4 @@ export default function TermsPage() {
         </section>
       </div>
     </Layout>
-  );
 }

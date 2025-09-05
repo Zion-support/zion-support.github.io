@@ -74,11 +74,11 @@ const getStatusIcon = (status: string) => {
     case 'operational':
       return <CheckCircle className="w-5 h-5 text-green-500" />;
     case 'degraded':
-      return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+      return <AlertCircle className="w-5 h-5 text-yellow-500" />,
     case 'outage':
-      return <XCircle className="w-5 h-5 text-red-500" />;
+      return <XCircle className="w-5 h-5 text-red-500" />,
     default:
-      return <Clock className="w-5 h-5 text-gray-500" />;
+      return <Clock className="w-5 h-5 text-gray-500" />,
   }
 };
 
@@ -87,11 +87,11 @@ const getStatusColor = (status: string) => {
     case 'operational':
       return 'bg-green-100 text-green-800';
     case 'degraded':
-      return 'bg-yellow-100 text-yellow-800';
+      return 'bg-yellow-100 text-yellow-800',
     case 'outage':
-      return 'bg-red-100 text-red-800';
+      return 'bg-red-100 text-red-800',
     default:
-      return 'bg-gray-100 text-gray-800';
+      return 'bg-gray-100 text-gray-800',
   }
 };
 
@@ -102,11 +102,11 @@ const getSeverityColor = (severity: string) => {
     case 'major':
       return 'bg-orange-100 text-orange-800';
     case 'minor':
-      return 'bg-yellow-100 text-yellow-800';
+      return 'bg-yellow-100 text-yellow-800',
     case 'maintenance':
-      return 'bg-blue-100 text-blue-800';
+      return 'bg-blue-100 text-blue-800',
     default:
-      return 'bg-gray-100 text-gray-800';
+      return 'bg-gray-100 text-gray-800',
   }
 };
 
@@ -164,7 +164,7 @@ export default function StatusPage() {
                   Service Status
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {services.map((service, index) => (
+                  {services.map((service, index) => (}
                     <motion.div
                       key={service.name}
                       initial={{ opacity: 0, y: 20 }}
@@ -181,7 +181,7 @@ export default function StatusPage() {
                       <div className="space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">Status</span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}}>
                             {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                           </span>
                         </div>
@@ -219,7 +219,7 @@ export default function StatusPage() {
                   Recent Incidents
                 </h2>
                 <div className="space-y-6">
-                  {incidents.map((incident, index) => (
+                  {incidents.map((incident, index) => (}
                     <motion.div
                       key={incident.id}
                       initial={{ opacity: 0, y: 20 }}
@@ -234,17 +234,17 @@ export default function StatusPage() {
                           </h3>
                           <p className="text-gray-600 mb-4">
                             {incident.description}
-                          </p>
-                          <div className="flex items-center space-x-4 text-sm text-gray-500">
-                            <span>Started: {incident.startTime}</span>
-                            <span>Ended: {incident.endTime}</span>
-                          </div>
-                        </div>
-                        <div className="flex flex-col items-end space-y-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)}`}>
-                            {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
-                          </span>
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(incident.status)}`}>
+                          </p>`
+                          <div className="flex items-center space-x-4 text-sm text-gray-500">`
+                            <span>Started: {incident.startTime}</span>`
+                            <span>Ended: {incident.endTime}</span>`
+                          </div>`
+                        </div>`
+                        <div className="flex flex-col items-end space-y-2">`
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)}}>`
+                            {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}`
+                          </span>`
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(incident.status)}}>
                             {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
                           </span>
                         </div>
@@ -312,7 +312,7 @@ export default function StatusPage() {
                   If you're experiencing issues or have questions about our services, 
                   please don't hesitate to contact our support team.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="/support"
                     className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -325,12 +325,11 @@ export default function StatusPage() {
                   >
                     General Contact
                   </a>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+                </div>`
+              </motion.div>`
+            </div>`
+          </div>`
+        </section>`
+      </div>`
+    </Layout>`
 }

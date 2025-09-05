@@ -67,8 +67,8 @@ export default function HelpdeskPage() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -98,7 +98,7 @@ export default function HelpdeskPage() {
               Thank you for contacting us. We've received your support ticket and will get back to you within 2 hours.
             </p>
             <div className="space-y-2">
-              <Link href="/helpdesk" className="block w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/helpdesk" className="block w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">
                 Submit Another Ticket
               </Link>
               <Link href="/" className="block w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
@@ -108,7 +108,7 @@ export default function HelpdeskPage() {
           </div>
         </div>
       </Layout>
-    );
+    ),
   }
 
   return (
@@ -209,7 +209,7 @@ export default function HelpdeskPage() {
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
                           <option value="">Select a category</option>
-                          {ticketCategories.map((category) => (
+                          {ticketCategories.map((category) => (}
                             <option key={category.id} value={category.id}>
                               {category.label}
                             </option>
@@ -229,7 +229,7 @@ export default function HelpdeskPage() {
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
                           <option value="">Select priority</option>
-                          {priorityLevels.map((priority) => (
+                          {priorityLevels.map((priority) => (}
                             <option key={priority.id} value={priority.id}>
                               {priority.label}
                             </option>
@@ -310,7 +310,7 @@ export default function HelpdeskPage() {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick FAQ</h3>
                   <div className="space-y-3">
-                    {faqItems.map((item, index) => (
+                    {faqItems.map((item, index) => (}
                       <div key={index} className="border-b border-gray-100 pb-3 last:border-b-0">
                         <h4 className="font-medium text-gray-900 text-sm mb-1">{item.question}</h4>
                         <p className="text-xs text-gray-600">{item.answer}</p>
@@ -331,7 +331,7 @@ export default function HelpdeskPage() {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                   <div className="space-y-2">
-                    <Link href="/docs" className="block text-blue-600 hover:text-blue-700 text-sm">
+                    <Link href="/docs" className="block text-blue-600 hover: text-blue-700 text-sm">
                       Documentation
                     </Link>
                     <Link href="/tutorials" className="block text-blue-600 hover:text-blue-700 text-sm">
@@ -351,5 +351,4 @@ export default function HelpdeskPage() {
         </div>
       </div>
     </Layout>
-  );
 }

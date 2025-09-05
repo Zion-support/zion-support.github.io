@@ -1,7 +1,7 @@
-import React from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   // TODO: Implement
 }
@@ -21,7 +21,7 @@ import {
   Brain,
   Network,
   Cloud;'
-} from 'lucide-react';'
+} from 'lucide-react';
 const industries = [
   {'
     title: 'Healthcare','
@@ -177,13 +177,13 @@ export default function IndustriesPage() {
 </meta>"
         <meta name="keywords" content="industry solutions, healthcare AI, fintech, e-commerce technology, manufacturing automation, education technology, government solutions" />"
 </meta>
-      </Head>"
+      </$1>
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-</section>"
+</section>
         <div className="absolute inset-0">"
-</div>"
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
+</div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
 "
         <div className="container mx-auto px-4 relative z-10">"
@@ -192,45 +192,45 @@ export default function IndustriesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"
-            className="text-center""
+            className="text-center"
           >
 </motion>"
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">"
+</h1>
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
 </span>
               </span>
-            </h1>"
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
 </p>
-            </p>"
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">"
 </Link>
-              </Link>"
+              </$1>
               <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
 </Link>
               </Link>
             </div>
           </motion.div>
         </div>
-      </section>"
+      </section>
       <section className="py-20 bg-gray-50">"
-</section>"
+</section>
         <div className="container mx-auto px-4">"
 </div>
-          <motion.div;"
-            className="text-center mb-16""
+          <motion.div,"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
 </motion>"
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+            <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 </h2>
-            </h2>"
+            </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">"
 </p>
             </p>
@@ -238,9 +238,9 @@ export default function IndustriesPage() {
 "
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={index}"
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -249,7 +249,7 @@ export default function IndustriesPage() {
                 >
 </motion>
                   <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-</div>"
+</div>
                     <IconComponent className="w-8 h-8 text-white" />"
 </IconComponent>
                   </div>
@@ -263,7 +263,7 @@ export default function IndustriesPage() {
                   </p>
 "
                   <div className="mb-6">"
-</div>"
+</div>
                     <h4 className="font-semibold text-gray-900 mb-3">Key Services:</h4>""
                     <ul className="space-y-2">"
 </ul>"
@@ -276,7 +276,7 @@ export default function IndustriesPage() {
                   </div>
 "
                   <div className="mb-6">"
-</div>"
+</div>
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>""
                     <ul className="space-y-2">"
 </ul>"
@@ -289,7 +289,7 @@ export default function IndustriesPage() {
                   </div>
 "
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
-</div>"
+</div>
                     <p className="text-sm text-gray-600 italic">"
 </p>
                       <strong>Case Study:</strong> {industry.caseStudy}
@@ -297,39 +297,39 @@ export default function IndustriesPage() {
                   </div>
 "
                   <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-lg font-semibold text-blue-600">{industry.pricing}</span>"
-                    <Link;"
-                      href="/contact"""
-                      className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group""
+</div>
+                    <span className="text-lg font-semibold text-blue-600">{industry.pricing}</span>
+                    <Link"
+                      href="/contact"
+                      className="text-blue-600 hover: text-blue-700 font-semibold inline-flex items-center group"
                     >
 </Link>
-                      <span>Learn More</span>"
+                      <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />"
 </ArrowRight>
                     </Link>
                   </div>
                 </motion.div>)
-              );
+              ),
             })}
           </div>
         </div>
-      </section>"
+      </section>
       <section className="py-20 bg-white">"
-</section>"
+</section>
         <div className="container mx-auto px-4">"
 </div>
           <motion.div;"
-            className="text-center mb-16""
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
 </motion>"
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">"
 </h2>
-            </h2>"
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">"
 </p>
             </p>
@@ -337,9 +337,9 @@ export default function IndustriesPage() {
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={index}"
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors""
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -347,13 +347,13 @@ export default function IndustriesPage() {
                 >
 </motion>"
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-</div>"
+</div>
                     <IconComponent className="w-8 h-8 text-blue-600" />"
 </IconComponent>
-                  </div>"
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">"
 </h3>
-                  </h3>"
+                  </h3>
                   <p className="text-gray-600">"
 </p>
                   </p>
@@ -362,9 +362,9 @@ export default function IndustriesPage() {
             })}
           </div>
         </div>
-      </section>"
+      </section>
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-</section>"
+</section>
         <div className="container mx-auto px-4 text-center">"
 </div>
           <motion.div;
@@ -376,15 +376,15 @@ export default function IndustriesPage() {
 </motion>"
             <h2 className="text-3xl md:text-4xl font-bold mb-6">"
 </h2>
-            </h2>"
+            </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">"
 </p>
-            </p>"
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
-              </Link>"
+              </$1>
               <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 </Link>
               </Link>
@@ -392,4 +392,5 @@ export default function IndustriesPage() {
           </motion.div>
         </div>
       </section>
-    </div>"
+    </div>
+}

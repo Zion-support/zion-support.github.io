@@ -120,8 +120,8 @@ export default function QuantumComputingPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {quantumServices.map((service, index) => {
-                const IconComponent = service.icon;
+              {quantumServices.map((service, index) => {}
+                const IconComponent = service.icon;}
                 return (
                   <motion.div
                     key={index}
@@ -142,7 +142,7 @@ export default function QuantumComputingPage() {
                       {service.description}
                     </p>
                     <div className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <div key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {feature}
@@ -175,7 +175,7 @@ export default function QuantumComputingPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <motion.div
                   key={index}
                   className="flex items-center p-4 bg-gray-50 rounded-lg"
@@ -201,7 +201,7 @@ export default function QuantumComputingPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Go Quantum?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -221,5 +221,4 @@ export default function QuantumComputingPage() {
         </section>
       </div>
     </Layout>
-  );
 }

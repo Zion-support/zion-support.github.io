@@ -108,8 +108,8 @@ export default function ServicesPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
+            {services.map((service, index) => {}
+              const IconComponent = service.icon;}
               return (
                 <motion.div
                   key={index}
@@ -142,7 +142,7 @@ whileHover={{ y: -5 }} ">
                   <div className="mb-6">
 <h4 className="font-semibold text-gray-900 mb-3">Key "Features": </h4>
                   <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -155,13 +155,13 @@ whileHover={{ y: -5 }} ">
                   </div>
                   <Link
                     href={service.href}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
+                    className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
                   >
                     <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   </motion.div>
-              );
+              ),
             })}
           </div>
                   </div>
@@ -183,8 +183,8 @@ whileHover={{ y: -5 }} ">
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+                    {benefits.map((benefit, index) => {}
+              const IconComponent = benefit.icon;}
               return (
                 <motion.div
                   key={index}
@@ -219,9 +219,9 @@ whileHover={{ y: -5 }} ">
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+<h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our services can help transform your business and drive growth.
+              Let&apos,s discuss how our services can help transform your business and drive growth.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
@@ -235,5 +235,4 @@ whileHover={{ y: -5 }} ">
                   </div>
                   </section>
                   </div>
-  );
 }

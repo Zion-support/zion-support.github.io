@@ -1,12 +1,10 @@
-import React from 'react';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
-  // TODO: Implement
-}
-  Cloud, 
-  Shield, 
-  Zap, 
+  Cloud,
+  Shield,
+  Zap,
   CheckCircle,
   ArrowRight,
   BarChart3,
@@ -17,7 +15,7 @@ import {
   Lock,
   Smartphone,
   Brain;'
-} from 'lucide-react';''
+} from 'lucide-react';
 import Layout from "../../components/Layout";"
 const phases = [
   {"
@@ -117,42 +115,42 @@ const benefits = [
   {'
     title: 'Cost Reduction',''
     description: 'Reduce infrastructure costs by up to 40% with cloud optimization.','
-    icon: BarChart3;
+    icon: BarChart3,
   },
   {'
     title: 'Enhanced Security',''
     description: 'Enterprise-grade security with automated updates and monitoring.','
-    icon: Shield;
+    icon: Shield,
   },
   {'
     title: 'Improved Scalability',''
     description: 'Scale resources up or down based on demand automatically.','
-    icon: Zap;
+    icon: Zap,
   },
   {'
     title: 'Better Performance',''
     description: 'Faster load times and improved application performance.','
-    icon: Smartphone;
+    icon: Smartphone,
   }]
 ];
 
 export default function CloudMigrationPage() {
   return (
-    <Layout;'
-      title="Cloud Migration Solutions - Zion Tech Group"""
-      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."""
+    <Layout'
+      title="Cloud Migration Solutions - Zion Tech Group"
+      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration""
     >
-</Layout>"
+</$1>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-</div>"
+</div>
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">"
-</section>"
+</section>
           <div className="absolute inset-0">"
-</div>"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>""
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>"
+</div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
 "
           <div className="container mx-auto px-4 relative z-10">"
@@ -161,49 +159,49 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
               <div className="flex items-center justify-center mb-6">"
-</div>"
+</div>
                 <Cloud className="w-12 h-12 text-blue-400 mr-4" />"
-</Cloud>"
-                <h1 className="text-5xl md:text-6xl font-bold">"
-</h1>"
+</$1>
+                <h1 className="text-5xl md: text-6xl font-bold">"
+</h1>
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">"
 </span>
                   </span>
                 </h1>
-              </div>"
+              </div>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
 </p>
-              </p>"
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
-                </Link>"
+                </$1>
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 </Link>
                 </Link>
               </div>
             </motion.div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
+            <motion.div,
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              className="text-center mb-16"
             >
 </motion>"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
 </p>
               </p>
@@ -211,21 +209,21 @@ export default function CloudMigrationPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={phase.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="text-center""
+                  className="text-center"
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
+</div>
                     <phase.icon className="w-8 h-8 text-white" />"
 </phase>
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>""
-                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>""
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>
                   <ul className="space-y-2 text-left">"
 </ul>"
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">"
@@ -238,21 +236,21 @@ export default function CloudMigrationPage() {
               ))}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gray-50">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              className="text-center mb-16"
             >
 </motion>"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
 </p>
               </p>
@@ -260,27 +258,27 @@ export default function CloudMigrationPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
                 >
 </motion>"
                   <div className="flex items-center mb-6">"
-</div>"
+</div>
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">"
-</div>"
+</div>
                       <service.icon className="w-6 h-6 text-white" />"
 </service>
-                    </div>"
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                   </div>
                   "
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                   <div>
-</div>"
+</div>
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>""
                     <ul className="space-y-2">"
 </ul>"
@@ -295,21 +293,21 @@ export default function CloudMigrationPage() {
               ))}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center mb-16""
+              className="text-center mb-16"
             >
 </motion>"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
 </p>
               </p>
@@ -317,28 +315,28 @@ export default function CloudMigrationPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="text-center""
+                  className="text-center"
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-</div>"
+</div>
                     <benefit.icon className="w-8 h-8 text-white" />"
 </benefit>
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>""
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
@@ -349,15 +347,15 @@ export default function CloudMigrationPage() {
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
 </p>
-              </p>"
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-</div>"
+</div>
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">"
 </Link>
-                </Link>"
+                </$1>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 </Link>
                 </Link>
@@ -366,4 +364,5 @@ export default function CloudMigrationPage() {
           </div>
         </section>
       </div>
-    </Layout>"
+    </$1>
+}

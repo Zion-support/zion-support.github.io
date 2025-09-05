@@ -176,8 +176,7 @@ export default function PrivacyPage() {
                   
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <p className="text-gray-600 mb-4">
-                      If you have any questions about this Privacy Policy or our privacy practices, please contact us:
-                    </p>
+                      If you have any questions about this Privacy Policy or our privacy practices, please contact us: </p>
                     <div className="space-y-2">
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -204,5 +203,4 @@ export default function PrivacyPage() {
         </section>
       </div>
     </Layout>
-  );
 }

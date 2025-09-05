@@ -167,11 +167,11 @@ const microSaaSProducts = [{
   },
   {
     title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
-    icon: BarChart3,
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
-    pricing: '$29 - $199/month',
-    category: 'Analytics'
+    description: 'Advanced website analytics with heatmaps and user behavior tracking.'
+    icon: BarChart3}
+    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],}
+    pricing: '$29 - $199/month'
+    category: 'Analytics'}
   },
   {
     title: 'Document Management System',
@@ -590,14 +590,14 @@ export default function MicroSaaSPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {
-              const IconComponent = product.icon;
+            {microSaaSProducts.map((product, index) => {}
+              const IconComponent = product.icon;}
               return (
                 <motion.div
                   key={index}
 className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-                    product.popular ? 'ring-2 ring-purple-200' : ''
-                  }`}
+                    product.popular ? "ring-2 ring-purple-200" : ''
+                  }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -629,7 +629,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-                      {product.features.map((feature, featureIndex) => (
+                      {product.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -642,13 +642,13 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                   </div>
                   <Link
                     href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-purple-600 hover: bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-              );
+              ),
             })}
           </div>
                   </div>
@@ -670,8 +670,8 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+                    {features.map((feature, index) => {}
+              const IconComponent = feature.icon;}
               return (
                 <motion.div
                   key={index}
@@ -713,8 +713,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+            {benefits.map((benefit, index) => {}
+              const IconComponent = benefit.icon;}
               return (
                 <motion.div
                   key={index}
@@ -755,16 +755,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
           >
 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.
-            </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={index}
+              Choose the plan that fits your business needs. No hidden fees, no surprises.`
+            </p>`
+                  </motion.div>`
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">`
+                    {pricingTiers.map((tier, index) => (`}
+              <motion.div`}
+                key={index}`
                 className={`p-8 rounded-xl shadow-lg ${
-                  tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
-                }`}
+                  tier.popular ? "bg-purple-50 border-2 border-purple-200" : 'bg-white'
+                }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -789,20 +789,19 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   <span className="text-gray-600">{tier.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                  <Link
-                  href="/contact"
+                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />`
+                      {feature}`
+                    </li>`
+                  ))}`
+                </ul>`
+                  <Link`
+                  href="/contact"`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? 'bg-purple-600 hover:bg-purple-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+? "bg-purple-600 hover:bg-purple-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -926,21 +925,20 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
+<h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
+              Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos,s build the perfect solution for your business.
             </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-</div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
-  );
+                View All Services`
+              </Link>`
+</div>`
+                  </motion.div>`
+                  </div>`
+                  </section>`
+                  </div>`
 }

@@ -24,7 +24,7 @@ import {
 const values = [{
     icon: Lightbulb,
     title: 'Innovation',
-    description: 'We constantly push the boundaries of what&apos;s possible with technology, always seeking new and better ways to solve problems.'
+    description: 'We constantly push the boundaries of what&apos,s possible with technology, always seeking new and better ways to solve problems.'
   },
   {
     icon: Shield,
@@ -39,7 +39,7 @@ const values = [{
   {
     icon: Handshake,
     title: 'Client Success',
-    description: 'Our success is measured by our clients&apos; success. We are committed to being true partners in their growth journey.'
+    description: 'Our success is measured by our clients&apos, success. We are committed to being true partners in their growth journey.'
   }
 ];
 
@@ -245,8 +245,8 @@ export default function AboutPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.icon;
-              return (
-                <motion.div
+              return (}
+                <motion.div}
                   key={index}
 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
@@ -285,8 +285,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
+            {team.map((member, index) => (}
+              <motion.div}
                 key={index}
 className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow
                 initial={{ opacity: 0, y: 30 }}
@@ -330,8 +330,8 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => {
-              const IconComponent = achievement.icon;
+            {achievements.map((achievement, index) => {}
+              const IconComponent = achievement.icon;}
               return (
                 <motion.div
                   key={index}
@@ -370,14 +370,14 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
+<h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Key milestones in our company&apos;s growth and evolution.
+              Key milestones in our company&apos,s growth and evolution.
             </p>
                   </motion.div>
                   <div className="max-w-4xl mx-auto">
                   <div className="space-y-8">
-              {timeline.map((item, index) => (
+              {timeline.map((item, index) => (}
                 <motion.div
                   key={index}
                   className="flex items-start space-x-6"
@@ -415,11 +415,11 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
+<h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Work With Us?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our team can help transform your business with cutting-edge technology solutions.
+              Let&apos,s discuss how our team can help transform your business with cutting-edge technology solutions.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get in Touch
               </Link>
@@ -431,5 +431,5 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   </div>
                   </section>
                   </div>
-  );
+    </MainLayout>
 }

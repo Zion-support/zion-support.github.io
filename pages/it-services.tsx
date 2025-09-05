@@ -503,8 +503,8 @@ export default function ITServicesPage() {
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => {
-              const IconComponent = service.icon;
+            {itServices.map((service, index) => {}
+              const IconComponent = service.icon;}
               return (
                 <motion.div
                   key={index}
@@ -531,7 +531,7 @@ whileHover={{ y: -5 }} ">
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -544,13 +544,13 @@ whileHover={{ y: -5 }} ">
                   </div>
                   <Link
                     href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-green-600 hover: bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-              );
+              ),
             })}
           </div>
                   </div>
@@ -572,8 +572,8 @@ whileHover={{ y: -5 }} ">
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => {
-              const IconComponent = tech.icon;
+            {technologies.map((tech, index) => {}
+              const IconComponent = tech.icon;}
               return (
                 <motion.div
                   key={index}
@@ -612,8 +612,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+            {benefits.map((benefit, index) => {}
+              const IconComponent = benefit.icon;}
               return (
                 <motion.div
                   key={index}
@@ -658,12 +658,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportLevels.map((level, index) => (
+            {supportLevels.map((level, index) => (}
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
-                  index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
-                }`}
+                  index === 1 ? "bg-green-50 border-2 border-green-200" : 'bg-white'
+                }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -679,20 +679,19 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   {level.pricing}
                 </div>
                   <ul className="space-y-3 mb-8">
-                  {level.features.map((feature, featureIndex) => (
+                  {level.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                  <Link
-                  href="/contact"
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />`
+                      {feature}`
+                    </li>`
+                  ))}`
+                </ul>`
+                  <Link`
+                  href="/contact"`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? 'bg-green-600 hover:bg-green-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+? "bg-green-600 hover:bg-green-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -716,17 +715,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
-  );
+                View All Services`
+              </Link>`
+                  </div>`
+                  </motion.div>`
+                  </div>`
+                  </section>`
+                  </div>`
 }

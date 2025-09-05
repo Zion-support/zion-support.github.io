@@ -1,7 +1,7 @@
-import React from 'react';''
+import React from 'react';
 import MainLayout from '../components/layout/MainLayout';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';'
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   // TODO: Implement
 }
@@ -21,10 +21,10 @@ import {
   Shield,
   Lock,
   Search;'
-} from 'lucide-react';'
+} from 'lucide-react';
 const siteStructure = [
   {'
-    category: "Main Pages","
+    category: "Main Pages",
     icon: Home,
     pages: ["
       { name: "Home", url: "/", description: "Main landing page with company overview" },""
@@ -33,7 +33,7 @@ const siteStructure = [
     ]
   },
   {"
-    category: "Services","
+    category: "Services",
     icon: Settings,
     pages: ["
       { name: "All Services", url: "/services", description: "Overview of all our services" },""
@@ -44,7 +44,7 @@ const siteStructure = [
     ]
   },
   {"
-    category: "Solutions","
+    category: "Solutions",
     icon: BarChart3,
     pages: ["
       { name: "All Solutions", url: "/solutions", description: "Overview of our solution categories" },""
@@ -55,7 +55,7 @@ const siteStructure = [
     ]
   },
   {"
-    category: "Resources","
+    category: "Resources",
     icon: BookOpen,
     pages: ["
       { name: "All Resources", url: "/resources", description: "Overview of all resources" },""
@@ -69,7 +69,7 @@ const siteStructure = [
     ]
   },
   {"
-    category: "Company","
+    category: "Company",
     icon: Users,
     pages: ["
       { name: "About Us", url: "/about", description: "Company information and team" },""
@@ -79,7 +79,7 @@ const siteStructure = [
     ]
   },
   {"
-    category: "Legal","
+    category: "Legal",
     icon: Shield,
     pages: ["
       { name: "Privacy Policy", url: "/privacy", description: "Data privacy and protection policy" },""
@@ -111,55 +111,55 @@ const externalLinks = ["
 
 export default function SitemapPage() {
   return (
-    <MainLayout;"
-      title="Sitemap - Zion Tech Group"""
-      description="Complete sitemap of all pages and resources available on the Zion Tech Group website.""
+    <MainLayout"
+      title="Sitemap - Zion Tech Group"
+      description="Complete sitemap of all pages and resources available on the Zion Tech Group website."
     >
-</MainLayout>"
+</$1>
       <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
+</div>}
+        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">"}
+</section>}
+          <div className="container mx-auto px-4">"}
+</div>}
+            <motion.div;}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
+              className="text-center max-w-4xl mx-auto"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">"
+</h1>
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">"
 </span>
                 </span>
-              </h1>"
+              </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">"
 </p>
               </p>
             </motion.div>
           </div>
-        </section>"
+        </section>
         <section className="py-12 bg-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
-              className="text-center mb-8""
+            <motion.div,"
+              className="text-center mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Links</h2>""
-              <p className="text-gray-600">Popular pages and resources</p>"
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Quick Links</h2>
+              <p className="text-gray-600">Popular pages and resources</p>
             </motion.div>
 "
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">"
+            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">"
 </div>
-                  <motion.div;
+                  <motion.div,
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -167,38 +167,38 @@ export default function SitemapPage() {
                     viewport={{ once: true }}
                   >
 </motion>
-                    <Link;
+                    <Link
                       href={link.url}"
-                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group""
+                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover: bg-blue-50 transition-colors group"
                     >
-</Link>"
+</$1>
                       <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
-</IconComponent>"
+</$1>
                       <span className="text-sm font-medium text-gray-900 group-hover:text-blue-700">"
 </span>
                       </span>
                     </Link>
                   </motion.div>)
-                );
+                ),
               })}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-16""
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
 </p>
               </p>
@@ -206,9 +206,9 @@ export default function SitemapPage() {
 "
             <div className="space-y-12">"
 </div>
-                  <motion.div;
+                  <motion.div,
                     key={categoryIndex}"
-                    className="bg-white rounded-xl shadow-lg p-8""
+                    className="bg-white rounded-xl shadow-lg p-8"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
@@ -216,39 +216,39 @@ export default function SitemapPage() {
                   >
 </motion>"
                     <div className="flex items-center mb-6">"
-</div>"
+</div>
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">"
-</div>"
+</div>
                         <IconComponent className="w-6 h-6 text-white" />"
 </IconComponent>
-                      </div>"
+                      </div>
                       <h3 className="text-2xl font-bold text-gray-900">"
 </h3>
                       </h3>
                     </div>
 "
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
+                    <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
-                        <motion.div;
+                        <motion.div,
                           key={pageIndex}"
-                          className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group""
+                          className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group"
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: pageIndex * 0.05 }}
                           viewport={{ once: true }}
                         >
 </motion>
-                          <Link;
+                          <Link
                             href={page.url}"
-                            className="block group-hover:text-blue-600 transition-colors""
+                            className="block group-hover:text-blue-600 transition-colors"
                           >
-</Link>"
+</$1>
                             <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">"
 </h4>
                             </h4>"
                             <p className="text-sm text-gray-600 leading-relaxed">"
 </p>
-                            </p>"
+                            </p>
                             <div className="mt-2 text-xs text-blue-600 group-hover:text-blue-700">"
 </div>
                             </div>
@@ -261,13 +261,13 @@ export default function SitemapPage() {
               })}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4">"
 </div>
             <motion.div;"
-              className="text-center mb-12""
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -276,39 +276,39 @@ export default function SitemapPage() {
 </motion>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-lg text-gray-600">"
 </p>
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">"
+            <div className="grid grid-cols-2 md: grid-cols-5 gap-6">"
 </div>
-                  <motion.a;
+                  <motion.a,
                     key={index}
                     href={link.url}"
                     target="_blank"""
                     rel="noopener noreferrer"""
-                    className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group""
+                    className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
 </motion>"
-                    <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
-</IconComponent>"
+                    <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover: text-blue-700" />"
+</$1>
                     <span className="text-sm font-medium text-gray-900 group-hover:text-blue-700">"
 </span>
                     </span>
                   </motion.a>
-                );
+                ),
               })}
             </div>
           </div>
-        </section>"
+        </section>
         <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">"
-</section>"
+</section>
           <div className="container mx-auto px-4 text-center">"
 </div>
             <motion.div;
@@ -318,25 +318,25 @@ export default function SitemapPage() {
               viewport={{ once: true }}
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
-              </h2>"
+              </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
 </p>
-              </p>"
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">"
-</div>"
+</div>
                 <div className="relative flex-1">"
-</div>"
+</div>
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
 </Search>
-                  <input;"
+                  <input,"
                     type="text"""
                     placeholder="Search the site..."""
-                    className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none""
+                    className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"
                   />
 </input>
-                </div>"
+                </div>
                 <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">"
 </button>
                 </button>
@@ -345,4 +345,5 @@ export default function SitemapPage() {
           </div>
         </section>
       </div>
-    </MainLayout>"
+    </$1>
+}

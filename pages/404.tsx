@@ -1,8 +1,8 @@
-import React from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';''
-import { motion } from 'framer-motion';''
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
 export default function Custom404() {
   return ('
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
@@ -25,7 +25,7 @@ export default function Custom404() {
           <div className="mb-8">"
 </div>
             <motion.div;"
-              className="text-9xl font-bold text-blue-600 mb-4""
+              className="text-9xl font-bold text-blue-600 mb-4"
               animate={{ 
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0]
@@ -37,106 +37,106 @@ export default function Custom404() {
               }}
             >
 </motion>
-            </motion.div>"
+            </motion.div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">"
 </h1>
-            </h1>"
+            </h1>
             <p className="text-xl text-gray-600 mb-8">"
 </p>
             </p>
-          </div>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
+          </div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">"
 </div>
-            <Link;"
-              href="/"""
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+            <Link"
+              href="/"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
-</Link>"
+</$1>
               <Home className="w-5 h-5" />"
 </Home>
             </Link>
-            <button;)
+            <button,)
               onClick={() => window.history.back()}
 </button>"
               <ArrowLeft className="w-5 h-5" />"
 </ArrowLeft>
             </button>
-          </div>"
+          </div>
           <div className="bg-white rounded-lg shadow-lg p-8">"
-</div>"
+</div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">"
 </h2>
-            </h2>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
+            </h2>
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">"
 </div>
-              <Link;"
-                href="/services"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+              <Link"
+                href="/services"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
-</Link>"
+</$1>
                 <div className="text-center">"
-</div>"
+</div>
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">"
-</div>"
+</div>
                     <Search className="w-6 h-6 text-blue-600" />"
 </Search>
-                  </div>"
+                  </div>
                   <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
 </h3>
-                  </h3>"
+                  </h3>
                   <p className="text-sm text-gray-600">"
 </p>
                   </p>
                 </div>
               </Link>
 
-              <Link;"
-                href="/about"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+              <Link"
+                href="/about"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
-</Link>"
+</$1>
                 <div className="text-center">"
-</div>"
+</div>
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">"
-</div>"
+</div>
                     <HelpCircle className="w-6 h-6 text-blue-600" />"
 </HelpCircle>
-                  </div>"
+                  </div>
                   <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
 </h3>
-                  </h3>"
+                  </h3>
                   <p className="text-sm text-gray-600">"
 </p>
                   </p>
                 </div>
               </Link>
 
-              <Link;"
-                href="/contact"""
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group""
+              <Link,"
+                href="/contact"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
               >
-</Link>"
+</$1>
                 <div className="text-center">"
-</div>"
+</div>
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">"
-</div>"
+</div>
                     <HelpCircle className="w-6 h-6 text-blue-600" />"
 </HelpCircle>
-                  </div>"
+                  </div>
                   <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
 </h3>
-                  </h3>"
+                  </h3>
                   <p className="text-sm text-gray-600">"
 </p>
                   </p>
                 </div>
               </Link>
             </div>
-          </div>"
+          </div>
           <div className="mt-8 text-center">"
-</div>"
+</div>
             <p className="text-gray-600">"
-</p>"
+</p>
               <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">"
 </Link>
               </Link>
@@ -144,4 +144,5 @@ export default function Custom404() {
           </div>
         </motion.div>
       </div>
-    </div>"
+    </div>
+}
