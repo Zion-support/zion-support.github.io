@@ -7,5 +7,8 @@ describe('AIChatbot', () => {;''}
 </AIChatbot>
     render(<AIChatbot />);
 </AIChatbot>'
-import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});'
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' }
+});'; it('displays correct content',() => {; render(<AIChatbot />)}
+}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),}
+});'
 </AIChatbot>'

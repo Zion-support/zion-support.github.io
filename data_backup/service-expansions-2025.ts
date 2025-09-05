@@ -10,7 +10,7 @@ export interface ServiceExpansion2025 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "serviceExpansions2025": ServiceExpansion2025[] = [{""}]

@@ -315,7 +315,7 @@ export default function CookiesPage() {}
                             cookie.type === 'Analytics' ? 'bg-blue-100 text-blue-800' :''
                             cookie.type === 'Functional' ? 'bg-green-100 text-green-800' :''
                             'bg-purple-100 text-purple-800''
-                          }`}>`
+                          }`}>
 </span>
                           </span>
                         </td>
@@ -325,7 +325,7 @@ export default function CookiesPage() {}
               </div>
             </div>
           </div>
-        </section>``
+        </section>
         <section className="py-20 bg-white">"
 </section>"
           <div className="container mx-auto px-4">"

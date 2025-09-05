@@ -25,7 +25,8 @@ class AccessibilityChecker {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -40,9 +41,9 @@ class AccessibilityChecker {}
                 const content = fs.readFileSync(file, 'utf8';);
                 const fileIssues = this.analyzeFileForAccessibility(content, file;);
                 issues.push(...fileIssues)} catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};`
+                this.log(`Error reading file ${file}: ${error.message}`)};
         };
-        this.log(`Found ${issues.length} accessibility issues`);`
+        this.log(`Found ${issues.length} accessibility issues`);
         return issues};
     findSourceFiles() {}
         const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -160,7 +161,8 @@ class AccessibilityChecker {}
                 if ( {})
                     const hasH1 = lines.slice(0, i).some(l => l.includes('<h1') {}
      {}
-                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1'}););
+                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1'}
+}););
                     if ( {})
                         issues.push({})
                             "file": path.relative(this.projectRoot, file),
@@ -267,7 +269,8 @@ export const accessibility = {}
      {}
         if (e.shiftKey) {}
           if (document.activeElement === firstElement) {}
-            lastElement.focus(});
+            lastElement.focus(}
+});
             e.preventDefault()};
         } else {}
           if ( {})
@@ -316,10 +319,12 @@ export const accessibility = {}
     \";
     
     skipLink.addEventListener('focus', () => {}
-      skipLink.style.top = '6px'});
+      skipLink.style.top = '6px'}
+});
     
     skipLink.addEventListener('blur', () => {}
-      skipLink.style.top = '-40px'});
+      skipLink.style.top = '-40px'}
+});
     
     return skipLink};
 };
@@ -367,7 +372,8 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
         // Check for missing alt attributes;
         const images = document.querySelectorAll('"img": not([alt]);';);
         images.forEach((img, index) => {}
-          newIssues.push(\"Image \${index + 1} missing alt attribute\")});
+          newIssues.push(\"Image \${index + 1} missing alt attribute\")}
+});
         
         // Check for missing form labels;
         const inputs = document.querySelectorAll('"input": not([aria-label]):not([aria-labelledby]);';);
@@ -385,7 +391,8 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
       
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
-      observer.observe(document.body, { "childList": true, "subtree": true });
+      observer.observe(document.body, { "childList": true, "subtree": true }
+});
       
       return () => observer.disconnect()};
   }, []);
@@ -444,7 +451,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Accessibility report saved to ${this.reportFile}`);`
+        this.log(`Accessibility report saved to ${this.reportFile}`);
         
         return report};
     generateAccessibilityRecommendations(issues) {}
@@ -477,7 +484,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             const report = this.generateAccessibilityReport(;);
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
-            this.log(`Accessibility Checker "failed": ${error.message}`);`
+            this.log(`Accessibility Checker "failed": ${error.message}`);
             throw error};
     };
 };

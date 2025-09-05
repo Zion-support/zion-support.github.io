@@ -34,7 +34,8 @@ class SecurityScanner {}
       const auditResult = execSync('npm audit --json', { })
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }
+});
       
       const audit = JSON.parse(auditResult);
       const vulnerabilities = audit.vulnerabilities || {};
@@ -43,7 +44,7 @@ class SecurityScanner {}
       this.securityReport.checks.npmAudit = {}
         status: vulnCount === 0 ? 'secure' : 'vulnerable',
         vulnerabilities: vulnCount,
-        message: vulnCount === 0 ? 'No vulnerabilities found' : `${vulnCount} vulnerabilities found``
+        message: vulnCount === 0 ? 'No vulnerabilities found' : `${vulnCount} vulnerabilities found
       };
     } catch (error) {}
       this.securityReport.checks.npmAudit = {}
@@ -68,7 +69,7 @@ class SecurityScanner {}
       this.securityReport.checks.dependencies = {}
         status: vulnerablePackages.length === 0 ? 'secure' : 'warning',
         vulnerablePackages,
-        message: vulnerablePackages.length === 0 ? 'Dependencies look secure' : `Found ${vulnerablePackages.length} potentially vulnerable packages``
+        message: vulnerablePackages.length === 0 ? 'Dependencies look secure' : `Found ${vulnerablePackages.length} potentially vulnerable packages
       };
     } catch (error) {}
       this.securityReport.checks.dependencies = {}
@@ -95,7 +96,7 @@ class SecurityScanner {}
     this.securityReport.checks.sensitiveFiles = {}
       status: foundFiles.length === 0 ? 'secure' : 'warning',
       foundFiles,
-      message: foundFiles.length === 0 ? 'No sensitive files found in root' : `Found ${foundFiles.length} sensitive files``
+      message: foundFiles.length === 0 ? 'No sensitive files found in root' : `Found ${foundFiles.length} sensitive files
     };
   };
   async checkEnvironmentVariables() {}
@@ -111,7 +112,7 @@ class SecurityScanner {}
     this.securityReport.checks.environmentVariables = {}
       status: foundSensitiveVars.length === 0 ? 'secure' : 'warning',
       foundSensitiveVars,
-      message: foundSensitiveVars.length === 0 ? 'No sensitive environment variables found' : `Found ${foundSensitiveVars.length} sensitive environment variables``
+      message: foundSensitiveVars.length === 0 ? 'No sensitive environment variables found' : `Found ${foundSensitiveVars.length} sensitive environment variables
     };
   };
   determineOverallStatus() {}
@@ -134,7 +135,7 @@ class SecurityScanner {}
     const reportPath = path.join(process.cwd(), 'security-report.json');
     try {}
       fs.writeFileSync(reportPath, JSON.stringify(this.securityReport, null, 2));
-      console.log(`Security report saved to ${reportPath}`);`
+      console.log(`Security report saved to ${reportPath}`);
     } catch (error) {}
       console.error('Failed to save security report:', error);
     };
@@ -144,8 +145,9 @@ class SecurityScanner {}
 if (require.main === module) {}
   const scanner = new SecurityScanner();
   scanner.runAllChecks().then(success => {})
-    console.log(`Security scan ${success ? 'passed' : 'failed'}`);`
+    console.log(`Security scan ${success ? 'passed' : 'failed'}`);
     process.exit(success ? 0 : 1);
-  });
+  }
+});
 };
 module.exports = SecurityScanner;

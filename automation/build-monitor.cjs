@@ -26,7 +26,8 @@ class BuildMonitor {}
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
-      });
+      }
+});
 
       const endTime = Date.now();
       const duration = endTime - startTime;
@@ -43,7 +44,7 @@ class BuildMonitor {}
         this.buildHistory.shift();
       };
       this.lastBuildTime = new Date();
-      this.log(`Build completed successfully in ${duration}ms`);`
+      this.log(`Build completed successfully in ${duration}ms`);
 
       return buildResult;
     } catch (error) {}
@@ -61,7 +62,7 @@ class BuildMonitor {}
       if (this.buildHistory.length > this.maxHistorySize) {}
         this.buildHistory.shift();
       };
-      this.log(`Build failed after ${duration}"ms": ${error.message}`);`
+      this.log(`Build failed after ${duration}"ms": ${error.message}`);
 
       return buildResult;
     };
@@ -71,12 +72,13 @@ class BuildMonitor {}
       this.log('Running type check...');
       const { stdout, stderr } = await execAsync('npm run type-check', {})
         "cwd": process.cwd(),
-        "timeout": 60000});
+        "timeout": 60000}
+});
 
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
-      this.log(`Type check "failed": ${error.message}`);`
+      this.log(`Type check "failed": ${error.message}`);
       return {}
         "success": false,
         "output": error.stdout || '',
@@ -88,12 +90,13 @@ class BuildMonitor {}
       this.log('Running lint check...');
       const { stdout, stderr } = await execAsync('npm run "lint": check', {})
         "cwd": process.cwd(),
-        "timeout": 60000});
+        "timeout": 60000}
+});
 
       this.log('Lint check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
-      this.log(`Lint check "failed": ${error.message}`);`
+      this.log(`Lint check "failed": ${error.message}`);
       return {}
         "success": false,
         "output": error.stdout || '',
@@ -105,12 +108,13 @@ class BuildMonitor {}
       this.log('Running tests...');
       const { stdout, stderr } = await execAsync('npm run "test": smoke', {})
         "cwd": process.cwd(),
-        "timeout": 120000});
+        "timeout": 120000}
+});
 
       this.log('Tests completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
-      this.log(`Tests "failed": ${error.message}`);`
+      this.log(`Tests "failed": ${error.message}`);
       return {}
         "success": false,
         "output": error.stdout || '',
@@ -133,7 +137,7 @@ class BuildMonitor {}
       results.build.success &&
       results.tests.success;
 
-    this.log(`Full check completed. All "passed": ${allPassed}`);`
+    this.log(`Full check completed. All "passed": ${allPassed}`);
 
     // Save results;
     const resultsFile = path.join(__dirname, 'logs', 'build-results.json');
@@ -149,12 +153,13 @@ class BuildMonitor {}
       for (const dir of buildDirs) {}
         const dirPath = path.join(process.cwd(), dir);
         if (fs.existsSync(dirPath)) {}
-          await execAsync(`rm -rf ${dirPath}`, { "cwd": process.cwd() });`
-          this.log(`Cleaned up ${dir}`);`
+          await execAsync(`rm -rf ${dirPath}`, { "cwd": process.cwd() }
+});
+          this.log(`Cleaned up ${dir}`);
         };
       };
     } catch (error) {}
-      this.log(`Cleanup "failed": ${error.message}`);`
+      this.log(`Cleanup "failed": ${error.message}`);
     };
   };
   async optimizeBuild() {}
@@ -167,12 +172,13 @@ class BuildMonitor {}
       // Run build with optimization;
       const { stdout, stderr } = await execAsync('npm run "build": production', {})
         "cwd": process.cwd(),
-        "timeout": 300000});
+        "timeout": 300000}
+});
 
       this.log('Build optimization completed');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
-      this.log(`Build optimization "failed": ${error.message}`);`
+      this.log(`Build optimization "failed": ${error.message}`);
       return {}
         "success": false,
         "output": error.stdout || '',
@@ -222,6 +228,7 @@ if (require.main === module) {}
   monitor.start().catch(error => {})
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = BuildMonitor;

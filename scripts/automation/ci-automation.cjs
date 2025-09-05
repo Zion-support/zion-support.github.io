@@ -48,17 +48,21 @@ class $1 {}
       const child = spawn(command, [], {})
   "shell": true,
         cwd,
-        "stdio": ["pipe", "pipe", "pipe"]});
+        "stdio": ["pipe", "pipe", "pipe"]}
+});
       let stdout = "";
       let stderr = "";
       child.stdout.on("data", data => {})
-  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")});
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
+});
       child.stderr.on("data", data => {})
-  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")});
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
+});
       child.on("close", code => {})
   if (code === 0) {this.log("Command completed successfully with code ${code}");
           resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
-      });
+      }
+});
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
@@ -174,7 +178,8 @@ class $1 {}
     results.push({})
   "step": "install-dependencies",
       "success": depsResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
 
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
@@ -188,27 +193,31 @@ class $1 {}
     results.push({})
   "step": "lint",
       "success": lintResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
 
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
     results.push({})
   "step": "type-check",
       "success": typeCheckResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
     // Run build;
     const buildResult = await this.runBuild();
     results.push({})
   "step": "build",
       "success": buildResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
       results.push({})
   "step": "verify-build",
         "success": verifyResult,
-        "timestamp": new Date().toISOString()});
+        "timestamp": new Date().toISOString()}
+});
       // Run tests;
       const testResult = await this.runTests();
       results.push({})
@@ -228,7 +237,8 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
       results.push({})
   "step": "verify-build",
         "success": verifyResult,
-        "timestamp": new Date().toISOString()});
+        "timestamp": new Date().toISOString()}
+});
 
       // Run tests;
       const testResult = await this.runTests();
@@ -239,7 +249,7 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
 ;
     // Generate final report;
     const report = await this.generateReport(results);
-this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);`
+this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
 
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");

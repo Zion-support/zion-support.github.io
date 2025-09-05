@@ -2,7 +2,8 @@ import { withErrorLogging } from '../withErrorLogging.cjs';
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }
+});
   }
 
   try {
@@ -21,6 +22,8 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({
       error: 'Failed to fetch wallet data',
       message: error.message
-    });
+    }
+});
   }
+}
 });

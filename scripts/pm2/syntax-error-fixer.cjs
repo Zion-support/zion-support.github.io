@@ -25,7 +25,7 @@ class SyntaxErrorFixer {}
     this.syntaxPatterns = {}
       unterminatedStrings: []
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
-        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g;`
+        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g;
       ],
       unterminatedComments: []
         /\/\*([^*]|\*[^/])*$/gm,
@@ -41,7 +41,7 @@ class SyntaxErrorFixer {}
       ],
       unclosedBrackets: []
         /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g,`
-        /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g;`
+        /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g;
       ];
     }};
   log(level, message, data = null) {}
@@ -58,7 +58,7 @@ class SyntaxErrorFixer {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
-      console.log(`[${timestamp}] DEBUG: ${message}`, data)};`
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     // Write to log file;
     this.writeToLog(logEntry)};
   writeToLog(logEntry) {}
@@ -120,7 +120,7 @@ class SyntaxErrorFixer {}
       if (filesWithIssues.length === 0) {}
         this.log('info', 'No files with syntax issues found');
         return};
-      this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);`
+      this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);
 
       // Process files in batches to avoid overwhelming the system;
       const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
@@ -174,7 +174,7 @@ class SyntaxErrorFixer {}
             files.push(fullPath)};
         };
       })} catch (error) {}
-      this.log('warn', `Error reading directory: ${dir}`, error.message)};`
+      this.log('warn', `Error reading directory: ${dir}`, error.message)};
     return files};
   async hasSyntaxIssues(filePath) {}
     try {}
@@ -185,14 +185,14 @@ class SyntaxErrorFixer {}
         return false};
       // Check for various syntax issues;
       return this.detectSyntaxIssues(content)} catch (error) {}
-      this.log('warn', `Error reading file: ${filePath}`, error.message);`
+      this.log('warn', `Error reading file: ${filePath}`, error.message);
       return false};
   };
   detectSyntaxIssues(content) {}
     // Check for unterminated strings;
     const singleQuotes = (content.match(/'/g) || []).length;
     const doubleQuotes = (content.match(/"/g) || []).length;
-    const backticks = (content.match(/`/g) || []).length;`
+    const backticks = (content.match(/`/g) || []).length;
     
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
@@ -223,7 +223,7 @@ class SyntaxErrorFixer {}
     return false};
   async fixFileSyntax(filePath) {}
     try {}
-      this.log('info', `Fixing syntax issues in: ${filePath}`);`
+      this.log('info', `Fixing syntax issues in: ${filePath}`);
       
       // Create backup if enabled;
       if (this.backupFiles) {}
@@ -241,18 +241,18 @@ class SyntaxErrorFixer {}
         this.fixesApplied++;
         this.fixedFiles.add(filePath);
         
-        this.log('info', `Successfully fixed syntax issues in: ${filePath}`);`
+        this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
         
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
-          this.log('warn', `Fix verification failed for: ${filePath}`);`
+          this.log('warn', `Fix verification failed for: ${filePath}`);
           this.fixesFailed++};
       } else {}
-        this.log('debug', `No fixes needed for: ${filePath}`);`
+        this.log('debug', `No fixes needed for: ${filePath}`);
         this.fixesSkipped++};
     } catch (error) {}
-      this.log('error', `Error fixing file: ${filePath}`, error);`
+      this.log('error', `Error fixing file: ${filePath}`, error);
       this.fixesFailed++};
   };
   async createBackup(filePath) {}
@@ -262,11 +262,11 @@ class SyntaxErrorFixer {}
         fs.mkdirSync(backupDir, { recursive: true })};
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);`
+      const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};`
+      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
   async applySyntaxFixes(content, filePath) {}
     let fixedContent = content;
@@ -294,7 +294,7 @@ class SyntaxErrorFixer {}
     if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
       fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)};
     if (fixes.length > 0) {}
-      this.log('debug', `Applied ${fixes.length} fixes to: ${filePath}`, fixes)};`
+      this.log('debug', `Applied ${fixes.length} fixes to: ${filePath}`, fixes)};
     return fixedContent};
   fixUnterminatedStrings(content, fixes) {}
     const fixed = content;
@@ -316,11 +316,11 @@ class SyntaxErrorFixer {}
         fixed = fixed.replace(original, fixed);
         fixes.push({ type: 'unterminated_string', original, fixed })})};
     // Fix backticks;
-    const backtickMatches = fixed.match(/`[^`]*$/gm);`
+    const backtickMatches = fixed.match(/`[^`]*$/gm);
     if (backtickMatches) {}
       backtickMatches.forEach(match => {})
         const original = match;
-        const fixed = match + '`';`
+        const fixed = match + '`';
         fixed = fixed.replace(original, fixed);
         fixes.push({ type: 'unterminated_string', original, fixed })})};
     return fixed};
@@ -341,7 +341,8 @@ class SyntaxErrorFixer {}
       if (inComment && i === lines.length - 1) {}
         // Last line is still in comment, close it;
         lines[i] = line + ' */';
-        fixes.push({ type: 'unterminated_comment', line: i + 1, action: 'closed_comment' });
+        fixes.push({ type: 'unterminated_comment', line: i + 1, action: 'closed_comment' }
+});
         inComment = false};
     };
     return lines.join('\n')};
@@ -391,16 +392,20 @@ class SyntaxErrorFixer {}
     // Fix imports without semicolons;
     fixed = fixed.replace(/import\s+([^]+?)(?=\n|$)/g, (match, importContent) => {}
       if (!importContent.trim().endsWith(';')) {}
-        fixes.push({ type: 'malformed_import', action: 'added_semicolon' });
-        return `import ${importContent};`};`
-      return match});
+        fixes.push({ type: 'malformed_import', action: 'added_semicolon' }
+});
+        return `import ${importContent};};
+      return match}
+});
     
     // Fix exports without semicolons;
     fixed = fixed.replace(/export\s+([^]+?)(?=\n|$)/g, (match, exportContent) => {}
       if (!exportContent.trim().endsWith(';')) {}
-        fixes.push({ type: 'malformed_export', action: 'added_semicolon' });
-        return `export ${exportContent};`};`
-      return match});
+        fixes.push({ type: 'malformed_export', action: 'added_semicolon' }
+});
+        return `export ${exportContent};};
+      return match}
+});
     
     return fixed};
   fixUnclosedBrackets(content, fixes) {}
@@ -418,17 +423,17 @@ class SyntaxErrorFixer {}
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
       fixed += '\n' + '}'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_braces` })};`
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_braces` })};
     // Add missing closing brackets;
     if (openBrackets > closeBrackets) {}
       const missing = openBrackets - closeBrackets;
       fixed += '\n' + ']'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_brackets` })};`
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_brackets` })};
     // Add missing closing parentheses;
     if (openParens > closeParens) {}
       const missing = openParens - closeParens;
       fixed += '\n' + ')'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};`
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};
     return fixed};
   fixJSXIssues(content, fixes) {}
     let fixed = content;
@@ -436,16 +441,20 @@ class SyntaxErrorFixer {}
     // Fix JSX self-closing tags;
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
-        fixes.push({ type: 'jsx_self_closing', action: 'fixed_self_closing_tag' });
+        fixes.push({ type: 'jsx_self_closing', action: 'fixed_self_closing_tag' }
+});
         return tagStart + ' />'};
-      return match});
+      return match}
+});
     
     // Fix JSX fragment syntax;
     fixed = fixed.replace(/<>([^<]*)<\/>/g, (match, content) => {}
       if (content.trim()) {}
-        fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' });
-        return `<React.Fragment>${content}</React.Fragment>`};`
-      return match});
+        fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' }
+});
+        return `<React.Fragment>${content}</React.Fragment>`};
+      return match}
+});
     
     return fixed};
   fixTypeScriptIssues(content, fixes) {}
@@ -454,16 +463,20 @@ class SyntaxErrorFixer {}
     // Fix type annotations;
     fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {}
       if (typeName.includes('any') && typeName !== 'any') {}
-        fixes.push({ type: 'typescript_type', action: 'fixed_type_annotation' });
-        return `${varName}: any`};`
-      return match});
+        fixes.push({ type: 'typescript_type', action: 'fixed_type_annotation' }
+});
+        return `${varName}: any`};
+      return match}
+});
     
     // Fix interface declarations;
     fixed = fixed.replace(/interface\s+(\w+)\s*\{/g, (match, interfaceName) => {}
       if (!content.includes(`interface ${interfaceName}`)) {`}
-        fixes.push({ type: 'typescript_interface', action: 'fixed_interface_declaration' });
-        return `interface ${interfaceName} {`};`
-      return match});
+        fixes.push({ type: 'typescript_interface', action: 'fixed_interface_declaration' }
+});
+        return `interface ${interfaceName} {`};
+      return match}
+});
     
     return fixed};
   async verifyFix(filePath) {}
@@ -501,10 +514,10 @@ class SyntaxErrorFixer {}
     };
 
     // Write report to file;
-    const reportPath = path.join(this.projectRoot, 'error-reports', `syntax-fix-report-${Date.now()}.json`);`
+    const reportPath = path.join(this.projectRoot, 'error-reports', `syntax-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('info', `Syntax fix report generated: ${reportPath}`);`
+    this.log('info', `Syntax fix report generated: ${reportPath}`);
     
     return report};
   generateRecommendations() {}
@@ -514,19 +527,19 @@ class SyntaxErrorFixer {}
       recommendations.push({})
         priority: 'high',
         action: 'Review failed fixes manually',
-        description: `${this.fixesFailed} fixes failed and need manual intervention``
+        description: `${this.fixesFailed} fixes failed and need manual intervention
       })};
     if (this.fixesApplied > 0) {}
       recommendations.push({})
         priority: 'medium',
         action: 'Run tests to verify fixes',
-        description: `${this.fixesApplied} syntax fixes were applied, verify functionality``
+        description: `${this.fixesApplied} syntax fixes were applied, verify functionality
       })};
     if (this.fixesSkipped > 0) {}
       recommendations.push({})
         priority: 'low',
         action: 'Review skipped files',
-        description: `${this.fixesSkipped} files were skipped during fixing``
+        description: `${this.fixesSkipped} files were skipped during fixing
       })};
     return recommendations};
   startContinuousFixing() {}
@@ -548,22 +561,28 @@ const fixer = new SyntaxErrorFixer();
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
+  process.exit(0)}
+});
 
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
-  process.exit(1)});
+  process.exit(1)}
+});
 
 process.on('unhandledRejection', (reason, promise) => {}
-  fixer.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1)});
+  fixer.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
 
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
-  process.exit(1)});
+  process.exit(1)}
+});

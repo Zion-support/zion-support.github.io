@@ -1,12 +1,11 @@
 export interface EnterpriseSolution {}
   // TODO: Implement;
-};
-  "id": string;"
+};id": string;"
   title: string;,
   description: string;
   longDescription: string;,
   icon: string;
-  color: string;,"
+  color: string;, 
   category: 'infrastructure' | 'cloud' | 'security' | 'consulting' | 'transformation' | 'integration' | 'analytics' | 'automation';'
   features: string[];,
   benefits: string[];
@@ -21,7 +20,7 @@ export interface EnterpriseSolution {}
   image?: string;
   enterpriseScore: number;,
   marketPrice: string;
-  contactLink: string;,"
+  contactLink: string;, 
   status: 'active' | 'beta' | 'coming-soon';'
   sla: string;,
   support: string;
@@ -55,7 +54,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Healthcare organizations',''
       'Government agencies''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$50,000',''
       "professional": '$150,000',''
       "enterprise": '$500,000+',''
@@ -63,7 +62,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '6-18 months',''
     technologies['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],''
-    "enterpriseScore": 98,""
+    "enterpriseScore": 98, 
     "marketPrice": '$50,000-$500,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -98,7 +97,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Healthcare systems',''
       'Government entities''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$75,000',''
       "professional": '$200,000',''
       "enterprise": '$750,000+',''
@@ -106,7 +105,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '3-12 months',''
     technologies['SIEM', 'EDR', 'XDR', 'Zero Trust', 'AI/ML', 'Automation'],''
-    "enterpriseScore": 99,""
+    "enterpriseScore": 99, 
     "marketPrice": '$75,000-$750,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -141,7 +140,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Retail chains',''
       'Service organizations''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$100,000',''
       "professional": '$300,000',''
       "enterprise": '$1,000,000+',''
@@ -149,7 +148,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '12-36 months',''
     technologies['AI/ML', 'Cloud Computing', 'IoT', 'Blockchain', 'RPA', 'Analytics'],''
-    "enterpriseScore": 97,""
+    "enterpriseScore": 97, 
     "marketPrice": '$100,000-$1,000,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -184,7 +183,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Manufacturing',''
       'Retail chains''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$60,000',''
       "professional": '$180,000',''
       "enterprise": '$600,000+',''
@@ -192,7 +191,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '4-12 months',''
     technologies['Apache Spark', 'Kafka', 'TensorFlow', 'Tableau', 'Power BI', 'Python'],''
-    "enterpriseScore": 96,""
+    "enterpriseScore": 96, 
     "marketPrice": '$60,000-$600,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -227,7 +226,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Customer service',''
       'Supply chain management''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$40,000',''
       "professional": '$120,000',''
       "enterprise": '$400,000+',''
@@ -235,7 +234,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '3-9 months',''
     technologies['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'RPA'],''
-    "enterpriseScore": 94,""
+    "enterpriseScore": 94, 
     "marketPrice": '$40,000-$400,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -270,7 +269,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Legacy system modernization',''
       'Cloud-to-on-premise''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$35,000',''
       "professional": '$100,000',''
       "enterprise": '$350,000+',''
@@ -278,7 +277,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '2-8 months',''
     technologies['MuleSoft', 'Boomi', 'Apache Camel', 'Node.js', 'Python', 'APIs'],''
-    "enterpriseScore": 93,""
+    "enterpriseScore": 93, 
     "marketPrice": '$35,000-$350,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -313,7 +312,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'Storage systems',''
       'Computing resources''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$80,000',''
       "professional": '$250,000',''
       "enterprise": '$800,000+',''
@@ -321,7 +320,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '6-18 months',''
     technologies['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],''
-    "enterpriseScore": 95,""
+    "enterpriseScore": 95, 
     "marketPrice": '$80,000-$800,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''
@@ -356,7 +355,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
       'System selection',''
       'Risk management''];
     ],'
-    "pricing": {""}
+    "pricing": {}
       starter: '$25,000',''
       "professional": '$75,000',''
       "enterprise": '$250,000+',''
@@ -364,7 +363,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
     },'
     "estimatedTime": '1-6 months',''
     technologies['Strategy frameworks', 'Architecture tools', 'Analysis methods', 'Best practices'],''
-    "enterpriseScore": 96,""
+    "enterpriseScore": 96, 
     "marketPrice": '$25,000-$250,000+',''
     "contactLink": 'https://ziontechgroup.com/contact',''
     "status": 'active',''

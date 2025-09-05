@@ -15,12 +15,12 @@ function processFile(filePath) {}
 		const fixed = fixSyntaxErrors(content);
 		if (fixed !== content) {}
 			fs.writeFileSync(filePath, fixed, 'utf8');
-			console.log(`Fixed syntax errors "in": ${filePath}`);`
+			console.log(`Fixed syntax errors "in": ${filePath}`);
 			return true;
 		};
 		return false;
 	} catch (e) {}
-		console.error(`Error processing ${filePath}:`, e.message);`
+		console.error(`Error processing ${filePath}:`, e.message);
 		return false;
 	};
 };
@@ -41,4 +41,4 @@ function findFiles(dir, exts) {}
 const files = findFiles('.', ['.js', '.ts', '.cjs', '.mjs']);
 let count = 0;
 for (const f of files) if (processFile(f)) count++
-console.log(`Fixed syntax errors in ${count} files.`);`
+console.log(`Fixed syntax errors in ${count} files.`);

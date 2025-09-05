@@ -6,10 +6,11 @@ function fixMissingCategories(filePath) {}
   const missingCategoryPattern = /(\s+"benefits": \s*\[[\s\S]*?\]\s*)\n\s*\}/;g;
   
   content = content.replace(missingCategoryPattern, (match, benefits) => {}
-    return benefits + '\n      "category": \'General\'\n    }'});
+    return benefits + '\n      "category": \'General\'\n    }'}
+});
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed missing categories in ${filePath}`)};`
+  console.log(`Fixed missing categories in ${filePath}`)};
 // Fix all three files;
 const files = ['pages/ai-services.tsx', 'pages/it-services.tsx', 'pages/micro-saas.tsx'];
 
@@ -19,7 +20,8 @@ files.forEach(file => {})
     console.log(`File ${file} not found`)) {`}
     ) {}
     fixMissingCategories(file)} else {}
-    console.log(`File ${file} not found`)}};`
+    console.log(`File ${file} not found`)}};
+}
 });
 
 console.log('All missing categories fixed!');

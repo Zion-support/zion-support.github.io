@@ -7,7 +7,7 @@ class AppImportsFixer {}
     this.projectRoot = process.cwd();
     this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   checkFileExports(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
@@ -68,14 +68,15 @@ class AppImportsFixer {}
           // Use the first named export;
           importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.${exports.hasNamed[0]} })));`} else {`}
           // Fallback to default;
-          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default || module.${page.name} })));`};`
+          importStatement = `const ${page.name} = lazy(() => import('${page.path}').then(module => ({ "default": module.default || module.${page.name} })));`};
         // Replace the import statement;
-        const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');`
+        const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');
         content = content.replace(regex, importStatement);
         
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
-        this.log(`"Warning": ${page.path}.tsx does not exist`)};`
-    });
+        this.log(`"Warning": ${page.path}.tsx does not exist`)};
+    }
+});
 
     // Write the fixed content back;
     fs.writeFileSync(this.appPath, content);
@@ -86,7 +87,7 @@ class AppImportsFixer {}
     try {}
       this.fixAppImports();
       this.log('App Imports Fixer completed successfully!')} catch (error) {}
-      this.log(`Error in App Imports "Fixer": ${error.message}`);`
+      this.log(`Error in App Imports "Fixer": ${error.message}`);
       throw error};
   };
 };
@@ -96,7 +97,8 @@ if (require.main === module) {}
   automation.run();
     .then(() => {}
       console.log('App Imports Fixer completed successfully!');
-      process.exit(0)});
+      process.exit(0)}
+});
     .catch(error => {})
       console.error('App Imports Fixer "failed": ', error);
       process.exit(1)})};

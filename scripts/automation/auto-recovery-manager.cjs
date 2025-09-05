@@ -186,7 +186,7 @@ this.log(Found ${issues.length} system issues")
         "
   this.log( Failed to recover merge conflicts in ${filePath}: ${error.message}")
         "ERROR"
-        `ERROR``
+        `ERROR
   this.log(" Recovering encoding issues in ${filePath}...")
       const encodings = ["utf8", "latin1", "cp1252"]
           fs.writeFileSync(filePath, content, ")
@@ -197,7 +197,7 @@ this.log(Found ${issues.length} system issues")
         "
   this.log( Failed to recover encoding issues in ${filePath}: ${error.message}")
         "ERROR"
-        `ERROR``
+        `ERROR
   this.log(" Recovering unreadable file ${filePath}...")
       const backupPath = filePath + ".backup"
       let content = ""

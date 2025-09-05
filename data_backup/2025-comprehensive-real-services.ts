@@ -16,7 +16,7 @@ export interface ComprehensiveService {}
   integrations: string[];
   compliance: string[];,
   website: string;
-  contact: {,}
+  contact: {}
   phone: string;
     email: string;,
   address: string};"

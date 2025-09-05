@@ -12,7 +12,7 @@ const path = require('path')
       .replace('.test.ts', '')
       .replace('.test.jsx', '')
       .replace('.test.js', '')
-    return `import React from 'react'`
+    return `import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ${componentName} from './${componentName}'
