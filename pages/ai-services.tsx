@@ -440,17 +440,17 @@ export default function AIServicesPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <Brain className="h-16 w-16 text-blue-400 mr-4" />
-              <h1 className="text-4xl "md": text-6xl font-bold">
+              <h1 className="text-4xl md: text-6xl font-bold">
                 AI{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Services
                 </span>
               </h1>
             </div>
-            <p className="text-xl "md": text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. From machine learning to natural language processing, we deliver AI that works.
             </p>
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get AI Consultation
               </Link>
@@ -472,7 +472,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our AI Solutions
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -549,7 +549,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -595,7 +595,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm: text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Services?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -643,7 +643,7 @@ export default function AIServicesPage() {
             transition={{ "duration": 0.8 }}
             viewport={{ "once": true }}
           >
-            <h2 className="text-3xl "md": text-4xl font-bold mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">

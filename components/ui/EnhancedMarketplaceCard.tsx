@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-
 interface EnhancedMarketplaceCardProps {
-  "title": string;
+  title: string;
   description: string;
   price?: string;
   image?: string;

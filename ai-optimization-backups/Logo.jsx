@@ -7,7 +7,7 @@ export function Logo({ customLogo, customColor }) {
   return (
     <Link to="/" className="flex items-center space-x-3 group">
       <div
-        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-"hover": shadow-xl transition-all duration-300"
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
         style={{
           background: customColor
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`
