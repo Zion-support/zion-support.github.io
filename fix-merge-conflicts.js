@@ -2,53 +2,58 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
+// Function to fix merge conflict markers in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the main branch version
-    
-    // Clean up duplicate imports and syntax issues
+    // Remove merge conflict markers and keep the content after the last marker
     const lines = content.split('\n');
-    const cleanedLines = [];
-    const seenImports = new Set();
+    let fixedLines = [];
+    let inConflict = false;
+    let conflictEnded = false;
     
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
+      const line = lines[i];
       
-      // Skip empty lines and duplicate imports
-      if (line === '' || line.startsWith('import') && seenImports.has(line)) {
-        continue}
+      if (line.includes('<<<<<<< HEAD') || line.includes('=======')) {
+        inConflict = true;
+        continue;
+      }
       
-      if (line.startsWith('import')) {
-        seenImports.add(line)}
+      if (line.includes('>>>>>>> origin/')) {
+        inConflict = false;
+        conflictEnded = true;
+        continue;
+      }
       
-      // Fix common syntax issues
-      const cleanedLine = line
-        .replace(/,,+/g, ',')
-        .replace(/;+/g, ';')
-        .replace(/\{\s*,/g, '{')
-        .replace(/,\s*\}/g, '}')
-        .replace(/\(\s*,/g, '(')
-        .replace(/,\s*\)/g, ')')
-        .replace(/\s+/g, ' ')
-        .trim();
-      
-      if (cleanedLine) {
-        cleanedLines.push(cleanedLine)}
+      if (!inConflict) {
+        fixedLines.push(line);
+      }
     }
     
-    const finalContent = cleanedLines.join('\n');
-    fs.writeFileSync(filePath, finalContent, 'utf8');
-    console.log(`Fixed merge conflicts "in": ${filePath}`)} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)}
+    // If we found conflict markers, write the fixed content
+    if (conflictEnded) {
+      const fixedContent = fixedLines.join('\n');
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-function findFilesWithConflicts(dir) {
-  const files = [];
+// Function to find all files with merge conflict markers
+function findConflictedFiles(dir) {
+  const conflictedFiles = [];
   
-  function traverse(currentDir) {
+  function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -56,7 +61,53 @@ function findFilesWithConflicts(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); console.log(`Fixed merge conflicts in: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+        searchDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('>>>>>>> origin/')) {
+            conflictedFiles.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  searchDirectory(dir);
+  return conflictedFiles;
+}
+
+// Main execution
+console.log('🔍 Searching for files with merge conflicts...');
+const conflictedFiles = findConflictedFiles('/workspace');
+
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+
+let fixedCount = 0;
+for (const file of conflictedFiles) {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
+
+// Now let's try to commit the changes
+try {
+  console.log('📝 Adding fixed files to git...');
+  execSync('git add .', { cwd: '/workspace', stdio: 'inherit' });
+  
+  console.log('💾 Committing resolved conflicts...');
+  execSync('git commit -m "Resolve merge conflicts and clean up corrupted files"', { 
+    cwd: '/workspace', 
+    stdio: 'inherit' 
+  });
+  
+  console.log('✅ Successfully committed resolved conflicts');
+} catch (error) {
+  console.error('❌ Error during git operations:', error.message);
+}
+
+console.log('🎉 Merge conflict resolution complete!');
