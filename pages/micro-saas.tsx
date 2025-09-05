@@ -44,7 +44,6 @@ import {
   HardDrive,
   Droplets,
   Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -95,6 +94,114 @@ const microSaasServices = [
     benefits: ['Improve team efficiency by 30%', 'Better project visibility', 'Reduced missed deadlines'],
     marketPrice: '$10-50/month',
     link: '/contact',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with AI-powered suggestions, security scanning, and performance optimization.',
+    icon: Code,
+    features: ['AI code analysis', 'Security vulnerability detection', 'Performance optimization', 'Best practices suggestions'],
+    pricing: '$49/month',
+    category: 'Development Tools',
+    benefits: ['Reduce bugs by 60%', 'Improve code quality', 'Faster development cycles', 'Enhanced security'],
+    marketPrice: '$30-100/month',
+    link: 'https://ziontechgroup.com/ai-code-review',
+    popular: true
+  },
+  {
+    title: 'Smart Invoice & Payment Processor',
+    description: 'Intelligent invoicing system with automated payment processing and financial analytics.',
+    icon: DollarSign,
+    features: ['Automated invoicing', 'Payment processing', 'Financial analytics', 'Tax calculations'],
+    pricing: '$39/month',
+    category: 'Finance',
+    benefits: ['Reduce payment time by 50%', 'Automated tax handling', 'Better cash flow management', 'Professional invoices'],
+    marketPrice: '$20-80/month',
+    link: 'https://ziontechgroup.com/smart-invoicing',
+    popular: false
+  },
+  {
+    title: 'AI Customer Support Chatbot',
+    description: 'Intelligent chatbot with natural language processing for 24/7 customer support.',
+    icon: Bot,
+    features: ['Natural language processing', 'Multi-language support', 'Integration with CRM', 'Analytics dashboard'],
+    pricing: '$79/month',
+    category: 'Customer Support',
+    benefits: ['24/7 customer support', 'Reduce support costs by 40%', 'Instant responses', 'Scalable support'],
+    marketPrice: '$50-200/month',
+    link: 'https://ziontechgroup.com/ai-chatbot',
+    popular: true
+  },
+  {
+    title: 'Smart Inventory Management',
+    description: 'AI-powered inventory tracking with predictive analytics and automated reordering.',
+    icon: Package,
+    features: ['Predictive analytics', 'Automated reordering', 'Multi-location tracking', 'Demand forecasting'],
+    pricing: '$59/month',
+    category: 'Inventory Management',
+    benefits: ['Reduce stockouts by 70%', 'Optimize inventory levels', 'Automated reordering', 'Cost savings'],
+    marketPrice: '$30-120/month',
+    link: 'https://ziontechgroup.com/smart-inventory',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Lead Scoring',
+    description: 'Intelligent lead qualification and scoring system to improve sales conversion rates.',
+    icon: TrendingUp,
+    features: ['Lead scoring algorithms', 'Behavioral analysis', 'CRM integration', 'Conversion tracking'],
+    pricing: '$89/month',
+    category: 'Sales & Marketing',
+    benefits: ['Increase conversion by 35%', 'Better lead prioritization', 'Automated qualification', 'Higher ROI'],
+    marketPrice: '$50-150/month',
+    link: 'https://ziontechgroup.com/ai-lead-scoring',
+    popular: true
+  },
+  {
+    title: 'Smart Document Processing',
+    description: 'AI-powered document analysis, extraction, and processing for business automation.',
+    icon: FileText,
+    features: ['Document OCR', 'Data extraction', 'Form processing', 'Workflow automation'],
+    pricing: '$69/month',
+    category: 'Document Management',
+    benefits: ['Reduce manual work by 80%', 'Faster processing', 'Higher accuracy', 'Automated workflows'],
+    marketPrice: '$40-120/month',
+    link: 'https://ziontechgroup.com/smart-documents',
+    popular: false
+  },
+  {
+    title: 'AI-Powered Analytics Dashboard',
+    description: 'Intelligent business analytics with predictive insights and automated reporting.',
+    icon: BarChart3,
+    features: ['Predictive analytics', 'Automated reports', 'Custom dashboards', 'Real-time insights'],
+    pricing: '$99/month',
+    category: 'Analytics',
+    benefits: ['Data-driven decisions', 'Predictive insights', 'Automated reporting', 'Better performance'],
+    marketPrice: '$60-200/month',
+    link: 'https://ziontechgroup.com/ai-analytics',
+    popular: true
+  },
+  {
+    title: 'Smart HR Management System',
+    description: 'AI-powered HR solution with recruitment, performance tracking, and employee analytics.',
+    icon: Users,
+    features: ['AI recruitment', 'Performance tracking', 'Employee analytics', 'Automated workflows'],
+    pricing: '$79/month',
+    category: 'Human Resources',
+    benefits: ['Streamline HR processes', 'Better talent acquisition', 'Performance insights', 'Reduced admin work'],
+    marketPrice: '$50-150/month',
+    link: 'https://ziontechgroup.com/smart-hr',
+    popular: false
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Intelligent SEO analysis and optimization recommendations for better search rankings.',
+    icon: Search,
+    features: ['SEO analysis', 'Keyword research', 'Content optimization', 'Rank tracking'],
+    pricing: '$49/month',
+    category: 'SEO & Marketing',
+    benefits: ['Improve search rankings', 'Better content strategy', 'Competitive analysis', 'Higher traffic'],
+    marketPrice: '$30-100/month',
+    link: 'https://ziontechgroup.com/ai-seo',
     popular: true
   },
   {

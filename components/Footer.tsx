@@ -22,15 +22,19 @@ const footerSections = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' }
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'Custom Development', href: '/custom-development' }
   ],
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
     { name: 'Custom Development', href: '/solutions/custom' },
-    { name: 'Industry Solutions', href: '/solutions/industry' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration' }
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Legacy Modernization', href: '/solutions/legacy-modernization' },
+    { name: 'API Development', href: '/solutions/api-development' }
   ],
   'Industries': [
     { name: 'Healthcare', href: '/industries/healthcare' },
@@ -40,7 +44,9 @@ const footerSections = {
     { name: 'Manufacturing', href: '/industries/manufacturing' },
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' }
+    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Transportation', href: '/industries/transportation' },
+    { name: 'Real Estate', href: '/industries/real-estate' }
   ],
   'Resources': [
     { name: 'Blog', href: '/blog' },
@@ -50,7 +56,9 @@ const footerSections = {
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' }
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Best Practices', href: '/best-practices' }
   ],
   'Company': [
     { name: 'About Us', href: '/about' },
@@ -60,7 +68,9 @@ const footerSections = {
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Security', href: '/security' }
   ],
   'Support': [
     { name: 'Help Center', href: '/help' },
