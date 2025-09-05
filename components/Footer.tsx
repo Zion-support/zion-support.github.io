@@ -21,7 +21,13 @@ const services = {
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' }
+    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
+    { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'Quantum Machine Learning', href: '/ai-services#quantum-ml' },
+    { name: 'AI Space Debris Management', href: '/ai-services#space-debris' },
+    { name: 'AI Climate Engineering', href: '/ai-services#climate-engineering' },
+    { name: 'AI Neural Interface', href: '/ai-services#neural-interface' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -29,7 +35,13 @@ const services = {
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-    { name: 'Data Center Migration', href: '/it-services#data-center-migration' }
+    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
+    { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
+    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Space Technology Infrastructure', href: '/it-services#space-technology' },
+    { name: 'Fusion Energy IT Systems', href: '/it-services#fusion-energy' },
+    { name: 'Smart City IT Infrastructure', href: '/it-services#smart-cities' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -37,41 +49,67 @@ const services = {
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-    { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' }
+    { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
+    { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'Quantum Computing Simulator', href: '/micro-saas#quantum-simulator' },
+    { name: 'Digital Twin Platform', href: '/micro-saas#digital-twin' },
+    { name: 'AI-Powered Metaverse Builder', href: '/micro-saas#metaverse-builder' },
+    { name: 'Autonomous Drone Fleet Management', href: '/micro-saas#drone-fleet' }
   ]
 };
 
+<<<<<<< HEAD
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
+=======
+const company = [{ name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/about#team' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'White Papers', href: '/white-papers' }
+  { name: 'Blog', href: '/blog' },
+  { name: 'News', href: '/news' }
 ];
 
+<<<<<<< HEAD
 const supportLinks = [
   { name: 'Help Center', href: '/help' },
   { name: 'Documentation', href: '/docs' },
+=======
+const resources = [{ name: 'Documentation', href: '/docs' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   { name: 'API Reference', href: '/api-docs' },
-  { name: 'Community', href: '/community' },
-  { name: 'Contact Support', href: '/contact' },
-  { name: 'Status Page', href: '/status' }
+  { name: 'Tutorials', href: '/tutorials' },
+  { name: 'Guides', href: '/guides' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Support', href: '/support' }
 ];
 
+<<<<<<< HEAD
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
+=======
+const legal = [{ name: 'Privacy Policy', href: '/privacy' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
-  { name: 'GDPR Compliance', href: '/compliance' }
+  { name: 'Security', href: '/security' },
+  { name: 'Compliance', href: '/compliance' },
+  { name: 'Sitemap', href: '/sitemap' }
 ];
 
+<<<<<<< HEAD
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+=======
+const socialLinks = [{ name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
 ];
 
 const contactInfo = {
@@ -93,26 +131,37 @@ export default function Footer() {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },
         { label: 'Data Analytics', href: '/services/data-analytics' },
+<<<<<<< HEAD
         { label: 'Digital Transformation', href: '/services/digital-transformation' },
         { label: 'Consulting', href: '/services/consulting' },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     },
     {
       title: 'Solutions',
       links: [
+<<<<<<< HEAD
+=======
+        { label: 'All Solutions', href: '/solutions' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
         { label: 'Enterprise', href: '/solutions/enterprise' },
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
         { label: 'Education', href: '/solutions/education' },
         { label: 'Government', href: '/solutions/government' },
+<<<<<<< HEAD
         { label: 'Manufacturing', href: '/solutions/manufacturing' },
         { label: 'Real Estate', href: '/solutions/real-estate' },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     },
     {
       title: 'Industries',
       links: [
+<<<<<<< HEAD
         { label: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
         { label: 'Financial Services', href: '/industries/finance' },
         { label: 'Manufacturing', href: '/industries/manufacturing' },
@@ -121,6 +170,15 @@ export default function Footer() {
         { label: 'Government', href: '/industries/government' },
         { label: 'Energy & Utilities', href: '/industries/energy' },
         { label: 'Transportation', href: '/industries/transportation' },
+=======
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Retail', href: '/industries/retail' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     },
     {
@@ -132,8 +190,11 @@ export default function Footer() {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
         { label: 'Partners', href: '/partners' },
+<<<<<<< HEAD
         { label: 'Investors', href: '/investors' },
         { label: 'Leadership', href: '/leadership' },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     },
     {
@@ -145,13 +206,17 @@ export default function Footer() {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'Documentation', href: '/docs' },
+<<<<<<< HEAD
         { label: 'API Reference', href: '/api-docs' },
         { label: 'Tutorials', href: '/tutorials' },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     },
     {
       title: 'Support',
       links: [
+<<<<<<< HEAD
         { label: 'Contact Support', href: '/support' },
         { label: 'System Status', href: '/status' },
         { label: 'Community', href: '/community' },
@@ -160,6 +225,14 @@ export default function Footer() {
         { label: 'FAQ', href: '/faq' },
         { label: 'Knowledge Base', href: '/knowledge-base' },
         { label: 'Developer Portal', href: '/developer' },
+=======
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Contact Support', href: '/support' },
+        { label: 'System Status', href: '/status' },
+        { label: 'API Reference', href: '/docs/api' },
+        { label: 'Community', href: '/community' },
+        { label: 'Training', href: '/training' },
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       ]
     }
   ];
@@ -183,7 +256,11 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
+=======
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -214,6 +291,7 @@ export default function Footer() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -227,10 +305,37 @@ export default function Footer() {
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
+=======
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Settings className="w-5 h-5 mr-2 text-blue-400" />
+              Services
+            </h3>
+            <div className="space-y-4">
+              {Object.entries(services).map(([category, links]) => (
+                <div key={category}>
+                  <h4 className="text-sm font-medium text-gray-300 mb-2">{category}</h4>
+                  <ul className="space-y-2">
+                    {links.slice(0, 3).map((link) => (
+                      <li key={link.name}>
+                        <Link 
+                          href={link.href}
+                          className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                        >
+                          <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
               ))}
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
@@ -252,40 +357,53 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Users className="w-5 h-5 mr-2 text-blue-400" />
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {company.map((link) => (
+                <li key={link.name}>
+                  <Link 
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Support */}
+
+          {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-blue-400" />
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {resources.map((link) => (
+                <li key={link.name}>
+                  <Link 
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Contact */}
+
+          {/* Legal & Social */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -341,6 +459,96 @@ export default function Footer() {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
+=======
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Shield className="w-5 h-5 mr-2 text-blue-400" />
+              Legal
+            </h3>
+            <ul className="space-y-3 mb-8">
+              {legal.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-sm font-medium text-gray-300 mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
+                      aria-label={social.name}
+                    >
+                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+{/* Newsletter Signup */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-8">
+                      <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-4 md:mb-0">
+              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+              <p className="text-gray-400 text-sm">
+                Get the latest technology insights and company updates delivered to your inbox.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="mb-6 md:mb-0">
+                <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+                <p className="text-gray-300">
+                  Subscribe to our newsletter for the latest technology insights and updates.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-64"
+                />
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-6">
+<div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="text-sm text-gray-400 mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved. | 
+              <span className="ml-2">Delaware, United States</span>
+            </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
             
             <div className="flex flex-wrap items-center space-x-6">
               {legalLinks.map((link, index) => (

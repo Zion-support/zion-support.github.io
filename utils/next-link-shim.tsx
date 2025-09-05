@@ -1,7 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface NextlinkshimProps {
   // Add props here as needed
+=======
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  "href": Href;
+  children: React.ReactNode;
+};
+function resolveHref("href": Href): string {
+  if (typeof href === 'string') return href;
+  return href?.pathname || (href as { href?: string })?.href || '#';
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 }
 
 export default function Nextlinkshim({ }: NextlinkshimProps) {

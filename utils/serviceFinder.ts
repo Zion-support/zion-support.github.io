@@ -1,4 +1,5 @@
 // Service finder utility
+<<<<<<< HEAD
 // Provides a simple lookup across known service collections at runtime.
 
 type BasicService = {
@@ -40,3 +41,10 @@ export async function findService(serviceName: string): Promise<BasicService | n
   }
   return null;
 }
+=======
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
+  return null;
+};
+export const findService = (_serviceName: string) => { return null};
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3

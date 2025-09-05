@@ -1,8 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   Code, 
+=======
+import {
+  Code,
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   ArrowRight,
   CheckCircle,
   Copy,

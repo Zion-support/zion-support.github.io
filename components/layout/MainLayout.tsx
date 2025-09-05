@@ -7,6 +7,7 @@ interface LayoutProps {
   description?: string;
   keywords?: string;
 }
+<<<<<<< HEAD
 
 export default function Layout({ 
   children, 
@@ -14,6 +15,14 @@ export default function Layout({
   description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
   keywords = "AI solutions, cloud services, technology consulting, digital transformation"
 }: LayoutProps) {
+=======
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: MainLayoutProps) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   return (
     <>
       <Head>

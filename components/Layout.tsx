@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 import Head from 'next/head';
 import { Header } from './Header';
 import Footer from './Footer';
@@ -20,6 +24,11 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
+<<<<<<< HEAD
+=======
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   return (
     <>
       <Head>
@@ -27,6 +36,7 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< HEAD
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
@@ -45,6 +55,34 @@ export default function Layout({
         {/* SEO */}
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href="https://ziontechgroup.com" />
+=======
+<meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+        <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
+        
+        {/* Open Graph */}
+        <meta property="og: title" content={title} />
+        <meta property="og: description" content={description} />
+        <meta property="og: type" content="website" />
+        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+        <meta property="og: site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter: card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter: description" content={description} />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
         
         {/* Structured Data */}
         <script
@@ -67,6 +105,7 @@ name: "Zion Tech Group",
               },
               "contactPoint": {
                 "@type": "ContactPoint",
+<<<<<<< HEAD
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
@@ -77,18 +116,39 @@ name: "Zion Tech Group",
                 "https://linkedin.com/company/ziontechgroup",
                 "https://instagram.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
+=======
+telephone: "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "contact@ziontechgroup.com"
+              },
+"sameAs": ["https: //linkedin.com/company/ziontechgroup",
+                "https: //twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
               ]
             })
           }}
         />
       </Head>
       
+<<<<<<< HEAD
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 pt-16">
           {children}
         </main>
         <Footer />
+=======
+      <div className="min-h-screen flex">
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        <div className="flex-1 flex flex-col lg:ml-80">
+          <Header onMenuClick={() => setIsSidebarOpen(true)} />
+          <main className="flex-1 pt-16">
+            {children}
+          </main>
+          <Footer />
+        </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       </div>
     </>
   );

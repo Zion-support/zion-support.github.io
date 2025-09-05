@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from "../components/Layout";
 
 const jobOpenings = [{
@@ -14,6 +15,18 @@ const jobOpenings = [{
     "experience": "5+ years",
     "description": "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
     "requirements": [
+=======
+
+const jobOpenings = [{
+    id: 1,
+    title: "Senior AI/ML Engineer",
+    department: "AI Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
+    requirements: [
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "Master's degree in Computer Science or related field",
       "5+ years experience in AI/ML development",
       "Proficiency in Python, TensorFlow, PyTorch",
@@ -23,6 +36,7 @@ const jobOpenings = [{
     "benefits": ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
+<<<<<<< HEAD
     "id": 2,
     "title": "Full-Stack Developer",
     "department": "Micro SaaS",
@@ -31,6 +45,16 @@ const jobOpenings = [{
     "experience": "3+ years",
     "description": "Build scalable web applications and microservices for our SaaS solutions.",
     "requirements": ["Bachelor's degree in Computer Science or related field",
+=======
+    id: 2,
+    title: "Full-Stack Developer",
+    department: "Micro SaaS",
+    location: "New York, NY",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Build scalable web applications and microservices for our SaaS solutions.",
+    requirements: ["Bachelor's degree in Computer Science or related field",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -39,6 +63,7 @@ const jobOpenings = [{
     "benefits": ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
+<<<<<<< HEAD
     "id": 3,
     "title": "Cloud Solutions Architect",
     "department": "IT Services",
@@ -47,6 +72,16 @@ const jobOpenings = [{
     "experience": "7+ years",
     "description": "Design and implement cloud infrastructure solutions for enterprise clients.",
     "requirements": ["Bachelor's degree in Computer Science or related field",
+=======
+    id: 3,
+    title: "Cloud Solutions Architect",
+    department: "IT Services",
+    location: "Remote",
+    type: "Full-time",
+    experience: "7+ years",
+    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
+    requirements: ["Bachelor's degree in Computer Science or related field",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -55,6 +90,7 @@ const jobOpenings = [{
     "benefits": ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
+<<<<<<< HEAD
     "id": 4,
     "title": "Cybersecurity Specialist",
     "department": "Security",
@@ -63,6 +99,16 @@ const jobOpenings = [{
     "experience": "4+ years",
     "description": "Protect our clients' digital assets and implement security best practices.",
     "requirements": ["Bachelor's degree in Cybersecurity or related field",
+=======
+    id: 4,
+    title: "Cybersecurity Specialist",
+    department: "Security",
+    location: "San Francisco, CA",
+    type: "Full-time",
+    experience: "4+ years",
+    description: "Protect our clients' digital assets and implement security best practices.",
+    requirements: ["Bachelor's degree in Cybersecurity or related field",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
@@ -71,6 +117,7 @@ const jobOpenings = [{
     "benefits": ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
+<<<<<<< HEAD
     "id": 5,
     "title": "DevOps Engineer",
     "department": "Engineering",
@@ -79,6 +126,16 @@ const jobOpenings = [{
     "experience": "3+ years",
     "description": "Streamline our development and deployment processes with modern DevOps practices.",
     "requirements": ["Bachelor's degree in Computer Science or related field",
+=======
+    id: 5,
+    title: "DevOps Engineer",
+    department: "Engineering",
+    location: "Austin, TX",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Streamline our development and deployment processes with modern DevOps practices.",
+    requirements: ["Bachelor's degree in Computer Science or related field",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -87,6 +144,7 @@ const jobOpenings = [{
     "benefits": ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
+<<<<<<< HEAD
     "id": 6,
     "title": "UX/UI Designer",
     "department": "Design",
@@ -95,6 +153,16 @@ const jobOpenings = [{
     "experience": "2+ years",
     "description": "Create intuitive and beautiful user experiences for our digital products.",
     "requirements": ["Bachelor's degree in Design or related field",
+=======
+    id: 6,
+    title: "UX/UI Designer",
+    department: "Design",
+    location: "Remote",
+    type: "Full-time",
+    experience: "2+ years",
+    description: "Create intuitive and beautiful user experiences for our digital products.",
+    requirements: ["Bachelor's degree in Design or related field",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
@@ -126,16 +194,26 @@ const benefits = [{
   }
 ];
 
+<<<<<<< HEAD
 const values = ["Innovation and creativity",
+=======
+const values = [
+  "Innovation and creativity",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
   "Collaboration and teamwork",
   "Continuous learning",
   "Work-life balance",
   "Diversity and inclusion",
   "Client success focus"
 ];
+
 export default function TalentPage() {
   return (
+<<<<<<< HEAD
     <Layout 
+=======
+<MainLayout 
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -163,10 +241,17 @@ export default function TalentPage() {
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get In Touch
                 </Link>
+<<<<<<< HEAD
               </div>
             </motion.div>
           </div>
         </section>
+=======
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 
         {/* Why Work With Us Section */}
         <section className="py-20 bg-white">
@@ -211,8 +296,13 @@ export default function TalentPage() {
                 );
               })}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
+=======
+                  </div>
+                  </section>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 
         {/* Our Values Section */}
         <section className="py-20 bg-gray-50">
@@ -249,8 +339,13 @@ export default function TalentPage() {
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
+=======
+                  </div>
+                  </section>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
@@ -343,8 +438,13 @@ export default function TalentPage() {
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
+=======
+                  </div>
+                  </section>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">

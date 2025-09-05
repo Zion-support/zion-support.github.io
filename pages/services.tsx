@@ -2,6 +2,7 @@ import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Brain,
   Network,
@@ -84,6 +85,13 @@ const serviceCategories = [
   {
     title: 'AI Services',
     description: 'Cutting-edge artificial intelligence solutions for modern businesses',
+=======
+import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } from 'lucide-react';
+
+const services = [{
+    title: "AI Services",
+    description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
     icon: Brain,
     href: '/ai-services',
     color: 'from-blue-500 to-purple-600',
@@ -107,8 +115,13 @@ const serviceCategories = [
     popular: true
   },
   {
+<<<<<<< HEAD
     title: 'IT Services',
     description: 'Comprehensive IT solutions to power your digital transformation',
+=======
+    title: "IT Services", 
+description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
     icon: Network,
     href: '/it-services',
     color: 'from-green-500 to-blue-600',
@@ -157,6 +170,7 @@ const serviceCategories = [
     popular: true
   }
 ];
+<<<<<<< HEAD
 
 const allServices = [
   // AI Services
@@ -351,6 +365,10 @@ const allServices = [
 
 const benefits = [
   {
+=======
+
+const benefits = [{
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
     icon: CheckCircle,
     title: "Expert Team",
     description: "Certified professionals with years of experience in cutting-edge technologies"
@@ -372,6 +390,7 @@ const benefits = [
   }
 ];
 
+<<<<<<< HEAD
 const mainServices = [
   {
     title: "AI Services",
@@ -559,6 +578,26 @@ export default function ServicesPage() {
               {serviceCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (
+=======
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                  <Head>
+                  <title>Our Services - Zion Tech Group</title>
+                  <meta name="description" content="Comprehensive technology solutions including AI services, IT services, and Micro SaaS solutions. Expert team delivering innovative results." />
+                  <meta name="keywords" content="AI services, IT services, Micro SaaS, cloud solutions, technology consulting" />
+                  </Head>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+<div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+                  </div>
+                  <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  </div>
+                  </div>
+                  <div className="container mx-auto px-4 relative z-10">
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
                   <motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative border border-gray-100"
@@ -605,6 +644,7 @@ export default function ServicesPage() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </motion.div>
+<<<<<<< HEAD
                 );
               })}
             </div>
@@ -634,16 +674,52 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group"
+=======
+                  </div>
+                  </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-12 md:mb-16
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }} ">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Offer</h2>
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We provide end-to-end technology solutions tailored to your business needs. From AI-powered automation to robust IT infrastructure and scalable SaaS applications.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={index}
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   whileHover={{ y: -2 }}
                 >
                   {service.popular && (
                     <div className="absolute -top-2 -right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Popular
                     </div>
+=======
+whileHover={{ y: -5 }}
+                >
+                  {service.popular && ( <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                  </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
                   )}
                   <div className="mb-4">
                     <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
@@ -720,6 +796,7 @@ export default function ServicesPage() {
               );
             })}
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Process Section */}
@@ -742,6 +819,30 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
+=======
+                  </div>
+                  </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We deliver exceptional results through our expertise, proven track record, and commitment to excellence.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
                 <motion.div
                   key={index}
                   className="text-center"
@@ -759,6 +860,7 @@ export default function ServicesPage() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -818,6 +920,15 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
+=======
+                  </div>
+                  </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
+>>>>>>> cursor/expand-services-advertise-and-build-project-22c3
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
