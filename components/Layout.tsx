@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
+import CookieConsent from './CookieConsent';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -101,6 +103,8 @@ export default function Layout({
           {children}
         </main>
         <Footer />
+        <ScrollToTop />
+        <CookieConsent />
       </div>
     </>
   );
