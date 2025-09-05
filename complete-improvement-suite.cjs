@@ -20,7 +20,7 @@ class CompleteImprovementSuite {
   }
 
   log(message) {
-    .toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   async runCommand(command, description, timeout = 60000) {
