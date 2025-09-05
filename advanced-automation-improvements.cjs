@@ -29,22 +29,22 @@ class AdvancedAutomationImprovements {
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`Runnin: g: ${description}`);
+    this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
         ...options,
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, outpu: t: result };
+      return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        succes: s: false,
-        erro: r: error.message,
-        outpu: t: error.stdout || error.stderr,
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
       };
     }
   }

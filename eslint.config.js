@@ -9,6 +9,22 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        module: 'readonly',
+        require: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        Buffer: 'readonly',
+        console: 'readonly',
+        global: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-undef': 'off'
+    },
     ignores: [
       '.next/**',
       'out/**',
