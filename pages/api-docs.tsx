@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { 
 import {
   Code, 
   ArrowRight,
@@ -9,7 +8,8 @@ import {
   BookOpen,
   Terminal,
   Download,
-  Play,
+  Play
+} from 'lucide-react';
 
 const endpoints = [
   {

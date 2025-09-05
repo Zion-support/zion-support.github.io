@@ -1,12 +1,12 @@
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import {
   User, 
   ArrowRight, 
   Tag, 
   ExternalLink,
-import { 
-  ArrowRight, 
-  ExternalLink, 
   Calendar, 
-  User, 
   Building,
   TrendingUp,
   CheckCircle,

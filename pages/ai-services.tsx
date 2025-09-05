@@ -2,13 +2,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
+import {
   Star,
   Globe,
   Lock,
   Cpu,
   Bot,
   FileText,
-  Image,
+  Image as ImageIcon,
   Video,
   Mic,
   Code,
@@ -1064,12 +1065,18 @@ const aiServices = [
     title: 'AI-Powered Legal Research Assistant',
     description: 'Intelligent legal research platform with case law analysis and document review.',
     icon: BookOpen,
-  { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
-  { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
-  { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
-  { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
-  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
+    industries: [
+      { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
+      { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
+      { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
+      { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
+      { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
+    ]
+  }
 ];
+
+const benefits = [
+  {
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',

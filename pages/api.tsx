@@ -1,31 +1,4 @@
 
-export default function APIPage() {
-  const apiFeatures = [
-    {
-      title: "RESTful APIs",
-      description: "Clean, intuitive REST API endpoints for easy integration",
-      icon: Code,
-      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-    },
-    {
-      title: "Comprehensive Documentation",
-      description: "Detailed API documentation with examples and guides",
-      icon: Book,
-      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-    },
-    {
-      title: "High Performance",
-      description: "Fast, reliable APIs built for scale and speed",
-      icon: Zap,
-      features: ["Low Latency", "High Throughput", "Global CDN"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with authentication and encryption",
-      icon: Shield,
-      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
-    }
-  ];
 import { 
   Code, 
   ArrowRight,
@@ -41,7 +14,8 @@ import {
   Settings
 } from 'lucide-react';
 
-const apiFeatures = [
+export default function APIPage() {
+  const apiFeatures = [
   {
     icon: Shield,
     title: 'Secure & Reliable',
@@ -96,7 +70,6 @@ const endpoints = [
 ];
 
 export default function APIPage() {
-
   const apiEndpoints = [{
     method: 'GET',
     path: '/api/v1/services',

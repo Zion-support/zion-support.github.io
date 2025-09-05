@@ -38,12 +38,18 @@ export default function CommunityPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
+        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Join Our Community
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Connect, learn, and grow together in the world of technology.
               </p>
             </motion.div>
@@ -51,32 +57,46 @@ export default function CommunityPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {communityFeatures.map((feature, index) => {}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {communityFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (;
-                  <motion.div);
+                return (
+                  <motion.div
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                          {item}
-                        </li>
-                      ))}
+                  >
+                    <div className="text-center">
+                      <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                      <p className="text-gray-600">{feature.description}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
         {/* Community Stats Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              className="text-center mb-16"";
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Community Stats</h2>
+              <p className="text-xl text-gray-600">Join thousands of developers worldwide</p>
+            </motion.div>
+            
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-teal-600 mb-2">2,500+</div>
