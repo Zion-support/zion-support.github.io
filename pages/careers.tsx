@@ -1,6 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { 
+  Users, 
+  ArrowRight,
+  CheckCircle,
+  MapPin,
+  Clock,
+  Briefcase,
+  GraduationCap,
+  Globe
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
