@@ -145,14 +145,12 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<h1 className="text-4xl md:text-6xl font-bold mb-6">ursor/add-new-services-and-deploy-updates-1b90
-              About{' '}
+<h1 className="text-4xl md:text-6xl font-bold mb-6">              About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
 </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">ursor/add-new-services-and-deploy-updates-1b90
-              We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">              We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
                   </motion.div>
                   </div>
@@ -168,8 +166,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
-              Our Foundation
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">              Our Foundation
             </h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Built on strong values and a clear vision for the future of technology.
@@ -235,8 +232,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
-              Our Core Values
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">              Our Core Values
             </h2>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               The principles that guide our work and define our culture.
@@ -252,8 +248,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }} ">ursor/add-new-services-and-deploy-updates-1b90
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  viewport={{ once: true }} ">                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -279,8 +274,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Expert professionals dedicated to delivering exceptional technology solutions.
             </p>
                   </motion.div>
@@ -291,8 +285,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">ursor/add-new-services-and-deploy-updates-1b90
-                  <span className="text-2xl font-bold text-white">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">                  <span className="text-2xl font-bold text-white">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                   </div>
@@ -324,8 +317,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Recognition and results that speak to our commitment to excellence.
             </p>
                   </motion.div>
@@ -370,8 +362,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Key milestones in our company&apos;s growth and evolution.
             </p>
                   </motion.div>
@@ -415,8 +406,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our team can help transform your business with cutting-edge technology solutions.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">

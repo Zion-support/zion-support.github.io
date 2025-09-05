@@ -68,8 +68,7 @@ const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
-};ursor/add-new-services-and-deploy-updates-1b90
-
+};
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -175,8 +174,7 @@ const contactInfo = {
         <div className="container mx-auto px-4">
 <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">ursor/add-new-services-and-deploy-updates-1b90
-                <Phone className="w-4 h-4" />
+              <div className="flex items-center gap-2">                <Phone className="w-4 h-4" />
                 <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
@@ -260,7 +258,7 @@ const contactInfo = {
                         ))}
                       </motion.div>
                     )}
-                  </AnimatePresence>ursor/add-new-services-and-deploy-updates-1b90
+                  </AnimatePresence>
                 )}
               </div>
 
@@ -366,8 +364,7 @@ const contactInfo = {
                     className="block w-full px-4 py-3 text-center bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors font-medium"
                     onClick={closeMenu}
                   >
-                    Free Consultationursor/add-new-services-and-deploy-updates-1b90
-                  </Link>
+                    Free Consultation                  </Link>
                   {item.hasDropdown && item.dropdownItems && (
                     <div className="ml-4 space-y-2 mt-2">
                       {item.dropdownItems.map((dropdownItem, dropdownIndex) => (

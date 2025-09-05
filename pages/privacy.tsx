@@ -49,8 +49,7 @@ export default function PrivacyPage() {
                   <li>Company information</li>
                   <li>Payment and billing information</li>
                   <li>Communications with us</li>
-                </ul>ursor/add-new-services-and-deploy-updates-1b90
-
+                </ul>
                   <div className="flex items-start gap-4">
                     <Database className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
                     <div>
@@ -136,8 +135,7 @@ export default function PrivacyPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Contact Us</h2>
                 <p className="text-gray-600 mb-4">
                   If you have any questions about this Privacy Policy, please contact us at: </p>
-                <div className="bg-gray-50 p-4 rounded-lg">ursor/add-new-services-and-deploy-updates-1b90
-                  <p className="text-gray-600">
+                <div className="bg-gray-50 p-4 rounded-lg">                  <p className="text-gray-600">
                     We do not sell, trade, or otherwise transfer your personal information to third parties without 
                     your consent, except in the following circumstances:
                   </p>

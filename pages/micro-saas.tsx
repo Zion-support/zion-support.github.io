@@ -49,7 +49,7 @@ import {
   HardDrive
 } from 'lucide-react';
 
-const microSaaSProducts = [{ursor/add-new-services-and-deploy-updates-1b90
+const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -423,11 +423,370 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation Platform',
+    description: 'Automated code generation from natural language descriptions with multi-language support.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Documentation Generation'],
+    pricing: '$199 - $1,999/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete blockchain development platform with testing, deployment, and monitoring tools.',
+    icon: Lock,
+    features: ['Smart Contract Builder', 'Testing Framework', 'Deployment Automation', 'Monitoring Dashboard'],
+    pricing: '$299 - $2,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Pipeline Automation',
+    description: 'Intelligent data pipeline orchestration with real-time processing and error handling.',
+    icon: Network,
+    features: ['Pipeline Orchestration', 'Real-time Processing', 'Error Handling', 'Data Quality Checks'],
+    pricing: '$399 - $2,999/month',
+    category: 'Data Engineering',
+    popular: true
+  },
+  {
+    title: 'Intelligent API Gateway',
+    description: 'Advanced API management with rate limiting, analytics, and security features.',
+    icon: Server,
+    features: ['Rate Limiting', 'API Analytics', 'Security Policies', 'Developer Portal'],
+    pricing: '$149 - $1,299/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email security with phishing detection, malware scanning, and threat intelligence.',
+    icon: Shield,
+    features: ['Phishing Detection', 'Malware Scanning', 'Threat Intelligence', 'Real-time Protection'],
+    pricing: '$2.50 - $8.00 per user/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-driven inventory forecasting with demand prediction and optimization algorithms.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'Inventory Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Churn Prediction',
+    description: 'Predictive analytics platform to identify and prevent customer churn with actionable insights.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Workflow',
+    description: 'Automated document processing with AI-powered routing, approval, and compliance checking.',
+    icon: FileText,
+    features: ['Document Routing', 'Approval Workflows', 'Compliance Checking', 'Version Control'],
+    pricing: '$99 - $799/month',
+    category: 'Document Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Advanced experimentation platform with statistical significance and automated optimization.',
+    icon: Target,
+    features: ['Statistical Analysis', 'Automated Optimization', 'Multi-variate Testing', 'Real-time Results'],
+    pricing: '$199 - $1,499/month',
+    category: 'Experimentation',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with comprehensive vulnerability detection.',
+    icon: Search,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation with multi-modal detection and real-time processing.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$0.01 - $0.05 per content item',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'Intelligent Load Testing Platform',
+    description: 'AI-powered load testing with realistic traffic simulation and performance optimization.',
+    icon: Zap,
+    features: ['Realistic Simulation', 'Performance Analysis', 'Auto-scaling Tests', 'Detailed Reports'],
+    pricing: '$99 - $799/month',
+    category: 'Performance Testing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fraud Detection API',
+    description: 'Real-time fraud detection with machine learning models and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Analysis', 'Behavioral Patterns', 'Risk Scoring', 'API Integration'],
+    pricing: '$0.10 - $0.50 per transaction',
+    category: 'Fraud Prevention',
+    popular: true
+  },
+  {
+    title: 'Smart Contract DeFi Analytics',
+    description: 'Comprehensive DeFi protocol analytics with yield farming optimization and risk assessment.',
+    icon: TrendingUp,
+    features: ['Yield Optimization', 'Risk Assessment', 'Protocol Analysis', 'Portfolio Tracking'],
+    pricing: '$199 - $1,999/month',
+    category: 'DeFi Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Deliverability',
+    description: 'Advanced email deliverability optimization with reputation monitoring and inbox placement.',
+    icon: Mail,
+    features: ['Reputation Monitoring', 'Inbox Placement', 'Bounce Management', 'Performance Analytics'],
+    pricing: '$149 - $1,299/month',
+    category: 'Email Marketing',
+    popular: true
+  },
+  {
+    title: 'Intelligent Database Optimization',
+    description: 'AI-powered database performance optimization with query analysis and index recommendations.',
+    icon: Database,
+    features: ['Query Optimization', 'Index Recommendations', 'Performance Monitoring', 'Automated Tuning'],
+    pricing: '$299 - $2,499/month',
+    category: 'Database Optimization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Social Listening',
+    description: 'Advanced social media monitoring with sentiment analysis and brand reputation tracking.',
+    icon: MessageSquare,
+    features: ['Brand Monitoring', 'Sentiment Analysis', 'Trend Detection', 'Competitor Analysis'],
+    pricing: '$199 - $1,499/month',
+    category: 'Social Media Analytics',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Yield Farming',
+    description: 'Automated yield farming optimization with risk management and portfolio rebalancing.',
+    icon: Sprout,
+    features: ['Yield Optimization', 'Risk Management', 'Auto Rebalancing', 'Gas Optimization'],
+    pricing: '$299 - $2,999/month',
+    category: 'DeFi Yield Farming',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video content analysis with object detection, sentiment analysis, and engagement metrics.',
+    icon: Video,
+    features: ['Object Detection', 'Sentiment Analysis', 'Engagement Metrics', 'Content Moderation'],
+    pricing: '$0.05 - $0.25 per minute',
+    category: 'Video Analytics',
+    popular: true
+  },
+  {
+    title: 'Intelligent API Documentation',
+    description: 'Auto-generated API documentation with interactive testing and real-time updates.',
+    icon: BookOpen,
+    features: ['Auto Generation', 'Interactive Testing', 'Real-time Updates', 'Version Control'],
+    pricing: '$99 - $799/month',
+    category: 'API Documentation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Automation',
+    description: 'Automated regulatory compliance monitoring and reporting across multiple jurisdictions.',
+    icon: Shield,
+    features: ['Multi-jurisdiction Support', 'Real-time Updates', 'Automated Reporting', 'Risk Assessment'],
+    pricing: '$499 - $2,999/month',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption Manager',
+    description: 'Post-quantum cryptography implementation for future-proof data protection.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Tools', 'Performance Optimization', 'Compliance Ready'],
+    pricing: '$999 - $4,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Edge AI Inference Platform',
+    description: 'Deploy AI models at the edge with ultra-low latency and offline capabilities.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'Offline Processing', 'Model Optimization', 'Real-time Inference'],
+    pricing: '$299 - $1,999/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Carbon Footprint Tracker Pro',
+    description: 'Comprehensive carbon footprint tracking and sustainability reporting for businesses.',
+    icon: Sprout,
+    features: ['Real-time Tracking', 'Scope 1-3 Emissions', 'Sustainability Reporting', 'Reduction Recommendations'],
+    pricing: '$199 - $1,299/month',
+    category: 'Sustainability',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning Studio',
+    description: 'Professional voice cloning and synthesis for content creators and businesses.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'API Integration'],
+    pricing: '$99 - $799/month',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete development environment for blockchain smart contracts with testing and deployment.',
+    icon: Code,
+    features: ['IDE Integration', 'Testing Framework', 'Deployment Tools', 'Security Auditing'],
+    pricing: '$199 - $1,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Multi-channel Support'],
+    pricing: '$299 - $1,999/month',
+    category: 'Personalization',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Management Platform',
+    description: 'Create and manage digital twins for physical assets with real-time monitoring.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
+    pricing: '$499 - $2,999/month',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Generate production-ready code from natural language descriptions and specifications.',
+    icon: Code,
+    features: ['Natural Language Input', 'Multiple Languages', 'Code Review', 'Testing Generation'],
+    pricing: '$199 - $1,499/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Simulate quantum algorithms and circuits for research and development.',
+    icon: Cpu,
+    features: ['Quantum Circuit Design', 'Algorithm Simulation', 'Performance Analysis', 'Educational Tools'],
+    pricing: '$99 - $799/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Threat Intelligence',
+    description: 'Real-time threat detection and intelligence gathering for cybersecurity teams.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Feeds', 'Risk Assessment', 'Incident Response'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Metaverse Event Platform',
+    description: 'Host virtual events and conferences in immersive 3D environments.',
+    icon: Globe,
+    features: ['3D Environments', 'Avatar Customization', 'Interactive Features', 'Analytics Dashboard'],
+    pricing: '$299 - $1,999/month',
+    category: 'Metaverse',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research and competitive analysis with real-time insights.',
+    icon: BarChart3,
+    features: ['Market Analysis', 'Competitor Tracking', 'Trend Identification', 'Report Generation'],
+    pricing: '$199 - $1,299/month',
+    category: 'Market Research',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Insurance Platform',
+    description: 'Decentralized insurance for smart contracts with automated claims processing.',
+    icon: Shield,
+    features: ['Automated Claims', 'Risk Assessment', 'Smart Contract Integration', 'Transparent Payouts'],
+    pricing: '$99 - $799/month',
+    category: 'DeFi',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Accessibility Checker',
+    description: 'Automated accessibility testing and compliance checking for web applications.',
+    icon: Eye,
+    features: ['WCAG Compliance', 'Automated Testing', 'Remediation Suggestions', 'Multi-language Support'],
+    pricing: '$49 - $399/month',
+    category: 'Accessibility',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Manage and orchestrate edge computing resources across distributed locations.',
+    icon: Network,
+    features: ['Resource Management', 'Load Balancing', 'Monitoring', 'Auto-scaling'],
+    pricing: '$399 - $2,499/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Patent Analyzer',
+    description: 'Intelligent patent analysis and prior art search for intellectual property management.',
+    icon: FileText,
+    features: ['Patent Search', 'Prior Art Analysis', 'Similarity Detection', 'Legal Research'],
+    pricing: '$299 - $1,999/month',
+    category: 'Intellectual Property',
+    popular: true
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization problems.',
+    icon: Brain,
+    features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Tools', 'Performance Analytics'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Privacy Manager',
+    description: 'Automated data privacy compliance and personal data protection management.',
+    icon: Lock,
+    features: ['Privacy Impact Assessment', 'Data Mapping', 'Consent Management', 'Compliance Reporting'],
+    pricing: '$199 - $1,499/month',
+    category: 'Data Privacy',
+    popular: true
+  },
+  {
+    title: 'Smart City IoT Platform',
+    description: 'Comprehensive IoT platform for smart city infrastructure management and optimization.',
+    icon: Building,
+    features: ['Infrastructure Monitoring', 'Traffic Management', 'Environmental Sensing', 'Citizen Services'],
+    pricing: '$999 - $4,999/month',
+    category: 'Smart Cities',
+    popular: true
   }
 ];
 
-const features = [{ursor/add-new-services-and-deploy-updates-1b90
-    icon: Zap,
+const features = [{    icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
   },
@@ -458,8 +817,7 @@ const features = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
-    icon: Clock,
+const benefits = [{    icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
     stat: '80%'
@@ -484,8 +842,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
-    name: 'Starter',
+const pricingTiers = [{    name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
     period: '/month',
@@ -503,8 +860,7 @@ const pricingTiers = [{ursor/add-new-services-and-deploy-updates-1b90
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
-      'Advanced analytics',
+features: ['Up to 10,000 users',      'Advanced analytics',
       'Priority support',
       'Enhanced security',
       '5 custom integrations',
@@ -517,8 +873,7 @@ features: ['Up to 10,000 users',ursor/add-new-services-and-deploy-updates-1b90
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-features: ['Unlimited users',ursor/add-new-services-and-deploy-updates-1b90
-      'Custom analytics',
+features: ['Unlimited users',      'Custom analytics',
       'Dedicated support',
       'Enterprise security',
       'Unlimited integrations',
@@ -546,8 +901,7 @@ export default function MicroSaaSPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
-            initial={{ opacity: 0, y: 30 }}
+                  <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -562,8 +916,7 @@ export default function MicroSaaSPage() {
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
-                Start Your SaaS
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">                Start Your SaaS
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
@@ -583,8 +936,7 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
                   </motion.div>
@@ -594,8 +946,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${ursor/add-new-services-and-deploy-updates-1b90
-                    product.popular ? 'ring-2 ring-purple-200' : ''
+className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${                    product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -615,8 +966,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
 <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
-                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
-                      {product.category}
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">                      {product.category}
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -627,8 +977,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
                   </p>
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
-                      {product.features.map((feature, featureIndex) => (
+                  <ul className="space-y-1">                      {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -669,13 +1018,11 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {ursor/add-new-services-and-deploy-updates-1b90
-              const IconComponent = feature.icon;
+                    {features.map((feature, index) => {              const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/add-new-services-and-deploy-updates-1b90
-                  initial={{ opacity: 0, y: 30 }}
+className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -706,8 +1053,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
                   </motion.div>
@@ -758,8 +1104,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
             </p>
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (ursor/add-new-services-and-deploy-updates-1b90
-              <motion.div
+                    {pricingTiers.map((tier, index) => (              <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
                   tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
@@ -799,8 +1144,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? 'bg-purple-600 hover: bg-purple-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+? 'bg-purple-600 hover: bg-purple-700 text-white'                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
                   <span>Choose Plan</span>
@@ -919,20 +1263,17 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
-            initial={{ opacity: 0, y: 30 }}
+                  <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
             </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Buildingursor/add-new-services-and-deploy-updates-1b90
-              </Link>
+                Start Building              </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
@@ -940,6 +1281,5 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"ursor/
                   </motion.div>
                   </div>
                   </section>
-                  </div>ursor/add-new-services-and-deploy-updates-1b90
-  );
+                  </div>  );
 }

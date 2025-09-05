@@ -36,7 +36,7 @@ import {
   Rocket
 } from 'lucide-react';
 
-const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const itServices = [{
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -377,19 +377,188 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for research and development.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Software Stack', 'Algorithm Development', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Network',
+    description: 'Distributed edge computing infrastructure for low-latency applications and IoT.',
+    icon: Network,
+    features: ['Edge Nodes', 'Load Balancing', 'Data Synchronization', 'Monitoring'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Lock,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'Zero Trust Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'AI-driven IT operations with predictive maintenance and automated incident response.',
+    icon: Brain,
+    features: ['Predictive Maintenance', 'Automated Response', 'Anomaly Detection', 'Performance Optimization'],
+    pricing: '$25,000 - $150,000/month',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Complete blockchain infrastructure including nodes, wallets, and smart contract deployment.',
+    icon: Shield,
+    features: ['Node Management', 'Wallet Integration', 'Smart Contracts', 'Security Auditing'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['Network Design', 'Coverage Optimization', 'Performance Tuning', 'Integration Services'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'IoT Security Management',
+    description: 'Comprehensive IoT security solution with device management and threat protection.',
+    icon: Shield,
+    features: ['Device Management', 'Threat Protection', 'Firmware Updates', 'Compliance Monitoring'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Migration',
+    description: 'Seamless migration to hybrid cloud environments with multi-cloud management.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Multi-cloud Management', 'Data Synchronization', 'Cost Optimization'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Implementation of post-quantum cryptography for future-proof security.',
+    icon: Lock,
+    features: ['Algorithm Migration', 'Performance Testing', 'Compliance Validation', 'Integration Support'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Autonomous IT Infrastructure',
+    description: 'Self-healing and self-optimizing IT infrastructure with minimal human intervention.',
+    icon: Settings,
+    features: ['Self-healing', 'Auto-optimization', 'Predictive Scaling', 'Automated Recovery'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Digital Twin IT Infrastructure',
+    description: 'Digital twin technology for IT infrastructure monitoring and optimization.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'Digital Twins',
+    popular: true
+  },
+  {
+    title: 'Advanced Persistent Threat Protection',
+    description: 'Specialized protection against advanced persistent threats and nation-state attacks.',
+    icon: Shield,
+    features: ['APT Detection', 'Behavioral Analysis', 'Threat Hunting', 'Incident Response'],
+    pricing: '$80,000 - $400,000/project',
+    category: 'Advanced Security',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Orchestration Platform',
+    description: 'Unified management and orchestration across multiple cloud providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Resource Optimization', 'Cost Management', 'Security Compliance'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Multi-cloud',
+    popular: true
+  },
+  {
+    title: 'Quantum Network Security',
+    description: 'Quantum key distribution and quantum-secure communication networks.',
+    icon: Lock,
+    features: ['Quantum Key Distribution', 'Secure Communication', 'Network Monitoring', 'Compliance'],
+    pricing: '$150,000 - $750,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Edge AI Infrastructure',
+    description: 'Edge computing infrastructure optimized for AI and machine learning workloads.',
+    icon: Cpu,
+    features: ['AI Workloads', 'Edge Optimization', 'Model Deployment', 'Performance Tuning'],
+    pricing: '$60,000 - $300,000/project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'Cyber Resilience Framework',
+    description: 'Comprehensive cyber resilience framework with business continuity planning.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Business Continuity', 'Disaster Recovery', 'Testing'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Cyber Resilience',
+    popular: true
+  },
+  {
+    title: 'Smart City IT Infrastructure',
+    description: 'Complete IT infrastructure for smart city initiatives and urban technology.',
+    icon: Building,
+    features: ['Urban IoT', 'Data Integration', 'Citizen Services', 'Infrastructure Management'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'Quantum-Classical Hybrid Systems',
+    description: 'Integration of quantum and classical computing systems for optimal performance.',
+    icon: Cpu,
+    features: ['Hybrid Architecture', 'Workload Optimization', 'Performance Monitoring', 'Integration'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Hybrid Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Network Optimization',
+    description: 'AI-driven network optimization with predictive analytics and automated tuning.',
+    icon: Network,
+    features: ['Predictive Analytics', 'Automated Tuning', 'Performance Optimization', 'Traffic Management'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Network AI',
+    popular: true
   }
 ];
 
-const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },ursor/add-new-services-and-deploy-updates-1b90
-  { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
+const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },  { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
-    icon: Clock,
+const benefits = [{    icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
     stat: '99.9%'
@@ -414,8 +583,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const supportLevels = [{ursor/add-new-services-and-deploy-updates-1b90
-    name: 'Basic Support',
+const supportLevels = [{    name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
     pricing: '$1,000/month'
@@ -452,16 +620,14 @@ export default function ITServicesPage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
-            initial={{ opacity: 0, y: 30 }}
+                  <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
 <div className="flex items-center justify-center mb-6">
                   <Server className="h-16 w-16 text-green-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">ursor/add-new-services-and-deploy-updates-1b90
-                IT{' '}
+                  <h1 className="text-4xl md:text-6xl font-bold">                IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
@@ -471,8 +637,7 @@ export default function ITServicesPage() {
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
-                Get IT Consultation
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">                Get IT Consultation
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
@@ -492,8 +657,7 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
-              Our IT Solutions
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">              Our IT Solutions
             </h2>
                   <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
@@ -505,8 +669,7 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 groupursor/add-new-services-and-deploy-updates-1b90
-                  initial={{ opacity: 0, y: 30 }}
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -515,8 +678,7 @@ whileHover={{ y: -5 }} ">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
-                      {service.category}
+                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">                      {service.category}
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -527,8 +689,7 @@ whileHover={{ y: -5 }} ">
                   </p>
                   <div className="mb-4">
 <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
-                      {service.features.map((feature, featureIndex) => (
+                  <ul className="space-y-1">                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -563,8 +724,7 @@ whileHover={{ y: -5 }} ">
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
                   </motion.div>
@@ -576,8 +736,7 @@ whileHover={{ y: -5 }} ">
                   key={index}
 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">ursor/add-new-services-and-deploy-updates-1b90
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -603,8 +762,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Proven expertise and measurable results for your technology infrastructure.
             </p>
                   </motion.div>
@@ -649,8 +807,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>ursor/add-new-services-and-deploy-updates-1b90
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the support level that best fits your business needs.
             </p>
                   </motion.div>
@@ -687,8 +844,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+? 'bg-green-600 hover: bg-green-700 text-white'                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
                   <span>Choose Plan</span>
@@ -703,8 +859,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
 <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
-            initial={{ opacity: 0, y: 30 }}
+                  <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -714,8 +869,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
-                Get IT Assessment
+                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">                Get IT Assessment
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services

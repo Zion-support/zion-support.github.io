@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import Head from 'next/head';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
-children: ReactNode;ursor/add-new-services-and-deploy-updates-1b90
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -55,8 +55,7 @@ export default function Layout({
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />ursor/add-new-services-and-deploy-updates-1b90
-        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -68,8 +67,7 @@ name: "Zion Tech Group",
               url: "https: //ziontechgroup.com",
               logo: "https: //ziontechgroup.com/logo.png",
               description: description,
-              address: {ursor/add-new-services-and-deploy-updates-1b90
-                "@type": "PostalAddress",
+              address: {                "@type": "PostalAddress",
                 "streetAddress": "123 Technology Drive",
                 "addressLocality": "Innovation City",
                 "addressRegion": "IC",
@@ -78,14 +76,12 @@ name: "Zion Tech Group",
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-telephone: "+1-302-464-0950",ursor/add-new-services-and-deploy-updates-1b90
-                "contactType": "customer service",
+telephone: "+1-302-464-0950",                "contactType": "customer service",
                 "email": "contact@ziontechgroup.com"
               },
 "sameAs": ["https: //linkedin.com/company/ziontechgroup",
                 "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"ursor/add-new-services-and-deploy-updates-1b90
-              ]
+                "https: //github.com/ziontechgroup"              ]
             })
           }}
         />

@@ -8,8 +8,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ursor/add-new-services-and-deploy-updates-1b90
-  children, 
+const MainLayout: React.FC<MainLayoutProps> = ({  children, 
   title = "Zion Tech Group", 
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"

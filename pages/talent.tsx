@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-const jobOpenings = [{ursor/add-new-services-and-deploy-updates-1b90
-    id: 1,
+const jobOpenings = [{    id: 1,
     title: "Senior AI/ML Engineer",
     department: "AI Services",
     location: "Remote",
@@ -29,8 +28,7 @@ const jobOpenings = [{ursor/add-new-services-and-deploy-updates-1b90
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
-      "3+ years experience in full-stack development",
+requirements: ["Bachelor's degree in Computer Science or related field",      "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
       "Knowledge of cloud deployment and DevOps"
@@ -45,8 +43,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
-      "7+ years experience in cloud architecture",
+requirements: ["Bachelor's degree in Computer Science or related field",      "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
       "Strong understanding of security best practices"
@@ -61,8 +58,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
-requirements: ["Bachelor's degree in Cybersecurity or related field",ursor/add-new-services-and-deploy-updates-1b90
-      "4+ years experience in cybersecurity",
+requirements: ["Bachelor's degree in Cybersecurity or related field",      "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
@@ -77,8 +73,7 @@ requirements: ["Bachelor's degree in Cybersecurity or related field",ursor/add-n
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
-      "3+ years experience in DevOps",
+requirements: ["Bachelor's degree in Computer Science or related field",      "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
       "Knowledge of monitoring and logging tools"
@@ -93,8 +88,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
-requirements: ["Bachelor's degree in Design or related field",ursor/add-new-services-and-deploy-updates-1b90
-      "2+ years experience in UX/UI design",
+requirements: ["Bachelor's degree in Design or related field",      "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
       "Strong portfolio demonstrating design skills"
@@ -103,8 +97,7 @@ requirements: ["Bachelor's degree in Design or related field",ursor/add-new-serv
   }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
-    title: "Competitive Compensation",
+const benefits = [{    title: "Competitive Compensation",
     description: "We offer competitive salaries and performance-based bonuses",
     icon: Star
   },
@@ -229,8 +222,7 @@ export default function TalentPage() {
               {values.map((value, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg"ursor/add-new-services-and-deploy-updates-1b90
-                  initial={{ opacity: 0, y: 30 }}
+                  className="bg-white p-6 rounded-lg shadow-lg"                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -353,6 +345,5 @@ export default function TalentPage() {
                   </div>
                   </section>
                   </div>
-                  </MainLayout>ursor/add-new-services-and-deploy-updates-1b90
-  );
+                  </MainLayout>  );
 }

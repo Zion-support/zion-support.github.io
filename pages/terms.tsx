@@ -98,8 +98,7 @@ export default function TermsPage() {
                   <p className="text-gray-600">
                     <strong>Email:</strong> legal@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (302) 464-0950<br />
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709ursor/add-new-services-and-deploy-updates-1b90
-                  </p>
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709                  </p>
                 </div>
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
