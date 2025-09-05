@@ -205,7 +205,7 @@ function scanAndFixDirectory();  dirPath,
       log(❌ Error processing directory ${currentPath}: ${error.message}",
         "red");
         `red");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,}
+,}
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
 ;

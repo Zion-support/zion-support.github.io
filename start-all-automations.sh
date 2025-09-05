@@ -191,7 +191,7 @@ display_system_status() {
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Starting All PM2 Automations${NC}"
-    echo "=========================================="
+    echo ""
     echo
     
     # Check prerequisites

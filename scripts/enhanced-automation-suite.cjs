@@ -4,7 +4,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Zion Tech Group - Enhanced Automation Suite');
-console.log('==============================================');
+console.log('====');
 
 class EnhancedAutomationSuite {
   constructor() {
