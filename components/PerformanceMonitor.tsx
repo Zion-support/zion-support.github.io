@@ -1,79 +1,94 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react;
+
+// Extend the Window interface to include performance and gtag
+declare global {
+  interface Window {
+    performance: {
+      getEntriesByType: (_type: string) => unknown[]
+},
+  gtag: (...args: unknown[]) => void;
+  }
+}
 
 interface PerformanceData {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  firstInputDelay?: number;
-  cumulativeLayoutShift?: number;
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+  total: number,
+  limit: number
+} | null;
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void;
+  onPerformanceData?: (performanceData: PerformanceData) => void
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !window.performance) return;
-      
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
-      
-      const performanceData: PerformanceData = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === undefined') return,
+  const measurePerformance = () => {
+      const navigation = window.performance.getEntriesByType('navigation)[0] as {
+        domContentLoadedEventEnd: number,
+  domContentLoadedEventStart: number,
+  loadEventEnd: number,
+  loadEventStart: number,
+  fetchStart: number
+};
+      const paint = window.performance.getEntriesByType('paint'),
+  const performanceData: PerformanceData = {
+        // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        
+        // Paint timing
+        firstPaint: paint.find(entry => entry.name === first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint)?.startTime || 0,
+        
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number,
+  totalJSHeapSize: number,
+  jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number,
+  totalJSHeapSize: number,
+  jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number,
+  totalJSHeapSize: number,
+  jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number,
+  totalJSHeapSize: number,
+  jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : null
       };
 
-      // Get First Contentful Paint
-      const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
-        performanceData.firstContentfulPaint = fcpEntry.startTime;
-      }
-
-      // Get Largest Contentful Paint
-      const lcpEntries = window.performance.getEntriesByType('largest-contentful-paint');
-      if (lcpEntries.length > 0) {
-        performanceData.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-      }
-
-      // Get First Input Delay
-      const fidEntries = window.performance.getEntriesByType('first-input');
-      if (fidEntries.length > 0) {
-        const fidEntry = fidEntries[0] as any;
-        performanceData.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
-      }
-
-      // Get Cumulative Layout Shift
-      const clsEntries = window.performance.getEntriesByType('layout-shift');
-      if (clsEntries.length > 0) {
-        performanceData.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
-          return sum + (entry as any).value;
-        }, 0);
-      }
-
-      // Call the callback if provided
       if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
+  onPerformanceData(performanceData)
+}
 
-      // Log performance data to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
-      }
+      // Log performance data in development
+      if (process.env.NODE_ENV === development') {
+  console.log('Performance Metrics:, performanceData)
+}
     };
 
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+  measurePerformance()
+} else {
+  window.addEventListener(load', measurePerformance)
+}
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
+  window.removeEventListener('load', measurePerformance)
+};
   }, [onPerformanceData]);
 
   return null;

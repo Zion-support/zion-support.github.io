@@ -1,49 +1,34 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { defineConfig } from "vite"; import react from "@vitejs/plugin-react"; export default defineConfig({ plugins: [react()],server: { port: 3000,open: "true",host: "true"},build: { outDir: "dist",sourcemap: "true",minify: "terser",rollupOptions: { output: { manualChunks: { vendor: ["react","react-dom"],ui: ["framer-motion","lucide-react"],router: ["react-router-dom"]}}},terserOptions: { compress: { drop_console: true,drop_debugger: "true"}}},optimizeDeps: { include: ["react","react-dom","framer-motion","lucide-react"]}});'"'"
-=======
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
+import { defineConfig } from "vite;
+import react from "@vitejs/plugin-react";
+;
+export default defineConfig({,
   plugins: [react()],
-  server: {
+  server: {,
     port: 3000,
     open: true,
     host: true
   },
-  build: {
-    outDir: 'dist',
+  build: {,
+    outDir: dist",
     sourcemap: true,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
-        }
-      }
+    minify: "terser,
+    rollupOptions: {,
+      output: {,
+        manualChunks: {,
+          vendor: ["react", react-dom"],
+          ui: ["framer-motion, "lucide-react"],
+          router: [react-router-dom"]
+        };
+      };
     },
-    terserOptions: {
-      compress: {
+    terserOptions: {,
+      compress: {,
         drop_console: true,
         drop_debugger: true
-      }
-    }
+      };
+    };
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
-});
-=======
-});
-=======
- 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+  optimizeDeps: {,
+    include: ["react, "react-dom", framer-motion", "lucide-react"]
+  };
+}),

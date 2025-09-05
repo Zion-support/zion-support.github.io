@@ -1,47 +1,23 @@
-<<<<<<< HEAD
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/services",
-  "/ai-services",
-  "/it-services",
-  "/micro-saas",
-  "/pricing",
-  "/careers",
-  "/case-studies",
-  "/api",
-  "/api-docs",
-  "/faq",
-  "/guides",
-  "/webinars",
-  "/accessibility",
-  "/terms",
-  "/privacy",
-  "/login",
-  "/register"
-];
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
+
+  // Check if there is any supported locale in the pathname
+  const pathnameHasLocale = ['/en', '/es', '/fr', '/de'].some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  // Redirect if there is no locale
+  if (!pathnameHasLocale) {
+    return NextResponse.redirect(new URL('/en' + pathname, request.url));
   }
-  
-  // Add any additional middleware logic here
-  
-  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    // Skip all internal paths (_next)
+    '/((?!_next|api|favicon.ico).*)',
   ],
 };
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
