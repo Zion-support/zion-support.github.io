@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -433,7 +432,6 @@ export default function SecurityPage() {
         </section>
       </div>
     </MainLayout>
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -502,6 +500,6 @@ export default function Security() {
         </div>
       </section>
     </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
+ursor/expand-services-advertise-and-build-project-cac2
   );
 }

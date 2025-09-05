@@ -1612,7 +1612,6 @@ const aiServices = [
     pricing: '$25,000 - $250,000/setup',
     category: 'Marine AI',
     popular: true
->>>>>>> ef299ea5de80bc92f9878e6440a7c743a10cbcce
   }
 ];
 

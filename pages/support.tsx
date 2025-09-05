@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   HelpCircle, 
   ArrowRight,
@@ -495,7 +494,6 @@ export default function SupportPage() {
         </section>
       </div>
     </MainLayout>
-=======
 
 export default function Support() {
   return (
@@ -561,6 +559,6 @@ export default function Support() {
         </div>
       </section>
     </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
+ursor/expand-services-advertise-and-build-project-cac2
   );
 }

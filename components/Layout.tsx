@@ -253,6 +253,7 @@ export default function Layout({
                             </Link>
                           ))}
                         </div>
+                      </div>
                     ) : (
                       <Link
                         href={item.href}

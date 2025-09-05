@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   BookOpen, 
   ArrowRight,
@@ -499,7 +498,6 @@ export default function GuidesPage() {
         </section>
       </div>
     </MainLayout>
-=======
 
 export default function Guides() {
   return (
@@ -565,6 +563,6 @@ export default function Guides() {
         </div>
       </section>
     </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-cac2
+ursor/expand-services-advertise-and-build-project-cac2
   );
 }
