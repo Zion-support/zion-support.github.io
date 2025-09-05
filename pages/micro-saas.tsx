@@ -45,7 +45,10 @@ import {
   Calendar,
   Headphones,
   Kanban,
-  HardDrive
+  HardDrive,
+  Bell,
+  Home,
+  BookOpen
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -230,6 +233,178 @@ const microSaaSProducts = [
     pricing: '$39 - $199/month',
     category: 'Data Management',
     link: 'https://databackup.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Automated SEO analysis and optimization with real-time keyword tracking and content suggestions.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis'],
+    pricing: '$149 - $799/month',
+    category: 'SEO',
+    popular: true,
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Analytics Dashboard',
+    description: 'Real-time business intelligence with AI-driven insights and predictive analytics.',
+    icon: BarChart3,
+    features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
+    pricing: '$199 - $999/month',
+    category: 'Analytics',
+    link: 'https://smartanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Automated Testing Suite',
+    description: 'Comprehensive automated testing platform for web and mobile applications.',
+    icon: CheckCircle,
+    features: ['UI Testing', 'API Testing', 'Performance Testing', 'Cross-browser Testing'],
+    pricing: '$299 - $1,499/month',
+    category: 'Quality Assurance',
+    link: 'https://autotesting.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Onboarding Platform',
+    description: 'Streamlined customer onboarding with interactive tutorials and progress tracking.',
+    icon: Rocket,
+    features: ['Interactive Tutorials', 'Progress Tracking', 'Personalized Paths', 'Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Customer Success',
+    link: 'https://onboarding.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation',
+    description: 'Advanced content moderation using machine learning for text, images, and video content.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules Engine', 'Real-time Processing', 'API Integration'],
+    pricing: '$399 - $1,999/month',
+    category: 'Content Safety',
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'Subscription Management Hub',
+    description: 'Complete subscription lifecycle management with billing automation and analytics.',
+    icon: Receipt,
+    features: ['Billing Automation', 'Subscription Analytics', 'Churn Prevention', 'Payment Processing'],
+    pricing: '$199 - $999/month',
+    category: 'Subscription Management',
+    link: 'https://subscriptionhub.ziontechgroup.com'
+  },
+  {
+    title: 'API Documentation Generator',
+    description: 'Automated API documentation with interactive testing and version management.',
+    icon: Code,
+    features: ['Auto Documentation', 'Interactive Testing', 'Version Management', 'Team Collaboration'],
+    pricing: '$79 - $399/month',
+    category: 'API Development',
+    link: 'https://apidocs.ziontechgroup.com'
+  },
+  {
+    title: 'User Behavior Analytics',
+    description: 'Deep user behavior analysis with heatmaps, session recordings, and conversion optimization.',
+    icon: TrendingUp,
+    features: ['Heatmaps', 'Session Recordings', 'Conversion Funnels', 'A/B Testing'],
+    pricing: '$149 - $799/month',
+    category: 'User Analytics',
+    link: 'https://useranalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Multi-Channel Notification Center',
+    description: 'Unified notification system across email, SMS, push, and in-app channels.',
+    icon: Bell,
+    features: ['Multi-channel Delivery', 'Smart Routing', 'Template Management', 'Delivery Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Communications',
+    link: 'https://notifications.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Chat Support',
+    description: 'Intelligent customer support chatbot with human handoff and knowledge base integration.',
+    icon: MessageSquare,
+    features: ['Natural Language Processing', 'Human Handoff', 'Knowledge Base', 'Multi-language'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Support',
+    link: 'https://aichat.ziontechgroup.com'
+  },
+  {
+    title: 'Real Estate Management Platform',
+    description: 'Complete property management solution with tenant portal and maintenance tracking.',
+    icon: Building,
+    features: ['Property Management', 'Tenant Portal', 'Maintenance Tracking', 'Financial Reporting'],
+    pricing: '$299 - $1,499/month',
+    category: 'Real Estate',
+    link: 'https://realestate.ziontechgroup.com'
+  },
+  {
+    title: 'Healthcare Appointment Scheduler',
+    description: 'Medical practice management with appointment scheduling and patient communication.',
+    icon: Calendar,
+    features: ['Appointment Scheduling', 'Patient Communication', 'Billing Integration', 'Compliance Tools'],
+    pricing: '$199 - $999/month',
+    category: 'Healthcare',
+    link: 'https://healthcare.ziontechgroup.com'
+  },
+  {
+    title: 'E-learning Platform Builder',
+    description: 'Create and manage online courses with interactive content and progress tracking.',
+    icon: BookOpen,
+    features: ['Course Builder', 'Progress Tracking', 'Interactive Content', 'Certification System'],
+    pricing: '$149 - $799/month',
+    category: 'Education',
+    link: 'https://elearning.ziontechgroup.com'
+  },
+  {
+    title: 'Fleet Management System',
+    description: 'Complete fleet tracking and management with GPS monitoring and maintenance scheduling.',
+    icon: Car,
+    features: ['GPS Tracking', 'Maintenance Scheduling', 'Driver Management', 'Fuel Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'Fleet Management',
+    link: 'https://fleetmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Event Management Platform',
+    description: 'Comprehensive event planning and management with ticketing and attendee tracking.',
+    icon: Calendar,
+    features: ['Event Planning', 'Ticketing System', 'Attendee Management', 'Analytics Dashboard'],
+    pricing: '$99 - $499/month',
+    category: 'Event Management',
+    link: 'https://eventmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Restaurant POS & Management',
+    description: 'Complete restaurant management system with POS, inventory, and staff scheduling.',
+    icon: Receipt,
+    features: ['POS System', 'Inventory Management', 'Staff Scheduling', 'Customer Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Restaurant',
+    link: 'https://restaurantpos.ziontechgroup.com'
+  },
+  {
+    title: 'Fitness Tracking & Coaching',
+    description: 'Personal fitness platform with workout tracking, nutrition planning, and AI coaching.',
+    icon: Heart,
+    features: ['Workout Tracking', 'Nutrition Planning', 'AI Coaching', 'Progress Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'Fitness',
+    link: 'https://fitness.ziontechgroup.com'
+  },
+  {
+    title: 'Cryptocurrency Portfolio Tracker',
+    description: 'Advanced crypto portfolio management with real-time tracking and trading alerts.',
+    icon: TrendingUp,
+    features: ['Portfolio Tracking', 'Real-time Prices', 'Trading Alerts', 'Tax Reporting'],
+    pricing: '$49 - $299/month',
+    category: 'Cryptocurrency',
+    link: 'https://cryptotracker.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation',
+    description: 'IoT platform for smart home device management and automation rules.',
+    icon: Home,
+    features: ['Device Management', 'Automation Rules', 'Energy Monitoring', 'Security Integration'],
+    pricing: '$99 - $499/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
   }
 ];
 

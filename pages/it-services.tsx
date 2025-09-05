@@ -31,7 +31,9 @@ import {
   Package,
   BookOpen,
   Kanban,
-  DollarSign
+  DollarSign,
+  Code,
+  Rocket
 } from 'lucide-react';
 
 const itServices = [
@@ -215,6 +217,205 @@ const itServices = [
     pricing: '$5,000 - $25,000/project',
     category: 'Cost Optimization',
     link: 'https://itcosts.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software development with modern technologies and best practices.',
+    icon: Code,
+    features: ['Custom Development', 'Modern Frameworks', 'API Integration', 'Scalable Architecture'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Software Development',
+    popular: true,
+    link: 'https://enterprisesoftware.ziontechgroup.com'
+  },
+  {
+    title: 'IT Infrastructure Assessment',
+    description: 'Comprehensive IT infrastructure evaluation and optimization recommendations.',
+    icon: BarChart3,
+    features: ['Infrastructure Audit', 'Performance Analysis', 'Security Assessment', 'Optimization Plan'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Infrastructure',
+    link: 'https://itassessment.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation planning and implementation services.',
+    icon: Rocket,
+    features: ['Digital Strategy', 'Process Automation', 'Technology Roadmap', 'Change Management'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Digital Transformation',
+    link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'ITIL-based service management implementation and optimization.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Service Management',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Integration Services',
+    description: 'Seamless integration of enterprise systems and applications.',
+    icon: Network,
+    features: ['System Integration', 'API Development', 'Data Synchronization', 'Workflow Automation'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Integration',
+    link: 'https://enterpriseintegration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Security Auditing',
+    description: 'Comprehensive security auditing and vulnerability assessment services.',
+    icon: Shield,
+    features: ['Security Auditing', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Review'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Security Auditing',
+    link: 'https://itsecurityaudit.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Architecture Design',
+    description: 'Scalable and secure cloud architecture design and implementation.',
+    icon: Cloud,
+    features: ['Cloud Architecture', 'Scalability Design', 'Security Implementation', 'Cost Optimization'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Cloud Architecture',
+    link: 'https://cloudarchitecture.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and implementation services.',
+    icon: HardDrive,
+    features: ['DR Planning', 'Backup Strategy', 'Recovery Testing', 'Business Continuity'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://itdisasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'IT governance framework implementation and risk management services.',
+    icon: Shield,
+    features: ['Governance Framework', 'Risk Assessment', 'Policy Development', 'Compliance Management'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Governance',
+    link: 'https://itgovernance.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Data Management',
+    description: 'Comprehensive data management strategy and implementation services.',
+    icon: Database,
+    features: ['Data Strategy', 'Data Governance', 'Data Quality', 'Master Data Management'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Data Management',
+    link: 'https://enterprisedata.ziontechgroup.com'
+  },
+  {
+    title: 'IT Operations Automation',
+    description: 'Automation of IT operations and processes for improved efficiency.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Optimization', 'Monitoring Automation', 'Incident Response'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Operations Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Mobility Solutions',
+    description: 'Comprehensive mobile enterprise solutions and device management.',
+    icon: Smartphone,
+    features: ['Mobile Strategy', 'Device Management', 'App Development', 'Security Implementation'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Enterprise Mobility',
+    link: 'https://enterprisemobility.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'System performance optimization and capacity planning services.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Capacity Planning', 'Optimization', 'Load Testing'],
+    pricing: '$5,000 - $35,000/project',
+    category: 'Performance Optimization',
+    link: 'https://itperformance.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Security Solutions',
+    description: 'Comprehensive enterprise security implementation and management.',
+    icon: Lock,
+    features: ['Security Architecture', 'Identity Management', 'Access Control', 'Security Monitoring'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Enterprise Security',
+    link: 'https://enterprisesecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Change Management',
+    description: 'Structured IT change management and implementation services.',
+    icon: Settings,
+    features: ['Change Planning', 'Risk Assessment', 'Implementation', 'Rollback Procedures'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Change Management',
+    link: 'https://itchangemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Application Support',
+    description: 'Comprehensive support and maintenance for enterprise applications.',
+    icon: Monitor,
+    features: ['Application Support', 'Bug Fixing', 'Performance Tuning', 'Feature Enhancement'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Application Support',
+    link: 'https://enterpriseappsupport.ziontechgroup.com'
+  },
+  {
+    title: 'IT Capacity Planning',
+    description: 'Strategic IT capacity planning and resource optimization services.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Forecasting'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Capacity Planning',
+    link: 'https://itcapacityplanning.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Backup Solutions',
+    description: 'Comprehensive enterprise backup and recovery solutions.',
+    icon: HardDrive,
+    features: ['Backup Strategy', 'Data Replication', 'Recovery Testing', 'Compliance'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Backup Solutions',
+    link: 'https://enterprisebackup.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Implementation',
+    description: 'Professional IT service desk setup and management services.',
+    icon: Headphones,
+    features: ['Service Desk Setup', 'Process Implementation', 'Staff Training', 'Performance Monitoring'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Service Desk',
+    link: 'https://itservicedesk.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Network Design',
+    description: 'Scalable enterprise network design and implementation services.',
+    icon: Network,
+    features: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Network Design',
+    link: 'https://enterprisenetwork.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Regulatory',
+    description: 'IT compliance management and regulatory adherence services.',
+    icon: Shield,
+    features: ['Compliance Assessment', 'Regulatory Adherence', 'Audit Preparation', 'Documentation'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Monitoring Solutions',
+    description: 'Comprehensive enterprise monitoring and alerting solutions.',
+    icon: Monitor,
+    features: ['Infrastructure Monitoring', 'Application Monitoring', 'Log Management', 'Alerting'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Monitoring Solutions',
+    link: 'https://enterprisemonitoring.ziontechgroup.com'
   }
 ];
 
