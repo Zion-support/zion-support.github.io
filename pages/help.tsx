@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-const helpCategories = [
-  {
+} from 'lucide-react'
+const helpCategories = [{
     title: "Getting Started",
     icon: BookOpen,
-    articles: [
-      {
+    articles: [{
         title: "Welcome to Zion Tech Group",
         description: "Learn the basics of our platform and services",
         type: "Guide",
@@ -38,14 +36,12 @@ const helpCategories = [
         description: "How to get started with our AI solutions",
         type: "Tutorial",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "AI Services",
     icon: HelpCircle,
-    articles: [
-      {
+    articles: [{
         title: "Understanding AI Models",
         description: "Learn about different AI models and their applications",
         type: "Guide",
@@ -62,14 +58,12 @@ const helpCategories = [
         description: "Tips and best practices for using AI effectively",
         type: "Guide",
         readTime: "12 min"
-      }
-    ]
+      }]
   },
   {
     title: "Cloud Services",
     icon: MessageCircle,
-    articles: [
-      {
+    articles: [{
         title: "Cloud Migration Guide",
         description: "Complete guide to migrating to our cloud platform",
         type: "Guide",
@@ -86,14 +80,12 @@ const helpCategories = [
         description: "Keep your cloud environment secure",
         type: "Guide",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "Billing & Account",
     icon: FileText,
-    articles: [
-      {
+    articles: [{
         title: "Understanding Your Bill",
         description: "Learn how to read and understand your billing statement",
         type: "Guide",
@@ -110,20 +102,14 @@ const helpCategories = [
         description: "Manage your account preferences and settings",
         type: "Tutorial",
         readTime: "10 min"
-      }
-    ]
-  }
-]
-
+      }]
+  }]
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-]
-
-const faqs = [
-  {
+  { title: "Community Forum", href: "/community", icon: MessageCircle }]
+const faqs = [{
     question: "How do I get started with your AI services?",
     answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
   },
@@ -138,13 +124,10 @@ const faqs = [
   {
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
-  }
-]
-
+  }]
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -210,16 +193,16 @@ export default function HelpPage() {
             "
             <div className="space-y-6">"
 </div>
-                <motion.div;
-                  key={categoryIndex};
+                <motion.div
+                  key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: categoryIndex * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: categoryIndex * 0.1 }}
                 >
 </motion>
-                  <button;
-                    onClick={() => toggleCategory(category.title)};
+                  <button
+                    onClick={() => toggleCategory(category.title)}
 </button>"
                     <div className="flex items-center gap-4">"
 </div>"
@@ -234,13 +217,12 @@ export default function HelpPage() {
                       <ChevronRight className="w-5 h-5 text-gray-500" />"
 </ChevronRight>
                   </button>
-                  
                   <AnimatePresence>
 </AnimatePresence>
-                      <motion.div;
-                        initial={{ height: 0, opacity: 0 }};
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}'
-                        exit={{ height: 0, opacity: 0 }};
+                        exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}'
                         className="overflow-hidden"
                       >
@@ -249,10 +231,10 @@ export default function HelpPage() {
 </div>"
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
-                              <motion.div;
-                                key={articleIndex};
+                              <motion.div
+                                key={articleIndex}
                                 className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-                                whileHover={{ y: -2 }};
+                                whileHover={{ y: -2 }}
                               >
 </motion>"
                                 <div className="flex items-start justify-between mb-2">"
@@ -271,14 +253,14 @@ export default function HelpPage() {
 </p>
                                 </p>
                               </motion.div>
-                            ))};
+                            ))}
                           </div>
                         </div>
                       </motion.div>
-                    )};
+                    )}
                   </AnimatePresence>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </div>
@@ -295,12 +277,12 @@ export default function HelpPage() {
             "
             <div className="space-y-6">"
 </div>
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index}
                   className="bg-gray-50 rounded-lg p-6"
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
                 >
 </motion>"
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">"
@@ -310,7 +292,7 @@ export default function HelpPage() {
 </p>
                   </p>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </div>
