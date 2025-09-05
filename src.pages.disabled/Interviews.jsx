@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface InterviewsProps {
-  // Add props here as needed
-}
-
-export default function Interviews({ }: InterviewsProps) {
-  return (
-    <div>
-      <h1>Interviews</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< \"HEAD\": src.pages.disabled/Interviews.jsx import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => { import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => {\";
+=======
+<<<<<<< "HEAD": src.pages.disabled/Interviews.jsx import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => { import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => {";
+>>>>>>> main

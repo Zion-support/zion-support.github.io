@@ -5,1053 +5,746 @@ import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Zap, 
-  Shield, 
-  Users, 
   BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Star, 
-  DollarSign, 
-  Award, 
-  Globe, 
-  Lock, 
-  Cpu, 
-  Bot, 
-  FileText, 
-  Image, 
-  Video, 
-  Mic, 
   Code, 
   Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
-  Sprout,
+  CheckCircle, 
+  ArrowRight,
+  Phone,
   Mail,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
+  MapPin,
+  Users,
+  Shield,
+  Globe,
   Package,
+  DollarSign,
+  GraduationCap,
   Calendar,
-  BookOpen,
+  FileText,
   ShoppingCart,
-  Home,
-  Database,
-  Vote
+  Network,
+  Wifi,
+  Brain,
+  Video,
+  Smartphone
 } from 'lucide-react';
+import Layout from '../components/Layout';
 
-const microSaaSProducts = [
+const microSaasSolutions = [
   {
-    title: 'Cloud Cost Guard (FinOps Assistant)',
-    description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    icon: DollarSign,
-    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'FinOps',
-    popular: true
+    title: "Workflow Automation",
+    description: "Streamline business processes with intelligent automation tools",
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Task Scheduling",
+      "Data Integration",
+      "Custom Workflows",
+      "API Integrations",
+      "Real-time Notifications"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"],
+    setupTime: "1-2 weeks"
   },
   {
-    title: 'LLM Evaluation & Safety Suite',
-    description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    icon: Shield,
-    features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
-    pricing: '$799 - $3,500/month',
-    category: 'AI Safety',
-    popular: true
-  },
-  {
-    title: 'Customer Feedback & NPS Micro-App',
-    description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    icon: MessageSquare,
-    features: ['Survey Builder', 'Sentiment Analysis', 'Auto Routing', 'NPS Tracking'],
-    pricing: '$149 - $799/month',
-    category: 'Customer Success'
-  },
-  {
-    title: 'API Rate Limiting & Analytics',
-    description: 'Intelligent rate limiting with detailed analytics and usage insights.',
+    title: "Data Processing Tools",
+    description: "Powerful data analysis and processing solutions",
     icon: BarChart3,
-    features: ['Smart Rate Limiting', 'Usage Analytics', 'Real-time Monitoring', 'Custom Rules'],
-    pricing: '$199 - $999/month',
-    category: 'API Management'
+    features: [
+      "Data Visualization",
+      "ETL Processes",
+      "Real-time Analytics",
+      "Custom Dashboards",
+      "Report Generation",
+      "Data Export/Import"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Process 10x more data", "Real-time insights", "50% faster reporting"],
+    setupTime: "2-3 weeks"
   },
   {
-    title: 'Content Moderation AI',
-    description: 'Automated content moderation using advanced AI for text, images, and videos.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Content Safety'
+    title: "API Integration Services",
+    description: "Connect your systems with seamless API solutions",
+    icon: Code,
+    features: [
+      "REST API Development",
+      "Third-party Integrations",
+      "Webhook Management",
+      "API Documentation",
+      "Rate Limiting",
+      "Authentication & Security"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Connect 50+ services", "99.9% uptime", "Reduce integration time by 70%"],
+    setupTime: "1-2 weeks"
   },
   {
-    title: 'Workflow Automation Engine',
-    description: 'No-code workflow automation with integrations to popular business tools.',
+    title: "Custom Dashboard Solutions",
+    description: "Tailored dashboards for your business needs",
     icon: Settings,
-    features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
-    pricing: '$99 - $599/month',
-    category: 'Automation',
-    popular: true
+    features: [
+      "Real-time Monitoring",
+      "Custom Widgets",
+      "User Management",
+      "Role-based Access",
+      "Mobile Responsive",
+      "Export Capabilities"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Centralized data view", "Mobile access", "Custom branding"],
+    setupTime: "1-2 weeks"
   },
   {
-    title: 'AI Lead Scoring & Enrichment',
-    description: 'Intelligent lead scoring and data enrichment for sales teams.',
-    icon: Target,
-    features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration'],
-    pricing: '$199 - $999/month',
-    category: 'Sales'
+    title: "SaaS Platform Development",
+    description: "Complete SaaS solutions from concept to deployment",
+    icon: Cloud,
+    features: [
+      "Multi-tenant Architecture",
+      "Subscription Management",
+      "Payment Integration",
+      "User Onboarding",
+      "Analytics & Reporting",
+      "Scalable Infrastructure"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Full SaaS solution", "Scalable architecture", "Revenue generation"],
+    setupTime: "4-8 weeks"
   },
   {
-    title: 'Social Media Scheduler Pro',
-    description: 'Advanced social media management with AI-powered content optimization.',
-    icon: Globe,
-    features: ['Multi-platform Posting', 'Optimal Timing', 'Content Suggestions', 'Analytics Dashboard'],
-    pricing: '$49 - $299/month',
-    category: 'Social Media'
-  },
-  {
-    title: 'Invoice & Payment Processor',
-    description: 'Streamlined invoicing and payment processing for small businesses.',
-    icon: DollarSign,
-    features: ['Invoice Generation', 'Payment Processing', 'Recurring Billing', 'Financial Reports'],
-    pricing: '$29 - $199/month',
-    category: 'Finance'
-  },
-  {
-    title: 'Project Time Tracker',
-    description: 'Comprehensive time tracking and project management for teams.',
-    icon: Clock,
-    features: ['Time Tracking', 'Project Management', 'Team Collaboration', 'Reporting'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'Email Marketing Automation',
-    description: 'Advanced email marketing with AI-powered personalization and automation.',
-    icon: Mail,
-    features: ['Email Templates', 'Automation Workflows', 'A/B Testing', 'Analytics'],
-    pricing: '$39 - $299/month',
-    category: 'Marketing'
-  },
-  {
-    title: 'Inventory Management System',
-    description: 'Smart inventory tracking and management for e-commerce businesses.',
-    icon: Package,
-    features: ['Stock Tracking', 'Low Stock Alerts', 'Supplier Management', 'Analytics'],
-    pricing: '$79 - $399/month',
-    category: 'E-commerce'
-  },
-  {
-    title: 'Customer Support Ticketing',
-    description: 'AI-powered customer support ticketing and knowledge base system.',
-    icon: MessageSquare,
-    features: ['Ticket Management', 'Knowledge Base', 'AI Chatbot', 'Performance Analytics'],
-    pricing: '$19 - $149/month',
-    category: 'Support'
-  },
-  {
-    title: 'HR & Payroll Management',
-    description: 'Complete HR and payroll solution for small to medium businesses.',
-    icon: Users,
-    features: ['Employee Management', 'Payroll Processing', 'Time Off Tracking', 'Compliance'],
-    pricing: '$99 - $499/month',
-    category: 'HR'
-  },
-  {
-    title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
+    title: "Business Intelligence Tools",
+    description: "Advanced BI solutions for data-driven decisions",
     icon: BarChart3,
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
-    pricing: '$29 - $199/month',
-    category: 'Analytics'
+    features: [
+      "Interactive Dashboards",
+      "Predictive Analytics",
+      "Data Mining",
+      "Custom Reports",
+      "Machine Learning Integration",
+      "Real-time Insights"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Data-driven decisions", "Predictive insights", "ROI tracking"],
+    setupTime: "3-4 weeks"
   },
   {
-    title: 'Document Management System',
-    description: 'Secure document storage, sharing, and collaboration platform.',
-    icon: FileText,
-    features: ['Document Storage', 'Version Control', 'Collaboration Tools', 'Security'],
-    pricing: '$19 - $99/month',
-    category: 'Document Management'
+    title: "Customer Relationship Management",
+    description: "Comprehensive CRM solution for managing customer relationships",
+    icon: Users,
+    features: [
+      "Contact Management",
+      "Lead Tracking",
+      "Sales Pipeline",
+      "Email Marketing",
+      "Customer Support",
+      "Analytics & Reporting"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Increase sales by 30%", "Better customer retention", "Automated follow-ups"],
+    setupTime: "2-3 weeks"
   },
   {
-    title: 'Event Management Platform',
-    description: 'Complete event planning and management solution for organizers.',
+    title: "Project Management Platform",
+    description: "Complete project management solution for teams",
+    icon: CheckCircle,
+    features: [
+      "Task Management",
+      "Team Collaboration",
+      "Time Tracking",
+      "Resource Planning",
+      "Progress Monitoring",
+      "Document Sharing"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["Improve productivity by 40%", "Better project visibility", "Team coordination"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Inventory Management System",
+    description: "Smart inventory tracking and management solution",
+    icon: Package,
+    features: [
+      "Real-time Inventory Tracking",
+      "Automated Reordering",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Analytics & Forecasting",
+      "Integration with POS/ERP"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Reduce stockouts by 90%", "Lower inventory costs", "Automated reordering"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing and automation platform",
+    icon: Mail,
+    features: [
+      "Email Campaign Builder",
+      "Automation Workflows",
+      "A/B Testing",
+      "List Segmentation",
+      "Analytics & Reporting",
+      "Integration with CRM"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,500-4,000/month",
+    benefits: ["Increase open rates by 25%", "Automated nurturing", "Better targeting"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Social Media Management",
+    description: "Comprehensive social media scheduling and analytics platform",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Calendar",
+      "Analytics & Insights",
+      "Team Collaboration",
+      "Hashtag Research",
+      "Competitor Analysis"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Save 10+ hours/week", "Increase engagement by 35%", "Better content planning"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "HR Management System",
+    description: "Complete human resources management solution",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Time & Attendance",
+      "Payroll Integration",
+      "Performance Reviews",
+      "Recruitment Tools",
+      "Benefits Management"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Streamline HR processes", "Reduce paperwork by 80%", "Better employee experience"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Financial Management Platform",
+    description: "Comprehensive financial tracking and management solution",
+    icon: DollarSign,
+    features: [
+      "Expense Tracking",
+      "Invoice Management",
+      "Budget Planning",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Bank Integration"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Better financial visibility", "Automated bookkeeping", "Tax compliance"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Learning Management System",
+    description: "Complete e-learning platform for training and education",
+    icon: GraduationCap,
+    features: [
+      "Course Creation",
+      "Student Management",
+      "Progress Tracking",
+      "Certification System",
+      "Video Streaming",
+      "Assessment Tools"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Scalable training", "Better engagement", "Progress tracking"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Event Management Platform",
+    description: "Complete solution for managing events and conferences",
     icon: Calendar,
-    features: ['Event Planning', 'Registration Management', 'Payment Processing', 'Analytics'],
-    pricing: '$49 - $299/month',
-    category: 'Events'
+    features: [
+      "Event Registration",
+      "Ticketing System",
+      "Attendee Management",
+      "Payment Processing",
+      "Event Analytics",
+      "Mobile App"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Streamline event planning", "Better attendee experience", "Revenue optimization"],
+    setupTime: "2-4 weeks"
   },
   {
-    title: 'Learning Management System',
-    description: 'Online learning platform for courses, training, and certifications.',
-    icon: BookOpen,
-    features: ['Course Creation', 'Student Management', 'Progress Tracking', 'Certificates'],
-    pricing: '$79 - $399/month',
-    category: 'Education'
-  },
-  {
-    title: 'Real Estate CRM',
-    description: 'Specialized CRM for real estate agents and property management.',
-    icon: Building,
-    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Deal Tracking'],
-    pricing: '$39 - $199/month',
-    category: 'Real Estate'
-  },
-  {
-    title: 'Restaurant POS & Management',
-    description: 'Point of sale and restaurant management system with inventory tracking.',
-    icon: ShoppingCart,
-    features: ['POS System', 'Menu Management', 'Inventory Tracking', 'Staff Scheduling'],
-    pricing: '$99 - $499/month',
-    category: 'Restaurant'
-  },
-  {
-    title: 'Fitness & Wellness Tracker',
-    description: 'Comprehensive fitness tracking and wellness management platform.',
-    icon: Heart,
-    features: ['Workout Tracking', 'Nutrition Logging', 'Progress Monitoring', 'Community Features'],
-    pricing: '$9 - $49/month',
-    category: 'Health & Fitness'
-  },
-  {
-    title: 'Cryptocurrency Portfolio Tracker',
-    description: 'Advanced cryptocurrency portfolio tracking and trading analytics.',
-    icon: TrendingUp,
-    features: ['Portfolio Tracking', 'Price Alerts', 'Trading Analytics', 'Tax Reporting'],
-    pricing: '$19 - $99/month',
-    category: 'Crypto'
-  },
-  {
-    title: 'Fleet Management System',
-    description: 'GPS tracking and fleet management solution for transportation companies.',
-    icon: Car,
-    features: ['GPS Tracking', 'Route Optimization', 'Driver Management', 'Maintenance Scheduling'],
-    pricing: '$199 - $999/month',
-    category: 'Transportation'
-  },
-  {
-    title: 'Property Maintenance Tracker',
-    description: 'Property maintenance and facility management solution.',
-    icon: Settings,
-    features: ['Maintenance Scheduling', 'Work Order Management', 'Vendor Management', 'Reporting'],
-    pricing: '$49 - $299/month',
-    category: 'Property Management'
-  },
-  {
-    title: 'AI-Powered Code Review Assistant',
-    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
-    icon: Code,
-    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
-    pricing: '$299 - $1,999/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Security Auditor',
-    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
-    icon: Lock,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
-    pricing: '$499 - $2,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered SEO Content Optimizer',
-    description: 'Intelligent content optimization for search engines with real-time ranking improvements.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'SEO & Marketing',
-    popular: true
-  },
-  {
-    title: 'Multi-Channel Customer Data Platform',
-    description: 'Unified customer data platform with real-time synchronization across all touchpoints.',
-    icon: Database,
-    features: ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
-    pricing: '$399 - $2,499/month',
-    category: 'Customer Data',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Video Content Generator',
-    description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
-    icon: Video,
-    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
-    pricing: '$199 - $1,499/month',
-    category: 'Content Creation',
-    popular: true
-  },
-  {
-    title: 'Intelligent Supply Chain Optimizer',
-    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
-    pricing: '$599 - $3,999/month',
-    category: 'Supply Chain',
-    popular: true
-  },
-  {
-    title: 'Real-Time Language Translation API',
-    description: 'Advanced translation service with context awareness and industry-specific terminology.',
-    icon: Globe,
-    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
-    pricing: '$0.01 - $0.10 per 1K characters',
-    category: 'Language Services',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Automated legal document analysis with contract review and compliance checking.',
+    title: "Content Management System",
+    description: "Advanced CMS for managing digital content",
     icon: FileText,
-    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
-    pricing: '$299 - $1,999/month',
-    category: 'Legal Tech',
-    popular: true
+    features: [
+      "Content Editor",
+      "Media Library",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Version Control",
+      "Publishing Workflow"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Easy content updates", "Better SEO", "Team collaboration"],
+    setupTime: "2-3 weeks"
   },
   {
-    title: 'Smart Energy Management System',
-    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
-    icon: Zap,
-    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
-    pricing: '$199 - $1,299/month',
-    category: 'IoT & Energy',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Recruitment Platform',
-    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
-    icon: Users,
-    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
-    pricing: '$199 - $1,499/month',
-    category: 'HR & Recruitment',
-    popular: true
-  },
-  {
-    title: 'Blockchain Analytics & Compliance',
-    description: 'Comprehensive blockchain transaction analysis with AML and compliance reporting.',
-    icon: TrendingUp,
-    features: ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
-    pricing: '$399 - $2,999/month',
-    category: 'Blockchain Analytics',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Image Analysis',
-    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
-    icon: Eye,
-    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
-    pricing: '$999 - $4,999/month',
-    category: 'Healthcare AI',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Platform',
-    description: 'Comprehensive smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
-    pricing: '$29 - $199/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Financial Risk Assessment',
-    description: 'Real-time financial risk analysis with credit scoring and fraud detection.',
-    icon: Shield,
-    features: ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Real-time Alerts'],
-    pricing: '$499 - $2,999/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Processing',
-    description: 'Automated document extraction and processing with OCR and data validation.',
-    icon: FileText,
-    features: ['OCR Processing', 'Data Extraction', 'Validation Rules', 'Workflow Automation'],
-    pricing: '$0.10 - $0.50 per document',
-    category: 'Document Processing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Social Media Monitoring',
-    description: 'Comprehensive social media monitoring with sentiment analysis and brand protection.',
-    icon: MessageSquare,
-    features: ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'Social Media',
-    popular: true
-  },
-  {
-    title: 'Smart Agriculture IoT Platform',
-    description: 'IoT-based agricultural monitoring with crop analysis and yield optimization.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
-    pricing: '$299 - $1,999/month',
-    category: 'AgTech',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personalization Engine',
-    description: 'Real-time personalization engine for e-commerce and content platforms.',
-    icon: Target,
-    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Recommendation Engine'],
-    pricing: '$399 - $2,499/month',
-    category: 'Personalization',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Verification',
-    description: 'Decentralized identity verification with KYC/AML compliance and privacy protection.',
-    icon: Lock,
-    features: ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Blockchain Integration'],
-    pricing: '$0.50 - $2.00 per verification',
-    category: 'Identity & Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Voice Analytics',
-    description: 'Advanced voice analysis for call centers with emotion detection and quality scoring.',
-    icon: Mic,
-    features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
-    pricing: '$199 - $1,299/month',
-    category: 'Voice Analytics',
-    popular: true
-  },
-  {
-    title: 'Quantum-Safe Encryption API',
-    description: 'Post-quantum cryptography solutions for future-proof data protection.',
-    icon: Lock,
-    features: ['Quantum-Resistant Algorithms', 'API Integration', 'Key Management', 'Compliance Ready'],
-    pricing: '$499 - $2,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Code Generation',
-    description: 'Automated code generation from natural language descriptions with multiple language support.',
-    icon: Code,
-    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Testing Generation'],
-    pricing: '$199 - $1,499/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Edge Computing Orchestrator',
-    description: 'Intelligent edge computing management with real-time workload distribution.',
-    icon: Cpu,
-    features: ['Edge Workload Management', 'Latency Optimization', 'Resource Allocation', 'Monitoring'],
-    pricing: '$299 - $1,999/month',
-    category: 'Edge Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Threat Intelligence',
-    description: 'Real-time threat detection and intelligence gathering for cybersecurity teams.',
-    icon: Shield,
-    features: ['Threat Detection', 'Intelligence Gathering', 'Risk Assessment', 'Automated Response'],
-    pricing: '$399 - $2,499/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Platform',
-    description: 'Create and manage digital twins for IoT devices and physical assets.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
-    pricing: '$599 - $3,999/month',
-    category: 'IoT & Digital Twins',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Market Research',
-    description: 'Automated market research with sentiment analysis and trend prediction.',
-    icon: TrendingUp,
-    features: ['Market Analysis', 'Sentiment Tracking', 'Trend Prediction', 'Competitor Intelligence'],
-    pricing: '$299 - $1,999/month',
-    category: 'Market Research',
-    popular: true
-  },
-  {
-    title: 'Blockchain Supply Chain Tracker',
-    description: 'End-to-end supply chain transparency using blockchain technology.',
-    icon: Package,
-    features: ['Product Tracking', 'Authenticity Verification', 'Compliance Monitoring', 'Smart Contracts'],
-    pricing: '$199 - $1,299/month',
-    category: 'Blockchain & Supply Chain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Email Security',
-    description: 'Advanced email protection against phishing, malware, and business email compromise.',
-    icon: Mail,
-    features: ['Phishing Detection', 'Malware Scanning', 'BEC Protection', 'User Training'],
-    pricing: '$99 - $599/month',
-    category: 'Email Security',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Development Platform',
-    description: 'No-code smart contract creation and deployment across multiple blockchains.',
-    icon: Code,
-    features: ['Visual Builder', 'Multi-chain Support', 'Testing Suite', 'Deployment Tools'],
-    pricing: '$199 - $1,499/month',
-    category: 'Blockchain Development',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Data Quality Engine',
-    description: 'Automated data cleaning, validation, and quality improvement for enterprise data.',
-    icon: Database,
-    features: ['Data Cleaning', 'Quality Scoring', 'Duplicate Detection', 'Validation Rules'],
-    pricing: '$299 - $1,999/month',
-    category: 'Data Management',
-    popular: true
-  },
-  {
-    title: 'Real-Time Collaboration Platform',
-    description: 'Advanced real-time collaboration with AR/VR integration for remote teams.',
-    icon: Users,
-    features: ['Real-time Editing', 'AR/VR Support', 'Whiteboard Integration', 'Voice/Video Chat'],
-    pricing: '$49 - $299/month',
-    category: 'Collaboration',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Compliance Monitor',
-    description: 'Automated compliance monitoring across multiple regulations and standards.',
-    icon: Shield,
-    features: ['Multi-regulation Support', 'Automated Auditing', 'Risk Assessment', 'Reporting'],
-    pricing: '$399 - $2,499/month',
-    category: 'Compliance',
-    popular: true
-  },
-  {
-    title: 'Intelligent API Gateway',
-    description: 'AI-powered API gateway with intelligent routing, caching, and security.',
-    icon: Network,
-    features: ['Smart Routing', 'Intelligent Caching', 'Security Policies', 'Performance Optimization'],
-    pricing: '$199 - $1,299/month',
-    category: 'API Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Customer Journey Analytics',
-    description: 'Comprehensive customer journey mapping with predictive analytics and optimization.',
-    icon: Target,
-    features: ['Journey Mapping', 'Predictive Analytics', 'Optimization Suggestions', 'ROI Tracking'],
-    pricing: '$299 - $1,999/month',
-    category: 'Customer Analytics',
-    popular: true
-  },
-  {
-    title: 'Blockchain-Based Voting System',
-    description: 'Secure, transparent voting platform with blockchain verification and audit trails.',
-    icon: Vote,
-    features: ['Secure Voting', 'Blockchain Verification', 'Audit Trails', 'Real-time Results'],
-    pricing: '$199 - $1,299/month',
-    category: 'Blockchain & Governance',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Content Moderation Suite',
-    description: 'Advanced content moderation with multi-modal detection and custom policy enforcement.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Policies', 'Real-time Processing', 'Human Review Queue'],
-    pricing: '$199 - $1,499/month',
-    category: 'Content Safety',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Audit Platform',
-    description: 'Automated smart contract security auditing with comprehensive vulnerability detection.',
-    icon: Lock,
-    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Predictive Maintenance',
-    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
-    icon: Settings,
-    features: ['Predictive Analytics', 'Equipment Monitoring', 'Maintenance Scheduling', 'Cost Optimization'],
-    pricing: '$399 - $2,499/month',
-    category: 'Industrial IoT',
-    popular: true
-  },
-  {
-    title: 'Decentralized Identity Management',
-    description: 'Self-sovereign identity management with privacy-preserving authentication.',
-    icon: Lock,
-    features: ['Self-Sovereign Identity', 'Privacy Protection', 'Zero-Knowledge Proofs', 'Interoperability'],
-    pricing: '$199 - $1,299/month',
-    category: 'Identity Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Financial Planning',
-    description: 'Intelligent financial planning and investment optimization for individuals and businesses.',
-    icon: DollarSign,
-    features: ['Portfolio Optimization', 'Risk Assessment', 'Goal Planning', 'Tax Optimization'],
-    pricing: '$99 - $599/month',
-    category: 'FinTech',
-    popular: true
-  }
-];
-
-const features = [
-  {
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in days, not months'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance'
-  },
-  {
-    icon: Users,
-    title: 'Scalable Architecture',
-    description: 'Grows with your business needs'
-  },
-  {
-    icon: Globe,
-    title: 'Multi-tenant Ready',
-    description: 'Built for SaaS from the ground up'
-  },
-  {
+    title: "Analytics & Reporting Platform",
+    description: "Advanced analytics and business intelligence solution",
     icon: BarChart3,
-    title: 'Analytics Built-in',
-    description: 'Comprehensive usage and performance metrics'
+    features: [
+      "Custom Dashboards",
+      "Data Visualization",
+      "Real-time Analytics",
+      "Automated Reports",
+      "Data Export",
+      "API Integration"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Data-driven insights", "Real-time monitoring", "Better decision making"],
+    setupTime: "2-4 weeks"
   },
   {
-    icon: Lock,
-    title: 'Data Privacy',
-    description: 'GDPR and SOC 2 compliant by default'
+    title: "Customer Support Platform",
+    description: "Comprehensive customer support and helpdesk solution",
+    icon: Shield,
+    features: [
+      "Ticket Management",
+      "Live Chat",
+      "Knowledge Base",
+      "Automation Rules",
+      "Performance Analytics",
+      "Multi-channel Support"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Faster response times", "Better customer satisfaction", "Reduced support costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Complete online store solution with advanced features",
+    icon: ShoppingCart,
+    features: [
+      "Product Catalog",
+      "Shopping Cart",
+      "Payment Processing",
+      "Order Management",
+      "Inventory Tracking",
+      "Marketing Tools"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Complete e-commerce solution", "Mobile optimized", "SEO friendly"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Document Management System",
+    description: "Secure document storage and collaboration platform",
+    icon: FileText,
+    features: [
+      "Document Storage",
+      "Version Control",
+      "Collaboration Tools",
+      "Access Control",
+      "Search & Indexing",
+      "Compliance Management"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,000/month",
+    benefits: ["Secure document storage", "Better collaboration", "Compliance ready"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "API Gateway & Management",
+    description: "Comprehensive API management and gateway solution",
+    icon: Network,
+    features: [
+      "API Gateway",
+      "Rate Limiting",
+      "Authentication",
+      "Monitoring & Analytics",
+      "Developer Portal",
+      "API Documentation"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Secure API management", "Better performance", "Developer friendly"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "IoT Device Management",
+    description: "Complete IoT device monitoring and management platform",
+    icon: Wifi,
+    features: [
+      "Device Registration",
+      "Real-time Monitoring",
+      "Remote Control",
+      "Data Collection",
+      "Alert System",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Centralized device management", "Real-time insights", "Predictive maintenance"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Blockchain Integration Platform",
+    description: "Blockchain integration and smart contract management",
+    icon: Shield,
+    features: [
+      "Smart Contract Deployment",
+      "Blockchain Integration",
+      "Wallet Management",
+      "Transaction Monitoring",
+      "Security Auditing",
+      "API Development"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Blockchain integration", "Enhanced security", "Transparent transactions"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Machine Learning Platform",
+    description: "End-to-end ML platform for model development and deployment",
+    icon: Brain,
+    features: [
+      "Model Training",
+      "Data Preprocessing",
+      "Model Deployment",
+      "A/B Testing",
+      "Monitoring & Alerts",
+      "AutoML Capabilities"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Faster ML development", "Automated model training", "Production ready"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Video Conferencing Platform",
+    description: "Custom video conferencing and collaboration solution",
+    icon: Video,
+    features: [
+      "HD Video Calls",
+      "Screen Sharing",
+      "Recording & Playback",
+      "Chat & Messaging",
+      "Meeting Scheduling",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Custom branding", "Better security", "Integration ready"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Mobile App Backend",
+    description: "Complete backend infrastructure for mobile applications",
+    icon: Smartphone,
+    features: [
+      "User Authentication",
+      "Database Management",
+      "Push Notifications",
+      "File Storage",
+      "API Development",
+      "Analytics Integration"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
+    setupTime: "3-5 weeks"
   }
 ];
 
-const benefits = [
+const industries = [
   {
-    icon: Clock,
-    title: 'Fast Time to Market',
-    description: 'Launch your SaaS in weeks, not months',
-    stat: '80%'
+    title: "Healthcare",
+    description: "Patient management, telemedicine, and medical data processing",
+    icon: "🏥"
   },
   {
-    icon: DollarSign,
-    title: 'Cost Effective',
-    description: 'Lower development and maintenance costs',
-    stat: '60%'
+    title: "Finance",
+    description: "Payment processing, risk analysis, and financial reporting",
+    icon: "💰"
   },
   {
-    icon: Star,
-    title: 'High Quality',
-    description: 'Production-ready code and infrastructure',
-    stat: '99.9%'
+    title: "E-commerce",
+    description: "Inventory management, order processing, and customer analytics",
+    icon: "🛒"
   },
   {
-    icon: TrendingUp,
-    title: 'Scalable',
-    description: 'Handles growth from startup to enterprise',
-    stat: '10x'
+    title: "Education",
+    description: "Learning management, student tracking, and assessment tools",
+    icon: "🎓"
+  },
+  {
+    title: "Manufacturing",
+    description: "Production monitoring, quality control, and supply chain management",
+    icon: "🏭"
+  },
+  {
+    title: "Real Estate",
+    description: "Property management, lead tracking, and market analysis",
+    icon: "🏠"
   }
 ];
 
-const pricingTiers = [
+const whyChooseUs = [
   {
-    name: 'Starter',
-    description: 'Perfect for small teams and MVPs',
-    price: '$299',
-    period: '/month',
-    features: [
-      'Up to 1,000 users',
-      'Basic analytics',
-      'Email support',
-      'Standard security',
-      '1 custom integration'
-    ],
-    popular: false
+    title: "Rapid Development",
+    description: "Fast delivery with agile methodologies and modern tech stack",
+    icon: "⚡"
   },
   {
-    name: 'Professional',
-    description: 'Ideal for growing businesses',
-    price: '$799',
-    period: '/month',
-    features: [
-      'Up to 10,000 users',
-      'Advanced analytics',
-      'Priority support',
-      'Enhanced security',
-      '5 custom integrations',
-      'API access'
-    ],
-    popular: true
+    title: "Scalable Solutions",
+    description: "Built to grow with your business from startup to enterprise",
+    icon: "📈"
   },
   {
-    name: 'Enterprise',
-    description: 'For large organizations',
-    price: 'Custom',
-    period: '',
-    features: [
-      'Unlimited users',
-      'Custom analytics',
-      'Dedicated support',
-      'Enterprise security',
-      'Unlimited integrations',
-      'Custom development'
-    ],
-    popular: false
+    title: "Cost-Effective",
+    description: "Affordable pricing with transparent costs and no hidden fees",
+    icon: "💰"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock support and maintenance for your solutions",
+    icon: "🛡️"
   }
 ];
 
-export default function MicroSaaSPage() {
+export default function MicroSaasPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
-        <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
-      </Head>
-
+    <Layout
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Innovative micro SaaS solutions for modern businesses. Custom automation tools, data processing, and API integrations to accelerate your growth."
+      keywords="micro SaaS, SaaS development, automation tools, API integration, business intelligence, custom software"
+      canonical="https://ziontechgroup.com/micro-saas"
+    >
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex items-center justify-center mb-6">
-              <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-              <h1 className="text-4xl md:text-6xl font-bold">
-                Micro{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                  SaaS
-                </span>
-              </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Your SaaS
+      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Innovative 
+              <span className="text-purple-400"> Micro SaaS Solutions</span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl mb-8 text-blue-100"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Transform your business with our cutting-edge micro SaaS platforms. 
+              From workflow automation to data processing, we create powerful tools 
+              that drive efficiency and growth.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Free Consultation
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                View All Services
+              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Request Quote
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Solutions Overview */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Micro SaaS Products
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful, focused solutions designed to solve specific business challenges and drive operational efficiency.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {
-              const IconComponent = product.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-                    product.popular ? 'ring-2 ring-purple-200' : ''
-                  }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  {product.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        Popular
-                      </span>
-                    </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSaasSolutions.map((solution, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="text-3xl mb-4">
+                  <solution.icon className="w-12 h-12 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+                
+                {/* Features */}
+                <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                  {solution.features.slice(0, 4).map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                  {solution.features.length > 4 && (
+                    <li className="text-purple-600 font-medium">
+                      +{solution.features.length - 4} more features
+                    </li>
                   )}
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {product.description}
-                  </p>
-                  
+                </ul>
+
+                {/* Benefits */}
+                {solution.benefits && (
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
-                          {feature}
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <ArrowRight className="w-3 h-3 text-purple-500 mr-1" />
+                          {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  <div className="mb-4">
-                    <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Micro SaaS?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built for modern businesses that need fast, reliable, and scalable solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Proven Results
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our Micro SaaS solutions deliver measurable business impact.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
-                    {benefit.stat}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                className={`p-8 rounded-xl shadow-lg ${
-                  tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
                 )}
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {tier.name}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {tier.description}
-                </p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-purple-600">{tier.price}</span>
-                  <span className="text-gray-600">{tier.period}</span>
+
+                {/* Pricing */}
+                <div className="border-t pt-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-lg font-bold text-purple-600">{solution.price}</span>
+                    {solution.setupTime && (
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        {solution.setupTime}
+                      </span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <p className="text-xs text-gray-500">
+                      Market rate: {solution.marketPrice}
+                    </p>
+                  )}
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    tier.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
-                >
-                  <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Launch Your Micro SaaS?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
+      {/* Industries Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our micro SaaS solutions are tailored to meet the unique needs of various industries.
             </p>
-            <div className="mb-8">
-              <p className="text-lg text-purple-100 mb-2">
-                📞 <strong>Call us:</strong> +1 302 464 0950
-              </p>
-              <p className="text-lg text-purple-100 mb-2">
-                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
-              </p>
-              <p className="text-lg text-purple-100">
-                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Building
-              </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-            </div>
-          </motion.div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <motion.div 
+                key={index}
+                className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="text-4xl mb-4">{industry.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{industry.title}</h3>
+                <p className="text-gray-600">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
-    </div>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div 
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Micro SaaS Solution?</h2>
+          <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
+            Join hundreds of companies that trust Zion Tech Group for their micro SaaS needs. 
+            Let's discuss how we can help accelerate your digital transformation.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Get Free Consultation
+            </Link>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="flex items-center justify-center">
+              <Phone className="w-6 h-6 mr-2" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <Mail className="w-6 h-6 mr-2" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <MapPin className="w-6 h-6 mr-2" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }

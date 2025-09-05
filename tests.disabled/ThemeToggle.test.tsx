@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface ThemeToggle.testProps {
@@ -12,3 +14,4 @@ export default function ThemeToggle.test({ }: ThemeToggle.testProps) {
     </div>
   );
 }
+>>>>>>> main

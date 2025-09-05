@@ -1,58 +1,138 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
-import Layout from "../../components/Layout";
+import { 
+  Rocket, 
+  Zap, 
+  DollarSign, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Cloud,
+  Shield,
+  BarChart3,
+  Settings,
+  Target,
+  TrendingUp
+} from 'lucide-react';
+import Layout from '../../components/Layout';
 
 const features = [
   {
-    title: 'Rapid Prototyping',
-    description: 'Quick MVP development to validate your ideas and get to market fast',
+    title: "Quick Setup",
+    description: "Get up and running in days, not months",
     icon: Zap,
-    benefits: ['2-4 Week MVPs', 'Agile Development', 'User Feedback Integration', 'Iterative Improvement']
+    benefits: [
+      "Pre-built templates",
+      "One-click deployment",
+      "Automated configuration",
+      "Instant scaling"
+    ]
   },
   {
-    title: 'Cost Optimization',
-    description: 'Budget-friendly solutions that maximize your startup resources',
+    title: "Cost Effective",
+    description: "Affordable solutions that grow with your budget",
     icon: DollarSign,
-    benefits: ['Flexible Pricing', 'Pay-as-you-grow', 'No Hidden Costs', 'ROI Focused']
+    benefits: [
+      "Pay-as-you-scale pricing",
+      "No upfront costs",
+      "Transparent billing",
+      "Budget-friendly options"
+    ]
   },
   {
-    title: 'Scalable Infrastructure',
-    description: 'Technology that grows with your startup from day one',
+    title: "Scalable Growth",
+    description: "Solutions that grow with your startup",
     icon: TrendingUp,
-    benefits: ['Auto-scaling', 'Cloud-native', 'Performance Optimized', 'Future-proof']
+    benefits: [
+      "Auto-scaling infrastructure",
+      "Modular architecture",
+      "Easy upgrades",
+      "Future-proof design"
+    ]
   },
   {
-    title: 'Expert Guidance',
-    description: 'Mentorship and technical guidance from experienced entrepreneurs',
+    title: "Expert Guidance",
+    description: "Get the support you need to succeed",
     icon: Users,
-    benefits: ['Technical Mentorship', 'Best Practices', 'Industry Insights', 'Ongoing Support']
+    benefits: [
+      "Dedicated startup advisor",
+      "Best practices guidance",
+      "Technical support",
+      "Growth strategy consulting"
+    ]
   }
 ];
 
-const services = [
-  { title: 'MVP Development', description: 'Minimum viable product development in 2-4 weeks' },
-  { title: 'Tech Stack Selection', description: 'Choose the right technologies for your startup' },
-  { title: 'UI/UX Design', description: 'User-centered design that converts visitors to customers' },
-  { title: 'API Development', description: 'Robust APIs for your mobile and web applications' },
-  { title: 'Cloud Setup', description: 'Scalable cloud infrastructure from day one' },
-  { title: 'Growth Hacking', description: 'Technical solutions to accelerate user acquisition' }
+const packages = [
+  {
+    name: "Launch Package",
+    price: "$2,999",
+    duration: "1-2 weeks",
+    description: "Perfect for MVP development and initial launch",
+    features: [
+      "Basic cloud setup",
+      "Core functionality",
+      "Security essentials",
+      "1 month support"
+    ],
+    popular: false
+  },
+  {
+    name: "Growth Package",
+    price: "$7,999",
+    duration: "2-4 weeks",
+    description: "Ideal for scaling startups with growing user base",
+    features: [
+      "Advanced cloud infrastructure",
+      "Analytics & monitoring",
+      "API development",
+      "3 months support"
+    ],
+    popular: true
+  },
+  {
+    name: "Scale Package",
+    price: "$19,999",
+    duration: "4-8 weeks",
+    description: "Complete solution for established startups",
+    features: [
+      "Enterprise-grade infrastructure",
+      "Custom integrations",
+      "Advanced security",
+      "6 months support"
+    ],
+    popular: false
+  }
 ];
 
-const stats = [
-  { number: '100+', label: 'Startups Helped' },
-  { number: '300+', label: 'Projects Delivered' },
-  { number: '300%', label: 'Average Growth' },
-  { number: '2-4', label: 'Weeks to MVP' }
+const successStories = [
+  {
+    company: "TechStart Inc.",
+    industry: "FinTech",
+    growth: "300% user growth",
+    description: "Scaled from 1K to 100K users in 6 months"
+  },
+  {
+    company: "HealthTech Solutions",
+    industry: "Healthcare",
+    growth: "500% revenue increase",
+    description: "Expanded to 5 new markets with our platform"
+  },
+  {
+    company: "EduTech Platform",
+    industry: "Education",
+    growth: "1000% user growth",
+    description: "Served 50K+ students with our learning platform"
+  }
 ];
 
 export default function StartupSolutionsPage() {
   return (
-    <Layout
+    <Layout 
       title="Startup Solutions - Zion Tech Group"
-      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions."
-      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions"
+      description="Fast, affordable technology solutions for startups. Quick setup, cost-effective pricing, and expert guidance to help your startup succeed."
+      keywords="startup solutions, MVP development, startup technology, affordable tech solutions, startup consulting"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -67,53 +147,27 @@ export default function StartupSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
               <div className="flex items-center justify-center mb-6">
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>
+                <h1 className="text-4xl md:text-6xl font-bold">
+                  Startup Solutions
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Rapid development and scaling solutions designed specifically for startups and growing businesses
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Fast, affordable technology solutions designed specifically for startups. 
+                Get to market quickly with our proven startup packages and expert guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Start Your MVP
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Startup Quote
                 </Link>
-                <Link
-                  href="/case-studies"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  Success Stories
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  View All Solutions
                 </Link>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -121,80 +175,182 @@ export default function StartupSolutionsPage() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Startups Choose Us
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We understand the unique challenges startups face and have designed our solutions 
+                to help you succeed from day one.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {feature.description}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Packages Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Startup Packages
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Choose the package that fits your startup's current needs and budget.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {packages.map((pkg, index) => (
                 <motion.div
-                  key={feature.title}
+                  key={index}
+                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+                    pkg.popular ? 'ring-2 ring-green-500 scale-105' : ''
+                  }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-                      <feature.icon className="w-8 h-8 text-white" />
+                  {pkg.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
-                    </div>
+                  )}
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {pkg.name}
+                  </h3>
+                  
+                  <div className="text-4xl font-bold text-green-600 mb-2">
+                    {pkg.price}
                   </div>
+                  
+                  <div className="text-gray-500 mb-4">
+                    {pkg.duration}
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {pkg.description}
+                  </p>
 
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        {benefit}
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
+
+                  <Link
+                    href="/contact"
+                    className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      pkg.popular
+                        ? 'bg-green-600 text-white hover:bg-green-700'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-20 bg-white">
+        {/* Success Stories Section */}
+        <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
             <motion.div
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                Startup Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive startup services designed to help you build, launch, and scale your business
+              <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                See how we've helped startups achieve remarkable growth and success.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {successStories.map((story, index) => (
                 <motion.div
-                  key={service.title}
+                  key={index}
+                  className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
                 >
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <div className="text-2xl font-bold text-green-400 mb-2">
+                    {story.growth}
+                  </div>
+                  <div className="text-lg font-semibold text-white mb-2">
+                    {story.company}
+                  </div>
+                  <div className="text-sm text-gray-400 mb-3">
+                    {story.industry}
+                  </div>
+                  <div className="text-gray-300 text-sm">
+                    {story.description}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -208,26 +364,20 @@ export default function StartupSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                 Ready to Launch Your Startup?
               </h2>
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Let's turn your idea into a successful product with our rapid development and scaling solutions
+                Let's turn your startup idea into a reality with our proven technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   Start Your Project
-                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link
-                  href="/solutions"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"
-                >
-                  View All Solutions
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  Meet Our Team
                 </Link>
               </div>
             </motion.div>

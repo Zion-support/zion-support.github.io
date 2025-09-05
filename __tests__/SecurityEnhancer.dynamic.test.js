@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
-
-interface SecurityEnhancer.dynamic.testProps {
-  // Add props here as needed
-}
-
-export default function SecurityEnhancer.dynamic.test({ }: SecurityEnhancer.dynamic.testProps) {
-  return (
-    <div>
-      <h1>SecurityEnhancer.dynamic.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic';
+describe('SecurityEnhancerdynamic', () => {
+  test('renders without crashing', () => {
+    render(<SecurityEnhancerdynamic />);
+    expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+});
+=======
+<<<<<<< HEAD
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityEnhancerdynamic from "./components/SecurityEnhancer.dynamic"; describe("SecurityEnhancerdynamic",() => { test("renders without crashing",() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId("securityenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityEnhancerdynamic />)}); test("handles user interactions",() => { render(<SecurityEnhancerdynamic />)}); test("applies correct styling",() => { render(<SecurityEnhancerdynamic />)})});''"
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
+>>>>>>> main
+>>>>>>> main

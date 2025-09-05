@@ -1,9 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
+import {
   ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
   TrendingUp,
   CheckCircle,
   Users,
@@ -11,12 +13,10 @@ import {
   Globe,
   Award,
   Clock,
-  Target,
-  Zap,
-  Shield,
-  Cloud
+  BarChart3,
+  Cloud,
+  Shield
 } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
 
 const caseStudies = [
   {
@@ -35,79 +35,50 @@ const caseStudies = [
     duration: "3 months",
     team: "8 experts",
     technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
-    category: "AI Solutions",
-    featured: true
+    image: "/images/case-studies/ecommerce-ai.jpg"
   },
   {
     id: 2,
-    title: "Healthcare AI Platform Transformation",
-    client: "MedTech Solutions",
-    industry: "Healthcare",
-    challenge: "Legacy system modernization and AI integration for patient data analysis",
-    solution: "Custom AI platform with real-time analytics and predictive modeling",
+    title: "Cloud Migration for Financial Services",
+    client: "Regional Bank",
+    industry: "Financial Services",
+    challenge: "Legacy systems limiting scalability and innovation",
+    solution: "Complete cloud migration with microservices architecture",
     results: [
-      "40% reduction in diagnosis time",
-      "95% accuracy in predictive analytics",
-      "60% improvement in patient outcomes",
-      "$2M annual cost savings"
+      "99.9% uptime achieved",
+      "50% faster application deployment",
+      "30% reduction in infrastructure costs",
+      "Enhanced security compliance"
     ],
     duration: "6 months",
     team: "12 experts",
-    technologies: ["AI/ML", "Cloud", "Data Analytics", "Security"],
-    category: "AI Solutions",
-    featured: false
+    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
+    image: "/images/case-studies/cloud-migration.jpg"
   },
   {
     id: 3,
-    title: "Enterprise Cloud Migration",
-    client: "Fortune 500 Manufacturing",
-    industry: "Manufacturing",
-    challenge: "Legacy on-premise infrastructure limiting scalability and innovation",
-    solution: "Complete cloud migration with microservices architecture",
-    results: [
-      "50% reduction in infrastructure costs",
-      "99.9% uptime achieved",
-      "3x faster deployment cycles",
-      "40% improvement in performance"
-    ],
-    duration: "8 months",
-    team: "15 experts",
-    technologies: ["Cloud", "DevOps", "Kubernetes", "Monitoring"],
-    category: "Cloud Solutions",
-    featured: true
-  },
-  {
-    id: 4,
-    title: "Fintech Security Platform",
-    client: "Digital Banking Startup",
-    industry: "Financial Services",
-    challenge: "Building secure, compliant platform for digital banking services",
-    solution: "End-to-end security platform with fraud detection and compliance automation",
+    title: "Cybersecurity Enhancement for Healthcare",
+    client: "Healthcare Network",
+    industry: "Healthcare",
+    challenge: "Increasing cyber threats and compliance requirements",
+    solution: "Comprehensive security framework and threat detection system",
     results: [
       "Zero security breaches",
-      "SOC 2 compliance achieved",
-      "99.99% fraud detection accuracy",
-      "50% faster compliance reporting"
+      "100% compliance with HIPAA",
+      "24/7 threat monitoring",
+      "50% faster incident response"
     ],
     duration: "4 months",
-    team: "10 experts",
-    technologies: ["Security", "Blockchain", "Compliance", "AI"],
-    category: "Cybersecurity",
-    featured: false
+    team: "6 experts",
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
+    image: "/images/case-studies/healthcare-security.jpg"
   }
-];
-
-const categories = [
-  { name: "All", count: caseStudies.length },
-  { name: "AI Solutions", count: caseStudies.filter(c => c.category === "AI Solutions").length },
-  { name: "Cloud Solutions", count: caseStudies.filter(c => c.category === "Cloud Solutions").length },
-  { name: "Cybersecurity", count: caseStudies.filter(c => c.category === "Cybersecurity").length }
 ];
 
 const stats = [
   { number: "500+", label: "Projects Completed" },
-  { number: "99%", label: "Client Satisfaction" },
-  { number: "$50M+", label: "Cost Savings Delivered" },
+  { number: "50+", label: "Happy Clients" },
+  { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -115,15 +86,15 @@ export default function CaseStudiesPage() {
   return (
     <MainLayout
       title="Case Studies - Zion Tech Group"
-      description="Explore our success stories and see how we've helped businesses transform with cutting-edge technology solutions."
-      keywords="case studies, success stories, client projects, technology solutions, business transformation"
+      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
+      keywords="case studies, success stories, client projects, technology solutions, AI implementation"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -134,29 +105,21 @@ export default function CaseStudiesPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories That{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Inspire Innovation
+                Success{' '}
+                <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+                  Stories
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover how we've helped businesses across industries transform their operations 
-                with cutting-edge technology solutions and achieve remarkable results.
+                Discover how we've helped businesses transform and achieve their goals 
+                through innovative technology solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#case-studies" className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  View Case Studies
-                </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Start Your Project
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -168,7 +131,7 @@ export default function CaseStudiesPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-4xl font-bold text-indigo-600 mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -178,13 +141,13 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Case Studies Section */}
-        <section id="case-studies" className="py-20 bg-white">
+        {/* Case Studies */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -192,134 +155,131 @@ export default function CaseStudiesPage() {
                 Featured Case Studies
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore our most successful projects and see the real impact of our technology solutions.
+                Real projects, real results. See how we've helped businesses across 
+                different industries achieve their technology goals.
               </p>
             </motion.div>
 
-            <div className="space-y-12">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={study.id}
-                  className={`bg-white rounded-lg shadow-lg overflow-hidden ${
-                    study.featured ? 'ring-2 ring-indigo-500' : ''
-                  }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  {study.featured && (
-                    <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2">
-                      <span className="text-sm font-semibold">Featured Project</span>
-                    </div>
-                  )}
-                  
-                  <div className="p-8">
-                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-4">
-                          <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">
-                            {study.category}
-                          </span>
-                          <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
+            <div className="max-w-6xl mx-auto">
+              <div className="space-y-16">
+                {caseStudies.map((study, index) => (
+                  <motion.div
+                    key={study.id}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
+                      <div className="p-8">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-4">
                             {study.industry}
                           </span>
+                          <span className="text-gray-500 text-sm">{study.duration}</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{study.title}</h3>
-                        <p className="text-lg text-indigo-600 font-semibold mb-4">{study.client}</p>
-                        <p className="text-gray-600 mb-6">{study.challenge}</p>
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Target className="w-5 h-5 mr-2 text-indigo-600" />
-                          Solution
-                        </h4>
-                        <p className="text-gray-600 mb-4">{study.solution}</p>
-                        
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Zap className="w-5 h-5 mr-2 text-indigo-600" />
-                          Technologies Used
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                          {study.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                          <strong>Client:</strong> {study.client}
+                        </p>
+
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                            <p className="text-gray-600">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                            <p className="text-gray-600">{study.solution}</p>
+                          </div>
+                        </div>
+
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                          <ul className="space-y-2">
+                            {study.results.map((result, idx) => (
+                              <li key={idx} className="flex items-center text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                {result}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 mb-6">
                           {study.technologies.map((tech, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
-                            >
+                            <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
                               {tech}
                             </span>
                           ))}
                         </div>
-                      </div>
 
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <TrendingUp className="w-5 h-5 mr-2 text-green-600" />
-                          Results
-                        </h4>
-                        <ul className="space-y-3">
-                          {study.results.map((result, idx) => (
-                            <li key={idx} className="flex items-center text-gray-600">
-                              <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-6 border-t border-gray-200">
-                      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-4 sm:mb-0">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          Duration: {study.duration}
-                        </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-2" />
-                          Team: {study.team}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Users className="w-4 h-4 mr-2" />
+                            {study.team}
+                          </div>
+                          <a
+                            href={`/case-studies/${study.id}`}
+                            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+                          >
+                            Read Full Case Study
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </a>
                         </div>
                       </div>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                      >
-                        Start Similar Project
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+
+                      <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">
+                        <div className="text-center text-white">
+                          <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />
+                          <h4 className="text-xl font-semibold mb-2">Project Overview</h4>
+                          <p className="text-green-100">
+                            A comprehensive solution that transformed our client's business operations
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+          <div className="container mx-auto px-4">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Create Your Success Story?
+                Ready to Start Your Success Story?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's work together to transform your business with cutting-edge technology solutions.
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Let's work together to create your own success story. 
+                Contact us today to discuss your project.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="text-center sm:text-left">
-                  <p className="text-indigo-100 mb-1">📞 <strong>Call:</strong> +1 302 464 0950</p>
-                  <p className="text-indigo-100">📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
-                </div>
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
                   Start Your Project
-                </Link>
+                </a>
+                <a
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
+                >
+                  Explore Our Services
+                </a>
               </div>
             </motion.div>
           </div>

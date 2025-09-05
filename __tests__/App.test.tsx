@@ -1,13 +1,26 @@
-import { render, screen } from '@testing-library/react';''
-import App from '../src/App';''
-describe('App', () => {''}
-  it('renders without crashing', () => {'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+import { render, screen } from '@testing-library/react';
+import App from '../src/App';
+describe('App', () => {
+  it('renders without crashing', () => {
     render(<App />);
-</App>
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  it('has proper heading structure', () => {
     render(<App />);
-</App>'
-import { render,screen } from '@testing-library/react'; import App from '../src/App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
-}); it('has proper heading structure',() => { render(<App />); const heading = screen.getByRole('heading',{ level: '1' }
-}); expect(heading).toBeInTheDocument()})}
-});'
-</App>'
+<<<<<<< HEAD
+    const heading = screen.getByRole('heading', { level: '1' });
+    expect(heading).toBeInTheDocument();
+  });
+});
+=======
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
+  });
+});
+>>>>>>> main
+>>>>>>> main

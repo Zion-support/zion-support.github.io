@@ -1,347 +1,418 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Shield, 
-  Zap, 
-  CheckCircle,
+import {
+  Cloud,
   ArrowRight,
-  BarChart3,
+  CheckCircle,
+  Star,
   Users,
-  Settings,
+  BarChart3,
+  Clock,
+  Award,
+  Shield,
   Database,
+  Server,
+  Zap,
+  Target,
+  TrendingUp,
   Globe,
+  Building,
+  Rocket,
   Lock,
-  Smartphone,
-  Brain
+  RefreshCw,
+  DollarSign
 } from 'lucide-react';
-import Layout from "../../components/Layout";
+import Layout from '../../components/Layout';
 
-const phases = [
+const migrationSteps = [
   {
+    step: '01',
     title: 'Assessment & Planning',
-    description: 'Comprehensive analysis of current infrastructure and migration strategy development.',
-    icon: BarChart3,
-    steps: [
-      'Infrastructure audit',
-      'Workload analysis',
-      'Migration strategy',
-      'Risk assessment'
-    ]
+    description: 'Comprehensive analysis of your current infrastructure and migration strategy development.',
+    icon: Target,
+    duration: '1-2 weeks',
+    features: ['Infrastructure audit', 'Dependency mapping', 'Risk assessment', 'Migration roadmap']
   },
   {
+    step: '02',
     title: 'Design & Architecture',
-    description: 'Cloud-native architecture design and security framework implementation.',
-    icon: Settings,
-    steps: [
-      'Cloud architecture design',
-      'Security framework',
-      'Scalability planning',
-      'Cost optimization'
-    ]
+    description: 'Design cloud-native architecture optimized for performance, security, and scalability.',
+    icon: Building,
+    duration: '2-4 weeks',
+    features: ['Cloud architecture design', 'Security planning', 'Cost optimization', 'Performance tuning']
   },
   {
+    step: '03',
     title: 'Migration Execution',
-    description: 'Phased migration with minimal downtime and comprehensive testing.',
-    icon: Cloud,
-    steps: [
-      'Data migration',
-      'Application migration',
-      'Testing & validation',
-      'Go-live support'
-    ]
+    description: 'Seamless migration of applications, data, and services to the cloud platform.',
+    icon: RefreshCw,
+    duration: '4-12 weeks',
+    features: ['Data migration', 'Application deployment', 'Service configuration', 'Testing & validation']
   },
   {
-    title: 'Optimization',
-    description: 'Continuous monitoring and optimization for peak performance.',
+    step: '04',
+    title: 'Optimization & Support',
+    description: 'Continuous optimization and ongoing support to ensure peak performance.',
     icon: Zap,
-    steps: [
-      'Performance monitoring',
-      'Cost optimization',
-      'Security updates',
-      'Continuous improvement'
-    ]
+    duration: 'Ongoing',
+    features: ['Performance monitoring', 'Cost optimization', 'Security updates', '24/7 support']
   }
 ];
 
-const services = [
+const cloudProviders = [
   {
-    title: 'AWS Migration',
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.',
+    name: 'Amazon Web Services (AWS)',
     icon: Cloud,
-    features: [
-      'EC2 instance migration',
-      'RDS database migration',
-      'S3 storage migration',
-      'Lambda serverless functions'
-    ]
+    description: 'Comprehensive cloud platform with extensive services and global reach.',
+    features: ['EC2, S3, RDS', 'Lambda functions', 'CloudFront CDN', 'Auto Scaling'],
+    pricing: 'Pay-as-you-go'
   },
   {
-    title: 'Azure Migration',
-    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.',
-    icon: Shield,
-    features: [
-      'Azure Virtual Machines',
-      'Azure SQL Database',
-      'Azure Storage migration',
-      'Azure Functions deployment'
-    ]
+    name: 'Microsoft Azure',
+    icon: Cloud,
+    description: 'Enterprise-focused cloud platform with strong integration capabilities.',
+    features: ['Virtual Machines', 'Azure SQL', 'Active Directory', 'DevOps tools'],
+    pricing: 'Flexible plans'
   },
   {
-    title: 'Google Cloud Migration',
-    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.',
-    icon: Brain,
-    features: [
-      'Compute Engine migration',
-      'Cloud SQL migration',
-      'Cloud Storage migration',
-      'Cloud Functions deployment'
-    ]
-  },
-  {
-    title: 'Multi-Cloud Strategy',
-    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.',
-    icon: Globe,
-    features: [
-      'Cross-cloud integration',
-      'Disaster recovery',
-      'Load balancing',
-      'Cost optimization'
-    ]
+    name: 'Google Cloud Platform',
+    icon: Cloud,
+    description: 'AI and data-focused cloud platform with advanced analytics capabilities.',
+    features: ['BigQuery', 'AI/ML services', 'Kubernetes Engine', 'Cloud Functions'],
+    pricing: 'Competitive rates'
   }
 ];
 
 const benefits = [
   {
-    title: 'Cost Reduction',
-    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
-    icon: BarChart3
-  },
-  {
-    title: 'Enhanced Security',
-    description: 'Enterprise-grade security with automated updates and monitoring.',
-    icon: Shield
-  },
-  {
-    title: 'Improved Scalability',
+    icon: TrendingUp,
+    title: 'Scalability',
     description: 'Scale resources up or down based on demand automatically.',
-    icon: Zap
+    metric: '99.9%'
   },
   {
-    title: 'Better Performance',
-    description: 'Faster load times and improved application performance.',
-    icon: Smartphone
+    icon: DollarSign,
+    title: 'Cost Savings',
+    description: 'Reduce infrastructure costs with pay-as-you-go pricing.',
+    metric: '30%'
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'Enterprise-grade security with built-in compliance features.',
+    metric: '24/7'
+  },
+  {
+    icon: Zap,
+    title: 'Performance',
+    description: 'Improved performance with global CDN and optimized infrastructure.',
+    metric: '50%'
   }
 ];
 
-export default function CloudMigrationPage() {
+const migrationTypes = [
+  {
+    type: 'Lift and Shift',
+    description: 'Move applications to cloud with minimal changes',
+    icon: ArrowRight,
+    duration: '2-4 weeks',
+    complexity: 'Low',
+    cost: 'Low'
+  },
+  {
+    type: 'Replatforming',
+    description: 'Optimize applications for cloud-native features',
+    icon: RefreshCw,
+    duration: '4-8 weeks',
+    complexity: 'Medium',
+    cost: 'Medium'
+  },
+  {
+    type: 'Refactoring',
+    description: 'Completely redesign applications for cloud architecture',
+    icon: Building,
+    duration: '8-16 weeks',
+    complexity: 'High',
+    cost: 'High'
+  }
+];
+
+export default function CloudMigration() {
   return (
-    <Layout 
+    <Layout
       title="Cloud Migration Solutions - Zion Tech Group"
-      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."
-      keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"
+      description="Migrate your infrastructure to the cloud with our expert cloud migration services. AWS, Azure, GCP support."
+      keywords="cloud migration, AWS migration, Azure migration, GCP migration, cloud infrastructure, cloud services"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
-              <div className="flex items-center justify-center mb-6">
-                <Cloud className="w-12 h-12 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Cloud
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Migration Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services. 
-                Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Cloud{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Migration
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Seamlessly migrate your infrastructure to the cloud with our expert migration services. AWS, Azure, and Google Cloud Platform support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Migration
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Start Migration
                 </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Migration Success Stories
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  View Success Stories
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Process Section */}
+        {/* Migration Process */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Cloud Migration Process
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our Migration Process
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                A proven methodology that ensures successful cloud migration 
-                with minimal downtime and maximum security.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We follow a proven methodology to ensure smooth, secure, and cost-effective cloud migration.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {phases.map((phase, index) => (
-                <motion.div
-                  key={phase.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <phase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>
-                  
-                  <ul className="space-y-2 text-left">
-                    {phase.steps.map((step, stepIndex) => (
-                      <li key={stepIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {step}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Cloud Migration Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from leading cloud providers or implement a multi-cloud strategy 
-                for maximum flexibility and redundancy.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
+              {migrationSteps.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                      {step.step}
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                    <p className="text-gray-600 mb-4">{step.description}</p>
+                    <div className="text-sm text-blue-600 font-semibold mb-4">
+                      Duration: {step.duration}
+                    </div>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {step.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Cloud Providers */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Cloud Providers We Support
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We work with all major cloud providers to give you the best options for your specific needs.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {cloudProviders.map((provider, index) => {
+                const IconComponent = provider.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-12 h-12" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{provider.name}</h3>
+                    <p className="text-gray-600 mb-4">{provider.description}</p>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                      <ul className="text-sm text-gray-600 space-y-1">
+                        {provider.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="text-sm text-blue-600 font-semibold">
+                      Pricing: {provider.pricing}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Migration Types */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Migration Strategies
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Choose the right migration approach based on your business requirements and timeline.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {migrationTypes.map((type, index) => {
+                const IconComponent = type.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-12 h-12 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{type.type}</h3>
+                    <p className="text-gray-600 mb-4">{type.description}</p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Duration:</span>
+                        <span className="font-semibold">{type.duration}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Complexity:</span>
+                        <span className="font-semibold">{type.complexity}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Cost:</span>
+                        <span className="font-semibold">{type.cost}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Why Choose Our Cloud Migration?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Migration Benefits
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our cloud migration services deliver measurable improvements in cost, 
-                performance, and security.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Experience the advantages of cloud migration with improved performance, security, and cost efficiency.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-                </motion.div>
-              ))}
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-12 h-12 mx-auto" />
+                    </div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Move to the Cloud?
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Migrate to the Cloud?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let our cloud migration experts help you seamlessly transition to the cloud 
-                with minimal downtime and maximum security.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let our cloud experts help you migrate your infrastructure with minimal downtime and maximum efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Cloud Migration
+                  Get Free Assessment
                 </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View All Solutions
                 </Link>
               </div>
             </motion.div>

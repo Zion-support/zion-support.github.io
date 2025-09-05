@@ -1,167 +1,155 @@
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  ArrowRight,
+import Link from 'next/link';
+import {
+  FileText,
   Download,
   Calendar,
   User,
-  Tag,
-  ExternalLink,
+  Eye,
   Search,
   Filter,
+  ArrowRight,
+  BookOpen,
   Star,
   Clock,
-  Eye
+  Tag
 } from 'lucide-react';
 
 export default function WhitePapersPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Papers' },
+    { id: 'all', name: 'All White Papers' },
     { id: 'ai', name: 'AI & Machine Learning' },
-    { id: 'cloud', name: 'Cloud Computing' },
+    { id: 'cloud', name: 'Cloud Solutions' },
     { id: 'security', name: 'Cybersecurity' },
-    { id: 'business', name: 'Business Strategy' },
-    { id: 'technology', name: 'Technology Trends' }
+    { id: 'development', name: 'Development' },
+    { id: 'business', name: 'Business Strategy' }
   ];
 
   const whitePapers = [
     {
       id: 1,
-      title: "The Future of Artificial Intelligence in Business",
-      description: "A comprehensive analysis of how AI is transforming business operations, with insights on implementation strategies and ROI measurement.",
-      author: "Dr. Sarah Johnson",
-      publishDate: "2024-01-15",
-      category: "ai",
-      tags: ["AI", "Business", "Strategy", "Innovation"],
-      downloadCount: "3,247",
-      downloadUrl: "/downloads/ai-business-future.pdf",
-      featured: true,
-      readTime: "15 min read",
-      thumbnail: "/images/white-papers/ai-business.jpg"
+      title: 'The Future of Artificial Intelligence in Business',
+      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
+      category: 'ai',
+      author: 'Dr. Sarah Johnson',
+      authorTitle: 'AI Research Director',
+      publishDate: '2024-01-10',
+      readTime: '15 min read',
+      downloads: 2450,
+      views: 8900,
+      rating: 4.8,
+      tags: ['AI', 'Machine Learning', 'Business Transformation', 'ROI'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: true
     },
     {
       id: 2,
-      title: "Cloud Security Best Practices for Enterprise",
-      description: "Essential security measures and best practices for protecting enterprise data and applications in cloud environments.",
-      author: "Mike Chen",
-      publishDate: "2024-01-10",
-      category: "security",
-      tags: ["Security", "Cloud", "Enterprise", "Compliance"],
-      downloadCount: "2,891",
-      downloadUrl: "/downloads/cloud-security-enterprise.pdf",
-      featured: true,
-      readTime: "12 min read",
-      thumbnail: "/images/white-papers/cloud-security.jpg"
+      title: 'Cloud Migration Strategies for Enterprise',
+      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
+      category: 'cloud',
+      author: 'Mike Chen',
+      authorTitle: 'Cloud Solutions Architect',
+      publishDate: '2024-01-05',
+      readTime: '12 min read',
+      downloads: 1890,
+      views: 7200,
+      rating: 4.7,
+      tags: ['Cloud Computing', 'Migration', 'Enterprise', 'Security'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: true
     },
     {
       id: 3,
-      title: "Digital Transformation: A Strategic Guide",
-      description: "A strategic framework for organizations looking to embark on digital transformation initiatives and achieve sustainable growth.",
-      author: "Emily Watson",
-      publishDate: "2024-01-05",
-      category: "business",
-      tags: ["Digital Transformation", "Strategy", "Innovation", "Growth"],
-      downloadCount: "4,156",
-      downloadUrl: "/downloads/digital-transformation-guide.pdf",
-      featured: false,
-      readTime: "20 min read",
-      thumbnail: "/images/white-papers/digital-transformation.jpg"
+      title: 'Cybersecurity in the Age of Remote Work',
+      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
+      category: 'security',
+      author: 'Alex Rodriguez',
+      authorTitle: 'Chief Security Officer',
+      publishDate: '2023-12-28',
+      readTime: '18 min read',
+      downloads: 3200,
+      views: 12500,
+      rating: 4.9,
+      tags: ['Cybersecurity', 'Remote Work', 'Zero Trust', 'Compliance'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: false
     },
     {
       id: 4,
-      title: "Machine Learning Implementation in Healthcare",
-      description: "Exploring the applications and benefits of machine learning in healthcare, including case studies and implementation challenges.",
-      author: "Dr. Lisa Park",
-      publishDate: "2023-12-20",
-      category: "ai",
-      tags: ["AI", "Healthcare", "Machine Learning", "Case Studies"],
-      downloadCount: "2,103",
-      downloadUrl: "/downloads/ml-healthcare.pdf",
-      featured: false,
-      readTime: "18 min read",
-      thumbnail: "/images/white-papers/ml-healthcare.jpg"
+      title: 'Building Scalable Web Applications',
+      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
+      category: 'development',
+      author: 'Emily Watson',
+      authorTitle: 'Senior Full-Stack Developer',
+      publishDate: '2023-12-20',
+      readTime: '20 min read',
+      downloads: 1650,
+      views: 6800,
+      rating: 4.6,
+      tags: ['Web Development', 'Scalability', 'Architecture', 'Performance'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: false
     },
     {
       id: 5,
-      title: "Cybersecurity Trends and Threats 2024",
-      description: "An in-depth analysis of emerging cybersecurity threats and trends, with recommendations for organizations to stay protected.",
-      author: "Alex Rodriguez",
-      publishDate: "2023-12-15",
-      category: "security",
-      tags: ["Cybersecurity", "Threats", "Trends", "Protection"],
-      downloadCount: "3,892",
-      downloadUrl: "/downloads/cybersecurity-trends-2024.pdf",
-      featured: true,
-      readTime: "14 min read",
-      thumbnail: "/images/white-papers/cybersecurity-trends.jpg"
+      title: 'Digital Transformation Roadmap',
+      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
+      category: 'business',
+      author: 'David Kim',
+      authorTitle: 'Digital Transformation Consultant',
+      publishDate: '2023-12-15',
+      readTime: '14 min read',
+      downloads: 2100,
+      views: 9500,
+      rating: 4.8,
+      tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Technology'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: true
     },
     {
       id: 6,
-      title: "The Economics of Cloud Computing",
-      description: "A detailed analysis of cloud computing economics, cost optimization strategies, and ROI measurement for enterprise adoption.",
-      author: "David Kim",
-      publishDate: "2023-12-10",
-      category: "cloud",
-      tags: ["Cloud Computing", "Economics", "ROI", "Cost Optimization"],
-      downloadCount: "1,847",
-      downloadUrl: "/downloads/cloud-economics.pdf",
-      featured: false,
-      readTime: "16 min read",
-      thumbnail: "/images/white-papers/cloud-economics.jpg"
-    },
-    {
-      id: 7,
-      title: "Edge Computing: The Next Frontier",
-      description: "Exploring the potential of edge computing and its impact on IoT, real-time applications, and distributed systems.",
-      author: "Rachel Green",
-      publishDate: "2023-12-05",
-      category: "technology",
-      tags: ["Edge Computing", "IoT", "Real-time", "Distributed Systems"],
-      downloadCount: "2,634",
-      downloadUrl: "/downloads/edge-computing-frontier.pdf",
-      featured: false,
-      readTime: "13 min read",
-      thumbnail: "/images/white-papers/edge-computing.jpg"
-    },
-    {
-      id: 8,
-      title: "Data Privacy in the Age of AI",
-      description: "Understanding data privacy challenges and solutions in AI-driven applications, with compliance and ethical considerations.",
-      author: "Dr. James Wilson",
-      publishDate: "2023-11-28",
-      category: "ai",
-      tags: ["Data Privacy", "AI", "Compliance", "Ethics"],
-      downloadCount: "2,456",
-      downloadUrl: "/downloads/data-privacy-ai.pdf",
-      featured: false,
-      readTime: "17 min read",
-      thumbnail: "/images/white-papers/data-privacy.jpg"
+      title: 'Machine Learning Model Deployment Best Practices',
+      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
+      category: 'ai',
+      author: 'Dr. Sarah Johnson',
+      authorTitle: 'AI Research Director',
+      publishDate: '2023-12-10',
+      readTime: '16 min read',
+      downloads: 1780,
+      views: 7600,
+      rating: 4.7,
+      tags: ['Machine Learning', 'MLOps', 'Deployment', 'Production'],
+      image: '/api/placeholder/400/250',
+      pdfUrl: '#',
+      isFeatured: false
     }
   ];
 
-  const filteredPapers = whitePapers.filter(paper => {
-    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
+  const filteredWhitePapers = whitePapers.filter(paper => {
     const matchesSearch = paper.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         paper.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
+    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
 
-  const featuredPapers = filteredPapers.filter(paper => paper.featured);
-  const regularPapers = filteredPapers.filter(paper => !paper.featured);
+  const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
 
   return (
     <MainLayout
       title="White Papers - Zion Tech Group"
-      description="Access our comprehensive collection of white papers on AI, cloud computing, cybersecurity, and technology trends. Download free research reports and insights."
-      keywords="white papers, research reports, AI insights, cloud computing, cybersecurity, technology trends, free downloads"
+      description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
+      keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -185,163 +173,142 @@ export default function WhitePapersPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Access our comprehensive collection of research papers and insights on the latest 
-                technology trends, AI, cloud computing, and cybersecurity.
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Filters */}
-        <section className="py-12 bg-white">
+        {/* Featured White Papers */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="max-w-6xl mx-auto"
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                        selectedCategory === category.id
-                          ? 'bg-indigo-600 text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      {category.name}
-                    </button>
-                  ))}
-                </div>
-                
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                <Star className="w-8 h-8 mr-3 text-yellow-500" />
+                Featured White Papers
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our most popular and highly-rated technical papers.
+              </p>
+            </motion.div>
+
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {featuredPapers.map((paper, index) => (
+                  <motion.div
+                    key={paper.id}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-200 hover:shadow-xl transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={paper.image}
+                        alt={paper.title}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        FEATURED
+                      </div>
+                      <div className="absolute top-4 right-4 bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-sm">
+                        <Star className="w-4 h-4 inline mr-1 text-yellow-500 fill-current" />
+                        {paper.rating}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{paper.title}</h3>
+                      <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
+                      
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center text-sm text-gray-500">
+                          <User className="w-4 h-4 mr-2" />
+                          <span>{paper.author} - {paper.authorTitle}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>{new Date(paper.publishDate).toLocaleDateString()}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-2" />
+                          <span>{paper.readTime}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Eye className="w-4 h-4 mr-2" />
+                          <span>{paper.views.toLocaleString()} views</span>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-1 mb-4">
+                        {paper.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download PDF
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Search and Filter */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search white papers..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   />
                 </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Featured Papers */}
-        {featuredPapers.length > 0 && (
-          <section className="py-20 bg-gray-50">
-            <div className="container mx-auto px-4">
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Featured White Papers
-                </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Our most popular and impactful research papers on cutting-edge technology topics.
-                </p>
-              </motion.div>
-
-              <div className="max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {featuredPapers.map((paper, index) => (
-                    <motion.div
-                      key={paper.id}
-                      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="relative">
-                        <div className="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                          <FileText className="w-16 h-16 text-white opacity-80" />
-                        </div>
-                        <div className="absolute top-4 left-4">
-                          <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center">
-                            <Star className="w-3 h-3 mr-1" />
-                            Featured
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="p-6">
-                        <div className="flex items-center mb-2">
-                          <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs font-semibold">
-                            {categories.find(c => c.id === paper.category)?.name}
-                          </span>
-                        </div>
-
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">
-                          {paper.title}
-                        </h3>
-                        <p className="text-gray-600 mb-4 line-clamp-3">
-                          {paper.description}
-                        </p>
-
-                        <div className="space-y-2 mb-6">
-                          <div className="flex items-center text-sm text-gray-600">
-                            <User className="w-4 h-4 mr-2" />
-                            {paper.author}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            {new Date(paper.publishDate).toLocaleDateString('en-US', { 
-                              year: 'numeric', 
-                              month: 'long', 
-                              day: 'numeric' 
-                            })}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Clock className="w-4 h-4 mr-2" />
-                            {paper.readTime}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Download className="w-4 h-4 mr-2" />
-                            {paper.downloadCount} downloads
-                          </div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-1 mb-4">
-                          {paper.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">
-                          <Download className="w-4 h-4 mr-2" />
-                          Download PDF
-                        </button>
-                      </div>
-                    </motion.div>
-                  ))}
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-white"
+                  >
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* All Papers */}
-        <section className="py-20 bg-white">
+        {/* All White Papers */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -351,77 +318,70 @@ export default function WhitePapersPage() {
                 All White Papers
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Browse our complete collection of research papers and technical insights.
+                Browse our complete collection of technical papers and research documents.
               </p>
             </motion.div>
 
             <div className="max-w-6xl mx-auto">
-              <div className="space-y-6">
-                {regularPapers.map((paper, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredWhitePapers.map((paper, index) => (
                   <motion.div
                     key={paper.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex flex-col lg:flex-row gap-6">
-                      <div className="lg:w-1/4">
-                        <div className="h-32 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg flex items-center justify-center">
-                          <FileText className="w-12 h-12 text-white opacity-80" />
-                        </div>
+                    <div className="relative">
+                      <img
+                        src={paper.image}
+                        alt={paper.title}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute top-4 right-4 bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-sm">
+                        <Star className="w-4 h-4 inline mr-1 text-yellow-500 fill-current" />
+                        {paper.rating}
                       </div>
-
-                      <div className="lg:w-3/4">
-                        <div className="flex items-center mb-2">
-                          <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-semibold mr-2">
-                            {categories.find(c => c.id === paper.category)?.name}
-                          </span>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{paper.title}</h3>
+                      <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
+                      
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center text-sm text-gray-500">
+                          <User className="w-4 h-4 mr-2" />
+                          <span>{paper.author}</span>
                         </div>
-
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          {paper.title}
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                          {paper.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
-                            {paper.author}
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {new Date(paper.publishDate).toLocaleDateString()}
-                          </div>
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {paper.readTime}
-                          </div>
-                          <div className="flex items-center">
-                            <Download className="w-4 h-4 mr-1" />
-                            {paper.downloadCount} downloads
-                          </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>{new Date(paper.publishDate).toLocaleDateString()}</span>
                         </div>
-
-                        <div className="flex flex-wrap gap-1 mb-4">
-                          {paper.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-2" />
+                          <span>{paper.readTime}</span>
                         </div>
-
-                        <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-semibold flex items-center">
+                        <div className="flex items-center text-sm text-gray-500">
                           <Download className="w-4 h-4 mr-2" />
-                          Download PDF
-                        </button>
+                          <span>{paper.downloads.toLocaleString()} downloads</span>
+                        </div>
                       </div>
+
+                      <div className="flex flex-wrap gap-1 mb-4">
+                        {paper.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download PDF
+                      </button>
                     </div>
                   </motion.div>
                 ))}
@@ -441,24 +401,24 @@ export default function WhitePapersPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Stay Updated with Our Research
+                Stay Updated with New White Papers
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Subscribe to our newsletter to receive the latest white papers, 
-                research insights, and technology updates directly in your inbox.
+                Subscribe to our newsletter to get notified about new white papers, 
+                research updates, and exclusive technical content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                 >
-                  Subscribe to Newsletter
+                  Subscribe to Updates
                 </Link>
                 <Link
-                  href="/about"
+                  href="/blog"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
-                  Learn More About Us
+                  Read Our Blog
                 </Link>
               </div>
             </motion.div>

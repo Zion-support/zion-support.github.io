@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface LoadingOptimizedProps {
-  // Add props here as needed
-}
-
-export default function LoadingOptimized({ }: LoadingOptimizedProps) {
-  return (
-    <div>
-      <h1>LoadingOptimized</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React,{ useState,useEffect } from \'react\'; interface LoadingOptimizedProps { \"children\": \'React.ReactNode; fallback?: React.ReactNode; delay?: number;\' } } export default function LoadingOptimized({ children,fallback,delay = 0 }: LoadingOptimizedProps) { const [isLoading,setIsLoading] = useState(true); useEffect(() => { const timer = setTimeout(() => { setIsLoading(false)},delay); return () => clearTimeout(timer)},[delay]); if (isLoading) { return <>{fallback}</> } return <>{children}</> }
+=======
+<<<<<<< HEAD
+const React,{ useState,useEffect } from "react"; interface LoadingOptimizedProps { children: "React.ReactNode; fallback?: React.ReactNode; delay?: number;" } } export default function LoadingOptimized({ children,fallback,delay = 0 }: LoadingOptimizedProps) { const [isLoading,setIsLoading] = useState(true); useEffect(() => { const timer = setTimeout(() => { setIsLoading(false)},delay); return () => clearTimeout(timer)},[delay]); if (isLoading) { return <>{fallback}</> } return <>{children}</> }'"'"
+=======
+import _React,{ useState,useEffect } from 'react'; interface LoadingOptimizedProps { "children": '_React.ReactNode; fallback?: _React.ReactNode; delay?: number;' } } export default function LoadingOptimized({ children,fallback,delay = 0 }: LoadingOptimizedProps) { const [isLoading,setIsLoading] = useState(true); useEffect(() => { const timer = setTimeout(() => { setIsLoading(false)},delay); return () => clearTimeout(timer)},[delay]); if (isLoading) { return <>{fallback}</> } return <>{children}</> }
+>>>>>>> main
+>>>>>>> main

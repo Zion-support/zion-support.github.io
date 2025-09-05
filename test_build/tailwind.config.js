@@ -1,3 +1,12 @@
-/** @type {import('tailwindcss'''})
-export default { content: [ './index.html','./src*.{js,ts,jsx,tsx}'']
-cursor/fix-lint-push-and-merge-to-main-f3c1;)]'
+<<<<<<< HEAD
+=======
+/** @type {import('tailwindcss').Config} */
+export default {
+  "content": ['./index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  "theme": {
+    extend: {}},
+  "plugins": []}
+>>>>>>> main
+export default { content: [ './index.html','./src*.{js,ts,jsx,tsx}',],theme: { extend: {},},plugins: [],}

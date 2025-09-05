@@ -1,39 +1,27 @@
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Globe, 
-  ArrowRight, 
-  Map, 
-  Search,
-  FileText,
-  Users,
-  Settings,
-  Shield
-} from 'lucide-react';
+import Link from 'next/link';
+import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
 
 export default function SitemapPage() {
-  const siteSections = [
+  const siteStructure = [
     {
-      title: 'Main Pages',
-      icon: Globe,
+      category: 'Main Pages',
       pages: [
-        { name: 'Home', url: '/', description: 'Our main landing page' },
+        { name: 'Home', url: '/', description: 'Main landing page' },
         { name: 'About Us', url: '/about', description: 'Learn about our company' },
         { name: 'Services', url: '/services', description: 'Our comprehensive services' },
-        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
-        { name: 'Blog', url: '/blog', description: 'Latest news and insights' }
+        { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
       ]
     },
     {
-      title: 'Services',
-      icon: Settings,
+      category: 'Services',
       pages: [
-        { name: 'AI Services', url: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', url: '/it-services', description: 'Information Technology services' },
+        { name: 'AI Services', url: '/ai-services', description: 'AI and machine learning solutions' },
+        { name: 'IT Services', url: '/it-services', description: 'Information technology services' },
         { name: 'Cloud Solutions', url: '/cloud-solutions', description: 'Cloud infrastructure and services' },
-        { name: 'Database Solutions', url: '/database-solutions', description: 'Database management and optimization' },
+        { name: 'Database Solutions', url: '/database-solutions', description: 'Database design and optimization' },
         { name: 'Security', url: '/security', description: 'Cybersecurity solutions' },
         { name: 'Custom Development', url: '/custom-development', description: 'Bespoke software development' },
         { name: 'Digital Transformation', url: '/digital-transformation', description: 'Digital transformation consulting' },
@@ -41,46 +29,42 @@ export default function SitemapPage() {
       ]
     },
     {
-      title: 'Solutions',
-      icon: Shield,
+      category: 'Solutions',
       pages: [
         { name: 'Enterprise Solutions', url: '/enterprise-solutions', description: 'Solutions for large organizations' },
         { name: 'Startup Solutions', url: '/startup-solutions', description: 'Solutions for growing businesses' },
-        { name: 'Industries', url: '/industries', description: 'Industry-specific solutions' }
+        { name: 'Industry Solutions', url: '/industries', description: 'Industry-specific solutions' }
       ]
     },
     {
-      title: 'Company',
-      icon: Users,
+      category: 'Company',
       pages: [
         { name: 'Team', url: '/team', description: 'Meet our team members' },
         { name: 'Careers', url: '/careers', description: 'Join our team' },
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' },
-        { name: 'News', url: '/news', description: 'Company news and updates' },
-        { name: 'Partners', url: '/partners', description: 'Our partners and alliances' }
+        { name: 'News', url: '/news', description: 'Latest news and updates' },
+        { name: 'Partners', url: '/partners', description: 'Our business partners' }
       ]
     },
     {
-      title: 'Resources',
-      icon: FileText,
+      category: 'Resources',
       pages: [
+        { name: 'Blog', url: '/blog', description: 'Technology insights and articles' },
         { name: 'Documentation', url: '/docs', description: 'Technical documentation' },
         { name: 'API Documentation', url: '/docs/api', description: 'API reference and guides' },
         { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and tutorials' },
-        { name: 'White Papers', url: '/white-papers', description: 'In-depth research and insights' },
+        { name: 'White Papers', url: '/white-papers', description: 'In-depth technical papers' },
         { name: 'Webinars', url: '/webinars', description: 'Educational webinars and events' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' }
+        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+        { name: 'Help Center', url: '/help', description: 'Support and help resources' }
       ]
     },
     {
-      title: 'Legal',
-      icon: Map,
+      category: 'Legal',
       pages: [
         { name: 'Privacy Policy', url: '/privacy', description: 'Our privacy policy' },
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage policy' },
-        { name: 'Security', url: '/security', description: 'Security information' },
-        { name: 'Compliance', url: '/compliance', description: 'Compliance and regulations' },
         { name: 'Accessibility', url: '/accessibility', description: 'Accessibility statement' }
       ]
     }
@@ -89,8 +73,8 @@ export default function SitemapPage() {
   return (
     <MainLayout
       title="Sitemap - Zion Tech Group"
-      description="Navigate our website easily with our comprehensive sitemap. Find all pages, services, and resources in one place."
-      keywords="sitemap, navigation, website structure, pages, services"
+      description="Navigate through all pages and sections of our website. Find the information you need quickly and easily."
+      keywords="sitemap, navigation, website structure, pages"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -114,8 +98,8 @@ export default function SitemapPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Navigate our website easily with our comprehensive sitemap. 
-                Find all pages, services, and resources organized by category.
+                Navigate through all pages and sections of our website. 
+                Find the information you need quickly and easily.
               </p>
             </motion.div>
           </div>
@@ -125,69 +109,105 @@ export default function SitemapPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
+              className="max-w-6xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {siteStructure.map((section, sectionIndex) => (
+                  <motion.div
+                    key={section.category}
+                    className="bg-gray-50 rounded-lg p-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
+                  >
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                      <FileText className="w-6 h-6 mr-3 text-indigo-600" />
+                      {section.category}
+                    </h2>
+                    
+                    <div className="space-y-4">
+                      {section.pages.map((page, pageIndex) => (
+                        <motion.div
+                          key={page.name}
+                          className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow duration-300"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: (sectionIndex * 0.1) + (pageIndex * 0.05) }}
+                        >
+                          <div className="flex items-start justify-between">
+                            <div className="flex-1">
+                              <Link
+                                href={page.url}
+                                className="text-lg font-semibold text-indigo-600 hover:text-indigo-700 transition-colors duration-300"
+                              >
+                                {page.name}
+                              </Link>
+                              <p className="text-gray-600 text-sm mt-1">{page.description}</p>
+                            </div>
+                            <ExternalLink className="w-4 h-4 text-gray-400 ml-2 flex-shrink-0" />
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Quick Links */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Website Navigation
+                Quick Links
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore all sections of our website organized by category for easy navigation.
+                Popular pages and resources you might be looking for.
               </p>
             </motion.div>
 
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {siteSections.map((section, sectionIndex) => (
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { name: 'Get Started', url: '/contact', description: 'Start your project with us' },
+                  { name: 'Our Services', url: '/services', description: 'Explore our service offerings' },
+                  { name: 'AI Solutions', url: '/ai-services', description: 'Discover AI capabilities' },
+                  { name: 'Cloud Services', url: '/cloud-solutions', description: 'Cloud infrastructure solutions' },
+                  { name: 'Security', url: '/security', description: 'Cybersecurity solutions' },
+                  { name: 'Support', url: '/help', description: 'Get help and support' }
+                ].map((link, index) => (
                   <motion.div
-                    key={section.title}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    key={link.name}
+                    className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex items-center mb-6">
-                      <div className="bg-indigo-100 p-3 rounded-lg mr-4">
-                        <section.icon className="w-6 h-6 text-indigo-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {section.title}
+                    <Link
+                      href={link.url}
+                      className="block group"
+                    >
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
+                        {link.name}
                       </h3>
-                    </div>
-
-                    <div className="space-y-3">
-                      {section.pages.map((page, pageIndex) => (
-                        <motion.div
-                          key={pageIndex}
-                          className="group"
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: pageIndex * 0.05 }}
-                          viewport={{ once: true }}
-                        >
-                          <Link
-                            href={page.url}
-                            className="block p-3 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 group"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                                  {page.name}
-                                </h4>
-                                <p className="text-sm text-gray-600 mt-1">
-                                  {page.description}
-                                </p>
-                              </div>
-                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-indigo-600 transition-colors" />
-                            </div>
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </div>
+                      <p className="text-gray-600 mb-4">{link.description}</p>
+                      <div className="flex items-center text-indigo-600 font-medium">
+                        Visit Page
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </Link>
                   </motion.div>
                 ))}
               </div>
@@ -195,43 +215,7 @@ export default function SitemapPage() {
           </div>
         </section>
 
-        {/* Search Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Can't Find What You're Looking For?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Use our search functionality to quickly find specific pages, services, or information.
-              </p>
-            </motion.div>
-
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search our website..."
-                    className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
-                  />
-                </div>
-                <p className="text-sm text-gray-500 mt-4 text-center">
-                  Search for services, pages, or any content you need
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact CTA */}
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -242,11 +226,11 @@ export default function SitemapPage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Need Help Navigating?
+                Can't Find What You're Looking For?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                If you can't find what you're looking for or need assistance, 
-                our team is here to help you navigate our services and solutions.
+                Our team is here to help you find the information you need. 
+                Contact us for personalized assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -256,10 +240,10 @@ export default function SitemapPage() {
                   Contact Us
                 </Link>
                 <Link
-                  href="/faq"
+                  href="/help"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
-                  View FAQ
+                  Get Help
                 </Link>
               </div>
             </motion.div>

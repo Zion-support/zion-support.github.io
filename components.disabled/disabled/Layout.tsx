@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface LayoutProps {
-  // Add props here as needed
-}
-
-export default function Layout({ }: LayoutProps) {
-  return (
-    <div>
-      <h1>Layout</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React from \"react\"; import Navigation from \"../Navigation\"; import Footer from \"../Footer\"; interface LayoutProps { children: \'React.ReactNode; title?: string; description?: string;\' } } const Layout: React.FC<LayoutProps> = ({ children,title = \"Zion Tech Group - Leading Technology Solutions Provider\",description = \"Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.\" }) => { return ( <div className=\"min-h-screen flex flex-col\"> <Navigation /> <main className=\"flex-1\"> {children} </main> <Footer /> </div> )}; export default Layout;
+=======
+<<<<<<< HEAD
+const React from "react"; import Navigation from "./Navigation"; import Footer from "./Footer"; interface LayoutProps { children: "React.ReactNode; title?: string; description?: string;" } } const Layout: React.FC<LayoutProps> = ({ children,title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence." }) => { return ( <div className="min-h-screen flex flex-col"> <Navigation /> <main className="flex-1"> {children} </main> <Footer /> </div> )}; export default Layout;'"'"
+=======
+import _React from "react"; import Navigation from "../Navigation"; import Footer from "../Footer"; interface LayoutProps { children: '_React.ReactNode; title?: string; description?: string;' } } const Layout: _React.FC<LayoutProps> = ({ children,title = "Zion Tech Group - Leading Technology Solutions Provider",description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence." }) => { return ( <div className="min-h-screen flex flex-col"> <Navigation /> <main className="flex-1"> {children} </main> <Footer /> </div> )}; export default Layout;
+>>>>>>> main
+>>>>>>> main

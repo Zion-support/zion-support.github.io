@@ -1,8 +1,20 @@
-import { type ClassValue, clsx } from 'clsx';''
-import { twMerge  } from 'tailwind-merge';''
-export function cn(..."inputs": ClassValue[]) {;"}
-  return twMerge(clsx(inputs))}"
-import { type ClassValue, clsx, twMerge } from 'lucide-react'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}'
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge  } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs)),
+}
+=======
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs));,}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge  } from 'tailwind-merge';
+export function cn(..."inputs": ClassValue[]) {;
+  return twMerge(clsx(inputs))}
+>>>>>>> main
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
+>>>>>>> main
