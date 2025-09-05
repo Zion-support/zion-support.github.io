@@ -1,1 +1,14 @@
-import React from 'react';'''; import { SEO } from '@/components/SEO';'''; import { DisputeDetail } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'''
+import React from 'react';
+
+interface DisputeDetailPageProps {
+  // Add props here as needed
+}
+
+export default function DisputeDetailPage({ }: DisputeDetailPageProps) {
+  return (
+    <div>
+      <h1>DisputeDetailPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

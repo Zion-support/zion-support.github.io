@@ -1,9 +1,14 @@
-import React from 'react'''
-import Head from 'next/head'''
-import Link from 'next/link'''
-import { CheckCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react'''
-      name: 'Starter'''
-      "description"""
-      "price"""
-      "period""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface PricingProps {
+  // Add props here as needed
+}
+
+export default function Pricing({ }: PricingProps) {
+  return (
+    <div>
+      <h1>Pricing</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

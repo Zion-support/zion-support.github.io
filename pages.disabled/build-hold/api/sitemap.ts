@@ -1,97 +1,14 @@
-import { NextApiRequest, NextApiResponse } from;
-  "next"";"export": default function handler(req: NextApiReques,t, "res": NextApiResponse) {"""}
-  "https"""
-  ""  const: staticPages = [,","""]
-  /about","""
-  "    """
-  ", """
-  ","""
-  "/products","""
-  "/talent","""
-  "    """
-  ", """
-  ","""
-  "/iot-platforms","""
-  "/enhanced-home","""
-  "    """
-  ", """
-  ","""
-  "/auth/forgot-password","""
-  "/auth/reset-password","""
-  "    ""]"
-  "]"  "const": blogPages = [";/blog/5g-technology-and-its-impact-on-iot-chat","""]
-  "/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat","""
-  "    """
-  ", """
-  ","""
-  "/blog/blockchain-technology-in-modern-business-solutions-chat","""
-  "/blog/cloud-native-architecture-best-practices-chat","""
-  "    """
-  ", """
-  ","""
-  "/blog/devops-automation-strategies-for-modern-teams-chat","""
-  "/blog/digital-twins-revolutionizing-industry-4-0-chat","""
-  "    """
-  ", """
-  ","""
-  "/blog/quantum-computing-implications-for-business-chat","""
-  "/blog/sustainable-technology-green-computing-solutions-chat","""
-  "    ""]"
-  "]"  "const": servicePages = [";/services/ai-model-development-chat","""]
-  "/services/api-development-chat","""
-  "    """
-  ", """
-  ","""
-  "/services/data-pipeline-engineering-chat","""
-  "/services/database-design-chat","""
-  "    """
-  ", """
-  ","""
-  "/services/performance-optimization-chat","""
-  "/services/quality-assurance-testing-chat","""
-  "    """
-  ", """
-  ","""
-  "/services/technical-documentation-chat","""
-  "/services/ui-ux-design-chat","""
-  "    ""]"
-  "]"  "const": categoryPages = [";/category/ai-consulting-chat","""]
-  "/category/business-intelligence-chat","""
-  "    """
-  ", """
-  ","""
-  "/category/data-science-chat","""
-  "/category/database-administration-chat","""
-  "    """
-  ", """
-  ","""
-  "/category/network-engineering-chat","""
-  "/category/product-management-chat","""
-  "    """
-  ", """
-  ","""
-  "/category/technical-writing-chat","""
-  "/category/ui-ux-design-chat","""
-  "    ""]"
-  "]"  "const": chatContentPages = [";/chat-content/ai-powered-business-solutions-discussion","""]
-  "/chat-content/cloud-computing-strategies","""
-  "    """
-  ", """
-  ","""
-  "/chat-content/digital-transformation-insights","""
-  "/chat-content/emerging-technology-trends","""
-  "    """
-  ", """
-  ","""
-  "/chat-content/sustainable-technology-practices","""
-  "/chat-content/technology-implementation-strategies",""]"
-  "  ]"""
-  "const"""
-  "const": sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">"  ${allPages"    .map((page) => {`      const: priority = page === ""`}
-</urlset>"
-    </url>"""
-  "</urlset>"""""
-  const sitemap = "<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9>  ${allPages"    .map((page) => {"      const priority = page === ""}
-</urlset>"
-    </url>"    })"""
-  "</urlset>"""  res.setHeader("")"
+import React from 'react';
+
+interface SitemapProps {
+  // Add props here as needed
+}
+
+export default function Sitemap({ }: SitemapProps) {
+  return (
+    <div>
+      <h1>Sitemap</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

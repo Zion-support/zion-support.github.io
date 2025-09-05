@@ -1,13 +1,14 @@
-import React, {useState} from "react"""
-import {useTranslation} from "react-i18next"""
-import {Card, CardContent} from "@/components/ui/card"""
-import {Briefcase, Users, Check} from "lucide-react"""
-    <div className="min-h-screen bg-white"""
-            <h2 className="text-xl font-medium"""
-            <p className="text-muted-foreground"""
-                            <divclassName="flex-1"""
-                                <h3 className="font-medium"""
-                                <p className="text-sm text-muted-foreground"""
-                            <divclassName="flex-1"""
-                                <h3 className="font-medium"""
-                                <p className="text-sm text-muted-foreground"""
+import React from 'react';
+
+interface RolePickerProps {
+  // Add props here as needed
+}
+
+export default function RolePicker({ }: RolePickerProps) {
+  return (
+    <div>
+      <h1>RolePicker</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

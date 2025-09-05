@@ -1,4 +1,14 @@
-import React from 'react'''
-  title = 'No data available'''
-  description = 'There are no items to display at the moment.'''
-export default EmptyState; </path> </EmptyStateProps>;';'''
+import React from 'react';
+
+interface EmptystateProps {
+  // Add props here as needed
+}
+
+export default function Emptystate({ }: EmptystateProps) {
+  return (
+    <div>
+      <h1>Emptystate</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

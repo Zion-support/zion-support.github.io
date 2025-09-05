@@ -14,64 +14,49 @@ const blogPosts = [
     date: "2024-01-15",
     category: "AI & Technology",
     readTime: "5 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["AI", "Business", "Technology"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 2,
-    title: "Micro SaaS: Building Scalable Solutions",
-    excerpt: "Learn how to build and scale micro SaaS applications for modern businesses.",
+    title: "Cloud Migration Best Practices",
+    excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime.",
     author: "Michael Rodriguez",
-    date: "2024-01-12",
-    category: "Development",
+    date: "2024-01-10",
+    category: "Cloud Computing",
     readTime: "7 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["SaaS", "Development", "Scalability"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 3,
-    title: "Cloud Security Best Practices",
-    excerpt: "Essential security measures for protecting your cloud infrastructure and data.",
-    author: "Jennifer Liu",
-    date: "2024-01-10",
-    category: "Security",
+    title: "Cybersecurity in the Age of AI",
+    excerpt: "Understanding the evolving threat landscape and how AI can help protect your business.",
+    author: "Alex Thompson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Security", "Cloud", "Best Practices"]
+    image: "/api/placeholder/600/300"
   },
   {
     id: 4,
-    title: "Digital Transformation Strategies",
-    excerpt: "How to successfully navigate your organization's digital transformation journey.",
-    author: "David Park",
-    date: "2024-01-08",
-    category: "Strategy",
+    title: "Micro SaaS: Building Scalable Solutions",
+    excerpt: "Discover how micro SaaS solutions can drive business growth and innovation.",
+    author: "Jennifer Lee",
+    date: "2024-01-01",
+    category: "SaaS",
     readTime: "8 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Strategy", "Digital Transformation", "Business"]
-  },
-  {
-    id: 5,
-    title: "Machine Learning in Production",
-    excerpt: "Best practices for deploying and maintaining ML models in production environments.",
-    author: "Dr. Sarah Chen",
-    date: "2024-01-05",
-    category: "AI & Technology",
-    readTime: "9 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["Machine Learning", "Production", "MLOps"]
-  },
-  {
-    id: 6,
-    title: "API Design Principles",
-    excerpt: "Creating robust, scalable APIs that developers love to use and maintain.",
-    author: "Michael Rodriguez",
-    date: "2024-01-03",
-    category: "Development",
-    readTime: "6 min read",
-    image: "/api/placeholder/600/300",
-    tags: ["API", "Development", "Design"]
-  }]
+    image: "/api/placeholder/600/300"
+  }
+];
+
+const categories = [
+  "All Posts",
+  "AI & Technology",
+  "Cloud Computing",
+  "Cybersecurity",
+  "SaaS",
+  "Digital Transformation"
+];
+
 export default function BlogPage() {
   return (
     <Layout
@@ -80,7 +65,7 @@ export default function BlogPage() {
       keywords="blog, AI insights, technology news, business innovation, tech trends">
       <Head>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
+        <meta name="description" content="Latest insights, trends, and technology news from Zion Tech Group experts." />
       </Head>
 
       {/* Hero Section */}
@@ -243,4 +228,32 @@ export default function BlogPage() {
       </div>
     </Layout>
   )
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{post.date}</span>
+                      </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        Read More
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                </motion.article>
+              ))}
+            </div>
+
+            {/* Load More Button */}
+            <div className="text-center mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Load More Posts
+              </button>
+            </div>
+      </section>
+    </div>
+  );
 }

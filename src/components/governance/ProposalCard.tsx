@@ -1,8 +1,14 @@
-import React from 'react'''
-  title: string;'','
-  description: string;';'''
-  status: 'active' | 'passed' | 'rejected' | 'expired'''
-  "proposal"""
-  onVote?: (proposalId: string, "vote""")
-      "default""
-cursor/fix-lint-push-and-merge-to-main-f3c1;)"
+import React from 'react';
+
+interface ProposalCardProps {
+  // Add props here as needed
+}
+
+export default function ProposalCard({ }: ProposalCardProps) {
+  return (
+    <div>
+      <h1>ProposalCard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

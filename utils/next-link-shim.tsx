@@ -1,37 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
 
-interface LinkProps {
-  href: string | { pathname: string; href?: string };
-  children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
+interface NextlinkshimProps {
+  // Add props here as needed
 }
 
-function resolveHref(href: string | { pathname: string; href?: string }): string {
-  if (typeof href === 'string') {
-    return href;
-  }
-  return href?.pathname || (href as { href?: string })?.href || '#';
-}
-
-export default function LinkShim({ href, children, className, ...rest }: LinkProps) {
-  const resolved = resolveHref(href);
-  
-  if (React.isValidElement(children)) {
-    const existingClass = (children.props as { className?: string })?.className || '';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-    
-    return (
-      <Link href={resolved} {...rest}>
-        {React.cloneElement(children, { className: mergedClassName })}
-      </Link>
-    );
-  }
-  
+export default function Nextlinkshim({ }: NextlinkshimProps) {
   return (
-    <Link href={resolved} className={className} {...rest}>
-      {children}
-    </Link>
+    <div>
+      <h1>Nextlinkshim</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 }

@@ -1,21 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github
-} from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -24,67 +8,14 @@ interface LayoutProps {
   keywords?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
+export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services"
-}) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const router = useRouter();
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      submenu: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
-      ]
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/services' },
-      { name: 'Cybersecurity', href: '/services' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/about' },
-      { name: 'Careers', href: '/contact' },
-      { name: 'News', href: '/contact' },
-      { name: 'Partners', href: '/contact' }
-    ],
-    support: [
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Help Center', href: '/contact' },
-      { name: 'Documentation', href: '/contact' },
-      { name: 'API Reference', href: '/contact' },
-      { name: 'Status', href: '/contact' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'GDPR', href: '/gdpr' }
-    ]
-  };
-
-  const isActive = (href: string) => {
-    return router.pathname === href;
-  };
-
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation"
+}: LayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -421,6 +352,4 @@ const Layout: React.FC<LayoutProps> = ({
       </footer>
     </div>
   );
-};
-
-export default Layout;
+}

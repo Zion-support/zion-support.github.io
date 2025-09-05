@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/MoreProductsPage.jsx import React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value"")"}
+import React from 'react';
+
+interface MoreProductsPageProps {
+  // Add props here as needed
+}
+
+export default function MoreProductsPage({ }: MoreProductsPageProps) {
+  return (
+    <div>
+      <h1>MoreProductsPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

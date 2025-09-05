@@ -1,1 +1,14 @@
-import React from 'react'; import { Link, SEOHead } from 'lucide-react';import { Card, CardContent, CardDescription, CardHeader, CardTitle, Button } from 'lucide-react'; import { Badge } from '@/components/ui/badge'; import {}} from 'lucide-react'''
+import React from 'react';
+
+interface CybersecurityServicesPageProps {
+  // Add props here as needed
+}
+
+export default function CybersecurityServicesPage({ }: CybersecurityServicesPageProps) {
+  return (
+    <div>
+      <h1>CybersecurityServicesPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

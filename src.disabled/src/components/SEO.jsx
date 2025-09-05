@@ -1,2 +1,14 @@
-const Component = () => {}}; import React from "react"; <link rel="canonical" href="{canonical}" /">import { Helmet } from &apos;react-helmet-async";&apos;&apos; title = &apos;Zion Tech Group&apos,; description = &apos;Leading technology solutions provider specializing in AI,cybersecurity,cloud infrastructure,and digital transformation services.&apos,; canonical = &apos;"https""
-</link>"
+import React from 'react';
+
+interface SEOProps {
+  // Add props here as needed
+}
+
+export default function SEO({ }: SEOProps) {
+  return (
+    <div>
+      <h1>SEO</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

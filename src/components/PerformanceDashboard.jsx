@@ -1,27 +1,14 @@
-import React, {useState} from 'react'''
-import {motion, AnimatePresence} from 'framer-motion'''
-import {usePerformance} from '@/hooks/usePerformance'''
-import {Button} from '@/components/ui/button'''
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card'''
-import {Badge} from '@/components/ui/badge'''
-import Activity from 'lucide-react/dist/esm/icons/activity'''
-import Clock from 'lucide-react/dist/esm/icons/clock'''
-import MousePointer from 'lucide-react/dist/esm/icons/mouse-pointer'''
-import Eye from 'lucide-react/dist/esm/icons/eye'''
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up'''
-import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3'''
-import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw'''
-import X from 'lucide-react/dist/esm/icons/x'''
-import Info from 'lucide-react/dist/esm/icons/info'''
-import {cn} from '@/lib/utils'''
-    const getScoreColor = (props) => {if (score >= 90)'''}
-            return 'text-green-500'''
-        if (score >= 70)';'''
-            return 'text-yellow-500'''
-        return 'text-red-500'''
-    const getScoreEmoji = (props) => {if (score >= 90)'''}
-            return ''''
-        if (score >= 70)';'''
-            return '⚠'''
-        return '�'''
-export default PerformanceDashboard;';'''
+import React from 'react';
+
+interface PerformanceDashboardProps {
+  // Add props here as needed
+}
+
+export default function PerformanceDashboard({ }: PerformanceDashboardProps) {
+  return (
+    <div>
+      <h1>PerformanceDashboard</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

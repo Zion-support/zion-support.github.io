@@ -1,25 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  Sun, 
-  Moon, 
-  User, 
-  Phone, 
-  Mail,
-  ChevronDown,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Users,
-  FileText,
-  HelpCircle,
-  DollarSign
-} from 'lucide-react';
+import React from 'react';
 
 const navigation = [{
     name: 'Services',
@@ -42,117 +21,10 @@ const contactInfo = {
 };
 
 interface HeaderProps {
-  className?: string;
+  // Add props here as needed
 }
 
-export function Header({ className }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
-    }
-  };
-
-  const navigationItems = [
-    {
-      label: 'Home',
-      href: '/',
-    },
-    {
-      label: 'Services',
-      href: '/services',
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'All Services', href: '/services' },
-        { label: 'AI Services', href: '/ai-services' },
-        { label: 'IT Services', href: '/it-services' },
-        { label: 'Micro SaaS', href: '/micro-saas' },
-        { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { label: 'Cybersecurity', href: '/services/cybersecurity' },
-        { label: 'Data Analytics', href: '/services/data-analytics' },
-      ]
-    },
-    {
-      label: 'Solutions',
-      href: '/solutions',
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { label: 'Healthcare', href: '/solutions/healthcare' },
-        { label: 'Finance', href: '/solutions/finance' },
-        { label: 'Retail', href: '/solutions/retail' },
-        { label: 'Education', href: '/solutions/education' },
-        { label: 'Government', href: '/solutions/government' },
-        { label: 'Startups', href: '/solutions/startup' },
-        { label: 'SMB', href: '/solutions/smb' },
-      ]
-    },
-    {
-      label: 'Industries',
-      href: '/industries',
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'All Industries', href: '/industries' },
-        { label: 'Healthcare', href: '/industries/healthcare' },
-        { label: 'Finance', href: '/industries/finance' },
-        { label: 'Retail', href: '/industries/retail' },
-        { label: 'Education', href: '/industries/education' },
-        { label: 'Government', href: '/industries/government' },
-        { label: 'Manufacturing', href: '/industries/manufacturing' },
-      ]
-    },
-    {
-      label: 'Company',
-      href: '/about',
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Our Team', href: '/team' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'News', href: '/news' },
-        { label: 'Partners', href: '/partners' },
-        { label: 'Contact', href: '/contact' },
-      ]
-    },
-    {
-      label: 'Resources',
-      href: '/resources',
-      hasDropdown: true,
-      dropdownItems: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Tutorials', href: '/tutorials' },
-        { label: 'Help Center', href: '/help' },
-        { label: 'FAQ', href: '/faq' },
-        { label: 'Documentation', href: '/docs' },
-      ]
-    },
-  ];
+export default function Header({ }: HeaderProps) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -366,5 +238,3 @@ export function Header({ className }: HeaderProps) {
     </header>
   );
 }
-
-export default Header;

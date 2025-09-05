@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/dashboard/DisputeDetailPage.jsx import React from 'react'';'; import SEO from '@/components/SEO'';'; import { DisputeDetail } from '@/components/disputes'';'; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputeDetailPage() {}; return (<ProtectedRoute>; <>; <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details"/>; <DisputeDetail />; </>; </ProtectedRoute>)}; export { DisputeDetailPage }; export default DisputeDetailPage';";" '"""
+import React from 'react';
+
+interface DisputeDetailPageProps {
+  // Add props here as needed
+}
+
+export default function DisputeDetailPage({ }: DisputeDetailPageProps) {
+  return (
+    <div>
+      <h1>DisputeDetailPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/ProductPage.jsx import React from 'react'; export default function ProductPage () { const { id } = useParams () ; const product = NEW_PRODUCTS.find (p => p.id === id) ; const { dispatch } = useCart () ; const [adding,setAdding] = useState (false) ; if (!product) { return < div className="p - 6 text - white">Product not found</div>} const handleAdd = () => { setAdding (true) ; dispatch ({ "type": "ADD_ITEM","payload": { id: product.id,"name": 'product.title',"price": 'product.price ?? 0',"quantity"")"}
+import React from 'react';
+
+interface ProductPageProps {
+  // Add props here as needed
+}
+
+export default function ProductPage({ }: ProductPageProps) {
+  return (
+    <div>
+      <h1>ProductPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
