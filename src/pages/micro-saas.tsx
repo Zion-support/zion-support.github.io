@@ -21,129 +21,347 @@ import {
   Lightbulb,
   Rocket,
   Code,
-  Layers
+  Layers,
+  Bot,
+  FileText,
+  TrendingUp,
+  PenTool,
+  Share2,
+  Mail,
+  MessageSquare,
+  Clock
 } from 'lucide-react';
 
 const microSaasServices = [
   {
-    title: "Custom Web Applications",
-    description: "Tailored web applications designed to solve specific business problems with modern technology stacks",
-    icon: Globe,
+    title: "AI-Powered Project Management",
+    description: "Intelligent project management platform with AI-driven insights, resource optimization, and predictive analytics",
+    icon: Target,
     features: [
-      "Responsive Design",
-      "Cross-browser Compatibility",
-      "Progressive Web App (PWA)",
-      "Real-time Updates",
-      "User Authentication",
-      "API Integration"
+      "AI Task Prioritization",
+      "Resource Allocation Optimization",
+      "Risk Prediction & Mitigation",
+      "Automated Progress Tracking",
+      "Smart Deadline Management",
+      "Team Performance Analytics"
     ],
     color: "from-blue-500 to-cyan-500",
     benefits: [
-      "Improved efficiency",
-      "Better user experience",
-      "Scalable architecture",
-      "Cost-effective solution"
-    ]
+      "30% faster project delivery",
+      "Reduced project overruns",
+      "Better resource utilization",
+      "Improved team productivity"
+    ],
+    pricing: "Starting at $29/month per user",
+    marketRate: "$25-50/user/month"
   },
   {
-    title: "Mobile Applications",
-    description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
-    icon: Smartphone,
+    title: "AI Customer Support Automation",
+    description: "Advanced AI chatbot system with natural language processing, sentiment analysis, and seamless human handoff",
+    icon: Bot,
     features: [
-      "iOS & Android Development",
-      "React Native Solutions",
-      "Flutter Applications",
-      "App Store Optimization",
-      "Push Notifications",
-      "Offline Functionality"
+      "Multi-language Support",
+      "Sentiment Analysis",
+      "Intent Recognition",
+      "Knowledge Base Integration",
+      "Live Chat Handoff",
+      "Performance Analytics"
     ],
     color: "from-green-500 to-emerald-500",
     benefits: [
-      "Increased accessibility",
-      "Better engagement",
-      "Mobile-first design",
-      "App store presence"
-    ]
+      "80% reduction in support tickets",
+      "24/7 customer availability",
+      "Consistent service quality",
+      "Reduced support costs"
+    ],
+    pricing: "Starting at $99/month for up to 1,000 conversations",
+    marketRate: "$50-200/month"
   },
   {
-    title: "API Development & Integration",
-    description: "Robust APIs and seamless integrations to connect your systems and data",
-    icon: Code,
+    title: "AI Financial Analytics Dashboard",
+    description: "Comprehensive financial intelligence platform with AI-powered forecasting, expense tracking, and investment insights",
+    icon: BarChart3,
     features: [
-      "RESTful API Design",
-      "GraphQL Implementation",
-      "Third-party Integrations",
-      "API Documentation",
-      "Rate Limiting & Security",
-      "Webhook Support"
+      "AI Financial Forecasting",
+      "Expense Categorization",
+      "Investment Analysis",
+      "Cash Flow Optimization",
+      "Tax Preparation Assistance",
+      "Financial Goal Tracking"
     ],
     color: "from-purple-500 to-pink-500",
     benefits: [
-      "System connectivity",
-      "Data synchronization",
-      "Automated workflows",
-      "Reduced manual work"
-    ]
+      "Better financial visibility",
+      "Improved decision making",
+      "Automated expense tracking",
+      "Tax optimization"
+    ],
+    pricing: "Starting at $49/month for small businesses",
+    marketRate: "$30-100/month"
   },
   {
-    title: "Data Management Solutions",
-    description: "Comprehensive data handling, processing, and analytics platforms",
-    icon: Database,
+    title: "AI Marketing Automation Suite",
+    description: "Complete marketing automation platform with AI-driven content creation, email campaigns, and customer segmentation",
+    icon: Lightbulb,
     features: [
-      "Data Collection & Storage",
-      "ETL Processes",
-      "Data Visualization",
-      "Real-time Analytics",
-      "Data Security & Privacy",
-      "Automated Reporting"
+      "AI Content Generation",
+      "Email Campaign Automation",
+      "Customer Segmentation",
+      "A/B Testing Optimization",
+      "Social Media Management",
+      "ROI Analytics"
     ],
     color: "from-orange-500 to-red-500",
     benefits: [
-      "Better insights",
-      "Data-driven decisions",
-      "Automated reporting",
-      "Compliance assurance"
-    ]
-  },
-  {
-    title: "Workflow Automation",
-    description: "Intelligent automation solutions that streamline business processes",
-    icon: Zap,
-    features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Email Automation",
-      "Document Processing",
-      "Approval Workflows",
-      "Integration Automation"
+      "3x higher engagement rates",
+      "Automated content creation",
+      "Better customer targeting",
+      "Improved conversion rates"
     ],
-    color: "from-yellow-500 to-orange-500",
-    benefits: [
-      "Reduced manual work",
-      "Faster processing",
-      "Fewer errors",
-      "Improved efficiency"
-    ]
+    pricing: "Starting at $79/month for up to 10,000 contacts",
+    marketRate: "$50-300/month"
   },
   {
-    title: "E-commerce Solutions",
-    description: "Complete e-commerce platforms with payment processing and inventory management",
-    icon: Layers,
+    title: "AI-Powered HR Management",
+    description: "Intelligent human resources platform with AI recruitment, performance analytics, and employee engagement tools",
+    icon: Users,
     features: [
-      "Online Store Setup",
-      "Payment Gateway Integration",
-      "Inventory Management",
-      "Order Processing",
-      "Customer Management",
-      "Analytics & Reporting"
+      "AI Resume Screening",
+      "Candidate Matching",
+      "Performance Analytics",
+      "Employee Engagement Tracking",
+      "Skills Gap Analysis",
+      "Retention Prediction"
     ],
     color: "from-indigo-500 to-purple-500",
     benefits: [
-      "Online presence",
-      "Revenue generation",
-      "Customer management",
-      "Business growth"
-    ]
+      "50% faster hiring process",
+      "Better candidate matching",
+      "Reduced turnover rates",
+      "Improved employee satisfaction"
+    ],
+    pricing: "Starting at $39/month per employee",
+    marketRate: "$20-80/employee/month"
+  },
+  {
+    title: "AI Inventory Management System",
+    description: "Smart inventory optimization platform with demand forecasting, automated reordering, and waste reduction",
+    icon: Database,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Waste Reduction Analytics",
+      "Supplier Performance Tracking",
+      "Multi-location Management",
+      "Cost Optimization"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    benefits: [
+      "20% reduction in inventory costs",
+      "Eliminated stockouts",
+      "Reduced waste",
+      "Improved cash flow"
+    ],
+    pricing: "Starting at $59/month for up to 1,000 SKUs",
+    marketRate: "$30-150/month"
+  },
+  {
+    title: "AI Document Processing Platform",
+    description: "Intelligent document management system with OCR, data extraction, and automated workflow processing",
+    icon: FileText,
+    features: [
+      "OCR Text Recognition",
+      "Data Extraction",
+      "Document Classification",
+      "Automated Workflows",
+      "Version Control",
+      "Compliance Tracking"
+    ],
+    color: "from-amber-500 to-orange-500",
+    benefits: [
+      "90% faster document processing",
+      "Reduced manual errors",
+      "Better compliance",
+      "Improved efficiency"
+    ],
+    pricing: "Starting at $89/month for up to 1,000 documents",
+    marketRate: "$50-200/month"
+  },
+  {
+    title: "AI Sales Intelligence Platform",
+    description: "Advanced sales analytics and lead scoring platform with AI-powered insights and pipeline optimization",
+    icon: TrendingUp,
+    features: [
+      "Lead Scoring AI",
+      "Sales Forecasting",
+      "Pipeline Analytics",
+      "Customer Behavior Analysis",
+      "Sales Coaching Insights",
+      "Revenue Optimization"
+    ],
+    color: "from-emerald-500 to-green-500",
+    benefits: [
+      "25% increase in conversion rates",
+      "Better lead qualification",
+      "Improved sales forecasting",
+      "Higher revenue per rep"
+    ],
+    pricing: "Starting at $69/month per sales rep",
+    marketRate: "$40-120/rep/month"
+  },
+  {
+    title: "AI Content Creation Studio",
+    description: "Comprehensive content creation platform with AI writing, image generation, and multi-channel publishing",
+    icon: PenTool,
+    features: [
+      "AI Writing Assistant",
+      "Image Generation",
+      "Content Optimization",
+      "Multi-channel Publishing",
+      "SEO Optimization",
+      "Brand Voice Consistency"
+    ],
+    color: "from-rose-500 to-pink-500",
+    benefits: [
+      "10x faster content creation",
+      "Consistent brand voice",
+      "SEO-optimized content",
+      "Multi-platform publishing"
+    ],
+    pricing: "Starting at $49/month for unlimited content",
+    marketRate: "$30-100/month"
+  },
+  {
+    title: "AI Compliance Monitoring System",
+    description: "Automated compliance tracking and reporting platform with real-time monitoring and audit preparation",
+    icon: Shield,
+    features: [
+      "Real-time Compliance Monitoring",
+      "Automated Reporting",
+      "Risk Assessment",
+      "Audit Trail Management",
+      "Policy Updates",
+      "Training Management"
+    ],
+    color: "from-red-500 to-rose-500",
+    benefits: [
+      "Reduced compliance risks",
+      "Automated reporting",
+      "Better audit preparation",
+      "Cost savings on compliance"
+    ],
+    pricing: "Starting at $199/month for enterprise compliance",
+    marketRate: "$100-500/month"
+  },
+  {
+    title: "AI Social Media Management",
+    description: "Intelligent social media platform with AI content scheduling, engagement optimization, and performance analytics",
+    icon: Share2,
+    features: [
+      "AI Content Scheduling",
+      "Engagement Optimization",
+      "Hashtag Research",
+      "Competitor Analysis",
+      "Performance Analytics",
+      "Multi-platform Management"
+    ],
+    color: "from-violet-500 to-purple-500",
+    benefits: [
+      "3x higher engagement",
+      "Automated posting",
+      "Better content strategy",
+      "Time savings"
+    ],
+    pricing: "Starting at $39/month for up to 5 social accounts",
+    marketRate: "$25-100/month"
+  },
+  {
+    title: "AI Email Marketing Platform",
+    description: "Advanced email marketing automation with AI personalization, send time optimization, and advanced analytics",
+    icon: Mail,
+    features: [
+      "AI Personalization",
+      "Send Time Optimization",
+      "Subject Line Testing",
+      "Segmentation AI",
+      "Deliverability Optimization",
+      "Advanced Analytics"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    benefits: [
+      "40% higher open rates",
+      "Better personalization",
+      "Improved deliverability",
+      "Higher conversion rates"
+    ],
+    pricing: "Starting at $29/month for up to 2,500 subscribers",
+    marketRate: "$15-50/month"
+  },
+  {
+    title: "AI Website Analytics & Optimization",
+    description: "Intelligent website analytics platform with AI insights, user behavior analysis, and automated optimization",
+    icon: Globe,
+    features: [
+      "AI User Behavior Analysis",
+      "Conversion Optimization",
+      "Heatmap Analytics",
+      "A/B Testing Automation",
+      "Performance Monitoring",
+      "SEO Recommendations"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "25% increase in conversions",
+      "Better user experience",
+      "Automated optimization",
+      "Data-driven insights"
+    ],
+    pricing: "Starting at $49/month for up to 100,000 page views",
+    marketRate: "$30-150/month"
+  },
+  {
+    title: "AI Customer Feedback Analysis",
+    description: "Advanced feedback analysis platform with sentiment analysis, trend identification, and actionable insights",
+    icon: MessageSquare,
+    features: [
+      "Sentiment Analysis",
+      "Trend Identification",
+      "Feedback Categorization",
+      "Actionable Insights",
+      "Multi-channel Collection",
+      "Real-time Monitoring"
+    ],
+    color: "from-lime-500 to-green-500",
+    benefits: [
+      "Better customer understanding",
+      "Faster issue resolution",
+      "Improved products/services",
+      "Higher customer satisfaction"
+    ],
+    pricing: "Starting at $39/month for up to 1,000 feedback items",
+    marketRate: "$25-100/month"
+  },
+  {
+    title: "AI Time Tracking & Productivity",
+    description: "Intelligent time management platform with AI productivity insights, distraction blocking, and work optimization",
+    icon: Clock,
+    features: [
+      "AI Productivity Analysis",
+      "Distraction Blocking",
+      "Work Pattern Recognition",
+      "Focus Time Optimization",
+      "Team Productivity Insights",
+      "Goal Tracking"
+    ],
+    color: "from-yellow-500 to-amber-500",
+    benefits: [
+      "30% productivity increase",
+      "Better focus management",
+      "Work-life balance",
+      "Team performance insights"
+    ],
+    pricing: "Starting at $19/month per user",
+    marketRate: "$10-40/user/month"
   }
 ];
 
@@ -395,11 +613,22 @@ export default function MicroSaasPage() {
                     </div>
                   </div>
 
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-600">Our Pricing:</span>
+                      <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-600">Market Rate:</span>
+                      <span className="text-sm text-gray-500">{service.marketRate}</span>
+                    </div>
+                  </div>
+
                   <Link
                     href="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
                   >
-                    Learn More
+                    Get Started
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
