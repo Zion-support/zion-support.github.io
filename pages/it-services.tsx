@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Cloud,
   Zap,
   Shield,
@@ -15,25 +14,12 @@ import {
   Eye,
   Target,
   TrendingUp,
-=======
-  Server,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Monitor,
-  Smartphone,
-  Laptop,
-  Settings,
-  Lock,
->>>>>>> main
   CheckCircle,
   ArrowRight,
   Clock,
   Award,
   Star,
   Globe,
-<<<<<<< HEAD
   Lock,
   Cpu,
   Bot,
@@ -53,7 +39,6 @@ import {
   Building,
   Sprout,
   Mail,
-=======
   Cpu,
   HardDrive,
   Wifi,
@@ -62,26 +47,20 @@ import {
   BarChart3,
   Code,
   FileText,
-  Mail,
   Phone,
-  Building,
   Car,
   Heart,
->>>>>>> main
   ShoppingCart,
   BookOpen,
   Home,
   Gamepad2,
   Package,
-<<<<<<< HEAD
   CreditCard,
   Calendar,
-  Phone,
   MapPin,
   Mail as MailIcon,
   Phone as PhoneIcon,
   Wrench,
-  HardDrive,
   Wifi,
   Terminal,
   Layers,
@@ -99,9 +78,7 @@ import {
   Save,
   Play,
   Pause,
-  Stop
-} from 'lucide-react';
-=======
+  Stop,
   Truck,
   Factory,
   Banknote,
@@ -169,12 +146,10 @@ import {
   Terminal as TerminalIcon
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> main
 
 const itServices = [
   {
     title: 'Cloud Migration & Management',
-<<<<<<< HEAD
     description: 'Seamless migration to cloud platforms with ongoing management and optimization for AWS, Azure, and Google Cloud.',
     icon: Cloud,
     features: ['Multi-cloud Strategy', 'Data Migration', 'Cost Optimization', 'Security Implementation', '24/7 Monitoring'],
@@ -403,14 +378,6 @@ const itServices = [
     popular: true,
     setupFee: 'Included',
     timeline: '1-4 weeks'
-=======
-    description: 'Seamless migration to cloud platforms with ongoing management and optimization.',
-    icon: Cloud,
-    features: ['AWS/Azure/GCP Migration', 'Cost Optimization', 'Security Implementation', '24/7 Monitoring'],
-    pricing: '$5,000 - $50,000 project',
-    category: 'Cloud Services',
-    popular: true,
-    benefits: ['Reduced Infrastructure Costs', 'Improved Scalability', 'Enhanced Security', 'Better Performance']
   },
   {
     title: 'Cybersecurity Solutions',
@@ -578,22 +545,16 @@ const itServices = [
     pricing: '$2,000 - $15,000 project',
     category: 'Cost Optimization',
     benefits: ['Reduced Costs', 'Improved ROI', 'Resource Efficiency', 'Budget Optimization']
->>>>>>> main
   }
 ];
 
 const categories = [
-<<<<<<< HEAD
-  'All',
-=======
   'All Services',
->>>>>>> main
   'Cloud Services',
   'Security',
   'Infrastructure',
   'Support',
   'Data Management',
-<<<<<<< HEAD
   'Development',
   'Consulting',
   'Communication',
@@ -605,12 +566,9 @@ const categories = [
   'Disaster Recovery',
   'Project Management',
   'Cloud Security',
-  'Assessment'
-=======
+  'Assessment',
   'DevOps',
   'Data Protection',
-  'Communication',
-  'Consulting',
   'Software Management',
   'Mobile Management',
   'Asset Management',
@@ -619,14 +577,12 @@ const categories = [
   'Compliance',
   'Project Management',
   'Cost Optimization'
->>>>>>> main
 ];
 
 const benefits = [
   {
     icon: CheckCircle,
     title: "Expert Team",
-<<<<<<< HEAD
     description: "Certified professionals with years of experience in enterprise IT solutions"
   },
   {
@@ -643,13 +599,6 @@ const benefits = [
     icon: Award,
     title: "Cutting-Edge Technology",
     description: "Latest technologies and best practices to keep your systems modern and secure"
-=======
-    description: "Certified IT professionals with extensive experience"
-  },
-  {
-    icon: Clock,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support and monitoring"
   },
   {
     icon: Shield,
@@ -660,7 +609,6 @@ const benefits = [
     icon: Award,
     title: "Proven Results",
     description: "Track record of successful implementations"
->>>>>>> main
   }
 ];
 
@@ -668,44 +616,27 @@ const processSteps = [
   {
     step: "01",
     title: "Assessment",
-<<<<<<< HEAD
     description: "We analyze your current IT infrastructure and identify areas for improvement"
-=======
-    description: "Comprehensive analysis of your current IT infrastructure and requirements"
->>>>>>> main
   },
   {
     step: "02",
     title: "Planning",
-<<<<<<< HEAD
     description: "Develop a comprehensive strategy tailored to your business needs and goals"
-=======
-    description: "Detailed project planning with clear milestones and timelines"
->>>>>>> main
   },
   {
     step: "03",
     title: "Implementation",
-<<<<<<< HEAD
     description: "Execute the plan with minimal disruption to your business operations"
-=======
-    description: "Professional implementation with minimal business disruption"
->>>>>>> main
   },
   {
     step: "04",
     title: "Support",
-<<<<<<< HEAD
     description: "Ongoing maintenance and support to ensure optimal performance"
-=======
-    description: "Ongoing support and maintenance to ensure optimal performance"
->>>>>>> main
   }
 ];
 
 export default function ITServicesPage() {
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -817,12 +748,10 @@ export default function ITServicesPage() {
                 </Link>
               </div>
             </motion.div>
->>>>>>> main
           </div>
         </section>
 
         {/* Services Section */}
-<<<<<<< HEAD
         <section id="services" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -967,13 +896,11 @@ export default function ITServicesPage() {
                   </motion.div>
                 );
               })}
->>>>>>> main
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -1037,13 +964,11 @@ export default function ITServicesPage() {
                   </motion.div>
                 );
               })}
->>>>>>> main
             </div>
           </div>
         </section>
 
         {/* Process Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -1053,31 +978,11 @@ export default function ITServicesPage() {
               </p>
             </div>
             
-=======
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Process
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                A proven methodology that ensures successful project delivery and long-term success
-              </p>
-            </motion.div>
-
->>>>>>> main
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
                 <motion.div
                   key={index}
                   className="text-center"
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -1096,7 +1001,6 @@ export default function ITServicesPage() {
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
->>>>>>> main
                   <p className="text-gray-600">{step.description}</p>
                 </motion.div>
               ))}
@@ -1104,7 +1008,6 @@ export default function ITServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-blue-900 text-white">
           <div className="container mx-auto px-4">
@@ -1151,41 +1054,5 @@ export default function ITServicesPage() {
         </section>
       </div>
     </>
-=======
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your IT Infrastructure?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's discuss how our IT services can help you achieve your technology goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  View AI Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
->>>>>>> main
   );
 }

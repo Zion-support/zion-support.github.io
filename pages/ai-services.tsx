@@ -1664,7 +1664,7 @@ const benefits = [
     description: 'AI-powered threat detection',
     stat: '99.9%'
   },
-  {}
+  {
     icon: Users,
     title: 'Improved Experience',
     description: 'Personalized user interactions',
@@ -1752,12 +1752,11 @@ export default function AIServicesPage() {
                     href="/contact"
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
                   >
-                    Learn More)
+                    Learn More
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </motion.div>
-              ))
-            });
+              ))}
           </div>
         </div>
       </section>

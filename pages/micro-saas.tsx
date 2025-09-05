@@ -44,7 +44,6 @@ import {
   Home,
   Gamepad2,
   Package,
-<<<<<<< HEAD
   CreditCard,
   Calendar,
   Phone,
@@ -350,50 +349,9 @@ const microSaasServices = [
     popular: true,
     setupFee: '$600',
     trialPeriod: '14 days'
-=======
-  Truck,
-  Factory,
-  Banknote,
-  Calendar,
-  MapPin,
-  Phone,
-  Headphones,
-  Wrench,
-  Cog,
-  Layers,
-  GitBranch,
-  Terminal,
-  Plus,
-  Minus,
-  DollarSign,
-  CreditCard,
-  Download,
-  Upload,
-  RefreshCw,
-  Play,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Wifi,
-  WifiOff,
-  Battery,
-  BatteryLow,
-  Signal,
-  SignalHigh,
-  SignalLow,
-  SignalZero,
-  Wifi as WifiIcon,
-  WifiOff as WifiOffIcon,
-  Battery as BatteryIcon,
-  BatteryLow as BatteryLowIcon,
-  Signal as SignalIcon,
-  SignalHigh as SignalHighIcon,
-  SignalLow as SignalLowIcon,
-  SignalZero as SignalZeroIcon
-} from 'lucide-react';
+  }
+];
+
 import Layout from '../components/Layout';
 
 const microSaasProducts = [
@@ -609,13 +567,11 @@ const microSaasProducts = [
     benefits: ['Security Enhancement', 'Behavior Insights', 'Real-time Alerts', 'Cost Savings'],
     marketPrice: '$60 - $500/month',
     link: 'https://ziontechgroup.com/ai-video-analytics'
->>>>>>> main
   }
 ];
 
 const categories = [
-<<<<<<< HEAD
-  'All',
+  'All Products',
   'Sales & Marketing',
   'Finance',
   'Customer Service',
@@ -641,35 +597,20 @@ const categories = [
   'Quality Assurance',
   'Data Management',
   'Event Management',
-  'Translation'
-=======
-  'All Products',
-  'Marketing',
-  'Sales',
+  'Translation',
   'Analytics',
   'Automation',
-  'Customer Service',
-  'Inventory',
-  'Email Marketing',
-  'Project Management',
-  'Finance',
-  'HR',
-  'Social Media',
-  'Document Management',
   'Web Optimization',
   'E-commerce',
   'Development',
   'Energy',
-  'Translation',
   'Compliance',
   'Video Analytics'
->>>>>>> main
 ];
 
 const benefits = [
   {
     icon: CheckCircle,
-<<<<<<< HEAD
     title: "Rapid Deployment",
     description: "Get up and running in days, not months with our pre-built solutions"
   },
@@ -710,24 +651,6 @@ const processSteps = [
     step: "04",
     title: "Go Live",
     description: "Start using your solution immediately with full support"
-=======
-    title: "Affordable Pricing",
-    description: "Cost-effective solutions starting from $19/month"
-  },
-  {
-    icon: Clock,
-    title: "Quick Setup",
-    description: "Get started in minutes with our easy onboarding"
-  },
-  {
-    icon: Shield,
-    title: "Secure & Reliable",
-    description: "Enterprise-grade security and 99.9% uptime guarantee"
-  },
-  {
-    icon: Award,
-    title: "Proven Results",
-    description: "Trusted by 1000+ businesses worldwide"
   }
 ];
 
@@ -752,13 +675,11 @@ const pricingTiers = [
     description: "For large organizations",
     features: ["All Features", "24/7 Support", "Unlimited Users", "Unlimited Storage"],
     popular: false
->>>>>>> main
   }
 ];
 
 export default function MicroSaasPage() {
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
@@ -1102,7 +1023,6 @@ export default function MicroSaasPage() {
                   >
                     Get Started
                   </Link>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
@@ -1112,7 +1032,6 @@ export default function MicroSaasPage() {
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SAAS Solutions?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -1172,12 +1091,10 @@ export default function MicroSaasPage() {
                   </motion.div>
                 );
               })}
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Process Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
