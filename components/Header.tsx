@@ -21,7 +21,6 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const navigation = [{
     name: 'Services',
     href: '/services',
@@ -70,7 +69,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
-=======
+
 interface HeaderProps {
   className?: string;
   onMenuClick?: () => void;
@@ -86,7 +85,6 @@ export function Header({ className, onMenuClick }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 
   useEffect(() => {
     const handleScroll = () => {
@@ -191,21 +189,15 @@ export function Header({ className, onMenuClick }: HeaderProps) {
       {/* Top Bar */}
       <div className="bg-gray-900 text-gray-300 text-sm py-2">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-=======
           <div className="flex items-center justify-between">
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -238,7 +230,6 @@ export function Header({ className, onMenuClick }: HeaderProps) {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -286,7 +277,7 @@ export function Header({ className, onMenuClick }: HeaderProps) {
                       </motion.div>
                     )}
                   </AnimatePresence>
-=======
+
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item, index) => (
@@ -490,7 +481,12 @@ export function Header({ className, onMenuClick }: HeaderProps) {
                     onClick={closeMenu}
                   >
                     Free Consultation
-=======
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Search Bar */}
           {isSearchOpen && (
             <div className="pb-4">

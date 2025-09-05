@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
-<<<<<<< HEAD
-const blogPosts = [{
+const blogPosts = [
+  {
     id: 1,
     title: "The Future of AI in Business: Trends and Predictions for 2024",
     excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
@@ -73,15 +73,16 @@ const categories = [{ name: "AI & Machine Learning", count: 12 },
   { name: "SaaS Development", count: 10 },
   { name: "Digital Transformation", count: 7 },
   { name: "IT Infrastructure", count: 5 }
-=======
+];
+
 const blogPosts = [
   {
     id: 1,
-    title: "The Future of AI in Business: 2025 Trends",
-    excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
-    author: "Dr. Sarah Chen",
+    title: "The Future of AI in Business",
+    excerpt: "Discover how artificial intelligence is transforming modern business operations.",
+    author: "Sarah Johnson",
     date: "2024-01-15",
-    category: "AI & Technology",
+    category: "AI & Machine Learning",
     readTime: "5 min read",
     image: "/api/placeholder/600/300"
   },
@@ -124,13 +125,11 @@ const categories = [
   "Cybersecurity",
   "SaaS",
   "Digital Transformation"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 ];
 
 export default function BlogPage() {
   return (
-<<<<<<< HEAD
-    <MainLayout 
+    <Layout 
       title="Blog - Zion Tech Group"
       description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
       keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, digital transformation"
@@ -152,12 +151,6 @@ export default function BlogPage() {
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
             </motion.div>
-=======
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights, trends, and technology news from Zion Tech Group experts." />
-      </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
@@ -229,7 +222,15 @@ export default function BlogPage() {
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
                         </div>
-=======
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
       {/* Blog Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -361,18 +362,10 @@ export default function BlogPage() {
                       type="submit"
                       className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
                     >
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
+                                          Subscribe
+                  </button>
+                </form>
               </div>
-=======
-            {/* Load More Button */}
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Load More Posts
-              </button>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
         </div>

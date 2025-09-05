@@ -254,8 +254,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="p-6 border-t border-gray-700">
           <div className="text-sm text-gray-400">
             <p className="mb-2">Need help?</p>
-            <p className="text-blue-400">contact@ziontechgroup.com</p>
-            <p className="text-blue-400">+1 (555) 123-4567</p>
+            <p className="text-blue-400">kleber@ziontechgroup.com</p>
+            <p className="text-blue-400">+1 (302) 464-0950</p>
           </div>
         </div>
       </div>

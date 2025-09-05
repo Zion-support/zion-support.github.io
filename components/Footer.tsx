@@ -14,7 +14,6 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const services = {
   'AI Solutions': [
     { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
@@ -98,8 +97,6 @@ const contactInfo = {
   hours: '24/7 Support Available'
 };
 
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -193,15 +190,9 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
@@ -229,7 +220,6 @@ export default function Footer() {
                 <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
 
           {/* Services */}
@@ -342,7 +332,6 @@ export default function Footer() {
                   );
                 })}
               </div>
-=======
 
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -372,7 +361,8 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 Get the latest technology insights and company updates delivered to your inbox.
               </p>
-=======
+            </div>
+
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
@@ -426,16 +416,9 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-<<<<<<< HEAD
-                      <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved. | 
-              <span className="ml-2">Delaware, United States</span>
-=======
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
             
             <div className="flex flex-wrap items-center space-x-6">
