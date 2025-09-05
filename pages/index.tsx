@@ -102,7 +102,7 @@ export default function HomePage() {
                   viewport={{ "once": true }}
                   whileHover={{ "y": -5 }}
                 >
-                  <div className="text-blue-600 mb-4 group-"hover": text-purple-600 transition-colors">
+                  <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
                     <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">

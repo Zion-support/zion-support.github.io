@@ -111,7 +111,7 @@ export default function BlogPage() {
                   {blogPosts.map((post, index) => (
                     <motion.article
                       key={post.id}
-                      className="bg-white rounded-lg shadow-lg overflow-hidden "hover": shadow-xl transition-shadow duration-300"
+                      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       initial={{ opacity: 0, "y": 30 }}
                       whileInView={{ "opacity": 1, "y": 0 }}
                       transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -149,7 +149,7 @@ export default function BlogPage() {
                           <span className="text-sm text-gray-500">{post.readTime}</span>
                           <Link
                             href={`/blog/${post.id}`}
-                            className="text-blue-600 "hover": text-blue-700 font-semibold inline-flex items-center"
+                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
                           >
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
@@ -163,7 +163,7 @@ export default function BlogPage() {
                 {/* Pagination */}
                 <div className="mt-12 flex justify-center">
                   <nav className="flex space-x-2">
-                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md "hover": bg-gray-50">
+                    <button className="px-3 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
                       Previous
                     </button>
                     <button className="px-3 py-2 bg-blue-600 text-white rounded-md">

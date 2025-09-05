@@ -486,7 +486,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -494,7 +494,7 @@ export default function AIServicesPage() {
                   whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-blue-600 group-"hover": text-purple-600 transition-colors">
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
@@ -527,7 +527,7 @@ export default function AIServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -563,7 +563,7 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
