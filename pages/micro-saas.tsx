@@ -867,6 +867,168 @@ const microSaaSProducts = [
     pricing: '$49 - $299/month',
     category: 'Local SEO',
     popular: true
+  },
+  {
+    title: 'AI-Powered Customer Churn Predictor',
+    description: 'Predict and prevent customer churn with machine learning and behavioral analysis.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for text, images, and videos with custom rule sets.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'Human Review Queue'],
+    pricing: '$0.01 - $0.05 per piece of content',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'Intelligent API Gateway',
+    description: 'Smart API management with rate limiting, analytics, and security features.',
+    icon: Network,
+    features: ['Rate Limiting', 'API Analytics', 'Security Policies', 'Developer Portal'],
+    pricing: '$199 - $1,299/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection for payments, accounts, and transactions.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Custom Rules', 'False Positive Reduction'],
+    pricing: '$0.10 - $0.50 per transaction',
+    category: 'Fraud Prevention',
+    popular: true
+  },
+  {
+    title: 'Smart Building Management System',
+    description: 'IoT-based building automation with energy optimization and predictive maintenance.',
+    icon: Building,
+    features: ['Energy Management', 'Predictive Maintenance', 'Occupancy Analytics', 'Climate Control'],
+    pricing: '$499 - $2,999/month',
+    category: 'Smart Buildings',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video analysis with object detection, tracking, and behavioral analysis.',
+    icon: Video,
+    features: ['Object Detection', 'Person Tracking', 'Behavioral Analysis', 'Alert System'],
+    pricing: '$199 - $1,299/month',
+    category: 'Video Analytics',
+    popular: true
+  },
+  {
+    title: 'Blockchain Data Marketplace',
+    description: 'Decentralized marketplace for buying and selling data with privacy protection.',
+    icon: Database,
+    features: ['Data Marketplace', 'Privacy Protection', 'Smart Contracts', 'Quality Assurance'],
+    pricing: '5-15% transaction fee',
+    category: 'Data Marketplace',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Predict equipment failures and optimize maintenance schedules using IoT and AI.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Predictive Maintenance',
+    popular: true
+  },
+  {
+    title: 'Smart Retail Analytics Platform',
+    description: 'AI-powered retail analytics with customer behavior tracking and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Price Optimization', 'Demand Forecasting'],
+    pricing: '$399 - $2,499/month',
+    category: 'Retail Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Assistant Builder',
+    description: 'Create custom voice assistants with natural language processing and multi-platform deployment.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-platform Support', 'Custom Skills'],
+    pricing: '$199 - $1,499/month',
+    category: 'Voice Technology',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Performance Testing', 'Educational Tools'],
+    pricing: '$99 - $999/month',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Machine learning platform for pharmaceutical research and drug discovery.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Research Tools'],
+    pricing: '$999 - $4,999/month',
+    category: 'Pharmaceutical AI',
+    popular: true
+  },
+  {
+    title: 'Smart City Traffic Management',
+    description: 'AI-powered traffic optimization and management for smart cities.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Congestion Prediction', 'Route Planning', 'Emergency Response'],
+    pricing: '$599 - $3,999/month',
+    category: 'Smart Cities',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Training',
+    description: 'Interactive cybersecurity training with AI-generated scenarios and personalized learning paths.',
+    icon: Shield,
+    features: ['Interactive Scenarios', 'Personalized Learning', 'Progress Tracking', 'Certification'],
+    pricing: '$29 - $199/month',
+    category: 'Cybersecurity Training',
+    popular: true
+  },
+  {
+    title: 'Blockchain Voting System',
+    description: 'Secure, transparent voting system using blockchain technology with audit trails.',
+    icon: Vote,
+    features: ['Secure Voting', 'Transparent Results', 'Audit Trails', 'Identity Verification'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain Voting',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Music Composition',
+    description: 'AI-generated music composition with style adaptation and copyright protection.',
+    icon: Music,
+    features: ['Style Adaptation', 'Copyright Protection', 'Custom Instruments', 'Collaboration Tools'],
+    pricing: '$49 - $299/month',
+    category: 'Creative AI',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture Drone Management',
+    description: 'AI-powered drone fleet management for precision agriculture and crop monitoring.',
+    icon: Sprout,
+    features: ['Fleet Management', 'Crop Monitoring', 'Precision Spraying', 'Data Analytics'],
+    pricing: '$399 - $2,499/month',
+    category: 'AgTech Drones',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning with AI tutors and real-time pronunciation feedback.',
+    icon: Globe,
+    features: ['AI Tutors', 'Pronunciation Feedback', 'Personalized Learning', 'Progress Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'EdTech',
+    popular: true
   }
 ];
 
