@@ -176,15 +176,13 @@ export default function SearchPage() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     performSearch(query);
-    router.push(`/search?q=${encodeURIComponent(query)}`, undefined, { shallow: true }
-});
+    router.push(`/search?q=${encodeURIComponent(query)}`, undefined, { shallow: true });
   };
 
   const handleRecentSearch = (searchTerm: string) => {
     setQuery(searchTerm);
     performSearch(searchTerm);
-    router.push(`/search?q=${encodeURIComponent(searchTerm)}`, undefined, { shallow: true }
-});
+    router.push(`/search?q=${encodeURIComponent(searchTerm)}`, undefined, { shallow: true });
   };
 
   const clearRecentSearches = () => {

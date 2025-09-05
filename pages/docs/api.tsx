@@ -30,7 +30,7 @@ data = {
   'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())
+print(response.json())`
   }
 ]
 
