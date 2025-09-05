@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 import { 
   MapPin, 
   Clock, 
@@ -13,7 +14,9 @@ import {
   Laptop, 
   Globe, 
   ArrowRight, 
-  CheckCircle 
+  CheckCircle,
+  DollarSign,
+  GraduationCap
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -129,7 +132,7 @@ const values = [
 
 export default function CareersPage() {
   return (
-    <MainLayout
+    <Layout
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI jobs, software development"
@@ -159,6 +162,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

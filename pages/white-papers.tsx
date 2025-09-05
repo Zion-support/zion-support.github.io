@@ -1,6 +1,5 @@
-import React from 'react';
 import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
@@ -8,64 +7,58 @@ import {
   Download,
   Calendar,
   User,
-  Eye,
+  ArrowRight,
   Search,
   Filter,
-  ArrowRight,
-  BookOpen,
   Star,
   Clock,
-  Tag
-} from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Tag, 
-  ExternalLink 
+  Eye
 } from 'lucide-react';
 
 const whitePapers = [
   {
     id: 1,
-    title: "The Future of AI in Enterprise: A Comprehensive Guide",
-    author: "Dr. Sarah Chen",
-    date: "2024-01-15",
-    category: "Artificial Intelligence",
-    description: "Explore how artificial intelligence is transforming enterprise operations and what it means for your business.",
-    downloadCount: 1250
+    title: 'The Future of Artificial Intelligence in Business',
+    description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
+    category: 'ai',
+    author: 'Dr. Sarah Johnson',
+    date: '2024-01-15',
+    downloadCount: 2500,
+    isFeatured: true,
+    tags: ['AI', 'Machine Learning', 'Business Strategy']
   },
   {
     id: 2,
-    title: "Cloud Migration Strategies: Best Practices and Pitfalls",
-    author: "Michael Rodriguez",
-    date: "2024-01-10",
-    category: "Cloud Computing",
-    description: "Learn the essential strategies for successful cloud migration and avoid common mistakes.",
-    downloadCount: 980
+    title: 'Cloud Migration Best Practices: A Complete Guide',
+    description: 'Step-by-step guide to migrating your infrastructure to the cloud, covering planning, execution, and optimization strategies.',
+    category: 'cloud',
+    author: 'Mike Chen',
+    date: '2024-01-10',
+    downloadCount: 1800,
+    isFeatured: true,
+    tags: ['Cloud Computing', 'Migration', 'Infrastructure']
   },
   {
     id: 3,
-    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
-    author: "Emily Johnson",
-    date: "2024-01-05",
-    category: "Cybersecurity",
-    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
-    downloadCount: 1500
+    title: 'Cybersecurity in the Digital Age: Protecting Your Assets',
+    description: 'Comprehensive guide to modern cybersecurity threats and how to protect your organization.',
+    category: 'security',
+    author: 'Emily Johnson',
+    date: '2024-01-05',
+    downloadCount: 1500,
+    isFeatured: false,
+    tags: ['Cybersecurity', 'Data Protection', 'Risk Management']
   },
   {
     id: 4,
-    title: "Data Analytics: Turning Information into Insights",
-    author: "David Kim",
-    date: "2023-12-20",
-    category: "Data Analytics",
-    description: "Discover how to leverage data analytics to drive business decisions and growth.",
-    downloadCount: 750
+    title: 'Data Analytics: Turning Information into Insights',
+    description: 'Discover how to leverage data analytics to drive business decisions and growth.',
+    category: 'development',
+    author: 'David Kim',
+    date: '2023-12-20',
+    downloadCount: 750,
+    isFeatured: false,
+    tags: ['Data Analytics', 'Business Intelligence', 'Insights']
   }
 ];
 
@@ -82,112 +75,7 @@ export default function WhitePapersPage() {
     { id: 'business', name: 'Business Strategy' }
   ];
 
-  const whitePapers = [
-    {
-      id: 1,
-      title: 'The Future of Artificial Intelligence in Business',
-      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2024-01-10',
-      readTime: '15 min read',
-      downloads: 2450,
-      views: 8900,
-      rating: 4.8,
-      tags: ['AI', 'Machine Learning', 'Business Transformation', 'ROI'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Strategies for Enterprise',
-      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
-      category: 'cloud',
-      author: 'Mike Chen',
-      authorTitle: 'Cloud Solutions Architect',
-      publishDate: '2024-01-05',
-      readTime: '12 min read',
-      downloads: 1890,
-      views: 7200,
-      rating: 4.7,
-      tags: ['Cloud Computing', 'Migration', 'Enterprise', 'Security'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
-      category: 'security',
-      author: 'Alex Rodriguez',
-      authorTitle: 'Chief Security Officer',
-      publishDate: '2023-12-28',
-      readTime: '18 min read',
-      downloads: 3200,
-      views: 12500,
-      rating: 4.9,
-      tags: ['Cybersecurity', 'Remote Work', 'Zero Trust', 'Compliance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
-      category: 'development',
-      author: 'Emily Watson',
-      authorTitle: 'Senior Full-Stack Developer',
-      publishDate: '2023-12-20',
-      readTime: '20 min read',
-      downloads: 1650,
-      views: 6800,
-      rating: 4.6,
-      tags: ['Web Development', 'Scalability', 'Architecture', 'Performance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Roadmap',
-      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
-      category: 'business',
-      author: 'David Kim',
-      authorTitle: 'Digital Transformation Consultant',
-      publishDate: '2023-12-15',
-      readTime: '14 min read',
-      downloads: 2100,
-      views: 9500,
-      rating: 4.8,
-      tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Technology'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 6,
-      title: 'Machine Learning Model Deployment Best Practices',
-      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2023-12-10',
-      readTime: '16 min read',
-      downloads: 1780,
-      views: 7600,
-      rating: 4.7,
-      tags: ['Machine Learning', 'MLOps', 'Deployment', 'Production'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    }
-  ];
-
-  const filteredWhitePapers = whitePapers.filter(paper => {
+  const filteredPapers = whitePapers.filter(paper => {
     const matchesSearch = paper.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -198,7 +86,7 @@ export default function WhitePapersPage() {
   const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
 
   return (
-    <MainLayout
+    <Layout
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -211,7 +99,7 @@ export default function WhitePapersPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,30 +108,11 @@ export default function WhitePapersPage() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 White{' '}
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                   Papers
                 </span>
               </h1>
-    <>
-      <Head>
-        <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Download our comprehensive white papers on technology trends and best practices." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Download our comprehensive white papers on technology trends and best practices.
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
               </p>
@@ -251,95 +120,44 @@ export default function WhitePapersPage() {
           </div>
         </section>
 
-        {/* White Papers List */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Research & Insights</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Access our latest research and insights on technology trends.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {whitePapers.map((paper, index) => (
-                <motion.div
-                  key={paper.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center">
-                      <FileText className="w-6 h-6 text-blue-600 mr-2" />
-                      <span className="text-sm text-gray-500">{paper.category}</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Download className="w-4 h-4 mr-1" />
-                      {paper.downloadCount}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{paper.title}</h3>
-                  <p className="text-gray-600 mb-4">{paper.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {paper.author}
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {paper.date}
-                    </div>
-                  </div>
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download PDF
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section className="py-16 bg-white">
+        {/* Filter Section */}
+        <section className="py-12 bg-white border-b">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Browse by Category</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Find white papers by technology area.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {['Artificial Intelligence', 'Cloud Computing', 'Cybersecurity', 'Data Analytics'].map((category, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors cursor-pointer"
-                >
-                  <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                  <span className="text-sm font-medium">{category}</span>
-                </motion.div>
-              ))}
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      selectedCategory === category.id
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search white papers..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                />
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                  <Search className="w-4 h-4 text-gray-400" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Featured White Papers */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
+        {/* Featured Papers */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
@@ -347,123 +165,80 @@ export default function WhitePapersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center justify-center">
-                <Star className="w-8 h-8 mr-3 text-yellow-500" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Featured White Papers
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our most popular and highly-rated technical papers.
+                Our most popular and impactful research documents, handpicked by our experts.
               </p>
             </motion.div>
 
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredPapers.map((paper, index) => (
-                  <motion.div
-                    key={paper.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-200 hover:shadow-xl transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="relative">
-                      <img
-                        src={paper.image}
-                        alt={paper.title}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        FEATURED
-                      </div>
-                      <div className="absolute top-4 right-4 bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-sm">
-                        <Star className="w-4 h-4 inline mr-1 text-yellow-500 fill-current" />
-                        {paper.rating}
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuredPapers.map((paper, index) => (
+                <motion.div
+                  key={paper.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div className="p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Star className="w-5 h-5 text-yellow-500" />
+                      <span className="text-sm font-medium text-yellow-600">Featured</span>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{paper.title}</h3>
-                      <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {paper.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 line-clamp-3">
+                      {paper.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {paper.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          <span>{paper.author}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{paper.date}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Download className="w-4 h-4" />
+                          <span>{paper.downloadCount}</span>
+                        </div>
+                      </div>
                       
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-sm text-gray-500">
-                          <User className="w-4 h-4 mr-2" />
-                          <span>{paper.author} - {paper.authorTitle}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          <span>{new Date(paper.publishDate).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-2" />
-                          <span>{paper.readTime}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Eye className="w-4 h-4 mr-2" />
-                          <span>{paper.views.toLocaleString()} views</span>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {paper.tags.slice(0, 3).map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full text-xs"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download PDF
+                      <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2">
+                        Download
+                        <Download className="w-4 h-4" />
                       </button>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Search and Filter */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search white papers..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="relative">
-                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-white"
-                  >
-                    {categories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* All White Papers */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
+        {/* All Papers */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
@@ -479,143 +254,102 @@ export default function WhitePapersPage() {
               </p>
             </motion.div>
 
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredWhitePapers.map((paper, index) => (
-                  <motion.div
-                    key={paper.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="relative">
-                      <img
-                        src={paper.image}
-                        alt={paper.title}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="absolute top-4 right-4 bg-white bg-opacity-90 text-gray-700 px-2 py-1 rounded-full text-sm">
-                        <Star className="w-4 h-4 inline mr-1 text-yellow-500 fill-current" />
-                        {paper.rating}
-                      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPapers.map((paper, index) => (
+                <motion.div
+                  key={paper.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-4">
+                      <FileText className="w-5 h-5 text-indigo-600" />
+                      <span className="text-sm font-medium text-indigo-600 capitalize">
+                        {paper.category}
+                      </span>
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{paper.title}</h3>
-                      <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
-                      
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-sm text-gray-500">
-                          <User className="w-4 h-4 mr-2" />
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {paper.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {paper.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {paper.tags.slice(0, 2).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3 text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
                           <span>{paper.author}</span>
                         </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          <span>{new Date(paper.publishDate).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-2" />
-                          <span>{paper.readTime}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Download className="w-4 h-4 mr-2" />
-                          <span>{paper.downloads.toLocaleString()} downloads</span>
+                        <div className="flex items-center gap-1">
+                          <Download className="w-4 h-4" />
+                          <span>{paper.downloadCount}</span>
                         </div>
                       </div>
-
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {paper.tags.slice(0, 3).map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download PDF
+                      
+                      <button className="text-indigo-600 hover:text-indigo-700 transition-colors flex items-center gap-1">
+                        Download
+                        <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Stay Updated with New White Papers
+                Stay Updated with Our Latest Research
               </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Subscribe to our newsletter to get notified about new white papers, 
-                research updates, and exclusive technical content.
+              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter and be the first to access new white papers and research insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/contact"
-                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  className="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-                  Subscribe to Updates
-                </Link>
-                <Link
-                  href="/blog"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
-                >
-                  Read Our Blog
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact us for custom research and analysis tailored to your specific needs.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Us
+                  Subscribe to Newsletter
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/research"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold"
                 >
-                  View All Research
-                </Link>
+                  Request Custom Research
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
-    </MainLayout>
+    </Layout>
   );
 }
