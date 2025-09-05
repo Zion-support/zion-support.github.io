@@ -5,7 +5,7 @@ import {
   Mail;
   MapPin;
   Brain;
-  Cloud,
+  Cloud;
   Shield,
   Code,
   Database,

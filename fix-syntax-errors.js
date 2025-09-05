@@ -4,7 +4,7 @@ import path from 'path';
 ;
 console.log('🔧 Fixing syntax errors...');
 ;
-// Fix Footer.tsx,
+// Fix Footer.tsx;
 const fixFooter = () => {,
   try {,
     let content = fs.readFileSync('components/Footer.tsxutf8'),

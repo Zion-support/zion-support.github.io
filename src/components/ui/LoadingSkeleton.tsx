@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 ;
 interface SkeletonProps {;
   className?: string;
-  width?: string | number,
+  width?: string | number;
   height?: string | number,
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full',
   animate?: boolean

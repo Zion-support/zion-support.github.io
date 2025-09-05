@@ -2,7 +2,7 @@ import React from 'react';
   alt: string;
   width?: number;
   height?: number;
-  priority?: boolean,
+  priority?: boolean;
   className?: string,
   sizes?: string
 };

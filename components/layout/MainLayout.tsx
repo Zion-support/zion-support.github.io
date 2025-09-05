@@ -6,7 +6,7 @@ import Footer from '../Footer';
 interface MainLayoutProps {;
   title: string;
   description: string;
-  children: React.ReactNode,
+  children: React.ReactNode;
   keywords?: string,
   image?: string,
   url?: string,

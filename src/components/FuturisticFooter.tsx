@@ -8,7 +8,7 @@ import {};
   Phone;
   Mail;
   MapPin;
-  ArrowRight,
+  ArrowRight;
   CheckCircle,
   Shield,
   Award,

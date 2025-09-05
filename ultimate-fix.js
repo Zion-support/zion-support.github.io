@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 ;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-,
+;
 // Function to fix all remaining issues,
 function fixAllRemainingIssues(content) {,
   // Fix malformed array structures,
