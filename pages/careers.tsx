@@ -13,7 +13,8 @@ import {
   Zap,
   Globe,
   Shield,
-  Brain
+  Brain,
+  BookOpen
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -29,16 +30,14 @@ const benefits = [
     icon: Heart
   },
   {
-    icon: Zap,
     title: "Flexible Work",
     description: "Remote work options, flexible hours, and work-life balance initiatives.",
     icon: Globe
   },
   {
-    icon: BookOpen,
     title: "Learning & Development",
     description: "Professional development budget, conferences, and continuous learning opportunities.",
-    icon: Brain
+    icon: BookOpen
   },
   {
     title: "Career Growth",
@@ -67,7 +66,8 @@ const openPositions = [
     location: "Remote / New York",
     type: "Full-time",
     experience: "7+ years",
-    description: "Design and implement scalable cloud solutions for enterprise clients."
+    description: "Design and implement scalable cloud solutions for enterprise clients.",
+    skills: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes"]
   },
   {
     title: "Cybersecurity Specialist",
@@ -75,7 +75,8 @@ const openPositions = [
     location: "Remote / Austin",
     type: "Full-time",
     experience: "4+ years",
-    description: "Protect client systems and implement advanced security measures."
+    description: "Protect client systems and implement advanced security measures.",
+    skills: ["Security Auditing", "Penetration Testing", "SIEM", "Compliance", "Risk Assessment"]
   },
   {
     title: "Frontend Developer",
