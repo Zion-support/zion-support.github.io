@@ -61,17 +61,7 @@ export default function Page("props": "any) {;
       "status": 'coming-soon';
     }
   ];
-;
-    return matchesCategory && matchesSearch});
-;
-      case 'price': ";
-        return a.pricing.starter - b.pricing.starter;
-      case 'popularity':;
-        return 0; // Default sorting;
-      "default": return 0"}
-  });
-;
-      case 'beta': ";
+
     return matchesCategory && matchesSearch}
     );
       case 'price':
@@ -102,10 +92,7 @@ export default function Page("props": "any) {;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-"}}
-          animate = {;
-  { "opacity": "1",;
-  "y": "0;
+
   return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
@@ -114,6 +101,7 @@ export default function Page("props": "any) {;
           initial = {
   { opacity: 0,
   y: 2 0
+
 "}}
           className="text-center mb-16";
         >;

@@ -1,23 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
-;
-export default function Page("props": "any) {;
-", [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
-    scrollToBottom();
-  }, [activeMessages]);
-;
-  const scrollToBottom = ("props": "any) => {;
-    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "});
-  };
-;
-  const handleSendMessage = async("e": "React.FormEvent) => {;
-    e.preventDefault();
-    if(!messageText.trim() || !activeConversation) return;
-;
-    await sendMessage(activeConversation.id", messageText);
+
 export default function Page(props: any) {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   useEffect(() => {
@@ -25,8 +8,6 @@ export default function Page(props: any) {
 }, []);
     scrollToBottom();
   }, [activeMessages]);
-';
-  const scrollToBottom = (props: any) => {';';
 ;
   const scrollToBottom = (props: any) => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -37,8 +18,7 @@ export default function Page(props: any) {
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
-    ';
-    await sendMessage(activeConversation.id, messageText);';';
+    
     await sendMessage(activeConversation.id, messageText);
     setMessageText('');
   };
@@ -62,14 +42,12 @@ export default function Page(props: any) {
         <p className="text-zion-slate text-center max-w-md">;
           Select a conversation from the list to view and send messages.</p>;
       </div>;
+=======
     );
   }
 ;
-  const groupedMessages: { date: string; messages: an y[] }[] = [];
-  ';
-  activeMessages.forEach(message => {';';
-;
   activeMessages.forEach(message => {;
+=======
   const "groupedMessages": "{ "date": string; "messages": an y[] "}[] = [];
 ;
   activeMessages.forEach(message => {;
@@ -79,11 +57,6 @@ export default function Page(props: any) {
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     if(existingGroup) {
       existingGroup.messages.push(message);
-    } else {;
-      groupedMessages.push({;
-        "date": "messageDat e",;
-        "messages": "[message];
-      "});
     } else {
       groupedMessages.push({
         date: messageDat e,
@@ -95,10 +68,10 @@ export default function Page(props: any) {
     );
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
-  return (
-    <div className="min-h-screen bg-white">
 ;
   return (<div className="flex-1 flex flex-col h-full">;
+=======
+
   return (
         <div className="flex-1 flex flex-col h-full">
       {/* Header */}
@@ -115,15 +88,11 @@ export default function Page(props: any) {
           <div>
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
-            </div>';
-            <div className="text-xs text-zion-slate">';';
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ';';
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' : ';';
+=======
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ";
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :;
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'"}
             </div>;
           </div>;
@@ -152,16 +121,6 @@ export default function Page(props: any) {
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
-                    className="object-cover"
-                    />
-                </AspectRatio>
-                  </div>
-  );
-}
-            <div>';
-              <div className="font-medium text-white mb-1">';';
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :';';
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';';
                     className="object-cover";
                     />;
                 </AspectRatio>;
@@ -171,11 +130,6 @@ export default function Page(props: any) {
                 </AspectRatio>
               </div>
             )}
-            <div>;
-              <div className="font-medium text-white mb-1">;
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :;
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :;
-                 'Regarding:'}
                 {activeConversation.context_type === 'job' ? 'Regarding "Job":' : ";
                  activeConversation.context_type === 'talent' ? 'Regarding "Talent":' :;
                  '"Regarding":'"}
@@ -193,27 +147,13 @@ export default function Page(props: any) {
               {activeConversation.context_data.description && (
                 <div className="text-xs text-zion-slate mt-1 line-clamp-2">
                   {activeConversation.context_data.description}
-                    </div>
-  );
-}
                 </div>
               )}
             </div>
           </div>
         </div>
       )}
-;
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">;
-        {groupedMessages.length === 0 ? (;
-          <div className="text-center text-zion-slate py-12">;
-            <p>No messages yet.Start the conversation!</p>;
-          </div>;
-        ) : "(;
-          groupedMessages.map((group", groupIndex) => (;
-            <div key={group.date}>;
-              <DateDivider date={new Date(group.date)}  />;
-              <div className="space-y-3">;
-                {group.messages.map((message) => (;
+      
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (
           <div className="text-center text-zion-slate py-12">
@@ -243,6 +183,7 @@ export default function Page(props: any) {
               <DateDivider date={new Date(group.date)}  />;
               <div className="space-y-3">;
                 {group.messages.map((message) => (;
+=======
                   <MessageBubble key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
@@ -259,28 +200,13 @@ export default function Page(props: any) {
           <textarea
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
-            placeholder="Type a message...";
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black "focus": "outlin e-none "focus": rin g-2 "focus": rin g-zion-cyan";
-          />;
-          <Button;
-            type="submit";
-            className="bg-zion-purple "hover": b g-zion-purple-dark text-white";
-          >;
-            Send;
-          </Button>;
-        </form>;
-      </div>;
-    </div>;
-  );
-}
-</textarea>
-</MessageBubble>';
-</AvatarImage>;';;';
+=======
 "}
 ;
 </textarea>;
 </MessageBubble>;
 </AvatarImage>;
+=======
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
           />

@@ -1,92 +1,146 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-
-const faqs = [
-  {
-    category: "General",
-    questions: [
-      {
-        question: "What services does Zion Tech Group offer?",
-        answer: "We offer comprehensive AI solutions, IT services, cloud computing, cybersecurity, and micro SaaS solutions. Our services include machine learning, natural language processing, cloud infrastructure, and custom software development."
-      },
-      {
-        question: "How can I get started with your services?",
-        answer: "You can get started by contacting us through our website, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We'll schedule a consultation to discuss your specific needs."
-      },
-      {
-        question: "Do you offer custom solutions?",
-        answer: "Yes, we specialize in creating custom solutions tailored to your specific business needs. Our team works closely with you to understand your requirements and develop the perfect solution."
-      }
-    ]
-  },
-  {
-    category: "AI Services",
-    questions: [
-      {
-        question: "What AI technologies do you work with?",
-        answer: "We work with a wide range of AI technologies including machine learning, natural language processing, computer vision, deep learning, and generative AI. We stay up-to-date with the latest advancements in AI."
-      },
-      {
-        question: "How long does it take to develop an AI solution?",
-        answer: "The timeline depends on the complexity of the project. Simple AI solutions can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during our consultation."
-      },
-      {
-        question: "Do you provide AI training and support?",
-        answer: "Yes, we provide comprehensive training and ongoing support for all our AI solutions. This includes user training, documentation, and technical support to ensure successful implementation."
-      }
-    ]
-  },
-  {
-    category: "Pricing",
-    questions: [
-      {
-        question: "What are your pricing models?",
-        answer: "We offer flexible pricing models including project-based pricing, hourly rates, and subscription plans. Our pricing depends on the scope and complexity of the project. Contact us for a detailed quote."
-      },
-      {
-        question: "Do you offer payment plans?",
-        answer: "Yes, we offer flexible payment plans for larger projects. We can work with you to create a payment schedule that fits your budget and project timeline."
-      },
-      {
-        question: "Is there a free consultation?",
-        answer: "Yes, we offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and provide accurate pricing."
-      }
-    ]
-  },
-  {
-    category: "Support",
-    questions: [
-      {
-        question: "What kind of support do you provide?",
-        answer: "We provide comprehensive support including 24/7 technical support, regular maintenance, updates, and training. Our support team is always available to help with any issues or questions."
-      },
-      {
-        question: "How do I contact support?",
-        answer: "You can contact our support team through email at kleber@ziontechgroup.com, phone at +1 302 464 0950, or through our online support portal. We typically respond within 24 hours."
-      },
-      {
-        question: "Do you provide documentation?",
-        answer: "Yes, we provide comprehensive documentation for all our solutions including user guides, API documentation, and technical specifications. All documentation is regularly updated."
-      }
-    ]
-  }
-];
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  HelpCircle,
+  ChevronDown,
+  ChevronUp,
+  Search,
+  Filter,
+  ArrowRight,
+  Users,
+  Clock,
+  Shield,
+  Zap
+} from 'lucide-react';
 
 export default function FAQPage() {
-  const [openItems, setOpenItems] = React.useState<{ [key: string]: boolean }>({});
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedItems, setExpandedItems] = useState(new Set());
 
-  const toggleItem = (categoryIndex: number, questionIndex: number) => {
-    const key = `${categoryIndex}-${questionIndex}`;
-    setOpenItems(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+  const categories = [
+    { id: 'all', name: 'All Questions' },
+    { id: 'general', name: 'General' },
+    { id: 'services', name: 'Services' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'support', name: 'Support' }
+  ];
+
+  const faqs = [
+    {
+      id: 1,
+      question: 'What services does Zion Tech Group offer?',
+      answer: 'We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, custom software development, database solutions, and digital transformation consulting. Our services are designed to help businesses of all sizes leverage technology for growth and efficiency.',
+      category: 'general',
+      tags: ['services', 'overview', 'technology']
+    },
+    {
+      id: 2,
+      question: 'How do I get started with your services?',
+      answer: 'Getting started is easy! Simply contact us through our contact form, call us directly, or schedule a consultation. We\'ll discuss your needs, assess your current technology stack, and recommend the best solutions for your business. Our team will guide you through the entire process from initial consultation to implementation.',
+      category: 'general',
+      tags: ['getting-started', 'consultation', 'process']
+    },
+    {
+      id: 3,
+      question: 'Do you offer custom development services?',
+      answer: 'Yes! We specialize in custom software development tailored to your specific business needs. Our team can build web applications, mobile apps, APIs, microservices, and more. We work with modern technologies and follow best practices to ensure scalable, maintainable, and secure solutions.',
+      category: 'services',
+      tags: ['custom-development', 'software', 'applications']
+    },
+    {
+      id: 4,
+      question: 'What is your response time for support requests?',
+      answer: 'We aim to respond to all support requests within 24 hours during business days. For critical issues, we provide 24/7 emergency support for our enterprise clients. Our support team is available via email, phone, and live chat to help you resolve any issues quickly.',
+      category: 'support',
+      tags: ['support', 'response-time', 'emergency']
+    },
+    {
+      id: 5,
+      question: 'What security measures do you have in place?',
+      answer: 'We implement enterprise-grade security measures including end-to-end encryption, secure data centers, regular security audits, and compliance with industry standards like SOC 2 and ISO 27001. We also follow OWASP security guidelines and conduct regular penetration testing to ensure the highest level of security.',
+      category: 'technical',
+      tags: ['security', 'encryption', 'compliance']
+    },
+    {
+      id: 6,
+      question: 'Can I integrate your services with my existing systems?',
+      answer: 'Absolutely! We provide comprehensive integration services and APIs that allow you to seamlessly connect our solutions with your existing business systems and workflows. Our team has experience with a wide range of technologies and can help you integrate with virtually any system.',
+      category: 'technical',
+      tags: ['integration', 'APIs', 'existing-systems']
+    },
+    {
+      id: 7,
+      question: 'What are your pricing models?',
+      answer: 'We offer flexible pricing models to suit different business needs. Our pricing is based on project scope, complexity, and ongoing support requirements. We provide transparent pricing with no hidden fees and offer both fixed-price and time-and-materials options. Contact us for a detailed quote tailored to your specific needs.',
+      category: 'billing',
+      tags: ['pricing', 'cost', 'billing']
+    },
+    {
+      id: 8,
+      question: 'Do you provide training for your solutions?',
+      answer: 'Yes! We provide comprehensive training for all our solutions to ensure your team can effectively use and maintain them. Our training includes documentation, video tutorials, hands-on workshops, and ongoing support. We also offer customized training programs based on your specific requirements.',
+      category: 'support',
+      tags: ['training', 'documentation', 'workshops']
+    },
+    {
+      id: 9,
+      question: 'What technologies do you work with?',
+      answer: 'We work with a wide range of modern technologies including React, Node.js, Python, Java, .NET, AWS, Azure, Google Cloud, Docker, Kubernetes, and more. Our team stays up-to-date with the latest technologies and best practices to provide you with cutting-edge solutions.',
+      category: 'technical',
+      tags: ['technologies', 'programming', 'cloud']
+    },
+    {
+      id: 10,
+      question: 'How do you ensure project quality?',
+      answer: 'We follow rigorous quality assurance processes including code reviews, automated testing, manual testing, and continuous integration. Our team uses industry-standard tools and methodologies to ensure high-quality deliverables. We also provide regular project updates and involve you in the review process.',
+      category: 'services',
+      tags: ['quality', 'testing', 'process']
+    },
+    {
+      id: 11,
+      question: 'Do you offer maintenance and support after project completion?',
+      answer: 'Yes! We provide ongoing maintenance and support services to ensure your solutions continue to perform optimally. Our support includes bug fixes, updates, security patches, performance monitoring, and technical assistance. We offer various support packages to meet your specific needs.',
+      category: 'support',
+      tags: ['maintenance', 'support', 'updates']
+    },
+    {
+      id: 12,
+      question: 'Can you help with digital transformation?',
+      answer: 'Absolutely! Digital transformation is one of our core services. We help businesses modernize their processes, adopt new technologies, and create digital-first strategies. Our approach includes assessment, strategy development, implementation, and change management to ensure successful transformation.',
+      category: 'services',
+      tags: ['digital-transformation', 'modernization', 'strategy']
+    }
+  ];
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         faq.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const toggleExpanded = (id) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
+    setExpandedItems(newExpanded);
   };
 
+  const popularQuestions = faqs.filter(faq => 
+    faq.tags.includes('getting-started') || 
+    faq.tags.includes('services') || 
+    faq.tags.includes('pricing')
+  );
+
   return (
-    <Layout
+    <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
       description="Find answers to common questions about our AI services, IT solutions, pricing, and support. Get the information you need to make informed decisions."
       keywords="FAQ, frequently asked questions, AI services, IT support, pricing, help"
@@ -207,6 +261,6 @@ export default function FAQPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

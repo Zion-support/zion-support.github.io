@@ -54,16 +54,7 @@ export function EnhancedAccessibilityPanel("props": any) {;
   const [isVisible", setIsVisible] = useState<any>(false);
   const [isExpanded, setIsExpanded] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
-    "highContrast": "fals e",;
-    "largeText": "fals e",;
-    "reducedMotion": "fals e",;
-    "screenReader": "boolean",;
-    "focusIndicator": "tru e",;
-    "colorBlindness": 'none',;
-    "fontSize": "1 6",;
-    "lineHeight": "1.5",;
-    "letterSpacing": "0",;
-    "wordSpacing": "0"});
+
     highContrast: fals e,
     largeText: fals e,
     reducedMotion: fals e,

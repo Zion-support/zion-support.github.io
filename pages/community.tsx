@@ -38,27 +38,39 @@ export default function CommunityPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">Community</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Connect, learn, and grow together in the world of technology.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Connect with developers, technologists, and innovators from around the world. 
+                Share knowledge, learn new skills, and grow together.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        {/* Community Features */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Community Features</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Discover what makes our community special and how you can get involved.
+              </p>
+            </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {communityFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;

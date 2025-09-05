@@ -106,11 +106,7 @@ export function AnalyticsManager("props": "any) {;
     if(currentSession) {;
       saveSessionData(currentSession)}
   }, [currentSession]) };
-;
-    // Scroll tracking';
-    document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
-;
-    // Page unload tracking';
+
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
@@ -150,41 +146,29 @@ export function AnalyticsManager("props": "any) {;
 ;
         if(fcp) {;
           trackPerformance('fcp', fcp.startTime)}
-      });
-      fcpObserver.observe({ "entryTypes": "['paint'] "});
-;
-      // Largest Contentful Paint;
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
+
         if(lcp) {;
           trackPerformance('lcp', lcp.startTime)}
-      });
-      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
-;
-      // First Input Delay;
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
+
         if(fid) {;
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-      });
-      fidObserver.observe({ "entryTypes": "['first-input'] "});
-;
-      // Cumulative Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {;
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
+
         let clsValue = 0;        for (const entry of list.getEntries()) {;
           if(!entry.hadRecentInput) {;
             clsValue += (entry as any).value}
         }
-        trackPerformance('cls', clsValue)});
-      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
         trackPerformance('cls', clsValue)}
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
@@ -192,13 +176,7 @@ export function AnalyticsManager("props": "any) {;
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-;
-        trackEvent('page_view', { path });
-;
-        // Send to analytics endpoint';
-        sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
-    },;
-    [currentSession];
+
         trackEvent('page_view', { path }
     );
         // Send to analytics endpoint'

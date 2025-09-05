@@ -1,13 +1,3 @@
-import React from 'react';
-;
-import { Link, Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-;
-  const handleDropdownToggle = ("props": "any) => {;
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  "};
-;
-;
 export function AppHeader() {;
   ];
 setServicesDropdownOpen(true);
@@ -132,10 +122,6 @@ setServicesDropdownOpen(true);
             exit={{ "opacity": "0", "height": "0 "}}
             className=""lg": "hidden border-t border-gray-200/50 py-4";
           >;
-;
-  const [scrolled", setScrolled] = useState<any>(false);
-  const [isSearching, setIsSearching] = useState<any>(false);
-;
   useEffect(() => {;
     const handleScroll = ("props": "any) => {;
       setScrolled(window.scrollY > 10);

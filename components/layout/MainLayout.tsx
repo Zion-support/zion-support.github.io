@@ -1,28 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+import Header from '../Header';
+import Footer from '../Footer';
 =======
 import Header from '../Header';
 import Footer from '../Footer';
->>>>>>> main
-=======
-import Header from '../Header';
-import Footer from '../Footer';
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
 
 interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-}
-
-=======
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
@@ -31,32 +19,13 @@ interface MainLayoutProps {
   canonical?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function MainLayout({ 
-  children, 
-  title = "Zion Tech Group", 
-  description = "Leading technology solutions provider", 
-  keywords = "technology, AI, cloud, micro SaaS" 
-}: MainLayoutProps) {
-=======
->>>>>>> main
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-<<<<<<< HEAD
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}: MainLayoutProps) => {
-<<<<<<< HEAD
-=======
 =======
   title = "Zion Tech Group - Leading Technology Solutions Provider",
   description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
 }) => {
->>>>>>> main
->>>>>>> main
 =======
 const MainLayout: React.FC<MainLayoutProps> = ({ 
   children, 
@@ -70,8 +39,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   nofollow = false, 
   canonical 
 }) => {
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
   return (
     <>
       <Head>
@@ -80,15 +47,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-      </Head>
-      {children}
-    </>
-  );
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -105,7 +63,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="twitter:title" content={title || 'Zion Tech Group'} />
         <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta name="twitter:image" content={image} />}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
       </Head>
       <div className="min-h-screen bg-gray-50">
         <Header />
@@ -139,7 +96,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
     </>
   );
->>>>>>> main
 };
 
 export default MainLayout;

@@ -59,12 +59,6 @@ const "cartSlice": "createSlic e({;
     "clearCart": "an y(state)  => {;
       state.items = [];
       state.total = 0;
-:src/store/cartSlice.tsx;
-      state.itemCount = 0"}}});
-      state.itemCount = 0},;
-  },;
-});
-;
 :src/store/cartSlice.tsx
       state.itemCount = 0}}}
     );
@@ -72,6 +66,7 @@ const "cartSlice": "createSlic e({;
   },
 }
     );
+
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;

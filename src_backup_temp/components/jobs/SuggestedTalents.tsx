@@ -37,14 +37,6 @@ export function SuggestedTalents("props": "any) {;
 ;
       if(error) throw error;
       setTalents(data || []);
-    } catch(error) {;
-      console.error("Error fetching suggested "talents":", error);
-      toast({;
-        "title": "Error",;
-        "description": "Failed to load suggested talents.Please try again later.",;
-        "variant": "destructive",;
-      });
-    } finally {;
     } catch(error) {
       console.error("Error fetching suggested talents:", error);
       toast({
@@ -57,20 +49,7 @@ export function SuggestedTalents("props": "any) {;
       setIsLoading(false);
     }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
-  const handleViewProfile = ("props": "any) => {;
-    ;
-    toast({;
-      "title": "View Profile"",;
-      "description": "`Navigating to talent "profile": ${talentId"}`,;
-    });
-  };
-;
-  const handleInvite = ("props": "any) => {;
-    ;
-    toast({;
-      "title": "Invite Talent"",;
-      "description": "`Inviting "talent": ${talentId"}`,;
-    });
+
   const handleViewProfile = (props: any) => {
     toast({
       title: "View Profile",
@@ -90,7 +69,6 @@ export function SuggestedTalents("props": "any) {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
-    "});
     }
     );
   };
@@ -118,23 +96,6 @@ export function SuggestedTalents("props": "any) {;
       "matchPercent": "talen t.match_score || 85",;
       "skills": "talen t.talent_profile?.skills || []",;
     };
-  });
-;
-  return (<Card className="border-zion-blue-light bg-zion-blue">;
-      <CardHeader>;
-        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;
-      </CardHeader>;
-      ;
-      <CardContent className="pt-6">;
-        {isLoading ? (;
-          <div>Loading suggested talents...</div>;
-        ) : "talents.length === 0 ? (;
-          <EmptyMatchesCard onRefresh={handleRefresh"} isProcessing={isProcessing}  />;
-        ) : "(;
-          <div className="space-y-4">;
-            {transformedTalents.map((talent) => (;
-              <JobMatchCard;
-                key={talent.id"}
   }
     );
   return (<Card className="border-zion-blue-light bg-zion-blue">

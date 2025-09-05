@@ -124,10 +124,9 @@ const "heroSlides": "HeroSlid e[] = [  {;
     ;
           img.onload = resolve;
           img.onerror = resolve;
-          img.src = slide.image}) }) ;
-;
           img.src = slide.image}) }
     );
+
       await Promise.all(imagePromises) ;
       setIsLoading(false) };
 ;
@@ -269,13 +268,6 @@ const "heroSlides": "HeroSlid e[] = [  {;
               <div className="text-center space-y-4">";
                 <h3 className="text-2xl font-bold text-white">;
                   {currentSlideData.title}
-                </h3>";
-                <p className="text-slate-300">{currentSlideData.subtitle}</p>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
                 "
                 <p className="text-slate-300">{currentSlideData.subtitle}</p>
               </div>
@@ -283,6 +275,7 @@ const "heroSlides": "HeroSlid e[] = [  {;
           </motion.div>
         </div>
       </div>
+
       {/* Navigation Controls */}";
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">";
         <div className="flex space-x-2">;

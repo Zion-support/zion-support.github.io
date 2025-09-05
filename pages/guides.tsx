@@ -3,8 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 =======
 
-import Link from 'next/link';';
->>>>>>> main
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 

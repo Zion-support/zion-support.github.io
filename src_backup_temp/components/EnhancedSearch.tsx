@@ -16,10 +16,7 @@ export function EnhancedSearch("props": "any) {;
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
   const [filters, setFilters] = useState<SearchFilter>({;
-    "type": "[]",;
-    "category": "[]",;
-    "tags": "[];
-  "}) ;
+
     type: [],
     category: [],
     tags: []
@@ -43,13 +40,13 @@ export function EnhancedSearch("props": "any) {;
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
   const [selectedIndex, setSelectedIndex] = useState<any>(-1);
-  const [filters, setFilters] = useState<SearchFilter>({;
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
     tags: []
   }
     );
+
     "type": "[]",;
     "category": "[]",;
     "tags": "[];
@@ -202,11 +199,10 @@ handleResultClick(results[selectedIndex])}      }
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 ;
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-;
-      return matchesQuery && matchesFilters}) ;
-;
+
       return matchesQuery && matchesFilters}
     );
+
     setIsOpen(false);
     setQuery('')};
 ;
@@ -462,16 +458,6 @@ setFilters("prev": "> ({;
                       </div>;
                     </button>;
                   ))}
-                </div>;
-              ) : "(";
-                <div className="p-8 text-center">";
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"   />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">;
-                    No results found;
-                  </h3>";
-                  <p className="text-gray-600">;
-                    Try adjusting your search terms or filters;
-                  </p>;
-                </div>) "}
                 </div>
               ) : ("
                 <div className="p-8 text-center">"
@@ -486,27 +472,6 @@ setFilters("prev": "> ({;
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) }
-'"`;
-;,"});})";
-;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
-</any>;
-</any>;
-</SearchFilter>;
-</any>;
-</any>;
-</SearchSuggestion>;
-</SearchResult>;
-</any>;
 '"`
 ;,"}
     );,})";

@@ -7,11 +7,10 @@ export default function Page("props": "any) {;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    ;
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-;
+    
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}
     );
+
     switch(sortBy) {;
       case 'price': ";
         return a.price - b.price;      case 'name':;
@@ -31,15 +30,6 @@ export default function Page("props": "any) {;
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category': ";
         return a.category.localeCompare(b.category) ;
-      "default":;
-        return 0"}) ;
-;
-    "hidden": "{ "opacity": 0 "},;
-    "visible": "{;
-      "opacity": 1",;
-      "transition": "{;
-        "staggerChildren": 0.1;
-      "};
       default:;
         return 0}
     );
@@ -186,13 +176,6 @@ export default function Page("props": "any) {;
                     <div className="flex items-start justify-between mb-4">";
                       <div className="flex items-center gap-3">;
                         {getCategoryIcon(service.category)}
-                        <div>";
-                          <h3 className="text-lg font-semibold text-white group-"hover": "tex t-zion-cyan transition-colors">;
-                            {service.title"}
-                          </h3>";
-                          <p className="text-sm text-zion-slate-400">{service.category}</p>;
-                        </div>;
-                      </div>;
                         <div>"
                           <h3 className="text-lg font-semibold text-white group-hover: tex t-zion-cyan transition-colors">
                             {service.title}
@@ -238,19 +221,6 @@ export default function Page("props": "any) {;
                       Learn More";
                       <ArrowRight className="w-4 h-4"   />                    </button>;
                   </>) : (;
-                  // List View;
-                  <>";
-                    <div className="flex-1">";
-                      <div className="flex items-start justify-between mb-2">";
-                        <div className="flex items-center gap-3">;
-                          {getCategoryIcon(service.category)"}
-                          <div>";
-                            <h3 className="text-xl font-semibold text-white group-"hover": "tex t-zion-cyan transition-colors">;
-                              {service.title"}
-                            </h3>";
-                            <p className="text-zion-slate-400">{service.category}</p>;
-                          </div>;
-                        </div>;
                   // List View
                   <>"
                     <div className="flex-1">"
@@ -294,16 +264,6 @@ export default function Page("props": "any) {;
               </motion.div>) ) }
           </motion.div>;
           {/* No Results */}
-          {filteredServices.length === 0 && (<motion.div;
-              initial={{ "opacity": "0 "}}
-              animate={{ "opacity": "1 "}}";
-              className="text-center py-20";
-";
-              <div className="text-6xl mb-4">🔍</div>";
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>";
-              <p className="text-zion-slate-400 mb-6">;
-                Try adjusting your search criteria or filters;
-              </p>;
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
@@ -397,28 +357,7 @@ export default function Page("props": "any) {;
                     <div className="text-zion-slate-400">ROI</div>;
                   </div>;
                 </div>;
-                {/* Features and Benefits */}";
-                <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
-                  <div>";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <CheckCircle className="w-5 h-5 text-zion-green"   />                      Key Features;
-                    </h3>";
-                    <ul className="space-y-2">;
-                      {selectedService.features.map((feature", index) => (";
-                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />;
-                          {feature}
-                        </li>) ) }
-                    </ul>;
-                  </div>;
-                  <div>";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <TrendingUp className="w-5 h-5 text-zion-green"   />                      Benefits;
-                    </h3>";
-                    <ul className="space-y-2">;
-                      {selectedService.benefits.map((benefit, index) => (";
-                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
-                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
+
                 {/* Features and Benefits */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -446,28 +385,7 @@ export default function Page("props": "any) {;
                     </ul>;
                   </div>;
                 </div>;
-                {/* Use Cases and Target Audience */}";
-                <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-8 mb-8">;
-                  <div>";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <Target className="w-5 h-5 text-zion-cyan"   />                      Use Cases;
-                    </h3>";
-                    <ul className="space-y-2">;
-                      {selectedService.useCases.map((useCase", index) => (";
-                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />;
-                          {useCase}
-                        </li>) ) }
-                    </ul>;
-                  </div>;
-                  <div>";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <Users className="w-5 h-5 text-zion-purple"   />                      Target Audience;
-                    </h3>";
-                    <ul className="space-y-2">;
-                      {selectedService.targetAudience.map((audience, index) => (";
-                        <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
-                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />;
+
                 {/* Use Cases and Target Audience */}"
                 <div className="grid grid-cols-1 md: gri d-cols-2 gap-8 mb-8">
                   <div>"
@@ -496,17 +414,6 @@ export default function Page("props": "any) {;
                   </div>;
                 </div>;
                 {/* Technical Specs */}
-                {selectedService.technicalSpecs && (";
-                  <div className="mb-8">";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <Code className="w-5 h-5 text-zion-cyan"   />                      Technical Specifications;
-                    </h3>";
-                    <div className="grid grid-cols-1 "md": "gri d-cols-2 gap-6">;
-                      <div>";
-                        <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>";
-                        <div className="flex flex-wrap gap-2">;
-                          {selectedService.technicalSpecs.technology.map((tech", index) => (";
-                            <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">;
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"

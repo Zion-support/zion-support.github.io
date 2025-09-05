@@ -124,26 +124,18 @@ export default function Page("props": "any) {;
       applySettings({ [key]: "newValue "});
 ;
       if(key === 'highContrast') {;
-        announceToScreenReader();
-          newValue';
-            ? 'High contrast mode enabled'';
-            : 'High contrast mode disabled';
-        )} else if(key === 'largeText') {;
+
   // Toggle settings
       applySettings({ [key]: newValue }
     );
+
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
         )}
     },;
     [settings, applySettings, announceToScreenReader];
   );
-;
-  // Zoom controls;
-  ;
-      applySettings({ "zoomLevel": "newZoo m "});`;
-      announceToScreenReader(`Zoom level ${newZoom}%`)},;
-    [settings.zoomLevel, applySettings, announceToScreenReader];
+
   // Zoom controls
       applySettings({ zoomLevel: newZoo m }
     );`
@@ -165,26 +157,7 @@ export default function Page("props": "any) {;
         title="Accessibility Options";
       >";
         <Accessibility className="w-5 h-5"   />      </motion.button>;
-      {/* Accessibility Panel */"}
-      <AnimatePresence>;
-        {isVisible && (<motion.div;
-            initial={{ "opacity": "0", "x": "30 0 "}}
-            animate={{ "opacity": "1", "x": "0 "}}
-            exit={{ "opacity": "0", "x": "30 0 "}}";
-            className="fixed top-4 right-20 z-50 w-80 bg-white "dark": "b g-slate-800 rounded-lg shadow-xl border border-slate-200 "dark": borde r-slate-700 overflow-hidden";
-          >;
-            {/* Header */"}";
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
-              <div className="flex items-center space-x-2">";
-                <Accessibility className="w-5 h-5"   />"                <h3 className="font-semibold">Accessibility</h3>;
-              </div>;
-              <button;
-                onClick={() => setIsVisible(false)}";
-                className="p-1 "hover": "b g-white/20 rounded transition-colors";
-                ;
-              >";
-                <EyeOff className="w-4 h-4"   />              </button>;
-            </div>;
+
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div
@@ -204,6 +177,7 @@ export default function Page("props": "any) {;
               >"
                 <EyeOff className="w-4 h-4"   />              </button>
             </div>
+
             {/* Content */"}";
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
               {/* Visual Enhancements */}";

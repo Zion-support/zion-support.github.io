@@ -19,28 +19,22 @@ export default function Page("props": "any) {;
   // Filter services based on search and category;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
-    return matchesSearch && matchesCategory && matchesPrice}) ;
-;
-  // Sort services;
-  ;
+
     return matchesSearch && matchesCategory && matchesPrice}
     );
   // Sort services
+  
     switch(sortBy) {;
       case 'name': ";
         return a.title.localeCompare(b.title);
       case 'price':;
         return parseFloat(a.price.replace(/[^0-9.]/g",)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category': ";
         return a.category.localeCompare(b.category) ;
-      "default":;
-        return 0"}
-  });
-;
       default:;
         return 0}
   }
     );
+
   ;
 ';
   "phone": '+1 302 464 0950',';
@@ -200,21 +194,7 @@ export default function Page("props": "any) {;
               transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.05;
-"}}";
-              className="group relative";
-";
-              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 "hover": "scal e-105 "hover": borde r-zion-cyan/40 "hover": shado w-2xl "hover": shado w-zion-cyan/25">;
-                {/* Service Header */"}";
-                <div className="flex items-start justify-between mb-4">";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-2 mb-2">";
-                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { "className": "w-4 h-4 text-zion-cyan" })}";
-                      <span className="text-zion-cyan text-xs font-medium">{service.category}</span>;
-                    </div>";
-                    <h3 className="text-xl font-bold text-white mb-2 group-"hover": "tex t-zion-cyan transition-colors duration-300">;
-                      {service.title"}
-                    </h3>";
-                    <p className="text-gray-300 text-sm leading-relaxed">;
+
 }}"
               className="group relative"
 "
@@ -297,35 +277,7 @@ export default function Page("props": "any) {;
   "y": "3 0 "}}          animate = {;
   isVisible ? { "opacity": "1",;
   "y": "0 "} : "{ "opacity": 0", "y": "3 0 "}}          transition = {;
-  { "duration": "0.8",;
-  "delay": "0.6 "}}"          className="text-center";
-";
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";
-            <h3 className="text-3xl font-bold text-white mb-6">;
-              Need Custom Pricing or Have Questions?;
-            </h3>";
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Our team of experts is ready to provide personalized quotes and answer any questions;
-              about our services.Get in touch for a detailed consultation.</p>;
-";
-            <div className="grid grid-cols-1 "md": "gri d-cols-3 gap-6 mb-8">";
-              <div className="flex items-center justify-center gap-3 text-zion-cyan">";
-                <Phone className="w-5 h-5"   />";
-                <span className="font-semibold">{contactInfo.phone"}</span>;
-              </div>";
-              <div className="flex items-center justify-center gap-3 text-zion-purple">";
-                <Mail className="w-5 h-5"   />";
-                <span className="font-semibold">{contactInfo.email}</span>;
-              </div>";
-              <div className="flex items-center justify-center gap-3 text-zion-cyan">";
-                <MapPin className="w-5 h-5"   />"                <span className="font-semibold text-center">{contactInfo.address}</span>;
-              </div>;
-            </div>;
-";
-            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">;
-              <a";
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg "hover": shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
+
   { duration: 0.8,
   delay: 0.6 }}"          className="text-center"
 "
@@ -355,6 +307,7 @@ export default function Page("props": "any) {;
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
+
                 Get Custom Quote";
                 <ArrowRight className="w-4 h-4"   />              </a>;
               <a";

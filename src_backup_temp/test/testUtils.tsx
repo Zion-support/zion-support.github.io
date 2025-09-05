@@ -1,49 +1,5 @@
-<<<<<<< HEAD:src/test/testUtils.tsx
-=======
-<<<<<<< HEAD
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-;
-// Test wrapper with providers;
-export const "TestWrapper": "React.FC<{ "children": React.ReactNode "}> = ({ children }) => {;
-  return (;
-    <BrowserRouter>;
-      {children}
-    </BrowserRouter>;
-  );
-};
-;
-// Custom render function;
-export const renderWithProviders = ("props": "any) => {;
-  return render(ui", { "wrapper": "TestWrapper "});
-};
-;
-// Mock data generators;
-export const mockUser = {;
-  "id": '1',;
-  "name": 'Test User',;
-  "email": 'test@example.com',;
-  "role": 'user';
-};
-;
-export const mockMessage = {;
-  "id": '1',;
-  "text": 'Test message',;
-  "sender": 'user' as const,;
-  "timestamp": "new Date();
-"};
-;
-// Common test helpers;
-export const waitForElementToBeRemoved = waitFor;
-export const waitForElementToAppear = waitFor;
-;
-export default {;
-  renderWithProviders,;
-  mockUser,;
-  mockMessage,;
-  waitForElementToBeRemoved,;
-  waitForElementToAppear;
 // Test wrapper with providers
 export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -52,14 +8,8 @@ export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ childre
     </BrowserRouter>
   )};
 // Custom render function
-export const renderWithProviders = (props: any) => {
-  return render(ui, { wrapper: TestWrapper }
-    );
-};
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
->>>>>>> main
->>>>>>> main:src_backup_temp/test/testUtils.tsx
 // Mock data generators
 export const mockUser = {
   "id": '1',

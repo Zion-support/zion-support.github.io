@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from 'react';';';
-import { Link, useLocation } from 'react-router-dom';';';
-import { MainNavigation } from './header/MainNavigation';';';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
+=======
+
 interface HeaderProps {
-  className?: string;
-}
-export function Header(props: any) {const router = useRouter()
-}
-export function Header(props: any) {
-export function Header(props: any) {
-  const [isScrolled, setIsScrolled] = useState<any>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
-export function Header(props: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState<string>('');
+
+=======
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 import React, { useState, useEffect } from 'react';
@@ -41,6 +23,7 @@ export function Header({ className = '' }: "HeaderProps) {;
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
+=======
   const location = useLocation();
 ;
   useEffect(() => {;
@@ -98,6 +81,7 @@ export function Header({ className = '' }: "HeaderProps) {;
               </h1>;
             </div>;
           </Link>;
+
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
@@ -323,10 +307,12 @@ const Header = () => {
       href: '/contact',
     },
   ];
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
+
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -364,8 +350,6 @@ const Header = () => {
             </div>
           </Link>
           {/* Desktop Navigation */}
-          <MainNavigation className="hidden md: fle x"  />
-          <MainNavigation className="hidden md:flex" />
           <nav className="hidden md:flex items-center space-x-8">
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -380,6 +364,7 @@ const Header = () => {
               </Link>
             ))}
           </nav>
+
           {/* Contact Info - Hidden on small screens */}
           <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-2">
@@ -391,12 +376,12 @@ const Header = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
+
           {/* Right side actions */}
           <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
             >
@@ -405,9 +390,6 @@ const Header = () => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
-            >';';
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >
@@ -417,7 +399,6 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
                 className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
                 aria-label="User menu"
               >
@@ -427,12 +408,7 @@ const Header = () => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
-                    onClick={() => setIsUserMenuOpen(false)}
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    onClick={() => setIsUserMenuOpen(false)}
+=======
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -447,8 +423,6 @@ const Header = () => {
                     Sign In
                   </Link>
                   <Link
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
                     to="/contact"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -462,7 +436,6 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
             >
@@ -470,40 +443,8 @@ const Header = () => {
             </button>
           </div>
         </div>
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400"
-              >
-                <Search className="w-5 h-5"  />
-              </button>
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-400"
-              >
-                <Search className="w-5 h-5" />
-              </button>
+
+=======
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -530,7 +471,7 @@ const Header = () => {
                     }`} />
                   )}
                 </button>
-        {/* Search overlay */}
+
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -558,26 +499,7 @@ const Header = () => {
               </div>
             ))}
           </div>
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or help..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors"
-                >
-                  Search
-                </button>
-              </div>
+
             </form>
           </div>
         )
@@ -586,23 +508,8 @@ const Header = () => {
     );
 }
       </div>
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation  />
-          </div>
-            </div>
-  );
-}
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation />
-          </div>
-        </div>
-      )}
+=======
+=======
         </div>
       )}
     </header>
@@ -733,11 +640,7 @@ const router = useRouter()
         </AnimatePresence>
       </nav>
     </header>
-  )
-}
-    );"
-}"
-"
   );
 };
+
 export default Header;

@@ -1,44 +1,86 @@
-import React from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { Cookie, Shield, Settings, BarChart3, CheckCircle } from 'lucide-react';
+import {
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle
+} from 'lucide-react';
 
-const cookieTypes = [
-  {
-    name: "Essential Cookies",
-    description: "These cookies are necessary for the website to function properly and cannot be disabled.",
-    icon: Shield,
-    purpose: "Website functionality, security, and basic features",
-    examples: ["Session management", "Authentication", "Security tokens"]
-  },
-  {
-    name: "Analytics Cookies",
-    description: "These cookies help us understand how visitors interact with our website.",
-    icon: BarChart3,
-    purpose: "Website analytics and performance monitoring",
-    examples: ["Page views", "User behavior", "Traffic sources"]
-  },
-  {
-    name: "Preference Cookies",
-    description: "These cookies remember your preferences and settings.",
-    icon: Settings,
-    purpose: "Personalization and user experience",
-    examples: ["Language settings", "Theme preferences", "Location data"]
-  }
-];
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  });
+
+  const cookieTypes = [
+    {
+      id: 'necessary',
+      name: 'Necessary Cookies',
+      description: 'Essential cookies required for the website to function properly',
+      required: true,
+      examples: ['Session management', 'Security', 'Load balancing']
+    },
+    {
+      id: 'analytics',
+      name: 'Analytics Cookies',
+      description: 'Help us understand how visitors interact with our website',
+      required: false,
+      examples: ['Google Analytics', 'Page views', 'User behavior']
+    },
+    {
+      id: 'marketing',
+      name: 'Marketing Cookies',
+      description: 'Used to track visitors across websites for advertising purposes',
+      required: false,
+      examples: ['Ad targeting', 'Social media', 'Remarketing']
+    },
+    {
+      id: 'functional',
+      name: 'Functional Cookies',
+      description: 'Enable enhanced functionality and personalization',
+      required: false,
+      examples: ['Language preferences', 'User settings', 'Chat widgets']
+    }
+  ];
+
+  const handleCookieToggle = (cookieId: string) => {
+    if (cookieId === 'necessary') return; // Can't disable necessary cookies
+    
+    setCookiePreferences(prev => ({
+      ...prev,
+      [cookieId]: !prev[cookieId]
+    }));
+  };
+
+  const savePreferences = () => {
+    // In a real implementation, this would save to localStorage and update cookie settings
+    alert('Cookie preferences saved!');
+  };
 
 export default function CookiesPage() {
   return (
-    <Layout
+    <MainLayout
       title="Cookie Policy - Zion Tech Group"
-      description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience."
-      keywords="cookie policy, privacy, data protection, website cookies, user preferences"
+      description="Learn about how Zion Tech Group uses cookies on our website. Understand what cookies we use and how you can manage your preferences."
+      keywords="cookie policy, cookies, privacy, data protection, website cookies"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -163,10 +205,42 @@ export default function CookiesPage() {
                           ))}
                         </ul>
                       </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
+                  <button
+                    onClick={() => setCookiePreferences({
+                      necessary: true,
+                      analytics: false,
+                      marketing: false,
+                      functional: false
+                    })}
+                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    Reject All
+                  </button>
+                  <button
+                    onClick={() => setCookiePreferences({
+                      necessary: true,
+                      analytics: true,
+                      marketing: true,
+                      functional: true
+                    })}
+                    className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    Accept All
+                  </button>
+                  <button
+                    onClick={savePreferences}
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  >
+                    Save Preferences
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -255,10 +329,10 @@ export default function CookiesPage() {
                   Privacy Policy
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

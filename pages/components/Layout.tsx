@@ -83,15 +83,6 @@ export default function Layout({ title, description, children, keywords }: Layou
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<<<<<<< HEAD
-      
-      <div className="min-h-screen flex flex-col">
-        <Navigation />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Top Bar */}
@@ -506,7 +497,6 @@ export default function Layout({ title, description, children, keywords }: Layou
             </div>
           </div>
         </footer>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
       </div>
     </>
   );

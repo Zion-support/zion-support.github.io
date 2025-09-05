@@ -94,12 +94,6 @@ export function CategoriesSection("props": "any) {;
                   <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color"} flex items-center justify-center mb-6 group-"hover": "scal e-110 transition-transform duration-300`"}>";
                     <div className="text-white text-2xl">;
                       {category.icon}
-                    </div>;
-                  </div>";
-                  <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>";
-                  <p className="text-gray-300 text-sm">{category.description}</p>;
-                </div>;
-              </Link>;
                     </div>
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}"
@@ -108,16 +102,7 @@ export function CategoriesSection("props": "any) {;
               </Link>
             </motion.div>) ) }
         </motion.div>;
-        <motion.div;
-          className="mt-12"          initial={{ "opacity": "0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6", "delay": "0.4 "}}
-        >";
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>";
-          <div className="flex flex-wrap justify-center gap-4">;
-            {specialServices.map((service) => (;
-              <Link;
+
         <motion.div
           className="mt-12"          initial={{ opacity: 0, y: 2 0 }}
           whileInView={{ opacity: 1, y: 0 }}
