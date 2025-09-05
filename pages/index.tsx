@@ -109,49 +109,6 @@ const contactInfo = {
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <MainLayout
-      title="Zion Tech Group - Leading Technology Solutions"
-      description="Transform your business with our comprehensive technology services including AI solutions, cloud services, cybersecurity, and custom development."
-      keywords="AI services, cloud solutions, cybersecurity, custom development, IT services, technology consulting, enterprise solutions"
-    >
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Business with
-                <span className="block text-yellow-400">Cutting-Edge Technology</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Leading provider of AI solutions, cloud services, and custom development. 
-                Empowering businesses to thrive in the digital age.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center"
-                >
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Explore Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
     <MainLayout>
       <SEOHead 
         title="Zion Tech Group - Leading AI & Technology Solutions"
@@ -159,7 +116,6 @@ export default function HomePage() {
         keywords="AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology"
       />
       <div id="main-content" className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0e40
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
