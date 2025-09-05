@@ -8,8 +8,10 @@ import Layout from '../components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Countries Served' }
+  { number: '3,500+', label: 'Projects Completed' },
+  { number: '115+', label: 'Services & Solutions' },
+  { number: '200+', label: 'Expert Team Members' },
+  { number: '20+', label: 'Years Experience' }
 ];
 
 const services = [
@@ -23,72 +25,26 @@ const services = [
     pricing: 'Starting at $1,800/month'
   },
   {
-    title: 'IT Services',
-    description: '25+ comprehensive IT services from cloud infrastructure to quantum computing and 6G networks',
+    title: "IT Services", 
+    description: "35+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, managed services, compliance, edge computing, quantum-ready infrastructure, 5G implementation, and enterprise digital transformation",
     icon: Network,
-    link: '/it-services',
-    color: 'from-green-500 to-blue-600',
-    stats: '25+ IT Services',
-    pricing: 'Starting at $1,999/month'
+    href: "/it-services",
+    count: "35+ Services",
+    pricing: "Starting at $800/month",
+    marketPrice: "$1,500-15,000/month",
+    benefits: ["99.9% uptime", "50% cost reduction", "24/7 support", "Future-ready infrastructure"],
+    categories: ["Cloud Computing", "Cybersecurity", "DevOps", "Quantum Computing", "Blockchain", "IoT", "AR/VR"]
   },
   {
-    title: 'Micro SAAS',
-    description: '30+ innovative micro SaaS solutions for modern businesses across all industries',
+    title: "Micro SaaS",
+    description: "50+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, automation platforms, subscription management, and specialized business applications with real-time pricing and instant deployment",
     icon: Cloud,
-    link: '/micro-saas',
-    color: 'from-purple-500 to-pink-600',
-    stats: '30+ SaaS Solutions',
-    pricing: 'Starting at $15/month'
-  },
-  {
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure, migration services, and DevOps automation',
-    icon: Globe,
-    link: '/cloud-solutions',
-    color: 'from-indigo-500 to-cyan-600',
-    stats: 'Multi-Cloud Support',
-    pricing: 'Starting at $1,800/month'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Advanced security solutions with AI-powered threat detection and zero-trust architecture',
-    icon: Shield,
-    link: '/cybersecurity',
-    color: 'from-red-500 to-orange-600',
-    stats: '24/7 Protection',
-    pricing: 'Starting at $2,000/month'
-  },
-  {
-    title: 'Quantum Computing',
-    description: 'Next-generation quantum computing infrastructure and quantum AI solutions',
-    icon: Cpu,
-    link: '/quantum-computing',
-    color: 'from-violet-500 to-purple-600',
-    stats: 'Future Technology',
-    pricing: 'Starting at $19,999/month'
-  }
-];
-
-const features = [
-  {
-    title: 'Lightning Fast',
-    description: 'Optimized performance with sub-second response times',
-    icon: Zap
-  },
-  {
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security and 99.9% uptime guarantee',
-    icon: Shield
-  },
-  {
-    title: 'Global Reach',
-    description: 'Serving clients worldwide with local support',
-    icon: Globe
-  },
-  {
-    title: 'Award Winning',
-    description: 'Recognized for excellence in technology innovation',
-    icon: Award
+    href: "/micro-saas",
+    count: "50+ Solutions",
+    pricing: "Starting at $800/month",
+    marketPrice: "$1,500-20,000/month",
+    benefits: ["80% efficiency improvement", "60-90% cost savings", "10x faster deployment"],
+    setupTime: "1-8 weeks"
   }
 ];
 
@@ -119,8 +75,9 @@ export default function HomePage() {
                 Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI & Technology</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Leading provider of innovative AI services, IT solutions, and micro SAAS platforms. 
-                Empowering businesses to thrive in the digital age.
+                Zion Tech Group delivers 115+ comprehensive AI services, IT solutions, and innovative micro SAAS platforms 
+                to accelerate your digital transformation and drive business growth. From cutting-edge AI and quantum computing 
+                to edge computing and sustainable IT solutions, we provide the technology foundation for tomorrow's success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -177,8 +134,12 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth and innovation.
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We provide comprehensive technology solutions to help your business thrive in the digital age. 
+                From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, 
+                edge computing, 5G implementation, and enterprise IT infrastructure. Our 115+ services cover every aspect of 
+                modern technology needs with competitive pricing, real market analysis, and proven results that drive 
+                measurable business growth and operational efficiency.
               </p>
             </motion.div>
 
