@@ -5,6 +5,17 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+    trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+    trackButtonClick: (buttonName: string, location?: string) => void;
+    trackFormSubmission: (formName: string) => void;
+    trackExternalLink: (url: string, linkText: string) => void;
+  }
+}
+
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
@@ -17,7 +28,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
@@ -55,7 +66,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   }, [trackingId]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
@@ -88,10 +99,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
   // Expose tracking functions globally for use in other components
   if (typeof window !== 'undefined') {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
+    (window as unknown as Record<string, unknown>).trackEvent = trackEvent;
+    (window as unknown as Record<string, unknown>).trackButtonClick = trackButtonClick;
+    (window as unknown as Record<string, unknown>).trackFormSubmission = trackFormSubmission;
+    (window as unknown as Record<string, unknown>).trackExternalLink = trackExternalLink;
   }
 
   return (

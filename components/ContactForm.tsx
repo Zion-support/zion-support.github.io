@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Name
+            Name *
           </label>
           <input
             type="text"
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Email
+            Email *
           </label>
           <input
             type="email"
@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -119,7 +119,7 @@ const ContactForm: React.FC = () => {
 
       <div>
         <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-          Service
+          Service Interest
         </label>
         <select
           id="service"
@@ -131,25 +131,38 @@ const ContactForm: React.FC = () => {
           <option value="">Select a service</option>
           <option value="web-development">Web Development</option>
           <option value="mobile-development">Mobile Development</option>
-          <option value="ai-solutions">AI Solutions</option>
+          <option value="ai-services">AI Services</option>
           <option value="consulting">Consulting</option>
+          <option value="other">Other</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Message
+          Message *
         </label>
         <textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleInputChange}
-          rows={5}
           required
+          rows={4}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
+
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+          Thank you for your message! We&apos;ll get back to you soon.
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+          There was an error sending your message. Please try again.
+        </div>
+      )}
 
       <button
         type="submit"
@@ -158,18 +171,6 @@ const ContactForm: React.FC = () => {
       >
         {isSubmitting ? <LoadingSpinner /> : 'Send Message'}
       </button>
-
-      {submitStatus === 'success' && (
-        <div className="text-green-600 text-center">
-          Message sent successfully!
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="text-red-600 text-center">
-          Failed to send message. Please try again.
-        </div>
-      )}
     </form>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Create skip link
+    // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -16,19 +16,16 @@ const AccessibilityEnhancer: React.FC = () => {
       padding: 8px;
       text-decoration: none;
       z-index: 1000;
-      border-radius: 4px;
     `;
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Focus management
-    let usingMouse = false;
     const handleMouseDown = () => {
-      usingMouse = true;
       document.body.classList.add('using-mouse');
     };
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        usingMouse = false;
         document.body.classList.remove('using-mouse');
       }
     };
