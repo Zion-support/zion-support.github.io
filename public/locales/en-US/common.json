@@ -21,11 +21,17 @@
     "home": "Home",
     "marketplace": "Marketplace",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
 >>>>>>> origin/chore/build-setup
     "services": "Services",
+=======
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+>>>>>>> origin/chore/cleanup-and-build
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -36,10 +42,13 @@
     "post_job": "Post Job",
     "analytics": "Analytics",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "faq": "FAQ",
     "help": "Help Center",
 >>>>>>> origin/chore/build-setup
+=======
+>>>>>>> origin/chore/cleanup-and-build
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",

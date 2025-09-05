@@ -45,6 +45,60 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Talent Matching",
+      "short_name": "AI Match",
+      "description": "Find AI talent or jobs",
+      "url": "/match",
+      "icons": [
+        {
+          "src": "/images/ai-match-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "Browse tech services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/images/services-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Talent Directory",
+      "short_name": "Talent",
+      "description": "Find tech professionals",
+      "url": "/talent",
+      "icons": [
+        {
+          "src": "/images/talent-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/%s"
+    }
 =======
   "short_name": "Zion Tech",
   "name": "Zion Tech Group - AI & Technology Solutions",
@@ -89,33 +143,10 @@
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow"
->>>>>>> origin/chore/cleanup-and-build
     }
   ],
   "shortcuts": [
     {
-<<<<<<< HEAD
-      "name": "AI Talent Matching",
-      "short_name": "AI Match",
-      "description": "Find AI talent or jobs",
-      "url": "/match",
-      "icons": [
-        {
-          "src": "/images/ai-match-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "Browse tech services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-=======
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
@@ -124,38 +155,10 @@
         {
           "src": "logo192.png",
           "sizes": "192x192"
->>>>>>> origin/chore/cleanup-and-build
         }
       ]
     },
     {
-<<<<<<< HEAD
-      "name": "Talent Directory",
-      "short_name": "Talent",
-      "description": "Find tech professionals",
-      "url": "/talent",
-      "icons": [
-        {
-          "src": "/images/talent-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/%s"
-=======
       "name": "AI Solutions",
       "short_name": "AI Solutions",
       "description": "Explore AI solutions",
@@ -178,7 +181,7 @@
           "sizes": "192x192"
         }
       ]
->>>>>>> origin/chore/cleanup-and-build
     }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-356a
   ]
 }
