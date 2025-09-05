@@ -5,8 +5,7 @@ import Link from 'next/link';
 export default function Services() {
   const services = [
     {
-      title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
+      title: 'AI Services', description: 'Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
       features: ['Machine Learning Models', 'AI Chatbots', 'Predictive Analytics', 'Computer Vision'],
       href: '/ai-services'
     },

@@ -5,8 +5,7 @@ import Link from 'next/link';
 export default function Pricing() {
   const plans = [
     {
-      name: 'Starter',
-      price: '$2,500',
+      name: 'Starter', price: '$2,500',
       period: '/month',
       description: 'Perfect for small businesses getting started with technology',
       features: [
