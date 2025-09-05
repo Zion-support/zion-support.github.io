@@ -50,25 +50,26 @@ import {}
   HardDrive;
 } from 'lucide-react';
 
-const microSaaSProducts = [{}]
+const microSaaSProducts = [
+  {
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
     features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
     pricing: '$299 - $1,499/month',
     category: 'FinOps',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'LLM Evaluation & Safety Suite',
     description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
     icon: Shield,
     features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
     pricing: '$799 - $3,500/month',
     category: 'AI Safety',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Customer Feedback & NPS Micro-App',
     description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
     icon: MessageSquare,
@@ -76,7 +77,7 @@ const microSaaSProducts = [{}]
     pricing: '$149 - $799/month',
     category: 'Customer Success'
   },
-  {}
+  {
     title: 'API Rate Limiting & Analytics',
     description: 'Intelligent rate limiting with detailed analytics and usage insights.',
     icon: BarChart3,
@@ -84,7 +85,7 @@ const microSaaSProducts = [{}]
     pricing: '$199 - $999/month',
     category: 'API Management'
   },
-  {}
+  {
     title: 'Content Moderation AI',
     description: 'Automated content moderation using advanced AI for text, images, and videos.',
     icon: Eye,
@@ -92,16 +93,16 @@ const microSaaSProducts = [{}]
     pricing: '$399 - $1,999/month',
     category: 'Content Safety'
   },
-  {}
+  {
     title: 'Workflow Automation Engine',
     description: 'No-code workflow automation with integrations to popular business tools.',
     icon: Settings,
     features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     pricing: '$99 - $599/month',
     category: 'Automation',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'AI Lead Scoring & Enrichment',
     description: 'Intelligent lead scoring and data enrichment for sales teams.',
     icon: Target,
@@ -109,7 +110,7 @@ const microSaaSProducts = [{}]
     pricing: '$199 - $999/month',
     category: 'Sales'
   },
-  {}
+  {
     title: 'Social Media Scheduler Pro',
     description: 'Advanced social media management with AI-powered content optimization.',
     icon: Globe,
@@ -117,7 +118,7 @@ const microSaaSProducts = [{}]
     pricing: '$49 - $299/month',
     category: 'Social Media'
   },
-  {}
+  {
     title: 'Invoice & Payment Processor',
     description: 'Streamlined invoicing and payment processing for small businesses.',
     icon: DollarSign,
@@ -125,7 +126,7 @@ const microSaaSProducts = [{}]
     pricing: '$29 - $199/month',
     category: 'Finance'
   },
-  {}
+  {
     title: 'Project Time Tracker',
     description: 'Comprehensive time tracking and project management for teams.',
     icon: Clock,
@@ -133,7 +134,7 @@ const microSaaSProducts = [{}]
     pricing: '$9 - $49/month',
     category: 'Productivity'
   },
-  {}
+  {
     title: 'Email Marketing Automation',
     description: 'Advanced email marketing with AI-powered personalization and automation.',
     icon: Mail,
@@ -141,7 +142,7 @@ const microSaaSProducts = [{}]
     pricing: '$39 - $299/month',
     category: 'Marketing'
   },
-  {}
+  {
     title: 'Inventory Management System',
     description: 'Smart inventory tracking and management for e-commerce businesses.',
     icon: Package,
@@ -149,7 +150,7 @@ const microSaaSProducts = [{}]
     pricing: '$79 - $399/month',
     category: 'E-commerce'
   },
-  {}
+  {
     title: 'Customer Support Ticketing',
     description: 'AI-powered customer support ticketing and knowledge base system.',
     icon: MessageSquare,
@@ -157,7 +158,7 @@ const microSaaSProducts = [{}]
     pricing: '$19 - $149/month',
     category: 'Support'
   },
-  {}
+  {
     title: 'HR & Payroll Management',
     description: 'Complete HR and payroll solution for small to medium businesses.',
     icon: Users,
@@ -165,7 +166,7 @@ const microSaaSProducts = [{}]
     pricing: '$99 - $499/month',
     category: 'HR'
   },
-  {}
+  {
     title: 'Website Analytics & Heatmaps',
     description: 'Advanced website analytics with heatmaps and user behavior tracking.',
     icon: BarChart3,
@@ -173,7 +174,7 @@ const microSaaSProducts = [{}]
     pricing: '$29 - $199/month',
     category: 'Analytics'
   },
-  {}
+  {
     title: 'Document Management System',
     description: 'Secure document storage, sharing, and collaboration platform.',
     icon: FileText,
@@ -181,7 +182,7 @@ const microSaaSProducts = [{}]
     pricing: '$19 - $99/month',
     category: 'Document Management'
   },
-  {}
+  {
     title: 'Event Management Platform',
     description: 'Complete event planning and management solution for organizers.',
     icon: Calendar,
@@ -189,7 +190,7 @@ const microSaaSProducts = [{}]
     pricing: '$49 - $299/month',
     category: 'Events'
   },
-  {}
+  {
     title: 'Learning Management System',
     description: 'Online learning platform for courses, training, and certifications.',
     icon: BookOpen,
@@ -197,16 +198,16 @@ const microSaaSProducts = [{}]
     pricing: '$79 - $399/month',
     category: 'Education'
   },
-  {}
+  {
     title: 'AI-Powered Code Review Assistant',
     description: 'Automated code review with security analysis and performance optimization.',
     icon: Code,
     features: ['Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Automated Fixes'],
     pricing: '$199 - $999/month',
     category: 'Development',
-    popular: true;
+    popular: true
   },
-  {}
+  {
     title: 'Blockchain Payment Gateway',
     description: 'Cryptocurrency payment processing with multi-chain support and DeFi integration.',
     icon: DollarSign,
@@ -214,7 +215,7 @@ const microSaaSProducts = [{}]
     pricing: '$299 - $1,999/month',
     category: 'FinTech'
   },
-  {}
+  {
     title: 'IoT Device Management Platform',
     description: 'Comprehensive IoT device monitoring, management, and analytics platform.',
     icon: Smartphone,
@@ -222,7 +223,7 @@ const microSaaSProducts = [{}]
     pricing: '$149 - $799/month',
     category: 'IoT'
   },
-  {}
+  {
     title: 'AI-Powered SEO Optimizer',
     description: 'Automated SEO optimization with AI content suggestions and ranking analysis.',
     icon: Search,
@@ -230,7 +231,7 @@ const microSaaSProducts = [{}]
     pricing: '$99 - $599/month',
     category: 'SEO'
   },
-  {}
+  {
     title: 'Virtual Event Platform',
     description: 'Complete virtual event hosting with networking, exhibitions, and analytics.',
     icon: Video,
@@ -238,7 +239,7 @@ const microSaaSProducts = [{}]
     pricing: '$199 - $1,499/month',
     category: 'Events'
   },
-  {}
+  {
     title: 'AI Customer Success Platform',
     description: 'Predictive customer success management with churn prevention and growth insights.',
     icon: TrendingUp,
@@ -246,7 +247,7 @@ const microSaaSProducts = [{}]
     pricing: '$299 - $1,999/month',
     category: 'Customer Success'
   },
-  {}
+  {
     title: 'Carbon Footprint Tracker',
     description: 'Sustainability tracking and carbon footprint management for businesses.',
     icon: Sprout,
@@ -254,7 +255,7 @@ const microSaaSProducts = [{}]
     pricing: '$49 - $299/month',
     category: 'Sustainability'
   },
-  {}
+  {
     title: 'AI-Powered Legal Document Generator',
     description: 'Automated legal document creation with compliance checking and customization.',
     icon: FileText,
@@ -262,7 +263,7 @@ const microSaaSProducts = [{}]
     pricing: '$199 - $999/month',
     category: 'Legal Tech'
   },
-  {}
+  {
     title: 'Real Estate Investment Analyzer',
     description: 'AI-powered real estate investment analysis and market prediction platform.',
     icon: Home,
@@ -270,7 +271,7 @@ const microSaaSProducts = [{}]
     pricing: '$149 - $799/month',
     category: 'Real Estate'
   },
-  {}
+  {
     title: 'AI-Powered Recruitment Platform',
     description: 'Intelligent candidate screening and matching for HR teams.',
     icon: Users,
@@ -278,7 +279,7 @@ const microSaaSProducts = [{}]
     pricing: '$199 - $1,299/month',
     category: 'HR Tech'
   },
-  {}
+  {
     title: 'Voice AI Assistant Platform',
     description: 'Custom voice AI assistants with natural language processing and multi-language support.',
     icon: Mic,
@@ -286,7 +287,7 @@ const microSaaSProducts = [{}]
     pricing: '$399 - $2,499/month',
     category: 'Voice AI'
   },
-  {}
+  {
     title: 'AI-Powered Content Moderation',
     description: 'Automated content moderation for text, images, and videos using advanced AI.',
     icon: Eye,
@@ -294,7 +295,7 @@ const microSaaSProducts = [{}]
     pricing: '$299 - $1,999/month',
     category: 'Content Safety'
   },
-  {}
+  {
     title: 'Predictive Maintenance Platform',
     description: 'IoT-based predictive maintenance for industrial equipment and machinery.',
     icon: Settings,
@@ -302,6 +303,159 @@ const microSaaSProducts = [{}]
     pricing: '$499 - $2,999/month',
     category: 'Industrial IoT'
   },
+  {
+    title: 'AI-Powered Cybersecurity Suite',
+    description: 'Advanced threat detection and response system with machine learning capabilities.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Vulnerability Scanning', 'Compliance Monitoring'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption Platform',
+    description: 'Post-quantum cryptography solutions for future-proof data protection.',
+    icon: Lock,
+    features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Tools', 'Compliance Support'],
+    pricing: '$599 - $3,999/month',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting and risk analysis.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Risk Analysis', 'Route Optimization', 'Cost Reduction'],
+    pricing: '$299 - $1,999/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'Neural Network Model Marketplace',
+    description: 'Marketplace for buying, selling, and deploying pre-trained AI models.',
+    icon: Brain,
+    features: ['Model Marketplace', 'API Integration', 'Performance Metrics', 'Version Control'],
+    pricing: '$99 - $999/month',
+    category: 'AI Marketplace'
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Manage and deploy applications across edge computing infrastructure.',
+    icon: Server,
+    features: ['Edge Deployment', 'Load Balancing', 'Monitoring', 'Auto-scaling'],
+    pricing: '$199 - $1,499/month',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerate pharmaceutical research with AI-driven molecular analysis.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Regulatory Compliance'],
+    pricing: '$999 - $9,999/month',
+    category: 'PharmaTech'
+  },
+  {
+    title: 'Autonomous Vehicle Fleet Management',
+    description: 'Comprehensive fleet management for autonomous vehicles and drones.',
+    icon: Car,
+    features: ['Fleet Monitoring', 'Route Optimization', 'Maintenance Scheduling', 'Safety Analytics'],
+    pricing: '$499 - $3,999/month',
+    category: 'Autonomous Vehicles'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis platform.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Analysis', 'Carbon Tracking', 'Sustainability Reporting'],
+    pricing: '$299 - $2,499/month',
+    category: 'ClimateTech'
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins for physical assets and processes.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation'],
+    pricing: '$399 - $2,999/month',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support platform.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapy Recommendations', 'Privacy Protection'],
+    pricing: '$29 - $199/month',
+    category: 'HealthTech'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification and KYC/AML compliance platform.',
+    icon: Shield,
+    features: ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Cross-platform Integration'],
+    pricing: '$199 - $1,499/month',
+    category: 'Identity Management'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time translation service with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'API Integration'],
+    pricing: '$99 - $799/month',
+    category: 'Language Tech'
+  },
+  {
+    title: 'Smart City Infrastructure Manager',
+    description: 'Comprehensive platform for managing smart city infrastructure and services.',
+    icon: Building,
+    features: ['Infrastructure Monitoring', 'Service Optimization', 'Citizen Engagement', 'Data Analytics'],
+    pricing: '$999 - $9,999/month',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection system using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Response'],
+    pricing: '$299 - $2,499/month',
+    category: 'Fraud Prevention'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Algorithm Development', 'Performance Testing', 'Educational Tools'],
+    pricing: '$199 - $1,999/month',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI-Powered Personal Finance Manager',
+    description: 'Intelligent personal finance management with investment recommendations.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Analysis', 'Goal Setting', 'Financial Planning'],
+    pricing: '$9 - $49/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Autonomous Drone Delivery Network',
+    description: 'Complete drone delivery management system with route optimization and safety monitoring.',
+    icon: Rocket,
+    features: ['Route Optimization', 'Safety Monitoring', 'Package Tracking', 'Weather Integration'],
+    pricing: '$499 - $3,999/month',
+    category: 'Drone Technology'
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Smart energy management system for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Optimization Algorithms', 'Cost Analysis', 'Sustainability Tracking'],
+    pricing: '$199 - $1,499/month',
+    category: 'Energy Management'
+  },
+  {
+    title: 'Neural Interface Development Kit',
+    description: 'Platform for developing brain-computer interface applications and devices.',
+    icon: Brain,
+    features: ['Signal Processing', 'Machine Learning', 'Device Integration', 'Safety Protocols'],
+    pricing: '$999 - $9,999/month',
+    category: 'Neurotechnology'
+  }
   {}
     title: 'AI-Powered Translation Platform',
     description: 'Real-time translation services with context awareness and industry terminology.',
