@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface NewServicesProps {
-  // Add props here as needed
-}
-
-export default function NewServices({ }: NewServicesProps) {
-  return (
-    <div>
-      <h1>NewServices</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+<<<<<<< \"HEAD\": src.pages.disabled/NewServices.jsx import React from \'react\'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [searchTerm,setSearchTerm] = useState (\") ; const [selectedService,setSelectedService] = useState (null) ; import React from \'react\'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [searchTerm,setSearchTerm] = useState (\") ; const [selectedService,setSelectedService] = useState (null) ;\"";
+=======
+<<<<<<< "HEAD": src.pages.disabled/NewServices.jsx import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ; import _React from 'react'; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export default NewServices; export function NewServices () { const [selectedCategory,setSelectedCategory] = useState ("all") ; const [searchTerm,setSearchTerm] = useState (") ; const [selectedService,setSelectedService] = useState (null) ;"";
+>>>>>>> main

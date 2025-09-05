@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface DeployProps {
-  // Add props here as needed
-}
-
-export default function Deploy({ }: DeployProps) {
-  return (
-    <div>
-      <h1>Deploy</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:',deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:',addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { '; )}'; main().catch((error) => { console.error(error); process."exitCode": '= 1'})
+=======
+<<<<<<< HEAD
+const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
+=======
+import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
+>>>>>>> main
+>>>>>>> main

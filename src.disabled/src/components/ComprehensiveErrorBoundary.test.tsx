@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+it(displays expected content\",() => {}; import { render,screen } from &apos;@testing - library/react\",; import ComprehensiveErrorBoundary from &apos;./ComprehensiveErrorBoundary; describe(&apos;ComprehensiveErrorBoundary&apos,() => {}} expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ComprehensiveErrorBoundary / >)\"; expect(screen.getByRole(\"main\") || screen.getByText(/.*/)).toBeInTheDocument();})\"; \";}}))
+=======
+<<<<<<< HEAD
+it(displays expected content",() => {}; import { render,screen } from &apos;@testing - library/react",; import ComprehensiveErrorBoundary from &apos;./ComprehensiveErrorBoundary; describe(&apos;ComprehensiveErrorBoundary&apos,() => {}} expect(screen.getByRole(&apos;main&apos) | screen.getByText(/.*/)).toBeInTheDocument()});} it(&apos;displays expected content&apos,() => {}} render(<ComprehensiveErrorBoundary / >)"; expect(screen.getByRole("main") | screen.getByText(/.*/)).toBeInTheDocument();})"; ";}}))""
+=======
 import React from 'react';
 
 interface ComprehensiveErrorBoundary.testProps {
@@ -12,3 +18,5 @@ export default function ComprehensiveErrorBoundary.test({ }: ComprehensiveErrorB
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

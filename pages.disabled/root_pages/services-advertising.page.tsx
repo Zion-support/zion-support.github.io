@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface Servicesadvertising.pageProps {
@@ -12,3 +14,4 @@ export default function Servicesadvertising.page({ }: Servicesadvertising.pagePr
     </div>
   );
 }
+>>>>>>> main
