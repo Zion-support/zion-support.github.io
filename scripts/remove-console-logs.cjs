@@ -84,13 +84,9 @@ function main() {
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
-<<<<<<< HEAD
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
   let totalRemoved = 0;
   let filesProcessed = 0;
 
@@ -120,18 +116,13 @@ function main() {
 
   console.log("\n📊 Summary: ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements "removed": ${totalRemoved}`);
+  console.log(`   Console statements removed: ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-<<<<<<< HEAD
-    console.log("\n✨ Production build optimized!")} else {
-    console.log("\n✨ No console statements found to remove.")}
-=======
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 }
 
 if (require.main === module) {
