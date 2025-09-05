@@ -1,16 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../src/components/Layout';
 
 export default function TermsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Terms of Service - Zion Tech Group"
       description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
       keywords="terms of service, user agreement, service terms, legal terms"
-      canonical="https://ziontechgroup.com/terms"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -114,6 +114,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }

@@ -36,7 +36,7 @@ import {
   Mic,
   Monitor
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../src/components/Layout';
 
 const microSaasSolutions = [
   {

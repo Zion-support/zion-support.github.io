@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../src/components/Layout';
 import { motion } from 'framer-motion';
 import {
   Eye, 
@@ -165,7 +165,7 @@ const accessibilityGuidelines = [
 
 export default function AccessibilityPage() {
   return (
-    <MainLayout
+    <Layout
       title="Accessibility - Zion Tech Group"
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
@@ -367,6 +367,6 @@ export default function AccessibilityPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
