@@ -23,7 +23,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       firstContentfulPaint: fcp ? fcp.startTime : 0,
       largestContentfulPaint: lcp ? lcp.startTime : 0,
       cumulativeLayoutShift: cls,
-      firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
+      firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
     };
   } catch (error) {
     console.warn('Error measuring performance:', error);

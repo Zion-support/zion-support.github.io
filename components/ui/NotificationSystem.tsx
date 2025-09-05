@@ -14,9 +14,9 @@ interface NotificationSystemProps {
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
+  notifications;
   onDismiss,
-  className,
+  className
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
