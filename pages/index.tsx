@@ -7,45 +7,45 @@ import Layout from './components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '3,200+', label: 'Projects Completed' },
-  { number: '235+', label: 'Services & Solutions' },
-  { number: '180+', label: 'Expert Team Members' },
-  { number: '18+', label: 'Years Experience' }
+  { number: '3,500+', label: 'Projects Completed' },
+  { number: '95+', label: 'Services & Solutions' },
+  { number: '200+', label: 'Expert Team Members' },
+  { number: '20+', label: 'Years Experience' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "25+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, quantum AI, drug discovery, climate modeling, space analytics, and metaverse platforms with real-world applications",
+    description: "30+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, chatbots, fraud detection, autonomous systems, voice AI, and specialized industry solutions with real-world applications",
     icon: Brain,
     href: "/ai-services",
-    count: "25+ Solutions",
+    count: "30+ Solutions",
     pricing: "Starting at $1,800/month",
-    marketPrice: "$2,500-100,000/month",
+    marketPrice: "$2,500-50,000/month",
     benefits: ["40-95% accuracy improvement", "60-90% automation", "15-90% ROI increase"],
     setupTime: "2-16 weeks"
   },
   {
     title: "IT Services", 
-    description: "28+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, 5G networks, quantum computing, edge computing, blockchain infrastructure, and green IT solutions",
+    description: "30+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, managed services, compliance, edge computing, quantum-ready infrastructure, 5G implementation, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
-    count: "28+ Services",
+    count: "30+ Services",
     pricing: "Starting at $800/month",
-    marketPrice: "$1,500-100,000/month",
+    marketPrice: "$1,500-20,000/month",
     benefits: ["99.9% uptime", "30-50% cost reduction", "24/7 support"],
-    setupTime: "1-24 weeks"
+    setupTime: "1-12 weeks"
   },
   {
     title: "Micro SaaS",
-    description: "35+ innovative micro SaaS solutions including AI content generators, smart contracts, predictive maintenance, voice commerce, AR/VR platforms, digital twins, and quantum-safe security for modern businesses",
+    description: "35+ innovative micro SaaS solutions for modern businesses across all industries including AI-powered tools, automation platforms, subscription management, and specialized business applications with real-time pricing and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
     count: "35+ Solutions",
-    pricing: "Starting at $1,000/month",
-    marketPrice: "$1,800-25,000/month",
+    pricing: "Starting at $800/month",
+    marketPrice: "$1,500-20,000/month",
     benefits: ["80% efficiency improvement", "60-90% cost savings", "10x faster deployment"],
-    setupTime: "1-12 weeks"
+    setupTime: "1-8 weeks"
   }
 ];
 
@@ -80,8 +80,9 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Zion Tech Group delivers comprehensive AI services, IT solutions, and innovative micro SAAS platforms 
-                to accelerate your digital transformation and drive business growth.
+                Zion Tech Group delivers 95+ comprehensive AI services, IT solutions, and innovative micro SAAS platforms 
+                to accelerate your digital transformation and drive business growth. From cutting-edge AI and quantum computing 
+                to edge computing and sustainable IT solutions, we provide the technology foundation for tomorrow's success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -111,8 +112,9 @@ export default function HomePage() {
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We provide comprehensive technology solutions to help your business thrive in the digital age. 
                 From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, 
-                and enterprise IT infrastructure. Our 235+ services cover every aspect of modern technology needs with 
-                competitive pricing and proven results.
+                edge computing, 5G implementation, and enterprise IT infrastructure. Our 95+ services cover every aspect of 
+                modern technology needs with competitive pricing, real market analysis, and proven results that drive 
+                measurable business growth and operational efficiency.
               </p>
             </motion.div>
 

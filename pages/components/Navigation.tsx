@@ -83,21 +83,21 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '80+ cutting-edge AI solutions',
+        description: '30+ cutting-edge AI solutions',
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '70+ comprehensive IT services',
+        description: '25+ comprehensive IT services',
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '85+ innovative micro SaaS solutions',
+        description: '40+ innovative micro SaaS solutions',
         popular: true
       }
     ]
