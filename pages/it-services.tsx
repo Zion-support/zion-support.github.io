@@ -85,6 +85,186 @@ const itServices = [
     category: 'DevOps',
     popular: false,
     benefits: ['Faster Deployments', 'Reduced Errors', 'Better Collaboration', 'Improved Quality']
+  },
+  {
+    title: 'AI-Powered IT Automation',
+    description: 'Intelligent automation solutions for IT operations and infrastructure management.',
+    icon: Zap,
+    features: ['Process Automation', 'Predictive Maintenance', 'Anomaly Detection', 'Self-Healing Systems'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'AI & Automation',
+    popular: true,
+    benefits: ['Reduced Manual Work', 'Proactive Issue Resolution', 'Cost Savings', 'Improved Reliability']
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',
+    icon: CogIcon,
+    features: ['Quantum Algorithm Development', 'Hybrid Classical-Quantum Systems', 'Optimization Problems', 'Research & Development'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    benefits: ['Exponential Speedup', 'Complex Problem Solving', 'Competitive Advantage', 'Future-Proof Technology']
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed computing infrastructure for real-time processing and reduced latency.',
+    icon: LayersIcon,
+    features: ['Edge Server Deployment', 'IoT Integration', 'Real-time Processing', 'Data Synchronization'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Edge Computing',
+    popular: true,
+    benefits: ['Reduced Latency', 'Improved Performance', 'Bandwidth Optimization', 'Real-time Analytics']
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Secure blockchain networks and smart contract development for enterprise applications.',
+    icon: Lock,
+    features: ['Blockchain Development', 'Smart Contracts', 'Consensus Mechanisms', 'Security Audits'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Blockchain',
+    popular: true,
+    benefits: ['Enhanced Security', 'Transparency', 'Decentralization', 'Immutable Records']
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Next-generation 5G network deployment and optimization for ultra-fast connectivity.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Optimization', 'IoT Connectivity', 'Performance Monitoring'],
+    pricing: '$25,000 - $200,000/project',
+    category: '5G Networks',
+    popular: true,
+    benefits: ['Ultra-Fast Speeds', 'Low Latency', 'Massive IoT Support', 'Future-Ready Infrastructure']
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT solutions for connected devices and smart systems.',
+    icon: Settings,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Integration APIs'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'IoT',
+    popular: true,
+    benefits: ['Connected Systems', 'Data Insights', 'Automation', 'Operational Efficiency']
+  },
+  {
+    title: 'AR/VR Technology Solutions',
+    description: 'Immersive augmented and virtual reality applications for business and training.',
+    icon: Monitor,
+    features: ['AR/VR Development', '3D Modeling', 'Interactive Experiences', 'Hardware Integration'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'AR/VR',
+    popular: true,
+    benefits: ['Immersive Experiences', 'Enhanced Training', 'Remote Collaboration', 'Innovative Solutions']
+  },
+  {
+    title: 'Machine Learning Infrastructure',
+    description: 'Scalable ML infrastructure and model deployment for AI applications.',
+    icon: Server,
+    features: ['ML Pipeline Setup', 'Model Training', 'Deployment Automation', 'Monitoring & Scaling'],
+    pricing: '$18,000 - $120,000/project',
+    category: 'Machine Learning',
+    popular: true,
+    benefits: ['Scalable AI', 'Automated ML', 'Better Performance', 'Cost Optimization']
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security model implementation for maximum protection.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Reduced Risk', 'Compliance', 'Trust Verification']
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable and energy-efficient IT infrastructure and practices.',
+    icon: Globe,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Sustainability',
+    popular: false,
+    benefits: ['Environmental Impact', 'Cost Savings', 'Compliance', 'Corporate Responsibility']
+  },
+  {
+    title: 'Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery and business continuity planning and implementation.',
+    icon: CheckCircle,
+    features: ['Backup Strategies', 'Recovery Testing', 'Business Continuity Planning', 'RTO/RPO Optimization'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Disaster Recovery',
+    popular: true,
+    benefits: ['Business Protection', 'Minimal Downtime', 'Data Safety', 'Compliance']
+  },
+  {
+    title: 'IT Governance & Compliance',
+    description: 'Comprehensive IT governance framework and compliance management.',
+    icon: Settings,
+    features: ['Policy Development', 'Compliance Monitoring', 'Risk Assessment', 'Audit Support'],
+    pricing: '$5,000 - $35,000/month',
+    category: 'Governance',
+    popular: false,
+    benefits: ['Regulatory Compliance', 'Risk Management', 'Policy Enforcement', 'Audit Readiness']
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Seamless management of hybrid cloud environments across multiple platforms.',
+    icon: Cloud,
+    features: ['Multi-Cloud Orchestration', 'Cost Optimization', 'Security Management', 'Performance Monitoring'],
+    pricing: '$8,000 - $60,000/setup',
+    category: 'Cloud Services',
+    popular: true,
+    benefits: ['Flexibility', 'Cost Optimization', 'Vendor Independence', 'Scalability']
+  },
+  {
+    title: 'API Management & Integration',
+    description: 'Comprehensive API lifecycle management and system integration services.',
+    icon: GitBranchIcon,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Monitoring & Analytics'],
+    pricing: '$6,000 - $45,000/setup',
+    category: 'Integration',
+    popular: true,
+    benefits: ['Seamless Integration', 'API Security', 'Performance Optimization', 'Developer Experience']
+  },
+  {
+    title: 'IT Asset Management',
+    description: 'Complete lifecycle management of IT assets and resources.',
+    icon: Monitor,
+    features: ['Asset Discovery', 'License Management', 'Lifecycle Tracking', 'Cost Optimization'],
+    pricing: '$3,000 - $25,000/setup',
+    category: 'Asset Management',
+    popular: false,
+    benefits: ['Cost Control', 'Compliance', 'Asset Optimization', 'Risk Reduction']
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic guidance for digital transformation initiatives and technology adoption.',
+    icon: Users,
+    features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Implementation Support'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Consulting',
+    popular: true,
+    benefits: ['Strategic Alignment', 'Technology Adoption', 'Change Management', 'Competitive Advantage']
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification preparation for teams.',
+    icon: Users,
+    features: ['Custom Training Programs', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$2,000 - $15,000/program',
+    category: 'Training',
+    popular: false,
+    benefits: ['Skill Development', 'Certification', 'Team Productivity', 'Knowledge Retention']
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive performance analysis and optimization for IT systems and applications.',
+    icon: Zap,
+    features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Implementation', 'Monitoring'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'Performance',
+    popular: true,
+    benefits: ['Improved Performance', 'Better User Experience', 'Cost Optimization', 'System Reliability']
   }
 ];
 
@@ -95,7 +275,23 @@ const categories = [
   'Infrastructure',
   'Data Management',
   'Support',
-  'DevOps'
+  'DevOps',
+  'AI & Automation',
+  'Quantum Computing',
+  'Edge Computing',
+  'Blockchain',
+  '5G Networks',
+  'IoT',
+  'AR/VR',
+  'Machine Learning',
+  'Sustainability',
+  'Disaster Recovery',
+  'Governance',
+  'Integration',
+  'Asset Management',
+  'Consulting',
+  'Training',
+  'Performance'
 ];
 
 const industries = [

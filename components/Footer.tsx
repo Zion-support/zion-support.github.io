@@ -160,10 +160,13 @@ export default function Footer() {
                 <span className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
 
-          {/* Services */}
-          {Object.entries(services).map(([category, serviceList]) => (
-            <div key={category}>
-              <h4 className="text-lg font-semibold mb-4">{category}</h4>
+          {/* Footer Sections */}
+          {footerSections.map((section, index) => (
+            <div key={index}>
+              <h4 className="text-lg font-semibold mb-4 flex items-center">
+                <section.icon className="w-5 h-5 mr-2 text-blue-400" />
+                {section.title}
+              </h4>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -179,33 +182,11 @@ export default function Footer() {
             </div>
           ))}
         </div>
+        
+        {/* Social Links */}
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Empowering businesses with cutting-edge technology solutions.
-                From AI and cloud computing to cybersecurity and quantum computing,
-                we deliver innovative solutions that drive growth and success.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-4 w-4 text-blue-400" />
-                  <span className="text-gray-300">{contactInfo.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-4 w-4 text-blue-400" />
-                  <span className="text-gray-300">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-4 w-4 text-blue-400 mt-1" />
-                  <span className="text-gray-300">{contactInfo.address}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="h-4 w-4 text-blue-400" />
-                  <span className="text-gray-300">{contactInfo.hours}</span>
-                </div>
-            <div>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-6 md:mb-0">
               <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -221,6 +202,29 @@ export default function Footer() {
                   </a>
                 ))}
               </div>
+            </div>
+            <div className="text-center md:text-right">
+              <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
+              <div className="space-y-2">
+                <div className="flex items-center justify-center md:justify-end space-x-3">
+                  <Phone className="h-4 w-4 text-blue-400" />
+                  <span className="text-gray-300">{contactInfo.phone}</span>
+                </div>
+                <div className="flex items-center justify-center md:justify-end space-x-3">
+                  <Mail className="h-4 w-4 text-blue-400" />
+                  <span className="text-gray-300">{contactInfo.email}</span>
+                </div>
+                <div className="flex items-start justify-center md:justify-end space-x-3">
+                  <MapPin className="h-4 w-4 text-blue-400 mt-1" />
+                  <span className="text-gray-300">{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center justify-center md:justify-end space-x-3">
+                  <Clock className="h-4 w-4 text-blue-400" />
+                  <span className="text-gray-300">{contactInfo.hours}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div>

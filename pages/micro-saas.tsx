@@ -19,7 +19,9 @@ import {
   FileText,
   Target,
   Globe,
-  Lock
+  Lock,
+  Calendar,
+  Code
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -103,6 +105,196 @@ const microSaasProducts = [
     category: 'Productivity',
     popular: false,
     benefits: ['Better organization', 'Team coordination', 'Progress tracking', 'Deadline management']
+  },
+  {
+    title: 'AI-Powered Social Media Scheduler',
+    description: 'Intelligent social media scheduling with optimal timing and content suggestions.',
+    icon: Globe,
+    features: ['Smart Scheduling', 'Content Suggestions', 'Analytics', 'Multi-platform'],
+    pricing: '$24/month',
+    category: 'Marketing',
+    popular: true,
+    benefits: ['Optimal posting times', 'Content optimization', 'Time savings', 'Better engagement']
+  },
+  {
+    title: 'Invoice Generator Pro',
+    description: 'Professional invoice creation and management for freelancers and small businesses.',
+    icon: FileText,
+    features: ['Custom Templates', 'Payment Tracking', 'Tax Calculations', 'Client Portal'],
+    pricing: '$12/month',
+    category: 'Finance',
+    popular: true,
+    benefits: ['Professional invoices', 'Faster payments', 'Tax compliance', 'Client satisfaction']
+  },
+  {
+    title: 'Password Manager Business',
+    description: 'Secure password management and team sharing for businesses.',
+    icon: Lock,
+    features: ['Secure Storage', 'Team Sharing', 'Password Generator', 'Security Audit'],
+    pricing: '$16/month',
+    category: 'Security',
+    popular: false,
+    benefits: ['Enhanced security', 'Team collaboration', 'Password strength', 'Compliance']
+  },
+  {
+    title: 'Time Tracking & Billing',
+    description: 'Accurate time tracking and automated billing for service businesses.',
+    icon: Clock,
+    features: ['Time Tracking', 'Automatic Billing', 'Project Reports', 'Client Portal'],
+    pricing: '$20/month',
+    category: 'Productivity',
+    popular: true,
+    benefits: ['Accurate billing', 'Time optimization', 'Client transparency', 'Revenue tracking']
+  },
+  {
+    title: 'AI Writing Assistant',
+    description: 'AI-powered writing tool for content creation, editing, and optimization.',
+    icon: Brain,
+    features: ['Content Generation', 'Grammar Check', 'SEO Optimization', 'Tone Analysis'],
+    pricing: '$28/month',
+    category: 'Content',
+    popular: true,
+    benefits: ['Better writing', 'SEO improvement', 'Time savings', 'Consistent quality']
+  },
+  {
+    title: 'Customer Feedback Manager',
+    description: 'Collect, analyze, and act on customer feedback across all channels.',
+    icon: MessageSquare,
+    features: ['Feedback Collection', 'Sentiment Analysis', 'Action Planning', 'Reporting'],
+    pricing: '$22/month',
+    category: 'Customer Success',
+    popular: false,
+    benefits: ['Better insights', 'Customer satisfaction', 'Data-driven decisions', 'Retention improvement']
+  },
+  {
+    title: 'Expense Tracker Pro',
+    description: 'Smart expense tracking and receipt management for businesses.',
+    icon: BarChart3,
+    features: ['Receipt Scanning', 'Category Management', 'Tax Preparation', 'Reporting'],
+    pricing: '$14/month',
+    category: 'Finance',
+    popular: false,
+    benefits: ['Expense control', 'Tax compliance', 'Receipt organization', 'Budget tracking']
+  },
+  {
+    title: 'Team Communication Hub',
+    description: 'Centralized communication platform for remote and hybrid teams.',
+    icon: Users,
+    features: ['Chat & Video', 'File Sharing', 'Project Channels', 'Integration Hub'],
+    pricing: '$26/month',
+    category: 'Communication',
+    popular: true,
+    benefits: ['Better collaboration', 'Reduced emails', 'Centralized info', 'Team productivity']
+  },
+  {
+    title: 'AI SEO Optimizer',
+    description: 'Automated SEO analysis and optimization for websites and content.',
+    icon: Target,
+    features: ['SEO Analysis', 'Keyword Research', 'Content Optimization', 'Rank Tracking'],
+    pricing: '$32/month',
+    category: 'Marketing',
+    popular: true,
+    benefits: ['Better rankings', 'Traffic increase', 'SEO insights', 'Competitive advantage']
+  },
+  {
+    title: 'Subscription Management',
+    description: 'Track and manage all your business subscriptions and recurring payments.',
+    icon: Settings,
+    features: ['Subscription Tracking', 'Cost Analysis', 'Renewal Alerts', 'Usage Monitoring'],
+    pricing: '$10/month',
+    category: 'Finance',
+    popular: false,
+    benefits: ['Cost control', 'No surprises', 'Usage insights', 'Budget optimization']
+  },
+  {
+    title: 'AI Customer Support',
+    description: 'Intelligent customer support with automated responses and ticket routing.',
+    icon: MessageSquare,
+    features: ['AI Responses', 'Ticket Routing', 'Knowledge Base', 'Analytics'],
+    pricing: '$30/month',
+    category: 'Support',
+    popular: true,
+    benefits: ['Faster responses', '24/7 support', 'Cost reduction', 'Customer satisfaction']
+  },
+  {
+    title: 'Document Collaboration',
+    description: 'Real-time document collaboration and version control for teams.',
+    icon: FileText,
+    features: ['Real-time Editing', 'Version Control', 'Comments', 'Approval Workflow'],
+    pricing: '$18/month',
+    category: 'Productivity',
+    popular: false,
+    benefits: ['Better collaboration', 'Version control', 'Efficient reviews', 'Team coordination']
+  },
+  {
+    title: 'AI Data Analytics',
+    description: 'Automated data analysis and insights for business intelligence.',
+    icon: BarChart3,
+    features: ['Data Visualization', 'Automated Reports', 'Predictive Analytics', 'Custom Dashboards'],
+    pricing: '$35/month',
+    category: 'Analytics',
+    popular: true,
+    benefits: ['Data insights', 'Automated reports', 'Better decisions', 'Competitive advantage']
+  },
+  {
+    title: 'Employee Onboarding',
+    description: 'Streamlined employee onboarding process with automated workflows.',
+    icon: Users,
+    features: ['Workflow Automation', 'Document Management', 'Progress Tracking', 'Compliance'],
+    pricing: '$25/month',
+    category: 'HR',
+    popular: false,
+    benefits: ['Faster onboarding', 'Consistency', 'Compliance', 'Better experience']
+  },
+  {
+    title: 'AI Meeting Scheduler',
+    description: 'Intelligent meeting scheduling with calendar integration and optimization.',
+    icon: Clock,
+    features: ['Smart Scheduling', 'Calendar Sync', 'Time Zone Handling', 'Meeting Analytics'],
+    pricing: '$16/month',
+    category: 'Productivity',
+    popular: true,
+    benefits: ['Time savings', 'No conflicts', 'Optimal timing', 'Better meetings']
+  },
+  {
+    title: 'Content Calendar Manager',
+    description: 'Plan, schedule, and manage all your content across multiple platforms.',
+    icon: Calendar,
+    features: ['Content Planning', 'Multi-platform', 'Collaboration', 'Analytics'],
+    pricing: '$20/month',
+    category: 'Content',
+    popular: false,
+    benefits: ['Better planning', 'Consistency', 'Team coordination', 'Content strategy']
+  },
+  {
+    title: 'AI Lead Qualification',
+    description: 'Automated lead scoring and qualification using AI and machine learning.',
+    icon: Target,
+    features: ['Lead Scoring', 'Qualification Rules', 'CRM Integration', 'Analytics'],
+    pricing: '$28/month',
+    category: 'Sales',
+    popular: true,
+    benefits: ['Better leads', 'Higher conversion', 'Time savings', 'Sales efficiency']
+  },
+  {
+    title: 'Team Performance Analytics',
+    description: 'Track and analyze team performance with detailed insights and recommendations.',
+    icon: BarChart3,
+    features: ['Performance Metrics', 'Goal Tracking', 'Team Insights', 'Recommendations'],
+    pricing: '$24/month',
+    category: 'HR',
+    popular: false,
+    benefits: ['Performance insights', 'Goal alignment', 'Team improvement', 'Data-driven HR']
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review and quality assurance for development teams.',
+    icon: Code,
+    features: ['Code Analysis', 'Quality Metrics', 'Security Checks', 'Best Practices'],
+    pricing: '$40/month',
+    category: 'Development',
+    popular: true,
+    benefits: ['Code quality', 'Security', 'Best practices', 'Team learning']
   }
 ];
 
@@ -114,7 +306,14 @@ const categories = [
   'Automation',
   'Support',
   'E-commerce',
-  'Productivity'
+  'Productivity',
+  'Finance',
+  'Security',
+  'Content',
+  'Customer Success',
+  'Communication',
+  'HR',
+  'Development'
 ];
 
 const benefits = [

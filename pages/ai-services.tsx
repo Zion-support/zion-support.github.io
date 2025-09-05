@@ -43,7 +43,13 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  Trash2,
+  Music,
+  Shirt,
+  Moon,
+  Activity,
+  MapPin
 } from 'lucide-react';
 const aiServices = [
   {
@@ -550,6 +556,177 @@ title: 'Generative AI Content Creation Suite',
     features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI.',
+    icon: Database,
+    features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'Intelligent AR systems with real-time object recognition and interaction.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'AR AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality Therapy',
+    description: 'VR-based therapeutic interventions powered by AI for mental health treatment.',
+    icon: Heart,
+    features: ['Therapy Sessions', 'Progress Tracking', 'Personalized Treatment', 'Biometric Monitoring'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'VR Therapy AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Home Intelligence',
+    description: 'Complete smart home automation with AI learning and adaptation.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Security Monitoring', 'Predictive Maintenance'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Smart Home AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Gaming Intelligence',
+    description: 'Advanced AI for game development, NPC behavior, and player experience optimization.',
+    icon: Gamepad2,
+    features: ['NPC AI', 'Procedural Generation', 'Player Behavior Analysis', 'Dynamic Difficulty'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Gaming AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Waste Management',
+    description: 'Intelligent waste sorting, recycling optimization, and environmental monitoring.',
+    icon: Trash2,
+    features: ['Waste Classification', 'Recycling Optimization', 'Route Planning', 'Environmental Impact'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Environmental AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sports Analytics',
+    description: 'Advanced sports performance analysis and strategy optimization using AI.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prevention', 'Strategy Optimization', 'Player Scouting'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Sports AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Music Composition',
+    description: 'AI-generated music composition with style learning and emotional intelligence.',
+    icon: Music,
+    features: ['Style Learning', 'Emotional Composition', 'Multi-instrument', 'Real-time Generation'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Music AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fashion Design',
+    description: 'AI-driven fashion design with trend analysis and personalized recommendations.',
+    icon: Shirt,
+    features: ['Trend Analysis', 'Design Generation', 'Size Optimization', 'Style Matching'],
+    pricing: '$8,000 - $50,000/setup',
+    category: 'Fashion AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Pet Care',
+    description: 'Intelligent pet monitoring, health tracking, and behavior analysis.',
+    icon: Heart,
+    features: ['Health Monitoring', 'Behavior Analysis', 'Diet Optimization', 'Emergency Alerts'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Pet Care AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sleep Optimization',
+    description: 'AI systems for sleep pattern analysis and optimization for better health.',
+    icon: Moon,
+    features: ['Sleep Analysis', 'Pattern Recognition', 'Optimization Recommendations', 'Health Integration'],
+    pricing: '$1,500 - $10,000/setup',
+    category: 'Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning with AI tutoring and pronunciation coaching.',
+    icon: BookOpen,
+    features: ['Personalized Curriculum', 'Pronunciation Analysis', 'Progress Tracking', 'Cultural Context'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Education AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Meditation Guide',
+    description: 'Intelligent meditation and mindfulness guidance with personalized recommendations.',
+    icon: Heart,
+    features: ['Personalized Sessions', 'Progress Tracking', 'Stress Analysis', 'Guided Meditation'],
+    pricing: '$1,000 - $8,000/setup',
+    category: 'Wellness AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Home Security',
+    description: 'Advanced home security with AI-powered threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Facial Recognition', 'Behavioral Analysis', 'Automated Response'],
+    pricing: '$5,000 - $35,000/setup',
+    category: 'Security AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Investment Advisor',
+    description: 'Personalized investment advice and portfolio management using AI.',
+    icon: TrendingUp,
+    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Automated Trading'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Finance AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Dating Assistant',
+    description: 'Intelligent dating platform with personality matching and conversation coaching.',
+    icon: Heart,
+    features: ['Personality Analysis', 'Match Optimization', 'Conversation Coaching', 'Safety Monitoring'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Social AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Travel Planner',
+    description: 'Comprehensive travel planning with AI-powered recommendations and optimization.',
+    icon: MapPin,
+    features: ['Itinerary Planning', 'Budget Optimization', 'Real-time Updates', 'Personalized Recommendations'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Travel AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Fitness Coach',
+    description: 'Personalized fitness training and nutrition guidance using AI.',
+    icon: Activity,
+    features: ['Workout Planning', 'Form Analysis', 'Nutrition Guidance', 'Progress Tracking'],
+    pricing: '$2,000 - $15,000/setup',
+    category: 'Fitness AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Analysis',
+    description: 'Intelligent real estate market analysis and property valuation using AI.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$5,000 - $40,000/setup',
+    category: 'Real Estate AI',
     popular: true
   }
 ];
