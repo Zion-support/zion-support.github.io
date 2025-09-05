@@ -331,5 +331,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </MainLayout>  );
+    </MainLayout>
+  );
 }

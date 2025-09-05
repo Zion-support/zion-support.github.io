@@ -336,6 +336,6 @@ export default function WebinarsPage() {
           </div>
         </section>
       </div>
+      </>
     );
   }
-}

@@ -325,5 +325,6 @@ export default function SupportPage() {
         </div>
       </section>
     </div>
+    </Layout>
   );
 }
