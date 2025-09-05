@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { }
+import {
   Code, 
   Copy, 
   Check, 
@@ -12,21 +12,21 @@ import { }
   Zap,
   Shield,
   Globe,
-  ArrowRight;
+  ArrowRight
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-const apiEndpoints = []
-  {}
+const apiEndpoints = [
+  {
     method: 'GET',
     path: '/api/v1/services',
     description: 'Retrieve all available services',
-    parameters: []
+    parameters: [
       { name: 'limit', type: 'integer', required: false, description: 'Number of services to return (max 100)' },
       { name: 'offset', type: 'integer', required: false, description: 'Number of services to skip' },
-      { name: 'category', type: 'string', required: false, description: 'Filter by service category' };
+      { name: 'category', type: 'string', required: false, description: 'Filter by service category' }
     ],
-    responses: []
+    responses: [
       { code: 200, description: 'Success', example: '{ "services": [...], "total": 45 }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid parameters" }' };
     ];

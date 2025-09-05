@@ -4,7 +4,7 @@ import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
-interface LayoutProps {}
+interface LayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
@@ -13,18 +13,18 @@ interface LayoutProps {}
   noIndex?: boolean;
   canonical?: string;
 };
-export default function Layout({})
+export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
   keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
   ogImage = '/og-image.jpg',
   noIndex = false,
-  canonical;
-}: LayoutProps) {}
+  canonical = ''
+}: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleMenuClick = () => {}
+  const handleMenuClick = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 

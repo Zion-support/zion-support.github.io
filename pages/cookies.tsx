@@ -1,14 +1,7 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
-<<<<<<< HEAD
 import { motion } from 'framer-motion'
 import {
-=======
-import { motion } from 'framer-motion;
-import {}
-  // TODO: Implement;
-};
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   Shield, 
   Settings, 
   CheckCircle, 
@@ -16,9 +9,9 @@ import {}
   Cookie,
   Eye,
   Lock,
-<<<<<<< HEAD
   Globe
 } from 'lucide-react'
+
 const cookieTypes = [
   {
     title: "Essential Cookies",
@@ -26,45 +19,28 @@ const cookieTypes = [
     required: true,
     examples: ["Authentication", "Security", "Load balancing", "User preferences"],
     icon: Shield
-=======
-  Globe;'
-} from 'lucide-react;
-const cookieTypes = []
-  {'}
-    title: "Essential Cookies",
-    description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
-    required: true,];
-    examples: [Authentication", "Security", "Load balancing", "User preferences"],
-    icon: Shield;
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
   },
-  {}
+  {
     title: "Analytics Cookies",
     description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
     required: false,
     examples: ["Google Analytics", "Page views", "User behavior", "Performance metrics"],
     icon: Eye
   },
-  {}
+  {
     title: "Functional Cookies",
     description: "These cookies enable the website to provide enhanced functionality and personalization.",
     required: false,
     examples: ["Language preferences", "Region settings", "Customization", "User interface"],
     icon: Settings
   },
-  {}
+  {
     title: "Marketing Cookies",
     description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
     required: false,
-<<<<<<< HEAD
     examples: ["Advertising", "Social media", "Retargeting", "Personalized content"],
     icon: Globe
   }
-=======
-    examples: [Advertising", "Social media", "Retargeting", "Personalized content"],
-    icon: Globe;
-  };
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
 const cookieDetails = []
