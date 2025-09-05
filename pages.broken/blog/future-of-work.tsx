@@ -1,1 +1,0 @@
-const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"

@@ -1,1 +1,0 @@
-module.exports = default function CommunityRoutes(function CommunityRoutes() {): any {}
