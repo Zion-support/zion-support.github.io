@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 
@@ -35,12 +34,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
-=======
-src = { src };
-alt = { alt };
-width = { width };
-height = { height };
-className = { className };
-priority = { priority };
-quality = { quality };
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
