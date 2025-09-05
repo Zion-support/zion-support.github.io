@@ -1,43 +1,35 @@
-import React, { useEffect } from 'react',
+import React, { useEffect } from 'react';
 
-interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-        const paint = performance.getEntriesByType('paint'),
-        
-        const performanceData = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-          totalTime: navigation.loadEventEnd - navigation.fetchStart
-        },
-        
-        if (onPerformanceData) {
-          onPerformanceData(performanceData)
-        }
+      // Measure Core Web Vitals
+      if ('web-vitals' in window) {
+        // This would be imported from web-vitals library
+        console.log('Web Vitals measurement would be here');
       }
-    },
-    
+      
+      // Measure page load time
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        console.log('Page load time:', loadTime);
+      }
+    };
+
     // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance()
+      measurePerformance();
     } else {
-      window.addEventListener('load', measurePerformance)
+      window.addEventListener('load', measurePerformance);
     }
-    
-    return () => {
-      window.removeEventListener('load', measurePerformance)
-    }
-  }, [onPerformanceData]),
-  return null
-},
 
-export { PerformanceMonitor },
-export default PerformanceMonitor,
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  return null; // This component doesn't render anything visible
+};
+
+export default PerformanceMonitor;

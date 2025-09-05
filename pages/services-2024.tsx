@@ -21,7 +21,7 @@ const Services2024Page: React.FC = () => {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+    const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase())),

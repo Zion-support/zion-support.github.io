@@ -174,7 +174,7 @@ const ROOT_CAUSE_WINDOW = Helpers.Timing.secondsToMicro(Types.Timing.Seconds(0.5
 /**
  * Returns if an event happens within the root cause window, before the target event.
  *          ROOT_CAUSE_WINDOW               v target event
- *        |------------------------|=======================
+ *        |------------------------|==
  */
 function isInRootCauseWindow(event, targetEvent) {
     const eventEnd = event.dur ? event.ts + event.dur : event.ts;

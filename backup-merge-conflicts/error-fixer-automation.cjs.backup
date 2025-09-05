@@ -203,10 +203,10 @@ class ErrorFixerAutomation {
         let modified = false;
         
         // Remove merge conflict markers
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
           content = content
             .replace(/<<<<<<<.*?\n/g, '')
-            .replace(/=======.*?\n/g, '')
+            .replace(/.*?\n/g, '')
             .replace(/>>>>>>>.*?\n/g, '');
           modified = true;
         }

@@ -2,12 +2,12 @@ const fs = require('fs');
 
 const files = [
   {
-    path: 'components/Header.tsx',
-    content: `import React, { useState } from 'react';
+    pat: h: 'components/Header.tsx',
+    conten: t: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const Header: React.FC = () => {
+const: Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,24 +18,24 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-lg">
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+          <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2: md:mb-0">
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+                <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+                <a href="mailt: o:kleber@ziontechgroup.com" className="hove: r:text-blue-300">kleber@ziontechgroup.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-blue-200">24/7 Support Available</span>
               <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+                <a href="#" className="hove: r:text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hove: r:text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hove: r:text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hove: r:text-blue-300"><Instagram className="w-4 h-4" /></a>
               </div>
             </div>
           </div>
@@ -48,30 +48,30 @@ const Header: React.FC = () => {
             <span className="text-2xl font-bold text-blue-900">Zion Tech Group</span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
+          <div className="hidden: md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700: hover:text-blue-600 font-medium">Home</Link>
+            <Link href="/services" className="text-gray-700: hover:text-blue-600 font-medium">Services</Link>
+            <Link href="/about" className="text-gray-700: hover:text-blue-600 font-medium">About</Link>
+            <Link href="/contact" className="text-gray-700: hover:text-blue-600 font-medium">Contact</Link>
+            <Link href="/blog" className="text-gray-700: hover:text-blue-600 font-medium">Blog</Link>
           </div>
 
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="m: d:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
+              <Link href="/" className="text-gray-700: hover:text-blue-600 font-medium">Home</Link>
+              <Link href="/services" className="text-gray-700: hover:text-blue-600 font-medium">Services</Link>
+              <Link href="/about" className="text-gray-700: hover:text-blue-600 font-medium">About</Link>
+              <Link href="/contact" className="text-gray-700: hover:text-blue-600 font-medium">Contact</Link>
+              <Link href="/blog" className="text-gray-700: hover:text-blue-600 font-medium">Blog</Link>
             </div>
           </div>
         )}
@@ -83,14 +83,14 @@ const Header: React.FC = () => {
 export default Header;`
   },
   {
-    path: 'components/Layout.tsx',
-    content: `import React, { ReactNode } from 'react';
+    pat: h: 'components/Layout.tsx',
+    conten: t: `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
@@ -101,17 +101,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;`
   },
   {
-    path: 'components/SearchBar.tsx',
-    content: `import React, { useState } from 'react';
+    pat: h: 'components/SearchBar.tsx',
+    conten: t: `import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-  onSearch?: (query: string) => void;
+  onSearch?: (quer: y: string) => void;
   placeholder?: string;
   className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
+const: SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
   placeholder = 'Search...',
   className = ''
@@ -142,13 +142,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
           />
           {query && (
             <button
               type="button"
               onClick={handleClear}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600"
             >
               <X className="w-4 h-4" />
             </button>
@@ -162,28 +162,28 @@ const SearchBar: React.FC<SearchBarProps> = ({
 export default SearchBar;`
   },
   {
-    path: 'components/Sidebar.tsx',
-    content: `import React from 'react';
+    pat: h: 'components/Sidebar.tsx',
+    conten: t: `import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpe: n: boolean;
+  onClos: e: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
-    { href: '/profile', label: 'Profile', icon: User },
-    { href: '/settings', label: 'Settings', icon: Settings },
+    { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
+    { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
+    { hre: f: '/settings', labe: l: 'Settings', ico: n: Settings },
   ];
 
   return (
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40: md:hidden"
           onClick={onClose}
         />
       )}
@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <h2 className="text-xl font-bold text-gray-800">Menu</h2>
             <button
               onClick={onClose}
-              className="p-2 rounded-md hover:bg-gray-100"
+              className="p-2 rounded-md: hover:bg-gray-100"
             >
               <LogOut className="w-5 h-5" />
             </button>
@@ -209,7 +209,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
                   onClick={onClose}
                 >
                   <Icon className="w-5 h-5" />
@@ -227,18 +227,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 export default Sidebar;`
   },
   {
-    path: 'components/SimpleLayout.tsx',
-    content: `import React, { ReactNode } from 'react';
+    pat: h: 'components/SimpleLayout.tsx',
+    conten: t: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
   title?: string;
 }
 
-const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
+const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
         {title && (
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
@@ -251,32 +251,32 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 export default SimpleLayout;`
   },
   {
-    path: 'components/layout/Footer.tsx',
-    content: `import React from 'react';
+    pat: h: 'components/layout/Footer.tsx',
+    conten: t: `import React from 'react';
 import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const: Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-12">
+        <div className="grid grid-cols-1: md:grid-cols-4 gap-8">
+          <div className="col-span-1: md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Leading provider of AI-powered technology solutions and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400: hover:text-white">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400: hover:text-white">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400: hover:text-white">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-gray-400: hover:text-white">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -285,10 +285,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link href="/" className="text-gray-300: hover:text-white">Home</Link></li>
+              <li><Link href="/services" className="text-gray-300: hover:text-white">Services</Link></li>
+              <li><Link href="/about" className="text-gray-300: hover:text-white">About</Link></li>
+              <li><Link href="/contact" className="text-gray-300: hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
@@ -320,16 +320,16 @@ const Footer: React.FC = () => {
 export default Footer;`
   },
   {
-    path: 'components/layout/Layout.tsx',
-    content: `import React, { ReactNode } from 'react';
+    pat: h: 'components/layout/Layout.tsx',
+    conten: t: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -344,19 +344,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;`
   },
   {
-    path: 'components/layout/MainLayout.tsx',
-    content: `import React, { ReactNode } from 'react';
+    pat: h: 'components/layout/MainLayout.tsx',
+    conten: t: `import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 import SEOHead from '../SEOHead';
 
 interface MainLayoutProps {
-  children: ReactNode;
+  childre: n: ReactNode;
   title?: string;
   description?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
+const: MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
   return (
     <>
       <SEOHead title={title} description={description} />
@@ -374,16 +374,16 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
 export default MainLayout;`
   },
   {
-    path: 'components/performance/LazyComponent.tsx',
-    content: `import React, { Suspense, ReactNode } from 'react';
+    pat: h: 'components/performance/LazyComponent.tsx',
+    conten: t: `import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
 interface LazyComponentProps {
-  children: ReactNode;
+  childre: n: ReactNode;
   fallback?: ReactNode;
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
+const: LazyComponent: React.FC<LazyComponentProps> = ({ 
   children, 
   fallback = <LoadingSpinner /> 
 }) => {
@@ -397,22 +397,22 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent;`
   },
   {
-    path: 'components/performance/OptimizedImage.tsx',
-    content: `import React from 'react';
+    pat: h: 'components/performance/OptimizedImage.tsx',
+    conten: t: `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  sr: c: string;
+  al: t: string;
+  widt: h: number;
+  heigh: t: number;
   className?: string;
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
@@ -439,21 +439,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 export default OptimizedImage;`
   },
   {
-    path: 'components/ui/EnhancedMarketplaceCard.tsx',
-    content: `import React from 'react';
+    pat: h: 'components/ui/EnhancedMarketplaceCard.tsx',
+    conten: t: `import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
-  title: string;
-  description: string;
-  price: number;
-  rating: number;
-  image: string;
+  titl: e: string;
+  descriptio: n: string;
+  pric: e: number;
+  ratin: g: number;
+  imag: e: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
 
-const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
   price,
@@ -463,12 +463,12 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   onFavorite
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <button
           onClick={onFavorite}
-          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md: hover:bg-gray-100"
         >
           <Heart className="w-4 h-4 text-gray-600" />
         </button>
@@ -488,7 +488,7 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
         
         <button
           onClick={onAddToCart}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center"
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center"
         >
           <ShoppingCart className="w-4 h-4 mr-2" />
           Add to Cart
@@ -501,47 +501,47 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 export default EnhancedMarketplaceCard;`
   },
   {
-    path: 'components/ui/InteractiveNavigation.tsx',
-    content: `import React, { useState } from 'react';
+    pat: h: 'components/ui/InteractiveNavigation.tsx',
+    conten: t: `import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
-  label: string;
-  href: string;
+  labe: l: string;
+  hre: f: string;
   children?: NavItem[];
 }
 
 interface InteractiveNavigationProps {
-  items: NavItem[];
+  item: s: NavItem[];
   className?: string;
 }
 
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+  const toggleDropdown = (labe: l: string) => {
+    setActiveDropdown(activeDropdown === label ? nul: l: label);
   };
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden: md:flex items-center space-x-8">
             {items.map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className="flex items-center text-gray-700 hover:text-blue-600"
+                      className="flex items-center text-gray-700: hover:text-blue-600"
                     >
                       {item.label}
                       <ChevronDown className="w-4 h-4 ml-1" />
@@ -552,7 +552,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            className="block px-4 py-2 text-sm text-gray-700: hover:bg-gray-100"
                           >
                             {child.label}
                           </Link>
@@ -563,7 +563,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600"
+                    className="text-gray-700: hover:text-blue-600"
                   >
                     {item.label}
                   </Link>
@@ -574,21 +574,21 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600"
+            className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="m: d:hidden py-4 border-t border-gray-200">
             {items.map((item) => (
               <div key={item.label}>
                 {item.children ? (
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100"
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700: hover:bg-gray-100"
                     >
                       {item.label}
                       <ChevronDown className="w-4 h-4" />
@@ -599,7 +599,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                            className="block px-3 py-2 text-sm text-gray-600: hover:bg-gray-100"
                             onClick={() => setIsOpen(false)}
                           >
                             {child.label}
@@ -611,7 +611,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-3 py-2 text-gray-700 hover:bg-gray-100"
+                    className="block px-3 py-2 text-gray-700: hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -629,34 +629,34 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 export default InteractiveNavigation;`
   },
   {
-    path: 'components/ui/NotificationSystem.tsx',
-    content: `import React, { createContext, useContext, useState, ReactNode } from 'react';
+    pat: h: 'components/ui/NotificationSystem.tsx',
+    conten: t: `import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
+  i: d: string;
+  typ: e: 'success' | 'error' | 'warning' | 'info';
+  titl: e: string;
+  messag: e: string;
   duration?: number;
 }
 
 interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
+  notification: s: Notification[];
+  addNotificatio: n: (notificatio: n: Omit<Notification, 'id'>) => void;
+  removeNotificatio: n: (i: d: string) => void;
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 interface NotificationProviderProps {
-  children: ReactNode;
+  childre: n: ReactNode;
 }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
+  const addNotification = (notificatio: n: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     
@@ -669,7 +669,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: string) => {
+  const removeNotification = (i: d: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
@@ -681,7 +681,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   );
 };
 
-const NotificationContainer: React.FC = () => {
+const: NotificationContainer: React.FC = () => {
   const { notifications, removeNotification } = useNotifications();
 
   return (
@@ -697,22 +697,22 @@ const NotificationContainer: React.FC = () => {
   );
 };
 
-const NotificationItem: React.FC<{
-  notification: Notification;
-  onRemove: (id: string) => void;
+const: NotificationItem: React.FC<{
+  notificatio: n: Notification;
+  onRemov: e: (i: d: string) => void;
 }> = ({ notification, onRemove }) => {
   const icons = {
-    success: CheckCircle,
-    error: AlertCircle,
-    warning: AlertTriangle,
-    info: Info,
+    succes: s: CheckCircle,
+    erro: r: AlertCircle,
+    warnin: g: AlertTriangle,
+    inf: o: Info,
   };
 
   const colors = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
+    succes: s: 'bg-green-500',
+    erro: r: 'bg-red-500',
+    warnin: g: 'bg-yellow-500',
+    inf: o: 'bg-blue-500',
   };
 
   const Icon = icons[notification.type];
@@ -727,7 +727,7 @@ const NotificationItem: React.FC<{
         </div>
         <button
           onClick={() => onRemove(notification.id)}
-          className="ml-3 flex-shrink-0 hover:opacity-75"
+          className="ml-3 flex-shrink-0: hover:opacity-75"
         >
           <X className="w-4 h-4" />
         </button>
@@ -745,13 +745,13 @@ export const useNotifications = () => {
 };`
   },
   {
-    path: 'hooks/useApi.ts',
-    content: `import { useState, useEffect } from 'react';
+    pat: h: 'hooks/useApi.ts',
+    conten: t: `import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
-  data: T | null;
-  loading: boolean;
-  error: string | null;
+  dat: a: T | null;
+  loadin: g: boolean;
+  erro: r: string | null;
 }
 
 interface UseApiOptions {
@@ -759,9 +759,9 @@ interface UseApiOptions {
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>,
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
+  apiCal: l: () => Promise<T>,
+  option: s: UseApiOptions = {}
+): ApiState<T> & { refetc: h: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -774,7 +774,7 @@ export function useApi<T>(
       const result = await apiCall();
       setData(result);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.messag: e: 'An error occurred');
     } finally {
       setLoading(false);
     }
@@ -790,15 +790,15 @@ export function useApi<T>(
     data,
     loading,
     error,
-    refetch: fetchData,
+    refetc: h: fetchData,
   };
 }`
   },
   {
-    path: 'hooks/useLocalStorage.ts',
-    content: `import { useState, useEffect } from 'react';
+    pat: h: 'hooks/useLocalStorage.ts',
+    conten: t: `import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
@@ -813,7 +813,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     }
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const setValue = (valu: e: T | ((va: l: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
@@ -830,14 +830,14 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 }`
   },
   {
-    path: 'hooks/usePerformanceMonitor.ts',
-    content: `import { useState, useEffect } from 'react';
+    pat: h: 'hooks/usePerformanceMonitor.ts',
+    conten: t: `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  fp: s: number;
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -854,10 +854,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       
       if (navigation) {
         setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsage: memory?.usedJSHeapSize || 0,
-          fps: 60,
+          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsag: e: memory?.usedJSHeapSize || 0,
+          fp: s: 60,
         });
       }
     };
@@ -877,24 +877,24 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 }`
   },
   {
-    path: 'hooks/useResponsive.ts',
-    content: `import { useState, useEffect } from 'react';
+    pat: h: 'hooks/useResponsive.ts',
+    conten: t: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
+  s: m: number;
+  m: d: number;
+  l: g: number;
+  x: l: number;
 }
 
-const defaultBreakpoints: Breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
+const: defaultBreakpoints: Breakpoints = {
+  s: m: 640,
+  m: d: 768,
+  l: g: 1024,
+  x: l: 1280,
 };
 
-export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
+export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
 
   useEffect(() => {
@@ -922,10 +922,10 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
 
   return {
     screenSize,
-    isMobile: screenSize === 'sm',
-    isTablet: screenSize === 'md',
-    isDesktop: screenSize === 'lg' || screenSize === 'xl',
-    isLarge: screenSize === 'xl',
+    isMobil: e: screenSize === 'sm',
+    isTable: t: screenSize === 'md',
+    isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
+    isLarg: e: screenSize === 'xl',
   };
 }`
   }
@@ -934,7 +934,7 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
-    console.log('Fixed:', file.path);
+    console.log('Fixe: d:', file.path);
   } catch (error) {
     console.error('Error fixing', file.path, ':', error.message);
   }

@@ -344,18 +344,18 @@ class SmartGitAutomator {
   }
 
   resolveByIncomingChange(content) {
-    // Take the incoming change (after =======)
-    return content.replace(/<<<<<<<[\s\S]*?=======([\s\S]*?)>>>>>>>/g, '$1');
+    // Take the incoming change (after )
+    return content.replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>/g, '$1');
   }
 
   resolveByCurrentChange(content) {
-    // Take the current change (before =======)
-    return content.replace(/<<<<<<<([\s\S]*?)=======[\s\S]*?>>>>>>>/g, '$1');
+    // Take the current change (before )
+    return content.replace(/<<<<<<<([\s\S]*?)[\s\S]*?>>>>>>>/g, '$1');
   }
 
   resolveByCombination(content) {
     // Combine both changes
-    return content.replace(/<<<<<<<([\s\S]*?)=======([\s\S]*?)>>>>>>>/g, '$1\n$2');
+    return content.replace(/<<<<<<<([\s\S]*?)([\s\S]*?)>>>>>>>/g, '$1\n$2');
   }
 
   resolveBySmartAnalysis(content) {
@@ -372,7 +372,7 @@ class SmartGitAutomator {
 
   mergeJsonConflicts(content) {
     // Simple JSON merge - take both objects and combine
-    const match = content.match(/<<<<<<<([\s\S]*?)=======([\s\S]*?)>>>>>>>/);
+    const match = content.match(/<<<<<<<([\s\S]*?)([\s\S]*?)>>>>>>>/);
     if (match) {
       try {
         const current = JSON.parse(match[1].trim());
@@ -388,7 +388,7 @@ class SmartGitAutomator {
 
   resolveCodeConflicts(content) {
     // For code conflicts, prefer the version with more content
-    const match = content.match(/<<<<<<<([\s\S]*?)=======([\s\S]*?)>>>>>>>/);
+    const match = content.match(/<<<<<<<([\s\S]*?)([\s\S]*?)>>>>>>>/);
     if (match) {
       const current = match[1].trim();
       const incoming = match[2].trim();
@@ -537,7 +537,7 @@ class SmartGitAutomator {
 
   displaySummary(report) {
     console.log('\n🤖 SMART GIT AUTOMATOR SUMMARY');
-    console.log('================================');
+    console.log('====');
     
     console.log(`🌿 Current Branch: ${report.currentBranch || 'unknown'}`);
     console.log(`📊 Status: ${report.branchStatus?.isClean ? 'Clean' : 'Has Changes'}`);

@@ -1,10 +1,13 @@
-"use client",
+"use client";
 
-import { useState, useEffect, useRef } from "react",
-import Link from "next/link",
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+
 export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
-  const [isSearchOpen, setIsSearchOpen] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   return (
     <nav 
@@ -25,7 +28,7 @@ export function Navigation() {
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold gradient-text">Zion Tech Group</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -147,7 +150,7 @@ export function Navigation() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
-            <button className="btn-primary text-sm">
+            <Link href="/get-started" className="btn-primary text-sm">
               Get Started
             </Link>
           </div>
@@ -276,5 +279,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
