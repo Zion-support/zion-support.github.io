@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Code, Zap, Shield, CheckCircle, ArrowRight, Phone, Mail, BarChart3, Lock, RefreshCw, Server, Database, Globe, Users } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -151,7 +151,7 @@ const pricingModels = [
 
 export default function CustomDevelopmentPage() {
   return (
-    <MainLayout
+    <Layout
       title="Custom Development - Zion Tech Group"
       description="Custom software development services. We build tailored solutions including web applications, mobile apps, and backend systems to meet your specific business needs."
       keywords="custom development, custom software, web applications, mobile apps, backend development, software development"
@@ -448,6 +448,6 @@ export default function CustomDevelopmentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

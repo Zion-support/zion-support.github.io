@@ -10,6 +10,7 @@ import {
   Handshake,
   Brain, 
   Users, 
+  User,
   Award, 
   Target, 
   Heart, 
