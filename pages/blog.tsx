@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
-const blogPosts = []
-  {}
+const blogPosts = [
+  {
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
     excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
@@ -16,7 +16,7 @@ const blogPosts = []
     readTime: "5 min read",
     image: "/api/placeholder/600/300"
   },
-  {}
+  {
     id: 2,
     title: "Micro SaaS: Building Scalable Solutions",
     excerpt: "Learn how to build and scale micro SaaS applications for modern businesses.",
@@ -26,7 +26,7 @@ const blogPosts = []
     readTime: "7 min read",
     image: "/api/placeholder/600/300"
   },
-  {}
+  {
     id: 3,
     title: "Cloud Security Best Practices",
     excerpt: "Essential security measures for protecting your cloud infrastructure and data.",
@@ -36,7 +36,7 @@ const blogPosts = []
     readTime: "6 min read",
     image: "/api/placeholder/600/300"
   },
-  {}
+  {
     id: 4,
     title: "Digital Transformation Strategies",
     excerpt: "How to successfully navigate your organization's digital transformation journey.",
@@ -46,7 +46,7 @@ const blogPosts = []
     readTime: "8 min read",
     image: "/api/placeholder/600/300"
   },
-  {}
+  {
     id: 5,
     title: "Machine Learning in Production",
     excerpt: "Best practices for deploying and maintaining ML models in production environments.",
@@ -56,7 +56,7 @@ const blogPosts = []
     readTime: "9 min read",
     image: "/api/placeholder/600/300"
   },
-  {}
+  {
     id: 6,
     title: "API Design Principles",
     excerpt: "Creating robust, scalable APIs that developers love to use and maintain.",
@@ -65,12 +65,12 @@ const blogPosts = []
     category: "Development",
     readTime: "6 min read",
     image: "/api/placeholder/600/300"
-  };
+  }
 ];
 
-export default function BlogPage() {}
-  return ()
-    <MainLayout;
+export default function BlogPage() {
+  return (
+    <MainLayout
       title="Blog - Zion Tech Group"
       description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
       keywords="blog, AI insights, technology news, business innovation, tech trends"
@@ -81,14 +81,14 @@ export default function BlogPage() {}
       </Head>
       
       <div className="min-h-screen bg-white">
-        {/* Hero Section */};
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Tech Insights & Innovation;
@@ -100,15 +100,15 @@ export default function BlogPage() {}
           </div>
         </section>
 
-        {/* Blog Posts Section */};
+        {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Latest Articles;
@@ -119,19 +119,19 @@ export default function BlogPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (})
-                <motion.article;
-                  key={post.id};
+              {blogPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="aspect-w-16 aspect-h-9">
-                    <img;
-                      src={post.image};
-                      alt={post.title};
+                    <img
+                      src={post.image}
+                      alt={post.title}
                       className="w-full h-48 object-cover"
                     />
                   </div>
@@ -165,8 +165,8 @@ export default function BlogPage() {}
                     
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500">{post.readTime}</span>
-                      <Link;
-                        href={`/blog/${post.id}`};`
+                      <Link
+                        href={`/blog/${post.id}`}
                         className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
                       >
                         Read More;
