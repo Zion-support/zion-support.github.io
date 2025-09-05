@@ -26,9 +26,15 @@ import {
   Wifi,
   Brain,
   Video,
-  Smartphone
+  Smartphone,
+  Calculator,
+  Receipt,
+  Heart,
+  Target,
+  Lock,
+  MessageSquare
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
@@ -472,6 +478,244 @@ const microSaasSolutions = [
     marketPrice: "$4,000-10,000/month",
     benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
     setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Social Media Scheduler",
+    description: "Intelligent social media management with AI content optimization",
+    icon: Globe,
+    features: [
+      "AI Content Generation",
+      "Optimal Post Timing",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Multi-platform Publishing",
+      "Brand Voice Training"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["40% increase in engagement", "Save 15+ hours/week", "AI-driven optimization"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Subscription Cancellation Service",
+    description: "Automated subscription management and cancellation platform",
+    icon: DollarSign,
+    features: [
+      "Subscription Discovery",
+      "One-click Cancellation",
+      "Spending Analytics",
+      "Renewal Alerts",
+      "Cost Optimization",
+      "Multi-provider Support"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save $200+/month per user", "Automated management", "Spending insights"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI Meeting Cost Calculator",
+    description: "Real-time meeting cost analysis and optimization tool",
+    icon: Calculator,
+    features: [
+      "Real-time Cost Tracking",
+      "ROI Analysis",
+      "Meeting Optimization",
+      "Productivity Metrics",
+      "Cost Alerts",
+      "Team Analytics"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Reduce meeting costs by 30%", "Better time management", "ROI visibility"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI-Powered Expense Tracker",
+    description: "Smart expense tracking with receipt scanning and categorization",
+    icon: Receipt,
+    features: [
+      "Receipt OCR Scanning",
+      "AI Categorization",
+      "Tax Preparation",
+      "Spending Insights",
+      "Multi-currency Support",
+      "Integration with Accounting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["90% faster expense entry", "Automated categorization", "Tax-ready reports"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Mental Health Support App",
+    description: "AI-powered mental wellness and support platform",
+    icon: Heart,
+    features: [
+      "AI Chat Support",
+      "Mood Tracking",
+      "Meditation Guides",
+      "Crisis Intervention",
+      "Progress Analytics",
+      "Professional Referrals"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["24/7 support availability", "Personalized care", "Privacy-focused"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI Content Repurposing Tool",
+    description: "Transform content across multiple formats using AI",
+    icon: FileText,
+    features: [
+      "Blog to Video Conversion",
+      "Podcast Transcription",
+      "Social Media Adaptation",
+      "Multi-language Translation",
+      "SEO Optimization",
+      "Brand Consistency"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,800-6,000/month",
+    benefits: ["10x content output", "Consistent branding", "Multi-format reach"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Lead Scoring",
+    description: "Intelligent lead qualification and prioritization system",
+    icon: Target,
+    features: [
+      "Behavioral Analysis",
+      "Predictive Scoring",
+      "Lead Nurturing",
+      "CRM Integration",
+      "Performance Analytics",
+      "Custom Scoring Models"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["35% higher conversion", "Better lead quality", "Automated prioritization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Cloud Cost Optimization Tool",
+    description: "AI-driven cloud infrastructure cost analysis and optimization",
+    icon: Cloud,
+    features: [
+      "Cost Analysis",
+      "Resource Optimization",
+      "Waste Detection",
+      "Right-sizing Recommendations",
+      "Budget Alerts",
+      "Multi-cloud Support"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Save 25-40% on cloud costs", "Automated optimization", "Real-time monitoring"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Email Follow-up",
+    description: "Intelligent email automation and follow-up system",
+    icon: Mail,
+    features: [
+      "Smart Follow-up Timing",
+      "Personalized Templates",
+      "A/B Testing",
+      "Response Prediction",
+      "CRM Integration",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["60% higher response rates", "Automated nurturing", "Personalized outreach"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI Meeting Summarizer",
+    description: "Automatic meeting transcription and intelligent summarization",
+    icon: Video,
+    features: [
+      "Real-time Transcription",
+      "AI Summarization",
+      "Action Item Extraction",
+      "Multi-language Support",
+      "Integration with Calendars",
+      "Searchable Archive"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save 2+ hours per meeting", "Never miss key points", "Searchable history"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI-Powered Password Manager",
+    description: "Advanced password security with AI-powered breach detection",
+    icon: Lock,
+    features: [
+      "Secure Password Generation",
+      "Breach Monitoring",
+      "Dark Web Scanning",
+      "Family Sharing",
+      "2FA Integration",
+      "Security Analytics"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-3,500/month",
+    benefits: ["Enhanced security", "Proactive breach alerts", "Family protection"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI Local SEO Optimizer",
+    description: "Automated local search optimization and reputation management",
+    icon: MapPin,
+    features: [
+      "Google My Business Optimization",
+      "Review Management",
+      "Local Keyword Tracking",
+      "Competitor Analysis",
+      "Citation Building",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["50% more local visibility", "Automated optimization", "Better local rankings"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Invoice Processing",
+    description: "Intelligent invoice automation and payment processing",
+    icon: FileText,
+    features: [
+      "OCR Invoice Reading",
+      "Automated Data Extraction",
+      "Approval Workflows",
+      "Payment Processing",
+      "Compliance Checking",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["90% faster processing", "Reduced errors", "Automated workflows"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "AI Customer Sentiment Analyzer",
+    description: "Real-time customer feedback analysis and sentiment tracking",
+    icon: MessageSquare,
+    features: [
+      "Multi-channel Monitoring",
+      "Sentiment Analysis",
+      "Trend Detection",
+      "Alert System",
+      "Custom Dashboards",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
+    setupTime: "2-3 weeks"
   }
 ];
 
