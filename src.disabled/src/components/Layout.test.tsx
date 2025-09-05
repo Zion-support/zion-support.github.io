@@ -1,1 +1,29 @@
-import React from "react"; import { SEO } from "@/components/SEO"; export default function Layout.test() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="Layout.test - Zion Tech Group" description="Professional Layout.test services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">Layout.test</h1>"; <p className="text-gray-300 text-lg"> Professional Layout.test services to help your business grow.; ></div> ></div> );"}";""
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation"
+}: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      {children}
+    </>
+  );
+}

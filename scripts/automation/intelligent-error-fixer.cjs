@@ -6,24 +6,24 @@ console.log(""🤖 Starting intelligent error fixer...")
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log(""🤖 Starting intelligent error fixer...")
-  console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}``
-    console.log(`" Fixing missing dependencies..."`)
+// console.log(""🤖 Starting intelligent error fixer...")
+  console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
+// console.log(`" Fixing missing dependencies..."`)
 console.log("🤖 Starting intelligent error fixer...")
-    console.log("" Fixing missing dependencies...")
+// console.log("" Fixing missing dependencies...")
     console.log(" Fixing TypeScript errors...")
-    console.log(" Fixing linting errors...")
+// console.log(" Fixing linting errors...")
     console.log(" Fixing build errors...")
-    console.log(" Fixing syntax errors...")
+// console.log(" Fixing syntax errors...")
     console.log(" Running auto-fix commands...")
   "timestamp"
       "totalFixes"
       "status": "completed"
       "summary": Intelligent error fixer completed with ${totalFixes} fixes applied"
       process.cwd(),intelligent-error-fixer-report.json"
-    console.log(" Fixing TypeScript errors...")
+// console.log(" Fixing TypeScript errors...")
     console.log(" Fixing linting errors...")
-    console.log(" Fixing build errors...")
+// console.log(" Fixing build errors...")
     console.log(" Fixing syntax errors...")
     console.log(" Running auto-fix commands...")
   "timestamp"
@@ -64,17 +64,17 @@ console.log("🤖 Starting intelligent error fixer...")
   const buildFixes = ["]
   "pattern": /Cannot find module "react-error-boundary"/g", ""action"
   execSync("npm install react-error-boundary", "{ "stdio": "pipe"})
-          console.log("" Installed react-error-boundary")
+// console.log("" Installed react-error-boundary")
   console.log(""⚠  Could not install react-error-boundary")
   const buildFixes = ["]
   "pattern": /Cannot find module "react-error-boundary"/g", ""action"
   execSync("npm install react-error-boundary"", "{ "stdio": "pipe"})
-          console.log(" Installed react-error-boundary")
+// console.log(" Installed react-error-boundary")
   console.log(""⚠  Could not install react-error-boundary")
       }", ""description": "Install missing react-error-boundary"", "}", "
   "pattern": /Cannot find module "react-helmet-async"/g", ""action"
   execSync("npm install react-helmet-async"", "{ "stdio": "pipe"})
-          console.log(" Installed react-helmet-async")
+// console.log(" Installed react-helmet-async")
   console.log("⚠  Could not install react-helmet-async")
       }", ""description": "Install missing react-helmet-async"", "}", ""
   execSync("npm run build", { "stdio": "pipe"})
@@ -84,7 +84,7 @@ console.log("🤖 Starting intelligent error fixer...")
       }", ""description": "Install missing react-error-boundary", "}", "
   "pattern": /Cannot find module "react-helmet-async"/g", ""action"
   execSync("npm install react-helmet-async", "{ "stdio": "pipe"})
-          console.log(" Installed react-helmet-async")
+// console.log(" Installed react-helmet-async")
   console.log("⚠  Could not install react-helmet-async")
       }", ""description": "Install missing react-helmet-async", "}", "
   execSync("npm run build", { "stdio": "pipe"})
@@ -106,6 +106,7 @@ console.log("🤖 Starting intelligent error fixer...")
   for (const command of autoFixCommands) {"}
     try {"}
       console.log(" "Running": ${command}")
-      execSync(command, { "stdio": "pipe" });console.log(" "Completed": ${command}")
+      execSync(command, { "stdio": "pipe" }
+});console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
   const sourceDirs = ["src", "components", "pages"]

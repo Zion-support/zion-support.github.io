@@ -1,2 +1,14 @@
-import React,{ useState } from';react' import { Link } from';';react-router-dom' import { MainNavigation } from';';./MainNavigation' import { MobileMenu } from';';./MobileMenu' import { Logo } from';';./Logo' import { Menu,X,Search,Bell,User,ShoppingBag } from';';lucide-react' import { SearchFunctionality } from';';../SearchFunctionality' "export": function Header() { const [isMobileMenuOpen,setIsMobileMenuOpen] = useState(false) const [showSearch,setShowSearch] = useState(false) const toggleMobileMenu = () => { setIsMobileMenuOpen(!isMobileMenuOpen) } const closeMobileMenu = () => setIsMobileMenuOpen(false) const toggleSearch = () => setShowSearch(!showSearch) return ( <> {} <div className='bg-zion-slate-darker border-b border-zion-purple/10'>'' <div className='container mx-auto px-4 "sm"")
-</div>)"
+import React from 'react';
+
+interface HeaderProps {
+  // Add props here as needed
+}
+
+export default function Header({ }: HeaderProps) {
+  return (
+    <div>
+      <h1>Header</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

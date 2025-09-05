@@ -8,14 +8,14 @@ function fixIntegrationTestFile(filePath) {}
     
     // Check if the file has malformed syntax;
     if (content.includes('import React from \'react" import { render,screen }')) {}
-      console.log(`Fixing malformed integration test: ${filePath}`);`
+      console.log(`Fixing malformed integration test: ${filePath}`);
       
       // Extract component name from file path;
       const fileName = path.basename(filePath, '.integration.test.js');
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
       
       // Create a proper integration test file structure;
-      const fixedContent = `import React from 'react';`
+      const fixedContent = `import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../pages/${componentName}';
@@ -24,22 +24,27 @@ describe('${componentName} Integration Tests', () => {}
   test('page renders correctly', () => {}
     render(<${componentName} />);
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
+  }
+});
 
   test('navigation works', () => {}
     render(<${componentName} />);
     // Add navigation tests here;
-  });
+  }
+});
 
   test('page content is accessible', () => {}
     render(<${componentName} />);
     // Add accessibility tests here;
-  });
+  }
+});
 
   test('page loads with correct data', () => {}
     render(<${componentName} />);
     // Add data loading tests here;
-  });
+  }
+});
+}
 });
 `;`
       
@@ -48,7 +53,7 @@ describe('${componentName} Integration Tests', () => {}
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing integration test ${filePath}:`, error.message);`
+    console.error(`Error fixing integration test ${filePath}:`, error.message);
     return false;
   };
 };
@@ -66,6 +71,7 @@ files.forEach(file => {})
       fixedCount++;
     };
   };
+}
 });
 
-console.log(`Fixed ${fixedCount} integration test files`);`
+console.log(`Fixed ${fixedCount} integration test files`);

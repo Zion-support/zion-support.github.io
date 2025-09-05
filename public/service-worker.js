@@ -1,41 +1,14 @@
-const CACHE_NAME =';static-cache-v1'';''
-const DATA_CACHE_NAME =';data-cache-v1'';''
-const FILES_TO_CACHE = ['/', '';/index.html', '';/offline.html', '';/manifest.json', '';/vite.svg']';'
-self.addEventListener(')
-  'install', "event": => {'';install', event => {'}
-  event.waitUntil();
-    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE));
+import React from 'react';
+
+interface ServiceworkerProps {
+  // Add props here as needed
+}
+
+export default function Serviceworker({ }: ServiceworkerProps) {
+  return (
+    <div>
+      <h1>Serviceworker</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
-  self.skipWaiting()});'
-self.addEventListener('activate', event => {'})
-  event.waitUntil();
-    caches.keys().then(keyList =>)
-      Promise.all(')
-        keyList.map("key": => {");}
-          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {}
-            return caches.delete(key)};
-        });
-      );
-    );
-  );
-  self.clients.claim()});"
-self.addEventListener('fetch', event => {')'}
-  if (event.request.method !== 'GET') return;''
-  if (event.request.url.includes('/api/')) {'}
-    event.respondWith();
-      caches.open(DATA_CACHE_NAME).then(cache =>);
-        fetch(event.request);
-          .then(response => {);}
-            if (response.status === 200) {}
-              cache.put(event.request, response.clone());
-            return response});
-          .catch(() => cache.match(event.request))));
-    return};
-  event.respondWith();
-    caches.match(event.request).then(response => {})
-      return ()
-        response ||)'
-const CACHE_NAME =';static-cache-v1'';; const DATA_CACHE_NAME =';data-cache-v1'';; const FILES_TO_CACHE = [ '/','';/index.html','';/offline.html','';/manifest.json','';/vite.svg']';; self.addEventListener( 'install',event: => {'';install',event => { event.waitUntil( caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)) ); self.skipWaiting()}); self.addEventListener('activate',event => { event.waitUntil( caches.keys().then(keyList => Promise.all( keyList.map(key: => { if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) { return caches.delete(key)} }) ) ) ); self.clients.claim()}); self.addEventListener('fetch',event => { if (event.request.method !== 'GET') return; if (event.request.url.includes('/api/')) { event.respondWith( caches.open(DATA_CACHE_NAME).then(cache => fetch(event.request) .then(response => { if (response.status === 200) { cache.put(event.request,response.clone()); return response}) .catch(() => cache.match(event.request)))); return} event.respondWith( caches.match(event.request).then(response => { return ( response ||'})
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+}

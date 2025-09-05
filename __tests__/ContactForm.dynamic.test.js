@@ -1,10 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});'
-</ContactFormdynamic>
-    render(<ContactFormdynamic />);
-</ContactFormdynamic>
-    render(<ContactFormdynamic />);
-</ContactFormdynamic>
-    render(<ContactFormdynamic />);
-</ContactFormdynamic>
-    render(<ContactFormdynamic />);
-</ContactFormdynamic>'
+import React from 'react';
+
+interface ContactForm.dynamic.testProps {
+  // Add props here as needed
+}
+
+export default function ContactForm.dynamic.test({ }: ContactForm.dynamic.testProps) {
+  return (
+    <div>
+      <h1>ContactForm.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

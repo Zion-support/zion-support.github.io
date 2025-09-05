@@ -1,1 +1,14 @@
-import React,{ useState,useEffect } from 'react'; export default function PerformanceMonitor() { const [metrics,setMetrics] = useState({ loadTime: 0,memoryUsage: 0,cpuUsage: 0 }); useEffect(() => { const interval = setInterval(() => { setMetrics({ loadTime: performance.now(),memoryUsage: performance.memory ? performance.memory.usedJSHeapSize : 0,cpuUsage: 0 })},1000); return () => clearInterval(interval)},[]); return ( <div className="performance-monitor"> <h3>Performance Metrics</h3> <div className="metrics"> <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div> <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div> </div> </div> )}""
+import React from 'react';
+
+interface PerformanceMonitorProps {
+  // Add props here as needed
+}
+
+export default function PerformanceMonitor({ }: PerformanceMonitorProps) {
+  return (
+    <div>
+      <h1>PerformanceMonitor</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

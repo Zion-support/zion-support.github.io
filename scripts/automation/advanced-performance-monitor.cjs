@@ -60,7 +60,7 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};`
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async startMonitoring() {}
   this.log("Starting advanced performance monitoring...");
@@ -145,7 +145,7 @@ class $1 {}
       // Disk usage;
       const diskStats = await this.getDiskUsage();
       metrics.disk = { ...metrics.disk, ...diskStats };
-    } catch (error) {  this.log(`Failed to collect system "metrics": ${error.message  }`, "WARN")};`
+    } catch (error) {  this.log(`Failed to collect system "metrics": ${error.message  }`, "WARN")};
 ;
     return metrics};
 ;
@@ -222,7 +222,7 @@ class $1 {}
       // Measure bundle size;
       metrics.bundleSize = await this.measureBundleSize();
       // Count dependencies;
-      metrics.dependencies = await this.countDependencies()} catch (error) {  this.log(`Failed to collect build "metrics": ${error.message  }", "WARN")};`
+      metrics.dependencies = await this.countDependencies()} catch (error) {  this.log(`Failed to collect build "metrics": ${error.message  }", "WARN")};
 ;
     return metrics};
 ;
@@ -236,13 +236,13 @@ class $1 {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");`
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
 
     try {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network "metrics": ${error.message}`, "WARN")};`
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network "metrics": ${error.message}`, "WARN")};
 ;
     return metrics};
 ;
@@ -251,7 +251,8 @@ class $1 {}
   const result = execSync("df -h .", {})
   "cwd": this.projectRoot,
         "encoding": "utf8",
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
 
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
@@ -280,7 +281,8 @@ class $1 {}
   const result = execSync("pm2 jlist", {})
   "cwd": this.projectRoot,
         "encoding": "utf8",
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
 
       const processes = JSON.parse(result);
       let totalMemory = 0;
@@ -288,7 +290,8 @@ class $1 {}
 
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
-        totalCPU += proc.monit.cpu || 0});
+        totalCPU += proc.monit.cpu || 0}
+});
 
       return {}
   "processes": processes.length,
@@ -327,7 +330,7 @@ class $1 {}
           "lastBuildSize": buildData.currentPerformance?.bundleSize || 0,
           "buildCount": this.performanceHistory.filter(m => m.build).length};
       };
-    } catch (error) {  this.log(`Failed to get build "metrics": ${error.message  }`, "WARN")};`
+    } catch (error) {  this.log(`Failed to get build "metrics": ${error.message  }`, "WARN")};
 ;
     return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };
   };
@@ -342,7 +345,7 @@ class $1 {}
           "codeSplitting": config.includes("manualChunks"),
           "minification": config.includes("minify")};
       };
-    } catch (error) {  this.log(`Failed to check Vite "config": ${error.message  }`, "WARN")};`
+    } catch (error) {  this.log(`Failed to check Vite "config": ${error.message  }`, "WARN")};
 ;
     return { "treeShaking": false, "codeSplitting": false, "minification": true };
   };
@@ -467,7 +470,7 @@ class $1 {}
         "current": issue.current,
         "recommendations": this.getRecommendations(issue)};
 ;
-      this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};`
+      this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
 ;
 
     // Save alerts;
@@ -556,7 +559,8 @@ class $1 {}
       // Clear npm cache;
       execSync("npm cache clean --force", {})
   "cwd": this.projectRoot,
-        "stdio": "pipe"});
+        "stdio": "pipe"}
+});
 
       return { "success": true, "message": "Disk space cleaned up successfully" };
     } catch (error) {}
@@ -586,7 +590,8 @@ class $1 {}
       const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
       if (metrics.system.memory.usage > 95) {}
-  execSync("pm2 restart all", { "cwd": this.projectRoot, "stdio": "pipe" });
+  execSync("pm2 restart all", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
         return {}
   "success": true,
           "message": "PM2 processes restarted to free memory"};
@@ -614,7 +619,8 @@ class $1 {}
       const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
 if (metrics.system.cpu.usage > 95) {}
-  execSync("pm2 scale all 1", { "cwd": this.projectRoot, "stdio": "pipe" });
+  execSync("pm2 scale all 1", { "cwd": this.projectRoot, "stdio": "pipe" }
+});
         return {}
   "success": true,
           "message": "PM2 processes scaled down to reduce CPU usage"};
@@ -636,7 +642,7 @@ if (metrics.system.cpu.usage > 95) {}
 ;
   async saveMetrics(metrics) {}
   try {}
-  fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2))} catch (error) {  this.log(`Failed to save "metrics": ${error.message  }`, "ERROR")};`
+  fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2))} catch (error) {  this.log(`Failed to save "metrics": ${error.message  }`, "ERROR")};
   };
 ;
   async saveAlerts() {}
@@ -644,7 +650,7 @@ if (metrics.system.cpu.usage > 95) {}
   fs.writeFileSync(;)
         this.alertsLog,
         JSON.stringify(this.alertHistory, null, 2);
-      )} catch (error) {  this.log(`Failed to save "alerts": ${error.message  }`, "ERROR")};`
+      )} catch (error) {  this.log(`Failed to save "alerts": ${error.message  }`, "ERROR")};
   };
 ;
   stopMonitoring() {}
@@ -699,7 +705,8 @@ if (require.main === module) {}
       process.on("SIGINT", () => {}
   console.log("Stopping performance monitor...");
         monitor.stopMonitoring();
-        process.exit(0)})});
+        process.exit(0)})}
+});
     .catch(error => {})
   console.error("Advanced Performance Monitor "failed": ", error);
       process.exit(1)})};

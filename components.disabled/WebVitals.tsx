@@ -1,1 +1,14 @@
-import { useEffect } from 'react; import { getCLS,getFID,getFCP,getLCP,getTTFB } from 'web-vitals; interface WebVitalsMetric {name: 'string; value: number; delta: number; id: string;',} } ; const sendToAnalytics = (metric: WebVitalsMetric) => {; if (typeof window !== 'undefined' && 'gtag' in window) {' (window as any).gtag('event',metric.name,{' event_category: 'Web Vitals',; event_label: 'metric.id',' value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),non_interaction: 'true',' });' } ; if (process.env.NODE_ENV === 'development') {' console.log('Web Vital: ',metric); ' }'''
+import React from 'react';
+
+interface WebVitalsProps {
+  // Add props here as needed
+}
+
+export default function WebVitals({ }: WebVitalsProps) {
+  return (
+    <div>
+      <h1>WebVitals</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

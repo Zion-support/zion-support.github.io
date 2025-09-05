@@ -117,7 +117,7 @@ const { execSync } = require("child_process")
           if (issue.file === "package.json")
         case "dependency-conflict"
           if (issue.file === "package.json")
-        case `invalid-option``
+        case `invalid-option
           if (issue.file === "tsconfig.json")
   fs.writeFileSync(filePath, content);this.log(" Fixed ${issue.type} in ${issue.file}")
       return false} catch (fixError) {this.log(" Failed to fix config "issue": ${fixError.message}", "ERROR")

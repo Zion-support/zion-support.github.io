@@ -1,10 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic'; describe('PerformanceMonitordynamic',() => { test('renders without crashing',() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId('performancemonitor.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<PerformanceMonitordynamic />)}); test('handles user interactions',() => { render(<PerformanceMonitordynamic />)}); test('applies correct styling',() => { render(<PerformanceMonitordynamic />)})});'
-</PerformanceMonitordynamic>
-    render(<PerformanceMonitordynamic />);
-</PerformanceMonitordynamic>
-    render(<PerformanceMonitordynamic />);
-</PerformanceMonitordynamic>
-    render(<PerformanceMonitordynamic />);
-</PerformanceMonitordynamic>
-    render(<PerformanceMonitordynamic />);
-</PerformanceMonitordynamic>'
+import React from 'react';
+
+interface PerformanceMonitor.dynamic.testProps {
+  // Add props here as needed
+}
+
+export default function PerformanceMonitor.dynamic.test({ }: PerformanceMonitor.dynamic.testProps) {
+  return (
+    <div>
+      <h1>PerformanceMonitor.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

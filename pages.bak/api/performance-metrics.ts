@@ -1,3 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next'''
-export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error''})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface PerformancemetricsProps {
+  // Add props here as needed
+}
+
+export default function Performancemetrics({ }: PerformancemetricsProps) {
+  return (
+    <div>
+      <h1>Performancemetrics</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

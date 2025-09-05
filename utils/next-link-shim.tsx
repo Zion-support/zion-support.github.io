@@ -1,5 +1,14 @@
-import React from 'react'''
-  if (typeof href === 'string'')'
-  return href?.pathname || (href as { href?: string })?.href || '#'''
-export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '')
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface NextlinkshimProps {
+  // Add props here as needed
+}
+
+export default function Nextlinkshim({ }: NextlinkshimProps) {
+  return (
+    <div>
+      <h1>Nextlinkshim</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

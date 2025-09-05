@@ -1,1 +1,14 @@
-import { ServiceVariant } from "../types/service-variants"; export interface NextGenAIService2026 { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenAIServices2026 NextGenAIServic',e2026[] =,[ ""]"
+import React from 'react';
+
+interface Nextgenaiservices2026Props {
+  // Add props here as needed
+}
+
+export default function Nextgenaiservices2026({ }: Nextgenaiservices2026Props) {
+  return (
+    <div>
+      <h1>Nextgenaiservices2026</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

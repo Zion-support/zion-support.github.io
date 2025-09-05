@@ -1,3 +1,14 @@
-import { NextApiRequest, NextApiResponse } from 'next'''
-export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error''})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface ErrorProps {
+  // Add props here as needed
+}
+
+export default function Error({ }: ErrorProps) {
+  return (
+    <div>
+      <h1>Error</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -25,7 +25,8 @@ class AdvancedAppOptimizer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -284,31 +285,31 @@ export class PerformanceMonitor {}
     this.isClient = typeof window !== 'undefined'};
   startTiming(name) {}
     if ( {})
-      performance.mark(\`\${name}-start\`)};`
+      performance.mark(\`\${name}-start\`)};
   };
   endTiming(name) {}
     if (this.isClient) {}
       performance.mark(\`\${name}-end\`)) {`}
      {}
-      performance.mark(\`\${name}-start\`)};`
+      performance.mark(\`\${name}-start\`)};
   };
   endTiming(name) {}
     if (this.isClient) {}
-      performance.mark(\`\${name}-end\`)};`
-      performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);`
+      performance.mark(\`\${name}-end\`)};
+      performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
       
       // Log slow operations;
       if ( {})
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};`
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
     };
   };
   getMetrics() {}
     return Object.fromEntries(this.metrics)) {}
      {}
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};`
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
     };
   };
   getMetrics() {}
@@ -476,7 +477,7 @@ export function initWebVitals() {}
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {}
-            this.log("Advanced App Optimizer "failed": ${error.message}`);`
+            this.log("Advanced App Optimizer "failed": ${error.message}`);
             throw error};
     };
 };

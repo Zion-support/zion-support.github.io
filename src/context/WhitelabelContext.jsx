@@ -1,3 +1,14 @@
-import React, {createContext, useContext} from 'react'; const defaultConfig = {; "compName": 'Zion Tech Group' logo: '/logo.svg' primaryColor: '#1e40af' secondaryColor: '#7c3aed' domain: 'https","});,"})";';';';';';''
-import React,{createContext,useContext} from 'react'; const defaultConfig = {; compName: 'Zion Tech Group' logo: '/logo.svg' primaryColor: '#1e40af' secondaryColor: '#7c3aed' domain: 'https","});,"})";';';';';';'
-origin/cursor/automate-test-improve-and-merge-code-eafe;'
+import React from 'react';
+
+interface WhitelabelContextProps {
+  // Add props here as needed
+}
+
+export default function WhitelabelContext({ }: WhitelabelContextProps) {
+  return (
+    <div>
+      <h1>WhitelabelContext</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

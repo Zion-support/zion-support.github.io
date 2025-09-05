@@ -13,7 +13,8 @@ export class PerformanceTracker {
     if (!this.metrics.has(name)) {
       this.metrics.set(name, []);
     }
-    this.metrics.get(name).push({ value, timestamp });
+    this.metrics.get(name).push({ value, timestamp }
+});
     
     // Keep only last 1000 entries
     const entries = this.metrics.get(name);
@@ -44,7 +45,8 @@ export class PerformanceTracker {
           value: avg,
           threshold,
           severity: 'warning'
-        });
+        }
+});
       }
     }
     

@@ -61,5 +61,6 @@ await this.log(" ESLint configuration fixed")
             "timestamp"
   "type": "linting-fix"
             "file": file,"
-            "timestamp": new Date().toISOString()")});")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
+            "timestamp": new Date().toISOString()")}
+});")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
   await this.log(")

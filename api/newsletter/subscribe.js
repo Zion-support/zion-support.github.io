@@ -1,32 +1,14 @@
-import { withErrorLogging } from '../../withErrorLogging.cjs';
+import React from 'react';
 
-export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+interface SubscribeProps {
+  // Add props here as needed
+}
 
-  try {
-<<<<<<< HEAD
-    const { email, name } = req.body;
-=======
-    const { email } = req.body;
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
-
-    if (!email || !email.includes('@')) {
-      return res.status(400).json({ error: 'Valid email is required' });
-    }
-
-    // Here you would integrate with your newsletter service
-    // For now, just return success
-    res.status(200).json({
-      message: 'Successfully subscribed to newsletter',
-      email: email,
-    });
-  } catch (error) {
-    console.error('Newsletter subscription failed:', error);
-    res.status(500).json({
-      error: 'Subscription failed',
-      message: error.message,
-    });
-  }
-});
+export default function Subscribe({ }: SubscribeProps) {
+  return (
+    <div>
+      <h1>Subscribe</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

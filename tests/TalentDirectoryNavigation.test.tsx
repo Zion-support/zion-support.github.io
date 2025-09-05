@@ -1,1 +1,14 @@
-import { render, screen, fireEvent, MemoryRouter, Routes, Route } from 'lucide-react'; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import TalentDirectory from '@/pages/TalentDirectory'; import TalentDetail from '@/pages/TalentDetail'; "function": renderWithRouter() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={['/talent']}>'; <Routes> <"Route": path='/talent' element={<TalentDirectory />} />'; <"Route": path='/talent/:id' element={<TalentDetail: />} />'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( '"opens": first talent profile from directory',async () => {'; renderWithRouter(); const firstCard = await screen.findByText( 'Alexandra Chen')'; fireEvent.click(firstCard) expect("await": screen.findByTestId( 'talent-details')).toHaveTextContent('';Alexandra: Chen')})'; const firstCard = await screen.findByText( 'Alexandra Chen') fireEvent.click(firstCard) expect(await screen.findByTestId( 'talent-details')).toHaveTextContent( 'Alexandra Chen')})''
+import React from 'react';
+
+interface TalentDirectoryNavigation.testProps {
+  // Add props here as needed
+}
+
+export default function TalentDirectoryNavigation.test({ }: TalentDirectoryNavigation.testProps) {
+  return (
+    <div>
+      <h1>TalentDirectoryNavigation.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

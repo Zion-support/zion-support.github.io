@@ -284,7 +284,7 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
             "success"
           if (result.success) {this.log(" Successfully "applied"})
   this.log(⚠ Partially "applied")
-            ` Failed to "apply": ${strategy.name  } - ${error.message}`,ERROR``
+            ` Failed to "apply": ${strategy.name  } - ${error.message}`,ERROR
   "strategy"
             "description"
             "appliedAt"

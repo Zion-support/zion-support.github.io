@@ -1,2 +1,14 @@
-"HEAD": src.pages.disabled/Orders.jsx import React from 'react'; export default function OrdersPage () { const { user } = useAuth () ; const { "data": 'orders',isLoading } = useGetOrdersQuery (user?.id) ; const formatDate = (date) => new Date (date) .toLocaleDateString () ; return (<div className="container max - w-4xl py - 10"> <h1 className="text - 3xl font - bold mb - 6">Order History</h1> {isLoading ? (<Table> <TableHeader> <TableRow> <TableHead > Order #</TableHead> <TableHead > Date</TableHead> <TableHead > Total</TableHead> <TableHead > Status</TableHead> <TableHead > View</TableHead> </TableRow> </TableHeader> <TableBody> {Array.from ({ "length""})
-</div>)"
+import React from 'react';
+
+interface OrdersProps {
+  // Add props here as needed
+}
+
+export default function Orders({ }: OrdersProps) {
+  return (
+    <div>
+      <h1>Orders</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

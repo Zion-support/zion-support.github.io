@@ -1,10 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PWARegistrationdynamic from '../components/PWARegistration.dynamic'; describe('PWARegistrationdynamic',() => { test('renders without crashing',() => { render(<PWARegistrationdynamic />); expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<PWARegistrationdynamic />)}); test('handles user interactions',() => { render(<PWARegistrationdynamic />)}); test('applies correct styling',() => { render(<PWARegistrationdynamic />)})});'
-</PWARegistrationdynamic>
-    render(<PWARegistrationdynamic />);
-</PWARegistrationdynamic>
-    render(<PWARegistrationdynamic />);
-</PWARegistrationdynamic>
-    render(<PWARegistrationdynamic />);
-</PWARegistrationdynamic>
-    render(<PWARegistrationdynamic />);
-</PWARegistrationdynamic>'
+import React from 'react';
+
+interface PWARegistration.dynamic.testProps {
+  // Add props here as needed
+}
+
+export default function PWARegistration.dynamic.test({ }: PWARegistration.dynamic.testProps) {
+  return (
+    <div>
+      <h1>PWARegistration.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

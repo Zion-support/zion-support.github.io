@@ -1,4 +1,14 @@
-import { useState, useEffect, useCallback } from 'react'''
-import { supabase } from '@/integrations/supabase/client'''
-export default function Page() {; ); .order('created_at',{ ascending: false }); if(resumeError) throw resumeError; if(!resumeData || resumeData.length === 0) {; setResumes([]); return [],} ; const transformedResumes: Resume[] = resumeData.map(resume => ({; id: resume.id,user_id: resume.user_id,basic_info: {; id: resume.id,title: resume.title,headline: resume.headline,summary: resume.summary,},work_experience: [],education: [],skills: [],certifications: [],is_active: resume.is_active,})); setResumes(transformedResumes); return transformedResumes,} catch(e: any) {; console.error('Error fetching resumes:''})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface UseResumeListProps {
+  // Add props here as needed
+}
+
+export default function UseResumeList({ }: UseResumeListProps) {
+  return (
+    <div>
+      <h1>UseResumeList</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

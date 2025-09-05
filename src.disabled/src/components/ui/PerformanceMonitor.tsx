@@ -1,2 +1,14 @@
-import React,{ useEffect,useState,useCallback } from 'react'; import { motion, AnimatePresence, Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'; interface PerformanceMetrics { "fcp": 'number | null; lcp: number | null; fid: number | null; cls: number | null; ttfb: number | null; domLoad: number | null; windowLoad: number | null;' }; interface PerformanceMonitorProps { showDetails?: boolean; autoHide?: boolean; threshold?: { "fcp": 'number; lcp: number; fid: number; cls: number;' }}; export const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({; showDetails = false,; autoHide = true,; threshold = {; "fcp": '1800',; "lcp": '2500',; "fid": '100',; "cls": '0.1;' }}) => {; const [metrics,setMetrics] = useState<PerformanceMetrics>({; "fcp": 'null',; "lcp": 'null',; "fid": 'null',; "cls": 'null',; "ttfb": 'null',; "domLoad": 'null',; "windowLoad": 'null;' }); const [isVisible,setIsVisible] = useState(true); const [isExpanded,setIsExpanded] = useState(false); const getPerformanceScore = useCallback(("metric": keyof PerformanceMetrics): number => {}}}})"
-</PerformanceMonitorProps>"
+import React from 'react';
+
+interface PerformanceMonitorProps {
+  // Add props here as needed
+}
+
+export default function PerformanceMonitor({ }: PerformanceMonitorProps) {
+  return (
+    <div>
+      <h1>PerformanceMonitor</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

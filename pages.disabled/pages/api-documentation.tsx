@@ -1,1 +1,71 @@
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; const "APIDocumentation": React.FC = () => { return ( <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"> <Head> <title>API Documentation - Zion App</title> <meta name="description" content="Comprehensive API documentation for Zion App services and integrations" /> <meta name="keywords" content="API,documentation,Zion App,integration,services" /> </Head> <div className="container mx-auto px-4 py-8"> <div className="max-w-4xl mx-auto"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> API Documentation </h1> <p className="text-xl text-gray-600"> Comprehensive guide to integrating with Zion App services </p> </div> <div className="bg-white rounded-lg shadow-lg p-8 mb-8"> <h2 className="text-2xl font-semibold text-gray-800 mb-6">Getting Started</h2> <div className="space-y-4"> <div className="bg-gray-50 p-4 rounded-lg"> <h3 className="font-medium text-gray-800 mb-2">Authentication</h3> <p className="text-gray-600 mb-3"> All API requests require authentication using API keys. Include your API key in the Authorization "header": </p> <code className="bg-gray-200 px-2 py-1 rounded text-sm"> Authorization: Bearer YOUR_API_KEY </code> </div> <div className="bg-gray-50 p-4 rounded-lg"> <h3 className="font-medium text-gray-800 mb-2">Base URL</h3> <p className="text-gray-600 mb-3"> All API endpoints are relative to our base URL: </p> <code className="bg-gray-200 px-2 py-1 rounded text-sm"> https: </code> </div> <div className="bg-gray-50 p-4 rounded-lg"> <h3 className="font-medium text-gray-800 mb-2">Rate Limiting</h3> <p className="text-gray-600 mb-3"> API requests are limited to 1000 requests per hour per API key. </p> </div> </div> </div> <div className="bg-white rounded-lg shadow-lg p-8 mb-8"> <h2 className="text-2xl font-semibold text-gray-800 mb-6">Core Endpoints</h2> <div className="space-y-6"> <div className="border-l-4 border-blue-500 pl-4"> <h3 className="text-lg font-medium text-gray-800 mb-2">Content Management</h3> <div className="space-y-2 text-sm"> <div><code className="bg-gray-100 px-2 py-1 rounded">GET /content</code> - Retrieve content</div> <div><code className="bg-gray-100 px-2 py-1 rounded">POST /content</code> - Create content</div> <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /content/{'{id}'}</code> - Update content</div> <div><code className="bg-gray-100 px-2 py-1 rounded">DELETE /content/{'{id}'}</code> - Delete content</div> </div> </div> <div className="border-l-4 border-green-500 pl-4"> <h3 className="text-lg font-medium text-gray-800 mb-2">User Management</h3> <div className="space-y-2 text-sm"> <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users</code> - List users</div> <div><code className="bg-gray-100 px-2 py-1 rounded">POST /users</code> - Create user</div> <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users/{'{id}'}</code> - Get user details</div> <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{'{id}'}</code> - Update user</div> </div> </div> <div className="border-l-4 border-purple-500 pl-4"> <h3 className="text-lg font-medium text-gray-800 mb-2">Analytics</h3> <div className="space-y-2 text-sm"> <div><code className="bg-gray-100 px-2 py-1 rounded">GET /analytics/overview</code> - Get analytics overview</div> <div><code className="bg-gray-100 px-2 py-1 rounded">GET /analytics/reports</code> - Generate reports</div> <div><code className="bg-gray-100 px-2 py-1 rounded">POST /analytics/export</code> - Export data</div> </div> </div> </div> </div> <div className="bg-white rounded-lg shadow-lg p-8 mb-8"> <h2 className="text-2xl font-semibold text-gray-800 mb-6">Code Examples</h2> <div className="space-y-6"> <div> <h3 className="text-lg font-medium text-gray-800 mb-3">JavaScript/Node.js</h3> <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm"> {"const axios = require('axios'); const api = axios.create({ "baseURL": 'https: headers: { 'Authorization': 'Bearer YOUR_API_KEY','Content-Type': 'application/json' } }); const getContent = async () => { try { const response = await api.get('/content'); console.log(response.data)} catch (error) { console.error('"Error": ',error.response.data)} };"} </pre> </div> <div> <h3 className="text-lg font-medium text-gray-800 mb-3">Python</h3> <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm"> {"import requests api_key = 'YOUR_API_KEY' base_url = '"https": headers = { 'Authorization': f'Bearer {api_key}','Content-Type': 'application/json' } # Get content response = requests.get(f'{base_url}/content',headers=headers) if response.status_code == "200": print(response.json()) else: print(f'Error: {response.status_code}')"} </pre> </div> </div> </div> </div> </div> </div> )}; export default APIDocumentation;""
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Apidocumentation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Apidocumentation - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Apidocumentation
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

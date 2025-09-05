@@ -1,4 +1,14 @@
-import { NextApiRequest, NextApiResponse } from;
-  'next'''
-export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });''
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import React from 'react';
+
+interface WebvitalsProps {
+  // Add props here as needed
+}
+
+export default function Webvitals({ }: WebvitalsProps) {
+  return (
+    <div>
+      <h1>Webvitals</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
