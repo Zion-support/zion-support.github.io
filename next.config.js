@@ -5,6 +5,8 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  output: 'standalone',
+  trailingSlash: true,
   
   // Performance optimizations
   experimental: {
