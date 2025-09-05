@@ -2556,6 +2556,194 @@ title: 'Generative AI Content Creation Suite',
     features: ['Risk Assessment', 'Supplier Analysis', 'Disruption Prediction', 'Mitigation Planning'],
     pricing: '$25,000 - $125,000/project',
     category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Complete autonomous vehicle AI system with perception, planning, and control capabilities.',
+    icon: Car,
+    features: ['Object Detection', 'Path Planning', 'Decision Making', 'Safety Systems'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Autonomous Systems',
+    popular: true,
+    link: 'https://autonomousvehicles.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Optimizer',
+    description: 'AI-powered quantum algorithm optimization and quantum machine learning for complex problems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Design', 'Optimization Problems', 'Quantum ML', 'Error Correction'],
+    pricing: '$50,000 - $200,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Mission Planner',
+    description: 'Autonomous space mission planning and satellite constellation optimization using advanced AI.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Orbit Optimization', 'Resource Allocation', 'Risk Assessment'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Aerospace AI',
+    link: 'https://spaceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Smart City Controller',
+    description: 'Intelligent city management system with traffic optimization, energy management, and public safety.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Waste Management', 'Public Safety'],
+    pricing: '$150,000 - $750,000/project',
+    category: 'Smart Cities',
+    link: 'https://smartcityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Agricultural Optimizer',
+    description: 'Precision agriculture with AI-driven crop optimization, yield prediction, and resource management.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Agriculture AI',
+    link: 'https://agricultureai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Mental Health Companion Pro',
+    description: 'Advanced AI-powered mental health support with mood tracking and therapeutic interventions.',
+    icon: Heart,
+    features: ['Mood Analysis', 'Therapeutic Chat', 'Crisis Detection', 'Progress Tracking'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'HealthTech AI',
+    popular: true,
+    link: 'https://mentalhealthai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Energy Grid Optimizer',
+    description: 'Intelligent energy grid management with demand forecasting and renewable integration.',
+    icon: Zap,
+    features: ['Demand Forecasting', 'Grid Optimization', 'Renewable Integration', 'Load Balancing'],
+    pricing: '$75,000 - $375,000/project',
+    category: 'Energy AI',
+    link: 'https://energygridai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Blockchain Security Auditor Pro',
+    description: 'Advanced automated smart contract auditing and blockchain security analysis with AI.',
+    icon: Shield,
+    features: ['Smart Contract Analysis', 'Vulnerability Detection', 'Security Auditing', 'Compliance Checking'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Blockchain AI',
+    popular: true,
+    link: 'https://blockchainsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Translator Pro',
+    description: 'Advanced real-time translation with cultural context and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Adaptation', 'Industry Terms', 'Voice Translation'],
+    pricing: '$0.02 - $0.10 per 1000 characters',
+    category: 'Language AI',
+    link: 'https://translationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Creative Design Assistant Pro',
+    description: 'Advanced AI-powered creative design tool for graphics, videos, and multimedia content.',
+    icon: Image,
+    features: ['Graphic Design', 'Video Editing', '3D Modeling', 'Brand Consistency'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Creative AI',
+    link: 'https://creativedesignai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Investment Advisor Pro',
+    description: 'Advanced personalized investment recommendations with risk assessment and portfolio optimization.',
+    icon: TrendingUp,
+    features: ['Portfolio Analysis', 'Risk Assessment', 'Market Analysis', 'Investment Strategies'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'FinTech AI',
+    popular: true,
+    link: 'https://investmentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Smart Home Controller Pro',
+    description: 'Advanced intelligent home automation with learning capabilities and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Learning Patterns', 'Voice Commands'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'Smart Home AI',
+    link: 'https://smarthomeai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Educational Tutor Pro',
+    description: 'Advanced personalized learning assistant with adaptive curriculum and progress tracking.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Progress Tracking', 'Personalized Content', 'Assessment Tools'],
+    pricing: '$500 - $2,500/month',
+    category: 'EdTech AI',
+    link: 'https://educationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Imaging Analysis Pro',
+    description: 'Advanced medical imaging analysis for radiology and diagnostic support with AI.',
+    icon: Eye,
+    features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Analysis', 'Pathology Detection'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Medical AI',
+    popular: true,
+    link: 'https://medicalimagingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Analyst Pro',
+    description: 'Advanced automated threat detection and response with behavioral analysis and incident management.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Incident Response', 'Vulnerability Assessment', 'Security Orchestration'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Cybersecurity AI',
+    popular: true,
+    link: 'https://cybersecurityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Predictor Pro',
+    description: 'Advanced climate modeling and environmental impact prediction using machine learning.',
+    icon: Globe,
+    features: ['Weather Forecasting', 'Climate Modeling', 'Environmental Impact', 'Risk Assessment'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Environmental AI',
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant Pro',
+    description: 'Advanced intelligent legal research and case law analysis with natural language processing.',
+    icon: FileText,
+    features: ['Case Law Analysis', 'Legal Document Review', 'Precedent Research', 'Contract Analysis'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Legal AI',
+    popular: true,
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Manufacturing Optimization Pro',
+    description: 'Advanced intelligent manufacturing process optimization and quality control using AI.',
+    icon: Settings,
+    features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Defect Detection'],
+    pricing: '$25,000 - $125,000/month',
+    category: 'Manufacturing AI',
+    link: 'https://manufacturingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Real Estate Analysis Pro',
+    description: 'Advanced AI platform for real estate market analysis and property valuation.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Recommendations', 'Risk Assessment'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Real Estate AI',
+    link: 'https://realestateai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization Pro',
+    description: 'Advanced intelligent supply chain management with predictive analytics and automation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Risk Analysis'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Supply Chain AI',
+    popular: true,
+    link: 'https://supplychainai.ziontechgroup.com'
   }
 ];
 

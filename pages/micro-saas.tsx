@@ -888,6 +888,236 @@ const microSaasProducts = [
     category: 'RPA',
     popular: true,
     link: 'https://rpaplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Voice Analytics Platform',
+    description: 'Advanced voice analysis for customer service, sales calls, and team meetings with sentiment analysis and insights.',
+    icon: Mic,
+    features: ['Call Analytics', 'Sentiment Analysis', 'Performance Metrics', 'Real-time Insights'],
+    pricing: '$199 - $999/month',
+    category: 'Voice Analytics',
+    popular: true,
+    link: 'https://voiceanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Security Auditor',
+    description: 'Automated smart contract security analysis with vulnerability detection and gas optimization recommendations.',
+    icon: Shield,
+    features: ['Security Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Security',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Environmental impact tracking and sustainability optimization for businesses with actionable insights.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'ESG Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Sustainability',
+    link: 'https://carbonfootprint.ziontechgroup.com'
+  },
+  {
+    title: 'Mental Health & Wellness Assistant',
+    description: 'AI-powered mental health support and wellness tracking for employees and individuals with privacy protection.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection'],
+    pricing: '$19 - $99/month',
+    category: 'Health & Wellness',
+    link: 'https://wellnessai.ziontechgroup.com'
+  },
+  {
+    title: 'Cryptocurrency Tax Calculator Pro',
+    description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization and compliance checking.',
+    icon: DollarSign,
+    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking'],
+    pricing: '$49 - $299/month',
+    category: 'Crypto Finance',
+    link: 'https://cryptotax.ziontechgroup.com'
+  },
+  {
+    title: 'Remote Work Analytics Dashboard',
+    description: 'Productivity and engagement analytics for remote teams with AI insights and team optimization recommendations.',
+    icon: Monitor,
+    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights'],
+    pricing: '$79 - $399/month',
+    category: 'Remote Work',
+    link: 'https://remotework.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Subscription Management',
+    description: 'Intelligent subscription lifecycle management with churn prediction, pricing optimization, and customer insights.',
+    icon: Settings,
+    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights'],
+    pricing: '$99 - $599/month',
+    category: 'Subscription Management',
+    link: 'https://subscriptionai.ziontechgroup.com'
+  },
+  {
+    title: 'Code Documentation Generator AI',
+    description: 'Automatically generate comprehensive documentation from code with AI analysis and interactive examples.',
+    icon: FileText,
+    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples'],
+    pricing: '$79 - $399/month',
+    category: 'Development Tools',
+    popular: true,
+    link: 'https://codedocs.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection and gas optimization.',
+    icon: Shield,
+    features: ['Unit Testing', 'Integration Testing', 'Security Auditing', 'Gas Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain',
+    link: 'https://contracttesting.ziontechgroup.com'
+  },
+  {
+    title: 'Database Query Optimizer AI',
+    description: 'Intelligent database query optimization and performance monitoring with automated recommendations.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Database',
+    link: 'https://dboptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing assistance and idea organization capabilities.',
+    icon: Target,
+    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options'],
+    pricing: '$29 - $149/month',
+    category: 'Collaboration',
+    link: 'https://collabwhiteboard.ziontechgroup.com'
+  },
+  {
+    title: 'API Documentation Generator Pro',
+    description: 'Automatically generate interactive API documentation from OpenAPI specs with testing interface and version management.',
+    icon: Code,
+    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
+    pricing: '$49 - $299/month',
+    category: 'API Tools',
+    link: 'https://apidocs.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Deployment Manager',
+    description: 'Automated smart contract deployment and management across multiple blockchains with monitoring and version control.',
+    icon: Rocket,
+    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain',
+    link: 'https://contractdeploy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Error Monitoring',
+    description: 'Intelligent error tracking and debugging assistance for applications with performance monitoring and alert management.',
+    icon: Monitor,
+    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management'],
+    pricing: '$39 - $199/month',
+    category: 'Monitoring',
+    link: 'https://errormonitor.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Analytics Dashboard',
+    description: 'Comprehensive analytics for smart contract performance and usage with cost analysis and user behavior insights.',
+    icon: BarChart3,
+    features: ['Usage Analytics', 'Performance Metrics', 'Cost Analysis', 'User Behavior'],
+    pricing: '$79 - $399/month',
+    category: 'Analytics',
+    link: 'https://contractanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Refactoring Assistant',
+    description: 'Intelligent code refactoring suggestions and automated improvements with best practices and quality analysis.',
+    icon: Code,
+    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
+    link: 'https://coderefactor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Responder Pro',
+    description: 'Advanced email automation with natural language processing, sentiment analysis, and smart routing capabilities.',
+    icon: Mail,
+    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
+    pricing: '$2,000 - $8,000 setup',
+    category: 'Email Automation',
+    popular: true,
+    link: 'https://emailresponder.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Analytics Platform Pro',
+    description: 'Advanced forecasting and predictive modeling for business intelligence with real-time predictions and custom dashboards.',
+    icon: BarChart3,
+    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Analytics',
+    popular: true,
+    link: 'https://predictiveanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Chatbot System Pro',
+    description: 'AI-powered customer support with natural conversation capabilities, context awareness, and multi-language support.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
+    pricing: '$1,000 - $6,000/month',
+    category: 'Customer Service',
+    popular: true,
+    link: 'https://intelligentchatbot.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Social Proof Widgets',
+    description: 'Real-time social proof widgets with AI optimization for increased conversions and customizable display options.',
+    icon: Globe,
+    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Marketing',
+    link: 'https://socialproof.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Loyalty Tracker',
+    description: 'Intelligent loyalty program management with AI-driven engagement strategies and reward optimization.',
+    icon: Heart,
+    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Retention',
+    link: 'https://loyaltytracker.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personalized E-Learning',
+    description: 'Adaptive learning platform with AI-powered personalization, skill assessment, and progress tracking.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring'],
+    pricing: '$49 - $299/month',
+    category: 'Education',
+    link: 'https://elearningai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Local SEO Optimizer',
+    description: 'Comprehensive local SEO optimization with AI-powered keyword research, competitor analysis, and performance tracking.',
+    icon: Search,
+    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'SEO',
+    link: 'https://localseo.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Online Booking System',
+    description: 'Intelligent appointment scheduling with AI optimization, automated reminders, and client management capabilities.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management'],
+    pricing: '$29 - $149/month',
+    category: 'Scheduling',
+    link: 'https://bookingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Referral Program Manager',
+    description: 'Automated referral program management with AI-driven optimization, fraud detection, and performance analytics.',
+    icon: Users,
+    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'Marketing',
+    link: 'https://referralmanager.ziontechgroup.com'
   }
 ];
 
