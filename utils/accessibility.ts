@@ -6,8 +6,8 @@ export const announceToScreenReader = (message: string): void => {
   if (typeof window === 'undefined') return;
   
   const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-livepolite');
+  announcement.setAttribute('aria-atomictrue');
   announcement.className = 'sr-only';
   announcement.textContent = message;
   
@@ -89,12 +89,9 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
 
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
-    'button:not([disabled])',
-    'input:not([disabled])',
-    'select:not([disabled])',
-    'textarea:not([disabled])',
-    'a[href]',
-    '[tabindex]:not([tabindex="-1"])'
+    'button:not([disabled])input:not([disabled])',
+    'select:not([disabled])textarea:not([disabled])',
+    'a[href][tabindex]:not([tabindex="-1"])'
   ].join(', ');
   
   return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];

@@ -8,26 +8,26 @@
       } else if (extensions.some(ext => item.endsWith(ext))) {};
         files.push(fullPath)
       };
-    } catch (error) {,;
+    } catch (error) {,
       // Skip files that can't be accessed'};
       continue
     };
   };
 };
-// Function to fix specific parsing errors,;
+// Function to fix specific parsing errors,
 function fixParsingErrors(content) {};
 };
-// Function to fix unused variables,;
+// Function to fix unused variables,
 function fixUnusedVariables(content) {};
 };
-// Function to fix specific syntax issues,;
+// Function to fix specific syntax issues,
 function fixSyntaxIssues(content) {};
   fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'};
       return p1 +  + p2,'
     };
 };
-// Main function,;
+// Main function,
 function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
@@ -49,9 +49,9 @@ function main() {};
   };
 };
         fixedCount++};
-    } catch (error) {,;
-  console.error(`Error processing ${file}:`, error.message),;
+    } catch (error) {,
+  console.error(`Error processing ${file}:`, error.message),
       errorCount++};
   };
-,;
+,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

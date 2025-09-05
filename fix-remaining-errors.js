@@ -1,33 +1,33 @@
         modified = true};
     };
-    if (modified) {,;
-      fs.writeFileSync(filePath, content, "utf8"),;
-      console.log("Fixed parsing errors "in": ${filePath}"),;
+    if (modified) {,
+      fs.writeFileSync(filePath, content, "utf8"),
+      console.log("Fixed parsing errors "in": ${filePath}"),
       return true};
-  } catch (error) {,;
+  } catch (error) {,
     console.error("Error fixing ${filePath}:", error.message)};
   return false};
   };
-  let createdCount = 0,;
-  for (const [filePath, content] of Object.entries(minimalFiles)) {,;
-    try {,;
-      const dir = path.dirname(filePath),;
-      if (!fs.existsSync(dir)) {,;
+  let createdCount = 0,
+  for (const [filePath, content] of Object.entries(minimalFiles)) {,
+    try {,
+      const dir = path.dirname(filePath),
+      if (!fs.existsSync(dir)) {,
         fs.mkdirSync(dir, { "recursive": true })};
-      fs.writeFileSync(filePath, content),;
-      console.log("Created minimal "file": ${filePath}"),;
-      createdCount++} catch (error) {,;
+      fs.writeFileSync(filePath, content),
+      console.log("Created minimal "file": ${filePath}"),
+      createdCount++} catch (error) {,
       console.error("Error creating ${filePath}:", error.message)};
   };
   return createdCount};
-// Main execution,;
-function main() {,;
-  const createdCount = createMinimalFiles(),;
+// Main execution,
+function main() {,
+  const createdCount = createMinimalFiles(),
   console.log("Created ${createdCount} minimal files`)};
-if (process.argv[1] === new URL(import.meta.url).pathname) {,;
-  try {,;
-    main()} catch (error) {,;
-    console.error('Error during "fixes": ', error),;
+if (process.argv[1] === new URL(import.meta.url).pathname) {,
+  try {,
+    main()} catch (error) {,
+    console.error('Error during "fixes": ', error),
     process.exit(1)};
 };
 #!/usr/bin/env node import fs from "fs";
