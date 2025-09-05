@@ -22,50 +22,34 @@ import Layout from '../../components/Layout';
 
 const energySolutions = [
   {
-    icon: Sun,
-    title: 'Solar Energy Management',
-    description: 'AI-powered solar panel optimization and energy forecasting systems.',
+    icon: Sun,,
     features: ['Smart Grid Integration', 'Weather Prediction', 'Energy Storage Optimization', 'Real-time Monitoring']
   },
   {
-    icon: Wind,
-    title: 'Wind Power Analytics',
-    description: 'Advanced analytics for wind farm performance and maintenance optimization.',
+    icon: Wind,,
     features: ['Predictive Maintenance', 'Turbine Optimization', 'Wind Pattern Analysis', 'Performance Monitoring']
   },
   {
-    icon: Battery,
-    title: 'Energy Storage Solutions',
-    description: 'Intelligent battery management and grid-scale storage systems.',
+    icon: Battery,,
     features: ['Battery Health Monitoring', 'Load Balancing', 'Peak Shaving', 'Grid Stabilization']
   },
   {
-    icon: Leaf,
-    title: 'Carbon Footprint Tracking',
-    description: 'Comprehensive carbon emissions monitoring and reduction strategies.',
+    icon: Leaf,,
     features: ['Emissions Tracking', 'Carbon Credits', 'Sustainability Reporting', 'Green Energy Integration']
   }
 ];
 
 const energyChallenges = [
-  {
-    title: 'Grid Modernization',
-    description: 'Upgrading aging infrastructure with smart grid technologies and IoT sensors.',
+  {,
     solution: 'Smart grid implementation with real-time monitoring and automated controls.'
   },
-  {
-    title: 'Renewable Integration',
-    description: 'Managing intermittent renewable energy sources and maintaining grid stability.',
+  {,
     solution: 'Advanced forecasting algorithms and energy storage management systems.'
   },
-  {
-    title: 'Energy Efficiency',
-    description: 'Optimizing energy consumption across generation, transmission, and distribution.',
+  {,
     solution: 'AI-powered optimization and predictive analytics for energy management.'
   },
-  {
-    title: 'Regulatory Compliance',
-    description: 'Meeting evolving environmental regulations and reporting requirements.',
+  {,
     solution: 'Automated compliance monitoring and reporting systems.'
   }
 ];

@@ -20,9 +20,7 @@ import {
 import Layout from '../../components/Layout';
 
 const realEstateSolutions = [
-  {
-    title: "Property Management Systems",
-    description: "Comprehensive property management and tenant tracking solutions",
+  {,
     icon: Home,
     features: [
       "Property Portfolio Management",
@@ -34,9 +32,7 @@ const realEstateSolutions = [
     ],
     price: "Starting at $2,000/month"
   },
-  {
-    title: "Lead Management & CRM",
-    description: "Streamline lead generation and customer relationship management",
+  {,
     icon: Users,
     features: [
       "Lead Capture & Tracking",
@@ -48,9 +44,7 @@ const realEstateSolutions = [
     ],
     price: "Starting at $1,500/month"
   },
-  {
-    title: "Market Analysis & Analytics",
-    description: "Data-driven insights for property valuation and market trends",
+  {,
     icon: BarChart3,
     features: [
       "Property Valuation Tools",
@@ -62,9 +56,7 @@ const realEstateSolutions = [
     ],
     price: "Starting at $2,500/month"
   },
-  {
-    title: "Virtual Tours & 3D Visualization",
-    description: "Immersive property showcasing with virtual reality technology",
+  {,
     icon: Globe,
     features: [
       "360° Virtual Tours",
@@ -76,9 +68,7 @@ const realEstateSolutions = [
     ],
     price: "Starting at $3,000/month"
   },
-  {
-    title: "Transaction Management",
-    description: "Streamline the entire real estate transaction process",
+  {,
     icon: Building,
     features: [
       "Deal Pipeline Management",
@@ -90,9 +80,7 @@ const realEstateSolutions = [
     ],
     price: "Starting at $1,800/month"
   },
-  {
-    title: "Marketing Automation",
-    description: "Automated marketing campaigns and lead nurturing systems",
+  {,
     icon: Zap,
     features: [
       "Email Marketing Campaigns",
@@ -107,57 +95,37 @@ const realEstateSolutions = [
 ];
 
 const propTechFeatures = [
-  {
-    title: "AI-Powered Property Matching",
-    description: "Match properties with buyers using machine learning algorithms",
+  {,
     icon: "🤖"
   },
-  {
-    title: "Blockchain Property Records",
-    description: "Secure, immutable property ownership and transaction records",
+  {,
     icon: "🔗"
   },
-  {
-    title: "IoT Smart Building Management",
-    description: "Connected devices for energy management and maintenance",
+  {,
     icon: "🏠"
   },
-  {
-    title: "Mobile-First Solutions",
-    description: "Native mobile apps for agents, buyers, and property managers",
+  {,
     icon: "📱"
   },
-  {
-    title: "Cloud-Based Infrastructure",
-    description: "Scalable, secure cloud solutions for real estate operations",
+  {,
     icon: "☁️"
   },
-  {
-    title: "Data Analytics & Insights",
-    description: "Advanced analytics for market trends and business intelligence",
+  {,
     icon: "📊"
   }
 ];
 
 const whyChooseUs = [
-  {
-    title: "Real Estate Expertise",
-    description: "Deep understanding of real estate industry challenges and opportunities",
+  {,
     icon: "🏘️"
   },
-  {
-    title: "Proven Technology",
-    description: "Cutting-edge PropTech solutions with proven track record",
+  {,
     icon: "💻"
   },
-  {
-    title: "Scalable Solutions",
-    description: "Solutions that grow with your business from startup to enterprise",
+  {,
     icon: "📈"
   },
-  {
-    title: "24/7 Support",
-    description: "Round-the-clock support for your real estate technology needs",
+  {,
     icon: "🛡️"
   }
 ];

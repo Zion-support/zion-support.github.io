@@ -21,30 +21,22 @@ import {
 import Layout from '../components/Layout';
 
 const healthcareSolutions = [
-  {
-    title: "Electronic Health Records (EHR)",
-    description: "Comprehensive patient data management systems with HIPAA compliance",
+  {,
     icon: Heart,
     features: ["Patient records", "Medical history", "Prescription management", "HIPAA compliance"],
     pricing: "Starting at $25,000"
   },
-  {
-    title: "Telemedicine Platforms",
-    description: "Secure video consultation and remote patient monitoring systems",
+  {,
     icon: Globe,
     features: ["Video consultations", "Remote monitoring", "Appointment scheduling", "Patient portal"],
     pricing: "Starting at $15,000"
   },
-  {
-    title: "Medical Device Integration",
-    description: "Connect and manage medical devices with centralized data collection",
+  {,
     icon: Settings,
     features: ["Device connectivity", "Data synchronization", "Real-time monitoring", "Alert systems"],
     pricing: "Starting at $20,000"
   },
-  {
-    title: "Healthcare Analytics",
-    description: "Advanced analytics for patient outcomes and operational efficiency",
+  {,
     icon: BarChart3,
     features: ["Patient analytics", "Operational insights", "Predictive modeling", "Compliance reporting"],
     pricing: "Starting at $18,000"
@@ -52,24 +44,16 @@ const healthcareSolutions = [
 ];
 
 const benefits = [
-  {
-    title: "HIPAA Compliance",
-    description: "Full compliance with healthcare data protection regulations",
+  {,
     icon: Shield
   },
-  {
-    title: "Patient Safety",
-    description: "Technology solutions that improve patient care and safety",
+  {,
     icon: Heart
   },
-  {
-    title: "Operational Efficiency",
-    description: "Streamlined workflows and automated processes",
+  {,
     icon: TrendingUp
   },
-  {
-    title: "Data Security",
-    description: "Enterprise-grade security for sensitive healthcare data",
+  {,
     icon: Lock
   }
 ];

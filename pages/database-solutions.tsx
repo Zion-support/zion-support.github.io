@@ -6,39 +6,27 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const services = [
   {
-    icon: Database,
-    title: 'Database Design & Architecture',
-    description: 'Custom database solutions designed for your specific business needs',
+    icon: Database,,
     features: ['Schema optimization', 'Performance tuning', 'Scalability planning', 'Data modeling']
   },
   {
-    icon: Server,
-    title: 'Database Migration',
-    description: 'Seamless migration between database systems with zero downtime',
+    icon: Server,,
     features: ['Data integrity assurance', 'Automated migration tools', 'Rollback capabilities', 'Testing & validation']
   },
   {
-    icon: Shield,
-    title: 'Database Security',
-    description: 'Comprehensive security solutions to protect your valuable data',
+    icon: Shield,,
     features: ['Access control', 'Encryption at rest', 'Audit logging', 'Compliance monitoring']
   },
   {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Optimize your database performance for maximum efficiency',
+    icon: Zap,,
     features: ['Query optimization', 'Index tuning', 'Resource monitoring', 'Capacity planning']
   },
   {
-    icon: BarChart3,
-    title: 'Analytics & Reporting',
-    description: 'Transform your data into actionable business insights',
+    icon: BarChart3,,
     features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Predictive analytics']
   },
   {
-    icon: RefreshCw,
-    title: 'Backup & Recovery',
-    description: 'Reliable backup and disaster recovery solutions',
+    icon: RefreshCw,,
     features: ['Automated backups', 'Point-in-time recovery', 'Cross-region replication', 'Disaster recovery testing']
   }
 ];

@@ -4,9 +4,7 @@ import Link from 'next/link';
 
 const Services: NextPage = () => {
   const serviceCategories = [
-    {
-      title: "AI & Machine Learning Services",
-      description: "Cutting-edge AI solutions to transform your business",
+    {,
       services: [
         { name: "AI Model Development", href: "/services/ai-model-development", price: "Starting at $2,500/month" },
         { name: "Chatbot Development", href: "/services/ai-chatbot-development", price: "Starting at $1,200/month" },
@@ -15,9 +13,7 @@ const Services: NextPage = () => {
         { name: "Natural Language Processing", href: "/services/nlp-services", price: "Starting at $2,800/month" }
       ]
     },
-    {
-      title: "Cloud & Infrastructure Services",
-      description: "Scalable cloud solutions for modern businesses",
+    {,
       services: [
         { name: "Cloud Migration", href: "/services/cloud-migration", price: "Starting at $5,000/project" },
         { name: "DevOps Automation", href: "/services/devops-automation", price: "Starting at $3,500/month" },
@@ -26,9 +22,7 @@ const Services: NextPage = () => {
         { name: "Cloud Security", href: "/services/cloud-security", price: "Starting at $2,500/month" }
       ]
     },
-    {
-      title: "Software Development Services",
-      description: "Custom software solutions tailored to your needs",
+    {,
       services: [
         { name: "Web Application Development", href: "/services/web-development", price: "Starting at $4,000/project" },
         { name: "Mobile App Development", href: "/services/mobile-development", price: "Starting at $6,000/project" },
@@ -37,9 +31,7 @@ const Services: NextPage = () => {
         { name: "Legacy System Modernization", href: "/services/legacy-modernization", price: "Starting at $10,000/project" }
       ]
     },
-    {
-      title: "Data & Analytics Services",
-      description: "Transform data into actionable business insights",
+    {,
       services: [
         { name: "Data Pipeline Engineering", href: "/services/data-pipeline-engineering", price: "Starting at $3,500/month" },
         { name: "Business Intelligence", href: "/services/business-intelligence", price: "Starting at $2,800/month" },
@@ -48,9 +40,7 @@ const Services: NextPage = () => {
         { name: "Database Design", href: "/services/database-design", price: "Starting at $1,500/project" }
       ]
     },
-    {
-      title: "Security & Compliance Services",
-      description: "Protect your business with enterprise-grade security",
+    {,
       services: [
         { name: "Security Auditing", href: "/services/security-auditing", price: "Starting at $3,000/audit" },
         { name: "Network Security", href: "/services/network-security", price: "Starting at $2,500/month" },
@@ -59,9 +49,7 @@ const Services: NextPage = () => {
         { name: "Security Training", href: "/services/security-training", price: "Starting at $1,500/session" }
       ]
     },
-    {
-      title: "Automation & Integration Services",
-      description: "Streamline operations with intelligent automation",
+    {,
       services: [
         { name: "Workflow Automation", href: "/services/workflow-automation", price: "Starting at $2,000/month" },
         { name: "System Integration", href: "/services/system-integration", price: "Starting at $3,500/project" },

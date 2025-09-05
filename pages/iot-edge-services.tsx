@@ -39,9 +39,7 @@ const contactInfo = {
 
 const iotServices = [
   {
-    id: 1,
-    title: 'IoT Platform Development',
-    description: 'Comprehensive IoT platforms for device management, data collection, and real-time analytics with scalable cloud infrastructure.',
+    id: 1,,
     icon: Wifi,
     category: 'Platform',
     price: 'Starting at $12,000/month',
@@ -66,9 +64,7 @@ const iotServices = [
     targetUsers: 'Manufacturing, Smart Cities, Agriculture, Healthcare'
   },
   {
-    id: 2,
-    title: 'Edge Computing Solutions',
-    description: 'Deploy computing power closer to data sources for real-time processing, reduced latency, and improved performance.',
+    id: 2,,
     icon: Cpu,
     category: 'Edge Computing',
     price: 'Starting at $8,000/month',
@@ -93,9 +89,7 @@ const iotServices = [
     targetUsers: 'Autonomous Vehicles, Manufacturing, Retail, Healthcare'
   },
   {
-    id: 3,
-    title: 'Industrial IoT (IIoT)',
-    description: 'Specialized IoT solutions for industrial environments with rugged devices, predictive maintenance, and operational optimization.',
+    id: 3,,
     icon: Building,
     category: 'Industrial',
     price: 'Starting at $15,000/month',
@@ -120,9 +114,7 @@ const iotServices = [
     targetUsers: 'Manufacturing, Oil & Gas, Mining, Utilities'
   },
   {
-    id: 4,
-    title: 'Smart City Solutions',
-    description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
+    id: 4,,
     icon: Globe,
     category: 'Smart Cities',
     price: 'Starting at $20,000/month',
@@ -147,9 +139,7 @@ const iotServices = [
     targetUsers: 'Municipalities, Government, Urban Planners'
   },
   {
-    id: 5,
-    title: 'IoT Security & Compliance',
-    description: 'Comprehensive security solutions for IoT devices and networks including threat detection, encryption, and compliance management.',
+    id: 5,,
     icon: Shield,
     category: 'Security',
     price: 'Starting at $10,000/month',
@@ -174,9 +164,7 @@ const iotServices = [
     targetUsers: 'Healthcare, Finance, Government, Critical Infrastructure'
   },
   {
-    id: 6,
-    title: 'IoT Analytics & AI',
-    description: 'Advanced analytics and AI solutions for IoT data including predictive modeling, anomaly detection, and intelligent automation.',
+    id: 6,,
     icon: BarChart3,
     category: 'Analytics',
     price: 'Starting at $8,000/month',
@@ -203,39 +191,27 @@ const iotServices = [
 ];
 
 const industries = [
-  {
-    title: "Manufacturing",
-    description: "Smart factories with predictive maintenance and quality control",
+  {,
     icon: "🏭",
     useCases: ["Predictive maintenance", "Quality control", "Asset tracking", "Energy optimization"]
   },
-  {
-    title: "Healthcare",
-    description: "Remote patient monitoring and medical device management",
+  {,
     icon: "🏥",
     useCases: ["Patient monitoring", "Medical devices", "Asset tracking", "Compliance"]
   },
-  {
-    title: "Agriculture",
-    description: "Precision farming and smart irrigation systems",
+  {,
     icon: "🌾",
     useCases: ["Crop monitoring", "Irrigation control", "Livestock tracking", "Weather data"]
   },
-  {
-    title: "Retail",
-    description: "Smart stores with inventory management and customer analytics",
+  {,
     icon: "🛒",
     useCases: ["Inventory tracking", "Customer analytics", "Supply chain", "Loss prevention"]
   },
-  {
-    title: "Energy & Utilities",
-    description: "Smart grids and energy management systems",
+  {,
     icon: "⚡",
     useCases: ["Smart meters", "Grid monitoring", "Energy optimization", "Outage management"]
   },
-  {
-    title: "Transportation",
-    description: "Fleet management and smart transportation systems",
+  {,
     icon: "🚛",
     useCases: ["Fleet tracking", "Route optimization", "Driver monitoring", "Maintenance"]
   }
@@ -530,23 +506,15 @@ export default function IoTEdgeServicesPage() {
               {[
                 {
                   icon: Award,
-                  title: "IoT Expertise",
-                  description: "Certified IoT engineers with 5+ years experience"
                 },
                 {
                   icon: Shield,
-                  title: "Security First",
-                  description: "Comprehensive security and compliance solutions"
                 },
                 {
                   icon: DollarSign,
-                  title: "Competitive Pricing",
-                  description: "50% lower than market rates with transparent pricing"
                 },
                 {
                   icon: Clock,
-                  title: "Fast Delivery",
-                  description: "Rapid development with 4-24 week timelines"
                 }
               ].map((item, index) => (
                 <motion.div

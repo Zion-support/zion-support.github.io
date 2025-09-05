@@ -22,48 +22,32 @@ import MainLayout from '../src/components/layout/MainLayout';
 const features = [
   {
     icon: Wifi,
-    title: 'Device Management',
-    description: 'Comprehensive IoT device management with real-time monitoring and control capabilities.'
   },
   {
     icon: Cpu,
-    title: 'Edge Computing',
-    description: 'Process data at the edge for faster response times and reduced latency.'
   },
   {
     icon: Database,
-    title: 'Data Analytics',
-    description: 'Advanced analytics and insights from your IoT data streams.'
   },
   {
     icon: Shield,
-    title: 'Security',
-    description: 'Enterprise-grade security for all connected devices and data transmission.'
   }
 ];
 
 const services = [
-  {
-    title: 'IoT Platform Development',
-    description: 'Custom IoT platforms with device connectivity, data processing, and analytics.',
+  {,
     features: ['Device Connectivity', 'Real-time Monitoring', 'Data Processing', 'Analytics Dashboard'],
     pricing: 'Starting at $8,000'
   },
-  {
-    title: 'Smart City Solutions',
-    description: 'Comprehensive smart city infrastructure with sensors, monitoring, and automation.',
+  {,
     features: ['Traffic Management', 'Environmental Monitoring', 'Energy Management', 'Public Safety'],
     pricing: 'Starting at $25,000'
   },
-  {
-    title: 'Industrial IoT',
-    description: 'Manufacturing and industrial IoT solutions for process optimization and monitoring.',
+  {,
     features: ['Predictive Maintenance', 'Quality Control', 'Asset Tracking', 'Process Optimization'],
     pricing: 'Starting at $15,000'
   },
-  {
-    title: 'IoT Integration',
-    description: 'Integrate existing systems with IoT capabilities and data connectivity.',
+  {,
     features: ['Legacy Integration', 'API Development', 'Data Migration', 'System Monitoring'],
     pricing: 'Starting at $5,000'
   }

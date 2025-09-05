@@ -1,169 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import { Calendar, Clock, Users, Filter, ChevronDown, ChevronUp } from 'lucide-react';
-
-const webinars = [
-  {
-    id: 1,
-    title: 'AI in Enterprise: Future Trends and Implementation',
-    description: 'Learn about the latest AI trends and how to implement them in your enterprise.',
-    date: '2024-02-15',
-    time: '2:00 PM EST',
-    duration: '60 minutes',
-    speaker: 'Dr. Sarah Chen',
-    category: 'AI',
-    attendees: 150,
-    maxAttendees: 200
-  },
-  {
-    id: 2,
-    title: 'Cloud Migration Strategies for Large Enterprises',
-    description: 'Best practices for migrating your infrastructure to the cloud.',
-    date: '2024-02-20',
-    time: '3:00 PM EST',
-    duration: '90 minutes',
-    speaker: 'Michael Rodriguez',
-    category: 'Cloud',
-    attendees: 120,
-    maxAttendees: 150
-  },
-  {
-    id: 3,
-    title: 'Cybersecurity Best Practices for 2024',
-    description: 'Essential cybersecurity measures to protect your business.',
-    date: '2024-02-25',
-    time: '1:00 PM EST',
-    duration: '45 minutes',
-    speaker: 'Jennifer Kim',
-    category: 'Security',
-    attendees: 200,
-    maxAttendees: 250
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Clock, 
-  User, 
-  ArrowRight, 
-  Tag, 
-  ExternalLink,
-  Play,
-  Download,
-  Users,
-  Award,
-  CheckCircle;
-import {
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Play, 
-  Download, 
-  Share2, 
-  Tag,
-  ExternalLink,
-  Video,
-  Mic,
-  Users,
-  Star,
-  Award,
-  Globe,
-  BookOpen,
-  MessageSquare,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-
->>>>>>> main
-  }
-];
-
-const categories = [
-<<<<<<< HEAD
-  'All',
-  'AI',
-  'Cloud',
-  'Security',
-  'Development'
-];
-
-export default function Webinars() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Webinars - Zion Tech Group</title>
-        <meta name="description" content="Join our expert-led webinars and learn about the latest technology trends" />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Webinars
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join our expert-led webinars and learn about the latest technology trends and best practices.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {webinars.map((webinar, index) => (
-            <motion.div
-              key={webinar.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded">
-                  {webinar.category}
-                </span>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Users className="h-4 w-4 mr-1" />
-                  {webinar.attendees}/{webinar.maxAttendees}
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {webinar.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4">
-                {webinar.description}
-              </p>
-              
-              <div className="mb-4">
-                <div className="flex items-center text-sm text-gray-600 mb-2">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Date:</span>
-                  <span className="ml-2">{webinar.date}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600 mb-2">
-                  <Clock className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Time:</span>
-                  <span className="ml-2">{webinar.time}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600 mb-4">
-                  <Users className="h-4 w-4 mr-2" />
-                  <span className="font-semibold">Speaker:</span>
-                  <span className="ml-2">{webinar.speaker}</span>
-                </div>
-              </div>
-              
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                Register Now
-              </button>
-=======
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -219,37 +54,150 @@ export default function WebinarsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-=======
-import React, { useState } from 'react';
-=======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';import {
-  Play,
-  Calendar,
-  Clock,
-  Users,
-  ExternalLink,
-  ArrowRight,
-  Filter,
-  Search,
-  Star,
-  BookOpen,
-  Video,
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Join our educational webinars and learn from industry experts.
+              </p>
+            </motion.div>
+          </div>
+        </section>
   Download
 } from 'lucide-react';
 
 export default function WebinarsPage() {
-  return (
-    <>
-      <Head>
-        <title>Webinars & Events - Zion Tech Group</title>
-        <meta name="description" content="Join our educational webinars and learn from industry experts. Discover the latest trends in technology and business." />
-        <meta name="keywords" content="webinars, events, education, technology, learning, training" />
-      </Head>
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-      <div className="min-h-screen bg-gray-50">
+  const categories = [
+    { id: 'all', name: 'All Webinars' },
+    { id: 'ai', name: 'AI & Machine Learning' },
+    { id: 'cloud', name: 'Cloud Solutions' },
+    { id: 'security', name: 'Cybersecurity' },
+    { id: 'development', name: 'Development' },
+    { id: 'business', name: 'Business Strategy' }
+  ];
+
+  const webinars = [
+    {
+      id: 1,,
+      category: 'ai',
+      date: '2024-01-15',
+      time: '2:00 PM EST',
+      duration: '60 minutes',
+      attendees: 1250,
+      speaker: 'Dr. Sarah Johnson',
+      speakerTitle: 'AI Research Director',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 4.8
+    },
+    {
+      id: 2,,
+      category: 'cloud',
+      date: '2024-01-22',
+      time: '3:00 PM EST',
+      duration: '45 minutes',
+      attendees: 980,
+      speaker: 'Mike Chen',
+      speakerTitle: 'Cloud Solutions Architect',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 4.9
+    },
+    {
+      id: 3,,
+      category: 'security',
+      date: '2024-01-08',
+      time: '1:00 PM EST',
+      duration: '75 minutes',
+      attendees: 2100,
+      speaker: 'Alex Rodriguez',
+      speakerTitle: 'Chief Security Officer',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: false,
+      rating: 4.7
+    },
+    {
+      id: 4,,
+      category: 'development',
+      date: '2024-01-29',
+      time: '4:00 PM EST',
+      duration: '90 minutes',
+      attendees: 0,
+      speaker: 'Emily Watson',
+      speakerTitle: 'Senior Full-Stack Developer',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: true,
+      isUpcoming: false,
+      rating: 0
+    },
+    {
+      id: 5,,
+      category: 'business',
+      date: '2024-02-05',
+      time: '2:30 PM EST',
+      duration: '60 minutes',
+      attendees: 0,
+      speaker: 'David Kim',
+      speakerTitle: 'Digital Transformation Consultant',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 0
+    },
+    {
+      id: 6,,
+      category: 'ai',
+      date: '2023-12-20',
+      time: '3:30 PM EST',
+      duration: '120 minutes',
+      attendees: 1850,
+      speaker: 'Dr. Sarah Johnson',
+      speakerTitle: 'AI Research Director',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: false,
+      rating: 4.9
+    }
+  ];
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const upcomingWebinars = webinars.filter(webinar => webinar.isUpcoming);
+  const liveWebinars = webinars.filter(webinar => webinar.isLive);
+  const pastWebinars = webinars.filter(webinar => !webinar.isUpcoming && !webinar.isLive);
+
+  return (
+    <MainLayout
+      title="Webinars - Zion Tech Group"
+      description="Join our educational webinars on AI, cloud solutions, cybersecurity, and more. Learn from industry experts and advance your technical knowledge."
+      keywords="webinars, AI training, cloud education, cybersecurity, technology learning, online courses"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -260,17 +208,10 @@ export default function WebinarsPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Join our educational webinars and learn from industry experts.
->>>>>>> main
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Educational{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -280,15 +221,11 @@ export default function WebinarsPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Learn from industry experts through our comprehensive webinar series. 
                 Covering AI, cloud solutions, cybersecurity, and more.
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         {/* Live Webinars */}
         {liveWebinars.length > 0 && (
           <section className="py-16 bg-red-50">
@@ -384,17 +321,11 @@ export default function WebinarsPage() {
                   </select>
                 </div>
               </div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
         {/* Upcoming Webinars */}
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -436,19 +367,12 @@ export default function WebinarsPage() {
                   <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
                     Register Now
                   </button>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-=======
         {/* Past Webinars */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -497,10 +421,7 @@ export default function WebinarsPage() {
                     Download
                   </button>
                 </div>
-=======
         {/* Upcoming Webinars */}
-=======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
         {upcomingWebinars.length > 0 && (
           <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -648,53 +569,27 @@ export default function WebinarsPage() {
                     </div>
                   </motion.div>
                 ))}
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Stay Updated
-              </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-                Subscribe to our newsletter to get notified about upcoming webinars.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/newsletter"
-                  className="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Subscribe
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold"
-                >
-                  Contact Us
-                </Link>
-              </div>
->>>>>>> main
-=======
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
-            <motion.div              className="text-center"
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Webinars & <span className="text-yellow-400">Events</span>
-              </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Join our educational webinars and learn from industry experts
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Stay Updated with Our Webinars
+              </h2>
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+                Subscribe to our newsletter to get notified about upcoming webinars, 
+                new content, and exclusive learning opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -709,28 +604,12 @@ export default function WebinarsPage() {
                 >
                   Browse Tutorials
                 </Link>
-<<<<<<< HEAD
               </div>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> main
             </motion.div>
-          ))}
-        </div>
+          </div>
+        </section>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     </>
->>>>>>> main
-=======
     </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> main
   );
-=======
-              </div>  );
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8
 }

@@ -6,39 +6,27 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const consultingServices = [
   {
-    icon: Target,
-    title: 'Technology Strategy',
-    description: 'Develop comprehensive technology strategies aligned with business goals',
+    icon: Target,,
     features: ['Technology roadmap', 'Architecture planning', 'Vendor selection', 'ROI analysis']
   },
   {
-    icon: BarChart3,
-    title: 'Digital Transformation',
-    description: 'Guide organizations through complete digital transformation initiatives',
+    icon: BarChart3,,
     features: ['Process optimization', 'Change management', 'Technology adoption', 'Performance metrics']
   },
   {
-    icon: Shield,
-    title: 'Cybersecurity Consulting',
-    description: 'Assess and improve your organization\'s security posture',
+    icon: Shield,s security posture',
     features: ['Security audits', 'Risk assessment', 'Compliance guidance', 'Incident response']
   },
   {
-    icon: Server,
-    title: 'Cloud Strategy',
-    description: 'Plan and execute cloud migration and optimization strategies',
+    icon: Server,,
     features: ['Cloud assessment', 'Migration planning', 'Cost optimization', 'Security design']
   },
   {
-    icon: Database,
-    title: 'Data Strategy',
-    description: 'Develop data management and analytics strategies for business growth',
+    icon: Database,,
     features: ['Data governance', 'Analytics planning', 'Data quality', 'Privacy compliance']
   },
   {
-    icon: Zap,
-    title: 'Process Optimization',
-    description: 'Streamline business processes for maximum efficiency and productivity',
+    icon: Zap,,
     features: ['Process mapping', 'Automation opportunities', 'Workflow design', 'Performance improvement']
   }
 ];

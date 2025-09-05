@@ -21,30 +21,22 @@ import {
 import Layout from '../components/Layout';
 
 const financeSolutions = [
-  {
-    title: "Payment Processing Systems",
-    description: "Secure payment gateways and processing systems for financial transactions",
+  {,
     icon: CreditCard,
     features: ["Multiple payment methods", "Fraud detection", "PCI compliance", "Real-time processing"],
     pricing: "Starting at $10,000"
   },
-  {
-    title: "Banking Software",
-    description: "Core banking systems and digital banking platforms",
+  {,
     icon: Shield,
     features: ["Account management", "Transaction processing", "Loan management", "Regulatory compliance"],
     pricing: "Starting at $50,000"
   },
-  {
-    title: "Financial Analytics",
-    description: "Advanced analytics and reporting for financial institutions",
+  {,
     icon: BarChart3,
     features: ["Risk assessment", "Performance analytics", "Regulatory reporting", "Predictive modeling"],
     pricing: "Starting at $25,000"
   },
-  {
-    title: "Fintech Applications",
-    description: "Innovative financial technology applications and platforms",
+  {,
     icon: Globe,
     features: ["Mobile banking", "Investment platforms", "Cryptocurrency integration", "API development"],
     pricing: "Starting at $30,000"
@@ -52,24 +44,16 @@ const financeSolutions = [
 ];
 
 const benefits = [
-  {
-    title: "Regulatory Compliance",
-    description: "Full compliance with financial regulations and standards",
+  {,
     icon: Shield
   },
-  {
-    title: "Security First",
-    description: "Bank-grade security for all financial transactions and data",
+  {,
     icon: Lock
   },
-  {
-    title: "Scalable Architecture",
-    description: "Systems that handle high transaction volumes and growth",
+  {,
     icon: TrendingUp
   },
-  {
-    title: "Real-time Processing",
-    description: "Instant transaction processing and real-time updates",
+  {,
     icon: Clock
   }
 ];

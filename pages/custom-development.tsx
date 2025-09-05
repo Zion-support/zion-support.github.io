@@ -6,39 +6,27 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const services = [
   {
-    icon: Code,
-    title: 'Custom Web Applications',
-    description: 'Tailored web applications built to your exact specifications',
+    icon: Code,,
     features: ['Responsive design', 'Cross-browser compatibility', 'Performance optimization', 'SEO-friendly']
   },
   {
-    icon: Zap,
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform mobile applications for iOS and Android',
+    icon: Zap,,
     features: ['Native performance', 'Cross-platform compatibility', 'App store optimization', 'Push notifications']
   },
   {
-    icon: Server,
-    title: 'Backend Development',
-    description: 'Robust server-side solutions and API development',
+    icon: Server,,
     features: ['RESTful APIs', 'GraphQL endpoints', 'Database design', 'Microservices architecture']
   },
   {
-    icon: Database,
-    title: 'Database Solutions',
-    description: 'Custom database design and optimization for your specific needs',
+    icon: Database,,
     features: ['Schema design', 'Query optimization', 'Data migration', 'Backup strategies']
   },
   {
-    icon: Shield,
-    title: 'Security Implementation',
-    description: 'Comprehensive security measures for your custom applications',
+    icon: Shield,,
     features: ['Authentication systems', 'Data encryption', 'Security audits', 'Compliance standards']
   },
   {
-    icon: BarChart3,
-    title: 'Analytics Integration',
-    description: 'Custom analytics and reporting solutions for business insights',
+    icon: BarChart3,,
     features: ['Real-time dashboards', 'Custom metrics', 'Data visualization', 'Automated reporting']
   }
 ];

@@ -15,9 +15,7 @@ export default function QuantumComputing() {
   
   const services = [
     {
-      icon: Atom,
-      title: 'Quantum Algorithm Development',
-      description: 'Custom quantum algorithms for optimization, simulation, and machine learning applications with proven quantum advantage.',
+      icon: Atom,,
       features: [
         'Quantum optimization algorithms',
         'Quantum simulation frameworks',
@@ -40,9 +38,7 @@ export default function QuantumComputing() {
       targetUsers: 'Finance, Logistics, Pharmaceuticals, Research'
     },
     {
-      icon: Cpu,
-      title: 'Quantum Computing Infrastructure',
-      description: 'Access to cutting-edge quantum computing resources and cloud-based quantum development platforms.',
+      icon: Cpu,,
       features: [
         'IBM Quantum, Google Quantum, AWS Braket access',
         'Quantum simulators & emulators',
@@ -65,9 +61,7 @@ export default function QuantumComputing() {
       targetUsers: 'Research Institutions, Enterprises, Startups'
     },
     {
-      icon: Zap,
-      title: 'Quantum Optimization Solutions',
-      description: 'Solve complex optimization problems using quantum annealing and variational algorithms with proven results.',
+      icon: Zap,,
       features: [
         'Supply chain optimization',
         'Portfolio optimization & risk management',
@@ -90,9 +84,7 @@ export default function QuantumComputing() {
       targetUsers: 'Logistics, Finance, Manufacturing, Energy'
     },
     {
-      icon: Lock,
-      title: 'Quantum Cryptography',
-      description: 'Next-generation security solutions using quantum key distribution and post-quantum cryptography.',
+      icon: Lock,,
       features: [
         'Quantum key distribution (QKD)',
         'Post-quantum cryptography implementation',
@@ -115,9 +107,7 @@ export default function QuantumComputing() {
       targetUsers: 'Government, Finance, Healthcare, Defense'
     },
     {
-      icon: Brain,
-      title: 'Quantum Machine Learning',
-      description: 'Advanced ML models leveraging quantum computing for enhanced pattern recognition and data analysis.',
+      icon: Brain,,
       features: [
         'Quantum neural networks',
         'Quantum feature maps & kernels',
@@ -140,9 +130,7 @@ export default function QuantumComputing() {
       targetUsers: 'AI Companies, Research, Healthcare, Finance'
     },
     {
-      icon: Target,
-      title: 'Quantum Consulting & Training',
-      description: 'Expert guidance and training to help your team understand and implement quantum solutions.',
+      icon: Target,,
       features: [
         'Quantum strategy & roadmap development',
         'Team training & certification programs',
@@ -335,23 +323,15 @@ export default function QuantumComputing() {
               {[
                 {
                   icon: Award,
-                  title: "Quantum Expertise",
-                  description: "PhD-level quantum physicists and engineers with proven track record"
                 },
                 {
                   icon: Zap,
-                  title: "Proven Results",
-                  description: "Demonstrated quantum advantage in real-world applications"
                 },
                 {
                   icon: DollarSign,
-                  title: "Competitive Pricing",
-                  description: "40% lower than market rates with transparent pricing"
                 },
                 {
                   icon: Clock,
-                  title: "Fast Implementation",
-                  description: "Rapid deployment with 2-12 week implementation timelines"
                 }
               ].map((item, index) => (
                 <motion.div

@@ -21,30 +21,22 @@ import {
 import Layout from '../components/Layout';
 
 const educationSolutions = [
-  {
-    title: "Learning Management Systems (LMS)",
-    description: "Comprehensive platforms for course delivery, student management, and assessment",
+  {,
     icon: BookOpen,
     features: ["Course creation", "Student tracking", "Assessment tools", "Progress analytics"],
     pricing: "Starting at $12,000"
   },
-  {
-    title: "Virtual Classroom Platforms",
-    description: "Interactive online learning environments with video, chat, and collaboration tools",
+  {,
     icon: Globe,
     features: ["Video conferencing", "Screen sharing", "Interactive whiteboard", "Breakout rooms"],
     pricing: "Starting at $8,000"
   },
-  {
-    title: "Student Information Systems",
-    description: "Complete student data management and administrative systems",
+  {,
     icon: Users,
     features: ["Student records", "Enrollment management", "Grade tracking", "Parent portal"],
     pricing: "Starting at $15,000"
   },
-  {
-    title: "Educational Analytics",
-    description: "Data-driven insights for student performance and institutional effectiveness",
+  {,
     icon: BarChart3,
     features: ["Performance analytics", "Predictive modeling", "Engagement tracking", "Outcome analysis"],
     pricing: "Starting at $10,000"
@@ -52,24 +44,16 @@ const educationSolutions = [
 ];
 
 const benefits = [
-  {
-    title: "Enhanced Learning",
-    description: "Technology solutions that improve student engagement and outcomes",
+  {,
     icon: BookOpen
   },
-  {
-    title: "Accessibility",
-    description: "Inclusive learning platforms accessible to all students",
+  {,
     icon: Users
   },
-  {
-    title: "Data-Driven Insights",
-    description: "Analytics that help educators make informed decisions",
+  {,
     icon: BarChart3
   },
-  {
-    title: "Scalable Solutions",
-    description: "Platforms that grow with your institution and student body",
+  {,
     icon: TrendingUp
   }
 ];

@@ -5,48 +5,36 @@ import { Brain, Code, Database, Zap, Shield, Cloud, ArrowRight, CheckCircle, Clo
 
 const aiServices = [
   {
-    title: "Machine Learning Development",
-    description: "Custom ML models and algorithms tailored to your business needs",
     icon: Brain,
     features: ["Predictive Analytics", "Pattern Recognition", "Automated Decision Making"],
     pricing: "Starting at $2,500/month",
     timeline: "4-12 weeks"
   },
   {
-    title: "Natural Language Processing",
-    description: "Advanced NLP solutions for text analysis, chatbots, and language understanding",
     icon: Code,
     features: ["Sentiment Analysis", "Language Translation", "Text Summarization"],
     pricing: "Starting at $1,800/month",
     timeline: "3-8 weeks"
   },
   {
-    title: "Computer Vision",
-    description: "Image and video analysis solutions for various industries",
     icon: Database,
     features: ["Object Detection", "Facial Recognition", "Medical Imaging"],
     pricing: "Starting at $3,200/month",
     timeline: "6-16 weeks"
   },
   {
-    title: "AI Chatbots & Virtual Assistants",
-    description: "Intelligent conversational AI for customer service and support",
     icon: Zap,
     features: ["24/7 Support", "Multi-language", "Integration Ready"],
     pricing: "Starting at $1,200/month",
     timeline: "2-6 weeks"
   },
   {
-    title: "Predictive Analytics",
-    description: "Data-driven insights and forecasting for business optimization",
     icon: Shield,
     features: ["Risk Assessment", "Demand Forecasting", "Performance Optimization"],
     pricing: "Starting at $2,000/month",
     timeline: "4-10 weeks"
   },
   {
-    title: "AI Cloud Solutions",
-    description: "Scalable AI infrastructure and deployment on cloud platforms",
     icon: Cloud,
     features: ["Auto-scaling", "High Availability", "Cost Optimization"],
     pricing: "Starting at $1,500/month",
@@ -66,38 +54,26 @@ const industries = [
 const process = [
   {
     step: "1",
-    title: "Discovery & Analysis",
-    description: "We analyze your business requirements and data to identify AI opportunities",
     duration: "1-2 weeks"
   },
   {
-    step: "2", 
-    title: "Strategy & Planning",
-    description: "Develop a comprehensive AI strategy and implementation roadmap",
+    step: "2",
     duration: "1-2 weeks"
   },
   {
     step: "3",
-    title: "Development & Training",
-    description: "Build and train custom AI models using cutting-edge technologies",
     duration: "4-16 weeks"
   },
   {
     step: "4",
-    title: "Testing & Optimization",
-    description: "Rigorous testing and performance optimization of AI solutions",
     duration: "1-4 weeks"
   },
   {
     step: "5",
-    title: "Deployment & Integration",
-    description: "Deploy AI solutions and integrate with existing systems",
     duration: "1-2 weeks"
   },
   {
     step: "6",
-    title: "Monitoring & Support",
-    description: "Ongoing monitoring, maintenance, and continuous improvement",
     duration: "Ongoing"
   }
 ];

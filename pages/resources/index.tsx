@@ -18,33 +18,25 @@ import {
 import Layout from '../../components/Layout';
 
 const resources = [
-  {
-    title: 'Documentation',
-    description: 'Comprehensive guides and API documentation',
+  {,
     icon: FileText,
     href: '/docs',
     color: 'from-blue-600 to-blue-800',
     items: ['API Reference', 'Integration Guides', 'Code Examples', 'Best Practices']
   },
-  {
-    title: 'Case Studies',
-    description: 'Real-world success stories and implementations',
+  {,
     icon: BarChart3,
     href: '/case-studies',
     color: 'from-green-600 to-green-800',
     items: ['Client Success Stories', 'ROI Analysis', 'Implementation Details', 'Lessons Learned']
   },
-  {
-    title: 'Blog',
-    description: 'Latest insights and technology trends',
+  {,
     icon: MessageSquare,
     href: '/blog',
     color: 'from-purple-600 to-purple-800',
     items: ['Technology Insights', 'Industry Trends', 'Best Practices', 'Expert Opinions']
   },
-  {
-    title: 'API Reference',
-    description: 'Complete API documentation and examples',
+  {,
     icon: Settings,
     href: '/api-docs',
     color: 'from-orange-600 to-orange-800',
@@ -53,30 +45,22 @@ const resources = [
 ];
 
 const additionalResources = [
-  {
-    title: 'Tutorials',
-    description: 'Step-by-step learning guides',
+  {,
     icon: BookOpen,
     href: '/tutorials',
     color: 'from-indigo-600 to-indigo-800'
   },
-  {
-    title: 'Guides',
-    description: 'Comprehensive how-to guides',
+  {,
     icon: Code,
     href: '/guides',
     color: 'from-pink-600 to-pink-800'
   },
-  {
-    title: 'FAQ',
-    description: 'Frequently asked questions',
+  {,
     icon: Users,
     href: '/faq',
     color: 'from-teal-600 to-teal-800'
   },
-  {
-    title: 'Support',
-    description: 'Get help and support',
+  {,
     icon: Clock,
     href: '/support',
     color: 'from-red-600 to-red-800'
