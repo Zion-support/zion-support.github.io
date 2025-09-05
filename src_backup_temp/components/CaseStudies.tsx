@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { motion  } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react';
 interface CaseStudy { "id": "string "title": string;
@@ -92,7 +92,7 @@ export default function CaseStudies("props": "any) {;
               transition={{ "duration": "0.6", "delay": "inde x * 0.1 "}}
             >;
               <div className="p-8">;
-import React from 'react'
+import * as React from 'react'
 import { motion  } from 'framer-motion'
 import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react'
 

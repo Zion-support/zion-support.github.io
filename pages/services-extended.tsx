@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -34,7 +34,7 @@ import {
   ClipboardList,
   ShoppingCart
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const allServices = [
   // AI Services

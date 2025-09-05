@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react';

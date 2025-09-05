@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 interface ApireferenceProps {
   // Add props here as needed

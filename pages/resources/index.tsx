@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -15,7 +15,7 @@ import {
   Clock,
   Star
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 
 const resources = [
   {
