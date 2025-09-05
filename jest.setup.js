@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -64,7 +65,15 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
+<<<<<<< HEAD
+;
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {; constructor() {}; disconnect() {}; observe() {}; unobserve() {}};
+;
+=======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -78,3 +87,4 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

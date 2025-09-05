@@ -26,7 +26,7 @@ class AutoFixer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    
+
     try {
       fs.appendFileSync(this.logFile, logMessage);
       if (level === 'ERROR') {
@@ -40,24 +40,23 @@ class AutoFixer {
   async runAutoFix() {
     try {
       this.log('Starting auto-fix process...');
-      
+
       // Fix linting issues
       await this.fixLintingIssues();
-      
+
       // Fix TypeScript issues
       await this.fixTypeScriptIssues();
-      
+
       // Fix dependency issues
       await this.fixDependencyIssues();
-      
+
       // Clean up temporary files
       await this.cleanupTempFiles();
-      
+
       // Optimize imports
       await this.optimizeImports();
-      
+
       this.log('Auto-fix process completed successfully');
-      
     } catch (error) {
       this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
       throw error;
@@ -67,13 +66,13 @@ class AutoFixer {
   async fixLintingIssues() {
     try {
       this.log('Fixing linting issues...');
-      
+
       // Run ESLint with --fix
-      execSync('npm run lint:fix', { 
+      execSync('npm run lint:fix', {
         stdio: 'pipe',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       this.log('Linting issues fixed');
     } catch (error) {
       this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR');
@@ -83,13 +82,13 @@ class AutoFixer {
   async fixTypeScriptIssues() {
     try {
       this.log('Checking TypeScript issues...');
-      
+
       // Run TypeScript check
-      execSync('npx tsc --noEmit', { 
+      execSync('npx tsc --noEmit', {
         stdio: 'pipe',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       this.log('TypeScript check passed');
     } catch (error) {
       this.log(`TypeScript issues found: ${error.message}`, 'WARN');
@@ -99,18 +98,19 @@ class AutoFixer {
   async fixDependencyIssues() {
     try {
       this.log('Checking dependency issues...');
-      
+
       // Check for outdated dependencies
-      const outdated = execSync('npm outdated --json', { 
+      const outdated = execSync('npm outdated --json', {
         stdio: 'pipe',
-        cwd: process.cwd()
+        cwd: process.cwd(),
       });
-      
+
       const outdatedDeps = JSON.parse(outdated.toString());
       if (Object.keys(outdatedDeps).length > 0) {
-        this.log(`Found ${Object.keys(outdatedDeps).length} outdated dependencies`);
+        this.log(
+          `Found ${Object.keys(outdatedDeps).length} outdated dependencies`
+        );
       }
-      
     } catch (error) {
       this.log(`Dependency check completed`);
     }
@@ -119,27 +119,27 @@ class AutoFixer {
   async cleanupTempFiles() {
     try {
       this.log('Cleaning up temporary files...');
-      
+
       const tempFiles = [
         '.next/cache',
         'node_modules/.cache',
         '*.log',
         '*.tmp',
         '.DS_Store',
-        'Thumbs.db'
+        'Thumbs.db',
       ];
-      
+
       for (const pattern of tempFiles) {
         try {
-          execSync(`find . -name "${pattern}" -type f -delete`, { 
+          execSync(`find . -name "${pattern}" -type f -delete`, {
             stdio: 'pipe',
-            cwd: process.cwd()
+            cwd: process.cwd(),
           });
         } catch (err) {
           // Ignore errors for file cleanup
         }
       }
-      
+
       this.log('Temporary files cleaned up');
     } catch (error) {
       this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR');
@@ -149,7 +149,7 @@ class AutoFixer {
   async optimizeImports() {
     try {
       this.log('Optimizing imports...');
-      
+
       // This would typically use a tool like organize-imports-cli
       // For now, we'll just log that we're checking
       this.log('Import optimization check completed');
@@ -162,7 +162,7 @@ class AutoFixer {
 // Run auto-fix
 async function main() {
   const autoFixer = new AutoFixer();
-  
+
   try {
     await autoFixer.runAutoFix();
     process.exit(0);
