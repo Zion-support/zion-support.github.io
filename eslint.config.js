@@ -1,13 +1,58 @@
 import js from '@eslint/js';
-      },
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
 export default [
   {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
+      },
       parserOptions: {
         ecmaFeatures: {
           jsx: true
@@ -16,7 +61,8 @@ export default [
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -72,14 +118,20 @@ export default [
         React: 'readonly',
         HTMLButtonElement: 'readonly',
         HTMLAnchorElement: 'readonly',
+        KeyboardEvent: 'readonly',
+        HTMLElement: 'readonly',
+        MutationObserver: 'readonly',
         RequestInit: 'readonly',
-        AbortController: 'readonly'
+        AbortController: 'readonly',
+        fs: 'readonly',
+        CodeQualityChecker: 'readonly'
       }
     },
     plugins: {
       '@typescript-eslint': tseslint,
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -87,8 +139,33 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
     }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+    },
   },
   {
     ignores: [
@@ -102,6 +179,7 @@ export default [
       'src.disabled/**',
       'src.broken/**',
       'src.pages.disabled/**',
+      'src_backup_temp/**',
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
@@ -134,8 +212,6 @@ export default [
       'pages.disabled.full/**',
       'pages_api.disabled/**',
       'pages_backup_conflict/**',
-      'pages.disabled_auto/**',
-      'pages.disabled.full/**',
       'temp_backup/**',
       'temp_broken_files/**',
       'temp_working/**',
@@ -162,177 +238,15 @@ export default [
       '.eslintrc.*',
       '*.min.js',
       '*.bundle.js',
-      'scripts/',
-      'automation/',
-      'automation_backup/',
-      'data_backup/',
-      'pm2-automation/',
-      '__tests__/',
-      'pages.disabled/',
-      'pages.corrupted.*/',
-      'pages.broken/',
-      'pages.bak/',
-      'pages.blog.disabled/',
-      'pages._archive_corrupted/',
-      'pages._quarantine/',
-      'pages-disabled/',
-      'pages-quarantine/',
-      'pages.__backup/',
-      'pages-backup/',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-      '*.spec.tsx'
-    ]
-  },
-  {
-    "files": ['**/*.{js,jsx}'],
-    "languageOptions": {
-      ecmaVersion: 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "require": 'readonly',
-        "module": 'readonly',
-        "__dirname": 'readonly',
-        "__filename": 'readonly',
-        "exports": 'readonly'
-      },
-      "parserOptions": {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    "plugins": {
-      react,
-      'react-hooks': reactHooks
-    },
-    "rules": {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    "files": ['**/*.{ts,tsx}'],
-    "languageOptions": {
-      parser: tsparser,
-      "ecmaVersion": 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "KeyboardEvent": 'readonly',
-        "HTMLElement": 'readonly',
-        "HTMLButtonElement": 'readonly',
-        "HTMLAnchorElement": 'readonly',
-        "MutationObserver": 'readonly',
-        "RequestInit": 'readonly',
-        "AbortController": 'readonly',
-        "fs": 'readonly',
-        "CodeQualityChecker": 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      react: react,
-      'jsx-a11y': jsxA11y,
-    },
-    rules: {
-      'no-console': 'warn',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-  },
-  {
-      'src/**',
+      'scripts/**',
       'automation/**',
       'automation_backup/**',
       'data_backup/**',
       'pm2-automation/**',
-      'scripts/**',
-      'tests/**',
-      'test-results/**',
-      'test-reports/**',
       '*.test.js',
-      '*.test.jsx',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
-      '*.spec.jsx',
       '*.spec.ts',
       '*.spec.tsx',
       '*.backup.js',
@@ -405,6 +319,21 @@ export default [
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
+      'targeted-*.cjs',
+      'ultimate-*.cjs',
+      'ultimate-*.js',
+      'structural-fix.js',
+      'temp_footer_start.tsx',
+      'test-suite.cjs',
+      'tools/repair-syntax.cjs',
+      'ultimate-automation-runner.js',
+      'ultimate-build-fix.cjs',
+      'ultimate-final-fix.cjs',
+      'ultimate-fix.cjs',
+      'ultimate-fix.js',
+      'ultimate-syntax-fix.cjs',
+      'ultimate-syntax-fix.js',
+      'ux-enhancer.cjs',
       '*.tgz',
       '*.tar.gz',
       '*.zip',
@@ -451,40 +380,4 @@ export default [
       '*.nar'
     ]
   }
-];
-=======
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      globals: {
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        fireEvent: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-    },
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      '*.min.js',
-      'build/',
-      'coverage/',
-    ],
-  },
 ];
