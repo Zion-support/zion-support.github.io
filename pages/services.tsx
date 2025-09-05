@@ -1,325 +1,258 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Monitor,
-  Smartphone,
-  Server,
-  Car,
-  Rocket,
-  Heart,
-  Building,
-  Sprout,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  Share2,
-  Receipt,
-  Package,
-  Calendar,
-  Headphones,
-  Kanban,
-  HardDrive,
-  Bell,
-  Home,
-  BookOpen,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Award
-} from 'lucide-react';
 import Layout from '../components/Layout';
+import { 
+  Brain, 
+  Server, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Smartphone, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Clock,
+  Users,
+  Zap
+} from 'lucide-react';
 
 const services = [
   {
-    title: "AI Services",
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    id: 1,
+    title: 'AI Services',
+    description: 'Cutting-edge artificial intelligence solutions for modern businesses',
     icon: Brain,
-    href: "/ai-services",
-    features: ["Machine Learning Models", "Computer Vision", "Natural Language Processing", "Predictive Analytics", "AI Chatbots", "Quantum AI"],
-    pricing: "Starting at $2,500/month",
-    color: "from-blue-500 to-purple-500",
-    popular: true
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'AI',
+    popular: true,
+    link: '/ai-services'
   },
   {
-    title: "IT Services",
-    description: "Complete IT infrastructure and cloud solutions for modern businesses with enterprise-grade security and scalability",
-    icon: Network,
-    href: "/it-services",
-    features: ["Cloud Migration", "DevOps Automation", "System Integration", "IT Consulting", "Infrastructure Management", "Technical Support"],
-    pricing: "Starting at $1,800/month",
-    color: "from-green-500 to-teal-500"
+    id: 2,
+    title: 'IT Services',
+    description: 'Comprehensive IT infrastructure and support solutions',
+    icon: Server,
+    features: ['Cloud Migration', 'Network Security', 'System Administration', 'Technical Support'],
+    pricing: '$1,500 - $10,000/month',
+    category: 'IT',
+    popular: false,
+    link: '/it-services'
   },
   {
-    title: "Automation",
-    description: "Streamline your business processes with intelligent automation solutions that reduce costs and increase efficiency",
-    icon: Zap,
-    href: "/automation",
-    features: ["Workflow Automation", "API Integration", "Custom Dashboards", "Data Processing", "Business Intelligence", "Process Optimization"],
-    pricing: "Starting at $1,500/month",
-    color: "from-orange-500 to-red-500"
+    id: 3,
+    title: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and management services',
+    icon: Cloud,
+    features: ['AWS/Azure/GCP', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Cloud',
+    popular: false,
+    link: '/cloud-solutions'
   },
   {
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and infrastructure with enterprise-grade protection",
+    id: 4,
+    title: 'Cybersecurity',
+    description: 'Advanced security solutions to protect your business',
     icon: Shield,
-    href: "/cybersecurity",
-    features: ["Security Audits", "Penetration Testing", "Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"],
-    pricing: "Starting at $2,000/month",
-    color: "from-purple-500 to-pink-500"
+    features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Security',
+    popular: true,
+    link: '/cybersecurity'
   },
   {
-    title: "Web Development",
-    description: "Modern, responsive web applications built with cutting-edge technologies for optimal performance and user experience",
-    icon: Code,
-    href: "/web-development",
-    features: ["React/Next.js Apps", "E-commerce Solutions", "Progressive Web Apps", "API Development", "Performance Optimization", "SEO Integration"],
-    pricing: "Starting at $2,200/month",
-    color: "from-indigo-500 to-blue-500"
+    id: 5,
+    title: 'Database Management',
+    description: 'Optimized database solutions for performance and reliability',
+    icon: Database,
+    features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'],
+    pricing: '$1,200 - $6,000/month',
+    category: 'Database',
+    popular: false,
+    link: '/database-services'
   },
   {
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design",
+    id: 6,
+    title: 'Mobile Development',
+    description: 'Native and cross-platform mobile applications',
     icon: Smartphone,
-    href: "/mobile-development",
-    features: ["iOS Development", "Android Development", "React Native", "Flutter Apps", "Mobile UI/UX", "App Store Optimization"],
-    pricing: "Starting at $3,000/month",
-    color: "from-green-500 to-emerald-500"
+    features: ['iOS Development', 'Android Development', 'React Native', 'Flutter'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Development',
+    popular: false,
+    link: '/mobile-development'
   }
 ];
 
-const processSteps = [
+const benefits = [
   {
-    title: "Discovery",
-    description: "We analyze your requirements and create a detailed project plan",
-    icon: Search
+    icon: CheckCircle,
+    title: 'Proven Expertise',
+    description: 'Over 500 successful projects delivered across various industries'
   },
   {
-    title: "Design",
-    description: "Our team designs the perfect solution for your business needs",
-    icon: Eye
+    icon: Clock,
+    title: 'Fast Delivery',
+    description: 'Agile development process ensuring timely project completion'
   },
   {
-    title: "Development",
-    description: "We build your solution using the latest technologies and best practices",
-    icon: Code
+    icon: Users,
+    title: 'Expert Team',
+    description: 'Certified professionals with years of industry experience'
   },
   {
-    title: "Deployment",
-    description: "We deploy your solution and ensure everything works perfectly",
-    icon: Rocket
+    icon: Zap,
+    title: '24/7 Support',
+    description: 'Round-the-clock technical support and maintenance'
   }
 ];
 
-<<<<<<< HEAD
-export default function ServicesPage() {
-=======
 export default function Services() {
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
   return (
     <>
       <Head>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI, IT, automation, cybersecurity, web development, and mobile development." />
-        <meta name="keywords" content="AI services, IT services, automation, cybersecurity, web development, mobile development" />
+        <meta name="description" content="Comprehensive technology services including AI, IT, cloud solutions, cybersecurity, and more for businesses of all sizes." />
       </Head>
-<<<<<<< HEAD
       
       <Layout>
-=======
-
-      <div className="min-h-screen bg-gray-50">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-          <div className="container mx-auto px-6 text-center">
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Comprehensive Technology Services
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Our Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200">
-                Empowering businesses with cutting-edge technology solutions
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Comprehensive technology solutions for modern businesses
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Get Started
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Learn More
-                </motion.button>
-              </div>
+              <p className="text-lg text-blue-200 max-w-3xl mx-auto">
+                From artificial intelligence to cloud infrastructure, we provide end-to-end technology services that drive innovation and growth.
+              </p>
             </motion.div>
           </div>
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-=======
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer a comprehensive range of technology services to help your business thrive in the digital age.
-              </p>
-            </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  >
-                    <div className="flex items-center mb-4">
-                      <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white mr-4`}>
-                        <IconComponent size={24} />
-                      </div>
-                      <h3 className="text-2xl font-bold">{service.title}</h3>
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="w-6 h-6 text-blue-600" />
                     </div>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle size={16} className="text-green-500 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-gray-900">{service.pricing}</span>
-                      <Link href={service.href}>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-                        >
-                          Learn More
-                        </motion.button>
-                      </Link>
+                    <div>
+                      <h3 className="text-xl font-semibold">{service.title}</h3>
+                      <p className="text-gray-600 text-sm">{service.category}</p>
                     </div>
-                  </motion.div>
-                );
-              })}
+                  </div>
+                  
+                  <p className="text-gray-700 mb-4">{service.description}</p>
+                  
+                  <ul className="mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center mb-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="border-t pt-4">
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
+                      {service.popular && (
+                        <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-sm font-medium">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    <Link
+                      href={service.link}
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Process Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-=======
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a proven methodology to deliver exceptional results for every project.
+                We deliver exceptional results through our proven expertise and commitment to excellence
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => {
-                const IconComponent = step.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent size={24} className="text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </motion.div>
-                );
-              })}
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-6 text-center">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let's discuss how our technology services can help you achieve your goals.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let's discuss how our services can help you achieve your business goals and drive innovation.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Get Free Consultation
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  View Portfolio
-                </motion.button>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </motion.div>
           </div>
         </section>

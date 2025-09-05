@@ -1,19 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-const publicPaths = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/blog',
-  '/auth/login',
-  '/auth/register',
-  '/auth/forgot-password',
-  '/auth/reset-password',
-  '/auth/verify'
-=======
 const publicRoutes = [
   "/",
   "/about",
@@ -22,36 +9,29 @@ const publicRoutes = [
   "/ai-services",
   "/it-services",
   "/micro-saas",
-  "/api-docs",
   "/api",
+  "/api-docs",
   "/careers",
-  "/case-studies"
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
+  "/guides",
+  "/case-studies",
+  "/cookies",
+  "/industries"
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Allow public paths
-  if (publicPaths.includes(pathname)) {
+  // Allow public routes
+  if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-  // Add security headers
-  const response = NextResponse.next();
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  
-  return response;
+  // For all other routes, continue normally
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
-=======
-    '/((?!_next/static|_next/image|favicon.ico).*)',
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
   ],
 };
