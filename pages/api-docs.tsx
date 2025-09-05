@@ -1,239 +1,404 @@
-import { motion } from 'framer-motion'
-import Head from 'next/head'
-import Head from 'next/head'
-import { Code, ArrowRight, Book, Zap, Shield, CheckCircle } from 'lucide-react'
-import Layout from '../components/Layout'
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy } from 'lucide-react'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { 
+  Code, 
+  ArrowRight,
+  Shield,
+  Database,
+  Zap,
+  Globe,
+  Lock,
+  CheckCircle,
+  Copy,
+  ExternalLink,
+  BookOpen,
+  Terminal,
+  Server,
+  Cpu,
+  Network
+} from 'lucide-react';
 
-const apiEndpoints = [{
-    method: 'GET', path: '/api/v1/health', description: 'Check API health status', response: {
-      status: 'ok', timestamp: '2024-01-01T00: 00:00Z' }}, ;
+const apiEndpoints = [
   {
-    method: 'POST',  }]
+    method: 'GET',
+    path: '/api/v1/health',
+    description: 'Check API health status',
+    icon: Shield,
+    response: {
+      status: 200,
+      data: {
+        status: 'healthy',
+        timestamp: '2024-01-15T10:30:00Z',
+        version: '1.0.0'
+      }
+    }
+  },
+  {
+    method: 'POST',
+    path: '/api/v1/ai/analyze',
+    description: 'Analyze text using AI models',
+    icon: Cpu,
+    response: {
+      status: 200,
+      data: {
+        analysis: {
+          sentiment: 'positive',
+          confidence: 0.95,
+          entities: ['Zion Tech Group', 'AI', 'technology']
+        }
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/api/v1/services',
+    description: 'Get available services',
+    icon: Server,
+    response: {
+      status: 200,
+      data: {
+        services: [
+          { id: 1, name: 'AI Services', status: 'active' },
+          { id: 2, name: 'IT Services', status: 'active' }
+        ]
+      }
+    }
+  },
+  {
+    method: 'POST',
+    path: '/api/v1/contact',
+    description: 'Submit contact form',
+    icon: Globe,
+    response: {
+      status: 201,
+      data: {
+        message: 'Contact form submitted successfully',
+        id: 'contact_123456'
+      }
+    }
+  }
+];
+
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    title: 'Health Check',
+    code: `// Check API health
+const response = await fetch('https://api.ziontechgroup.com/v1/health');
+const data = await response.json();
+console.log(data); // { status: 'healthy', timestamp: '...', version: '1.0.0' }`
+  },
+  {
+    language: 'Python',
+    title: 'AI Text Analysis',
+    code: `import requests
+
+# Analyze text with AI
+response = requests.post(
+    'https://api.ziontechgroup.com/v1/ai/analyze',
+    json={'text': 'Zion Tech Group provides excellent AI services'},
+    headers={'Authorization': 'Bearer YOUR_API_KEY'}
+)
+result = response.json()
+print(result['analysis']['sentiment'])  # positive`
+  },
+  {
+    language: 'cURL',
+    title: 'Get Services',
+    code: `curl -X GET "https://api.ziontechgroup.com/v1/services" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+  }
+];
+
+const sdkLinks = [
+  { name: 'JavaScript SDK', href: '/sdk/javascript', icon: Code },
+  { name: 'Python SDK', href: '/sdk/python', icon: Terminal },
+  { name: 'Postman Collection', href: '/sdk/postman', icon: ExternalLink },
+  { name: 'OpenAPI Spec', href: '/sdk/openapi', icon: BookOpen }
+];
 
 export default function APIDocs() {
-  return(<>
+  const [selectedExample, setSelectedExample] = React.useState(0);
+
+  return (
+    <Layout 
+      title="API Documentation - Zion Tech Group"
+      description="Comprehensive API documentation for Zion Tech Group's services. Get started with our RESTful APIs for AI, IT services, and more."
+      keywords="API documentation, REST API, developer tools, integration, SDK, webhooks"
+    >
       <Head>
         <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="Complete API documentation for Zion Tech Group's services. Learn how to integrate our APIs into your applications."  />
-        <meta name="keywords" content="API documentation, RESTful API, developer tools, integration"  />
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group's services. Get started with our RESTful APIs for AI, IT services, and more." />
       </Head>
-      <Layout>
-        {/* Hero Section */ }
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-          <div className="container mx-auto px-6 text-center">
-            <motion.div;
-              initial={{opacity: 0, y: 30 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-5xl md: text-6xl font-bold mb-6 text-white">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 API Documentation
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Complete guide to integrating with our APIs
+                Integrate with our powerful APIs to build amazing applications. 
+                Comprehensive documentation, SDKs, and examples to get you started.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{scale: 1.05 }}
-                  whileTap={{scale: 0.95 }}
-                  className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#getting-started" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   Get Started
-                </motion.button>
-                <motion.button
-                  whileHover={{scale: 1.05 }}
-                  whileTap={{scale: 0.95 }}
-                  className="border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  View Examples
-                </motion.button>
+                </a>
+                <a href="#endpoints" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                  View Endpoints
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
-        { /* API Endpoints Section */ }
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <motion.div;
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              className="text-center mb-16"
+
+        {/* Quick Start */}
+        <section id="getting-started" className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Quick Start
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Get up and running with our API in minutes
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">1. Get API Key</h3>
+                  <p className="text-gray-600">Sign up and get your free API key from the dashboard</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Code className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">2. Make Request</h3>
+                  <p className="text-gray-600">Use our RESTful API endpoints with your preferred language</p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">3. Build & Deploy</h3>
+                  <p className="text-gray-600">Integrate our services into your application</p>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* API Endpoints */}
+        <section id="endpoints" className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">API Endpoints</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore our available API endpoints and their responses.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                API Endpoints
+              </h2>
+              <p className="text-lg text-gray-600">
+                Explore our comprehensive API reference
               </p>
             </motion.div>
-            <div className="space-y-8">
-              { apiEndpoints.map((endpoint, index) => (;
-                <motion.div;
-                  key={index }
-                  initial={{opacity: 0, y: 30 }}
-                  whileInView={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-8"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4">
-                      <span className={ `px-3 py-1 rounded text-sm font-semibold ${
-                        endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :;
-                        endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :;
-                        'bg-gray-100 text-gray-800' }`}>
-                        { endpoint.method }
-                      </span>
-                      <code className="text-lg font-mono">{ endpoint.path }</code>
-                    </div>
-                    <button className="p-2 hover: bg-gray-100 rounded">
-                      <Copy size={ 20 }  />
-                    </button>
-                  </div>
-                  <p className="text-gray-600 mb-4">{ endpoint.description }</p>
-                  <div className="bg-gray-900 rounded-lg p-4">
-                    <pre className="text-green-400 text-sm overflow-x-auto">
-                      { JSON.stringify(endpoint.response, null, 2) }
-                    </pre>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-    endpoint: '/api/auth/login',
-    description: 'Authenticate users and get access tokens',
-    parameters: [{ name: 'email', type: 'string', required: true, description: 'User email address' }, ;
-      { name: 'password', type: 'string', required: true, description: 'User password' }],;
-    response: { success: { token: 'string', user: 'object' },;
-      error: { message: 'string', code: 'number' }}},;
-  {
-    name: 'Get User Profile', method: 'GET', endpoint: '/api/user/profile', description: 'Retrieve user profile information', parameters: [{ name: 'id', type: 'string', required: true, description: 'User ID' }],;
-    response: { success: { user: 'object' },;
-      error: { message: 'string', code: 'number' }}},;
-  {
-    name: 'Create Project', method: 'POST', endpoint: '/api/projects', description: 'Create a new project', parameters: [{ name: 'name', type: 'string', required: true, description: 'Project name' }, ;
-      { name: 'description', type: 'string', required: false, description: 'Project description' }],;
-    response: { success: { project: 'object' },;
-      error: { message: 'string', code: 'number' }}}]
 
-export default function ApiDocs() {
-  return(<Layout>
-      <Head>
-        <title>API Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations."  />
-      </Head>
-      <main>
-        {/* Hero Section */ }
-        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-cyan-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                API Documentation
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive API documentation for integrating with Zion Tech Group services
-              </p>
-            </div>
-          </div>
-        </section>
-        { /* API Endpoints Section */ }
-        <section className="py-20">
-          <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-12 text-center">
-                Available Endpoints
-              </h2>
-              <div className="space-y-8">
-                { endpoints.map((endpoint, index) => (;
-                  <div key={index } className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                    <div className="flex items-center justify-between mb-6">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{ endpoint.name }</h3>
-                        <p className="text-gray-600">{ endpoint.description }</p>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className={ `px-3 py-1 rounded-full text-sm font-medium ${
-                          endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :;
-                          endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :;
-                          'bg-gray-100 text-gray-800' }`}>
-                          { endpoint.method }
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {apiEndpoints.map((endpoint, index) => (
+                  <motion.div
+                    key={endpoint.path}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                  >
+                    <div className="flex items-center mb-4">
+                      <endpoint.icon className="w-6 h-6 text-blue-600 mr-3" />
+                      <div className="flex items-center space-x-2">
+                        <span className={`px-2 py-1 rounded text-sm font-medium ${
+                          endpoint.method === 'GET' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                        }`}>
+                          {endpoint.method}
                         </span>
-                        <code className="bg-gray-100 px-3 py-1 rounded text-sm font-mono">
-                          { endpoint.endpoint }
-                        </code>
+                        <code className="text-gray-700 font-mono">{endpoint.path}</code>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Parameters</h4>
-                        <div className="space-y-3">
-                          { endpoint.parameters.map((param, paramIndex) => (;
-                            <div key={paramIndex } className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                              <div>
-                                <span className="font-medium text-gray-900">{ param.name }</span>
-                                <span className="text-gray-500 ml-2">({ param.type })</span>
-                                { param.required && <span className="text-red-500 ml-2">*</span> }
-                              </div>
-                              <p className="text-sm text-gray-600">{ param.description }</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Response</h4>
-                        <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                          <pre>{ JSON.stringify(endpoint.response, null, 2) }</pre>
-                        </div>
-                      </div>
+                    <p className="text-gray-600 mb-4">{endpoint.description}</p>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h4 className="text-sm font-medium text-gray-700 mb-2">Response Example:</h4>
+                      <pre className="text-xs text-gray-600 overflow-x-auto">
+                        {JSON.stringify(endpoint.response, null, 2)}
+                      </pre>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-6 text-center">
-            <motion.div;
-              initial={{opacity: 0, y: 30 }}
-              whileInView={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+
+        {/* Code Examples */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Ready to Start Building?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Code Examples
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Get your API key and start integrating our services into your applications today.
+              <p className="text-lg text-gray-600">
+                Get started with these code examples in your favorite language
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.button
-                  whileHover={{scale: 1.05 }}
-                  whileTap={{scale: 0.95 }}
-                  className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  Get Started
-                </motion.button>
-                <motion.button
-                  whileHover={{scale: 1.05 }}
-                  whileTap={{scale: 0.95 }}
-                  className="border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-                >
-                  View Examples
-                </motion.button>
-              </div>
             </motion.div>
+
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center mb-8">
+                {codeExamples.map((example, index) => (
+                  <button
+                    key={example.language}
+                    onClick={() => setSelectedExample(index)}
+                    className={`px-6 py-3 rounded-lg font-medium transition-colors mr-2 mb-2 ${
+                      selectedExample === index
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {example.language}
+                  </button>
+                ))}
+              </div>
+
+              <motion.div
+                key={selectedExample}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="bg-gray-900 rounded-xl p-6"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-white">
+                    {codeExamples[selectedExample].title}
+                  </h3>
+                  <button className="text-gray-400 hover:text-white transition-colors">
+                    <Copy className="w-5 h-5" />
+                  </button>
+                </div>
+                <pre className="text-green-400 text-sm overflow-x-auto">
+                  <code>{codeExamples[selectedExample].code}</code>
+                </pre>
+              </motion.div>
+            </div>
           </div>
         </section>
-      </Layout>
-    </>
-      </main>
+
+        {/* SDKs and Tools */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                SDKs & Tools
+              </h2>
+              <p className="text-lg text-gray-600">
+                Download our official SDKs and development tools
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {sdkLinks.map((sdk, index) => (
+                <motion.a
+                  key={sdk.name}
+                  href={sdk.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center group"
+                >
+                  <sdk.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {sdk.name}
+                  </h3>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Need Help with Integration?</h2>
+            <p className="text-xl mb-8 text-blue-100">
+              Our developer support team is here to help you integrate our APIs successfully.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Contact Support
+              </Link>
+              <a href="mailto:dev@ziontechgroup.com" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                Email Dev Team
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </Layout>
-  )
+  );
 }
-)

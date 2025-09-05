@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 const fs = require('fs');
 const path = require('path');
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -109,6 +110,22 @@ const services = [
 
 =======
 >>>>>>> pr-11914
+=======
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  children: React.ReactNode;
+}
+
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
@@ -128,6 +145,7 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
+<<<<<<< HEAD
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -407,21 +425,36 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'Contact', href: '/contact' }
   ];
 
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="keywords" content={keywords || "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+=======
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow"} />
+        
+        {/* Open Graph */}
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
+<<<<<<< HEAD
+=======
+        <meta property="og:image" content={ogImage} />
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
         <link rel="canonical" href="https://ziontechgroup.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50">
         {/* Top Bar */}
         <div className="bg-blue-900 text-white py-2">
@@ -946,3 +979,13 @@ export default function Layout({ title, description, children, keywords }: Layou
 =======
 }
 >>>>>>> pr-11935
+=======
+      <Header />
+      <main className="min-h-screen">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+}
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

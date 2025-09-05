@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> pr-11935
 import { 
@@ -78,34 +79,36 @@ const socialLinks = [
 export default function Footer() {
 =======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram, Zap, Brain, Server, Shield, Users, Building2, FileText, Rocket, Target, Atom, Network, Cloud, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle } from 'lucide-react';
+=======
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram, Youtube } from 'lucide-react';
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 
 const Footer: React.FC = () => {
 >>>>>>> pr-11914
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {
-      title: "AI & Automation Services",
-      icon: Brain,
+  const footerSections = {
+    company: {
+      title: 'Company',
       links: [
-        { name: "AI Business Intelligence", href: "/ai-services", icon: BarChart3 },
-        { name: "AI Customer Support", href: "/ai-services", icon: MessageCircle },
-        { name: "AI Project Management", href: "/ai-services", icon: Workflow },
-        { name: "AI Marketing Automation", href: "/ai-services", icon: TrendingUp },
-        { name: "AI Enterprise Automation", href: "/ai-services", icon: Building2 },
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' }
       ]
     },
-    {
-      title: "IT Infrastructure & Security",
-      icon: Server,
+    services: {
+      title: 'Services',
       links: [
-        { name: "Cloud DevOps", href: "/it-services", icon: Cloud },
-        { name: "IT Infrastructure Management", href: "/it-services", icon: Server },
-        { name: "Cybersecurity Solutions", href: "/it-services", icon: Shield },
-        { name: "Digital Transformation", href: "/it-services", icon: Rocket },
-        { name: "Green IT Solutions", href: "/it-services", icon: Leaf },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Blockchain', href: '/blockchain' },
+        { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
     },
+<<<<<<< HEAD
     {
       title: "Development Services",
       icon: Code,
@@ -247,6 +250,30 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
+=======
+    solutions: {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise', href: '/enterprise' },
+        { name: 'Startup', href: '/solutions/startup' },
+        { name: 'E-commerce', href: '/ecommerce' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Finance', href: '/industries/finance' }
+      ]
+    },
+    resources: {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api-docs' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support', href: '/support' }
+      ]
+    }
+  };
+
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
   const socialLinks = [
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Twitter', href: '#', icon: Twitter },
@@ -258,6 +285,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -316,10 +344,46 @@ const Footer: React.FC = () => {
                 <MapPin className="h-4 w-4 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
 >>>>>>> pr-11935
+=======
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div>
+                <div className="text-xl font-bold">Zion Tech Group</div>
+                <div className="text-sm text-gray-400">Technology Solutions</div>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI solutions, cloud services, and technology consulting. 
+              Transforming businesses through innovation and cutting-edge technology.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2 text-blue-400" />
+                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2 text-blue-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2 text-blue-400" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
               </div>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Services */}
           <div>
 <<<<<<< HEAD
@@ -560,10 +624,52 @@ const Footer: React.FC = () => {
 >>>>>>> pr-11914
                 Subscribe
               </button>
+=======
+          {/* Footer Sections */}
+          {Object.entries(footerSections).map(([key, section]) => (
+            <div key={key}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href} 
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Social Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       {/* Bottom Bar */}
@@ -637,3 +743,10 @@ export default Footer;
 
 export default Footer;
 >>>>>>> pr-11935
+=======
+    </footer>
+  );
+};
+
+export default Footer;
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

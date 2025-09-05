@@ -1,20 +1,14 @@
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> pr-11914
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> pr-11914
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -27,11 +21,11 @@ export const messageChannelHandler: MessageHandler = {
     // No-op: placeholder for message listener registration
   }
 <<<<<<< HEAD
-};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 };
 =======
 };
@@ -42,4 +36,3 @@ export const messageChannelHandler: MessageHandler = {
 =======
 };
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> pr-11914

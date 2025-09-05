@@ -60,7 +60,7 @@ module.exports = QuickSyntaxFixer;
 =======
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

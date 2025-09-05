@@ -31,8 +31,17 @@ export default function ChatBotPanel({ }: ChatBotPanelProps) {
   );
 <<<<<<< HEAD:backup-merge-conflicts/ChatBotPanel.jsx.backup
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/ChatBotPanel.jsx.backup
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 >>>>>>> main
 >>>>>>> main
 =======
 }
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/support/ChatBotPanel.jsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/support/ChatBotPanel.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,280 +1,271 @@
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Layout from '../../components/Layout'
-import { DollarSign, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, Users } from 'lucide-react'
-import Head from 'next/head'
-import { motion } from 'framer-motion'
-import {
-  DollarSign, ;
-  Shield, ;
-  TrendingUp, ;
-  Clock, ;
-  CheckCircle, ;
-  BarChart3, ;
-  Lock, ;
-  Users } from 'lucide-react'
-import Layout from '../components/Layout'
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { 
+  DollarSign, 
+  Shield, 
+  TrendingUp, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  Users, 
+  Clock, 
+  Lock, 
+  Zap,
+  Globe,
+  Database
+} from 'lucide-react';
 
-const financeSolutions = [{  }]
+const solutions = [
+  {
+    icon: Shield,
+    title: 'Enhanced Security',
+    description: 'Advanced security measures protect against cyber threats and fraud',
+    features: ['Multi-factor Authentication', 'End-to-end Encryption', 'Fraud Detection', 'Compliance Monitoring']
+  },
+  {
+    icon: TrendingUp,
+    title: 'Risk Management',
+    description: 'AI-powered risk assessment and real-time monitoring systems',
+    features: ['Real-time Risk Analysis', 'Predictive Modeling', 'Portfolio Optimization', 'Stress Testing']
+  },
+  {
+    icon: BarChart3,
+    title: 'Analytics & Reporting',
+    description: 'Comprehensive financial analytics and regulatory reporting',
+    features: ['Real-time Dashboards', 'Regulatory Compliance', 'Performance Analytics', 'Custom Reports']
+  },
+  {
+    icon: Zap,
+    title: 'Automation',
+    description: 'Streamline operations with intelligent automation solutions',
+    features: ['Process Automation', 'Workflow Optimization', 'Document Processing', 'API Integration']
+  }
+];
 
 const benefits = [
   {
-    icon: DollarSign, title: 'Cost Reduction', description: 'Automate processes and reduce operational costs through technology.', metric: '35%' }, ;
+    icon: Shield,
+    title: 'Enhanced Security',
+    description: 'Advanced security measures protect against cyber threats and fraud',
+    metric: '99.9%'
+  },
   {
-    icon: Shield, title: 'Enhanced Security', description: 'Advanced security measures protect against cyber threats and fraud' }, ;
+    icon: TrendingUp,
+    title: 'Increased Efficiency',
+    description: 'Automated processes reduce manual work and improve accuracy',
+    metric: '40%'
+  },
   {
-    title: 'Improved Efficiency', description: 'Automated processes reduce manual work and increase productivity', icon: TrendingUp }, ;
+    icon: Clock,
+    title: 'Faster Processing',
+    description: 'Real-time processing and instant transaction settlement',
+    metric: '90%'
+  },
   {
-    title: 'Better Risk Management', description: 'AI-powered analytics help identify and mitigate risks', icon: Shield }, ;
-  {
-    title: 'Regulatory Compliance', description: 'Automated compliance monitoring ensures adherence to regulations', icon: CheckCircle
-    title: 'Risk Management Platform', description: 'Advanced risk assessment and management tools for financial institutions', icon: Shield, features: ['Real-time Risk Monitoring', 'Compliance Tracking', 'Fraud Detection', 'Regulatory Reporting'], ;
-    benefits: ['30% risk reduction', 'Faster compliance', 'Better fraud detection', 'Automated reporting'] },;
-  {
-    title: 'Trading Analytics', description: 'AI-powered analytics for trading decisions and market analysis', icon: BarChart3, features: ['Market Analysis', 'Algorithmic Trading', 'Portfolio Optimization', 'Performance Tracking'], ;
-    benefits: ['25% better returns', 'Reduced risk', 'Automated trading', 'Real-time insights'] },;
-  {
-    title: 'Customer Onboarding', description: 'Streamlined digital onboarding process for financial services', icon: Users, features: ['Digital Identity Verification', 'Document Processing', 'Compliance Checks', 'Account Setup'], ;
-    benefits: ['80% faster onboarding', 'Reduced errors', 'Better compliance', 'Improved UX'] }]
+    icon: Users,
+    title: 'Better Customer Experience',
+    description: 'Seamless digital banking and personalized financial services',
+    metric: '95%'
+  }
+];
 
-const financeBenefits = [{
-    icon: Shield, title: 'Security & Compliance', description: 'Advanced security measures to protect financial data and transactions.', metric: '99.9%' }, ;
-  {
-    icon: Clock, title: 'Real-time Processing', description: 'Process transactions and analyze data in real-time for better decisions.', metric: '<1s' }, ;
-  {
-    icon: TrendingUp, title: 'Performance Improvement', description: 'Optimize operations and improve financial performance across all metrics.', metric: '40%' }]
+const technologies = [
+  'Blockchain & Cryptocurrency',
+  'AI & Machine Learning',
+  'Cloud Computing',
+  'API Integration',
+  'Data Analytics',
+  'Mobile Banking',
+  'RegTech Solutions',
+  'Cybersecurity'
+];
 
-export default function FinancePage() {
-  return(<Layout>
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial={{opacity: 0, y: 30 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Finance <span className="text-blue-600">Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your financial services with AI-powered fraud detection, predictive analytics, ;
-                and automated compliance solutions.;
+export default function Finance() {
+  return (
+    <Layout 
+      title="Financial Services - Zion Tech Group"
+      description="Transform your financial services with cutting-edge technology solutions including AI, blockchain, and secure digital platforms."
+      keywords="fintech, financial services, banking technology, AI finance, blockchain, digital banking, financial software"
+    >
       <Head>
-        <title>Finance Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your financial services with our cutting-edge technology solutions for banks, fintech, and financial institutions."  />
+        <title>Financial Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your financial services with cutting-edge technology solutions including AI, blockchain, and secure digital platforms." />
       </Head>
-      <main>
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div;
-              className="text-center"
-              initial={{opacity: 0, y: 30 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Finance Solutions
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Financial Services Technology
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your financial services with our cutting-edge technology solutions.
+              <p className="text-xl md:text-2xl mb-8 text-green-100">
+                Transform your financial institution with cutting-edge technology solutions. 
+                Secure, scalable, and innovative platforms for the modern financial world.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4"  />
                 </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
+                <Link href="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-colors">
+                  View Case Studies
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+
+        {/* Solutions Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md: text-4xl font-bold mb-4">Our Finance Solutions</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed specifically for financial institutions.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Financial Technology Solutions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Comprehensive technology solutions for modern financial institutions
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              { solutions.map((solution, index) => (;
-                <motion.div;
-                  key={index }
-                  initial={{opacity: 0, y: 20 }}
-                  animate={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow p-6"
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {solutions.map((solution, index) => (
+                <motion.div
+                  key={solution.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600"  />
-                    </div>
-                    <h3 className="text-xl font-semibold">{ solution.title }</h3>
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <solution.icon className="w-6 h-6 text-green-600" />
                   </div>
-                  <p className="text-gray-600 mb-4">{ solution.description }</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
                   <ul className="space-y-2">
-                    { solution.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex } className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
-                        { feature }
-                      </li>))}
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               ))}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-                Our Finance Solutions;
-              </h2>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-                { financeSolutions.map((solution, index) => {
-                  const IconComponent = solution.icon;
-                  return(<motion.div;
-                      key={index }
-                      className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow duration-300"
-                      initial={{opacity: 0, y: 30 }}
-                      whileInView={{opacity: 1, y: 0 }}
-                      transition={{duration: 0.8, delay: index * 0.1 }}
-                      viewport={{once: true }}
-                    >
-                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <IconComponent className="w-8 h-8 text-blue-600"  />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{ solution.title }</h3>
-                      <p className="text-gray-600 mb-6">{ solution.description }</p>
-                      <div className="space-y-3 mb-6">
-                        <h4 className="font-semibold text-gray-900">Key Features: </h4>
-                        <ul className="space-y-2">
-                          { solution.features.map((feature, featureIndex) => (;
-                            <li key={featureIndex } className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
-                              { feature }
-                            </li>))}
-                        </ul>
-                      </div>
-                      <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900">Benefits: </h4>
-                        <ul className="space-y-2">
-                          { solution.benefits.map((benefit, benefitIndex) => (;
-                            <li key={benefitIndex } className="flex items-center text-sm text-gray-600">
-                              <TrendingUp className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"  />
-                              { benefit }
-                            </li>))}
-                        </ul>
-                      </div>
-                    </motion.div>
-                  )})}
-              </div>
             </div>
           </div>
         </section>
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+
+        {/* Benefits Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md: text-4xl font-bold mb-4">Why Choose Our Finance Solutions?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our solutions are designed to address the unique challenges faced by financial institutions.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our Financial Solutions?
+              </h2>
+              <p className="text-lg text-gray-600">
+                Proven results and industry-leading expertise
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              { benefits.map((benefit, index) => (;
-                <motion.div;
-                  key={index }
-                  initial={{opacity: 0, y: 20 }}
-                  animate={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.5, delay: index * 0.1 }}
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600"  />
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{ benefit.title }</h3>
-                  <p className="text-gray-600">{ benefit.description }</p>
-                </motion.div>))}
+                  <div className="text-3xl font-bold text-green-600 mb-2">{benefit.metric}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+
+        {/* Technologies Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-                Ready to Transform Finance?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Technologies We Use
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our finance solutions can help your institution achieve its goals.
+              <p className="text-lg text-gray-600">
+                Cutting-edge technologies for modern financial services
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4"  />
-                </Link>
-                <Link
-                  href="/it-services"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View IT Services
-                </Link>
-              </div>
             </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {technologies.map((tech, index) => (
+                  <motion.div
+                    key={tech}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bg-gray-100 rounded-lg p-4 text-center hover:bg-green-100 transition-colors"
+                  >
+                    <span className="text-gray-700 font-medium">{tech}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-green-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Services?</h2>
+            <p className="text-xl mb-8 text-green-100">
+              Let's discuss how our technology solutions can help your financial institution thrive in the digital age.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                Get Free Consultation
+              </Link>
+              <a href="tel:+13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-colors">
+                Call +1 302 464 0950
+              </a>
+            </div>
           </div>
         </section>
       </div>
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-                Why Choose Our Finance Solutions?
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                { financeBenefits.map((benefit, index) => {
-                  const IconComponent = benefit.icon;
-                  return(<motion.div;
-                      key={index }
-                      className="bg-white rounded-lg p-8 text-center hover: shadow-lg transition-shadow duration-300"
-                      initial={{opacity: 0, y: 30 }}
-                      whileInView={{opacity: 1, y: 0 }}
-                      transition={{duration: 0.8, delay: index * 0.1 }}
-                      viewport={{once: true }}
-                    >
-                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <IconComponent className="w-8 h-8 text-green-600"  />
-                      </div>
-                      <div className="text-4xl font-bold text-green-600 mb-2">{ benefit.metric }</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{ benefit.title }</h3>
-                      <p className="text-gray-600">{ benefit.description }</p>
-                    </motion.div>)})}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
     </Layout>
-  )}
+  );
+}

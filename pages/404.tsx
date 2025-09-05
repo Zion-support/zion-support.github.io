@@ -1,58 +1,149 @@
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Home, Search } from 'lucide-react'
-import MainLayout from '../src/components/layout/MainLayout'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { 
+  Home, 
+  ArrowLeft, 
+  Search, 
+  HelpCircle, 
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
 
 export default function Custom404() {
-  return(<MainLayout
-      title="404 - Page Not Found | Zion Tech Group"
-      description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
-      noindex={true}
+  return (
+    <Layout 
+      title="Page Not Found - Zion Tech Group"
+      description="The page you're looking for doesn't exist. Return to our homepage or contact us for assistance."
+      keywords="404, page not found, error, Zion Tech Group"
+      noIndex={true}
     >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
-        <div className="text-center max-w-2xl mx-auto">
+      <Head>
+        <title>Page Not Found - Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or contact us for assistance." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            initial={{opacity: 0, y: 20 }}
-            animate={{opacity: 1, y: 0 }}
-            transition={{duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
+            {/* 404 Illustration */}
             <div className="mb-8">
-              <h1 className="text-9xl font-bold text-gray-300 mb-4">404</h1>
-              <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-                Page Not Found;
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.;
-              </p>
+              <div className="text-9xl font-bold text-blue-600 mb-4">404</div>
+              <div className="w-32 h-32 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <Search className="w-16 h-16 text-blue-600" />
+              </div>
             </div>
-            <div className="space-y-4">
-              <Link
+
+            {/* Error Message */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Page Not Found
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Sorry, we couldn't find the page you're looking for. 
+              It might have been moved, deleted, or you entered the wrong URL.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link 
                 href="/"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover: bg-blue-700 transition-colors duration-200"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </Link>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <Search className="w-5 h-5 mr-2"  />
-                  Browse Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                >
-                  Contact Support
-                </Link>
+              <button 
+                onClick={() => window.history.back()}
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center"
+              >
+                <ArrowLeft className="w-5 h-5 mr-2" />
+                Go Back
+              </button>
+            </div>
+
+            {/* Help Section */}
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Need Help?
+              </h2>
+              <p className="text-gray-600 mb-6">
+                If you're still having trouble finding what you're looking for, 
+                our team is here to help.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Support Center</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Browse our help articles and FAQs
+                  </p>
+                  <Link 
+                    href="/support"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    Visit Support →
+                  </Link>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Email Us</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Send us a message anytime
+                  </p>
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Speak with our team directly
+                  </p>
+                  <a 
+                    href="tel:+13024640950"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    +1 302 464 0950
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="mt-12 text-sm text-gray-500">
-              <p>If you believe this is an error, please contact our support team.</p>
+
+            {/* Contact Info */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-2">
+                <strong>Zion Tech Group</strong>
+              </p>
+              <p className="text-gray-600 mb-2">
+                364 E Main St STE 1008, Middletown DE 19709
+              </p>
+              <p className="text-gray-600">
+                We're here to help you succeed with technology.
+              </p>
             </div>
           </motion.div>
         </div>
       </div>
-    </MainLayout>)}
+    </Layout>
+  );
+}

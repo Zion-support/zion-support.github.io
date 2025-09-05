@@ -19,6 +19,10 @@ const * as React from "react"; import {Toaster as HotToaster} from "react-hot-to
 import _React from 'react';,
 <<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
@@ -26,9 +30,14 @@ import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/toaster.jsx
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import _React from 'react';,
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/toaster.jsx
 >>>>>>> pr-11935
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/components/ui/toaster.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

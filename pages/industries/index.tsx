@@ -1,238 +1,200 @@
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Layout from '../../components/Layout'
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Shield, Cloud, Brain } from 'lucide-react'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 
 const industries = [
-  { , ;
-    icon: Heart, features: ['Medical Imaging AI', 'EHR Systems', 'Telemedicine', 'Health Analytics'], ;
-    href: '/industries/healthcare' },;
-  { , ;
-    icon: DollarSign, features: ['Fraud Detection', 'Risk Analytics', 'Digital Banking', 'Compliance'], ;
-    href: '/industries/finance' },;
-  { , ;
-    icon: BookOpen, features: ['LMS Platforms', 'Virtual Classrooms', 'Student Analytics', 'Content Management'], ;
-    href: '/industries/education' },;
-  { , ;
-    icon: Building, features: ['Digital Platforms', 'Cybersecurity', 'Citizen Services', 'Data Analytics'], ;
-    href: '/industries/government' },;
-  { , ;
-    icon: Settings, features: ['Smart Manufacturing', 'Quality Control', 'Supply Chain', 'IoT Solutions'], ;
-    href: '/industries/manufacturing' },;
-  { , ;
-    icon: ShoppingCart, features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'], ;
-    href: '/industries/retail' }]
+  {
+    name: 'Healthcare',
+    icon: Heart,
+    description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',
+    solutions: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],
+    href: '/industries/healthcare',
+    color: 'from-red-500 to-pink-500'
+  },
+  {
+    name: 'Finance',
+    icon: DollarSign,
+    description: 'Secure financial solutions with fraud detection, automated trading, and regulatory compliance systems.',
+    solutions: ['Fraud Detection', 'Automated Trading', 'Regulatory Compliance', 'Risk Management'],
+    href: '/industries/finance',
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    name: 'Manufacturing',
+    icon: Settings,
+    description: 'Optimize production with IoT sensors, predictive maintenance, and quality control automation.',
+    solutions: ['IoT Integration', 'Predictive Maintenance', 'Quality Control', 'Supply Chain'],
+    href: '/industries/manufacturing',
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    name: 'Retail',
+    icon: ShoppingCart,
+    description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
+    solutions: ['Personalization', 'Inventory Management', 'Omnichannel', 'Analytics'],
+    href: '/industries/retail',
+    color: 'from-purple-500 to-violet-500'
+  },
+  {
+    name: 'Education',
+    icon: BookOpen,
+    description: 'Revolutionize learning with AI-powered platforms, virtual classrooms, and personalized education tools.',
+    solutions: ['Learning Platforms', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
+    href: '/industries/education',
+    color: 'from-orange-500 to-amber-500'
+  },
+  {
+    name: 'Government',
+    icon: Building,
+    description: 'Modernize public services with digital transformation, citizen portals, and data-driven governance.',
+    solutions: ['Digital Services', 'Citizen Portals', 'Data Analytics', 'Security'],
+    href: '/industries/government',
+    color: 'from-gray-500 to-slate-500'
+  }
+];
 
-const benefits = [{ , ;
-    icon: Brain }, ;
-  { , ;
-    icon: Settings }, ;
-  { , ;
-    icon: Shield }, ;
-  { , ;
-    icon: Cloud }]
-
-export default function IndustriesPage() {
-  return(<MainLayout
-      title="Industries - Zion Tech Group"
-      description="Discover how Zion Tech Group serves various industries with tailored technology solutions."
-      keywords="industries, healthcare, finance, education, manufacturing, retail, government, technology solutions"
-    >      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */ }
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import {
-  Heart, ;
-  Building, ;
-  ShoppingCart, ;
-  GraduationCap, ;
-  DollarSign, ;
-  Target } from 'lucide-react'
-import Layout from '../../components/Layout'
-
-const industries = [{
-    title: 'Healthcare', description: 'Transform healthcare delivery with AI-powered medical solutions.', icon: Heart, href: '/industries/healthcare', color: 'from-red-500 to-pink-600' }, ;
-  {
-    title: 'Finance', description: 'Modernize financial services with secure banking solutions.', icon: DollarSign, href: '/industries/finance', color: 'from-green-500 to-emerald-600' }, ;
-  {
-    title: 'Education', description: 'Enhance learning with educational technology solutions.', icon: GraduationCap, href: '/industries/education', color: 'from-blue-500 to-cyan-600' }, ;
-  {
-    title: 'Government', description: 'Modernize public sector with digital government platforms.', icon: Building, href: '/industries/government', color: 'from-purple-500 to-indigo-600' }, ;
-  {
-    title: 'Retail', description: 'Revolutionize retail with e-commerce solutions.', icon: ShoppingCart, href: '/industries/retail', color: 'from-orange-500 to-red-600' }, ;
-  {
-    title: 'Manufacturing', description: 'Optimize manufacturing with smart factory solutions.', icon: Target, href: '/industries/manufacturing', color: 'from-teal-500 to-blue-600' }]
+const stats = [
+  { number: '50+', label: 'Industries Served' },
+  { number: '200+', label: 'Successful Projects' },
+  { number: '98%', label: 'Client Satisfaction' },
+  { number: '5+', label: 'Years Experience' }
+];
 
 export default function Industries() {
-  return(<Layout>
+  return (
+    <Layout 
+      title="Industries - Zion Tech Group"
+      description="Discover how Zion Tech Group serves various industries with tailored technology solutions for healthcare, finance, manufacturing, retail, education, and government."
+      keywords="industries, healthcare technology, fintech, manufacturing solutions, e-commerce, education technology, real estate tech"
+    >
       <Head>
         <title>Industries - Zion Tech Group</title>
-        <meta name="description" content="Discover how we serve different industries with tailored technology solutions."  />
+        <meta name="description" content="Discover how Zion Tech Group serves various industries with tailored technology solutions for healthcare, finance, manufacturing, retail, education, and government." />
       </Head>
-      <main>
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              className="text-center"
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Industry <span className="text-blue-600">Solutions</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Industries We Serve
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Specialized technology solutions designed for specific industries.
-                We understand the unique challenges and requirements of each sector.
+                We deliver tailored technology solutions across diverse industries, 
+                helping organizations transform and thrive in the digital age.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4"  />
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
-        { /* Industries Grid */ }
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md: text-4xl font-bold mb-4">Industries We Serve</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our industry-specific solutions and see how we can help transform your sector.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              { industries.map((industry, index) => (;
-                <motion.div;
-                  key={index }
-                  initial={{opacity: 0, y: 20 }}
-                  animate={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow p-6"
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <industry.icon className="w-6 h-6 text-blue-600"  />
-                    </div>
-                    <h3 className="text-xl font-semibold">{ industry.title }</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{ industry.description }</p>
-                  <ul className="space-y-2 mb-6">
-                    { industry.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex } className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
-                        { feature }
-                      </li>))}
-                  </ul>
-                  <Link
-                    href={ industry.href }
-                    className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1 w-4 h-4"  />
-                  </Link>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-        { /* Benefits Section */ }
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
+
+        {/* Industries Grid */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md: text-4xl font-bold mb-4">Why Choose Our Industry Solutions?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our industry-specific approach ensures that our solutions are perfectly tailored to your needs.
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Industry Solutions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Specialized technology solutions for every industry
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              { benefits.map((benefit, index) => (;
-                <motion.div;
-                  key={index }
-                  initial={{opacity: 0, y: 20 }}
-                  animate={{opacity: 1, y: 0 }}
-                  transition={{duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
                 >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600"  />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{ benefit.title }</h3>
-                  <p className="text-gray-600">{ benefit.description }</p>
-                </motion.div>))}
-            </div>
-          </div>
-        </section>
-        { /* CTA Section */ }
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div;
-              initial={{opacity: 0, y: 20 }}
-              animate={{opacity: 1, y: 0 }}
-              transition={{duration: 0.8 }}
-            >
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">
-                Industries We Serve
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover how we serve different industries with tailored technology solutions.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                { industries.map((industry, index) => {
-                  const IconComponent = industry.icon;
-                  return(<motion.div;
-                      key={index }
-                      className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-300"
-                      initial={{opacity: 0, y: 30 }}
-                      whileInView={{opacity: 1, y: 0 }}
-                      transition={{duration: 0.8, delay: index * 0.1 }}
-                      viewport={{once: true }}
+                  <div className={`h-2 bg-gradient-to-r ${industry.color}`}></div>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mr-4`}>
+                        <industry.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">{industry.name}</h3>
+                    </div>
+                    <p className="text-gray-600 mb-6">{industry.description}</p>
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Solutions:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {industry.solutions.map((solution, idx) => (
+                          <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                            {solution}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <Link 
+                      href={industry.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group-hover:translate-x-1 transition-transform"
                     >
-                      <Link href={ industry.href }>
-                        <div className="p-8">
-                          <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                            <IconComponent className={ `w-8 h-8 bg-gradient-to-r ${industry.color } bg-clip-text text-transparent`}  />
-                          </div>
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">{ industry.title }</h3>
-                          <p className="text-gray-600">{ industry.description }</p>
-                        </div>
-                      </Link>
-                    </motion.div>)})}
-              </div>
+                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
-      </main>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Industry?</h2>
+            <p className="text-xl mb-8 text-blue-100">
+              Let's discuss how our industry-specific solutions can help your organization succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Get Industry Consultation
+              </Link>
+              <Link href="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </Layout>
-  )}}
-)
+  );
+}

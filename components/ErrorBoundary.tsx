@@ -9,12 +9,16 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 <<<<<<< HEAD
 =======
 >>>>>>> pr-11913
 =======
 >>>>>>> pr-11935
+=======
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 }
 
 interface State {
@@ -22,6 +26,9 @@ interface State {
   error?: Error;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
   errorInfo?: ErrorInfo;
 }
 
@@ -145,6 +152,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> pr-11935
@@ -209,6 +217,8 @@ class ErrorBoundary extends Component<Props, State> {
               Reload Page
             </button>
 >>>>>>> pr-11935
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
           </div>
         </div>
       );
