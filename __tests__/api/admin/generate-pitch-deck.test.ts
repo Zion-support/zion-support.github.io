@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';
 import { supabase } from '@/integrations/supabase/client';
+import { jest, beforeEach } from '@jest/globals';
 
 // Mock Supabase client
 jest.mock('@/integrations/supabase/client', () => ({
