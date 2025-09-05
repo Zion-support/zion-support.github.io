@@ -15,7 +15,7 @@ import {
   Phone,
   Mail
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 
 const services = [
   {
@@ -111,7 +111,7 @@ const benefits = [
 
 export default function GovernmentPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Government Technology Solutions - Zion Tech Group"
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
       keywords="government technology, citizen services, digital government, public safety, government security, civic tech"
@@ -270,6 +270,6 @@ export default function GovernmentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

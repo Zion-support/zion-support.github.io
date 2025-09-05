@@ -395,6 +395,79 @@ const microSaaSProducts = [
     features: ['Threat Detection', 'Anomaly Analysis', 'Incident Response', 'Compliance Monitoring'],
     pricing: '$399 - $1,999/month',
     category: 'Cybersecurity'
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation and editing using AI for marketing and social media.',
+    icon: Video,
+    features: ['Auto Video Generation', 'Text-to-Video', 'Voice Synthesis', 'Multi-format Export'],
+    pricing: '$199 - $999/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Processing',
+    description: 'AI-powered document extraction, classification, and data processing automation.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$149 - $799/month',
+    category: 'Document Processing'
+  },
+  {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'High-quality voice cloning and text-to-speech synthesis for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Multi-language Support', 'Emotion Control', 'API Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice Technology'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment with AI assistance.',
+    icon: Code,
+    features: ['Visual Builder', 'AI Code Generation', 'Security Auditing', 'Multi-blockchain Support'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Development'
+  },
+  {
+    title: 'AI-Powered Market Research Assistant',
+    description: 'Automated market research and competitive analysis using AI and web scraping.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Detection', 'Sentiment Analysis', 'Report Generation'],
+    pricing: '$99 - $499/month',
+    category: 'Market Research'
+  },
+  {
+    title: 'Intelligent Email Security Gateway',
+    description: 'AI-powered email security with advanced threat detection and phishing prevention.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'Spam Filtering', 'User Training'],
+    pricing: '$2.50 - $8.00/user/month',
+    category: 'Email Security'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Content Personalization', 'A/B Testing', 'Real-time Adaptation'],
+    pricing: '$199 - $999/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'Smart Contract Analytics Platform',
+    description: 'Comprehensive analytics and monitoring for smart contracts and DeFi protocols.',
+    icon: BarChart3,
+    features: ['Transaction Analysis', 'Risk Assessment', 'Performance Metrics', 'Alert System'],
+    pricing: '$149 - $799/month',
+    category: 'DeFi Analytics'
+  },
+  {
+    title: 'AI-Powered Fraud Detection System',
+    description: 'Real-time fraud detection and prevention for financial transactions.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
+    pricing: '$0.10 - $0.50 per transaction',
+    category: 'Fraud Prevention'
   }
 ];
 
@@ -570,13 +643,13 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
                   key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+                  className={`bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -657,13 +730,13 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="text-center p-4 sm:p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -703,7 +776,7 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (

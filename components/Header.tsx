@@ -73,6 +73,8 @@ export function Header({ className }: HeaderProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },
         { label: 'Data Analytics', href: '/services/data-analytics' },
+        { label: 'Digital Transformation', href: '/services/digital-transformation' },
+        { label: 'Consulting', href: '/services/consulting' },
       ]
     },
     {
@@ -84,6 +86,25 @@ export function Header({ className }: HeaderProps) {
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
+        { label: 'Education', href: '/solutions/education' },
+        { label: 'Government', href: '/solutions/government' },
+        { label: 'Manufacturing', href: '/solutions/manufacturing' },
+        { label: 'Real Estate', href: '/solutions/real-estate' },
+      ]
+    },
+    {
+      label: 'Industries',
+      href: '/industries',
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
+        { label: 'Financial Services', href: '/industries/finance' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Retail & E-commerce', href: '/industries/retail' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Energy & Utilities', href: '/industries/energy' },
+        { label: 'Transportation', href: '/industries/transportation' },
       ]
     },
     {
@@ -96,6 +117,8 @@ export function Header({ className }: HeaderProps) {
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
+        { label: 'Partners', href: '/partners' },
+        { label: 'Investors', href: '/investors' },
       ]
     },
     {
@@ -109,6 +132,21 @@ export function Header({ className }: HeaderProps) {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
+        { label: 'API Reference', href: '/api-docs' },
+        { label: 'Tutorials', href: '/tutorials' },
+      ]
+    },
+    {
+      label: 'Support',
+      href: '/support',
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'Contact Support', href: '/support' },
+        { label: 'System Status', href: '/status' },
+        { label: 'Community', href: '/community' },
+        { label: 'Training', href: '/training' },
+        { label: 'Certification', href: '/certification' },
       ]
     },
   ];
@@ -126,11 +164,11 @@ export function Header({ className }: HeaderProps) {
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">

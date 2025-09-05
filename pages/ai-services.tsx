@@ -301,12 +301,165 @@ const aiServices = [
     category: 'Virtual Reality'
   },
   {
-    title: 'AI Language Translation',
-    description: 'Real-time multi-language translation with cultural context understanding.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Translation'],
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using AI for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$0.01 - $0.05 per content item',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Content Personalization', 'A/B Testing', 'Real-time Adaptation'],
     pricing: '$2,000 - $10,000/month',
-    category: 'Language Technology'
+    category: 'Personalization'
+  },
+  {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for emotion detection, sentiment, and speaker identification.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Sentiment Analysis', 'Speaker Identification', 'Voice Biometrics'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Voice Analytics'
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'AI-powered medical image analysis for diagnosis and treatment planning.',
+    icon: Heart,
+    features: ['Image Classification', 'Anomaly Detection', 'Diagnostic Support', 'Treatment Planning'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Understanding', 'Cultural Adaptation', 'Multi-language Support'],
+    pricing: '$0.10 - $0.50 per 1000 characters',
+    category: 'Language Processing'
+  },
+  {
+    title: 'AI-Powered Search Engine',
+    description: 'Intelligent search with semantic understanding and personalized results.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalized Results', 'Natural Language Queries', 'Context Understanding'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Search Technology'
+  },
+  {
+    title: 'AI-Powered Data Visualization',
+    description: 'Intelligent data visualization with automatic chart generation and insights.',
+    icon: BarChart3,
+    features: ['Auto Chart Generation', 'Insight Discovery', 'Interactive Dashboards', 'Natural Language Queries'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Data Visualization'
+  },
+  {
+    title: 'AI-Powered Email Intelligence',
+    description: 'Smart email management with automatic categorization, prioritization, and responses.',
+    icon: Mail,
+    features: ['Auto Categorization', 'Priority Scoring', 'Smart Responses', 'Spam Detection'],
+    pricing: '$5 - $25/user/month',
+    category: 'Email Intelligence'
+  },
+  {
+    title: 'AI-Powered Workflow Automation',
+    description: 'Intelligent workflow automation with decision-making capabilities.',
+    icon: Settings,
+    features: ['Process Automation', 'Decision Making', 'Exception Handling', 'Learning Adaptation'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Workflow Automation'
+  },
+  {
+    title: 'AI-Powered Risk Assessment',
+    description: 'Comprehensive risk assessment using AI for various business domains.',
+    icon: Shield,
+    features: ['Risk Identification', 'Probability Analysis', 'Impact Assessment', 'Mitigation Strategies'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Risk Management'
+  },
+  {
+    title: 'AI-Powered Performance Optimization',
+    description: 'AI-driven performance optimization for applications and systems.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Detection', 'Optimization Recommendations', 'Auto-tuning'],
+    pricing: '$8,000 - $40,000/setup',
+    category: 'Performance Optimization'
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting for regulatory requirements.',
+    icon: CheckCircle,
+    features: ['Regulatory Monitoring', 'Compliance Reporting', 'Risk Assessment', 'Audit Support'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Customer Service',
+    description: 'Intelligent customer service with natural language understanding and resolution.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Intent Recognition', 'Automated Resolution', 'Escalation Management'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Customer Service'
+  },
+  {
+    title: 'AI-Powered Investment Analysis',
+    description: 'Advanced investment analysis and portfolio optimization using AI.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Portfolio Optimization', 'Risk Assessment', 'Investment Recommendations'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Investment AI'
+  },
+  {
+    title: 'AI-Powered Content Generation',
+    description: 'Automated content generation for marketing, blogs, and social media.',
+    icon: FileText,
+    features: ['Content Creation', 'SEO Optimization', 'Brand Voice Consistency', 'Multi-format Output'],
+    pricing: '$500 - $2,500/month',
+    category: 'Content Generation'
+  },
+  {
+    title: 'AI-Powered Security Monitoring',
+    description: 'Real-time security monitoring with AI-powered threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Security AI'
+  },
+  {
+    title: 'AI-Powered Process Mining',
+    description: 'Intelligent process mining and optimization for business processes.',
+    icon: Network,
+    features: ['Process Discovery', 'Conformance Checking', 'Process Enhancement', 'Performance Analysis'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Process Mining'
+  },
+  {
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge management with automatic categorization and retrieval.',
+    icon: BookOpen,
+    features: ['Knowledge Extraction', 'Automatic Categorization', 'Smart Search', 'Expertise Mapping'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Knowledge Management'
+  },
+  {
+    title: 'AI-Powered Decision Support',
+    description: 'AI-powered decision support systems for complex business decisions.',
+    icon: Target,
+    features: ['Decision Analysis', 'Scenario Modeling', 'Risk Assessment', 'Recommendation Engine'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Decision Support'
   },
   {
     title: 'AI-Powered Robotics',
@@ -467,13 +620,13 @@ export default function AIServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {aiServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -544,7 +697,7 @@ export default function AIServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (

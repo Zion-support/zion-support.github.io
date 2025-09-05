@@ -33,7 +33,8 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket,
+  FileText
 } from 'lucide-react';
 
 const itServices = [
@@ -298,6 +299,119 @@ const itServices = [
     category: 'Cloud Management'
   },
   {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI for proactive monitoring and issue resolution.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Anomaly Detection', 'Automated Remediation', 'Root Cause Analysis'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Cybersecurity Operations Center (SOC)',
+    description: '24/7 security monitoring and incident response services.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Incident Response', 'Security Monitoring', 'Threat Intelligence'],
+    pricing: '$15,000 - $75,000/month',
+    category: 'Security Operations'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation services.',
+    icon: Rocket,
+    features: ['Digital Strategy', 'Process Automation', 'Technology Modernization', 'Change Management'],
+    pricing: '$200 - $500/hour',
+    category: 'Digital Transformation'
+  },
+  {
+    title: 'IT Risk Management',
+    description: 'Comprehensive IT risk assessment and mitigation strategies.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Vulnerability Management', 'Compliance Monitoring', 'Risk Mitigation'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Risk Management'
+  },
+  {
+    title: 'Cloud-Native Application Development',
+    description: 'Modern cloud-native application development using microservices and containers.',
+    icon: Code,
+    features: ['Microservices Architecture', 'Container Orchestration', 'API Development', 'DevOps Integration'],
+    pricing: '$150 - $300/hour',
+    category: 'Cloud Development'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive IT infrastructure performance analysis and optimization.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Implementation', 'Monitoring Setup'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Performance Optimization'
+  },
+  {
+    title: 'IT Service Integration',
+    description: 'Integration of disparate IT systems and services for unified operations.',
+    icon: Network,
+    features: ['System Integration', 'API Development', 'Data Synchronization', 'Workflow Automation'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'System Integration'
+  },
+  {
+    title: 'IT Capacity Planning',
+    description: 'Strategic IT capacity planning and resource optimization.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Forecasting'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Capacity Planning'
+  },
+  {
+    title: 'IT Change Management',
+    description: 'Structured approach to managing IT changes and minimizing business disruption.',
+    icon: Settings,
+    features: ['Change Planning', 'Impact Assessment', 'Rollback Procedures', 'Communication Management'],
+    pricing: '$100 - $250/hour',
+    category: 'Change Management'
+  },
+  {
+    title: 'IT Documentation & Knowledge Management',
+    description: 'Comprehensive IT documentation and knowledge management systems.',
+    icon: FileText,
+    features: ['Technical Documentation', 'Knowledge Base', 'Process Documentation', 'Training Materials'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Documentation'
+  },
+  {
+    title: 'IT Vendor Risk Management',
+    description: 'Assessment and management of third-party IT vendor risks.',
+    icon: Shield,
+    features: ['Vendor Assessment', 'Risk Evaluation', 'Contract Review', 'Ongoing Monitoring'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Vendor Risk'
+  },
+  {
+    title: 'IT Business Continuity Planning',
+    description: 'Comprehensive business continuity planning for IT systems and operations.',
+    icon: Shield,
+    features: ['Business Impact Analysis', 'Recovery Planning', 'Testing Procedures', 'Plan Maintenance'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Business Continuity'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'Strategic IT cost analysis and optimization across all technology investments.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Budget Optimization', 'Vendor Negotiation', 'ROI Analysis'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Cost Optimization'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concepts.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concepts', 'Pilot Programs', 'Innovation Workshops'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Innovation'
+  },
+  {
     title: 'IT Automation & Orchestration',
     description: 'Comprehensive IT process automation and workflow orchestration.',
     icon: Settings,
@@ -485,13 +599,13 @@ export default function ITServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -562,7 +676,7 @@ export default function ITServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (

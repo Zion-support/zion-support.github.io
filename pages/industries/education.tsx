@@ -14,7 +14,7 @@ import {
   Globe,
   Database
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 
 const services = [
   {
@@ -110,7 +110,7 @@ const benefits = [
 
 export default function EducationPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Education Technology Solutions - Zion Tech Group"
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
       keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"
@@ -269,6 +269,6 @@ export default function EducationPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

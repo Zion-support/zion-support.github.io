@@ -27,6 +27,8 @@ export default function Footer() {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { label: 'Cybersecurity', href: '/services/cybersecurity' },
         { label: 'Data Analytics', href: '/services/data-analytics' },
+        { label: 'Digital Transformation', href: '/services/digital-transformation' },
+        { label: 'Consulting', href: '/services/consulting' },
       ]
     },
     {
@@ -38,6 +40,21 @@ export default function Footer() {
         { label: 'Retail', href: '/solutions/retail' },
         { label: 'Education', href: '/solutions/education' },
         { label: 'Government', href: '/solutions/government' },
+        { label: 'Manufacturing', href: '/solutions/manufacturing' },
+        { label: 'Real Estate', href: '/solutions/real-estate' },
+      ]
+    },
+    {
+      title: 'Industries',
+      links: [
+        { label: 'Healthcare & Life Sciences', href: '/industries/healthcare' },
+        { label: 'Financial Services', href: '/industries/finance' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Retail & E-commerce', href: '/industries/retail' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Energy & Utilities', href: '/industries/energy' },
+        { label: 'Transportation', href: '/industries/transportation' },
       ]
     },
     {
@@ -49,6 +66,8 @@ export default function Footer() {
         { label: 'News', href: '/news' },
         { label: 'Contact', href: '/contact' },
         { label: 'Partners', href: '/partners' },
+        { label: 'Investors', href: '/investors' },
+        { label: 'Leadership', href: '/leadership' },
       ]
     },
     {
@@ -60,17 +79,21 @@ export default function Footer() {
         { label: 'Webinars', href: '/webinars' },
         { label: 'Help Center', href: '/help' },
         { label: 'Documentation', href: '/docs' },
+        { label: 'API Reference', href: '/api-docs' },
+        { label: 'Tutorials', href: '/tutorials' },
       ]
     },
     {
       title: 'Support',
       links: [
-        { label: 'FAQ', href: '/faq' },
         { label: 'Contact Support', href: '/support' },
         { label: 'System Status', href: '/status' },
-        { label: 'API Reference', href: '/docs/api' },
         { label: 'Community', href: '/community' },
         { label: 'Training', href: '/training' },
+        { label: 'Certification', href: '/certification' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Knowledge Base', href: '/knowledge-base' },
+        { label: 'Developer Portal', href: '/developer' },
       ]
     }
   ];
@@ -113,15 +136,15 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">contact@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">123 Technology Drive, Innovation City, IC 12345</span>
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
 
