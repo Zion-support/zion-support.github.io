@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { 
   Brain, 
   Users, 
-  Award, 
   Target, 
   Heart, 
   Globe, 
@@ -13,11 +12,7 @@ import {
   CheckCircle, 
   ArrowRight, 
   Star, 
-  TrendingUp, 
-  Building, 
   Rocket, 
-  Lightbulb, 
-  Handshake,
   Code
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';

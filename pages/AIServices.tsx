@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -10,16 +9,9 @@ import {
   MessageSquare, 
   BarChart3, 
   Shield, 
-  Zap, 
   CheckCircle, 
-  ArrowRight, 
-  Star,
   TrendingUp,
-  Building,
-  Rocket,
-  Lightbulb,
-  Handshake,
-  Car
+  Rocket
 } from 'lucide-react';
 
 const aiServices = [
