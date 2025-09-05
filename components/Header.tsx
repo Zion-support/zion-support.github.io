@@ -18,7 +18,9 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  BookOpen,
+  HelpCircle
 } from 'lucide-react';
 
 const navigation = [{
@@ -29,6 +31,7 @@ const navigation = [{
       { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
       { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
       { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
+      { "name": 'Talent Solutions', "href": '/talent', "icon": Users, "count": '50+' },
       { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
     ]
   },
@@ -49,13 +52,22 @@ const navigation = [{
     "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
       { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
       { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
-      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings },
+      { "name": 'Tutorials', "href": '/tutorials', "icon": BookOpen },
+      { "name": 'Guides', "href": '/guides', "icon": FileText },
+      { "name": 'FAQ', "href": '/faq', "icon": HelpCircle }
     ]
   },
   {
-    "name": 'About',
+    "name": 'Company',
     "href": '/about',
-    "icon": Users
+    "icon": Users,
+    "children": [
+      { name: 'About Us', "href": '/about', "icon": Users },
+      { "name": 'Careers', "href": '/careers', "icon": Rocket },
+      { "name": 'News', "href": '/news', "icon": MessageSquare },
+      { "name": 'Support', "href": '/support', "icon": HelpCircle }
+    ]
   },
   {
     "name": 'Contact',
