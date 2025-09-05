@@ -16,8 +16,7 @@ import {
   DollarSign
 } from 'lucide-react';
 
-const navigation = [
-  {
+const navigation = [{
     name: 'Services',
     href: '/services',
     children: [
@@ -160,9 +159,32 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                       ))}
                     </motion.div>
                   )}
+                        onMouseEnter={() => setActiveDropdown(item.name)}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                      >
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            <div className="flex items-center space-x-3">
+                              <child.icon className="w-4 h-4" />
+                              <span>{child.name}</span>
+                            </div>
+                            {child.count && (
+                              <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+                                {child.count}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
-            </nav>
+            </div>
 
             {/* Search and CTA */}
             <div className="flex items-center space-x-4">

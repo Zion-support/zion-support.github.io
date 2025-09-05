@@ -58,6 +58,24 @@ export default function Layout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/favicon.ico" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* SEO */}
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+        <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Structured Data */}
         <script
@@ -85,10 +103,8 @@ export default function Layout({
                 "email": "kleber@ziontechgroup.com"
               },
               "sameAs": [
-                "https://facebook.com/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
                 "https://linkedin.com/company/ziontechgroup",
-                "https://instagram.com/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
               ]
             })

@@ -45,7 +45,6 @@ const companyInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
 };
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -53,29 +52,34 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-              {companyInfo.description}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
+            </Link>
+            
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI solutions, cloud services, and technology consulting. 
+              We help businesses transform and succeed in the digital age.
             </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <span>{companyInfo.phone}</span>
+
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400" />
-                <span>{companyInfo.email}</span>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-blue-400 mt-1" />
-                <span className="text-xs">{companyInfo.address}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-blue-400" />
-                <span className="text-xs">{companyInfo.hours}</span>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
