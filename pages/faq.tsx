@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';''
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  // TODO: Implement
-}
   ChevronDown, 
   ChevronUp, 
   HelpCircle,
@@ -11,13 +9,14 @@ import {
   Filter,
   MessageCircle,
   Phone,
-  Mail;'
+  Mail
 } from 'lucide-react';
-const faqCategories = ['
-  { id: 'general', name: 'General Questions', count: 15 },''
-  { id: 'technical', name: 'Technical Support', count: 20 },''
-  { id: 'billing', name: 'Billing & Pricing', count: 10 },''
-  { id: 'api', name: 'API & Integration', count: 25 }']
+
+const faqCategories = [
+  { id: 'general', name: 'General Questions', count: 15 },
+  { id: 'technical', name: 'Technical Support', count: 20 },
+  { id: 'billing', name: 'Billing & Pricing', count: 10 },
+  { id: 'api', name: 'API & Integration', count: 25 }
 ];
 
 const faqCategories = {
