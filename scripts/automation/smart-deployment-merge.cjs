@@ -366,9 +366,11 @@ class SmartDeploymentMerge {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
+=======
         } else if (line.startsWith('')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           conflictType = 'theirs';
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false;
           conflictType = '';
         } else if (!inConflict) {

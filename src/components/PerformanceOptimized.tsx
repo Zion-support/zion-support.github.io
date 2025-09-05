@@ -1,4 +1,14 @@
+import React from 'react';
 
+<<<<<<< HEAD
+export default function PerformanceOptimized() {
+  return (
+    <div className="performance-optimized">
+      <p>Performance Optimized Component</p>
+    </div>
+  );
+}
+=======
 
 import React, { memo, useMemo, useCallback } from 'react',
 ,
@@ -175,3 +185,4 @@ export const usePerformanceMetrics = () => {,
   return { metrics, recordRender };
 };
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

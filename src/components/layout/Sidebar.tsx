@@ -1,4 +1,14 @@
+import React from 'react';
 
+<<<<<<< HEAD
+export default function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <p>Sidebar</p>
+    </aside>
+  );
+}
+=======
 
   };
 ,
@@ -208,3 +218,4 @@
 
 };
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

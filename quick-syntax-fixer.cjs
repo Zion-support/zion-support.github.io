@@ -21,8 +21,11 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+<<<<<<< HEAD
+=======
         .replace(/[\s\S]*?
         .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')

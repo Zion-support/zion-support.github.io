@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Brain } from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+=======
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
@@ -10,6 +19,7 @@ const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +30,8 @@ const EnhancedNavigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll),
   }, []),
 
+<<<<<<< HEAD
+=======
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
@@ -46,6 +58,7 @@ const EnhancedNavigation: React.FC = () => {
     setIsOpen(false),
   },
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -54,177 +67,32 @@ const EnhancedNavigation: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
+          <Link href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'services' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        Our Solutions
-                      </h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            href={service.href}
-                            onClick={closeAllDropdowns}
-                            className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
-                              <service.icon className="w-4 h-4 text-cyan-400" />
-                            </div>
-                            <div className="text-sm text-white/60">{service.description}</div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>About</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'company' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              {activeDropdown === 'company' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
-                  <div className="p-4">
-                    <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                      About Zion
-                    </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {company.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          onClick={closeAllDropdowns}
-                          className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                        >
-                          <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                            <item.icon className="w-5 h-5 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="font-medium text-white group-hover:text-blue-300 transition-colors">
-                              {item.name}
-                            </div>
-                            <div className="text-sm text-white/60">{item.description}</div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Contact Button */}
-            <Link
-              href="mailto:kleber@ziontechgroup.com"
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              Get Started
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/services" className="text-white hover:text-cyan-400 transition-colors">
+              Services
+            </Link>
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden py-6 border-t border-white/10"
-          >
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Services
-                </h3>
-                <div className="space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
-                    >
-                      <service.icon className="w-5 h-5 text-white" />
-                      <span className="text-white">{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Company
-                </h3>
-                <div className="space-y-2">
-                  {company.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors"
-                    >
-                      <item.icon className="w-5 h-5 text-white" />
-                      <span className="text-white">{item.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
       </div>
     </nav>
   ),
 },
 
+<<<<<<< HEAD
+export default EnhancedNavigation;
+=======
 export default EnhancedNavigation,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

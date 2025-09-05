@@ -49,29 +49,41 @@ export default defineConfig({
             '@radix-ui/react-tabs',
             '@radix-ui/react-toast',
             '@radix-ui/react-toggle',
-            '@radix-ui/react-tooltip'
+            '@radix-ui/react-tooltip',
           ],
           'animation-vendor': ['framer-motion'],
-          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          'utils-vendor': [
+            'clsx',
+            'tailwind-merge',
+            'class-variance-authority',
+          ],
           'icons-vendor': ['lucide-react'],
           'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          'router-vendor': ['react-router-dom']
+          'router-vendor': ['react-router-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+        assetFileNames: assetInfo => {
+          if (/\.(css)$/.test(assetInfo.name || ''))
+            return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || ''))
+            return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || ''))
+            return 'fonts/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
-        }
-      }
+        },
+      },
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [
+          'console.log',
+          'console.info',
+          'console.debug',
+          'console.warn',
+        ],
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
@@ -84,8 +96,13 @@ export default defineConfig({
         safari10: true,
         properties: {
           regex: /^_/,
+<<<<<<< HEAD
+        },
+      },
+=======
         }
       }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
@@ -118,12 +135,16 @@ export default defineConfig({
       '@radix-ui/react-switch',
       '@radix-ui/react-tabs',
       '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip'
+      '@radix-ui/react-tooltip',
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
       target: 'esnext',
+<<<<<<< HEAD
+    },
+=======
     }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   },
   css: {
     devSourcemap: false,
@@ -141,7 +162,11 @@ export default defineConfig({
     },
     fs: {
       allow: ['..'],
+<<<<<<< HEAD
+    },
+=======
     }
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   },
   preview: {
     port: 4173,
@@ -161,6 +186,6 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
-    }
-  }
+    },
+  },
 });

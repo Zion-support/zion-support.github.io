@@ -1,4 +1,14 @@
+import React from 'react';
 
+<<<<<<< HEAD
+export default function Header() {
+  return (
+    <header className="bg-blue-600 text-white p-4">
+      <h1>Header Component</h1>
+    </header>
+  );
+}
+=======
 
 import React, { useState } from 'react',
 import Link from 'next/link',
@@ -233,3 +243,4 @@ const Header = () => {,
 ,
 export default Header,
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

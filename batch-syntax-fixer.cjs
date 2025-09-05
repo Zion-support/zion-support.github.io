@@ -16,7 +16,10 @@
 // Run the fixer
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

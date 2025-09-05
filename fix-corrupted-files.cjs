@@ -283,7 +283,7 @@ const: ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;`
+export default ContactForm;`,
 };
 
 // Write the fixed files

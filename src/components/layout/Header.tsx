@@ -1,4 +1,14 @@
+import React from 'react';
 
+<<<<<<< HEAD
+export default function LayoutHeader() {
+  return (
+    <header className="layout-header">
+      <h1>Layout Header</h1>
+    </header>
+  );
+}
+=======
 
   };
 ,
@@ -164,3 +174,4 @@
 
 };
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

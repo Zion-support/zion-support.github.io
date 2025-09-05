@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+import SEOHead from '../SEOHead';
+
+interface MainLayoutProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title,
+  description,
+}) => {
+  return (
+    <>
+      <SEOHead title={title} description={description} />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default MainLayout;
+=======
         {keywords && <meta name="keywords" content={keywords} />};
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon.ico" />;
@@ -20,3 +51,4 @@
         <Header />;
         <main className="flex-1">;
           {children};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

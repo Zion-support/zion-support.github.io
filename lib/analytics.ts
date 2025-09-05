@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+// Analytics utilities
+export const trackEvent = (event: string, data?: any) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', event, data);
+  }
+};
+
+export const trackPageView = (url: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', 'GA_MEASUREMENT_ID', {
+      page_path: url,
+    });
+  }
+};
+=======
 // Google Analytics utilities
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
@@ -56,3 +72,4 @@ declare global {
   }
 }
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

@@ -1,4 +1,17 @@
 export interface MicroSaasService {
+<<<<<<< HEAD
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  category: string;
+  color: string;
+=======
   id: string,
   name: string,
   tagline: string,
@@ -37,16 +50,20 @@ export interface MicroSaasService {
   customers: number,
   rating: number,
   reviews: number
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 }
 
-export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
-  // Revolutionary Quantum AI Services
+export const microSaasServices: MicroSaasService[] = [
   {
-    id: 'quantum-ai-cognitive-platform',
-    name: 'Quantum AI Cognitive Platform',
-    tagline: 'Revolutionary quantum AI platform with unprecedented problem-solving capabilities',
-    price: '$1,299',
+    id: 'ai-content-generator',
+    name: 'AI Content Generator',
+    tagline: 'Generate high-quality content with AI',
+    price: '$29',
     period: '/month',
+<<<<<<< HEAD
+    description: 'AI-powered content generation for blogs, social media, and marketing materials.',
+    features: ['AI writing assistant', 'Multiple content types', 'SEO optimization', 'Team collaboration'],
+=======
     description: 'First-to-market quantum AI platform combining quantum computing with advanced cognitive AI for unprecedented problem-solving capabilities. Achieves 99.99% accuracy in complex decision-making scenarios.',
     features: [
       'Quantum-enhanced neural networksCognitive reasoning engine',
@@ -1234,16 +1251,13 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Data analysis agentsPredictive modeling',
       'Integration APIsPerformance analytics'
     ],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     popular: true,
     icon: '🤖',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/autonomous-ai-agents',
-    marketPosition: 'Cutting-edge autonomous AI platform. Competes with traditional RPA tools but offers true AI autonomy.',
-    targetAudience: 'Enterprise businesses, E-commerce companies, Customer service teams, Operations managers, Data analysts',
-    trialDays: 21,
-    setupTime: '1-2 days',
     category: 'AI & Machine Learning',
+<<<<<<< HEAD
+    color: 'blue'
+=======
     realService: true,
     technology: ['Deep learningReinforcement learning', 'Natural language processingComputer vision', 'Predictive analytics'],
     integrations: ['SalesforceHubSpot', 'ZendeskSlack', 'Microsoft TeamsZapier', 'Webhook APIs'],
@@ -2162,9 +2176,19 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     customers: 85,
     rating: 4.5,
     reviews: 27
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   }
 ],
 
+<<<<<<< HEAD
+export const serviceCategories = [
+  'All',
+  'AI & Machine Learning',
+  'Cybersecurity',
+  'Cloud Computing',
+  'Data Analytics'
+];
+=======
 // Helper functions
 export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSaasService[] => {
   if (categoryName === 'All' || categoryName === 'all') {
@@ -2252,3 +2276,4 @@ export const serviceCategories = [
   'Automation & RoboticsEdge Computing',
   'Predictive Analytics'
 ],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

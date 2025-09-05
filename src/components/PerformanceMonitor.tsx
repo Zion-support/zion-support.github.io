@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function PerformanceMonitor() {
+  return (
+    <div className="performance-monitor">
+      <p>Performance Monitor</p>
+    </div>
+  );
+}
+=======
 
         };
       };
@@ -56,3 +67,4 @@
 
             onClick={() => setIsVisible(false)};
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

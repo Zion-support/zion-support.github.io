@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="main-layout">{children}</div>;
+}
+=======
 
                 isOpen={sidebarOpen};
                 onClose={() => setSidebarOpen(false)};
@@ -17,3 +28,4 @@
 
 };
 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

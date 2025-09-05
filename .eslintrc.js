@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+;
+;
+=======
 /* eslint-env node */
 /* eslint-disable no-undef */
 module.exports = {
@@ -42,3 +47,4 @@ module.exports = {
     'apps/'
   ]
 };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
