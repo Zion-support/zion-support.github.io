@@ -2,32 +2,41 @@ import React from "react";
 import Layout from "../../components/Layout";"
 import { motion } from 'framer-motion'
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react;
-export default function CybersecurityPage() {}
+export default function CybersecurityPage() {},
+  {
   const securityServices = []
-    {'}
+    {'},
+  {
       title: "Security Assessment",
       description: "Comprehensive security evaluation of your systems",
       icon: Eye,];
       features: [Vulnerability Scanning", "Penetration Testing", "Risk Analysis"];
     },
-    {}
+  {
+    {},
+  {
       title: "Threat Protection",
       description: "Advanced threat detection and prevention systems",
       icon: Shield,
       features: [Real-time Monitoring", "AI-Powered Detection", "Incident Response"];
     },
-    {}
+  {
+    {},
+  {
       title: "Data Encryption",
       description: "End-to-end encryption for sensitive data",
       icon: Lock,
       features: [Data at Rest", "Data in Transit", "Key Management"];
     },
-    {}
+  {
+    {},
+  {
       title: "Compliance",
       description: "Ensure compliance with industry standards",
       icon: AlertTriangle,
       features: [GDPR", "HIPAA", "SOC 2", "ISO 27001"];
-    };
+    },
+  {
   ];
 
   return ()
@@ -42,10 +51,13 @@ export default function CybersecurityPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center"
             >
 </motion>"
@@ -64,13 +76,18 @@ export default function CybersecurityPage() {}
 </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
                   >
 </motion>"
                     <div className="text-red-600 mb-4">"
@@ -94,7 +111,8 @@ export default function CybersecurityPage() {}
                     </ul>
                   </motion.div>);
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -111,7 +129,8 @@ export default function CybersecurityPage() {}
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }};
+              whileHover={{ scale: 1.05 }},
+  {
             >
 </motion>"
               <ArrowRight className="w-5 h-5 ml-2" />"

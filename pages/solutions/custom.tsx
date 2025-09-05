@@ -2,9 +2,11 @@ import React from "react";
 import MainLayout from '../../components/layout/MainLayout'
 import Link from 'next/link'
 import { motion } from 'framer-motion;
-import {}
+import {},
+  {
   // TODO: Implement;
-};
+},
+  {
   Settings, 
   Code, 
   Wrench, 
@@ -20,7 +22,8 @@ import {}
   BarChart3;'
 } from 'lucide-react;
 const services = []
-  {'}
+  {'},
+  {
     title: "Custom Web Applications",
     description: "Bespoke web applications built from scratch to meet your specific business requirements and workflows.",
     icon: Globe,];
@@ -28,7 +31,9 @@ const services = []
     timeline: "4-12 weeks",
     pricing: "Starting at $15,000"
   },
-  {}
+  {
+  {},
+  {
     title: "Mobile App Development",
     description: "Native and cross-platform mobile applications for iOS and Android with custom functionality.",
     icon: Settings,
@@ -36,7 +41,9 @@ const services = []
     timeline: "6-16 weeks",
     pricing: "Starting at $20,000"
   },
-  {}
+  {
+  {},
+  {
     title: "API Development",
     description: "Custom RESTful APIs and microservices to power your applications and integrate with third-party services.",
     icon: Code,
@@ -44,77 +51,103 @@ const services = []
     timeline: "2-8 weeks",
     pricing: "Starting at $8,000"
   },
-  {}
+  {
+  {},
+  {
     title: "Database Solutions",
     description: "Custom database design, optimization, and migration services for your specific data requirements.",
     icon: BarChart3,
     features: [Database Design", "Performance Optimization", "Data Migration", "Backup Solutions", "Monitoring"],
     timeline: "2-6 weeks",
     pricing: "Starting at $5,000"
-  };
+  },
+  {
 ];
 
 const technologies = [];
   { category: "Frontend", items: [React", "Next.js", "Vue.js", "Angular", "TypeScript"] },
+  {
   { category: "Backend", items: [Node.js", "Python", "Java", "C#", "Go", "PHP"] },
+  {
   { category: "Mobile", items: [React Native", "Flutter", "Swift", "Kotlin", "Xamarin"] },
+  {
   { category: "Database", items: [PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"] },
+  {
   { category: "Cloud", items: [AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },
-  { category: "DevOps", items: [CI/CD", "Jenkins", "GitLab", "Terraform", "Monitoring"] };
+  {
+  { category: "DevOps", items: [CI/CD", "Jenkins", "GitLab", "Terraform", "Monitoring"] },
+  {
 ];
 
 const process = []
-  {}
+  {},
+  {
     step: "01",
     title: "Discovery & Planning",
     description: "We analyze your requirements, define project scope, and create a detailed development plan.",
     duration: "1-2 weeks"
   },
-  {}
+  {
+  {},
+  {
     step: "02",
     title: "Design & Architecture",
     description: "Create wireframes, mockups, and technical architecture for your custom solution.",
     duration: "1-3 weeks"
   },
-  {}
+  {
+  {},
+  {
     step: "03",
     title: "Development & Testing",
     description: "Build your solution using agile methodology with regular testing and feedback cycles.",
     duration: "4-12 weeks"
   },
-  {}
+  {
+  {},
+  {
     step: "04",
     title: "Deployment & Support",
     description: "Deploy your solution and provide ongoing maintenance and support services.",
     duration: "Ongoing"
-  }];
+  }
+];
 ];
 
 const benefits = []
-  {}
+  {},
+  {
     title: "Perfect Fit",
     description: "Solutions built specifically for your business needs and workflows",
     icon: Target;
   },
-  {}
+  {
+  {},
+  {
     title: "Full Ownership",
     description: "Complete ownership of source code and intellectual property",
     icon: Award;
   },
-  {}
+  {
+  {},
+  {
     title: "Scalable Architecture",
     description: "Built to grow with your business and handle increased load",
     icon: Zap;
   },
-  {}
+  {
+  {},
+  {
     title: "Ongoing Support",
     description: "Continuous maintenance, updates, and feature enhancements",
     icon: Wrench;
-  }];
+  }
+];
 ];
 
 const caseStudies = []
-  {}
+  {},
+  {
     title: "E-commerce Platform",
     client: "Retail Chain",
     challenge: "Needed custom e-commerce platform with multi-vendor support and complex inventory management",
@@ -122,7 +155,9 @@ const caseStudies = []
     results: "300% increase in online sales, 50% reduction in operational costs",];
     technologies: [React", "Node.js", "PostgreSQL", "Stripe"];
   },
-  {}
+  {
+  {},
+  {
     title: "Healthcare Management System",
     client: "Medical Practice",
     challenge: "Required HIPAA-compliant patient management system with appointment scheduling",
@@ -130,17 +165,21 @@ const caseStudies = []
     results: "40% improvement in patient satisfaction, 100% HIPAA compliance",
     technologies: [Vue.js", "Python", "MongoDB", "AWS"];
   },
-  {}
+  {
+  {},
+  {
     title: "IoT Monitoring Dashboard",
     client: "Manufacturing Company",
     challenge: "Needed real-time monitoring system for industrial equipment and predictive maintenance",
     solution: "Built IoT platform with real-time data collection, analytics, and alerting",
     results: "25% reduction in downtime, 30% improvement in equipment efficiency",
     technologies: [React", "Node.js", "InfluxDB", "MQTT"];
-  };
+  },
+  {
 ];
 
-export default function CustomSolutionsPage() {}
+export default function CustomSolutionsPage() {},
+  {
   return ()
     <MainLayout;"
       title="Custom Development Solutions - Zion Tech Group"
@@ -153,10 +192,13 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -185,12 +227,16 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -203,14 +249,20 @@ export default function CustomSolutionsPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
-                    whileHover={{ y: -5 }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
+                    whileHover={{ y: -5 }},
+  {
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -268,7 +320,8 @@ export default function CustomSolutionsPage() {}
                     </div>
                   </motion.div>);
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -276,12 +329,16 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -294,13 +351,18 @@ export default function CustomSolutionsPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index},
+  {
                   className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
                 >
 </motion>"
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">{category.category}</h3>"
@@ -311,7 +373,7 @@ export default function CustomSolutionsPage() {}
                       </span>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -319,12 +381,16 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -337,13 +403,18 @@ export default function CustomSolutionsPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index},
+  {
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
                 >
 </motion>"
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -360,7 +431,7 @@ export default function CustomSolutionsPage() {}
 </div>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -368,12 +439,16 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -386,13 +461,18 @@ export default function CustomSolutionsPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="text-center"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
                   >
 </motion>"
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -408,7 +488,8 @@ export default function CustomSolutionsPage() {}
                     </p>
                   </motion.div>
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -416,12 +497,16 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -434,13 +519,18 @@ export default function CustomSolutionsPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index},
+  {
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
                 >
 </motion>"
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{study.title}</h3>"
@@ -474,7 +564,7 @@ export default function CustomSolutionsPage() {}
                     </div>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -482,11 +572,15 @@ export default function CustomSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
+              viewport={{ once: true }},
+  {
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

@@ -2,32 +2,41 @@ import React from "react";
 import Layout from "../../components/Layout";"
 import { motion } from 'framer-motion'
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react;
-export default function SMBSolutionsPage() {}
+export default function SMBSolutionsPage() {},
+  {
   const smbServices = []
-    {'}
+    {'},
+  {
       title: "Cost-Effective IT",
       description: "Affordable technology solutions for small and medium businesses",
       icon: DollarSign,];
       features: [Budget-Friendly", "Scalable Solutions", "ROI Focused"];
     },
-    {}
+  {
+    {},
+  {
       title: "Quick Setup",
       description: "Rapid deployment of essential business systems",
       icon: Zap,
       features: [Fast Implementation", "Minimal Downtime", "Easy Migration"];
     },
-    {}
+  {
+    {},
+  {
       title: "Team Collaboration",
       description: "Tools and systems to enhance team productivity",
       icon: Users,
       features: [Communication Tools", "Project Management", "File Sharing"];
     },
-    {}
+  {
+    {},
+  {
       title: "Business Growth",
       description: "Technology solutions that grow with your business",
       icon: Building2,
       features: [Scalable Infrastructure", "Future-Proof", "Growth Support"];
-    };
+    },
+  {
   ];
 
   return ()
@@ -42,10 +51,13 @@ export default function SMBSolutionsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center"
             >
 </motion>"
@@ -64,13 +76,18 @@ export default function SMBSolutionsPage() {}
 </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
                   >
 </motion>"
                     <div className="text-orange-600 mb-4">"
@@ -94,7 +111,8 @@ export default function SMBSolutionsPage() {}
                     </ul>
                   </motion.div>);
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -111,7 +129,8 @@ export default function SMBSolutionsPage() {}
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }};
+              whileHover={{ scale: 1.05 }},
+  {
             >
 </motion>"
               <ArrowRight className="w-5 h-5 ml-2" />"

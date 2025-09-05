@@ -2,31 +2,41 @@ import React from "react";
 import Layout from '../../components/Layout'
 import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react;
 const features = []
-  {}
+  {},
+  {
     icon: GraduationCap,'
     title: 'Learning Management Systems',''
     description: 'Comprehensive LMS platforms that support online and blended learning environments.''
   },
-  {}
+  {
+  {},
+  {
     icon: Users,'
     title: 'Student Information Systems',''
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.''
   },
-  {}
+  {
+  {},
+  {
     icon: BookOpen,'
     title: 'Digital Content Management',''
     description: 'Platforms for creating, managing, and delivering educational content and resources.''
   },
-  {}
+  {
+  {},
+  {
     icon: Laptop,'
     title: 'Virtual Classrooms',''
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.''
   },
-  {}
+  {
+  {},
+  {
     icon: Globe,'
     title: 'Accessibility Solutions',''
     description: 'ADA-compliant educational technology that ensures equal access for all students.''
-  }];
+  }
+];
 ];
 
 const solutions = [']
@@ -42,7 +52,8 @@ const solutions = [']
   'Educational Data Integration''];
 ];
 
-export default function EducationSolutionsPage() {}
+export default function EducationSolutionsPage() {},
+  {
   return ()
     <Layout;'
       title="Education Solutions - Zion Tech Group"

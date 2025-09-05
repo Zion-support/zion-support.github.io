@@ -1,9 +1,11 @@
 import React from "react";
 import Link from 'next/link'
 import { motion } from 'framer-motion;
-import {}
+import {},
+  {
   // TODO: Implement;
-};
+},
+  {
   Heart, 
   Brain, 
   Shield, 
@@ -22,7 +24,8 @@ import {}
 } from 'lucide-react'
 import Layout from '../../components/Layout;
 const services = []
-  {'}
+  {'},
+  {
     title: 'AI-Powered Medical Diagnostics',''
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.','
     icon: Brain,
@@ -33,7 +36,9 @@ const services = []
       'Real-time diagnostic support''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Telemedicine Platforms',''
     description: 'Comprehensive virtual healthcare delivery systems for remote patient care.','
     icon: Phone,
@@ -44,7 +49,9 @@ const services = []
       'Integrated health records''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Electronic Health Records (EHR)',''
     description: 'Secure, interoperable health information management systems.','
     icon: Database,
@@ -55,7 +62,9 @@ const services = []
       'Privacy compliance tools''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Medical Imaging AI',''
     description: 'AI-enhanced medical imaging for improved diagnostic accuracy.','
     icon: Camera,
@@ -66,7 +75,9 @@ const services = []
       'Automated report generation''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Healthcare Analytics',''
     description: 'Data-driven insights for improved patient outcomes and operational efficiency.','
     icon: BarChart3,
@@ -77,7 +88,9 @@ const services = []
       'Quality metrics tracking''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Patient Management Systems',''
     description: 'Comprehensive patient care coordination and management platforms.','
     icon: Users,
@@ -87,51 +100,67 @@ const services = []
       'Patient communication tools',''
       'Outcome tracking systems''];
     ];
-  };
+  },
+  {
 ];
 
 const benefits = []
-  {'}
+  {'},
+  {
     title: 'Improved Patient Outcomes',''
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.','
     icon: Heart;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Enhanced Efficiency',''
     description: 'Streamlined workflows and automated processes reduce administrative burden.','
     icon: Activity;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Cost Reduction',''
     description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.','
     icon: BarChart3;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Regulatory Compliance',''
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.','
     icon: Shield;
-  }];
+  }
+];
 ];
 
 const caseStudies = []
-  {'}
+  {'},
+  {
     title: 'AI Diagnostic System Implementation',''
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',']'
     results: ['60% faster diagnosis', '25% accuracy improvement', '40% cost reduction']'
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Telemedicine Platform Deployment',''
     description: 'Enabled remote care for 50,000+ patients during the pandemic with 99.9% uptime.',''
     results: ['50,000+ patients served', '99.9% uptime', '95% patient satisfaction']'
   },
-  {'}
+  {
+  {'},
+  {
     title: 'EHR Integration Project',''
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',''
     results: ['15 facilities connected', '80% workflow improvement', '100% data accuracy']'
-  };
+  },
+  {
 ];
 
-export default function HealthcarePage() {}
+export default function HealthcarePage() {},
+  {
   return ()
     <Layout;'
       title="Healthcare Technology Solutions - Zion Tech Group"
@@ -152,10 +181,13 @@ export default function HealthcarePage() {}
 "
           <div className="container mx-auto px-4 relative z-10">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -189,10 +221,13 @@ export default function HealthcarePage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -206,11 +241,15 @@ export default function HealthcarePage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={service.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={service.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -231,7 +270,7 @@ export default function HealthcarePage() {}
                       </li>
                   </ul>
                 </motion.div>);
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -239,10 +278,13 @@ export default function HealthcarePage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -256,11 +298,15 @@ export default function HealthcarePage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={benefit.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={benefit.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="text-center"
                 >
 </motion>"
@@ -272,7 +318,7 @@ export default function HealthcarePage() {}
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -280,10 +326,13 @@ export default function HealthcarePage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -297,11 +346,15 @@ export default function HealthcarePage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={study.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={study.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
 </motion>"
@@ -316,7 +369,7 @@ export default function HealthcarePage() {}
                       </div>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -324,10 +377,13 @@ export default function HealthcarePage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

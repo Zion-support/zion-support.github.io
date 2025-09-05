@@ -2,31 +2,41 @@ import React from "react";
 import Layout from '../../components/Layout'
 import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react;
 const features = []
-  {}
+  {},
+  {
     icon: Heart,'
     title: 'Patient Data Management',''
     description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.''
   },
-  {}
+  {
+  {},
+  {
     icon: Shield,'
     title: 'Healthcare Security',''
     description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.''
   },
-  {}
+  {
+  {},
+  {
     icon: Database,'
     title: 'Electronic Health Records',''
     description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.''
   },
-  {}
+  {
+  {},
+  {
     icon: Users,'
     title: 'Telemedicine Platforms',''
     description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.''
   },
-  {}
+  {
+  {},
+  {
     icon: Activity,'
     title: 'Health Analytics',''
     description: 'AI-powered analytics for population health management and predictive insights.''
-  }];
+  }
+];
 ];
 
 const solutions = [']
@@ -42,7 +52,8 @@ const solutions = [']
   'Population Health Management''];
 ];
 
-export default function HealthcareSolutionsPage() {}
+export default function HealthcareSolutionsPage() {},
+  {
   return ()
     <Layout;'
       title="Healthcare Solutions - Zion Tech Group"

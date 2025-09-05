@@ -2,32 +2,41 @@ import React from "react";
 import Layout from "../../components/Layout";"
 import { motion } from 'framer-motion'
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react;
-export default function DataAnalyticsPage() {}
+export default function DataAnalyticsPage() {},
+  {
   const analyticsServices = []
-    {'}
+    {'},
+  {
       title: "Business Intelligence",
       description: "Transform data into actionable business insights",
       icon: BarChart3,];
       features: [Custom Dashboards", "Real-time Reports", "KPI Tracking"];
     },
-    {}
+  {
+    {},
+  {
       title: "Predictive Analytics",
       description: "Forecast trends and make data-driven decisions",
       icon: TrendingUp,
       features: [Machine Learning Models", "Risk Assessment", "Demand Forecasting"];
     },
-    {}
+  {
+    {},
+  {
       title: "Data Warehousing",
       description: "Centralized data storage and management solutions",
       icon: Database,
       features: [ETL Processes", "Data Integration", "Data Quality"];
     },
-    {}
+  {
+    {},
+  {
       title: "AI-Powered Analytics",
       description: "Advanced analytics powered by artificial intelligence",
       icon: Brain,
       features: [Natural Language Processing", "Pattern Recognition", "Automated Insights"];
-    };
+    },
+  {
   ];
 
   return ()
@@ -42,10 +51,13 @@ export default function DataAnalyticsPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center"
             >
 </motion>"
@@ -64,13 +76,18 @@ export default function DataAnalyticsPage() {}
 </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
                   >
 </motion>"
                     <div className="text-green-600 mb-4">"
@@ -94,7 +111,8 @@ export default function DataAnalyticsPage() {}
                     </ul>
                   </motion.div>);
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -111,7 +129,8 @@ export default function DataAnalyticsPage() {}
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }};
+              whileHover={{ scale: 1.05 }},
+  {
             >
 </motion>"
               <ArrowRight className="w-5 h-5 ml-2" />"

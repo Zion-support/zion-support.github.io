@@ -2,31 +2,41 @@ import React from "react";
 import Layout from '../../components/Layout'
 import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react;
 const features = []
-  {}
+  {},
+  {
     icon: ShoppingCart,'
     title: 'E-commerce Platforms',''
     description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.''
   },
-  {}
+  {
+  {},
+  {
     icon: Users,'
     title: 'Customer Analytics',''
     description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.''
   },
-  {}
+  {
+  {},
+  {
     icon: BarChart,'
     title: 'Inventory Management',''
     description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.''
   },
-  {}
+  {
+  {},
+  {
     icon: Smartphone,'
     title: 'Mobile Commerce',''
     description: 'Mobile-first shopping experiences with native apps and progressive web applications.''
   },
-  {}
+  {
+  {},
+  {
     icon: Package,'
     title: 'Supply Chain Optimization',''
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.''
-  }];
+  }
+];
 ];
 
 const solutions = [']
@@ -42,7 +52,8 @@ const solutions = [']
   'Retail Mobile Applications''];
 ];
 
-export default function RetailSolutionsPage() {}
+export default function RetailSolutionsPage() {},
+  {
   return ()
     <Layout;'
       title="Retail Solutions - Zion Tech Group"

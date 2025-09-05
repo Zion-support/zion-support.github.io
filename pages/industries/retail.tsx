@@ -1,9 +1,11 @@
 import React from "react";
 import Link from 'next/link'
 import { motion } from 'framer-motion;
-import {}
+import {},
+  {
   // TODO: Implement;
-};
+},
+  {
   ShoppingCart, 
   Brain, 
   BarChart3, 
@@ -18,7 +20,8 @@ import {}
 } from 'lucide-react'
 import Layout from '../../components/Layout;
 const services = []
-  {'}
+  {'},
+  {
     title: 'E-commerce Platforms',''
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.','
     icon: Globe,
@@ -29,7 +32,9 @@ const services = []
       'Order processing systems''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Inventory Management AI',''
     description: 'AI-powered inventory optimization and demand forecasting systems.','
     icon: Brain,
@@ -40,7 +45,9 @@ const services = []
       'Waste reduction''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Customer Analytics',''
     description: 'Advanced analytics to understand customer behavior and preferences.','
     icon: BarChart3,
@@ -51,7 +58,9 @@ const services = []
       'Lifetime value prediction''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Personalized Recommendations',''
     description: 'AI-driven product recommendation systems for enhanced customer experience.','
     icon: Users,
@@ -62,7 +71,9 @@ const services = []
       'A/B testing frameworks''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Supply Chain Optimization',''
     description: 'End-to-end supply chain management with AI optimization.','
     icon: Package,
@@ -73,7 +84,9 @@ const services = []
       'Cost reduction''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Omnichannel Solutions',''
     description: 'Seamless integration across all sales channels and touchpoints.','
     icon: Smartphone,
@@ -83,33 +96,43 @@ const services = []
       'Mobile commerce',''
       'Social commerce integration''];
     ];
-  };
+  },
+  {
 ];
 
 const benefits = []
-  {'}
+  {'},
+  {
     title: 'Increased Sales',''
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.','
     icon: ShoppingCart;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Better Customer Experience',''
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.','
     icon: Users;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Reduced Costs',''
     description: 'Optimized inventory and supply chain reduce operational costs significantly.','
     icon: BarChart3;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Data-Driven Insights',''
     description: 'Advanced analytics provide actionable insights for business growth.','
     icon: Database;
-  }];
+  }
+];
 ];
 
-export default function RetailPage() {}
+export default function RetailPage() {},
+  {
   return ()
     <Layout;'
       title="Retail Technology Solutions - Zion Tech Group"
@@ -130,10 +153,13 @@ export default function RetailPage() {}
 "
           <div className="container mx-auto px-4 relative z-10">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -167,10 +193,13 @@ export default function RetailPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -184,11 +213,15 @@ export default function RetailPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={service.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={service.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -209,7 +242,7 @@ export default function RetailPage() {}
                       </li>
                   </ul>
                 </motion.div>);
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -217,10 +250,13 @@ export default function RetailPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -234,11 +270,15 @@ export default function RetailPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={benefit.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={benefit.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="text-center"
                 >
 </motion>"
@@ -250,7 +290,7 @@ export default function RetailPage() {}
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -258,10 +298,13 @@ export default function RetailPage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

@@ -1,9 +1,11 @@
 import React from "react";
 import Link from 'next/link'
 import { motion } from 'framer-motion;
-import {}
+import {},
+  {
   // TODO: Implement;
-};
+},
+  {
   Cloud, 
   Shield, 
   Zap, 
@@ -20,7 +22,8 @@ import {}
 } from 'lucide-react'
 import Layout from "../../components/Layout";"
 const phases = []
-  {}
+  {},
+  {
     title: 'Assessment & Planning',''
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.','
     icon: BarChart3,
@@ -31,7 +34,9 @@ const phases = []
       'Risk assessment''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Design & Architecture',''
     description: 'Cloud-native architecture design and security framework implementation.','
     icon: Settings,
@@ -42,7 +47,9 @@ const phases = []
       'Cost optimization''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Migration Execution',''
     description: 'Phased migration with minimal downtime and comprehensive testing.','
     icon: Cloud,
@@ -53,7 +60,9 @@ const phases = []
       'Go-live support''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Optimization',''
     description: 'Continuous monitoring and optimization for peak performance.','
     icon: Zap,
@@ -63,11 +72,13 @@ const phases = []
       'Security updates',''
       'Continuous improvement''];
     ];
-  };
+  },
+  {
 ];
 
 const services = []
-  {'}
+  {'},
+  {
     title: 'AWS Migration',''
     description: 'Complete migration to Amazon Web Services with best practices and optimization.','
     icon: Cloud,
@@ -78,7 +89,9 @@ const services = []
       'Lambda serverless functions''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Azure Migration',''
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.','
     icon: Shield,
@@ -89,7 +102,9 @@ const services = []
       'Azure Functions deployment''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Google Cloud Migration',''
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.','
     icon: Brain,
@@ -100,7 +115,9 @@ const services = []
       'Cloud Functions deployment''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Multi-Cloud Strategy',''
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.','
     icon: Globe,
@@ -110,33 +127,43 @@ const services = []
       'Load balancing',''
       'Cost optimization''];
     ];
-  };
+  },
+  {
 ];
 
 const benefits = []
-  {'}
+  {'},
+  {
     title: 'Cost Reduction',''
     description: 'Reduce infrastructure costs by up to 40% with cloud optimization.','
     icon: BarChart3;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Enhanced Security',''
     description: 'Enterprise-grade security with automated updates and monitoring.','
     icon: Shield;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Improved Scalability',''
     description: 'Scale resources up or down based on demand automatically.','
     icon: Zap;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Better Performance',''
     description: 'Faster load times and improved application performance.','
     icon: Smartphone;
-  }];
+  }
+];
 ];
 
-export default function CloudMigrationPage() {}
+export default function CloudMigrationPage() {},
+  {
   return ()
     <Layout;'
       title="Cloud Migration Solutions - Zion Tech Group"
@@ -157,10 +184,13 @@ export default function CloudMigrationPage() {}
 "
           <div className="container mx-auto px-4 relative z-10">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -194,10 +224,13 @@ export default function CloudMigrationPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -211,11 +244,15 @@ export default function CloudMigrationPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={phase.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={phase.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="text-center"
                 >
 </motion>"
@@ -235,7 +272,7 @@ export default function CloudMigrationPage() {}
                       </li>
                   </ul>
                 </motion.div>);
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -243,10 +280,13 @@ export default function CloudMigrationPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -260,11 +300,15 @@ export default function CloudMigrationPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
-                <motion.div;
-                  key={service.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={service.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
                 >
 </motion>"
@@ -292,7 +336,7 @@ export default function CloudMigrationPage() {}
                     </ul>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -300,10 +344,13 @@ export default function CloudMigrationPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -317,11 +364,15 @@ export default function CloudMigrationPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={benefit.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={benefit.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="text-center"
                 >
 </motion>"
@@ -333,7 +384,7 @@ export default function CloudMigrationPage() {}
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -341,10 +392,13 @@ export default function CloudMigrationPage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

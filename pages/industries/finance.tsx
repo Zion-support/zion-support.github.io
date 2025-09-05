@@ -1,9 +1,11 @@
 import React from "react";
 import Link from 'next/link'
 import { motion } from 'framer-motion;
-import {}
+import {},
+  {
   // TODO: Implement;
-};
+},
+  {
   DollarSign, 
   Brain, 
   Shield, 
@@ -19,7 +21,8 @@ import {}
 } from 'lucide-react'
 import Layout from '../../components/Layout;
 const services = []
-  {'}
+  {'},
+  {
     title: 'Blockchain Solutions',''
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.','
     icon: Shield,
@@ -30,7 +33,9 @@ const services = []
       'Digital identity management''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'AI Trading Algorithms',''
     description: 'Advanced machine learning algorithms for automated trading and investment strategies.','
     icon: Brain,
@@ -41,7 +46,9 @@ const services = []
       'Portfolio optimization''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Digital Payment Systems',''
     description: 'Secure, scalable payment processing solutions for modern financial transactions.','
     icon: CreditCard,
@@ -52,7 +59,9 @@ const services = []
       'Fraud detection systems''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Risk Management AI',''
     description: 'AI-powered risk assessment and management tools for financial institutions.','
     icon: TrendingUp,
@@ -63,7 +72,9 @@ const services = []
       'Regulatory compliance monitoring''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Fraud Detection Systems',''
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.','
     icon: Lock,
@@ -74,7 +85,9 @@ const services = []
       'Automated alert systems''];
     ];
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Regulatory Compliance Tools',''
     description: 'Automated compliance monitoring and reporting for financial regulations.','
     icon: FileText,
@@ -84,33 +97,43 @@ const services = []
       'Audit trail management',''
       'Compliance dashboards''];
     ];
-  };
+  },
+  {
 ];
 
 const benefits = []
-  {'}
+  {'},
+  {
     title: 'Enhanced Security',''
     description: 'Bank-grade security measures protect sensitive financial data and transactions.','
     icon: Shield;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Improved Efficiency',''
     description: 'Automated processes reduce manual work and increase operational efficiency.','
     icon: BarChart3;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Better Risk Management',''
     description: 'AI-powered risk assessment helps make informed financial decisions.','
     icon: TrendingUp;
   },
-  {'}
+  {
+  {'},
+  {
     title: 'Regulatory Compliance',''
     description: 'Built-in compliance tools ensure adherence to financial regulations.','
     icon: FileText;
-  }];
+  }
+];
 ];
 
-export default function FinancePage() {}
+export default function FinancePage() {},
+  {
   return ()
     <Layout;'
       title="Financial Technology Solutions - Zion Tech Group"
@@ -131,10 +154,13 @@ export default function FinancePage() {}
 "
           <div className="container mx-auto px-4 relative z-10">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -168,10 +194,13 @@ export default function FinancePage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -185,11 +214,15 @@ export default function FinancePage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={service.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={service.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
 </motion>"
@@ -210,7 +243,7 @@ export default function FinancePage() {}
                       </li>
                   </ul>
                 </motion.div>);
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -218,10 +251,13 @@ export default function FinancePage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center mb-16"
             >
 </motion>"
@@ -235,11 +271,15 @@ export default function FinancePage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
-                  key={benefit.title};
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                <motion.div
+                  key={benefit.title},
+  {
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6, delay: index * 0.1 }},
+  {
                   className="text-center"
                 >
 </motion>"
@@ -251,7 +291,7 @@ export default function FinancePage() {}
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>"
@@ -259,10 +299,13 @@ export default function FinancePage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 20 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
 </motion>"
               <h2 className="text-4xl md:text-5xl font-bold mb-6">"

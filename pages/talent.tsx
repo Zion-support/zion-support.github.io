@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
-const jobOpenings = [{}]
+const jobOpenings = ["{}"]
     "id": 1,
     "title": "Senior AI/ML Engineer",
     "department": "AI Services",
@@ -19,9 +19,8 @@ const jobOpenings = [{}]
       "Experience with cloud platforms (AWS, Azure, GCP)",
       "Strong problem-solving and communication skills"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Remote work", "Professional development"];
-  },
-  {}
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Professional development"],
+  {
     "id": 2,
     "title": "Full-Stack Developer",
     "department": "Micro SaaS",
@@ -29,15 +28,14 @@ const jobOpenings = [{}]
     "type": "Full-time",
     "experience": "3+ years",
     "description": "Build scalable web applications and microservices for our SaaS solutions.",
-    "requirements": [Bachelor's degree in Computer Science or related field",]
+    "requirements": [Bachelor's degree in Computer Science or related field"]
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
       "Knowledge of cloud deployment and DevOps"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Stock options"];
-  },
-  {}
+    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Stock options"],
+  {
     "id": 3,
     "title": "Cloud Solutions Architect",
     "department": "IT Services",
@@ -45,15 +43,14 @@ const jobOpenings = [{}]
     "type": "Full-time",
     "experience": "7+ years",
     "description": "Design and implement cloud infrastructure solutions for enterprise clients.",
-    "requirements": [Bachelor's degree in Computer Science or related field",]
+    "requirements": [Bachelor's degree in Computer Science or related field"]
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
       "Strong understanding of security best practices"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Remote work", "Certification support"];
-  },
-  {}
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Certification support"],
+  {
     "id": 4,
     "title": "Cybersecurity Specialist",
     "department": "Security",
@@ -61,15 +58,14 @@ const jobOpenings = [{}]
     "type": "Full-time",
     "experience": "4+ years",
     "description": "Protect our clients' digital assets and implement security best practices.",
-    "requirements": [Bachelor's degree in Cybersecurity or related field",]
+    "requirements": [Bachelor's degree in Cybersecurity or related field"]
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Professional development"];
-  },
-  {}
+    "benefits": [Competitive salary", "Health insurance", "Flexible hours", "Professional development"],
+  {
     "id": 5,
     "title": "DevOps Engineer",
     "department": "Engineering",
@@ -77,15 +73,14 @@ const jobOpenings = [{}]
     "type": "Full-time",
     "experience": "3+ years",
     "description": "Streamline our development and deployment processes with modern DevOps practices.",
-    "requirements": [Bachelor's degree in Computer Science or related field",]
+    "requirements": [Bachelor's degree in Computer Science or related field"]
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
       "Knowledge of monitoring and logging tools"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Remote work", "Learning budget"];
-  },
-  {}
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Learning budget"],
+  {
     "id": 6,
     "title": "UX/UI Designer",
     "department": "Design",
@@ -93,39 +88,41 @@ const jobOpenings = [{}]
     "type": "Full-time",
     "experience": "2+ years",
     "description": "Create intuitive and beautiful user experiences for our digital products.",
-    "requirements": [Bachelor's degree in Design or related field",]
+    "requirements": [Bachelor's degree in Design or related field"]
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
       "Strong portfolio demonstrating design skills"
     ],
-    "benefits": [Competitive salary", "Health insurance", "Remote work", "Design tools budget"];
-  };
+    "benefits": [Competitive salary", "Health insurance", "Remote work", "Design tools budget"],
+  {
 ];
 
-const benefits = [{}]
+const benefits = [
+  {
     "title": "Competitive Compensation",
     "description": "We offer competitive salaries and performance-based bonuses",
-    "icon": Star;
+    "icon": Star
   },
-  {}
+  {
     "title": "Health & Wellness",
     "description": "Comprehensive health insurance and wellness programs",
-    "icon": Users;
+    "icon": Users
   },
-  {}
+  {
     "title": "Flexible Work",
     "description": "Remote work options and flexible schedules",
-    "icon": Clock;
+    "icon": Clock
   },
-  {}
+  {
     "title": "Professional Growth",
     "description": "Learning opportunities and career development support",
-    "icon": ArrowRight;
-  };
+    "icon": ArrowRight
+  },
+  {
 ];
 
-const values = [Innovation and creativity",]
+const values = [Innovation and creativity"]
   "Collaboration and teamwork",
   "Continuous learning",
   "Work-life balance",
@@ -133,21 +130,26 @@ const values = [Innovation and creativity",]
   "Client success focus"
 ];
 
-export default function TalentPage() {}
-  return ()
-    <MainLayout;
+export default function TalentPage() {},
+  {
+  return (
+    <MainLayout
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */};
+        {/* Hero Section */},
+  {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div;
-              initial={{ "opacity": 0, "y": 30 }};
-              animate={{ "opacity": 1, "y": 0 }};
-              transition={{ "duration": 0.8 }};
+            <motion.div
+              initial={{ "opacity": 0, "y": 30 }},
+  {
+              animate={{ "opacity": 1, "y": 0 }},
+  {
+              transition={{ "duration": 0.8 }},
+  {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -168,15 +170,20 @@ export default function TalentPage() {}
           </div>
         </section>
 
-        {/* Why Work With Us Section */};
+        {/* Why Work With Us Section */},
+  {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }};
-              whileInView={{ "opacity": 1, "y": 0 }};
-              transition={{ "duration": 0.8 }};
-              viewport={{ "once": true }};
+              initial={{ "opacity": 0, "y": 30 }},
+  {
+              whileInView={{ "opacity": 1, "y": 0 }},
+  {
+              transition={{ "duration": 0.8 }},
+  {
+              viewport={{ "once": true }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -187,42 +194,56 @@ export default function TalentPage() {}
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {}
+  {benefits.map((benefit, index) => {},
+  {
                 const IconComponent = benefit.icon;
-                return ()
-                  <motion.div;
-                    key={index};
+                return (
+    <motion.div
+                    key={index},
+  {
                     className="text-center p-6"
-                    initial={{ "opacity": 0, "y": 30 }};
-                    whileInView={{ "opacity": 1, "y": 0 }};
-                    transition={{ "duration": 0.8, "delay": index * 0.1 }};
-                    viewport={{ "once": true }};
+                    initial={{ "opacity": 0, "y": 30 }},
+  {
+                    whileInView={{ "opacity": 1, "y": 0 }},
+  {
+                    transition={{ "duration": 0.8, "delay": index * 0.1 }},
+  {
+                    viewport={{ "once": true }},
+  {
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {benefit.title};
+                      {benefit.title},
+  {
                     </h3>
                     <p className="text-gray-600">
-                      {benefit.description};
+                      {benefit.description},
+  {
                     </p>
                   </motion.div>
-                );
-              })};
+                )
+  })},
+  {
             </div>
           </div>
         </section>
 
-        {/* Our Values Section */};
+        {/* Our Values Section */},
+  {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }};
-              whileInView={{ "opacity": 1, "y": 0 }};
-              transition={{ "duration": 0.8 }};
-              viewport={{ "once": true }};
+              initial={{ "opacity": 0, "y": 30 }},
+  {
+              whileInView={{ "opacity": 1, "y": 0 }},
+  {
+              transition={{ "duration": 0.8 }},
+  {
+              viewport={{ "once": true }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values;
@@ -234,33 +255,43 @@ export default function TalentPage() {}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (})
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index},
+  {
                   className="bg-white p-6 rounded-lg shadow-lg"
-                  initial={{ "opacity": 0, "y": 30 }};
-                  whileInView={{ "opacity": 1, "y": 0 }};
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }};
-                  viewport={{ "once": true }};
+                  initial={{ "opacity": 0, "y": 30 }},
+  {
+                  whileInView={{ "opacity": 1, "y": 0 }},
+  {
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }},
+  {
+                  viewport={{ "once": true }},
+  {
                 >
                   <div className="flex items-center">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-gray-900 font-medium">{value}</span>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* Job Openings Section */};
+        {/* Job Openings Section */},
+  {
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ "opacity": 0, "y": 30 }};
-              whileInView={{ "opacity": 1, "y": 0 }};
-              transition={{ "duration": 0.8 }};
-              viewport={{ "once": true }};
+              initial={{ "opacity": 0, "y": 30 }},
+  {
+              whileInView={{ "opacity": 1, "y": 0 }},
+  {
+              transition={{ "duration": 0.8 }},
+  {
+              viewport={{ "once": true }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions;
@@ -272,39 +303,49 @@ export default function TalentPage() {}
 
             <div className="space-y-8">
               {jobOpenings.map((job, index) => (})
-                <motion.div;
-                  key={job.id};
+                <motion.div
+                  key={job.id},
+  {
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, "y": 30 }};
-                  whileInView={{ "opacity": 1, "y": 0 }};
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }};
-                  viewport={{ "once": true }};
+                  initial={{ opacity: 0, "y": 30 }},
+  {
+                  whileInView={{ "opacity": 1, "y": 0 }},
+  {
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }},
+  {
+                  viewport={{ "once": true }},
+  {
                 >
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {job.title};
+                        {job.title},
+  {
                       </h3>
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <div className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
-                          {job.location};
+                          {job.location},
+  {
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {job.type};
+                          {job.type},
+  {
                         </div>
                         <div className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {job.experience};
+                          {job.experience},
+  {
                         </div>
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
-                          {job.department};
+                          {job.department},
+  {
                         </span>
                       </div>
                     </div>
-                    <Link;
-                      href={`/talent/${job.id}`};`
+                    <Link
+                      href={`/talent/${job.id}`}`
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
                       Apply Now;
@@ -313,7 +354,8 @@ export default function TalentPage() {}
                   </div>
                   
                   <p className="text-gray-600 mb-6">
-                    {job.description};
+                    {job.description},
+  {
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -323,9 +365,10 @@ export default function TalentPage() {}
                         {job.requirements.slice(0, 3).map((req, reqIndex) => (})
                           <li key={reqIndex} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {req};
+                            {req},
+  {
                           </li>
-                        ))};
+                        );
                       </ul>
                     </div>
                     <div>
@@ -334,26 +377,32 @@ export default function TalentPage() {}
                         {job.benefits.map((benefit, benefitIndex) => (})
                           <li key={benefitIndex} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {benefit};
+                            {benefit},
+  {
                           </li>
-                        ))};
+                        );
                       </ul>
                     </div>
                   </div>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* CTA Section */};
+        {/* CTA Section */},
+  {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div;
-              initial={{ "opacity": 0, "y": 30 }};
-              whileInView={{ "opacity": 1, "y": 0 }};
-              transition={{ "duration": 0.8 }};
-              viewport={{ "once": true }};
+            <motion.div
+              initial={{ "opacity": 0, "y": 30 }},
+  {
+              whileInView={{ "opacity": 1, "y": 0 }},
+  {
+              transition={{ "duration": 0.8 }},
+  {
+              viewport={{ "once": true }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don&apos;t See the Right Role?
@@ -369,5 +418,6 @@ export default function TalentPage() {}
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )
+  },
+  {

@@ -3,22 +3,27 @@ import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle, Mail, Phone } from 'lucide-react';
 import Layout from '../components/Layout';
 
-export default function TermsPage() {}
-  return ()
-    <Layout;
+export default function TermsPage() {},
+  {
+  return (
+    <Layout
       title="Terms of Service - Zion Tech Group"
       description="Read our terms of service to understand the rules and guidelines for using Zion Tech Group's services and website.'
       keywords="terms of service, user agreement, service terms, legal terms, user guidelines"
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */};
+        {/* Hero Section */},
+  {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.div;
-                initial={{ opacity: 0, y: 30 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.8 }};
+              <motion.div
+                initial={{ opacity: 0, y: 30 }},
+  {
+                animate={{ opacity: 1, y: 0 }},
+  {
+                transition={{ duration: 0.8 }},
+  {
                 className="mb-8"
               >
                 <div className="flex justify-center mb-6">
@@ -40,15 +45,19 @@ export default function TermsPage() {}
           </div>
         </section>
 
-        {/* Content Section */};
+        {/* Content Section */},
+  {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-                <motion.div;
-                  initial={{ opacity: 0, y: 20 }};
-                  animate={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6 }};
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }},
+  {
+                  animate={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.6 }},
+  {
                 >
                   <h2 className="text-3xl font-bold text-gray-900 mb-8">Agreement to Terms</h2>
                   
@@ -211,5 +220,6 @@ export default function TermsPage() {}
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+  },
+  {

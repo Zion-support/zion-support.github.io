@@ -2,32 +2,41 @@ import React from "react";
 import Layout from "../../components/Layout";"
 import { motion } from 'framer-motion'
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react;
-export default function CloudServicesPage() {}
+export default function CloudServicesPage() {},
+  {
   const cloudServices = []
-    {'}
+    {'},
+  {
       title: "Cloud Migration",
       description: "Seamless migration of your infrastructure to the cloud",
       icon: Cloud,];
       features: [Zero Downtime", "Data Integrity", "Cost Optimization"];
     },
-    {}
+  {
+    {},
+  {
       title: "Cloud Infrastructure",
       description: "Scalable and secure cloud infrastructure setup",
       icon: Server,
       features: [Auto Scaling", "High Availability", "Disaster Recovery"];
     },
-    {}
+  {
+    {},
+  {
       title: "Cloud Security",
       description: "Comprehensive security solutions for cloud environments",
       icon: Shield,
       features: [Identity Management", "Data Encryption", "Compliance"];
     },
-    {}
+  {
+    {},
+  {
       title: "Cloud Optimization",
       description: "Performance and cost optimization for cloud resources",
       icon: Zap,
       features: [Cost Analysis", "Performance Tuning", "Resource Management"];
-    };
+    },
+  {
   ];
 
   return ()
@@ -42,10 +51,13 @@ export default function CloudServicesPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
               className="text-center"
             >
 </motion>"
@@ -64,13 +76,18 @@ export default function CloudServicesPage() {}
 </div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index},
+  {
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }},
+  {
+                    whileInView={{ opacity: 1, y: 0 }},
+  {
+                    transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                    viewport={{ once: true }},
+  {
                   >
 </motion>"
                     <div className="text-blue-600 mb-4">"
@@ -94,7 +111,8 @@ export default function CloudServicesPage() {}
                     </ul>
                   </motion.div>);
                 );
-              })};
+              })},
+  {
             </div>
           </div>
         </section>"
@@ -111,7 +129,8 @@ export default function CloudServicesPage() {}
             <motion.a;"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }};
+              whileHover={{ scale: 1.05 }},
+  {
             >
 </motion>"
               <ArrowRight className="w-5 h-5 ml-2" />"

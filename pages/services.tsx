@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { }
+import { },
+  {
   Cloud, 
   Cpu, 
   Brain, 
@@ -16,12 +17,12 @@ import { }
   Globe,
   Lock,
   Clock,
-  TrendingUp;
-} from 'lucide-react';
+  TrendingUp
+  } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const services = []
-  {}
+const services = [
+  {
     "title": "AI Services",
     "description": "Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and AI-powered automation to transform your business operations.",
     "icon": Brain,
@@ -29,9 +30,9 @@ const services = []
     "features": [Machine Learning", "Natural Language Processing", "Computer Vision", "AI Automation", "Predictive Analytics", "Chatbots", "Voice Recognition", "Deep Learning"],
     "pricing": "Starting at $5,000/project",
     "count": "25+ Solutions",
-    "popular": true;
+    "popular": true
   },
-  {}
+  {
     "title": "IT Services",
     "description": "Complete information technology solutions including cloud migration, cybersecurity, system integration, and IT consulting to modernize and secure your infrastructure.",
     "icon": Cpu,
@@ -39,124 +40,134 @@ const services = []
     "features": [Cloud Migration", "Cybersecurity", "System Integration", "IT Consulting", "Network Security", "Data Management", "Infrastructure Setup", "Technical Support"],
     "pricing": "Starting at $2,500/month",
     "count": "30+ Services",
-    "popular": true;
+    "popular": true
   },
-  {}
+  {
     title: "Micro SaaS",
     description: "Scalable software as a service solutions designed for specific business needs, rapid deployment, and innovative functionality.",
     icon: Cloud,
     href: "/micro-saas",
-    features: [Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
+    features: ["Custom Applications"", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
-    popular: true;
-  };
+    popular: true
+  },
+  {
 ];
 
-const benefits = []
-  {}
+const benefits = [
+  {
     icon: CheckCircle,
     title: "Expert Team",
     description: "50+ certified professionals with years of experience"
   },
-  {}
+  {
     icon: Star,
     title: "Proven Results",
     description: "500+ successful projects delivered"
   },
-  {}
+  {
     icon: Zap,
     title: "Fast Delivery",
     description: "Agile development with rapid deployment"
   },
-  {}
+  {
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
   },
-  {}
+  {
     icon: Zap,
     title: "Fast Delivery",
     description: "Agile development with rapid deployment"
   },
-  {}
+  {
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
-  };
+  },
+  {
 ];
 
-const whyChooseUs = []
-  {}
+const whyChooseUs = [
+  {
     icon: Target,
     title: "Custom Solutions",
     description: "Tailored to your specific business needs and goals"
   },
-  {}
+  {
     icon: Shield,
     title: "24/7 Support",
     description: "Round-the-clock technical support"
   },
-  {}
+  {
     icon: Award,
     title: "Quality Assurance",
     description: "Rigorous testing and quality control processes"
   },
-  {}
+  {
     icon: Globe,
     title: "Global Reach",
     description: "Serving clients worldwide with local expertise"
   },
-  {}
+  {
     icon: Lock,
     title: "Security First",
     description: "Enterprise-grade security and compliance"
   },
-  {}
+  {
     icon: Clock,
     title: "24/7 Support",
     description: "Round-the-clock technical assistance"
-  };
+  },
+  {
 ];
 
-const processSteps = []
-  {}
+const processSteps = [
+  {
     step: "01",
     title: "Discovery",
     description: "We analyze your requirements and business goals"
   },
-  {}
+  {
     step: "02",
     title: "Planning",
     description: "Create a detailed project roadmap and timeline"
   },
-  {}
+  {
     step: "03",
     title: "Development",
     description: "Build and implement your solution with regular updates"
   },
-  {}
+  {
     step: "04",
     title: "Deployment",
     description: "Launch your solution with full support and training"
-  };
+  },
+  {
 ];
 
-export default function ServicesPage() {}
-  return ()
+export default function ServicesPage() {},
+  {
+  return (
     <Layout>
       <div className="min-h-screen bg-white">
-        {/* Hero Section */};
+        {/* Hero Section */},
+  {
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              animate={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our{' '};
+                Our{' '},
+  {
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Services;
                 </span>
@@ -168,14 +179,18 @@ export default function ServicesPage() {}
           </div>
         </section>
 
-        {/* Services Grid */};
+        {/* Services Grid */},
+  {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 What We Offer;
@@ -187,14 +202,20 @@ export default function ServicesPage() {}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (})
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index},
+  {
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
-                  whileHover={{ y: -5 }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
+                  whileHover={{ y: -5 }},
+  {
                 >
                   <div className="flex items-center mb-4">
                     <service.icon className="h-12 w-12 text-blue-600 mr-4" />
@@ -212,9 +233,10 @@ export default function ServicesPage() {}
                       {service.features.slice(0, 4).map((feature, featureIndex) => (})
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature};
+                          {feature},
+  {
                         </li>
-                      ))};
+                      );
                     </ul>
                   </div>
                   
@@ -223,27 +245,32 @@ export default function ServicesPage() {}
                     <p className="text-sm text-gray-500">Starting price</p>
                   </div>
                   
-                  <Link;
-                    href={service.href};
+                  <Link
+                    href={service.href},
+  {
                     className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold flex items-center justify-center"
                   >
                     Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* Why Choose Us */};
+        {/* Why Choose Us */},
+  {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
@@ -255,13 +282,18 @@ export default function ServicesPage() {}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseUs.map((item, index) => (})
-                <motion.div;
-                  key={item.title};
+                <motion.div
+                  key={item.title},
+  {
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
+                  viewport={{ once: true }},
+  {
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="h-8 w-8 text-blue-600" />
@@ -269,19 +301,23 @@ export default function ServicesPage() {}
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* Our Process */};
+        {/* Our Process */},
+  {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Process;
@@ -293,32 +329,41 @@ export default function ServicesPage() {}
 
             <div className="grid md:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (})
-                <motion.div;
-                  key={step.step};
+                <motion.div
+                  key={step.step},
+  {
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
                 >
                   <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    {step.step};
+                    {step.step},
+  {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* Benefits */};
+        {/* Benefits */},
+  {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 What You Get;
@@ -330,34 +375,44 @@ export default function ServicesPage() {}
 
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (})
-                <motion.div;
-                  key={benefit.title};
+                <motion.div
+                  key={benefit.title},
+  {
                   className="bg-gray-50 p-8 rounded-lg text-center"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  initial={{ opacity: 0, y: 30 }},
+  {
+                  whileInView={{ opacity: 1, y: 0 }},
+  {
+                  transition={{ duration: 0.8, delay: index * 0.1 }},
+  {
                 >
                   <benefit.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title};
+                    {benefit.title},
+  {
                   </h3>
                   <p className="text-gray-600">
-                    {benefit.description};
+                    {benefit.description},
+  {
                   </p>
                 </motion.div>
-              ))};
+              );
             </div>
           </div>
         </section>
 
-        {/* CTA Section */};
+        {/* CTA Section */},
+  {
         <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
           <div className="container mx-auto px-4">
-            <motion.div;
+            <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+              initial={{ opacity: 0, y: 30 }},
+  {
+              whileInView={{ opacity: 1, y: 0 }},
+  {
+              transition={{ duration: 0.8 }},
+  {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
@@ -378,5 +433,6 @@ export default function ServicesPage() {}
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+  },
+  {
