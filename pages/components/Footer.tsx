@@ -13,9 +13,6 @@ import {
   Camera,
   CheckCircle,
   ClipboardList,
-<<<<<<< HEAD
-  Layers
-=======
   Clock,
   Cloud,
   Code,
@@ -56,7 +53,6 @@ import {
   Wifi,
   Wrench,
   Zap
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 } from 'lucide-react';
 
 const footerSections = [
