@@ -251,7 +251,7 @@ export default function AboutPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -295,7 +295,7 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg text-center "hover": shadow-xl transition-shadow"
+                className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, "y": 30 }}
                 whileInView={{ "opacity": 1, "y": 0 }}
                 transition={{ "duration": 0.8, "delay": index * 0.1 }}

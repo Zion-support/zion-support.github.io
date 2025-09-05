@@ -274,7 +274,7 @@ export default function TalentPage() {
               {jobOpenings.map((job, index) => (
                 <motion.div
                   key={job.id}
-                  className="bg-white border border-gray-200 rounded-lg p-8 "hover": shadow-lg transition-shadow duration-300"
+                  className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}

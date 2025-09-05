@@ -118,7 +118,7 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group relative"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -132,7 +132,7 @@ export default function ServicesPage() {
                       </span>
                     </div>
                   )}
-                  <div className="text-blue-600 mb-6 group-"hover": text-purple-600 transition-colors">
+                  <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
                     <IconComponent className="w-12 h-12" />
                   </div>
                   <div className="flex items-center justify-between mb-4">
@@ -165,7 +165,7 @@ export default function ServicesPage() {
 
                   <Link
                     href={service.href}
-                    className="w-full bg-blue-600 "hover": bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center group"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
