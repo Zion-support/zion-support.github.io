@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Shield, Zap, DollarSign, Users, Lock, Globe, BarChart3, Rocket } from 'lucide-react';
+import { Shield, Zap, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
 
 export default function Blockchain() {
   const services = [
@@ -161,7 +161,7 @@ export default function Blockchain() {
               Ready to Build on Blockchain?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss your blockchain project and how we can help bring your vision to life.
+              Let&apos;s discuss your blockchain project and how we can help bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
