@@ -63,6 +63,7 @@ export default [
       'structural-fix.js',
       'types/empty.ts',
       'src.pages.disabled/',
+      'src.disabled/',
       'src/',
       'types/',
       'utils/',
