@@ -1,99 +1,78 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import MainLayout from '../../src/components/layout/MainLayout';
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
 
-const industries = [
+const solutions = [
   {
-    title: 'Healthcare',
-    description: 'AI-powered medical imaging, electronic health records, and telemedicine solutions',
-    icon: Heart,
-    features: ['Medical Imaging AI', 'EHR Systems', 'Telemedicine', 'Health Analytics'],
-    href: '/industries/healthcare'
-  },
-  {
-    title: 'Finance',
-    description: 'Fraud detection, predictive analytics, and digital banking solutions',
-    icon: DollarSign,
-    features: ['Fraud Detection', 'Risk Analytics', 'Digital Banking', 'Compliance'],
-    href: '/industries/finance'
-  },
-  {
-    title: 'Education',
-    description: 'Learning management systems, virtual classrooms, and student analytics',
-    icon: BookOpen,
-    features: ['LMS Platforms', 'Virtual Classrooms', 'Student Analytics', 'Content Management'],
-    href: '/industries/education'
-  },
-  {
-    title: 'Government',
-    description: 'Digital government platforms, cybersecurity, and citizen services',
-    icon: Building,
-    features: ['Digital Platforms', 'Cybersecurity', 'Citizen Services', 'Data Analytics'],
-    href: '/industries/government'
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Smart manufacturing, quality control, and supply chain optimization',
-    icon: Settings,
-    features: ['Smart Manufacturing', 'Quality Control', 'Supply Chain', 'IoT Solutions'],
-    href: '/industries/manufacturing'
-  },
-  {
-    title: 'Retail',
-    description: 'E-commerce platforms, inventory management, and customer analytics',
+    title: 'E-commerce Platform',
+    description: 'Advanced e-commerce platform with AI-powered features for personalized shopping',
     icon: ShoppingCart,
-    features: ['E-commerce', 'Inventory Management', 'Customer Analytics', 'Personalization'],
-    href: '/industries/retail'
+    features: ['Product Catalog', 'Shopping Cart', 'Payment Processing', 'Order Management']
+  },
+  {
+    title: 'Inventory Management System',
+    description: 'AI-powered inventory management with demand forecasting and optimization',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Management', 'Real-time Tracking']
+  },
+  {
+    title: 'Customer Analytics Platform',
+    description: 'Comprehensive analytics platform for customer behavior and preferences',
+    icon: BarChart3,
+    features: ['Customer Segmentation', 'Behavior Analysis', 'Purchase Patterns', 'Personalization']
+  },
+  {
+    title: 'Mobile Commerce App',
+    description: 'Native mobile app for seamless shopping experience across devices',
+    icon: Smartphone,
+    features: ['Mobile Shopping', 'Push Notifications', 'Offline Support', 'Social Integration']
   }
 ];
 
 const benefits = [
   {
-    title: 'Industry Expertise',
-    description: 'Deep understanding of industry-specific challenges and requirements',
-    icon: Brain
+    icon: TrendingUp,
+    title: 'Increased Sales',
+    description: 'AI-powered personalization and optimization drive higher conversion rates',
+    icon: ShoppingCart
   },
   {
-    title: 'Custom Solutions',
-    description: 'Tailored solutions designed for your specific industry needs',
-    icon: Settings
+    title: 'Better Customer Experience',
+    description: 'Personalized recommendations and seamless shopping experience',
+    icon: Users
   },
   {
-    title: 'Compliance Ready',
-    description: 'Solutions built with industry regulations and compliance in mind',
-    icon: Shield
+    title: 'Optimized Operations',
+    description: 'Automated inventory management and demand forecasting reduce costs',
+    icon: CheckCircle
   },
   {
-    title: 'Scalable Technology',
-    description: 'Solutions that grow with your business and adapt to changing needs',
-    icon: Cloud
+    title: 'Data-Driven Insights',
+    description: 'Comprehensive analytics help make informed business decisions',
+    icon: Database
   }
 ];
 
-export default function IndustriesPage() {
+export default function RetailPage() {
   return (
-    <MainLayout
-      title="Industries - Zion Tech Group"
-      description="Discover how Zion Tech Group serves various industries with tailored technology solutions."
-      keywords="industries, healthcare, finance, education, manufacturing, retail, government, technology solutions"
-    >
+    <Layout>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Industry <span className="text-blue-600">Solutions</span>
+                Retail <span className="text-blue-600">Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Specialized technology solutions designed for specific industries. 
-                We understand the unique challenges and requirements of each sector.
+                Transform retail operations with e-commerce platforms, inventory management systems, 
+                and AI-powered customer analytics.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -114,7 +93,7 @@ export default function IndustriesPage() {
           </div>
         </section>
 
-        {/* Industries Grid */}
+        {/* Solutions Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -123,13 +102,13 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Retail Solutions</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our industry-specific solutions and see how we can help transform your sector.
+                Comprehensive technology solutions designed specifically for retail businesses.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {solutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -139,26 +118,19 @@ export default function IndustriesPage() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <industry.icon className="w-6 h-6 text-blue-600" />
+                      <solution.icon className="w-6 h-6 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold">{industry.title}</h3>
+                    <h3 className="text-xl font-semibold">{solution.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{industry.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {industry.features.map((feature, featureIndex) => (
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={industry.href}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -174,9 +146,9 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Industry Solutions?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Retail Solutions?</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our industry-specific approach ensures that our solutions are perfectly tailored to your needs.
+                Our solutions are designed to address the unique challenges faced by retail businesses.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -208,10 +180,10 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Industry?
+                Ready to Transform Retail?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our industry-specific solutions can help your organization achieve its goals.
+                Let's discuss how our retail solutions can help your business achieve its goals.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -232,6 +204,6 @@ export default function IndustriesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

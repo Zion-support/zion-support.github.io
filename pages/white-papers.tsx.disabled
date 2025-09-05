@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -83,7 +84,13 @@ import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 import { motion } from 'framer-motion';
+========
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
 import {
   FileText,
   Download,
@@ -96,6 +103,7 @@ import {
   BookOpen,
   Star,
   Clock,
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
 <<<<<<< HEAD
@@ -222,6 +230,9 @@ import {
   User, 
   ArrowRight, 
   Tag, 
+========
+  Tag,
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
   ExternalLink 
 } from 'lucide-react';
 >>>>>>> main
@@ -465,9 +476,13 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 =======
+========
+              </p>
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
@@ -896,12 +911,15 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
     </>
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 =======
+========
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
   );

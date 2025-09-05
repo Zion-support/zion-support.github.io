@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/docs/api.tsx
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -204,6 +205,14 @@ import {
   YawningFace2,
   DizzyFace2
 } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../components/layout/Layout';
+import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check, Globe, Terminal, XCircle } from 'lucide-react';
+>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/docs/api.tsx.disabled
 
 const apiEndpoints = [
   {
@@ -1237,6 +1246,12 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
           </div>
         </section>
       </div>
+<<<<<<< HEAD:pages/docs/api.tsx
     </MainLayout>
   );
 }
+=======
+    </Layout>
+  );
+}
+>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/docs/api.tsx.disabled

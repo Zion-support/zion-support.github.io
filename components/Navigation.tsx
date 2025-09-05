@@ -21,8 +21,10 @@ import {
   Shield,
   Zap,
   Globe,
-  BarChart3
+  BarChart3,
+  Search
 } from 'lucide-react';
+import SearchModal from './SearchModal';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +32,7 @@ export default function Navigation() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const services = [
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision', icon: BarChart3 },
@@ -327,8 +330,15 @@ export default function Navigation() {
               </Link>
             </div>
 
-            {/* CTA Buttons */}
+            {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
               <Link 
                 href="/contact" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
@@ -468,6 +478,9 @@ export default function Navigation() {
           </AnimatePresence>
         </div>
       </nav>
+      
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 }
