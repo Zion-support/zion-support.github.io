@@ -15,9 +15,27 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  Package,
+  Clock,
+  MessageSquare,
+  DollarSign,
+  FileText,
+  Target,
+  Calendar,
+  Video,
+  Lock,
+  Monitor,
+  HardDrive,
+  Search,
+  ClipboardList,
+  Truck,
+  GraduationCap,
+  Home,
+  ShoppingCart,
+  Heart
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const microSaasSolutions = [
   {
@@ -103,6 +121,440 @@ const microSaasSolutions = [
       "Real-time Insights"
     ],
     price: "Starting at $2,500/month"
+  },
+  {
+    title: "AI-Powered CRM System",
+    description: "Intelligent customer relationship management with predictive analytics and automation",
+    icon: Users,
+    features: [
+      "AI Lead Scoring",
+      "Predictive Analytics",
+      "Automated Follow-ups",
+      "Customer Segmentation",
+      "Sales Forecasting",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Smart Inventory Management",
+    description: "Automated inventory tracking with AI-powered demand forecasting",
+    icon: Package,
+    features: [
+      "Real-time Stock Tracking",
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Multi-location Support",
+      "Barcode Scanning",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Employee Time Tracking",
+    description: "Advanced time tracking with productivity analytics and project management",
+    icon: Clock,
+    features: [
+      "Time Tracking",
+      "Project Management",
+      "Productivity Analytics",
+      "Team Collaboration",
+      "Reporting & Invoicing",
+      "Mobile App"
+    ],
+    price: "Starting at $800/month"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Intelligent email campaigns with personalization and analytics",
+    icon: Mail,
+    features: [
+      "Drag & Drop Editor",
+      "A/B Testing",
+      "Personalization Engine",
+      "Behavioral Triggers",
+      "Analytics & Reporting",
+      "List Management"
+    ],
+    price: "Starting at $900/month"
+  },
+  {
+    title: "Social Media Management",
+    description: "Comprehensive social media scheduling and analytics platform",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Calendar",
+      "Analytics Dashboard",
+      "Team Collaboration",
+      "Hashtag Research",
+      "Competitor Analysis"
+    ],
+    price: "Starting at $1,100/month"
+  },
+  {
+    title: "Project Management Suite",
+    description: "Complete project management with team collaboration and resource planning",
+    icon: ClipboardList,
+    features: [
+      "Task Management",
+      "Gantt Charts",
+      "Resource Planning",
+      "Team Collaboration",
+      "Time Tracking",
+      "Budget Management"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Customer Support Ticketing",
+    description: "AI-powered customer support with automated responses and analytics",
+    icon: MessageSquare,
+    features: [
+      "Ticket Management",
+      "AI Chatbot",
+      "Knowledge Base",
+      "SLA Management",
+      "Performance Analytics",
+      "Multi-channel Support"
+    ],
+    price: "Starting at $1,000/month"
+  },
+  {
+    title: "Financial Management Tool",
+    description: "Comprehensive financial tracking and reporting for small businesses",
+    icon: DollarSign,
+    features: [
+      "Expense Tracking",
+      "Invoice Generation",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Budget Planning",
+      "Bank Integration"
+    ],
+    price: "Starting at $1,300/month"
+  },
+  {
+    title: "HR Management System",
+    description: "Complete human resources management with employee self-service",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Payroll Management",
+      "Leave Management",
+      "Performance Reviews",
+      "Recruitment Tools",
+      "Compliance Tracking"
+    ],
+    price: "Starting at $1,400/month"
+  },
+  {
+    title: "Document Management",
+    description: "Secure document storage and collaboration with version control",
+    icon: FileText,
+    features: [
+      "Document Storage",
+      "Version Control",
+      "Collaboration Tools",
+      "Search & Indexing",
+      "Access Control",
+      "Audit Trail"
+    ],
+    price: "Starting at $700/month"
+  },
+  {
+    title: "Lead Generation Platform",
+    description: "Automated lead generation and nurturing with CRM integration",
+    icon: Target,
+    features: [
+      "Lead Capture Forms",
+      "Lead Scoring",
+      "Email Sequences",
+      "CRM Integration",
+      "Analytics Dashboard",
+      "A/B Testing"
+    ],
+    price: "Starting at $1,600/month"
+  },
+  {
+    title: "E-commerce Analytics",
+    description: "Advanced analytics and insights for online stores",
+    icon: BarChart3,
+    features: [
+      "Sales Analytics",
+      "Customer Behavior",
+      "Conversion Tracking",
+      "Revenue Forecasting",
+      "Product Performance",
+      "Custom Reports"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Content Management System",
+    description: "Flexible CMS with multi-site support and SEO optimization",
+    icon: FileText,
+    features: [
+      "Multi-site Management",
+      "SEO Optimization",
+      "Content Scheduling",
+      "User Management",
+      "Template Engine",
+      "API Integration"
+    ],
+    price: "Starting at $1,000/month"
+  },
+  {
+    title: "Survey & Feedback Tool",
+    description: "Create and analyze surveys with advanced reporting and automation",
+    icon: ClipboardList,
+    features: [
+      "Survey Builder",
+      "Response Analytics",
+      "Automated Reports",
+      "Email Distribution",
+      "Custom Branding",
+      "Integration APIs"
+    ],
+    price: "Starting at $600/month"
+  },
+  {
+    title: "Appointment Scheduling",
+    description: "Smart scheduling system with calendar integration and notifications",
+    icon: Calendar,
+    features: [
+      "Online Booking",
+      "Calendar Sync",
+      "Automated Reminders",
+      "Payment Processing",
+      "Team Scheduling",
+      "Mobile App"
+    ],
+    price: "Starting at $800/month"
+  },
+  {
+    title: "Video Conferencing Platform",
+    description: "Professional video meetings with recording and collaboration tools",
+    icon: Video,
+    features: [
+      "HD Video Calls",
+      "Screen Sharing",
+      "Recording & Playback",
+      "Chat & Whiteboard",
+      "Meeting Rooms",
+      "Mobile Support"
+    ],
+    price: "Starting at $1,100/month"
+  },
+  {
+    title: "Password Manager",
+    description: "Secure password management with team sharing and compliance",
+    icon: Lock,
+    features: [
+      "Password Generation",
+      "Secure Storage",
+      "Team Sharing",
+      "Two-Factor Auth",
+      "Breach Monitoring",
+      "Compliance Reporting"
+    ],
+    price: "Starting at $500/month"
+  },
+  {
+    title: "Website Monitoring",
+    description: "Uptime monitoring and performance analytics for websites",
+    icon: Monitor,
+    features: [
+      "Uptime Monitoring",
+      "Performance Metrics",
+      "Alert Notifications",
+      "Historical Reports",
+      "Multi-location Testing",
+      "API Monitoring"
+    ],
+    price: "Starting at $400/month"
+  },
+  {
+    title: "API Management Platform",
+    description: "Comprehensive API development, testing, and monitoring solution",
+    icon: Code,
+    features: [
+      "API Gateway",
+      "Rate Limiting",
+      "Authentication",
+      "Analytics & Monitoring",
+      "Documentation",
+      "Testing Tools"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Data Backup Solution",
+    description: "Automated cloud backup with encryption and disaster recovery",
+    icon: HardDrive,
+    features: [
+      "Automated Backups",
+      "Encryption",
+      "Version Control",
+      "Disaster Recovery",
+      "Cross-platform Sync",
+      "Compliance Support"
+    ],
+    price: "Starting at $300/month"
+  },
+  {
+    title: "SEO Optimization Tool",
+    description: "Comprehensive SEO analysis and optimization recommendations",
+    icon: Search,
+    features: [
+      "Keyword Research",
+      "Site Analysis",
+      "Competitor Tracking",
+      "Rank Monitoring",
+      "Technical SEO",
+      "Content Optimization"
+    ],
+    price: "Starting at $900/month"
+  },
+  {
+    title: "Marketing Automation",
+    description: "End-to-end marketing automation with lead nurturing and analytics",
+    icon: Zap,
+    features: [
+      "Lead Nurturing",
+      "Email Campaigns",
+      "Behavioral Triggers",
+      "Lead Scoring",
+      "Analytics Dashboard",
+      "CRM Integration"
+    ],
+    price: "Starting at $1,700/month"
+  },
+  {
+    title: "Customer Analytics Platform",
+    description: "Deep customer insights with behavioral analysis and segmentation",
+    icon: BarChart3,
+    features: [
+      "Behavioral Analytics",
+      "Customer Segmentation",
+      "Cohort Analysis",
+      "Churn Prediction",
+      "Lifetime Value",
+      "Custom Dashboards"
+    ],
+    price: "Starting at $1,400/month"
+  },
+  {
+    title: "Team Communication Hub",
+    description: "All-in-one team communication with chat, video, and file sharing",
+    icon: MessageSquare,
+    features: [
+      "Team Chat",
+      "Video Calls",
+      "File Sharing",
+      "Project Channels",
+      "Mobile Apps",
+      "Integration Hub"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Compliance Management",
+    description: "Automated compliance tracking and reporting for various regulations",
+    icon: Shield,
+    features: [
+      "Regulation Tracking",
+      "Audit Management",
+      "Document Control",
+      "Risk Assessment",
+      "Reporting Tools",
+      "Training Management"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Fleet Management System",
+    description: "Complete fleet tracking and management with GPS and analytics",
+    icon: Truck,
+    features: [
+      "GPS Tracking",
+      "Route Optimization",
+      "Driver Management",
+      "Fuel Monitoring",
+      "Maintenance Scheduling",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,000/month"
+  },
+  {
+    title: "Learning Management System",
+    description: "Online learning platform with course creation and student management",
+    icon: GraduationCap,
+    features: [
+      "Course Creation",
+      "Student Management",
+      "Progress Tracking",
+      "Certification",
+      "Mobile Learning",
+      "Analytics & Reports"
+    ],
+    price: "Starting at $1,300/month"
+  },
+  {
+    title: "Event Management Platform",
+    description: "Complete event planning and management with ticketing and analytics",
+    icon: Calendar,
+    features: [
+      "Event Creation",
+      "Ticketing System",
+      "Attendee Management",
+      "Payment Processing",
+      "Analytics Dashboard",
+      "Mobile App"
+    ],
+    price: "Starting at $1,100/month"
+  },
+  {
+    title: "Property Management System",
+    description: "Comprehensive property management with tenant portal and maintenance tracking",
+    icon: Home,
+    features: [
+      "Property Database",
+      "Tenant Portal",
+      "Maintenance Tracking",
+      "Rent Collection",
+      "Financial Reporting",
+      "Document Management"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Restaurant Management",
+    description: "Complete restaurant operations management with POS and inventory",
+    icon: ShoppingCart,
+    features: [
+      "POS System",
+      "Inventory Management",
+      "Staff Scheduling",
+      "Customer Management",
+      "Analytics Dashboard",
+      "Online Ordering"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Healthcare Management",
+    description: "Patient management system with scheduling and electronic records",
+    icon: Heart,
+    features: [
+      "Patient Records",
+      "Appointment Scheduling",
+      "Billing Management",
+      "Prescription Tracking",
+      "Insurance Processing",
+      "Telemedicine Support"
+    ],
+    price: "Starting at $2,200/month"
   }
 ];
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { 
   Brain, 
   Eye, 
@@ -150,6 +150,249 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'Quantum AI Solutions',
+    description: 'Next-generation quantum machine learning algorithms for optimization, cryptography, and complex problem solving.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $8,500/month',
+    features: [
+      'Quantum machine learning models',
+      'Quantum optimization algorithms',
+      'Quantum cryptography & security',
+      'Quantum neural networks',
+      'Quantum data processing',
+      'Hybrid classical-quantum systems',
+      'Quantum simulation services',
+      'Quantum error correction'
+    ],
+    benefits: [
+      'Solve complex optimization problems 1000x faster',
+      'Unbreakable quantum encryption',
+      'Revolutionary pattern recognition',
+      'Future-proof AI infrastructure'
+    ],
+    marketPrice: '$12,000-25,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Finance, Defense, Research, Pharmaceuticals'
+  },
+  {
+    id: 5,
+    title: 'Autonomous Systems AI',
+    description: 'Self-driving vehicles, drones, robots, and autonomous machinery with advanced AI decision-making capabilities.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $5,500/month',
+    features: [
+      'Autonomous vehicle AI',
+      'Drone navigation systems',
+      'Robotic process automation',
+      'Smart manufacturing robots',
+      'Autonomous logistics systems',
+      'Real-time decision making',
+      'Sensor fusion & processing',
+      'Safety & compliance monitoring'
+    ],
+    benefits: [
+      'Reduce operational costs by 60%',
+      'Improve safety by 95%',
+      'Enable 24/7 autonomous operations',
+      'Scale operations without human limits'
+    ],
+    marketPrice: '$8,000-18,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Transportation, Manufacturing, Logistics, Agriculture'
+  },
+  {
+    id: 6,
+    title: 'AI-Powered Healthcare',
+    description: 'Medical diagnosis, drug discovery, personalized treatment, and healthcare automation solutions.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $4,200/month',
+    features: [
+      'Medical image analysis',
+      'Drug discovery algorithms',
+      'Personalized treatment plans',
+      'Predictive health analytics',
+      'Electronic health record AI',
+      'Telemedicine automation',
+      'Clinical trial optimization',
+      'Patient monitoring systems'
+    ],
+    benefits: [
+      'Improve diagnosis accuracy by 40%',
+      'Reduce drug discovery time by 50%',
+      'Lower healthcare costs by 30%',
+      'Enable personalized medicine'
+    ],
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Hospitals, Clinics, Pharmaceuticals, Research'
+  },
+  {
+    id: 7,
+    title: 'Financial AI & Trading',
+    description: 'Algorithmic trading, risk assessment, fraud detection, and financial market analysis using advanced AI.',
+    icon: TrendingUp,
+    category: 'Financial AI',
+    price: 'Starting at $3,800/month',
+    features: [
+      'Algorithmic trading systems',
+      'Risk assessment models',
+      'Fraud detection & prevention',
+      'Market sentiment analysis',
+      'Credit scoring algorithms',
+      'Portfolio optimization',
+      'Regulatory compliance AI',
+      'Real-time market monitoring'
+    ],
+    benefits: [
+      'Increase trading profits by 25-40%',
+      'Reduce fraud losses by 90%',
+      'Improve risk assessment accuracy',
+      'Enable 24/7 market monitoring'
+    ],
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Banks, Investment Firms, Fintech, Insurance'
+  },
+  {
+    id: 8,
+    title: 'AI Content Generation',
+    description: 'Automated content creation, copywriting, video production, and creative AI solutions for marketing and media.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Automated copywriting',
+      'Video content generation',
+      'Image & graphic creation',
+      'Social media content',
+      'Blog & article writing',
+      'Email marketing automation',
+      'Multilingual content creation',
+      'Brand voice customization'
+    ],
+    benefits: [
+      'Reduce content creation time by 80%',
+      'Scale content production 10x',
+      'Maintain consistent brand voice',
+      'Generate multilingual content instantly'
+    ],
+    marketPrice: '$2,500-6,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing, Media, E-commerce, Agencies'
+  },
+  {
+    id: 9,
+    title: 'AI Cybersecurity',
+    description: 'Advanced threat detection, automated security response, and intelligent cybersecurity solutions.',
+    icon: Shield,
+    category: 'Security AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Threat detection & analysis',
+      'Automated incident response',
+      'Behavioral anomaly detection',
+      'Vulnerability assessment',
+      'Security orchestration',
+      'Zero-trust AI implementation',
+      'Compliance monitoring',
+      'Predictive security analytics'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 85%',
+      'Automate 90% of security tasks',
+      'Prevent 99% of cyber attacks'
+    ],
+    marketPrice: '$4,500-10,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Enterprises, Government, Healthcare, Finance'
+  },
+  {
+    id: 10,
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management, demand forecasting, and logistics optimization using AI.',
+    icon: Package,
+    category: 'Supply Chain AI',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Demand forecasting models',
+      'Inventory optimization',
+      'Route optimization',
+      'Supplier risk assessment',
+      'Quality control automation',
+      'Supply chain visibility',
+      'Cost optimization algorithms',
+      'Sustainability tracking'
+    ],
+    benefits: [
+      'Reduce inventory costs by 25%',
+      'Improve delivery times by 40%',
+      'Minimize supply chain disruptions',
+      'Increase sustainability by 30%'
+    ],
+    marketPrice: '$4,000-8,500/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Manufacturing, Retail, Logistics, E-commerce'
+  },
+  {
+    id: 11,
+    title: 'AI Customer Experience',
+    description: 'Personalized customer experiences, recommendation engines, and intelligent customer service solutions.',
+    icon: Users,
+    category: 'Customer AI',
+    price: 'Starting at $2,100/month',
+    features: [
+      'Personalized recommendations',
+      'Customer journey optimization',
+      'Intelligent chatbots',
+      'Sentiment analysis',
+      'Churn prediction',
+      'Upselling algorithms',
+      'Customer segmentation',
+      'Real-time personalization'
+    ],
+    benefits: [
+      'Increase conversion rates by 35%',
+      'Improve customer satisfaction by 45%',
+      'Reduce churn by 50%',
+      'Boost average order value by 25%'
+    ],
+    marketPrice: '$3,000-7,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'E-commerce, SaaS, Retail, Hospitality'
+  },
+  {
+    id: 12,
+    title: 'AI Environmental Solutions',
+    description: 'Climate monitoring, environmental impact analysis, and sustainable technology solutions powered by AI.',
+    icon: TreePine,
+    category: 'Environmental AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Climate data analysis',
+      'Carbon footprint tracking',
+      'Environmental monitoring',
+      'Sustainability optimization',
+      'Renewable energy forecasting',
+      'Waste reduction algorithms',
+      'Ecosystem health monitoring',
+      'Green technology recommendations'
+    ],
+    benefits: [
+      'Reduce carbon footprint by 40%',
+      'Optimize energy usage by 30%',
+      'Improve sustainability metrics',
+      'Enable data-driven environmental decisions'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Energy, Manufacturing, Government, NGOs'
   }
 ];
 
@@ -157,7 +400,16 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length },
+  { name: "Financial AI", count: aiServices.filter(s => s.category === "Financial AI").length },
+  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
+  { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length },
+  { name: "Supply Chain AI", count: aiServices.filter(s => s.category === "Supply Chain AI").length },
+  { name: "Customer AI", count: aiServices.filter(s => s.category === "Customer AI").length },
+  { name: "Environmental AI", count: aiServices.filter(s => s.category === "Environmental AI").length }
 ];
 
 export default function AIServicesPage() {

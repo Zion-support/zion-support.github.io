@@ -15,9 +15,19 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Brain,
+  Cpu,
+  Wifi,
+  Globe,
+  Package,
+  DollarSign,
+  Smartphone,
+  Monitor,
+  Laptop,
+  TreePine
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -103,6 +113,370 @@ const services = [
       "24/7 System Support"
     ],
     price: "Starting at $800/month"
+  },
+  {
+    title: "Cloud Migration Services",
+    description: "Seamless migration to cloud platforms with zero downtime",
+    icon: Cloud,
+    features: [
+      "AWS/Azure/GCP Migration",
+      "Data Migration Planning",
+      "Application Modernization",
+      "Security & Compliance",
+      "Cost Optimization",
+      "Performance Tuning"
+    ],
+    price: "Starting at $2,500/month"
+  },
+  {
+    title: "Zero Trust Security Architecture",
+    description: "Implement zero trust security model for enhanced protection",
+    icon: Shield,
+    features: [
+      "Identity & Access Management",
+      "Network Segmentation",
+      "Device Trust Verification",
+      "Continuous Monitoring",
+      "Policy Enforcement",
+      "Threat Detection"
+    ],
+    price: "Starting at $3,200/month"
+  },
+  {
+    title: "AI-Powered IT Operations",
+    description: "Intelligent IT operations with predictive analytics and automation",
+    icon: Brain,
+    features: [
+      "Predictive Maintenance",
+      "Automated Incident Response",
+      "Performance Optimization",
+      "Capacity Planning",
+      "Anomaly Detection",
+      "Root Cause Analysis"
+    ],
+    price: "Starting at $2,800/month"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Deploy computing resources closer to data sources for better performance",
+    icon: Network,
+    features: [
+      "Edge Server Deployment",
+      "IoT Integration",
+      "Real-time Processing",
+      "Low Latency Solutions",
+      "Distributed Computing",
+      "Edge Security"
+    ],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "Quantum Computing Integration",
+    description: "Prepare your infrastructure for quantum computing capabilities",
+    icon: Cpu,
+    features: [
+      "Quantum-Ready Infrastructure",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Security Implementation",
+      "Algorithm Development",
+      "Performance Optimization",
+      "Future-Proofing"
+    ],
+    price: "Starting at $5,500/month"
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Secure blockchain networks and smart contract deployment",
+    icon: Link,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "Cryptocurrency Integration",
+      "DeFi Solutions",
+      "NFT Platforms",
+      "Security Auditing"
+    ],
+    price: "Starting at $3,500/month"
+  },
+  {
+    title: "5G Network Implementation",
+    description: "Deploy and optimize 5G networks for ultra-fast connectivity",
+    icon: Wifi,
+    features: [
+      "5G Network Design",
+      "Small Cell Deployment",
+      "Network Optimization",
+      "IoT Connectivity",
+      "Performance Monitoring",
+      "Security Implementation"
+    ],
+    price: "Starting at $4,200/month"
+  },
+  {
+    title: "IoT Platform Development",
+    description: "Comprehensive IoT solutions for connected devices and sensors",
+    icon: Globe,
+    features: [
+      "Device Management",
+      "Sensor Integration",
+      "Data Processing",
+      "Real-time Analytics",
+      "Edge Computing",
+      "Security & Privacy"
+    ],
+    price: "Starting at $2,600/month"
+  },
+  {
+    title: "Microservices Architecture",
+    description: "Transform monolithic applications into scalable microservices",
+    icon: Settings,
+    features: [
+      "Application Decomposition",
+      "API Gateway Setup",
+      "Service Mesh Implementation",
+      "Container Orchestration",
+      "Monitoring & Logging",
+      "Auto-scaling"
+    ],
+    price: "Starting at $3,000/month"
+  },
+  {
+    title: "Data Center Modernization",
+    description: "Upgrade and optimize data center infrastructure for efficiency",
+    icon: Server,
+    features: [
+      "Hardware Modernization",
+      "Virtualization",
+      "Energy Efficiency",
+      "Cooling Optimization",
+      "Power Management",
+      "Disaster Recovery"
+    ],
+    price: "Starting at $4,500/month"
+  },
+  {
+    title: "Hybrid Cloud Management",
+    description: "Seamlessly manage on-premises and cloud resources",
+    icon: Cloud,
+    features: [
+      "Multi-cloud Management",
+      "Resource Optimization",
+      "Cost Management",
+      "Security Orchestration",
+      "Compliance Monitoring",
+      "Automated Scaling"
+    ],
+    price: "Starting at $2,800/month"
+  },
+  {
+    title: "AI Infrastructure Setup",
+    description: "Specialized infrastructure for AI and machine learning workloads",
+    icon: Brain,
+    features: [
+      "GPU Cluster Setup",
+      "ML Pipeline Infrastructure",
+      "Data Lake Architecture",
+      "Model Training Environment",
+      "Inference Optimization",
+      "Auto-scaling for ML"
+    ],
+    price: "Starting at $3,800/month"
+  },
+  {
+    title: "Disaster Recovery Solutions",
+    description: "Comprehensive disaster recovery and business continuity planning",
+    icon: Shield,
+    features: [
+      "Backup Strategy Design",
+      "Recovery Time Optimization",
+      "Multi-site Replication",
+      "Testing & Validation",
+      "Documentation & Training",
+      "24/7 Monitoring"
+    ],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "Network Security Hardening",
+    description: "Advanced network security measures and threat protection",
+    icon: Shield,
+    features: [
+      "Firewall Configuration",
+      "Intrusion Detection",
+      "VPN Implementation",
+      "Network Segmentation",
+      "Threat Intelligence",
+      "Security Monitoring"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "API Gateway Management",
+    description: "Centralized API management and security for microservices",
+    icon: Code,
+    features: [
+      "API Gateway Setup",
+      "Rate Limiting",
+      "Authentication & Authorization",
+      "API Documentation",
+      "Monitoring & Analytics",
+      "Version Management"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "Container Security",
+    description: "Secure containerized applications and Kubernetes clusters",
+    icon: Shield,
+    features: [
+      "Container Scanning",
+      "Runtime Security",
+      "Image Security",
+      "Network Policies",
+      "Secrets Management",
+      "Compliance Monitoring"
+    ],
+    price: "Starting at $2,000/month"
+  },
+  {
+    title: "Database Performance Tuning",
+    description: "Optimize database performance and scalability",
+    icon: Database,
+    features: [
+      "Query Optimization",
+      "Index Tuning",
+      "Memory Management",
+      "Connection Pooling",
+      "Replication Setup",
+      "Monitoring & Alerting"
+    ],
+    price: "Starting at $1,600/month"
+  },
+  {
+    title: "Mobile Device Management",
+    description: "Secure mobile device management and enterprise mobility",
+    icon: Smartphone,
+    features: [
+      "Device Enrollment",
+      "Policy Enforcement",
+      "App Management",
+      "Remote Wiping",
+      "Compliance Monitoring",
+      "Security Controls"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Comprehensive IT asset tracking and lifecycle management",
+    icon: Package,
+    features: [
+      "Asset Discovery",
+      "License Management",
+      "Lifecycle Tracking",
+      "Cost Optimization",
+      "Compliance Reporting",
+      "Automated Updates"
+    ],
+    price: "Starting at $1,000/month"
+  },
+  {
+    title: "Network Performance Monitoring",
+    description: "Real-time network monitoring and performance optimization",
+    icon: Monitor,
+    features: [
+      "Real-time Monitoring",
+      "Performance Analytics",
+      "Alert Management",
+      "Capacity Planning",
+      "Troubleshooting Tools",
+      "Historical Reporting"
+    ],
+    price: "Starting at $1,400/month"
+  },
+  {
+    title: "IT Service Management",
+    description: "Comprehensive IT service delivery and support management",
+    icon: Settings,
+    features: [
+      "Service Desk Setup",
+      "Incident Management",
+      "Change Management",
+      "Problem Management",
+      "Service Level Management",
+      "Knowledge Management"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "Cloud Cost Optimization",
+    description: "Optimize cloud spending and resource utilization",
+    icon: DollarSign,
+    features: [
+      "Cost Analysis",
+      "Resource Right-sizing",
+      "Reserved Instance Planning",
+      "Spot Instance Management",
+      "Cost Allocation",
+      "Budget Alerts"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "Ensure IT compliance with industry standards and regulations",
+    icon: Shield,
+    features: [
+      "Compliance Assessment",
+      "Policy Development",
+      "Audit Preparation",
+      "Risk Management",
+      "Documentation",
+      "Training Programs"
+    ],
+    price: "Starting at $2,500/month"
+  },
+  {
+    title: "Remote Work Infrastructure",
+    description: "Secure and efficient remote work solutions",
+    icon: Laptop,
+    features: [
+      "VPN Setup",
+      "Remote Desktop Solutions",
+      "Collaboration Tools",
+      "Security Policies",
+      "Device Management",
+      "Performance Optimization"
+    ],
+    price: "Starting at $1,600/month"
+  },
+  {
+    title: "IT Automation & Orchestration",
+    description: "Automate IT processes and workflows for efficiency",
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Workflow Orchestration",
+      "Script Development",
+      "Integration Services",
+      "Monitoring & Alerting",
+      "Documentation"
+    ],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "Green IT Solutions",
+    description: "Sustainable and energy-efficient IT infrastructure",
+    icon: TreePine,
+    features: [
+      "Energy Monitoring",
+      "Efficiency Optimization",
+      "Carbon Footprint Tracking",
+      "Green Procurement",
+      "Waste Reduction",
+      "Sustainability Reporting"
+    ],
+    price: "Starting at $1,500/month"
   }
 ];
 
