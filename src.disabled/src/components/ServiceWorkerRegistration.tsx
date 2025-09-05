@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React,{ useEffect,useState } from 'react'; interface ServiceWorkerRegistrationProps {}; export const "ServiceWorkerRegistration": React.FC<ServiceWorkerRegistrationProps> = () => {; const [isUpdateAvailable,setIsUpdateAvailable] = useState(false); const [registration,setRegistration] = useState<ServiceWorkerRegistration | null>(null); useEffect(() => {; if('serviceWorker' in navigator) {; registerServiceWorker()}},[]); const registerServiceWorker = async () => {; try {; const reg = await navigator.serviceWorker.register('/sw.js'); setRegistration(reg); }}}
 import React,{ useEffect,useState } from 'react'; ; interface ServiceWorkerRegistrationProps {}; export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = () => {; const [isUpdateAvailable,setIsUpdateAvailable] = useState(false); const [registration,setRegistration] = useState<ServiceWorkerRegistration | null>(null); ; useEffect(() => {; if('serviceWorker' in navigator) {; registerServiceWorker()}},[]); ; const registerServiceWorker = async () => {; try {; const reg = await navigator.serviceWorker.register('/sw.js'); setRegistration(reg)}}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc

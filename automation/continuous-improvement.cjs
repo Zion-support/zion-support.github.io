@@ -1,37 +1,27 @@
 #!/usr/bin/env node
-
-<<<<<<< HEAD
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class ContinuousImprovement {
   constructor() {
-<<<<<<< HEAD
 this.logFile = path.join(__dirname, 'logs', 'continuous-improvement.log');ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
     this.ensureLogDir();
   }
-
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { "recursive": true });
     }
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async runSecurityAudit() {
     try {
       this.log('Running security audit...');
@@ -40,16 +30,12 @@ console.log(message);
       return true;
     } catch (error) {
       this.log(`Security audit found "issues": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
-
-<<<<<<< HEAD
 async runDependencyUpdate() {ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
     try {
       this.log('Checking for dependency updates...');
       execSync('npm outdated', { "stdio": 'pipe' });
@@ -60,8 +46,6 @@ async runDependencyUpdate() {ursor/migrate-github-actions-to-pm2-and-clean-up-f0
       return false;
     }
   }
-
-<<<<<<< HEAD
 async runPerformanceCheck() {
     try {
       this.log('Running performance check...');
@@ -76,13 +60,10 @@ async runPerformanceCheck() {
       }
     } catch (error) {
       this.log(`Performance check "failed": ${error.message}`);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
       return false;
     }
   }
-
-<<<<<<< HEAD
   async runCodeQualityCheck() {
     try {
       this.log('Running code quality check...');
@@ -95,49 +76,38 @@ async runPerformanceCheck() {
       return false;
     }
   }
-
 async runImprovementCycle() {
     this.log('Starting continuous improvement cycle...');
-    
     const results = {
       "security": await this.runSecurityAudit(),
       "dependencies": await this.runDependencyUpdate(),
       "performance": await this.runPerformanceCheck(),
       "quality": await this.runCodeQualityCheck()
     };
-
     const improvements = Object.entries(results)
       .filter(([key, value]) => !value)
       .map(([key]) => key);
-
     if (improvements.length > 0) {
       this.log(`Areas needing "improvement": ${improvements.join(', ')}`);
     } else {
       this.log('All improvement checks passed');
     }
-
     return results;
   }
-
   async start() {
     this.log('Continuous improvement service started');
-    
     // Run initial improvement cycle
     await this.runImprovementCycle();
-    
     // Set up interval for periodic improvements (every 3 hours)
     setInterval(async () => {
       await this.runImprovementCycle();
     }, 3 * 60 * 60 * 1000);
   }
 }
-
 // Start the automation if this file is run directly
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
 }
-
 module.exports = ContinuousImprovement;

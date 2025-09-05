@@ -1,28 +1,7 @@
 #!/usr/bin/env node
-const { execSync } = require('child_process');
-const fs = require('fs')
-
-class HealthMonitor {
-  constructor() {
-    this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
-      { "name": 'Disk Space', "command": 'df -h' },
-      { "name": 'Process Status', "command": 'ps aux | grep node' }
-    ]}
-
-  async runChecks() {
-    console.log('🏥 Running health checks...');
-    for (const check of this.checks) {
-      try {
-<<<<<<< HEAD
-        const result = execSync(check.command, { "encoding": 'utf8' };);
-        const result = execSync(check.command, { encoding: 'utf8' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-        console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
-        console.log(`❌ ${check.name}: ${error.message}`)}
-    }
-  }
-}
-
-new HealthMonitor().runChecks();
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+const { execSync } = require('child_process'
+const fs = require('fs'
+    this.checks = [{ "name": 'Memory Usage', "command"
+      { "name": 'Disk Space', "command"
+      { "name": 'Process Status', "command"
+        const result = execSync(check.command, { "encoding"

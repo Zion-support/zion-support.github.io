@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -19,8 +18,6 @@ const Switch = React.forwardRef<
   </SwitchPrimitives.Root>
 ))
 Switch.displayName = SwitchPrimitives.Root.displayName
-
 export { Switch };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe

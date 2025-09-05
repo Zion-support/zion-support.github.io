@@ -4,13 +4,10 @@
   - Removes git conflict markers, preferring the right side (after ) when present, else left.
   - Fixes common token corruptions introduced into TS/TSX files.
 */
-
 const fs = require('fs');
 const path = require('path');
-
 const ROOT_DIRS = ['components', 'pages'];
 const EXTENSIONS = new Set(['.ts', '.tsx']);
-
 function listFiles(dir) {
   const out = [];
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {
@@ -20,10 +17,9 @@ function listFiles(dir) {
       out.push(full)}
   }
   return out}
-
 function stripConflictMarkers(content) {
   // Prefer the right side of conflicts (after ) since HEAD often contains broken text
-  // "Pattern": <<<<<<< ... \n(left)\n\n(right)\n>>>>>>> ...
+  // "Pattern": ... \n(left)\n\n(right)\n...
   return content.replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, left, right) => {
     // "Heuristic": choose the side with more balanced braces/quotes; default to right
     const score = (s) => {
@@ -36,7 +32,6 @@ function stripConflictMarkers(content) {
     return rightScore >= leftScore ? right : left}).replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, only) => {
     // Two-way conflict without middle separator; keep inner content
     return only})}
-
 function fixCommonMangles(content) {
   let c = content;
   // Type literal string "corruption": label: 'string; -> label: string;
@@ -66,7 +61,6 @@ function fixCommonMangles(content) {
   // Remove trailing unmatched syntax artifacts
   c = c.replace(/^\)\s*}\s*;?\s*$/gm, '');
   return c}
-
 function processFile(file) {
   const orig = fs.readFileSync(file, 'utf8');
   let next = orig;
@@ -76,7 +70,6 @@ function processFile(file) {
     fs.writeFileSync(file, next, 'utf8');
     return true}
   return false}
-
 function main() {
   const targets = ROOT_DIRS.flatMap((d) => (fs.existsSync(d) ? listFiles(d) : []));
   let fixed = 0;
@@ -86,6 +79,4 @@ function main() {
       console.error('Error fixing', f, e.message)}
   }
   console.log(`Repaired ${fixed} files out of ${targets.length}.`)}
-
 main();
-

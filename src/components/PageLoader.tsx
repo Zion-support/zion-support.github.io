@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export const "PageLoader": React.FC = (props) => {
   return (
     <div className="min-h-screen bg-white">
@@ -12,6 +10,5 @@ export const "PageLoader": React.FC = (props) => {
   );
 };';';
 import React from 'react'; export const PageLoader: React.FC = (props) => { return ( <div className="min-h-screen bg-white"> <div className="text-center"> <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div> <p className="text-gray-600">Loading...</p> </div> </div> )};';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc

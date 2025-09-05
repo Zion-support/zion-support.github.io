@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-console.log('🔍 Enhanced SEO Monitor Starting...');
-
-const seoChecks = {
-  "metaTags": () => {
-    console.log('🏷️ Checking meta tags...');
-    return true;
-  },
-  
-  "sitemap": () => {
-    console.log('🗺️ Checking sitemap...');
-    return true;
-  },
-  
-  "robots": () => {
-    console.log('🤖 Checking robots.txt...');
-    return true;
-  }
-};
-
-Object.entries(seoChecks).forEach(([name, check]) => {
-  try {
-    const result = check();
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
-  }
-});
-
-console.log('🎉 SEO monitoring completed!');
-console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+console.log(' Enhanced SEO Monitor Starting...'
+    console.log('� Checking meta tags...'
+    console.log('� Checking sitemap...'
+    console.log('🤖 Checking robots.txt...'
+    console.log(` ${name}: ${result ? 'PASS' : 'FAIL'
+console.log('� SEO monitoring completed!'
+console.log(' Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('� Checking meta tags...'); return true},sitemap: () => { console.log('� Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(` ${name}: ERROR - ${error.message}`)} }); console.log('� SEO monitoring completed!'

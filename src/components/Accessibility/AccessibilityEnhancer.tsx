@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'; interface AccessibilitySettings { "fontSize": 'small' | 'medium' | 'large'; highContrast: boolean; reducedMotion: boolean; screenReader boolean',';
     ';';';';';
   } export const "AccessibilityEnhancer": Reac t.FC = () => { const [settings, setSettings] = useState<AccessibilitySettings>({ "fontSize": 'medium', "highContrast": fals e, "reducedMotion": fals e, "screenReader": fals e };); const [isVisible, setIsVisible] = useState<any>(false); useEffect(() => {";';';';
 </any>
 </AccessibilitySettings>;';';
 import React,{ useEffect,useState } from 'react'; interface AccessibilitySettings { fontSize: 'small' | 'medium' | 'large'; highContrast: boolean; reducedMotion: boolean; screenReader boolean','; ';';';';'} export const AccessibilityEnhancer: Reac t.FC = () => { const [settings,setSettings] = useState<AccessibilitySettings>({ fontSize: 'medium',highContrast: fals e,reducedMotion: fals e,screenReader: fals e };); const [isVisible,setIsVisible] = useState<any>(false); useEffect(() => {";';';'; </any> </AccessibilitySettings>;';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc

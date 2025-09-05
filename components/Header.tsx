@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 import {
   Menu,
   X,
@@ -11,7 +10,6 @@ import {
   User,
   Phone,
   Mail,
-=======
 import { motion } from 'framer-motion';
 import { 
   Menu, 
@@ -23,17 +21,14 @@ import {
   Mail, 
   MapPin, 
   Clock,
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
   ChevronDown,
   DollarSign
 } from 'lucide-react';
-
-<<<<<<< HEAD
 const navigation = [{
-=======
 const navigation = [
   {
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
     name: 'Services',
     href: '/services',
     children: [
@@ -46,20 +41,15 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ];
-
 const $1 = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
-<<<<<<< HEAD
-=======
-
 interface HeaderProps {
   className?: string;
   onMenuClick?: () => void;
 }
-
 export default function Header({ className = '', onMenuClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -67,17 +57,14 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
-
+cursor/website-audit-and-update-with-deployment-76dc
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -86,8 +73,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
       setSearchQuery('');
     }
   };
-
-<<<<<<< HEAD
   const $1 = [
     {
       label: 'Home',
@@ -161,30 +146,26 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
       ]
     },
   ];
-=======
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
-
+cursor/website-audit-and-update-with-deployment-76dc
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${className}`}>
       {/* Top Bar */}
       <div className="bg-gray-900 text-gray-300 text-sm py-2">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
 <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 <span>+1 (555) 123-4567</span>
-=======
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400" />
                 <span>{contactInfo.phone}</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-blue-400" />
@@ -206,7 +187,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -218,7 +198,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
             >
               <Menu className="w-6 h-6" />
             </button>
-
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -226,8 +205,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
-
-<<<<<<< HEAD
 {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -242,7 +219,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                   <span>{item.name}</span>
                   {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
-
                 {/* Dropdown Menu */}
                 {item.children && (
                   <AnimatePresence>
@@ -278,9 +254,7 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                 )}
               </div>
             ))}
-
             {/* CTA Button */}
-=======
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
@@ -294,7 +268,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                     <span>{item.name}</span>
                     {item.children && <ChevronDown className="w-4 h-4" />}
                   </Link>
-                  
                   {/* Dropdown Menu */}
                   {item.children && isDropdownOpen === item.name && (
                     <motion.div
@@ -320,7 +293,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                 </div>
               ))}
             </nav>
-
             {/* Search and CTA */}
             <div className="flex items-center space-x-4">
               {/* Search Button */}
@@ -330,9 +302,8 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
               >
                 <Search className="w-5 h-5" />
               </button>
-
               {/* CTA Button */}
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
               <Link
                 href="/contact"
                 className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
@@ -342,8 +313,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-
 {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -359,7 +328,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
               Free Consultation
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -367,12 +335,9 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
         </div>
       </div>
-
-<<<<<<< HEAD
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
@@ -417,7 +382,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
                     )}
                   </div>
                 ))}
-                
                 {/* Mobile CTA Buttons */}
                 <div className="px-4 pt-4 border-t border-gray-200 space-y-2">
                   <Link
@@ -454,7 +418,6 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           </div>
         )}
       </div>
-=======
       {/* Search Overlay */}
       {isSearchOpen && (
         <motion.div
@@ -500,7 +463,7 @@ export default function Header({ className = '', onMenuClick }: HeaderProps) {
           </motion.div>
         </motion.div>
       )}
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+cursor/website-audit-and-update-with-deployment-76dc
     </header>
   );
 }

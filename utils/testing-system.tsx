@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import "@testing-library/jest-dom";
-
 // Type definition for HTMLElement
 interface HTMLElement {
   click(): void;
 }
-
 export class TestingSystem {
   static async testUserInteraction(
     "element": HTMLElement,
@@ -27,6 +24,5 @@ export class TestingSystem {
   }
 }
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc

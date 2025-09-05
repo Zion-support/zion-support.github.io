@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from';react' "export": interface AdvancedITService {';
   id: string;
    title: string;
@@ -23,6 +22,5 @@ import React from';react' "export": interface AdvancedITService {';
    website: string;
    address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} "competitors": string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  "export": const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
 import React from';react' export: interface AdvancedITService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r} export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [''',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc

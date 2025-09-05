@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface AdvancedMicroSaaSService { 
   "id": string; 
   title: string; 
@@ -25,7 +24,6 @@ export interface AdvancedMicroSaaSService {
   demoUrl?: string; 
   documentationUrl?: string;
 }
-
 export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     id: 'ai-code-review-security',
     "title": 'AI-Powered Code Review & Security Scanner',
@@ -93,6 +91,5 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     "documentationUrl": 'https://ziontechgroup.com/docs'
   };
 ];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe

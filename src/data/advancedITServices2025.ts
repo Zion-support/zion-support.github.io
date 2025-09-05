@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react
-
 export interface AdvancedITService { 
   "id": string; 
   title: string; 
@@ -29,8 +27,6 @@ export interface AdvancedITService {
   reviews: number; 
   customers: number;
 }
-
 export const "ADVANCED_IT_SERVICES_2025": AdvancedITService[] = [];ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-76dc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+cursor/website-audit-and-update-with-deployment-76dc
+origin/cursor/automate-test-improve-and-merge-code-eafe
