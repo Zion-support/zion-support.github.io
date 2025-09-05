@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-console.log('🔧 Merge conflict resolver - fixing syntax errors...');
+console.log('🔧 Syntax fix - resolving merge conflicts...');
 
 // Fix the specific syntax errors we identified
 const files = [
@@ -59,4 +59,4 @@ files.forEach(file => {
 });
 
 console.log(`✅ Fixed ${totalFixed} files`);
-console.log('🎉 Merge conflict resolver completed!');
+console.log('🎉 Syntax fix completed!');
