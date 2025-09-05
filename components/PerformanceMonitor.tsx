@@ -21,6 +21,49 @@ interface PerformanceData {
   firstContentfulPaint: number;
 }
 
+// Extend Window interface to include performance API
+declare global {
+  interface Window {
+    performance: Performance;
+  }
+  
+  interface Performance {
+    getEntriesByType(_type: string): PerformanceEntry[];
+    memory?: {
+      usedJSHeapSize: number;
+      totalJSHeapSize: number;
+      jsHeapSizeLimit: number;
+    };
+  }
+  
+  interface PerformanceEntry {
+    name: string;
+    startTime: number;
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number;
+    domContentLoadedEventEnd: number;
+    loadEventStart: number;
+    loadEventEnd: number;
+    fetchStart: number;
+  }
+}
+
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void;
 }
