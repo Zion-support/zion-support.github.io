@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from './components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
   Users,
@@ -16,7 +16,8 @@ import {
   Briefcase,
   GraduationCap,
   Globe,
-  CheckCircle
+  CheckCircle,
+  BookOpen
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -70,7 +71,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   }
 ];
-
 const benefits = [
   {
     icon: Heart,
@@ -78,51 +78,48 @@ const benefits = [
     description: "Comprehensive health insurance, mental health support, and wellness programs"
   },
   {
-    icon: DollarSign,
-    title: "Competitive Compensation",
-    description: "Competitive salaries, performance bonuses, and equity participation"
-  },
-  {
-    icon: GraduationCap,
-    title: "Learning & Development",
-    description: "Professional development budget, conference attendance, and training programs"
-  },
-  {
-    icon: Globe,
+    icon: Zap,
     title: "Flexible Work",
-    description: "Remote work options, flexible hours, and work-life balance"
+    description: "Remote work options, flexible hours, and work-life balance initiatives"
   },
   {
-    icon: Coffee,
-    title: "Great Culture",
-    description: "Collaborative environment, team events, and inclusive workplace"
+    icon: BookOpen,
+    title: "Learning & Development",
+    description: "Professional development budget, training programs, and conference attendance"
   },
   {
     icon: Award,
     title: "Career Growth",
     description: "Clear career paths, mentorship programs, and advancement opportunities"
-  }
+  },
+  {
+    icon: Coffee,
+    title: "Great Culture",
+    description: "Inclusive environment, team events, and collaborative atmosphere"
+  },
+  {
+    icon: Award,
+    title: "Career Growth",
+    description: "Clear career paths, mentorship programs, and advancement opportunities"  }
 ];
-
 const values = [
   {
-    title: "Innovation",
+    title: "Innovation First",
     description: "We encourage creative thinking and embrace new technologies to solve complex problems."
   },
   {
     title: "Collaboration",
-    description: "We believe in the power of teamwork and open communication across all levels."
+    description: "We believe in the power of teamwork and diverse perspectives to achieve great results."
   },
   {
-    title: "Excellence",
-    description: "We strive for the highest quality in everything we do and continuously improve."
+    title: "Continuous Learning",
+    description: "We invest in our people's growth and provide opportunities for professional development."
   },
   {
-    title: "Integrity",
-    description: "We conduct business with honesty, transparency, and ethical practices."
+    title: "Client Success",
+    description: "Our success is measured by our clients' success and satisfaction with our solutions."
   }
 ];
-
 export default function CareersPage() {
   return (
     <MainLayout
@@ -185,7 +182,7 @@ export default function CareersPage() {
                 working together to build amazing technology solutions.
               </p>
             </motion.div>
-
+          
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
@@ -212,139 +209,93 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
-        {/* Our Values */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      {/* Why Join Us */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Why Join Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600">
+                We're building something special, and we want you to be part of it
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <benefit.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Our Values */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
+              <p className="text-xl text-gray-600">
+                The principles that guide everything we do
               </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {values.map((value, index) => (
-                  <motion.div
-                    key={value.title}
-                    className="bg-white p-6 rounded-lg shadow-lg"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start gap-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {value.title}
                     </h3>
                     <p className="text-gray-600">
                       {value.description}
                     </p>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </section>
-
-        {/* Open Positions */}
-        <section id="open-positions" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        </div>
+      </section>
+      {/* Open Positions */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Open Positions
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore our current job openings and find the perfect role for you.
+              <p className="text-xl text-gray-600">
+                Find your next opportunity with us
               </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {jobOpenings.map((job, index) => (
-                  <motion.div
-                    key={job.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        {job.department}
-                      </span>
-                      <span className="text-gray-500 text-sm">{job.type}</span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {job.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {job.description}
-                    </p>
-
-                    <div className="space-y-2 mb-6">
-                      <div className="flex items-center text-sm text-gray-600">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center text-sm text-gray-600">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {job.experience}
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {job.requirements.slice(0, 3).map((requirement, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
-                            {requirement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {job.benefits.map((benefit, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <a
-                      href={`/careers/${job.id}`}
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center"
-                    >
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </motion.div>
-                ))}
-              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">

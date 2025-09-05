@@ -25,7 +25,7 @@ import {
   Database,
   Video
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '.././components/layout/MainLayout';
 
 const solutions = [
   {
@@ -54,8 +54,7 @@ const solutions = [
     description: 'Streamline administrative processes with automated workflows and systems.',
     icon: Building,
     features: ['Enrollment Management', 'Grade Management', 'Scheduling', 'Communication Tools'],
-    benefits: ['50% time savings', 'Reduced errors', 'Better organization', 'Improved efficiency']
-  }
+    benefits: ['50% time savings', 'Reduced errors', 'Better organization', 'Improved efficiency']  }
 ];
 
 const benefits = [
@@ -87,7 +86,7 @@ const benefits = [
 
 export default function Education() {
   return (
-    <Layout
+    <MainLayout
       title="Education Technology Solutions - Zion Tech Group"
       description="Transform education with LMS platforms, virtual classrooms, student analytics, and administrative automation."
       keywords="education technology, LMS, virtual classroom, student analytics, e-learning, educational software"
@@ -99,8 +98,7 @@ export default function Education() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+          <div className="container mx-auto px-4 relative z-10">            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -120,8 +118,7 @@ export default function Education() {
                   Get Education Solution
                 </Link>
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View Case Studies
-                </Link>
+                  View Case Studies                </Link>
               </div>
             </motion.div>
           </div>
@@ -192,8 +189,7 @@ export default function Education() {
                     </div>
                   </motion.div>
                 );
-              })}
-            </div>
+              })}            </div>
           </div>
         </section>
 
@@ -235,8 +231,7 @@ export default function Education() {
                     <p className="text-gray-600">{benefit.description}</p>
                   </motion.div>
                 );
-              })}
-            </div>
+              })}            </div>
           </div>
         </section>
 
@@ -260,13 +255,12 @@ export default function Education() {
                   Get Education Consultation
                 </Link>
                 <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">
-                  View All Industries
-                </Link>
+                  View All Industries                </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

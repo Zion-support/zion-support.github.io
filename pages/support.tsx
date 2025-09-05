@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 import { 
   Phone, 
   Mail, 
@@ -15,10 +15,17 @@ import {
   FileText,
   Users,
   Zap,
-  Shield
+  Shield,
+  MessageCircle
 } from 'lucide-react';
 
 const supportChannels = [
+  {
+    icon: MessageCircle,
+    title: 'Live Chat',
+    description: 'Get instant help with our 24/7 live chat support',
+    availability: '24/7'
+  },
   {
     icon: Phone,
     title: 'Phone Support',
@@ -101,7 +108,7 @@ const resources = [
 
 export default function SupportPage() {
   return (
-    <Layout 
+    <MainLayout 
       title="Support - Zion Tech Group | 24/7 Technical Support & Help Center"
       description="Get expert technical support for all Zion Tech Group services. 24/7 phone support, live chat, email support, and comprehensive help resources."
       keywords="technical support, help desk, customer service, 24/7 support, IT support, troubleshooting"
@@ -306,28 +313,18 @@ export default function SupportPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Need Help?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Our expert team is ready to assist you with any questions or issues you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Call +1 302 464 0950
-                </a>
-                <Link 
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Contact Support
-                </Link>
+              <div className="text-center">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Get Support
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  We're here to help you succeed with our comprehensive support services.
+                </p>
               </div>
             </motion.div>
           </div>
         </section>
-      </div>
-    </Layout>
+    </div>
+    </MainLayout>
   );
 }

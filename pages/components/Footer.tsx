@@ -1,53 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Database Solutions', href: '/database-solutions' }
-    ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-      { name: 'Startup Solutions', href: '/startup-solutions' },
-      { name: 'Industries', href: '/industries' },
-      { name: 'Custom Development', href: '/custom-development' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Consulting', href: '/consulting' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'News', href: '/news' },
-      { name: 'Partners', href: '/partners' }
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Documentation', href: '/docs/api' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Security', href: '/security' },
-      { name: 'Compliance', href: '/compliance' },
-      { name: 'Accessibility', href: '/accessibility' }
-    ]
-  };
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
@@ -196,8 +148,7 @@ const Footer = () => {
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
-            
+            </motion.div>            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +165,6 @@ const Footer = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </motion.div>
           </div>
         </div>
       </div>
