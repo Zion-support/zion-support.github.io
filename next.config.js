@@ -9,8 +9,7 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+    optimizeCss: true
   },
   
   // Image optimization
