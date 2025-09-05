@@ -33,7 +33,8 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain
 } from 'lucide-react';
 
 const itServices = [
@@ -245,6 +246,97 @@ const itServices = [
     pricing: '$20,000 - $150,000/project',
     category: 'Digital Transformation',
     link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'AIOps',
+    popular: true,
+    link: 'https://aiops.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure deployment for low-latency applications and IoT devices.',
+    icon: Wifi,
+    features: ['Edge Infrastructure', 'IoT Integration', 'Low-latency Processing', 'Distributed Computing'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Post-quantum Cryptography', 'Migration Planning', 'Security Assessment'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Advanced Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
+    pricing: '$25,000 - $150,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain implementation with smart contracts and decentralized applications.',
+    icon: Cpu,
+    features: ['Blockchain Deployment', 'Smart Contract Development', 'DApp Integration', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security solutions and device management platforms.',
+    icon: Smartphone,
+    features: ['Device Security', 'Firmware Updates', 'Threat Detection', 'Device Lifecycle Management'],
+    pricing: '$12,000 - $60,000/project',
+    category: 'IoT Security',
+    link: 'https://iotsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Design and implementation of hybrid cloud solutions combining on-premises and cloud resources.',
+    icon: Cloud,
+    features: ['Hybrid Design', 'Data Synchronization', 'Workload Optimization', 'Security Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Automation & Orchestration',
+    description: 'Advanced IT process automation and orchestration using AI and machine learning.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Orchestration', 'AI-driven Decisions', 'Self-service Portals'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Data Privacy & GDPR Compliance',
+    description: 'Comprehensive data privacy solutions and GDPR compliance implementation.',
+    icon: Shield,
+    features: ['Privacy Impact Assessment', 'Data Mapping', 'Consent Management', 'Compliance Monitoring'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Privacy & Compliance',
+    link: 'https://dataprivacy.ziontechgroup.com'
   },
   {
     title: 'IT Service Management (ITSM)',

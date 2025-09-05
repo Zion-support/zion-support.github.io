@@ -199,6 +199,178 @@ const microSaaSProducts = [
     link: 'https://meetingscheduler.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security scanning, performance analysis, and best practice recommendations.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Best Practice Checks', 'Automated Comments'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codereviewai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Security Scoring', 'Audit Reports'],
+    pricing: '$499 - $2,999/project',
+    category: 'Blockchain',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced digital whiteboard with real-time collaboration and intelligent diagram generation.',
+    icon: Kanban,
+    features: ['Real-time Collaboration', 'AI Diagram Generation', 'Voice Notes', 'Export Options'],
+    pricing: '$29 - $149/month',
+    category: 'Collaboration',
+    link: 'https://whiteboardpro.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Automated SEO analysis and optimization with content suggestions and ranking predictions.',
+    icon: Search,
+    features: ['Keyword Analysis', 'Content Optimization', 'Ranking Predictions', 'Competitor Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'SEO',
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Voice-to-Text Transcription Pro',
+    description: 'Advanced speech-to-text with speaker identification, punctuation, and multi-language support.',
+    icon: Mic,
+    features: ['Speaker Identification', 'Auto Punctuation', 'Multi-language', 'Real-time Processing'],
+    pricing: '$39 - $199/month',
+    category: 'Transcription',
+    link: 'https://voicetextpro.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent A/B testing with automated statistical analysis and optimization recommendations.',
+    icon: TrendingUp,
+    features: ['Automated Testing', 'Statistical Analysis', 'Optimization Suggestions', 'Multi-variate Testing'],
+    pricing: '$149 - $799/month',
+    category: 'Testing',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Data Backup & Recovery',
+    description: 'Automated data backup with intelligent recovery options and ransomware protection.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Ransomware Protection', 'Point-in-time Recovery', 'Cross-platform Sync'],
+    pricing: '$19 - $99/month',
+    category: 'Data Protection',
+    link: 'https://databackup.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Support Analytics',
+    description: 'Advanced analytics for customer support with sentiment analysis and performance insights.',
+    icon: Headphones,
+    features: ['Sentiment Analysis', 'Performance Metrics', 'Trend Detection', 'Agent Optimization'],
+    pricing: '$99 - $499/month',
+    category: 'Analytics',
+    link: 'https://supportanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Generator',
+    description: 'AI-powered smart contract generation with customizable templates and security checks.',
+    icon: FileText,
+    features: ['Template Library', 'Custom Generation', 'Security Validation', 'Deployment Tools'],
+    pricing: '$299 - $1,499/project',
+    category: 'Blockchain',
+    link: 'https://contractgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Editor',
+    description: 'Automated video editing with AI-driven cuts, transitions, and content optimization.',
+    icon: Video,
+    features: ['Auto Editing', 'Smart Cuts', 'Content Optimization', 'Multi-format Export'],
+    pricing: '$49 - $249/month',
+    category: 'Video Production',
+    link: 'https://videoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Form Builder',
+    description: 'AI-powered form creation with smart validation, conditional logic, and analytics.',
+    icon: FileText,
+    features: ['Smart Validation', 'Conditional Logic', 'Analytics Dashboard', 'Multi-step Forms'],
+    pricing: '$29 - $149/month',
+    category: 'Forms',
+    link: 'https://formbuilder.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Service',
+    description: 'Real-time translation with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'Quality Scoring'],
+    pricing: '$0.01 - $0.05 per word',
+    category: 'Translation',
+    link: 'https://translationai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered home automation with voice control and predictive behavior learning.',
+    icon: Home,
+    features: ['Voice Control', 'Predictive Learning', 'Device Integration', 'Energy Optimization'],
+    pricing: '$99 - $499/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Learning Management System',
+    description: 'Intelligent LMS with personalized learning paths and automated assessment generation.',
+    icon: BookOpen,
+    features: ['Personalized Paths', 'Auto Assessments', 'Progress Tracking', 'Content Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Education',
+    link: 'https://lmsai.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain data analysis with transaction tracking and market insights.',
+    icon: BarChart3,
+    features: ['Transaction Tracking', 'Market Analysis', 'Risk Assessment', 'Custom Alerts'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email protection with phishing detection and automated threat response.',
+    icon: Shield,
+    features: ['Phishing Detection', 'Threat Response', 'Email Encryption', 'Compliance Monitoring'],
+    pricing: '$49 - $249/month',
+    category: 'Security',
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-driven inventory prediction with demand forecasting and supply chain optimization.',
+    icon: TrendingUp,
+    features: ['Demand Forecasting', 'Supply Optimization', 'Seasonal Analysis', 'Risk Assessment'],
+    pricing: '$199 - $999/month',
+    category: 'Supply Chain',
+    link: 'https://inventoryforecast.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'AI-powered energy optimization for buildings with predictive maintenance and cost analysis.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Predictive Maintenance', 'Cost Analysis', 'Carbon Tracking'],
+    pricing: '$399 - $1,999/month',
+    category: 'Energy',
+    link: 'https://energymanager.ziontechgroup.com'
+  },
+  {
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
@@ -824,6 +996,112 @@ export default function MicroSaaSPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+              Ready to transform your business with our innovative micro SaaS solutions? Contact our expert team for a free consultation and custom quote.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 hover:text-purple-800 font-semibold">
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
+                <p className="text-sm text-gray-500">Get a custom quote within 24 hours</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800 font-semibold">
+                    +1 302 464 0950
+                  </a>
+                </p>
+                <p className="text-sm text-gray-500">Speak with our SaaS experts directly</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-blue-600 hover:text-blue-800 font-semibold">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </a>
+                </p>
+                <p className="text-sm text-gray-500">Schedule an in-person consultation</p>
+              </div>
+            </div>
+
+            <div className="mt-12 p-8 bg-white rounded-xl shadow-lg max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">Expert development team with 10+ years experience</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">Custom solutions tailored to your business needs</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">24/7 support and maintenance included</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">Scalable architecture for future growth</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">Competitive pricing with transparent costs</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-purple-500 mr-3" />
+                    <span className="text-gray-700">Fast delivery with agile development process</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
