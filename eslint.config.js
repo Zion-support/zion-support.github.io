@@ -120,7 +120,7 @@ export default [
       'no-console': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-non-null-assertion': 'warn',
-      '@typescript-eslint/prefer-const': 'warn',
+      'prefer-const': 'warn',
       '@typescript-eslint/no-inferrable-types': 'warn'
     }
   }
