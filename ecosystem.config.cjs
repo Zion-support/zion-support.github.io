@@ -4,9 +4,12 @@ module.exports = {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -38,11 +41,14 @@ module.exports = {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
@@ -55,9 +61,12 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -71,11 +80,14 @@ module.exports = {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -119,10 +131,13 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         NODE_ENV: 'production',
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
@@ -136,12 +151,15 @@ module.exports = {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
         NODE_ENV: 'development',
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -153,6 +171,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   ]
 =======
@@ -160,6 +179,8 @@ module.exports = {
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     },
     {
       name: 'auto-commit-fixes',
@@ -550,6 +571,7 @@ module.exports = {}
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 };
 =======
@@ -558,3 +580,6 @@ module.exports = {}
 =======
 };
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+};
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

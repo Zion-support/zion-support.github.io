@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/webinars.tsx.broken
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/webinars.tsx.backup
 <<<<<<< HEAD
@@ -423,8 +424,14 @@ export default function WebinarsPage() {
   const upcomingWebinars = webinars.filter(webinar => webinar.isUpcoming);
   const liveWebinars = webinars.filter(webinar => webinar.isLive);
   const pastWebinars = webinars.filter(webinar => !webinar.isUpcoming && !webinar.isLive);
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440:pages/webinars.tsx
 
+const Page = () => {
   return (
+<<<<<<< HEAD:pages/webinars.tsx.broken
     <MainLayout
 =======
 import React from 'react';
@@ -1174,3 +1181,20 @@ export default function Webinars() {
 >>>>>>> main:pages/webinars.tsx.broken
   );
 }
+=======
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440:pages/webinars.tsx

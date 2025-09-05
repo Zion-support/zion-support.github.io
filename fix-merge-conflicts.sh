@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 echo "Fixing merge conflicts in the codebase..."
 
@@ -27,6 +28,21 @@ for file in $files_with_conflicts; do
     sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
     sed -i '/>>>>>>> main/d' "$file"
 =======
+=======
+
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in pages/ directory..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     # Use sed to remove merge conflict markers and keep HEAD version
     # Remove lines from <<<<<<< HEAD to ======= (inclusive)
     # Remove lines from ======= to >>>>>>> (inclusive)
@@ -37,5 +53,9 @@ for file in $files_with_conflicts; do
     echo "Fixed: $file"
 done
 
+<<<<<<< HEAD
 echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
 echo "Please review the changes and test the build."
+=======
+echo "Merge conflicts fixed!"
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

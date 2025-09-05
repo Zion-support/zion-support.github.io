@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -84,15 +85,69 @@ export default function Footer({ className = '' }: FooterProps) {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
+=======
+import { motion } from 'framer-motion';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Github 
+} from 'lucide-react';
+
+const Footer = () => {
+  const footerSections = {
+    services: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/security' },
+      { name: 'Data Analytics', href: '/data-analytics' }
+    ],
+    solutions: [
+      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
+      { name: 'Startup Solutions', href: '/startup-solutions' },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+      { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+      { name: 'Custom Development', href: '/custom-development' }
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'News', href: '/news' },
+      { name: 'Contact', href: '/contact' }
+    ],
+    resources: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Webinars', href: '/webinars' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Support', href: '/support' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' },
+      { name: 'Accessibility', href: '/accessibility' }
+    ]
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'GitHub', href: '#', icon: Github }
   ];
 =======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram, Zap, Brain, Server, Shield, Users, Building2, FileText, Rocket, Target, Atom, Network, Cloud, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle } from 'lucide-react';
@@ -174,6 +229,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -320,21 +376,29 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
+<<<<<<< HEAD
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg mr-3">
+=======
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+              <span className="ml-3 text-2xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI solutions, cloud services, and technology consulting.
-              We help businesses transform and grow through innovative technology.
+              Leading technology solutions provider specializing in AI, cloud computing, 
+              and digital transformation services for businesses worldwide.
             </p>
+<<<<<<< HEAD
           </div>
 
 <<<<<<< HEAD
@@ -461,14 +525,36 @@ export default function Footer() {
                   <social.icon className="h-5 w-5" />
                 </a>
               ))}
+=======
+            
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300">
+                <MapPin className="h-5 w-5 mr-3 text-blue-400" />
+                <span>123 Tech Street, Innovation City, IC 12345</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="h-5 w-5 mr-3 text-blue-400" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />
+                <span>info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Clock className="h-5 w-5 mr-3 text-blue-400" />
+                <span>Mon-Fri 9AM-6PM EST</span>
+              </div>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             </div>
           </div>
 
           {/* Services */}
 <<<<<<< HEAD
           <div>
-            <h4 className="text-lg font-semibold mb-6">Services</h4>
+            <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
+<<<<<<< HEAD
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
@@ -506,26 +592,66 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3 mb-8">
               {company.map((item) => (
+=======
+              {footerSections.services.map((item) => (
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
                 <li key={item.name}>
-                  <Link
+                  <Link 
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
 
-            <h4 className="text-lg font-semibold mb-6">Resources</h4>
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Solutions</h3>
             <ul className="space-y-3">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <Link
-                    href={resource.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+              {footerSections.solutions.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                    {resource.name}
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <ul className="space-y-3">
+              {footerSections.company.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Resources</h3>
+            <ul className="space-y-3">
+              {footerSections.resources.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -533,6 +659,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Trust Indicators */}
 =======
           {Object.entries(services).map(([category, links]) => (
@@ -670,16 +797,38 @@ export default function Footer() {
               </p>
               <div className="flex space-x-6">
                 {legal.map((item) => (
+=======
+        {/* Social Links */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="h-6 w-6" />
+                </Link>
+              ))}
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+              <div className="flex space-x-6 text-sm">
+                {footerSections.legal.map((item) => (
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
             <div className="flex items-center mt-4 md:mt-0">
               <Globe className="w-4 h-4 mr-2 text-gray-400" />
               <span className="text-gray-400 text-sm">Serving clients worldwide</span>
@@ -699,12 +848,26 @@ export default function Footer() {
               </Link>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 >>>>>>> main
+=======
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <div className="flex items-center mt-2 md:mt-0">
+              <span className="mr-2">Trusted by</span>
+              <span className="font-semibold text-white">500+</span>
+              <span className="ml-2">companies worldwide</span>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             </div>
           </div>
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -720,3 +883,8 @@ export default Footer;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
 >>>>>>> main
+=======
+};
+
+export default Footer;
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

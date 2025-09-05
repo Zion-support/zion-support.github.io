@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;,
 import _React from 'react';';,
@@ -24,6 +25,8 @@ export function Logo({ customLogo, customColor }) {}
       </div>;
     </Link>;
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import React from 'react';
 import { Link } from 'react-router-dom';
 export function Logo({ customLogo, customColor }) {
@@ -49,6 +52,7 @@ export function Logo({ customLogo, customColor }) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 }
@@ -63,3 +67,6 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 =======
 >>>>>>> main
 >>>>>>> main
+=======
+}
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

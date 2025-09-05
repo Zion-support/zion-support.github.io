@@ -13,7 +13,10 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     if (!config.includes('optimizeCss')) {}
       optimizations.push('Add CSS optimization');
     };
@@ -293,7 +296,11 @@ module.exports = nextConfig`;
       });
       this.optimizations.push("Build test successful");
       this.log("✅ Build test successful");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     } catch (error) {
       this.errors.push(`Build test failed: ${error.message}`);
       this.log(`❌ Build test failed: ${error.message}`, "ERROR");
@@ -360,7 +367,11 @@ function analyzeDependencies() {
       }
       
       this.log("\n🎉 Performance optimization completed!");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     } catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, "ERROR");
       process.exit(1);
@@ -415,6 +426,7 @@ console.log(`\n📄 Report saved to: ${reportPath}`);
 
 process.exit(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
@@ -422,3 +434,9 @@ process.exit(0);
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 >>>>>>> main
+=======
+=======
+const optimizer = new PerformanceOptimizer();
+optimizer.run().catch(console.error);
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

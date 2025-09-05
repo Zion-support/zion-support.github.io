@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 export interface Real2026Q4NewService {
@@ -32,3 +33,8 @@ export interface Real2026Q4NewService { id: string; name: string; tagline: strin
 =======
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

@@ -200,7 +200,11 @@ class SecurityScanner {
 
   async runNpmAudit() {
     this.log("🔍 Running npm audit...");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     try {
       const result = execSync("npm audit --json", {
         cwd: this.projectRoot,
@@ -280,7 +284,11 @@ runSecurityCheck('Dependency Security', () => {
 
   async checkSensitiveFiles() {
     this.log("🔐 Checking for sensitive files...");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     try {
       const sensitiveFiles = [
         ".env",
@@ -360,7 +368,11 @@ runSecurityCheck('Dependency Security', () => {
       const packageJsonPath = path.join(this.projectRoot, "package.json");
       if (fs.existsSync(packageJsonPath)) {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         
         // Check for known vulnerable packages
         const vulnerablePackages = [
@@ -396,7 +408,11 @@ runSecurityCheck('Dependency Security', () => {
             this.log(`⚠️ Potentially vulnerable package: ${name}@${packageJson.dependencies[name]}`, "WARN");
             foundVulnerable = true;
           }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         }
         
         if (!foundVulnerable) {
@@ -473,7 +489,11 @@ runSecurityCheck('Security Headers', () => {
             this.log(`⚠️ File ${file} is world-writable`, "WARN");
             permissionIssues = true;
           }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         }
       }
       
@@ -559,7 +579,11 @@ runSecurityCheck('HTTPS Configuration', () => {
       });
       this.fixes.push("Security vulnerabilities fixed");
       this.log("✅ Security vulnerabilities fixed");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     } catch (error) {
       this.log(`⚠️ Security fix had issues: ${error.message}`, "WARN");
     }
@@ -649,7 +673,11 @@ runSecurityCheck('File Permissions', () => {
       }
       
       this.log("\n🎉 Security scan completed!");
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     } catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, "ERROR");
       process.exit(1);
@@ -698,13 +726,20 @@ if (securityReport.status === 'vulnerable') {
     process.exit(0);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
   }
 }
 
 const scanner = new SecurityScanner();
 scanner.run().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

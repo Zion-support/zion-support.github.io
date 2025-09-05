@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import { 
   X, 
   ChevronDown, 
@@ -14,6 +17,11 @@ import {
   Mail,
   MapPin,
   Building2,
+<<<<<<< HEAD
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   User,
   LogOut,
   Search
@@ -58,6 +66,7 @@ const navigationItems = [
 ];
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
+<<<<<<< HEAD
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleExpanded = (label: string) => {
@@ -67,6 +76,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, label]
     );
   };
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 
   useEffect(() => {
     if (isOpen) {
@@ -80,6 +93,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     };
   }, [isOpen]);
 
+<<<<<<< HEAD
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   return (
     <AnimatePresence>
       {isOpen && (
@@ -89,7 +108,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             onClick={onClose}
           />
           
@@ -99,6 +123,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
           >
             <div className="flex flex-col h-full">
@@ -108,11 +133,46 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+=======
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          >
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+          >
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
+<<<<<<< HEAD
               
+=======
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
               {/* Navigation */}
               <nav className="flex-1 overflow-y-auto py-4">
                 <div className="px-4 space-y-2">
@@ -163,6 +223,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
               </nav>
               
               {/* Contact Info */}
@@ -179,6 +240,25 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div className="flex items-center text-sm text-gray-600">
                     <MapPin className="h-4 w-4 mr-2" />
                     <span>123 Tech Street, Innovation City</span>
+=======
+              </div>
+
+              {/* Contact Info */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-600">
+                    <Phone className="w-4 h-4 mr-3" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <Mail className="w-4 h-4 mr-3" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
                   </div>
                 </div>
               </div>
@@ -188,4 +268,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

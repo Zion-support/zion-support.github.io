@@ -94,7 +94,11 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -615,9 +619,12 @@ if (healthReport.status === 'unhealthy') {
     process.exit(0);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
   log(message, type = "INFO") {
     const timestamp = new Date().toISOString();
@@ -798,4 +805,8 @@ if (healthReport.status === 'unhealthy') {
 
 const checker = new HealthChecker();
 checker.run().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

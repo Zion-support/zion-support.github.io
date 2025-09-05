@@ -1,4 +1,39 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  User, 
+  ArrowRight, 
+  Tag, 
+  ExternalLink,
+import { 
+  ArrowRight, 
+  ExternalLink, 
+  Calendar, 
+  User, 
+  Building,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  TrendingUp,
+  Award,
+  Clock,
+<<<<<<< HEAD
+  Target,
+  Zap,
+=======
+=======
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -33,7 +68,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 import MainLayout from '../src/components/layout/MainLayout';
+<<<<<<< HEAD
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -74,7 +113,10 @@ const caseStudies = [
   {
     id: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -84,6 +126,11 @@ const caseStudies = [
 >>>>>>> main
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     title: "AI-Powered Customer Service Transformation",
     client: "Global E-commerce Retailer",
     industry: "E-commerce",
@@ -144,6 +191,7 @@ const caseStudies = [
     challenge: "Manual patient data processing and diagnosis delays",
     solution: "AI-powered diagnostic platform with real-time analysis",
 <<<<<<< HEAD
+<<<<<<< HEAD
     results: [
       "85% reduction in diagnosis time",
       "60% improvement in accuracy",
@@ -190,6 +238,12 @@ const caseStudies = [
 =======
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     results: [
       "60% reduction in support costs",
       "40% faster response times",
@@ -200,6 +254,35 @@ const caseStudies = [
     team: "8 experts",
     technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
     image: "/images/case-studies/ecommerce-ai.jpg"
+<<<<<<< HEAD
+  },
+<<<<<<< HEAD
+=======
+  {
+<<<<<<< HEAD
+    id: 4,
+    title: "Micro SaaS Platform Development",
+    client: "Startup Accelerator",
+    industry: "Technology",
+    challenge: "Need for scalable SaaS platform to support multiple startups",
+    solution: "Multi-tenant SaaS platform with AI-powered features",
+    results: "500+ active users, 99.9% uptime, $50K MRR",
+    category: "Micro SaaS",
+    duration: "4 months",
+    teamSize: "6 developers",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
+    featured: false,
+    metrics: {
+      activeUsers: "500+",
+      uptime: "99.9%",
+      mrr: "$50K",
+      growth: "400%"
+    },
+    testimonial: {
+      quote: "The platform has been instrumental in our growth.",
+      author: "Emily Rodriguez",
+      role: "Founder & CEO"
+    }
   },
 <<<<<<< HEAD
 =======
@@ -255,6 +338,35 @@ const caseStudies = [
     }
   },
   {
+    id: 5,
+    title: "Cybersecurity Implementation",
+    client: "Government Agency",
+    industry: "Government",
+    challenge: "Strengthening cybersecurity posture and compliance",
+    solution: "Comprehensive security framework with zero-trust architecture",
+    results: "100% compliance, 90% reduction in security incidents",
+    category: "IT Services",
+    duration: "8 months",
+    teamSize: "15 security experts",
+    technologies: ["Zero Trust", "SIEM", "EDR", "Compliance"],
+    featured: true,
+    metrics: {
+      compliance: "100%",
+      incidentReduction: "90%",
+      threatDetection: "95%",
+      responseTime: "50%"
+    },
+    testimonial: {
+      quote: "Our security posture has been significantly strengthened. The implementation was thorough and professional.",
+      author: "David Wilson",
+      role: "CISO"
+    }
+  },
+  {
+=======
+  },
+  {
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
     id: 6,
     title: "Educational Technology Platform",
     client: "Online Learning Company",
@@ -293,8 +405,16 @@ const caseStudies = [
     icon: Brain
   },
   {
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
@@ -326,7 +446,11 @@ const caseStudies = [
       "50% faster incident response"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+<<<<<<< HEAD
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     technologies: ["Cybersecurity", "Zero-Trust", "Compliance"],
     duration: "8 months",
     team: "15 experts",
@@ -345,6 +469,20 @@ const caseStudies = [
       "Predictive maintenance implementation",
       "Real-time quality monitoring"
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    technologies: ['Cybersecurity', 'SIEM', 'Machine Learning', 'Blockchain'],
+    duration: '4 months',
+    teamSize: '6 developers',
+    image: '/case-studies/retail-security.jpg',
+    icon: Shield
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     technologies: ["IoT", "Data Analytics", "Machine Learning"],
     duration: "10 months",
     team: "20 experts",
@@ -386,16 +524,26 @@ const caseStudies = [
     team: "25 experts",
     image: "/api/placeholder/600/400"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   }
 ];
 
 const industries = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 <<<<<<< HEAD
   { name: 'All', count: caseStudies.length },
   { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
@@ -419,7 +567,12 @@ const categories = [
   { name: "Technology", count: 15, icon: Zap },
   { name: "Education", count: 7, icon: Award }
 =======
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   "All Industries",
   "Healthcare",
   "E-commerce",
@@ -883,16 +1036,25 @@ export default function CaseStudies() {
                 </motion.div>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -924,7 +1086,12 @@ export default function CaseStudies() {
                   Explore Our Services
                 </a>
 =======
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -953,25 +1120,47 @@ export default function CaseStudies() {
                   View AI Services
                 </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+<<<<<<< HEAD
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
 }

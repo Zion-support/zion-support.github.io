@@ -3,8 +3,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
@@ -22,6 +25,7 @@ const nextConfig = {
   },
   // Image optimization
   images: {
+<<<<<<< HEAD
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -68,6 +72,8 @@ module.exports = withBundleAnalyzer({
   "generateEtags": false,
   "images": {
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
   },
@@ -92,17 +98,24 @@ module.exports = withBundleAnalyzer({
             enforce: true,
           },
         },
+<<<<<<< HEAD
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
             "minChunks": 2,
             "chunks": 'all',
             "enforce": true}}}}
     return config}});
 <<<<<<< HEAD
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       };
     }
     return config;
   },
+<<<<<<< HEAD
 });
 =======
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
 >>>>>>> main
+=======
+});
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

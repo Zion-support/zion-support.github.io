@@ -19,6 +19,7 @@ Object.defineProperty(window, 'matchMedia', {
   value: jest.fn().mockImplementation(query => ({
     matches: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     media: query,
     onchange: null,
@@ -30,6 +31,8 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -38,7 +41,11 @@ Object.defineProperty(window, 'matchMedia', {
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 =======
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 >>>>>>> main
+=======
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

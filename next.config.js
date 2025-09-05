@@ -1,5 +1,10 @@
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
+=======
+  compress: true,
+  poweredByHeader: false,
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],

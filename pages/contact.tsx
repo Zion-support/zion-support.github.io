@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -306,25 +307,23 @@ export default function Contact() {
       description="Get in touch with our team of experts. We're here to help you transform your business with cutting-edge technology solutions."
 <<<<<<< HEAD
       keywords="contact, get in touch, support, consultation, technology solutions"
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Touch</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Ready to transform your business? Let's discuss how our technology solutions can help you achieve your goals.
-            </p>
-          </motion.div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Contact Information */}
@@ -1186,5 +1185,11 @@ export default function Contact() {
     </MainLayout>
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
 >>>>>>> main
+=======
+      </div>
+    </MainLayout>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
-}
+};
+
+export default Page;

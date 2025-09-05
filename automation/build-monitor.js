@@ -7,6 +7,7 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
@@ -146,6 +147,10 @@ class BuildMonitor {
         this.log('Could not read previous report', 'WARN');
       }
 >>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -164,6 +169,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -220,6 +226,11 @@ class BuildMonitor {
   async run() {
     this.log('Starting build health check...');
 >>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -240,6 +251,7 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
       if (report.healthScore < 70) {
@@ -249,6 +261,11 @@ class BuildMonitor {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
 >>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+      
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -449,10 +466,15 @@ class BuildMonitor {
 const monitor = new BuildMonitor();
 if (require.main === module) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
 >>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   const command = process.argv[2];
   switch (command) {
     case 'start':

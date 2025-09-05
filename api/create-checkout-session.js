@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 export default function handler(req, res) {
@@ -18,8 +19,9 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import Stripe from 'stripe';
-import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16',
@@ -70,9 +72,13 @@ async function handler(req, res) {
 
 export default withErrorLogging(handler);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
 =======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

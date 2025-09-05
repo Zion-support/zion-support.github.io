@@ -9,6 +9,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default [{
     "ignores": [
 =======
@@ -26,6 +27,9 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> main
+=======
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 
 export default [
   {
@@ -44,6 +48,13 @@ export default [
       '*.config.cjs',
       '*.config.mjs',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      '.prettierrc.js',
+      '.eslintrc.*',
+      '*.min.js',
+      '*.bundle.js',
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'scripts/',
       'automation/',
       'automation_backup/',
@@ -57,6 +68,7 @@ export default [
       'pages.blog.disabled/',
       'pages._archive_corrupted/',
       'pages._quarantine/',
+<<<<<<< HEAD
 =======
       'fix-critical-files.js',
       'fix-*.js',
@@ -108,10 +120,13 @@ export default [
       'pages.broken/',
       'pages.corrupted.*/',
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'pages-disabled/',
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       '*.test.js',
@@ -330,6 +345,77 @@ export default [
       'corrupted-files-backup/**/*',
       'cypress_backup/',
 <<<<<<< HEAD
+=======
+      'src_backup_temp/',
+      'src.pages.disabled/',
+      'src.disabled/',
+      'src.broken/',
+      'src.corrupted/',
+      'pages_backup/',
+      'pages_backup_conflicts/',
+      'pages_disabled/',
+      'pages_api.disabled/',
+      'lib.broken/',
+      'lib.disabled/',
+      'lib/',
+      'lint-target/',
+      'monitoring/',
+      'netlify/',
+      'next.config.*.js',
+      'pages.disabled_auto/',
+      'pages.old/',
+      'public/',
+      'server/',
+      'temp-backup/',
+      'temp_broken_files/',
+      'temp_working/',
+      'temp_footer_start.tsx',
+      'temp_backup/',
+      'test_build/',
+      'tests/',
+      'tools/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'fix-*.cjs',
+      'fix-*.js',
+      'git-*.js',
+      'git-*.cjs',
+      'hooks.disabled/',
+      'hooks/',
+      'intelligent-*.cjs',
+      'jest.*',
+      'master-*.cjs',
+      'merge-*.cjs',
+      'middleware.*',
+      'optimized-*.cjs',
+      'quick-*.cjs',
+      'resolve-*.cjs',
+      'run-*.cjs',
+      'security-*.cjs',
+      'seo-*.cjs',
+      'simple-*.cjs',
+      'structural-*.js',
+      'supabase/',
+      'types/',
+      'utils/',
+      'data/',
+      'database/',
+      'deployment*/',
+      'e2e/',
+      'ecosystem.*.cjs',
+      'enhanced-*.cjs',
+      'final-*.cjs',
+      'lint-stub.js',
+      'playwright.config.ts',
+      'pr-manager.cjs',
+      'services/',
+      'src/',
+      'components.disabled/',
+      'components.disabled_full/',
+      'contracts.disabled/',
+      'corrupted-files-backup/',
+      'cypress_backup/',
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'ai-optimization-backups/',
       'api-backup/',
       'backup/',
@@ -354,6 +440,7 @@ export default [
       'components/ui/',
       '*.cjs',
       '*.js',
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
       'cypress_backup/**/*',
@@ -364,12 +451,15 @@ export default [
 =======
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
+<<<<<<< HEAD
 <<<<<<< HEAD
       '*.report.json',
       'temp_*/',
@@ -637,6 +727,20 @@ export default [
       '*.swo.jsx',
       '*.swo.ts',
       '*.swo.tsx',
+=======
+      '*.backup.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.disabled.*',
+      '*.old.*',
+      '*.temp.*',
+      '*.tmp.*',
+      '*.bak.*',
+      '*.orig.*',
+      '*.rej.*',
+      '*.swp.*',
+      '*.swo.*',
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       '*.log',
       '*.pid',
       '*.seed',
@@ -647,6 +751,10 @@ export default [
       'final-*.js',
       'fix_*.js',
       'health-endpoint.js',
+<<<<<<< HEAD
+=======
+      'improve-app.js',
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'maintenance-scheduler.js',
       'merge-*.js',
       'monitoring-system.js',
@@ -658,6 +766,7 @@ export default [
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
+<<<<<<< HEAD
       '*.tgz',
       '*.tar.gz',
       '*.zip',
@@ -763,6 +872,17 @@ export default [
     },
   },
 >>>>>>> main
+=======
+      'ultimate-*.js',
+      'ultimate-*.cjs',
+      'targeted-*.cjs',
+      'test-suite.cjs',
+      'ux-enhancer.cjs',
+      'vite.config-backup.ts',
+      'types/empty.ts'
+    ]
+  },
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -973,6 +1093,7 @@ export default [
 ];
 =======
   }
+<<<<<<< HEAD
 ];
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -980,3 +1101,6 @@ export default [
   }
 ];
 >>>>>>> main
+=======
+];
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

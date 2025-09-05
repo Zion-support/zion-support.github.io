@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -202,38 +203,22 @@ const companyInfo = {
 =======
 =======
 export default function AIServicesPage() {
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+const AIServicesPage = () => {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   return (
-    <MainLayout
+    <MainLayout 
       title="AI Services - Zion Tech Group"
-      description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation."
-      keywords="AI services, artificial intelligence, machine learning, NLP, computer vision, automation, AI consulting"
+      description="Transform your business with cutting-edge AI solutions."
     >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Harness the power of artificial intelligence to transform your business operations, enhance customer experiences, and drive innovation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Started
-              </Link>
-              <Link href="/quote" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Quote
-              </Link>
-            </div>
-          </motion.div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* AI Services Overview */}
@@ -2233,3 +2218,11 @@ export default function AIServices() {
 >>>>>>> main
   );
 }
+=======
+      </div>
+    </MainLayout>
+  );
+};
+
+export default AIServicesPage;
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
