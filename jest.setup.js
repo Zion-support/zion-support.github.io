@@ -1,12 +1,12 @@
 // Jest setup file
-import '@testing-library/jest-dom;
+import '@testing-library/jest-dom';
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: /',
-      pathname: '/,
+      route: '/',
+      pathname: '/',
       query: {},
       asPath: '/',
       push: jest.fn(),
@@ -20,17 +20,13 @@ jest.mock('next/router', () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
-<<<<<<< HEAD
-=======
-      isFallback: false,
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
+      isFallback: false
     };
   }
 }));
 
-<<<<<<< HEAD
 // Mock Next.js Image component
-jest.mock(next/image', () => ({
+jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
@@ -39,19 +35,13 @@ jest.mock(next/image', () => ({
 }));
 
 // Mock Next.js Link component
-jest.mock('next/link, () => ({
+jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>;
   }
 }));
 
-// Global test setup
-beforeEach(() => {
-  // Reset all mocks before each test
-  jest.clearAllMocks()
-});
-=======
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -82,4 +72,9 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
+
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+});
