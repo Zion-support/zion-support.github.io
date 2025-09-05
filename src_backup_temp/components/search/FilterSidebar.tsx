@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
           
           <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"

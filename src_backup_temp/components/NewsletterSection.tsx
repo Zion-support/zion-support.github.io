@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 "description": "Get exclusive access to tech trends and analysis";
     }, {;
       "icon": "Za p",;";

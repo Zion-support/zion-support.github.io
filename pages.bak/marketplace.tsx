@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 interface MarketplaceProps {
   // Add props here as needed

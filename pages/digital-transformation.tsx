@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { RefreshCw, Zap, Users, Shield, CheckCircle, ArrowRight, Phone, Mail, BarChart3, Lock, Globe, Server, Database, Target } from 'lucide-react';

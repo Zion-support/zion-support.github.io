@@ -3,7 +3,7 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const baseUrl ,=
   https: //ziontechgroup.com'';;
   const staticPages = [',';
-import React from 'react';
+import * as React from 'react';
 
 interface SitemapProps {
   // Add props here as needed

@@ -1,33 +1,3 @@
-import { NextResponse } from "next/server";",
-import type { NextRequest } from "next/server";",
-
-const publicRoutes = [;
-  "/",",
-  "/about",",
-  "/contact",",
-  "/blog",",
-  "/services",",
-  "/solutions",",
-  "/industries",",
-  "/resources",",
-  "/talent",",
-  "/team",",
-  "/partners",",
-  "/news",",
-  "/careers",",
-  "/privacy",",
-  "/terms",",
-  "/cookies",",
-  "/sitemap",",
-  "/auth/login",",
-  "/auth/register",",
-  "/auth/forgot-password",",
-  "/auth/reset-password",",
-  "/auth/verify",",
-;];,
-
-  }
-  
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
@@ -38,157 +8,141 @@ const publicRoutes = [
   "/blog",
   "/services",
   "/solutions",
-  "/industries",
-  "/resources",
-  "/talent",
-  "/team",
   "/careers",
-  "/help",
-  "/faq",
   "/privacy",
   "/terms",
-  "/login",
-  "/register",
-  "/forgot-password",
+  "/cookies",
+  "/security",
+  "/sitemap",
   "/api-docs",
-  "/api",
-  "/micro-saas",
-  "/it-services",
-  "/ai-services",
-  "/pricing",
-  "/news",
+  "/guides",
+  "/help",
   "/newsletter",
   "/webinars",
-  "/tutorials",
   "/white-papers",
-  "/whitepapers",
   "/case-studies",
-  "/community",
-  "/company",
-  "/compliance",
-  "/cookies",
-  "/docs",
-  "/guides",
-  "/support",
-  "/security",
-  "/partners",
-  "/sitemap",
-  "/search",
-  "/services-overview",
-  "/services-2024",
-  "/revolutionary-2025-pricing",
+  "/industries",
   "/products",
-  "/solutions/enterprise"
-  "/partners",
-  "/news",
-  "/careers",
-  "/privacy",
-  "/terms",
-  "/cookies",
-  "/sitemap",
-  "/auth/login",
-  "/auth/register",
-  "/auth/forgot-password",
-  "/auth/reset-password",
-  "/auth/verify",
-];
-
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  
-  // Allow public routes
-
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/blog",
-  "/services",
-  "/solutions",
-  "/industries",
-  "/resources",
-  "/talent",
-  "/team",
-  "/partners",
-  "/news",
-  "/careers",
-  "/privacy",
-  "/terms",
-  "/cookies",
-  "/accessibility",
-  "/compliance",
-  "/gdpr",
-  "/security",
-  "/support",
-  "/help",
-  "/faq",
-  "/guides",
-  "/tutorials",
-  "/webinars",
-  "/white-papers",
-  "/case-studies",
-  "/press",
-  "/events",
-  "/newsletter",
-  "/sitemap",
-  "/api-docs",
-  "/docs",
   "/api",
-  "/login",
-  "/register",
-  "/forgot-password",
+  "/docs",
   "/pricing",
-  "/company",
-  "/community",
-  "/status",
-  "/search",
-  "/micro-saas",
-  "/it-services",
+  "/demo",
+  "/support",
+  "/dev-resources",
+  "/integration-guides",
+  "/sdk-downloads",
+  "/news",
+  "/partners",
+  "/investors",
   "/ai-services",
-  "/services-overview",
-  "/solutions/cloud-migration",
-  "/solutions/custom",
-  "/solutions/digital-transformation",
-  "/solutions/education",
-  "/solutions/enterprise",
-  "/solutions/finance",
-  "/solutions/government",
-  "/solutions/healthcare",
-  "/solutions/industry",
-  "/solutions/retail",
-  "/solutions/smb",
-  "/solutions/startup",
-  "/services/cloud",
-  "/services/cloud-devops",
-  "/services/cybersecurity",
-  "/services/data-analytics",
-  "/services/quantum-computing",
-  "/industries/education",
-  "/industries/finance",
-  "/industries/government",
-  "/industries/healthcare",
-  "/industries/manufacturing",
-  "/industries/retail"
+  "/cloud-solutions",
+  "/performance",
+  "/digital-transformation",
+  "/consulting",
+  "/services-overview"
+];
+
+const protectedRoutes = [
+  "/dashboard",
+  "/profile",
+  "/settings",
+  "/billing",
+  "/admin"
+];
+
+const apiRoutes = [
+  "/api/auth",
+  "/api/users",
+  "/api/projects",
+  "/api/analytics"
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Check if the route is public
-  if (publicRoutes.includes(pathname)) {
+  // Skip middleware for static files and API routes
+  if (
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/static/') ||
+    pathname.startsWith('/images/') ||
+    pathname.startsWith('/favicon.ico') ||
+    pathname.startsWith('/api/')
+  ) {
     return NextResponse.next();
   }
+
+  // Check if route is public
+  const isPublicRoute = publicRoutes.includes(pathname) || 
+    publicRoutes.some(route => pathname.startsWith(route + '/'));
+
+  // Check if route is protected
+  const isProtectedRoute = protectedRoutes.includes(pathname) ||
+    protectedRoutes.some(route => pathname.startsWith(route + '/'));
+
+  // Check if route is API route
+  const isApiRoute = apiRoutes.includes(pathname) ||
+    apiRoutes.some(route => pathname.startsWith(route + '/'));
+
+  // Handle API routes
+  if (isApiRoute) {
+    // Add CORS headers for API routes
+    const response = NextResponse.next();
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    return response;
+  }
+
+  // Handle protected routes
+  if (isProtectedRoute) {
+    // Check for authentication token
+    const token = request.cookies.get('auth-token');
+    
+    if (!token) {
+      // Redirect to login page
+      const loginUrl = new URL('/login', request.url);
+      loginUrl.searchParams.set('redirect', pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  // Add security headers
+  const response = NextResponse.next();
   
-  // Add any authentication logic here
-  // For now, just allow all requests
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  
+  // Content Security Policy
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com",
+    "img-src 'self' data: https: blob:",
+    "connect-src 'self' https://vitals.vercel-insights.com",
+    "frame-src 'none'",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'none'"
+  ].join('; ');
+  
+  response.headers.set('Content-Security-Policy', csp);
+  
+  // Cache control for static assets
+  if (pathname.startsWith('/_next/static/')) {
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
   }
   
-  // For protected routes, you can add authentication logic here
-  // For now, we'll just allow all requests
-  return NextResponse.next();
+  // Cache control for images
+  if (pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
+    response.headers.set('Cache-Control', 'public, max-age=31536000');
+  }
+
+  return response;
 }
 
 export const config = {
@@ -201,6 +155,5 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };

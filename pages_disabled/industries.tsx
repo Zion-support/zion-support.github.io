@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';;
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';

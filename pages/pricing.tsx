@@ -152,7 +152,7 @@ export default function PricingPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
