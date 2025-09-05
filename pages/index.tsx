@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -34,7 +34,7 @@ const services = [
 
 export default function HomePage() {
   return (
-    <MainLayout>
+    <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
@@ -247,6 +247,6 @@ export default function HomePage() {
         </div>
       </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
