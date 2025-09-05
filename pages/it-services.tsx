@@ -2,23 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Server,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Monitor,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Lock,
+import { 
+  Server, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Network, 
+  Monitor, 
+  Settings, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Award, 
+  Star, 
+  Zap, 
+  TrendingUp, 
+  Users, 
+  Lock, 
   Globe,
   Cpu,
   HardDrive,
@@ -35,6 +35,7 @@ import {
   DollarSign,
   Rocket
 } from 'lucide-react';
+
 const itServices = [{
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
@@ -376,8 +377,180 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'Quantum-Safe Security Implementation',
+    description: 'Implementation of post-quantum cryptography and quantum-resistant security protocols.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'Key Management', 'Migration Planning', 'Compliance Support'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Network,
+    features: ['Edge Nodes Deployment', 'Content Delivery', 'IoT Integration', 'Real-time Processing'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'Zero-Trust Security Architecture',
+    description: 'Complete zero-trust security model implementation with continuous verification.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI for predictive maintenance and automated responses.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Remediation', 'Anomaly Detection', 'Performance Optimization'],
+    pricing: '$35,000 - $200,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions including private networks and smart contract deployment.',
+    icon: Lock,
+    features: ['Private Blockchain', 'Smart Contracts', 'Consensus Mechanisms', 'Integration APIs'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Core Network', 'Edge Computing', 'Network Slicing', 'Performance Optimization'],
+    pricing: '$100,000 - $750,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security solutions and device management platform.',
+    icon: Cpu,
+    features: ['Device Authentication', 'Secure Communication', 'Firmware Updates', 'Threat Detection'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Integrated compute, storage, and networking solutions for simplified data center management.',
+    icon: Server,
+    features: ['Unified Management', 'Scalable Architecture', 'High Availability', 'Disaster Recovery'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'HCI',
+    popular: true
+  },
+  {
+    title: 'Software-Defined Everything (SDx)',
+    description: 'Software-defined networking, storage, and data center solutions for maximum flexibility.',
+    icon: Settings,
+    features: ['SDN Implementation', 'SDS Deployment', 'SDDC Architecture', 'Automation'],
+    pricing: '$50,000 - $350,000/project',
+    category: 'Software Defined',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Management Platform',
+    description: 'Unified management platform for multiple cloud providers with cost optimization.',
+    icon: Cloud,
+    features: ['Multi-Cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance Monitoring'],
+    pricing: '$40,000 - $250,000/setup',
+    category: 'Multi-Cloud',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Integration of quantum computing capabilities with classical IT infrastructure.',
+    icon: Cpu,
+    features: ['Quantum-Classical Hybrid', 'Algorithm Optimization', 'Quantum Simulation', 'Performance Analysis'],
+    pricing: '$100,000 - $750,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'Autonomous IT Operations',
+    description: 'Fully automated IT operations with self-healing systems and predictive maintenance.',
+    icon: Settings,
+    features: ['Self-Healing Systems', 'Predictive Maintenance', 'Automated Scaling', 'Intelligent Routing'],
+    pricing: '$60,000 - $400,000/setup',
+    category: 'Autonomous IT',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin technology for IT infrastructure monitoring and optimization.',
+    icon: Monitor,
+    features: ['Real-time Modeling', 'Predictive Analytics', 'Performance Optimization', 'What-if Analysis'],
+    pricing: '$45,000 - $300,000/project',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'Neuromorphic Computing Integration',
+    description: 'Integration of neuromorphic computing systems for AI and machine learning workloads.',
+    icon: Brain,
+    features: ['Neuromorphic Hardware', 'AI Acceleration', 'Low Power Computing', 'Real-time Processing'],
+    pricing: '$80,000 - $500,000/project',
+    category: 'Neuromorphic Computing',
+    popular: true
+  },
+  {
+    title: 'Space-Based IT Infrastructure',
+    description: 'Satellite-based IT infrastructure and ground station management services.',
+    icon: Rocket,
+    features: ['Satellite Networks', 'Ground Stations', 'Orbital Computing', 'Space Data Centers'],
+    pricing: '$150,000 - $1,000,000/project',
+    category: 'Space IT',
+    popular: true
+  },
+  {
+    title: 'Biometric Security Infrastructure',
+    description: 'Advanced biometric authentication systems and identity management solutions.',
+    icon: Shield,
+    features: ['Multi-modal Biometrics', 'Identity Management', 'Access Control', 'Privacy Protection'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'Biometric Security',
+    popular: true
+  },
+  {
+    title: 'Augmented Reality IT Support',
+    description: 'AR-powered IT support and maintenance with remote assistance capabilities.',
+    icon: Monitor,
+    features: ['AR Remote Support', 'Visual Troubleshooting', 'Guided Maintenance', 'Knowledge Transfer'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'AR IT Support',
+    popular: true
+  },
+  {
+    title: 'Sustainable IT Infrastructure',
+    description: 'Green IT solutions with renewable energy and carbon-neutral data centers.',
+    icon: Sprout,
+    features: ['Renewable Energy', 'Carbon Neutrality', 'Energy Efficiency', 'Sustainability Reporting'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Green IT',
+    popular: true
+  },
+  {
+    title: 'Holographic Computing Infrastructure',
+    description: 'Holographic display and computing systems for immersive data visualization.',
+    icon: Monitor,
+    features: ['Holographic Displays', '3D Data Visualization', 'Immersive Interfaces', 'Collaborative Spaces'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'Holographic Computing',
+    popular: true
   }
 ];
+
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
@@ -385,6 +558,7 @@ const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS,
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
+
 const benefits = [{
     icon: Clock,
     title: 'Reduced Downtime',
@@ -410,6 +584,7 @@ const benefits = [{
     stat: 'Unlimited'
   }
 ];
+
 const supportLevels = [{
     name: 'Basic Support',
     description: 'Standard business hours support',
@@ -429,6 +604,7 @@ const supportLevels = [{
     pricing: 'Custom Pricing'
   }
 ];
+
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -437,6 +613,7 @@ export default function ITServicesPage() {
                   <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
                   </Head>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -475,6 +652,7 @@ export default function ITServicesPage() {
                   </motion.div>
                   </div>
                   </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -498,12 +676,13 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
+whileHover={{ y: -5 }}
+                >
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
@@ -545,6 +724,7 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
+
       {/* Technologies Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -568,7 +748,8 @@ whileHover={{ y: -5 }} ">
                   key={index}
 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
+                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
@@ -584,6 +765,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -629,6 +811,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
+
       {/* Support Levels Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -677,7 +860,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'
+? 'bg-green-600 hover:bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -689,6 +872,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </div>
                   </div>
                   </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
 <div className="container mx-auto px-4 text-center">

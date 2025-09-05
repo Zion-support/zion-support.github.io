@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+
 const jobOpenings = [{
     id: 1,
     title: "Senior AI/ML Engineer",
@@ -28,7 +29,7 @@ const jobOpenings = [{
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
-requirements: ["Bachelor's degree in Computer Science or related field",
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -44,7 +45,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-requirements: ["Bachelor's degree in Computer Science or related field",
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -60,7 +61,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",
     type: "Full-time",
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
-requirements: ["Bachelor's degree in Cybersecurity or related field",
+    requirements: ["Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
@@ -76,7 +77,7 @@ requirements: ["Bachelor's degree in Cybersecurity or related field",
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
-requirements: ["Bachelor's degree in Computer Science or related field",
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -92,7 +93,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",
     type: "Full-time",
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
-requirements: ["Bachelor's degree in Design or related field",
+    requirements: ["Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
@@ -101,6 +102,7 @@ requirements: ["Bachelor's degree in Design or related field",
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
+
 const benefits = [{
     title: "Competitive Compensation",
     description: "We offer competitive salaries and performance-based bonuses",
@@ -122,6 +124,7 @@ const benefits = [{
     icon: ArrowRight
   }
 ];
+
 const values = [
   "Innovation and creativity",
   "Collaboration and teamwork",
@@ -130,9 +133,10 @@ const values = [
   "Diversity and inclusion",
   "Client success focus"
 ];
+
 export default function TalentPage() {
   return (
-<MainLayout
+<MainLayout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -162,6 +166,7 @@ export default function TalentPage() {
                   </motion.div>
                   </div>
                   </section>
+
         {/* Why Work With Us Section */}
         <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -204,6 +209,7 @@ export default function TalentPage() {
             </div>
                   </div>
                   </section>
+
         {/* Our Values Section */}
         <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -238,6 +244,7 @@ export default function TalentPage() {
             </div>
                   </div>
                   </section>
+
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -325,6 +332,7 @@ export default function TalentPage() {
             </div>
                   </div>
                   </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">

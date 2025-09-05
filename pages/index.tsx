@@ -1,33 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import Layout from '../components/Layout';
+import { Brain, Network, Cloud, ArrowRight, Star, Award, Users, Zap } from 'lucide-react';
+
 const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }
 ];
+
 const services = [{
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "Revolutionary artificial intelligence solutions including machine learning, computer vision, natural language processing, and quantum AI applications",
     icon: Brain,
     href: "/ai-services"},
   {
-    title: "IT Services",
-    description: "Comprehensive information technology services",
+    title: "IT Services", 
+    description: "Comprehensive enterprise IT solutions including cloud infrastructure, cybersecurity, DevOps, and cutting-edge technologies",
     icon: Network,
     href: "/it-services"},
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "Innovative micro software-as-a-service solutions for modern businesses with rapid deployment and scalable architecture",
     icon: Cloud,
     href: "/micro-saas"}
 ];
+
 export default function HomePage() {
   return (
-<MainLayout>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         {/* Background Animation */}
@@ -49,13 +50,13 @@ export default function HomePage() {
 <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI & Technology
+                Next-Gen AI & Technology
               </span>
 </h1>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+              Premier technology solutions provider specializing in cutting-edge AI, quantum computing, cybersecurity, cloud infrastructure, and digital transformation services. 
               <br className="hidden md:block" />
-                  <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
+                  <span className="text-blue-300 font-semibold">📞 +1 302 464 0950 | 📧 kleber@ziontechgroup.com | 🌐 ziontechgroup.com</span>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -68,6 +69,7 @@ export default function HomePage() {
                   </motion.div>
                   </div>
                   </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
 <div className="container mx-auto px-4">
@@ -103,7 +105,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
 <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
                   <Link
                     href={service.href}
-                    className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
+                    className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
                   >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -114,6 +116,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
           </div>
                   </div>
                   </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-white">
 <div className="container mx-auto px-4">
@@ -134,6 +137,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
           </div>
                   </div>
                   </section>
+
 {/* Market Position & Pricing Section */}
       <section className="py-20 bg-gray-100">
                   <div className="container mx-auto px-4">
@@ -146,7 +150,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
           >
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
+              We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise. 
               Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
             </p>
                   </motion.div>
@@ -219,6 +223,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   </motion.div>
                   </div>
                   </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">
@@ -230,7 +235,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
           >
 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you leverage cutting-edge technology to drive growth and innovation.
+              Let our expert team help you leverage cutting-edge technology to drive growth and innovation. 
               <br className="hidden md:block" />
                   <span className="text-blue-200 font-semibold">Get your free consultation today!</span>
                   </p>
@@ -256,7 +261,6 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   </motion.div>
                   </div>
                   </section>
-                  </div>
-                  </MainLayout>
+    </div>
   );
 }

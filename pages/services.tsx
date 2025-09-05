@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Zap, Shield } from 'lucide-react';
+
 const services = [{
     title: "AI Services",
     description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and intelligent automation.",
@@ -14,7 +15,7 @@ const services = [{
     popular: true
   },
   {
-    title: "IT Services",
+    title: "IT Services", 
 description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
     icon: Network,
     href: "/it-services",
@@ -34,6 +35,7 @@ description: "Scalable software as a service solutions designed for specific bus
     popular: true
   }
 ];
+
 const benefits = [{
     icon: CheckCircle,
     title: "Expert Team",
@@ -55,6 +57,7 @@ const benefits = [{
     description: "Round-the-clock technical support"
   }
 ];
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -63,6 +66,7 @@ export default function ServicesPage() {
                   <meta name="description" content="Comprehensive technology solutions including AI services, IT services, and Micro SaaS solutions. Expert team delivering innovative results." />
                   <meta name="keywords" content="AI services, IT services, Micro SaaS, cloud solutions, technology consulting" />
                   </Head>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -88,6 +92,7 @@ export default function ServicesPage() {
                   </motion.div>
                   </div>
                   </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -108,12 +113,13 @@ export default function ServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
+whileHover={{ y: -5 }}
+                >
                   {service.popular && ( <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
@@ -161,6 +167,7 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -203,6 +210,7 @@ whileHover={{ y: -5 }} ">
           </div>
                   </div>
                   </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
 <div className="container mx-auto px-4 text-center">
