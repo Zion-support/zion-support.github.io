@@ -10,7 +10,7 @@
     // Set up periodic tracking,
     const interval = setInterval(() => {,
       trackMemory(),
-      trackNetwork(),
+      trackNetwork()
     }, 10000),
 ,
     // Track online/offline status,
@@ -23,7 +23,7 @@
     return () => {,
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline),
+      window.removeEventListener('offline', handleOffline)
     };
   }, [location.pathname]),
 ,
@@ -38,7 +38,7 @@
       setIsVisible(true),
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     };
   }, [metrics]),
 ,

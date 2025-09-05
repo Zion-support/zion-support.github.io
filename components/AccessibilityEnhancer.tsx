@@ -12,13 +12,13 @@
     const announcePageChange = (message: string) => {,
       const liveRegion = document.getElementById('live-region'),
       if (liveRegion) {,
-        liveRegion.textContent = message,
+        liveRegion.textContent = message
       };
     };
 ,
     // Listen for route changes (Next.js specific),
     const handleRouteChange = () => {,
-      announcePageChange('Page loaded'),
+      announcePageChange('Page loaded')
     };
 ,
     // Add route change listener if available,
@@ -28,15 +28,15 @@
 ,
       window.history.pushState = function(...args) {,
         originalPushState.apply(this, args),
-        setTimeout(handleRouteChange, 100),
+        setTimeout(handleRouteChange, 100)
       };
 ,
       window.history.replaceState = function(...args) {,
         originalReplaceState.apply(this, args),
-        setTimeout(handleRouteChange, 100),
+        setTimeout(handleRouteChange, 100)
       };
 ,
-      window.addEventListener('popstate', handleRouteChange),
+      window.addEventListener('popstate', handleRouteChange)
     };
 ,
     // Cleanup,
@@ -44,25 +44,25 @@
       document.removeEventListener('mousedown', handleMouseDown),
       document.removeEventListener('keydown', handleKeyDown),
       if (skipLink.parentNode) {,
-        skipLink.parentNode.removeChild(skipLink),
+        skipLink.parentNode.removeChild(skipLink)
       };
       if (liveRegion.parentNode) {,
-        liveRegion.parentNode.removeChild(liveRegion),
+        liveRegion.parentNode.removeChild(liveRegion)
       };
     };
   }, []),
 ,
-  return null,
+  return null
 };
 ,
 // Add CSS for focus management,
 const focusStyles = `,
   .using-mouse *:focus {,
-    outline: none !important,
+    outline: none !important
   };
   .focus-visible: focus {,
     outline: 2px solid #2563eb !important,
-    outline-offset: 2px !important,
+    outline-offset: 2px !important
   };
   .sr-only {,
     position: absolute,
@@ -73,7 +73,7 @@ const focusStyles = `,
     overflow: hidden,
     clip: rect(0, 0, 0, 0),
     white-space: nowrap,
-    border: 0,
+    border: 0
   };
   .sr-only.focus: not-sr-only:focus {,
     position: static,
@@ -83,7 +83,7 @@ const focusStyles = `,
     margin: inherit,
     overflow: visible,
     clip: auto,
-    white-space: normal,
+    white-space: normal
   };
 `,
 ,
@@ -91,5 +91,5 @@ const focusStyles = `,
 if (typeof document !== 'undefined') {,
   const styleSheet = document.createElement('style'),
   styleSheet.textContent = focusStyles,
-  document.head.appendChild(styleSheet),
+  document.head.appendChild(styleSheet)
 };

@@ -9,8 +9,8 @@
         this.log('📦 Building project first...'),
         execSync('npm run build', {,
           cwd: this.projectRoot,
-          stdio: 'pipe',
-        }),
+          stdio: 'pipe'
+        })
       };
 ,
       const buildStats = {,
@@ -19,7 +19,7 @@
         largestFiles: [],
         jsFiles: [],
         cssFiles: [],
-        assetFiles: [],
+        assetFiles: []
       };
 ,
       const analyzeDirectory = (dir) => {,
@@ -29,26 +29,26 @@
           const stat = fs.statSync(fullPath),
 ,
           if (stat.isDirectory()) {,
-            analyzeDirectory(fullPath),
+            analyzeDirectory(fullPath)
           } else {,
             const fileInfo = {,
               path: fullPath.replace(this.projectRoot + '/dist/', ''),
               size: stat.size,
-              sizeKB: Math.round(stat.size / 1024 * 100) / 100,
+              sizeKB: Math.round(stat.size / 1024 * 100) / 100
             };
 ,
             buildStats.totalSize += stat.size,
             buildStats.fileCount++,
 ,
             if (item.endsWith('.js')) {,
-              buildStats.jsFiles.push(fileInfo),
+              buildStats.jsFiles.push(fileInfo)
             } else if (item.endsWith('.css')) {,
-              buildStats.cssFiles.push(fileInfo),
+              buildStats.cssFiles.push(fileInfo)
             } else {,
-              buildStats.assetFiles.push(fileInfo),
+              buildStats.assetFiles.push(fileInfo)
             };
           };
-        }),
+        })
       };
 ,
       analyzeDirectory('dist'),
@@ -63,13 +63,13 @@
 ,
       return {,
         success: true,
-        stats: buildStats,
+        stats: buildStats
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        stats: null,
+        stats: null
       };
     };
   };
@@ -87,12 +87,12 @@
         available: hasAnalyzer,
         package: hasAnalyzer ?,
           (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :,
-          null,
+          null
       };
     } catch (error) {,
       return {,
         available: false,
-        error: error.message,
+        error: error.message
       };
     };
   };
@@ -105,14 +105,14 @@
         treeShaking: false,
         minification: false,
         codeSplitting: false,
-        compression: false,
+        compression: false
       };
 ,
       // Check Next.js config,
       if (fs.existsSync('next.config.js')) {,
         const nextConfig = fs.readFileSync('next.config.jsutf8'),
         settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify:true'),
-        settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true'),
+        settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true')
       };
 ,
       // Check package.json for optimization scripts,
@@ -124,13 +124,13 @@
 ,
       return {,
         success: true,
-        settings: settings,
+        settings: settings
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        settings: null,
+        settings: null
       };
     };
   };
@@ -142,14 +142,14 @@
         buildSize: buildStats?.stats?.totalSizeMB || 0,
         fileCount: buildStats?.stats?.fileCount || 0,
         optimizationScore: 0,
-        recommendations: [],
+        recommendations: []
       },
       details: {,
         build: buildStats,
         analyzer: analyzerInfo,
-        settings: settingsInfo,
+        settings: settingsInfo
       },
-      optimizations: [],
+      optimizations: []
     };
 ,
     // Calculate optimization score,
@@ -175,8 +175,8 @@
         type: 'bundle-size',
         message: 'Bundle size is large',
         action: 'Implement code splitting and tree shaking',
-        impact: 'high',
-      }),
+        impact: 'high'
+      })
     };
 ,
     if (!settingsInfo?.settings?.minification) {,
@@ -185,8 +185,8 @@
         type: 'minification',
         message: 'Minification not enabled',
         action: 'Enable SWC minification in Next.js config',
-        impact: 'high',
-      }),
+        impact: 'high'
+      })
     };
 ,
     if (!settingsInfo?.settings?.compression) {,
@@ -195,8 +195,8 @@
         type: 'compression',
         message: 'Compression not enabled',
         action: 'Enable gzip compression',
-        impact: 'medium',
-      }),
+        impact: 'medium'
+      })
     };
 ,
     if (!analyzerInfo?.available) {,
@@ -205,24 +205,24 @@
         type: 'analysis',
         message: 'Bundle analyzer not available',
         action: 'Install webpack-bundle-analyzer for detailed analysis',
-        impact: 'low',
-      }),
+        impact: 'low'
+      })
     };
 ,
-    return report,
+    return report
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursive: true }),
+        fs.mkdirSync(reportDir, { recursive: true })
       };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`),
+      this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving report: ${error.message}`),
+      this.log(`Error saving report: ${error.message}`)
     };
   };
 ,
@@ -234,7 +234,7 @@
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursive: true }),
+        fs.mkdirSync(logsDir, { recursive: true })
       };
 ,
       // Run all optimization checks,
@@ -263,15 +263,15 @@
         report.optimizations.forEach(opt => {,
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),
           this.log(`    Action: ${opt.action}`),
-          this.log(`    Impact: ${opt.impact}`),
-        }),
+          this.log(`    Impact: ${opt.impact}`)
+        })
       } else {,
-        this.log('\n✨ Build is well optimized!'),
+        this.log('\n✨ Build is well optimized!')
       };
-,
+
     } catch (error) {,
       this.log(`❌ Error running build optimizer: ${error.message}`),
-      process.exit(1),
+      process.exit(1)
     };
   };
 };
@@ -279,5 +279,5 @@
 // Run the build optimizer,
 const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,
-  process.exit(1),
+  process.exit(1)
 }),

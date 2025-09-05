@@ -10,7 +10,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false
 }) => {,
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
@@ -33,7 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     },
     sameAs: [,
       'https: //linkedin.com/company/zion-tech-grouphttps: //twitter.com/ziontechgroup'
-    ],
+    ]
   };
 ,
   const mergedStructuredData = structuredData || defaultStructuredData,
@@ -108,7 +108,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="X-Frame-Options" content="DENY" />,
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,
     </Head>,
-  ),
+  )
 };
 ,
 export default SEOHead,

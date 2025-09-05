@@ -1,15 +1,14 @@
 import React, { ReactNode } from "react",
 ,
 interface LayoutProps {,
-  children: ReactNode,
+  children: ReactNode
 };
 ,
 const Layout: React.FC<LayoutProps> = ({ children }) => {,
   return (,
     <main className="min-h-screen">,
       {children};
-    </main>,
-  ),
+    </main>)
 };
 ,
 export default Layout,

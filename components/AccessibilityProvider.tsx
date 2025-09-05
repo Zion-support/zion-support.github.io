@@ -1,9 +1,9 @@
   };
-  return context,
+  return context
 };
 ,
 interface AccessibilityProviderProps {,
-  children: React.ReactNode,
+  children: React.ReactNode
 };
 ,
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {,
@@ -21,7 +21,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     reducedMotion,
     toggleHighContrast,
     toggleLargeText,
-    toggleReducedMotion,
+    toggleReducedMotion
   };
 ,
   return (,
@@ -29,8 +29,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>,
         {children};
       </div>,
-    </AccessibilityContext.Provider>,
-  ),
+    </AccessibilityContext.Provider>)
 };
 ,
 export default AccessibilityProvider,
