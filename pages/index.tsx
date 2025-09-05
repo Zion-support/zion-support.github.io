@@ -7,36 +7,42 @@ import { Brain, Network, Cloud, Zap, Shield, ArrowRight, CheckCircle, Users, Glo
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '1,200+', label: 'Projects Completed' },
-  { number: '235+', label: 'Services & Solutions' },
-  { number: '95+', label: 'Expert Team Members' },
-  { number: '15+', label: 'Years Experience' }
+  { number: '2,500+', label: 'Projects Completed' },
+  { number: '305+', label: 'Services & Solutions' },
+  { number: '150+', label: 'Expert Team Members' },
+  { number: '18+', label: 'Years Experience' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, and advanced analytics with real-world applications",
     icon: Brain,
     href: "/ai-services",
-    count: "80+ Solutions",
-    pricing: "Starting at $1,000/month"
+    count: "100+ Solutions",
+    pricing: "Starting at $2,500/month",
+    marketPrice: "$4,000-15,000/month",
+    benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase"]
   },
   {
     title: "IT Services", 
-    description: "70+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, and zero-trust architecture",
+    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, zero-trust architecture, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
-    count: "70+ Services",
-    pricing: "Starting at $120/hour"
+    count: "85+ Services",
+    pricing: "Starting at $150/hour",
+    marketPrice: "$200-500/hour",
+    benefits: ["99.9% uptime", "50% cost reduction", "24/7 support"]
   },
   {
     title: "Micro SaaS",
-    description: "85+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing and market analysis",
+    description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
     icon: Cloud,
     href: "/micro-saas",
-    count: "85+ Platforms",
-    pricing: "Starting at $19/month"
+    count: "120+ Platforms",
+    pricing: "Starting at $29/month",
+    marketPrice: "$50-500/month",
+    benefits: ["10x productivity", "Instant setup", "White-label options"]
   }
 ];
 
@@ -105,7 +111,7 @@ export default function HomePage() {
                 Our Core Services
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 235+ services cover every aspect of modern technology needs with real-world pricing and proven results.
+                We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 305+ services cover every aspect of modern technology needs with competitive pricing and proven results.
               </p>
             </motion.div>
 
@@ -131,15 +137,32 @@ export default function HomePage() {
                     <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="mb-4">
+                    <div className="mb-4 flex flex-wrap gap-2">
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                         {service.count}
                       </span>
+                      {service.benefits && service.benefits.slice(0, 2).map((benefit, idx) => (
+                        <span key={idx} className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
                     </div>
                     <div className="mb-4">
-                      <span className="text-lg font-bold text-green-600">
-                        {service.pricing}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-bold text-green-600">
+                          {service.pricing}
+                        </span>
+                        {service.marketPrice && (
+                          <span className="text-sm text-gray-500 line-through">
+                            {service.marketPrice}
+                          </span>
+                        )}
+                      </div>
+                      {service.marketPrice && (
+                        <div className="text-xs text-green-600 font-medium">
+                          Save up to 40% vs market rate
+                        </div>
+                      )}
                     </div>
                     <Link
                       href={service.href}

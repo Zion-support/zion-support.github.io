@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Head from 'next/head';
 
 export default function Custom404() {
   return (
-    <Layout 
-      title="404 - Page Not Found - Zion Tech Group"
-      description="The page you are looking for could not be found. Return to our homepage or explore our services."
-    >
+    <>
+      <Head>
+        <title>404 - Page Not Found - Zion Tech Group</title>
+        <meta name="description" content="The page you are looking for could not be found. Return to our homepage or explore our services." />
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
@@ -22,6 +23,6 @@ export default function Custom404() {
           </Link>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
