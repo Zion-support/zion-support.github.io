@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import MainLayout from '../src/components/layout/MainLayout';
-import { BarChart3,Globe,RefreshCw,Shield,Target,Users,Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { BarChart3,Globe,RefreshCw,Shield,Target,Users,Zap,CheckCircle,ArrowRight } from 'lucide-react';
 
 const transformationAreas = [
   {

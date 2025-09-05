@@ -39,7 +39,7 @@ const services = [
   {
     title: "IT Services",
     description: "70+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, and zero-trust architecture",
-    icon: Network,
+    icon: Server,
     href: "/it-services",
     features: ["Cloud Migration", "DevOps Automation", "System Integration", "IT Consulting", "Infrastructure Management", "Technical Support"],
     pricing: "Starting at $1,800/month"
