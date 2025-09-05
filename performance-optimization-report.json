@@ -1,17 +1,16 @@
 {
-  "timestamp": "2025-09-05T22:25:16.020Z",
+  "timestamp": "2025-09-05T23:15:49.320Z",
   "metrics": {
-    "bundleSize": 8568279,
+    "bundleSize": 0,
     "loadTime": 0,
     "performanceScore": 0
   },
   "optimizations": [
-    "Bundle analysis completed",
-    "Found 3 images for optimization"
+    "Found 5 images for optimization"
   ],
   "summary": {
-    "totalOptimizations": 2,
-    "bundleSize": 8568279,
+    "totalOptimizations": 1,
+    "bundleSize": 0,
     "performanceScore": 0
   }
 }

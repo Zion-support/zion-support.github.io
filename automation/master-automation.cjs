@@ -98,6 +98,18 @@ class MasterAutomation {
         command: 'node automation/advanced-performance-optimizer.cjs',
         description: 'Performance Optimizer',
       },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
+      },
     ];
 
     const results = [];
@@ -119,7 +131,7 @@ class MasterAutomation {
       quality: await this.runQualityChecks(),
       automation: await this.runAutomationScripts(),
       summary: {
-        totalScripts: 3,
+        totalScripts: 6,
         successfulScripts: 0,
         failedScripts: 0,
       },
