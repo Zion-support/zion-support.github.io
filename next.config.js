@@ -1,14 +1,9 @@
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   // Performance optimizations
@@ -87,31 +82,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-<<<<<<< HEAD
-  }
-};
-
-module.exports = nextConfig;
-=======
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY
-  },
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  }
-};
-
-export default nextConfig;
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
