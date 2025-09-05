@@ -1,12 +1,10 @@
-import React from "react";
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-import Layout from '../components/Layout';
-
-const blogPosts = [
-  {
+import React from "react"
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
+import MainLayout from '../components/layout/MainLayout'
+const blogPosts = [{
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
     excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
@@ -14,7 +12,8 @@ const blogPosts = [
     date: "2024-01-15",
     category: "AI & Technology",
     readTime: "5 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["AI", "Business", "Technology"]
   },
   {
     id: 2,
@@ -24,7 +23,8 @@ const blogPosts = [
     date: "2024-01-12",
     category: "Development",
     readTime: "7 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["SaaS", "Development", "Scalability"]
   },
   {
     id: 3,
@@ -34,7 +34,8 @@ const blogPosts = [
     date: "2024-01-10",
     category: "Security",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Security", "Cloud", "Best Practices"]
   },
   {
     id: 4,
@@ -44,7 +45,8 @@ const blogPosts = [
     date: "2024-01-08",
     category: "Strategy",
     readTime: "8 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Strategy", "Digital Transformation", "Business"]
   },
   {
     id: 5,
@@ -54,7 +56,8 @@ const blogPosts = [
     date: "2024-01-05",
     category: "AI & Technology",
     readTime: "9 min read",
-    image: "/api/placeholder/600/300"
+    image: "/api/placeholder/600/300",
+    tags: ["Machine Learning", "Production", "MLOps"]
   },
   {
     id: 6,
@@ -64,51 +67,36 @@ const blogPosts = [
     date: "2024-01-03",
     category: "Development",
     readTime: "6 min read",
-    image: "/api/placeholder/600/300"
-  }
-];
-
-const categories = [{ name: "AI & Machine Learning", count: 12 },
-  { name: "Cloud Computing", count: 8 },
-  { name: "Cybersecurity", count: 6 },
-  { name: "SaaS Development", count: 10 },
-  { name: "Digital Transformation", count: 7 },
-  { name: "IT Infrastructure", count: 5 }
-];
-
+    image: "/api/placeholder/600/300",
+    tags: ["API", "Development", "Design"]
+  }]
 
 export default function BlogPage() {
   return (
-    <Layout
+    <MainLayout
       title="Blog - Zion Tech Group"
       description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
-      keywords="blog, AI insights, technology news, business innovation, tech trends"
-    >
+      keywords="blog, AI insights, technology news, business innovation, tech trends">
       <Head>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Blog
+              transition={{ duration: 0.8 }}>
+              <h1>
+                Tech Insights & Innovation
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Insights, trends, and expert perspectives on AI, technology, and business innovation
+              <p>
+                Stay ahead with the latest insights on AI, technology trends, and business innovation
               </p>
             </motion.div>
-          </div>
-        </section>
-
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -123,14 +111,17 @@ export default function BlogPage() {
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                      viewport={{ once: true }}>
+                      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+                      </div>
                       <div className="p-6">
                         <div className="flex flex-wrap gap-2 mb-3">
-                          <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
-                            {post.category}
-                          </span>
+                          {post.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                              {tag}
+                            </span>
+                          ))}
                         </div>
                         <h2 className="text-xl font-semibold text-gray-900 mb-2">
                           {post.title}
@@ -152,8 +143,7 @@ export default function BlogPage() {
                           <span>{post.readTime}</span>
                           <Link
                             href={`/blog/${post.id}`}
-                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
-                          >
+                            className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center">
                             Read More
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
@@ -163,55 +153,24 @@ export default function BlogPage() {
                   ))}
                 </div>
               </div>
-
----
-
               {/* Sidebar */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Categories</h3>
-                  <ul className="space-y-2">
-                    {categories.map((category, index) => (
-                      <li key={index}>
-                        <Link
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors"
-                        >
-                          <span>{category.name}</span>
-                          <span className="text-sm bg-gray-100 px-2 py-1 rounded-full">
-                            {category.count}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Newsletter</h3>
-                  <p className="text-gray-600 mb-4">
-                    Subscribe to get the latest technology insights delivered to your inbox.
-                  </p>
-                  <form className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-                    >
-                      Subscribe
-                    </button>
-                  </form>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Posts</h3>
+                  <div className="space-y-4">
+                    {blogPosts.slice(0, 3).map((post) => (
+                      <div key={post.id} className="border-b border-gray-200 pb-4 last:border-b-0">
+                        <h4 className="text-sm font-medium text-gray-900 mb-1">{post.title}</h4>
+                        <p className="text-xs text-gray-500">{post.date}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
       </div>
-    </Layout>
-  );
+    </MainLayout>
+  )
 }
