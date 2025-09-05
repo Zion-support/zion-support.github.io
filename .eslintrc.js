@@ -1,5 +1,21 @@
 
+/* eslint-env node */
+/* eslint-disable no-undef */
 module.exports = {
+  env: {
+    node: true,
+    es2021: true
+  },
+  globals: {
+    module: 'readonly',
+    require: 'readonly',
+    exports: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    global: 'readonly',
+    Buffer: 'readonly',
+    console: 'readonly'
+  },
   extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -27,4 +43,3 @@ module.exports = {
     'apps/'
   ]
 };
-,

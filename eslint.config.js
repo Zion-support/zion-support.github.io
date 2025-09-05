@@ -6,7 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
 
 export default [
-  js.configs.recommended;
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
@@ -15,6 +15,7 @@ export default [
       'dist/**',
       'build/**',
       'node_modules/**',
+      '.eslintrc.js',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -212,7 +213,15 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        jest: 'readonly'
+        jest: 'readonly',
+        // Node.js globals
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly'
       }
     },
     plugins: {
@@ -226,7 +235,14 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      'no-unused-vars': 'warnno-console': 'warnprefer-const': 'errorno-var': 'errorreact/prop-types': 'offreact/react-in-jsx-scope': 'off@typescript-eslint/no-unused-vars': 'warn@typescript-eslint/no-explicit-any': 'warn'
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
       react: {
@@ -261,13 +277,23 @@ export default [
   {
     ignores: [
       // Node/build outputs
-
-
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
       // Public assets/scripts
       'public/**',
-
       // Root-level noisy files
-
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      '*.backup.*',
+      '*.old.*',
+      '*.disabled.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.temp.*'
     ]
   }
 ];
