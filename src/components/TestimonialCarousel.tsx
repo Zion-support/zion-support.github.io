@@ -12,7 +12,6 @@ import { Quote } from 'lucide-react'
 import Link from "next/link",
 import Image from "next/image",
 import { CASE_STUDIES } from "@/data/case-studies",
-
 const testimonials = CASE_STUDIES,
 
 export function TestimonialCarousel() {

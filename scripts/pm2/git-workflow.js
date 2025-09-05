@@ -25,7 +25,7 @@ class GitWorkflow {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    },
+    }
   },
 ,
   async checkGitStatus() {,
@@ -53,7 +53,7 @@ class GitWorkflow {,
         changes: status.trim().split('\n').filter(line => line.trim()),
         branches: branches.trim().split('\n'),
         currentBranch: currentBranch
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
@@ -62,8 +62,8 @@ class GitWorkflow {,
         changes: [],
         branches: [],
         currentBranch: null
-      },
-    },
+      }
+    }
   },
 ,
   async checkBranchHealth() {,
@@ -99,8 +99,8 @@ class GitWorkflow {,
             })
           } catch (error) {,
             // Skip if can't access branch
-          },
-        },
+          }
+        }
       },
       return {,
         success: true,
@@ -110,15 +110,15 @@ class GitWorkflow {,
       return {,
         success: true,
         branches: branchInfo
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         branches: []
-      },
+      }
 
-    },
+    }
   },
 ,
   async checkMergeConflicts() {,
@@ -139,15 +139,15 @@ class GitWorkflow {,
         success: true,
         hasConflicts: conflictFiles.length > 0,
         conflictFiles: conflictFiles
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         hasConflicts: false,
         conflictFiles: []
-      },
-    },
+      }
+    }
   },
 ,
   async checkStaleBranches() {,
@@ -180,11 +180,11 @@ class GitWorkflow {,
                 lastCommit: lastCommit,
                 daysSinceLastCommit: Math.floor(daysSinceLastCommit)
               })
-            },
+            }
           } catch (error) {,
             // Skip if can't access branch
-          },
-        },
+          }
+        }
       },
       return {,
         success: true,
@@ -195,14 +195,14 @@ ursor/automate-test-improve-and-merge-code-8ee2
       return {,
         success: true,
         staleBranches: staleBranches
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         staleBranches: []
-      },
-    },
+      }
+    }
   },
 ,
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,
@@ -281,7 +281,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -328,13 +328,13 @@ ursor/automate-test-improve-and-merge-code-8ee2
         })
       } else {,
         this.log('\n✨ Git workflow is healthy!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running git workflow monitor: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the git workflow monitor,

@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { createServerClient } from '../../../utils/supabase/server',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient(),
@@ -27,14 +26,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { tag: 'react' },
       { tag: 'node' },
       { tag: 'ai' },
-      { tag: 'react' }]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1, }),
+      { tag: 'react' }]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1 }),
 
     res.status(200).json({
       profileViews,
       quoteInvites,
       jobApplications,
       successRate,
-      topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))}),
+      topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))})
   } catch (e) {
     res.status(200).json({
       profileViews: 27,
@@ -44,6 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       topTags: [
         { label: 'react', value: 2 },
         { label: 'node', value: 1 },
-        { label: 'ai', value: 1 }]}),
+        { label: 'ai', value: 1 }]})
   }
 }

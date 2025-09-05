@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { useRouter } from 'next/router',
-
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
@@ -16,8 +15,7 @@ const whitepapers = {
     content: {
       executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       keyTopics: [
-        'Understanding Autonomous SystemsImplementation Strategies',
-        'Best Practices & Case StudiesFuture Trends & Predictions'
+        'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
       ],
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
@@ -33,8 +31,7 @@ const whitepapers = {
     content: {
       executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
       keyTopics: [
-        'Ethical AI PrinciplesImplementation Guidelines',
-        'Risk Assessment & MitigationCompliance & Governance'
+        'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
       ],
       targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
     }
@@ -50,8 +47,7 @@ const whitepapers = {
     content: {
       executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       keyTopics: [
-        'ROI Calculation MethodsCost-Benefit Analysis',
-        'Success Metrics & KPIsInvestment Justification Strategies'
+        'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }

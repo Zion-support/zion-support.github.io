@@ -3,7 +3,7 @@ import Tree, { TreeNode } from "../../components/ui/Tree",
 
 interface ApiResponse {
   nodes: TreeNode[],
-  status: { gitConnected: boolean, gitBranch?: string },
+  status: { gitConnected: boolean, gitBranch?: string }
 }
 
 export default function DevTreePage() {
@@ -18,7 +18,7 @@ export default function DevTreePage() {
         headers: token ? { "x-admin-token": token } : undefined}),
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`),
+        throw new Error(j.error || `HTTP ${resp.status}`)
       }
       const data: ApiResponse = await resp.json(),
       setNodes(data.nodes),
@@ -31,12 +31,12 @@ export default function DevTreePage() {
   useEffect(() => {
     const stored = localStorage.getItem("ADMIN_TOKEN") || "",
     setAdminToken(stored),
-    fetchTree(stored),
+    fetchTree(stored)
   }, []),
 
   const handleSaveToken = () => {
     localStorage.setItem("ADMIN_TOKEN", adminToken),
-    fetchTree(adminToken),
+    fetchTree(adminToken)
   },
 
   const onDeploy = async (p: string) => {
@@ -49,9 +49,9 @@ export default function DevTreePage() {
         body: JSON.stringify({ path: p })}),
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`),
+        throw new Error(j.error || `HTTP ${resp.status}`)
       }
-      await fetchTree(adminToken),
+      await fetchTree(adminToken)
     } catch (e: any) {
       setError(e.message || "Deploy failed")
     }
@@ -89,5 +89,5 @@ export default function DevTreePage() {
         <div>Loading...</div>
       )}
     </div>
-  ),
+  )
 }

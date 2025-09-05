@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import v1 from '../../../data/api-docs/v1',
 import { EndpointSpec } from '../../../data/api-docs/types',
-
 function toOpenApi() {
   const paths: Record<string, any> = {},
   v1.sections.forEach((section) => {
@@ -17,8 +16,8 @@ function toOpenApi() {
         requestBody: ep.requestBodySchema ? { content: { 'application/json': { schema: ep.requestBodySchema } } } : undefined,
         responses: {
           '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }},
-        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []},
-    }),
+        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
+    })
   }),
 
   return {
@@ -26,10 +25,10 @@ function toOpenApi() {
     info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },
     servers: [{ url: 'https://api.zion.os' }],
     paths,
-    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }},
+    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }}
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json'),
-  res.status(200).json(toOpenApi()),
+  res.status(200).json(toOpenApi())
 }

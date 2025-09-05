@@ -13,7 +13,6 @@ import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimate
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -42,26 +41,26 @@ export default function ComprehensivePricing2029() {
     ? allServices 
     : allServices.filter(service => {
         if (selectedCategory === 'ai-autonomous') {
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous')),
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
         } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space')),
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))
         } else if (selectedCategory === 'business-solutions') {
-          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education')),
+          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))
         }
-        return true,
+        return true
       }),
 
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8),
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
   },
 
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
     if (billingCycle === 'monthly') {
-      return `$${numericPrice.toLocaleString()}/month`,
+      return `$${numericPrice.toLocaleString()}/month`
     } else {
-      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`,
+      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
     }
   },
 

@@ -1,7 +1,6 @@
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -14,7 +13,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -24,7 +23,7 @@ serve(async (req) => {
     ),
 
     if (scheduleError) {
-      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`),
+      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
     }
 
     console.log(`Scheduled ${scheduledCount} retention emails`),
@@ -38,7 +37,7 @@ serve(async (req) => {
       .limit(50),
 
     if (jobsError) {
-      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`),
+      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
     }
 
     const processedJobs = [],
@@ -66,9 +65,9 @@ serve(async (req) => {
               .from("scheduled_jobs")
               .update({
                 status: "failed"})
-              .eq("id", job.id),
+              .eq("id", job.id)
           } else {
-            processedJobs.push(job.id),
+            processedJobs.push(job.id)
           }
         } catch (error) {
           console.error(`Error processing job ${job.id}:`, error),
@@ -78,7 +77,7 @@ serve(async (req) => {
             .from("scheduled_jobs")
             .update({
               status: "failed"})
-            .eq("id", job.id),
+            .eq("id", job.id)
         }
       }
     }
@@ -92,7 +91,7 @@ serve(async (req) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   } catch (error) {
     console.error("Error in process-retention-emails function:", error),
 
@@ -104,6 +103,6 @@ serve(async (req) => {
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   }
 }),

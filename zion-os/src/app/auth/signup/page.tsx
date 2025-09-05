@@ -3,7 +3,6 @@
 import { useState } from "react",
 import Link from "next/link",
 import { useAuth } from "@/contexts/AuthContext",
-
 export default function SignUpPage() {
   const [name, setName] = useState(""),
   const [email, setEmail] = useState(""),
@@ -25,11 +24,11 @@ export default function SignUpPage() {
     }
 
     try {
-      await register(name, email, password),
+      await register(name, email, password)
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Registration failed"),
+      setError(error instanceof Error ? error.message : "Registration failed")
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 

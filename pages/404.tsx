@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function Custom404() {
   return (
     <>
@@ -30,7 +29,6 @@ export default function Custom404() {
 }
 import type { NextPage } from 'next',
 import Head from 'next/head',
-
 const NotFoundPage: NextPage = () => {
   return (
     <div>

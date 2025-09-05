@@ -46,15 +46,15 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       // Cleanup,
       return () => {,
         window.removeEventListener('popstate', handleRouteChange)
-      },
-    },
+      }
+    }
   }, [trackingId]),
 ,
   // Track custom events,
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {,
     if (typeof window !== 'undefined' && window.gtag) {,
       window.gtag('event', eventName, parameters)
-    },
+    }
   },
 ,
   // Track button clicks,
@@ -107,8 +107,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                         name: 'load',
                         value: Math.round(loadTime)
                       })
-                    },
-                  },
+                    }
+                  }
                 }, 0)
               })
             },

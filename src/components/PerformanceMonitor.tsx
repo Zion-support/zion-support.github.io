@@ -1,5 +1,5 @@
-        },
-      },
+        }
+      }
 
     },
 ,
@@ -25,7 +25,7 @@
       clearInterval(interval),
       window.removeEventListener('online', handleOnline),
       window.removeEventListener('offline', handleOffline)
-    },
+    }
   }, [location.pathname]),
 ,
   // Show performance issues,
@@ -40,7 +40,7 @@
       // Auto-hide after 10 seconds,
       const timer = setTimeout(() => setIsVisible(false), 10000),
       return () => clearTimeout(timer)
-    },
+    }
   }, [metrics]),
 ,
   if (!isVisible) return null,

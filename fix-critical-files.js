@@ -1,4 +1,4 @@
-    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" },
+    { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" }
 
   ],
   return (,
@@ -20,8 +20,7 @@
               className="block p-6 bg-white rounded-lg shadow-md "hover": shadow-lg transition-shadow",
             >,
               <h3 className="text-lg font-semibold text-gray-900">,
-                {link.label},
-  )},
+                {link.label})},
 export default ServicesIndex,
 ",
   fs.writeFileSync("src/pages/services/index.tsx", content),
@@ -48,4 +47,3 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugins:
 import react from "@vitejs/plugin-react", export default defineConfig({ plugins: [react()], test: { environment: "jsdom"}}), `, fs.writeFileSync("vitest.config.ts",content), console.log("Fixed vitest.config.ts")} , console.log("Starting critical file fixes..."), try { fixServicesIndex(), fixSolutions(), fixTailwindConfig(), fixViteConfig(), fixVitestConfig(), console.log("All critical files have been fixed!")} catch (error) { console.error("Error fixing files: ",error), process.exit(1)},
 #!/usr/bin/env node, import fs from "fs",
 import path from "path", const criticalFiles = [ "src/pages/services/index.tsx","src/pages/solutions.tsx","tailwind.config.ts","vite.config.ts","vitest.config.ts"], function $1() { const content = `import React from "react",
-

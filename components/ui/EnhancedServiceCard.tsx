@@ -42,7 +42,7 @@ interface EnhancedServiceCardProps {
     customers: number,
     rating: number,
     reviews: number
-  },
+  }
 }
 
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {

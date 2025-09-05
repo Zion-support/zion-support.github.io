@@ -36,8 +36,7 @@ export default function TrainingPage() {
       featured: true,
       icon: <Brain className="w-12 h-12" />,
       highlights: [
-        'Hands-on AI consciousness platform developmentReal-world project implementation',
-        'Expert mentorship and supportIndustry-recognized certification',
+        'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certification',
         'Lifetime access to course materials'
       ]
     },
@@ -54,8 +53,7 @@ export default function TrainingPage() {
       featured: true,
       icon: <Atom className="w-12 h-12" />,
       highlights: [
-        'Quantum algorithm developmentEnterprise integration strategies',
-        'Performance optimization techniquesSecurity and compliance considerations',
+        'Quantum algorithm developmentEnterprise integration strategiesPerformance optimization techniquesSecurity and compliance considerations',
         'Hands-on quantum simulator access'
       ]
     },
@@ -72,8 +70,7 @@ export default function TrainingPage() {
       featured: true,
       icon: <Rocket className="w-12 h-12" />,
       highlights: [
-        'Business process automation designAI-powered decision making systems',
-        'Change management strategiesROI measurement and optimization',
+        'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimization',
         'Industry best practices and case studies'
       ]
     }
@@ -244,14 +241,14 @@ export default function TrainingPage() {
       'autonomous-ops': <Rocket className="w-6 h-6" />,
       'enterprise-it': <Building className="w-6 h-6" />
     },
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />,
+    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
   },
 
   const getCategoryColor = (category: string) => {
     const colors = {
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     },
-    return colors[category as keyof typeof colors] || 'gray',
+    return colors[category as keyof typeof colors] || 'gray'
   },
 
   const toggleProgram = (id: number) => {
@@ -600,10 +597,8 @@ export default function TrainingPage() {
                   icon: <Brain className="w-12 h-12" />,
                   color: 'cyan',
                   path: [
-                    'AI Consciousness FundamentalsConsciousness Architecture Design',
-                    'Advanced ImplementationEthics and Governance',
-                    'API DevelopmentSystem Optimization',
-                    'Real-world ApplicationsExpert Certification'
+                    'AI Consciousness FundamentalsConsciousness Architecture DesignAdvanced ImplementationEthics and Governance',
+                    'API DevelopmentSystem OptimizationReal-world ApplicationsExpert Certification'
                   ]
                 },
                 {
@@ -615,8 +610,7 @@ export default function TrainingPage() {
                   icon: <Atom className="w-12 h-12" />,
                   color: 'purple',
                   path: [
-                    'Quantum Computing BasicsQuantum Algorithms',
-                    'Machine Learning IntegrationSecurity Implementation',
+                    'Quantum Computing BasicsQuantum AlgorithmsMachine Learning IntegrationSecurity Implementation',
                     'Enterprise SolutionsAdvanced Applications'
                   ]
                 },
@@ -629,8 +623,7 @@ export default function TrainingPage() {
                   icon: <Rocket className="w-12 h-12" />,
                   color: 'green',
                   path: [
-                    'Business Process AnalysisAutomation Strategy',
-                    'System ImplementationChange Management',
+                    'Business Process AnalysisAutomation StrategySystem ImplementationChange Management',
                     'Performance Optimization'
                   ]
                 }

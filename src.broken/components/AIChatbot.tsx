@@ -11,7 +11,7 @@ interface ChatMessage {
 }
 
 interface AIChatbotProps {
-  className?: string,
+  className?: string
 }
 
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
@@ -31,11 +31,11 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const inputRef = useRef<HTMLInputElement>(null),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
 
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [messages]),
 
   // AI response simulation
@@ -61,12 +61,12 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?"
     } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
-      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?",
+      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"
     } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?",
+      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"
     }
     
-    return finalResponse!,
+    return finalResponse!
   },
 
   const handleSendMessage = async () => {
@@ -93,7 +93,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     },
 
     setMessages([...messages, botMessage]),
-    setIsTyping(false),
+    setIsTyping(false)
   },
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -113,7 +113,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
-    setTimeout(() => handleSendMessage(), 100),
+    setTimeout(() => handleSendMessage(), 100)
   },
 
   return (
@@ -284,7 +284,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 export default AIChatbot,

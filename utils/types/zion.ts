@@ -4,7 +4,7 @@ export interface Branding {
   logoUrl?: string,
   primaryColor?: string,
   secondaryColor?: string,
-  subdomain?: string,
+  subdomain?: string
 }
 
 export interface DeployModules {
@@ -43,7 +43,7 @@ export interface DeployLogEntry {
   timestamp: string,
   level: "info" | "warn" | "error",
   action: string,
-  details?: Record<string, unknown> | string,
+  details?: Record<string, unknown> | string
 }
 
 export interface GeneratedAsset {

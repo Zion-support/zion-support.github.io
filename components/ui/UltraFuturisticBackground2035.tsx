@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high',
@@ -68,7 +67,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           accent: '#ffff00',
           background: 'rgba(0, 0, 0, 0.95)',
           glow: 'rgba(0, 255, 255, 0.3)'
-        },
+        }
     }
   },
 
@@ -83,7 +82,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     resizeCanvas(),
@@ -103,7 +102,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           maxLife: Math.random() * 100 + 50,
           type: Math.random() > 0.7 ? 'quantum' : 'normal',
           color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        }),
+        })
       }
     },
 
@@ -132,7 +131,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           particle.x = Math.random() * canvas.width,
           particle.y = Math.random() * canvas.height,
           particle.life = particle.maxLife,
-          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal',
+          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
         }
 
         // Draw particle
@@ -153,32 +152,32 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
           ctx.fillStyle = colors.glow,
           ctx.fill(),
-          ctx.shadowBlur = 0,
+          ctx.shadowBlur = 0
         } else {
           // Normal particle
           ctx.beginPath(),
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
           ctx.fillStyle = particle.color,
-          ctx.fill(),
+          ctx.fill()
         }
       }),
 
       // Draw holographic grid
       if (enableHolographic) {
-        drawHolographicGrid(ctx, colors),
+        drawHolographicGrid(ctx, colors)
       }
 
       // Draw neon effects
       if (enableNeonEffects) {
-        drawNeonEffects(ctx, colors),
+        drawNeonEffects(ctx, colors)
       }
 
       // Draw space-time effects
       if (enableSpaceTime) {
-        drawSpaceTimeEffects(ctx, colors),
+        drawSpaceTimeEffects(ctx, colors)
       }
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     animate(),
@@ -186,9 +185,9 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-    },
+    }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
 
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
@@ -203,14 +202,14 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       ctx.beginPath(),
       ctx.moveTo(x, 0),
       ctx.lineTo(x, ctx.canvas.height),
-      ctx.stroke(),
+      ctx.stroke()
     }
 
     for (let y = 0, y < ctx.canvas.height, y += gridSize) {
       ctx.beginPath(),
       ctx.moveTo(0, y),
       ctx.lineTo(ctx.canvas.width, y),
-      ctx.stroke(),
+      ctx.stroke()
     }
 
     // Animated diagonal lines
@@ -221,7 +220,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       ctx.beginPath(),
       ctx.moveTo(offset, 0),
       ctx.lineTo(offset + 200, ctx.canvas.height),
-      ctx.stroke(),
+      ctx.stroke()
     }
   },
 
@@ -247,7 +246,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       ctx.beginPath(),
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2),
       ctx.fillStyle = colors.primary,
-      ctx.fill(),
+      ctx.fill()
     }
   },
 
@@ -270,7 +269,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       ctx.fillStyle = colors.accent,
       ctx.beginPath(),
       ctx.arc(x, y, 2, 0, Math.PI * 2),
-      ctx.fill(),
+      ctx.fill()
     }
   },
 
@@ -327,7 +326,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2035,

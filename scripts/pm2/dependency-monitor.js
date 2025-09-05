@@ -20,7 +20,7 @@ class DependencyMonitor {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    },
+    }
   },
 ,
   async checkNpmAudit() {,
@@ -53,18 +53,18 @@ class DependencyMonitor {,
                   title: parts[2],
                   path: parts[3]
                 })
-              },
-            },
+              }
+            }
           }),
 ,
-          return { vulnerabilities, error: true },
-        },
+          return { vulnerabilities, error: true }
+        }
       } catch (parseError) {,
         this.log(`Error parsing npm audit output: ${parseError.message}`)
       },
 ,
-      return { error: true, message: error.message },
-    },
+      return { error: true, message: error.message }
+    }
   },
 ,
   async checkOutdatedPackages() {,
@@ -84,13 +84,13 @@ class DependencyMonitor {,
         const output = error.stdout?.toString() || '',
         if (output) {,
           return JSON.parse(output)
-        },
+        }
       } catch (parseError) {,
         this.log(`Error parsing npm outdated output: ${parseError.message}`)
       },
 ,
-      return {},
-    },
+      return {}
+    }
   },
 ,
   async checkPackageLock() {,
@@ -98,7 +98,7 @@ class DependencyMonitor {,
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json'),
 ,
       if (!fs.existsSync(packageLockPath)) {,
-        return { exists: false, message: 'No package-lock.json found' },
+        return { exists: false, message: 'No package-lock.json found' }
       },
 ,
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')),
@@ -109,10 +109,10 @@ class DependencyMonitor {,
         lockfileVersion,
         dependencies: Object.keys(packageLock.dependencies || {}).length,
         devDependencies: Object.keys(packageLock.devDependencies || {}).length
-      },
+      }
     } catch (error) {,
-      return { exists: false, error: error.message },
-    },
+      return { exists: false, error: error.message }
+    }
   },
 ,
   async checkNodeVersion() {,
@@ -124,10 +124,10 @@ class DependencyMonitor {,
         encoding: 'utf8'
       }).trim(),
 ,
-      return { nodeVersion, npmVersion },
+      return { nodeVersion, npmVersion }
     } catch (error) {,
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
 
   },
 ,
@@ -136,7 +136,7 @@ class DependencyMonitor {,
       const hooksDir = path.join(this.projectRoot, '.git/hooks'),
 ,
       if (!fs.existsSync(hooksDir)) {,
-        return { exists: false, message: 'No git hooks directory found' },
+        return { exists: false, message: 'No git hooks directory found' }
       },
 ,
       const hooks = fs.readdirSync(hooksDir),
@@ -146,10 +146,10 @@ class DependencyMonitor {,
         return stats.isFile() && (hook.endsWith('.sample') || stats.mode & 0o111)
       }),
 ,
-      return { exists: true, hooks: activeHooks },
+      return { exists: true, hooks: activeHooks }
     } catch (error) {,
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
 ,
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {,
@@ -237,7 +237,7 @@ class DependencyMonitor {,
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -308,13 +308,13 @@ class DependencyMonitor {,
       if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,
         this.log('\n🚨 CRITICAL: Security vulnerabilities detected!'),
         this.log('Consider running: npm audit fix')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running dependency monitor: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the dependency monitor,

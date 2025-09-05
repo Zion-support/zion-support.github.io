@@ -12,7 +12,6 @@ import {
 } from 'lucide-react',
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
-
 // Import all the new 2025 service data
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
@@ -20,26 +19,22 @@ import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
 import { additionalRealServices2025 } from '../data/2025-additional-real-services',
 import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',
-
 // Import new innovative services
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
-
 // Import our new innovative service categories
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
 import { blockchainWeb3Services2025 } from '../data/2025-blockchain-web3-services',
 import { cybersecurityQuantumServices2025 } from '../data/2025-cybersecurity-quantum-services',
 import { spaceMetaverseServices2025 } from '../data/2025-space-metaverse-services',
-
 // Import existing services for comprehensive coverage
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
 import { quantumSpaceServices } from '../data/quantum-space-services',
 import { enterpriseITServices } from '../data/enterprise-it-services',
-
 const allServices = [
   ...realMicroSaasServices2025,
   ...innovativeAIServices2025,
@@ -165,7 +160,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image',
 import { cn } from '@/lib/utils',
-
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
   alt?: string,
@@ -27,12 +26,12 @@ export function ImageWithRetry({
 
   const handleError = () => {
     setFailed(true),
-    setCurrentSrc(fallbackSrc),
+    setCurrentSrc(fallbackSrc)
   },
 
   const handleRetry = () => {
     setFailed(false),
-    setCurrentSrc(src),
+    setCurrentSrc(src)
   },
 
   const fill = !('width' in props) && !('height' in props),
@@ -57,7 +56,7 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
-  ),
+  )
 }
 
 export default ImageWithRetry,

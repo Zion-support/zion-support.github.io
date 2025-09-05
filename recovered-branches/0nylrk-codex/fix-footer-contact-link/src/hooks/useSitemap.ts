@@ -2,7 +2,6 @@
 import { useAuth } from './useAuth',
 import { getAccessibleRoutes } from '@/config/sitemap',
 import type { SitemapItem } from '@/config/sitemap',
-
 // Define the allowed user types
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',
 
@@ -35,17 +34,17 @@ export function useSitemap() {
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false
     }
     
-    return true,
+    return true
   },
 
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
-    return ['employerbuyer', 'jobSeekercreator', 'admin'].includes(type),
+    return ['employerbuyerjobSeekercreator', 'admin'].includes(type)
   }
   
   return {
     accessibleRoutes,
     findRouteByPath,
     canAccessRoute
-  },
+  }
 }

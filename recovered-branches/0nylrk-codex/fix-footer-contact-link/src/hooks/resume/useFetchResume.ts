@@ -2,7 +2,6 @@ import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { Resume } from '@/types/resume',
 import { useAuth } from '@/hooks/useAuth',
-
 export function useFetchResume() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -12,7 +11,7 @@ export function useFetchResume() {
   const fetchResume = async (resumeId?: string) => {
     if (!user) {
       setError('You must be logged in to access resumes'),
-      return null,
+      return null
     }
     
     setIsLoading(true),
@@ -24,13 +23,13 @@ export function useFetchResume() {
       let resumeQuery = supabase.from('talent_resumes').select('*'),
       
       if (resumeId) {
-        resumeQuery = resumeQuery.eq('id', resumeId),
+        resumeQuery = resumeQuery.eq('id', resumeId)
       } else {
         resumeQuery = resumeQuery
           .eq('user_id', user.id)
           .order('is_active', { ascending: false })
           .order('created_at', { ascending: false })
-          .limit(1),
+          .limit(1)
       }
       
       const { data: resumeData, error: resumeError } = await resumeQuery.single(),
@@ -40,9 +39,9 @@ export function useFetchResume() {
           // No resume found, this is not a critical error for a new user
           setResume(null),
           setIsLoading(false),
-          return null,
+          return null
         }
-        throw resumeError,
+        throw resumeError
       }
       
       // Fetch work experience
@@ -98,13 +97,13 @@ export function useFetchResume() {
       },
       
       setResume(fullResume),
-      return fullResume,
+      return fullResume
     } catch (e: any) {
       console.error('Error fetching resume:', e),
       setError(e.message),
-      return null,
+      return null
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -112,5 +111,5 @@ export function useFetchResume() {
     isLoading,
     error,
     resume,
-    fetchResume},
+    fetchResume}
 }

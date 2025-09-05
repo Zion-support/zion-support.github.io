@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const usersPath = path.join(process.cwd(), 'datalearn', 'users.json'),
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -15,8 +14,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     })),
 
     const top = entries.sort((a: any, b: any) => b.points - a.points).slice(0, 20),
-    res.status(200).json({ leaderboard: top }),
+    res.status(200).json({ leaderboard: top })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' }),
+    res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
   }
 }

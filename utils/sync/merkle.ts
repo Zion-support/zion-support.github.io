@@ -1,6 +1,5 @@
 import crypto from "crypto",
 import { ProposalVoteEntry } from "./types",
-
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex")
 }
@@ -10,7 +9,7 @@ export function leafHashForVote(vote: ProposalVoteEntry): string {
     voterId: vote.voterId,
     weight: vote.weight,
     choice: vote.choice}),
-  return sha256Hex(canonical),
+  return sha256Hex(canonical)
 }
 
 export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
@@ -19,7 +18,7 @@ export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
     .slice()
     .sort((a, b) => a.voterId.localeCompare(b.voterId))
     .map(leafHashForVote),
-  return computeMerkleRootFromLeaves(leaves),
+  return computeMerkleRootFromLeaves(leaves)
 }
 
 export function computeMerkleRootFromLeaves(leaves: string[]): string {
@@ -32,9 +31,9 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
       const right = i + 1 < layer.length ? layer[i + 1] : left,
       next.push(sha256Hex(left + right))
     }
-    layer = next,
+    layer = next
   }
-  return layer[0],
+  return layer[0]
 }
 
 export function verifyVotesAgainstMerkleRoot(

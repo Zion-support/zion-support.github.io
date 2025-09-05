@@ -12,10 +12,10 @@ export const OfflineIndicator = () => {
       setIsOnline(online),
       
       if (!online) {
-        setShowOfflineAlert(true),
+        setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000),
+        setTimeout(() => setShowOfflineAlert(false), 3000)
       }
     },
 
@@ -28,8 +28,8 @@ export const OfflineIndicator = () => {
 
     return () => {
       window.removeEventListener('online', updateOnlineStatus),
-      window.removeEventListener('offline', updateOnlineStatus),
-    },
+      window.removeEventListener('offline', updateOnlineStatus)
+    }
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
@@ -53,5 +53,5 @@ export const OfflineIndicator = () => {
         </div>
       </Alert>
     </div>
-  ),
+  )
 }, 

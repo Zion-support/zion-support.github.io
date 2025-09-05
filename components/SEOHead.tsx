@@ -1,6 +1,5 @@
 import React from 'react',
 import Head from 'next/head',
-
 interface SEOHeadProps {
   title?: string,
   description?: string,
@@ -11,7 +10,7 @@ interface SEOHeadProps {
   twitterCard?: string,
   structuredData?: any,
   noindex?: boolean,
-  nofollow?: boolean,
+  nofollow?: boolean
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -122,7 +121,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
     </Head>
-  ),
+  )
 },
 
 export default SEOHead,

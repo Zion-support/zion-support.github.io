@@ -6,7 +6,6 @@ import {
   Brain, Globe, Lock, Code, Database, Cloud
 } from 'lucide-react',
 import Button from '../ui/Button',
-
 interface Service {
   id: string,
   name: string,
@@ -107,7 +106,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000),
 
-      return matchesCategory && matchesPrice,
+      return matchesCategory && matchesPrice
     }),
 
     // Sort services
@@ -122,7 +121,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         filtered.sort((a, b) => {
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
-          return bROI - aROI,
+          return bROI - aROI
         }),
         break,
       case 'price-low':
@@ -134,7 +133,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       default: break
     }
 
-    return filtered.slice(0, maxServices),
+    return filtered.slice(0, maxServices)
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]),
 
   const stats = [

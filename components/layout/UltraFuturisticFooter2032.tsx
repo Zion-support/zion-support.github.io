@@ -346,5 +346,5 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
-  ),
+  )
 }

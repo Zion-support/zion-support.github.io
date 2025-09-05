@@ -3,14 +3,13 @@ import Head from 'next/head',
 import { useState, useEffect } from 'react',
 import { ContactInfo } from '../types',
 import ErrorBoundary from '../components/ErrorBoundary',
-
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100),
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   const contact: ContactInfo = {
@@ -36,7 +35,7 @@ export default function MicroSaaS() {
       name: 'AI-Powered Video Clip Maker',
       description: 'Automatically create engaging video clips from long-form content using advanced AI algorithms.',
       category: 'ai',
-      features: ['AI Content AnalysisAuto-Editing', 'Multiple FormatsCloud Processing'],
+      features: ['AI Content AnalysisAuto-EditingMultiple FormatsCloud Processing'],
       price: '$29/month',
       popular: true
     },
@@ -45,7 +44,7 @@ export default function MicroSaaS() {
       name: 'Smart Contract Analyzer',
       description: 'Comprehensive analysis and security auditing for blockchain smart contracts.',
       category: 'security',
-      features: ['Vulnerability DetectionGas Optimization', 'Code ReviewAudit Reports'],
+      features: ['Vulnerability DetectionGas OptimizationCode ReviewAudit Reports'],
       price: '$99/month',
       popular: false
     },
@@ -54,7 +53,7 @@ export default function MicroSaaS() {
       name: 'Cybersecurity Threat Intelligence',
       description: 'Real-time threat monitoring and intelligence gathering for enhanced security.',
       category: 'security',
-      features: ['Threat DetectionRisk Assessment', 'Incident ResponseCompliance Monitoring'],
+      features: ['Threat DetectionRisk AssessmentIncident ResponseCompliance Monitoring'],
       price: '$149/month',
       popular: true
     },
@@ -63,7 +62,7 @@ export default function MicroSaaS() {
       name: 'Multi-Language Website Translator',
       description: 'Automatically translate websites into multiple languages with context awareness.',
       category: 'automation',
-      features: ['100+ LanguagesContext Translation', 'SEO OptimizationReal-time Updates'],
+      features: ['100+ LanguagesContext TranslationSEO OptimizationReal-time Updates'],
       price: '$49/month',
       popular: false
     },
@@ -72,7 +71,7 @@ export default function MicroSaaS() {
       name: 'Predictive Inventory Optimizer',
       description: 'AI-driven inventory management with demand forecasting and optimization.',
       category: 'analytics',
-      features: ['Demand ForecastingStock Optimization', 'Cost AnalysisIntegration APIs'],
+      features: ['Demand ForecastingStock OptimizationCost AnalysisIntegration APIs'],
       price: '$79/month',
       popular: true
     },
@@ -81,7 +80,7 @@ export default function MicroSaaS() {
       name: 'Real-Time Analytics Dashboard',
       description: 'Comprehensive business intelligence dashboard with real-time data visualization.',
       category: 'analytics',
-      features: ['Real-time DataCustom Dashboards', 'Alert SystemExport Capabilities'],
+      features: ['Real-time DataCustom DashboardsAlert SystemExport Capabilities'],
       price: '$59/month',
       popular: false
     },
@@ -90,7 +89,7 @@ export default function MicroSaaS() {
       name: 'Automated Customer Support',
       description: 'AI-powered customer support system with natural language processing.',
       category: 'ai',
-      features: ['Chatbot IntegrationTicket Management', 'Knowledge BaseMulti-channel Support'],
+      features: ['Chatbot IntegrationTicket ManagementKnowledge BaseMulti-channel Support'],
       price: '$89/month',
       popular: true
     },
@@ -99,7 +98,7 @@ export default function MicroSaaS() {
       name: 'Blockchain Transaction Monitor',
       description: 'Monitor and analyze blockchain transactions across multiple networks.',
       category: 'analytics',
-      features: ['Multi-chain SupportTransaction Tracking', 'Alert SystemAPI Access'],
+      features: ['Multi-chain SupportTransaction TrackingAlert SystemAPI Access'],
       price: '$69/month',
       popular: false
     },
@@ -108,7 +107,7 @@ export default function MicroSaaS() {
       name: 'Social Media Scheduler',
       description: 'Advanced social media management with AI-powered content optimization.',
       category: 'marketing',
-      features: ['Multi-platformContent Calendar', 'AnalyticsAuto-posting'],
+      features: ['Multi-platformContent CalendarAnalyticsAuto-posting'],
       price: '$39/month',
       popular: false
     },
@@ -117,7 +116,7 @@ export default function MicroSaaS() {
       name: 'Document Processing AI',
       description: 'Intelligent document processing with OCR and data extraction capabilities.',
       category: 'ai',
-      features: ['OCR TechnologyData Extraction', 'Format ConversionBatch Processing'],
+      features: ['OCR TechnologyData ExtractionFormat ConversionBatch Processing'],
       price: '$59/month',
       popular: true
     },
@@ -126,7 +125,7 @@ export default function MicroSaaS() {
       name: 'Workflow Automation Engine',
       description: 'Create and manage complex business workflows with drag-and-drop interface.',
       category: 'automation',
-      features: ['Visual BuilderIntegration Hub', 'Conditional LogicMonitoring'],
+      features: ['Visual BuilderIntegration HubConditional LogicMonitoring'],
       price: '$79/month',
       popular: false
     },
@@ -135,7 +134,7 @@ export default function MicroSaaS() {
       name: 'Email Marketing Optimizer',
       description: 'AI-powered email marketing with personalization and performance optimization.',
       category: 'marketing',
-      features: ['PersonalizationA/B Testing', 'AnalyticsTemplate Library'],
+      features: ['PersonalizationA/B TestingAnalyticsTemplate Library'],
       price: '$49/month',
       popular: true
     }

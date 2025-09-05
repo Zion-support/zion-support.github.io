@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import Button from '../components/ui/Button',
-
 export default function QuantumCybersecurityPlatform() {
   return (
     <>
@@ -18,8 +17,7 @@ export default function QuantumCybersecurityPlatform() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Post-quantum cryptography integrationQuantum key distribution options',
-              'Advanced anomaly and threat detectionSecurity analytics and incident workflows',
+              'Post-quantum cryptography integrationQuantum key distribution optionsAdvanced anomaly and threat detectionSecurity analytics and incident workflows',
               'Compliance and reportingFrom $4,999/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -31,5 +29,5 @@ export default function QuantumCybersecurityPlatform() {
         </div>
       </div>
     </>
-  ),
+  )
 }

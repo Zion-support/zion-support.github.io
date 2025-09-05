@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
 import { Search } from "lucide-react",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
-
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -23,7 +22,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [searchQuery, setSearchQuery] = useState(""),
   
   const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type }),
+    updateFormData({ serviceType: type })
   },
   
   const handleItemSelect = (item: ListingItem) => {
@@ -31,19 +30,19 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
-    }),
+    })
   },
   
   const filteredListings = SAMPLE_LISTINGS.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
-      if (!categoryMatch) return false,
+      if (!categoryMatch) return false
     }
     
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase()),
+           item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
   return (
@@ -133,5 +132,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  ),
+  )
 }

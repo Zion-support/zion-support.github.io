@@ -27,7 +27,7 @@ export interface SyncRules {
   pushNotesMode?: 'auto' | 'manual',
   // ATS rules
   autoSyncApplicants?: boolean,
-  autoUploadResumes?: boolean,
+  autoUploadResumes?: boolean
 }
 
 export interface ProviderConnection {
@@ -48,7 +48,7 @@ export interface SyncLogEntry {
   providerId: IntegrationProviderId,
   level: 'info' | 'warn' | 'error',
   action: string,
-  details?: Record<string, any>,
+  details?: Record<string, any>
 }
 
 export interface ManualOverride {
@@ -61,7 +61,7 @@ export interface ZapierEvent {
   id: string,
   type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
-  payload: Record<string, any>,
+  payload: Record<string, any>
 }
 
 export interface IntegrationsState {

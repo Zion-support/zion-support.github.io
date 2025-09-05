@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button",
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
 import { RolePicker } from "../components/onboarding/RolePicker",
 import { SignUpForm } from "../components/onboarding/SignUpForm",
-
 type OnboardingStep = "language" | "role" | "signup",
 
 export function MobileOnboarding() {
@@ -14,16 +13,16 @@ export function MobileOnboarding() {
   
   const goToNextStep = () => {
     if (currentStep === "language") {
-      setCurrentStep("role"),
+      setCurrentStep("role")
     } else if (currentStep === "role") {
-      setCurrentStep("signup"),
+      setCurrentStep("signup")
     } else {
-      navigate("/mobile"),
+      navigate("/mobile")
     }
   },
   
   const handleRoleSelect = () => {
-    setCurrentStep("signup"),
+    setCurrentStep("signup")
   },
 
   return (
@@ -75,5 +74,5 @@ export function MobileOnboarding() {
         )}
       </div>
     </div>
-  ),
+  )
 }

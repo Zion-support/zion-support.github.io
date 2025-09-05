@@ -38,8 +38,8 @@ interface HealthData {
       severity: string,
       solution?: string
     }>,
-    byCategory: { [category: string]: number },
-  },
+    byCategory: { [category: string]: number }
+  }
 }
 
 const HealthDashboard: React.FC = () => {
@@ -52,15 +52,15 @@ const HealthDashboard: React.FC = () => {
     try {
       const response = await fetch('/api/admin/health'),
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`),
+        throw new Error(`HTTP ${response.status}`)
       }
       const data = await response.json(),
       setHealthData(data),
-      setError(null),
+      setError(null)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch health data'),
+      setError(err instanceof Error ? err.message : 'Failed to fetch health data')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -69,10 +69,10 @@ const HealthDashboard: React.FC = () => {
 
     if (autoRefresh) {
       const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
-      return () => clearInterval(interval),
+      return () => clearInterval(interval)
     }
     
-    return undefined,
+    return undefined
   }, [autoRefresh]),
 
   const getStatusIcon = (status: string) => {
@@ -95,17 +95,17 @@ const HealthDashboard: React.FC = () => {
       <Badge variant={variant} className="ml-2">
         {status.toUpperCase()}
       </Badge>
-    ),
+    )
   },
 
   const formatUptime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600),
     const minutes = Math.floor((seconds % 3600) / 60),
-    return `${hours}h ${minutes}m`,
+    return `${hours}h ${minutes}m`
   },
 
   const formatBytes = (bytes: number) => {
-    return `${bytes.toFixed(1)} MB`,
+    return `${bytes.toFixed(1)} MB`
   },
 
   if (loading) {
@@ -113,7 +113,7 @@ const HealthDashboard: React.FC = () => {
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
       </div>
-    ),
+    )
   }
 
   if (error) {
@@ -129,7 +129,7 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   if (!healthData) return null,
@@ -388,7 +388,7 @@ const HealthDashboard: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  ),
+  )
 },
 
 export default HealthDashboard, 

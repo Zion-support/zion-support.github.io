@@ -20,7 +20,7 @@ export function ServicesPage() {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const getServicesByCategory = (categoryId: string) => {
@@ -234,7 +234,7 @@ function ServiceCard({ service }: ServiceCardProps) {
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
-    return service.pricing.professional,
+    return service.pricing.professional
   },
 
   const popularPlan = getPopularPlan(),
@@ -440,5 +440,5 @@ function ServiceCard({ service }: ServiceCardProps) {
         )}
       </div>
     </div>
-  ),
+  )
 }

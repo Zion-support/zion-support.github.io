@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",

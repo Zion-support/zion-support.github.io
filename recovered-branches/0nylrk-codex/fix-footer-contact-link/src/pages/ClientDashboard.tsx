@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader", 
+import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { JobsList } from "@/components/jobs/JobsList",
 import { Button } from "@/components/ui/button",
@@ -16,7 +16,6 @@ import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingS
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile",
-
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -28,7 +27,7 @@ function ClientDashboardContent() {
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
-      setSelectedJobTitle(jobs[0].title),
+      setSelectedJobTitle(jobs[0].title)
     }
   }, [jobs, selectedJobId]),
 
@@ -129,7 +128,7 @@ function ClientDashboardContent() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }
 
 export default function ClientDashboard() {
@@ -137,5 +136,5 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  ),
+  )
 }

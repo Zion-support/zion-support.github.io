@@ -1,7 +1,6 @@
 import fs from 'fs',
 import path from 'path',
 import type { GetStaticProps } from 'next',
-
 type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
 
@@ -9,12 +8,12 @@ type Props = { report: Report | null },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomation', 'content-map.json'),
+    const file = path.join(process.cwd(), 'publicautomationcontent-map.json'),
     const raw = fs.readFileSync(file, 'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 21600 },
+    return { props: { report: data }, revalidate: 21600 }
   } catch {
-    return { props: { report: null }, revalidate: 21600 },
+    return { props: { report: null }, revalidate: 21600 }
   }
 },
 
@@ -48,5 +47,5 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  ),
+  )
 }

@@ -20,7 +20,6 @@ import {
   Award
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-
 const ReportsPage: React.FC = () => {
   const reports = [
     {
@@ -29,7 +28,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
-      tags: ['Quantum ComputingEnterprise', 'Market AnalysisFuture Tech'],
+      tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
       pages: 45,
       downloads: 1247,
       views: 5678,
@@ -43,7 +42,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
-      tags: ['AIROI', 'Fortune 500Best Practices'],
+      tags: ['AIROIFortune 500Best Practices'],
       pages: 38,
       downloads: 892,
       views: 3456,
@@ -57,7 +56,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
-      tags: ['CybersecurityAI Threats', 'Threat LandscapeDefense'],
+      tags: ['CybersecurityAI ThreatsThreat LandscapeDefense'],
       pages: 52,
       downloads: 1567,
       views: 6789,
@@ -71,7 +70,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
-      tags: ['Venture CapitalInvestment', 'InnovationGlobal Markets'],
+      tags: ['Venture CapitalInvestmentInnovationGlobal Markets'],
       pages: 41,
       downloads: 734,
       views: 2890,
@@ -85,7 +84,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
-      tags: ['Edge ComputingIoT', 'Industry 4.0Real-time'],
+      tags: ['Edge ComputingIoTIndustry 4.0Real-time'],
       pages: 36,
       downloads: 623,
       views: 2345,
@@ -99,7 +98,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
-      tags: ['Green ComputingSustainability', 'Environmental ImpactClean Tech'],
+      tags: ['Green ComputingSustainabilityEnvironmental ImpactClean Tech'],
       pages: 43,
       downloads: 445,
       views: 1789,

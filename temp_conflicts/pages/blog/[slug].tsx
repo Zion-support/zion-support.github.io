@@ -8,7 +8,6 @@ import ShareButtons from '@/components/blog/ShareButtons',
 import SuggestedArticles from '@/components/blog/SuggestedArticles',
 import CTASection from '@/components/blog/CTASection',
 import LikeButton from '@/components/blog/LikeButton',
-
 type Props = { post: BlogPost, all: BlogPost[] },
 
 const PostPage: NextPage<Props> = ({ post, all }) => {
@@ -16,7 +15,7 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
 
   useEffect(() => {
     // track view
-    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' }).catch(() => {}),
+    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' }).catch(() => {})
   }, [post.id]),
 
   const toc = useMemo(() => {
@@ -28,10 +27,10 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
         const level = m[1].length,
         const text = m[2].trim(),
         const id = text,
-        headings.push({ level, text, id }),
+        headings.push({ level, text, id })
       }
     }),
-    return headings,
+    return headings
   }, [post.body]),
 
   const jsonLd = {
@@ -95,17 +94,17 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
         <CTASection />
       </article>
     </div>
-  ),
+  )
 },
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const slug = ctx.params?.slug as string,
   const post = findPostBySlug(slug),
   if (!post || post.status !== 'published') {
-    return { notFound: true },
+    return { notFound: true }
   }
   const all = listPublishedPosts(),
-  return { props: { post, all } },
+  return { props: { post, all } }
 },
 
 export default PostPage,

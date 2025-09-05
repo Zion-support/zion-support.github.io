@@ -10,8 +10,6 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
-
-
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
@@ -93,7 +91,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 },
 
 export const PostCard = React.memo(PostCardComponent),

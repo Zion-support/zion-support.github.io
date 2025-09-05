@@ -18,7 +18,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
-
 import { Checkbox } from "@/components/ui/checkbox",
 // Form validation schema
 const loginSchema = z.object({
@@ -55,17 +54,17 @@ export function LoginForm() {
         let errorMessage = "Login failed. Please try again.", // Default generic error
         if (result?.error && result?.error?.message) {
           if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.",
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
           } else {
-            errorMessage = result.error.message,
+            errorMessage = result.error.message
           }
         }
-        form.setError("root", { message: errorMessage }),
+        form.setError("root", { message: errorMessage })
       } else {
-        fireEvent('login', { method: 'email' }),
+        fireEvent('login', { method: 'email' })
       }
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -73,7 +72,7 @@ export function LoginForm() {
     const email = form.getValues('email'),
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' }),
-      return,
+      return
     }
     setIsResending(true),
     setVerificationMessage(''),
@@ -85,14 +84,14 @@ export function LoginForm() {
       }),
       const data = await response.json(),
       if (response.ok) {
-        setVerificationMessage('Verification email sent. Please check your inbox.'),
+        setVerificationMessage('Verification email sent. Please check your inbox.')
       } else {
-        setVerificationMessage(data.message || 'Failed to resend verification email.'),
+        setVerificationMessage(data.message || 'Failed to resend verification email.')
       }
     } catch (err) {
-      setVerificationMessage('Failed to resend verification email.'),
+      setVerificationMessage('Failed to resend verification email.')
     } finally {
-      setIsResending(false),
+      setIsResending(false)
     }
   },
 
@@ -100,9 +99,9 @@ export function LoginForm() {
     const email = form.getValues('email'),
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' }),
-      return,
+      return
     }
-    router.push(`/verify-status?email=${encodeURIComponent(email)}`),
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   },
 
   return (
@@ -116,7 +115,7 @@ export function LoginForm() {
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues,
           if (firstError) {
-            form.setFocus(firstError),
+            form.setFocus(firstError)
           }
         })}
         className="space-y-6"

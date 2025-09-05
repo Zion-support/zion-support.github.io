@@ -3,19 +3,19 @@ const path = require('path'),
 const { OpenAI } = require('openai'),
 
 const ROOT = process.cwd(),
-const REPORTS_DIR = path.join(ROOT, 'datareports', 'automation'),
+const REPORTS_DIR = path.join(ROOT, 'datareportsautomation'),
 const STATUS_FILE = path.join(REPORTS_DIR, 'status.json'),
 const IDEAS_DIR = REPORTS_DIR,
 
 function ensureDirs() {
-  fs.mkdirSync(REPORTS_DIR, { recursive: true }),
+  fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
 
 function listAutomations() {
   const autoDir = path.join(ROOT, 'automation'),
   if (!fs.existsSync(autoDir)) return [],
   const files = fs.readdirSync(autoDir),
-  return files.filter((f) => f.endsWith('.cjs') || f.endsWith('.js')).sort(),
+  return files.filter((f) => f.endsWith('.cjs') || f.endsWith('.js')).sort()
 }
 
 function writeStatus(automations, extras = {}) {
@@ -24,7 +24,7 @@ function writeStatus(automations, extras = {}) {
     automations,
     ...extras},
   fs.writeFileSync(STATUS_FILE, JSON.stringify(status, null, 2)),
-  return status,
+  return status
 }
 
 async function analyzeFeedbackIfPossible() {
@@ -33,7 +33,7 @@ async function analyzeFeedbackIfPossible() {
     if (fs.existsSync(script)) {
       // Run in-process to avoid spawning
       process.env.NODE_ENV = process.env.NODE_ENV || 'production',
-      await import(pathToFileURL(script).href),
+      await import(pathToFileURL(script).href)
     }
   } catch (_) {
     // ignore
@@ -53,7 +53,7 @@ async function generateIdeasIfPossible() {
   const text = resp.choices?.[0]?.message?.content || '[]',
   const ideasPath = path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),
   fs.writeFileSync(ideasPath, text.trim()),
-  return ideasPath,
+  return ideasPath
 }
 
 async function main() {
@@ -75,10 +75,10 @@ async function main() {
 
   // Generate automation ideas if key present
   try {
-    await generateIdeasIfPossible(),
+    await generateIdeasIfPossible()
   } catch {}
 
-  console.log('Cloud autonomous run complete:', status.updatedAt),
+  console.log('Cloud autonomous run complete:', status.updatedAt)
 }
 
-main().catch((e) => { console.error(e), process.exit(1), }),
+main().catch((e) => { console.error(e), process.exit(1) }),

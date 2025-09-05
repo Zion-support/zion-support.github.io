@@ -1,7 +1,6 @@
 import type { GetServerSideProps } from 'next',
 import { FormEvent, useState } from 'react',
 import type { Vendor } from '../../utils/vendor-types',
-
 type Props = { vendor: Vendor | null },
 
 export default function VendorProfilePage({ vendor }: Props) {
@@ -24,11 +23,11 @@ export default function VendorProfilePage({ vendor }: Props) {
         body: JSON.stringify({ vendorId: vendor.id, title })}),
       if (!res.ok) throw new Error('Failed to submit'),
       setMessage('Thanks! We will contact you soon.'),
-      form.reset(),
+      form.reset()
     } catch (e: any) {
       setMessage(e.message)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -105,12 +104,12 @@ export default function VendorProfilePage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug || ''),
   const { getVendorBySlug } = await import('../../utils/vendor-store'),
   const vendor = slug ? getVendorBySlug(slug) || null : null,
-  return { props: { vendor } },
+  return { props: { vendor } }
 },

@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-
 export default function CloudBackupCompliancePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-backup-compliance')),
   if (!service) return null,
@@ -51,6 +49,6 @@ export default function CloudBackupCompliancePage() {
         </div>
       </div>
     </Layout>
-  ),
+  )
 }
 

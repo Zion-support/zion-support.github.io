@@ -248,7 +248,7 @@ export default function ForumCategoryPage() {
           </Button>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   const category = categoriesInfo[categoryId],
@@ -338,5 +338,5 @@ export default function ForumCategoryPage() {
         )}
       </div>
     </AppLayout>
-  ),
+  )
 }

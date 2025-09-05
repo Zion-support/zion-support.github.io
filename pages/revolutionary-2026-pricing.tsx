@@ -12,7 +12,6 @@ import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
-
 export default function Revolutionary2026Pricing() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
@@ -32,16 +31,16 @@ export default function Revolutionary2026Pricing() {
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
-          return service.category.includes('AI') || service.category.includes('Machine Learning'),
+          return service.category.includes('AI') || service.category.includes('Machine Learning')
         } else if (selectedCategory === 'quantum') {
-          return service.category.includes('Quantum') || service.category.includes('Space'),
+          return service.category.includes('Quantum') || service.category.includes('Space')
         } else if (selectedCategory === 'emerging') {
-          return service.category.includes('Emerging') || service.category.includes('Technology'),
+          return service.category.includes('Emerging') || service.category.includes('Technology')
         } else if (selectedCategory === 'enterprise') {
-          return service.category.includes('Enterprise') || service.category.includes('Business'),
+          return service.category.includes('Enterprise') || service.category.includes('Business')
         }
-        return true,
-      }),
+        return true
+      })
     }
 
     // Price filter
@@ -52,8 +51,8 @@ export default function Revolutionary2026Pricing() {
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,
         if (selectedPriceRange === 'premium') return price >= 20000,
-        return true,
-      }),
+        return true
+      })
     }
 
     // Sort services
@@ -61,20 +60,20 @@ export default function Revolutionary2026Pricing() {
       if (sortBy === 'price-low') {
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
-        return priceA - priceB,
+        return priceA - priceB
       }
       if (sortBy === 'price-high') {
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
-        return priceB - priceA,
+        return priceB - priceA
       }
       if (sortBy === 'rating') return b.rating - a.rating,
       if (sortBy === 'popularity') return b.customers - a.customers,
       if (sortBy === 'name') return a.name.localeCompare(b.name),
-      return 0,
+      return 0
     }),
 
-    return filtered,
+    return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),
 
   const categories = [
@@ -113,7 +112,7 @@ export default function Revolutionary2026Pricing() {
     totalServices: all2026Services.length,
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0,
-      return acc + price,
+      return acc + price
     }, 0) / all2026Services.length,
     lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
     highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
@@ -545,5 +544,5 @@ export default function Revolutionary2026Pricing() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

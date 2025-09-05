@@ -1,5 +1,4 @@
 import type { TalentProfile } from '@/utils/types/talent',
-
 export const TALENT_PROFILES: TalentProfile[] = [
   {
     slug: 'ava-chen',
@@ -9,7 +8,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Toronto, CA',
     timezone: 'America/Toronto',
     region: 'North America',
-    skills: ['LLM OpsRAG', 'OpenAILangChain', 'Vector DBsTypeScript'],
+    skills: ['LLM OpsRAGOpenAILangChain', 'Vector DBsTypeScript'],
     summary:
       'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
     bio:
@@ -32,7 +31,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Lisbon, PT',
     timezone: 'Europe/Lisbon',
     region: 'Europe',
-    skills: ['AWSKubernetes', 'TerraformServerless', 'Networking'],
+    skills: ['AWSKubernetesTerraformServerless', 'Networking'],
     summary:
       'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
     bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',
@@ -53,7 +52,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Austin, US',
     timezone: 'America/Chicago',
     region: 'North America',
-    skills: ['PythonPyTorch', 'NLPEvaluation', 'PromptingDashboards'],
+    skills: ['PythonPyTorchNLPEvaluation', 'PromptingDashboards'],
     summary:
       'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
@@ -73,7 +72,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Tokyo, JP',
     timezone: 'Asia/Tokyo',
     region: 'Asia',
-    skills: ['Next.jsTypeScript', 'RustPostgreSQL', 'OpenAIVercel'],
+    skills: ['Next.jsTypeScriptRustPostgreSQL', 'OpenAIVercel'],
     summary:
       'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
     bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',
@@ -93,7 +92,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Berlin, DE',
     timezone: 'Europe/Berlin',
     region: 'Europe',
-    skills: ['Threat ModelingAppSec', 'SAST/DASTZero Trust', 'IAM'],
+    skills: ['Threat ModelingAppSecSAST/DASTZero Trust', 'IAM'],
     summary:
       'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
     bio: 'Hardens platforms with practical, developer‑friendly security programs.',

@@ -20,7 +20,7 @@ interface PerformanceMetrics {
 interface PerformanceMonitorProps {
   showUI?: boolean,
   autoRefresh?: boolean,
-  refreshInterval?: number,
+  refreshInterval?: number
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -68,12 +68,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
           }
 
-          resolve(metrics),
+          resolve(metrics)
         } else {
           // Wait for page to load
           window.addEventListener('load', () => {
-            setTimeout(() => getPerformanceMetrics().then(resolve), 100),
-          }),
+            setTimeout(() => getPerformanceMetrics().then(resolve), 100)
+          })
         }
       } else {
         resolve({
@@ -83,9 +83,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           cumulativeLayoutShift: 0,
           firstInputDelay: 0,
           timeToInteractive: 0
-        }),
+        })
       }
-    }),
+    })
   }, []),
 
   const refreshMetrics = useCallback(async () => {
@@ -101,31 +101,31 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         newAlerts.push('Page load time is slow (>3s)')
       }
       if (newMetrics.firstContentfulPaint > 2000) {
-        newAlerts.push('First contentful paint is slow (>2s)'),
+        newAlerts.push('First contentful paint is slow (>2s)')
       }
       if (newMetrics.largestContentfulPaint > 4000) {
-        newAlerts.push('Largest contentful paint is slow (>4s)'),
+        newAlerts.push('Largest contentful paint is slow (>4s)')
       }
       
-      setAlerts(newAlerts),
+      setAlerts(newAlerts)
     } catch (error) {
-      console.error('Failed to get performance metrics:', error),
+      console.error('Failed to get performance metrics:', error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   }, [getPerformanceMetrics]),
 
   // Auto-refresh functionality
   useEffect(() => {
     if (showUI) {
-      refreshMetrics(),
+      refreshMetrics()
     }
   }, [showUI, refreshMetrics]),
 
   useEffect(() => {
     if (autoRefresh && showUI) {
       const interval = setInterval(refreshMetrics, refreshInterval),
-      return () => clearInterval(interval),
+      return () => clearInterval(interval)
     }
   }, [autoRefresh, showUI, refreshInterval, refreshMetrics]),
 
@@ -146,7 +146,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const formatTime = (ms: number): string => {
     if (ms === 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`,
-    return `${(ms / 1000).toFixed(2)}s`,
+    return `${(ms / 1000).toFixed(2)}s`
   },
 
   // Get device icon
@@ -168,7 +168,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (metrics.fcp < 1800) score += 100,
       else if (metrics.fcp < 3000) score += 75,
       else if (metrics.fcp < 4000) score += 50,
-      else score += 25,
+      else score += 25
     }
 
     // LCP scoring (0-100)
@@ -177,7 +177,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (metrics.lcp < 2500) score += 100,
       else if (metrics.lcp < 4000) score += 75,
       else if (metrics.lcp < 6000) score += 50,
-      else score += 25,
+      else score += 25
     }
 
     // FID scoring (0-100)
@@ -186,7 +186,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (metrics.fid < 100) score += 100,
       else if (metrics.fid < 300) score += 75,
       else if (metrics.fid < 500) score += 50,
-      else score += 25,
+      else score += 25
     }
 
     // CLS scoring (0-100)
@@ -195,15 +195,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (metrics.cls < 0.1) score += 100,
       else if (metrics.cls < 0.25) score += 75,
       else if (metrics.cls < 0.4) score += 50,
-      else score += 25,
+      else score += 25
     }
 
-    return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0,
+    return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0
   },
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null,
+    return null
   }
 
   const performanceScore = getPerformanceScore(),
@@ -361,7 +361,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       </motion.div>
     </AnimatePresence>
-  ),
+  )
 },
 
 // Helper functions

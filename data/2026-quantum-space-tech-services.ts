@@ -12,7 +12,7 @@ export interface QuantumSpaceTechService2026 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [

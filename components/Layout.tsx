@@ -17,7 +17,6 @@ export default Layout,
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 interface LayoutProps {
   children: React.ReactNode,
   title?: string,

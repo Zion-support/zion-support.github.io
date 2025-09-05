@@ -7,7 +7,6 @@ import {
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -16,10 +15,8 @@ const contactInfo = {
 },
 
 const features = [
-  'Quantum-enhanced market prediction algorithmsReal-time market data processing',
-  'AI-powered risk assessmentMulti-asset portfolio optimization',
-  'Regulatory compliance automationBacktesting and simulation engine',
-  'Custom strategy builderPerformance analytics dashboard'
+  'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimization',
+  'Regulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
 ],
 
 const pricingPlans = [
@@ -27,21 +24,21 @@ const pricingPlans = [
     name: 'Starter',
     price: 199,
     period: 'month',
-    features: ['Basic algorithms5 asset classes', 'Daily rebalancingStandard support'],
+    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 499,
     period: 'month',
-    features: ['Advanced algorithmsAll asset classes', 'Real-time rebalancingCustom strategies', 'Priority support'],
+    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategies', 'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1299,
     period: 'month',
-    features: ['Quantum algorithmsWhite-label solution', 'API accessDedicated support', 'Custom integrations'],
+    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated support', 'Custom integrations'],
     popular: false
   }
 ],
@@ -285,5 +282,5 @@ export default function QuantumTradingAlgorithm() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

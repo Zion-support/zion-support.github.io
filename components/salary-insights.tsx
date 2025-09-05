@@ -32,11 +32,11 @@ export default function SalaryInsightsPage() {
       try {
         const { supabase } = await import('../utils/supabase/client'),
         const user = await supabase.auth.getUser(),
-        setIsLoggedIn(!!user.data.user),
+        setIsLoggedIn(!!user.data.user)
       } catch {
-        setIsLoggedIn(false),
+        setIsLoggedIn(false)
       }
-    })(),
+    })()
   }, []),
 
   async function fetchInsights() {
@@ -55,11 +55,11 @@ export default function SalaryInsightsPage() {
           employmentType})}),
       if (!res.ok) throw new Error('Failed to fetch insights'),
       const json = (await res.json()) as InsightResponse,
-      setData(json),
+      setData(json)
     } catch (e: any) {
       setError(e.message || 'Unexpected error')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -80,7 +80,7 @@ export default function SalaryInsightsPage() {
             user_id: user.data.user.id,
             payload}),
           alert('Insight saved to your profile'),
-          return,
+          return
         }
       } catch {
         // fall back
@@ -90,9 +90,9 @@ export default function SalaryInsightsPage() {
         const history = JSON.parse(localStorage.getItem(key) || '[]'),
         history.unshift(payload),
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50))),
-        alert('Insight saved locally'),
+        alert('Insight saved locally')
       } catch {}
-    })(),
+    })()
   }
 
   const donutData = useMemo(() => {
@@ -105,7 +105,7 @@ export default function SalaryInsightsPage() {
     return [
       { label: 'Below Median', value: lower || 1 },
       { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 }],
+      { label: 'Above Median', value: upper || 1 }]
   }, [data]),
 
   return (
@@ -272,5 +272,5 @@ export default function SalaryInsightsPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

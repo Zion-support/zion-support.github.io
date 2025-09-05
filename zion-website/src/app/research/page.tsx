@@ -15,8 +15,7 @@ const researchAreas = [
     description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
     icon: LightBulbIcon,
     topics: [
-      'Deep Learning & Neural NetworksNatural Language Processing',
-      'Computer Vision & Image RecognitionReinforcement Learning',
+      'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement Learning',
       'Federated LearningExplainable AI'
     ]},
   {
@@ -24,8 +23,7 @@ const researchAreas = [
     description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
     icon: CpuChipIcon,
     topics: [
-      'Quantum Neural NetworksQuantum Machine Learning',
-      'Quantum-Classical Hybrid SystemsQuantum Error Correction',
+      'Quantum Neural NetworksQuantum Machine LearningQuantum-Classical Hybrid SystemsQuantum Error Correction',
       'Quantum Algorithms for AIQuantum Supremacy Applications'
     ]},
   {
@@ -33,8 +31,7 @@ const researchAreas = [
     description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
     icon: RocketLaunchIcon,
     topics: [
-      'Autonomous Decision MakingMulti-Agent Systems',
-      'Robotic Learning & AdaptationHuman-Robot Interaction',
+      'Autonomous Decision MakingMulti-Agent SystemsRobotic Learning & AdaptationHuman-Robot Interaction',
       'Autonomous NavigationSwarm Intelligence'
     ]},
   {
@@ -42,8 +39,7 @@ const researchAreas = [
     description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
     icon: ShieldCheckIcon,
     topics: [
-      'AI Bias & FairnessPrivacy-Preserving AI',
-      'AI Safety & AlignmentEthical AI Guidelines',
+      'AI Bias & FairnessPrivacy-Preserving AIAI Safety & AlignmentEthical AI Guidelines',
       'AI Regulation & PolicyHuman-AI Collaboration'
     ]}]
 

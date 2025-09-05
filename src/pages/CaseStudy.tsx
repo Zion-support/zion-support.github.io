@@ -12,7 +12,6 @@ import {
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd',
 import { getBreadcrumbsForPath } from '@/utils/routeUtils',
-
 export default function CaseStudy() {
   const router = useRouter(),
   const slug = router.query.slug as string,
@@ -24,7 +23,7 @@ export default function CaseStudy() {
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
       </div>
-    ),
+    )
   }
 
   return (
@@ -88,5 +87,5 @@ export default function CaseStudy() {
         </div>
       </div>
     </>
-  ),
+  )
 }

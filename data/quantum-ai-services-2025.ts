@@ -12,7 +12,7 @@ export interface QuantumAiService2025 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const quantumAIServices2025: QuantumAiService2025[] = [

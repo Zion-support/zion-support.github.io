@@ -35,16 +35,16 @@ export default function URLShortenerPage() {
     setShortenedUrls(prev => [newShortUrl, ...prev]),
     setLongUrl(''),
     setCustomAlias(''),
-    setIsShortening(false),
+    setIsShortening(false)
   },
 
   const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
     let result = '',
     for (let i = 0, i < 6, i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length)),
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
     }
-    return result,
+    return result
   },
 
   const copyToClipboard = (text: string) => {
@@ -56,7 +56,7 @@ export default function URLShortenerPage() {
       prev.map(url => 
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    ),
+    )
   },
 
   const deleteUrl = (id: number) => {
@@ -64,11 +64,11 @@ export default function URLShortenerPage() {
   },
 
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0),
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
   },
 
   const getTotalUrls = () => {
-    return shortenedUrls.length,
+    return shortenedUrls.length
   },
 
   return (

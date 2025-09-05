@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
-
 interface SmartAppBannerProps {
   appName?: string,
   appIconSrc?: string,
@@ -26,21 +25,21 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
-        setIsVisible(true),
+        setIsVisible(true)
       }, delay),
       
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
   }, [isMobile, delay]),
   
   const dismissBanner = () => {
     setIsVisible(false),
-    localStorage.setItem("smartBannerDismissed", "true"),
+    localStorage.setItem("smartBannerDismissed", "true")
   },
 
   const resetBanner = () => {
     localStorage.removeItem("smartBannerDismissed"),
-    setIsVisible(true),
+    setIsVisible(true)
   },
   
   // Only render on mobile devices
@@ -49,7 +48,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
-    ) : null,
+    ) : null
   }
   
   // Detect iOS or Android
@@ -87,5 +86,5 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
       </div>
     </div>
-  ),
+  )
 },

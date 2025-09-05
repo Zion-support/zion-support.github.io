@@ -11,7 +11,6 @@ import EnhancedFooter from '../components/EnhancedFooter',
 import EnhancedContactForm from '../components/EnhancedContactForm',
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',
-
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
@@ -21,10 +20,10 @@ export default function HomePage() {
     
     // Auto-rotate features
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 6),
+      setCurrentFeature((prev) => (prev + 1) % 6)
     }, 5000),
     
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, []),
 
   const features = [

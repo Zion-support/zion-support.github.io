@@ -6,7 +6,6 @@ import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
-
 // Mock data for demonstration
 const jobsData = [
   {
@@ -128,5 +127,5 @@ export function MobileBrowse() {
       
       <BottomNavigation />
     </div>
-  ),
+  )
 }

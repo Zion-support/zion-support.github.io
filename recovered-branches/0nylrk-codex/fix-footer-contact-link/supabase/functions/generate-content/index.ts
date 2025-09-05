@@ -1,7 +1,6 @@
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -33,13 +32,13 @@ interface GeneratedNewsletterContent {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
     if (!openAIApiKey) {
-      throw new Error("OpenAI API key is not set in environment variables"),
+      throw new Error("OpenAI API key is not set in environment variables")
     }
 
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,
@@ -58,7 +57,7 @@ serve(async (req) => {
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
       
       userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
-      Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`,
+      Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.
       You create concise, engaging newsletter content that summarizes platform updates, highlights talent, and drives user engagement.
@@ -88,7 +87,7 @@ serve(async (req) => {
 
     if (!response.ok) {
       const errorData = await response.json(),
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
     const data = await response.json(),
@@ -117,7 +116,7 @@ serve(async (req) => {
           max_tokens: 100})}),
       
       const imagePromptData = await imagePromptResponse.json(),
-      generatedContent.imagePrompt = imagePromptData.choices[0].message.content,
+      generatedContent.imagePrompt = imagePromptData.choices[0].message.content
     }
 
     // If autoPublish is true, save the content to the database
@@ -126,7 +125,7 @@ serve(async (req) => {
       const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY"),
       
       if (!supabaseUrl || !supabaseKey) {
-        throw new Error("Supabase credentials are not set in environment variables"),
+        throw new Error("Supabase credentials are not set in environment variables")
       }
       
       const supabase = createClient(supabaseUrl, supabaseKey),
@@ -175,7 +174,7 @@ serve(async (req) => {
         .single(),
       
       if (error) {
-        console.error("Error saving blog post:", error),
+        console.error("Error saving blog post:", error)
       } else {
         console.log("Blog post saved successfully:", blogPost),
         
@@ -191,18 +190,18 @@ serve(async (req) => {
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
             action_text: "View Post"
-          }),
+          })
       }
     }
 
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200}),
+      status: 200})
   } catch (error) {
     console.error("Error in generate-content function:", error),
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500}),
+      status: 500})
   }
 }),

@@ -31,7 +31,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate),
+    setValue("hourlyRate", rate)
   },
 
   return (
@@ -71,5 +71,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 },

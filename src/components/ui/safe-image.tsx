@@ -32,14 +32,14 @@ export function SafeImage({
   const handleError = () => {
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc),
-      setHasError(true),
+      setHasError(true)
     } else if (!hasError && src.startsWith('/')) {
       // Try serving the image directly through our custom API route
       const fallbackUrl = `/api/image${src}`,
       setCurrentSrc(fallbackUrl),
-      setHasError(true),
+      setHasError(true)
     } else if (!hasError) {
-      setHasError(true),
+      setHasError(true)
     }
   },
 
@@ -54,7 +54,7 @@ export function SafeImage({
       >
         <ImageIcon className="w-6 h-6" />
       </div>
-    ),
+    )
   }
 
   return (
@@ -69,5 +69,5 @@ export function SafeImage({
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
     />
-  ),
+  )
 } 

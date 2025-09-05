@@ -40,5 +40,5 @@ export default function AITalentMatchingPage() {
       ctaText="Find Your AI Talent"
       ctaLink="/request-quote"
     />
-  ),
+  )
 }

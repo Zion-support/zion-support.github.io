@@ -5,8 +5,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$399/month',
     features: [
-      'Automated deploymentSelf-healing infrastructure',
-      'Performance optimizationCost management'
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management'
     ]
   },
   {
@@ -15,8 +14,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$499/month',
     features: [
-      'Incident automationPredictive maintenance',
-      'Resource optimizationPerformance monitoring'
+      'Incident automationPredictive maintenanceResource optimizationPerformance monitoring'
     ]
   },
   {
@@ -25,8 +23,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Transportation',
     pricing: '$899/month',
     features: [
-      'Vehicle control systemsSafety monitoring',
-      'Route optimizationPerformance analytics'
+      'Vehicle control systemsSafety monitoringRoute optimizationPerformance analytics'
     ]
   },
   {
@@ -35,8 +32,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Financial Services',
     pricing: '$649/month',
     features: [
-      'Smart contract managementConsensus mechanisms',
-      'Security protocolsScalability solutions'
+      'Smart contract managementConsensus mechanismsSecurity protocolsScalability solutions'
     ]
   },
   {
@@ -45,8 +41,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Financial Services',
     pricing: '$449/month',
     features: [
-      'Node managementNetwork security',
-      'Performance optimizationMonitoring tools'
+      'Node managementNetwork securityPerformance optimizationMonitoring tools'
     ]
   },
   {
@@ -55,8 +50,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Healthcare',
     pricing: '$1299/month',
     features: [
-      'Neural signal processingInterface protocols',
-      'Safety systemsPerformance metrics'
+      'Neural signal processingInterface protocolsSafety systemsPerformance metrics'
     ]
   },
   {
@@ -65,8 +59,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$379/month',
     features: [
-      'Regulatory trackingAutomated reporting',
-      'Audit managementCompliance monitoring'
+      'Regulatory trackingAutomated reportingAudit managementCompliance monitoring'
     ]
   },
   {
@@ -75,8 +68,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$299/month',
     features: [
-      'Customer analyticsBehavior tracking',
-      'Segmentation toolsInsight generation'
+      'Customer analyticsBehavior trackingSegmentation toolsInsight generation'
     ]
   },
   {
@@ -85,8 +77,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$249/month',
     features: [
-      'Data processingVisualization tools',
-      'Statistical analysisReporting automation'
+      'Data processingVisualization toolsStatistical analysisReporting automation'
     ]
   },
   {
@@ -95,8 +86,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$329/month',
     features: [
-      'CI/CD pipelinesInfrastructure as code',
-      'Automated testingDeployment management'
+      'CI/CD pipelinesInfrastructure as codeAutomated testingDeployment management'
     ]
   },
   {
@@ -105,8 +95,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$279/month',
     features: [
-      'Edge node managementLatency optimization',
-      'Resource distributionPerformance monitoring'
+      'Edge node managementLatency optimizationResource distributionPerformance monitoring'
     ]
   },
   {
@@ -115,8 +104,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Manufacturing',
     pricing: '$599/month',
     features: [
-      'Process automationQuality control',
-      'Predictive maintenancePerformance optimization'
+      'Process automationQuality controlPredictive maintenancePerformance optimization'
     ]
   },
   {
@@ -125,8 +113,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$1499/month',
     features: [
-      'Deep space communicationSignal processing',
-      'Network managementReliability monitoring'
+      'Deep space communicationSignal processingNetwork managementReliability monitoring'
     ]
   },
   {
@@ -135,8 +122,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$199/month',
     features: [
-      'Asset trackingLifecycle management',
-      'Cost optimizationCompliance reporting'
+      'Asset trackingLifecycle managementCost optimizationCompliance reporting'
     ]
   },
   {
@@ -145,8 +131,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$349/month',
     features: [
-      'Campaign automationPersonalization',
-      'Performance trackingROI optimization'
+      'Campaign automationPersonalizationPerformance trackingROI optimization'
     ]
   },
   {
@@ -155,8 +140,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Metaverse',
     pricing: '$799/month',
     features: [
-      '3D modeling toolsVirtual world creation',
-      'User interaction systemsPerformance optimization'
+      '3D modeling toolsVirtual world creationUser interaction systemsPerformance optimization'
     ]
   },
   {
@@ -165,8 +149,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Metaverse',
     pricing: '$649/month',
     features: [
-      'Virtual environment hostingUser management',
-      'Content creation toolsAnalytics platform'
+      'Virtual environment hostingUser managementContent creation toolsAnalytics platform'
     ]
   },
   {
@@ -175,8 +158,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Developer Tools',
     pricing: '$179/month',
     features: [
-      'Responsive designPerformance optimization',
-      'Mobile analyticsUser experience tools'
+      'Responsive designPerformance optimizationMobile analyticsUser experience tools'
     ]
   },
   {
@@ -185,8 +167,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$429/month',
     features: [
-      'Cloud orchestrationCost optimization',
-      'Security managementPerformance monitoring'
+      'Cloud orchestrationCost optimizationSecurity managementPerformance monitoring'
     ]
   },
   {
@@ -195,8 +176,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps',
     pricing: '$299/month',
     features: [
-      'Network provisioningConfiguration management',
-      'Performance optimizationSecurity automation'
+      'Network provisioningConfiguration managementPerformance optimizationSecurity automation'
     ]
   },
   {
@@ -205,8 +185,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Financial Services',
     pricing: '$549/month',
     features: [
-      'Neural network trainingFinancial modeling',
-      'Risk assessmentPerformance optimization'
+      'Neural network trainingFinancial modelingRisk assessmentPerformance optimization'
     ]
   },
   {
@@ -215,8 +194,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$1199/month',
     features: [
-      'Satellite computingOrbital data processing',
-      'Communication systemsPerformance monitoring'
+      'Satellite computingOrbital data processingCommunication systemsPerformance monitoring'
     ]
   },
   {
@@ -225,8 +203,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$899/month',
     features: [
-      'Quantum algorithmsAI integration',
-      'Hybrid optimizationPerformance analytics'
+      'Quantum algorithmsAI integrationHybrid optimizationPerformance analytics'
     ]
   },
   {
@@ -235,8 +212,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$1099/month',
     features: [
-      'Biological algorithmsQuantum processing',
-      'Bio-computing integrationPerformance optimization'
+      'Biological algorithmsQuantum processingBio-computing integrationPerformance optimization'
     ]
   },
   {
@@ -245,8 +221,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$649/month',
     features: [
-      'Quantum algorithmsCompliance automation',
-      'Risk assessmentPerformance monitoring'
+      'Quantum algorithmsCompliance automationRisk assessmentPerformance monitoring'
     ]
   },
   {
@@ -255,8 +230,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$749/month',
     features: [
-      'Quantum algorithmsCreative tools',
-      'Performance optimizationAnalytics platform'
+      'Quantum algorithmsCreative toolsPerformance optimizationAnalytics platform'
     ]
   },
   {
@@ -265,8 +239,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$599/month',
     features: [
-      'Quantum algorithmsCRM functionality',
-      'Performance optimizationAnalytics tools'
+      'Quantum algorithmsCRM functionalityPerformance optimizationAnalytics tools'
     ]
   },
   {
@@ -275,8 +248,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$1299/month',
     features: [
-      'Quantum hardwareCooling systems',
-      'Security protocolsPerformance monitoring'
+      'Quantum hardwareCooling systemsSecurity protocolsPerformance monitoring'
     ]
   },
   {
@@ -285,8 +257,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$799/month',
     features: [
-      'Quantum encryptionSecurity protocols',
-      'Performance optimizationMonitoring tools'
+      'Quantum encryptionSecurity protocolsPerformance optimizationMonitoring tools'
     ]
   },
   {
@@ -295,8 +266,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Energy',
     pricing: '$699/month',
     features: [
-      'Quantum algorithmsEnergy modeling',
-      'Optimization toolsPerformance analytics'
+      'Quantum algorithmsEnergy modelingOptimization toolsPerformance analytics'
     ]
   },
   {
@@ -305,8 +275,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$849/month',
     features: [
-      'Quantum algorithmsFinancial modeling',
-      'Risk assessmentPerformance optimization'
+      'Quantum algorithmsFinancial modelingRisk assessmentPerformance optimization'
     ]
   },
   {
@@ -315,8 +284,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$599/month',
     features: [
-      'Quantum algorithmsIdentity verification',
-      'Security protocolsPerformance monitoring'
+      'Quantum algorithmsIdentity verificationSecurity protocolsPerformance monitoring'
     ]
   },
   {
@@ -325,8 +293,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$749/month',
     features: [
-      'Quantum algorithmsSecurity protocols',
-      'Threat detectionPerformance optimization'
+      'Quantum algorithmsSecurity protocolsThreat detectionPerformance optimization'
     ]
   },
   {
@@ -335,8 +302,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$899/month',
     features: [
-      'Quantum algorithmsGateway security',
-      'Performance optimizationMonitoring tools'
+      'Quantum algorithmsGateway securityPerformance optimizationMonitoring tools'
     ]
   },
   {
@@ -345,8 +311,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$649/month',
     features: [
-      'Quantum algorithmsLearning optimization',
-      'Performance trackingAnalytics tools'
+      'Quantum algorithmsLearning optimizationPerformance trackingAnalytics tools'
     ]
   },
   {
@@ -355,8 +320,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$999/month',
     features: [
-      'Quantum algorithmsMaterials modeling',
-      'Discovery toolsPerformance optimization'
+      'Quantum algorithmsMaterials modelingDiscovery toolsPerformance optimization'
     ]
   },
   {
@@ -365,8 +329,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$799/month',
     features: [
-      'Quantum algorithmsNetwork security',
-      'Threat detectionPerformance monitoring'
+      'Quantum algorithmsNetwork securityThreat detectionPerformance monitoring'
     ]
   },
   {
@@ -375,8 +338,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$949/month',
     features: [
-      'Quantum protocolsNetwork management',
-      'Performance optimizationSecurity protocols'
+      'Quantum protocolsNetwork managementPerformance optimizationSecurity protocols'
     ]
   },
   {
@@ -385,8 +347,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$1099/month',
     features: [
-      'Quantum algorithmsNeural networks',
-      'Ecosystem managementPerformance optimization'
+      'Quantum algorithmsNeural networksEcosystem managementPerformance optimization'
     ]
   },
   {
@@ -395,8 +356,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$899/month',
     features: [
-      'Quantum algorithmsRisk assessment',
-      'Financial modelingPerformance optimization'
+      'Quantum algorithmsRisk assessmentFinancial modelingPerformance optimization'
     ]
   },
   {
@@ -405,8 +365,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$799/month',
     features: [
-      'Quantum storageData management',
-      'Performance optimizationSecurity protocols'
+      'Quantum storageData managementPerformance optimizationSecurity protocols'
     ]
   },
   {
@@ -415,8 +374,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Supply Chain',
     pricing: '$699/month',
     features: [
-      'Quantum algorithmsSupply chain modeling',
-      'Optimization toolsPerformance analytics'
+      'Quantum algorithmsSupply chain modelingOptimization toolsPerformance analytics'
     ]
   },
   {
@@ -425,8 +383,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$849/month',
     features: [
-      'Quantum algorithmsThreat detection',
-      'Security protocolsPerformance monitoring'
+      'Quantum algorithmsThreat detectionSecurity protocolsPerformance monitoring'
     ]
   },
   {
@@ -435,8 +392,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Quantum Computing',
     pricing: '$749/month',
     features: [
-      'Quantum algorithmsWorkload management',
-      'Performance optimizationResource allocation'
+      'Quantum algorithmsWorkload managementPerformance optimizationResource allocation'
     ]
   },
   {
@@ -445,8 +401,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$999/month',
     features: [
-      'Satellite designCommunication systems',
-      'Performance monitoringSecurity protocols'
+      'Satellite designCommunication systemsPerformance monitoringSecurity protocols'
     ]
   },
   {
@@ -455,8 +410,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$1499/month',
     features: [
-      'Colonization planningInfrastructure design',
-      'Resource managementPerformance monitoring'
+      'Colonization planningInfrastructure designResource managementPerformance monitoring'
     ]
   },
   {
@@ -465,8 +419,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$799/month',
     features: [
-      'Space security protocolsThreat detection',
-      'Incident responsePerformance monitoring'
+      'Space security protocolsThreat detectionIncident responsePerformance monitoring'
     ]
   },
   {
@@ -475,8 +428,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$649/month',
     features: [
-      'Data processingAnalytics tools',
-      'VisualizationPerformance optimization'
+      'Data processingAnalytics toolsVisualizationPerformance optimization'
     ]
   },
   {
@@ -485,8 +437,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$1199/month',
     features: [
-      'Mining automationResource extraction',
-      'Safety systemsPerformance monitoring'
+      'Mining automationResource extractionSafety systemsPerformance monitoring'
     ]
   },
   {
@@ -495,8 +446,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$999/month',
     features: [
-      'Mining operationsResource management',
-      'Safety protocolsPerformance analytics'
+      'Mining operationsResource managementSafety protocolsPerformance analytics'
     ]
   },
   {
@@ -505,8 +455,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Space Technology',
     pricing: '$749/month',
     features: [
-      'Resource mappingIntelligence analysis',
-      'Planning toolsPerformance optimization'
+      'Resource mappingIntelligence analysisPlanning toolsPerformance optimization'
     ]
   },
   {
@@ -515,8 +464,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$599/month',
     features: [
-      'Identity verificationAccess control',
-      'Threat detectionPerformance monitoring'
+      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
   }

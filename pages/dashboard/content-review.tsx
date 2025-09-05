@@ -3,19 +3,18 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GetServerSideProps } from 'next',
 import ModerationModal from '../../components/admin/ModerationModal',
-
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
     const [k, v] = part.trim().split('='),
     if (k) acc[k] = decodeURIComponent(v || ''),
-    return acc,
+    return acc
   }, {} as Record<string, string>),
   let role = 'guest',
-  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest', } catch {}
+  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {}
   if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },
-  return { props: {} },
+  return { props: {} }
 },
 
 export default function ContentReviewPage() {
@@ -26,7 +25,7 @@ export default function ContentReviewPage() {
     if (filters.reason) p.set('reason', filters.reason),
     if (filters.userEmail) p.set('userEmail', filters.userEmail),
     if (filters.contentType) p.set('contentType', filters.contentType),
-    return p.toString(),
+    return p.toString()
   }, [filters]),
   const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher),
   const flags = data?.flags || [],
@@ -39,7 +38,7 @@ export default function ContentReviewPage() {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes })
     }),
     setSelected(null),
-    mutate(),
+    mutate()
   }
 
   return (
@@ -113,5 +112,5 @@ export default function ContentReviewPage() {
         />
       )}
     </EnhancedLayout>
-  ),
+  )
 }

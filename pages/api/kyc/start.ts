@@ -3,22 +3,21 @@ import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc',
 import type { KycProfile, KycRole } from '../../../utils/kyc',
 import fs from 'fs',
 import path from 'path',
-
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
-    return JSON.parse(raw),
+    return JSON.parse(raw)
   } catch {
-    return {},
+    return {}
   }
 }
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true }),
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2)),
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     role?: KycRole,
     fullLegalName?: string,
     businessName?: string,
-    businessRegistrationNumber?: string,
+    businessRegistrationNumber?: string
   },
   if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' }),
 
@@ -60,5 +59,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
-    optionalDocuments: getOptionalDocuments(role)}),
+    optionalDocuments: getOptionalDocuments(role)})
 }

@@ -10,7 +10,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
-
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -20,7 +19,7 @@ export interface HireRequestFormProps {
     email?: string,
     id?: string
   },
-  onSubmitSuccess?: () => void,
+  onSubmitSuccess?: () => void
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -72,5 +71,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  ),
+  )
 }

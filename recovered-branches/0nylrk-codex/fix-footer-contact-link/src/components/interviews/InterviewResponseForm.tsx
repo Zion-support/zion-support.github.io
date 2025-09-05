@@ -67,5 +67,5 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </Button>
       </div>
     </div>
-  ),
+  )
 }

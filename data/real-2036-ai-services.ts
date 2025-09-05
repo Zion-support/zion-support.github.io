@@ -7,8 +7,7 @@ export const real2036AIServices = [
     price: '$3,999',
     period: 'month',
     features: [
-      'Emotion recognitionSentiment analysis',
-      'Emotional response generationEmotional intelligence training',
+      'Emotion recognitionSentiment analysisEmotional response generationEmotional intelligence training',
       'Multi-modal emotion detectionEmotional pattern analysis'
     ],
     popular: true,
@@ -16,12 +15,10 @@ export const real2036AIServices = [
     icon: '😊🤖',
     marketPrice: '$5,000-8,000/month',
     benefits: [
-      'Enhanced customer experienceBetter emotional understanding',
-      'Improved human-AI interactionEmotional intelligence development'
+      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'
     ],
     useCases: [
-      'Customer serviceMental health support',
-      'Education technologyHuman resources'
+      'Customer serviceMental health supportEducation technologyHuman resources'
     ]
   },
   {
@@ -32,8 +29,7 @@ export const real2036AIServices = [
     price: '$2,999',
     period: 'month',
     features: [
-      'Creative idea generationWorkflow orchestration',
-      'Artistic collaboration toolsCreative process optimization',
+      'Creative idea generationWorkflow orchestrationArtistic collaboration toolsCreative process optimization',
       'Innovation managementCreative analytics'
     ],
     popular: true,
@@ -41,12 +37,10 @@ export const real2036AIServices = [
     icon: '🎨🤖',
     marketPrice: '$4,000-7,000/month',
     benefits: [
-      'Enhanced creativityFaster innovation cycles',
-      'Better collaborationCreative process optimization'
+      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'
     ],
     useCases: [
-      'Marketing campaignsProduct design',
-      'Content creationResearch and development'
+      'Marketing campaignsProduct designContent creationResearch and development'
     ]
   },
   {
@@ -57,8 +51,7 @@ export const real2036AIServices = [
     price: '$1,999',
     period: 'month',
     features: [
-      'Dream pattern analysisPsychological interpretation',
-      'Symbolic analysisDream journaling',
+      'Dream pattern analysisPsychological interpretationSymbolic analysisDream journaling',
       'Pattern recognitionPsychological insights'
     ],
     popular: false,
@@ -66,12 +59,10 @@ export const real2036AIServices = [
     icon: '💭🤖',
     marketPrice: '$3,000-5,000/month',
     benefits: [
-      'Dream understandingPsychological insights',
-      'Self-reflection toolsMental health awareness'
+      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'
     ],
     useCases: [
-      'Mental health supportPsychological research',
-      'Personal developmentTherapeutic applications'
+      'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
     ]
   },
   {
@@ -82,8 +73,7 @@ export const real2036AIServices = [
     price: '$4,999',
     period: 'month',
     features: [
-      'Multi-format content creationBrand voice consistency',
-      'Content optimizationSEO integration',
+      'Multi-format content creationBrand voice consistencyContent optimizationSEO integration',
       'Content analyticsAutomated publishing'
     ],
     popular: true,
@@ -91,12 +81,10 @@ export const real2036AIServices = [
     icon: '📝🤖',
     marketPrice: '$6,000-10,000/month',
     benefits: [
-      '10x faster content creationConsistent brand voice',
-      'SEO-optimized contentScalable content production'
+      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'
     ],
     useCases: [
-      'Marketing contentBlog writing',
-      'Social media contentProduct descriptions'
+      'Marketing contentBlog writingSocial media contentProduct descriptions'
     ]
   },
   {
@@ -107,8 +95,7 @@ export const real2036AIServices = [
     price: '$5,999',
     period: 'month',
     features: [
-      'Customer journey mappingPredictive analytics',
-      'Personalized recommendationsBehavior analysis',
+      'Customer journey mappingPredictive analyticsPersonalized recommendationsBehavior analysis',
       'Customer segmentationPredictive modeling'
     ],
     popular: true,
@@ -116,12 +103,10 @@ export const real2036AIServices = [
     icon: '👥🤖',
     marketPrice: '$7,000-12,000/month',
     benefits: [
-      'Deep customer insightsPredictive customer behavior',
-      'Personalized experiencesImproved customer retention'
+      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'
     ],
     useCases: [
-      'E-commerce optimizationCustomer service',
-      'Marketing campaignsProduct development'
+      'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
     ]
   },
   {
@@ -132,8 +117,7 @@ export const real2036AIServices = [
     price: '$6,999',
     period: 'month',
     features: [
-      'Autonomous campaign managementReal-time optimization',
-      'Predictive marketing strategiesPerformance maximization',
+      'Autonomous campaign managementReal-time optimizationPredictive marketing strategiesPerformance maximization',
       'Automated A/B testingROI optimization'
     ],
     popular: true,
@@ -141,12 +125,10 @@ export const real2036AIServices = [
     icon: '📈🤖',
     marketPrice: '$8,000-15,000/month',
     benefits: [
-      'Autonomous marketing operationsMaximum ROI optimization',
-      'Real-time performance improvementScalable marketing automation'
+      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'
     ],
     useCases: [
-      'Digital advertisingEmail marketing',
-      'Social media marketingContent marketing'
+      'Digital advertisingEmail marketingSocial media marketingContent marketing'
     ]
   },
   {
@@ -157,8 +139,7 @@ export const real2036AIServices = [
     price: '$3,499',
     period: 'month',
     features: [
-      'Automated research workflowsData analysis',
-      'Insight generationResearch automation',
+      'Automated research workflowsData analysisInsight generationResearch automation',
       'Data synthesisReport generation'
     ],
     popular: true,
@@ -166,12 +147,10 @@ export const real2036AIServices = [
     icon: '🔬🤖',
     marketPrice: '$4,500-7,000/month',
     benefits: [
-      'Automated research processesFaster insight generation',
-      'Comprehensive data analysisScalable research operations'
+      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'
     ],
     useCases: [
-      'Market researchAcademic research',
-      'Business intelligenceCompetitive analysis'
+      'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
     ]
   },
   {
@@ -182,8 +161,7 @@ export const real2036AIServices = [
     price: '$7,999',
     period: 'month',
     features: [
-      'Decision automationRisk assessment',
-      'Outcome predictionBusiness rule engine',
+      'Decision automationRisk assessmentOutcome predictionBusiness rule engine',
       'Predictive modelingDecision analytics'
     ],
     popular: true,
@@ -191,12 +169,10 @@ export const real2036AIServices = [
     icon: '🎯🤖',
     marketPrice: '$10,000-18,000/month',
     benefits: [
-      'Automated decision makingRisk reduction',
-      'Faster decision cyclesData-driven decisions'
+      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'
     ],
     useCases: [
-      'Financial decisionsOperational decisions',
-      'Strategic planningRisk management'
+      'Financial decisionsOperational decisionsStrategic planningRisk management'
     ]
   },
   {
@@ -207,8 +183,7 @@ export const real2036AIServices = [
     price: '$8,999',
     period: 'month',
     features: [
-      'Ecosystem mappingRelationship management',
-      'Autonomous optimizationPartnership orchestration',
+      'Ecosystem mappingRelationship managementAutonomous optimizationPartnership orchestration',
       'Integration managementEcosystem analytics'
     ],
     popular: false,
@@ -216,12 +191,10 @@ export const real2036AIServices = [
     icon: '🌐🤖',
     marketPrice: '$12,000-20,000/month',
     benefits: [
-      'Ecosystem optimizationPartnership maximization',
-      'Integration efficiencyScalable ecosystem management'
+      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'
     ],
     useCases: [
-      'Business partnershipsPlatform ecosystems',
-      'Supply chain managementDigital transformation'
+      'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
     ]
   },
   {
@@ -232,8 +205,7 @@ export const real2036AIServices = [
     price: '$9,999',
     period: 'month',
     features: [
-      'Autonomous navigationSafety monitoring',
-      'Traffic managementVehicle optimization',
+      'Autonomous navigationSafety monitoringTraffic managementVehicle optimization',
       'Predictive maintenanceSafety systems'
     ],
     popular: true,
@@ -241,12 +213,10 @@ export const real2036AIServices = [
     icon: '🚗🤖',
     marketPrice: '$15,000-25,000/month',
     benefits: [
-      'Enhanced vehicle safetyAutonomous operation',
-      'Traffic optimizationPredictive maintenance'
+      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'
     ],
     useCases: [
-      'Autonomous vehiclesFleet management',
-      'Traffic optimizationSafety systems'
+      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
   }
 ],

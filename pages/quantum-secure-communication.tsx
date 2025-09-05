@@ -11,7 +11,6 @@ import {
 import Button from '../components/ui/Button',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
-
 export default function QuantumSecureCommunication() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -21,27 +20,24 @@ export default function QuantumSecureCommunication() {
   },
 
   const features = [
-    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communications',
-    'Quantum-resistant algorithms and protocolsSecure file sharing and collaboration tools',
-    'Real-time encrypted messaging and video callsAudit trails and compliance reporting',
-    'Multi-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
+    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration tools',
+    'Real-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
     'Advanced threat detection and monitoring24/7 security monitoring and support'
   ],
 
   const useCases = [
-    'Secure executive communicationsConfidential document sharing',
-    'Regulated industry complianceResearch collaboration',
+    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaboration',
     'Government communications'
   ],
 
   const integrations = [
-    'SlackMicrosoft Teams', 'ZoomEmail systems', 
+    'SlackMicrosoft TeamsZoomEmail systems', 
     'File storage platforms'
   ],
 
   const technology = [
-    'Quantum ComputingPost-Quantum Cryptography', 'ReactNode.js', 
-    'WebRTCWebAssembly', 'DockerKubernetes'
+    'Quantum ComputingPost-Quantum CryptographyReactNode.js', 
+    'WebRTCWebAssemblyDockerKubernetes'
   ],
 
   return (
@@ -483,5 +479,5 @@ export default function QuantumSecureCommunication() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

@@ -7,7 +7,6 @@ import { Checkbox } from '@/components/ui/checkbox',
 import { cn } from '@/lib/utils',
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button',
-
 interface ValidationRule {
   required?: boolean,
   minLength?: number,
@@ -56,51 +55,51 @@ export function ValidatedFormField({
   useEffect(() => {
     if (!fieldValue || !isTouched) {
       setValidationState('idle'),
-      return,
+      return
     }
 
     if (debounceTimer) {
-      clearTimeout(debounceTimer),
+      clearTimeout(debounceTimer)
     }
 
     setValidationState('validating'),
 
     const timer = setTimeout(() => {
       const error = validateField(fieldValue),
-      setValidationState(error ? 'invalid' : 'valid'),
+      setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs),
 
     setDebounceTimer(timer),
 
     return () => {
-      if (timer) clearTimeout(timer),
-    },
+      if (timer) clearTimeout(timer)
+    }
   }, [fieldValue, isTouched, debounceMs]),
 
   const validateField = (value: any): string | null => {
     if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {
-      return `${label} is required`,
+      return `${label} is required`
     }
 
     if (typeof value === 'string') {
       if (validation.minLength && value.length < validation.minLength) {
-        return `${label} must be at least ${validation.minLength} characters`,
+        return `${label} must be at least ${validation.minLength} characters`
       }
 
       if (validation.maxLength && value.length > validation.maxLength) {
-        return `${label} must not exceed ${validation.maxLength} characters`,
+        return `${label} must not exceed ${validation.maxLength} characters`
       }
 
       if (validation.pattern && !validation.pattern.test(value)) {
-        return `${label} format is invalid`,
+        return `${label} format is invalid`
       }
     }
 
     if (validation.custom) {
-      return validation.custom(value),
+      return validation.custom(value)
     }
 
-    return null,
+    return null
   },
 
   const getValidationIcon = () => {
@@ -231,7 +230,7 @@ export function ValidatedFormField({
               {getValidationIcon()}
             </div>
           </div>
-        ),
+        )
     }
   },
 
@@ -260,7 +259,7 @@ export function ValidatedFormField({
           </FormItem>
         )}
       />
-    ),
+    )
   }
 
   return (
@@ -292,7 +291,7 @@ export function ValidatedFormField({
         </FormItem>
       )}
     />
-  ),
+  )
 }
 
 // Validation helpers for common patterns
@@ -312,7 +311,7 @@ export const commonValidations = {
       if (value && !validationPatterns.email.test(value)) {
         return 'Please enter a valid email address'
       }
-      return null,
+      return null
     }
   },
   password: {
@@ -320,9 +319,9 @@ export const commonValidations = {
     minLength: 8,
     custom: (value: string) => {
       if (value && !validationPatterns.strongPassword.test(value)) {
-        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character',
+        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
       }
-      return null,
+      return null
     }
   },
   phone: {
@@ -331,6 +330,6 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
-      return null,
+      return null
     }
   }}, 

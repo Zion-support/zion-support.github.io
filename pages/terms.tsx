@@ -4,15 +4,13 @@ import React from 'react',
     {
       title: 'Quantum Technology Services',
       terms: [
-        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulations',
-        'Performance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration'
+        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulationsPerformance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration'
       ]
     },
     {
       title: 'Cybersecurity Services',
       terms: [
-        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be shared',
-        'Penetration testing requires written authorizationIncident response follows our established protocols'
+        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be sharedPenetration testing requires written authorizationIncident response follows our established protocols'
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
 import AnalyticsTracker from '../components/AnalyticsTracker',
@@ -32,8 +30,7 @@ const TermsPage: React.FC = () => {
       icon: <CheckCircle className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
-        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our servicesWe may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
     },
     {
@@ -41,8 +38,7 @@ const TermsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       content: [
-        'AI and machine learning solutionsQuantum computing services',
-        'IT infrastructure and consultingMicro SAAS applications',
+        'AI and machine learning solutionsQuantum computing servicesIT infrastructure and consultingMicro SAAS applications',
         'Business automation servicesTechnical support and maintenance'
       ]
     },
@@ -51,8 +47,7 @@ const TermsPage: React.FC = () => {
       icon: <User className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'Provide accurate and complete informationMaintain security of your account credentials',
-        'Comply with applicable laws and regulationsUse services for lawful purposes only',
+        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes only',
         'Respect intellectual property rights'
       ]
     },
@@ -61,8 +56,7 @@ const TermsPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Our services and content are protected by copyrightYou retain rights to your own content',
-        'No transfer of intellectual property rightsLicense to use our services as intended',
+        'Our services and content are protected by copyrightYou retain rights to your own contentNo transfer of intellectual property rightsLicense to use our services as intended',
         'Prohibition of reverse engineering'
       ]
     }
@@ -89,7 +83,6 @@ import {
 import { motion } from 'framer-motion',
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const Terms: React.FC = () => {
   const sections = [
     {
@@ -152,7 +145,6 @@ import { motion } from 'framer-motion',
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
-
 const termsSections = [
   {
     title: 'Acceptance of Terms',
@@ -729,14 +721,12 @@ export default function Terms() {
                           </li>
                         ))}
                       </ul>
-    'Unauthorized access to our systems or networksInterference with service operation',
-    'Distribution of malware or harmful codeViolation of third-party rights',
+    'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rights',
     'Attempts to gain unauthorized accessUse of services for illegal activities'
   ],
 
   const limitations = [
-    'Services provided "as is" without warrantiesNo guarantee of uninterrupted service',
-    'Limitation of liability for damagesNo responsibility for third-party content',
+    'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party content',
     'Service availability subject to changeTechnical support during business hours only'
   ],
 
@@ -1366,7 +1356,7 @@ export default function Terms() {
         </section>
       </div>
     </Layout>
-  ),
+  )
 },
 
 export default Terms,

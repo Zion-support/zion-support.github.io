@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' }),
-    return,
+    return
   }
 
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
@@ -16,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       title: c.title,
       content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`})),
     res.status(200).json({ chapters: drafted }),
-    return,
+    return
   }
 
   const client = new OpenAI({ apiKey }),
@@ -32,8 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { role: 'user', content: prompt }],
       temperature: 0.7}),
     const text = completion.choices?.[0]?.message?.content || '',
-    drafted.push({ title: ch.title, content: text }),
+    drafted.push({ title: ch.title, content: text })
   }
 
-  res.status(200).json({ chapters: drafted }),
+  res.status(200).json({ chapters: drafted })
 }

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 import { ensureAdminFromApi } from '../../../../utils/auth',
-
 type EventRow = {
   name: string,
   page?: string,
@@ -11,7 +10,7 @@ type EventRow = {
   at: string
 },
 
-const LOG_FILE = path.join(process.cwd(), 'dataanalytics', 'events.log.jsonl'),
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
@@ -31,9 +30,9 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
     }
-    return rows,
+    return rows
   } catch {
-    return [],
+    return []
   }
 }
 
@@ -43,7 +42,7 @@ function featureFromPath(page?: string): string {
   if (p.includes('/services') || p.includes('ai')) return 'AI services',
   if (p.includes('talent') || p.includes('job')) return 'job board',
   if (p.includes('rental')) return 'rentals',
-  return 'other',
+  return 'other'
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -63,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     byFeature[f] = (byFeature[f] || 0) + 1,
     byEvent[r.name] = (byEvent[r.name] || 0) + 1,
     const day = r.at.slice(0, 10),
-    byDay[day] = (byDay[day] || 0) + 1,
+    byDay[day] = (byDay[day] || 0) + 1
   }
 
   const pagesMostUsed = Object.entries(byFeature)
@@ -77,8 +76,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const days = Object.keys(byDay).sort(),
   const line = days.map((d) => ({ date: d, value: byDay[d] })),
 
-  const funnelStages = ['VisitAI Prompt Used', 'Post CreatedMessage Sent'],
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 
-  res.status(200).json({ pagesMostUsed, events, line, funnel }),
+  res.status(200).json({ pagesMostUsed, events, line, funnel })
 }

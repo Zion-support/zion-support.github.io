@@ -10,10 +10,10 @@ export default function UltraAdvancedNavigation2026V2() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigationItems = [
@@ -308,5 +308,5 @@ export default function UltraAdvancedNavigation2026V2() {
       {/* Spacer for fixed navigation */}
       <div className="h-32"></div>
     </>
-  ),
+  )
 }

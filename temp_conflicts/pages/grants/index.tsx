@@ -3,8 +3,8 @@ import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants',
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent Development', 'Regional ExpansionResearch Grants'],
-const statuses: GrantStatus[] = ['DraftSubmitted', 'Under ReviewApproved', 'Rejected'],
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApproved', 'Rejected'],
 
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]),
@@ -19,7 +19,7 @@ export default function GrantsPage() {
     fetch(`/api/grants?${params.toString()}`)
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
-      .catch(() => setItems([])),
+      .catch(() => setItems([]))
   }, [filters]),
 
   return (
@@ -74,5 +74,5 @@ export default function GrantsPage() {
         {items.length === 0 && <div className="text-sm text-gray-600">No grants found.</div>}
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

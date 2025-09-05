@@ -7,7 +7,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function PrivacyPage() {
   const lastUpdated = 'January 15, 2025',
 
@@ -16,8 +15,7 @@ export default function PrivacyPage() {
       title: 'Information We Collect',
       icon: <Database className="w-6 h-6" />,
       content: [
-        'Personal information (name, email, phone number)Company information and business details',
-        'Usage data and analyticsTechnical information (IP address, browser type)',
+        'Personal information (name, email, phone number)Company information and business detailsUsage data and analyticsTechnical information (IP address, browser type)',
         'Communication records and support interactions'
       ]
     },
@@ -25,8 +23,7 @@ export default function PrivacyPage() {
       title: 'How We Use Your Information',
       icon: <Users className="w-6 h-6" />,
       content: [
-        'Provide and improve our servicesCommunicate with you about our services',
-        'Process payments and transactionsSend marketing communications (with consent)',
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and transactionsSend marketing communications (with consent)',
         'Comply with legal obligations'
       ]
     },
@@ -34,8 +31,7 @@ export default function PrivacyPage() {
       title: 'Information Sharing',
       icon: <Globe className="w-6 h-6" />,
       content: [
-        'We do not sell your personal informationShare with service providers and partners',
-        'Comply with legal requirementsProtect our rights and safety',
+        'We do not sell your personal informationShare with service providers and partnersComply with legal requirementsProtect our rights and safety',
         'Business transfers (with notice)'
       ]
     },
@@ -43,8 +39,7 @@ export default function PrivacyPage() {
       title: 'Data Security',
       icon: <Lock className="w-6 h-6" />,
       content: [
-        'Industry-standard encryption protocolsRegular security audits and assessments',
-        'Access controls and authenticationData backup and recovery procedures',
+        'Industry-standard encryption protocolsRegular security audits and assessmentsAccess controls and authenticationData backup and recovery procedures',
         'Employee training on data protection'
       ]
     },
@@ -52,8 +47,7 @@ export default function PrivacyPage() {
       title: 'Your Rights',
       icon: <CheckCircle className="w-6 h-6" />,
       content: [
-        'Access your personal informationCorrect inaccurate data',
-        'Request deletion of your dataOpt-out of marketing communications',
+        'Access your personal informationCorrect inaccurate dataRequest deletion of your dataOpt-out of marketing communications',
         'Data portability'
       ]
     },
@@ -61,8 +55,7 @@ export default function PrivacyPage() {
       title: 'Data Retention',
       icon: <Info className="w-6 h-6" />,
       content: [
-        'Retain data as long as necessaryComply with legal requirements',
-        'Resolve disputes and enforce agreementsImprove our services',
+        'Retain data as long as necessaryComply with legal requirementsResolve disputes and enforce agreementsImprove our services',
         'Regular data cleanup procedures'
       ]
     }
@@ -263,5 +256,5 @@ export default function PrivacyPage() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

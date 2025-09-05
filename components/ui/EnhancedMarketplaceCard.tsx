@@ -7,7 +7,6 @@
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>},
 import React from 'react',
 import EnhancedCard from './EnhancedCard',
-
 export type MarketplaceCardProps = {
   title: string,
   subtitle?: string,
@@ -27,5 +26,5 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
         {footer && <div className="pt-2">{footer}</div>}
       </div>
     </EnhancedCard>
-  ),
+  )
 }

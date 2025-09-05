@@ -37,9 +37,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length),
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, []),
 
   const scrollToSection = (sectionId: string) => {
@@ -47,7 +47,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
-      setIsMobileMenuOpen(false),
+      setIsMobileMenuOpen(false)
     }
   },
 

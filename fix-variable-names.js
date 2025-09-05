@@ -6,7 +6,7 @@
       return true},
     return false} catch (error) {,
     console.error("Error fixing ${filePath}:", error.message),
-    return false},
+    return false}
 },
 function fixedCount = 0,
   for (const filePath = path.join(dir, file),
@@ -14,7 +14,7 @@ function fixedCount = 0,
     if (stat.isDirectory()) {,
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
       if (fixFile(filePath)) {,
-        fixedCount++},
-},
+        fixedCount++}
+}
 },
   return fixedCount},

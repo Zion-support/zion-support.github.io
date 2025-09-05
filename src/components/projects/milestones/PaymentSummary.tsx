@@ -54,5 +54,5 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

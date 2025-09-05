@@ -19,7 +19,7 @@ export interface TalentProfile {
   key_projects?: {
     title: string,
     description: string
-  }[],
+  }[]
 }
 
 export interface TalentProfileFilters {
@@ -28,7 +28,7 @@ export interface TalentProfileFilters {
   availabilities?: string[],
   regions?: string[],
   priceRange?: [number, number],
-  experienceRange?: [number, number],
+  experienceRange?: [number, number]
 }
 
 export interface HireRequest {

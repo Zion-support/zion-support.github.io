@@ -8,7 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const internal = isInternalAgentRequest(req),
   if (!session && !internal) {
     res.status(401).json({ error: 'Unauthorized' }),
-    return,
+    return
   }
 
   const dataDir = path.join(process.cwd(), 'dataadmin'),
@@ -22,5 +22,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null },
 
-  res.status(200).json({ status, insights }),
+  res.status(200).json({ status, insights })
 }

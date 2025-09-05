@@ -3,7 +3,6 @@ import fs from 'fs',
 import path from 'path',
 import fse from 'fs-extra',
 import { randomUUID } from 'crypto',
-
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string,
@@ -31,7 +30,7 @@ async function summarizeAndTag(input: {
 
   if (!openaiApiKey) {
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
-    return { summary, tags: basicTags.slice(0, 24) },
+    return { summary, tags: basicTags.slice(0, 24) }
   }
 
   try {
@@ -50,7 +49,7 @@ async function summarizeAndTag(input: {
     try {
       const parsed = JSON.parse(content),
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) },
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
       }
     } catch (_) {
       // fall through to heuristic
@@ -60,13 +59,13 @@ async function summarizeAndTag(input: {
   }
 
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
-  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) },
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
@@ -87,7 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       cvFile} = req.body || {},
 
     if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
-      return res.status(400).json({ error: 'Missing required fields' }),
+      return res.status(400).json({ error: 'Missing required fields' })
     }
 
     const uploadsDir = path.join(process.cwd(), 'publicuploads'),
@@ -103,7 +102,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const base64Data = profilePicture.base64.split()[1],
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64')),
-        savedProfileImagePath = `/uploads/${filename}`,
+        savedProfileImagePath = `/uploads/${filename}`
       }
     }
 
@@ -115,7 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const base64Data = cvFile.base64.split()[1],
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64')),
-        savedCvPath = `/uploads/${filename}`,
+        savedCvPath = `/uploads/${filename}`
       }
     }
 
@@ -167,8 +166,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
-    return res.status(200).json({ ok: true, id, summary, tags }),
+    return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' }),
+    return res.status(500).json({ error: 'Internal server error' })
   }
 }

@@ -1,6 +1,5 @@
 import { format } from 'date-fns',
 import { apiClient } from './apiClient',
-
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -13,10 +12,10 @@ export function formatDate(date: Date | string | undefined): string {
     return new Intl.DateTimeFormat('en-US', {
       month: 'short',
       day: 'numeric',
-      year: 'numeric'}).format(d),
+      year: 'numeric'}).format(d)
   } catch (e) {
     logErrorToProduction('Error formatting date:', { data:  e }),
-    return '-',
+    return '-'
   }
 }
 
@@ -34,17 +33,16 @@ export function checkUrlForReferralCode(): string | null {
     // Remove it from URL to keep it clean
     url.searchParams.delete('ref'),
     window.history.replaceState({}, document.title, url.toString()),
-    return refCode,
+    return refCode
   }
   
-  return safeStorage.getItem('referral_code'),
+  return safeStorage.getItem('referral_code')
 }
 
 /**
  * Track referral when a user signs up
  */
 import api from '@/lib/api',
-
 export async function trackReferral(userId: string, email: string) {
   try {
     const refCode = safeStorage.getItem('referral_code'),
@@ -65,10 +63,10 @@ export async function trackReferral(userId: string, email: string) {
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code
       safeStorage.removeItem('referral_code'),
-      return true,
+      return true
     }
   } catch (error) {
-    logErrorToProduction('Error tracking referral:', { data: error }),
+    logErrorToProduction('Error tracking referral:', { data: error })
   }
-  return false,
+  return false
 }

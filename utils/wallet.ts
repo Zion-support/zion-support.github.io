@@ -4,7 +4,7 @@ export function getEthereumProvider(): WalletProvider | null {
   if (typeof window === 'undefined') return null,
   // @ts-ignore
   const { ethereum } = window,
-  return ethereum ?? null,
+  return ethereum ?? null
 }
 
 export async function connectMetaMask(): Promise<string[] | null> {
@@ -12,9 +12,9 @@ export async function connectMetaMask(): Promise<string[] | null> {
   if (!provider) return null,
   try {
     const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' }),
-    return accounts,
+    return accounts
   } catch (e) {
-    return null,
+    return null
   }
 }
 
@@ -23,8 +23,8 @@ export async function getAccounts(): Promise<string[] | null> {
   if (!provider) return null,
   try {
     const accounts: string[] = await provider.request({ method: 'eth_accounts' }),
-    return accounts,
+    return accounts
   } catch (e) {
-    return null,
+    return null
   }
 }

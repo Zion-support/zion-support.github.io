@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -23,35 +22,35 @@ const serviceHighlights = [
     description: 'Never trust, always verify - Advanced zero trust implementation',
     icon: Shield,
     color: 'from-red-500 to-pink-600',
-    features: ['Continuous verificationMicro-segmentation', 'Adaptive controlsReal-time monitoring']
+    features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
   },
   {
     title: 'AI Threat Intelligence',
     description: 'Predict and prevent cyber threats with AI intelligence',
     icon: Eye,
     color: 'from-indigo-500 to-purple-600',
-    features: ['Real-time detectionPredictive analytics', 'Automated responseGlobal intelligence']
+    features: ['Real-time detectionPredictive analyticsAutomated responseGlobal intelligence']
   },
   {
     title: 'Cloud Security Posture',
     description: 'Secure your cloud infrastructure with comprehensive posture management',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Multi-cloud monitoringCompliance automation', 'Risk managementSecurity analytics']
+    features: ['Multi-cloud monitoringCompliance automationRisk managementSecurity analytics']
   },
   {
     title: 'DevSecOps Security',
     description: 'Integrate security into your DevOps pipeline seamlessly',
     icon: Cpu,
     color: 'from-green-500 to-emerald-600',
-    features: ['Automated testingVulnerability scanning', 'Compliance automationSecurity metrics']
+    features: ['Automated testingVulnerability scanningCompliance automationSecurity metrics']
   },
   {
     title: 'IoT Security Platform',
     description: 'Secure your IoT ecosystem with comprehensive protection',
     icon: Globe,
     color: 'from-purple-500 to-violet-600',
-    features: ['Device authenticationNetwork monitoring', 'Threat detectionAutomated response']
+    features: ['Device authenticationNetwork monitoringThreat detectionAutomated response']
   }
 ],
 

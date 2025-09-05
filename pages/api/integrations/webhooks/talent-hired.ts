@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { readState, writeState } from '../../../../lib/integrations/fileStore',
 import { ats } from '../../../../lib/integrations/connectors',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { talent } = req.body as { talent?: Record<string, any> },
@@ -13,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of atsProviders) {
     const { log } = await ats.updateStatus(conn, { applicantId: talent.id, status: 'hired' }),
     writeState(s => s.logs.push(log)),
-    results.push({ providerId: conn.providerId, ok: true }),
+    results.push({ providerId: conn.providerId, ok: true })
   }
-  res.status(200).json({ ok: true, results }),
+  res.status(200).json({ ok: true, results })
 }

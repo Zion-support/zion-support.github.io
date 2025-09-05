@@ -80,8 +80,7 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        '5 websites monitoredBasic performance metrics',
-        'Daily monitoringEmail alerts',
+        '5 websites monitoredBasic performance metricsDaily monitoringEmail alerts',
         'Basic reportingCore Web Vitals tracking'
       ],
       popular: false
@@ -92,10 +91,8 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-        '25 websites monitoredAdvanced performance metrics',
-        'Real-time monitoringSMS & email alerts',
-        'Advanced reportingPerformance optimization tips',
-        'API accessTeam collaboration'
+        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alerts',
+        'Advanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ],
       popular: true
     },
@@ -105,10 +102,8 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'For large organizations with critical performance requirements',
       features: [
-        'Unlimited websitesEnterprise-grade monitoring',
-        'Custom alerting rules24/7 support',
-        'Custom integrationsWhite-label reporting',
-        'SLA guaranteesOn-premise options'
+        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 support',
+        'Custom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ],
       popular: false
     }
@@ -126,12 +121,11 @@ export default function WebsitePerformanceMonitorPage() {
         cls: '0.08',
         loadTime: '1.8s',
         recommendations: [
-          'Optimize images and implement lazy loadingMinimize render-blocking resources',
-          'Enable compression and cachingConsider using a CDN for global performance'
+          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
         ]
       }),
-      setIsAnalyzing(false),
-    }, 4000),
+      setIsAnalyzing(false)
+    }, 4000)
   },
 
   return (

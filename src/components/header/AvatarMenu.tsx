@@ -68,7 +68,7 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
+  )
 },
 
 export default AvatarMenu,

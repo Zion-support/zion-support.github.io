@@ -13,7 +13,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -35,7 +34,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600',
-    features: ['Quantum ProcessingHybrid Computing', 'AI Acceleration']
+    features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
   },
   {
     title: 'Edge Computing & IoT',
@@ -43,7 +42,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Edge Computing & IoT'),
     icon: Wifi,
     color: 'from-green-500 to-emerald-600',
-    features: ['Edge ProcessingIoT Orchestration', '5G Optimization']
+    features: ['Edge ProcessingIoT Orchestration5G Optimization']
   },
   {
     title: 'Cybersecurity',
@@ -51,7 +50,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Cybersecurity'),
     icon: SecurityIcon,
     color: 'from-red-500 to-orange-600',
-    features: ['Zero TrustThreat Detection', 'Compliance Automation']
+    features: ['Zero TrustThreat DetectionCompliance Automation']
   },
   {
     title: 'Data Center Infrastructure',
@@ -59,7 +58,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Data Center Infrastructure'),
     icon: Building,
     color: 'from-blue-500 to-cyan-600',
-    features: ['AI ManagementPredictive Maintenance', 'Cost Optimization']
+    features: ['AI ManagementPredictive MaintenanceCost Optimization']
   },
   {
     title: 'Quantum Networking',
@@ -67,7 +66,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
-    features: ['Quantum EncryptionNetwork Optimization', 'Security Monitoring']
+    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
 ],
 
@@ -414,5 +413,5 @@ export default function AdvancedITInfrastructureServices() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

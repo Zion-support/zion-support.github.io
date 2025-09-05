@@ -3,25 +3,24 @@ import { Button } from "@/components/ui/button",
 import { HireRequestModal } from "./hire-request",
 import { useState } from "react",
 import { TalentProfile } from "@/types/talent",
-
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
     hourly_rate?: number
-  },
+  }
 }
 
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false),
 
   const handleOpenModal = () => {
-    setModalOpen(true),
+    setModalOpen(true)
   },
 
   const handleCloseModal = () => {
-    setModalOpen(false),
+    setModalOpen(false)
   },
 
   // Check if we have minimum required data
@@ -78,7 +77,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         } : null}
       />
     </div>
-  ),
+  )
 }
 
 // Helper function to calculate profile completeness
@@ -86,10 +85,8 @@ function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0,
   
   const fields = [
-    'full_nameprofessional_title', 
-    'bioskills', 
-    'hourly_ratelocation',
-    'portfolio_linksexperience',
+    'full_nameprofessional_titlebioskills', 
+    'hourly_ratelocationportfolio_linksexperience',
     'availability_type'
   ],
   
@@ -98,10 +95,10 @@ function calculateProfileCompleteness(profile: any) {
   
   fields.forEach(field => {
     if (profile[field]) {
-      completedFields++,
+      completedFields++
     }
-    totalFields++,
+    totalFields++
   }),
   
-  return Math.min(Math.round((completedFields / totalFields) * 100), 100),
+  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 }

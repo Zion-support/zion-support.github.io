@@ -12,7 +12,7 @@ export interface ExtraService {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const extraServices: ExtraService[] = [

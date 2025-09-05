@@ -11,7 +11,6 @@ import { TemplateManager } from "./templates/TemplateManager",
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
-
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -57,11 +56,11 @@ export function SmartContractBuilder({
       setGeneratedContract(generatedContractText),
       setActiveTab("preview"),
       if (onContractGenerated) {
-        onContractGenerated(generatedContractText),
+        onContractGenerated(generatedContractText)
       }
     } catch (error) {
       console.error("Error generating contract:", error),
-      toast.error("Failed to generate smart contract"),
+      toast.error("Failed to generate smart contract")
     }
   },
   
@@ -75,15 +74,15 @@ export function SmartContractBuilder({
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
         setDeployStatus('deployed'),
-        toast.success("Smart contract deployed successfully!"),
+        toast.success("Smart contract deployed successfully!")
       } else {
         setDeployStatus('error'),
-        toast.error("Failed to deploy smart contract"),
+        toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
-      toast.error("Failed to deploy smart contract"),
+      toast.error("Failed to deploy smart contract")
     }
   },
 
@@ -92,10 +91,10 @@ export function SmartContractBuilder({
     // This should be a function that takes a string (contract content)
     // Since we need to adapt the interface, we'll implement the simplest solution that works
     if (onContractGenerated) {
-      onContractGenerated(contract),
+      onContractGenerated(contract)
     }
     setGeneratedContract(contract),
-    setActiveTab("preview"),
+    setActiveTab("preview")
   },
 
   return (
@@ -168,5 +167,5 @@ export function SmartContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

@@ -80,7 +80,7 @@
                                   {subItem.name},
                                 </div>,
                                 <div className="text-sm text-gray-500">,
-                                  {subItem.description},
+                                  {subItem.description}
                         })},
                       </motion.div>,
                     )},

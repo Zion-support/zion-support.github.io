@@ -12,7 +12,7 @@ export interface AiAutonomousEcosystem2029 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [

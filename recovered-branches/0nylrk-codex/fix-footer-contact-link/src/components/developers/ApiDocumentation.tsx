@@ -5,9 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { Badge } from "@/components/ui/badge",
-
 import CodeBlock from "./CodeBlock",
-
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -70,7 +68,7 @@ headers = {
 }
 
 response = requests.get(
-    'https://api.ziontechgroup.com/v1/jobs',
+    'https: //api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'},
     headers=headers
 )
@@ -207,7 +205,7 @@ print(data)`
     title: 'Senior React Developer',
     description: 'We need an experienced React developer...',
     category: 'development',
-    skills: ['reacttypescript', 'node.js'],
+    skills: ['reacttypescriptnode.js'],
     budget: {
       min: 5000,
       max: 10000,
@@ -227,7 +225,7 @@ headers = {
 }
 
 payload = {
-    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescript', 'node.js'],
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
     'budget': {
         'min': 5000,
         'max': 10000,
@@ -300,7 +298,7 @@ headers = {
 }
 
 response = requests.get(
-    'https://api.ziontechgroup.com/v1/talent',
+    'https: //api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'},
     headers=headers
 )
@@ -527,7 +525,7 @@ headers = {
 }
 
 response = requests.get(
-    'https://api.ziontechgroup.com/v1/quotes',
+    'https: //api.ziontechgroup.com/v1/quotes',
     headers=headers
 )
 
@@ -578,7 +576,6 @@ print(data)`
               
               <CodeBlock
                 code={`import crypto from 'crypto',
-
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
@@ -586,7 +583,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
-  ),
+  )
 }
 
 // Example usage in Express.js
@@ -596,7 +593,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const webhookSecret = process.env.WEBHOOK_SECRET,
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
-    return res.status(401).send('Invalid signature'),
+    return res.status(401).send('Invalid signature')
   }
   
   // Process the webhook event
@@ -604,7 +601,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   console.log('Received valid webhook:', event),
   
   // Respond to acknowledge receipt
-  res.status(200).send('Webhook received'),
+  res.status(200).send('Webhook received')
 }),`}
                 language="javascript"
                 showLineNumbers={true}
@@ -868,6 +865,6 @@ function EndpointSection({
         </div>
       )}
     </div>
-  ),
+  )
 }
 

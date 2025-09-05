@@ -19,7 +19,6 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
-
 const MarketplaceRoutes = () => {
   return (
     <Routes>
@@ -89,7 +88,7 @@ const MarketplaceRoutes = () => {
         } 
       />
     </Routes>
-  ),
+  )
 },
 
 export default MarketplaceRoutes,

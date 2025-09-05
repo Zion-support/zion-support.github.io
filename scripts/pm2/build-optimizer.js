@@ -1,5 +1,5 @@
 
-    },
+    }
   },
 ,
   async analyzeBuild() {,
@@ -47,8 +47,8 @@
               buildStats.cssFiles.push(fileInfo)
             } else {,
               buildStats.assetFiles.push(fileInfo)
-            },
-          },
+            }
+          }
         })
       },
 ,
@@ -65,15 +65,15 @@
       return {,
         success: true,
         stats: buildStats
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
 
         stats: null
-      },
-    },
+      }
+    }
   },
 ,
   async checkBundleAnalyzer() {,
@@ -90,13 +90,13 @@
         package: hasAnalyzer ?,
           (packageJson.devDependencies['webpack-bundle-analyzer'] ? 'webpack-bundle-analyzer' : '@next/bundle-analyzer') :,
           null
-      },
+      }
     } catch (error) {,
       return {,
         available: false,
         error: error.message
-      },
-    },
+      }
+    }
   },
 ,
   async checkOptimizationSettings() {,
@@ -127,14 +127,14 @@
       return {,
         success: true,
         settings: settings
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         settings: null
-      },
-    },
+      }
+    }
   },
 ,
   async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {,
@@ -225,7 +225,7 @@
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -269,13 +269,13 @@
         })
       } else {,
         this.log('\n✨ Build is well optimized!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running build optimizer: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the build optimizer,

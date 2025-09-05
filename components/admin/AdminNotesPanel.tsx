@@ -29,17 +29,17 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
       if (!res.ok) {
         setNotes([]),
-        return,
+        return
       }
       const data = await res.json(),
-      setNotes(data.notes || []),
+      setNotes(data.notes || [])
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
   useEffect(() => {
-    if (isAdmin) fetchNotes(),
+    if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]),
 
   async function addNote() {
@@ -52,12 +52,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         body: JSON.stringify({ targetType, targetId, text })}),
       if (!res.ok) {
         alert('Failed to add note'),
-        return,
+        return
       }
       setText(''),
-      await fetchNotes(),
+      await fetchNotes()
     } finally {
-      setAdding(false),
+      setAdding(false)
     }
   }
 
@@ -70,7 +70,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         </div>
         <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -109,5 +109,5 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
-  ),
+  )
 }

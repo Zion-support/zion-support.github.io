@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import ErrorBoundary from '../components/ErrorBoundary',
-
 export default function Blockchain() {
   return (
     <>
@@ -21,5 +20,5 @@ export default function Blockchain() {
         </main>
       </ErrorBoundary>
     </>
-  ),
+  )
 }

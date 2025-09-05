@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function AIAutomationTrends2025Page() {
   const trends = [
     {
@@ -10,7 +9,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'AI systems that can make complex decisions without human intervention.',
       impact: 'High',
       timeline: '2025-2026',
-      examples: ['Financial trading algorithmsSupply chain optimization', 'Healthcare diagnostics']
+      examples: ['Financial trading algorithmsSupply chain optimizationHealthcare diagnostics']
     },
     {
       id: 'edge-ai-computing',
@@ -18,7 +17,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'AI processing moved closer to data sources for real-time decision making.',
       impact: 'Medium',
       timeline: '2025-2027',
-      examples: ['IoT devicesAutonomous vehicles', 'Smart cities']
+      examples: ['IoT devicesAutonomous vehiclesSmart cities']
     },
     {
       id: 'ai-powered-automation',
@@ -26,7 +25,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'Intelligent automation that learns and improves over time.',
       impact: 'High',
       timeline: '2025-2026',
-      examples: ['Process automationCustomer service', 'Content generation']
+      examples: ['Process automationCustomer serviceContent generation']
     },
     {
       id: 'human-ai-collaboration',
@@ -34,29 +33,29 @@ export default function AIAutomationTrends2025Page() {
       description: 'Enhanced collaboration between humans and AI systems.',
       impact: 'Medium',
       timeline: '2025-2028',
-      examples: ['Augmented decision makingCreative assistance', 'Problem solving']
+      examples: ['Augmented decision makingCreative assistanceProblem solving']
     }
   ],
 
   const industryApplications = [
     {
       industry: 'Manufacturing',
-      trends: ['Predictive maintenanceQuality control automation', 'Supply chain optimization'],
+      trends: ['Predictive maintenanceQuality control automationSupply chain optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      trends: ['Diagnostic assistanceDrug discovery', 'Patient care automation'],
+      trends: ['Diagnostic assistanceDrug discoveryPatient care automation'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      trends: ['Fraud detectionAlgorithmic trading', 'Risk assessment'],
+      trends: ['Fraud detectionAlgorithmic tradingRisk assessment'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      trends: ['Personalized marketingInventory management', 'Customer service automation'],
+      trends: ['Personalized marketingInventory managementCustomer service automation'],
       icon: '🛍️'
     }
   ],

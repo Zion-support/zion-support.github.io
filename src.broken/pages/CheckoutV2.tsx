@@ -13,7 +13,6 @@ import {
   FormControl,
   FormMessage} from '@/components/ui/form',
 import { useFeatureFlags } from '@/context/FeatureFlagContext',
-
 interface CartItem {
   id: string,
   name: string,
@@ -41,14 +40,14 @@ export default function CheckoutV2() {
     const sku = searchParams.get('sku'),
     if (sku) {
       setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]),
-      return,
+      return
     }
     const stored = safeStorage.getItem('cart'),
     if (stored) {
       try {
-        setItems(JSON.parse(stored) as CartItem[]),
+        setItems(JSON.parse(stored) as CartItem[])
       } catch {
-        setItems([]),
+        setItems([])
       }
     }
   }, [searchParams]),
@@ -75,7 +74,7 @@ export default function CheckoutV2() {
         track('new-checkout-v2: conversion')
       }
     } catch (err) {
-      console.error('Payment failed', err),
+      console.error('Payment failed', err)
     }
   },
 
@@ -143,5 +142,5 @@ export default function CheckoutV2() {
         </Form>
       </div>
     </div>
-  ),
+  )
 }

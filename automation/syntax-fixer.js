@@ -1,4 +1,4 @@
-      },
+      }
 
     })
   },
@@ -22,10 +22,10 @@
           fs.writeFileSync(file, content),
           this.fixesApplied++,
           this.log(`Fixed import issues in ${file}`),
-        },
+        }
       } catch (error) {,
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      },
+      }
     })
   },
 ,
@@ -47,10 +47,10 @@
           fs.writeFileSync(file, content),
           this.fixesApplied++,
           this.log(`Fixed export issues in ${file}`)
-        },
+        }
       } catch (error) {,
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      },
+      }
     })
   },
 ,
@@ -69,7 +69,7 @@
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath)
-          },
+          }
         })
       },
 ,
@@ -88,8 +88,8 @@
       this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`)} catch (error) {,
       this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")
-    },
-  },
+    }
+  }
 },
 ,
 // Main execution,

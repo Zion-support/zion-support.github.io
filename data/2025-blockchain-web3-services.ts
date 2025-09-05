@@ -51,20 +51,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Self-sovereign identity managementZero-knowledge proof verification',
-      'Multi-chain identity supportDecentralized identifiers (DIDs)',
-      'Verifiable credentialsPrivacy-preserving authentication',
-      'Cross-platform identity portabilityAdvanced encryption standards',
+      'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)',
+      'Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards',
       'Compliance with W3C standardsAPI for enterprise integration'
     ],
     benefits: [
-      'Eliminate identity theft and fraudReduce compliance costs by 60%',
-      'Improve user privacy and controlEnable seamless cross-platform authentication',
+      'Eliminate identity theft and fraudReduce compliance costs by 60%Improve user privacy and controlEnable seamless cross-platform authentication',
       'Reduce data breach risks'
     ],
     targetAudience: [
-      'Financial institutionsHealthcare providers',
-      'Government agenciesEducational institutions',
+      'Financial institutionsHealthcare providersGovernment agenciesEducational institutions',
       'E-commerce platformsSocial media companies'
     ],
     marketPosition: 'Leading decentralized identity platform. Competes with Microsoft Entra ID ($6/user), Okta ($2-8/user), and Auth0 ($23-240/user). Our advantage: True decentralization and privacy.',
@@ -74,8 +70,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     implementationDetails: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.',
     roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.',
     useCases: [
-      'KYC/AML complianceHealthcare patient identity',
-      'Educational credentialsProfessional certifications',
+      'KYC/AML complianceHealthcare patient identityEducational credentialsProfessional certifications',
       'Financial services authenticationGovernment digital identity'
     ],
     integrations: ['Salesforce, SAP, Oracle, Microsoft 365, Custom enterprise systems'],
@@ -105,20 +100,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'AI-powered yield strategy optimizationMulti-chain protocol support',
-      'Real-time risk assessmentAutomated portfolio rebalancing',
-      'Gas fee optimizationImpermanent loss protection',
-      'Advanced analytics dashboardMobile app for monitoring',
+      'AI-powered yield strategy optimizationMulti-chain protocol supportReal-time risk assessmentAutomated portfolio rebalancing',
+      'Gas fee optimizationImpermanent loss protectionAdvanced analytics dashboardMobile app for monitoring',
       'API for institutional clientsCustom strategy development'
     ],
     benefits: [
-      'Increase DeFi yields by 40-80%Reduce impermanent loss by 60%',
-      'Optimize gas fees automaticallyMinimize risk through AI analysis',
+      'Increase DeFi yields by 40-80%Reduce impermanent loss by 60%Optimize gas fees automaticallyMinimize risk through AI analysis',
       'Access institutional-grade DeFi strategies'
     ],
     targetAudience: [
-      'DeFi investors and tradersInstitutional investors',
-      'Crypto hedge fundsFamily offices',
+      'DeFi investors and tradersInstitutional investorsCrypto hedge fundsFamily offices',
       'Retail crypto investorsDeFi protocol developers'
     ],
     marketPosition: 'Leading AI-powered DeFi optimization platform. Competes with Yearn Finance (free), Harvest Finance (free), and Beefy Finance (free). Our advantage: AI optimization and risk management.',
@@ -128,8 +119,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.',
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
     useCases: [
-      'Yield farming optimizationLiquidity provision strategies',
-      'Staking optimizationCross-chain yield opportunities',
+      'Yield farming optimizationLiquidity provision strategiesStaking optimizationCross-chain yield opportunities',
       'Risk-managed DeFi investingInstitutional DeFi access'
     ],
     integrations: ['MetaMask, WalletConnect, Uniswap, Curve, Aave, Compound, Custom DeFi protocols'],
@@ -159,20 +149,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'AI-powered NFT valuation modelsReal-time market analytics',
-      'Trend prediction algorithmsPortfolio tracking and management',
-      'Rarity scoring and analysisMarket sentiment analysis',
-      'Trading signal generationMulti-chain NFT support',
+      'AI-powered NFT valuation modelsReal-time market analyticsTrend prediction algorithmsPortfolio tracking and management',
+      'Rarity scoring and analysisMarket sentiment analysisTrading signal generationMulti-chain NFT support',
       'Advanced filtering and searchAPI for developers'
     ],
     benefits: [
-      'Improve NFT investment returns by 200%Reduce investment risks through AI analysis',
-      'Identify undervalued NFT opportunitiesOptimize portfolio allocation',
+      'Improve NFT investment returns by 200%Reduce investment risks through AI analysisIdentify undervalued NFT opportunitiesOptimize portfolio allocation',
       'Access institutional-grade NFT analytics'
     ],
     targetAudience: [
-      'NFT investors and collectorsDigital art galleries',
-      'Gaming companiesBrands and marketers',
+      'NFT investors and collectorsDigital art galleriesGaming companiesBrands and marketers',
       'Investment firmsContent creators'
     ],
     marketPosition: 'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2.5%). Our advantage: AI-powered valuation and predictive analytics.',
@@ -182,8 +168,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.',
     useCases: [
-      'NFT investment researchPortfolio optimization',
-      'Market trend analysisRarity and value assessment',
+      'NFT investment researchPortfolio optimizationMarket trend analysisRarity and value assessment',
       'Trading strategy developmentBrand NFT strategy'
     ],
     integrations: ['OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms'],
@@ -213,20 +198,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'End-to-end supply chain trackingReal-time transparency monitoring',
-      'Smart contract automationIoT sensor integration',
-      'Compliance verificationSustainability certification',
-      'Multi-stakeholder accessAdvanced analytics dashboard',
+      'End-to-end supply chain trackingReal-time transparency monitoringSmart contract automationIoT sensor integration',
+      'Compliance verificationSustainability certificationMulti-stakeholder accessAdvanced analytics dashboard',
       'Mobile app for field workersAPI for system integration'
     ],
     benefits: [
-      'Improve supply chain transparency by 100%Reduce compliance costs by 40%',
-      'Enhance brand trust and reputationOptimize inventory management',
+      'Improve supply chain transparency by 100%Reduce compliance costs by 40%Enhance brand trust and reputationOptimize inventory management',
       'Enable sustainable sourcing verification'
     ],
     targetAudience: [
-      'Manufacturing companiesFood and beverage industry',
-      'Pharmaceutical companiesLuxury goods manufacturers',
+      'Manufacturing companiesFood and beverage industryPharmaceutical companiesLuxury goods manufacturers',
       'Retail chainsLogistics companies'
     ],
     marketPosition: 'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01-0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
@@ -236,8 +217,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
     useCases: [
-      'Food safety trackingPharmaceutical authenticity',
-      'Luxury goods verificationSustainable sourcing verification',
+      'Food safety trackingPharmaceutical authenticityLuxury goods verificationSustainable sourcing verification',
       'Compliance monitoringQuality assurance'
     ],
     integrations: ['SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'],
@@ -267,20 +247,16 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Decentralized content ownershipToken-based reward system',
-      'Privacy-first designContent monetization',
-      'Decentralized governanceCross-platform content portability',
-      'AI-powered content discoveryNFT integration',
+      'Decentralized content ownershipToken-based reward systemPrivacy-first designContent monetization',
+      'Decentralized governanceCross-platform content portabilityAI-powered content discoveryNFT integration',
       'Mobile and web appsAPI for developers'
     ],
     benefits: [
-      'Users own and monetize their contentComplete privacy and data control',
-      'Earn rewards for quality contentCensorship-resistant platform',
+      'Users own and monetize their contentComplete privacy and data controlEarn rewards for quality contentCensorship-resistant platform',
       'Transparent and fair algorithms'
     ],
     targetAudience: [
-      'Content creators and influencersSocial media users',
-      'Brands and marketersDevelopers and entrepreneurs',
+      'Content creators and influencersSocial media usersBrands and marketersDevelopers and entrepreneurs',
       'Privacy-conscious individualsWeb3 enthusiasts'
     ],
     marketPosition: 'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
@@ -290,8 +266,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.',
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.',
     useCases: [
-      'Social networkingContent creation and sharing',
-      'Community buildingBrand marketing',
+      'Social networkingContent creation and sharingCommunity buildingBrand marketing',
       'Influencer monetizationDecentralized governance'
     ],
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],

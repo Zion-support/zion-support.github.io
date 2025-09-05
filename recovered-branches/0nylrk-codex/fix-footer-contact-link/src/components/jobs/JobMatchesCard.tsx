@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button",
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
-
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -103,5 +102,5 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 }

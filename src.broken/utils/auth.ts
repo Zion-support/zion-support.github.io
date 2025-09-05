@@ -14,7 +14,7 @@ export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean
 
   if (allowPublicGet && method === 'GET') {
     if (tenantIdHeader && getTenantById(tenantIdHeader)) {
-      return { ok: true, tenantId: tenantIdHeader },
+      return { ok: true, tenantId: tenantIdHeader }
     }
   }
 
@@ -23,5 +23,5 @@ export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean
   const tenant = getTenantByApiKey(bearer),
   if (!tenant) return { ok: false, error: 'Invalid API key' },
 
-  return { ok: true, tenantId: tenant.id },
+  return { ok: true, tenantId: tenant.id }
 }

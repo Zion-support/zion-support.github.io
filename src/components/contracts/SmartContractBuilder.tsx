@@ -11,8 +11,6 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -59,15 +57,15 @@ export function SmartContractBuilder({
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
         setDeployStatus('deployed'),
-        toast.success("Smart contract deployed successfully!"),
+        toast.success("Smart contract deployed successfully!")
       } else {
         setDeployStatus('error'),
-        toast.error("Failed to deploy smart contract"),
+        toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
       logErrorToProduction('Error deploying contract:', { data: error }),
       setDeployStatus('error'),
-      toast.error("Failed to deploy smart contract"),
+      toast.error("Failed to deploy smart contract")
     }
   },
 
@@ -76,10 +74,10 @@ export function SmartContractBuilder({
     // This should be a function that takes a string (contract content)
     // Since we need to adapt the interface, we'll implement the simplest solution that works
     if (onContractGenerated) {
-      onContractGenerated(contract),
+      onContractGenerated(contract)
     }
     setGeneratedContract(contract),
-    setActiveTab("preview"),
+    setActiveTab("preview")
   },
 
   return (
@@ -152,5 +150,5 @@ export function SmartContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

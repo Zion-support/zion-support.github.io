@@ -50,8 +50,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Perfect for individuals and small blogs',
       features: [
-        '1,000 words per month5 content templates',
-        'Basic SEO optimizationEmail support',
+        '1,000 words per month5 content templatesBasic SEO optimizationEmail support',
         'API access (100 calls/month)Content analytics dashboard'
       ],
       popular: false,
@@ -64,10 +63,8 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '10,000 words per month25+ content templates',
-        'Advanced SEO toolsPriority support',
-        'API access (1,000 calls/month)Advanced analytics',
-        'Team collaborationCustom branding'
+        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority support',
+        'API access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -79,10 +76,8 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited wordsAll templates + custom',
-        'Full SEO suiteDedicated support',
-        'Unlimited API accessAdvanced analytics',
-        'White-label solutionCustom integrations',
+        'Unlimited wordsAll templates + customFull SEO suiteDedicated support',
+        'Unlimited API accessAdvanced analyticsWhite-label solutionCustom integrations',
         'SLA guarantee'
       ],
       popular: false,
@@ -96,25 +91,25 @@ export default function AIContentGeneratorPage() {
       title: 'Blog Writing',
       description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
       icon: '📝',
-      examples: ['Tech reviewsHow-to guides', 'Industry insightsProduct comparisons']
+      examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
     },
     {
       title: 'Marketing Copy',
       description: 'Create compelling ad copy, landing pages, and marketing materials.',
       icon: '🎯',
-      examples: ['Facebook adsGoogle ads', 'Landing pagesEmail campaigns']
+      examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns']
     },
     {
       title: 'Social Media',
       description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
       icon: '📱',
-      examples: ['Instagram postsTwitter threads', 'LinkedIn articlesTikTok captions']
+      examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions']
     },
     {
       title: 'E-commerce',
       description: 'Write product descriptions, category pages, and promotional content.',
       icon: '🛍️',
-      examples: ['Product descriptionsCategory pages', 'Promotional emailsFAQ sections']
+      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
   ],
 

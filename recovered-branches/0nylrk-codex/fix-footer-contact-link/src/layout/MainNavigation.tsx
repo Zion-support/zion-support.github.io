@@ -3,11 +3,10 @@ import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
-
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
-  className?: string,
+  className?: string
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
@@ -54,7 +53,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: "Dashboard",
       href: "/dashboard",
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"
-    }),
+    })
   }
   
   // Add admin-only links
@@ -63,7 +62,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: "Analytics",
       href: "/analytics",
       matches: (path: string) => path.startsWith("/analytics")
-    }),
+    })
   }
   
   return (
@@ -109,5 +108,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         )}
       </ul>
     </nav>
-  ),
+  )
 }

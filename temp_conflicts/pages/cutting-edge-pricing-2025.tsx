@@ -9,7 +9,6 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -24,8 +23,7 @@ const pricingTiers = [
     period: 'month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Up to 5 team membersBasic AI content generation',
-      'Standard supportCore integrations',
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrations',
       'Basic analyticsEmail support'
     ],
     icon: <Target className="w-6 h-6" />,
@@ -40,10 +38,8 @@ const pricingTiers = [
     period: 'month',
     description: 'Ideal for growing businesses and teams',
     features: [
-      'Up to 25 team membersAdvanced AI features',
-      'Priority supportAdvanced integrations',
-      'Advanced analyticsPhone & email support',
-      'Custom brandingAPI access'
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrations',
+      'Advanced analyticsPhone & email supportCustom brandingAPI access'
     ],
     icon: <Zap className="w-6 h-6" />,
     color: 'from-purple-500 to-pink-500',
@@ -57,10 +53,8 @@ const pricingTiers = [
     period: 'month',
     description: 'For large organizations with complex needs',
     features: [
-      'Unlimited team membersFull AI suite access',
-      '24/7 dedicated supportCustom integrations',
-      'Advanced analytics & reportingDedicated account manager',
-      'Custom developmentSLA guarantees',
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrations',
+      'Advanced analytics & reportingDedicated account managerCustom developmentSLA guarantees',
       'On-premise optionsCompliance certifications'
     ],
     icon: <Shield className="w-6 h-6" />,
@@ -497,5 +491,5 @@ export default function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
-  ),
+  )
 }

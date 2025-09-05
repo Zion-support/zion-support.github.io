@@ -1,9 +1,8 @@
 import OpenAI from 'openai',
-
 type OpenAIClient = OpenAI,
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
-  return new OpenAI({ apiKey }),
+  return new OpenAI({ apiKey })
 }
 
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
@@ -16,5 +15,5 @@ Add responsibilities, requirements, and benefits in bullet points.`,
     model: 'gpt-4o-mini',
     input: prompt
   }),
-  return completion.output_text,
+  return completion.output_text
 }

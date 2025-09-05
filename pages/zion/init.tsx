@@ -1,6 +1,5 @@
 import { useState } from 'react',
 import type { NextPage } from 'next',
-
 type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid',
 
 type DeployFormState = {
@@ -16,7 +15,7 @@ type DeployFormState = {
     subdomain: string
   },
   modules: Record<string, boolean>,
-  bonusModules: Record<string, boolean>,
+  bonusModules: Record<string, boolean>
 },
 
 const defaultModules: DeployFormState['modules'] = {
@@ -57,7 +56,7 @@ const InitPage: NextPage = () => {
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState((prev) => ({
       ...prev,
-      [group]: { ...prev[group], [key]: !prev[group][key] }})),
+      [group]: { ...prev[group], [key]: !prev[group][key] }}))
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -72,11 +71,11 @@ const InitPage: NextPage = () => {
         body: JSON.stringify(state)}),
       const json = await res.json(),
       if (!res.ok) throw new Error(json?.error || 'Deployment failed'),
-      setResult(json),
+      setResult(json)
     } catch (err: any) {
       setError(err.message || 'Unexpected error')
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   },
 
@@ -177,7 +176,7 @@ const InitPage: NextPage = () => {
         </div>
       )}
     </div>
-  ),
+  )
 },
 
 export default InitPage,

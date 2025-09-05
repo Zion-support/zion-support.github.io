@@ -2,7 +2,6 @@
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
-
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -23,7 +22,7 @@ serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders}),
+      headers: corsHeaders})
   }
   
   try {
@@ -41,7 +40,7 @@ serve(async (req: Request) => {
         {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-      ),
+      )
     }
     
     // Get user data
@@ -57,7 +56,7 @@ serve(async (req: Request) => {
         {
           status: 404,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-      ),
+      )
     }
     
     // Create message based on role and missing milestone
@@ -102,7 +101,7 @@ serve(async (req: Request) => {
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
-      ),
+      )
     }
     
     // Create notification in database
@@ -116,7 +115,7 @@ serve(async (req: Request) => {
     ),
     
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError),
+      console.error("Failed to create notification:", notificationError)
     }
     
     return new Response(
@@ -126,7 +125,7 @@ serve(async (req: Request) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   } catch (error) {
     console.error(error),
     return new Response(
@@ -134,6 +133,6 @@ serve(async (req: Request) => {
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    ),
+    )
   }
 }),

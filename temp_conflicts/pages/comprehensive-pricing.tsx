@@ -40,7 +40,7 @@ export default function ComprehensivePricingPage() {
 
   // Category filter
   if (selectedCategory !== 'All') {
-    filteredServices = filteredServices.filter(service => service.category === selectedCategory),
+    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
   }
 
   // Price range filter
@@ -48,8 +48,8 @@ export default function ComprehensivePricingPage() {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, '')),
-      return price >= min && (max === Infinity || price <= max),
-    }),
+      return price >= min && (max === Infinity || price <= max)
+    })
   }
 
   // Search filter
@@ -59,7 +59,7 @@ export default function ComprehensivePricingPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
+    )
   }
 
   // Sort services
@@ -94,8 +94,7 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Basic service accessEmail support',
-        'Standard featuresCommunity forum access',
+        'Basic service accessEmail supportStandard featuresCommunity forum access',
         'Basic analytics'
       ],
       icon: <Star className="w-6 h-6" />,
@@ -108,8 +107,7 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: [
-        'Advanced service accessPriority support',
-        'Advanced featuresAPI access',
+        'Advanced service accessPriority supportAdvanced featuresAPI access',
         'Advanced analyticsCustom integrations'
       ],
       icon: <Gem className="w-6 h-6" />,
@@ -122,10 +120,8 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Full service access24/7 dedicated support',
-        'All featuresCustom development',
-        'Enterprise analyticsWhite-label options',
-        'SLA guarantees'
+        'Full service access24/7 dedicated supportAll featuresCustom development',
+        'Enterprise analyticsWhite-label optionsSLA guarantees'
       ],
       icon: <Crown className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-600',
@@ -587,7 +583,7 @@ export default function ComprehensivePricingPage() {
                    onClick={() => {
                      setSearchQuery(''),
                      setSelectedCategory('All'),
-                     setPriceRange('All'),
+                     setPriceRange('All')
                    }}
                  >
                    Clear Filters
@@ -655,5 +651,5 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  ),
+  )
 }

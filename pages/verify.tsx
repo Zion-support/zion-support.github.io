@@ -3,7 +3,6 @@ import Head from 'next/head',
 import { getBadgeLabels } from '../utils/kyc',
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc',
 import { VerifiedBadge } from '../components/ui/VerifiedBadge',
-
 export default function VerifyPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [role, setRole] = useState<KycRole>('client'),
@@ -24,7 +23,7 @@ export default function VerifyPage() {
     const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%
     const submitted = profile.status === 'submitted' ? 90 : 0,
     const approved = profile.status === 'approved' ? 100 : 0,
-    return Math.max(base, submitted, approved),
+    return Math.max(base, submitted, approved)
   }, [profile, requiredDocs]),
 
   async function start() {
@@ -38,11 +37,11 @@ export default function VerifyPage() {
     if (data.ok) {
       setProfile(data.profile),
       setRequiredDocs(data.requiredDocuments),
-      setOptionalDocs(data.optionalDocuments),
+      setOptionalDocs(data.optionalDocuments)
     } else {
-      setMessage(data.error || 'Failed to start'),
+      setMessage(data.error || 'Failed to start')
     }
-    setBusy(false),
+    setBusy(false)
   }
 
   async function upload(kind: KycDocumentMeta['kind']) {
@@ -55,11 +54,11 @@ export default function VerifyPage() {
       body: JSON.stringify({ userId, kind, filename })}),
     const data = await res.json(),
     if (data.ok) {
-      setProfile(data.profile),
+      setProfile(data.profile)
     } else {
-      setMessage(data.error || 'Upload failed'),
+      setMessage(data.error || 'Upload failed')
     }
-    setBusy(false),
+    setBusy(false)
   }
 
   async function submit() {
@@ -71,11 +70,11 @@ export default function VerifyPage() {
     const data = await res.json(),
     if (data.ok) {
       setProfile(data.profile),
-      setMessage('Submitted. AML check performed.'),
+      setMessage('Submitted. AML check performed.')
     } else {
-      setMessage(data.error || 'Submit failed'),
+      setMessage(data.error || 'Submit failed')
     }
-    setBusy(false),
+    setBusy(false)
   }
 
   const labels = getBadgeLabels(profile || undefined),
@@ -157,7 +156,7 @@ export default function VerifyPage() {
                       </div>
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
-                  ),
+                  )
                 })}
               </div>
             </section>
@@ -176,7 +175,7 @@ export default function VerifyPage() {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-                    ),
+                    )
                   })}
                 </div>
               </section>
@@ -191,5 +190,5 @@ export default function VerifyPage() {
         )}
       </main>
     </>
-  ),
+  )
 }

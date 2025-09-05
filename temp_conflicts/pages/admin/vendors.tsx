@@ -1,23 +1,22 @@
 import { useEffect, useState } from 'react',
 import type { Vendor } from '../../utils/vendor-types',
-
 export default function AdminVendorsPage() {
   const [vendors, setVendors] = useState<Vendor[]>([]),
 
   async function load() {
     const res = await fetch('/api/vendors'),
     const data = await res.json(),
-    setVendors(data.vendors || []),
+    setVendors(data.vendors || [])
   }
 
-  useEffect(() => { load(), }, []),
+  useEffect(() => { load() }, []),
 
   async function call(action: string, vendorId: string, value?: any) {
     await fetch('/api/admin/vendors', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action, vendorId, value })}),
-    load(),
+    load()
   }
 
   return (
@@ -49,5 +48,5 @@ export default function AdminVendorsPage() {
       </div>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  ),
+  )
 }

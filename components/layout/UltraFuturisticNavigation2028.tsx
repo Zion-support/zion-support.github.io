@@ -179,7 +179,7 @@ export default function UltraFuturisticNavigation2028() {
   },
 
   const handleCategoryLeave = () => {
-    setActiveCategory(null),
+    setActiveCategory(null)
   },
 
   const filteredServices = serviceCategories.flatMap(category =>
@@ -456,5 +456,5 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       )}
     </nav>
-  ),
+  )
 }

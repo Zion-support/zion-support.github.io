@@ -10,7 +10,7 @@ export const checkAccessibility = () => {
         type: 'missing-alt',
         element: img,
         message: 'Image missing alt text',
-        severity: 'error'}),
+        severity: 'error'})
     }
   }),
 
@@ -24,18 +24,18 @@ export const checkAccessibility = () => {
         type: 'heading-hierarchy',
         element: heading,
         message: 'Heading level skipped',
-        severity: 'warning'}),
+        severity: 'warning'})
     }
-    lastLevel = level,
+    lastLevel = level
   }),
 
-  return issues,
+  return issues
 },
 
 export const fixAccessibilityIssues = issues => {
   issues.forEach(issue => {
     if (issue.type === 'missing-alt') {
-      issue.element.alt = 'Image description',
+      issue.element.alt = 'Image description'
     }
-  }),
+  })
 },

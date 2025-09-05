@@ -157,7 +157,7 @@ const HeroSection: React.FC = () => {
         </motion.div>
       </motion.div>
     </section>
-  ),
+  )
 },
 
 export default HeroSection,

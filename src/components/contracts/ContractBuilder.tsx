@@ -8,7 +8,6 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { SmartContractBuilder } from "./SmartContractBuilder",
-
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -50,13 +49,13 @@ export function ContractBuilder({
         isOpen={isOpen}
         onClose={() => {
           setShowSmartContractBuilder(false),
-          onClose(),
+          onClose()
         }}
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}
       />
-    ),
+    )
   }
 
   return (
@@ -123,5 +122,5 @@ export function ContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

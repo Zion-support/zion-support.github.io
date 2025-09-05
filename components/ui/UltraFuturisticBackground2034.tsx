@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2034: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -40,7 +39,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`,
         this.alpha = Math.random() * 0.5 + 0.3,
         this.life = Math.random() * 100 + 50,
-        this.maxLife = this.life,
+        this.maxLife = this.life
       }
 
       update() {
@@ -54,7 +53,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         if (this.life <= 0) {
           this.life = this.maxLife,
           this.x = Math.random() * canvas.width,
-          this.y = Math.random() * canvas.height,
+          this.y = Math.random() * canvas.height
         }
       }
 
@@ -66,7 +65,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         ctx.beginPath(),
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }
     }
 
@@ -90,7 +89,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
       // Update and draw particles
       particles.forEach(particle => {
         particle.update(),
-        particle.draw(),
+        particle.draw()
       }),
 
       // Draw connecting lines
@@ -107,19 +106,19 @@ const UltraFuturisticBackground2034: React.FC = () => {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
+            ctx.stroke()
           }
         }
       }
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, []),
 
   return (
@@ -321,8 +320,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
-            '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)',
-            '0 0 10px rgba(0, 255, 255, 0.5)'
+            '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)0 0 10px rgba(0, 255, 255, 0.5)'
           ]
         }}
         transition={{
@@ -336,8 +334,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
-            '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)',
-            '0 0 10px rgba(0, 255, 255, 0.5)'
+            '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)0 0 10px rgba(0, 255, 255, 0.5)'
           ]
         }}
         transition={{
@@ -387,7 +384,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
         ))}
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2034,

@@ -31,7 +31,7 @@ export function RaiseDisputeButton({
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
-    router.push(`/dashboard/disputes/${disputeId}`),
+    router.push(`/dashboard/disputes/${disputeId}`)
   },
   
   return (
@@ -64,5 +64,5 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  ),
+  )
 }

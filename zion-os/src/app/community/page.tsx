@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export default function CommunityPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">

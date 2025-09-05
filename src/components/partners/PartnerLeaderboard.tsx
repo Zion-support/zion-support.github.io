@@ -74,7 +74,7 @@ export function PartnerLeaderboard() {
       case 3:
         return <Medal className="h-5 w-5 text-amber-700" />,
       default:
-        return <span className="text-sm font-semibold">{rank}</span>,
+        return <span className="text-sm font-semibold">{rank}</span>
     }
   },
   
@@ -201,5 +201,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }

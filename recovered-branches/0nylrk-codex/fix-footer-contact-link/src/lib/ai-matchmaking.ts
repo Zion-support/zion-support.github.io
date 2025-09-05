@@ -64,7 +64,7 @@ export async function findMatches(
     if (type && type !== "all") {
       filteredItems = sampleData.filter(item => 
         item.category.toLowerCase().includes(type.toLowerCase())
-      ),
+      )
     }
     
     // Sort by simulated relevance (random for now)
@@ -76,9 +76,9 @@ export async function findMatches(
     })),
     
     // Sort by score
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit),
+    return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {
     console.error("Error in matchmaking:", error),
-    return [],
+    return []
   }
 }

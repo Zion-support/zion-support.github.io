@@ -1,7 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore - JSON import
-import data from '../../data/global-bounties.json',
-
+// @ts-ignore - JSON import import data from '../../data/global-bounties.json',
 export default function GlobalBountiesPage() {
   const items: any[] = (data?.items || []).slice(0, 100),
   return (
@@ -24,5 +22,5 @@ export default function GlobalBountiesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import { realMarketServices } from '../../data/2024-real-market-services',
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -85,7 +84,7 @@ export default function UltraFuturisticServiceShowcase2034() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const containerVariants = {
@@ -383,5 +382,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  ),
+  )
 }

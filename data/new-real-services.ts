@@ -1,5 +1,4 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -16,10 +15,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
     features: [
-      'Prompt and response tracingCost and token analytics',
-      'Automatic PII redactionOffline and online evals',
-      'Guardrail policy engineDrift and performance alerts',
-      'SDKs for JS, Python, GoGrafana and Datadog exporters'
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evals',
+      'Guardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ],
     popular: true,
     icon: '📈',
@@ -32,11 +29,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['Next.jsOpenTelemetry', 'PostgreSQLClickHouse'],
-    integrations: ['OpenAI-compatibleLangChain', 'LlamaIndexDatadog', 'Grafana'],
-    useCases: ['LLM app monitoringCost control', 'Policy compliance'],
+    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'],
+    integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadog', 'Grafana'],
+    useCases: ['LLM app monitoringCost controlPolicy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
-    competitors: ['LangfuseArize', 'Weights & Biases'],
+    competitors: ['LangfuseArizeWeights & Biases'],
     marketSize: '$5B+ AI Ops and Observability',
     growthRate: 'Rapid growth with LLM adoption',
     variant: 'quantum-holographic',
@@ -56,8 +53,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
-      'Prospect enrichment via public sourcesPersonalized email generation',
-      'Sequence and follow-up schedulingA/B testing and analytics',
+      'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analytics',
       'SPF/DKIM/DMARC checksInbox rotation support'
     ],
     popular: false,
@@ -71,11 +67,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Sales & Marketing',
     realService: true,
-    technology: ['Next.jsWorkers', 'PostgreSQL'],
-    integrations: ['HubSpotSalesforce', 'ApolloLemlist'],
-    useCases: ['Outbound sequencesUpsell campaigns', 'Reactivation'],
+    technology: ['Next.jsWorkersPostgreSQL'],
+    integrations: ['HubSpotSalesforceApolloLemlist'],
+    useCases: ['Outbound sequencesUpsell campaignsReactivation'],
     roi: 'Increase replies 2–5x with hyper-personalization',
-    competitors: ['Copy.aiLavender', 'Instantly'],
+    competitors: ['Copy.aiLavenderInstantly'],
     marketSize: '$15B Sales Engagement',
     growthRate: 'Strong growth',
     variant: 'holographic',
@@ -95,8 +91,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
-      'Policy packs for CIS/NISTKubernetes and cloud posture',
-      'Auto-remediation PRsEvidence collection and reports',
+      'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reports',
       'SOC2/ISO 27001 export'
     ],
     popular: true,
@@ -110,11 +105,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1–3 days',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['OPAKyverno', 'TerraformGitHub Actions'],
-    integrations: ['AWSAzure', 'GCPGitHub', 'GitLab'],
-    useCases: ['Baseline enforcementAudit readiness', 'Drift detection'],
+    technology: ['OPAKyvernoTerraformGitHub Actions'],
+    integrations: ['AWSAzureGCPGitHub', 'GitLab'],
+    useCases: ['Baseline enforcementAudit readinessDrift detection'],
     roi: 'Reduce audit prep time by 70%',
-    competitors: ['WizPrisma Cloud', 'Snyk'],
+    competitors: ['WizPrisma CloudSnyk'],
     marketSize: '$30B Cloud Security',
     growthRate: 'High growth',
     variant: 'neural-quantum',
@@ -134,8 +129,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
-      'Freshness and volume checksSchema drift detection',
-      'SLA and SLO trackingIncident routing to Slack/Teams'
+      'Freshness and volume checksSchema drift detectionSLA and SLO trackingIncident routing to Slack/Teams'
     ],
     popular: false,
     icon: '🗄️',
@@ -148,9 +142,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Data & Analytics',
     realService: true,
-    technology: ['DebeziumAirflow', 'dbt'],
-    integrations: ['BigQuerySnowflake', 'RedshiftPostgres'],
-    useCases: ['Pipeline healthData quality', 'SLA tracking'],
+    technology: ['DebeziumAirflowdbt'],
+    integrations: ['BigQuerySnowflakeRedshiftPostgres'],
+    useCases: ['Pipeline healthData qualitySLA tracking'],
     roi: 'Reduce data incidents 30–60%',
     competitors: ['Monte CarloBigeye'],
     marketSize: '$3B Data Observability',
@@ -172,8 +166,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
-      'Global CDN edge cachingDynamic rate limiting',
-      'Anomaly and abuse detectionZero-downtime deploys with shadow traffic'
+      'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
     ],
     popular: true,
     icon: '🛰️',
@@ -186,9 +179,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: 'Same day',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['WorkersRust', 'Redis'],
-    integrations: ['CloudflareFastly', 'Akamai'],
-    useCases: ['API accelerationAbuse protection', 'Cost control'],
+    technology: ['WorkersRustRedis'],
+    integrations: ['CloudflareFastlyAkamai'],
+    useCases: ['API accelerationAbuse protectionCost control'],
     roi: 'Reduce p99 latency up to 60%',
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'],
     marketSize: '$10B API Security',
@@ -210,8 +203,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
-      'Auto-segmentation and cohortsLLM query interface',
-      'Retention and churn signalsAnomaly alerts to Slack/Teams'
+      'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
     ],
     popular: false,
     icon: '📊',
@@ -224,9 +216,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Analytics & Business Intelligence',
     realService: true,
-    technology: ['Next.jsPostHog', 'ClickHouse'],
-    integrations: ['SegmentRudderStack', 'Snowplow'],
-    useCases: ['Growth analyticsRetention', 'Experimentation'],
+    technology: ['Next.jsPostHogClickHouse'],
+    integrations: ['SegmentRudderStackSnowplow'],
+    useCases: ['Growth analyticsRetentionExperimentation'],
     roi: 'Find growth levers 2x faster',
     competitors: ['AmplitudeMixpanel'],
     marketSize: '$8B Product Analytics',
@@ -248,8 +240,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
     features: [
-      'Multi-channel widgetsGrounded answers with citations',
-      'Secure human handoffAnalytics and CSAT tracking'
+      'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
     ],
     popular: true,
     icon: '💬',
@@ -262,9 +253,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: 'Same day',
     category: 'Customer Support & Success',
     realService: true,
-    technology: ['RAGVector DB', 'Next.js'],
-    integrations: ['ZendeskIntercom', 'Freshdesk'],
-    useCases: ['Self-serve supportTicket reduction', 'CSAT improvement'],
+    technology: ['RAGVector DBNext.js'],
+    integrations: ['ZendeskIntercomFreshdesk'],
+    useCases: ['Self-serve supportTicket reductionCSAT improvement'],
     roi: 'Reduce tickets 30–50%',
     competitors: ['Intercom FinAda'],
     marketSize: '$10B Support Tech',
@@ -286,8 +277,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
-      'Rightsizing recommendationsAnomaly detection',
-      'Savings plan/RIs planningTag hygiene and showback'
+      'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
     ],
     popular: true,
     icon: '💸',
@@ -300,9 +290,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2–5 days',
     category: 'Cloud & Infrastructure',
     realService: true,
-    technology: ['AWS Cost ExplorerAzure Cost', 'GCP Billing'],
-    integrations: ['AWSAzure', 'GCP'],
-    useCases: ['Cost controlAnomaly response', 'Budgeting'],
+    technology: ['AWS Cost ExplorerAzure CostGCP Billing'],
+    integrations: ['AWSAzureGCP'],
+    useCases: ['Cost controlAnomaly responseBudgeting'],
     roi: 'Save 15–35% on cloud spend',
     competitors: ['CloudZeroKubecost'],
     marketSize: '$6B FinOps',
@@ -324,8 +314,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
-      'Field-level encryptionTokenization APIs',
-      'Consent enforcementAudit trail and reporting'
+      'Field-level encryptionTokenization APIsConsent enforcementAudit trail and reporting'
     ],
     popular: false,
     icon: '🔏',
@@ -338,9 +327,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1–3 days',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['KMSHSM', 'PostgreSQL'],
+    technology: ['KMSHSMPostgreSQL'],
     integrations: ['AWS KMSHashiCorp Vault'],
-    useCases: ['PCI/PII protectionConsent management', 'Data sharing'],
+    useCases: ['PCI/PII protectionConsent managementData sharing'],
     roi: 'Reduce breach risk and compliance effort',
     competitors: ['SkyflowVery Good Security'],
     marketSize: '$4B Privacy Tech',
@@ -362,8 +351,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
-      'Graph-based anomaly detectionExplainability reports',
-      'Risk scoring APIWorkflow actions and webhooks'
+      'Graph-based anomaly detectionExplainability reportsRisk scoring APIWorkflow actions and webhooks'
     ],
     popular: false,
     icon: '🧠',
@@ -376,9 +364,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2–5 days',
     category: 'Financial Technology',
     realService: true,
-    technology: ['Graph DBPython', 'Kafka'],
-    integrations: ['StripeAdyen', 'Plaid'],
-    useCases: ['Chargeback reductionAccount takeover', 'Abuse prevention'],
+    technology: ['Graph DBPythonKafka'],
+    integrations: ['StripeAdyenPlaid'],
+    useCases: ['Chargeback reductionAccount takeoverAbuse prevention'],
     roi: 'Lower chargebacks by 30–60%',
     competitors: ['SiftSEON'],
     marketSize: '$10B Fraud Prevention',
@@ -400,8 +388,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
-      'HA with automatic failoverContinuous backups and PITR',
-      'Slow query insights and indexingEncryption and access controls'
+      'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
     ],
     popular: true,
     icon: '🗃️',
@@ -414,9 +401,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1–2 days',
     category: 'Observability',
     realService: true,
-    technology: ['PostgreSQLPatroni', 'Wal-G'],
+    technology: ['PostgreSQLPatroniWal-G'],
     integrations: ['GrafanaDatadog'],
-    useCases: ['Reliable databasesCompliance', 'Scaling'],
+    useCases: ['Reliable databasesComplianceScaling'],
     roi: 'Avoid outages and accelerate teams',
     competitors: ['CrunchyDataAiven'],
     marketSize: '$12B DBaaS',
@@ -438,8 +425,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
-      'Core Web Vitals dashboardsSession replay and heatmaps',
-      'Error tracking and sourcemapsA/B test impact analysis'
+      'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
     ],
     popular: true,
     icon: '⚡',
@@ -476,8 +462,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
-      'Site audits and fixesSchema and sitemaps',
-      'Programmatic pagesInternal linking graph'
+      'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'
     ],
     popular: false,
     icon: '🔎',
@@ -514,8 +499,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     features: [
-      'DLQ and retry policiesInspector and redaction',
-      'Signature verificationFan-out and transformations'
+      'DLQ and retry policiesInspector and redactionSignature verificationFan-out and transformations'
     ],
     popular: true,
     icon: '🔁',
@@ -528,8 +512,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 hour',
     category: 'Developer Tools',
     realService: true,
-    technology: ['KafkaS3', 'Node.js'],
-    integrations: ['StripeShopify', 'GitHub'],
+    technology: ['KafkaS3Node.js'],
+    integrations: ['StripeShopifyGitHub'],
     useCases: ['Webhook reliabilityDebugging'],
     roi: 'Reduce integration incidents 50%+',
     competitors: ['SvixHookdeck'],
@@ -552,8 +536,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.',
     features: [
-      'Serverless scaleTemplate gallery',
-      'Brand-safe fontsWebhook on completion'
+      'Serverless scaleTemplate galleryBrand-safe fontsWebhook on completion'
     ],
     popular: true,
     icon: '📄',
@@ -590,8 +573,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.',
     features: [
-      'Auto-instrumentationRED dashboards',
-      'Error analyticsExporters to APMs'
+      'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
     ],
     popular: false,
     icon: '🛰️',
@@ -628,8 +610,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
     features: [
-      'SAML and OIDCSCIM and JIT provisioning',
-      'Branding and mappingCustomer sandbox'
+      'SAML and OIDCSCIM and JIT provisioningBranding and mappingCustomer sandbox'
     ],
     popular: true,
     icon: '🔐',
@@ -643,10 +624,10 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Security & Compliance',
     realService: true,
     technology: ['KeycloakAuth gateways'],
-    integrations: ['OktaAzure AD', 'Google'],
+    integrations: ['OktaAzure ADGoogle'],
     useCases: ['Enterprise dealsUser management'],
     roi: 'Unlock enterprise revenue faster',
-    competitors: ['WorkosAuth0', 'Stytch'],
+    competitors: ['WorkosAuth0Stytch'],
     marketSize: '$8B Identity',
     growthRate: 'High',
     variant: 'neural-quantum',
@@ -666,8 +647,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
     features: [
-      'Network scans and SNMPSoftware inventory',
-      'Change trackingCMDB integrations'
+      'Network scans and SNMPSoftware inventoryChange trackingCMDB integrations'
     ],
     popular: false,
     icon: '🛰️',
@@ -680,7 +660,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1–3 days',
     category: 'IT Operations',
     realService: true,
-    technology: ['nmapSNMP', 'Go'],
+    technology: ['nmapSNMPGo'],
     integrations: ['ServiceNowJira'],
     useCases: ['InventorySecurity'],
     roi: 'Reduce unknown assets and risk',
@@ -704,8 +684,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     features: [
-      'Questionnaire templatesEvidence collection portal',
-      'Continuous monitoringRisk scoring'
+      'Questionnaire templatesEvidence collection portalContinuous monitoringRisk scoring'
     ],
     popular: true,
     icon: '📋',

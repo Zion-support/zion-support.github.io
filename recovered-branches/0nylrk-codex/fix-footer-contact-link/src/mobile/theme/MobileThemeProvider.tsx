@@ -1,7 +1,6 @@
 
 import React from "react",
 import { useTheme } from "@/hooks/useTheme",
-
 interface MobileThemeProviderProps {
   children: React.ReactNode
 }
@@ -13,5 +12,5 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
       {children}
     </div>
-  ),
+  )
 }

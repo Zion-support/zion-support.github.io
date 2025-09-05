@@ -1,5 +1,4 @@
 import React from 'react',
-
 type QA = { q: string, a: string },
 
 type Props = { items: QA[] },
@@ -18,5 +17,5 @@ export default function FAQ({ items }: Props) {
         ))}
       </div>
     </div>
-  ),
+  )
 }

@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
-
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -36,14 +35,14 @@ export function AIEnhancementButton({
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     const enhancedContent = await enhanceContent(options),
     
     if (enhancedContent) {
       setGeneratedContent(enhancedContent),
-      setShowActions(true),
+      setShowActions(true)
     }
   },
   
@@ -54,17 +53,17 @@ export function AIEnhancementButton({
       setGeneratedContent(null),
       toast({
         title: "Content applied",
-        description: "AI-enhanced content has been applied."}),
+        description: "AI-enhanced content has been applied."})
     }
   },
   
   const handleRegenerate = async () => {
-    await handleEnhance(),
+    await handleEnhance()
   },
   
   const handleCancel = () => {
     setShowActions(false),
-    setGeneratedContent(null),
+    setGeneratedContent(null)
   },
   
   if (showActions) {
@@ -125,5 +124,5 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  ),
+  )
 }

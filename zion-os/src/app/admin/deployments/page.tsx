@@ -139,7 +139,7 @@ export default function DeploymentsPage() {
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    }),
+    })
   },
 
   const filteredDeployments = deployments.filter(deployment => 
@@ -321,7 +321,7 @@ export default function DeploymentsPage() {
                 <div className="flex flex-wrap gap-2">
                   {deployment.features.slice(0, 4).map((feature) => (
                     <span key={feature} className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
-                      {feature.replace('_', ' ')}
+                      {feature.replace('_ ')}
                     </span>
                   ))}
                   {deployment.features.length > 4 && (
@@ -418,5 +418,5 @@ export default function DeploymentsPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

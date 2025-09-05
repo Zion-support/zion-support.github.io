@@ -1,6 +1,5 @@
 import React from 'react',
 import EnhancedButton from './EnhancedButton',
-
 export type PaginationProps = {
   page: number,
   pageSize: number,
@@ -29,5 +28,5 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Next
       </EnhancedButton>
     </div>
-  ),
+  )
 }

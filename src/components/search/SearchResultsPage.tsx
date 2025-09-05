@@ -53,7 +53,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
   className = '' 
 }) => {
   if (!searchTerm.trim()) {
-    return <span className={className}>{text}</span>,
+    return <span className={className}>{text}</span>
   }
 
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
@@ -70,7 +70,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
         )
       )}
     </span>
-  ),
+  )
 },
 
 // Search Result Card Component
@@ -83,7 +83,7 @@ const SearchResultCard: React.FC<{
 
   const handleClick = () => {
     if (result.url) {
-      router.push(result.url),
+      router.push(result.url)
     }
   },
 
@@ -150,7 +150,7 @@ const SearchResultCard: React.FC<{
         </div>
       </div>
     </div>
-  ),
+  )
 },
 
 // Filter Sidebar Component
@@ -171,7 +171,7 @@ const FilterSidebar: React.FC<{
       ? [...filters.types, typeId]
       : filters.types.filter(t => t !== typeId),
     
-    onFiltersChange({ ...filters, types: newTypes }),
+    onFiltersChange({ ...filters, types: newTypes })
   },
 
   const handlePriceChange = (values: number[]) => {
@@ -179,7 +179,7 @@ const FilterSidebar: React.FC<{
       ...filters, 
       minPrice: values[0] ?? 0, 
       maxPrice: values[1] ?? 10000 
-    }),
+    })
   },
 
   return (
@@ -264,7 +264,7 @@ const FilterSidebar: React.FC<{
         </Select>
       </div>
     </div>
-  ),
+  )
 },
 
 // No Results Component
@@ -349,16 +349,16 @@ export const SearchResultsPage: React.FC = () => {
   const availableCategories = useMemo(() => {
     const categories = new Set<string>(),
     results.forEach(result => {
-      if (result.category) categories.add(result.category),
+      if (result.category) categories.add(result.category)
     }),
-    return Array.from(categories).sort(),
+    return Array.from(categories).sort()
   }, [results]),
 
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
       const urlTerm = router.query.q as string,
-      setSearchTerm(urlTerm),
+      setSearchTerm(urlTerm)
     }
   }, [router.isReady, router.query.q]),
 
@@ -367,7 +367,7 @@ export const SearchResultsPage: React.FC = () => {
     if (!term.trim()) {
       setResults([]),
       setTotalCount(0),
-      return,
+      return
     }
 
     setLoading(true),
@@ -380,22 +380,22 @@ export const SearchResultsPage: React.FC = () => {
       }),
 
       if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join()),
+        params.append('type', searchFilters.types.join())
       }
       if (searchFilters.category) {
-        params.append('category', searchFilters.category),
+        params.append('category', searchFilters.category)
       }
       if (searchFilters.minPrice > 0) {
-        params.append('minPrice', searchFilters.minPrice.toString()),
+        params.append('minPrice', searchFilters.minPrice.toString())
       }
       if (searchFilters.maxPrice < 10000) {
-        params.append('maxPrice', searchFilters.maxPrice.toString()),
+        params.append('maxPrice', searchFilters.maxPrice.toString())
       }
       if (searchFilters.minRating > 0) {
-        params.append('minRating', searchFilters.minRating.toString()),
+        params.append('minRating', searchFilters.minRating.toString())
       }
       if (searchFilters.sort !== 'relevance') {
-        params.append('sort', searchFilters.sort),
+        params.append('sort', searchFilters.sort)
       }
 
       const response = await fetch(`/api/search?${params}`),
@@ -404,7 +404,7 @@ export const SearchResultsPage: React.FC = () => {
       if (page === 1) {
         setResults(data.results)
       } else {
-        setResults(prev => [...prev, ...data.results]),
+        setResults(prev => [...prev, ...data.results])
       }
       
       setTotalCount(data.totalCount),
@@ -415,13 +415,13 @@ export const SearchResultsPage: React.FC = () => {
         term, 
         resultCount: data.results.length, 
         totalCount: data.totalCount 
-      }),
+      })
     } catch (error) {
       logErrorToProduction('Search failed', { data: error }),
       setResults([]),
-      setTotalCount(0),
+      setTotalCount(0)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -429,14 +429,14 @@ export const SearchResultsPage: React.FC = () => {
   useEffect(() => {
     if (searchTerm.trim()) {
       performSearch(searchTerm, 1, filters),
-      setCurrentPage(1),
+      setCurrentPage(1)
     }
   }, [searchTerm, filters]),
 
   // Handle search input
   const handleSearch = (term: string) => {
     setSearchTerm(term),
-    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true }),
+    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })
   },
 
   // Handle filter changes
@@ -447,7 +447,7 @@ export const SearchResultsPage: React.FC = () => {
   // Load more results
   const loadMore = () => {
     if (hasMore && !loading) {
-      performSearch(searchTerm, currentPage + 1),
+      performSearch(searchTerm, currentPage + 1)
     }
   },
 
@@ -630,7 +630,7 @@ export const SearchResultsPage: React.FC = () => {
         </div>
       )}
     </div>
-  ),
+  )
 },
 
 export default SearchResultsPage, 

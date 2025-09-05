@@ -19,7 +19,6 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-
 // Form validation schema
 const signupSchema = z
   .object({
@@ -61,20 +60,20 @@ export default function Signup() {
     
     setIsSubmitting(true),
     try {
-      await signup(data.email, data.password, data.displayName),
+      await signup(data.email, data.password, data.displayName)
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />,
+    return <Navigate to="/" />
   }
   
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />,
+    return <Navigate to="/onboarding" />
   }
 
   return (
@@ -328,5 +327,5 @@ export default function Signup() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

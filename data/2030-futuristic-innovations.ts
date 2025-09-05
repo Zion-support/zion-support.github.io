@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface FuturisticInnovation2030 {
   id: string,
   name: string,
@@ -51,10 +50,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',
     features: [
-      'Consciousness development algorithmsEmotional intelligence training',
-      'Personality customization engineContext awareness systems',
-      'Self-reflection capabilitiesEthical decision-making frameworks',
-      'Consciousness monitoring toolsMulti-modal consciousness fusion',
+      'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systems',
+      'Self-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusion',
       'Real-time consciousness metricsConsciousness evolution tracking'
     ],
     popular: true,
@@ -97,10 +94,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes human emotions in real-time through voice, facial expressions, and text, then generates empathetic and contextually appropriate responses.',
     features: [
-      'Real-time emotion detectionMulti-modal emotion analysis',
-      'Empathetic response generationEmotional context understanding',
-      'Emotion-based decision makingEmotional intelligence training',
-      'Emotion tracking over timeCultural emotion adaptation',
+      'Real-time emotion detectionMulti-modal emotion analysisEmpathetic response generationEmotional context understanding',
+      'Emotion-based decision makingEmotional intelligence trainingEmotion tracking over timeCultural emotion adaptation',
       'Privacy-preserving emotion analysisEmotion-based analytics dashboard'
     ],
     popular: true,
@@ -144,10 +139,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Next-generation quantum internet security gateway providing unbreakable encryption, quantum key distribution, and post-quantum cryptography for ultra-secure communications.',
     features: [
-      'Quantum key distribution (QKD)Post-quantum cryptography',
-      'Quantum-resistant algorithmsReal-time quantum encryption',
-      'Quantum network securityQuantum threat detection',
-      'Quantum-safe protocolsQuantum network monitoring',
+      'Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant algorithmsReal-time quantum encryption',
+      'Quantum network securityQuantum threat detectionQuantum-safe protocolsQuantum network monitoring',
       'Quantum key managementQuantum security analytics'
     ],
     popular: true,
@@ -190,10 +183,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Groundbreaking platform leveraging DNA molecules for ultra-dense data storage and parallel computing, enabling massive computational power in microscopic spaces.',
     features: [
-      'DNA data encoding/decodingParallel DNA computation',
-      'Ultra-dense data storageDNA synthesis automation',
-      'DNA sequencing integrationMolecular computing',
-      'DNA-based algorithmsBiocompatible interfaces',
+      'DNA data encoding/decodingParallel DNA computationUltra-dense data storageDNA synthesis automation',
+      'DNA sequencing integrationMolecular computingDNA-based algorithmsBiocompatible interfaces',
       'DNA error correctionDNA computing analytics'
     ],
     popular: true,
@@ -237,10 +228,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital manufacturing. Enables sustainable space exploration and resource utilization.',
     features: [
-      'Asteroid identification and mappingAutomated mining operations',
-      'Space resource extractionOrbital manufacturing',
-      'Space logistics managementResource processing automation',
-      'Space safety protocolsResource transportation',
+      'Asteroid identification and mappingAutomated mining operationsSpace resource extractionOrbital manufacturing',
+      'Space logistics managementResource processing automationSpace safety protocolsResource transportation',
       'Space mining analyticsRegulatory compliance tools'
     ],
     popular: true,
@@ -283,10 +272,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Comprehensive platform for creating immersive metaverse experiences, virtual worlds, and digital reality applications with advanced AI, blockchain, and spatial computing.',
     features: [
-      '3D world building toolsAI-powered NPCs',
-      'Blockchain integrationVR/AR support',
-      'Multi-user collaborationReal-time rendering',
-      'Spatial audioDigital asset marketplace',
+      '3D world building toolsAI-powered NPCsBlockchain integrationVR/AR support',
+      'Multi-user collaborationReal-time renderingSpatial audioDigital asset marketplace',
       'Metaverse analyticsCross-platform deployment'
     ],
     popular: true,
@@ -330,10 +317,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Revolutionary DevOps platform that operates completely autonomously, managing infrastructure, deployments, monitoring, and optimization without human intervention.',
     features: [
-      'Autonomous infrastructure managementSelf-healing systems',
-      'Automated deployment pipelinesIntelligent monitoring',
-      'Predictive maintenanceAuto-scaling capabilities',
-      'Security automationPerformance optimization',
+      'Autonomous infrastructure managementSelf-healing systemsAutomated deployment pipelinesIntelligent monitoring',
+      'Predictive maintenanceAuto-scaling capabilitiesSecurity automationPerformance optimization',
       'Cost optimizationCompliance automation'
     ],
     popular: true,
@@ -376,10 +361,8 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     period: '/month',
     description: 'Complete zero trust network architecture implementation providing comprehensive security through continuous verification, micro-segmentation, and least-privilege access.',
     features: [
-      'Continuous identity verificationMicro-segmentation',
-      'Least-privilege accessMulti-factor authentication',
-      'Behavioral analyticsThreat detection',
-      'Access control policiesNetwork monitoring',
+      'Continuous identity verificationMicro-segmentationLeast-privilege accessMulti-factor authentication',
+      'Behavioral analyticsThreat detectionAccess control policiesNetwork monitoring',
       'Security automationCompliance reporting'
     ],
     popular: true,

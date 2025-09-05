@@ -9,7 +9,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -149,7 +148,7 @@ export default function EquipmentDetail() {
         </div>
         <Footer />
       </>
-    ),
+    )
   }
 
   const handleAddToCart = () => {
@@ -160,8 +159,8 @@ export default function EquipmentDetail() {
       setIsAdding(false),
       toast({
         title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`}),
-    }, 800),
+        description: `${quantity}x ${equipment.name} added to your cart.`})
+    }, 800)
   },
 
   const handleBuyNow = () => {
@@ -172,8 +171,8 @@ export default function EquipmentDetail() {
       setIsAdding(false),
       toast({
         title: "Proceeding to checkout",
-        description: `Preparing your order for ${equipment.name}.`}),
-    }, 800),
+        description: `Preparing your order for ${equipment.name}.`})
+    }, 800)
   },
 
   return (
@@ -423,5 +422,5 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

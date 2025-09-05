@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
-
 const ext = (url: string, label?: string) => (
 	<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>
 ),
@@ -404,5 +403,5 @@ export default function MarketPricingPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

@@ -20,7 +20,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
   const toggle = () => setOpen((v) => !v),
 
   const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path),
+    await navigator.clipboard.writeText(node.path)
   },
 
   const clonePath = async () => {
@@ -31,7 +31,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         "Content-Type": "application/json",
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
-      body: JSON.stringify({ path: node.path })}),
+      body: JSON.stringify({ path: node.path })})
   },
 
   const deploy = () => onDeploy && onDeploy(node.path),
@@ -63,7 +63,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         </div>
       )}
     </div>
-  ),
+  )
 }
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -73,7 +73,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
-  ),
+  )
 }
 
 export default Tree,

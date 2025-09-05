@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { buildPressRelease } from '../../../utils/mediaKit',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {},
@@ -22,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const text = completion.choices?.[0]?.message?.content?.trim(),
         if (text) {
           res.status(200).json({ ok: true, text }),
-          return,
+          return
         }
       } catch (_) {
         // fall through to template
@@ -30,8 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any),
-    res.status(200).json({ ok: true, text, fallback: true }),
+    res.status(200).json({ ok: true, text, fallback: true })
   } catch (e: any) {
-    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' }),
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
   }
 }

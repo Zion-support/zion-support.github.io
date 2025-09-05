@@ -1,12 +1,11 @@
 
 import { NotificationType } from './types',
 import { createNotification } from './createNotification',
-
 /**
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
-  const types: NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_request', 'onboardingsystem'],
   const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {
@@ -34,5 +33,5 @@ export async function createTestNotification(userId: string) {
     sendEmail: true,
     actionUrl: actions[randomType].url,
     actionText: actions[randomType].text
-  }),
+  })
 }

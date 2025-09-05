@@ -2,7 +2,6 @@
 // Email analysis functionality
 import { suspiciousEmailDomains } from './constants',
 import { EmailAnalysisResult } from './types',
-
 /**
  * Analyzes email for suspicious patterns
  */
@@ -16,12 +15,12 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
   for (const suspiciousDomain of suspiciousEmailDomains) {
     if (domain.includes(suspiciousDomain)) {
       reasons.push(`Suspicious email domain: ${domain}`),
-      break,
+      break
     }
   }
   
   return {
     isSuspicious: reasons.length > 0,
     reasons
-  },
+  }
 },

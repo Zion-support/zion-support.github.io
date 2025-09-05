@@ -12,7 +12,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
 import { SERVICES } from '@/data/servicesData',
 import { useCurrency } from '@/hooks/useCurrency',
-
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
 
@@ -124,7 +123,7 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
       </div>
     </CardHeader>
   </Card>
-),
+)
 },
 
 // Loading grid
@@ -159,11 +158,11 @@ export default function ServicesPage() {
     let filteredServices = allServices,
     
     if (filterCategory) {
-      filteredServices = filteredServices.filter(s => s.category === filterCategory),
+      filteredServices = filteredServices.filter(s => s.category === filterCategory)
     }
     
     if (showRecommended) {
-      filteredServices = getRecommendedServices(filteredServices),
+      filteredServices = getRecommendedServices(filteredServices)
     }
     
     filteredServices.sort((a, b) => {
@@ -188,7 +187,7 @@ export default function ServicesPage() {
       items,
       hasMore: endIndex < filteredServices.length || page < 10,
       total: filteredServices.length
-    },
+    }
   }, [sortBy, filterCategory, showRecommended, totalGenerated]),
 
   const {
@@ -205,23 +204,23 @@ export default function ServicesPage() {
 
   useEffect(() => {
     refresh(),
-    setTotalGenerated(0),
+    setTotalGenerated(0)
   }, [sortBy, filterCategory, showRecommended]),
 
   const marketStats = useMemo(() => {
     if (services.length === 0) return null,
-    return getServicesMarketStats(services),
+    return getServicesMarketStats(services)
   }, [services]),
 
   const categories = useMemo(() => {
-    return Array.from(new Set(services.map(s => s.category).filter(Boolean))),
+    return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
   }, [services]),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   if (loading && services.length === 0) {
@@ -235,7 +234,7 @@ export default function ServicesPage() {
         </motion.div>
         <ServicesLoadingGrid />
       </div>
-    ),
+    )
   }
 
   if (error) {
@@ -245,7 +244,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
       </div>
-    ),
+    )
   }
 
   return (
@@ -314,5 +313,5 @@ export default function ServicesPage() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }

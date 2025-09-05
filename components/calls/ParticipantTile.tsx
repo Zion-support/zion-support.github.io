@@ -17,7 +17,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
-        track.attach(audioRef.current),
+        track.attach(audioRef.current)
       }
     },
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
@@ -25,13 +25,13 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.detach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current),
+        track.detach(audioRef.current)
       }
     },
 
     participant.tracks.forEach(pub => {
       const track = pub.track,
-      if (track) handleTrackSubscribed(pub, track),
+      if (track) handleTrackSubscribed(pub, track)
     }),
 
     participant.on('trackSubscribed', handleTrackSubscribed),
@@ -39,8 +39,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed),
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed),
-    },
+      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
+    }
   }, [participant]),
 
   return (
@@ -51,5 +51,5 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  ),
+  )
 }

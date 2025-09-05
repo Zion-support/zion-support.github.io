@@ -23,7 +23,6 @@ import api from '@/services/apiClient',
 import { toast } from '@/hooks/use-toast',
 import { useAuth } from '@/hooks/useAuth',
 import { LoginModal } from '@/components/auth/LoginModal',
-
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -68,7 +67,7 @@ export function ContactPublisherModal({
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true),
-      return,
+      return
     }
     const values = form.getValues(),
     setIsSubmitting(true),
@@ -81,9 +80,9 @@ export function ContactPublisherModal({
         fromUser: user.id}),
       toast.success('Message sent'),
       form.reset(),
-      onClose(),
+      onClose()
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -170,5 +169,5 @@ export function ContactPublisherModal({
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  ),
+  )
 }

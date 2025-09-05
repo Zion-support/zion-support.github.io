@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/form",
 import { Checkbox } from "@/components/ui/checkbox",
 import { ContractFormValues } from "./ContractForm",
-
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }
@@ -42,7 +41,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'nda'])
                           : field.onChange(
                               currentValues.filter((value) => value !== 'nda')
-                            ),
+                            )
                       }}
                     />
                   </FormControl>
@@ -72,7 +71,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'ip'])
                           : field.onChange(
                               currentValues.filter((value) => value !== 'ip')
-                            ),
+                            )
                       }}
                     />
                   </FormControl>
@@ -102,7 +101,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'termination'])
                           : field.onChange(
                               currentValues.filter((value) => value !== 'termination')
-                            ),
+                            )
                       }}
                     />
                   </FormControl>
@@ -132,7 +131,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'revisions'])
                           : field.onChange(
                               currentValues.filter((value) => value !== 'revisions')
-                            ),
+                            )
                       }}
                     />
                   </FormControl>
@@ -151,5 +150,5 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
         </FormItem>
       )}
     />
-  ),
+  )
 }

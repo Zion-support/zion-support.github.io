@@ -88,8 +88,7 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-      'Advanced Research AutomationQuantum Research Platform',
-      'AI Research AssistantBiotech Research Suite'
+      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
     ]
   }
 ],
@@ -348,5 +347,5 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
     </nav>
-  ),
+  )
 }

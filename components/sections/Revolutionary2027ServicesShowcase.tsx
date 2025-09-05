@@ -2,7 +2,6 @@ import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react',
 import Link from 'next/link',
-
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
     {
@@ -14,7 +13,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulationNeural pattern recognition', 'Emotional intelligence modelingReal-time brain-computer interface'],
+      features: ['Quantum consciousness simulationNeural pattern recognitionEmotional intelligence modelingReal-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
     },
@@ -27,7 +26,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
-      features: ['Autonomous mining operationsResource detection algorithms', 'Risk assessment AIMission planning automation'],
+      features: ['Autonomous mining operationsResource detection algorithmsRisk assessment AIMission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
     },
@@ -40,7 +39,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
-      features: ['DNA-based computationMolecular algorithm optimization', 'Real-time molecular analysisAlgorithm library (100+ algorithms)'],
+      features: ['DNA-based computationMolecular algorithm optimizationReal-time molecular analysisAlgorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
     },
@@ -53,7 +52,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
-      features: ['3D holographic renderingReal-time 3D modeling', 'Holographic projection systemsAI-powered content generation'],
+      features: ['3D holographic renderingReal-time 3D modelingHolographic projection systemsAI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
     },
@@ -66,7 +65,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
-      features: ['Autonomous diagnosisTreatment recommendation AI', 'Continuous learning algorithmsPredictive health analytics'],
+      features: ['Autonomous diagnosisTreatment recommendation AIContinuous learning algorithmsPredictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
     },
@@ -79,7 +78,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
-      features: ['Quantum key distributionUnbreakable encryption', 'Real-time threat detectionZero-trust architecture'],
+      features: ['Quantum key distributionUnbreakable encryptionReal-time threat detectionZero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }

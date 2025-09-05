@@ -64,7 +64,7 @@ export function ThemeProvider({
   const setCurrentTheme = (newTheme: Theme) => {
     safeStorage.setItem("theme", newTheme),
     applyTheme(newTheme),
-    setTheme(newTheme),
+    setTheme(newTheme)
   },
 
   const toggleTheme = () => {
@@ -75,7 +75,7 @@ export function ThemeProvider({
         ? "dark"
         : "light"
     }
-    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark"),
+    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")
   },
 
   const value = {

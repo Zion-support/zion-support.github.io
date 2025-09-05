@@ -1,7 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
-
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 export default function AIEvalsPage() {
@@ -13,9 +12,9 @@ export default function AIEvalsPage() {
 	},
 
 	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost tracking', 'Toxicity/PII checksCSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)', 'CI evals via APISlack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logs', 'SOC2 supportSAML/SSO'] }],
+		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] },
+		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }],
 
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
@@ -79,5 +78,5 @@ export default function AIEvalsPage() {
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
-	),
+	)
 }

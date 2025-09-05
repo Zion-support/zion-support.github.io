@@ -3,7 +3,6 @@
 import { FraudFlag, FraudSeverity } from '@/types/fraud',
 import { analyzeContent } from './analyzeContent',
 import { flagContent } from './flagContent',
-
 /**
  * Create a monitoring system helper to easily monitor any content
  */
@@ -25,7 +24,7 @@ export const monitorContent = async (
       r.includes('external') || 
       r.includes('bypass')
     )) {
-      severity = 'dangerous',
+      severity = 'dangerous'
     }
     
     await flagContent(

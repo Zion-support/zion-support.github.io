@@ -3,7 +3,6 @@ import ModuleCard from '../../components/academy/ModuleCard',
 import ProgressTracker from '../../components/academy/ProgressTracker',
 import CertificateView from '../../components/academy/CertificateView',
 import { founderCourseModules } from '../../components/academy/courseData',
-
 const STORAGE_KEY = 'founder_course_progress_v1',
 
 export default function FounderCoursePage() {
@@ -12,13 +11,13 @@ export default function FounderCoursePage() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY),
-      if (raw) setCompleted(JSON.parse(raw)),
+      if (raw) setCompleted(JSON.parse(raw))
     } catch {}
   }, []),
 
   useEffect(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(completed)),
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(completed))
     } catch {}
   }, [completed]),
 
@@ -29,7 +28,7 @@ export default function FounderCoursePage() {
   ),
 
   const toggleComplete = (moduleId: string) => {
-    setCompleted((prev) => ({ ...prev, [moduleId]: !prev[moduleId] })),
+    setCompleted((prev) => ({ ...prev, [moduleId]: !prev[moduleId] }))
   },
 
   return (
@@ -61,5 +60,5 @@ export default function FounderCoursePage() {
         Operator prompt: Create a 5-module course for founders launching a decentralized AI work protocol — include mission, DAO, token, governance, and deployment tools.
       </div>
     </div>
-  ),
+  )
 }

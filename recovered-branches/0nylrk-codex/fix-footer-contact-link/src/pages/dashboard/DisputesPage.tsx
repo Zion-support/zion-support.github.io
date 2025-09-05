@@ -5,7 +5,6 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDashboard } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
-
 function DisputesPage() {
   return (
     <ProtectedRoute>
@@ -19,7 +18,7 @@ function DisputesPage() {
         <Footer />
       </>
     </ProtectedRoute>
-  ),
+  )
 }
 
 export default DisputesPage,

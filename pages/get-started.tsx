@@ -44,10 +44,9 @@ export default function GetStarted() {
       description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       features: [
-        'AI consciousness developmentEmotional intelligence training',
-        'Self-aware neural networksAutonomous decision making'
+        'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
       ],
-      useCases: ['Customer SuccessHR Analytics', 'Mental HealthEducation'],
+      useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
       timeline: '6-12 months',
       complexity: 'Advanced'
     },
@@ -57,10 +56,9 @@ export default function GetStarted() {
       description: 'Leverage quantum computing for cryptography, optimization, and simulation',
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
-        'Quantum algorithmsPost-quantum cryptography',
-        'Quantum machine learningQuantum simulation'
+        'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
       ],
-      useCases: ['Financial ServicesHealthcare', 'ResearchCybersecurity'],
+      useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
       timeline: '8-18 months',
       complexity: 'Expert'
     },
@@ -70,10 +68,9 @@ export default function GetStarted() {
       description: 'Build self-managing and self-optimizing business operations',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       features: [
-        'Process automationSelf-healing infrastructure',
-        'Predictive maintenanceAutonomous operations'
+        'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
       ],
-      useCases: ['ManufacturingDevOps', 'Customer ServiceSupply Chain'],
+      useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
       timeline: '3-9 months',
       complexity: 'Intermediate'
     },
@@ -83,10 +80,9 @@ export default function GetStarted() {
       description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
       icon: <Building className="w-8 h-8 text-blue-400" />,
       features: [
-        'Cloud migrationMicroservices architecture',
-        'AI-powered analyticsSecurity automation'
+        'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
       ],
-      useCases: ['Digital TransformationLegacy Modernization', 'Data AnalyticsSecurity'],
+      useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
       timeline: '4-12 months',
       complexity: 'Intermediate'
     }
@@ -134,13 +130,13 @@ export default function GetStarted() {
 
   const handleNextStep = () => {
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1),
+      setCurrentStep(currentStep + 1)
     }
   },
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1),
+      setCurrentStep(currentStep - 1)
     }
   },
 

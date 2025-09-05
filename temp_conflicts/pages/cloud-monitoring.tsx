@@ -47,22 +47,22 @@ export default function CloudMonitoringPage() {
     {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
-      metrics: ['CPU UsageMemory Utilization', 'Disk I/ONetwork Performance', 'Container Metrics']
+      metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork Performance', 'Container Metrics']
     },
     {
       category: 'Applications',
       icon: <Code className="w-6 h-6 text-green-400" />,
-      metrics: ['Response TimeError Rates', 'ThroughputUser Experience', 'API Performance']
+      metrics: ['Response TimeError RatesThroughputUser Experience', 'API Performance']
     },
     {
       category: 'Databases',
       icon: <Database className="w-6 h-6 text-purple-400" />,
-      metrics: ['Query PerformanceConnection Pool', 'Index UsageReplication Lag', 'Storage Growth']
+      metrics: ['Query PerformanceConnection PoolIndex UsageReplication Lag', 'Storage Growth']
     },
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      metrics: ['Threat DetectionAccess Logs', 'Vulnerability ScansCompliance Status', 'Audit Trails']
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance Status', 'Audit Trails']
     }
   ],
 
@@ -73,8 +73,7 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 10 serversBasic monitoring',
-        'Email alerts7-day data retention',
+        'Up to 10 serversBasic monitoringEmail alerts7-day data retention',
         'Community supportMobile app access'
       ],
       popular: false,
@@ -87,10 +86,8 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 100 serversAdvanced monitoring',
-        'SMS & Slack alerts30-day data retention',
-        'Priority supportCustom dashboards',
-        'API accessTeam collaboration'
+        'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retention',
+        'Priority supportCustom dashboardsAPI accessTeam collaboration'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -102,10 +99,8 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited serversFull monitoring suite',
-        'Custom integrations1-year data retention',
-        'Dedicated supportWhite-label solution',
-        'SLA guaranteeOn-premise option'
+        'Unlimited serversFull monitoring suiteCustom integrations1-year data retention',
+        'Dedicated supportWhite-label solutionSLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',
@@ -129,25 +124,25 @@ export default function CloudMonitoringPage() {
       title: 'DevOps Teams',
       description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
       icon: '🔄',
-      benefits: ['Faster deploymentsReduced downtime', 'Better collaborationAutomated scaling']
+      benefits: ['Faster deploymentsReduced downtimeBetter collaborationAutomated scaling']
     },
     {
       title: 'SaaS Companies',
       description: 'Track user experience, application performance, and business metrics.',
       icon: '💼',
-      benefits: ['User satisfactionRevenue optimization', 'Competitive advantageCustomer retention']
+      benefits: ['User satisfactionRevenue optimizationCompetitive advantageCustomer retention']
     },
     {
       title: 'E-commerce',
       description: 'Monitor website performance, payment processing, and inventory systems.',
       icon: '🛒',
-      benefits: ['Higher conversionFaster checkout', 'Inventory optimizationRevenue growth']
+      benefits: ['Higher conversionFaster checkoutInventory optimizationRevenue growth']
     },
     {
       title: 'Financial Services',
       description: 'Ensure compliance, security, and 24/7 availability of critical systems.',
       icon: '💰',
-      benefits: ['Regulatory complianceFraud detection', 'Risk managementCustomer trust']
+      benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
   ],
 

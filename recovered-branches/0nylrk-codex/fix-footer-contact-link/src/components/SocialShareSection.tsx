@@ -2,7 +2,6 @@
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
 import { toast } from "./ui/use-toast",
-
 export function SocialShareSection() {
   // Current URL and text to share
   const shareUrl = encodeURIComponent(window.location.href),
@@ -10,15 +9,15 @@ export function SocialShareSection() {
   
   // Social sharing functions
   const shareToTwitter = () => {
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank"),
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
   },
   
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank"),
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
   },
   
   const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank"),
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
   
   const copyLinkToClipboard = () => {
@@ -26,15 +25,15 @@ export function SocialShareSection() {
       .then(() => {
         toast({
           title: "Link Copied!",
-          description: "The link has been copied to your clipboard"}),
+          description: "The link has been copied to your clipboard"})
       })
       .catch(() => {
         toast({
           title: "Failed to copy",
           description: "Please try again or copy the URL manually",
           variant: "destructive"
-        }),
-      }),
+        })
+      })
   },
 
   const shareLinks = [
@@ -87,5 +86,5 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

@@ -2,7 +2,6 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import React, { useMemo, useState } from 'react',
 import AIAssistant from '../../components/ui/AIAssistant',
-
 const NewProposal: NextPage = () => {
   const [jobBrief, setJobBrief] = useState(''),
   const [resumeSummary, setResumeSummary] = useState(''),
@@ -46,7 +45,7 @@ const NewProposal: NextPage = () => {
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
-  ),
+  )
 },
 
 export default NewProposal,

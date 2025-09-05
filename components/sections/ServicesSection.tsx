@@ -20,7 +20,7 @@ const ServicesSection: React.FC = () => {
       icon: Brain,
       title: 'AI Development',
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning ModelsNatural Language Processing', 'Computer VisionPredictive Analytics'],
+      features: ['Machine Learning ModelsNatural Language ProcessingComputer VisionPredictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'
     },
@@ -28,7 +28,7 @@ const ServicesSection: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS/Azure/GCPMicroservices', 'Serverless ArchitectureDevOps Automation'],
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/cloud-architecture'
     },
@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
       icon: RefreshCw,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your business.',
-      features: ['Process AutomationLegacy System Migration', 'Change ManagementDigital Strategy'],
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'
     },
@@ -44,7 +44,7 @@ const ServicesSection: React.FC = () => {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-      features: ['Sensor NetworksReal-time Monitoring', 'Data AnalyticsEdge Computing'],
+      features: ['Sensor NetworksReal-time MonitoringData AnalyticsEdge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
     },
@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
       icon: Shield,
       title: 'Blockchain Solutions',
       description: 'Decentralized technology platforms and smart contract development.',
-      features: ['Smart ContractsDeFi Applications', 'NFT PlatformsSupply Chain Solutions'],
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions'
     },
@@ -60,7 +60,7 @@ const ServicesSection: React.FC = () => {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
-      features: ['Big Data ProcessingReal-time Dashboards', 'Predictive ModelingData Visualization'],
+      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics'
     }

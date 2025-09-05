@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils",
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
-
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -48,7 +47,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
+    setFormData(prev => ({ ...prev, [name]: value }))
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -86,26 +85,26 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
-      setCurrentStep('details'),
+      setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error),
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
-    else if (currentStep === 'timeline') setCurrentStep('contact'),
+    else if (currentStep === 'timeline') setCurrentStep('contact')
   },
 
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details'),
-    else if (currentStep === 'contact') setCurrentStep('timeline'),
+    else if (currentStep === 'contact') setCurrentStep('timeline')
   },
 
   return (
@@ -335,5 +334,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </form>
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

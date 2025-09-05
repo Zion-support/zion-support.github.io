@@ -9,7 +9,6 @@ import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
-
 export function WebhookManager() {
   const { 
     webhooks,
@@ -39,7 +38,7 @@ export function WebhookManager() {
   ],
   
   useEffect(() => {
-    fetchWebhooks(),
+    fetchWebhooks()
   }, []),
   
   const handleAddEvent = () => {
@@ -47,27 +46,27 @@ export function WebhookManager() {
     
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
-      return,
+      return
     }
     
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
-    }),
+    })
   },
   
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-    }),
+    })
   },
   
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
-      return,
+      return
     }
     
     await createWebhook(
@@ -84,11 +83,11 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
       secret: ""
-    }),
+    })
   },
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
-    await testWebhook(webhookId, eventType),
+    await testWebhook(webhookId, eventType)
   },
   
   return (
@@ -289,5 +288,5 @@ export function WebhookManager() {
         )}
       </div>
     </div>
-  ),
+  )
 }

@@ -1,7 +1,7 @@
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
-  className?: string,
+  className?: string
 }
 
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
@@ -34,5 +34,5 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
       </svg>
       {text && <span className="text-sm">{text}</span>}
     </div>
-  ),
+  )
 }

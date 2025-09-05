@@ -45,7 +45,7 @@ export const useStableCallback = <T extends (...args: any[]) => any>(,
   callback: T,
   deps: React.DependencyList): T => {,
   return useCallback(callback, deps)
-},
+}
 },
 ,
 // Lazy loading wrapper with intersection observer,
@@ -65,7 +65,7 @@ export const LazyLoadWrapper: React.FC<{,
         if (entry.isIntersecting && !hasLoaded) {,
           setIsVisible(true),
           setHasLoaded(true)
-        },
+        }
       },
       { threshold, rootMargin },
     ),
@@ -131,8 +131,8 @@ export const OptimizedImage: React.FC<{,
         </div>)},
     </div>,
   )
-},
-  },
+}
+  }
 },
 ,
 // Debounced search hook,
@@ -146,7 +146,7 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {,
 ,
     return () => {,
       clearTimeout(handler)
-    },
+    }
   }, [value, delay]),
 ,
   return debouncedValue
@@ -170,5 +170,5 @@ export const usePerformanceMetrics = () => {,
     }))
   }, []),
 ,
-  return { metrics, recordRender },
+  return { metrics, recordRender }
 },

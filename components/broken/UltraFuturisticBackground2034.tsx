@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2034Props {
   intensity?: number,
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic',
+  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
 }
 
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
@@ -22,7 +21,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     resizeCanvas(),
@@ -71,8 +70,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: Math.random() * 100,
           maxLife: 100,
-          type: ['quantumneural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
-        }),
+          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
+        })
       }
     },
 
@@ -84,7 +83,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           y: Math.random() * canvas.height,
           connections: [],
           activation: Math.random()
-        }),
+        })
       }
 
       // Create connections
@@ -93,10 +92,10 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         for (let j = 0, j < numConnections, j++) {
           const targetIndex = Math.floor(Math.random() * neuralNodes.length),
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
-            node.connections.push(targetIndex),
+            node.connections.push(targetIndex)
           }
         }
-      }),
+      })
     },
 
     // Initialize entanglement lines
@@ -114,7 +113,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           y2,
           strength: Math.random(),
           life: Math.random() * 100
-        }),
+        })
       }
     },
 
@@ -144,15 +143,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         if (particle.type === 'quantum') {
           ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`,
           ctx.shadowColor = 'cyan',
-          ctx.shadowBlur = 10,
+          ctx.shadowBlur = 10
         } else if (particle.type === 'neural') {
           ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`,
           ctx.shadowColor = 'magenta',
-          ctx.shadowBlur = 8,
+          ctx.shadowBlur = 8
         } else {
           ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`,
           ctx.shadowColor = 'lime',
-          ctx.shadowBlur = 6,
+          ctx.shadowBlur = 6
         }
 
         ctx.beginPath(),
@@ -162,7 +161,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
         // Remove dead particles
         if (particle.life <= 0) {
-          particles.splice(index, 1),
+          particles.splice(index, 1)
         }
       }),
 
@@ -185,7 +184,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         ctx.restore(),
 
         if (line.life <= 0) {
-          entanglementLines.splice(index, 1),
+          entanglementLines.splice(index, 1)
         }
       }),
 
@@ -209,7 +208,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.moveTo(node.x, node.y),
             ctx.lineTo(targetNode.x, targetNode.y),
             ctx.stroke(),
-            ctx.restore(),
+            ctx.restore()
           }
         }),
 
@@ -223,7 +222,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         ctx.beginPath(),
         ctx.arc(node.x, node.y, 4, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }),
 
       // Add new particles
@@ -236,8 +235,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: 100,
           maxLife: 100,
-          type: ['quantumneural', 'holographic'][Math.floor(Math.random() * 3)] as ParticleType
-        }),
+          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
+        })
       }
 
       // Add new entanglement lines
@@ -254,30 +253,30 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           y2,
           strength: Math.random(),
           life: 100
-        }),
+        })
       }
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     animate(),
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, [intensity]),
 
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY }),
+      setMousePosition({ x: e.clientX, y: e.clientY })
     },
 
     window.addEventListener('mousemove', handleMouseMove),
-    return () => window.removeEventListener('mousemove', handleMouseMove),
+    return () => window.removeEventListener('mousemove', handleMouseMove)
   }, []),
 
   return (
@@ -401,7 +400,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2034,

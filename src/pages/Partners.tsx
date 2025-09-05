@@ -28,13 +28,13 @@ export default function Partners() {
     async function checkHealth() {
       try {
         const res = await fetch('/api/auth/health'),
-        setAuthServiceAvailable(res.ok),
+        setAuthServiceAvailable(res.ok)
       } catch (err) {
         logErrorToProduction('Partner login auth health check failed', { data: err }),
-        setAuthServiceAvailable(false),
+        setAuthServiceAvailable(false)
       }
     }
-    checkHealth(),
+    checkHealth()
   }, []),
 
   // If not authenticated, display partner program info and signup CTA
@@ -172,7 +172,7 @@ export default function Partners() {
           )}
         </div>
       </div>
-    ),
+    )
   }
 
   // Authenticated user view - Partner Dashboard
@@ -232,5 +232,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  ),
+  )
 }

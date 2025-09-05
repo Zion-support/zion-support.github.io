@@ -11,7 +11,6 @@ import {
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -79,7 +78,7 @@ const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`,
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
-  return 'Contact for pricing',
+  return 'Contact for pricing'
 },
 
 const getServiceFeatures = (service: any) => {
@@ -108,8 +107,8 @@ export default function AdvancedServicesShowcase() {
         if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),
         if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),
         if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
-        return false,
-      }),
+        return false
+      })
     }
 
     // Filter by search term
@@ -119,10 +118,10 @@ export default function AdvancedServicesShowcase() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
-    setFilteredServices(filtered),
+    setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),
 
   const ServiceCard = ({ service }: { service: any }) => (

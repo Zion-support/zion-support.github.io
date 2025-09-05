@@ -6,7 +6,6 @@ import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
-
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -149,5 +148,5 @@ export default function ServicesPage() {
       />
       <TrustedBySection />
     </AppLayout>
-  ),
+  )
 }

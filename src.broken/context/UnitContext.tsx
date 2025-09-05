@@ -1,15 +1,14 @@
 import { createContext, useContext, ReactNode } from 'react',
 import { useLocalStorage } from '@/hooks/useLocalStorage',
 import type { UnitSystem } from '@/utils/unitConversion',
-
 function getDefaultUnit(): UnitSystem {
   if (typeof navigator !== 'undefined') {
     const region = navigator.language.split('-')[1],
     if (region === 'US' || region === 'LR' || region === 'MM') {
-      return 'imperial',
+      return 'imperial'
     }
   }
-  return 'metric',
+  return 'metric'
 }
 
 interface UnitContextState {
@@ -30,7 +29,7 @@ export function UnitProvider({ children }: { children: ReactNode }) {
     <UnitContext.Provider value={{ unit, setUnit, toggleUnit }}>
       {children}
     </UnitContext.Provider>
-  ),
+  )
 }
 
 export const useUnitSystem = () => useContext(UnitContext),

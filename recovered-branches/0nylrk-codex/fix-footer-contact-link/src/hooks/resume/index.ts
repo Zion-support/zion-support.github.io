@@ -8,7 +8,6 @@ import { useEducation } from './useEducation',
 import { useSkills } from './useSkills',
 import { useCertifications } from './useCertifications',
 import { useResumeList } from './useResumeList',
-
 export function useResume() {
   const [resume, setResume] = useState<Resume | null>(null),
   
@@ -44,9 +43,9 @@ export function useResume() {
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume(resumeId),
     if (result) {
-      setResume(result),
+      setResume(result)
     }
-    return result,
+    return result
   },
   
   return {
@@ -80,7 +79,7 @@ export function useResume() {
     addCertification: certOperations.addCertification,
     updateCertification: certOperations.updateCertification,
     deleteCertification: certOperations.deleteCertification
-  },
+  }
 }
 
 // Export all hooks

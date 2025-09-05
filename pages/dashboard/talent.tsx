@@ -16,12 +16,12 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent'),
-      if (raw) setCompleted(JSON.parse(raw)),
+      if (raw) setCompleted(JSON.parse(raw))
     } catch {}
   }, []),
 
   useEffect(() => {
-    try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)), } catch {}
+    try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]),
 
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
@@ -62,5 +62,5 @@ export default function TalentDashboard() {
         </ul>
       </EnhancedCard>
     </div>
-  ),
+  )
 }

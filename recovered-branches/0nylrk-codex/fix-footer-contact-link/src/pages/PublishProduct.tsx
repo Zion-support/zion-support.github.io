@@ -6,7 +6,6 @@ import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
-
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   
@@ -18,12 +17,12 @@ export default function PublishProduct() {
           Loading...
         </div>
       </div>
-    ),
+    )
   }
   
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />,
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />
   }
 
   return (

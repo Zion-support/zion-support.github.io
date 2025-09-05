@@ -11,7 +11,6 @@ import {
 import Layout from '../components/layout/Layout',
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -59,7 +58,7 @@ export default function InnovativeMicroSaasShowcase() {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
 
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   // Sort services

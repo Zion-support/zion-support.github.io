@@ -14,7 +14,7 @@
       const liveRegion = document.getElementById('live-region'),
       if (liveRegion) {,
         liveRegion.textContent = message
-      },
+      }
     },
 ,
     // Listen for route changes (Next.js specific),
@@ -49,8 +49,8 @@
       },
       if (liveRegion.parentNode) {,
         liveRegion.parentNode.removeChild(liveRegion)
-      },
-    },
+      }
+    }
   }, []),
 ,
   return null
@@ -144,25 +144,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     if (settings.highContrast) {
       root.style.setProperty('--text-color#ffffff'),
       root.style.setProperty('--bg-color#000000'),
-      root.style.setProperty('--accent-color#ffff00'),
+      root.style.setProperty('--accent-color#ffff00')
     } else {
       root.style.removeProperty('--text-color'),
       root.style.removeProperty('--bg-color'),
-      root.style.removeProperty('--accent-color'),
+      root.style.removeProperty('--accent-color')
     }
 
     // Large text
     if (settings.largeText) {
-      root.style.fontSize = '18px',
+      root.style.fontSize = '18px'
     } else {
-      root.style.fontSize = '16px',
+      root.style.fontSize = '16px'
     }
 
     // Reduced motion
     if (settings.reducedMotion) {
-      root.style.setProperty('--reduced-motionreduce'),
+      root.style.setProperty('--reduced-motionreduce')
     } else {
-      root.style.removeProperty('--reduced-motion'),
+      root.style.removeProperty('--reduced-motion')
     }
 
     // Font size
@@ -178,9 +178,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         deuteranopia: 'url(#deuteranopia)',
         tritanopia: 'url(#tritanopia)'
       },
-      root.style.filter = filters[settings.colorBlindMode],
+      root.style.filter = filters[settings.colorBlindMode]
     } else {
-      root.style.filter = 'none',
+      root.style.filter = 'none'
     }
   }, [settings]),
 
@@ -193,7 +193,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     },
 
     document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside)
   }, []),
 
   // Text-to-speech functionality
@@ -215,14 +215,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const stopSpeaking = () => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel(),
-      setIsReading(false),
+      setIsReading(false)
     }
   },
 
   // Screen reader mode
   const toggleScreenReader = () => {
     if (isReading) {
-      stopSpeaking(),
+      stopSpeaking()
     } else {
       // Get main content text
       const mainContent = document.querySelector('main'),
@@ -238,7 +238,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const target = e.target as HTMLElement,
     if (target) {
       setCurrentFocus(target),
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`),
+      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`)
     }
   }, []),
 
@@ -258,22 +258,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       liveRegion.setAttribute('aria-atomictrue'),
       liveRegion.className = 'sr-only',
       document.body.appendChild(liveRegion),
-      announcementRef.current = liveRegion,
+      announcementRef.current = liveRegion
     }
     
     if (announcementRef.current) {
-      announcementRef.current.textContent = message,
+      announcementRef.current.textContent = message
     }
     
     // Remove announcement after a delay
     setTimeout(() => {
       // setAnnouncements(prev => prev.filter(a => a !== message)), // This line was removed
-    }, 5000),
+    }, 5000)
   }, []),
 
   // Auto-optimize accessibility
   useEffect(() => {
-    applySettings(settings),
+    applySettings(settings)
   }, [settings, applySettings]),
 
   // Keyboard navigation enhancement
@@ -285,7 +285,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       
       // Skip if target is an input, textarea, or select
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {
-        return,
+        return
       }
 
       switch (e.key) {
@@ -317,17 +317,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             if (modal.getAttribute('aria-hidden') === 'false') {
               const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]'),
               if (closeButton instanceof HTMLElement) {
-                closeButton.click(),
+                closeButton.click()
               }
             }
           }),
-          break,
+          break
         }
       }
     },
 
     document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)
   }, [settings.keyboardNavigation]),
 
   // Focus management
@@ -348,7 +348,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       // Enhanced focus indicators
       if (settings.focusIndicators) {
         target.style.outline = '3px solid #3b82f6',
-        target.style.outlineOffset = '2px',
+        target.style.outlineOffset = '2px'
       }
     },
 
@@ -365,44 +365,42 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     return () => {
       document.removeEventListener('focusin', handleFocusIn),
-      document.removeEventListener('focusout', handleFocusOut),
-    },
+      document.removeEventListener('focusout', handleFocusOut)
+    }
   }, [settings.screenReader, settings.focusIndicators]),
 
   // Get all focusable elements
   const getFocusableElements = (): HTMLElement[] => {
     const focusableSelectors = [
-      'button:not([disabled])input:not([disabled])',
-      'select:not([disabled])textarea:not([disabled])',
-      'a[href][tabindex]:not([tabindex="-1"])',
-      '[role="button"][role="tab"]',
+      'button:not([disabled])input:not([disabled])select:not([disabled])textarea:not([disabled])',
+      'a[href][tabindex]:not([tabindex="-1"])[role="button"][role="tab"]',
       '[role="menuitem"]'
     ],
     
-    return Array.from(document.querySelectorAll(focusableSelectors.join())) as HTMLElement[],
+    return Array.from(document.querySelectorAll(focusableSelectors.join())) as HTMLElement[]
   },
 
   // Highlighter mode
   const toggleHighlighter = () => {
-    setSettings(prev => ({ ...prev, highlighter: !prev.highlighter })),
+    setSettings(prev => ({ ...prev, highlighter: !prev.highlighter }))
   },
 
   // Font size controls
   const increaseFontSize = () => {
-    setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) })),
+    setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }))
   },
 
   const decreaseFontSize = () => {
-    setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) })),
+    setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }))
   },
 
   // Line spacing controls
   const increaseLineSpacing = () => {
-    setSettings(prev => ({ ...prev, lineSpacing: Math.min(prev.lineSpacing + 0.1, 2.5) })),
+    setSettings(prev => ({ ...prev, lineSpacing: Math.min(prev.lineSpacing + 0.1, 2.5) }))
   },
 
   const decreaseLineSpacing = () => {
-    setSettings(prev => ({ ...prev, lineSpacing: Math.max(prev.lineSpacing - 0.1, 1.0) })),
+    setSettings(prev => ({ ...prev, lineSpacing: Math.max(prev.lineSpacing - 0.1, 1.0) }))
   },
 
   // Reset all settings
@@ -415,7 +413,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       fontSize: 16,
       lineSpacing: 1.5,
       colorBlindMode: 'none'
-    }),
+    })
   },
 
   return (
@@ -649,7 +647,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {/* Render children with accessibility enhancements */}
       {children}
     </>
-  ),
+  )
 },
 
 // Skip Link Component

@@ -19,11 +19,11 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         .order('created_at', { ascending: false }),
 
       if (error) throw error,
-      setNotifications(data || []),
+      setNotifications(data || [])
     } catch (err) {
-      console.error('Error fetching notifications:', err),
+      console.error('Error fetching notifications:', err)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [userId]),
 
@@ -38,9 +38,9 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         .eq('user_id', userId),
 
       if (error) throw error,
-      await fetchNotifications(),
+      await fetchNotifications()
     } catch (err) {
-      console.error('Error marking notification as read:', err),
+      console.error('Error marking notification as read:', err)
     }
   }, [userId, fetchNotifications]),
 
@@ -55,9 +55,9 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         .eq('read', false),
 
       if (error) throw error,
-      await fetchNotifications(),
+      await fetchNotifications()
     } catch (err) {
-      console.error('Error marking all notifications as read:', err),
+      console.error('Error marking all notifications as read:', err)
     }
   }, [userId, fetchNotifications]),
 
@@ -72,9 +72,9 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         .eq('user_id', userId),
 
       if (error) throw error,
-      await fetchNotifications(),
+      await fetchNotifications()
     } catch (err) {
-      console.error('Error dismissing notification:', err),
+      console.error('Error dismissing notification:', err)
     }
   }, [userId, fetchNotifications]),
 
@@ -104,5 +104,5 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
-    fetchNotifications},
+    fetchNotifications}
 },

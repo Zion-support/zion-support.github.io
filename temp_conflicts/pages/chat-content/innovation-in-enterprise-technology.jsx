@@ -1,6 +1,5 @@
 
 import Head from 'next/head',
-
 const InnovationInEnterpriseTechnology = () => {
   return (
     <div>
@@ -14,7 +13,7 @@ const InnovationInEnterpriseTechnology = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  ),
+  )
 },
 
 export default InnovationInEnterpriseTechnology,

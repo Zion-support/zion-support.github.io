@@ -1,6 +1,5 @@
 
 import { supabase } from '@/integrations/supabase/client',
-
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -11,7 +10,7 @@ export async function ensureAnalyticsTablesExist() {
       
     if (error && error.code === 'PGRST204') {
       console.log('Creating analytics tables...'),
-      await createAnalyticsTables(),
+      await createAnalyticsTables()
     }
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error),
@@ -82,7 +81,7 @@ async function createAnalyticsTables() {
       `
     }),
     
-    console.log('Analytics tables created successfully'),
+    console.log('Analytics tables created successfully')
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue

@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button",
-
 interface Contract {
   id: string,
   title: string,
@@ -84,5 +83,5 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
         </table>
       </div>
     </>
-  ),
+  )
 }

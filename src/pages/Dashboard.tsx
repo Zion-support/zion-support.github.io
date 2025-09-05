@@ -11,7 +11,6 @@ import { useFavorites } from '@/hooks/useFavorites',
 import { useToast } from "@/hooks/use-toast",
 import { EmptyState } from "@/components/ui/empty-state",
 import Link from 'next/link',
-
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
@@ -58,7 +57,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
-    ),
+    )
   }
 
   // useRequireAuth will handle redirect if user is not authenticated
@@ -70,7 +69,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Redirecting to login...</p>
         </div>
       </div>
-    ),
+    )
   }
 
   const handleTestNotification = async () => {
@@ -80,18 +79,18 @@ export default function Dashboard() {
       if (result.success) {
         toast({
           title: "Test notification created",
-          description: "Check your notification center"}),
+          description: "Check your notification center"})
       } else {
         toast({
           title: "Error creating test notification",
           description: "Something went wrong",
-          variant: "destructive"}),
+          variant: "destructive"})
       }
     } catch (error) {
       toast({
         title: "Error loading notification system",
         description: "Please try again",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -181,12 +180,12 @@ export default function Dashboard() {
                           toast({
                             title: "Onboarding notification sent",
                             description: "Check your notification center"
-                          }),
+                          })
                         } catch (error) {
                           toast({
                             title: "Error sending notification",
                             description: "Please try again",
-                            variant: "destructive"}),
+                            variant: "destructive"})
                         }
                       }}
                     >
@@ -210,12 +209,12 @@ export default function Dashboard() {
                           toast({
                             title: "System notification sent",
                             description: "Check your notification center"
-                          }),
+                          })
                         } catch (error) {
                           toast({
                             title: "Error sending notification",
                             description: "Please try again",
-                            variant: "destructive"}),
+                            variant: "destructive"})
                         }
                       }}
                     >
@@ -372,5 +371,5 @@ export default function Dashboard() {
       </div>
       <GuidedTour role={roleForTour} />
     </>
-  ),
+  )
 }

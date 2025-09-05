@@ -2,7 +2,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-
 interface ResourceItem {
   id: string,
   title: string,
@@ -69,7 +68,7 @@ export function PartnerResources() {
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-      variant: "default"}),
+      variant: "default"})
   },
 
   return (

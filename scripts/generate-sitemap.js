@@ -125,16 +125,16 @@ function generateSitemapXML() {
     xml += `    <lastmod>${page.lastmod}</lastmod>\n`,
     xml += `    <changefreq>${page.changefreq}</changefreq>\n`,
     xml += `    <priority>${page.priority}</priority>\n`,
-    xml += '  </url>\n',
+    xml += '  </url>\n'
   }),
   
   xml += '</urlset>',
-  return xml,
+  return xml
 }
 
 // Generate sitemap.txt (simple text version)
 function generateSitemapTXT() {
-  return pages.map(page => `${BASE_URL}${page.url}`).join('\n'),
+  return pages.map(page => `${BASE_URL}${page.url}`).join('\n')
 }
 
 // Main execution
@@ -143,7 +143,7 @@ function main() {
     // Create public directory if it doesn't exist
     const publicDir = path.join(__dirname, '../public'),
     if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true }),
+      fs.mkdirSync(publicDir, { recursive: true })
     }
 
     // Generate and save sitemap.xml
@@ -175,17 +175,17 @@ Crawl-delay: 1`,
 
     console.log(`\n🎉 Sitemap generation complete!`),
     console.log(`📊 Total pages: ${pages.length}`),
-    console.log(`🌐 Base URL: ${BASE_URL}`),
+    console.log(`🌐 Base URL: ${BASE_URL}`)
     
   } catch (error) {
     console.error('❌ Error generating sitemap:', error),
-    process.exit(1),
+    process.exit(1)
   }
 }
 
 // Run if called directly
 if (require.main === module) {
-  main(),
+  main()
 }
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages },

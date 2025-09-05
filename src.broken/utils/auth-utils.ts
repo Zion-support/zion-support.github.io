@@ -1,10 +1,9 @@
 import { supabase } from './supabase/client',
-
 export type UserRole = 'admin' | 'client' | 'talent' | 'guest',
 
 export async function getCurrentUser() {
   const { data } = await supabase.auth.getUser(),
-  return data?.user || null,
+  return data?.user || null
 }
 
 export async function getCurrentUserRole(): Promise<UserRole> {

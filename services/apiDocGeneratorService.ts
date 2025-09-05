@@ -14,7 +14,7 @@ export interface APIDocumentation {
     coverage: number,
     languages: string[],
     frameworks: string[]
-  },
+  }
 }
 
 export interface APIEndpoint {
@@ -45,20 +45,20 @@ export interface APIParameter {
 export interface APIRequestBody {
   required: boolean,
   content: Record<string, APIContent>,
-  description?: string,
+  description?: string
 }
 
 export interface APIContent {
   schema: APISchema,
   example?: any,
-  examples?: Record<string, APIExample>,
+  examples?: Record<string, APIExample>
 }
 
 export interface APIResponse {
   code: string,
   description: string,
   content?: Record<string, APIContent>,
-  headers?: Record<string, APIHeader>,
+  headers?: Record<string, APIHeader>
 }
 
 export interface APIHeader {
@@ -86,7 +86,7 @@ export interface APISchema {
   pattern?: string,
   default?: any,
   nullable?: boolean,
-  $ref?: string,
+  $ref?: string
 }
 
 export interface APIExample {
@@ -103,7 +103,7 @@ export interface ExampleRequest {
   method: string,
   url: string,
   headers: Record<string, string>,
-  body?: any,
+  body?: any
 }
 
 export interface ExampleResponse {
@@ -134,17 +134,17 @@ export interface DocumentationConfig {
   branding?: {
     logo?: string,
     primaryColor?: string,
-    companyName?: string,
-  },
+    companyName?: string
+  }
 }
 
 export class APIDocGeneratorService {
   private supportedFrameworks = [
-    'expressfastify', 'koahapi', 'djangoflask', 'fastapispring', 'aspnetlaravel'
+    'expressfastifykoahapi', 'djangoflaskfastapispring', 'aspnetlaravel'
   ],
 
   private supportedLanguages = [
-    'javascripttypescript', 'pythonjava', 'csharpphp', 'goruby'
+    'javascripttypescriptpythonjava', 'csharpphpgoruby'
   ],
 
   async generateDocumentation(
@@ -180,20 +180,20 @@ export class APIDocGeneratorService {
 
       // Generate examples if requested
       if (config.includeExamples) {
-        documentation.examples = await this.generateExamples(documentation.endpoints),
+        documentation.examples = await this.generateExamples(documentation.endpoints)
       }
 
       // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints),
+      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)
 
     } catch (error) {
       console.error('Error generating documentation:', error),
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints(),
-      documentation.metadata.totalEndpoints = documentation.endpoints.length,
+      documentation.metadata.totalEndpoints = documentation.endpoints.length
     }
 
-    return documentation,
+    return documentation
   }
 
   private async analyzeSourceCode(sourcePath: string): Promise<{
@@ -216,15 +216,15 @@ export class APIDocGeneratorService {
       if (extension === 'js' || extension === 'ts') {
         languages.push('javascripttypescript'),
         frameworks.push('expressfastify'),
-        endpoints.push(...this.analyzeJavaScriptFile(file)),
+        endpoints.push(...this.analyzeJavaScriptFile(file))
       } else if (extension === 'py') {
         languages.push('python'),
-        frameworks.push('djangoflask', 'fastapi'),
-        endpoints.push(...this.analyzePythonFile(file)),
+        frameworks.push('djangoflaskfastapi'),
+        endpoints.push(...this.analyzePythonFile(file))
       } else if (extension === 'java') {
         languages.push('java'),
         frameworks.push('spring'),
-        endpoints.push(...this.analyzeJavaFile(file)),
+        endpoints.push(...this.analyzeJavaFile(file))
       }
     }
 
@@ -237,17 +237,15 @@ export class APIDocGeneratorService {
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
-    },
+    }
   }
 
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
     return [
-      'src/routes/users.jssrc/routes/products.js',
-      'src/routes/orders.jssrc/models/User.js',
-      'src/models/Product.jssrc/middleware/auth.js',
-      'src/config/database.js'
-    ],
+      'src/routes/users.jssrc/routes/products.jssrc/routes/orders.jssrc/models/User.js',
+      'src/models/Product.jssrc/middleware/auth.jssrc/config/database.js'
+    ]
   }
 
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
@@ -347,10 +345,10 @@ export class APIDocGeneratorService {
           tags: ['Users'],
           deprecated: false
         }
-      ),
+      )
     }
 
-    return endpoints,
+    return endpoints
   }
 
   private analyzePythonFile(filePath: string): APIEndpoint[] {
@@ -390,10 +388,10 @@ export class APIDocGeneratorService {
         ],
         tags: ['Products'],
         deprecated: false
-      }),
+      })
     }
 
-    return endpoints,
+    return endpoints
   }
 
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
@@ -412,7 +410,7 @@ export class APIDocGeneratorService {
             name: 'status',
             in: 'query',
             required: false,
-            schema: { type: 'string', enum: ['pendingprocessing', 'completedcancelled'] },
+            schema: { type: 'string', enum: ['pendingprocessingcompletedcancelled'] },
             description: 'Filter orders by status'
           }
         ],
@@ -433,10 +431,10 @@ export class APIDocGeneratorService {
         ],
         tags: ['Orders'],
         deprecated: false
-      }),
+      })
     }
 
-    return endpoints,
+    return endpoints
   }
 
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
@@ -450,7 +448,7 @@ export class APIDocGeneratorService {
           createdAt: { type: 'string', format: 'date-time' },
           updatedAt: { type: 'string', format: 'date-time' }
         },
-        required: ['idemail', 'name'],
+        required: ['idemailname'],
         description: 'User entity schema'
       },
       {
@@ -463,7 +461,7 @@ export class APIDocGeneratorService {
           category: { type: 'string' },
           inStock: { type: 'boolean' }
         },
-        required: ['idname', 'price'],
+        required: ['idnameprice'],
         description: 'Product entity schema'
       },
       {
@@ -483,9 +481,9 @@ export class APIDocGeneratorService {
             }
           },
           total: { type: 'number', minimum: 0 },
-          status: { type: 'string', enum: ['pendingprocessing', 'completedcancelled'] }
+          status: { type: 'string', enum: ['pendingprocessingcompletedcancelled'] }
         },
-        required: ['iduserId', 'itemstotal'],
+        required: ['iduserIditemstotal'],
         description: 'Order entity schema'
       },
       {
@@ -496,12 +494,12 @@ export class APIDocGeneratorService {
           total: { type: 'integer', minimum: 0 },
           pages: { type: 'integer', minimum: 1 }
         },
-        required: ['pagelimit', 'totalpages'],
+        required: ['pagelimittotalpages'],
         description: 'Pagination metadata schema'
       }
     ],
 
-    return schemas,
+    return schemas
   }
 
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
@@ -529,10 +527,10 @@ export class APIDocGeneratorService {
           body: this.generateExampleResponse(endpoint.responses[0])
         },
         tags: endpoint.tags
-      }),
+      })
     }
 
-    return examples,
+    return examples
   }
 
   private generateExampleBody(requestBody: APIRequestBody): any {
@@ -541,7 +539,7 @@ export class APIDocGeneratorService {
       name: "Example Name",
       email: "user@example.com",
       description: "This is an example description"
-    },
+    }
   }
 
   private generateExampleResponse(response: APIResponse): any {
@@ -551,9 +549,9 @@ export class APIDocGeneratorService {
         id: "123e4567-e89b-12d3-a456-426614174000",
         name: "Example Item",
         createdAt: new Date().toISOString()
-      },
+      }
     }
-    return null,
+    return null
   }
 
   private generateFallbackEndpoints(): APIEndpoint[] {
@@ -575,7 +573,7 @@ export class APIDocGeneratorService {
         tags: ['System'],
         deprecated: false
       }
-    ],
+    ]
   }
 
   private extractProjectName(sourcePath: string): string {
@@ -586,12 +584,12 @@ export class APIDocGeneratorService {
 
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.
-    return '1.0.0',
+    return '1.0.0'
   }
 
   private async extractDescription(sourcePath: string): Promise<string> {
     // Simulate description extraction from README, package.json, etc.
-    return 'Comprehensive API documentation automatically generated from source code',
+    return 'Comprehensive API documentation automatically generated from source code'
   }
 
   private async extractBaseUrl(sourcePath: string): Promise<string> {
@@ -610,7 +608,7 @@ export class APIDocGeneratorService {
       }
     }
     
-    return Math.round((documentedEndpoints / endpoints.length) * 100),
+    return Math.round((documentedEndpoints / endpoints.length) * 100)
   }
 
   async exportDocumentation(
@@ -619,7 +617,7 @@ export class APIDocGeneratorService {
   ): Promise<string> {
     // Simulate export functionality
     const timestamp = new Date().toISOString(),
-    return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`,
+    return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`
   }
 
   async updateDocumentation(
@@ -634,7 +632,7 @@ export class APIDocGeneratorService {
         ...changes.metadata,
         lastGenerated: new Date()
       }
-    } as APIDocumentation,
+    } as APIDocumentation
   }
 }
 

@@ -55,8 +55,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.',
 		features: [
-			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checks',
-			'Customizable commission structures and tiersAutomated payouts and tax form collection',
+			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collection',
 			'Shareable links, coupons, and influencer codesPartner portal and real-time analytics'
 		],
 		popular: true,
@@ -70,11 +69,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsNode.js', 'PostgreSQLRedis'],
-		integrations: ['ShopifyWooCommerce', 'StripePayPal'],
-		useCases: ['Affiliate programsInfluencer tracking', 'Partnership analytics'],
+		technology: ['Next.jsNode.jsPostgreSQLRedis'],
+		integrations: ['ShopifyWooCommerceStripePayPal'],
+		useCases: ['Affiliate programsInfluencer trackingPartnership analytics'],
 		roi: 'Increase attributed sales 10–25% with optimized partnerships.',
-		competitors: ['RefersionLeadDyno', 'Tapfiliate'],
+		competitors: ['RefersionLeadDynoTapfiliate'],
 		marketSize: '$1.5B affiliate software',
 		growthRate: '15% YoY',
 		variant: 'ai-futuristic',
@@ -94,8 +93,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
 		features: [
-			'Multi-speaker diarizationTimestamps and filler removal',
-			'Chapter detection and show notesEmbeddings and semantic search',
+			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic search',
 			'Export to SRT, VTT, DOCXPodcast platform integrations'
 		],
 		popular: false,
@@ -109,11 +107,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '10 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Whisper Large v3Next.js', 'Node.js'],
-		integrations: ['SpotifyApple Podcasts', 'YouTube'],
-		useCases: ['TranscriptsSEO summaries', 'Episode search'],
+		technology: ['Whisper Large v3Next.jsNode.js'],
+		integrations: ['SpotifyApple PodcastsYouTube'],
+		useCases: ['TranscriptsSEO summariesEpisode search'],
 		roi: 'Save 4–8 hours per episode and improve SEO traffic.',
-		competitors: ['OtterDescript', 'Rev'],
+		competitors: ['OtterDescriptRev'],
 		marketSize: '$500M transcription tools',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
@@ -133,8 +131,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
 		features: [
-			'Contact management and segmentationPipelines and kanban views',
-			'Calendar with SMS/email remindersImport/export CSV and simple API',
+			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple API',
 			'Mobile-friendly PWABasic reporting'
 		],
 		popular: true,
@@ -148,11 +145,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsSQLite/Postgres', 'Twilio'],
-		integrations: ['GmailOutlook', 'Stripe'],
-		useCases: ['LeadsFollow-ups', 'Deal tracking'],
+		technology: ['Next.jsSQLite/PostgresTwilio'],
+		integrations: ['GmailOutlookStripe'],
+		useCases: ['LeadsFollow-upsDeal tracking'],
 		roi: 'Increase follow-through and close rates 10–20% via reminders.',
-		competitors: ['HubSpot StarterZoho CRM', 'Pipedrive'],
+		competitors: ['HubSpot StarterZoho CRMPipedrive'],
 		marketSize: '$5B SMB CRM',
 		growthRate: '12% YoY',
 		variant: 'ai-futuristic',
@@ -172,8 +169,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
 		features: [
-			'Customer returns portalPrepaid label generation',
-			'RMA approval rulesInventory and refund sync',
+			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund sync',
 			'Email/SMS notificationsAnalytics on reasons and cost'
 		],
 		popular: false,
@@ -187,9 +183,9 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '2 hours',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsNode.js', 'StripeShippo'],
-		integrations: ['ShopifyWooCommerce', 'ShippoStripe'],
-		useCases: ['Returns portalExchange workflows', 'Refund automation'],
+		technology: ['Next.jsNode.jsStripeShippo'],
+		integrations: ['ShopifyWooCommerceShippoStripe'],
+		useCases: ['Returns portalExchange workflowsRefund automation'],
 		roi: 'Reduce support tickets ~30% and speed refunds.',
 		competitors: ['Loop ReturnsReturnly'],
 		marketSize: '$800M returns software',
@@ -211,8 +207,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
 		features: [
-			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalations',
-			'Public/private knowledge baseClient portal with reports',
+			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reports',
 			'RMM and network tool integrationsBilling export and time tracking'
 		],
 		popular: true,
@@ -226,11 +221,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Next.jsNode.js', 'PostgreSQL'],
-		integrations: ['ZendeskFreshdesk', 'DatadogGrafana'],
-		useCases: ['IT supportSLA management', 'Client reporting'],
+		technology: ['Next.jsNode.jsPostgreSQL'],
+		integrations: ['ZendeskFreshdeskDatadogGrafana'],
+		useCases: ['IT supportSLA managementClient reporting'],
 		roi: 'Faster resolution, less toil, better client satisfaction.',
-		competitors: ['ZendeskFreshdesk', 'HaloPSA'],
+		competitors: ['ZendeskFreshdeskHaloPSA'],
 		marketSize: '$10B helpdesk software',
 		growthRate: '10% YoY',
 		variant: 'ai-futuristic',
@@ -252,8 +247,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [
-      'Document sync and chunking pipelinesMetadata and policy guardrails',
-      'Evals and drift trackingHuman-in-the-loop approvals',
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvals',
       'Observability and cost capsSDKs for Node/Python'
     ],
     popular: true,
@@ -291,8 +285,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
     features: [
-      'Audience builder and traitsEdge functions and KV cache',
-      'A/B and holdout testsPrivacy-first scoring',
+      'Audience builder and traitsEdge functions and KV cacheA/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
     popular: true,
@@ -330,8 +323,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     features: [
-      'One-PR one-env automationSeed data and fixtures',
-      'Smoke tests and screenshotsSecrets and policies as code',
+      'One-PR one-env automationSeed data and fixturesSmoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
     icon: '🚀',
@@ -368,8 +360,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [
-      'Streaming ingestion and rulesAnomaly detection and drift',
-      'LLM summaries and hintsSlack/Email alerts and tickets',
+      'Streaming ingestion and rulesAnomaly detection and driftLLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
     icon: '📈',
@@ -406,8 +397,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [
-      'Policies and approvalsChange logs and RBAC',
-      'SLO-based rollbacksSDKs and edge eval',
+      'Policies and approvalsChange logs and RBACSLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
     icon: '🏳️',
@@ -444,8 +434,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
     features: [
-      'Sequence composer and AI draftWarm-up and safety checks',
-      'Reply intent and routingBlacklist monitoring',
+      'Sequence composer and AI draftWarm-up and safety checksReply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
     icon: '✉️',
@@ -482,8 +471,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
     features: [
-      'Schema registry and versioningBack/forward compatibility checks',
-      'Lineage and ownershipAlerts and SLOs',
+      'Schema registry and versioningBack/forward compatibility checksLineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
     icon: '🧮',
@@ -520,8 +508,7 @@ export const real2025Q4Additions = [
     period: '/fixed',
     description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
     features: [
-      'Okta/Entra app configsSAML/OIDC + SCIM',
-      'Security test plansCustomer enablement kit'
+      'Okta/Entra app configsSAML/OIDC + SCIMSecurity test plansCustomer enablement kit'
     ],
     icon: '🔐',
     color: 'from-slate-600 to-gray-700',
@@ -557,8 +544,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
     features: [
-      'Risk scoring and hygiene checksStage SLAs and alerts',
-      'Next-best action copilotReporting and dashboards'
+      'Risk scoring and hygiene checksStage SLAs and alertsNext-best action copilotReporting and dashboards'
     ],
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -594,8 +580,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
     features: [
-      'Signature verification and secretsReplay and DLQs',
-      'Retries and backoffFan-out and transformations',
+      'Signature verification and secretsReplay and DLQsRetries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
     icon: '🔁',
@@ -632,8 +617,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
     features: [
-      'Automated backups and PITRFailover drills and runbooks',
-      'Index and bloat maintenancePerformance dashboards'
+      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
     ],
     icon: '🗄️',
     color: 'from-emerald-600 to-teal-700',

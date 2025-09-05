@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react',
 import Link from 'next/link',
-
 interface SearchResult {
   title: string,
   description: string,
@@ -75,7 +74,7 @@ const SearchBar: React.FC = () => {
 
     setResults(filteredResults),
     setIsOpen(true),
-    setIsLoading(false),
+    setIsLoading(false)
   },
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,7 +85,7 @@ const SearchBar: React.FC = () => {
 
   const handleResultClick = () => {
     setIsOpen(false),
-    setQuery(''),
+    setQuery('')
   },
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -105,8 +104,8 @@ const SearchBar: React.FC = () => {
 
     document.addEventListener('mousedown', handleClickOutside),
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside),
-    },
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, []),
 
   return (
@@ -172,7 +171,7 @@ const SearchBar: React.FC = () => {
         </div>
       )}
     </div>
-  ),
+  )
 },
 
 export default SearchBar,

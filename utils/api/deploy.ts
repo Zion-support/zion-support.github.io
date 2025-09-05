@@ -7,22 +7,22 @@ function toSlug(name: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
-    .slice(0, 64),
+    .slice(0, 64)
 }
 
 function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true }),
+    fs.mkdirSync(dirPath, { recursive: true })
   }
 }
 
 function writeTextFile(filePath: string, content: string) {
   ensureDir(path.dirname(filePath)),
-  fs.writeFileSync(filePath, content, "utf8"),
+  fs.writeFileSync(filePath, content, "utf8")
 }
 
 function nowIso(): string {
-  return new Date().toISOString(),
+  return new Date().toISOString()
 }
 
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {
@@ -52,7 +52,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,
     writeTextFile(promptBasePath, promptBase),
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" }),
-    logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" }),
+    logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" })
   }
 
   // 2. Deploy DAO + Token Logic
@@ -74,7 +74,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       )
     ),
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" }),
-    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" }),
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" })
   }
 
   if (input.modules.token || input.tokenActivation) {
@@ -95,7 +95,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       )
     ),
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" }),
-    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" }),
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" })
   }
 
   // 3. Publish Assets
@@ -124,7 +124,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       changelogPath,
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`
     ),
-    assets.push({ kind: "file", path: changelogPath, description: "Changelog" }),
+    assets.push({ kind: "file", path: changelogPath, description: "Changelog" })
   }
 
   if (input.modules.bookBuilder) {
@@ -133,7 +133,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       bookPath,
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`
     ),
-    assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" }),
+    assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" })
   }
 
   if (input.modules.launchKit) {
@@ -142,7 +142,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       trailerScriptPath,
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`
     ),
-    assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" }),
+    assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" })
   }
 
   // Schedule launch stream (/summit)
@@ -191,7 +191,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   if (optionalModules.length > 0) {
     const optionalPath = path.join(baseDir, "optional-modules.json"),
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),
-    assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" }),
+    assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })
   }
 
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules)
@@ -208,5 +208,5 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     assets,
     logs,
     summary,
-    version},
+    version}
 }

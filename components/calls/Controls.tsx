@@ -1,6 +1,5 @@
 import React from 'react',
 import type { Room } from 'livekit-client',
-
 type Props = {
   room: Room | null,
   onLeave: () => void,
@@ -17,22 +16,22 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const toggleMic = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled),
-    setMicEnabled(enabled),
+    setMicEnabled(enabled)
   },
 
   const toggleCam = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled),
-    setCamEnabled(enabled),
+    setCamEnabled(enabled)
   },
 
   const toggleScreenShare = async () => {
     if (!room) return,
     try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing),
-      setSharing(enabled),
+      setSharing(enabled)
     } catch (e) {
-      console.warn('Screen share failed', e),
+      console.warn('Screen share failed', e)
     }
   },
 
@@ -49,5 +48,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
-  ),
+  )
 }

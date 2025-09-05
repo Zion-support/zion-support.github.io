@@ -84,5 +84,5 @@ export function ApplicationActions({
         </Link>
       </Button>
     </div>
-  ),
+  )
 }

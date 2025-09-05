@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react',
 import Link from 'next/link',
 import { useRole } from '../context/RoleContext',
-
 export default function OnboardingWizard() {
   const { role, setRole } = useRole(),
   const [open, setOpen] = useState(false),
@@ -10,7 +9,7 @@ export default function OnboardingWizard() {
     try {
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true',
       if (!has) {
-        setOpen(true),
+        setOpen(true)
       }
     } catch {}
   }, []),
@@ -18,10 +17,10 @@ export default function OnboardingWizard() {
   function completeOnboarding() {
     try {
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem('zion_has_onboarded1'),
+        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
-    setOpen(false),
+    setOpen(false)
   }
 
   if (!open) return null,
@@ -72,5 +71,5 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

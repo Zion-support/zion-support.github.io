@@ -1,7 +1,6 @@
 
 import Head from 'next/head',
 import Link from 'next/link',
-
 const UiUxDesignChat = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const UiUxDesignChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  ),
+  )
 },
 
 export default UiUxDesignChat,

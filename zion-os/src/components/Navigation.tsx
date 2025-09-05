@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react",
 import Link from "next/link",
-
 export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
   const [isSearchOpen, setIsSearchOpen] = useState(false),
@@ -277,5 +276,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  ),
+  )
 }

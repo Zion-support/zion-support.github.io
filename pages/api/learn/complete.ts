@@ -1,22 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const usersPath = path.join(process.cwd(), 'datalearn', 'users.json'),
-const coursesPath = path.join(process.cwd(), 'datalearn', 'courses.json'),
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8')),
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
 
 function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2)),
+  fs.writeFileSync(p, JSON.stringify(data, null, 2))
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).end('Method Not Allowed'),
+    return res.status(405).end('Method Not Allowed')
   }
 
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {},
@@ -38,8 +37,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     users[userId] = user,
     writeJson(usersPath, users),
-    return res.status(200).json({ ok: true, user }),
+    return res.status(200).json({ ok: true, user })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' }),
+    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
   }
 }

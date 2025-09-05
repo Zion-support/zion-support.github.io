@@ -9,15 +9,15 @@ export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list'),
       const data = await res.json(),
       setItems(data.proposals || []),
-      setLoading(false),
-    })(),
+      setLoading(false)
+    })()
   }, []),
 
   async function updateStatus(id: string, status: string) {
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
     const data = await res.json(),
-    setItems(data.proposals || []),
+    setItems(data.proposals || [])
   }
 
   return (
@@ -53,5 +53,5 @@ export default function InternationalProposals() {
         </div>
       )}
     </div>
-  ),
+  )
 }

@@ -24,7 +24,7 @@ class GitWorkflowAutomator {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
       fs.mkdirSync(logDir, { recursive: true })
-    },
+    }
   },
 ,
   log(message, level = 'INFO') {,
@@ -35,10 +35,10 @@ class GitWorkflowAutomator {,
       fs.appendFileSync(this.logFile, logMessage),
       if (level === 'ERROR') {,
         fs.appendFileSync(this.errorFile, logMessage)
-      },
+      }
     } catch (err) {,
       console.error('Failed to write to log file:', err.message)
-    },
+    }
   },
 ,
   async automateGitWorkflow() {,
@@ -75,7 +75,7 @@ class GitWorkflowAutomator {,
       return workflowReport} catch (error) {,
       this.log(`Git workflow automation failed: ${error.message}`, 'ERROR'),
       throw error
-    },
+    }
   },
 ,
   async checkGitStatus() {,
@@ -102,11 +102,11 @@ class GitWorkflowAutomator {,
         currentBranch: branch,
         lastCommit,
         uncommittedFiles: status.trim().split('\n').filter(line => line.trim())
-      },
+      }
     } catch (error) {,
       this.log(`Git status check failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
 ,
   async cleanupOldBranches() {,
@@ -146,7 +146,7 @@ class GitWorkflowAutomator {,
           this.log(`Deleted branch: ${branchName}`)
         } catch (err) {,
           this.log(`Failed to delete branch ${branch}: ${err.message}`, 'WARN')
-        },
+        }
       },
       return {,
         totalBranches: allBranches.length,
@@ -161,11 +161,11 @@ class GitWorkflowAutomator {,
         mergedBranches: mergedBranches.length,
         deletedBranches: deletedCount,
         branchesToDelete: branchesToDelete.length
-      },
+      }
     } catch (error) {,
       this.log(`Branch cleanup failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
   async checkForConflicts() {,
     try {,
@@ -181,11 +181,11 @@ class GitWorkflowAutomator {,
         conflictFiles: hasConflicts ? status.split('\n').filter(line =>,
           line.includes('UU') || line.includes('AA') || line.includes('DD'),
         ) : []
-      },
+      }
     } catch (error) {,
       this.log(`Conflict check failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
   async optimizeRepository() {,
     try {,
@@ -200,11 +200,11 @@ class GitWorkflowAutomator {,
       return {,
         message: 'Repository optimization completed',
         repositorySize: repoSize
-      },
+      }
     } catch (error) {,
       this.log(`Repository optimization failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
   getRepositorySize() {,
     try {,
@@ -216,7 +216,7 @@ class GitWorkflowAutomator {,
     } catch (error) {,
       this.log(`Failed to get repository size: ${error.message}`, 'ERROR'),
       return 'Unknown'
-    },
+    }
   },
   generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {,
     const recommendations = [],
@@ -253,11 +253,11 @@ ursor/automate-test-improve-and-merge-code-8ee2
         conflictFiles: hasConflicts ? status.split('\n').filter(line =>,
           line.includes('UU') || line.includes('AA') || line.includes('DD'),
         ) : []
-      },
+      }
     } catch (error) {,
       this.log(`Conflict check failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
 ,
   async optimizeRepository() {,
@@ -276,11 +276,11 @@ ursor/automate-test-improve-and-merge-code-8ee2
       return {,
         message: 'Repository optimization completed',
         repositorySize: repoSize
-      },
+      }
     } catch (error) {,
       this.log(`Repository optimization failed: ${error.message}`, 'ERROR'),
-      return { error: error.message },
-    },
+      return { error: error.message }
+    }
   },
 ,
   getRepositorySize() {,
@@ -294,7 +294,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
     } catch (error) {,
       this.log(`Failed to get repository size: ${error.message}`, 'ERROR'),
       return 'Unknown'
-    },
+    }
   },
 ,
   generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {,
@@ -317,7 +317,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
     },
 ,
     return recommendations
-  },
+  }
 },
 ,
 // Run git workflow automation,
@@ -330,7 +330,7 @@ async function main() {,
   } catch (error) {,
     automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'),
     process.exit(1)
-  },
+  }
 },
 ,
 if (require.main === module) {,

@@ -14,7 +14,6 @@ import { toast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
 import { SearchSuggestion } from "@/types/search",
 import { AppLayout } from "@/layout/AppLayout",
-
 export default function Marketplace() {
   const navigate = useNavigate(),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -37,25 +36,25 @@ export default function Marketplace() {
     
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-      return false,
+      return false
     }
     
     // Location filter
     if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
-      return false,
+      return false
     }
     
     // Availability filter
     if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
-      return false,
+      return false
     }
     
     // Rating filter
     if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
-      return false,
+      return false
     }
     
-    return true,
+    return true
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
@@ -75,7 +74,7 @@ export default function Marketplace() {
         setSelectedAvailability(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         ),
-        break,
+        break
     }
   },
   
@@ -84,7 +83,7 @@ export default function Marketplace() {
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
-    setSelectedRating(null),
+    setSelectedRating(null)
   },
   
   // Handle requesting a quote
@@ -108,7 +107,7 @@ export default function Marketplace() {
             image: listing.images?.[0]
           }
         }
-      }),
+      })
     }
   },
 
@@ -214,5 +213,5 @@ export default function Marketplace() {
         </div>
       </main>
     </AppLayout>
-  ),
+  )
 }

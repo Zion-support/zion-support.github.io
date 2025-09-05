@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
-
 interface FilterSidebarProps {
   filters: {
     selectedProductTypes: string[],
@@ -149,5 +148,5 @@ export function FilterSidebar({
         </div>
       </div>
     </div>
-  ),
+  )
 }

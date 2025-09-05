@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
 }
@@ -37,9 +36,9 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        color: ['#8b5cf6#3b82f6', '#06b6d4#10b981'][Math.floor(Math.random() * 4)],
+        color: ['#8b5cf6#3b82f6#06b6d4#10b981'][Math.floor(Math.random() * 4)],
         opacity: Math.random() * 0.5 + 0.3
-      }),
+      })
     }
 
     // Animation loop
@@ -77,12 +76,12 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ctx.strokeStyle = particle.color,
             ctx.globalAlpha = (100 - distance) / 100 * 0.1,
             ctx.lineWidth = 1,
-            ctx.stroke(),
+            ctx.stroke()
           }
-        }),
+        })
       }),
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     animate(),
@@ -90,14 +89,14 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
-      window.removeEventListener('resize', handleResize),
-    },
+      window.removeEventListener('resize', handleResize)
+    }
   }, []),
 
   return (
@@ -277,5 +276,5 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       {/* Bottom Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={{ zIndex: 5 }} />
     </div>
-  ),
+  )
 }

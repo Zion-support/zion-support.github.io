@@ -9,7 +9,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Onboarding from "@/pages/Onboarding",
 import TalentOnboarding from "@/pages/TalentOnboarding",
 import ServiceOnboarding from "@/pages/ServiceOnboarding",
-
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -45,7 +44,7 @@ const AuthRoutes = () => {
         } 
       />
     </Routes>
-  ),
+  )
 },
 
 export default AuthRoutes,

@@ -1,5 +1,5 @@
 
-    },
+    }
   },
 ,
   async analyzeFile(filePath) {,
@@ -72,16 +72,16 @@
                 message: `Potentially unused import ${importName}`,
                 severity: 'medium'
               })
-            },
-          },
-        },
+            }
+          }
+        }
       }),
 ,
       return analysis
     } catch (error) {,
       this.log(`Error analyzing file ${filePath}: ${error.message}`),
       return null
-    },
+    }
   },
 ,
   async walkDirectory(dir) {,
@@ -104,17 +104,17 @@
               !fullPath.includes('logs')) {,
             const subAnalyses = await this.walkDirectory(fullPath),
             analyses.push(...subAnalyses)
-          },
+          }
         } else if (stat.isFile()) {,
           const ext = path.extname(fullPath),
           if (['.js.jsx.ts.tsx'].includes(ext)) {,
             const analysis = await this.analyzeFile(fullPath),
             if (analysis) {,
               analyses.push(analysis)
-            },
-          },
-        },
-      },
+            }
+          }
+        }
+      }
 
     } catch (error) {,
       this.log(`Error walking directory ${dir}: ${error.message}`)
@@ -208,7 +208,7 @@
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async checkGitStatus() {,
@@ -227,7 +227,7 @@
     } catch (error) {,
       this.log(`Error checking git status: ${error.message}`),
       return false
-    },
+    }
   },
 ,
   async run() {,
@@ -278,16 +278,16 @@
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')
-        },
+        }
       } else {,
         this.log('✨ Excellent! No code quality issues found!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running code quality monitor: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the code quality monitor,

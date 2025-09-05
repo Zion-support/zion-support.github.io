@@ -28,17 +28,15 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     .filter(Boolean),
 
   const baseThemes = [
-    'FoundationsTrust Layer',
-    'AI-Native MatchingReputation & Identity',
-    'Payments & EscrowMarketplace Liquidity',
-    'Sovereign WorkflowsOpen Protocol Interfaces',
+    'FoundationsTrust LayerAI-Native MatchingReputation & Identity',
+    'Payments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'],
 
   return baseThemes.map((theme, index) => {
     const id = index + 1,
     const name = `Zion v${id}`,
 
-    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}, focus: ${
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
       priorityList.join() || 'execution and learning'
     }.`,
 
@@ -57,12 +55,11 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       .map((s) => String(s)),
 
     const metrics: string[] = [
-      'Weekly active contributorsVerified engagements (intros, briefs, scopes)',
-      'On-chain/escrow settlement volumeTime-to-hire and time-to-pay',
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-pay',
       'Retention and NPS'],
 
-    return { id, name, theme, objective, highlights, metrics },
-  }),
+    return { id, name, theme, objective, highlights, metrics }
+  })
 }
 
 function defaultOperatorPrompt(): string {
@@ -111,9 +108,9 @@ export default function RoadmapPage(): JSX.Element {
     try {
       await navigator.clipboard.writeText(operatorPrompt),
       setCopied(true),
-      setTimeout(() => setCopied(false), 1500),
+      setTimeout(() => setCopied(false), 1500)
     } catch {
-      setCopied(false),
+      setCopied(false)
     }
   },
 
@@ -226,5 +223,5 @@ export default function RoadmapPage(): JSX.Element {
         </div>
       </main>
     </>
-  ),
+  )
 }

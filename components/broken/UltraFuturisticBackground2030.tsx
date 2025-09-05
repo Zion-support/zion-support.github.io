@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode
 }
@@ -39,9 +38,9 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
-          color: ['#00ffff#ff00ff', '#ffff00#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
+          color: ['#00ffff#ff00ff#ffff00#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
           opacity: Math.random() * 0.8 + 0.2
-        }),
+        })
       }
     },
 
@@ -81,14 +80,14 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               ctx.strokeStyle = particle.color,
               ctx.globalAlpha = (100 - distance) / 100 * 0.3,
               ctx.lineWidth = 0.5,
-              ctx.stroke(),
+              ctx.stroke()
             }
           }
-        }),
+        })
       }),
 
       ctx.globalAlpha = 1,
-      animationId = requestAnimationFrame(animate),
+      animationId = requestAnimationFrame(animate)
     },
 
     initParticles(),
@@ -97,15 +96,15 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles(),
+      initParticles()
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize', handleResize),
-    },
+      window.removeEventListener('resize', handleResize)
+    }
   }, []),
 
   return (
@@ -257,7 +256,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl" />
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2030,

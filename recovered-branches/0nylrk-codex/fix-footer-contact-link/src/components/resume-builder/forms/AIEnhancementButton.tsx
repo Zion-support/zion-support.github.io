@@ -3,7 +3,6 @@ import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2 } from 'lucide-react',
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',
-
 interface AIEnhancementButtonProps {
   currentContent: string,
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
@@ -27,7 +26,7 @@ export function AIEnhancementButton({
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing'),
-      return,
+      return
     }
     
     setError(null),
@@ -38,7 +37,7 @@ export function AIEnhancementButton({
     ),
     
     if (enhancedContent) {
-      onEnhanced(enhancedContent),
+      onEnhanced(enhancedContent)
     }
   },
   
@@ -58,5 +57,5 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  ),
+  )
 }

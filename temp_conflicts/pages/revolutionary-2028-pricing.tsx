@@ -13,7 +13,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -28,8 +27,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: [
-      'Basic AI integrationStandard support',
-      'Core features accessEmail support',
+      'Basic AI integrationStandard supportCore features accessEmail support',
       'Basic analyticsMobile app access'
     ],
     popular: false,
@@ -43,10 +41,8 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
     features: [
-      'Advanced AI capabilitiesPriority support',
-      'Full feature accessPhone & email support',
-      'Advanced analyticsAPI access',
-      'Custom integrationsTraining & onboarding'
+      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email support',
+      'Advanced analyticsAPI accessCustom integrationsTraining & onboarding'
     ],
     popular: true,
     color: 'from-purple-600 to-pink-600',
@@ -59,10 +55,8 @@ const pricingTiers = [
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
-      'Custom AI developmentDedicated support team',
-      'White-label solutions24/7 phone support',
-      'Custom analyticsFull API access',
-      'Custom integrationsDedicated account manager',
+      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone support',
+      'Custom analyticsFull API accessCustom integrationsDedicated account manager',
       'SLA guaranteesOn-premise deployment'
     ],
     popular: false,

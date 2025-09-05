@@ -29,7 +29,7 @@ export interface Availability {
   status: 'available' | 'limited' | 'unavailable',
   nextAvailable?: string,
   message?: string,
-  availableHours?: { day: string, hours: string }[],
+  availableHours?: { day: string, hours: string }[]
 }
 
 export interface ProfileData {

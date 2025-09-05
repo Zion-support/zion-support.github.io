@@ -7,24 +7,23 @@ import { ProjectCard } from './ProjectCard',
 import { ProjectForm } from './ProjectForm',
 import { PortfolioProject } from '@/types/resume',
 import { usePortfolio } from '@/hooks/usePortfolio',
-
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
   const [showAddProject, setShowAddProject] = useState(false),
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
   
   useEffect(() => {
-    fetchProjects(),
+    fetchProjects()
   }, [fetchProjects]),
   
   const handleAddSuccess = () => {
     setShowAddProject(false),
-    fetchProjects(),
+    fetchProjects()
   },
   
   const handleEditSuccess = () => {
     setEditingProject(null),
-    fetchProjects(),
+    fetchProjects()
   },
   
   const handleDeleteProject = async (projectId: string) => {
@@ -39,7 +38,7 @@ export function PortfolioBuilder() {
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-    ),
+    )
   }
   
   return (
@@ -72,7 +71,7 @@ export function PortfolioBuilder() {
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false),
-                setEditingProject(null),
+                setEditingProject(null)
               }}
             />
           </CardContent>
@@ -115,5 +114,5 @@ export function PortfolioBuilder() {
         )
       )}
     </div>
-  ),
+  )
 }

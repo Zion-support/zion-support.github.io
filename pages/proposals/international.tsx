@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-
 type ProposalListItem = {
   id: string,
   title: string,
@@ -19,7 +18,7 @@ export default function InternationalProposalsPage() {
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
-      .catch(() => setItems([])),
+      .catch(() => setItems([]))
   }, []),
 
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter)),
@@ -60,5 +59,5 @@ export default function InternationalProposalsPage() {
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

@@ -1,7 +1,6 @@
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
 
 const corsHeaders = {
@@ -11,7 +10,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -55,7 +54,7 @@ serve(async (req) => {
         break,
         
       default:
-        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`,
+        userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     
     // Add subject line request to the prompt
@@ -77,7 +76,7 @@ serve(async (req) => {
 
     if (!response.ok) {
       const errorData = await response.json(),
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
     const data = await response.json(),
@@ -86,7 +85,7 @@ serve(async (req) => {
     // Parse the JSON response from OpenAI
     let generatedContent,
     try {
-      generatedContent = JSON.parse(generatedContentText),
+      generatedContent = JSON.parse(generatedContentText)
     } catch (e) {
       console.error("Failed to parse GPT response as JSON:", e),
       console.log("Raw response:", generatedContentText),
@@ -94,22 +93,22 @@ serve(async (req) => {
       const jsonMatch = generatedContentText.match(/\{[\s\S]*\}/),
       if (jsonMatch) {
         try {
-          generatedContent = JSON.parse(jsonMatch[0]),
+          generatedContent = JSON.parse(jsonMatch[0])
         } catch (e2) {
-          throw new Error("Could not parse the generated content as JSON"),
+          throw new Error("Could not parse the generated content as JSON")
         }
       } else {
-        throw new Error("Could not extract JSON from the generated content"),
+        throw new Error("Could not extract JSON from the generated content")
       }
     }
 
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }}),
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
   } catch (error) {
     console.error("Error in personalize-email function:", error),
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }}),
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
   }
 }),

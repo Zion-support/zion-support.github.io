@@ -11,8 +11,6 @@ import { useForm } from "react-hook-form",
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -48,11 +46,11 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),
 
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
       
       if (response && (response as any).error) {
-        throw new Error((response as any).error),
+        throw new Error((response as any).error)
       }
 
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
@@ -62,16 +60,16 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       toast({
         title: "Description Generated",
         description: "Your professional service description has been created."
-      }),
+      })
     } catch (error) {
       logErrorToProduction('Error generating description:', { data: error }),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -167,5 +165,5 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>
       </CardContent>
     </Card>
-  ),
+  )
 }

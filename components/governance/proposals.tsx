@@ -3,7 +3,7 @@ import path from 'path'
 
 export async function getStaticProps(){
   try{
-    const p = path.join(process.cwd(),'datagovernance','proposals.json')
+    const p = path.join(process.cwd(),'datagovernanceproposals.json')
     const raw = fs.readFileSync(p,'utf8')
     return { props: { data: JSON.parse(raw) } }
   }catch{

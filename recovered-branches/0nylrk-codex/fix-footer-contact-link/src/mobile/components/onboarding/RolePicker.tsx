@@ -73,5 +73,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  ),
+  )
 }

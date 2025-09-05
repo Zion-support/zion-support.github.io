@@ -10,7 +10,6 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types",
-
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -41,7 +40,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         description: "Please enter a message before applying.",
         variant: "destructive"
       }),
-      return,
+      return
     }
     
     try {
@@ -55,19 +54,19 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       ),
       
       if (!applicationSuccess) {
-        throw new Error("Failed to submit application"),
+        throw new Error("Failed to submit application")
       }
       
       // Format message with proposal link if provided
       let fullMessage = message,
       
       if (proposalLink) {
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`,
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
       }
       
       // Add info about attached resume if available
       if (selectedResume) {
-        fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`,
+        fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
       
       // Create context data for the conversation
@@ -92,23 +91,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
-        await onApplySuccess(job.id),
+        await onApplySuccess(job.id)
       }
       
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
       
-      onClose(),
+      onClose()
     } catch (error) {
       console.error("Failed to send application:", error),
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -167,5 +166,5 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </Button>
       </div>
     </>
-  ),
+  )
 }

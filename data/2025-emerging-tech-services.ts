@@ -49,20 +49,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'Brain-inspired neural architectureUltra-low power consumption',
-      'Real-time learning capabilitiesEdge computing optimization',
-      'Neuromorphic chip integrationAdaptive neural networks',
-      'Energy-efficient AI processingHardware-software co-design',
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesEdge computing optimization',
+      'Neuromorphic chip integrationAdaptive neural networksEnergy-efficient AI processingHardware-software co-design',
       'Scalable neuromorphic systemsResearch collaboration tools'
     ],
     benefits: [
-      'Reduce power consumption by 90%Improve AI performance by 500%',
-      'Enable edge AI deploymentReduce infrastructure costs by 70%',
+      'Reduce power consumption by 90%Improve AI performance by 500%Enable edge AI deploymentReduce infrastructure costs by 70%',
       'Future-proof computing architecture'
     ],
     targetAudience: [
-      'IoT device manufacturersEdge computing companies',
-      'AI hardware developersResearch institutions',
+      'IoT device manufacturersEdge computing companiesAI hardware developersResearch institutions',
       'Government agenciesAutomotive companies'
     ],
     marketPosition: 'Leading neuromorphic computing platform. Competes with Intel Loihi, IBM TrueNorth, and BrainChip. Our advantage: Advanced neural architecture and edge optimization.',
@@ -72,8 +68,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready neuromorphic platform with custom hardware integration, comprehensive development tools, and edge deployment capabilities.',
     roi: 'Companies see 600% ROI through reduced power costs and improved AI performance. Average payback period: 8 months.',
     useCases: [
-      'Edge AI processingIoT device intelligence',
-      'Autonomous vehiclesSmart cities',
+      'Edge AI processingIoT device intelligenceAutonomous vehiclesSmart cities',
       'Industrial automationMedical devices'
     ],
     integrations: ['IoT platforms, Edge computing infrastructure, AI frameworks, Hardware systems, Cloud platforms'],
@@ -102,20 +97,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '1 week'
     },
     features: [
-      'Quantum-resistant algorithmsQuantum key distribution',
-      'Post-quantum cryptographyReal-time encryption',
-      'Multi-layer securityCompliance automation',
-      'Performance monitoringAPI integration',
+      'Quantum-resistant algorithmsQuantum key distributionPost-quantum cryptographyReal-time encryption',
+      'Multi-layer securityCompliance automationPerformance monitoringAPI integration',
       'Mobile securityCloud security'
     ],
     benefits: [
-      'Unbreakable encryption securityFuture-proof against quantum attacks',
-      'Reduce security risks by 99.9%Comply with future regulations',
+      'Unbreakable encryption securityFuture-proof against quantum attacksReduce security risks by 99.9%Comply with future regulations',
       'Enable quantum-safe communications'
     ],
     targetAudience: [
-      'Financial institutionsGovernment agencies',
-      'Healthcare organizationsDefense contractors',
+      'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractors',
       'Technology companiesCritical infrastructure'
     ],
     marketPosition: 'Leading quantum encryption platform. Competes with traditional encryption providers and emerging quantum security companies. Our advantage: Quantum-resistant algorithms and quantum key distribution.',
@@ -125,8 +116,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready quantum encryption platform with comprehensive security features, real-time encryption, and seamless integration with existing systems.',
     roi: 'Organizations see 500% ROI through enhanced security and regulatory compliance. Average payback period: 6 months.',
     useCases: [
-      'Secure communicationsData encryption',
-      'Financial transactionsGovernment communications',
+      'Secure communicationsData encryptionFinancial transactionsGovernment communications',
       'Healthcare data protectionCritical infrastructure security'
     ],
     integrations: ['Communication systems, Financial platforms, Government networks, Healthcare systems, Cloud platforms'],
@@ -155,20 +145,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '1 month'
     },
     features: [
-      'AI-powered DNA designSynthetic organism creation',
-      'Biological system testingGene editing tools',
-      'Metabolic pathway designBiological circuit design',
-      'Safety assessment toolsRegulatory compliance',
+      'AI-powered DNA designSynthetic organism creationBiological system testingGene editing tools',
+      'Metabolic pathway designBiological circuit designSafety assessment toolsRegulatory compliance',
       'Research collaborationCommercialization support'
     ],
     benefits: [
-      'Accelerate biological research by 1000%Create novel biological systems',
-      'Reduce research costs by 80%Enable breakthrough discoveries',
+      'Accelerate biological research by 1000%Create novel biological systemsReduce research costs by 80%Enable breakthrough discoveries',
       'Accelerate commercialization'
     ],
     targetAudience: [
-      'Biotechnology companiesPharmaceutical companies',
-      'Agricultural companiesResearch institutions',
+      'Biotechnology companiesPharmaceutical companiesAgricultural companiesResearch institutions',
       'Government labsStartup companies'
     ],
     marketPosition: 'Leading synthetic biology platform. Competes with traditional biotechnology tools and emerging synthetic biology companies. Our advantage: AI integration and comprehensive platform.',
@@ -178,8 +164,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready synthetic biology platform with comprehensive design tools, laboratory integration, and commercialization support.',
     roi: 'Companies see 800% ROI through accelerated research and novel discoveries. Average payback period: 12 months.',
     useCases: [
-      'Drug developmentAgricultural improvements',
-      'Industrial biotechnologyEnvironmental remediation',
+      'Drug developmentAgricultural improvementsIndustrial biotechnologyEnvironmental remediation',
       'Medical treatmentsBiofuels production'
     ],
     integrations: ['Laboratory systems, Research databases, Academic networks, Government research platforms, Commercial partners'],
@@ -208,20 +193,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '2 months'
     },
     features: [
-      'AI-powered plasma controlFusion reaction optimization',
-      'Real-time monitoring systemsPredictive maintenance',
-      'Energy output optimizationSafety systems integration',
-      'Performance analyticsResearch collaboration',
+      'AI-powered plasma controlFusion reaction optimizationReal-time monitoring systemsPredictive maintenance',
+      'Energy output optimizationSafety systems integrationPerformance analyticsResearch collaboration',
       'Commercial deploymentRegulatory compliance'
     ],
     benefits: [
-      'Optimize fusion reactions by 500%Improve energy output by 300%',
-      'Reduce operational costs by 60%Accelerate commercial deployment',
+      'Optimize fusion reactions by 500%Improve energy output by 300%Reduce operational costs by 60%Accelerate commercial deployment',
       'Enable clean energy future'
     ],
     targetAudience: [
-      'Fusion energy companiesGovernment research labs',
-      'Energy utilitiesResearch institutions',
+      'Fusion energy companiesGovernment research labsEnergy utilitiesResearch institutions',
       'Investment firmsTechnology companies'
     ],
     marketPosition: 'Leading fusion energy AI platform. First-to-market in AI-powered fusion optimization. Positioned as the industry standard for fusion energy control.',
@@ -231,8 +212,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready fusion energy platform with real-time control systems, comprehensive monitoring, and commercial deployment capabilities.',
     roi: 'Fusion companies report 1000% ROI through optimized reactions and accelerated commercialization. Average payback period: 18 months.',
     useCases: [
-      'Fusion reactor controlPlasma stability optimization',
-      'Energy output maximizationSafety system management',
+      'Fusion reactor controlPlasma stability optimizationEnergy output maximizationSafety system management',
       'Research accelerationCommercial deployment'
     ],
     integrations: ['Fusion reactors, Energy infrastructure, Research networks, Government systems, Commercial energy grids'],
@@ -261,20 +241,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '1 month'
     },
     features: [
-      'Quantum network infrastructureQuantum entanglement networks',
-      'Quantum key distributionQuantum routing systems',
-      'Quantum network securityQuantum internet protocols',
-      'Network management toolsPerformance monitoring',
+      'Quantum network infrastructureQuantum entanglement networksQuantum key distributionQuantum routing systems',
+      'Quantum network securityQuantum internet protocolsNetwork management toolsPerformance monitoring',
       'API integrationCommercial deployment'
     ],
     benefits: [
-      'Unbreakable quantum securityInstant quantum communication',
-      'Future-proof internet infrastructureEnable quantum applications',
+      'Unbreakable quantum securityInstant quantum communicationFuture-proof internet infrastructureEnable quantum applications',
       'First-mover advantage'
     ],
     targetAudience: [
-      'Telecommunications companiesGovernment agencies',
-      'Financial institutionsResearch institutions',
+      'Telecommunications companiesGovernment agenciesFinancial institutionsResearch institutions',
       'Technology companiesInternet service providers'
     ],
     marketPosition: 'Leading quantum internet platform. First-to-market in commercial quantum internet infrastructure. Positioned as the industry standard for quantum networking.',
@@ -284,8 +260,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready quantum internet platform with comprehensive network infrastructure, quantum communication protocols, and commercial deployment capabilities.',
     roi: 'Telecommunications companies see 800% ROI through quantum security and future-proof infrastructure. Average payback period: 12 months.',
     useCases: [
-      'Quantum-secure communicationsGovernment networks',
-      'Financial networksResearch networks',
+      'Quantum-secure communicationsGovernment networksFinancial networksResearch networks',
       'Commercial applicationsQuantum internet development'
     ],
     integrations: ['Traditional networks, Quantum hardware, Government systems, Financial platforms, Research networks'],
@@ -314,20 +289,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '2 months'
     },
     features: [
-      'Neural signal processingBrain-computer communication',
-      'Cognitive enhancement toolsMedical applications',
-      'Research collaborationSafety monitoring',
-      'Performance analyticsUser interface design',
+      'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical applications',
+      'Research collaborationSafety monitoringPerformance analyticsUser interface design',
       'API integrationCommercial applications'
     ],
     benefits: [
-      'Enable direct brain controlEnhance human capabilities',
-      'Revolutionize medical treatmentsCreate new interaction methods',
+      'Enable direct brain controlEnhance human capabilitiesRevolutionize medical treatmentsCreate new interaction methods',
       'Advance neuroscience research'
     ],
     targetAudience: [
-      'Medical device companiesResearch institutions',
-      'Technology companiesHealthcare organizations',
+      'Medical device companiesResearch institutionsTechnology companiesHealthcare organizations',
       'Government agenciesAcademic researchers'
     ],
     marketPosition: 'Leading brain-computer interface platform. Competes with emerging BCI companies and traditional medical devices. Our advantage: Advanced neural processing and comprehensive platform.',
@@ -337,8 +308,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready BCI platform with comprehensive neural processing, medical applications, and research collaboration tools.',
     roi: 'Medical companies see 600% ROI through novel treatments and enhanced capabilities. Average payback period: 15 months.',
     useCases: [
-      'Medical treatmentsCognitive enhancement',
-      'Human-computer interactionNeuroscience research',
+      'Medical treatmentsCognitive enhancementHuman-computer interactionNeuroscience research',
       'Assistive technologyGaming and entertainment'
     ],
     integrations: ['Medical devices, Research systems, Healthcare platforms, Academic networks, Government research'],
@@ -367,20 +337,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'Quantum sensor arraysUltra-sensitive detection',
-      'Precision measurementReal-time monitoring',
-      'Data analysis toolsIntegration APIs',
-      'Performance optimizationCalibration tools',
+      'Quantum sensor arraysUltra-sensitive detectionPrecision measurementReal-time monitoring',
+      'Data analysis toolsIntegration APIsPerformance optimizationCalibration tools',
       'Research collaborationCommercial applications'
     ],
     benefits: [
-      'Improve sensitivity by 1000xEnable new measurement capabilities',
-      'Reduce detection limitsImprove precision accuracy',
+      'Improve sensitivity by 1000xEnable new measurement capabilitiesReduce detection limitsImprove precision accuracy',
       'Enable quantum advantage'
     ],
     targetAudience: [
-      'Manufacturing companiesResearch institutions',
-      'Government agenciesTechnology companies',
+      'Manufacturing companiesResearch institutionsGovernment agenciesTechnology companies',
       'Healthcare organizationsEnvironmental monitoring'
     ],
     marketPosition: 'Leading quantum sensors platform. Competes with traditional sensors and emerging quantum sensor companies. Our advantage: Quantum sensitivity and comprehensive platform.',
@@ -390,8 +356,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready quantum sensors platform with comprehensive sensor arrays, data analysis tools, and integration capabilities.',
     roi: 'Companies see 400% ROI through improved sensitivity and new measurement capabilities. Average payback period: 8 months.',
     useCases: [
-      'Precision manufacturingEnvironmental monitoring',
-      'Medical diagnosticsSecurity detection',
+      'Precision manufacturingEnvironmental monitoringMedical diagnosticsSecurity detection',
       'Scientific researchQuality control'
     ],
     integrations: ['Manufacturing systems, Research platforms, Healthcare systems, Government networks, Environmental monitoring'],
@@ -420,20 +385,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '1 week'
     },
     features: [
-      'Autonomous robot controlAI-powered decision making',
-      'Multi-robot coordinationSafety systems integration',
-      'Performance optimizationRemote monitoring',
-      'Integration APIsCustom robot development',
+      'Autonomous robot controlAI-powered decision makingMulti-robot coordinationSafety systems integration',
+      'Performance optimizationRemote monitoringIntegration APIsCustom robot development',
       'Deployment toolsAnalytics dashboard'
     ],
     benefits: [
-      'Reduce operational costs by 50%Improve efficiency by 300%',
-      'Enable 24/7 autonomous operationReduce human intervention',
+      'Reduce operational costs by 50%Improve efficiency by 300%Enable 24/7 autonomous operationReduce human intervention',
       'Scale operations easily'
     ],
     targetAudience: [
-      'Manufacturing companiesWarehouse operations',
-      'Logistics companiesHealthcare organizations',
+      'Manufacturing companiesWarehouse operationsLogistics companiesHealthcare organizations',
       'Service industriesResearch institutions'
     ],
     marketPosition: 'Leading autonomous robotics platform. Competes with traditional robotics companies and emerging autonomous robot platforms. Our advantage: AI integration and comprehensive autonomy.',
@@ -443,8 +404,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready autonomous robotics platform with comprehensive robot control, safety systems, and integration capabilities.',
     roi: 'Companies see 400% ROI through reduced operational costs and improved efficiency. Average payback period: 6 months.',
     useCases: [
-      'Industrial automationWarehouse operations',
-      'Logistics automationService robotics',
+      'Industrial automationWarehouse operationsLogistics automationService robotics',
       'Research roboticsCustom applications'
     ],
     integrations: ['Manufacturing systems, Warehouse management, Logistics platforms, Healthcare systems, Research platforms'],
@@ -473,20 +433,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '1 month'
     },
     features: [
-      'AI-powered material discoveryQuantum material design',
-      'Property predictionSynthesis optimization',
-      'Performance testingResearch collaboration',
-      'Commercialization supportPatent assistance',
+      'AI-powered material discoveryQuantum material designProperty predictionSynthesis optimization',
+      'Performance testingResearch collaborationCommercialization supportPatent assistance',
       'Market analysisIntegration support'
     ],
     benefits: [
-      'Accelerate discovery by 1000xReduce research costs by 80%',
-      'Enable breakthrough materialsAccelerate commercialization',
+      'Accelerate discovery by 1000xReduce research costs by 80%Enable breakthrough materialsAccelerate commercialization',
       'Create competitive advantage'
     ],
     targetAudience: [
-      'Materials companiesElectronics manufacturers',
-      'Energy companiesResearch institutions',
+      'Materials companiesElectronics manufacturersEnergy companiesResearch institutions',
       'Technology companiesStartup companies'
     ],
     marketPosition: 'Leading quantum materials platform. Competes with traditional materials research and emerging quantum materials companies. Our advantage: AI integration and comprehensive platform.',
@@ -496,8 +452,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready quantum materials platform with comprehensive discovery tools, design capabilities, and commercialization support.',
     roi: 'Companies see 700% ROI through accelerated discovery and novel materials. Average payback period: 10 months.',
     useCases: [
-      'Electronics materialsEnergy storage materials',
-      'Quantum computing materialsAdvanced coatings',
+      'Electronics materialsEnergy storage materialsQuantum computing materialsAdvanced coatings',
       'Novel alloysBiomaterials'
     ],
     integrations: ['Research databases, Laboratory systems, Academic networks, Government research, Commercial partners'],
@@ -526,20 +481,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
       setupTime: '2 weeks'
     },
     features: [
-      'Quantum key distributionQuantum entanglement networks',
-      'Secure communication protocolsNetwork infrastructure',
-      'Performance monitoringSecurity validation',
-      'Integration APIsCommercial deployment',
+      'Quantum key distributionQuantum entanglement networksSecure communication protocolsNetwork infrastructure',
+      'Performance monitoringSecurity validationIntegration APIsCommercial deployment',
       'Research collaborationRegulatory compliance'
     ],
     benefits: [
-      'Unbreakable communication securityFuture-proof against quantum attacks',
-      'Enable quantum applicationsReduce security risks by 99.9%',
+      'Unbreakable communication securityFuture-proof against quantum attacksEnable quantum applicationsReduce security risks by 99.9%',
       'Comply with future regulations'
     ],
     targetAudience: [
-      'Government agenciesFinancial institutions',
-      'Healthcare organizationsDefense contractors',
+      'Government agenciesFinancial institutionsHealthcare organizationsDefense contractors',
       'Technology companiesCritical infrastructure'
     ],
     marketPosition: 'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
@@ -549,8 +500,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     implementationDetails: 'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
     roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.',
     useCases: [
-      'Government communicationsFinancial transactions',
-      'Healthcare data transmissionDefense communications',
+      'Government communicationsFinancial transactionsHealthcare data transmissionDefense communications',
       'Critical infrastructureResearch networks'
     ],
     integrations: ['Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'],
@@ -568,7 +518,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
 ],
 
 export const getPopularEmergingTechServices = () => {
-  return emergingTechServices2025.filter(service => service.popular),
+  return emergingTechServices2025.filter(service => service.popular)
 },
 
 export const getEmergingTechServicesByCategory = (category: string) => {
@@ -579,5 +529,5 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) || 0,
     return price >= minPrice && price <= maxPrice
-  }),
+  })
 },

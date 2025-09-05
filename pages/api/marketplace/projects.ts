@@ -5,7 +5,7 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
 
 function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message }),
+  return res.status(code).json({ ok: false, error: message })
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
@@ -24,7 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403),
 
     if (req.method === "GET") {
-      return res.json({ ok: true, project }),
+      return res.json({ ok: true, project })
     }
 
     if (req.method === "PATCH") {
@@ -41,7 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           createdAtIso: new Date().toISOString()},
         project.notes.push(note),
         saveProject(project),
-        return res.json({ ok: true, project }),
+        return res.json({ ok: true, project })
       }
 
       if (action === "add_document") {
@@ -54,28 +54,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           uploadedAtIso: new Date().toISOString()},
         project.documents.push(doc),
         saveProject(project),
-        return res.json({ ok: true, project }),
+        return res.json({ ok: true, project })
       }
 
       if (action === "update_timeline") {
         const { timeline } = req.body as { timeline: Project["timeline"] },
         project.timeline = Array.isArray(timeline) ? timeline : project.timeline,
         saveProject(project),
-        return res.json({ ok: true, project }),
+        return res.json({ ok: true, project })
       }
 
       if (action === "mark_completed") {
         project.status = "COMPLETED",
         saveProject(project),
-        return res.json({ ok: true, project }),
+        return res.json({ ok: true, project })
       }
 
-      return bad(res, "Unknown action"),
+      return bad(res, "Unknown action")
     }
 
-    return bad(res, "Method not allowed", 405),
+    return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500,
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" }),
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }

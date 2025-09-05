@@ -2,7 +2,6 @@ import type { GetServerSideProps, NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 import Layout from '../../components/layout/Layout',
-
 type Props = { posts: BlogPost[], authors: string[], topics: string[], tags: string[] },
 
 const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
@@ -13,8 +12,8 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
       if (filters.author && p.author !== filters.author) return false,
       if (filters.topic && !p.topics.includes(filters.topic)) return false,
       if (filters.tag && !p.tags.includes(filters.tag)) return false,
-      return true,
-    }),
+      return true
+    })
   }, [posts, filters]),
 
   const hero = filtered[0],
@@ -58,7 +57,7 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
         </div>
       </div>
     </Layout>
-  ),
+  )
 },
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -66,7 +65,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const authors = listAllAuthors(),
   const topics = listAllTopics(),
   const tags = listAllTags(),
-  return { props: { posts, authors, topics, tags } },
+  return { props: { posts, authors, topics, tags } }
 },
 
 export default BlogHome,

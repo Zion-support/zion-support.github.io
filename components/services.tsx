@@ -37,7 +37,6 @@ import {
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-
 // Import all the new 2025 service data
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
@@ -45,20 +44,17 @@ import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
 import { additionalRealServices2025 } from '../data/2025-additional-real-services',
 import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',
-
 // Import new innovative services
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
-
 // Import existing services for comprehensive coverage
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
 import { quantumSpaceServices } from '../data/quantum-space-services',
 import { enterpriseITServices } from '../data/enterprise-it-services',
-
 const allServices = [
   ...realMicroSaasServices2025,
   ...innovativeAIServices2025,
@@ -240,7 +236,6 @@ const serviceCategories: Array<{
   }
 ],
 import { realVerifiedServices } from '../data/real-verified-services',
-
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('All'),
@@ -291,7 +286,7 @@ export default function ServicesPage() {
                              (Array.isArray(service.category) ? 
                                service.category.includes(selectedCategory) : 
                                service.category === selectedCategory),
-      return matchesSearch && matchesCategory,
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -635,7 +630,7 @@ export default function ServicesPage() {
                 <button
                   onClick={() => {
                     setSearchTerm(''),
-                    setSelectedCategory('All'),
+                    setSelectedCategory('All')
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >

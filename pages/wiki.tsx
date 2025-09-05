@@ -13,13 +13,13 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       onClick={async () => {
         await navigator.clipboard.writeText(text),
         setCopied(true),
-        setTimeout(() => setCopied(false), 1500),
+        setTimeout(() => setCopied(false), 1500)
       }}
       className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
     >
       {copied ? 'Copied' : label}
     </button>
-  ),
+  )
 }
 
 export default function WikiPage() {
@@ -92,5 +92,5 @@ export default function WikiPage() {
         </div>
       </article>
     </div>
-  ),
+  )
 }

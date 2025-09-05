@@ -1,12 +1,11 @@
 import OpenAI from 'openai',
-
 export type SupportedProvider = 'openai' | 'deepl' | 'none',
 
 const provider: SupportedProvider = (process.env.TRANSLATION_PROVIDER as SupportedProvider) || (process.env.OPENAI_API_KEY ? 'openai' : process.env.DEEPL_API_KEY ? 'deepl' : 'none'),
 
 let openai: OpenAI | null = null,
 if (provider === 'openai') {
-  openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+  openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 }
 
 async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string> {
@@ -19,7 +18,7 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
       { role: 'system', content: system },
       { role: 'user', content: user }],
     temperature: 0.2}),
-  return (completion.choices?.[0]?.message?.content || '').trim(),
+  return (completion.choices?.[0]?.message?.content || '').trim()
 }
 
 async function translateWithDeepL(text: string, to: string, from?: string): Promise<string> {
@@ -37,7 +36,7 @@ async function translateWithDeepL(text: string, to: string, from?: string): Prom
     body: params.toString()}),
   const data = await res.json(),
   if (!res.ok) throw new Error(data?.message || 'DeepL error'),
-  return data?.translations?.[0]?.text || '',
+  return data?.translations?.[0]?.text || ''
 }
 
 export async function translateText(text: string, to: string, from?: string): Promise<string> {
@@ -45,9 +44,9 @@ export async function translateText(text: string, to: string, from?: string): Pr
   try {
     if (provider === 'openai') return await translateWithOpenAI(text, to, from),
     if (provider === 'deepl') return await translateWithDeepL(text, to, from),
-    return text,
+    return text
   } catch {
-    return text,
+    return text
   }
 }
 

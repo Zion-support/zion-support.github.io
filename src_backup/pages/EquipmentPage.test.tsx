@@ -1,7 +1,6 @@
 import React, { useState } from 'react',
 import { Link } from 'react-router-dom',
 import { SERVICE_CATEGORIES } from '@/data/servicesData',
-
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,14 +20,14 @@ export function ContactPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    })),
+    }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Here you would typically send the form data to your backend
     const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
-    window.location.href = mailtoLink,
+    window.location.href = mailtoLink
   },
 
   return (

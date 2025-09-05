@@ -10,7 +10,6 @@ import {
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
-
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
@@ -31,7 +30,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
 
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
-      return,
+      return
     }
 
     setIsLoading(true),
@@ -42,11 +41,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         location},
 
       const result = await getTalentRateSuggestion(params),
-      setSuggestion(result),
+      setSuggestion(result)
     } catch (error) {
-      console.error("Error generating rate suggestion:", error),
+      console.error("Error generating rate suggestion:", error)
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -65,7 +64,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           suggestedMax: suggestion.maxRate,
           actualValue: suggestedRate,
           accepted: true
-        }),
+        })
       }
     }
   },
@@ -93,5 +92,5 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         )}
       </div>
     </div>
-  ),
+  )
 },

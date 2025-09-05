@@ -9,7 +9,6 @@ import {
   ShoppingCart
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -63,8 +62,7 @@ const pricingPlans = [
     period: '/month',
     description: 'Perfect for small businesses and content creators',
     features: [
-      'Real-time content analyticsAI optimization suggestions',
-      'Basic performance trackingSEO content insights',
+      'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insights',
       'Email supportUp to 100 content pieces/month'
     ],
     popular: false,
@@ -76,10 +74,8 @@ const pricingPlans = [
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
     features: [
-      'Everything in StarterPredictive performance modeling',
-      'Advanced competitor analysisMulti-channel optimization',
-      'Priority supportUp to 500 content pieces/month',
-      'Custom integrations'
+      'Everything in StarterPredictive performance modelingAdvanced competitor analysisMulti-channel optimization',
+      'Priority supportUp to 500 content pieces/monthCustom integrations'
     ],
     popular: true,
     color: 'from-blue-500 to-purple-600'
@@ -90,10 +86,8 @@ const pricingPlans = [
     period: '/month',
     description: 'For large organizations with complex content needs',
     features: [
-      'Everything in ProfessionalCustom AI models',
-      'Advanced analyticsDedicated account manager',
-      '24/7 phone supportUnlimited content pieces',
-      'White-label solutionsAPI access'
+      'Everything in ProfessionalCustom AI modelsAdvanced analyticsDedicated account manager',
+      '24/7 phone supportUnlimited content piecesWhite-label solutionsAPI access'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'
@@ -128,8 +122,7 @@ const useCases = [
 ],
 
 const integrations = [
-  'WordPressShopify', 'HubSpotMailchimp', 'Google AnalyticsFacebook Ads', 'Google AdsLinkedIn', 'TwitterInstagram',
-  'YouTubeTikTok', 'SlackZapier', 'API Access'
+  'WordPressShopifyHubSpotMailchimp', 'Google AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTok', 'SlackZapierAPI Access'
 ],
 
 export default function AIContentIntelligencePlatform() {

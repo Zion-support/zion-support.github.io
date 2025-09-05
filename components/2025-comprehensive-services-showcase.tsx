@@ -13,7 +13,6 @@ import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecuri
 import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',
 import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',
-
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all'),
 
@@ -22,7 +21,7 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
   if (typeof service.price === 'string') return service.price,
-  return 'Contact for pricing',
+  return 'Contact for pricing'
 },
 
 // Helper function to get service features
@@ -72,7 +71,7 @@ const allServices = [
         if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),
         if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),
         if (activeTab === 'ai-services') return service.category?.includes('AI Services'),
-        return true,
+        return true
       }),
 
   return (

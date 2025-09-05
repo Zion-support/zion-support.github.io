@@ -6,7 +6,6 @@ import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", 
 import { Wallet } from 'lucide-react'
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function Web3Login() {
 
   const { loginWithWeb3 } = useAuth(),
@@ -17,7 +16,7 @@ export function Web3Login() {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
-      return,
+      return
     }
 
     try {
@@ -28,7 +27,7 @@ export function Web3Login() {
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
-        return,
+        return
       }
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
@@ -36,9 +35,9 @@ export function Web3Login() {
     } catch (error: any) {
       toast("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
-      logErrorToProduction('Web3 login error:', { data: error }),
+      logErrorToProduction('Web3 login error:', { data: error })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -53,7 +52,7 @@ export function Web3Login() {
       <>
         <Wallet className="h-5 w-5 mr-2" /> Web3 Login Unavailable
       </>
-    ),
+    )
   } else if (isLoading) {
     buttonContent = (
       <span className="flex items-center">
@@ -70,7 +69,7 @@ export function Web3Login() {
         <Wallet className="h-5 w-5 mr-2" /> Sign in with Web3
         <span className="sr-only">Sign in with Web3</span>
       </>
-    ),
+    )
   }
 
   return (
@@ -84,5 +83,5 @@ export function Web3Login() {
     >
       {buttonContent}
     </Button>
-  ),
+  )
 }

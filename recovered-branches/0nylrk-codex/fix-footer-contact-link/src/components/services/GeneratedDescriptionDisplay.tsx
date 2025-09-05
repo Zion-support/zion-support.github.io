@@ -25,7 +25,7 @@ export function GeneratedDescriptionDisplay({
     toast({
       title: "Description Saved",
       description: "Your edited description has been saved."
-    }),
+    })
   },
 
   return (
@@ -77,5 +77,5 @@ export function GeneratedDescriptionDisplay({
         </CardFooter>
       )}
     </Card>
-  ),
+  )
 }

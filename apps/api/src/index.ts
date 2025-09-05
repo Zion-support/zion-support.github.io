@@ -4,7 +4,6 @@ import rateLimit from '@fastify/rate-limit',
 import { createOpenAIClient, generateJobPost } from './openai',
 import { withUser } from './pg',
 import dotenv from 'dotenv',
-
 dotenv.config(),
 
 const app = Fastify({ logger: true }),
@@ -14,11 +13,11 @@ await app.register(cors, {
     const allowed = (process.env.CORS_ORIGINS || '').split().map((s) => s.trim()),
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true),
-      return,
+      return
     }
-    cb(new Error('Not allowed'), false),
+    cb(new Error('Not allowed'), false)
   },
-  methods: ['GETPOST', 'OPTIONS']
+  methods: ['GETPOSTOPTIONS']
 }),
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' }),
@@ -34,7 +33,7 @@ app.post('/ai/ask', async (req: any, reply: any) => {
   const prompt = body.prompt as string,
   if (!prompt) return reply.code(400).send({ error: 'prompt required' }),
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt }),
-  return { text: completion.output_text },
+  return { text: completion.output_text }
 }),
 
 app.post('/jobs/generate', async (req: any, reply: any) => {
@@ -48,9 +47,9 @@ app.post('/jobs/generate', async (req: any, reply: any) => {
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [userId, role, description, body.location || null, body.tags || null]
-    ),
+    )
   }),
-  return { saved: Boolean(userId), description },
+  return { saved: Boolean(userId), description }
 }),
 
 app.get('/talent/search', async (req: any, reply: any) => {
@@ -69,9 +68,9 @@ app.get('/talent/search', async (req: any, reply: any) => {
        LIMIT 25`,
       [country || null, q || null]
     ),
-    return res.rows,
+    return res.rows
   }),
-  return { results: rows },
+  return { results: rows }
 }),
 
 app.get('/projects/:name/track', async (req: any, reply: any) => {
@@ -80,10 +79,10 @@ app.get('/projects/:name/track', async (req: any, reply: any) => {
   if (!userId) return reply.code(401).send({ error: 'unauthorized' }),
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]),
-    return res.rows[0],
+    return res.rows[0]
   }),
   if (!project) return reply.code(404).send({ error: 'not found' }),
-  return { project },
+  return { project }
 }),
 
 app.get('/notifications', async (req: any, reply: any) => {
@@ -94,9 +93,9 @@ app.get('/notifications', async (req: any, reply: any) => {
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     ),
-    return res.rows,
+    return res.rows
   }),
-  return { items },
+  return { items }
 }),
 
 const port = Number(process.env.API_PORT || 4000),

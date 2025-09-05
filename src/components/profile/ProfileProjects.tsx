@@ -54,5 +54,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         ))}
       </div>
     </div>
-  ),
+  )
 }

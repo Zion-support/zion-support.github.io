@@ -2,18 +2,17 @@
 
 import { useState, useEffect } from 'react',
 import Link from 'next/link',
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const navigation = [
@@ -186,5 +185,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  ),
+  )
 }

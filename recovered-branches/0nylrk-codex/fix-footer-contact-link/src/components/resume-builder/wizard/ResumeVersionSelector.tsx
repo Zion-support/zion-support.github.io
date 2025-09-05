@@ -13,7 +13,6 @@ import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',
 import { Resume } from '@/types/resume',
 import { useResume } from '@/hooks/useResume',
-
 interface ResumeVersionSelectorProps {
   currentResume: Resume,
   onResumeChange: (resumeId: string) => void
@@ -34,9 +33,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId),
         onResumeChange(resumeId),
         setSaveDialogOpen(false),
-        setNewResumeTitle(''),
+        setNewResumeTitle('')
       }
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -103,5 +102,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-  ),
+  )
 }

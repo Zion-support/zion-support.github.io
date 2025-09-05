@@ -3,7 +3,6 @@ import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
 import { useTranslation } from 'react-i18next',
-
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',
   title?: string,
@@ -12,7 +11,7 @@ export interface EmptyStateProps {
     label: string,
     onClick: () => void
   },
-  icon?: React.ReactNode,
+  icon?: React.ReactNode
 }
 
 const defaultContent = {
@@ -106,7 +105,7 @@ export function EmptyState({
         </div>
       )}
     </div>
-  ),
+  )
 }
 
 // Specific empty state variants for quick use
@@ -117,7 +116,7 @@ export function ProductsEmptyState({
 }: {
   onRetry?: () => void,
   onAddProduct?: () => void,
-  isAuthenticated?: boolean,
+  isAuthenticated?: boolean
 }) {
   const action = onAddProduct
     ? { 
@@ -138,7 +137,7 @@ export function ProductsEmptyState({
       action={action}
       description={customDescription}
     />
-  ),
+  )
 }
 
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -147,7 +146,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />
-  ),
+  )
 }
 
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -156,7 +155,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="talent"
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
     />
-  ),
+  )
 }
 
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -165,7 +164,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="equipment"
       action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
     />
-  ),
+  )
 }
 
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -174,7 +173,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
       type="search"
       action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
     />
-  ),
+  )
 }
 
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
@@ -183,7 +182,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       type="network"
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
     />
-  ),
+  )
 }
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
@@ -192,5 +191,5 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       type="error"
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />
-  ),
+  )
 } 

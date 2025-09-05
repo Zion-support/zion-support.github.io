@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react',
 import type { BlogPost } from '@/utils/types/blog',
-
 const emptyPost: Partial<BlogPost> = {
   title: '',
   slug: '',
@@ -21,11 +20,11 @@ export default function AdminBlog() {
     const t = localStorage.getItem('adminToken') || '',
     setToken(t),
     fetch('/api/blog/posts?status=draft').then((r) => r.json()).then((d) => setPosts(d.items || [])).catch(() => {}),
-    fetch('/api/blog/posts?status=published').then((r) => r.json()).then((d) => setPosts((p) => [...p, ...(d.items || [])])).catch(() => {}),
+    fetch('/api/blog/posts?status=published').then((r) => r.json()).then((d) => setPosts((p) => [...p, ...(d.items || [])])).catch(() => {})
   }, []),
 
   const saveToken = () => {
-    localStorage.setItem('adminToken', token),
+    localStorage.setItem('adminToken', token)
   },
 
   const save = async (publish = false) => {
@@ -41,7 +40,7 @@ export default function AdminBlog() {
       // refresh list
       const list = await fetch('/api/blog/posts').then((r) => r.json()),
       setPosts(list.items || []),
-      alert('Saved'),
+      alert('Saved')
     } else {
       const err = await res.json().catch(() => ({})),
       alert('Error: ' + (err.error || res.statusText))
@@ -50,7 +49,7 @@ export default function AdminBlog() {
 
   const startEdit = (p?: BlogPost) => {
     if (p) setEditing(p),
-    else setEditing({ ...emptyPost }),
+    else setEditing({ ...emptyPost })
   },
 
   return (
@@ -84,7 +83,7 @@ export default function AdminBlog() {
             <input className="border rounded px-3 py-2" placeholder="Cover Image URL" value={editing.coverImageUrl || ''} onChange={(e) => setEditing((s) => ({ ...s, coverImageUrl: e.target.value }))} />
             <input className="border rounded px-3 py-2" placeholder="Author" value={editing.author || ''} onChange={(e) => setEditing((s) => ({ ...s, author: e.target.value }))} />
             <input type="date" className="border rounded px-3 py-2" value={(editing.publishDate || '').slice(0, 10)} onChange={(e) => setEditing((s) => ({ ...s, publishDate: new Date(e.target.value).toISOString() }))} />
-            <input className="border rounded px-3 py-2" placeholder="Tags (comma separated)" value={(editing.tags || []).join()} onChange={(e) => setEditing((s) => ({ ...s, tags: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
+            <input className="border rounded px-3 py-2" placeholder="Tags (comma separated)" value={(editing.tags || []).join()} onChange={(e) => setEditing((s) => ({ ...s, tags: e.target.value.split().map((x) => x.trim()).filter(Boolean) }))} />
             <input className="border rounded px-3 py-2" placeholder="Topics (comma separated)" value={(editing.topics || []).join()} onChange={(e) => setEditing((s) => ({ ...s, topics: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Title" value={editing.seo?.metaTitle || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaTitle: e.target.value } }))} />
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Description" value={editing.seo?.metaDescription || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaDescription: e.target.value } }))} />
@@ -98,5 +97,5 @@ export default function AdminBlog() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

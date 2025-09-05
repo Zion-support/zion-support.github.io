@@ -20,7 +20,7 @@ class SecurityScanner {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    },
+    }
   },
 ,
   async scanDependencies() {,
@@ -37,8 +37,8 @@ class SecurityScanner {,
       return {,
         success: true,
         vulnerabilities: audit.vulnerabilities || {},
-        summary: audit.metadata || {},
-      },
+        summary: audit.metadata || {}
+      }
     } catch (error) {,
       // npm audit might fail if there are vulnerabilities,
       try {,
@@ -48,8 +48,8 @@ class SecurityScanner {,
             success: false,
             error: 'Vulnerabilities found',
             output: output
-          },
-        },
+          }
+        }
       } catch (parseError) {,
         this.log(`Error parsing npm audit output: ${parseError.message}`)
       },
@@ -58,8 +58,8 @@ class SecurityScanner {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || ''
-      },
-    },
+      }
+    }
   },
 ,
   async scanCode() {,
@@ -86,8 +86,8 @@ class SecurityScanner {,
               severity: 'high',
               message: 'Hardcoded password detected'
             })
-          },
-      },
+          }
+      }
     },
 ,
     scanDirectory(this.projectRoot),
@@ -126,21 +126,21 @@ class SecurityScanner {,
               severity: 'medium',
               message: 'Debug mode enabled in production configuration'
             })
-          },
-        },
+          }
+        }
       }),
 ,
       return {,
         success: true,
         issues: configIssues
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         issues: []
-      },
-    },
+      }
+    }
   },
 ,
   async generateReport(depResults, codeResults, configResults) {,
@@ -177,7 +177,7 @@ class SecurityScanner {,
           message: `${highSeverity} high-severity security issues found in code`,
           action: 'Review and fix high-severity security issues'
         })
-      },
+      }
     },
 ,
     if (configResults.issues.length > 0) {,
@@ -202,7 +202,7 @@ class SecurityScanner {,
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -246,13 +246,13 @@ class SecurityScanner {,
         })
       } else {,
         this.log('\n✨ No security issues found!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running security scanner: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the security scanner,

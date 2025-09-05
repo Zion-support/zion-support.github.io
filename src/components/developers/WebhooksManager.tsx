@@ -44,7 +44,7 @@ export function WebhooksManager() {
 
   // Load webhooks on mount
   useEffect(() => {
-    fetchWebhooks(),
+    fetchWebhooks()
   }, []),
 
   const handleCreateWebhook = async () => {
@@ -58,11 +58,11 @@ export function WebhooksManager() {
     ),
     
     setShowCreateDialog(false),
-    resetWebhookForm(),
+    resetWebhookForm()
   },
 
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
-    await toggleWebhook(webhookId, !currentStatus),
+    await toggleWebhook(webhookId, !currentStatus)
   },
 
   const handleDeleteWebhook = async (webhookId: string) => {
@@ -72,14 +72,14 @@ export function WebhooksManager() {
 
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType),
-    setShowTestResult(true),
+    setShowTestResult(true)
   },
 
   const resetWebhookForm = () => {
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
-    setSelectedEvents([]),
+    setSelectedEvents([])
   },
 
   // Event type options
@@ -95,7 +95,7 @@ export function WebhooksManager() {
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
         : [...prev, event]
-    ),
+    )
   },
 
   return (
@@ -197,7 +197,7 @@ export function WebhooksManager() {
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false),
-                  resetWebhookForm(),
+                  resetWebhookForm()
                 }}>
                   Cancel
                 </Button>
@@ -313,7 +313,7 @@ export function WebhooksManager() {
             setTestEventType('new_application'),
             if (showTestResult) {
               setShowTestResult(false),
-              clearTestResult(),
+              clearTestResult()
             }
           }
         }}
@@ -393,13 +393,13 @@ export function WebhooksManager() {
                 <Button variant="default" onClick={() => {
                   setShowTestDialog(null),
                   setShowTestResult(false),
-                  clearTestResult(),
+                  clearTestResult()
                 }}>
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
                   setShowTestResult(false),
-                  clearTestResult(),
+                  clearTestResult()
                 }}>
                   Test Another Event
                 </Button>

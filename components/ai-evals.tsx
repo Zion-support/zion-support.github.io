@@ -4,7 +4,6 @@ import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLin
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -14,8 +13,7 @@ export default function AIEvalsPage() {
 	},
 
 	const features = [
-		'Golden datasets and synthetic evalsHallucination and grounding score',
-		'Toxicity, bias and safety metricsLLM version comparison reports',
+		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reports',
 		'CI quality gates and webhooksLatency and cost KPIs with budgets'
 	],
 
@@ -86,5 +84,5 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-	),
+	)
 }

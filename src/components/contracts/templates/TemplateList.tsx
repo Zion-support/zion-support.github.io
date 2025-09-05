@@ -19,7 +19,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
-
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -45,7 +44,7 @@ export function TemplateList({
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete),
-      setTemplateToDelete(null),
+      setTemplateToDelete(null)
     }
   },
 
@@ -53,9 +52,9 @@ export function TemplateList({
     if (!user) {
       const currentPath = router.asPath,
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`),
-      return,
+      return
     }
-    await setDefaultTemplate.mutateAsync(templateId),
+    await setDefaultTemplate.mutateAsync(templateId)
   },
 
   if (isLoading) {
@@ -63,7 +62,7 @@ export function TemplateList({
       <div className="flex justify-center items-center py-8">
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
       </div>
-    ),
+    )
   }
 
   if (!templates.length) {
@@ -72,7 +71,7 @@ export function TemplateList({
         <p className="text-muted-foreground">No templates found.</p>
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -171,5 +170,5 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  ),
+  )
 }

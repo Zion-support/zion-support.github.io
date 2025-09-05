@@ -35,10 +35,10 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       // If it's not already viewed, mark it as viewed
       const application = applications.find(app => app.id === applicationId),
       if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId),
+        await markApplicationAsViewed(applicationId)
       }
     } finally {
-      setProcessingId(null),
+      setProcessingId(null)
     }
   },
 
@@ -56,15 +56,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   },
 
   if (isLoading) {
-    return <LoadingState />,
+    return <LoadingState />
   }
 
   if (error) {
-    return <ErrorState error={error} />,
+    return <ErrorState error={error} />
   }
 
   if (applications.length === 0) {
-    return <EmptyState />,
+    return <EmptyState />
   }
 
   return (
@@ -84,5 +84,5 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onScoreUpdated={handleScoreUpdated}
       />
     </>
-  ),
+  )
 }

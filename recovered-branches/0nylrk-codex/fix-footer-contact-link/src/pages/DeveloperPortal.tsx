@@ -16,7 +16,6 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
-
 interface TabDefinition {
   id: string,
   label: string,
@@ -64,7 +63,7 @@ export function DeveloperPortal() {
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
-            ),
+            )
           })}
         </div>
       </div>
@@ -77,7 +76,7 @@ export function DeveloperPortal() {
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
-  ),
+  )
 }
 
 export default function ProtectedDeveloperPortal() {
@@ -85,5 +84,5 @@ export default function ProtectedDeveloperPortal() {
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-  ),
+  )
 }

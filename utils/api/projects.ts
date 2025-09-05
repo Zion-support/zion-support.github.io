@@ -3,18 +3,17 @@ import path from 'path',
 import { NextApiRequest, NextApiResponse } from 'next',
 import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones',
 import { CurrentUser } from './auth',
-
 const DATA_FILE = path.join(process.cwd(), 'dataprojects.json'),
 
 type DbShape = { projects: Project[] },
 
 function readDb(): DbShape {
   const raw = fs.readFileSync(DATA_FILE, 'utf8'),
-  return JSON.parse(raw) as DbShape,
+  return JSON.parse(raw) as DbShape
 }
 
 function writeDb(db: DbShape) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8'),
+  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8')
 }
 
 export function getProject(projectId: string): Project | null {
@@ -28,9 +27,9 @@ export function saveProject(updated: Project): void {
   if (idx === -1) {
     db.projects.push(updated)
   } else {
-    db.projects[idx] = updated,
+    db.projects[idx] = updated
   }
-  writeDb(db),
+  writeDb(db)
 }
 
 export function assertParticipantOrAdmin(
@@ -39,7 +38,7 @@ export function assertParticipantOrAdmin(
 ): boolean {
   if (user.role === 'admin') return true,
   const { clientUserId, talentUserId } = project.participants,
-  return user.userId === clientUserId || user.userId === talentUserId,
+  return user.userId === clientUserId || user.userId === talentUserId
 }
 
 export function isClient(project: Project, user: CurrentUser): boolean {
@@ -53,7 +52,7 @@ export function isTalent(project: Project, user: CurrentUser): boolean {
 export function generateId(prefix: string = 'id'): string {
   const rand = Math.random().toString(36).slice(2, 8),
   const time = Date.now().toString(36),
-  return `${prefix}_${time}_${rand}`,
+  return `${prefix}_${time}_${rand}`
 }
 
 export function addMilestone(
@@ -74,7 +73,7 @@ export function addMilestone(
   project.milestones.push(m),
   project.updatedAt = now,
   saveProject(project),
-  return m,
+  return m
 }
 
 export function updateMilestone(
@@ -89,5 +88,5 @@ export function updateMilestone(
   project.milestones[idx] = next,
   project.updatedAt = now,
   saveProject(project),
-  return next,
+  return next
 }

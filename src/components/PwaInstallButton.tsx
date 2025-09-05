@@ -4,8 +4,6 @@ import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner',
 import { safeStorage } from '@/utils/safeStorage',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const DISMISS_KEY = 'pwaDismissed',
 const DISMISS_MS = 7 * 24 * 60 * 60 * 1000, // 7 days
 
@@ -29,7 +27,7 @@ export const PwaInstallButton: React.FC = () => {
     },
 
     window.addEventListener('beforeinstallprompt', handler),
-    return () => window.removeEventListener('beforeinstallprompt', handler),
+    return () => window.removeEventListener('beforeinstallprompt', handler)
   }, []),
 
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {
@@ -40,7 +38,7 @@ export const PwaInstallButton: React.FC = () => {
     if (!promptEvent) {
       toast('Installation not available', {
         description: 'Your browser does not support app installation.'}),
-      return,
+      return
     }
     try {
       setIsInstalling(true),
@@ -49,16 +47,16 @@ export const PwaInstallButton: React.FC = () => {
       setIsInstalling(false),
       if (result.outcome === 'accepted') {
         toast.success('App installed'),
-        setPromptEvent(null),
+        setPromptEvent(null)
       } else {
         toast('Installation dismissed'),
         safeStorage.setItem(DISMISS_KEY, Date.now().toString()),
-        setPromptEvent(null),
+        setPromptEvent(null)
       }
     } catch (err) {
       setIsInstalling(false),
       toast('Installation failed', { description: 'Please try again later.' }),
-      logErrorToProduction('PWA install error:', { data: err }),
+      logErrorToProduction('PWA install error:', { data: err })
     }
   },
 
@@ -69,7 +67,7 @@ export const PwaInstallButton: React.FC = () => {
         Install App
       </Button>
     </div>
-  ),
+  )
 },
 
 export default PwaInstallButton,

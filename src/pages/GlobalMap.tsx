@@ -59,13 +59,12 @@ export default function GlobalMapPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       const messages = [
-        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia'],
+        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],
       const id = Date.now(),
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',
-      setFeed((f) => [{ id, text }, ...f].slice(0, 5)),
+      setFeed((f) => [{ id, text }, ...f].slice(0, 5))
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, []),
 
   const width = 800,
@@ -73,7 +72,7 @@ export default function GlobalMapPage() {
   function project(lat: number, lng: number) {
     const x = ((lng + 180) / 360) * width,
     const y = ((90 - lat) / 180) * height,
-    return { x, y },
+    return { x, y }
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
@@ -112,7 +111,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              ),
+              )
             })}
           </div>
           <div className="flex-1 space-y-6">
@@ -139,6 +138,6 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
-  ),
+  )
 }
 

@@ -11,7 +11,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
-
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
@@ -19,7 +18,7 @@ export interface HeaderProps {
     primaryColor: string,
     backgroundColor: string,
     textColor: string
-  },
+  }
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
@@ -47,7 +46,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     e.preventDefault(),
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`),
-      setQuery(""),
+      setQuery("")
     }
   },
   
@@ -76,5 +75,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
       </div>
     </header>
-  ),
+  )
 }

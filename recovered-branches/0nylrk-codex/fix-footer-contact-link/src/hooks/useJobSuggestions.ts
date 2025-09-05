@@ -3,7 +3,6 @@ import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { JobMatch } from "@/types/jobs",
-
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -27,19 +26,19 @@ export function useJobSuggestions(talentId?: string) {
           
         if (error) throw error,
         
-        setJobMatches(data || []),
+        setJobMatches(data || [])
       } catch (error) {
         console.error("Error fetching job matches:", error),
         toast({
           title: "Error",
           description: "Failed to load job suggestions",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    fetchSuggestedJobs(),
+    fetchSuggestedJobs()
   }, [talentId]),
 
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
@@ -70,19 +69,19 @@ export function useJobSuggestions(talentId?: string) {
         toast({
           title: "Application Submitted",
           description: "You've successfully applied to this job"
-        }),
+        })
       } else if (status === 'declined') {
         toast({
           title: "Job Declined",
           description: "This job will be removed from your suggestions"
-        }),
+        })
       }
     } catch (error) {
       console.error("Error updating job match status:", error),
       toast({
         title: "Error",
         description: "Failed to update job status",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
 
@@ -102,5 +101,5 @@ export function useJobSuggestions(talentId?: string) {
       appliedMatches,
       declinedMatches
     }
-  },
+  }
 }

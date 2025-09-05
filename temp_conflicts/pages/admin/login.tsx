@@ -1,6 +1,5 @@
 import { useState } from 'react',
 import { useRouter } from 'next/router',
-
 export default function AdminLoginPage() {
   const router = useRouter(),
   const [username, setUsername] = useState(''),
@@ -18,11 +17,11 @@ export default function AdminLoginPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })}),
       if (!res.ok) throw new Error('Invalid credentials'),
-      router.push('/admin'),
+      router.push('/admin')
     } catch (err: any) {
       setError(err.message || 'Login failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -44,5 +43,5 @@ export default function AdminLoginPage() {
         </button>
       </form>
     </div>
-  ),
+  )
 }

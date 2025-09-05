@@ -4,7 +4,6 @@ import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
 import { useRouter } from 'next/router',
-
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
@@ -37,12 +36,12 @@ export function TalentCardSaveButton({
       }),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
+      return
     }
     
     setLocalIsSaved(!localIsSaved),
     if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved),
+      onToggleSave(profileId, !localIsSaved)
     }
     
     toast({
@@ -51,7 +50,7 @@ export function TalentCardSaveButton({
         ? `${profileName} has been removed from your favorites` 
         : `${profileName} has been added to your favorites`,
       variant: "default"
-    }),
+    })
   },
 
   return (
@@ -67,5 +66,5 @@ export function TalentCardSaveButton({
         )} 
       />
     </button>
-  ),
+  )
 }

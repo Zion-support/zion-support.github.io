@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
-
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -39,19 +38,19 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           3
         ),
         
-        setMatches(results),
+        setMatches(results)
       } catch (error) {
         console.error("Error during AI matching:", error),
         toast({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsMatching(false),
+        setIsMatching(false)
       }
     },
     
-    runMatching(),
+    runMatching()
   }, [formData]),
   
   const handleSelectMatch = (match: MatchResult) => {
@@ -63,7 +62,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     
     toast({
       title: "Match Selected",
-      description: `You've selected ${match.item.title}`}),
+      description: `You've selected ${match.item.title}`})
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
@@ -219,5 +218,5 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
         </Card>
       </div>
     </div>
-  ),
+  )
 }

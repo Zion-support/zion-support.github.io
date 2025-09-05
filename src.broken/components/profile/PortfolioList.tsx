@@ -27,5 +27,5 @@ export function PortfolioList({ projects }: PortfolioListProps) {
         </ul>
       </CardContent>
     </Card>
-  ),
+  )
 }

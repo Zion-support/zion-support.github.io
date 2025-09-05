@@ -24,9 +24,9 @@ export default function PasswordCheckerPage() {
 
   useEffect(() => {
     if (password) {
-      analyzePassword(password),
+      analyzePassword(password)
     } else {
-      resetAnalysis(),
+      resetAnalysis()
     }
   }, [password]),
 
@@ -62,36 +62,35 @@ export default function PasswordCheckerPage() {
     // Set strength text and color
     if (score >= 90) {
       setStrengthText('Very Strong'),
-      setStrengthColor('text-green-400'),
+      setStrengthColor('text-green-400')
     } else if (score >= 70) {
       setStrengthText('Strong'),
-      setStrengthColor('text-green-400'),
+      setStrengthColor('text-green-400')
     } else if (score >= 50) {
       setStrengthText('Moderate'),
-      setStrengthColor('text-yellow-400'),
+      setStrengthColor('text-yellow-400')
     } else if (score >= 30) {
       setStrengthText('Weak'),
-      setStrengthColor('text-orange-400'),
+      setStrengthColor('text-orange-400')
     } else {
       setStrengthText('Very Weak'),
-      setStrengthColor('text-red-400'),
+      setStrengthColor('text-red-400')
     }
 
     // Generate suggestions
-    generateSuggestions(newChecks, pass),
+    generateSuggestions(newChecks, pass)
   },
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-      'password123456', '123456789qwerty', 'abc123password123',
-      'adminletmein', 'welcomemonkey', 'dragonmaster', 'hello'
+      'password123456123456789qwerty', 'abc123password123adminletmein', 'welcomemonkeydragonmaster', 'hello'
     ],
-    return commonPasswords.includes(pass.toLowerCase()),
+    return commonPasswords.includes(pass.toLowerCase())
   },
 
   const hasSequentialChars = (pass: string) => {
-    const sequences = ['123abc', 'qweasd', 'zxc789', '456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq)),
+    const sequences = ['123abcqweasd', 'zxc789456'],
+    return sequences.some(seq => pass.toLowerCase().includes(seq))
   },
 
   const generateSuggestions = (checks: any, pass: string) => {
@@ -108,7 +107,7 @@ export default function PasswordCheckerPage() {
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
     
-    setSuggestions(suggestions),
+    setSuggestions(suggestions)
   },
 
   const resetAnalysis = () => {
@@ -124,7 +123,7 @@ export default function PasswordCheckerPage() {
       noCommon: false,
       noSequential: false
     }),
-    setSuggestions([]),
+    setSuggestions([])
   },
 
   const generateStrongPassword = () => {
@@ -140,13 +139,13 @@ export default function PasswordCheckerPage() {
     
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
-      result += charset[Math.floor(Math.random() * charset.length)],
+      result += charset[Math.floor(Math.random() * charset.length)]
     }
     
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join(''),
     setGeneratedPassword(result),
-    setPassword(result),
+    setPassword(result)
   },
 
   const copyToClipboard = (text: string) => {
@@ -158,7 +157,7 @@ export default function PasswordCheckerPage() {
     if (strength >= 70) return 'bg-green-400',
     if (strength >= 50) return 'bg-yellow-400',
     if (strength >= 30) return 'bg-orange-400',
-    return 'bg-red-400',
+    return 'bg-red-400'
   },
 
   const getCheckIcon = (passed: boolean) => {

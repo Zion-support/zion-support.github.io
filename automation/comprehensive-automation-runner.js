@@ -3,7 +3,6 @@ import fs from "fs",
 import path from "path",
 import { execSync, spawn } from "child_process",
 import { fileURLToPath } from "url",
-
       }),
       const duration = Date.now() - startTime,
       this.log(`✓ ${description} completed in ${duration}ms`),
@@ -30,9 +29,9 @@ class ComprehensiveAutomationRunner {,
       linting: {},
       performance: {},
       security: {},
-      overall: { status: "unknown", score: 0 },
-    },
-      },
+      overall: { status: "unknown", score: 0 }
+    }
+      }
     })
   },
 ,
@@ -54,15 +53,15 @@ class ComprehensiveAutomationRunner {,
       }),
       const duration = Date.now() - startTime,
       this.log(`✓ ${description} completed in ${duration}ms`),
-      return { success: true, output: output.toString(), duration },
+      return { success: true, output: output.toString(), duration }
     } catch (error) {,
       this.log(`✗ ${description} failed: ${error.message}`, "ERROR"),
       return {,
         success: false,
         error: error.message,
         output: error.stdout?.toString() || error.stderr?.toString() || ""
-      },
-    },
+      }
+    }
   },
 ,
   async runBuildTests() {,
@@ -72,13 +71,13 @@ class ComprehensiveAutomationRunner {,
       { cmd: "npm run build", desc: "Production build" },
       { cmd: "npm run lint", desc: "Linting check" },
       { cmd: "npm run type-check", desc: "TypeScript type checking" },
-      { cmd: "npm run test:smoke", desc: "Smoke tests" },
+      { cmd: "npm run test:smoke", desc: "Smoke tests" }
     ],
 ,
     for (const test of buildTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result
-    },
+    }
   },
 ,
   async runPerformanceTests() {,
@@ -86,13 +85,13 @@ class ComprehensiveAutomationRunner {,
 ,
     const perfTests = [,
       { cmd: "npm run build:analyze", desc: "Bundle analysis" },
-      { cmd: "npm run perf:audit", desc: "Performance audit" },
+      { cmd: "npm run perf:audit", desc: "Performance audit" }
     ],
 ,
     for (const test of perfTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.performance[test.desc] = result
-    },
+    }
   },
 ,
   async runSecurityTests() {,
@@ -100,13 +99,13 @@ class ComprehensiveAutomationRunner {,
 ,
     const securityTests = [,
       { cmd: "npm audit", desc: "Security audit" },
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" },
+      { cmd: "npm run security:audit", desc: "Enhanced security audit" }
     ],
 ,
     for (const test of securityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.security[test.desc] = result
-    },
+    }
   },
 ,
   async runQualityTests() {,
@@ -115,13 +114,13 @@ class ComprehensiveAutomationRunner {,
     const qualityTests = [,
       { cmd: "npm run lint:check", desc: "Lint check" },
       { cmd: "npm run format:check", desc: "Format check" },
-      { cmd: "npm run test:coverage", desc: "Test coverage" },
+      { cmd: "npm run test:coverage", desc: "Test coverage" }
     ],
 ,
     for (const test of qualityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.tests[test.desc] = result
-    },
+    }
   },
 ,
   calculateOverallScore() {,
@@ -172,28 +171,28 @@ class ComprehensiveAutomationRunner {,
     Object.entries(this.results.builds).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Fix ${test}: ${result.error}`)
-      },
+      }
     }),
 ,
     // Performance recommendations,
     Object.entries(this.results.performance).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Optimize ${test}: ${result.error}`)
-      },
+      }
     }),
 ,
     // Security recommendations,
     Object.entries(this.results.security).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Address security issue in ${test}: ${result.error}`)
-      },
+      }
     }),
 ,
     // Quality recommendations,
     Object.entries(this.results.tests).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Improve ${test}: ${result.error}`)
-      },
+      }
     }),
 ,
     return recommendations
@@ -228,13 +227,13 @@ class ComprehensiveAutomationRunner {,
         this.log("⚠️  Some improvements needed. Check recommendations.", "WARN")
       } else {,
         this.log("✅ All systems performing well!", "SUCCESS")
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"),
       throw error
-    },
-  },
+    }
+  }
 },
 ,
 // Main execution,

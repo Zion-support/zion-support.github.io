@@ -5,7 +5,7 @@ export default function ElasticSearchSearch() {
 
   const search = () => {
     // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query', query),
+    console.log('ElasticSearch query', query)
   },
 
   return (
@@ -20,5 +20,5 @@ export default function ElasticSearchSearch() {
         Search
       </button>
     </div>
-  ),
+  )
 }

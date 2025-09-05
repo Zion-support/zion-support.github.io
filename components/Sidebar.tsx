@@ -33,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       prev.includes(title)
         ? prev.filter(item => item !== title)
         : [...prev, title]
-    ),
+    )
   },
 
   const navigation = {
@@ -196,7 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </>
       )}
     </AnimatePresence>
-  ),
+  )
 },
 
 export default Sidebar,

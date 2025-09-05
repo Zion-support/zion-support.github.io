@@ -94,14 +94,13 @@ export default function AboutPage() {
 				</div>
 			</section>
 		</UltraFuturisticBackground>
-	),
+	)
 }
 
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-
 export default function AboutPage() {
   const values = [
     {
@@ -328,5 +327,5 @@ export default function AboutPage() {
         </section>
       </section>
     </>
-  ),
+  )
 }

@@ -34,7 +34,7 @@ interface DeploymentUpdate {
     label: string,
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',
     href?: string
-  }[],
+  }[]
 }
 
 interface DeploymentNotificationProps {
@@ -99,12 +99,12 @@ export default function DeploymentNotification({
     if (diffInMinutes < 1) return 'Just now',
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
-    return date.toLocaleDateString(),
+    return date.toLocaleDateString()
   },
 
   const handleAction = (updateId: string, action: string) => {
     if (onAction) {
-      onAction(updateId, action),
+      onAction(updateId, action)
     }
   },
 
@@ -218,7 +218,7 @@ export default function DeploymentNotification({
         </div>
       ))}
     </div>
-  ),
+  )
 }
 
 // Example usage with mock data
@@ -272,5 +272,5 @@ export function DeploymentNotificationExample() {
       onDismiss={handleDismiss}
       onAction={handleAction}
     />
-  ),
+  )
 }

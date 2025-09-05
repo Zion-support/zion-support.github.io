@@ -13,5 +13,5 @@ export function ErrorState({ error }: ErrorStateProps) {
         <p className="text-muted-foreground">{error}</p>
       </CardContent>
     </Card>
-  ),
+  )
 }

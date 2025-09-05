@@ -4,7 +4,6 @@ import { motion } from 'framer-motion',
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function Compliance() {
   const complianceFrameworks = [
     {
@@ -13,8 +12,7 @@ export default function Compliance() {
       icon: Shield,
       description: 'Annual audits of security, availability, and confidentiality controls',
       details: [
-        'Independent third-party auditingSecurity controls assessment',
-        'Availability and processing integrityConfidentiality safeguards',
+        'Independent third-party auditingSecurity controls assessmentAvailability and processing integrityConfidentiality safeguards',
         'Annual compliance reporting'
       ]
     },
@@ -24,8 +22,7 @@ export default function Compliance() {
       icon: Scale,
       description: 'International standard for information security management',
       details: [
-        'Information security management system (ISMS)Risk assessment and management',
-        'Security policy implementationContinuous improvement processes',
+        'Information security management system (ISMS)Risk assessment and managementSecurity policy implementationContinuous improvement processes',
         'Regular certification audits'
       ]
     },
@@ -35,8 +32,7 @@ export default function Compliance() {
       icon: Globe,
       description: 'European Union data protection regulation compliance',
       details: [
-        'Data protection by design and defaultIndividual rights management',
-        'Data processing agreementsPrivacy impact assessments',
+        'Data protection by design and defaultIndividual rights managementData processing agreementsPrivacy impact assessments',
         'Breach notification procedures'
       ]
     },
@@ -46,8 +42,7 @@ export default function Compliance() {
       icon: Users,
       description: 'Healthcare information privacy and security standards',
       details: [
-        'Protected health information (PHI) safeguardsBusiness associate agreements',
-        'Access controls and audit logsWorkforce training programs',
+        'Protected health information (PHI) safeguardsBusiness associate agreementsAccess controls and audit logsWorkforce training programs',
         'Incident response procedures'
       ]
     }

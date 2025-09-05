@@ -3,14 +3,13 @@ import Head from 'next/head',
 import { useState, useEffect } from 'react',
 import { ContactInfo } from '../types',
 import ErrorBoundary from '../components/ErrorBoundary',
-
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100),
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   const contact: ContactInfo = {
@@ -36,120 +35,120 @@ export default function AIServices() {
       name: 'Autonomous AI Agents',
       description: 'Self-managing AI agents that can perform complex tasks independently with minimal human intervention.',
       category: 'autonomous',
-      features: ['Task AutomationDecision Making', 'Learning CapabilitiesMulti-platform Integration'],
+      features: ['Task AutomationDecision MakingLearning CapabilitiesMulti-platform Integration'],
       price: 'Custom Pricing',
       popular: true,
-      useCases: ['Process AutomationCustomer Service', 'Data AnalysisContent Generation']
+      useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
     },
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
       category: 'predictive',
-      features: ['Market AnalysisRisk Assessment', 'Automated TradingReal-time Monitoring'],
+      features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
-      useCases: ['Algorithmic TradingPortfolio Management', 'Risk AnalysisMarket Prediction']
+      useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
     },
     {
       id: 3,
       name: 'AI Legal Document Analysis',
       description: 'Intelligent document review and analysis for legal professionals with contract insights.',
       category: 'nlp',
-      features: ['Contract AnalysisRisk Identification', 'Compliance CheckingDocument Summarization'],
+      features: ['Contract AnalysisRisk IdentificationCompliance CheckingDocument Summarization'],
       price: '$199/month',
       popular: false,
-      useCases: ['Contract ReviewLegal Research', 'Compliance MonitoringDocument Management']
+      useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
     },
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
       category: 'nlp',
-      features: ['Sentiment AnalysisEmotion Detection', 'Intent RecognitionReal-time Processing'],
+      features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
-      useCases: ['Customer ServiceCall Center Analytics', 'Market ResearchQuality Assurance']
+      useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
     },
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
       description: 'Intelligent search solutions with semantic understanding and personalized results.',
       category: 'specialized',
-      features: ['Semantic SearchPersonalization', 'Natural Language QueriesContext Awareness'],
+      features: ['Semantic SearchPersonalizationNatural Language QueriesContext Awareness'],
       price: '$99/month',
       popular: false,
-      useCases: ['Enterprise SearchE-commerce', 'Content DiscoveryKnowledge Management']
+      useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
     },
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
       category: 'computer-vision',
-      features: ['Object DetectionImage Recognition', 'Video AnalysisReal-time Processing'],
+      features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
-      useCases: ['Quality ControlSecurity Monitoring', 'Medical ImagingAutonomous Vehicles']
+      useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
     },
     {
       id: 7,
       name: 'Machine Learning Model Training',
       description: 'Custom ML model development and training for specific business requirements.',
       category: 'specialized',
-      features: ['Custom ModelsData Preprocessing', 'Model OptimizationDeployment Support'],
+      features: ['Custom ModelsData PreprocessingModel OptimizationDeployment Support'],
       price: 'Custom Pricing',
       popular: false,
-      useCases: ['Predictive ModelingPattern Recognition', 'Anomaly DetectionRecommendation Systems']
+      useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
     },
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
       category: 'nlp',
-      features: ['Text AnalysisLanguage Translation', 'Sentiment AnalysisEntity Recognition'],
+      features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
-      useCases: ['Content AnalysisMultilingual Support', 'Customer FeedbackDocument Processing']
+      useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
     },
     {
       id: 9,
       name: 'AI Process Automation',
       description: 'Intelligent automation of complex business processes using AI and machine learning.',
       category: 'automation',
-      features: ['Process MiningWorkflow Optimization', 'Decision AutomationIntegration APIs'],
+      features: ['Process MiningWorkflow OptimizationDecision AutomationIntegration APIs'],
       price: '$159/month',
       popular: false,
-      useCases: ['Business Process AutomationWorkflow Management', 'Decision SupportSystem Integration']
+      useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
     },
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
       category: 'predictive',
-      features: ['Trend ForecastingBehavioral Analysis', 'Risk PredictionScenario Modeling'],
+      features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
-      useCases: ['Sales ForecastingCustomer Behavior', 'Risk ManagementResource Planning']
+      useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
     },
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
       category: 'specialized',
-      features: ['Content CreationMulti-format Support', 'Brand ConsistencyQuality Control'],
+      features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
-      useCases: ['Marketing ContentTechnical Documentation', 'Social MediaEmail Campaigns']
+      useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
     },
     {
       id: 12,
       name: 'AI Chatbot Development',
       description: 'Intelligent conversational AI for customer service and engagement.',
       category: 'automation',
-      features: ['Natural ConversationsMulti-channel Support', 'Learning CapabilitiesIntegration APIs'],
+      features: ['Natural ConversationsMulti-channel SupportLearning CapabilitiesIntegration APIs'],
       price: '$89/month',
       popular: true,
-      useCases: ['Customer SupportLead Generation', 'Internal HelpdeskE-commerce Assistant']
+      useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
   ],
 
@@ -358,7 +357,6 @@ export default function AIServices() {
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Link from 'next/link',
-
 export default function AIServicesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -385,5 +383,5 @@ export default function AIServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

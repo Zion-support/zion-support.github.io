@@ -35,7 +35,7 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode,
   /** Optional canned questions shown when the chat is empty */
-  starterQuestions?: string[],
+  starterQuestions?: string[]
 }
 
 export function ChatAssistant({
@@ -76,7 +76,7 @@ export function ChatAssistant({
         setDisplayGuestMessages(initialMessages),
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
       } else {
-        setDisplayGuestMessages(storedGuestMessages),
+        setDisplayGuestMessages(storedGuestMessages)
       }
     }
   }, [
@@ -90,7 +90,7 @@ export function ChatAssistant({
   useEffect(() => {
     if (!isGuest) {
       // Update state if initialMessages prop changes (e.g. new conversation loaded)
-      setLoggedInMessages(initialMessages),
+      setLoggedInMessages(initialMessages)
     }
   }, [isGuest, initialMessages, recipient.id]),
 
@@ -109,7 +109,7 @@ export function ChatAssistant({
     } else {
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
-      setLoggedInMessages(newMessages),
+      setLoggedInMessages(newMessages)
     }
   },
 
@@ -118,16 +118,16 @@ export function ChatAssistant({
   useEffect(() => {
     if (debouncedApiCallParams) {
       onSendMessage(debouncedApiCallParams.message,
-        debouncedApiCallParams.conversationId),
+        debouncedApiCallParams.conversationId)
     }
   }, [debouncedApiCallParams, onSendMessage]),
 
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
 
   const handleSendMessage = async (messageContent: string) => {
@@ -141,11 +141,11 @@ export function ChatAssistant({
         message: messageContent,
         timestamp: new Date()},
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]),
-      setPendingApiCallParams({ message: messageContent, conversationId }),
+      setPendingApiCallParams({ message: messageContent, conversationId })
     } else {
       // Guest user
       setGuestMessage(messageContent),
-      setShowGuestModal(true),
+      setShowGuestModal(true)
     }
   },
 
@@ -161,12 +161,12 @@ export function ChatAssistant({
     setPendingApiCallParams({ message: guestMessage, conversationId }),
 
     setShowGuestModal(false),
-    setGuestMessage(null),
+    setGuestMessage(null)
   },
 
   const handleModalCancel = () => {
     setShowGuestModal(false),
-    setGuestMessage(null),
+    setGuestMessage(null)
   },
 
   useEffect(() => {
@@ -178,7 +178,7 @@ export function ChatAssistant({
       }
     },
     document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
 
   if (!isOpen) return null,
@@ -300,5 +300,5 @@ export function ChatAssistant({
         </div>
       )}
     </div>
-  ),
+  )
 }

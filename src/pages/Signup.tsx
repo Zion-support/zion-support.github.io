@@ -52,26 +52,26 @@ export default function Signup() {
       const res = await axios.get('/api/auth/health'),
       setAuthServiceAvailable(res.status === 200),
       if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues'),
+        setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
       logErrorToProduction('Auth service health check failed', { data: err }),
       setAuthServiceAvailable(false),
       // Set a more specific error message based on the error type
       if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
-        setHealthCheckError('Network connection issues detected'),
+        setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
-        setHealthCheckError('Authentication service is temporarily unavailable'),
+        setHealthCheckError('Authentication service is temporarily unavailable')
       } else {
-        setHealthCheckError('Unable to verify authentication service status'),
+        setHealthCheckError('Unable to verify authentication service status')
       }
     } finally {
-      setHealthCheckLoading(false),
+      setHealthCheckLoading(false)
     }
   },
 
   useEffect(() => {
-    performHealthCheck(),
+    performHealthCheck()
   }, []),
 
   const formik = useFormik({
@@ -138,7 +138,7 @@ export default function Signup() {
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
               description: isPartnerSignup 
                 ? 'Please verify your email. Your partner application will be reviewed after verification.'
-                : 'Please check your email to verify your account before logging in.'}),
+                : 'Please check your email to verify your account before logging in.'})
           } else {
             // Account created and ready to use
             const message = isPartnerSignup 
@@ -154,8 +154,8 @@ export default function Signup() {
             
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login'),
-            }, 2000),
+              router.push(isPartnerSignup ? '/partners' : '/login')
+            }, 2000)
           }
         }
       } catch (err: any) {
@@ -188,22 +188,22 @@ export default function Signup() {
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'}),
+            variant: 'destructive'})
         } else if (status === 400) {
           // Handle validation errors (weak password, etc.)
           setErrorMessage(errorMsg),
           
           // Set the error on password field if it's password-related
           if (errorMsg.toLowerCase().includes('password')) {
-            setErrors({ password: errorMsg }),
+            setErrors({ password: errorMsg })
           } else {
-            setErrors({ confirm: errorMsg }),
+            setErrors({ confirm: errorMsg })
           }
           
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'}),
+            variant: 'destructive'})
         } else {
           // Handle other errors (network, server, etc.)
           setErrorMessage(errorMsg),
@@ -213,11 +213,11 @@ export default function Signup() {
           toast({
             title: 'Signup failed',
             description: errorMsg,
-            variant: 'destructive'}),
+            variant: 'destructive'})
         }
       } finally {
         logInfo('Form submission completed, setting loading to false'),
-        setLoading(false),
+        setLoading(false)
       }
     }
   }),
@@ -231,18 +231,18 @@ export default function Signup() {
       confirm: true,
       terms: true
     }),
-    await formik.handleSubmit(e),
+    await formik.handleSubmit(e)
   },
 
   // After successful registration, guide the user to the verification screen
   useEffect(() => {
     if (emailVerificationRequired && formik.values.email) {
       const timer = setTimeout(() => {
-        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`),
+        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
       }, 3000),
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer)
     }
-    return undefined,
+    return undefined
   }, [emailVerificationRequired, formik.values.email, router]),
 
   // Show loading state only during initial health check
@@ -256,7 +256,7 @@ export default function Signup() {
           </div>
         </div>
       </AuthLayout>
-    ),
+    )
   }
 
   return (
@@ -451,7 +451,7 @@ export default function Signup() {
                 className="w-full text-sm"
                 onClick={() => {
                   setEmailVerificationRequired(false),
-                  setSuccessMessage(''),
+                  setSuccessMessage('')
                 }}
               >
                 Try Different Email
@@ -475,5 +475,5 @@ export default function Signup() {
         </div>
       </div>
     </AuthLayout>
-  ),
+  )
 }

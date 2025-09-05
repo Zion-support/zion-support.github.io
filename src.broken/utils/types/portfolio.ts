@@ -2,7 +2,7 @@ export type ProjectMedia = {
   imageUrl?: string,
   pdfUrl?: string,
   githubUrl?: string,
-  demoUrl?: string,
+  demoUrl?: string
 },
 
 export type Project = {
@@ -63,7 +63,7 @@ export type AiAssistAction =
 export type AiAssistRequest = {
   action: AiAssistAction,
   text?: string,
-  context?: Record<string, unknown>,
+  context?: Record<string, unknown>
 },
 
 export type AiAssistResponse = {

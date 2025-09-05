@@ -15,7 +15,7 @@ export const useLoadMilestones = (projectId?: string) => {
   const fetchMilestones = async () => {
     if (!projectId) {
       setIsLoading(false),
-      return,
+      return
     }
     
     try {
@@ -46,24 +46,24 @@ export const useLoadMilestones = (projectId?: string) => {
           
         if (activitiesError) throw activitiesError,
         
-        activitiesMap[milestone.id] = activitiesData || [],
+        activitiesMap[milestone.id] = activitiesData || []
       }
       
       setActivities(activitiesMap),
-      setError(null),
+      setError(null)
     } catch (err: any) {
       console.error("Error fetching milestones:", err),
       setError("Failed to fetch milestones: " + err.message),
       toast.error("Failed to fetch milestones")
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
   // Fetch milestones when component mounts or projectId changes
   useEffect(() => {
     if (projectId) {
-      fetchMilestones(),
+      fetchMilestones()
     }
   }, [projectId]),
 
@@ -73,5 +73,5 @@ export const useLoadMilestones = (projectId?: string) => {
     isLoading,
     error,
     refetch: fetchMilestones
-  },
+  }
 },

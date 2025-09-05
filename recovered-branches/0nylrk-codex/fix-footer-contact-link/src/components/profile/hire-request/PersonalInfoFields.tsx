@@ -3,7 +3,6 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 }
@@ -48,5 +47,5 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
         )}
       />
     </>
-  ),
+  )
 }

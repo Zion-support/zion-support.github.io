@@ -1,7 +1,6 @@
 import React from 'react',
 import { useRouter } from 'next/router',
 import { useCurrentUser } from '../../hooks/useCurrentUser',
-
 export default function ComposePage() {
   const router = useRouter(),
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>,
@@ -12,7 +11,7 @@ export default function ComposePage() {
   const [sending, setSending] = React.useState(false),
 
   React.useEffect(() => {
-    if (!loading && !user) router.replace('/auth'),
+    if (!loading && !user) router.replace('/auth')
   }, [loading, user, router]),
 
   if (!user) return null,
@@ -33,7 +32,7 @@ export default function ComposePage() {
       const buff = await file.arrayBuffer(),
       const base64 = Buffer.from(buff).toString('base64'),
       const mime = file.type || 'application/octet-stream',
-      attachmentBase64 = `data:${mime},base64,${base64}`,
+      attachmentBase64 = `data:${mime},base64,${base64}`
     }
     const res = await fetch('/api/messages/compose', {
       method: 'POST',
@@ -47,7 +46,7 @@ export default function ComposePage() {
         context})}),
     const data = await res.json(),
     setSending(false),
-    if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`),
+    if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
   },
 
   return (
@@ -78,5 +77,5 @@ export default function ComposePage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

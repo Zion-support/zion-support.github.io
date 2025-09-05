@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react',
 
 interface UltraFuturisticBackground2036Props {
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',
-  intensity?: 'low' | 'medium' | 'high',
+  intensity?: 'low' | 'medium' | 'high'
 }
 
 export default function UltraFuturisticBackground2036({ 
@@ -23,7 +23,7 @@ export default function UltraFuturisticBackground2036({
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     let animationFrameId: number,
@@ -42,10 +42,10 @@ export default function UltraFuturisticBackground2036({
     }> = [],
 
     const colors = {
-      quantum: ['#00ffff#0080ff', '#8000ff#ff0080'],
-      neon: ['#00ff00#ff00ff', '#ffff00#00ffff'],
-      energy: ['#ff6600#ff0066', '#6600ff#00ff66'],
-      data: ['#00ccff#cc00ff', '#ffcc00#00ffcc']
+      quantum: ['#00ffff#0080ff#8000ff#ff0080'],
+      neon: ['#00ff00#ff00ff#ffff00#00ffff'],
+      energy: ['#ff6600#ff0066#6600ff#00ff66'],
+      data: ['#00ccff#cc00ff#ffcc00#00ffcc']
     },
 
     const intensityMultiplier = {
@@ -75,8 +75,8 @@ export default function UltraFuturisticBackground2036({
         size: Math.random() * config.size * multiplier,
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
-        type: variant === 'default' ? ['quantumneon', 'energydata'][Math.floor(Math.random() * 4)] as any : variant
-      }),
+        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant
+      })
     }
 
     const animate = () => {
@@ -152,27 +152,27 @@ export default function UltraFuturisticBackground2036({
             ctx.beginPath(),
             ctx.moveTo(particle.x, particle.y),
             ctx.lineTo(otherParticle.x, otherParticle.y),
-            ctx.stroke(),
+            ctx.stroke()
           }
-        }),
+        })
       }),
 
       // Add floating geometric shapes
       if (variant === 'quantum' || variant === 'ai') {
-        drawQuantumShapes(ctx, canvas, multiplier),
+        drawQuantumShapes(ctx, canvas, multiplier)
       }
 
       // Add data streams for AI variant
       if (variant === 'ai') {
-        drawDataStreams(ctx, canvas, multiplier),
+        drawDataStreams(ctx, canvas, multiplier)
       }
 
       // Add space elements for space variant
       if (variant === 'space') {
-        drawSpaceElements(ctx, canvas, multiplier),
+        drawSpaceElements(ctx, canvas, multiplier)
       }
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
@@ -206,7 +206,7 @@ export default function UltraFuturisticBackground2036({
         ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2),
         ctx.fill(),
         
-        ctx.restore(),
+        ctx.restore()
       }
     },
 
@@ -235,7 +235,7 @@ export default function UltraFuturisticBackground2036({
         ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`,
         ctx.fillRect(x - 3, streamY - 3, 6, 6),
         
-        ctx.restore(),
+        ctx.restore()
       }
     },
 
@@ -253,7 +253,7 @@ export default function UltraFuturisticBackground2036({
         ctx.beginPath(),
         ctx.arc(x, y, 1, 0, Math.PI * 2),
         ctx.fill(),
-        ctx.restore(),
+        ctx.restore()
       }
       
       // Draw nebula
@@ -269,17 +269,17 @@ export default function UltraFuturisticBackground2036({
       ctx.fillStyle = nebulaGradient,
       ctx.beginPath(),
       ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2),
-      ctx.fill(),
+      ctx.fill()
     },
 
     animate(),
 
     return () => {
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, [variant, intensity]),
 
   return (
@@ -340,7 +340,7 @@ export default function UltraFuturisticBackground2036({
         )}
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2036,

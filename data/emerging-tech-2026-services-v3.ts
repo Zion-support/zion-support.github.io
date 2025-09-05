@@ -12,7 +12,7 @@ export interface EmergingTech2026ServiceV3 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [

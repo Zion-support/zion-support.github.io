@@ -3,15 +3,14 @@ import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { GetServerSideProps } from 'next',
 import { requireAdminRole } from '../../utils/auth',
-
 export type Slide = {
   id: string,
   title: string,
   content: string,
   chart?: {
     type: 'bar' | 'funnel' | 'timeline',
-    data: Array<{ label: string, value: number }>,
-  },
+    data: Array<{ label: string, value: number }>
+  }
 },
 
 type BuilderState = {
@@ -24,7 +23,7 @@ type BuilderState = {
 },
 
 function uid() {
-  return Math.random().toString(36).slice(2),
+  return Math.random().toString(36).slice(2)
 }
 
 function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
@@ -33,7 +32,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
       <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
     </button>
-  ),
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -56,7 +55,7 @@ export default function PitchGenerator() {
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault(),
     const files = Array.from(e.dataTransfer.files || []),
-    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] })),
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []),
 
   const prevent = (e: React.DragEvent) => {
@@ -71,11 +70,11 @@ export default function PitchGenerator() {
     try {
       const res = await fetch('/api/admin/pitch/metrics'),
       const data = await res.json(),
-      return data,
+      return data
     } catch (e) {
-      return {},
+      return {}
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, []),
 
@@ -96,11 +95,11 @@ export default function PitchGenerator() {
       setActiveIndex(0),
       const v = json.version || `v${new Date().toISOString()}`,
       setVersionTag(v),
-      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h]),
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
     } catch (e) {
       // noop
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [autoFetchMetrics, builder, operatorPrompt]),
 
@@ -113,10 +112,10 @@ export default function PitchGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slide: slides[idx] })}),
       const json = await res.json(),
-      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s))),
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
     } catch (e) {
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [slides]),
 
@@ -126,10 +125,10 @@ export default function PitchGenerator() {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
       const json = await res.json(),
       setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
-      setActiveIndex(slides.length),
+      setActiveIndex(slides.length)
     } catch (e) {
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [slides.length]),
 
@@ -143,10 +142,10 @@ export default function PitchGenerator() {
       a.href = url,
       a.download = `pitch-deck-${versionTag || 'draft'}.pdf`,
       a.click(),
-      URL.revokeObjectURL(url),
+      URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [slides, versionTag]),
 
@@ -156,16 +155,16 @@ export default function PitchGenerator() {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
       const json = await res.json(),
       if (json && json.url) {
-        window.open(json.url, '_blank'),
+        window.open(json.url, '_blank')
       }
     } catch (e) {
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [slides, versionTag]),
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))),
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
 
   const renderChartPreview = (slide: Slide) => {
@@ -199,7 +198,7 @@ export default function PitchGenerator() {
           )}
         </div>
       </div>
-    ),
+    )
   },
 
   return (
@@ -307,5 +306,5 @@ export default function PitchGenerator() {
         </div>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

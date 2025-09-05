@@ -11,7 +11,6 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
 import { futuristic2028Services } from '../data/2028-futuristic-micro-saas',
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -360,5 +359,5 @@ export default function ServicesShowcase2028() {
 
       <UltraFuturisticFooter2028 />
     </>
-  ),
+  )
 }

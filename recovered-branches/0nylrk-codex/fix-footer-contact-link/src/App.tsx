@@ -77,7 +77,7 @@ const App = () => {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-  ),
+  )
 },
 
 export default App,

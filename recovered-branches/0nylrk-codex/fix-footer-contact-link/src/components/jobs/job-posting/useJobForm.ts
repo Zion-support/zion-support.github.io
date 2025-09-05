@@ -5,13 +5,11 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
 import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
-
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-
 export interface JobPostingProps {
   jobId?: string,
-  onSuccess?: () => void,
+  onSuccess?: () => void
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
@@ -68,16 +66,16 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
         user_id: user.id},
 
       if (onSuccess) {
-        onSuccess(),
+        onSuccess()
       }
       
-      return jobData,
+      return jobData
     } catch (error: any) {
       console.error("Error in job form submission:", error),
       toast.error(error.message || "Failed to process form"),
-      throw error,
+      throw error
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -93,5 +91,5 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     initialValues,
     setInitialValues,
     submitJob
-  },
+  }
 },

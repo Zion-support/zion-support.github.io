@@ -11,13 +11,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const dispute = await getDisputeById(id),
     if (!dispute) return res.status(404).json({ error: 'Not found' }),
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId),
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }),
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
     }
-    return res.status(200).json({ dispute }),
+    return res.status(200).json({ dispute })
   }
 
   res.setHeader('AllowGET'),
-  return res.status(405).end('Method Not Allowed'),
+  return res.status(405).end('Method Not Allowed')
 }

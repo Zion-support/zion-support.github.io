@@ -1,21 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
 
 async function loadRequests(): Promise<any[]> {
   try {
     const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8'),
-    return JSON.parse(raw),
+    return JSON.parse(raw)
   } catch {
-    return [],
+    return []
   }
 }
 
 async function saveRequests(requests: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2)),
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
 }
 
 async function summarizeWithOpenAI(description: string) {
@@ -32,9 +31,9 @@ async function summarizeWithOpenAI(description: string) {
       temperature: 0.3}),
     const content = response.choices[0]?.message?.content || '',
     const typeMatch = content.match(/type\s*:\s*(.+)$/im),
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' },
+    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
-    return { summary: description.slice(0, 280), type: 'unknown' },
+    return { summary: description.slice(0, 280), type: 'unknown' }
   }
 }
 
@@ -68,5 +67,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({ id, status: 'ok' }),
+  return res.status(200).json({ id, status: 'ok' })
 }

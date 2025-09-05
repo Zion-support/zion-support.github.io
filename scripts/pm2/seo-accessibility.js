@@ -20,7 +20,7 @@ class SEOAccessibility {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    },
+    }
   },
 ,
   async checkSEO() {,
@@ -38,8 +38,8 @@ class SEOAccessibility {,
           const seoChecks = this.analyzeSEO(file, content),
           seoIssues.push(...seoChecks)
         })
-      },
-    },
+      }
+    }
   },
 ,
   getPageFiles(dir) {,
@@ -56,6 +56,6 @@ class SEOAccessibility {,
           scanDirectory(fullPath)
         } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,
           files.push(fullPath)
-        },
+        }
       })
     },

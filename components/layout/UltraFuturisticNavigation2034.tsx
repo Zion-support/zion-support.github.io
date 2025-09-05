@@ -137,10 +137,8 @@ const socialLinks = [
 ],
 
 const certifications = [
-  'ISO 27001 CertifiedSOC 2 Type II Compliant',
-  'GDPR CompliantHIPAA Compliant',
-  'PCI DSS Level 1FedRAMP Authorized',
-  'Quantum Security CertifiedAI Ethics Compliant'
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ],
 
 export default function UltraFuturisticNavigation2034() {
@@ -150,10 +148,10 @@ export default function UltraFuturisticNavigation2034() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50),
+      setIsScrolled(window.scrollY > 50)
     },
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const toggleDropdown = (category: string) => {
@@ -161,7 +159,7 @@ export default function UltraFuturisticNavigation2034() {
   },
 
   const closeDropdown = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null)
   },
 
   return (
@@ -380,5 +378,5 @@ export default function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  ),
+  )
 }

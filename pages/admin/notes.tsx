@@ -21,12 +21,12 @@ export default function AdminNotesConsole() {
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
         if (!res.ok) return,
         const data = await res.json(),
-        setNotes(data.notes || []),
+        setNotes(data.notes || [])
       } finally {
-        setLoading(false),
+        setLoading(false)
       }
     }
-    if (isAdmin) load(),
+    if (isAdmin) load()
   }, [isAdmin]),
 
   return (
@@ -55,5 +55,5 @@ export default function AdminNotesConsole() {
         </div>
       )}
     </div>
-  ),
+  )
 }

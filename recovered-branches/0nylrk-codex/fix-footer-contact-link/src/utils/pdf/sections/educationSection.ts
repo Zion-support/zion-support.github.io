@@ -3,7 +3,6 @@ import { jsPDF } from 'jspdf',
 import { Education } from '@/types/resume',
 import { PdfThemeColors } from '../themeConfig',
 import { formatDate } from '../formatters',
-
 export function addEducationSection(
   doc: jsPDF,
   education: Education[],
@@ -36,14 +35,14 @@ export function addEducationSection(
     
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),
-    return dateB.getTime() - dateA.getTime(),
+    return dateB.getTime() - dateA.getTime()
   }),
   
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
       doc.addPage(),
-      yPos = 20,
+      yPos = 20
     }
     
     doc.setFontSize(14),
@@ -63,7 +62,7 @@ export function addEducationSection(
     doc.text(dateText, 20, yPos + 10),
     
     if (edu.location) {
-      doc.text(edu.location, 70, yPos + 10),
+      doc.text(edu.location, 70, yPos + 10)
     }
     
     if (edu.description) {
@@ -71,11 +70,11 @@ export function addEducationSection(
       const descriptionLines = doc.splitTextToSize(edu.description, 170),
       doc.text(descriptionLines, 20, yPos + 16),
       
-      yPos += (descriptionLines.length * 5) + 20,
+      yPos += (descriptionLines.length * 5) + 20
     } else {
-      yPos += 20,
+      yPos += 20
     }
   }
   
-  return yPos + 5,
+  return yPos + 5
 }

@@ -28,8 +28,7 @@ export default function ApiToolsPage() {
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
-        'Support for 20+ programming languagesReal-time code completion and suggestions',
-        'Custom code templates and patternsIntegration with popular IDEs',
+        'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEs',
         'Code review and optimization suggestions'
       ],
       pricing: {
@@ -53,8 +52,7 @@ export default function ApiToolsPage() {
       title: 'DataSync API - Real-time Data Synchronization',
       description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
       features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagation',
-        'Conflict resolution and data validationWebhook support for custom integrations',
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrations',
         'Comprehensive audit logging and monitoring'
       ],
       pricing: {
@@ -78,8 +76,7 @@ export default function ApiToolsPage() {
       title: 'GeoAPI - Advanced Geospatial Services',
       description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
       features: [
-        'Global geocoding and reverse geocodingReal-time traffic and routing optimization',
-        'Geofencing and location trackingMap visualization and customization',
+        'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customization',
         'Spatial data analysis and clustering'
       ],
       pricing: {
@@ -103,8 +100,7 @@ export default function ApiToolsPage() {
       title: 'AuthGuard API - Enterprise Authentication',
       description: 'Secure, scalable authentication and authorization system with advanced security features.',
       features: [
-        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect support',
-        'Role-based access control (RBAC)Advanced threat detection and prevention',
+        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and prevention',
         'Compliance with SOC2, GDPR, and HIPAA'
       ],
       pricing: {
@@ -128,8 +124,7 @@ export default function ApiToolsPage() {
       title: 'WebhookHub - Intelligent Webhook Management',
       description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
       features: [
-        'Guaranteed webhook delivery with retry logicEvent filtering and transformation',
-        'Real-time monitoring and analyticsCustom authentication and security',
+        'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and security',
         'Integration with popular platforms'
       ],
       pricing: {
@@ -153,8 +148,7 @@ export default function ApiToolsPage() {
       title: 'NLP API - Natural Language Processing',
       description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
       features: [
-        'Text classification and categorizationSentiment analysis and emotion detection',
-        'Named entity recognition (NER)Language detection and translation',
+        'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translation',
         'Custom model training and fine-tuning'
       ],
       pricing: {
@@ -178,8 +172,7 @@ export default function ApiToolsPage() {
       title: 'Analytics API - Business Intelligence',
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
-        'Real-time data aggregation and analysisCustom dashboard creation and sharing',
-        'Advanced filtering and segmentationExport capabilities (CSV, JSON, PDF)',
+        'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)',
         'Scheduled reports and alerts'
       ],
       pricing: {
@@ -203,8 +196,7 @@ export default function ApiToolsPage() {
       title: 'EncryptAPI - Data Encryption Services',
       description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
       features: [
-        'AES-256 encryption and decryptionSecure key management and rotation',
-        'Digital signatures and certificatesCompliance with FIPS 140-2 standards',
+        'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standards',
         'Hardware security module (HSM) support'
       ],
       pricing: {
@@ -225,7 +217,7 @@ export default function ApiToolsPage() {
     }
   ],
 
-  const categories = ['AllDevelopment', 'DataLocation', 'SecurityIntegration', 'AI/MLAnalytics'],
+  const categories = ['AllDevelopmentDataLocation', 'SecurityIntegrationAI/MLAnalytics'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredTools = selectedCategory === 'All' 

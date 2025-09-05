@@ -4,7 +4,6 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
-
 // Mock data for demonstration
 const mockConversations = [
   {
@@ -83,7 +82,7 @@ export function MobileMessages() {
   },
   
   const handleBack = () => {
-    setActiveConversation(null),
+    setActiveConversation(null)
   },
   
   const handleSendMessage = (content: string) => {
@@ -93,7 +92,7 @@ export function MobileMessages() {
       timestamp: "Just now",
       isMe: true,
       status: "sent"},
-    setMessages([...messages, newMessage]),
+    setMessages([...messages, newMessage])
   },
   
   const currentContact = mockConversations.find(c => c.id === activeConversation),
@@ -128,5 +127,5 @@ export function MobileMessages() {
         </>
       )}
     </div>
-  ),
+  )
 }

@@ -14,7 +14,6 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced',
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced',
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',
-
 interface Service {
   id: string,
   name: string,
@@ -97,12 +96,12 @@ export default function ComprehensiveServicesShowcase2025() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
+      )
     }
 
     // Filter by category
     if (selectedCategory !== 'All Services') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Filter by price range
@@ -116,7 +115,7 @@ export default function ComprehensiveServicesShowcase2025() {
           case 'over-500': return price > 500,
           default: return true
         }
-      }),
+      })
     }
 
     // Sort services
@@ -136,7 +135,7 @@ export default function ComprehensiveServicesShowcase2025() {
       }
     }),
 
-    setFilteredServices(filtered),
+    setFilteredServices(filtered)
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const getCategoryColor = (category: string) => {
@@ -540,7 +539,7 @@ export default function ComprehensiveServicesShowcase2025() {
               onClick={() => {
                 setSearchTerm(''),
                 setSelectedCategory('All Services'),
-                setSelectedPriceRange('all'),
+                setSelectedPriceRange('all')
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >

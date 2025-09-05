@@ -20,7 +20,7 @@ class TestAutomation {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
-    },
+    }
   },
 ,
   async runTests() {,
@@ -42,15 +42,15 @@ class TestAutomation {,
         success: true,
         output: testResult,
         duration: duration
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || '',
         duration: 0
-      },
-    },
+      }
+    }
   },
 ,
   async runLintTests() {,
@@ -66,14 +66,14 @@ class TestAutomation {,
       return {,
         success: true,
         output: lintResult
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || ''
-      },
-    },
+      }
+    }
   },
 ,
   async runTypeCheck() {,
@@ -89,14 +89,14 @@ class TestAutomation {,
       return {,
         success: true,
         output: typeResult
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         output: error.stdout || error.stderr || ''
-      },
-    },
+      }
+    }
   },
 ,
   async generateReport(testResults, lintResults, typeResults) {,
@@ -155,7 +155,7 @@ class TestAutomation {,
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -199,13 +199,13 @@ class TestAutomation {,
         })
       } else {,
         this.log('\n✨ All tests passed!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running test automation: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the test automation,

@@ -1,8 +1,7 @@
 import React from 'react',
-
 interface FilterSidebarProps {
   className?: string,
-  children?: React.ReactNode,
+  children?: React.ReactNode
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
@@ -13,7 +12,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     <div className={`filter-sidebar ${className || ''}`}>
       {children}
     </div>
-  ),
+  )
 },
 
 export default FilterSidebar,

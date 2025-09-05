@@ -9,7 +9,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
 import { KanbanColumn } from "./KanbanColumn",
 import { useIsMobile } from "@/hooks/use-mobile",
-
 interface DnDLocation {
   droppableId: string,
   index: number
@@ -45,7 +44,7 @@ const COLUMNS = [
     description: "Not moving forward"}],
 
 interface KanbanBoardProps {
-  jobId?: string,
+  jobId?: string
 }
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
@@ -59,10 +58,10 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
       // Group applications by status
       const groupedApplications = COLUMNS.reduce((acc, column) => {
         acc[column.id] = applications.filter(app => app.status === column.id),
-        return acc,
+        return acc
       }, {} as Record<string, JobApplication[]>),
       
-      setColumns(groupedApplications),
+      setColumns(groupedApplications)
     }
   }, [applications]),
   
@@ -74,7 +73,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     if (!destination || 
         (destination.droppableId === source.droppableId && 
          destination.index === source.index)) {
-      return,
+      return
     }
     
     // Get the application that was dragged
@@ -100,13 +99,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
       await updateApplicationStatus(draggableId, newStatus),
       toast({
         title: "Status updated",
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}),
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})
     } catch (error) {
       // Revert the UI changes if the database update fails
       toast({
         title: "Failed to update status",
         description: "Please try again",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
   
@@ -124,7 +123,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
           </Card>
         ))}
       </div>
-    ),
+    )
   }
   
   if (!applications || applications.length === 0) {
@@ -137,7 +136,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
           </p>
         </CardContent>
       </Card>
-    ),
+    )
   }
   
   return (
@@ -155,5 +154,5 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
         ))}
       </div>
     </DragDropContext>
-  ),
+  )
 }

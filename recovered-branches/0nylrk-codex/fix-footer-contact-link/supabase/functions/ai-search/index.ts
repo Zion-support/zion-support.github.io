@@ -8,7 +8,7 @@ const corsHeaders = {
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
@@ -17,7 +17,7 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({ error: "Query is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      ),
+      )
     }
 
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -37,20 +37,20 @@ serve(async (req) => {
     let filters,
     try {
       const match = responseText.match(/\{[\s\S]*\}/),
-      filters = match ? JSON.parse(match[0]) : JSON.parse(responseText),
+      filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
     } catch (_) {
-      filters = { type: null, skills: null, location: null, budget: null, availability: null },
+      filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
 
     return new Response(
       JSON.stringify({ filters }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    ),
+    )
   } catch (error) {
     console.error("ai-search error", error),
     return new Response(
       JSON.stringify({ error: error.message }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    ),
+    )
   }
 }),

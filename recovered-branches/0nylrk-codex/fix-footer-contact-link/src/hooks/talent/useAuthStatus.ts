@@ -1,6 +1,5 @@
 
 import { useState } from 'react',
-
 export function useAuthStatus() {
   // Mock authenticated status
   const [isAuthenticated, setIsAuthenticated] = useState(false),
@@ -20,19 +19,19 @@ export function useAuthStatus() {
   const handleToggleSave = (talentId: string, isSaved: boolean) => {
     if (isAuthenticated) {
       if (isSaved) {
-        setSavedTalents(prev => [...prev, talentId]),
+        setSavedTalents(prev => [...prev, talentId])
       } else {
-        setSavedTalents(prev => prev.filter(id => id !== talentId)),
+        setSavedTalents(prev => prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
-      console.log('User needs to log in to save talents'),
+      console.log('User needs to log in to save talents')
     }
   },
   
   // For demo purposes, let's provide a login/logout toggle
   const toggleAuth = () => {
-    setIsAuthenticated(prev => !prev),
+    setIsAuthenticated(prev => !prev)
   },
   
   return {
@@ -41,5 +40,5 @@ export function useAuthStatus() {
     savedTalents,
     handleToggleSave,
     toggleAuth
-  },
+  }
 }

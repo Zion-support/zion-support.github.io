@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -18,17 +17,13 @@ const contactInfo = {
 },
 
 const categories = [
-  'All ServicesAI & Machine Learning',
-  'Customer SuccessSupply Chain',
-  'Financial PlanningSales Intelligence',
-  'HR AnalyticsDecision Intelligence',
-  'Content MarketingCRM & Customer Intelligence',
-  'Business Intelligence'
+  'All ServicesAI & Machine LearningCustomer SuccessSupply Chain',
+  'Financial PlanningSales IntelligenceHR AnalyticsDecision Intelligence',
+  'Content MarketingCRM & Customer IntelligenceBusiness Intelligence'
 ],
 
 const pricingRanges = [
-  'All PricesUnder $300',
-  '$300 - $500$500 - $800',
+  'All PricesUnder $300$300 - $500$500 - $800',
   '$800+'
 ],
 
@@ -58,7 +53,7 @@ export default function ComprehensiveServicesShowcase2025() {
           break,
         case '$800+':
           priceMatch = price > 800,
-          break,
+          break
       }
     }
     
@@ -66,7 +61,7 @@ export default function ComprehensiveServicesShowcase2025() {
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        service.category.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    return categoryMatch && priceMatch && searchMatch,
+    return categoryMatch && priceMatch && searchMatch
   }),
 
   // Sort services
@@ -89,7 +84,7 @@ export default function ComprehensiveServicesShowcase2025() {
     if (numPrice < 300) return 'Under $300',
     if (numPrice <= 500) return '$300 - $500',
     if (numPrice <= 800) return '$500 - $800',
-    return '$800+',
+    return '$800+'
   },
 
   const getCategoryIcon = (category: string) => {
@@ -482,7 +477,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   onClick={() => {
                     setSelectedCategory('All Services'),
                     setSelectedPriceRange('All Prices'),
-                    setSearchQuery(''),
+                    setSearchQuery('')
                   }}
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
@@ -540,7 +535,7 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </section>
     </>
-  ),
+  )
 },
 
 export default ComprehensiveServicesShowcase2025,

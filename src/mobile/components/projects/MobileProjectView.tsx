@@ -9,7 +9,6 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
-
 interface Milestone {
   id: string,
   title: string,
@@ -46,7 +45,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       description: "Initializing video connection..."
     }),
     
-    router.push(`/call/${roomId}`),
+    router.push(`/call/${roomId}`)
   },
   
   const messageClient = () => {
@@ -183,5 +182,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  ),
+  )
 }

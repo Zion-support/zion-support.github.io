@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
-
 export default function ComprehensiveServicesOverviewPage() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -45,7 +44,7 @@ export default function ComprehensiveServicesOverviewPage() {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      return matchesCategory && matchesSearch,
+      return matchesCategory && matchesSearch
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -69,12 +68,12 @@ export default function ComprehensiveServicesOverviewPage() {
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/),
-    return sum + (marketSize ? parseFloat(marketSize[1]) : 0),
+    return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
   }, 0),
 
   const averageROI = allServices.reduce((sum, service) => {
     const roi = service.roi.match(/(\d+)%/),
-    return sum + (roi ? parseInt(roi[1]) : 0),
+    return sum + (roi ? parseInt(roi[1]) : 0)
   }, 0) / allServices.length,
 
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),

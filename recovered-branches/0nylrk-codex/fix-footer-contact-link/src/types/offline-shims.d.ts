@@ -43,11 +43,11 @@ declare module 'react' {
   export type Ref<T = any> = any,
   export type LegacyRef<T = any> = any,
   export type ElementRef<T = any> = any,
-  export type CSSProperties = Record<string, string | number | undefined>,
+  export type CSSProperties = Record<string, string | number | undefined>
 }
 
 declare module 'react-dom' {
-  export * from 'react-dom/index',
+  export * from 'react-dom/index'
 }
 
 declare module 'react/jsx-runtime' {

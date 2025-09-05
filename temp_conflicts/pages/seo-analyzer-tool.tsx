@@ -39,8 +39,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'On-Page SEO',
       factors: [
-        'Title tags optimizationMeta descriptions',
-        'Header structure (H1, H2, H3)Content quality and length',
+        'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and length',
         'Internal linking structureImage optimization (alt tags)'
       ],
       icon: '📝',
@@ -49,8 +48,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Technical SEO',
       factors: [
-        'Page load speedMobile responsiveness',
-        'XML sitemapRobots.txt configuration',
+        'Page load speedMobile responsivenessXML sitemapRobots.txt configuration',
         'SSL certificateCore Web Vitals'
       ],
       icon: '⚙️',
@@ -59,8 +57,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Content SEO',
       factors: [
-        'Keyword densityContent relevance',
-        'Readability scoresContent freshness',
+        'Keyword densityContent relevanceReadability scoresContent freshness',
         'Multimedia optimizationSchema markup'
       ],
       icon: '📊',
@@ -69,8 +66,7 @@ export default function SEOAnalyzerToolPage() {
     {
       category: 'Local SEO',
       factors: [
-        'Google My BusinessLocal citations',
-        'Review managementLocal keyword targeting',
+        'Google My BusinessLocal citationsReview managementLocal keyword targeting',
         'Location-based contentLocal link building'
       ],
       icon: '📍',
@@ -85,8 +81,7 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
       features: [
-        '10 website analyses/monthBasic SEO metrics',
-        'Keyword research (100 keywords)On-page SEO analysis',
+        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysis',
         'Email supportBasic reporting'
       ],
       popular: false
@@ -97,10 +92,8 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '50 website analyses/monthAdvanced SEO metrics',
-        'Keyword research (500 keywords)Competitive analysis',
-        'Priority supportAdvanced reporting',
-        'API accessTeam collaboration'
+        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysis',
+        'Priority supportAdvanced reportingAPI accessTeam collaboration'
       ],
       popular: true
     },
@@ -110,10 +103,8 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'For large organizations and SEO agencies',
       features: [
-        'Unlimited analysesEnterprise SEO metrics',
-        'Unlimited keyword researchAdvanced competitive analysis',
-        '24/7 dedicated supportCustom reporting',
-        'White-label optionsCustom integrations'
+        'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis',
+        '24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations'
       ],
       popular: false
     }
@@ -138,8 +129,7 @@ export default function SEOAnalyzerToolPage() {
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
         ],
         recommendations: [
-          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing images',
-          'Add more relevant internal links to improve site structureImplement schema markup for rich snippets'
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ],
         keywords: [
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },
@@ -147,8 +137,8 @@ export default function SEOAnalyzerToolPage() {
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
       }),
-      setIsAnalyzing(false),
-    }, 4000),
+      setIsAnalyzing(false)
+    }, 4000)
   },
 
   return (

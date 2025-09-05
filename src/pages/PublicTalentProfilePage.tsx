@@ -32,24 +32,24 @@ export default function ProfilePage() {
           .single(),
 
         if (error) {
-          throw error,
+          throw error
         }
 
-        setProfileData(data),
+        setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive"}),
+          variant: "destructive"})
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
 
     if (profileId) {
-      fetchProfile(),
+      fetchProfile()
     }
   }, [profileId]),
 
@@ -58,7 +58,7 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    ),
+    )
   }
 
   if (isError || !profileData) {
@@ -66,7 +66,7 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    ),
+    )
   }
 
   return (
@@ -233,5 +233,5 @@ export default function ProfilePage() {
         </div>
       </div>
     </>
-  ),
+  )
 }

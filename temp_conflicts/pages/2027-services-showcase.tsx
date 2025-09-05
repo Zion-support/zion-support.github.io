@@ -12,7 +12,6 @@ import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovation
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas',
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027',
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027',
-
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -44,7 +43,7 @@ export default function ServicesShowcase2027() {
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000),
 
-    return matchesSearch && matchesCategory && matchesPrice,
+    return matchesSearch && matchesCategory && matchesPrice
   }),
 
   // Sort services
@@ -345,7 +344,7 @@ export default function ServicesShowcase2027() {
                 onClick={() => {
                   setSearchTerm(''),
                   setSelectedCategory('all'),
-                  setSelectedPriceRange('all'),
+                  setSelectedPriceRange('all')
                 }} className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Clear Filters
               </button>

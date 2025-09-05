@@ -12,7 +12,7 @@ export interface ServiceExpansion2025 {
     mobile: string,
     email: string,
     address: string
-  },
+  }
 }
 
 export const serviceExpansions2025: ServiceExpansion2025[] = [

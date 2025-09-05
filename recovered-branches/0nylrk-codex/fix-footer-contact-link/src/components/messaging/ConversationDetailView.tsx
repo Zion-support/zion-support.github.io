@@ -9,7 +9,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio',
 import { useAuth } from '@/hooks/useAuth',
 import { MessageBubble } from './MessageBubble',
 import { DateDivider } from './DateDivider',
-
 export function ConversationDetailView() {
   const { user } = useAuth(),
   const { 
@@ -23,16 +22,16 @@ export function ConversationDetailView() {
   
   useEffect(() => {
     if (activeConversation) {
-      loadMessages(activeConversation.id),
+      loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [activeMessages]),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -40,7 +39,7 @@ export function ConversationDetailView() {
     if (!messageText.trim() || !activeConversation) return,
     
     await sendMessage(activeConversation.id, messageText),
-    setMessageText(''),
+    setMessageText('')
   },
   
   if (!activeConversation) {
@@ -52,7 +51,7 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    ),
+    )
   }
   
   // Group messages by date
@@ -63,12 +62,12 @@ export function ConversationDetailView() {
     const existingGroup = groupedMessages.find(group => group.date === messageDate),
     
     if (existingGroup) {
-      existingGroup.messages.push(message),
+      existingGroup.messages.push(message)
     } else {
       groupedMessages.push({
         date: messageDate,
         messages: [message]
-      }),
+      })
     }
   }),
   

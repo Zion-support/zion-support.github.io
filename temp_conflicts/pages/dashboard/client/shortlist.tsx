@@ -16,7 +16,7 @@ function useToast() {
   const show = (msg: string, t: "success" | "error" | "info" = "info") => {
     setMessage(msg),
     setType(t),
-    setTimeout(() => setMessage(null), 2500),
+    setTimeout(() => setMessage(null), 2500)
   },
   const node = message ? (
     <div
@@ -27,7 +27,7 @@ function useToast() {
       {message}
     </div>
   ) : null,
-  return { show, node } as const,
+  return { show, node } as const
 }
 
 export default function ClientShortlistPage() {
@@ -44,10 +44,10 @@ export default function ClientShortlistPage() {
     supabase.auth.getSession().then((res) => {
       if (!res.data.session) {
         router.replace("/auth/login"),
-        return,
+        return
       }
-      setIsAuthChecked(true),
-    }),
+      setIsAuthChecked(true)
+    })
   }, [router]),
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function ClientShortlistPage() {
     setLoading(true),
     fetchJobApplications(jobId || undefined, filters)
       .then((data) => setApplications(data))
-      .finally(() => setLoading(false)),
+      .finally(() => setLoading(false))
   }, [isAuthChecked, jobId, filters]),
 
   const shortlistedOnly = useMemo(
@@ -72,7 +72,7 @@ export default function ClientShortlistPage() {
           hired.reduce((acc, a) => {
             const start = a.createdAt ? new Date(a.createdAt).getTime() : Date.now(),
             const end = a.updatedAt ? new Date(a.updatedAt).getTime() : Date.now(),
-            return acc + (end - start),
+            return acc + (end - start)
           }, 0) /
             hired.length /
             (1000 * 60 * 60 * 24)
@@ -88,15 +88,15 @@ export default function ClientShortlistPage() {
       hired: applications.filter((a) => a.status === "hired").length,
       rejected: applications.filter((a) => a.status === "rejected").length} as any,
 
-    return { total, hiredCount, avgTimeToHireDays, ratio, stageCounts },
+    return { total, hiredCount, avgTimeToHireDays, ratio, stageCounts }
   }, [applications]),
 
   const handleMove = async (id: string, status: CandidateStatus) => {
     if (await updateApplicationStatus(id, status)) {
       setApplications((prev) => prev.map((a) => (a.id === id ? { ...a, status } : a))),
-      show(`Talent moved to ${status.charAt(0).toUpperCase() + status.slice(1)} stage`, "success"),
+      show(`Talent moved to ${status.charAt(0).toUpperCase() + status.slice(1)} stage`, "success")
     } else {
-      show("Failed to update status", "error"),
+      show("Failed to update status", "error")
     }
   },
 
@@ -104,27 +104,27 @@ export default function ClientShortlistPage() {
     const ok = await updateApplicationNotes(id, notes),
     if (ok) {
       setApplications((prev) => prev.map((a) => (a.id === id ? { ...a, notes } : a))),
-      show("Notes saved", "success"),
+      show("Notes saved", "success")
     } else {
-      show("Failed to save notes", "error"),
+      show("Failed to save notes", "error")
     }
   },
 
   const filteredList = useMemo(() => {
     let list = shortlistedOnly,
     if (filters.status && filters.status !== "all") {
-      list = list.filter((a) => a.status === filters.status),
+      list = list.filter((a) => a.status === filters.status)
     }
     if (typeof filters.minScore === "number") {
-      list = list.filter((a) => typeof a.score === "number" && (a.score as number) >= (filters.minScore as number)),
+      list = list.filter((a) => typeof a.score === "number" && (a.score as number) >= (filters.minScore as number))
     }
     if (filters.fromDate) {
-      list = list.filter((a) => a.createdAt && new Date(a.createdAt) >= (filters.fromDate as Date)),
+      list = list.filter((a) => a.createdAt && new Date(a.createdAt) >= (filters.fromDate as Date))
     }
     if (filters.toDate) {
-      list = list.filter((a) => a.createdAt && new Date(a.createdAt) <= (filters.toDate as Date)),
+      list = list.filter((a) => a.createdAt && new Date(a.createdAt) <= (filters.toDate as Date))
     }
-    return list,
+    return list
   }, [shortlistedOnly, filters]),
 
   if (!isAuthChecked) return null,

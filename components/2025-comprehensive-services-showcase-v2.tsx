@@ -13,7 +13,6 @@ import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2',
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2',
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2',
-
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent',
 import OpenAI from 'openai',
-
 type RequestBody = {
   roleTitle: string,
   skills: string[],
@@ -28,26 +27,26 @@ function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b),
   const mid = Math.floor(arr.length / 2),
   if (arr.length === 0) return 0,
-  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid],
+  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
     const key = getKey(item),
     (acc[key] ||= []).push(item),
-    return acc,
-  }, {} as Record<K, T[]>),
+    return acc
+  }, {} as Record<K, T[]>)
 }
 
 function extractCountry(location: string): string {
   const parts = location.split().map((p) => p.trim()),
-  return parts[parts.length - 1] || 'Global',
+  return parts[parts.length - 1] || 'Global'
 }
 
 function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
   const set = new Set(targetSkills.map((s) => s.toLowerCase())),
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length,
-  return overlap / Math.max(1, targetSkills.length),
+  return overlap / Math.max(1, targetSkills.length)
 }
 
 function prng(seed: string): () => number {
@@ -55,12 +54,12 @@ function prng(seed: string): () => number {
   for (let i = 0, i < seed.length, i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619),
   return () => {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5,
-    return (h >>> 0) / 4294967295,
-  },
+    return (h >>> 0) / 4294967295
+  }
 }
 
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFeb','MarApr','MayJun','JulAug','SepOct','NovDec'],
+  const months = ['JanFebMarApr','MayJunJulAug','SepOctNovDec'],
   const now = new Date(),
   const seed = prng(seedKey),
   const series: { label: string, value: number }[] = [],
@@ -69,9 +68,9 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1),
     const drift = (seed() - 0.5) * 0.03, // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift)),
-    series.push({ label: months[date.getMonth()], value: Math.round(current) }),
+    series.push({ label: months[date.getMonth()], value: Math.round(current) })
   }
-  return series,
+  return series
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
@@ -89,15 +88,15 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
         { role: 'user', content: prompt }],
       temperature: 0.2,
       max_tokens: 300}),
-    return completion.choices?.[0]?.message?.content || undefined,
+    return completion.choices?.[0]?.message?.content || undefined
   } catch {
-    return undefined,
+    return undefined
   }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   const body: RequestBody = req.body,
@@ -142,7 +141,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 8),
 
   // Tags
-  const scarceSkills = ['RAGLangChain', 'Vector DBsKubernetes', 'AppSecSecurity'],
+  const scarceSkills = ['RAGLangChainVector DBsKubernetes', 'AppSecSecurity'],
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase()))),
   const tags: string[] = [],
   if (remote) tags.push('Remote Premium'),
@@ -162,5 +161,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags,
     gptRecommendation},
 
-  return res.status(200).json(response),
+  return res.status(200).json(response)
 }

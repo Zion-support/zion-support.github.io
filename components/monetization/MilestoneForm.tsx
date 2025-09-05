@@ -1,7 +1,7 @@
 import React, { useState } from 'react',
 
 type Props = {
-  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void,
+  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 },
 
 export default function MilestoneForm({ onSubmit }: Props) {
@@ -18,7 +18,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
     const parsedAmount = Number(amountUsd),
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
       setError('Please provide Title, Due Date and a valid Amount.'),
-      return,
+      return
     }
     setLoading(true),
     try {
@@ -26,11 +26,11 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setTitle(''),
       setDescription(''),
       setDueDate(''),
-      setAmountUsd(''),
+      setAmountUsd('')
     } catch (err: any) {
       setError(err?.message || 'Failed to create milestone')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   },
 
@@ -90,5 +90,5 @@ export default function MilestoneForm({ onSubmit }: Props) {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-  ),
+  )
 }

@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",
   description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",

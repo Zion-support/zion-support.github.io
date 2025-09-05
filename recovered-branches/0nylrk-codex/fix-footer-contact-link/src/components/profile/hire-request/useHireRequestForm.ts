@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
-
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -14,7 +13,7 @@ interface UseHireRequestFormProps {
     name?: string,
     email?: string,
     id?: string
-  },
+  }
 }
 
 export interface FormValues {
@@ -80,12 +79,12 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
       const result = await submitHireRequest(requestData),
       if (result.success) {
-        onClose(),
+        onClose()
       }
     } catch (error) {
-      console.error("Error submitting hire request:", error),
+      console.error("Error submitting hire request:", error)
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -93,5 +92,5 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form,
     isSubmitting,
     onSubmit
-  },
+  }
 }

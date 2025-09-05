@@ -10,7 +10,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',
-
 export default function Comprehensive2025InnovativeServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -44,7 +43,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     const numPrice = parseFloat(price.replace('$', '').replace(, '')),
     if (numPrice < 1000) return 'budget',
     if (numPrice < 5000) return 'mid',
-    return 'enterprise',
+    return 'enterprise'
   },
 
   const filteredServices = allServices
@@ -54,7 +53,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange,
-      return matchesSearch && matchesCategory && matchesPrice,
+      return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -295,7 +294,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('all'),
-                    setPriceRange('all'),
+                    setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
@@ -468,5 +467,5 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

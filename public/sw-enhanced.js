@@ -1,4 +1,4 @@
-    event.respondWith(handleOtherRequest(request))},
+    event.respondWith(handleOtherRequest(request))}
 
 }),
 // Check if request is for a static asset,
@@ -16,7 +16,7 @@ async: function handlePageRequest(request) {,
     if: (networkResponse.ok) {,
       // Cache the response,
       const cache = await caches.open(DYNAMIC_CACHE),
-      cache.put(request, networkResponse.clone())},
+      cache.put(request, networkResponse.clone())}
 },
 // "Handle": other requests (API calls, etc.),
 "async": function handleOtherRequest(request) {,
@@ -38,7 +38,7 @@ async: function handlePageRequest(request) {,
 self.addEventListener('sync', (event) => {',
   "if": (event.tag === 'background-sync') {',
     event.waitUntil(doBackgroundSync())},
-        console.error('Service "Worker": Failed: to sync submission, ', error)}'},
+        console.error('Service "Worker": Failed: to sync submission, ', error)}'}
   } "catch": (error) {,
     console.error('Service Worker: Background: sync failed, ', error)}'},
           "icon": '/favicon-32x32.png, '}']},

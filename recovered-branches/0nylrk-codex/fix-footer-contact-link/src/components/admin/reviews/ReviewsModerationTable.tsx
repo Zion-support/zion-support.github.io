@@ -28,7 +28,6 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
@@ -55,20 +54,20 @@ export function ReviewsModerationTable({
         .eq("id", reviewId),
 
       if (error) throw error,
-      return { reviewId, status },
+      return { reviewId, status }
     },
     onSuccess: (data) => {
       toast({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
-      setViewDetailsOpen(false),
+      setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive"}),
+        variant: "destructive"})
     }}),
 
   const getStatusColor = (status: ReviewStatus) => {
@@ -97,7 +96,7 @@ export function ReviewsModerationTable({
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
       </div>
-    ),
+    )
   }
 
   if (reviews.length === 0) {
@@ -108,15 +107,15 @@ export function ReviewsModerationTable({
           All reviews have been processed. Check back later for new submissions.
         </p>
       </div>
-    ),
+    )
   }
 
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" }),
+    updateReviewStatus({ reviewId, status: "approved" })
   },
 
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" }),
+    updateReviewStatus({ reviewId, status: "rejected" })
   },
 
   const handleViewDetails = (review: Review) => {
@@ -134,7 +133,7 @@ export function ReviewsModerationTable({
           />
         ))}
       </div>
-    ),
+    )
   },
 
   return (
@@ -381,5 +380,5 @@ export function ReviewsModerationTable({
         </Dialog>
       )}
     </>
-  ),
+  )
 }

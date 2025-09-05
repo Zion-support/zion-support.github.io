@@ -4,7 +4,6 @@ import { motion } from 'framer-motion',
 import { Mail, Phone, MapPin, Clock } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function ContactPage() {
   const [formData, setFormData] = React.useState({
     name: '',
@@ -16,14 +15,14 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission
-    console.log('Form submitted:', formData),
+    console.log('Form submitted:', formData)
   },
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    }),
+    })
   },
 
   return (
@@ -228,5 +227,5 @@ export default function ContactPage() {
 
       <EnhancedFooter />
     </>
-  ),
+  )
 }

@@ -12,7 +12,7 @@ interface AutocompleteSuggestionsProps {
 // Helper function to highlight matching text
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm || searchTerm.length === 0) {
-    return { before: '', match: text, after: '' },
+    return { before: '', match: text, after: '' }
   }
   
   const lowerText = text.toLowerCase(),
@@ -20,14 +20,14 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   const index = lowerText.indexOf(lowerSearchTerm),
   
   if (index === -1) {
-    return { before: '', match: text, after: '' },
+    return { before: '', match: text, after: '' }
   }
   
   return {
     before: text.substring(0, index),
     match: text.substring(index, index + searchTerm.length),
     after: text.substring(index + searchTerm.length)
-  },
+  }
 },
 
 export function AutocompleteSuggestions({ 
@@ -59,9 +59,9 @@ export function AutocompleteSuggestions({
                 </span>
               </div>
             </li>
-          ),
+          )
         })}
       </ul>
     </div>
-  ),
+  )
 }

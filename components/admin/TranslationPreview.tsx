@@ -1,7 +1,6 @@
 import React, { useState } from 'react',
 import { useAutoTranslate } from '../../hooks/useAutoTranslate',
-
-const defaultTargets = ['enpt', 'esar'],
+const defaultTargets = ['enptesar'],
 
 export default function TranslationPreview() {
   const [text, setText] = useState(''),
@@ -29,5 +28,5 @@ export default function TranslationPreview() {
         ))}
       </div>
     </div>
-  ),
+  )
 }

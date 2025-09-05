@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",

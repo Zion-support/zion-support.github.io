@@ -13,7 +13,6 @@ import {
   NotificationFooter 
 } from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter',
-
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
@@ -36,25 +35,25 @@ export const NotificationCenter: React.FC = () => {
       const loadNotifications = async () => {
         try {
           await fetchNotifications(),
-          setError(null),
+          setError(null)
         } catch (err) {
           console.error("Failed to fetch notifications:", err),
           setError("Couldn't load notifications"),
-          toast.error("Failed to load notifications"),
+          toast.error("Failed to load notifications")
         }
       },
       
-      loadNotifications(),
+      loadNotifications()
     }
   }, [open, fetchNotifications]),
 
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
-      toast.success("All notifications marked as read"),
+      toast.success("All notifications marked as read")
     } catch (err) {
       console.error("Failed to mark notifications as read:", err),
-      toast.error("Failed to update notifications"),
+      toast.error("Failed to update notifications")
     }
   },
 
@@ -97,5 +96,5 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-  ),
+  )
 },

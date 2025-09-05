@@ -1,7 +1,6 @@
 
 import { cn } from "@/lib/utils",
 import React from "react",
-
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -24,5 +23,5 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <p className="text-zion-slate-light">{description}</p>
       </div>
     </div>
-  ),
+  )
 }

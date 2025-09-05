@@ -23,10 +23,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false),
-      setTimeout(() => onRemove(toast.id), 300),
+      setTimeout(() => onRemove(toast.id), 300)
     }, toast.duration || 5000),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, [toast.id, toast.duration, onRemove]),
 
   const getIcon = () => {
@@ -96,7 +96,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         <button
           onClick={() => {
             setIsVisible(false),
-            setTimeout(() => onRemove(toast.id), 300),
+            setTimeout(() => onRemove(toast.id), 300)
           }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
@@ -119,7 +119,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         />
       </div>
     </motion.div>
-  ),
+  )
 },
 
 interface ToastContainerProps {
@@ -136,7 +136,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
       </AnimatePresence>
     </div>
-  ),
+  )
 },
 
 // Hook for managing toasts
@@ -146,7 +146,7 @@ export const useToast = () => {
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9),
     const newToast = { ...toast, id },
-    setToasts(prev => [...prev, newToast]),
+    setToasts(prev => [...prev, newToast])
   },
 
   const removeToast = (id: string) => {
@@ -154,19 +154,19 @@ export const useToast = () => {
   },
 
   const showSuccess = (title: string, message?: string) => {
-    addToast({ type: 'success', title, message }),
+    addToast({ type: 'success', title, message })
   },
 
   const showError = (title: string, message?: string) => {
-    addToast({ type: 'error', title, message }),
+    addToast({ type: 'error', title, message })
   },
 
   const showInfo = (title: string, message?: string) => {
-    addToast({ type: 'info', title, message }),
+    addToast({ type: 'info', title, message })
   },
 
   const showWarning = (title: string, message?: string) => {
-    addToast({ type: 'warning', title, message }),
+    addToast({ type: 'warning', title, message })
   },
 
   return {
@@ -175,5 +175,5 @@ export const useToast = () => {
     showError,
     showInfo,
     showWarning,
-    removeToast},
+    removeToast}
 },

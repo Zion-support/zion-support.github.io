@@ -2,7 +2,6 @@
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-
 export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -22,12 +21,12 @@ export const MobileEmailCapture: React.FC = () => {
       setEmail(""),
       
       setTimeout(() => {
-        setIsSuccess(false),
-      }, 5000),
+        setIsSuccess(false)
+      }, 5000)
     } catch (error) {
-      console.error("Error subscribing:", error),
+      console.error("Error subscribing:", error)
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -66,5 +65,5 @@ export const MobileEmailCapture: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

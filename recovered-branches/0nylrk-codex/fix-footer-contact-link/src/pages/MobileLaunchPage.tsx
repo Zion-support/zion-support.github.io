@@ -9,7 +9,6 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
-
 const MobileLaunchPage: React.FC = () => {
   return (
     <AppLayout>
@@ -34,7 +33,7 @@ const MobileLaunchPage: React.FC = () => {
       
       <AppStoreBanner />
     </AppLayout>
-  ),
+  )
 },
 
 export default MobileLaunchPage,

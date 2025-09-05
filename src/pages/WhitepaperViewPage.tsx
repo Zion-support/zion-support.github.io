@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button',
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link', // For a back button, changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
@@ -22,7 +20,7 @@ interface SharedWhitepaper {
     tokenSupply: string,
     sections: Array<{ id: string, title: string, content: string }>,
     distributionChartData: Array<{ name: string, value: number }>,
-    distributionBreakdown?: string,
+    distributionBreakdown?: string
   },
   created_at: string,
   is_public: boolean
@@ -42,7 +40,7 @@ const WhitepaperViewPage: React.FC = () => {
       if (!id) {
         setError("No whitepaper ID provided."),
         setLoading(false),
-        return,
+        return
       }
       setLoading(true),
       setError(null),
@@ -53,23 +51,23 @@ const WhitepaperViewPage: React.FC = () => {
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error),
         if (!responseData || !(responseData as any).whitepaper_data) {
-          throw new Error('Shared whitepaper not found or data is invalid.'),
+          throw new Error('Shared whitepaper not found or data is invalid.')
         }
 
-        setSharedData(responseData as SharedWhitepaper),
+        setSharedData(responseData as SharedWhitepaper)
 
       } catch (e: any) {
         logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
-        setError(e.message || 'An unexpected error occurred.'),
+        setError(e.message || 'An unexpected error occurred.')
       } finally {
-        setLoading(false),
+        setLoading(false)
       }
     },
-    fetchWhitepaper(),
+    fetchWhitepaper()
   }, [id]),
 
   if (loading) {
-    return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>,
+    return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>
   }
 
   if (error) {
@@ -80,7 +78,7 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-    ),
+    )
   }
 
   if (!sharedData) { // Check sharedData which includes the is_public flag
@@ -91,7 +89,7 @@ const WhitepaperViewPage: React.FC = () => {
               <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
             </Button>
         </div>
-    ),
+    )
   }
 
   // Access control based on is_public and admin role
@@ -104,7 +102,7 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-    ),
+    )
   }
 
   const { whitepaper_data: whitepaper } = sharedData,
@@ -130,7 +128,7 @@ const WhitepaperViewPage: React.FC = () => {
         tokenSupply={whitepaper.tokenSupply}
       />
     </div>
-  ),
+  )
 },
 
 export default WhitepaperViewPage,

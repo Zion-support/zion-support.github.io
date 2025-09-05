@@ -3,7 +3,6 @@
 import { useState } from "react",
 import { FeatureKeys } from "@/lib/zod",
 import LoadingSpinner from "@/app/components/LoadingSpinner",
-
 export default function AdminDeployPage() {
   const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState<string | null>(null),
@@ -43,17 +42,17 @@ export default function AdminDeployPage() {
       if (!res.ok) {
         setMessageType('error'),
         setMessage(data.error || "Deployment failed"),
-        return,
+        return
       }
       
       setMessageType('success'),
       setMessage(`✅ Deployment queued successfully! ID: ${data.deploymentId}`),
-      (event.target as HTMLFormElement).reset(),
+      (event.target as HTMLFormElement).reset()
     } catch (error) {
       setMessageType('error'),
-      setMessage("Network error occurred. Please try again."),
+      setMessage("Network error occurred. Please try again.")
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -430,7 +429,7 @@ export default function AdminDeployPage() {
         </form>
       </div>
     </div>
-  ),
+  )
 }
 
 function labelFor(key: string) {

@@ -2,14 +2,13 @@ import Head from 'next/head',
 import { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 import Link from 'next/link',
-
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z" />
     </svg>
-  ),
+  )
 }
 
 function AppleBadge({ href }: { href: string }) {
@@ -69,7 +68,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
     if (dismissed) return,
     const ua = navigator.userAgent || '',
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua),
-    if (isMobile) setVisible(true),
+    if (isMobile) setVisible(true)
   }, []),
 
   if (!visible) return null,
@@ -90,7 +89,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>
             <button
               aria-label="Dismiss"
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false), }}
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
               ✕
@@ -122,13 +121,13 @@ export default function MobileLaunchPage() {
   const [idx, setIdx] = useState(0),
   useEffect(() => {
     const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000),
-    return () => clearInterval(t),
+    return () => clearInterval(t)
   }, []),
 
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download'),
     const encoded = encodeURIComponent(target),
-    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`,
+    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
   }, []),
 
   async function handleSubmit(e: React.FormEvent) {
@@ -139,7 +138,7 @@ export default function MobileLaunchPage() {
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text()),
       setStatus('success'),
-      setEmail(''),
+      setEmail('')
     } catch (err: any) {
       setStatus('error'),
       setError(err?.message || 'Something went wrong.')

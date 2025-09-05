@@ -8,7 +8,6 @@ import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
-
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
 }
@@ -18,7 +17,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]),
+      setActiveFilters([...activeFilters, filter])
     }
   },
   
@@ -168,5 +167,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
-  ),
+  )
 }

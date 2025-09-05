@@ -52,5 +52,5 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
         </Card>
       ))}
     </div>
-  ),
+  )
 }

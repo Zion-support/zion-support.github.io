@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
-
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
@@ -30,7 +29,7 @@ export function LeaveReviewModal({
   const [open, setOpen] = useState(isOpen),
   
   useEffect(() => {
-    setOpen(isOpen),
+    setOpen(isOpen)
   }, [isOpen]),
   
   const handleOpenChange = (open: boolean) => {
@@ -46,16 +45,16 @@ export function LeaveReviewModal({
       const { project_id, reviewee_id, ...updates } = formValues,
       const success = await updateReview(userReview.id, updates),
       if (success) {
-        handleOpenChange(false),
+        handleOpenChange(false)
       }
-      return success,
+      return success
     } else {
       // Create new review
       const success = await submitReview(formValues),
       if (success) {
-        handleOpenChange(false),
+        handleOpenChange(false)
       }
-      return success,
+      return success
     }
   },
   
@@ -81,5 +80,5 @@ export function LeaveReviewModal({
         />
       </DialogContent>
     </Dialog>
-  ),
+  )
 }

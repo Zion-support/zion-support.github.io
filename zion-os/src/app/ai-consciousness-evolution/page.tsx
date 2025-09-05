@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
   description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",

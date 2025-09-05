@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react',
 import Link from 'next/link',
-
 type EpisodeListItem = {
   id: string,
   title: string,
@@ -11,7 +10,7 @@ type EpisodeListItem = {
     mp3Url?: string,
     wavUrl?: string,
     mp4Url?: string
-  },
+  }
 },
 
 export default function PodcastIndexPage() {
@@ -23,14 +22,14 @@ export default function PodcastIndexPage() {
       try {
         const res = await fetch('/api/podcast/list'),
         const data = await res.json(),
-        setEpisodes(data.episodes || []),
+        setEpisodes(data.episodes || [])
       } catch (err) {
-        console.error(err),
+        console.error(err)
       } finally {
-        setLoading(false),
+        setLoading(false)
       }
     },
-    load(),
+    load()
   }, []),
 
   if (loading) return <div>Loading episodes…</div>,
@@ -76,5 +75,5 @@ export default function PodcastIndexPage() {
         ))}
       </ul>
     </div>
-  ),
+  )
 }

@@ -36,12 +36,12 @@ export default function CodeQualityCheckerPage() {
       gradient: 'from-purple-400 to-indigo-500'}],
 
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checks', 'React best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hints', 'Security scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyle', 'SonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysis', 'Memory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vet', 'Performance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS Fixer', 'Security analysis'] }
+    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
   ],
 
   const pricing = [
@@ -51,8 +51,7 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Perfect for individual developers and small projects',
       features: [
-        '100 code analyses/monthBasic quality metrics',
-        '5 programming languagesEmail support',
+        '100 code analyses/monthBasic quality metrics5 programming languagesEmail support',
         'Basic reportingCommunity rules'
       ],
       popular: false
@@ -63,10 +62,8 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Ideal for development teams and growing companies',
       features: [
-        '500 code analyses/monthAdvanced quality metrics',
-        'All programming languagesPriority support',
-        'Advanced reportingCustom rules',
-        'Team collaborationAPI access'
+        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority support',
+        'Advanced reportingCustom rulesTeam collaborationAPI access'
       ],
       popular: true
     },
@@ -76,10 +73,8 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited analysesEnterprise metrics',
-        'Custom language support24/7 dedicated support',
-        'Custom reportingWhite-label options',
-        'On-premise deploymentCustom integrations'
+        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated support',
+        'Custom reportingWhite-label optionsOn-premise deploymentCustom integrations'
       ],
       popular: false
     }
@@ -106,12 +101,11 @@ export default function CodeQualityCheckerPage() {
           securityScore: '92%'
         },
         recommendations: [
-          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functions',
-          'Add proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
+          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
         ]
       }),
-      setIsAnalyzing(false),
-    }, 3000),
+      setIsAnalyzing(false)
+    }, 3000)
   },
 
   return (

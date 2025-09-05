@@ -4,7 +4,6 @@ import { MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false),
@@ -21,13 +20,13 @@ export function ChatAssistantTrigger() {
         })}),
       
       if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant"),
+        throw new Error("Failed to get response from AI assistant")
       }
       
-      return Promise.resolve(),
+      return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
-      return Promise.resolve(),
+      return Promise.resolve()
     }
   },
 
@@ -57,5 +56,5 @@ export function ChatAssistantTrigger() {
         />
       )}
     </>
-  ),
+  )
 }

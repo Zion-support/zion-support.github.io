@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants',
-
 export interface EmergingTechBreakthroughServiceV2 {
   id: string,
   name: string,
@@ -51,10 +50,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real-time.',
     features: [
-      'Real-time brain signal interpretationDirect neural control of applications',
-      'Thought-to-text conversionMental command execution',
-      'Neural pattern recognitionCustom neural interface development',
-      'Enterprise security and privacyIntegration with existing systems',
+      'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command execution',
+      'Neural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems',
       'Advanced analytics and insights24/7 technical support'
     ],
     popular: true,
@@ -99,10 +96,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary quantum internet gateway that provides ultra-secure, ultra-fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',
     features: [
-      'Quantum network connectivityQuantum key distribution',
-      'Quantum cloud computing accessUltra-secure communication',
-      'Quantum internet protocolsReal-time quantum routing',
-      'Enterprise security complianceIntegration with existing networks',
+      'Quantum network connectivityQuantum key distributionQuantum cloud computing accessUltra-secure communication',
+      'Quantum internet protocolsReal-time quantum routingEnterprise security complianceIntegration with existing networks',
       'Advanced monitoring and analytics24/7 quantum network support'
     ],
     popular: true,
@@ -147,10 +142,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',
     features: [
-      'Biological system design toolsDNA synthesis and assembly',
-      'Biological circuit designMetabolic pathway engineering',
-      'Protein design and optimizationBiological manufacturing processes',
-      'Regulatory compliance supportIntegration with lab equipment',
+      'Biological system design toolsDNA synthesis and assemblyBiological circuit designMetabolic pathway engineering',
+      'Protein design and optimizationBiological manufacturing processesRegulatory compliance supportIntegration with lab equipment',
       'Advanced analytics and modelingExpert consultation and support'
     ],
     popular: true,
@@ -195,10 +188,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.',
     features: [
-      'Real-time fusion reactor monitoringPlasma confinement optimization',
-      'Energy output maximizationSafety system management',
-      'Predictive maintenanceEnergy grid integration',
-      'Advanced analytics and reportingIntegration with power systems',
+      'Real-time fusion reactor monitoringPlasma confinement optimizationEnergy output maximizationSafety system management',
+      'Predictive maintenanceEnergy grid integrationAdvanced analytics and reportingIntegration with power systems',
       '24/7 monitoring and supportExpert consultation services'
     ],
     popular: true,
@@ -243,10 +234,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',
     features: [
-      'Automated asteroid identificationMining robot control systems',
-      'Resource extraction automationTransportation logistics',
-      'Processing facility managementMarket analysis and pricing',
-      'Regulatory compliance supportIntegration with space systems',
+      'Automated asteroid identificationMining robot control systemsResource extraction automationTransportation logistics',
+      'Processing facility managementMarket analysis and pricingRegulatory compliance supportIntegration with space systems',
       'Advanced analytics and reporting24/7 space operations support'
     ],
     popular: true,
@@ -291,10 +280,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     period: '/month',
     description: 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self-aware, conscious AI systems.',
     features: [
-      'Quantum consciousness algorithmsNeural network consciousness',
-      'Self-awareness developmentEmotional intelligence creation',
-      'Consciousness testing and validationEthical AI development',
-      'Research collaboration toolsIntegration with AI systems',
+      'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creation',
+      'Consciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems',
       'Advanced consciousness analyticsExpert consultation and support'
     ],
     popular: true,

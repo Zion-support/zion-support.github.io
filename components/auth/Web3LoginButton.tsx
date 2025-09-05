@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react',
 import dynamic from 'next/dynamic',
-
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
 
 async function resolveDisplayName(addr: string): Promise<string | null> {
@@ -8,8 +7,8 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`),
     const { data } = await r.json(),
     const did = data?.payload || {},
-    return did.lens || did.ens || null,
-  } catch { return null, }
+    return did.lens || did.ens || null
+  } catch { return null }
 }
 
 export default function Web3LoginButton() {
@@ -22,25 +21,25 @@ export default function Web3LoginButton() {
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null,
     if (saved) setUser(JSON.parse(saved)),
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null,
-    setDisplayWeb3(pref === 'true'),
+    setDisplayWeb3(pref === 'true')
   }, []),
 
   useEffect(() => {
     (async () => {
       if (user && displayWeb3) setDisplayName(await resolveDisplayName(user.address)),
-      else setDisplayName(null),
-    })(),
+      else setDisplayName(null)
+    })()
   }, [user, displayWeb3]),
 
   const onLoggedIn = (u: { address: string, chain: 'evm' | 'sol' }) => {
     window.localStorage.setItem('zion-web3-user', JSON.stringify(u)),
-    setUser(u),
+    setUser(u)
   },
 
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user'),
-    try { await fetch('/api/auth/logout', { method: 'POST' }), } catch {}
-    setUser(null),
+    try { await fetch('/api/auth/logout', { method: 'POST' }) } catch {}
+    setUser(null)
   },
 
   if (user) {
@@ -52,7 +51,7 @@ export default function Web3LoginButton() {
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
-    ),
+    )
   }
 
   return (
@@ -60,5 +59,5 @@ export default function Web3LoginButton() {
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
-  ),
+  )
 }

@@ -12,7 +12,7 @@ export interface CalendarProps {
 
 export interface DateRange {
   from?: Date,
-  to?: Date,
+  to?: Date
 }
 
 // Stub DayPicker component - simple function that returns null during build

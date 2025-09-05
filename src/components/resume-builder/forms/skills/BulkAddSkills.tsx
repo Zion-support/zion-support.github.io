@@ -7,7 +7,6 @@ import { useResume } from '@/hooks/useResume',
 import { BulkAddSkillsProps } from './types',
 import { Alert, AlertDescription } from '@/components/ui/alert',
 import { Textarea } from '@/components/ui/textarea',
-
 export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [bulkSkills, setBulkSkills] = useState(''),
   const [error, setError] = useState<string | null>(null),
@@ -17,7 +16,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const handleCategorizeSkills = async () => {
     if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize'),
-      return,
+      return
     }
     
     setError(null),
@@ -39,7 +38,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
                 await addSkill(resumeId, {
                   name: skillName,
                   category: category,
-                  proficiency: 3}),
+                  proficiency: 3})
               }
             }
           }
@@ -48,9 +47,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           setBulkSkills(''),
           
           // Refresh the skills
-          await onSuccess(),
+          await onSuccess()
         } catch (err) {
-          setError('Failed to parse categorized skills. Please try again.'),
+          setError('Failed to parse categorized skills. Please try again.')
         }
       }
     } catch (err: any) {
@@ -92,5 +91,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
-  ),
+  )
 },

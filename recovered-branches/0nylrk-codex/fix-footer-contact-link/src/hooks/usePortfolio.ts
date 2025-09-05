@@ -4,7 +4,6 @@ import { PortfolioProject } from '@/types/resume',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from '@/hooks/use-toast',
-
 export function usePortfolio() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -14,7 +13,7 @@ export function usePortfolio() {
   const fetchProjects = useCallback(async () => {
     if (!user) {
       setError('You must be logged in to access portfolio projects'),
-      return [],
+      return []
     }
     
     setIsLoading(true),
@@ -30,13 +29,13 @@ export function usePortfolio() {
       if (error) throw error,
       
       setProjects(data || []),
-      return data || [],
+      return data || []
     } catch (e: any) {
       console.error('Error fetching portfolio projects:', e),
       setError(e.message),
-      return [],
+      return []
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   }, [user]),
   
@@ -73,7 +72,7 @@ export function usePortfolio() {
       }),
       
       await fetchProjects(),
-      return data.id,
+      return data.id
     } catch (e: any) {
       console.error('Error adding portfolio project:', e),
       setError(e.message),
@@ -82,9 +81,9 @@ export function usePortfolio() {
         description: `Could not add project: ${e.message}`,
         variant: "destructive"
       }),
-      return null,
+      return null
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -120,7 +119,7 @@ export function usePortfolio() {
       }),
       
       await fetchProjects(),
-      return true,
+      return true
     } catch (e: any) {
       console.error('Error updating portfolio project:', e),
       setError(e.message),
@@ -129,9 +128,9 @@ export function usePortfolio() {
         description: `Could not update project: ${e.message}`,
         variant: "destructive"
       }),
-      return false,
+      return false
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -159,7 +158,7 @@ export function usePortfolio() {
       }),
       
       setProjects(projects.filter(p => p.id !== projectId)),
-      return true,
+      return true
     } catch (e: any) {
       console.error('Error deleting portfolio project:', e),
       setError(e.message),
@@ -168,9 +167,9 @@ export function usePortfolio() {
         description: `Could not delete project: ${e.message}`,
         variant: "destructive"
       }),
-      return false,
+      return false
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
@@ -182,5 +181,5 @@ export function usePortfolio() {
     addProject,
     updateProject,
     deleteProject
-  },
+  }
 }

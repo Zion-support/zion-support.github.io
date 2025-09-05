@@ -31,7 +31,7 @@ export interface Project {
   client_profile?: {
     display_name: string,
     avatar_url?: string
-  },
+  }
 }
 
 export interface ProjectNote {
@@ -43,5 +43,5 @@ export interface ProjectNote {
   created_by_profile?: {
     display_name: string,
     avatar_url?: string
-  },
+  }
 }

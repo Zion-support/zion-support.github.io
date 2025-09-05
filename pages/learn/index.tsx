@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react',
 import CourseCard, { Course } from '../../components/learn/CourseCard',
 import FilterBar from '../../components/learn/FilterBar',
-
 export default function LearnMarketplace() {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
   const [courses, setCourses] = useState<Course[]>([]),
@@ -17,9 +16,9 @@ export default function LearnMarketplace() {
       const resp = await fetch(`/api/learn/courses?${params.toString()}`),
       const data = await resp.json(),
       setCourses(data.courses || []),
-      setLoading(false),
+      setLoading(false)
     }
-    load(),
+    load()
   }, [filters]),
 
   return (
@@ -43,5 +42,5 @@ export default function LearnMarketplace() {
         </div>
       )}
     </div>
-  ),
+  )
 }

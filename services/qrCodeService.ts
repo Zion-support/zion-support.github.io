@@ -10,7 +10,7 @@ export interface QRCodeOptions {
     url: string,
     width: number,
     height: number
-  },
+  }
 }
 
 export interface QRCodeResult {
@@ -20,7 +20,7 @@ export interface QRCodeResult {
   size: {
     width: number,
     height: number
-  },
+  }
 }
 
 export interface QRCodeTemplate {
@@ -65,7 +65,7 @@ class QRCodeService {
         width: finalOptions.size!,
         height: finalOptions.size!
       }
-    },
+    }
   }
 
   async generateBusinessCardQR(data: {
@@ -84,7 +84,7 @@ class QRCodeService {
       size: 300,
       errorCorrectionLevel: 'H',
       format: 'svg'
-    }),
+    })
   }
 
   async generateWiFiQR(data: {
@@ -100,7 +100,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
+    })
   }
 
   async generateEmailQR(data: {
@@ -115,7 +115,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
+    })
   }
 
   async generateSMSQR(data: {
@@ -129,7 +129,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
+    })
   }
 
   async generateGeoLocationQR(data: {
@@ -145,7 +145,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
+    })
   }
 
   getTemplates(): QRCodeTemplate[] {
@@ -192,11 +192,11 @@ class QRCodeService {
         options: { size: 256, errorCorrectionLevel: 'M' },
         category: 'personal'
       }
-    ],
+    ]
   }
 
   getErrorCorrectionInfo(): Record<string, any> {
-    return this.ERROR_CORRECTION_LEVELS,
+    return this.ERROR_CORRECTION_LEVELS
   }
 
   private validateOptions(options: QRCodeOptions): void {
@@ -205,11 +205,11 @@ class QRCodeService {
     }
     
     if (options.size && (options.size < 64 || options.size > 1024)) {
-      throw new Error('Size must be between 64 and 1024 pixels'),
+      throw new Error('Size must be between 64 and 1024 pixels')
     }
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
-      throw new Error('Margin must be between 0 and 10'),
+      throw new Error('Margin must be between 0 and 10')
     }
   }
 
@@ -230,7 +230,7 @@ class QRCodeService {
       </svg>
     `,
     
-    return `data: image/svg+xml,base64,${btoa(svg)}`,
+    return `data: image/svg+xml,base64,${btoa(svg)}`
   }
 
   private generateVCard(data: any): string {
@@ -254,7 +254,7 @@ class QRCodeService {
     wifiString += `T:${data.encryption},`,
     
     if (data.encryption !== 'nopass') {
-      wifiString += `P:${data.password},`,
+      wifiString += `P:${data.password},`
     }
     
     if (data.hidden) {
@@ -262,7 +262,7 @@ class QRCodeService {
     }
     
     wifiString += ,
-    return wifiString,
+    return wifiString
   }
 
   private generateMailtoString(data: any): string {
@@ -273,34 +273,34 @@ class QRCodeService {
     if (data.body) params.push(`body=${encodeURIComponent(data.body)}`),
     
     if (params.length > 0) {
-      mailto += `?${params.join('&')}`,
+      mailto += `?${params.join('&')}`
     }
     
-    return mailto,
+    return mailto
   }
 
   private generateSMSString(data: any): string {
     let smsString = `sms:${data.phone}`,
     
     if (data.message) {
-      smsString += `?body=${encodeURIComponent(data.message)}`,
+      smsString += `?body=${encodeURIComponent(data.message)}`
     }
     
-    return smsString,
+    return smsString
   }
 
   private generateGeoString(data: any): string {
     let geoString = `geo:${data.latitude},${data.longitude}`,
     
     if (data.altitude) {
-      geoString += `,${data.altitude}`,
+      geoString += `,${data.altitude}`
     }
     
     if (data.name) {
-      geoString += `?q=${encodeURIComponent(data.name)}`,
+      geoString += `?q=${encodeURIComponent(data.name)}`
     }
     
-    return geoString,
+    return geoString
   }
 
   // Utility methods
@@ -317,17 +317,17 @@ class QRCodeService {
       canFit: textLength <= maxCapacity,
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,
       maxCapacity
-    },
+    }
   }
 
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
-    return [],
+    return []
   }
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
-    console.log('QR Code saved:', qrCode.options.text),
+    console.log('QR Code saved:', qrCode.options.text)
   }
 }
 

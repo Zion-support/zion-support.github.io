@@ -14,7 +14,6 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026',
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026',
 import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026',
-
 export default function Comprehensive2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -54,7 +53,7 @@ export default function Comprehensive2026ServicesShowcase() {
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory = selectedCategory === 'all' || 
                              service.category.toLowerCase().includes(selectedCategory),
-      return matchesSearch && matchesCategory,
+      return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -392,7 +391,7 @@ export default function Comprehensive2026ServicesShowcase() {
                 <button
                   onClick={() => {
                     setSearchTerm(''),
-                    setSelectedCategory('all'),
+                    setSelectedCategory('all')
                   }}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
@@ -446,5 +445,5 @@ export default function Comprehensive2026ServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }

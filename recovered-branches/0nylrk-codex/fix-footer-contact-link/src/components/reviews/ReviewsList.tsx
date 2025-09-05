@@ -1,7 +1,6 @@
 
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
-
 interface ReviewsListProps {
   reviews: Review[],
   isLoading: boolean,
@@ -29,7 +28,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
           </div>
         ))}
       </div>
-    ),
+    )
   }
   
   if (reviews.length === 0) {
@@ -40,7 +39,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
           Once reviews are submitted and approved, they will appear here.
         </p>
       </div>
-    ),
+    )
   }
   
   return (
@@ -53,5 +52,5 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
         />
       ))}
     </div>
-  ),
+  )
 }

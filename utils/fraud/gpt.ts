@@ -8,7 +8,7 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     return {
       label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS',
       reason: looksDanger ? 'Heuristic fallback matched high-risk terms' : 'Heuristic fallback matched suspicious language',
-      confidence: looksDanger ? 0.7 : 0.5},
+      confidence: looksDanger ? 0.7 : 0.5}
   }
 
   const { OpenAI } = await import('openai'),
@@ -30,11 +30,11 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     const parsed = JSON.parse(content),
     const label = (parsed.label as string)?.toUpperCase?.(),
     if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
-      return { label: 'SUSPICIOUS', reason: 'Unrecognized label from GPT', confidence: 0.5 },
+      return { label: 'SUSPICIOUS', reason: 'Unrecognized label from GPT', confidence: 0.5 }
     }
     const confidence = typeof parsed.confidence === 'number' ? Math.max(0, Math.min(1, parsed.confidence)) : 0.6,
-    return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification,
+    return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
   } catch {
-    return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 },
+    return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
   }
 }

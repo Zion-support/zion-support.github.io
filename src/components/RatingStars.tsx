@@ -15,7 +15,7 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
-          ),
+          )
         }
         if (i === filled && half) {
           return (
@@ -23,13 +23,13 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
-          ),
+          )
         }
-        return <Star key={i} className="h-4 w-4 text-zion-slate" />,
+        return <Star key={i} className="h-4 w-4 text-zion-slate" />
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
       )}
     </div>
-  ),
+  )
 }

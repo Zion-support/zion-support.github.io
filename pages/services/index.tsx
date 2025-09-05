@@ -24,7 +24,6 @@ import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025
 import { realServicesQ22025 } from '../../data/real-services-q2-2025',
 import { realServicesQ32025 } from '../../data/real-services-q3-2025',
 import { realServicesQ42025 } from '../../data/real-services-q4-2025',
-
 // Define a common service interface
 interface Service {
   id?: string,
@@ -60,7 +59,7 @@ const sampleServices: Service[] = [
     description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
     price: '$2,999/month',
     category: 'AI',
-    features: ['Custom AI ModelsMLOps Pipeline', 'Real-time Analytics24/7 Support'],
+    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
     popular: true,
     link: '/ai-services'
   },
@@ -71,7 +70,7 @@ const sampleServices: Service[] = [
     description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
     price: '$9,999/month',
     category: 'Quantum',
-    features: ['Quantum AlgorithmsCryptography', 'OptimizationResearch Support'],
+    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
     link: '/quantum-computing'
   },
   {
@@ -81,7 +80,7 @@ const sampleServices: Service[] = [
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
     price: '$1,999/month',
     category: 'Security',
-    features: ['Threat DetectionIncident Response', 'ComplianceSecurity Audits'],
+    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity'
   },
   {
@@ -91,7 +90,7 @@ const sampleServices: Service[] = [
     description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
     price: '$1,499/month',
     category: 'Cloud',
-    features: ['Multi-CloudAuto-scaling', 'Global CDNDevOps Tools'],
+    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],
     link: '/cloud-platform'
   },
   {
@@ -101,7 +100,7 @@ const sampleServices: Service[] = [
     description: 'Cutting-edge space technology services for satellite operations and space missions.',
     price: '$24,999/month',
     category: 'Space',
-    features: ['Satellite OperationsMission Control', 'Data AnalyticsGround Systems'],
+    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'
   }
 ],
@@ -130,7 +129,7 @@ export default function ServicesIndexPage() {
       realServicesQ32025 as unknown[],
       realServicesQ42025 as unknown[]
     ),
-    return acc,
+    return acc
   }, {} as Record<string, Service[]>),
 
 
@@ -257,7 +256,7 @@ export default function ServicesIndexPage() {
                         </div>
                       )}
                     </div>
-                  ),
+                  )
                 })}
               </div>
             </section>
@@ -298,7 +297,7 @@ export default function ServicesIndexPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
                 const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string },
-                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''), } catch { return toSlug(service.id || service.name || ''), } })() : toSlug(service.id || service.name || ''),
+                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || '') } catch { return toSlug(service.id || service.name || '') } })() : toSlug(service.id || service.name || ''),
                 return (
                   <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
                     <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
@@ -506,5 +505,5 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  ),
+  )
 }

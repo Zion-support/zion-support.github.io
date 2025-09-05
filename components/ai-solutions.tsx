@@ -1,14 +1,13 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-      features: ['Predictive AnalyticsPattern Recognition', 'Anomaly DetectionRecommendation Systems'],
+      features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
@@ -17,7 +16,7 @@ export default function AISolutionsPage() {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
-      features: ['Text AnalysisSentiment Analysis', 'Language TranslationChatbot Development'],
+      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
@@ -26,7 +25,7 @@ export default function AISolutionsPage() {
       id: 'computer-vision',
       title: 'Computer Vision',
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
-      features: ['Image RecognitionObject Detection', 'Facial RecognitionQuality Control'],
+      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'
@@ -35,7 +34,7 @@ export default function AISolutionsPage() {
       id: 'autonomous-systems',
       title: 'Autonomous Systems',
       description: 'Self-operating systems that can make decisions and take actions independently.',
-      features: ['Decision MakingSelf-Learning', 'Adaptive BehaviorContinuous Improvement'],
+      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement'],
       icon: '🤖',
       category: 'Autonomy',
       complexity: 'Expert'
@@ -44,7 +43,7 @@ export default function AISolutionsPage() {
       id: 'predictive-analytics',
       title: 'Predictive Analytics',
       description: 'Data-driven insights that help predict future trends and behaviors.',
-      features: ['Trend AnalysisRisk Assessment', 'ForecastingBehavioral Prediction'],
+      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction'],
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate'
@@ -53,7 +52,7 @@ export default function AISolutionsPage() {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
-      features: ['Process AutomationWorkflow Optimization', 'Intelligent RoutingAdaptive Workflows'],
+      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate'
@@ -63,28 +62,28 @@ export default function AISolutionsPage() {
   const useCases = [
     {
       industry: 'Manufacturing',
-      solutions: ['Quality ControlPredictive Maintenance', 'Supply Chain Optimization'],
+      solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      solutions: ['Diagnostic SupportPatient Care Optimization', 'Drug Discovery'],
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      solutions: ['Fraud DetectionRisk Assessment', 'Algorithmic Trading'],
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      solutions: ['Customer SegmentationInventory Management', 'Personalized Marketing'],
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
       icon: '🛍️'
     }
   ],
 
   const technologies = [
-    'TensorFlowPyTorch', 'Scikit-learnOpenAI GPT', 'BERTYOLO', 'KerasPandas'
+    'TensorFlowPyTorchScikit-learnOpenAI GPT', 'BERTYOLOKerasPandas'
   ],
 
   return (

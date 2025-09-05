@@ -9,7 +9,6 @@ import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
-
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -31,7 +30,7 @@ const TalentCardComponent = ({
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id),
+      onViewProfile(talent.id)
     }
   },
 
@@ -154,7 +153,7 @@ const TalentCardComponent = ({
               variant="ghost"
               onClick={(e) => {
                 e.stopPropagation(),
-                handleViewProfile(),
+                handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >

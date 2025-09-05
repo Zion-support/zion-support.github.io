@@ -8,7 +8,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
-
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",

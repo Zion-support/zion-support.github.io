@@ -52,7 +52,7 @@ export function RedeemTokensCard() {
     if (!wallet || wallet.balance < option.cost) return,
     
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
-    setOpen(false),
+    setOpen(false)
   },
 
   return (
@@ -106,5 +106,5 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
-  ),
+  )
 }

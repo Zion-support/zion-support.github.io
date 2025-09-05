@@ -6,7 +6,6 @@ import { useAuth } from '@/hooks/useAuth',
 import { Button } from '@/components/ui/button',
 import { ModeToggle } from '@/components/ModeToggle',
 import { useTranslation } from 'react-i18next',
-
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void,
@@ -16,10 +15,8 @@ export interface MobileMenuProps {
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.
 const protectedRoutes = [
-  '/categories/talent',
-  '/equipment/partners',
-  '/tutorials/case-studies',
-  '/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
+  '/categories/talent/equipment/partners',
+  '/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
   '/messages',  // Already marked as authRequired
   '/dashboard', // Already marked as authRequired
   // Add any specific sub-routes if necessary
@@ -142,5 +139,5 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
-  ),
+  )
 }

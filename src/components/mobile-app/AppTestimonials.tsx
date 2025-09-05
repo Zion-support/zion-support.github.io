@@ -68,5 +68,5 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

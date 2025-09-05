@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react-datepicker',
 import { useRouter } from 'next/router',
-
 type PaymentType = 'hourly' | 'fixed',
 
 export default function ContractBuilderPage() {
@@ -31,7 +30,7 @@ export default function ContractBuilderPage() {
     if (!router.isReady) return,
     const { talent, project } = router.query as { talent?: string, project?: string },
     if (talent && !talentName) setTalentName(decodeURIComponent(talent)),
-    if (project && !projectName) setProjectName(decodeURIComponent(project)),
+    if (project && !projectName) setProjectName(decodeURIComponent(project))
   }, [router.isReady, router.query, talentName, projectName]),
 
   const canSubmit = useMemo(() => {
@@ -42,7 +41,7 @@ export default function ContractBuilderPage() {
       !!startDate &&
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
-    ),
+    )
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),
 
   async function submitForm(event: React.FormEvent) {
@@ -88,21 +87,21 @@ export default function ContractBuilderPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({})),
-        throw new Error(data?.error || `Request failed: ${res.status}`),
+        throw new Error(data?.error || `Request failed: ${res.status}`)
       }
 
       const data = (await res.json()) as { contract: string },
-      setContract(data.contract),
+      setContract(data.contract)
     } catch (e: any) {
       setError(e?.message || 'Failed to generate contract')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
   function copyToClipboard() {
     if (!contract) return,
-    void navigator.clipboard.writeText(contract),
+    void navigator.clipboard.writeText(contract)
   }
 
   function downloadAsTxt() {
@@ -113,7 +112,7 @@ export default function ContractBuilderPage() {
     a.href = url,
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`,
     a.click(),
-    URL.revokeObjectURL(url),
+    URL.revokeObjectURL(url)
   }
 
   return (
@@ -234,5 +233,5 @@ export default function ContractBuilderPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

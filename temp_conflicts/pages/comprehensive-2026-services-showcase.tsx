@@ -11,7 +11,6 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',
 import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',
-
 export default function Comprehensive2026ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -46,7 +45,7 @@ export default function Comprehensive2026ServicesShowcase() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const getCategoryIcon = (category: string) => {
@@ -533,5 +532,5 @@ export default function Comprehensive2026ServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-  ),
+  )
 }

@@ -3,7 +3,6 @@ import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileProjectView } from "../components/projects/MobileProjectView",
-
 // Mock data
 const projectData = {
   id: "project-123",
@@ -64,5 +63,5 @@ export function MobileProjects() {
       
       <BottomNavigation />
     </div>
-  ),
+  )
 }

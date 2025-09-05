@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
@@ -22,17 +21,17 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
-    ),
+    )
   }
   
   // If not authenticated, redirect
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />,
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
   
   // If not admin, redirect
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />
   }
 
   return (
@@ -54,5 +53,5 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       </main>
       <Footer />
     </div>
-  ),
+  )
 }

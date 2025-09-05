@@ -13,10 +13,10 @@ export default function JobDetailsPage() {
   const { notify } = useToast(),
   const [loading, setLoading] = useState(true),
 
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t), }, []),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
 
   const onApply = () => {
-    notify('Application submitted! We’ll notify you when it’s viewed.success'),
+    notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
 
   return (
@@ -62,5 +62,5 @@ export default function JobDetailsPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

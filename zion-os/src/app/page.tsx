@@ -1,5 +1,4 @@
 import FeatureCard from './components/FeatureCard',
-
 export default function HomePage() {
   const features = [
     {
@@ -181,5 +180,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  ),
+  )
 }

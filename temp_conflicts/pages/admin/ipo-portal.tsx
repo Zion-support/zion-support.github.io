@@ -38,13 +38,13 @@ export default function IpoPortal({ user }: Props) {
       {activeTab === 'updates' && <InvestorUpdates />}
       {activeTab === 'dealroom' && <DealRoom />}
     </EnhancedLayout>
-  ),
+  )
 }
 
 function Dashboard() {
   const [metrics, setMetrics] = useState<Metric[]>([]),
   useEffect(() => {
-    fetch('/api/ipo/metrics').then((r) => r.json()).then(setMetrics).catch(() => setMetrics([])),
+    fetch('/api/ipo/metrics').then((r) => r.json()).then(setMetrics).catch(() => setMetrics([]))
   }, []),
 
   return (
@@ -74,14 +74,13 @@ function Dashboard() {
 
 function DataRoom() {
   const sections: DataRoomSection[] = useMemo(() => [
-    'FinancialsCap Table',
-    'Legal DocsStrategic Partnerships',
+    'FinancialsCap TableLegal DocsStrategic Partnerships',
     'Press Coverage / PR kit'], []),
   const [active, setActive] = useState<DataRoomSection>('Financials'),
   const [files, setFiles] = useState<any[]>([]),
 
   useEffect(() => {
-    fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).then(setFiles).catch(() => setFiles([])),
+    fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).then(setFiles).catch(() => setFiles([]))
   }, [active]),
 
   async function onUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -92,11 +91,11 @@ function DataRoom() {
     form.set('file', file),
     await fetch('/api/ipo/dataroom/upload', { method: 'POST', body: form }),
     const next = await fetch(`/api/ipo/dataroom/list?section=${encodeURIComponent(active)}`).then((r) => r.json()).catch(() => []),
-    setFiles(next),
+    setFiles(next)
   }
 
   function onOpen(fileName: string) {
-    window.open(`/api/ipo/dataroom/file?section=${encodeURIComponent(active)}&file=${encodeURIComponent(fileName)}`, '_blank'),
+    window.open(`/api/ipo/dataroom/file?section=${encodeURIComponent(active)}&file=${encodeURIComponent(fileName)}`, '_blank')
   }
 
   return (
@@ -121,7 +120,7 @@ function DataRoom() {
         ))}
       </div>
     </div>
-  ),
+  )
 }
 
 function InvestorUpdates() {
@@ -134,10 +133,10 @@ function InvestorUpdates() {
 
   async function refresh() {
     const list = await fetch('/api/ipo/updates/list').then((r) => r.json()).catch(() => []),
-    setUpdates(list),
+    setUpdates(list)
   }
 
-  useEffect(() => { refresh(), }, []),
+  useEffect(() => { refresh() }, []),
 
   async function save() {
     await fetch('/api/ipo/updates/create', {
@@ -147,7 +146,7 @@ function InvestorUpdates() {
     }),
     setShowModal(false),
     setTitle(''), setDate(''), setSummary(''), setKpis(''),
-    refresh(),
+    refresh()
   }
 
   return (
@@ -186,7 +185,7 @@ function InvestorUpdates() {
         </div>
       )}
     </div>
-  ),
+  )
 }
 
 function DealRoom() {
@@ -196,16 +195,16 @@ function DealRoom() {
 
   useEffect(() => {
     fetch('/api/ipo/deal/terms').then((r) => r.json()).then(setTerms).catch(() => setTerms({})),
-    fetch('/api/ipo/deal/offerings').then((r) => r.json()).then(setOfferings).catch(() => {}),
+    fetch('/api/ipo/deal/offerings').then((r) => r.json()).then(setOfferings).catch(() => {})
   }, []),
 
   async function saveOfferings() {
-    await fetch('/api/ipo/deal/offerings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(offerings) }),
+    await fetch('/api/ipo/deal/offerings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(offerings) })
   }
 
   async function submitSoftCommit() {
     await fetch('/api/ipo/deal/commit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: softCommit }) }),
-    setSoftCommit(''),
+    setSoftCommit('')
   }
 
   return (
@@ -233,5 +232,5 @@ function DealRoom() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

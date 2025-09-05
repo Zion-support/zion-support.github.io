@@ -1,5 +1,4 @@
 import Head from 'next/head',
-
 export default function SecurityDocRedirect() {
   return (
     <>
@@ -10,6 +9,6 @@ export default function SecurityDocRedirect() {
         <p>Redirecting to Security documentation…</p>
       </main>
     </>
-  ),
+  )
 }
 

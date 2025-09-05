@@ -28,8 +28,7 @@ export default function AutomationPage() {
   ],
 
   const benefits = [
-    'Reduce manual tasks by 80%Improve process accuracy',
-    'Scale operations efficiently24/7 automated operations',
+    'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operations',
     'Real-time monitoringCustom integration support'
   ],
 

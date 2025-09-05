@@ -12,7 +12,7 @@
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
-        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' },
+        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' }
     },
     {,
       id: 'solutions',
@@ -24,7 +24,7 @@
         { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
         { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
-        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' },
+        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' }
     },
     {,
       id: 'company',
@@ -36,17 +36,17 @@
         { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' },
         { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
         { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
-        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' },
+        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' }
 
       ]
-    },
+    }
   ],
 ,
   const quickLinks = [,
     { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
-    { name: 'Download Brochure', href: '/resources', icon: ArrowRight },
+    { name: 'Download Brochure', href: '/resources', icon: ArrowRight }
   ],
 
 ,

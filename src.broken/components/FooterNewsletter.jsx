@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button',
 import { useToast } from '@/hooks/use-toast',
 import { apiClient } from '@/utils/apiClient',
 import { Loader2 } from 'lucide-react',
-
 export function FooterNewsletter() {
   const [email, setEmail] = useState(''),
   const [honeypot, setHoneypot] = useState(''),
@@ -24,15 +23,15 @@ export function FooterNewsletter() {
 
       if (res.ok) {
         toast.success('Subscribed!'),
-        setEmail(''),
+        setEmail('')
       } else {
         const data = await res.json().catch(() => ({})),
-        toast.error(data.error || 'Subscription failed'),
+        toast.error(data.error || 'Subscription failed')
       }
     } catch (err) {
-      toast.error(err.message || 'Subscription failed'),
+      toast.error(err.message || 'Subscription failed')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -73,5 +72,5 @@ export function FooterNewsletter() {
         )}
       </Button>
     </form>
-  ),
+  )
 }

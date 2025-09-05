@@ -1,22 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const configPath = path.join(process.cwd(), 'datadao', 'config.json'),
-const cachePath = path.join(process.cwd(), 'datadao', 'metrics.json'),
+const configPath = path.join(process.cwd(), 'datadaoconfig.json'),
+const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
 
 async function fetchJson(url: string) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.json(),
+  return resp.json()
 }
 
 function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8')),
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
 
 function writeJson(p: string, v: any) {
-  fs.writeFileSync(p, JSON.stringify(v, null, 2)),
+  fs.writeFileSync(p, JSON.stringify(v, null, 2))
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -27,7 +26,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000,
 
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-      return res.status(200).json({ ...cache, cached: true }),
+      return res.status(200).json({ ...cache, cached: true })
     }
 
     const apiKey = process.env.ETHERSCAN_API_KEY || '',
@@ -45,7 +44,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       const from = (tx.from || '').toLowerCase(),
       const to = (tx.to || '').toLowerCase(),
       if (from) holderToDelta[from] = (holderToDelta[from] || 0n) - value,
-      if (to) holderToDelta[to] = (holderToDelta[to] || 0n) + value,
+      if (to) holderToDelta[to] = (holderToDelta[to] || 0n) + value
     }
 
     const entries = Object.entries(holderToDelta)
@@ -78,8 +77,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     },
 
     writeJson(cachePath, result),
-    return res.status(200).json(result),
+    return res.status(200).json(result)
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' }),
+    return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' })
   }
 }

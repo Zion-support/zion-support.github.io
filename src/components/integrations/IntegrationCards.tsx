@@ -65,7 +65,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  ),
+  )
 }
 
 export function IntegrationCards() {
@@ -90,5 +90,5 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
-  ),
+  )
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -37,7 +36,7 @@ const UltraFuturisticBackground: React.FC = () => {
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         life: Math.random() * 100,
         maxLife: 100
-      }),
+      })
     }
 
     // Animation loop
@@ -75,7 +74,7 @@ const UltraFuturisticBackground: React.FC = () => {
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             life: 100,
             maxLife: 100
-          },
+          }
         }
       }),
 
@@ -93,12 +92,12 @@ const UltraFuturisticBackground: React.FC = () => {
             ctx.lineTo(particle2.x, particle2.y),
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`,
             ctx.lineWidth = 1,
-            ctx.stroke(),
+            ctx.stroke()
           }
-        }),
+        })
       }),
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     animate(),
@@ -106,14 +105,14 @@ const UltraFuturisticBackground: React.FC = () => {
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
+      canvas.height = window.innerHeight
     },
 
     window.addEventListener('resize', handleResize),
 
     return () => {
-      window.removeEventListener('resize', handleResize),
-    },
+      window.removeEventListener('resize', handleResize)
+    }
   }, []),
 
   return (
@@ -311,7 +310,7 @@ const UltraFuturisticBackground: React.FC = () => {
         </svg>
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground,

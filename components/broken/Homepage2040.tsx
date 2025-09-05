@@ -14,7 +14,6 @@ import {
 // Import new service data
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2',
-
 // Lazy load heavy components for better performance
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')),
 
@@ -25,9 +24,9 @@ const Homepage2040: React.FC = () => {
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length),
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, []),
 
   // Enhanced animation variants for better performance
@@ -522,7 +521,7 @@ const Homepage2040: React.FC = () => {
         </section>
       </main>
     </Layout>
-  ),
+  )
 },
 
 export default Homepage2040,

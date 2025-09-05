@@ -10,7 +10,6 @@ import {
 } from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -19,14 +18,10 @@ const contactInfo = {
 },
 
 const categories = [
-  'All ServicesAI & Data',
-  'Quantum TechnologySpace Technology',
-  'IT InfrastructureCybersecurity',
-  'Edge ComputingBlockchain',
-  'ManufacturingHealthcare AI',
-  'Emerging TechnologyBiotechnology',
-  'Human-Computer InteractionMetaverse',
-  'Autonomous SystemsClimate Technology'
+  'All ServicesAI & DataQuantum TechnologySpace Technology',
+  'IT InfrastructureCybersecurityEdge ComputingBlockchain',
+  'ManufacturingHealthcare AIEmerging TechnologyBiotechnology',
+  'Human-Computer InteractionMetaverseAutonomous SystemsClimate Technology'
 ],
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -60,7 +55,7 @@ export default function InnovativeServicesShowcase2036() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {

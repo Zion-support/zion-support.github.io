@@ -10,7 +10,6 @@ import { Menu, X } from 'lucide-react',
 import { MobileMenu } from '@/components/header/MobileMenu',
 import { useIsMobile } from '@/hooks/use-mobile',
 import { MobileBottomNav } from '@/components/header/MobileBottomNav',
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const isMobile = useIsMobile(),
@@ -20,9 +19,9 @@ export function AppHeader() {
   let unreadCount = 0,
   try {
     const { unreadCount: count } = useMessaging(),
-    unreadCount = count,
+    unreadCount = count
   } catch (error) {
-    console.warn('Messaging context not available'),
+    console.warn('Messaging context not available')
   }
   
   return (
@@ -76,5 +75,5 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-  ),
+  )
 }

@@ -12,7 +12,6 @@ import { Separator } from '@/components/ui/separator',
 import { Switch } from '@/components/ui/switch',
 import { Label } from '@/components/ui/label',
 import { toast } from 'sonner',
-
 export default function AccountSettings() {
   const { user } = useAuth(),
   const [displayWeb3, setDisplayWeb3] = useState(false),
@@ -27,10 +26,10 @@ export default function AccountSettings() {
         const parsed = JSON.parse(saved),
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
-        setEnableBackup(!!parsed.enableBackup),
+        setEnableBackup(!!parsed.enableBackup)
       }
     } catch (e) {
-      console.error('Error loading account settings', e),
+      console.error('Error loading account settings', e)
     }
   }, []),
 
@@ -45,14 +44,14 @@ export default function AccountSettings() {
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
         ),
         console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully'),
+        toast.success('Account settings updated successfully')
       } catch (e) {
         console.error('Failed to save settings', e),
-        toast.error('Failed to save settings'),
+        toast.error('Failed to save settings')
       } finally {
-        setIsSubmitting(false),
+        setIsSubmitting(false)
       }
-    }, 1000),
+    }, 1000)
   },
   
   const handleConnectWallet = async () => {
@@ -61,7 +60,7 @@ export default function AccountSettings() {
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),
-        return,
+        return
       }
       
       // Request accounts
@@ -80,13 +79,13 @@ export default function AccountSettings() {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum),
         const ensName = await provider.lookupAddress(address),
         if (ensName) {
-          setDidHandle(ensName),
+          setDidHandle(ensName)
         }
       } catch (error) {
-        console.error('ENS lookup error:', error),
+        console.error('ENS lookup error:', error)
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet')
     }
@@ -288,5 +287,5 @@ export default function AccountSettings() {
       </main>
       <Footer />
     </>
-  ),
+  )
 }

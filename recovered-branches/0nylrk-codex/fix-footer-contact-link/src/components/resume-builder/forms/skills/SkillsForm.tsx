@@ -8,7 +8,6 @@ import { SkillsFormProps } from './types',
 import { SkillsList } from './SkillsList',
 import { AddSkillForm } from './AddSkillForm',
 import { BulkAddSkills } from './BulkAddSkills',
-
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
   const { addSkill, deleteSkill, fetchResume } = useResume(),
   const [error, setError] = useState<string | null>(null),
@@ -20,9 +19,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       const success = await addSkill(resumeId, data),
       if (success) {
         // Refresh the skills list
-        await refreshSkills(),
+        await refreshSkills()
       }
-      return success,
+      return success
     } catch (err: any) {
       setError(err.message || 'An error occurred'),
       return false
@@ -43,7 +42,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     try {
       const resumeData = await fetchResume(resumeId),
       if (resumeData && resumeData.skills) {
-        setLocalSkills(resumeData.skills),
+        setLocalSkills(resumeData.skills)
       }
     } catch (err: any) {
       setError(err.message || 'Failed to refresh skills')
@@ -82,5 +81,5 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         </Button>
       </div>
     </div>
-  ),
+  )
 }

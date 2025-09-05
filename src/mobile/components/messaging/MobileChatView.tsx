@@ -7,7 +7,6 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lu
 import { cn } from "@/lib/utils",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
-
 interface Message {
   id: string,
   content: string,
@@ -37,7 +36,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const handleSend = () => {
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage),
-      setNewMessage(""),
+      setNewMessage("")
     }
   },
   
@@ -55,7 +54,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),
     
     // Navigate to video call page
-    router.push(`/call/${roomId}`),
+    router.push(`/call/${roomId}`)
   },
   
   const startAudioCall = () => {
@@ -65,7 +64,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),
     
     // Navigate to video call page with audio-only flag
-    router.push(`/call/${roomId}?audioOnly=true`),
+    router.push(`/call/${roomId}?audioOnly=true`)
   },
   
   return (
@@ -180,5 +179,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </div>
     </div>
-  ),
+  )
 }

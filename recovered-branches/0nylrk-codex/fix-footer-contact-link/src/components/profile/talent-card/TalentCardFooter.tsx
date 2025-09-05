@@ -8,7 +8,6 @@ import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth",
 import { useNavigate } from "react-router-dom",
-
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -39,7 +38,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onRequestHire(profile)
     } else {
       // Open hire modal directly if no handler provided
-      setIsHireModalOpen(true),
+      setIsHireModalOpen(true)
     }
   },
 
@@ -52,7 +51,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(profile.id || ''),
+      onViewProfile(profile.id || '')
     }
   },
 
@@ -105,5 +104,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />
     </>
-  ),
+  )
 }

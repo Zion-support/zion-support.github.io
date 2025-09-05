@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research')),
   if (!service) return null,
@@ -51,5 +49,5 @@ export default function AIMarketResearchPage() {
         </div>
       </div>
     </Layout>
-  ),
+  )
 }

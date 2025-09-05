@@ -20,8 +20,8 @@ export function useWebSocket(options: unknown)  {,
           const data: unknown = JSON.parse(event.data),
           options.onMessage?.(data)
         } catch {,
-          options.onMessage?.(event.data),
-        },
+          options.onMessage?.(event.data)
+        }
       },
       ws.onclose = () => {,
         setIsConnected(false),
@@ -30,17 +30,16 @@ export function useWebSocket(options: unknown)  {,
           reconnectAttemptsRef.current++,
           reconnectTimeoutRef.current = setTimeout(,
             connect,
-            options.reconnectInterval || 3000,
-          ),
-        },
+            options.reconnectInterval || 3000)
+        }
       }
       ws.onerror = (event) => {,
         setError('WebSocket error occurred'),
-        options.onError?.(event),
-      },
+        options.onError?.(event)
+      }
     } catch (err) {,
-      setError('Failed to create WebSocket connection'),
-    },
+      setError('Failed to create WebSocket connection')
+    }
   }, [options]),
   const disconnect: unknown = useCallback(() => {,
     if (reconnectTimeoutRef.current) {,
@@ -49,32 +48,32 @@ export function useWebSocket(options: unknown)  {,
     },
     if (wsRef.current) {,
       wsRef.current.close(),
-      wsRef.current = null,
+      wsRef.current = null
     },
     setIsConnected(false),
-    reconnectAttemptsRef.current = options.maxReconnectAttempts || 5,
+    reconnectAttemptsRef.current = options.maxReconnectAttempts || 5
   }, [options.maxReconnectAttempts]),
   const sendMessage: unknown = useCallback(,
     (data: unknown) => {,
       if (wsRef.current && isConnected) {,
         wsRef.current.send(,
           typeof data === string' ? data : JSON.stringify(data),
-        ),
-      },
+        )
+      }
     },
     [isConnected],
   ),
   useEffect(() => {,
     connect(),
     return () => {,
-      disconnect(),
-    },
+      disconnect()
+    }
   }, [connect, disconnect]),
   return {,
     isConnected,
     error,
     sendMessage,
     disconnect,
-    connect,
-  },
+    connect
+  }
 }

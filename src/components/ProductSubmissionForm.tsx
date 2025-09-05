@@ -8,7 +8,6 @@ import { useToast } from "@/hooks/use-toast",
 import { useRouter } from "next/router",
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger',
-
 import {
   Form,
   FormControl,
@@ -69,23 +68,23 @@ export function ProductSubmissionForm() {
       form.setValue("image", file),
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setImagePreview(reader.result as string),
+        setImagePreview(reader.result as string)
       },
-      reader.readAsDataURL(file),
+      reader.readAsDataURL(file)
     }
   },
 
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
-      form.setValue("video", file),
+      form.setValue("video", file)
     }
   },
 
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
-      form.setValue("model", file),
+      form.setValue("model", file)
     }
   },
 
@@ -99,7 +98,7 @@ export function ProductSubmissionForm() {
     form.setValue("price", averagePrice),
     
     // Switch to the manual tab to show applied content
-    setActiveTab("manual"),
+    setActiveTab("manual")
   },
 
   // Handle form submission
@@ -109,7 +108,7 @@ export function ProductSubmissionForm() {
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -135,7 +134,7 @@ export function ProductSubmissionForm() {
         .single(),
         
       if (productError) {
-        throw new Error(productError.message),
+        throw new Error(productError.message)
       }
 
       let imagePublicUrl: string | undefined,
@@ -148,7 +147,7 @@ export function ProductSubmissionForm() {
           .upload(imagePath, values.image),
           
         if (uploadError) {
-          throw new Error(uploadError.message),
+          throw new Error(uploadError.message)
         }
         
         // Get the public URL for the image
@@ -166,7 +165,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id),
           
       if (updateError) {
-        throw new Error(updateError.message),
+        throw new Error(updateError.message)
       }
     }
 
@@ -178,7 +177,7 @@ export function ProductSubmissionForm() {
           .upload(videoPath, values.video),
 
         if (uploadError) {
-          throw new Error(uploadError.message),
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
@@ -191,7 +190,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id),
 
         if (updateError) {
-          throw new Error(updateError.message),
+          throw new Error(updateError.message)
         }
       }
 
@@ -203,7 +202,7 @@ export function ProductSubmissionForm() {
           .upload(modelPath, values.model),
 
         if (uploadError) {
-          throw new Error(uploadError.message),
+          throw new Error(uploadError.message)
         }
 
         const { data: publicUrlData } = supabase.storage
@@ -216,7 +215,7 @@ export function ProductSubmissionForm() {
           .eq('id', productRecord.id),
 
         if (updateError) {
-          throw new Error(updateError.message),
+          throw new Error(updateError.message)
         }
       }
 
@@ -229,9 +228,9 @@ export function ProductSubmissionForm() {
             description: values.description,
             images: imagePublicUrl ? [imagePublicUrl] : [],
             sellerId: user.id}
-        }),
+        })
       } catch (err) {
-        logErrorToProduction('Error invoking moderation:', { data: err }),
+        logErrorToProduction('Error invoking moderation:', { data: err })
       }
       
       // Show success message
@@ -240,14 +239,14 @@ export function ProductSubmissionForm() {
         description: "Your product has been successfully published on Zion."}),
       
       // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`),
+      router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -288,7 +287,7 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-                ),
+                )
               }}
             />
 
@@ -471,5 +470,5 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-  ),
+  )
 }

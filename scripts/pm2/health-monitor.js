@@ -1,5 +1,5 @@
 
-    },
+    }
   },
 ,
   async checkSystemResources() {,
@@ -38,8 +38,8 @@
         },
         cpu: {,
           usagePercent: Math.round(cpuUsage)
-        },
-      },
+        }
+      }
     } catch (error) {,
       return {,
         success: false,
@@ -47,8 +47,8 @@
         memory: null,
         disk: null,
         cpu: null
-      },
-    },
+      }
+    }
   },
 ,
   async checkProcessHealth() {,
@@ -84,14 +84,14 @@
       return {,
         success: true,
         health: processHealth
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         health: null
-      },
-    },
+      }
+    }
   },
 ,
   async checkApplicationHealth() {,
@@ -145,14 +145,14 @@
       return {,
         success: true,
         checks: healthChecks
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         checks: []
-      },
-    },
+      }
+    }
   },
 ,
   async checkLogHealth() {,
@@ -174,7 +174,7 @@
               sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100,
               lastModified: stats.mtime
             })
-          },
+          }
         })
       },
 ,
@@ -182,15 +182,15 @@
         success: true,
         logFiles: logFiles,
         totalSize: logFiles.reduce((sum, file) => sum + file.size, 0)
-      },
+      }
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         logFiles: [],
         totalSize: 0
-      },
-    },
+      }
+    }
   },
 ,
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {,
@@ -232,7 +232,7 @@
       } else {,
         report.summary.systemHealth = 'unhealthy',
         totalScore += 5
-      },
+      }
     },
     maxScore += 25,
 ,
@@ -248,7 +248,7 @@
       } else {,
         report.summary.processHealth = 'unhealthy',
         totalScore += 5
-      },
+      }
     },
     maxScore += 25,
 ,
@@ -266,7 +266,7 @@
       } else {,
         report.summary.applicationHealth = 'unhealthy',
         totalScore += 5
-      },
+      }
     },
     maxScore += 25,
 ,
@@ -282,7 +282,7 @@
       } else {,
         report.summary.logHealth = 'unhealthy',
         totalScore += 5
-      },
+      }
     },
     maxScore += 25,
 ,
@@ -312,7 +312,7 @@
           message: 'High disk usage detected',
           action: 'Clean up logs and temporary files'
         })
-      },
+      }
     },
 ,
     if (processInfo.success && processInfo.health?.errored > 0) {,
@@ -345,7 +345,7 @@
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    },
+    }
   },
 ,
   async run() {,
@@ -392,13 +392,13 @@
         })
       } else {,
         this.log('\n✨ All systems are healthy!')
-      },
+      }
 
     } catch (error) {,
       this.log(`❌ Error running health monitor: ${error.message}`),
       process.exit(1)
-    },
-  },
+    }
+  }
 },
 ,
 // Run the health monitor,

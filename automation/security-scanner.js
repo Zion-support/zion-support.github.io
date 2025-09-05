@@ -1,5 +1,5 @@
 
-    },
+    }
   },
 ,
   log(message, level = "INFO") {,
@@ -21,10 +21,10 @@
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
       } else {,
         this.log("✓ No vulnerabilities found")
-      },
+      }
     } catch (error) {,
       this.log(`Security audit failed: ${error.message}`, "ERROR")
-    },
+    }
   },
 ,
   async checkSecrets() {,
@@ -45,7 +45,7 @@
         secretPatterns.forEach(pattern => {,
           if (pattern.test(content)) {,
             secretCount++
-          },
+          }
         })
       }),
 ,
@@ -54,10 +54,10 @@
         this.log(`Found ${secretCount} potential secrets`, "WARN")
       } else {,
         this.log("✓ No exposed secrets found")
-      },
+      }
     } catch (error) {,
       this.log(`Secret check failed: ${error.message}`, "ERROR")
-    },
+    }
   },
 ,
   getSourceFiles() {,
@@ -75,7 +75,7 @@
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath)
-          },
+          }
         })
       },
 ,
@@ -117,8 +117,8 @@
       this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))} catch (error) {,
       this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")
-    },
-  },
+    }
+  }
 },
 ,
 // Main execution,

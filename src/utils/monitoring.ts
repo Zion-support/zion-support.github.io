@@ -9,10 +9,10 @@ export const setupAnalytics = () => {
 
     window.dataLayer = window.dataLayer || [],
     function gtag() {
-      dataLayer.push(arguments),
+      dataLayer.push(arguments)
     }
     gtag('js', new Date()),
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID),
+    gtag('config', process.env.NEXT_PUBLIC_GA_ID)
   }
 },
 
@@ -27,9 +27,9 @@ export const trackPerformance = () => {
       if (typeof gtag !== 'undefined') {
         gtag('eventpage_load_time', {
           value: Math.round(loadTime),
-          event_category: 'Performance'}),
+          event_category: 'Performance'})
       }
-    }),
+    })
   }
 },
 
@@ -39,7 +39,7 @@ export const trackErrors = () => {
       gtag('eventjavascript_error', {
         event_category: 'Error',
         event_label: event.message,
-        value: 1}),
+        value: 1})
     }
-  }),
+  })
 },

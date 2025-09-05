@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",

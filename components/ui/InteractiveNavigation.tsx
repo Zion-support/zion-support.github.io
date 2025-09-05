@@ -18,5 +18,5 @@ export default function InteractiveNavigation() {
         </div>
       )}
     </div>
-  ),
+  )
 }

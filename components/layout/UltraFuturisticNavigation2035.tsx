@@ -250,11 +250,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10)
     },
 
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const toggleDropdown = (name: string) => {
@@ -262,12 +262,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   },
 
   const closeDropdowns = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null)
   },
 
   const closeMobileMenu = () => {
     setIsOpen(false),
-    closeDropdowns(),
+    closeDropdowns()
   },
 
   return (
@@ -543,7 +543,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         </AnimatePresence>
       </div>
     </nav>
-  ),
+  )
 },
 
 export default UltraFuturisticNavigation2035,

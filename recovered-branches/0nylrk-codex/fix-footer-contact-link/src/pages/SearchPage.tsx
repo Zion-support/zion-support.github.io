@@ -6,7 +6,6 @@ import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { SearchSuggestion } from "@/types/search",
 import { useAISearch } from "@/hooks/useAISearch",
 import { AppLayout } from "@/layout/AppLayout",
-
 export default function SearchPage() {
   const [params] = useSearchParams(),
   const navigate = useNavigate(),
@@ -24,7 +23,7 @@ export default function SearchPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query),
+    search(query)
   },
 
   return (
@@ -61,5 +60,5 @@ export default function SearchPage() {
         )}
       </main>
     </AppLayout>
-  ),
+  )
 }

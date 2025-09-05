@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react',
 import { ContactInfo } from '../types',
 import ErrorBoundary from '../components/ErrorBoundary',
 import ContactForm from '../components/ContactForm',
-
 export default function Contact() {
   const [isLoaded, setIsLoaded] = useState(false),
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100),
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   const contact: ContactInfo = {
@@ -111,7 +110,6 @@ export default function Contact() {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 const ContactPage: React.FC = () => {
   Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle,
   ArrowRight, MessageSquare, Calendar, Building, Users
@@ -123,7 +121,6 @@ import Button from '../components/ui/Button',
 import Card from '../components/ui/Card',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -144,7 +141,7 @@ export default function ContactPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    })),
+    }))
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -169,8 +166,8 @@ export default function ContactPage() {
         message: '',
         budget: '',
         timeline: ''
-      }),
-    }, 5000),
+      })
+    }, 5000)
   },
 
   const contactMethods = [
@@ -251,22 +248,18 @@ export default function ContactPage() {
               <p>✓ 24/7 AI support and emergency hotline</p>
               <p>✓ Custom implementation and training</p>
   const services = [
-    'AI Business IntelligenceQuantum Cybersecurity',
-    'Edge Computing OrchestrationSpace Technology Innovation',
-    'Neural Interface DevelopmentAutonomous DevOps',
-    'AI Customer ExperienceQuantum Neural Networks',
+    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology Innovation',
+    'Neural Interface DevelopmentAutonomous DevOpsAI Customer ExperienceQuantum Neural Networks',
     'Other (Please specify)'
   ],
 
   const budgets = [
-    'Under $10,000$10,000 - $50,000',
-    '$50,000 - $100,000$100,000 - $500,000',
+    'Under $10,000$10,000 - $50,000$50,000 - $100,000$100,000 - $500,000',
     '$500,000+To be discussed'
   ],
 
   const timelines = [
-    'Immediate (1-2 weeks)Quick (1-2 months)',
-    'Standard (3-6 months)Extended (6+ months)',
+    'Immediate (1-2 weeks)Quick (1-2 months)Standard (3-6 months)Extended (6+ months)',
     'Flexible timelineTo be discussed'
   ],
 
@@ -849,5 +842,5 @@ export default function ContactPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	),
+	)
 }

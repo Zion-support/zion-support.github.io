@@ -2,7 +2,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image",
-
 interface ServiceDetailsProps {
   country: string
 }
@@ -23,7 +22,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "default": ["Major metropolitan areas"]
     },
     
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"],
+    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"]
   },
   
   // Get region-specific image
@@ -61,7 +60,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`,
+           `For remote locations, additional travel fees may apply.`
   },
   
   const datacenters = getDatacenters(country),
@@ -133,5 +132,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  ),
+  )
 }

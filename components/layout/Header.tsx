@@ -1,7 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
 import Button from '../ui/Button',
-
 const Header: React.FC = () => {
   const navigation = [
     { name: 'About', href: '/about' },
@@ -54,7 +53,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-  ),
+  )
 },
 
 export default Header,

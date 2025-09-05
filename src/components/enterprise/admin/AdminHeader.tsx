@@ -3,7 +3,6 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, Settings } from 'lucide-react'
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace(),
@@ -64,5 +63,5 @@ export function AdminHeader() {
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  ),
+  )
 }

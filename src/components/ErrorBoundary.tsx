@@ -1,6 +1,6 @@
     return { hasError: true, error },
 
-export { ErrorBoundary },
+export { ErrorBoundary }
   },
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
@@ -58,7 +58,7 @@ export { ErrorBoundary },
     },
 ,
     return this.props.children
-  },
+  }
 },
 ,
 export { ErrorBoundary },
@@ -66,8 +66,6 @@ import React, { Component, ReactNode } from 'react',
 import { Button } from './ui/button',
 import { AlertTriangle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 interface Props {
   children: ReactNode,
   fallback?: ReactNode
@@ -81,21 +79,21 @@ interface State {
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props),
-    this.state = { hasError: false },
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error },
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
-    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo),
+    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo)
   }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback,
+        return this.props.fallback
       }
 
       return (
@@ -106,9 +104,9 @@ export class ErrorBoundary extends Component<Props, State> {
           <button onClick={() => window.location.reload()}>Refresh Page</button>
           <button onClick={() => window.location.href = '/'}>Go Home</button>
         </div>
-      ),
+      )
     }
 
-    return this.props.children,
+    return this.props.children
   }
 }

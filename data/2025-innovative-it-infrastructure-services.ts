@@ -4,31 +4,29 @@ export const innovativeITInfrastructureServices2025 = [
     name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     features: [
-      'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimization',
-      'Real-time data processing and analyticsAdvanced security with quantum encryption',
-      'Autonomous edge node managementMulti-cloud edge orchestration',
-      'AI-powered predictive maintenanceZero-latency communication protocols',
+      'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryption',
+      'Autonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols',
       'Scalable edge infrastructureEnergy-efficient quantum processing'
     ],
     pricing: {
       starter: { 
         price: 199, 
         period: 'month', 
-        features: ['Basic edge computingStandard security', 'Email supportLimited nodes'] 
+        features: ['Basic edge computingStandard securityEmail supportLimited nodes'] 
       },
       professional: { 
         price: 599, 
         period: 'month', 
-        features: ['Quantum processingAdvanced security', 'Priority supportExtended nodes'] 
+        features: ['Quantum processingAdvanced securityPriority supportExtended nodes'] 
       },
       enterprise: { 
         price: 1499, 
         period: 'month', 
-        features: ['Full quantum suiteCustom deployment', 'Dedicated supportUnlimited nodes'] 
+        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes'] 
       }
     },
     category: 'IT Infrastructure',
-    tags: ['Quantum ComputingEdge Computing', 'IoTReal-time Processing', 'Infrastructure Orchestration'],
+    tags: ['Quantum ComputingEdge ComputingIoTReal-time Processing', 'Infrastructure Orchestration'],
     website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator',
     contact: {
       phone: '+1 302 464 0950',
@@ -38,43 +36,40 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudience: 'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms',
     competitiveAdvantage: 'Quantum computing integration for unprecedented processing speed, intelligent edge orchestration, and industry-leading security',
     useCases: [
-      'Autonomous vehicle processingSmart city infrastructure',
-      'Industrial IoT automationReal-time gaming and entertainment',
+      'Autonomous vehicle processingSmart city infrastructureIndustrial IoT automationReal-time gaming and entertainment',
       'Emergency response systems'
     ],
-    integrations: ['IoT platformsCloud providers', '5G networksAI platforms', 'Security systems'],
-    compliance: ['SOC2ISO 27001', 'NISTGDPR', 'Industry-specific regulations']
+    integrations: ['IoT platformsCloud providers5G networksAI platforms', 'Security systems'],
+    compliance: ['SOC2ISO 27001NISTGDPR', 'Industry-specific regulations']
   },
   {
     id: 'zero-trust-quantum-security-platform',
     name: 'Zero Trust Quantum Security Platform',
     description: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.',
     features: [
-      'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracy',
-      'Zero-trust network architectureAutonomous security response and remediation',
-      'Real-time threat intelligenceAdvanced behavioral analytics',
-      'Multi-factor quantum authenticationSecure quantum key distribution',
+      'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediation',
+      'Real-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution',
       'Compliance automation and reporting24/7 autonomous security monitoring'
     ],
     pricing: {
       starter: { 
         price: 299, 
         period: 'month', 
-        features: ['Basic securityStandard encryption', 'Email supportBasic monitoring'] 
+        features: ['Basic securityStandard encryptionEmail supportBasic monitoring'] 
       },
       professional: { 
         price: 799, 
         period: 'month', 
-        features: ['Quantum securityAdvanced AI detection', 'Priority supportFull monitoring'] 
+        features: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring'] 
       },
       enterprise: { 
         price: 1999, 
         period: 'month', 
-        features: ['Complete security suiteCustom deployment', 'Dedicated supportWhite-label solution'] 
+        features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution'] 
       }
     },
     category: 'Cybersecurity',
-    tags: ['Zero TrustQuantum Security', 'AI SecurityThreat Detection', 'Network Security'],
+    tags: ['Zero TrustQuantum SecurityAI SecurityThreat Detection', 'Network Security'],
     website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -84,43 +79,40 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudience: 'Enterprise businesses, government agencies, financial institutions, healthcare providers, critical infrastructure',
     competitiveAdvantage: 'Quantum-resistant security, AI-powered threat detection, and comprehensive zero-trust architecture implementation',
     useCases: [
-      'Enterprise network securityGovernment infrastructure protection',
-      'Financial system securityHealthcare data protection',
+      'Enterprise network securityGovernment infrastructure protectionFinancial system securityHealthcare data protection',
       'Critical infrastructure security'
     ],
-    integrations: ['SIEM systemsFirewall platforms', 'Identity providersCloud security', 'Network monitoring'],
-    compliance: ['SOC2ISO 27001', 'NISTFedRAMP', 'HIPAAPCI DSS']
+    integrations: ['SIEM systemsFirewall platformsIdentity providersCloud security', 'Network monitoring'],
+    compliance: ['SOC2ISO 27001NISTFedRAMP', 'HIPAAPCI DSS']
   },
   {
     id: 'autonomous-devops-intelligence-platform',
     name: 'Autonomous DevOps Intelligence Platform',
     description: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.',
     features: [
-      'Autonomous code review and quality assuranceAI-powered testing and bug detection',
-      'Intelligent deployment orchestrationReal-time performance monitoring and optimization',
-      'Automated incident response and resolutionPredictive maintenance and scaling',
-      'Multi-environment managementAdvanced CI/CD pipeline optimization',
+      'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimization',
+      'Automated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization',
       'Security vulnerability scanningCompliance automation and reporting'
     ],
     pricing: {
       starter: { 
         price: 149, 
         period: 'month', 
-        features: ['Basic DevOps automationStandard CI/CD', 'Email supportLimited environments'] 
+        features: ['Basic DevOps automationStandard CI/CDEmail supportLimited environments'] 
       },
       professional: { 
         price: 449, 
         period: 'month', 
-        features: ['AI-powered automationAdvanced monitoring', 'Priority supportExtended environments'] 
+        features: ['AI-powered automationAdvanced monitoringPriority supportExtended environments'] 
       },
       enterprise: { 
         price: 1199, 
         period: 'month', 
-        features: ['Full autonomous suiteCustom deployment', 'Dedicated supportUnlimited environments'] 
+        features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments'] 
       }
     },
     category: 'DevOps & Automation',
-    tags: ['DevOpsAI Automation', 'CI/CDPerformance Monitoring', 'Incident Response'],
+    tags: ['DevOpsAI AutomationCI/CDPerformance Monitoring', 'Incident Response'],
     website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -130,43 +122,40 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudience: 'Software development companies, IT departments, DevOps teams, technology startups',
     competitiveAdvantage: 'Autonomous DevOps operations, AI-powered automation, and comprehensive development lifecycle management',
     useCases: [
-      'Software development automationContinuous deployment optimization',
-      'Performance monitoring and optimizationIncident response automation',
+      'Software development automationContinuous deployment optimizationPerformance monitoring and optimizationIncident response automation',
       'Development workflow optimization'
     ],
-    integrations: ['Git platformsCloud providers', 'Monitoring toolsSecurity platforms', 'Communication tools'],
-    compliance: ['SOC2ISO 27001', 'GDPRIndustry-specific regulations']
+    integrations: ['Git platformsCloud providersMonitoring toolsSecurity platforms', 'Communication tools'],
+    compliance: ['SOC2ISO 27001GDPRIndustry-specific regulations']
   },
   {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
     features: [
-      'Quantum-enhanced cloud processingHybrid quantum-classical computing',
-      'Intelligent resource allocationQuantum-secure data transmission',
-      'Advanced load balancing and scalingMulti-cloud quantum orchestration',
-      'AI-powered infrastructure optimizationReal-time performance analytics',
+      'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmission',
+      'Advanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics',
       'Quantum-resistant encryptionAutonomous infrastructure management'
     ],
     pricing: {
       starter: { 
         price: 299, 
         period: 'month', 
-        features: ['Basic quantum cloudStandard security', 'Email supportLimited resources'] 
+        features: ['Basic quantum cloudStandard securityEmail supportLimited resources'] 
       },
       professional: { 
         price: 899, 
         period: 'month', 
-        features: ['Advanced quantum processingEnhanced security', 'Priority supportExtended resources'] 
+        features: ['Advanced quantum processingEnhanced securityPriority supportExtended resources'] 
       },
       enterprise: { 
         price: 2299, 
         period: 'month', 
-        features: ['Full quantum suiteCustom deployment', 'Dedicated supportUnlimited resources'] 
+        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources'] 
       }
     },
     category: 'Cloud Computing',
-    tags: ['Quantum ComputingCloud Infrastructure', 'Hybrid ComputingInfrastructure Optimization', 'Quantum Security'],
+    tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure Optimization', 'Quantum Security'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -176,43 +165,40 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudience: 'Enterprise businesses, technology companies, research institutions, government agencies',
     competitiveAdvantage: 'Quantum computing integration, hybrid quantum-classical architecture, and industry-leading performance',
     useCases: [
-      'High-performance computingScientific research and simulation',
-      'Financial modeling and analysisAI and machine learning training',
+      'High-performance computingScientific research and simulationFinancial modeling and analysisAI and machine learning training',
       'Big data processing and analytics'
     ],
-    integrations: ['Major cloud providersQuantum computers', 'AI platformsData analytics tools', 'Security platforms'],
-    compliance: ['SOC2ISO 27001', 'FedRAMPGDPR', 'Industry-specific regulations']
+    integrations: ['Major cloud providersQuantum computersAI platformsData analytics tools', 'Security platforms'],
+    compliance: ['SOC2ISO 27001FedRAMPGDPR', 'Industry-specific regulations']
   },
   {
     id: 'ai-powered-data-center-automation',
     name: 'AI-Powered Data Center Automation',
     description: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.',
     features: [
-      'Autonomous data center operationsAI-powered energy optimization',
-      'Predictive maintenance and failure preventionIntelligent workload distribution',
-      'Real-time performance monitoringAutomated capacity planning',
-      'Advanced cooling and power managementSecurity automation and threat response',
+      'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distribution',
+      'Real-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response',
       'Compliance monitoring and reportingCost optimization and resource management'
     ],
     pricing: {
       starter: { 
         price: 399, 
         period: 'month', 
-        features: ['Basic automationStandard monitoring', 'Email supportLimited data centers'] 
+        features: ['Basic automationStandard monitoringEmail supportLimited data centers'] 
       },
       professional: { 
         price: 1199, 
         period: 'month', 
-        features: ['Advanced AI automationFull monitoring', 'Priority supportExtended data centers'] 
+        features: ['Advanced AI automationFull monitoringPriority supportExtended data centers'] 
       },
       enterprise: { 
         price: 2999, 
         period: 'month', 
-        features: ['Complete automation suiteCustom deployment', 'Dedicated supportUnlimited data centers'] 
+        features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers'] 
       }
     },
     category: 'Data Center Management',
-    tags: ['AI AutomationData Center', 'Energy OptimizationPredictive Maintenance', 'Infrastructure Management'],
+    tags: ['AI AutomationData CenterEnergy OptimizationPredictive Maintenance', 'Infrastructure Management'],
     website: 'https://ziontechgroup.com/ai-powered-data-center-automation',
     contact: {
       phone: '+1 302 464 0950',
@@ -222,11 +208,10 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudience: 'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitiveAdvantage: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities',
     useCases: [
-      'Data center operations automationEnergy efficiency optimization',
-      'Predictive maintenanceCapacity planning and optimization',
+      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimization',
       'Cost reduction and management'
     ],
-    integrations: ['Data center infrastructureMonitoring systems', 'Energy managementSecurity platforms', 'Compliance tools'],
-    compliance: ['SOC2ISO 27001', 'Uptime InstituteEnergy Star', 'Industry-specific regulations']
+    integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platforms', 'Compliance tools'],
+    compliance: ['SOC2ISO 27001Uptime InstituteEnergy Star', 'Industry-specific regulations']
   }
 ],

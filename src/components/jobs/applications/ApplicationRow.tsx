@@ -97,5 +97,5 @@ export function ApplicationRow({
         />
       </TableCell>
     </TableRow>
-  ),
+  )
 }

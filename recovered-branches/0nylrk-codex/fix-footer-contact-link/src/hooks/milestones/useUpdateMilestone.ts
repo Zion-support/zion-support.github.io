@@ -5,7 +5,6 @@ import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
 import { Milestone, MilestoneStatus } from './types',
 import { useRecordActivity } from './useRecordActivity',
-
 export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -42,13 +41,13 @@ export const useUpdateMilestone = () => {
       
       toast.success(`Milestone status changed to ${newStatus}`),
       
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error updating milestone status:", err),
       toast.error("Failed to update status: " + err.message),
       return false
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -70,13 +69,13 @@ export const useUpdateMilestone = () => {
       
       toast.success("Milestone updated successfully"),
       
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error updating milestone:", err),
       toast.error("Failed to update milestone: " + err.message),
       return false
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
   
@@ -84,5 +83,5 @@ export const useUpdateMilestone = () => {
     updateMilestoneStatus,
     updateMilestone,
     isSubmitting
-  },
+  }
 },

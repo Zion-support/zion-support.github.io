@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react',
 
 function getRefCode(): string {
   if (typeof window === 'undefined') return '',
-  return localStorage.getItem('ref_code') || '',
+  return localStorage.getItem('ref_code') || ''
 }
 
 export default function AffiliateDashboard() {
@@ -13,7 +13,7 @@ export default function AffiliateDashboard() {
 
   useEffect(() => {
     const c = getRefCode(),
-    setCode(c),
+    setCode(c)
   }, []),
 
   useEffect(() => {
@@ -22,9 +22,9 @@ export default function AffiliateDashboard() {
       try {
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
         const json = await res.json(),
-        setMetrics(json),
+        setMetrics(json)
       } catch {}
-    })(),
+    })()
   }, [code]),
 
   async function requestPayout() {
@@ -36,7 +36,7 @@ export default function AffiliateDashboard() {
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed'),
-      setMsg('Payout requested'),
+      setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message || 'Error')
     }
@@ -77,7 +77,7 @@ export default function AffiliateDashboard() {
         {msg && <p className="mt-2 text-sm">{msg}</p>}
       </div>
     </div>
-  ),
+  )
 }
 
 function Stat({ label, value }: { label: string, value: number | string }) {
@@ -86,5 +86,5 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-  ),
+  )
 }

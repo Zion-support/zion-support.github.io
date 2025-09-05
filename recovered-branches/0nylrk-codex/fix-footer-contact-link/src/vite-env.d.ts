@@ -16,17 +16,17 @@ declare namespace React {
   type FC<P = {}> = React.FC<P>,
   type FormEvent<T = Element> = React.FormEvent<T>,
   type KeyboardEvent<T = Element> = React.KeyboardEvent<T>,
-  type ChangeEvent<T = Element> = React.ChangeEvent<T>,
+  type ChangeEvent<T = Element> = React.ChangeEvent<T>
 }
 
 // Type declarations for modules used in Vite configuration
 declare module 'vitest/config' {
-  export { defineConfig } from 'vite',
+  export { defineConfig } from 'vite'
 }
 
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite',
-  export default function reactSWC(): Plugin,
+  export default function reactSWC(): Plugin
 }
 
 declare module 'path' {
@@ -37,7 +37,7 @@ declare module 'path' {
 
 declare module 'lovable-tagger' {
   import { Plugin } from 'vite',
-  export function componentTagger(): Plugin,
+  export function componentTagger(): Plugin
 }
 
 // Add Node.js globals
@@ -56,7 +56,7 @@ declare module '@/components/ui/badge' {
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
-    key?: string | number,
+    key?: string | number
   }
 
   export const Badge: React.FC<BadgeProps>
@@ -123,7 +123,7 @@ declare module '@livekit/components-react' {
     token?: string,
     serverUrl?: string,
     onDisconnect?: () => void,
-    className?: string,
+    className?: string
   }
   
   export const VideoCall: React.FC<VideoCallProps>,

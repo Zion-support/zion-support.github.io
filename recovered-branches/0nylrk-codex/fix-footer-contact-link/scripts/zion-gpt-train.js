@@ -4,7 +4,6 @@ import { createReadStream } from 'fs',
 import path from 'path',
 import FormData from 'form-data',
 import fetch from 'node-fetch',
-
 const {
   SUPABASE_URL,
   SUPABASE_SERVICE_ROLE_KEY,
@@ -13,7 +12,7 @@ const {
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),
-  process.exit(1),
+  process.exit(1)
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY),
@@ -27,7 +26,7 @@ async function fetchData() {
     jobs: jobPosts.data || [],
     resumes: resumes.data || [],
     logs: supportLogs.data || []
-  },
+  }
 }
 
 function stripPii(text) {
@@ -39,7 +38,7 @@ function stripPii(text) {
   result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
   // Naive full name removal (two capitalized words)
   result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
-  return result,
+  return result
 }
 
 function buildTrainingPairs(records) {
@@ -49,29 +48,29 @@ function buildTrainingPairs(records) {
     pairs.push({
       prompt: `Create a job description titled "${stripPii(job.title)}"`,
       completion: stripPii(job.description)
-    }),
+    })
   }
 
   for (const resume of records.resumes) {
     pairs.push({
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`,
       completion: stripPii(resume.summary)
-    }),
+    })
   }
 
   for (const log of records.logs) {
     pairs.push({
       prompt: stripPii(log.question),
       completion: stripPii(log.answer)
-    }),
+    })
   }
 
-  return pairs,
+  return pairs
 }
 
 async function saveJsonl(pairs, filePath) {
   const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),
-  await fs.writeFile(filePath, lines, 'utf8'),
+  await fs.writeFile(filePath, lines, 'utf8')
 }
 
 async function createFineTune(filePath) {
@@ -102,16 +101,16 @@ async function createFineTune(filePath) {
     })
   }),
   const job = await jobRes.json(),
-  console.log('Fine-tune job created:', job.id),
+  console.log('Fine-tune job created:', job.id)
 }
 
 async function main() {
   const records = await fetchData(),
   const pairs = buildTrainingPairs(records),
   await saveJsonl(pairs, 'training-data.jsonl'),
-  await createFineTune('training-data.jsonl'),
+  await createFineTune('training-data.jsonl')
 }
 
 main().catch((err) => {
-  console.error('Training workflow failed', err),
+  console.error('Training workflow failed', err)
 }),

@@ -3,7 +3,6 @@ import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { Web3Login } from "./Web3Login",
-
 export function SocialLogin() {
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth(),
 
@@ -57,5 +56,5 @@ export function SocialLogin() {
         <Web3Login />
       </div>
     </div>
-  ),
+  )
 }

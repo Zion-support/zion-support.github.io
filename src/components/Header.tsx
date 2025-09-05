@@ -22,7 +22,7 @@ const Header = () => {,
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
     },
     {,
@@ -34,7 +34,7 @@ const Header = () => {,
         { name: 'Finance', href: '/solutions/finance' },
         { name: 'Government', href: '/solutions/government' },
         { name: 'Retail', href: '/solutions/retail' },
-        { name: 'Education', href: '/solutions/education' },
+        { name: 'Education', href: '/solutions/education' }
       ]
     },
     {,
@@ -45,7 +45,7 @@ const Header = () => {,
         { name: 'Healthcare', href: '/industries/healthcare' },
         { name: 'Manufacturing', href: '/industries/manufacturing' },
         { name: 'Retail', href: '/industries/retail' },
-        { name: 'Government', href: '/industries/government' },
+        { name: 'Government', href: '/industries/government' }
       ]
     },
     {,
@@ -56,7 +56,7 @@ const Header = () => {,
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Case Studies', href: '/case-studies' }
       ]
     },
     {,
@@ -67,13 +67,13 @@ const Header = () => {,
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Webinars', href: '/webinars' },
         { name: 'Tutorials', href: '/tutorials' },
-        { name: 'API Documentation', href: '/api-docs' },
+        { name: 'API Documentation', href: '/api-docs' }
       ]
     },
     {,
       name: 'Contact',
       href: '/contact'
-    },
+    }
   ],
 ,
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen),

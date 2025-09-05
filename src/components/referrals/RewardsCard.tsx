@@ -26,7 +26,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   if (rewards.length === 0) {
@@ -48,7 +48,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-    ),
+    )
   }
 
   return (
@@ -96,5 +96,5 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 }

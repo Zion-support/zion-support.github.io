@@ -5,7 +5,6 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
-
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
@@ -19,7 +18,7 @@ function ProjectMilestones() {
         <Footer />
       </>
     </ProtectedRoute>
-  ),
+  )
 }
 
 export default ProjectMilestones,

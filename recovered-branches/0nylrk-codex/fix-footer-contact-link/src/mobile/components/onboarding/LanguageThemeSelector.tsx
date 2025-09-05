@@ -94,5 +94,5 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  ),
+  )
 }

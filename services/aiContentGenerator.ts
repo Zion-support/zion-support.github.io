@@ -17,7 +17,7 @@ export interface ContentGenerationResponse {
     title: string,
     description: string,
     tags: string[]
-  },
+  }
 }
 
 export interface ContentTemplate {
@@ -49,13 +49,13 @@ export class AIContentGeneratorService {
         body: JSON.stringify(request)}),
 
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`),
+        throw new Error(`Content generation failed: ${response.statusText}`)
       }
 
-      return await response.json(),
+      return await response.json()
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request),
+      return this.generateMockContent(request)
     }
   }
 
@@ -93,7 +93,7 @@ export class AIContentGeneratorService {
         preview: 'Turn visitors into customers with compelling copy...',
         price: 59
       }
-    ],
+    ]
   }
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
@@ -117,37 +117,35 @@ ${request.topic} represents a significant opportunity for organizations looking 
       seoScore: 85,
       readabilityScore: 78,
       suggestions: [
-        'Add more specific examplesInclude relevant statistics',
-        'Optimize for target keywords'
+        'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ],
       metadata: {
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
         tags: [request.topic, request.type, 'guidetutorial']
       }
-    },
+    }
   }
 
   async analyzeContent(content: string): Promise<{
     seoScore: number,
     readabilityScore: number,
     suggestions: string[],
-    keywordDensity: Record<string, number>,
+    keywordDensity: Record<string, number>
   }> {
     // Mock content analysis
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,
       readabilityScore: Math.floor(Math.random() * 30) + 70,
       suggestions: [
-        'Add more headings for better structureInclude internal links to related content',
-        'Optimize meta description'
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
       ],
       keywordDensity: {
         'content': 2.1,
         'seo': 1.8,
         'marketing': 1.5
       }
-    },
+    }
   }
 }
 
@@ -158,8 +156,7 @@ export const AI_CONTENT_PRICING = {
     price: 29,
     period: '/month',
     features: [
-      '100 content generations per monthBasic templates',
-      'SEO analysisEmail support',
+      '100 content generations per monthBasic templatesSEO analysisEmail support',
       'Standard quality'
     ]
   },
@@ -168,10 +165,8 @@ export const AI_CONTENT_PRICING = {
     price: 99,
     period: '/month',
     features: [
-      '500 content generations per monthPremium templates',
-      'Advanced SEO analysisPriority support',
-      'High quality outputCustom branding',
-      'API access'
+      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority support',
+      'High quality outputCustom brandingAPI access'
     ]
   },
   enterprise: {
@@ -179,10 +174,8 @@ export const AI_CONTENT_PRICING = {
     price: 299,
     period: '/month',
     features: [
-      'Unlimited content generationsCustom templates',
-      'Advanced analyticsDedicated support',
-      'Highest qualityWhite-label options',
-      'Custom integrationsSLA guarantee'
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated support',
+      'Highest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
   }
 },

@@ -5,5 +5,5 @@ export function ProjectRoom() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  ),
+  )
 }

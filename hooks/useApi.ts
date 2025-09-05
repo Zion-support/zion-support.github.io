@@ -31,17 +31,17 @@ export function useApi<T = any>(
     } catch (err) {
       const error = err instanceof Error ? err : new Error('An error occurred'),
       setError(error),
-      options.onError?.(error),
+      options.onError?.(error)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [apiFunction, options]),
 
   useEffect(() => {
     if (options.immediate) {
-      execute(),
+      execute()
     }
   }, [execute, options.immediate]),
 
-  return { data, loading, error, execute },
+  return { data, loading, error, execute }
 }

@@ -1,6 +1,5 @@
 import React from 'react',
 import Head from 'next/head',
-
 export default function EntertainmentMediaSolutions() {
   return (
     <>
@@ -16,5 +15,5 @@ export default function EntertainmentMediaSolutions() {
         </section>
       </div>
     </>
-  ),
+  )
 }

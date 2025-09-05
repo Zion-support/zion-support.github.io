@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 interface UltraFuturisticBackground2038Props {
   intensity?: 'low' | 'medium' | 'high',
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness',
-  children?: React.ReactNode,
+  children?: React.ReactNode
 }
 
 export default function UltraFuturisticBackground2038({ 
@@ -30,7 +29,7 @@ export default function UltraFuturisticBackground2038({
       if (rect) {
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
     },
 
@@ -42,46 +41,46 @@ export default function UltraFuturisticBackground2038({
       switch (theme) {
         case 'consciousness':
           return {
-            primary: ['#ff0080#00ffff', '#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff', '#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0080#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
           },
         case 'neon':
           return {
-            primary: ['#ff0080#00ffff', '#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff', '#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0080#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
           },
         case 'holographic':
           return {
-            primary: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            secondary: ['#54a0ff#5f27cd', '#ff9ff3#54a0ff', '#5f27cd#ff6b6b'],
-            accent: ['#4ecdc4#45b7d1', '#96ceb4#feca57', '#ff9ff3#54a0ff'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
+            secondary: ['#54a0ff#5f27cd#ff9ff3#54a0ff', '#5f27cd#ff6b6b'],
+            accent: ['#4ecdc4#45b7d1#96ceb4#feca57', '#ff9ff3#54a0ff'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
           },
         case 'cyberpunk':
           return {
-            primary: ['#ff0055#00ffff', '#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff', '#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ffff40#ff40ff', '#ff6b6b#4ecdc4', '#45b7d1#96ceb4'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0055#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
+            accent: ['#ffff40#ff40ff#ff6b6b#4ecdc4', '#45b7d1#96ceb4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
           },
         case 'space':
           return {
-            primary: ['#1e3a8a#7c3aed', '#059669#dc2626', '#ea580c#0891b2'],
-            secondary: ['#8b5cf6#ec4899', '#f59e0b#10b981', '#06b6d4#a855f7'],
-            accent: ['#f97316#ef4444', '#84cc16#06b6d4', '#a855f7#f97316'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#1e3a8a#7c3aed#059669#dc2626', '#ea580c#0891b2'],
+            secondary: ['#8b5cf6#ec4899#f59e0b#10b981', '#06b6d4#a855f7'],
+            accent: ['#f97316#ef4444#84cc16#06b6d4', '#a855f7#f97316'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
           },
         default: // quantum
           return {
-            primary: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444'],
-            secondary: ['#f59e0b#ef4444', '#8b5cf6#06b6d4', '#ec4899#10b981'],
-            accent: ['#ec4899#10b981', '#f59e0b#ef4444', '#8b5cf6#06b6d4'],
-            quantum: ['#8b5cf6#06b6d4', '#ec4899#10b981', '#f59e0b#ef4444']
-          },
+            primary: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444'],
+            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4', '#ec4899#10b981'],
+            accent: ['#ec4899#10b981#f59e0b#ef4444', '#8b5cf6#06b6d4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+          }
       }
     },
 
@@ -138,7 +137,7 @@ export default function UltraFuturisticBackground2038({
           entanglement: [Math.random(), Math.random()],
           consciousness: Math.random(),
           quantumState: Math.random()
-        }),
+        })
       }
     },
 
@@ -157,7 +156,7 @@ export default function UltraFuturisticBackground2038({
             const alpha = (noise + 0.5) * 0.1,
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`,
-              ctx.fillRect(x, y, 20, 20),
+              ctx.fillRect(x, y, 20, 20)
             }
           }
         }
@@ -188,10 +187,10 @@ export default function UltraFuturisticBackground2038({
                 ctx.beginPath(),
                 ctx.moveTo(particle.x, particle.y),
                 ctx.lineTo(otherParticle.x, otherParticle.y),
-                ctx.stroke(),
+                ctx.stroke()
               }
             }
-          }),
+          })
         }
 
         // Consciousness wave effects
@@ -204,7 +203,7 @@ export default function UltraFuturisticBackground2038({
           ctx.beginPath(),
           ctx.moveTo(particle.x, particle.y),
           ctx.lineTo(waveX, waveY),
-          ctx.stroke(),
+          ctx.stroke()
         }
 
         // Holographic effects
@@ -217,7 +216,7 @@ export default function UltraFuturisticBackground2038({
             particle.y - hologramSize / 2, 
             hologramSize, 
             hologramSize
-          ),
+          )
         }
 
         // Quantum field effects
@@ -236,7 +235,7 @@ export default function UltraFuturisticBackground2038({
             particle.y - fieldSize / 2, 
             fieldSize, 
             fieldSize
-          ),
+          )
         }
 
         // Standard particle rendering
@@ -244,7 +243,7 @@ export default function UltraFuturisticBackground2038({
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`,
           ctx.beginPath(),
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
-          ctx.fill(),
+          ctx.fill()
         }
 
         // Boundary wrapping with quantum tunneling effect
@@ -252,10 +251,10 @@ export default function UltraFuturisticBackground2038({
             particle.y < 0 || particle.y > canvas.height) {
           if (Math.random() > 0.8) { // Quantum tunneling
             particle.x = Math.random() * canvas.width,
-            particle.y = Math.random() * canvas.height,
+            particle.y = Math.random() * canvas.height
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width,
-            particle.y = (particle.y + canvas.height) % canvas.height,
+            particle.y = (particle.y + canvas.height) % canvas.height
           }
         }
 
@@ -265,19 +264,19 @@ export default function UltraFuturisticBackground2038({
           particle.y = Math.random() * canvas.height,
           particle.life = particle.maxLife,
           particle.consciousness = Math.random(),
-          particle.quantumState = Math.random() * Math.PI * 2,
+          particle.quantumState = Math.random() * Math.PI * 2
         }
       }),
 
-      requestAnimationFrame(animate),
+      requestAnimationFrame(animate)
     },
 
     initParticles(),
     animate(),
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas),
-    },
+      window.removeEventListener('resize', resizeCanvas)
+    }
   }, [intensity, theme]),
 
   return (
@@ -365,5 +364,5 @@ export default function UltraFuturisticBackground2038({
 
       {children}
     </div>
-  ),
+  )
 }

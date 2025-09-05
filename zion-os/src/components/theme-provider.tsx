@@ -37,7 +37,7 @@ export function ThemeProvider({
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem(storageKey) as Theme,
       if (storedTheme) {
-        setTheme(storedTheme),
+        setTheme(storedTheme)
       }
     }
   }, [storageKey]),
@@ -59,28 +59,28 @@ export function ThemeProvider({
       return
     }
 
-    root.classList.add(theme),
+    root.classList.add(theme)
   }, [theme, mounted]),
 
   const value = {
     theme,
     setTheme: (theme: Theme) => {
       if (typeof window !== "undefined") {
-        localStorage.setItem(storageKey, theme),
+        localStorage.setItem(storageKey, theme)
       }
-      setTheme(theme),
+      setTheme(theme)
     }},
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
-    return <>{children}</>,
+    return <>{children}</>
   }
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
     </ThemeProviderContext.Provider>
-  ),
+  )
 }
 
 export const useTheme = () => {
@@ -89,5 +89,5 @@ export const useTheme = () => {
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider"),
 
-  return context,
+  return context
 },

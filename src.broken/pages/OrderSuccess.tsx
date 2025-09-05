@@ -11,5 +11,5 @@ export default function OrderSuccess() {
       {sessionId && <p className="mb-4">Session ID: {sessionId}</p>}
       <Link className="underline" to="/">Return Home</Link>
     </div>
-  ),
+  )
 }

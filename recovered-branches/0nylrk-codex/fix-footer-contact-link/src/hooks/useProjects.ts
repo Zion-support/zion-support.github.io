@@ -3,7 +3,6 @@ import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { Project, ProjectStatus } from "@/types/projects",
 import { toast } from "sonner",
-
 export function useProjects() {
   const { user } = useAuth(),
   const [projects, setProjects] = useState<Project[]>([]),
@@ -13,7 +12,7 @@ export function useProjects() {
   const fetchProjects = async () => {
     if (!user) {
       setIsLoading(false),
-      return,
+      return
     }
 
     try {
@@ -33,9 +32,9 @@ export function useProjects() {
         .order("created_at", { ascending: false }),
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
-        query = query.eq("talent_id", user.id),
+        query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" || user.userType === "buyer") {
-        query = query.eq("client_id", user.id),
+        query = query.eq("client_id", user.id)
       }
       
       const { data, error: fetchError } = await query,
@@ -52,13 +51,13 @@ export function useProjects() {
       })),
       
       setProjects(transformedData as Project[]),
-      setError(null),
+      setError(null)
     } catch (err: any) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
       toast.error("Failed to fetch projects")
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -86,11 +85,11 @@ export function useProjects() {
         } : undefined
       },
       
-      return transformedProject as Project,
+      return transformedProject as Project
     } catch (err: any) {
       console.error("Error fetching project:", err),
       toast.error("Failed to fetch project details"),
-      return null,
+      return null
     }
   },
 
@@ -109,18 +108,18 @@ export function useProjects() {
       ),
       
       toast.success(`Project status updated to ${status}`),
-      return true,
+      return true
     } catch (err: any) {
       console.error("Error updating project status:", err),
       toast.error("Failed to update project status"),
-      return false,
+      return false
     }
   },
 
   // Fetch projects when component mounts or user changes
   useEffect(() => {
     if (user) {
-      fetchProjects(),
+      fetchProjects()
     }
   }, [user]),
 
@@ -131,5 +130,5 @@ export function useProjects() {
     refetch: fetchProjects,
     getProjectById,
     updateProjectStatus
-  },
+  }
 }

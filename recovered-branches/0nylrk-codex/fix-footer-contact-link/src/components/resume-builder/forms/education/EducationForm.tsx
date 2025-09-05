@@ -7,7 +7,6 @@ import { format } from 'date-fns',
 import { EducationFormProps } from './types',
 import { EducationList } from './EducationList',
 import { EducationFormFields } from './EducationFormFields',
-
 export function EducationForm({ 
   resumeId,
   educationEntries, 
@@ -21,7 +20,7 @@ export function EducationForm({
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue, 'yyyy-MM-dd'),
+    return format(dateValue, 'yyyy-MM-dd')
   },
 
   const handleAddOrUpdate = async (data: any) => {
@@ -37,13 +36,13 @@ export function EducationForm({
 
     let success,
     if (editingId) {
-      success = await updateEducation(editingId, educationData),
+      success = await updateEducation(editingId, educationData)
     } else {
-      success = await addEducation(resumeId, educationData),
+      success = await addEducation(resumeId, educationData)
     }
 
     if (success) {
-      setEditingId(null),
+      setEditingId(null)
     }
   },
 
@@ -60,9 +59,9 @@ export function EducationForm({
 
   const handleCancel = () => {
     if (editingId) {
-      setEditingId(null),
+      setEditingId(null)
     } else {
-      onBack(),
+      onBack()
     }
   },
 
@@ -101,5 +100,5 @@ export function EducationForm({
         </div>
       )}
     </div>
-  ),
+  )
 }

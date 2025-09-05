@@ -32,11 +32,11 @@ export default function VendorRegisterPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed to submit'),
       setMessage('Application submitted. Await approval.'),
-      form.reset(),
+      form.reset()
     } catch (err: any) {
       setMessage(err.message)
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }
 
@@ -76,5 +76,5 @@ export default function VendorRegisterPage() {
       {message && <div className="text-sm">{message}</div>}
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  ),
+  )
 }

@@ -4,7 +4,7 @@ exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [
-      '//learn', '/dao/certifications', '/api/learn/courses/api/dao/metrics'
+      '//learn/dao/certifications', '/api/learn/courses/api/dao/metrics'
     ],
 
     const results = [],
@@ -14,10 +14,10 @@ exports.handler = async function() {
       try {
         const resp = await fetch(url),
         const ms = Date.now() - t0,
-        results.push({ path: ep, status: resp.status, ms }),
+        results.push({ path: ep, status: resp.status, ms })
       } catch (e) {
         const ms = Date.now() - t0,
-        results.push({ path: ep, status: 0, ms, error: String(e.message || e) }),
+        results.push({ path: ep, status: 0, ms, error: String(e.message || e) })
       }
     }
 
@@ -37,15 +37,15 @@ exports.handler = async function() {
         arr.push(log),
         while (arr.length > 500) arr.shift(),
         const content = JSON.stringify(arr, null, 2),
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token }),
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })
       } catch (_) {
         const content = JSON.stringify([log], null, 2),
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token }),
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) },
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) },
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },

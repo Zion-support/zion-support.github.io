@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils/auth',
 import OpenAI from 'openai',
-
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,10 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {},
 
   const seed = [
-    'Problem & OpportunitySolution & Product',
-    'Market Size (TAM/SAM/SOM)Traction & Metrics',
-    'Business ModelGo-To-Market',
-    'TeamRoadmap',
+    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & Metrics',
+    'Business ModelGo-To-MarketTeamRoadmap',
     'Token StrategyAsk & Call to Action'],
 
   try {
@@ -39,16 +36,16 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
           { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
           { role: 'user', content: prompt }],
         temperature: 0.5}),
-      content = chat.choices?.[0]?.message?.content || '',
+      content = chat.choices?.[0]?.message?.content || ''
     } catch (err) {
-      content = '',
+      content = ''
     }
 
     const slides = seed.map((title, idx) => ({ id: `${idx + 1}`, title, content: extractSection(content, title) })),
     const version = `v${new Date().toISOString()}`,
-    res.status(200).json({ slides, version }),
+    res.status(200).json({ slides, version })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Generation failed' }),
+    res.status(500).json({ error: e?.message || 'Generation failed' })
   }
 }
 
@@ -59,7 +56,7 @@ function extractSection(body: string, title: string): string {
   const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase())),
   if (matchIdx >= 0) {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n'),
-    return snippet.trim(),
+    return snippet.trim()
   }
-  return '',
+  return ''
 }

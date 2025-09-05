@@ -1,5 +1,4 @@
 import React from 'react',
-
 export function VerifiedBadge({ labels }: { labels: string[] }) {
   if (!labels || labels.length === 0) return null,
   return (
@@ -13,5 +12,5 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
         </span>
       ))}
     </div>
-  ),
+  )
 }

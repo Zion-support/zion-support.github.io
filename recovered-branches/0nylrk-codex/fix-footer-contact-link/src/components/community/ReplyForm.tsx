@@ -36,7 +36,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
       await onSubmit(values.content),
       form.reset()
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -70,7 +70,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         </Form>
       </CardContent>
     </Card>
-  ),
+  )
 },
 
 export default ReplyForm,

@@ -25,7 +25,7 @@ interface ToastProps {
   id?: string,
   duration?: number,
   priority?: ToastPriority,
-  persistent?: boolean,
+  persistent?: boolean
 }
 
 const shouldShow = (key: string): boolean => {
@@ -35,7 +35,7 @@ const shouldShow = (key: string): boolean => {
   }
   lastKey = key,
   lastShown = now,
-  return true,
+  return true
 },
 
 /**
@@ -45,7 +45,7 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
-      type: ToastType.INFO}),
+      type: ToastType.INFO})
   }
 
   const { 
@@ -85,31 +85,31 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
-    onRetry}),
+    onRetry})
 },
 
 // Convenience methods that use the global toast manager
 toastAdapter.success = (message: string, options?: { id?: string, duration?: number } & Record<string, any>) => {
-  return showToast.success(message, options),
+  return showToast.success(message, options)
 },
 
 toastAdapter.error = (message: string, options?: { id?: string, duration?: number } & Record<string, any>) => {
-  return showToast.error(message, options),
+  return showToast.error(message, options)
 },
 
 toastAdapter.info = (message: string, options?: { id?: string, duration?: number } & Record<string, any>) => {
-  return showToast.info(message, options),
+  return showToast.info(message, options)
 },
 
 toastAdapter.warning = (message: string, options?: { id?: string, duration?: number } & Record<string, any>) => {
-  return showToast.warning(message, options),
+  return showToast.warning(message, options)
 },
 
 toastAdapter.dismiss = (toastId?: string | number) => {
   if (toastId) {
-    globalToastManager.dismissToast(String(toastId)),
+    globalToastManager.dismissToast(String(toastId))
   } else {
-    globalToastManager.dismissAll(),
+    globalToastManager.dismissAll()
   }
 },
 
@@ -120,7 +120,7 @@ export const useToast = () => ({
     if (toastId) {
       globalToastManager.dismissToast(toastId)
     } else {
-      globalToastManager.dismissAll(),
+      globalToastManager.dismissAll()
     }
   },
   

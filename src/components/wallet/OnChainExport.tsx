@@ -10,7 +10,6 @@ import {
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
-
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false),
   const [isExporting, setIsExporting] = useState(false),
@@ -28,7 +27,7 @@ export function OnChainExport() {
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
         }),
-        return,
+        return
       }
       
       // Request accounts
@@ -45,13 +44,13 @@ export function OnChainExport() {
       setIsConnected(true),
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`}),
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
       toast({
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
         variant: "destructive"
-      }),
+      })
     }
   },
   
@@ -66,16 +65,16 @@ export function OnChainExport() {
       setExportStatus('success'),
       toast({
         title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet"}),
+        description: "Your ZION$ tokens have been exported to your wallet"})
     } catch (error: any) {
       setExportStatus('error'),
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsExporting(false),
+      setIsExporting(false)
     }
   },
   
@@ -137,5 +136,5 @@ export function OnChainExport() {
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

@@ -50,7 +50,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'structured-data',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['seojson-ld', 'schemaaudit'],
+      tags: ['seojson-ldschemaaudit'],
       source: 'autonomous-auditor',
       type: 'report'
     },
@@ -63,7 +63,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'vulnerability-scan',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['securityvulnerability', 'scanremediation'],
+      tags: ['securityvulnerabilityscanremediation'],
       source: 'security-scanner',
       type: 'security'
     },
@@ -76,7 +76,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'performance',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['aiperformance', 'optimizationmetrics'],
+      tags: ['aiperformanceoptimizationmetrics'],
       source: 'ai-monitor',
       type: 'update'
     },
@@ -89,7 +89,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'deployment',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['featuresdeployment', 'uximpact'],
+      tags: ['featuresdeploymentuximpact'],
       source: 'deployment-tracker',
       type: 'feature'
     },
@@ -102,7 +102,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'system-health',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['monitoringperformance', 'infrastructurehealth'],
+      tags: ['monitoringperformanceinfrastructurehealth'],
       source: 'health-monitor',
       type: 'report'
     },
@@ -115,7 +115,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'user-behavior',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['analyticsuser-behavior', 'engagementoptimization'],
+      tags: ['analyticsuser-behaviorengagementoptimization'],
       source: 'behavior-analyzer',
       type: 'insight'
     }
@@ -137,7 +137,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Search optimization and performance analytics',
       color: 'from-green-500 to-emerald-500',
       count: contentItems.filter(item => item.category === 'seo').length,
-      subcategories: ['structured-dataperformance', 'technical-seo']
+      subcategories: ['structured-dataperformancetechnical-seo']
     },
     {
       id: 'security',
@@ -146,7 +146,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Security assessments and compliance reports',
       color: 'from-red-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'security').length,
-      subcategories: ['vulnerability-scancompliance', 'threat-detection']
+      subcategories: ['vulnerability-scancompliancethreat-detection']
     },
     {
       id: 'ai',
@@ -155,7 +155,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'AI model performance and insights',
       color: 'from-purple-500 to-pink-500',
       count: contentItems.filter(item => item.category === 'ai').length,
-      subcategories: ['performancetraining', 'deployment']
+      subcategories: ['performancetrainingdeployment']
     },
     {
       id: 'features',
@@ -164,7 +164,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'New features and system updates',
       color: 'from-yellow-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'features').length,
-      subcategories: ['deploymentenhancements', 'roadmap']
+      subcategories: ['deploymentenhancementsroadmap']
     },
     {
       id: 'monitoring',
@@ -173,7 +173,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Infrastructure and system health',
       color: 'from-indigo-500 to-purple-500',
       count: contentItems.filter(item => item.category === 'monitoring').length,
-      subcategories: ['system-healthperformance', 'infrastructure']
+      subcategories: ['system-healthperformanceinfrastructure']
     },
     {
       id: 'analytics',
@@ -182,7 +182,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'User behavior and engagement insights',
       color: 'from-teal-500 to-cyan-500',
       count: contentItems.filter(item => item.category === 'analytics').length,
-      subcategories: ['user-behaviorengagement', 'conversion']
+      subcategories: ['user-behaviorengagementconversion']
     }
   ],
 
@@ -221,7 +221,7 @@ const ContentCategorizer: React.FC = () => {
       const matchesType = selectedType === 'all' || item.type === selectedType,
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
       
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance,
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance
     }),
 
     // Sort items
@@ -237,12 +237,12 @@ const ContentCategorizer: React.FC = () => {
           break,
         case 'title':
           comparison = a.title.localeCompare(b.title),
-          break,
+          break
       }
-      return sortOrder === 'asc' ? comparison : -comparison,
+      return sortOrder === 'asc' ? comparison : -comparison
     }),
 
-    return filtered,
+    return filtered
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
 
   const getCategoryIcon = (category: string) => {
@@ -270,7 +270,7 @@ const ContentCategorizer: React.FC = () => {
     setSelectedSubcategory('all'),
     setSelectedType('all'),
     setSelectedDateRange('all'),
-    setSelectedRelevance('all'),
+    setSelectedRelevance('all')
   },
 
   return (
@@ -298,7 +298,7 @@ const ContentCategorizer: React.FC = () => {
               value={selectedCategory}
               onChange={(e) => {
                 setSelectedCategory(e.target.value),
-                setSelectedSubcategory('all'),
+                setSelectedSubcategory('all')
               }}
               className="w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
             >
@@ -521,7 +521,7 @@ const ContentCategorizer: React.FC = () => {
         </div>
       )}
     </div>
-  ),
+  )
 },
 
 export default ContentCategorizer,

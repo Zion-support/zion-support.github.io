@@ -25,7 +25,6 @@ import { nextGenAIServices } from '../data/next-gen-ai-services',
 import { industryRealServices } from '../data/industry-real-services',
 import { professionalServices } from '../data/professional-services',
 import { realVerifiedServices } from '../data/real-verified-services',
-
 export default function DynamicServicePage() {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
@@ -64,15 +63,15 @@ export default function DynamicServicePage() {
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link),
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, ''),
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-        return false,
+        return false
       }
     }),
     if (byLink) return byLink,
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug),
     if (byId) return byId,
-    return undefined,
+    return undefined
   }, [slug]),
 
   if (!service) {
@@ -136,7 +135,7 @@ export default function DynamicServicePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
+  )
 }
 
 // Static export support: generate root-level pages for service slugs
@@ -159,11 +158,11 @@ function collectAllServices(): Svc[] {
       newRealInnovations as Svc[],
       realMarketServices as Svc[],
       realVerifiedServices as unknown as Svc[]
-    ),
+    )
 }
 
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
 function extractRootSlugFromLink(link?: string): string | null {
@@ -173,9 +172,9 @@ function extractRootSlugFromLink(link?: string): string | null {
     const path = url.pathname.replace(/^\/+|\/+$/g, ''),
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
     if (path && !path.includes('/')) return path,
-    return null,
+    return null
   } catch {
-    return null,
+    return null
   }
 }
 
@@ -192,7 +191,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
         const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, ''),
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
-          staticSlugs.add(base.toLowerCase()),
+          staticSlugs.add(base.toLowerCase())
         }
       }
     }
@@ -203,7 +202,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : '')),
     if (!slugCandidate) continue,
     if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
-    candidateSlugs.add(slugCandidate),
+    candidateSlugs.add(slugCandidate)
   }
 
   // Exclude any slug that conflicts with an existing root page file
@@ -212,10 +211,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
     fallback: true
-  },
+  }
 },
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-  return { props: {} },
+  return { props: {} }
 },

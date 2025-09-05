@@ -5,12 +5,11 @@ import { DisputesList } from "./DisputesList",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
-
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes(),
 
   useEffect(() => {
-    refetch(),
+    refetch()
   }, [refetch]),
 
   const openDisputes = disputes.filter(d => d.status === 'open'),
@@ -85,5 +84,5 @@ export function DisputeDashboard() {
       
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
-  ),
+  )
 }

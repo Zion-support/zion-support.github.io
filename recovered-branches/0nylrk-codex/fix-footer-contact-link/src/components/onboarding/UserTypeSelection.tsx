@@ -2,7 +2,6 @@
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react",
 import { Button } from "@/components/ui/button",
-
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | "client",
   name: string,
@@ -72,9 +71,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 </p>
               </div>
             </Button>
-          ),
+          )
         })}
       </div>
     </div>
-  ),
+  )
 }

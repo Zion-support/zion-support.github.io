@@ -8,7 +8,6 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -245,7 +244,7 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['StarterProfessional', 'Enterprise'].map((plan, index) => (
+            {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
                 key={plan}
                 initial={{ opacity: 0, y: 30 }}

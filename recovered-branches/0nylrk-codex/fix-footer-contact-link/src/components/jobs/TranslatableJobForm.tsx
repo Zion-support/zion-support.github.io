@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
-
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
   isSubmitting?: boolean
@@ -47,15 +46,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value }),
+    setTitle({ ...title, [activeTab]: value })
   },
   
   const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value }),
+    setDescription({ ...description, [activeTab]: value })
   },
   
   const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value }),
+    setRequirements({ ...requirements, [activeTab]: value })
   },
   
   // Handle form submission
@@ -70,7 +69,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       description,
       requirements,
       budget,
-      deadline}),
+      deadline})
   },
   
   // Auto translate content when language tab changes
@@ -94,11 +93,11 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       } else if (field === 'description' && description[lang]) {
         content = description[lang],
         sourceLanguage = lang,
-        break,
+        break
       } else if (field === 'requirements' && requirements[lang]) {
         content = requirements[lang],
         sourceLanguage = lang,
-        break,
+        break
       }
     }
     
@@ -107,7 +106,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
         variant: "destructive"}),
-      return,
+      return
     }
     
     try {
@@ -118,26 +117,26 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           title: t('translation.translation_failed'),
           description: error,
           variant: "destructive"}),
-        return,
+        return
       }
       
       if (field === 'title') {
-        setTitle(translations),
+        setTitle(translations)
       } else if (field === 'description') {
-        setDescription(translations),
+        setDescription(translations)
       } else if (field === 'requirements') {
-        setRequirements(translations),
+        setRequirements(translations)
       }
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated')}),
+        description: t('translation.content_translated')})
     } catch (error) {
       console.error(`Error translating ${field}:`, error),
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
   
@@ -150,21 +149,21 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
-      promises.push(autoTranslate('title')),
+      promises.push(autoTranslate('title'))
     }
     
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
-      promises.push(autoTranslate('description')),
+      promises.push(autoTranslate('description'))
     }
     
     // Requirements translations
     if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {
-      promises.push(autoTranslate('requirements')),
+      promises.push(autoTranslate('requirements'))
     }
     
     if (promises.length) {
-      await Promise.all(promises),
+      await Promise.all(promises)
     }
   },
   
@@ -363,5 +362,5 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </Button>
       </div>
     </form>
-  ),
+  )
 }

@@ -38,13 +38,13 @@ const ContactForm: React.FC = () => {,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    })),
+    }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission here
-    console.log('Form submitted:', formData),
+    console.log('Form submitted:', formData)
   }),
 ,
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -79,7 +79,7 @@ const ContactForm: React.FC = () => {,
       setSubmitStatus('error')
     } finally {,
       setIsSubmitting(false)
-    },
+    }
   },
 
   return (

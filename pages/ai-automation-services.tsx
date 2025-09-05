@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -23,35 +22,35 @@ const serviceHighlights = [
     description: 'Generate production-ready code across multiple languages with AI intelligence',
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
-    features: ['Multi-language supportSecurity scanning', 'Performance optimizationTeam collaboration']
+    features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
   },
   {
     title: 'DevOps Automation',
     description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
     color: 'from-purple-500 to-indigo-600',
-    features: ['CI/CD optimizationSelf-healing infrastructure', 'Cost optimizationMulti-cloud support']
+    features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support']
   },
   {
     title: 'Customer Support AI',
     description: 'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Intelligent chatbotsMulti-language support', 'Predictive resolution24/7 availability']
+    features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability']
   },
   {
     title: 'Marketing Automation',
     description: 'AI-powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
     color: 'from-pink-500 to-rose-600',
-    features: ['Campaign optimizationCustomer personalization', 'ROI trackingMulti-channel automation']
+    features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation']
   },
   {
     title: 'Sales Intelligence',
     description: 'Boost sales performance with AI-powered insights and predictive analytics',
     icon: TrendingUp,
     color: 'from-yellow-500 to-orange-600',
-    features: ['Lead scoringSales forecasting', 'Customer insightsPerformance optimization']
+    features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
 ],
 

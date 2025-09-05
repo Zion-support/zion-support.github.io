@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
-
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -25,14 +24,14 @@ export default function ProjectPage() {
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
         const json = await res.json(),
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
-        setProject(json.project),
+        setProject(json.project)
       } catch (e: any) {
         setError(e.message)
       } finally {
-        setLoading(false),
+        setLoading(false)
       }
     }
-    load(),
+    load()
   }, [projectId]),
 
   const [showFeedback, setShowFeedback] = useState(false),
@@ -46,7 +45,7 @@ export default function ProjectPage() {
     if (json.ok) {
       setProject(json.project),
       setNote(""),
-      setShowFeedback(true),
+      setShowFeedback(true)
     }
   }
 
@@ -58,7 +57,7 @@ export default function ProjectPage() {
     const json = await res.json(),
     if (json.ok) {
       setProject(json.project),
-      setShowFeedback(true),
+      setShowFeedback(true)
     }
   }
 
@@ -157,5 +156,5 @@ export default function ProjectPage() {
         userHeaders={headers}
       />
     </div>
-  ),
+  )
 }

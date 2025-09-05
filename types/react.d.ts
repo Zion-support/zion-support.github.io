@@ -36,7 +36,7 @@ declare module "react" {
     useMemo: typeof useMemo
   } & Record<string, unknown>,
 
-  export default React,
+  export default React
 }
 
 declare namespace React {

@@ -29,7 +29,6 @@ import { motion } from 'framer-motion',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036ITServices } from '../data/real-2036-it-services',
 import { real2036AIServices } from '../data/real-2036-ai-services',
-
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
@@ -41,9 +40,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length),
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, []),
 
   const scrollToSection = (sectionId: string) => {
@@ -51,7 +50,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
-      setIsMobileMenuOpen(false),
+      setIsMobileMenuOpen(false)
     }
   },
 
@@ -750,7 +749,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </footer>
     </UltraFuturisticBackground2035>
-  ),
+  )
 }
 
 export default Homepage2025,

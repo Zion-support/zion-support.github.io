@@ -65,19 +65,19 @@ function ProjectDetailsContent() {
         setProject(projectData),
         
         // Now fetch notes
-        fetchProjectNotes(projectId),
+        fetchProjectNotes(projectId)
       } else {
         toast({
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
-        router.push("/dashboard"),
+        router.push("/dashboard")
       }
       
-      setIsLoading(false),
+      setIsLoading(false)
     }
     
-    loadProject(),
+    loadProject()
   }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
@@ -93,13 +93,13 @@ function ProjectDetailsContent() {
       
       if (error) throw error,
       
-      setNotes(data || []),
+      setNotes(data || [])
     } catch (err: any) {
       logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive"}),
+        variant: "destructive"})
     }
   },
   
@@ -125,15 +125,15 @@ function ProjectDetailsContent() {
       
       toast({
         title: "Note added",
-        description: "Your note has been added to the project."}),
+        description: "Your note has been added to the project."})
     } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err }),
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmittingNote(false),
+      setIsSubmittingNote(false)
     }
   },
   
@@ -151,7 +151,7 @@ function ProjectDetailsContent() {
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!"}),
+          description: "The project is now in progress. Congratulations!"})
       }
     }
   },
@@ -170,7 +170,7 @@ function ProjectDetailsContent() {
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>,
+        return <Badge variant="outline">{status}</Badge>
     }
   },
   
@@ -184,7 +184,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
-    ),
+    )
   }
   
   if (!project) {
@@ -203,7 +203,7 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>
-    ),
+    )
   }
   
   // Check if user is either the client or the talent
@@ -212,7 +212,7 @@ function ProjectDetailsContent() {
   
   if (!isClient && !isTalent) {
     router.push("/unauthorized"),
-    return null,
+    return null
   }
   
   const isOfferPending = project.status === "offer_sent",
@@ -660,7 +660,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
-  ),
+  )
 }
 
 export default function ProjectDetails() {
@@ -668,5 +668,5 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-  ),
+  )
 }

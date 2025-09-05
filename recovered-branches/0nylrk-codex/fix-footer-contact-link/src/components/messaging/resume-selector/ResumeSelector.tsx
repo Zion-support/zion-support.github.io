@@ -26,15 +26,15 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     const loadResumes = async () => {
       setIsLoading(true),
       try {
-        await fetchResume(),
+        await fetchResume()
       } catch (error) {
-        console.error("Error loading resumes:", error),
+        console.error("Error loading resumes:", error)
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     },
     
-    loadResumes(),
+    loadResumes()
   }, [fetchResume]),
   
   // Update resume options when resume data changes
@@ -52,7 +52,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       // Pre-select the most recent resume
       if (options.length > 0 && selectedOption === 'recent') {
         setSelectedResume(options[0]),
-        onResumeSelected(options[0]),
+        onResumeSelected(options[0])
       }
     }
   }, [resume, selectedOption, onResumeSelected]),
@@ -66,9 +66,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       onResumeSelected(resumeOptions[0])
     } else if (value === 'select') {
       // Reset selection until user chooses
-      setSelectedResume(null),
+      setSelectedResume(null)
     } else if (value === 'upload') {
-      setSelectedResume(null),
+      setSelectedResume(null)
     }
   },
   
@@ -93,7 +93,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           description: "Please upload a PDF file",
           variant: "destructive"
         }),
-        return,
+        return
       }
       
       // Create a custom resume option
@@ -106,14 +106,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       setCustomFile(file),
       setSelectedResume(customOption),
-      onResumeSelected(customOption),
+      onResumeSelected(customOption)
     }
   },
   
   // Handle resume download
   const handleDownloadResume = async () => {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
-      return,
+      return
     }
     
     try {
@@ -134,22 +134,22 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded."}),
+        description: "Your resume has been downloaded."})
     } catch (error) {
       console.error('Error downloading PDF:', error),
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
         variant: "destructive"
-      }),
+      })
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
   
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio_blank'),
+    window.open('/dashboard/talent/portfolio_blank')
   },
   
   return (
@@ -215,5 +215,5 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>
       </div>
     </div>
-  ),
+  )
 }

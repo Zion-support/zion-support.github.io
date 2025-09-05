@@ -7,7 +7,7 @@ interface SlackCommand {
 }
 
 interface SlackAck {
-  (): Promise<void>,
+  (): Promise<void>
 }
 
 interface SlackRespond {
@@ -26,8 +26,8 @@ declare const globalThis: {
     env: {
       PORT?: string,
       [key: string]: string | undefined
-    },
-  },
+    }
+  }
 },
 
 // Mock App class that mimics the Slack Bolt SDK behavior
@@ -43,9 +43,9 @@ class MockApp {
     // Safely log without direct console reference
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`),
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
     }
-    return Promise.resolve(),
+    return Promise.resolve()
   }
 }
 
@@ -56,9 +56,9 @@ async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
   if (safeConsole && safeConsole.log) {
-    safeConsole.log(`ZionGPT was asked: ${prompt}`),
+    safeConsole.log(`ZionGPT was asked: ${prompt}`)
   }
-  return `AI response to: ${prompt}`,
+  return `AI response to: ${prompt}`
 }
 
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
@@ -73,12 +73,12 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const query = args.join(' '),
       const answer = await askZionGPT(`Suggest talent for ${query}`),
       await respond(answer),
-      break,
+      break
     }
     case 'track-project': {
       const project = args.join(' '),
       await respond(`Tracking project **${project}** - feature coming soon.`),
-      break,
+      break
     }
     case 'help':
     default: await respond(
@@ -97,7 +97,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   const env = typeof globalThis !== 'undefined' && globalThis.process ? 
     globalThis.process.env : {},
   const port = env.PORT ? Number(env.PORT) : 3000,
-  await app.start(port),
+  await app.start(port)
 })(),
 
 export default app,

@@ -5,7 +5,7 @@ export type TrackEventPayload = {
   page?: string,
   userType?: UserType,
   properties?: Record<string, any>,
-  at?: string,
+  at?: string
 },
 
 export async function trackEvent(payload: TrackEventPayload) {
@@ -14,7 +14,7 @@ export async function trackEvent(payload: TrackEventPayload) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-      keepalive: true as any}),
+      keepalive: true as any})
   } catch (e) {
     // swallow
   }

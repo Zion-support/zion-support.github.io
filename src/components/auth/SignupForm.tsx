@@ -11,8 +11,6 @@ import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils',
 import { fireEvent } from '@/lib/analytics',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const signupSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
   email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
@@ -91,14 +89,14 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               isValidating: false,
               error: error?.message || null
             }
-          })),
-        }, 300),
+          }))
+        }, 300)
       }
     }),
 
     return () => {
-      Object.values(timeouts).forEach(clearTimeout),
-    },
+      Object.values(timeouts).forEach(clearTimeout)
+    }
   }, [watchedFields, touchedFields, trigger, errors]),
 
   const getFieldValidationIcon = (fieldName: string) => {
@@ -112,14 +110,14 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     if (state?.isValid && !state?.error) {
-      return <CheckCircle className="h-4 w-4 text-green-500" />,
+      return <CheckCircle className="h-4 w-4 text-green-500" />
     }
     
     if (state?.error) {
-      return <AlertCircle className="h-4 w-4 text-red-500" />,
+      return <AlertCircle className="h-4 w-4 text-red-500" />
     }
     
-    return null,
+    return null
   },
 
   const getFieldClasses = (fieldName: string) => {
@@ -140,7 +138,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
     }
     
-    return '',
+    return ''
   },
 
   const getPasswordStrength = (password: string) => {
@@ -156,15 +154,15 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     
     strength = checks.filter(Boolean).length,
     
-    const labels = ['Very WeakWeak', 'FairGood', 'Strong'],
-    const colors = ['bg-red-500bg-orange-500', 'bg-yellow-500bg-blue-500', 'bg-green-500'],
+    const labels = ['Very WeakWeakFairGood', 'Strong'],
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500', 'bg-green-500'],
     
     return {
       strength,
       label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
       percentage: (strength / 5) * 100
-    },
+    }
   },
 
   const passwordStrength = getPasswordStrength(watchedFields.password || ''),
@@ -188,23 +186,23 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         if (result.error.includes('already registered') || result.error.includes('already exists')) {
           setError('email', { 
             message: 'An account with this email already exists. Please try logging in instead.' 
-          }),
+          })
         } else if (result.error.includes('invalid email')) {
           setError('email', { 
             message: 'Please enter a valid email address.' 
-          }),
+          })
         } else if (result.error.includes('weak password')) {
           setError('password', { 
             message: 'Password is too weak. Please choose a stronger password.' 
-          }),
+          })
         } else {
           setError('root', { 
             message: result.error 
-          }),
+          })
         }
         
         onError?.(result.error),
-        return,
+        return
       }
 
       // Success
@@ -218,7 +216,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       fireEvent('signup_success'),
       onSuccess?.({
         email: data.email,
-        emailVerificationRequired: result.emailVerificationRequired ?? false}),
+        emailVerificationRequired: result.emailVerificationRequired ?? false})
 
     } catch (error: any) {
       logErrorToProduction('Unexpected signup error:', { data: error }),
@@ -231,9 +229,9 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       toast({
         title: "Signup Failed",
         description: errorMessage,
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
@@ -440,5 +438,5 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         )}
       </Button>
     </form>
-  ),
+  )
 }

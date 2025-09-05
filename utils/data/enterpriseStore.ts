@@ -55,7 +55,7 @@ export const store = {
       invoices: []},
     companiesById[id] = record,
     companiesBySlug[slug] = record,
-    return record,
+    return record
   },
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {
     const company = companiesById[companyId],
@@ -64,7 +64,7 @@ export const store = {
     company.members.push(member),
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),
-    return member,
+    return member
   },
   removeMember(companyId: string, memberId: string): boolean {
     const company = companiesById[companyId],
@@ -74,9 +74,9 @@ export const store = {
     const changed = company.members.length !== before,
     if (changed) {
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } }),
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
     }
-    return changed,
+    return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
     const company = companiesById[companyId],
@@ -85,14 +85,14 @@ export const store = {
     if (!member) return false,
     member.role = role,
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),
-    return true,
+    return true
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
     const company = companiesById[companyId],
     if (!company) return false,
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),
-    return true,
+    return true
   },
   listInvoices(companyId: string): InvoiceRecord[] {
     const company = companiesById[companyId],

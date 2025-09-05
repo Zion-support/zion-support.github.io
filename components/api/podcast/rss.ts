@@ -1,14 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcast', 'episodes.json'),
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH),
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8'),
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <guid isPermaLink="false">${e.id}</guid>
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`,
+    </item>`
     })
     .join('\n'),
 
@@ -48,5 +47,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 </rss>`,
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8'),
-  return res.status(200).json({ ok: true, path: '/podcast.xml' }),
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }

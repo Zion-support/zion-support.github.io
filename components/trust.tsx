@@ -3,7 +3,6 @@ import EnhancedLayout from '../components/layout/EnhancedLayout',
 import TrustBadge from '../components/ui/TrustBadge',
 import TrustRadar from '../components/ui/TrustRadar',
 import RiskIndicator from '../components/ui/RiskIndicator',
-
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
@@ -13,7 +12,7 @@ export default function TrustPage() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search),
     const u = params.get('user'),
-    if (u) setUserId(u),
+    if (u) setUserId(u)
   }, []),
 
   useEffect(() => {
@@ -22,14 +21,14 @@ export default function TrustPage() {
       const res = await fetch(`/api/trust/${encodeURIComponent(userId)}?analyze=true`),
       const json = await res.json(),
       setData(json),
-      setLoading(false),
+      setLoading(false)
     }
-    load(),
+    load()
   }, [userId]),
 
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) }),
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged'),
+    alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
   }
 
   async function submitAppeal(e: React.FormEvent) {
@@ -40,7 +39,7 @@ export default function TrustPage() {
     const contactEmail = formData.get('email'),
     await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) }),
     alert('Appeal submitted'),
-    form.reset(),
+    form.reset()
   }
 
   return (
@@ -105,5 +104,5 @@ export default function TrustPage() {
         )}
       </div>
     </EnhancedLayout>
-  ),
+  )
 }

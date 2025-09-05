@@ -79,7 +79,7 @@ function verifyWebhookSignature(req, res, next) {
   const timestamp = req.headers['x-zion-timestamp'],
   
   if (!signature || !timestamp) {
-    return res.status(401).send('Missing signature or timestamp'),
+    return res.status(401).send('Missing signature or timestamp')
   }
   
   // Verify the signature
@@ -90,10 +90,10 @@ function verifyWebhookSignature(req, res, next) {
     .digest('hex'),
   
   if (signature !== expectedSignature) {
-    return res.status(401).send('Invalid signature'),
+    return res.status(401).send('Invalid signature')
   }
   
-  next(),
+  next()
 }
 
 // Webhook endpoint with signature verification
@@ -123,15 +123,15 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break,
     
     default:
-      console.log('Unknown event type:', event_type),
+      console.log('Unknown event type:', event_type)
   }
   
   // Always return a 200 response quickly
-  res.status(200).send('Webhook received'),
+  res.status(200).send('Webhook received')
 }),
 
 app.listen(3000, () => {
-  console.log('Webhook server listening on port 3000'),
+  console.log('Webhook server listening on port 3000')
 }),`,
 
   return (
@@ -246,7 +246,7 @@ app.listen(3000, () => {
         </ul>
       </div>
     </ApiDocsLayout>
-  ),
+  )
 }
 
 export default ApiWebhooks,

@@ -6,15 +6,15 @@ import { Alert, AlertDescription } from '@/components/ui/alert',
 
 interface AuthConfigurationErrorProps {
   onRetry?: () => void,
-  showSetupButton?: boolean,
+  showSetupButton?: boolean
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
-      onRetry(),
+      onRetry()
     } else {
-      window.location.reload(),
+      window.location.reload()
     }
   },
 

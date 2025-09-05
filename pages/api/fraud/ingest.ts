@@ -5,13 +5,12 @@ import { getFraudStore, newEvent } from '../../../utils/fraud/store',
 import { extractClientIp } from '../../../utils/ip',
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types',
 import { sendWarningEmail } from '../../../utils/email',
-
-const allowedSources: MonitoredSource[] = ['signupjob_post', 'messagequote', 'review'],
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequote', 'review'],
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' }),
-    return,
+    return
   }
 
   try {
@@ -19,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const source = body.source as MonitoredSource,
     if (!allowedSources.includes(source)) {
       res.status(400).json({ error: 'Invalid source' }),
-      return,
+      return
     }
 
     const userId = typeof body.userId === 'string' ? body.userId : null,
@@ -38,10 +37,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (content && userId) {
       const privacy = await store.getPrivacySettings(userId),
       if (!privacy.monitoringContentAnalysisOptOut) {
-        gpt = await classifyWithGPT(content, source),
+        gpt = await classifyWithGPT(content, source)
       }
     } else if (content && !userId) {
-      gpt = await classifyWithGPT(content, source),
+      gpt = await classifyWithGPT(content, source)
     }
 
     let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE'),
@@ -65,7 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await sendWarningEmail({
           toUserId: userId,
           subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`}),
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
 
@@ -76,8 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       heuristic,
       gpt,
       autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt}),
+      createdAt: saved.createdAt})
   } catch (e: any) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) }),
+    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
 }

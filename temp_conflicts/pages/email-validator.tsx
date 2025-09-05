@@ -25,11 +25,11 @@ export default function EmailValidatorPage() {
       
       const email = emailList[i].trim(),
       const result = validateSingleEmail(email),
-      results.push(result),
+      results.push(result)
     }
     
     setValidationResults(results),
-    setIsValidating(false),
+    setIsValidating(false)
   },
 
   const validateSingleEmail = (email: string) => {
@@ -38,16 +38,16 @@ export default function EmailValidatorPage() {
     
     // Check for common disposable email domains
     const disposableDomains = [
-      'tempmail.orgguerrillamail.com', 'mailinator.com10minutemail.com',
-      'throwaway.emailtemp-mail.org', 'sharklasers.comgetairmail.com'
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
+      'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com'
     ],
     
     // Check for common typos
     const commonTypos = {
-      'gmail.com': ['gmial.comgamil.com', 'gmai.com'],
-      'yahoo.com': ['yaho.comyahooo.com', 'yhaoo.com'],
-      'hotmail.com': ['hotmai.comhotmial.com', 'hotmeil.com'],
-      'outlook.com': ['outlok.comoutloook.com', 'outlok.com']
+      'gmail.com': ['gmial.comgamil.comgmai.com'],
+      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'],
+      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],
+      'outlook.com': ['outlok.comoutloook.comoutlok.com']
     },
     
     const domain = email.split('@')[1],
@@ -63,28 +63,28 @@ export default function EmailValidatorPage() {
     if (!emailRegex.test(email)) {
       status = 'invalid',
       score = 0,
-      issues.push('Invalid email format'),
+      issues.push('Invalid email format')
     } else if (isDisposable) {
       status = 'disposable',
       score = 20,
-      issues.push('Disposable email domain'),
+      issues.push('Disposable email domain')
     } else if (hasTypo) {
       status = 'suspicious',
       score = 60,
-      issues.push('Possible typo in domain'),
+      issues.push('Possible typo in domain')
     }
     
     // Additional checks
     if (email.length > 254) {
       status = 'invalid',
       score = 0,
-      issues.push('Email too long'),
+      issues.push('Email too long')
     }
     
     if (email.split('@')[0].length > 64) {
       status = 'invalid',
       score = 0,
-      issues.push('Local part too long'),
+      issues.push('Local part too long')
     }
     
     return {
@@ -96,7 +96,7 @@ export default function EmailValidatorPage() {
       isDisposable,
       hasTypo,
       timestamp: new Date().toLocaleTimeString()
-    },
+    }
   },
 
   const getStatusIcon = (status: string) => {
@@ -140,12 +140,12 @@ export default function EmailValidatorPage() {
     const resultsText = validationResults.map(result => 
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`
     ).join('\n'),
-    navigator.clipboard.writeText(resultsText),
+    navigator.clipboard.writeText(resultsText)
   },
 
   const clearResults = () => {
     setValidationResults([]),
-    setEmails(''),
+    setEmails('')
   },
 
   const getStats = () => {
@@ -158,7 +158,7 @@ export default function EmailValidatorPage() {
     const disposable = validationResults.filter(r => r.status === 'disposable').length,
     const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,
     
-    return { total, valid, invalid, suspicious, disposable, avgScore },
+    return { total, valid, invalid, suspicious, disposable, avgScore }
   },
 
   const stats = getStats(),

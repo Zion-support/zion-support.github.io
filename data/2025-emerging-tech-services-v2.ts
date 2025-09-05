@@ -53,20 +53,16 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       enterprise: 4999
     },
     features: [
-      'Asteroid identification and mappingAutomated mining operations',
-      'Resource extraction systemsSpace logistics management',
-      'Real-time monitoringResource processing',
-      'Transportation coordinationMarket analysis',
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics management',
+      'Real-time monitoringResource processingTransportation coordinationMarket analysis',
       'Risk assessmentRegulatory compliance tools'
     ],
     benefits: [
-      'Access to rare earth elementsReduce Earth resource dependency',
-      'Enable space colonizationCreate new economic opportunities',
+      'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunities',
       'Advance space technology'
     ],
     targetAudience: [
-      'Space agenciesMining companies',
-      'Investment firmsResearch institutions',
+      'Space agenciesMining companiesInvestment firmsResearch institutions',
       'Government agenciesTechnology companies'
     ],
     marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.',
@@ -76,8 +72,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.',
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.',
     useCases: [
-      'Asteroid miningResource extraction',
-      'Space logisticsResource processing',
+      'Asteroid miningResource extractionSpace logisticsResource processing',
       'Market analysisRegulatory compliance'
     ],
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],
@@ -109,20 +104,16 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       enterprise: 2499
     },
     features: [
-      'Quantum-biological hybrid processingDNA sequence analysis',
-      'Protein folding simulationDrug discovery algorithms',
-      'Genetic optimizationBiological data processing',
-      'Quantum molecular dynamicsBioinformatics tools',
+      'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithms',
+      'Genetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools',
       'Custom biological modelsAPI for research'
     ],
     benefits: [
-      'Solve biological problems 1000x fasterAccelerate drug discovery',
-      'Improve genetic analysisEnable new research capabilities',
+      'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilities',
       'Reduce research costs'
     ],
     targetAudience: [
-      'Pharmaceutical companiesResearch institutions',
-      'Biotechnology firmsHealthcare organizations',
+      'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizations',
       'UniversitiesGovernment agencies'
     ],
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
@@ -132,8 +123,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [
-      'Drug discoveryGenetic analysis',
-      'Protein foldingMolecular dynamics',
+      'Drug discoveryGenetic analysisProtein foldingMolecular dynamics',
       'Biological optimizationResearch acceleration'
     ],
     integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'],
@@ -165,20 +155,16 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       enterprise: 1599
     },
     features: [
-      'Neural signal processingBrain activity monitoring',
-      'Thought-to-text conversionMental command recognition',
-      'Accessibility toolsGaming integration',
-      'Medical applicationsReal-time processing',
+      'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognition',
+      'Accessibility toolsGaming integrationMedical applicationsReal-time processing',
       'Custom neural modelsAPI for developers'
     ],
     benefits: [
-      'Enable new forms of human-computer interactionImprove accessibility for disabled users',
-      'Create immersive gaming experiencesAdvance medical research',
+      'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical research',
       'Enhance human capabilities'
     ],
     targetAudience: [
-      'Healthcare providersGaming companies',
-      'Accessibility organizationsResearch institutions',
+      'Healthcare providersGaming companiesAccessibility organizationsResearch institutions',
       'Technology companiesEducational institutions'
     ],
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.',
@@ -188,8 +174,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [
-      'Accessibility assistanceGaming control',
-      'Medical researchCommunication aids',
+      'Accessibility assistanceGaming controlMedical researchCommunication aids',
       'Prosthetic controlCognitive enhancement'
     ],
     integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'],
@@ -221,20 +206,16 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       enterprise: 1999
     },
     features: [
-      'Quantum energy optimizationFusion reaction simulation',
-      'Grid optimization algorithmsEnergy storage optimization',
-      'Renewable energy integrationQuantum thermodynamics',
-      'Real-time monitoringPredictive analytics',
+      'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimization',
+      'Renewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics',
       'Custom energy modelsAPI for energy systems'
     ],
     benefits: [
-      'Optimize energy systems 100x fasterEnable fusion power simulation',
-      'Reduce energy costs by 30%Improve grid efficiency',
+      'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiency',
       'Accelerate clean energy adoption'
     ],
     targetAudience: [
-      'Energy companiesUtility providers',
-      'Research institutionsGovernment agencies',
+      'Energy companiesUtility providersResearch institutionsGovernment agencies',
       'Technology companiesEnvironmental organizations'
     ],
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
@@ -244,8 +225,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [
-      'Energy system optimizationFusion power simulation',
-      'Grid optimizationEnergy storage optimization',
+      'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimization',
       'Renewable integrationEnergy research'
     ],
     integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'],
@@ -277,20 +257,16 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       enterprise: 2999
     },
     features: [
-      'Advanced computer visionReal-time decision making',
-      'Safety systemsPath planning algorithms',
-      'Traffic predictionWeather adaptation',
-      'Fleet managementPerformance monitoring',
+      'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithms',
+      'Traffic predictionWeather adaptationFleet managementPerformance monitoring',
       'Custom AI modelsAPI for vehicles'
     ],
     benefits: [
-      'Enable autonomous transportationImprove road safety',
-      'Reduce transportation costsOptimize fleet operations',
+      'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operations',
       'Advance mobility technology'
     ],
     targetAudience: [
-      'Automotive manufacturersTransportation companies',
-      'Logistics providersRide-sharing platforms',
+      'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platforms',
       'Government agenciesTechnology companies'
     ],
     marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
@@ -300,8 +276,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.',
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
     useCases: [
-      'Autonomous drivingFleet management',
-      'Safety systemsTraffic optimization',
+      'Autonomous drivingFleet managementSafety systemsTraffic optimization',
       'Transportation logisticsResearch and development'
     ],
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],

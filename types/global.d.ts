@@ -44,7 +44,7 @@ declare module '*.bmp' {
 
 declare module '*.json' {
   const content: Record<string, unknown>,
-  export default content,
+  export default content
 }
 
 declare module '*.md' {
@@ -64,7 +64,7 @@ declare global {
     __NEXT_PRELOADREADY__: (() => void) | undefined,
     __NEXT_REGISTER_PAGE__: (() => void) | undefined,
     __NEXT_WEBPACK_CHUNKS__: string[],
-    __NEXT_WEBPACK_RUNTIME__: Record<string, unknown>,
+    __NEXT_WEBPACK_RUNTIME__: Record<string, unknown>
   }
 
   namespace NodeJS {

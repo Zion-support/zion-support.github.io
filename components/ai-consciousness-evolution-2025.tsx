@@ -17,34 +17,26 @@ const contactInfo = {
 },
 
 const features = [
-  'Emotional intelligence training modulesConsciousness expansion exercises',
-  'Self-awareness development toolsEmpathy and compassion training',
-  'Mindfulness and meditation guidanceCognitive enhancement techniques',
-  'Social intelligence developmentCreative consciousness exploration',
+  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion training',
+  'Mindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',
   'Spiritual growth pathwaysPersonal transformation tracking'
 ],
 
 const useCases = [
-  'Personal development and growthProfessional leadership training',
-  'Therapeutic and healing practicesEducational enhancement',
-  'Corporate wellness programsMental health support',
-  'Spiritual developmentCreative arts enhancement',
+  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancement',
+  'Corporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',
   'Relationship improvementStress management and resilience'
 ],
 
 const technology = [
-  'Advanced AI algorithmsMachine learning models',
-  'Natural language processingEmotional recognition systems',
-  'Biometric feedback integrationVirtual reality experiences',
-  'Augmented reality overlaysBrain-computer interfaces',
+  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systems',
+  'Biometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',
   'Quantum computing integrationBlockchain security'
 ],
 
 const integrations = [
-  'Wearable devicesMobile applications',
-  'Web platformsSmart home systems',
-  'Healthcare platformsEducational systems',
-  'Corporate wellness platformsSocial media networks',
+  'Wearable devicesMobile applicationsWeb platformsSmart home systems',
+  'Healthcare platformsEducational systemsCorporate wellness platformsSocial media networks',
   'Fitness trackersMeditation apps'
 ],
 
@@ -462,8 +454,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
-                  'Basic AI assessment10 consciousness exercises',
-                  'Progress trackingEmail support',
+                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail support',
                   'Mobile app access'
                 ],
                 popular: false
@@ -474,10 +465,8 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Advanced features for serious consciousness development',
                 features: [
-                  'Advanced AI assessmentUnlimited exercises',
-                  'Personalized coachingPriority support',
-                  'Advanced analyticsIntegration with wearables',
-                  'Group sessions'
+                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority support',
+                  'Advanced analyticsIntegration with wearablesGroup sessions'
                 ],
                 popular: true
               },
@@ -487,10 +476,8 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
                 features: [
-                  'Everything in ProfessionalTeam management',
-                  'Custom integrationsDedicated support',
-                  'White-label optionsAdvanced reporting',
-                  'API access'
+                  'Everything in ProfessionalTeam managementCustom integrationsDedicated support',
+                  'White-label optionsAdvanced reportingAPI access'
                 ],
                 popular: false
               }
@@ -600,5 +587,5 @@ export default function AIConsciousnessEvolution2025() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

@@ -2,7 +2,6 @@
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -10,7 +9,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
@@ -21,7 +20,7 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    ),
+    )
   }
 
   const supabase = createClient(supabaseUrl, supabaseAnonKey),
@@ -30,7 +29,7 @@ serve(async (req) => {
     const { applicationId } = await req.json(),
     
     if (!applicationId) {
-      throw new Error("Application ID is required"),
+      throw new Error("Application ID is required")
     }
 
     // 1. Fetch the application with job details and resume content
@@ -49,11 +48,11 @@ serve(async (req) => {
       .single(),
 
     if (appError) {
-      throw new Error(`Failed to fetch application: ${appError.message}`),
+      throw new Error(`Failed to fetch application: ${appError.message}`)
     }
 
     if (!application) {
-      throw new Error("Application not found"),
+      throw new Error("Application not found")
     }
 
     // 2. Fetch resume details if a resume_id is provided
@@ -74,7 +73,7 @@ serve(async (req) => {
         .single(),
         
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError),
+        console.error("Error fetching resume:", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
@@ -107,7 +106,7 @@ serve(async (req) => {
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,
-      resumeSkills = application.talent_profile?.skills || [],
+      resumeSkills = application.talent_profile?.skills || []
     }
 
     // 4. Prepare job details
@@ -174,7 +173,7 @@ serve(async (req) => {
 
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json(),
-      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`),
+      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
     }
 
     const aiResult = await openAIResponse.json(),
@@ -187,11 +186,11 @@ serve(async (req) => {
       
       // Validate required fields
       if (!matchResult.score || !matchResult.summary || !matchResult.suggestion) {
-        throw new Error("Invalid response format"),
+        throw new Error("Invalid response format")
       }
     } catch (error) {
       console.error("Error parsing AI response:", error),
-      throw new Error("Failed to parse AI analysis results"),
+      throw new Error("Failed to parse AI analysis results")
     }
 
     // 6. Update the application with the match results
@@ -207,7 +206,7 @@ serve(async (req) => {
       .eq("id", applicationId),
 
     if (updateError) {
-      throw new Error(`Failed to update application with score: ${updateError.message}`),
+      throw new Error(`Failed to update application with score: ${updateError.message}`)
     }
 
     // 7. Return the match results
@@ -220,7 +219,7 @@ serve(async (req) => {
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    ),
+    )
   } catch (error) {
     console.error("Error in resume-scorer function:", error),
     return new Response(
@@ -229,6 +228,6 @@ serve(async (req) => {
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    ),
+    )
   }
 }),

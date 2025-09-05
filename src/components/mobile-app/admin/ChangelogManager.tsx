@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Plus, Trash2 } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager",
-
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -47,7 +46,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       version: "",
       date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
       changes: ""
-    }),
+    })
   },
   
   const handleRemoveEntry = (id: string) => {
@@ -56,7 +55,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
-    setNewEntry(prev => ({ ...prev, [name]: value })),
+    setNewEntry(prev => ({ ...prev, [name]: value }))
   },
   
   return (
@@ -129,5 +128,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

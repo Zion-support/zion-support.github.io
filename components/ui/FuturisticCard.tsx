@@ -1,5 +1,4 @@
 import React from 'react',
-
 type Props = {
   title: string,
   description: string,
@@ -16,5 +15,5 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         {cta && <div className="mt-3">{cta}</div>}
       </div>
     </div>
-  ),
+  )
 }

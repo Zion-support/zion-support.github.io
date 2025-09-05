@@ -48,7 +48,7 @@ export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
-    services: ['urlShortenerpasswordGenerator', 'qrCodeGenerator']
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
   },
   MEDIA: {
     name: 'Media & Files',
@@ -70,8 +70,7 @@ export const SERVICES_METADATA = {
     icon: '🔗',
     category: 'UTILITIES',
     features: [
-      'Custom short codesClick tracking',
-      'Analytics dashboardExpiration dates',
+      'Custom short codesClick trackingAnalytics dashboardExpiration dates',
       'QR code generation'
     ],
     pricing: 'Free',
@@ -83,8 +82,7 @@ export const SERVICES_METADATA = {
     icon: '🔐',
     category: 'UTILITIES',
     features: [
-      'Multiple generation modesStrength analysis',
-      'Custom character setsPassword history',
+      'Multiple generation modesStrength analysisCustom character setsPassword history',
       'Security recommendations'
     ],
     pricing: 'Free',
@@ -96,8 +94,7 @@ export const SERVICES_METADATA = {
     icon: '📱',
     category: 'UTILITIES',
     features: [
-      'Multiple QR code typesCustom styling',
-      'Logo integrationError correction',
+      'Multiple QR code typesCustom stylingLogo integrationError correction',
       'Template library'
     ],
     pricing: 'Free',
@@ -109,8 +106,7 @@ export const SERVICES_METADATA = {
     icon: '🔄',
     category: 'MEDIA',
     features: [
-      'Multiple file formatsBatch conversion',
-      'Quality settingsMetadata preservation',
+      'Multiple file formatsBatch conversionQuality settingsMetadata preservation',
       'Cloud processing'
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
@@ -122,8 +118,7 @@ export const SERVICES_METADATA = {
     icon: '📊',
     category: 'ANALYSIS',
     features: [
-      'Readability metricsSentiment analysis',
-      'Keyword extractionEntity recognition',
+      'Readability metricsSentiment analysisKeyword extractionEntity recognition',
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
@@ -139,7 +134,7 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  },
+  }
 },
 
 // Service usage statistics
@@ -155,5 +150,5 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
-  },
+  }
 },

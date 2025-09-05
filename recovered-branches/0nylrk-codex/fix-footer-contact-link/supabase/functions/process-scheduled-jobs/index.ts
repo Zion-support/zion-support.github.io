@@ -1,13 +1,12 @@
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
 
   const supabaseAdmin = createClient(
@@ -37,7 +36,7 @@ serve(async (req) => {
               job.payload.user_id,
               job.payload.missing_milestone,
               job.payload.role
-            ),
+            )
           }
           break,
         case 'email_reminder':
@@ -49,7 +48,7 @@ serve(async (req) => {
         case 'resume_scoring':
           // Process resume scoring request
           if (job.payload && job.payload.application_id) {
-            await processResumeScoring(supabaseAdmin, job.payload.application_id),
+            await processResumeScoring(supabaseAdmin, job.payload.application_id)
           }
           break,
         case 'blog_generation':
@@ -68,16 +67,16 @@ serve(async (req) => {
           status: 'completed',
           completed_at: new Date().toISOString()
         })
-        .eq('id', job.id),
+        .eq('id', job.id)
     }
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200}),
+      status: 200})
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500}),
+      status: 500})
   }
 }),
 
@@ -109,7 +108,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     // For example, call another edge function to send email
     
   } catch (error) {
-    console.error("Error processing onboarding reminder:", error),
+    console.error("Error processing onboarding reminder:", error)
   }
 }
 
@@ -128,7 +127,7 @@ async function processResumeScoring(supabase, applicationId) {
 
     if (!response.ok) {
       const errorData = await response.json(),
-      throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`),
+      throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
     }
 
     console.log(`Successfully scored application ${applicationId}`),
@@ -156,11 +155,11 @@ async function processResumeScoring(supabase, applicationId) {
           type: "application_scored",
           related_id: applicationId,
           read: false
-        }),
+        })
       }
     }
   } catch (error) {
-    console.error("Error processing resume scoring:", error),
+    console.error("Error processing resume scoring:", error)
   }
 }
 
@@ -185,7 +184,7 @@ async function processContentGeneration(supabase, contentType) {
 
     if (!response.ok) {
       const errorData = await response.json(),
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`),
+      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
 
     const contentData = await response.json(),
@@ -227,12 +226,12 @@ async function processContentGeneration(supabase, contentType) {
           message: "AI-generated newsletter draft has been sent to your email for review.",
           type: "system",
           read: false
-        }),
+        })
       }
     }
     
-    return contentData,
+    return contentData
   } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error),
+    console.error(`Error processing ${contentType} generation:`, error)
   }
 }

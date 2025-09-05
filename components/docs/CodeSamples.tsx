@@ -1,7 +1,7 @@
 import React, { useState } from 'react',
 
 interface Props {
-  samples: { language: 'curl' | 'javascript' | 'python', code: string }[],
+  samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 }
 
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
@@ -30,5 +30,5 @@ export default function CodeSamples({ samples }: Props) {
         <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>
-  ),
+  )
 }

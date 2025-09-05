@@ -617,11 +617,11 @@ export const Icon: React.FC<IconProps> = ({
 
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`),
-    return null,
+    return null
   }
 
   // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />,
+  return <LucideIconComponent size={size} className={className} {...props} />
 },
 
 export default Icon, // Default export the Icon component

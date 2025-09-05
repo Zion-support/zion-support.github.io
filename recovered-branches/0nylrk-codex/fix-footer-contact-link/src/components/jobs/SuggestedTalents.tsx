@@ -5,7 +5,6 @@ import { toast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { EmptyMatchesCard } from "./EmptyMatchesCard",
 import { JobMatchCard } from "./JobMatchCard",
-
 interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
@@ -42,15 +41,15 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
         .eq("job_id", jobId),
 
       if (error) throw error,
-      setTalents(data || []),
+      setTalents(data || [])
     } catch (error) {
       console.error("Error fetching suggested talents:", error),
       toast({
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
-        variant: "destructive"}),
+        variant: "destructive"})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -59,7 +58,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     console.log("View talent profile:", talentId),
     toast({
       title: "View Profile",
-      description: `Navigating to talent profile: ${talentId}`}),
+      description: `Navigating to talent profile: ${talentId}`})
   },
 
   const handleInvite = (talentId: string) => {
@@ -67,19 +66,19 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     console.log("Invite talent:", talentId),
     toast({
       title: "Invite Talent",
-      description: `Inviting talent: ${talentId}`}),
+      description: `Inviting talent: ${talentId}`})
   },
 
   const handleRefresh = () => {
     setIsProcessing(true),
     fetchSuggestedTalents().finally(() => {
-      setIsProcessing(false),
-    }),
+      setIsProcessing(false)
+    })
   },
 
   useEffect(() => {
     if (jobId) {
-      fetchSuggestedTalents(),
+      fetchSuggestedTalents()
     }
   }, [jobId]),
 
@@ -94,7 +93,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       location: talent.talent_profile?.location || 'Remote',
       category: talent.talent_profile?.category || 'Technology',
       matchPercent: talent.match_score || 85,
-      skills: talent.talent_profile?.skills || []},
+      skills: talent.talent_profile?.skills || []}
   }),
 
   return (
@@ -132,5 +131,5 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
         )}
       </CardContent>
     </Card>
-  ),
+  )
 }

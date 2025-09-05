@@ -11,12 +11,12 @@ type AdminAction =
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   const key = req.headers['x-admin-key'],
   if (key !== ADMIN_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' }),
+    return res.status(401).json({ error: 'Unauthorized' })
   }
 
   const action = req.body as AdminAction,
@@ -28,13 +28,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const arr: BasePerson[] = data[section] || [],
     // prevent duplicates
     if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' }),
+      return res.status(400).json({ error: 'ID already exists' })
     }
     arr.push({ ...action.person, active: true }),
     // @ts-expect-error write back dynamic section
     data[section] = arr as any,
     writeOrgData(data),
-    return res.status(200).json({ ok: true }),
+    return res.status(200).json({ ok: true })
   }
 
   if (action.type === 'promote') {
@@ -47,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section
     data[section] = arr as any,
     writeOrgData(data),
-    return res.status(200).json({ ok: true }),
+    return res.status(200).json({ ok: true })
   }
 
   if (action.type === 'deactivate') {
@@ -60,8 +60,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section
     data[section] = arr as any,
     writeOrgData(data),
-    return res.status(200).json({ ok: true }),
+    return res.status(200).json({ ok: true })
   }
 
-  return res.status(400).json({ error: 'Unknown action' }),
+  return res.status(400).json({ error: 'Unknown action' })
 }

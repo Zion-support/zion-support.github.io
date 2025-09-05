@@ -7,7 +7,6 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
-
 // Example listing type
 interface Listing {
   id: string,
@@ -31,7 +30,7 @@ interface CategoryListingPageProps {
   description: string,
   listings: Listing[],
   sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[],
+  filterOptions?: { label: string, value: string }[]
 }
 
 export function CategoryListingPage({ 
@@ -60,23 +59,23 @@ export function CategoryListingPage({
   const [isLoading, setIsLoading] = useState(false),
 
   useEffect(() => {
-    safeStorage.setItem('category_selected_sort', selectedSort),
+    safeStorage.setItem('category_selected_sort', selectedSort)
   }, [selectedSort]),
 
   useEffect(() => {
-    safeStorage.setItem('category_selected_filter', selectedFilter),
+    safeStorage.setItem('category_selected_filter', selectedFilter)
   }, [selectedFilter]),
 
   useEffect(() => {
     let mounted = true,
     setIsLoading(true),
     const timeout = setTimeout(() => {
-      if (mounted) setIsLoading(false),
+      if (mounted) setIsLoading(false)
     }, 300),
     return () => {
       mounted = false,
-      clearTimeout(timeout),
-    },
+      clearTimeout(timeout)
+    }
   }, [searchQuery, selectedSort, selectedFilter]),
   
   // Process listings based on filters and search
@@ -95,7 +94,7 @@ export function CategoryListingPage({
       if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,
       if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,
       
-      return matchesSearch,
+      return matchesSearch
     })
     .sort((a, b) => {
       // Apply sorting
@@ -221,7 +220,7 @@ export function CategoryListingPage({
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
-                    setSelectedFilter(filterOptions[0]?.value || 'all'),
+                    setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
@@ -233,5 +232,5 @@ export function CategoryListingPage({
         </div>
       </div>
     </>
-  ),
+  )
 }

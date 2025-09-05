@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
-
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean()}),
@@ -53,17 +52,17 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
-          isDefault: values.isDefault}),
+          isDefault: values.isDefault})
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
-          isDefault: values.isDefault}),
+          isDefault: values.isDefault})
       }
       
-      onComplete(),
+      onComplete()
     } finally {
-      setSaving(false),
+      setSaving(false)
     }
   },
   
@@ -119,5 +118,5 @@ export function TemplateSaveForm({
         </div>
       </form>
     </Form>
-  ),
+  )
 }

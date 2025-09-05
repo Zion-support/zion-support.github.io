@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { BlogPost } from "@/types/blog",
 import { Search } from "lucide-react",
-
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -233,7 +232,7 @@ export default function Blog() {
       
     const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
     
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory
   }),
   
   // Get featured posts
@@ -395,7 +394,7 @@ export default function Blog() {
                 variant="outline" 
                 onClick={() => {
                   setSearchQuery(""),
-                  setSelectedCategory("All Categories"),
+                  setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -407,5 +406,5 @@ export default function Blog() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

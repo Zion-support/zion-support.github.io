@@ -3,7 +3,6 @@ import { motion } from 'framer-motion',
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react',
 import { FormData, FormErrors } from '../types',
 import { useToast } from './ui/Toast',
-
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,37 +16,35 @@ const EnhancedContactForm: React.FC = () => {
   const { showSuccess, showError } = useToast(),
 
   const services = [
-    'AI & Machine LearningQuantum Computing',
-    'CybersecurityCloud Infrastructure',
-    'Data AnalyticsDigital Transformation',
-    'Other'
+    'AI & Machine LearningQuantum ComputingCybersecurityCloud Infrastructure',
+    'Data AnalyticsDigital TransformationOther'
   ],
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {},
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required',
+      newErrors.name = 'Name is required'
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters long',
+      newErrors.name = 'Name must be at least 2 characters long'
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required',
+      newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address',
+      newErrors.email = 'Please enter a valid email address'
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required',
+      newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long',
+      newErrors.message = 'Message must be at least 10 characters long'
     } else if (formData.message.trim().length > 1000) {
-      newErrors.message = 'Message must be less than 1000 characters',
+      newErrors.message = 'Message must be less than 1000 characters'
     }
 
     setErrors(newErrors),
-    return Object.keys(newErrors).length === 0,
+    return Object.keys(newErrors).length === 0
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -55,7 +52,7 @@ const EnhancedContactForm: React.FC = () => {
     
     if (!validateForm()) {
       showError('Validation ErrorPlease fix the errors in the form'),
-      return,
+      return
     }
 
     setIsSubmitting(true),
@@ -74,18 +71,17 @@ const EnhancedContactForm: React.FC = () => {
         service: '',
         message: ''
       }),
-      setErrors({}),
+      setErrors({})
     } catch (error) {
       console.error('Error submitting form:', error),
-      showError('Submission FailedThere was an error sending your message. Please try again.'),
+      showError('Submission FailedThere was an error sending your message. Please try again.')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   const services = [
-    'AI Business IntelligenceQuantum Cybersecurity',
-    'Edge Computing OrchestrationSpace Technology Innovation',
+    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology Innovation',
     'Neural Interface DevelopmentOther'
   ],
 
@@ -94,7 +90,7 @@ const EnhancedContactForm: React.FC = () => {
     if (formData[name] && errors[name]) {
       const newErrors = { ...errors },
       delete newErrors[name],
-      setErrors(newErrors),
+      setErrors(newErrors)
     }
   },
 
@@ -324,7 +320,7 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },
 
 export default EnhancedContactForm,

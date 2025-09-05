@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -67,13 +66,13 @@ export function TeamActivity() {
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
     if (diffMins < 60) {
-      return `${diffMins} minutes ago`,
+      return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
-      return `${diffHrs} hours ago`,
+      return `${diffHrs} hours ago`
     } else if (diffDays < 7) {
-      return `${diffDays} days ago`,
+      return `${diffDays} days ago`
     } else {
-      return date.toLocaleDateString(),
+      return date.toLocaleDateString()
     }
   },
 
@@ -85,7 +84,7 @@ export function TeamActivity() {
       billing: { variant: "destructive" }},
 
     const style = categoryStyles[category] || { variant: "default" as const },
-    return <Badge variant={style.variant}>{category}</Badge>,
+    return <Badge variant={style.variant}>{category}</Badge>
   },
 
   return (
@@ -148,5 +147,5 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
-  ),
+  )
 }

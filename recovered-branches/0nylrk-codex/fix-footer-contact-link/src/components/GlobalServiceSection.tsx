@@ -2,7 +2,6 @@
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
-
 const services = [
   {
     title: "Servers",

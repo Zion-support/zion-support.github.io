@@ -20,9 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     appendLog({ module: 'optimizer', type: 'optimize', status: status as any, latencyMs, payload: { userIntent, originalLength: String(prompt || '').length, optimizedLength: result.optimized.length } }),
 
-    return res.status(200).json(result),
+    return res.status(200).json(result)
   } catch (e: any) {
     appendLog({ module: 'optimizer', type: 'optimize', status: 'error', payload: { error: e?.message || 'unknown' } }),
-    return res.status(500).json({ error: 'Optimization failure' }),
+    return res.status(500).json({ error: 'Optimization failure' })
   }
 }

@@ -1,7 +1,6 @@
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
-
 // Real company logos for trusted partners - with more reliable image URLs
 const trustedCompanies = [
   {
@@ -114,7 +113,7 @@ export function TrustedBySection() {
     setFailedLogos(prev => ({
       ...prev,
       [companyName]: true
-    })),
+    }))
   },
 
   return (
@@ -153,5 +152,5 @@ export function TrustedBySection() {
         </div>
       </div>
     </section>
-  ),
+  )
 }

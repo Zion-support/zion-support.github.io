@@ -20,13 +20,12 @@ import { toast } from '@/hooks/use-toast',
 import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
 import { format } from 'date-fns',
-
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
-    loadTenants(),
+    loadTenants()
   }, []),
 
   const loadTenants = async () => {
@@ -38,15 +37,15 @@ export function TenantsList() {
         .order('created_at', { ascending: false }),
         
       if (error) throw error,
-      setTenants(data as WhitelabelTenant[]),
+      setTenants(data as WhitelabelTenant[])
     } catch (error: any) {
       logErrorToProduction('Error loading tenants:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to load tenants',
-        description: error.message}),
+        description: error.message})
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   },
 
@@ -66,13 +65,13 @@ export function TenantsList() {
       
       toast({
         title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,
-        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`}),
+        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`})
     } catch (error: any) {
       logErrorToProduction('Error toggling tenant status:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to update tenant',
-        description: error.message}),
+        description: error.message})
     }
   },
 
@@ -94,13 +93,13 @@ export function TenantsList() {
       
       toast({
         title: 'DNS verified',
-        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`}),
+        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`})
     } catch (error: any) {
       logErrorToProduction('Error verifying DNS:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to verify DNS',
-        description: error.message}),
+        description: error.message})
     }
   },
 
@@ -233,5 +232,5 @@ export function TenantsList() {
         </div>
       )}
     </div>
-  ),
+  )
 }

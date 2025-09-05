@@ -1,7 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-
 export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -157,8 +156,7 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branchFewer regressions via layered checks and reports'].map((b) => (
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reports'].map((b) => (
               <motion.div
                 key={b}
                 initial={{ opacity: 0, y: 6 }}

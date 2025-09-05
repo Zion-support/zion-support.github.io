@@ -9,8 +9,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' }),
   try {
     const item = addPipelineItem(vendorId, title),
-    res.status(201).json({ item }),
+    res.status(201).json({ item })
   } catch (e: any) {
-    res.status(500).json({ error: e.message }),
+    res.status(500).json({ error: e.message })
   }
 }

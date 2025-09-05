@@ -35,8 +35,8 @@ interface TextAnalysisResult {
   keywords: {
     topWords: Array<{ word: string, count: number, frequency: number }>,
     bigrams: Array<{ phrase: string, count: number }>,
-    trigrams: Array<{ phrase: string, count: number }>,
-  },
+    trigrams: Array<{ phrase: string, count: number }>
+  }
 }
 
 export default async function handler(
@@ -44,18 +44,18 @@ export default async function handler(
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' }),
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
     const { text } = req.body,
 
     if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' }),
+      return res.status(400).json({ error: 'Text is required' })
     }
 
     if (text.length > 10000) {
-      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' }),
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' })
     }
 
     // Basic statistics
@@ -72,11 +72,11 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, ''),
       word = word.replace(/^y/, ''),
       const matches = word.match(/[aeiouy]{1,2}/g),
-      return matches ? matches.length : 1,
+      return matches ? matches.length : 1
     },
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word),
+      return total + syllableCount(word)
     }, 0),
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
@@ -94,8 +94,8 @@ export default async function handler(
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5),
 
     // Sentiment analysis (simplified)
-    const positiveWords = ['goodgreat', 'excellentamazing', 'wonderfulfantastic', 'brilliantoutstanding', 'superbmarvelous'],
-    const negativeWords = ['badterrible', 'awfulhorrible', 'dreadfulatrocious', 'abysmalappalling', 'dismallousy'],
+    const positiveWords = ['goodgreatexcellentamazing', 'wonderfulfantasticbrilliantoutstanding', 'superbmarvelous'],
+    const negativeWords = ['badterribleawfulhorrible', 'dreadfulatrociousabysmalappalling', 'dismallousy'],
 
     const textWords = text.toLowerCase().split(/\s+/),
     const positiveCount = textWords.filter(word => positiveWords.includes(word)).length,
@@ -114,7 +114,7 @@ export default async function handler(
     text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, ''),
       if (cleanWord.length > 2) {
-        wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1),
+        wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
       }
     }),
 
@@ -134,12 +134,12 @@ export default async function handler(
 
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`,
-      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1),
+      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
     }
 
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`,
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1),
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
     }
 
     const bigrams = Array.from(bigramCounts.entries())
@@ -190,9 +190,9 @@ export default async function handler(
         bigrams,
         trigrams}},
 
-    res.status(200).json(result),
+    res.status(200).json(result)
   } catch (error) {
     console.error('Text analysis error:', error),
-    res.status(500).json({ error: 'Internal server error' }),
+    res.status(500).json({ error: 'Internal server error' })
   }
 }

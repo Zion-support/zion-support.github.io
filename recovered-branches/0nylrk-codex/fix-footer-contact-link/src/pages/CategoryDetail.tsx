@@ -9,7 +9,6 @@ import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
 import { toast } from "@/hooks/use-toast",
-
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { slug } = useParams() as { slug?: string },
@@ -126,7 +125,7 @@ export default function CategoryDetail() {
       })),
 
     setListings(listingsToShow),
-    setIsLoading(false),
+    setIsLoading(false)
   }, [slug]),
 
   // Handle requesting a quote
@@ -150,7 +149,7 @@ export default function CategoryDetail() {
             image: listing.images?.[0]
           }
         }
-      }),
+      })
     }
   },
 
@@ -198,5 +197,5 @@ export default function CategoryDetail() {
       </div>
       <Footer />
     </>
-  ),
+  )
 }

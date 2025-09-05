@@ -1,7 +1,6 @@
 import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
-
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -29,8 +28,7 @@ export default function RAGEvaluationLabPage() {
 					</div>
 
   const useCases = [
-    'Enterprise Knowledge ManagementCustomer Support Systems',
-    'Research & DevelopmentContent Generation Platforms',
+    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation Platforms',
     'Educational ApplicationsLegal & Compliance Systems'
   ],
 

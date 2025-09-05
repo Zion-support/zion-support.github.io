@@ -11,8 +11,6 @@ import { NextSeo } from '@/components/NextSeo',
 import { Header } from "@/components/Header",
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -49,11 +47,11 @@ function generateInnovationListing(index: number): ProductListing {
     location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
-  },
+  }
 }
 
 interface CategoryDetailProps {
-  slug?: string,
+  slug?: string
 }
 
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
@@ -65,7 +63,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   // Redirect to categories list if slug is missing
   if (!slug) {
     router.push('/categories'),
-    return null,
+    return null
   }
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
@@ -185,16 +183,16 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   rating: Math.floor(Math.random() * 5) + 1,
                   reviewCount: Math.floor(Math.random() * 100)})),
 
-        setListings(listingsToShow),
+        setListings(listingsToShow)
       } catch (err) {
         logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' }),
+        toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
-        setIsLoading(false),
+        setIsLoading(false)
       }
     }
 
-    load(),
+    load()
   }, [slug]),
 
   useEffect(() => {
@@ -204,10 +202,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       innovationCounterRef.current += 1,
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
-        ...prev]),
+        ...prev])
     }, 120000), // every 2 minutes
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval)
   }, [slug]),
 
   // Handle requesting a quote
@@ -229,7 +227,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         ...(listing.images?.[0] && { itemImage: listing.images[0] })
       }),
       
-      router.push(`/request-quote?${queryParams.toString()}`),
+      router.push(`/request-quote?${queryParams.toString()}`)
     }
   },
 
@@ -284,5 +282,5 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         </div>
       </Suspense>
     </>
-  ),
+  )
 }

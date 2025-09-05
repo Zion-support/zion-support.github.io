@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    }),
+    })
   },
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,19 +39,17 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      }),
+      })
     } catch (error) {
-      setSubmitStatus('error'),
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   },
 
   const services = [
-    'AI DevelopmentCloud Architecture',
-    'Digital TransformationIoT Platforms',
-    'Blockchain SolutionsData Analytics',
-    'Other'
+    'AI DevelopmentCloud ArchitectureDigital TransformationIoT Platforms',
+    'Blockchain SolutionsData AnalyticsOther'
   ],
 
   const contactInfo = [
@@ -341,7 +339,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },
 
 export default ContactForm,

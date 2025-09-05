@@ -4,7 +4,6 @@ import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
@@ -25,7 +24,7 @@ export interface ChatAssistantProps {
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode,
+  contextHeader?: ReactNode
 }
 
 export function ChatAssistant({
@@ -42,16 +41,16 @@ export function ChatAssistant({
   
   useEffect(() => {
     if (initialMessages.length > 0) {
-      setMessages(initialMessages),
+      setMessages(initialMessages)
     }
   }, [initialMessages]),
 
   useEffect(() => {
-    scrollToBottom(),
+    scrollToBottom()
   }, [messages]),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   
   const handleSendMessage = async (message: string) => {
@@ -68,7 +67,7 @@ export function ChatAssistant({
     setMessages((prev: Message[]) => [...prev, newMessage]),
     
     // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId),
+    await onSendMessage(message, conversationId)
   },
 
   if (!isOpen) return null,
@@ -133,5 +132,5 @@ export function ChatAssistant({
         </div>
       </div>
     </div>
-  ),
+  )
 }

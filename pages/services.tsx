@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react',
 import { ContactInfo } from '../types',
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner',
-
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false),
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100),
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer)
   }, []),
 
   const contact: ContactInfo = {
@@ -27,10 +26,8 @@ export default function Services() {
       count: '150+',
       color: 'blue',
       services: [
-        'AI-Powered Video Clip MakerSmart Contract Analyzer',
-        'Cybersecurity Threat IntelligenceMulti-Language Website Translator',
-        'Predictive Inventory OptimizerReal-Time Analytics Dashboard',
-        'Automated Customer SupportBlockchain Transaction Monitor'
+        'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website Translator',
+        'Predictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ],
       href: '/micro-saas'
     },
@@ -40,10 +37,8 @@ export default function Services() {
       count: '100+',
       color: 'purple',
       services: [
-        'Autonomous AI AgentsAI-Powered Financial Trading',
-        'AI Legal Document AnalysisAI-Powered Voice Analytics',
-        'AI-Powered Search & DiscoveryMachine Learning Model Training',
-        'Natural Language ProcessingComputer Vision Solutions'
+        'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice Analytics',
+        'AI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
       ],
       href: '/ai-services'
     },
@@ -53,10 +48,8 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-        'Quantum Computing ConsultingBlockchain & Web3 Solutions',
-        'DevSecOps & Security AutomationEnterprise Data Platform',
-        'High-Performance ComputingCloud Migration Services',
-        'Infrastructure as CodeDisaster Recovery Solutions'
+        'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data Platform',
+        'High-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
       ],
       href: '/it-services'
     }
@@ -86,7 +79,7 @@ export default function Services() {
         ring: 'focus:ring-green-500'
       }
     },
-    return colors[color as keyof typeof colors] || colors.blue,
+    return colors[color as keyof typeof colors] || colors.blue
   },
 
   return (
@@ -164,7 +157,7 @@ export default function Services() {
                         </svg>
                       </Link>
                     </div>
-                  ),
+                  )
                 })}
               </div>
             </div>

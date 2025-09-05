@@ -24,7 +24,7 @@ export default function AIAssistant({
   const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
-    setPrompt(defaultPrompt),
+    setPrompt(defaultPrompt)
   }, [defaultPrompt]),
 
   const callOperator = useCallback(async () => {
@@ -44,20 +44,20 @@ export default function AIAssistant({
       }),
       const data = await res.json(),
       if (!res.ok) {
-        throw new Error(data?.error || 'Failed to generate'),
+        throw new Error(data?.error || 'Failed to generate')
       }
       setOutput(String(data.text || '')),
-      setIsEditing(false),
+      setIsEditing(false)
     } catch (e: any) {
       setError(e.message || 'Request failed')
     } finally {
-      setLoading(false),
+      setLoading(false)
     }
   }, [authorizationToken, prompt, systemPrompt]),
 
   const onCopy = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(output),
+      await navigator.clipboard.writeText(output)
     } catch {}
   }, [output]),
 
@@ -65,7 +65,7 @@ export default function AIAssistant({
     setIsOpen(true),
     setOutput(''),
     setIsEditing(false),
-    setError(null),
+    setError(null)
   }, []),
 
   const onClose = useCallback(() => setIsOpen(false), []),
@@ -142,5 +142,5 @@ export default function AIAssistant({
         </div>
       )}
     </>
-  ),
+  )
 }

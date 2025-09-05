@@ -10,7 +10,6 @@ import { addWorkExperienceSection } from './sections/workExperienceSection',
 import { addEducationSection } from './sections/educationSection',
 import { addCertificationsSection } from './sections/certificationsSection',
 import { addPortfolioSection } from './sections/portfolioSection',
-
 export interface ExportOptions {
   theme: 'light' | 'dark',
   includePortfolio?: boolean,
@@ -61,8 +60,8 @@ export async function exportResumeToPDF(
   
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
-    currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects),
+    currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
   }
   
-  return doc.output('blob'),
+  return doc.output('blob')
 }

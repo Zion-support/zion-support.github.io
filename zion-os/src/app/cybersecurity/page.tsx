@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",

@@ -8,7 +8,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
@@ -25,8 +24,7 @@ export default function PricingPage() {
       textColor: 'text-blue-400',
       popular: false,
       features: [
-        'AI Business Intelligence BasicUp to 5 team members',
-        'Basic analytics dashboardEmail support',
+        'AI Business Intelligence BasicUp to 5 team membersBasic analytics dashboardEmail support',
         '14-day free trialStandard integrations'
       ],
       cta: 'Start Free Trial',
@@ -43,10 +41,8 @@ export default function PricingPage() {
       textColor: 'text-purple-400',
       popular: true,
       features: [
-        'AI Business Intelligence ProAI Customer Experience',
-        'Up to 25 team membersAdvanced analytics & reporting',
-        'Priority support30-day free trial',
-        'Custom integrationsAdvanced AI models'
+        'AI Business Intelligence ProAI Customer ExperienceUp to 25 team membersAdvanced analytics & reporting',
+        'Priority support30-day free trialCustom integrationsAdvanced AI models'
       ],
       cta: 'Start Free Trial',
       ctaColor: 'from-purple-500 to-pink-600'
@@ -62,10 +58,8 @@ export default function PricingPage() {
       textColor: 'text-green-400',
       popular: false,
       features: [
-        'All Professional featuresQuantum Cybersecurity',
-        'Edge Computing OrchestrationUnlimited team members',
-        'Custom AI developmentDedicated support manager',
-        '60-day free trialWhite-label solutions',
+        'All Professional featuresQuantum CybersecurityEdge Computing OrchestrationUnlimited team members',
+        'Custom AI developmentDedicated support manager60-day free trialWhite-label solutions',
         'SLA guaranteesOn-premise deployment'
       ],
       cta: 'Contact Sales',
@@ -82,10 +76,8 @@ export default function PricingPage() {
       textColor: 'text-orange-400',
       popular: false,
       features: [
-        'Fully customized solutionsSpace technology integration',
-        'Quantum computing accessDedicated development team',
-        '24/7 premium supportCustom trial period',
-        'Exclusive featuresStrategic partnership',
+        'Fully customized solutionsSpace technology integrationQuantum computing accessDedicated development team',
+        '24/7 premium supportCustom trial periodExclusive featuresStrategic partnership',
         'ROI optimizationFuture technology access'
       ],
       cta: 'Get Custom Quote',
@@ -138,7 +130,7 @@ export default function PricingPage() {
     if (planId === 'custom') {
       window.location.href = '/contact'
     } else {
-      window.location.href = '/contact',
+      window.location.href = '/contact'
     }
   },
 

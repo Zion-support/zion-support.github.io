@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-
 const UltraFuturisticBackground2046: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<any[]>([]),
@@ -43,7 +42,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.life = Math.random() * 100,
         this.maxLife = 100,
         
-        const types = ['quantumneural', 'dataenergy'],
+        const types = ['quantumneuraldataenergy'],
         this.type = types[Math.floor(Math.random() * types.length)] as any,
         
         switch (this.type) {
@@ -58,7 +57,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break,
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`,
-            break,
+            break
         }
       }
 
@@ -74,12 +73,12 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add some quantum randomness
         if (Math.random() < 0.01) {
           this.vx += (Math.random() - 0.5) * 0.5,
-          this.vy += (Math.random() - 0.5) * 0.5,
+          this.vy += (Math.random() - 0.5) * 0.5
         }
 
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx)),
-        this.vy = Math.max(-3, Math.min(3, this.vy)),
+        this.vy = Math.max(-3, Math.min(3, this.vy))
       }
 
       draw() {
@@ -104,7 +103,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
               ctx.strokeStyle = this.color,
               ctx.lineWidth = 1,
               ctx.globalAlpha = alpha * (0.3 - i * 0.1),
-              ctx.stroke(),
+              ctx.stroke()
             }
             break,
             
@@ -128,7 +127,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.strokeStyle = this.color,
                   ctx.lineWidth = 0.5,
                   ctx.globalAlpha = alpha * (1 - distance / 100),
-                  ctx.stroke(),
+                  ctx.stroke()
                 }
               }
             }),
@@ -161,14 +160,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
             gradient.addColorStop(1, 'transparent'),
             ctx.fillStyle = gradient,
             ctx.fill(),
-            break,
+            break
         }
         
-        ctx.restore(),
+        ctx.restore()
       }
 
       isDead() {
-        return this.life <= 0,
+        return this.life <= 0
       }
     }
 
@@ -176,7 +175,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
     const initParticles = () => {
       particlesRef.current = [],
       for (let i = 0, i < 150, i++) {
-        particlesRef.current.push(new Particle()),
+        particlesRef.current.push(new Particle())
       }
     },
 
@@ -195,7 +194,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         
         // Remove dead particles and add new ones
         if (particle.isDead()) {
-          particlesRef.current[index] = new Particle(),
+          particlesRef.current[index] = new Particle()
         }
       }),
 
@@ -205,7 +204,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
       // Draw neural network grid
       drawNeuralGrid(ctx, canvas.width, canvas.height),
 
-      animationRef.current = requestAnimationFrame(animate),
+      animationRef.current = requestAnimationFrame(animate)
     },
 
     // Quantum field lines
@@ -225,10 +224,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add wave interference
         for (let j = 0, j < height, j += 10) {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30,
-          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j),
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
         }
         
-        ctx.stroke(),
+        ctx.stroke()
       }
     },
 
@@ -248,7 +247,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ctx.lineTo(x + gridSize + offset, y),
           ctx.moveTo(x, y + offset),
           ctx.lineTo(x, y + gridSize + offset),
-          ctx.stroke(),
+          ctx.stroke()
         }
       }
     },
@@ -261,9 +260,9 @@ const UltraFuturisticBackground2046: React.FC = () => {
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
+        cancelAnimationFrame(animationRef.current)
       }
-    },
+    }
   }, []),
 
   return (
@@ -273,8 +272,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
         animate={{
           background: [
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
         transition={{
           duration: 10,
           repeat: Infinity,
@@ -335,7 +333,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
           animate={{
-            height: ['32px48px', '32px']}}
+            height: ['32px48px32px']}}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -344,7 +342,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
           animate={{
-            height: ['24px40px', '24px']}}
+            height: ['24px40px24px']}}
           transition={{
             duration: 3,
             repeat: Infinity,
@@ -373,7 +371,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         ))}
       </div>
     </div>
-  ),
+  )
 },
 
 export default UltraFuturisticBackground2046,

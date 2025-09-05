@@ -51,20 +51,16 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Post-quantum cryptography algorithmsHybrid classical-quantum encryption',
-      'Real-time threat assessmentAutomated key rotation',
-      'Multi-layer security architectureZero-trust implementation',
-      'Advanced key managementCompliance monitoring',
+      'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotation',
+      'Multi-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring',
       'API for integrationMobile SDK support'
     ],
     benefits: [
-      'Future-proof against quantum attacksReduce security breach risks by 99.9%',
-      'Ensure long-term data protectionMeet regulatory compliance requirements',
+      'Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirements',
       'Protect against emerging threats'
     ],
     targetAudience: [
-      'Financial institutionsGovernment agencies',
-      'Healthcare organizationsDefense contractors',
+      'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractors',
       'Technology companiesCritical infrastructure'
     ],
     marketPosition: 'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.',
@@ -74,8 +70,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     implementationDetails: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.',
     roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.',
     useCases: [
-      'Data encryption at restSecure communications',
-      'Digital signaturesKey management',
+      'Data encryption at restSecure communicationsDigital signaturesKey management',
       'Compliance monitoringThreat detection'
     ],
     integrations: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems'],
@@ -105,20 +100,16 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Autonomous threat huntingAI-powered attack pattern analysis',
-      'Real-time threat intelligenceBehavioral anomaly detection',
-      'Predictive threat modelingAutomated incident response',
-      'Advanced analytics dashboardMulti-source data correlation',
+      'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detection',
+      'Predictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation',
       'Custom threat hunting rulesAPI for security tools integration'
     ],
     benefits: [
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%',
-      'Prevent 95% of cyber attacksAutomate 70% of security operations',
+      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operations',
       'Improve incident response time by 90%'
     ],
     targetAudience: [
-      'Security operations centersCybersecurity teams',
-      'IT security professionalsManaged security providers',
+      'Security operations centersCybersecurity teamsIT security professionalsManaged security providers',
       'Government agenciesFinancial institutions'
     ],
     marketPosition: 'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
@@ -128,8 +119,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
     useCases: [
-      'Advanced persistent threat detectionMalware analysis and classification',
-      'Network security monitoringEndpoint threat detection',
+      'Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detection',
       'Security incident investigationThreat intelligence sharing'
     ],
     integrations: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools'],
@@ -159,20 +149,16 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Continuous identity verificationContext-aware access control',
-      'Device health monitoringLeast privilege access',
-      'Micro-segmentationReal-time risk assessment',
-      'Multi-factor authenticationSingle sign-on integration',
+      'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege access',
+      'Micro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration',
       'Advanced analyticsAPI for enterprise systems'
     ],
     benefits: [
-      'Reduce security breaches by 90%Eliminate VPN vulnerabilities',
-      'Improve user experienceSimplify compliance management',
+      'Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance management',
       'Enable secure remote work'
     ],
     targetAudience: [
-      'Enterprise organizationsHealthcare providers',
-      'Financial institutionsGovernment agencies',
+      'Enterprise organizationsHealthcare providersFinancial institutionsGovernment agencies',
       'Educational institutionsRemote workforces'
     ],
     marketPosition: 'Leading zero-trust platform. Competes with Zscaler ($5-15/user), Palo Alto Prisma ($7-15/user), and Cloudflare Access ($3-7/user). Our advantage: AI-powered risk assessment and continuous verification.',
@@ -182,8 +168,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
     useCases: [
-      'Secure remote accessApplication access control',
-      'Cloud securityCompliance management',
+      'Secure remote accessApplication access controlCloud securityCompliance management',
       'Identity governanceRisk management'
     ],
     integrations: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers'],
@@ -213,20 +198,16 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'Quantum key distributionQuantum entanglement networks',
-      'Real-time key generationMulti-node quantum network',
-      'Quantum repeatersAdvanced quantum protocols',
-      'Network monitoringKey management system',
+      'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum network',
+      'Quantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system',
       'API for integrationCustom quantum protocols'
     ],
     benefits: [
-      'Provide mathematically unbreakable securityEnable ultra-secure communications',
-      'Future-proof against quantum attacksMeet highest security requirements',
+      'Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirements',
       'Enable quantum internet development'
     ],
     targetAudience: [
-      'Government agenciesMilitary organizations',
-      'Financial institutionsHealthcare providers',
+      'Government agenciesMilitary organizationsFinancial institutionsHealthcare providers',
       'Research institutionsCritical infrastructure'
     ],
     marketPosition: 'First-to-market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.',
@@ -236,8 +217,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     implementationDetails: 'Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.',
     roi: 'Organizations achieve unlimited ROI through unbreakable security and future-proof communications.',
     useCases: [
-      'Government communicationsMilitary communications',
-      'Financial transactionsHealthcare data transmission',
+      'Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmission',
       'Critical infrastructureResearch collaboration'
     ],
     integrations: ['Custom quantum protocols, Classical encryption systems, Network infrastructure'],
@@ -267,20 +247,16 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       enterprise: 'Custom pricing'
     },
     features: [
-      'AI-powered vulnerability scanningIntelligent risk prioritization',
-      'Automated remediation guidanceContinuous security monitoring',
-      'Custom scan policiesAdvanced reporting',
-      'Integration with security toolsMobile app support',
+      'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoring',
+      'Custom scan policiesAdvanced reportingIntegration with security toolsMobile app support',
       'API for automationCompliance reporting'
     ],
     benefits: [
-      'Reduce false positives by 70%Improve vulnerability detection by 40%',
-      'Speed up remediation by 60%Reduce security assessment costs',
+      'Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costs',
       'Improve compliance posture'
     ],
     targetAudience: [
-      'Security teamsDevOps engineers',
-      'Compliance officersIT managers',
+      'Security teamsDevOps engineersCompliance officersIT managers',
       'Security consultantsPenetration testers'
     ],
     marketPosition: 'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
@@ -290,8 +266,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
     useCases: [
-      'Application security testingNetwork vulnerability assessment',
-      'Cloud security scanningCompliance auditing',
+      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditing',
       'Penetration testingSecurity monitoring'
     ],
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],

@@ -2,7 +2,6 @@
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
-
 export const useRecordActivity = () => {
   const { user } = useAuth(),
   
@@ -33,14 +32,14 @@ export const useRecordActivity = () => {
       
       if (error) throw error,
       
-      return data,
+      return data
     } catch (err: any) {
       console.error("Error recording activity:", err),
-      return null,
+      return null
     }
   },
   
   return {
     recordMilestoneActivity
-  },
+  }
 },

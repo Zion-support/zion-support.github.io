@@ -9,7 +9,6 @@ import {
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
-
 export default function ExplorePage() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -156,7 +155,7 @@ export default function ExplorePage() {
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          category.description.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,
-    return matchesSearch && matchesFilter,
+    return matchesSearch && matchesFilter
   }),
 
   // Sort categories

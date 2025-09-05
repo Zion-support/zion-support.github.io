@@ -1,5 +1,5 @@
 
-    },
+    }
   },
 ,
   log(message, level = "INFO") {,
@@ -17,7 +17,7 @@
       this.log("✓ Bundle analysis completed")
     } catch (error) {,
       this.log(`Bundle optimization failed: ${error.message}`, "ERROR")
-    },
+    }
   },
 ,
   async optimizeImages() {,
@@ -37,11 +37,11 @@
           this.optimizations.push(`Found ${imageFiles.length} images`)
         } else {,
           this.log("No images found to optimize")
-        },
-      },
+        }
+      }
     } catch (error) {,
       this.log(`Image optimization failed: ${error.message}`, "ERROR")
-    },
+    }
   },
 ,
   async checkDependencies() {,
@@ -57,7 +57,7 @@
       this.optimizations.push(`Analyzed ${dependencies.length + devDependencies.length} dependencies`)
     } catch (error) {,
       this.log(`Dependency check failed: ${error.message}`, "ERROR")
-    },
+    }
   },
 ,
   async generateReport() {,
@@ -91,8 +91,8 @@
       this.log(`🎯 Performance Optimizer completed. Optimizations: ${this.optimizations.length}`),
       this.optimizations.forEach(opt => this.log(`  ✓ ${opt}`))} catch (error) {,
       this.log(`❌ Performance Optimizer failed: ${error.message}`, "ERROR")
-    },
-  },
+    }
+  }
 },
 ,
 // Main execution,

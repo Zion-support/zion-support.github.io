@@ -13,8 +13,6 @@ import Spinner from '@/components/ui/spinner',
 import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
-
-
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
@@ -226,7 +224,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },
 
 // Loading grid
@@ -259,7 +257,7 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
         </CardContent>
       </Card>
     </div>
-  ),
+  )
 }
 
 // Main component
@@ -271,7 +269,7 @@ function EquipmentPageContent() {
 
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
-    return `equipment-${filterCategory}-${showRecommended}`,
+    return `equipment-${filterCategory}-${showRecommended}`
   }, [filterCategory, showRecommended]),
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
@@ -295,7 +293,7 @@ function EquipmentPageContent() {
       const dedupMap = new Map<string, ProductListing>(),
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
-          dedupMap.set(item.id, item),
+          dedupMap.set(item.id, item)
         }
       }
       fullVirtualDataset = Array.from(dedupMap.values()),
@@ -303,12 +301,12 @@ function EquipmentPageContent() {
       // Apply category filtering
       let processedDataset = fullVirtualDataset,
       if (filterCategory) {
-        processedDataset = processedDataset.filter(e => e.category === filterCategory),
+        processedDataset = processedDataset.filter(e => e.category === filterCategory)
       }
 
       // Apply recommended filtering
       if (showRecommended) {
-        processedDataset = getRecommendedEquipment(processedDataset),
+        processedDataset = getRecommendedEquipment(processedDataset)
       }
 
       // Sort the processed dataset
@@ -334,10 +332,10 @@ function EquipmentPageContent() {
         items,
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
-      },
+      }
     } catch (error) {
       logErrorToProduction('Error in fetchEquipment:', { data: error }),
-      throw new Error('Failed to load equipment data. Please try again.'),
+      throw new Error('Failed to load equipment data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
@@ -357,27 +355,27 @@ function EquipmentPageContent() {
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      refresh(),
+      refresh()
     }, 100), // Small delay to prevent rapid successive refreshes
 
-    return () => clearTimeout(timeoutId),
+    return () => clearTimeout(timeoutId)
   }, [sortBy, filterCategory, showRecommended, refresh]),
 
   const marketStats = useMemo(() => {
     if (equipment.length === 0) return null,
-    return getEquipmentMarketStats(equipment),
+    return getEquipmentMarketStats(equipment)
   }, [equipment]),
 
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"],
+    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
   }, []),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   // Loading state
@@ -392,7 +390,7 @@ function EquipmentPageContent() {
         </motion.div>
         <EquipmentLoadingGrid />
       </div>
-    ),
+    )
   }
 
   // Error state
@@ -414,7 +412,7 @@ function EquipmentPageContent() {
           </div>
         </div>
       </div>
-    ),
+    )
   }
 
   return (
@@ -462,12 +460,12 @@ function EquipmentPageContent() {
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
-                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item)),
+                      sessionStorage.setItem(`equipment:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/equipment/${item.id}`),
+                  router.push(`/equipment/${item.id}`)
                 }}
               />
             </motion.div>
@@ -521,7 +519,7 @@ function EquipmentPageContent() {
         )}
       </AnimatePresence>
     </div>
-  ),
+  )
 }
 
 // Main export with error boundary
@@ -530,5 +528,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  ),
+  )
 }

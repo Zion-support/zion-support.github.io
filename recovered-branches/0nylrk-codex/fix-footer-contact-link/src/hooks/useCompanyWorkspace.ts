@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
-
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null),
   const [isLoading, setIsLoading] = useState(true),
@@ -27,7 +26,7 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamLimit: 50,
           billingCycle: "Annual",
           workspaceUrl: "acme.zion-ai.com"}),
-        setError(null),
+        setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
         // For demo purposes, let's assume it exists
@@ -44,11 +43,11 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamLimit: 10,
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai.com`}),
-        setError(null),
+        setError(null)
       }
-      setIsLoading(false),
+      setIsLoading(false)
     }, 1000), // Simulate loading delay
   }, [companySlug]),
 
-  return { company, isLoading, error },
+  return { company, isLoading, error }
 }

@@ -8,7 +8,6 @@ import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast",
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
-
 interface PostFormValues {
   title: string,
   content: string,
@@ -47,7 +46,7 @@ export default function EditPostPage() {
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
-    setIsLoading(false),
+    setIsLoading(false)
   }, [postId]),
   
   if (isLoading) {
@@ -59,7 +58,7 @@ export default function EditPostPage() {
           </div>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   if (!post) {
@@ -72,7 +71,7 @@ export default function EditPostPage() {
           </Button>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   // Check if the user is the author or an admin
@@ -90,7 +89,7 @@ export default function EditPostPage() {
           </Button>
         </div>
       </AppLayout>
-    ),
+    )
   }
   
   const initialValues: Partial<PostFormValues> = {
@@ -111,13 +110,13 @@ export default function EditPostPage() {
       }),
       
       // Redirect back to the post
-      navigate(`/community/post/${postId}`),
+      navigate(`/community/post/${postId}`)
     } catch (error) {
       toast({
         title: "Error",
         description: "There was a problem updating your post",
         variant: "destructive"
-      }),
+      })
     }
   },
 
@@ -151,5 +150,5 @@ export default function EditPostPage() {
         />
       </div>
     </AppLayout>
-  ),
+  )
 }

@@ -30,8 +30,8 @@ export default function AdminQuotesPage() {
       const res = await fetch('/api/requests/list'),
       const json = await res.json(),
       setData(json.items || []),
-      setLoading(false),
-    })(),
+      setLoading(false)
+    })()
   }, []),
 
   const filtered = useMemo(() => {
@@ -40,16 +40,16 @@ export default function AdminQuotesPage() {
       if (talent !== 'all' && r.talentSlug !== talent) return false,
       if (q) {
         const hay = `${r.name} ${r.email} ${r.description} ${r.aiSummary}`.toLowerCase(),
-        if (!hay.includes(q.toLowerCase())) return false,
+        if (!hay.includes(q.toLowerCase())) return false
       }
       if (dateFrom && new Date(r.createdAt) < new Date(dateFrom)) return false,
       if (dateTo && new Date(r.createdAt) > new Date(dateTo)) return false,
-      return true,
-    }),
+      return true
+    })
   }, [data, q, status, talent, dateFrom, dateTo]),
 
   const exportCsv = () => {
-    const header = ['idname','emailbudget','timelinetalentSlug','aiTypestatus','createdAt'],
+    const header = ['idnameemailbudget','timelinetalentSlugaiTypestatus','createdAt'],
     const rows = filtered.map(r => [r.id,r.name,r.email,r.budget,r.timeline,r.talentSlug||'',r.aiType,r.status,r.createdAt]),
     const csv = [header.join(), ...rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join())].join('\n'),
     const blob = new Blob([csv], { type: 'text/csv' }),
@@ -58,12 +58,12 @@ export default function AdminQuotesPage() {
     a.href = url,
     a.download = 'quotes.csv',
     a.click(),
-    URL.revokeObjectURL(url),
+    URL.revokeObjectURL(url)
   },
 
   const changeStatus = async (id: string, status: QuoteRequest['status']) => {
     await fetch('/api/requests/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
-    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt: new Date().toISOString() } : r)),
+    setData(prev => prev.map(r => r.id === id ? { ...r, status, updatedAt: new Date().toISOString() } : r))
   },
 
   return (
@@ -140,5 +140,5 @@ export default function AdminQuotesPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }

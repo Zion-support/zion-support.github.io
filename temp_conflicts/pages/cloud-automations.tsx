@@ -6,7 +6,7 @@ export default function CloudAutomationsPage() {
     fetch('/api/cloud-automations-status')
       .then((r) => r.json())
       .then(setData)
-      .catch(() => setData({ ok: false })),
+      .catch(() => setData({ ok: false }))
   }, []),
 
   const items = data?.data ? Object.entries(data.data) : [],
@@ -29,5 +29,5 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
-  ),
+  )
 }

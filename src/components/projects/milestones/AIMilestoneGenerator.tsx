@@ -11,7 +11,6 @@ import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns',
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
 import { Badge } from '@/components/ui/badge',
-
 interface AIMilestoneGeneratorProps {
   scope: string,
   startDate: string,
@@ -34,7 +33,7 @@ export function AIMilestoneGenerator({
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
-      return,
+      return
     }
 
     const input: MilestoneInput = {
@@ -50,7 +49,7 @@ export function AIMilestoneGenerator({
     generatedMilestones.forEach((_, index: number) => {
       initialSelection[index] = true
     }),
-    setSelectedMilestones(initialSelection),
+    setSelectedMilestones(initialSelection)
   },
 
   const handleAddToProject = () => {
@@ -60,14 +59,14 @@ export function AIMilestoneGenerator({
     
     onAddMilestones(selectedMilestonesList),
     clearGeneratedMilestones(),
-    setSelectedMilestones({}),
+    setSelectedMilestones({})
   },
 
   const toggleMilestoneSelection = (index: number) => {
     setSelectedMilestones(prev => ({
       ...prev,
       [index]: !prev[index]
-    })),
+    }))
   },
 
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
@@ -76,9 +75,9 @@ export function AIMilestoneGenerator({
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy'),
+      return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString,
+      return dateString
     }
   },
 
@@ -150,7 +149,7 @@ export function AIMilestoneGenerator({
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation(),
-                        handleAddSingleMilestone(milestone),
+                        handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
                     >
@@ -176,5 +175,5 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
-  ),
+  )
 }

@@ -26,7 +26,7 @@ export function ProductListingCard({
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing",
-    return `${listing.currency}${listing.price.toLocaleString()}`,
+    return `${listing.currency}${listing.price.toLocaleString()}`
   },
 
   // Handle image loading errors
@@ -36,7 +36,7 @@ export function ProductListingCard({
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`),
+    navigate(`/listing/${listing.id}`)
   },
   
   // Handle request quote button click
@@ -48,7 +48,7 @@ export function ProductListingCard({
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`),
+      navigate(`/request-quote?listing=${listing.id}`)
     }
   },
   
@@ -135,7 +135,7 @@ export function ProductListingCard({
               size="sm" 
               onClick={(e) => {
                 e.stopPropagation(),
-                navigate(`/listing/${listing.id}`),
+                navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -156,5 +156,5 @@ export function ProductListingCard({
         </div>
       </div>
     </div>
-  ),
+  )
 }

@@ -2,10 +2,8 @@ import { useRouter } from 'next/router',
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { useCurrentUser } from '../../utils/auth',
-
 const REASONS = [
-  'Scope DisagreementQuality Issues',
-  'Delivery DelayPayment Issue',
+  'Scope DisagreementQuality IssuesDelivery DelayPayment Issue',
   'Communication BreakdownOther'] as const,
 
 type ReasonType = typeof REASONS[number],
@@ -25,7 +23,7 @@ export default function NewDisputePage() {
   const [submitting, setSubmitting] = useState(false),
 
   useEffect(() => {
-    if (qProjectId) setProjectId(qProjectId),
+    if (qProjectId) setProjectId(qProjectId)
   }, [qProjectId]),
 
   async function handleSubmit(e: React.FormEvent) {
@@ -50,14 +48,14 @@ export default function NewDisputePage() {
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ files: filePayload })}),
+          body: JSON.stringify({ files: filePayload })})
       }
 
-      router.push(`/disputes/${encodeURIComponent(dispute.id)}`),
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`)
     } catch (e: any) {
       alert(e.message || 'Error')
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   }
 
@@ -104,7 +102,7 @@ export default function NewDisputePage() {
         </form>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }
 
 function toBase64(file: File): Promise<string> {
@@ -112,6 +110,6 @@ function toBase64(file: File): Promise<string> {
     const reader = new FileReader(),
     reader.onload = () => resolve(String(reader.result)),
     reader.onerror = reject,
-    reader.readAsDataURL(file),
-  }),
+    reader.readAsDataURL(file)
+  })
 }

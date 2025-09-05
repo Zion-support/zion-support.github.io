@@ -2,7 +2,6 @@
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { toast } from '@/hooks/use-toast',
-
 type EnhancementType = 
   | 'resume-summary' 
   | 'work-description' 
@@ -41,10 +40,10 @@ export function useAIContentEnhancer() {
       }),
       
       if (error) {
-        throw new Error(error.message),
+        throw new Error(error.message)
       }
       
-      return data.enhancedContent,
+      return data.enhancedContent
     } catch (err: any) {
       const errorMessage = err.message || 'Failed to enhance content',
       setError(errorMessage),
@@ -54,9 +53,9 @@ export function useAIContentEnhancer() {
         variant: "destructive"
       }),
       console.error('Enhancement error:', err),
-      return null,
+      return null
     } finally {
-      setIsEnhancing(false),
+      setIsEnhancing(false)
     }
   },
   
@@ -64,5 +63,5 @@ export function useAIContentEnhancer() {
     enhanceContent,
     isEnhancing,
     error
-  },
+  }
 }

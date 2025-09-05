@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-
 async function fetchFromGitHub(): Promise<any[]> {
   try {
     const repoUrl = require('../../../package.json').repository?.url || '',
@@ -22,14 +21,14 @@ async function fetchFromGitHub(): Promise<any[]> {
         const r = await fetch(f.download_url, { headers }),
         if (!r.ok) continue,
         const j = await r.json(),
-        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights }),
+        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore
       }
     }
-    return results,
+    return results
   } catch {
-    return [],
+    return []
   }
 }
 
@@ -43,12 +42,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           try {
             const raw = fs.readFileSync(path.join(dir, f), 'utf8'),
             const json = JSON.parse(raw),
-            return { id: json.id || f, file: f, generatedAt: json.generatedAt, insights: json.insights },
+            return { id: json.id || f, file: f, generatedAt: json.generatedAt, insights: json.insights }
           } catch {
-            return { id: f, file: f },
+            return { id: f, file: f }
           }
         }),
-        return res.status(200).json({ logs }),
+        return res.status(200).json({ logs })
       }
     }
   } catch {
@@ -56,5 +55,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const remote = await fetchFromGitHub(),
-  return res.status(200).json({ logs: remote }),
+  return res.status(200).json({ logs: remote })
 }

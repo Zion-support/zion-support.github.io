@@ -3,8 +3,6 @@ import Head from 'next/head',
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import ServiceAds from '../components/sections/ServiceAds',
-
-
 export default function ApiMockContractTestingPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -19,8 +17,7 @@ export default function ApiMockContractTestingPage() {
       description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
       price: 'Starting at $69/month',
       features: [
-        'OpenAPI/GraphQL import and live mock serverContract tests gated in CI (GitHub/GitLab/Bitbucket)',
-        'Dynamic data generators and scenario templatesSnapshot diffs and changelog with approvals'
+        'OpenAPI/GraphQL import and live mock serverContract tests gated in CI (GitHub/GitLab/Bitbucket)Dynamic data generators and scenario templatesSnapshot diffs and changelog with approvals'
       ],
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo
@@ -28,9 +25,9 @@ export default function ApiMockContractTestingPage() {
   ],
 
   const tiers = [
-    { name: 'Starter', price: '$69/month', items: ['1 project5 mocks', 'OpenAPI importCI status checks'] },
-    { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocks', 'Record/replaySlack alerts'] },
-    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBAC', 'Private cloud/VPCPremium support'] }
+    { name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },
+    { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] },
+    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support'] }
   ],
 
   return (
@@ -75,6 +72,6 @@ export default function ApiMockContractTestingPage() {
         </div>
       </div>
     </Layout>
-  ),
+  )
 }
 

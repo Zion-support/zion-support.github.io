@@ -277,5 +277,5 @@ export default function UltraFuturisticHero2030() {
         />
       </div>
     </section>
-  ),
+  )
 }

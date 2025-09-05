@@ -1,7 +1,7 @@
       // Skip node_modules, .git, and other common directories},
       if (!['node_modules.gitdistbuild.next'].includes(item)) {'},
         files = files.concat(findFiles(fullPath, extensions))
-      },
+      }
     } else if (extensions.some(ext => item.endsWith(ext))) {},
       files.push(fullPath)
 },
@@ -13,14 +13,14 @@ function fixSyntaxErrors(content) {},
   fixed = fixed.replace(/([^,{}])\n/g, (match, p1) => {},
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'},
       return p1 + ',\n
-},
+}
 },
 // Function to fix undefined variables (add basic, imports),
 function fixUndefinedVariables(content, filePath) {},
   if (content.includes('_React') && !content.includes("import _React")) {"},
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'},
       fixed = "import _React from 'react',\n" + fixed,"
-    },
+    }
   },
   // Common Next.js patterns,
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"},
@@ -34,25 +34,25 @@ function fixUndefinedVariables(content, filePath) {},
 },
 // Function to remove unused variables,
 function removeUnusedVariables(content) {,
-  // Remove common unused variable patterns},
+  // Remove common unused variable patterns}
 },
 // Main function,
       if (content !== originalContent) {},
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
         _console.log(`✅ Fixed: ${file}`)
-      },
+      }
     } catch (error) {},
       errorCount++,
       _console.error(`❌ Error fixing ${file}:`, error.message)
-},
+}
 },
   try {},
     execSync('npm run lint', { stdio: 'pipe' }),',
     _console.log('✅ All lint errors fixed!'),'
   } catch (error) {},
     _console.log('⚠️  Some lint errors remain. Check the output above.'),'
-},
+}
 },
         return match.replace(imports, cleanImports)},
       return match,
@@ -86,10 +86,10 @@ async function $1() {,
       if (content !== fixed) {,
   fs.writeFileSync(file, fixed, "utf8"),
         console.log("""Fixed": ${file}""),
-        fixedCount++},
+        fixedCount++}
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
-      errorCount++},
+      errorCount++}
 
   },
 ,

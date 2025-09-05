@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
-
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues
@@ -19,10 +18,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`,
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
-        const headers = ['appTitleshortDescription', 'longDescriptionversion', 'platform'],
+        const headers = ['appTitleshortDescriptionlongDescriptionversion', 'platform'],
         const values = [
           metadata.appTitle,
           metadata.shortDescription,
@@ -36,7 +35,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
         
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`,
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
       // Create download link
@@ -50,16 +49,16 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
       
-      toast.success(`Exported ${format.toUpperCase()} file successfully`),
+      toast.success(`Exported ${format.toUpperCase()} file successfully`)
     } catch (error) {
       console.error("Export failed:", error),
-      toast.error(`Failed to export ${format.toUpperCase()} file`),
+      toast.error(`Failed to export ${format.toUpperCase()} file`)
     }
   },
   
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics..."),
-    toast.success("Analytics tracking enabled"),
+    toast.success("Analytics tracking enabled")
   },
   
   return (
@@ -98,5 +97,5 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         </div>
       </CardContent>
     </Card>
-  ),
+  )
 },

@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react',
 import { X } from 'lucide-react',
-
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
@@ -13,7 +12,7 @@ function generateSessionId(): string {
   if (existing) return existing,
   const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`,
   window.localStorage.setItem('zion_support_session_id', id),
-  return id,
+  return id
 }
 
 export default function ChatWidget() {
@@ -27,23 +26,23 @@ export default function ChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
 
   useEffect(() => {
-    sessionIdRef.current = generateSessionId(),
+    sessionIdRef.current = generateSessionId()
   }, []),
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }]),
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
   }, [isOpen, messages.length]),
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]),
 
   const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?', 'Billing help'],
+    () => ['How do I hire?How do I get matched?Billing help'],
     []
   ),
 
@@ -52,7 +51,7 @@ export default function ChatWidget() {
       await fetch('/api/support/session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })}),
+        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
     } catch {}
   }
 
@@ -62,7 +61,7 @@ export default function ChatWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-      setShowEscalation(true),
+      setShowEscalation(true)
     } catch {}
   }
 
@@ -91,26 +90,26 @@ export default function ChatWidget() {
           content: data.assistantMessage,
           timestamp: Date.now()},
         setMessages((prev) => [...prev, assistantMessage]),
-        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta }),
+        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1,
           if (next >= 3) {
-            escalateSupport('Failed to match user intent 3+ times'),
+            escalateSupport('Failed to match user intent 3+ times')
           }
-          return next,
-        }),
+          return next
+        })
       } else if (data?.meta?.intentMatched === true) {
-        setFailedIntents(0),
+        setFailedIntents(0)
       }
     } catch (e) {
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }]),
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
-      setIsLoading(false),
+      setIsLoading(false)
     }
   }
 
@@ -182,7 +181,7 @@ export default function ChatWidget() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault(),
-                      onSend(),
+                      onSend()
                     }
                   }}
                   placeholder="Ask a question…"
@@ -209,5 +208,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  ),
+  )
 }

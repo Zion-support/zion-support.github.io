@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 
 const SAMPLE_QUERIES = [
-  'React developers under $50/hrPart-time DevOps jobs in LATAM',
-  'LLM engineers with RAG experienceSecurity projects with Zero Trust',
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero Trust',
   'Next.js freelancers in Berlin'
 ],
 
 const SKILLS = [
-  'ReactNext.js', 'TypeScriptNode', 'PythonAWS', 'KubernetesDevOps', 'DockerTerraform', 'OpenAILangChain', 'RAGNLP', 'PostgreSQLRust'
+  'ReactNext.jsTypeScriptNode', 'PythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChain', 'RAGNLPPostgreSQLRust'
 ],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,8 +17,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }
   for (const s of SKILLS) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s),
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }
 
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) }),
+  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) })
 }

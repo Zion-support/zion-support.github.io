@@ -1,7 +1,6 @@
 
 import { useRef, useEffect } from 'react',
 import { useAnalytics } from '@/context/AnalyticsContext',
-
 export function useTrackUserBehavior(componentName: string) {
   const { trackEvent } = useAnalytics(),
   const componentRef = useRef<HTMLDivElement>(null),
@@ -22,7 +21,7 @@ export function useTrackUserBehavior(componentName: string) {
           component: componentName,
           elementId: buttonId,
           text: buttonText
-        }),
+        })
       }
     },
 
@@ -35,7 +34,7 @@ export function useTrackUserBehavior(componentName: string) {
         trackEvent('form_submit', {
           component: componentName,
           elementId: formId
-        }),
+        })
       }
     },
 
@@ -44,9 +43,9 @@ export function useTrackUserBehavior(componentName: string) {
 
     return () => {
       component.removeEventListener('click', trackButtonClicks),
-      component.removeEventListener('submit', trackFormSubmits, true),
-    },
+      component.removeEventListener('submit', trackFormSubmits, true)
+    }
   }, [trackEvent, componentName]),
 
-  return componentRef,
+  return componentRef
 }

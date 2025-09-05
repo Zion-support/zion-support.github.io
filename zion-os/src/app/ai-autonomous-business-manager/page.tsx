@@ -1,5 +1,4 @@
 import Link from "next/link",
-
 export const metadata = {
   title: "AI Autonomous Business Manager - Zion Tech Group",
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",

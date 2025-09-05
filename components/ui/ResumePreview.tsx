@@ -26,7 +26,7 @@ export type ResumeData = {
     description?: string,
     link?: string,
     technologies?: string[]
-  }>,
+  }>
 },
 
 export type ResumePreviewProps = {
@@ -203,7 +203,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
           ) : null}
         </div>
       </div>
-    ),
+    )
   }
 ),
 

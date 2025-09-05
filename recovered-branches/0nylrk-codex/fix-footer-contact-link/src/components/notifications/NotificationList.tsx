@@ -5,7 +5,6 @@ import { Skeleton } from '@/components/ui/skeleton',
 import { Button } from '@/components/ui/button',
 import { NotificationItem } from './NotificationItem',
 import { Notification } from '@/context/notifications',
-
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -58,5 +57,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ))
       )}
     </ScrollArea>
-  ),
+  )
 },

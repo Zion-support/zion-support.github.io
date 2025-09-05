@@ -9,7 +9,6 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025',
-
 export default function Comprehensive2025ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -63,7 +62,7 @@ export default function Comprehensive2025ServicesShowcase() {
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
-    return `$${Math.round(annualPrice)}`,
+    return `$${Math.round(annualPrice)}`
   },
 
   return (
@@ -292,7 +291,7 @@ export default function Comprehensive2025ServicesShowcase() {
               <button
                 onClick={() => {
                   setSearchTerm(''),
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
               >

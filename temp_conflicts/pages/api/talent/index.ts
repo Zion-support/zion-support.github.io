@@ -14,11 +14,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (hasSupabase) {
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false }),
         if (error) throw error,
-        return res.status(200).json({ items: data as TalentProfile[] }),
+        return res.status(200).json({ items: data as TalentProfile[] })
       }
-      return res.status(200).json({ items: LOCAL }),
+      return res.status(200).json({ items: LOCAL })
     } catch (e: any) {
-      return res.status(500).json({ error: e.message }),
+      return res.status(500).json({ error: e.message })
     }
   }
 
@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (item.bio) translations.bio[lang] = await translateText(item.bio, lang, originalLang),
         if (item.category) {
           translations.category = translations.category || {},
-          translations.category[lang] = await translateText(item.category, lang, originalLang),
+          translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
       }
       item.originalLanguage = originalLang,
@@ -87,15 +87,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           original_language: item.originalLanguage,
           translations: item.translations as any} as any),
         if (error) throw error,
-        return res.status(201).json({ slug: item.slug }),
+        return res.status(201).json({ slug: item.slug })
       }
 
       // Fallback: return the slug as if saved
-      return res.status(201).json({ slug: item.slug }),
+      return res.status(201).json({ slug: item.slug })
     } catch (e: any) {
-      return res.status(500).json({ error: e.message }),
+      return res.status(500).json({ error: e.message })
     }
   }
 
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed'),
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
 }

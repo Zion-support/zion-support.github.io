@@ -1,7 +1,6 @@
 import React from "react",
 import fs from "fs",
 import path from "path",
-
 type Experiment = {
   title: string,
   hypothesis?: string,
@@ -51,7 +50,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         )}
       </div>
     </main>
-  ),
+  )
 }
 
 export async function getStaticProps() {
@@ -63,12 +62,12 @@ export async function getStaticProps() {
       props: {
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
-      revalidate: 300},
+      revalidate: 300}
   } catch {
     return {
       props: {
         updatedAt: null,
         items: []},
-      revalidate: 300},
+      revalidate: 300}
   }
 }

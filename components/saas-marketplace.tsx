@@ -31,13 +31,12 @@ export default function SaaSMarketplacePage() {
       icon: <Zap className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        '5000+ app integrationsVisual workflow builder',
-        'Multi-step automationsScheduled triggers',
+        '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggers',
         'Error handlingTeam collaboration'
       ],
       website: 'https://zapier.com',
       useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
-      pros: ['Easy to useExtensive integrations', 'ReliableGreat support'],
+      pros: ['Easy to useExtensive integrationsReliableGreat support'],
       cons: ['Can get expensiveLimited customization']
     },
     {
@@ -50,13 +49,12 @@ export default function SaaSMarketplacePage() {
       icon: <Code className="w-8 h-8 text-gray-400" />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docsProject management',
-        'Team collaborationDatabase & tables',
+        'Note-taking & docsProject managementTeam collaborationDatabase & tables',
         'Templates libraryAPI integration'
       ],
       website: 'https://notion.so',
       useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: ['Highly flexibleBeautiful interface', 'Great templatesFree tier'],
+      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
       cons: ['Learning curveLimited offline access']
     },
     {
@@ -69,13 +67,12 @@ export default function SaaSMarketplacePage() {
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methodsSubscription billing',
-        'Fraud protectionCompliance tools',
+        'Global payment methodsSubscription billingFraud protectionCompliance tools',
         'Developer-friendly APIAnalytics dashboard'
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
-      pros: ['Developer-friendlyGlobal reach', 'Excellent docsReliable'],
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
       cons: ['Higher fees than some alternativesComplex for beginners']
     },
     {
@@ -88,14 +85,13 @@ export default function SaaSMarketplacePage() {
       icon: <Users className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chatCustomer messaging',
-        'Help deskUser onboarding',
+        'Live chatCustomer messagingHelp deskUser onboarding',
         'Analytics & reportingIntegration ecosystem'
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UXPowerful features', 'Good integrationsMobile apps'],
-      cons: ['ExpensiveComplex pricing', 'Can be overwhelming']
+      pros: ['Great UXPowerful featuresGood integrationsMobile apps'],
+      cons: ['ExpensiveComplex pricingCan be overwhelming']
     },
     {
       name: 'Mixpanel',
@@ -107,14 +103,13 @@ export default function SaaSMarketplacePage() {
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior trackingFunnel analysis',
-        'A/B testingReal-time data',
+        'User behavior trackingFunnel analysisA/B testingReal-time data',
         'Custom eventsMobile analytics'
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
-      pros: ['Powerful analyticsReal-time data', 'Good documentationFlexible'],
-      cons: ['Complex setupExpensive at scale', 'Steep learning curve']
+      pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
+      cons: ['Complex setupExpensive at scaleSteep learning curve']
     },
     {
       name: 'MongoDB Atlas',
@@ -126,14 +121,13 @@ export default function SaaSMarketplacePage() {
       icon: <Database className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Fully managed MongoDBGlobal clusters',
-        'Auto-scalingBackup & recovery',
+        'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recovery',
         'Security & complianceMonitoring & alerting'
       ],
       website: 'https://mongodb.com/atlas',
       useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
-      pros: ['Fully managedGlobal distribution', 'Auto-scalingGood free tier'],
-      cons: ['Can be expensiveVendor lock-in', 'Limited customization']
+      pros: ['Fully managedGlobal distributionAuto-scalingGood free tier'],
+      cons: ['Can be expensiveVendor lock-inLimited customization']
     },
     {
       name: 'Vercel',
@@ -145,13 +139,12 @@ export default function SaaSMarketplacePage() {
       icon: <Cloud className="w-8 h-8 text-black" />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deploymentGlobal CDN',
-        'Automatic scalingGit integration',
+        'Zero-config deploymentGlobal CDNAutomatic scalingGit integration',
         'Preview deploymentsEdge functions'
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero configExcellent performance', 'Great DXFree tier'],
+      pros: ['Zero configExcellent performanceGreat DXFree tier'],
       cons: ['Limited backend featuresCan be expensive for high traffic']
     },
     {
@@ -164,18 +157,17 @@ export default function SaaSMarketplacePage() {
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Issue trackingRoadmap planning',
-        'Team collaborationGit integration',
+        'Issue trackingRoadmap planningTeam collaborationGit integration',
         'Automated workflowsMobile apps'
       ],
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
-      pros: ['Lightning fastBeautiful design', 'Great keyboard shortcutsGit integration'],
-      cons: ['Limited reportingNo time tracking', 'Smaller ecosystem']
+      pros: ['Lightning fastBeautiful designGreat keyboard shortcutsGit integration'],
+      cons: ['Limited reportingNo time trackingSmaller ecosystem']
     }
   ],
 
-  const categories = ['AllAutomation', 'ProductivityPayments', 'Customer SupportAnalytics', 'DatabaseHosting', 'Project Management'],
+  const categories = ['AllAutomationProductivityPayments', 'Customer SupportAnalyticsDatabaseHosting', 'Project Management'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredServices = selectedCategory === 'All' 

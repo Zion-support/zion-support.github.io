@@ -28,8 +28,7 @@ interface OnboardingFormData {
 }
 
 const steps = [
-  'Basic InfoExperience',
-  'Skills & TechAvailability'] as const,
+  'Basic InfoExperienceSkills & TechAvailability'] as const,
 
 type StepKey = typeof steps[number],
 
@@ -52,7 +51,7 @@ function useInitialFormState(): OnboardingFormData {
     timezone: '',
     hourlyRate: '',
     portfolioLinks: '',
-    cvFile: null},
+    cvFile: null}
 }
 
 async function fileToBase64(file: File): Promise<FileData> {
@@ -61,14 +60,14 @@ async function fileToBase64(file: File): Promise<FileData> {
       const reader = new FileReader(),
       reader.readAsDataURL(fileInner),
       reader.onload = () => resolve(reader.result as string),
-      reader.onerror = (error) => reject(error),
+      reader.onerror = (error) => reject(error)
     }),
   const base64 = await toBase64(file),
   return {
     name: file.name,
     type: file.type,
     size: file.size,
-    base64},
+    base64}
 }
 
 export default function TalentOnboardingPage() {
@@ -82,40 +81,40 @@ export default function TalentOnboardingPage() {
   const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),
 
   function nextStep() {
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),
+    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1)
   }
   function prevStep() {
-    if (stepIndex > 0) setStepIndex(stepIndex - 1),
+    if (stepIndex > 0) setStepIndex(stepIndex - 1)
   }
 
   function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {
-    setFormData((prev) => ({ ...prev, [key]: value })),
+    setFormData((prev) => ({ ...prev, [key]: value }))
   }
 
   function requiredMissingForStep(): string | null {
     if (currentStep === 'Basic Info') {
       if (!formData.fullName.trim()) return 'Full Name is required.',
-      if (!formData.professionalTitle.trim()) return 'Professional Title is required.',
+      if (!formData.professionalTitle.trim()) return 'Professional Title is required.'
     }
     if (currentStep === 'Experience') {
       if (!formData.bio.trim()) return 'Short Bio is required.',
-      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.',
+      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.'
     }
     if (currentStep === 'Skills & Tech') {
-      if (!formData.skills.trim()) return 'Please list at least one skill.',
+      if (!formData.skills.trim()) return 'Please list at least one skill.'
     }
     if (currentStep === 'Availability') {
       if (!formData.availability) return 'Please select your current availability.',
-      if (!formData.timezone.trim()) return 'Preferred Timezone is required.',
+      if (!formData.timezone.trim()) return 'Preferred Timezone is required.'
     }
-    return null,
+    return null
   }
 
   async function handleSubmit() {
     const missing = requiredMissingForStep(),
     if (missing) {
       setErrorMessage(missing),
-      return,
+      return
     }
     setErrorMessage(null),
     setSubmitting(true),
@@ -125,11 +124,11 @@ export default function TalentOnboardingPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData })}),
       if (!response.ok) throw new Error('Submission failed'),
-      setSubmitted(true),
+      setSubmitted(true)
     } catch (err) {
-      setErrorMessage('Submission failed. Please try again.'),
+      setErrorMessage('Submission failed. Please try again.')
     } finally {
-      setSubmitting(false),
+      setSubmitting(false)
     }
   }
 
@@ -326,7 +325,7 @@ export default function TalentOnboardingPage() {
                     return
                   }
                   setErrorMessage(null),
-                  nextStep(),
+                  nextStep()
                 }}
               >
                 Next
@@ -345,7 +344,7 @@ export default function TalentOnboardingPage() {
         </div>
       </div>
     </div>
-  ),
+  )
 }
 
 function FloatingInput(props: {
@@ -376,7 +375,7 @@ function FloatingInput(props: {
         {label}
       </label>
     </div>
-  ),
+  )
 }
 
 function FloatingTextarea(props: {
@@ -404,7 +403,7 @@ function FloatingTextarea(props: {
         {label}
       </label>
     </div>
-  ),
+  )
 }
 
 function FileUpload(props: {
@@ -434,9 +433,9 @@ function FileUpload(props: {
           try {
             const base64 = await fileToBase64(file),
             onFileChange(base64),
-            setLocalError(null),
+            setLocalError(null)
           } catch (err) {
-            setLocalError('Failed to read file.'),
+            setLocalError('Failed to read file.')
           }
         }}
       />
@@ -447,5 +446,5 @@ function FileUpload(props: {
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>
       )}
     </div>
-  ),
+  )
 }

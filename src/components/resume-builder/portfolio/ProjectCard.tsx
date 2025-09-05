@@ -7,7 +7,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image',
 import { PortfolioProject } from '@/types/resume',
-
 interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
@@ -19,9 +18,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   
   const handleDelete = () => {
     if (project.id) {
-      onDelete(project.id),
+      onDelete(project.id)
     }
-    setDeleteDialogOpen(false),
+    setDeleteDialogOpen(false)
   },
   
   return (
@@ -119,5 +118,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  ),
+  )
 }

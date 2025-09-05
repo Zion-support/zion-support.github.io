@@ -8,7 +8,6 @@ import {
   Cpu, Eye, Target, Users, BarChart3
 } from 'lucide-react',
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
-
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
     { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -38,8 +37,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
         keywords={[
-          'innovative services 2025micro SAAS',
-          'quantum computingspace technology',
+          'innovative services 2025micro SAASquantum computingspace technology',
           'AI platformsautonomous systems'
         ]}
       />
@@ -151,7 +149,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>
@@ -226,7 +224,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>
@@ -281,7 +279,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              ),
+              )
             })}
           </div>
         </div>

@@ -59,5 +59,5 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  ),
+  )
 },

@@ -2,7 +2,6 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { useRouter } from 'next/router',
-
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,

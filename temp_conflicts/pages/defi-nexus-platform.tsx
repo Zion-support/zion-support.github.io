@@ -7,7 +7,6 @@ import {
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -16,10 +15,8 @@ const contactInfo = {
 },
 
 const features = [
-  'Multi-chain DeFi aggregationAutomated yield optimization',
-  'Liquidity pool managementCross-chain bridge services',
-  'Smart contract auditingDeFi analytics dashboard',
-  'Mobile app integrationStaking and governance'
+  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge services',
+  'Smart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
 ],
 
 const pricingPlans = [
@@ -27,21 +24,21 @@ const pricingPlans = [
     name: 'Starter',
     price: 29,
     period: 'month',
-    features: ['Basic DeFi tools3 blockchain networks', 'Yield trackingStandard support'],
+    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 99,
     period: 'month',
-    features: ['Advanced DeFi toolsAll major networks', 'Automated strategiesAnalytics', 'Priority support'],
+    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalytics', 'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 299,
     period: 'month',
-    features: ['Custom DeFi solutionsWhite-label platform', 'API accessPriority support', 'Custom integrations'],
+    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority support', 'Custom integrations'],
     popular: false
   }
 ],
@@ -285,5 +282,5 @@ export default function DeFiNexusPlatform() {
         </div>
       </section>
     </Layout>
-  ),
+  )
 }

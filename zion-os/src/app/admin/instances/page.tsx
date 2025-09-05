@@ -1,5 +1,4 @@
 // import { prisma } from "@/lib/prisma",
-
 interface InstanceWithCounts {
   id: string,
   name: string,
@@ -19,7 +18,7 @@ interface InstanceWithCounts {
   _count: {
     deployments: number,
     features: number
-  },
+  }
 }
 
 export default async function InstancesPage() {
@@ -31,10 +30,10 @@ export default async function InstancesPage() {
       include: {
         daoConfig: true,
         _count: { select: { deployments: true, features: true } }},
-      orderBy: { createdAt: "desc" }}),
+      orderBy: { createdAt: "desc" }})
   } catch (err) {
     console.error("Database connection error:", err),
-    error = "Unable to connect to database",
+    error = "Unable to connect to database"
   }
 
   const instances: any[] = [], // Temporary empty array
@@ -485,7 +484,7 @@ export default function InstancesPage() {
         </div>
       )}
     </div>
-  ),
+  )
 }
 
 function getGovernanceLabel(type: string) {

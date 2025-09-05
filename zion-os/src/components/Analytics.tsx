@@ -1,7 +1,6 @@
 "use client",
 
 import { useEffect } from "react",
-
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number,
   processingEnd: number,
@@ -16,11 +15,11 @@ export function Analytics() {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === "largest-contentful-paint") {
-            console.log("LCP:", entry.startTime),
+            console.log("LCP:", entry.startTime)
           }
           if (entry.entryType === "first-input") {
             const firstInputEntry = entry as FirstInputEntry,
-            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime),
+            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime)
           }
         }
       }),
@@ -33,7 +32,7 @@ export function Analytics() {
         for (const entry of list.getEntries()) {
           if (entry.entryType === "layout-shift") {
             const layoutShiftEntry = entry as any,
-            cls += layoutShiftEntry.value,
+            cls += layoutShiftEntry.value
           }
         }
       }),
@@ -42,14 +41,14 @@ export function Analytics() {
 
       // Report metrics on page unload
       window.addEventListener("beforeunload", () => {
-        console.log("CLS:", cls),
+        console.log("CLS:", cls)
       }),
 
       // Cleanup
       return () => {
         observer.disconnect(),
-        observer2.disconnect(),
-      },
+        observer2.disconnect()
+      }
     }
   }, []),
 

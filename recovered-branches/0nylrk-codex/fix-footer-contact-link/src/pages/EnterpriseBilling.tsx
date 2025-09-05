@@ -7,7 +7,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-
 export default function EnterpriseBilling() {
   const { user } = useAuth(),
   
@@ -16,7 +15,7 @@ export default function EnterpriseBilling() {
                           (user?.permissions && user.permissions.includes('billing_access')),
   
   if (!hasBillingAccess) {
-    return <Navigate to="/unauthorized" />,
+    return <Navigate to="/unauthorized" />
   }
 
   return (
@@ -31,5 +30,5 @@ export default function EnterpriseBilling() {
       </main>
       <Footer />
     </ProtectedRoute>
-  ),
+  )
 }

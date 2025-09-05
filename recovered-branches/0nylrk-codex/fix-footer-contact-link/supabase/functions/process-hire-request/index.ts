@@ -24,7 +24,7 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
     budgetMax: number
-  },
+  }
 }
 
 interface EnhancedContent {
@@ -35,7 +35,7 @@ interface EnhancedContent {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
+    return new Response(null, { headers: corsHeaders })
   }
   
   try {
@@ -87,7 +87,7 @@ serve(async (req) => {
           const jsonMatch = responseText.match(/\{[\s\S]*\}/),
           if (jsonMatch) {
             enhancedContent = JSON.parse(jsonMatch[0]),
-            console.log("Enhanced content generated:", enhancedContent),
+            console.log("Enhanced content generated:", enhancedContent)
           }
         } catch (jsonError) {
           console.error("Error parsing AI response:", jsonError),
@@ -122,7 +122,7 @@ serve(async (req) => {
       .select(),
       
     if (requestError) {
-      throw new Error(`Error storing hire request: ${requestError.message}`),
+      throw new Error(`Error storing hire request: ${requestError.message}`)
     }
     
     // 3. Create notification for the admin
@@ -134,7 +134,7 @@ serve(async (req) => {
       .limit(1),
       
     if (adminError) {
-      console.error("Error fetching admin users:", adminError),
+      console.error("Error fetching admin users:", adminError)
     }
     
     let adminId: string | undefined = undefined,
@@ -160,7 +160,7 @@ serve(async (req) => {
         }),
         
       if (notificationError) {
-        console.error("Error creating admin notification:", notificationError),
+        console.error("Error creating admin notification:", notificationError)
       }
     }
     
@@ -186,7 +186,7 @@ serve(async (req) => {
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}}),
       
-      console.log("Email sending result:", emailResponse),
+      console.log("Email sending result:", emailResponse)
     }
 
     return new Response(
@@ -198,7 +198,7 @@ serve(async (req) => {
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
-    ),
+    )
   } catch (error) {
     console.error("Error processing hire request:", error.message),
     
@@ -211,6 +211,6 @@ serve(async (req) => {
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 500}
-    ),
+    )
   }
 }),

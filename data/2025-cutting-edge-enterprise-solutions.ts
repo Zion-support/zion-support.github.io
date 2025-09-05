@@ -1,5 +1,4 @@
 import { UnifiedService } from '../types/unified-service-types',
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -23,35 +22,30 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
-      'Real-time risk monitoringAI risk assessment',
-      'Automated mitigationCompliance tracking',
-      'Risk scoringScenario modeling',
-      'Incident responseReporting dashboard',
+      'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance tracking',
+      'Risk scoringScenario modelingIncident responseReporting dashboard',
       'Integration capabilitiesCustom workflows'
     ],
     benefits: [
-      'Reduce risk exposure by 60%Improve compliance by 85%',
-      'Cut risk management costs by 40%Real-time monitoring and alerts',
+      'Reduce risk exposure by 60%Improve compliance by 85%Cut risk management costs by 40%Real-time monitoring and alerts',
       'Automated response capabilities'
     ],
     targetAudience: [
-      'Fortune 500 companiesFinancial institutions',
-      'Healthcare organizationsGovernment agencies'
+      'Fortune 500 companiesFinancial institutionsHealthcare organizationsGovernment agencies'
     ],
     marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',
-    competitors: ['MetricStreamServiceNow', 'IBM OpenPagesRSA Archer', 'SAP GRC'],
-    techStack: ['AI/MLMachine Learning', 'Risk AnalyticsCompliance', 'Automation'],
+    competitors: ['MetricStreamServiceNowIBM OpenPagesRSA Archer', 'SAP GRC'],
+    techStack: ['AI/MLMachine LearningRisk AnalyticsCompliance', 'Automation'],
     realImplementation: true,
     implementationDetails: 'Advanced AI platform with real-time risk monitoring and automated response capabilities.',
     roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
     useCases: [
-      'Risk assessmentCompliance management',
-      'Incident responseBusiness continuity',
+      'Risk assessmentCompliance managementIncident responseBusiness continuity',
       'Strategic planning'
     ],
-    integrations: ['ERP systemsGRC platforms', 'Compliance toolsSecurity systems', 'Business intelligence tools'],
+    integrations: ['ERP systemsGRC platformsCompliance toolsSecurity systems', 'Business intelligence tools'],
     support: '24/7 enterprise support with dedicated risk management specialists.',
-    compliance: ['Industry-specific complianceData governance', 'Security standardsRegulatory requirements'],
+    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
     icon: '⚠️',
     color: 'from-orange-600 via-red-600 to-pink-600',
@@ -84,35 +78,30 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     },
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
-      'Process analysis AIAutomated optimization',
-      'Workflow automationPerformance monitoring',
-      'Cost optimizationCompliance automation',
-      'Integration capabilitiesReal-time analytics',
+      'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoring',
+      'Cost optimizationCompliance automationIntegration capabilitiesReal-time analytics',
       'Custom workflowsReporting dashboard'
     ],
     benefits: [
-      'Improve process efficiency by 70%Reduce operational costs by 45%',
-      'Increase productivity by 60%Automated workflow management',
+      'Improve process efficiency by 70%Reduce operational costs by 45%Increase productivity by 60%Automated workflow management',
       'Real-time performance monitoring'
     ],
     targetAudience: [
-      'Large enterprisesManufacturing companies',
-      'Service organizationsGovernment agencies'
+      'Large enterprisesManufacturing companiesService organizationsGovernment agencies'
     ],
     marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',
-    competitors: ['UiPathAutomation Anywhere', 'Blue PrismPega', 'Appian'],
-    techStack: ['AI/MLMachine Learning', 'Process MiningAutomation', 'Workflow Management'],
+    competitors: ['UiPathAutomation AnywhereBlue PrismPega', 'Appian'],
+    techStack: ['AI/MLMachine LearningProcess MiningAutomation', 'Workflow Management'],
     realImplementation: true,
     implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.',
     roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
-      'Process optimizationWorkflow automation',
-      'Cost reductionEfficiency improvement',
+      'Process optimizationWorkflow automationCost reductionEfficiency improvement',
       'Compliance'
     ],
-    integrations: ['ERP systemsCRM platforms', 'BPM toolsWorkflow engines', 'Business intelligence tools'],
+    integrations: ['ERP systemsCRM platformsBPM toolsWorkflow engines', 'Business intelligence tools'],
     support: '24/7 enterprise support with process optimization specialists.',
-    compliance: ['Industry-specific complianceData governance', 'Security standardsRegulatory requirements'],
+    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],
     link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
     icon: '⚙️',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -139,10 +128,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     period: '/month',
     description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
     features: [
-      'AI knowledge discoveryIntelligent categorization',
-      'Semantic searchKnowledge graphs',
-      'Collaborative workspacesVersion control',
-      'Access controlAnalytics dashboard',
+      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphs',
+      'Collaborative workspacesVersion controlAccess controlAnalytics dashboard',
       'Integration capabilitiesMobile access'
     ],
     popular: true,
@@ -154,11 +141,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',
     category: 'AI Automation',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Knowledge GraphsMachine Learning', 'Semantic Search'],
-    integrations: ['Document management systemsCRM platforms', 'ERP systemsCollaboration tools', 'Business intelligence tools'],
-    useCases: ['Knowledge discoveryDocument management', 'Research collaborationDecision support', 'Training and onboarding'],
+    technology: ['AI/MLNatural Language ProcessingKnowledge GraphsMachine Learning', 'Semantic Search'],
+    integrations: ['Document management systemsCRM platformsERP systemsCollaboration tools', 'Business intelligence tools'],
+    useCases: ['Knowledge discoveryDocument managementResearch collaborationDecision support', 'Training and onboarding'],
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
-    competitors: ['Microsoft SharePointConfluence', 'NotionSlack', 'Box'],
+    competitors: ['Microsoft SharePointConfluenceNotionSlack', 'Box'],
     marketSize: '$15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,

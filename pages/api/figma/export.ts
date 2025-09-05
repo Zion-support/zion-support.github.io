@@ -5,7 +5,7 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const kit = (req.query.kit as string) || 'tailwind'
-    const kind = (['tailwindchakra','react'].includes(kit) ? kit : 'tailwind') as UIKitKind
+    const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind
     const zip = new JSZip()
 
     const map = getZionDesignMap()
