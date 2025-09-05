@@ -5,13 +5,11 @@ interface PerformanceMonitorProps {
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') {
+      return;
+    }
 
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
