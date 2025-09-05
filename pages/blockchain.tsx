@@ -5,13 +5,7 @@ import {
   Zap, 
   Globe, 
   Lock, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  Award, 
-  Phone, 
-  Mail, 
-  MapPin 
+  CheckCircle
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 

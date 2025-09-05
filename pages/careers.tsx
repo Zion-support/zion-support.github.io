@@ -2,18 +2,13 @@ import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-  Users,
   MapPin,
   Clock,
   DollarSign,
   ArrowRight,
   Heart,
-  Star,
   Award,
   Coffee,
-  Zap,
-  Shield,
-  Briefcase,
   GraduationCap,
   Globe,
   CheckCircle

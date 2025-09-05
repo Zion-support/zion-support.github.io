@@ -3,9 +3,6 @@ import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
   TrendingUp,
   CheckCircle,
   Users,

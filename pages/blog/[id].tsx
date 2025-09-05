@@ -3,11 +3,10 @@ import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Tag, Clock, Share2, BookOpen } from 'lucide-react';
+import { Calendar, User, ArrowRight, Tag, Clock, Share2 } from 'lucide-react';
 
 const BlogPost = () => {
   const router = useRouter();
-  const { id } = router.query;
 
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
