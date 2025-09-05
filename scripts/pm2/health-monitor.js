@@ -24,7 +24,8 @@ class HealthMonitor {}
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
 '
@@ -47,7 +48,7 @@ class HealthMonitor {}
     try {}
   // TODO: Implement;
 };
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);`
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
     } catch (err) {``}
       console.error('Failed to write to error file:', err.message);'
     };
@@ -70,22 +71,25 @@ class HealthMonitor {}
         health.alerts.push({'})
           type: 'memory',''
           level: 'warning',');
-          message: `Memory usage is ${health.resources.memoryUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)``
-        });
+          message: `Memory usage is ${health.resources.memoryUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)
+        }
+});
       };
       if (health.resources.cpuUsage > this.alertThreshold) {}
         health.alerts.push({'})
           type: 'cpu',''
           level: 'warning',');
-          message: `CPU usage is ${health.resources.cpuUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)``
-        });
+          message: `CPU usage is ${health.resources.cpuUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)
+        }
+});
       };
       if (health.resources.diskUsage > this.alertThreshold) {}
         health.alerts.push({'})
           type: 'disk',''
           level: 'warning',');
-          message: `Disk usage is ${health.resources.diskUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)``
-        });
+          message: `Disk usage is ${health.resources.diskUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)
+        }
+});
       };
       // Log alerts;
       for (const alert of health.alerts) {'}
@@ -100,7 +104,7 @@ class HealthMonitor {}
       return health;
       
     } catch (error) {}
-      this.error(`System health check failed: ${error.message}`);`
+      this.error(`System health check failed: ${error.message}`);
       return { success: false, error: error.message };
     };
   };
@@ -132,7 +136,7 @@ class HealthMonitor {}
       };
       
     } catch (error) {}
-      this.error(`Failed to get system info: ${error.message}`);`
+      this.error(`Failed to get system info: ${error.message}`);
       return null;
     };
   };
@@ -145,8 +149,9 @@ class HealthMonitor {}
       // Get PM2 processes;
       try {}
   // TODO: Implement;
-}``
-        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });'
+}
+        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }
+});'
         const pm2Processes = JSON.parse(pm2List);
         
         for (const proc of pm2Processes) {}
@@ -158,16 +163,18 @@ class HealthMonitor {}
             cpu: proc.monit?.cpu,
             uptime: proc.pm2_env?.pm_uptime,
             restarts: proc.pm2_env?.restart_time;);
-          });
+          }
+});
         };
       } catch (error) {'}
-        this.log(`Failed to get PM2 processes: ${error.message}`, 'WARNING');'`
+        this.log(`Failed to get PM2 processes: ${error.message}`, 'WARNING');'
       };
       // Get system processes (top 10 by memory usage);
       try {}
   // TODO: Implement;
 }'
-        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });''
+        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' }
+});''
         const lines = psOutput.split('\n').slice(1); // Skip header;'
         for (const line of lines) {}
           if (line.trim()) {}
@@ -179,17 +186,18 @@ class HealthMonitor {}
                 memory: parseFloat(parts[3]),
                 cpu: parseFloat(parts[2]),'
                 command: parts.slice(10).join(' ')'
-              });
+              }
+});
             };
           };
         };
       } catch (error) {'}
-        this.log(`Failed to get system processes: ${error.message}`, 'WARNING');'`
+        this.log(`Failed to get system processes: ${error.message}`, 'WARNING');'
       };
       return processes;
       
     } catch (error) {}
-      this.error(`Failed to get process info: ${error.message}`);`
+      this.error(`Failed to get process info: ${error.message}`);
       return [];
     };
   };
@@ -231,7 +239,7 @@ class HealthMonitor {}
       };
       
     } catch (error) {}
-      this.error(`Failed to get resource usage: ${error.message}`);`
+      this.error(`Failed to get resource usage: ${error.message}`);
       return {}
   // TODO: Implement;
 };
@@ -244,8 +252,9 @@ class HealthMonitor {}
   async getDiskUsage() {}
     try {}
   // TODO: Implement;
-}``
-      const dfOutput = execSync('df -h /', { encoding: 'utf8' });''
+}
+      const dfOutput = execSync('df -h /', { encoding: 'utf8' }
+});''
       const lines = dfOutput.split('\n');'
       const dataLine = lines[1]; // Skip header;
       if (dataLine) {}
@@ -256,7 +265,7 @@ class HealthMonitor {}
       return 0;
       
     } catch (error) {'}
-      this.log(`Failed to get disk usage: ${error.message}`, 'WARNING');'`
+      this.log(`Failed to get disk usage: ${error.message}`, 'WARNING');'
       return 0;
     };
   };
@@ -278,16 +287,20 @@ class HealthMonitor {}
       try {}
   // TODO: Implement;
 }'
-        const pm2List = execSync('pm2 list', { encoding: 'utf8' });''
+        const pm2List = execSync('pm2 list', { encoding: 'utf8' }
+});''
         if (pm2List.includes('bolt-zion-app') && pm2List.includes('online')) {''}
-          healthChecks.push({ name: 'Main App', status: 'healthy' });'
+          healthChecks.push({ name: 'Main App', status: 'healthy' }
+});'
         } else {}
   // TODO: Implement;
 }'
-          healthChecks.push({ name: 'Main App', status: 'unhealthy' });'
+          healthChecks.push({ name: 'Main App', status: 'unhealthy' }
+});'
         };
       } catch (error) {'}
-        healthChecks.push({ name: 'Main App', status: 'error', error: error.message });'
+        healthChecks.push({ name: 'Main App', status: 'error', error: error.message }
+});'
       };
       // Check if build directory exists;'
       const buildDirs = ['dist', 'build', 'out', '.next'];'
@@ -301,7 +314,8 @@ class HealthMonitor {}
       healthChecks.push({ '})
         name: 'Build Directory',''
         status: buildExists ? 'healthy' : 'missing'');
-      });
+      }
+});
       
       // Check log files;'
       const logDir = 'logs/pm2';'
@@ -310,12 +324,13 @@ class HealthMonitor {}
         name: 'Log Files',''
         status: logFiles.length > 0 ? 'healthy' : 'missing','
         count: logFiles.length;);
-      });
+      }
+});
       
       return healthChecks;
       
     } catch (error) {}
-      this.error(`Application health check failed: ${error.message}`);``
+      this.error(`Application health check failed: ${error.message}`);
       return [{ name: 'Health Check', status: 'error', error: error.message }];'
     };
   };
@@ -329,7 +344,7 @@ class HealthMonitor {}
         processName: this.processName,
         systemHealth: await this.getSystemHealth(),
         applicationHealth: await this.checkApplicationHealth(),
-        environment: {,}
+        environment: {}
   nodeVersion: process.version,
           platform: process.platform,
           cwd: process.cwd();
@@ -353,21 +368,22 @@ class HealthMonitor {}
       const reportDir = path.dirname(reportFile);
       
       if (!fs.existsSync(reportDir)) {}
-        fs.mkdirSync(reportDir, { recursive: true });
+        fs.mkdirSync(reportDir, { recursive: true }
+});
       };
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      this.log(`Health report saved to: ${reportFile}`);`
-      this.log(`Overall health score: ${report.healthScore}/100`);`
+      this.log(`Health report saved to: ${reportFile}`);
+      this.log(`Overall health score: ${report.healthScore}/100`);
       
       return report;
       
     } catch (error) {}
-      this.error(`Failed to generate health report: ${error.message}`);`
+      this.error(`Failed to generate health report: ${error.message}`);
       return null;
     };
   };
   async start() {}
-    this.log(`Starting ${this.processName}...`);`
+    this.log(`Starting ${this.processName}...`);
     
     // Run initial health check;
     await this.generateHealthReport();
@@ -379,7 +395,7 @@ class HealthMonitor {}
       await this.generateHealthReport();
     }, interval);
     
-    this.log(`${this.processName} started successfully`);`
+    this.log(`${this.processName} started successfully`);
   };
 };
 // Start the automation if this script is run directly;
@@ -388,6 +404,7 @@ if (require.main === module) {}
   monitor.start().catch(error => {)``}
     console.error('Health monitor failed to start:', error);'
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = HealthMonitor;'

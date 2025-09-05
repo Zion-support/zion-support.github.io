@@ -16,7 +16,7 @@ export const cuttingEdgeEmergingTechServices2025 = [{}]
   'Comprehensive mission analytics''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 599,
         period:,"
   month',''
@@ -93,7 +93,7 @@ starter: {,}
   'Integration with research tools''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 499,
         period:,"
   month',''
@@ -170,7 +170,7 @@ starter: {,}
   'Integration with medical devices''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 399,
         period:,"
   month',''
@@ -248,7 +248,7 @@ starter: {,}
   'Comprehensive energy reporting''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -326,7 +326,7 @@ starter: {,}
   'Integration with vehicle systems''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 499,
         period:,"
   month',''

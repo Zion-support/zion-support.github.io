@@ -5,7 +5,7 @@ import path from 'path';
 function createValidReactComponent(filePath) {}
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-  return `import React from 'react';`
+  return `import React from 'react';
 
 export default function ${componentName}() {}
   return ()
@@ -34,7 +34,7 @@ function fixFile(filePath) {}
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);`
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   };
 };
@@ -61,9 +61,10 @@ function fixDirectory(dirPath) {}
 const directories = ['src', 'pages', 'components'];
 directories.forEach(dir => {})
   if (fs.existsSync(dir)) {}
-    console.log(`Fixing directory: ${dir}`);`
+    console.log(`Fixing directory: ${dir}`);
     fixDirectory(dir);
   };
+}
 });
 
 console.log('Aggressive fix completed!');

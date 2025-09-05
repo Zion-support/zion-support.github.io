@@ -11,7 +11,7 @@ console.log('⚡ Starting Performance Optimization Automation...')
     '.css'
   console.log('�  Starting Image Optimization...')
   const imagesDir = path.join(process.cwd(), 'public/images;'
-    console.log('� Creating images directory...')
+// console.log('� Creating images directory...')
     console.log('� Creating images directory...')
   const optimizedImageComponent = "
     execSync('npx @next/bundle-analyzer', { "stdio"})

@@ -25,7 +25,8 @@ class AICodeAnalyzer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -42,7 +43,7 @@ class AICodeAnalyzer {}
             
             this.log('ESLint analysis completed successfully');
             return { "eslint": 'passed', "output": eslintResult }} catch (error) {}
-            this.log(`ESLint analysis "failed": ${error.message}`);`
+            this.log(`ESLint analysis "failed": ${error.message}`);
             return { "eslint": 'failed', "output": error.stdout || error.message }};
     };
     analyzeTypeScript() {}
@@ -57,7 +58,7 @@ class AICodeAnalyzer {}
             
             this.log('TypeScript analysis completed successfully');
             return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}
-            this.log(`TypeScript analysis "failed": ${error.message}`);`
+            this.log(`TypeScript analysis "failed": ${error.message}`);
             return { "typescript": 'failed', "output": error.stdout || error.message }};
     };
     analyzeDependencies() {}
@@ -71,14 +72,14 @@ class AICodeAnalyzer {}
             };);
             
             const auditData = JSON.parse(auditResult;);
-            this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);`
+            this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
             
             return {;}
                 "vulnerabilities": auditData.vulnerabilities?.total || 0,
                 "dependencies": auditData.metadata?.dependencies || 0,
                 "devDependencies": auditData.metadata?.devDependencies || 0;
             }} catch (error) {}
-            this.log(`Dependency analysis "failed": ${error.message}`);`
+            this.log(`Dependency analysis "failed": ${error.message}`);
             return { "error": error.message }};
     };
     generateReport() {}
@@ -96,7 +97,7 @@ class AICodeAnalyzer {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Analysis report saved to ${this.reportFile}`);`
+        this.log(`Analysis report saved to ${this.reportFile}`);
         
         return report};
     generateRecommendations() {}
@@ -114,7 +115,7 @@ class AICodeAnalyzer {}
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
             return report} catch (error) {}
-            this.log(`AI Code Analyzer "failed": ${error.message}`);`
+            this.log(`AI Code Analyzer "failed": ${error.message}`);
             throw error};
     };
 };

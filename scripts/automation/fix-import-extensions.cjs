@@ -8,12 +8,13 @@ class ImportExtensionFixer {}
     this.projectRoot = process.cwd();
     this.fixesApplied = 0};
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
     
     // Find all TypeScript and JavaScript files;
-    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot });
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
+});
     
     for (const file of files) {}
       const filePath = path.join(this.projectRoot, file);
@@ -38,7 +39,7 @@ class ImportExtensionFixer {}
       if (content !== originalContent) {}
         fs.writeFileSync(filePath, content);
         modified = true;
-        this.log(`Fixed import extensions in ${file}`)};`
+        this.log(`Fixed import extensions in ${file}`)};
       if (modified) {}
         this.fixesApplied++};
     };
@@ -51,7 +52,7 @@ class ImportExtensionFixer {}
       
       this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
-      this.log(`Error in Import Extension "Fixer": ${error.message}`);`
+      this.log(`Error in Import Extension "Fixer": ${error.message}`);
       throw error};
   };
 };
@@ -61,7 +62,8 @@ if (require.main === module) {}
   automation.run();
     .then(() => {}
       console.log('Import Extension Fixer completed successfully!');
-      process.exit(0)});
+      process.exit(0)}
+});
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};

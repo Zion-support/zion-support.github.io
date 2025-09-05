@@ -28,7 +28,7 @@ export interface ComprehensiveService {}
    reviews?: number;
    popular?: boolean;
    launchDate?: string;
-   contactInfo: { ,}
+   contactInfo: {}
   mobile: string;'
    email: string;';','
   address: string";';''

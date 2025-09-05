@@ -27,7 +27,8 @@ console.log(""[INFO]  Starting advanced syntax error fix automation...")
       console.log(")
     return fixes} catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}"")
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]
-  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)});`)}``
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}
+});`)}
 "
     return fixes;`)} catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}```)
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]

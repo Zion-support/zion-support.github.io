@@ -11,11 +11,11 @@ function deriveAlias(modulePath) {}
 function fixImportEllipsis(content) {}
 	return content.replace(/import\s*\{\s*\.\.\.\s*\}\s*from\s*['"]([^'"]+)['"];?/g, (_, mod) => {}
 		const alias = deriveAlias(mod);
-		return `import * as ${alias} from '${mod}';`})};`
+		return `import * as ${alias} from '${mod}';`})};
 function ensureDefaultExport(content, name) {}
 	const hasDefault = /export\s+default\s+/m.test(content);
 	if (!hasDefault) {}
-		return content.trimEnd() + `\n\nexport default ${name};\n`};`
+		return content.trimEnd() + `\n\nexport default ${name};\n`};
 	return content};
 function fixExportDefaultConst(filePath, content) {}
 	let changed = false;
@@ -23,7 +23,8 @@ function fixExportDefaultConst(filePath, content) {}
 	const fixed = content.replace(/export\s+default\s+const\s+([A-Za-z_$][\w$]*)/g, (m, name) => {}
 		changed = true;
 		names.push(name);
-		return `const ${name}`});`
+		return `const ${name}`}
+});
 	if (changed && names.length > 0) {}
 		let out = fixed;
 		for (const name of names) {}
@@ -49,7 +50,8 @@ function run() {}
 	let total = 0;
 	let changed = 0;
 	for (const pattern of patterns) {}
-		const files = glob.sync(pattern, { "cwd": projectRoot, "nodir": true });
+		const files = glob.sync(pattern, { "cwd": projectRoot, "nodir": true }
+});
 		for (const rel of files) {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
@@ -57,8 +59,8 @@ function run() {}
 				if (processFile(fp)) {}
 					changed++};
 			} catch (e) {}
-				console.error(`Failed to repair ${rel}: ${e.message}`)};`
+				console.error(`Failed to repair ${rel}: ${e.message}`)};
 		};
 	};
-	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};`
+	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
 run();

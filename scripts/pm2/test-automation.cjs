@@ -20,7 +20,8 @@ class TestAutomation {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
   log(message) {}
@@ -42,21 +43,22 @@ class TestAutomation {}
         return { success: false, message: 'No test script configured' };
       };
       // Run tests;
-      const testCommand = this.parallelTests ? `${testScript} --run` : testScript;`
-      this.log(`Running tests: ${testCommand}`);`
+      const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
+      this.log(`Running tests: ${testCommand}`);
       
       const result = execSync(testCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
-      });
+      }
+});
 
       this.log('Tests completed successfully');
-      this.log(`Test output: ${result}`);`
+      this.log(`Test output: ${result}`);
 
       return { success: true, output: result };
     } catch (error) {}
-      this.log(`Test execution failed: ${error.message}`);`
+      this.log(`Test execution failed: ${error.message}`);
       
       if (this.autoRetryFailed) {}
         this.log('Retrying failed tests...');
@@ -65,11 +67,12 @@ class TestAutomation {}
             encoding: 'utf8',
             stdio: 'pipe',
             cwd: process.cwd();
-          });
+          }
+});
           this.log('Retry successful');
           return { success: true, output: retryResult, retried: true };
         } catch (retryError) {}
-          this.log(`Retry also failed: ${retryError.message}`);`
+          this.log(`Retry also failed: ${retryError.message}`);
           return { success: false, error: retryError.message, retried: true };
         };
       };
@@ -86,21 +89,22 @@ class TestAutomation {}
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
-      });
+      }
+});
 
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
       
-      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);`
+      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
       
       if (coverage < this.coverageThreshold) {}
-        this.log(`WARNING: Coverage below threshold!`);`
+        this.log(`WARNING: Coverage below threshold!`);
         return { coverage, belowThreshold: true };
       };
       return { coverage, belowThreshold: false };
     } catch (error) {}
-      this.log(`Coverage check failed: ${error.message}`);`
+      this.log(`Coverage check failed: ${error.message}`);
       return { coverage: 0, belowThreshold: true, error: error.message };
     };
   };
@@ -121,11 +125,11 @@ class TestAutomation {}
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`Test report generated: ${reportFile}`);`
+    this.log(`Test report generated: ${reportFile}`);
     return report;
   };
   async start() {}
-    this.log(`${this.processName} started`);`
+    this.log(`${this.processName} started`);
     
     try {}
       const report = await this.generateReport();
@@ -139,7 +143,7 @@ class TestAutomation {}
         this.log('WARNING: Test coverage below threshold');
       };
     } catch (error) {}
-      this.log(`Test automation error: ${error.message}`);`
+      this.log(`Test automation error: ${error.message}`);
     };
   };
 };

@@ -2,11 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 function getAllFiles(dir) {}
-  const entries = fs.readdirSync(dir, { "withFileTypes": true });
+  const entries = fs.readdirSync(dir, { "withFileTypes": true }
+});
   const files = entries.flatMap((entry) => {}
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) return getAllFiles(fullPath);
-    return [fullPath]});
+    return [fullPath]}
+});
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
@@ -44,11 +46,11 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
-        console.log(`Resolved conflicts "in": ${f}`)};`
+        console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
-      console.error(`Failed to process ${f}: ${e.message}`)};`
+      console.error(`Failed to process ${f}: ${e.message}`)};
   };
-  console.log(`Done. Files "updated": ${count}`)};`
+  console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;

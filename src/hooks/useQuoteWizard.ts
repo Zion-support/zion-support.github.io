@@ -9,7 +9,7 @@ export interface ServiceItem {}
 export interface WizardResponse {}
 
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {`}
-</WizardResponse>``
+</WizardResponse>
   const [step, setStep] = useState<WizardStep>('Services');'
 </WizardStep>
   const [selectedService, setSelectedService] = useState<string | null>(null);

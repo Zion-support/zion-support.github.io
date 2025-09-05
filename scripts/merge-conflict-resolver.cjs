@@ -46,7 +46,8 @@ files.forEach(file => {
           content = content.replace(pattern.from, pattern.to);
           modified = true;
         }
-      });
+      }
+});
       
       if (modified) {
         fs.writeFileSync(file, content);
@@ -57,6 +58,7 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+}
 });
 
 console.log(`✅ Fixed ${totalFixed} files`);
@@ -66,7 +68,7 @@ console.log('🎉 Merge conflict resolver completed!');
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Merge Conflict Resolver')
+// console.log(' Merge Conflict Resolver')
 console.log('=====')
       const conflictFiles = execSync('git diff --name-only --diff-filter=U')
         "encoding"

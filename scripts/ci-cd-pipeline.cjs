@@ -9,7 +9,7 @@ console.log(' Starting CI/CD Pipeline...')
     "status"
         "status"
         "status"
-  console.log(`   - "Successful"`)
+// console.log(`   - "Successful"`)
   console.log(`   - "Failed"`)
     "name"
       const gitStatus = execSync('git status --porcelain', { "encoding"})
@@ -62,6 +62,6 @@ console.log(' Starting CI/CD Pipeline...')
       "name"
             "successfulStages"
             "failedStages"
-console.log(`   - Successful "Stages"`)
+// console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
   console.log('� Application "URL")

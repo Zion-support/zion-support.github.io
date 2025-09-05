@@ -12,7 +12,7 @@ class SimpleScriptFixer {}
     this.fixedCount = 0;
     this.errorCount = 0};
   async log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};`
+    console.log(`[${new Date().toISOString()}] ${message}`)};
   async findScriptFiles() {}
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
@@ -28,7 +28,7 @@ class SimpleScriptFixer {}
             scriptFiles.push(path.join(dir, file))};
         };
       } catch (error) {}
-        await this.log(`Error reading directory ${dir}: ${error.message}`)};`
+        await this.log(`Error reading directory ${dir}: ${error.message}`)};
     };
     return scriptFiles};
   async fixScriptFile(filePath) {}
@@ -60,17 +60,18 @@ class SimpleScriptFixer {}
       };
       if (hasChanges) {}
         await fs.writeFile(filePath, fixedContent, 'utf8');
-        await this.log(`Fixed "script": ${path.basename(filePath)}`);`
+        await this.log(`Fixed "script": ${path.basename(filePath)}`);
         this.fixedCount++;
         return true};
       return false} catch (error) {}
-      await this.log(`Error fixing script ${filePath}: ${error.message}`);`
+      await this.log(`Error fixing script ${filePath}: ${error.message}`);
       this.errorCount++;
       return false};
   };
   async testScript(filePath) {}
     try {}
-      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 });`
+      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }
+});
       return { "success": true, "output": stdout, "error": stderr }} catch (error) {}
       return { "success": false, "output": '', "error": error.message }};
   };
@@ -78,12 +79,12 @@ class SimpleScriptFixer {}
     await this.log('Starting automation script fixing process...');
 
     const scriptFiles = await this.findScriptFiles();
-    await this.log(`Found ${scriptFiles.length} script files to check`);`
+    await this.log(`Found ${scriptFiles.length} script files to check`);
 
     let testedCount = 0;
 
     for (const scriptFile of scriptFiles) {}
-      await this.log(`"Processing": ${path.basename(scriptFile)}`);`
+      await this.log(`"Processing": ${path.basename(scriptFile)}`);
       
       const wasFixed = await this.fixScriptFile(scriptFile);
 
@@ -93,9 +94,9 @@ class SimpleScriptFixer {}
       
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`)} else {`}
-        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`)};`
+        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`)};
     };
-    await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);`
+    await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);
     return { "fixed": this.fixedCount, "errors": this.errorCount, "total": scriptFiles.length }};
 };
 // Run the fixer;

@@ -8,7 +8,7 @@ export interface ProductListing {}
   price: number;
   currency: string;,
   tags: string[];
-  author: {,}
+  author: {}
   name: string;
     id: string;
   };"

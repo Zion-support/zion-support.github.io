@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Comprehensive Syntax Fixer v2.0')
+// console.log(' Comprehensive Syntax Fixer v2.0')
 console.log('==')
         "pattern"
         "replacement": 'import React from "react"\nimport dynamic from "next/dynamic"
@@ -23,7 +23,7 @@ console.log('==')
         "replacement": 'const $1 = ({ children, title = "$2", description = "$3"})
       {"pattern"}
         content = 'import React from "react";
-    console.log('\n "Summary")
+// console.log('\n "Summary")
       console.log('\n� Fixed "files")
-      console.log('\n� "Errors")
+// console.log('\n� "Errors")
     console.log('\n� Report saved "to")

@@ -34,7 +34,7 @@ console.log(" Detecting build errors...")
   const auditResult = execSync("npm audit --json")
   "encoding": "utf8"
         "stdio": "pipe"
-  console.log("⚠  Could not run npm audit")
+// console.log("⚠  Could not run npm audit")
     console.log(" Detecting syntax errors...")
     const reportPath = path.join(process.cwd(), "error-detection-report.json"
     console.log( Error detection completed. "Found": );console.log(   - ${errors.typescript.length} TypeScript errors"");console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(` Report saved "to"`)

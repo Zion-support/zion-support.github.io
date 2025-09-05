@@ -14,7 +14,7 @@ class $1 {}
 ;
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};`
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}
@@ -27,7 +27,8 @@ class $1 {}
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe",
-        ...options});
+        ...options}
+});
       return { "success": true, "output": result };
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status   };
@@ -62,7 +63,8 @@ class $1 {}
   "encoding": "utf8",
         "cwd": this.projectRoot,
         "stdio": "pipe",
-        ...options });
+        ...options }
+});
       return { "success": true, "output": result };
     } catch (error) {}
   return { "success": false, "output": error.message, "code": error.status };
@@ -127,14 +129,14 @@ class $1 {}
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    this.log(`Dependency monitor report "generated": ${this.logFile}`)};`
+    this.log(`Dependency monitor report "generated": ${this.logFile}`)};
 ;
   async run() {}
   this.log("Starting dependency monitoring process...");
     try {}
   await this.checkDependencies();
       await this.generateReport();
-      this.log("Dependency monitoring completed", "success")} catch (error) {  this.log(`Error during dependency "monitoring": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);`
+      this.log("Dependency monitoring completed", "success")} catch (error) {  this.log(`Error during dependency "monitoring": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
       await this.generateReport()};
   };
 };

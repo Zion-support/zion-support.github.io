@@ -19,7 +19,7 @@ export interface InnovativeMicroSaasService {}
   marketPrice: string;
   roi: string;,
   innovationLevel: string;
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,
   website: string};
@@ -81,13 +81,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$2,999 - $8,999/month",""
     roi: "250-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],""
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],"
       apiEndpoints: 150,"
@@ -147,13 +147,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$3,499 - $9,999/month",""
     roi: "300-500%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],""
       integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],"
       apiEndpoints: 200,"
@@ -213,13 +213,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$5,999 - $15,999/month",""
     roi: "200-400%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],""
       integrations: ["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],"
       apiEndpoints: 200,"
@@ -279,13 +279,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$4,499 - $12,999/month",""
     roi: "150-300%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],""
       integrations: ["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],"
       apiEndpoints: 300,"
@@ -345,13 +345,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$3,799 - $11,999/month",""
     roi: "250-450%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],""
       integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],"
       apiEndpoints: 400,"
@@ -411,13 +411,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$2,499 - $7,999/month",""
     roi: "200-350%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Ethereum", "Hyperledger", "React", "Node.js", "IPFS"],""
       integrations: ["ERP systems", "WMS", "TMS", "IoT sensors", "Mobile apps"],"
       apiEndpoints: 250,"
@@ -477,13 +477,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$1,999 - $6,999/month",""
     roi: "300-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "React", "Node.js", "Redis"],""
       integrations: ["CRM systems", "Email platforms", "Social media", "Analytics tools", "Mobile apps"],"
       apiEndpoints: 300,"
@@ -543,13 +543,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$7,999 - $19,999/month",""
     roi: "150-300%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++"],""
       integrations: ["Jupyter notebooks", "GitHub", "Cloud platforms", "Research tools"],"
       apiEndpoints: 100,"
@@ -609,13 +609,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$4,999 - $14,999/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "R", "React", "Node.js", "PostgreSQL"],""
       integrations: ["Trading platforms", "Market data feeds", "Regulatory systems", "Banking APIs"],"
       apiEndpoints: 200,"
@@ -675,13 +675,13 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = []
     marketPrice: "$6,999 - $18,999/month",""
     roi: "250-450%",""
     innovationLevel: "Cutting-edge","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "TensorFlow", "ROS", "React", "Node.js", "MongoDB"],""
       integrations: ["Vehicle APIs", "GPS systems", "Weather services", "Traffic data", "Payment systems"],"
       apiEndpoints: 500,"

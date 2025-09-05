@@ -13,7 +13,7 @@ const path = require("path")
     "format": "json"
 "
     fs.writeFileSync(path.join(this.projectRoot, "config/analytics.js")
-    console.log(" Analytics configuration created")
+// console.log(" Analytics configuration created")
     console.log("� Setting up health checks...")
     const healthCheckScript = "
 const express = require("$1")
@@ -28,5 +28,5 @@ app.get("/ready")
     "timestamp"
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
-    console.log(" Health check script created")
+// console.log(" Health check script created")
     console.log(" Monitoring setup completed!")
