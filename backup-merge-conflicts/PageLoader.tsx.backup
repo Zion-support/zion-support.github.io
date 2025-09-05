@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
+<<<<<<< HEAD:backup-merge-conflicts/PageLoader.tsx.backup
 <<<<<<< HEAD
 ;
 export const "PageLoader": "React.FC = ("props": any) => {;
@@ -21,6 +22,10 @@ export const "PageLoader": React.FC = (props) => {
 <<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
 =======
+=======
+export const "PageLoader": React.FC = (props) => {
+  return (
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/PageLoader.tsx
     <div className="min-h-screen bg-white">
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/PageLoader.tsx
@@ -29,5 +34,8 @@ export const "PageLoader": React.FC = (props) => {
         <p className="text-gray-600">Loading...</p>
       </div>
     </div>
+<<<<<<< HEAD:backup-merge-conflicts/PageLoader.tsx.backup
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/PageLoader.tsx

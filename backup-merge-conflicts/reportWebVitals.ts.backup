@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src/reportWebVitals.ts
+<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/reportWebVitals.ts
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -67,5 +70,8 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
+<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/reportWebVitals.ts

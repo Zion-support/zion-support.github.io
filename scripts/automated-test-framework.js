@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AutomatedTestFramework { constructor() { this.tests = []; this.results = { passed: 0,failed: 0,total: 0 }} addTest(name,testFn) { this.tests.push({ name,testFn })} async runTests() {  for (const test of this.tests) { try { await test.testFn(); this.results.passed++; } catch (error) { this.results.failed++; } } this.results.total = this.tests.length; this.generateReport()} generateReport() { const report = { timestamp: new Date().toISOString(),...this.results,successRate: (this.results.passed / this.results.total) * 100 }; const reportPath = path.join(process.cwd(),'test-reports','automated-test-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); } } module.exports = AutomatedTestFramework;
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = require("fs"); const path = require("path"); class AutomatedTestFramework { constructor() { this.tests = []; this.results = { passed: 0,failed: 0,total: 0 }} addTest(name,testFn) { this.tests.push({ name,testFn })} async runTests() { console.log(" Running automated tests."); for (const test of this.tests) { try { await test.testFn(); this.results.passed++; console.log(` ${test.name}`)} catch (error) { this.results.failed++; console.log(` ${test.name}: ${error.message}`)} } this.results.total = this.tests.length; this.generateReport()} generateReport() { const report = { timestamp: new Date().toISOString(),.this.results,successRate: (this.results.passed / this.results.total) * 100 }; const reportPath = path.join(process.cwd(),"test-reports","automated-test-report.json"); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); console.log(`\n Test Results: ${this.results.passed}/${this.results.total} passed`)} } module.exports = AutomatedTestFramework;'`'"`
@@ -7,3 +8,5 @@
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

@@ -42,9 +42,13 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Initial health check
     await this.performHealthCheck();
 
@@ -88,9 +92,12 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
       });
     }
@@ -202,18 +209,25 @@ class ErrorMonitor {
             column: parseInt(match[3]),
             message: match[4].trim(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             timestamp: new Date().toISOString()
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     return errors;
   }
 
@@ -231,20 +245,27 @@ class ErrorMonitor {
           column: parseInt(match[3]),
           message: match[4].trim(),
 <<<<<<< HEAD
+<<<<<<< HEAD
           timestamp: new Date().toISOString()
         });
       }
     }
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
           timestamp: new Date().toISOString(),
         });
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     return errors;
   }
 
@@ -270,11 +291,14 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -294,10 +318,14 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.log('✅ Error fixer completed');
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -305,9 +333,12 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         timestamp: new Date().toISOString(),
       });
     }
@@ -338,9 +369,13 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Activity,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
   ArrowRight,
-  Award,
-  BarChart3,
-  BookOpen,
   Brain,
+<<<<<<< HEAD
   Building,
   Calculator,
   Calendar,
@@ -35,28 +36,54 @@ import {
   MapPin,
   MessageSquare,
   Music,
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   Network,
-  Paintbrush,
-  Phone,
-  PieChart,
-  Server,
-  Settings,
+  Cloud,
   Shield,
-  ShoppingCart,
-  Sprout,
-  Star,
-  Target,
-  TreePine,
-  TrendingUp,
-  Truck,
+  BarChart3,
   Users,
-  Video,
-  Wifi,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
   Wrench,
+<<<<<<< HEAD
   Zap
 =======
   Layers
 >>>>>>> origin/main
+=======
+  PieChart,
+  ClipboardList,
+  Layers
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 } from 'lucide-react';
 
 const footerSections = [

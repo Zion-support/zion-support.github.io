@@ -5,6 +5,10 @@ const Layout = dynamic(() => import(\"./Layout\"),{\'; \"loading\": () => <p>Loa
 const Layout = dynamic(() => import("./Layout"),{"; loading: () => <p>Loading.</p,>}) export: "default Layout" ,"""
 =======
 const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
+<<<<<<< HEAD:backup-merge-conflicts/Layout.dynamic.jsx.backup
 </p>'
 >>>>>>> main
 >>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/Layout.dynamic.jsx

@@ -11,14 +11,20 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
+<<<<<<< HEAD:backup-merge-conflicts/performance-monitor.js.backup
 <<<<<<< HEAD
     console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart)})}
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/utils/performance-monitor.js
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
     console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+<<<<<<< HEAD:backup-merge-conflicts/performance-monitor.js.backup
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/utils/performance-monitor.js

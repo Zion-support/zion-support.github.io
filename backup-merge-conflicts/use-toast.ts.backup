@@ -19,7 +19,10 @@ import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "num
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/use-toast.ts
 
+<<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/use-toast.ts
 import { toast } from 'react-hot-toast'
 >>>>>>> main
 interface ToastOptions {
@@ -32,6 +35,9 @@ export function useToast() {
   };
   return { showToast };
 };
+<<<<<<< HEAD:backup-merge-conflicts/use-toast.ts.backup
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/use-toast.ts

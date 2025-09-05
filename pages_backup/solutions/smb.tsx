@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -55,6 +56,12 @@ export default function SMBSolutionsPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import { 
   Building2, 
   Users, 
@@ -88,8 +95,11 @@ const smbServices = [
 ];
 
 export default function SMBSolutionsPage() {
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -103,6 +113,7 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -124,6 +135,8 @@ export default function SMBSolutionsPage() {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -136,6 +149,7 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -184,6 +198,8 @@ export default function SMBSolutionsPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -219,8 +235,11 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

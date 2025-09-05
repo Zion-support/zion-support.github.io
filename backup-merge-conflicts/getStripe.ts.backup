@@ -1,8 +1,11 @@
 <<<<<<< HEAD:src/utils/getStripe.ts
+<<<<<<< HEAD:backup-merge-conflicts/getStripe.ts.backup
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/getStripe.ts
 import { loadStripe,Stripe } from '@stripe/stripe-js'; let "stripePromise": "Promise<Stripe | null> export function getStripe(): Promise<Stripe | null> { if (!stripePromise) { const key = import.meta.env.PROD ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string) : (import.meta.env.VITE_STRIPE_TEST_KEY as string); stripePromise = loadStripe(key",{ "advancedFraudSignals": 'false' })} return stripePromise} export default getStripe;
 =======
 <<<<<<< HEAD
@@ -36,8 +39,11 @@ import { loadStripe,Stripe } from '@stripe/stripe-js'; let stripePromise: Promis
 =======
 export default getStripe;';';
 import { loadStripe,Stripe } from '@stripe/stripe-js'; let stripePromise: Promise<Stripe | null>; export function getStripe(): Promise<Stripe | null> { if (!stripePromise) { const key = import.meta.env.PROD ? (import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY as string) : (import.meta.env.VITE_STRIPE_TEST_KEY as string); stripePromise = loadStripe(key,{ advancedFraudSignals: false })} return stripePromise} export default getStripe;';';
+<<<<<<< HEAD:backup-merge-conflicts/getStripe.ts.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/utils/getStripe.ts
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/getStripe.ts

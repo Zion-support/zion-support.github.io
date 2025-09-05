@@ -1,4 +1,7 @@
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 <<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js
 export default {
 <<<<<<< HEAD
   extends: ['next/core-web-vitals', 'next/typescript'],
@@ -18,7 +21,10 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -100,7 +106,10 @@ module.exports = {
 <<<<<<< HEAD
     es2021: true,
   },
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js
     node: true,
     es6: true
   },
@@ -118,7 +127,11 @@ module.exports = {
     '@next/next/no-img-element': 'warn'
 >>>>>>> main
   }
+<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 >>>>>>> main
 };
 >>>>>>> main
 >>>>>>> main
+=======
+};
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:.eslintrc.js

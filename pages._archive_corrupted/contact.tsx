@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -31,6 +32,8 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -57,6 +60,7 @@ const "ContactPage": React.FC = () => {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -81,6 +85,8 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ]
   return (
     <>
@@ -130,6 +136,7 @@ const "ContactPage": React.FC = () => {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -143,6 +150,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -386,6 +395,7 @@ const "Contact": NextPage = () => {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -400,6 +410,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -409,6 +421,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -421,6 +434,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -430,6 +445,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -442,6 +458,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -451,6 +469,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -463,6 +482,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -494,6 +515,7 @@ const "Contact": NextPage = () => {
                 </p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 =======
@@ -503,6 +525,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -551,6 +575,7 @@ const "Contact": NextPage = () => {
                 </p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 =======
@@ -560,6 +585,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -593,6 +620,7 @@ const "Contact": NextPage = () => {
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 =======
@@ -602,6 +630,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -626,6 +656,7 @@ const "Contact": NextPage = () => {
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -638,6 +669,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       Service Interest
                     </label>
                     <select
@@ -654,6 +687,7 @@ const "Contact": NextPage = () => {
                     </select>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -666,6 +700,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       Message *
                     </label>
                     <textarea
@@ -688,6 +724,7 @@ const "Contact": NextPage = () => {
                   </motion.button>
                 </motion.form>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 =======
@@ -697,6 +734,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -716,6 +755,7 @@ const "Contact": NextPage = () => {
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -728,6 +768,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -775,6 +817,7 @@ const "Contact": NextPage = () => {
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 =======
@@ -784,6 +827,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -874,6 +919,7 @@ const "Contact": NextPage = () => {
                   </p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 =======
@@ -883,6 +929,8 @@ const "Contact": NextPage = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -898,6 +946,7 @@ const "Contact": NextPage = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -947,12 +996,15 @@ export default ContactPage
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
           </div>
         </section>
       </div>
     </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 =======
@@ -961,3 +1013,5 @@ export default ContactPage
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

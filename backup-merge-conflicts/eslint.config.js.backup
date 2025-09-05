@@ -1,16 +1,24 @@
 import js from '@eslint/js';
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import globals from 'globals';
+=======
+import react from 'eslint-plugin-react';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
+import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+=======
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 
 export default [
   {
     ignores: [
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 =======
 <<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -102,6 +110,8 @@ export default [{
     "ignores": [
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
       'node_modules/',
       '.next/',
       'out/',
@@ -111,6 +121,7 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -217,6 +228,8 @@ export default [{
     },
   },
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -238,6 +251,7 @@ export default [{
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
@@ -490,62 +504,119 @@ export default [{
       'tests/**',
       'test-results/**',
       'test-reports/**',
+=======
+      'src_backup_temp/',
+      'src.pages.disabled/',
+      'src.disabled/',
+      'src.broken/',
+      'src.corrupted/',
+      'pages_backup/',
+      'pages_backup_conflicts/',
+      'pages_disabled/',
+      'pages_api.disabled/',
+      'lib.broken/',
+      'lib.disabled/',
+      'lib/',
+      'lint-target/',
+      'monitoring/',
+      'netlify/',
+      'next.config.*.js',
+      'pages.disabled_auto/',
+      'pages.old/',
+      'public/',
+      'server/',
+      'temp-backup/',
+      'temp_broken_files/',
+      'temp_working/',
+      'temp_footer_start.tsx',
+      'temp_backup/',
+      'test_build/',
+      'tests/',
+      'tools/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'fix-*.cjs',
+      'fix-*.js',
+      'git-*.js',
+      'git-*.cjs',
+      'hooks.disabled/',
+      'hooks/',
+      'intelligent-*.cjs',
+      'jest.*',
+      'master-*.cjs',
+      'merge-*.cjs',
+      'middleware.*',
+      'optimized-*.cjs',
+      'quick-*.cjs',
+      'resolve-*.cjs',
+      'run-*.cjs',
+      'security-*.cjs',
+      'seo-*.cjs',
+      'simple-*.cjs',
+      'structural-*.js',
+      'supabase/',
+      'types/',
+      'utils/',
+      'data/',
+      'database/',
+      'deployment*/',
+      'e2e/',
+      'ecosystem.*.cjs',
+      'enhanced-*.cjs',
+      'final-*.cjs',
+      'lint-stub.js',
+      'playwright.config.ts',
+      'pr-manager.cjs',
+      'services/',
+      'src/',
+      'components.disabled/',
+      'components.disabled_full/',
+      'contracts.disabled/',
+      'corrupted-files-backup/',
+      'cypress_backup/',
+      'ai-optimization-backups/',
+      'api-backup/',
+      'backup/',
+      'cache/',
+      'clean-build/',
+      'cypress.config.ts',
+      'pages/404.jsx',
+      'pages/404.tsx',
+      'pages/about.tsx',
+      'pages/ai-services.tsx',
+      'pages/api-docs.tsx',
+      'pages/api.tsx',
+      'pages/careers.tsx',
+      'pages/it-services.tsx',
+      'pages/micro-saas.tsx',
+      'pages/resources.tsx',
+      'pages/services.tsx',
+      'pages/webinars.tsx',
+      'pages/white-papers.tsx',
+      'components/layout/',
+      'components/performance/',
+      'components/ui/',
+      '*.cjs',
+      '*.js',
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
       '*.test.js',
-      '*.test.jsx',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
-      '*.spec.jsx',
       '*.spec.ts',
       '*.spec.tsx',
-      '*.backup.js',
-      '*.backup.jsx',
-      '*.backup.ts',
-      '*.backup.tsx',
-      '*.broken.js',
-      '*.broken.jsx',
-      '*.broken.ts',
-      '*.broken.tsx',
-      '*.corrupted.js',
-      '*.corrupted.jsx',
-      '*.corrupted.ts',
-      '*.corrupted.tsx',
-      '*.disabled.js',
-      '*.disabled.jsx',
-      '*.disabled.ts',
-      '*.disabled.tsx',
-      '*.old.js',
-      '*.old.jsx',
-      '*.old.ts',
-      '*.old.tsx',
-      '*.temp.js',
-      '*.temp.jsx',
-      '*.temp.ts',
-      '*.temp.tsx',
-      '*.tmp.js',
-      '*.tmp.jsx',
-      '*.tmp.ts',
-      '*.tmp.tsx',
-      '*.bak.js',
-      '*.bak.jsx',
-      '*.bak.ts',
-      '*.bak.tsx',
-      '*.orig.js',
-      '*.orig.jsx',
-      '*.orig.ts',
-      '*.orig.tsx',
-      '*.rej.js',
-      '*.rej.jsx',
-      '*.rej.ts',
-      '*.rej.tsx',
-      '*.swp.js',
-      '*.swp.jsx',
-      '*.swp.ts',
-      '*.swp.tsx',
-      '*.swo.js',
-      '*.swo.jsx',
-      '*.swo.ts',
-      '*.swo.tsx',
+      '*.backup.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.disabled.*',
+      '*.old.*',
+      '*.temp.*',
+      '*.tmp.*',
+      '*.bak.*',
+      '*.orig.*',
+      '*.rej.*',
+      '*.swp.*',
+      '*.swo.*',
       '*.log',
       '*.pid',
       '*.seed',
@@ -568,6 +639,7 @@ export default [{
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
       '*.tgz',
       '*.tar.gz',
       '*.zip',
@@ -620,6 +692,175 @@ export default [{
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
+=======
+      'ultimate-*.js',
+      'ultimate-*.cjs',
+      'targeted-*.cjs',
+      'test-suite.cjs',
+      'ux-enhancer.cjs',
+      'vite.config-backup.ts',
+      'types/empty.ts'
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+=======
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+    },
+=======
+    plugins: {
+      react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        KeyboardEvent: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MutationObserver: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        fs: 'readonly',
+        CodeQualityChecker: 'readonly'
+      }
+    },
+    plugins: {
+      react,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+    }
+  },
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+>>>>>>> main
+>>>>>>> main
+];
+>>>>>>> main
+=======
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -637,21 +878,7 @@ export default [{
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
     },
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      '*.min.js',
-      'build/',
-      'coverage/',
-    ],
-  },
->>>>>>> main
->>>>>>> main
+  }
 ];
->>>>>>> main
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js

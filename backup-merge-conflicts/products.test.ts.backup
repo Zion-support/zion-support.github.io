@@ -151,5 +151,9 @@ describe('/api/products API Endpoint', () => {
       });
     });
   });
+<<<<<<< HEAD:backup-merge-conflicts/products.test.ts.backup
 });
 >>>>>>> main
+=======
+});
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/api/products.test.ts

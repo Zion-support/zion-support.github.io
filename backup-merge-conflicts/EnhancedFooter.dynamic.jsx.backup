@@ -5,6 +5,10 @@ const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{\'; \"loading
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedFooter" ,"""
 =======
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedFooter.dynamic.jsx.backup
 </p>'
 >>>>>>> main
 >>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/EnhancedFooter.dynamic.jsx

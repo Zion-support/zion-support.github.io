@@ -10,6 +10,7 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -149,6 +150,8 @@ class BuildMonitor {
       }
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -169,6 +172,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     const report = {
       ...results,
@@ -225,6 +229,9 @@ class BuildMonitor {
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -247,6 +254,7 @@ class BuildMonitor {
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
@@ -256,6 +264,9 @@ class BuildMonitor {
 =======
       
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+      
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -506,10 +517,13 @@ const monitor = new BuildMonitor();
 
 if (require.main === module) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const command = process.argv[2];
   
   switch (command) {

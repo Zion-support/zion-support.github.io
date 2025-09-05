@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -248,6 +249,8 @@ const ServicesIndex: NextPage = () => {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -295,8 +298,11 @@ const services = [
 ];
 
 export default function ServicesIndex() {
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <>
       <Head>
@@ -304,6 +310,7 @@ export default function ServicesIndex() {
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -514,6 +521,8 @@ export default function ServicesIndex() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -564,8 +573,11 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     Learn More
                   </Link>
                 </div>
@@ -573,6 +585,7 @@ export default function ServicesIndex() {
             ))}
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -586,6 +599,7 @@ export default function ServicesIndex() {
             </Link>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -605,3 +619,9 @@ export default ServicesIndex;
 }
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+      </div>
+    </>
+  );
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

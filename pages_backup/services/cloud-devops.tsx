@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -17,18 +18,24 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -175,6 +182,10 @@ export default function CloudDevOpsPage() {
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   },
   {
     icon: GitBranch,
@@ -198,6 +209,7 @@ export default function CloudDevOpsPage() {
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -213,6 +225,8 @@ export default function CloudDevOpsServices() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -226,8 +240,11 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -257,6 +274,7 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,6 +287,7 @@ export default function CloudDevOpsPage() {
                 and accelerate your development processes.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 =======
 <<<<<<< HEAD
@@ -277,6 +296,9 @@ export default function CloudDevOpsPage() {
             </motion.div>
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+            </motion.div>
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -294,6 +316,7 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -333,6 +356,8 @@ export default function CloudDevOpsPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -400,11 +425,15 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -427,6 +456,7 @@ export default function CloudDevOpsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
 <<<<<<< HEAD
@@ -435,5 +465,8 @@ export default function CloudDevOpsPage() {
     </>
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+    </>
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

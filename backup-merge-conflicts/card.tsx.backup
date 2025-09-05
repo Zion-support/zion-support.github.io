@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 <<<<<<< HEAD:src/components/ui/card.tsx
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ export function Card({ className, ...props }: CardProps) {
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || ''}`}
       {...props}
      />
@@ -24,6 +27,7 @@ export function Card("props": "any) {;
   );
 }
 interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 <<<<<<< HEAD
 
 export function CardHeader({ className, ...props }: CardHeaderProps) {
@@ -31,6 +35,8 @@ export function CardHeader({ className, ...props }: CardHeaderProps) {
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
     <div className={`flex flex-col space-y-1.5 p-6 ${className || ''}`} {...props}  />
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -46,6 +52,7 @@ export function CardTitle("props": "any) {;
     <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className"}`}
       {...props}
      />;
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 =======
 <<<<<<< HEAD
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || &quot;}`}
@@ -71,6 +78,10 @@ export function CardDescription("props": "any) {;
   return (;
     <p className={`text-sm text-muted-foreground ${className"}`} {...props}  />;
 =======
+=======
+<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || "}`}
+      {...props}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
 
 export function CardDescription(props: any) {
   return (
@@ -79,6 +90,7 @@ export function CardDescription(props: any) {
   );
 }
 interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 <<<<<<< HEAD
 export function CardContent("props": "any) {;
   return (;
@@ -91,6 +103,11 @@ export function CardContent(props: any) {
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">
 =======
+=======
+
+export function CardContent(props: any) {
+  return (
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
     <div className={`p-6 pt-0 ${className || ''}`} {...props}  />
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -100,6 +117,7 @@ export function CardContent(props: any) {
   );
 }
 interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 <<<<<<< HEAD
 export function CardFooter("props": "any) {;
   return (;
@@ -114,6 +132,11 @@ export function CardFooter(props: any) {
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">
 =======
+=======
+
+export function CardFooter(props: any) {
+  return (
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
     <div className={`flex items-center p-6 pt-0 ${className}`} {...props}  />
 >>>>>>> main
   );
@@ -123,6 +146,7 @@ export function CardFooter(props: any) {
 
 
 </HTMLHeadingElement>
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 <<<<<<< HEAD
 </HTMLDivElement>
 </div>';
@@ -133,10 +157,16 @@ export function CardFooter(props: any) {
 }
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+=======
+    <div className={`flex items-center p-6 pt-0 ${className}`} {...props} />
+  );
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx
 
 </div>
 =======
      /> )} interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {} export function CardHeader({ className,...props }: CardHeaderProps) { return (  <div className={`flex flex-col space-y-1.5 p-6 ${className || "}`} {...props} />  <div className="min-h-screen bg-white">  )} interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {} export function CardTitle({ className,...props }: CardTitleProps) { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className || "}`} {...props} /> )} interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {} export function CardDescription({ className,...props }: CardDescriptionProps) { return ( <p className={`text-sm text-muted-foreground ${className || "}`} {...props} /> )} interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {} export function CardContent({ className,...props }: CardContentProps) { return (  <div className={`p-6 pt-0 ${className || "}`} {...props} />  <div className="min-h-screen bg-white">  )} interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {} export function CardFooter({ className,...props }: CardFooterProps) { return (  <div className={`flex items-center p-6 pt-0 ${className}`} {...props} /> )}  <div className="min-h-screen bg-white"> )} </HTMLDivElement> </HTMLParagraphElement> </h3> </HTMLHeadingElement> </HTMLDivElement> </div> </HTMLDivElement>;';';
+<<<<<<< HEAD:backup-merge-conflicts/card.tsx.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/card.tsx
 >>>>>>> main
@@ -144,3 +174,5 @@ export function CardFooter(props: any) {
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/card.tsx

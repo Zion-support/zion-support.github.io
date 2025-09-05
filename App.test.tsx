@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -6,19 +7,26 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './src/App';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   it('displays correct content', () => {
     render(<App />);
@@ -30,6 +38,9 @@ describe('App', () => {
 =======
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -40,7 +51,11 @@ describe('App', () => {
     // Add interaction tests here
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 });
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+});
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

@@ -1,6 +1,9 @@
 <<<<<<< HEAD:src/data/itServicesData.ts
+<<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/itServicesData.ts
 export interface ITService {;
   "id": "string;
   "title": string;
@@ -2728,4 +2731,7 @@ export const IT_SERVICES: ITService[] = [
 >>>>>>> main
   }
 ];
+<<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/itServicesData.ts

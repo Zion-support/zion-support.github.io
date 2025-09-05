@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { ServiceVariant } from "./types/service-variants"; export interface NextGenInnovation2025 { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovations2025 NextGenInnovatio",n2025[] =,[ "'"'"
 import { ServiceVariant } from "../types/service-variants"; export interface NextGenInnovation2025 { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: ServiceVariant contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovations2025 NextGenInnovatio,n2025[] =,[ "
 =======
@@ -8,3 +9,5 @@ import { ServiceVariant } from "../types/service-variants"; export interface Nex
 =======
 >>>>>>> origin/main
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

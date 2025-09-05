@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 =======
 import React, { createContext, useContext } from 'react';
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
 ;
 interface User {;
@@ -10,6 +11,8 @@ interface User {;
   "id": "string;
   "email": string;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
 interface User {
   "id": string;
   email: string;
@@ -19,6 +22,7 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
   updatedAt?: string"}
 ;
@@ -48,6 +52,8 @@ const AuthContext = createContext<AuthContextType | null>(null);
 ;
 export const useAuth = ("props": "any) => {;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
   updatedAt?: string}
 interface AuthTokens {
   "accessToken": string | null;
@@ -73,6 +79,7 @@ export const useAuth = (props) => {;
   const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 <<<<<<< HEAD
 ;
   return context;
@@ -93,6 +100,8 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>;
 </any>
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx
   return context;
 };
 export { AuthContext };
@@ -105,6 +114,9 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>
 </any>;';';
 import React,{ createContext,useContext } from 'react'; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string} interface AuthTokens { accessToken: string | null; refreshToken: string | null} interface AuthContextType { user: Use r | null; isLoading: boolean; onboardingStep: number; tokens: AuthToken s; login: (email: string,password: string) => Promise<any>; register: (name: string,email: string,password: string) => Promise<any>; signup: (email: string,password: string,userData) => Promise<any>; logout: () => Promise<any>; resetPassword: (email: string) => Promise<any>; updateProfile: (updates: Partia l<User>) => Promise<any>; loginWithGoogle: () => Promise<any>; loginWithFacebook: () => Promise<any>; loginWithTwitter: () => Promise<any>; loginWithWeb3: () => Promise<any>} const AuthContext = createContext<AuthContextType | null>(null); export const useAuth = (props) => {; const context = useContext(AuthContext); if (context = == null) {;';'; throw new Error('useAuth must be used within an AuthProvider'); return context}; export { AuthContext }; export type { User,AuthTokens,AuthContextType }}}}} </AuthContextType> </any> </any> </User> </any> </any> </any>;';';
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/context/auth/AuthContext.tsx
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/context/auth/AuthContext.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -14,6 +15,11 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import {
   BookOpen,
   Brain,
@@ -28,6 +34,7 @@ import {
   Database;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -35,6 +42,8 @@ const services = [;
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -104,6 +113,7 @@ const services = [
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -112,6 +122,8 @@ const benefits = [;
     icon: GraduationCap;
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const benefits = [
   {
@@ -134,6 +146,7 @@ const benefits = [
     description: 'Analytics help educators make informed decisions about teaching methods.,',
     icon: BarChart3;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;];
 export default function EducationPage() {
@@ -184,6 +197,8 @@ export default function EducationPage() {
         </section>;
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 export default function EducationPage() {
   return (
@@ -239,6 +254,7 @@ export default function EducationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -254,6 +270,8 @@ export default function EducationPage() {
                 <motion.div}),
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -272,6 +290,7 @@ export default function EducationPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -285,6 +304,8 @@ export default function EducationPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -303,11 +324,14 @@ export default function EducationPage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -318,6 +342,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
@@ -334,6 +359,8 @@ export default function EducationPage() {
                 <motion.div}),
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -361,11 +388,14 @@ export default function EducationPage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -376,6 +406,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
@@ -400,6 +431,8 @@ export default function EducationPage() {
     </Layout>;
 =======
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?

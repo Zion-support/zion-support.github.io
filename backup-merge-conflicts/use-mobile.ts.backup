@@ -1,7 +1,10 @@
 <<<<<<< HEAD:src/hooks/use-mobile.ts
+<<<<<<< HEAD:backup-merge-conflicts/use-mobile.ts.backup
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/use-mobile.ts
 import { useState, useEffect } from 'react'  export function useMobile() { const [isMobile, setIsMobile] = useState(false)  useEffect(() => {;""';
 }};';;';
 =======
@@ -16,7 +19,10 @@ const { useState,useEffect } from "react" export function useMobile() { const [i
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
+<<<<<<< HEAD:backup-merge-conflicts/use-mobile.ts.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/use-mobile.ts
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/use-mobile.ts

@@ -4,6 +4,7 @@
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, {;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
             "isOpen": "openItem s.includes(child.props.value)",;
             "onToggle": ": unknown handleToggle(child.props.value);
@@ -13,6 +14,8 @@ export function Accordion("props": "any) {;
   const [openItems", setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : "[defaultValue]) : [];
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
             "isOpen": openItem s.includes(child.props.value),;
             "onToggle": : unknown handleToggle(child.props.value);
           })}
@@ -29,6 +32,7 @@ export function Accordion($1) {;
           ? prev.filter(item => item !== value);
           : "[...prev", value];
       )};
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD:src/components/ui/accordion.tsx
 =======
 <<<<<<< HEAD
@@ -47,11 +51,14 @@ export function Accordion($1) {;
     );
 
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
   return ()";
     <div className={"space-y-1 ${className}"}>;
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, {;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
             "isOpen": "openItem s.includes(child.props.value)",;
             "onToggle": ": unknown handleToggle(child.props.value);
@@ -69,10 +76,13 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 =======
 =======
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
     </div>;
   )}
 ;
 interface AccordionItemProps extends React.PropsWithChildren<{}> {;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
   children: React.ReactNode;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
@@ -89,6 +99,8 @@ export function AccordionItem(props: any) {;
         return child})}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
   "children": "React.ReactNode;
   "value": string;
 =======
@@ -103,6 +115,7 @@ export function AccordionItem(props: any) {;
   );
 }
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD:src/components/ui/accordion.tsx
 =======
 <<<<<<< HEAD
@@ -111,6 +124,8 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   children: Reac t.ReactNode;
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
   children: React.ReactNode;
 =======
   "children": Reac t.ReactNode;
@@ -122,6 +137,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void"}
 ;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
 export function AccordionItem("props": "any) {;
   return (;`    <div className={`border-b border-gray-200 ${className"}`}> {React.Children.map("children": "unknow n", ("child": "unknow n {;
@@ -136,6 +152,8 @@ export function AccordionItem("props": "any) {;
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {;
   "children": "React.ReactNode;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 export function AccordionItem($1) {;
   return (;"    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map("children": unknow n, ("child": unknow n {;
         if (React.isValidElement(child)) {;
@@ -144,6 +162,7 @@ export function AccordionItem($1) {;
   );
 }
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD:src/components/ui/accordion.tsx
 =======
 <<<<<<< HEAD
@@ -153,6 +172,8 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
   "children": Reac t.ReactNode;
 >>>>>>> main
 >>>>>>> main
@@ -162,12 +183,15 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
   onToggle?: ()  => void"}
 ;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
 export function AccordionTrigger("props": "any) {;
   return ();
     <button`;
       className = {`flex w-full items-center justify-between py-4 font-medium transition-all "hover": underline "focus":outline-none "focus": rin g-2 "focus": rin g-blue-500 "focus": rin g-offset-2 ${className"}`}
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 export function AccordionTrigger($1) {;
   return ();
     <button";
@@ -176,6 +200,7 @@ export function AccordionTrigger($1) {;
       onClick={onToggle}
 ;
       {children}
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
       <ChevronDown`';
@@ -183,6 +208,8 @@ export function AccordionTrigger($1) {;
 '';';
           isOpen ? 'rotate-180' : ''`        }`}
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
       <ChevronDown"
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
 '
@@ -193,9 +220,12 @@ export function AccordionTrigger($1) {;
   )}
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;"
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;';';
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
           isOpen ? 'rotate-180' : '';`
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
       <ChevronDown`;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
 ';
@@ -207,6 +237,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;"
 >>>>>>> main
     </button>;
   )}
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD:src/components/ui/accordion.tsx
 =======
 <<<<<<< HEAD
@@ -218,16 +249,21 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
         }`} ;      />;
     </button>;
   )}
 ;
   "children": "React.ReactNode;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 =======
 <<<<<<< HEAD
 
   children: React.ReactNode;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 ;
   "children": React.ReactNode;
 >>>>>>> main
@@ -236,6 +272,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
   className?: string;
   isOpen?: boolean"}
 ;
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
 export function AccordionContent("props": "any) {;
   if (!isOpen) return null;
@@ -252,17 +289,22 @@ export function AccordionContent("props": "any) {;
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className"}`}> {children};
     </div>;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
 export function AccordionContent($1) {;
   if (!isOpen) return null;
   return ()";
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
       {children}
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>
   );
 }
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
     </div>;
   )}
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
@@ -271,6 +313,7 @@ export function AccordionContent(props: any) {;
 ;
   return ()`;
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children};
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 <<<<<<< HEAD
     </div>;';
   )}';';
@@ -279,6 +322,8 @@ export function AccordionContent(props: any) {;
 </string>';
 </div>';';
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx
     </div>;
   )}
 '`;
@@ -302,5 +347,8 @@ export function AccordionContent($1) {;
 </string>
 </div>';
 prev.includes(value); ? prev.filter(item => item !== value); [...prev,value]; )}}; ; return (); <div className = {`space-y-1 ${className}`}>; {React.Children.map(children,(child) => {; if (React.isValidElement(child)) {; return React.cloneElement(child,{; isOpen: openItem s.includes(child.props.value),; onToggle: : unknown handleToggle(child.props.value)})} return child})} export function Accordion($1) {; const [openItems,setOpenItems] = useState<string[]>(; defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []; ); ; if (type === 'single') {; setOpenItems(openItems.includes(value) ? [] : [value])} else {; setOpenItems(prev = > ; prev.includes(value) ; ? prev.filter(item => item !== value); : [...prev,value]; )}; ; return ()`; <div className={`space-y-1 ${className}`}>; {React.Children.map(children,(child) => {; if (React.isValidElement(child)) {; return React.cloneElement(child,{; isOpen: openItem s.includes(child.props.value),; onToggle: : unknown handleToggle(child.props.value)}); ; return child})} </div> )} interface AccordionItemProps extends React.PropsWithChildren<{}> { children: Reac t.ReactNode; value: string; className?: string; isOpen?: boolean; onToggle?: () => void} ; export function AccordionItem($1) {; return (;` <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n,(child: unknow n {; if (React.isValidElement(child)) {; return React.cloneElement(child,{ isOpen,onToggle }); ; return child})} </div> )} interface AccordionTriggerProps extends React.PropsWithChildren<{}> { children: Reac t.ReactNode; className?: string; isOpen?: boolean; onToggle?: () => void} ; export function AccordionTrigger($1) {; return (); <button`; className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 ${className}`} onClick={onToggle} ; {children} <ChevronDown` className={`h-4 w-4 shrink-0 transition-transform duration-200 ${ ' isOpen ? 'rotate-180' : "` }`} /> </button> )} interface AccordionContentProps extends React.PropsWithChildren<{}> {;` className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;';'; isOpen ? 'rotate-180' : '` }`} ; />; </button>; )} ; children: React.ReactNode; className?: string; isOpen?: boolean} ; export function AccordionContent($1) {; if (!isOpen) return null; ; return ()`; <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>; {children} </div> )} export function AccordionContent($1) {; if (!isOpen) return null; ; return ()`; <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children}; </div>;'; )} '` </ChevronDown> </string> </div>';
+<<<<<<< HEAD:backup-merge-conflicts/accordion.tsx.backup
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/accordion.tsx

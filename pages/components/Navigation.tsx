@@ -2,11 +2,27 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Brain, 
+  Network, 
+  Cloud, 
+  Phone, 
+  Mail, 
+  MapPin,
   ArrowRight,
+  CheckCircle,
+  Star,
   Award,
+  Users,
+  Settings,
   BarChart3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   Shield,
   Code,
   Zap,
@@ -17,48 +33,31 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   BookOpen,
-  Brain,
-  Building,
-  Calculator,
-  Calendar,
   Camera,
-  CheckCircle,
-  ChevronDown,
-  Clock,
-  Cloud,
-  Code,
-  CreditCard,
-  Document,
-  DollarSign,
-  Eye,
-  FileText,
-  Gamepad2,
-  Globe,
-  Heart,
-  Home,
-  Lock,
-  Mail,
-  MapPin,
-  Menu,
-  MessageSquare,
   Music,
-  Network,
-  Phone,
-  Rocket,
-  Settings,
-  Shield,
-  ShoppingCart,
-  Star,
+  Gamepad2,
+  Heart,
+  Truck,
+  Calculator,
+  CreditCard,
+  Lock,
+  Eye,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Truck,
   Users,
   X,
   Zap
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   Clock,
   DollarSign,
   Cpu,
@@ -96,7 +95,10 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 } from 'lucide-react';
 
 const navigationItems = [

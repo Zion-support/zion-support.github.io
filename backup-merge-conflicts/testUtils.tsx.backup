@@ -4,6 +4,7 @@
 =======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+<<<<<<< HEAD:backup-merge-conflicts/testUtils.tsx.backup
 <<<<<<< HEAD
 ;
 // Test wrapper with providers;
@@ -46,6 +47,8 @@ export default {;
   waitForElementToBeRemoved,;
   waitForElementToAppear;
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/test/testUtils.tsx
 // Test wrapper with providers
 export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -54,6 +57,7 @@ export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ childre
     </BrowserRouter>
   )};
 // Custom render function
+<<<<<<< HEAD:backup-merge-conflicts/testUtils.tsx.backup
 <<<<<<< HEAD
 export const renderWithProviders = (props: any) => {
   return render(ui, { wrapper: TestWrapper }
@@ -61,6 +65,8 @@ export const renderWithProviders = (props: any) => {
 };
 
 =======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/test/testUtils.tsx
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
 >>>>>>> main
@@ -90,4 +96,7 @@ export default {
 >>>>>>> main
 };
 import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
+<<<<<<< HEAD:backup-merge-conflicts/testUtils.tsx.backup
 >>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/test/testUtils.tsx
