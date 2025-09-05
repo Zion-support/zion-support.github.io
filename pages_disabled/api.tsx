@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-import Layout from '../components/Layout';
-=======
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
@@ -44,7 +40,7 @@ const apiServices = [
     features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
   }
 ];
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 
 export default function APIPage() {
   const apiFeatures = [
@@ -119,33 +115,13 @@ export default function APIPage() {
                 </button>
                 <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Documentation
-<<<<<<< HEAD
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  Get API Key
-                </a>
-=======
                 </button>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-=======
         {/* API Services Grid */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -154,7 +130,7 @@ export default function APIPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Available APIs
@@ -173,10 +149,6 @@ export default function APIPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
                 >
-<<<<<<< HEAD
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
-=======
                   <div className="flex items-center mb-4">
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">
                       <service.icon className="h-6 w-6 text-blue-600" />
@@ -184,23 +156,17 @@ export default function APIPage() {
                     <h3 className="text-xl font-semibold text-gray-900">
                       {service.title}
                     </h3>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
                   </div>
                   <p className="text-gray-600 mb-4">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
-<<<<<<< HEAD
-                    {feature.features.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {item}
-=======
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                         {feature}
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
                       </li>
                     ))}
                   </ul>
@@ -209,12 +175,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        {/* Features Section */}
-=======
     title: 'GraphQL API',
     description: 'Flexible GraphQL API for complex queries',
     icon: Code,
@@ -233,7 +194,7 @@ export default function APIPage() {
     features: ['JavaScript/TypeScript', 'Python', 'Java', 'C#/.NET']
   }
 ];
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 import {
   Code,
   Copy,
@@ -457,7 +418,7 @@ const apiEndpoints = [
         </section>
 
         {/* Response Examples */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+ursor/fix-lint-push-and-merge-to-main-4bb1
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -526,25 +487,6 @@ const apiEndpoints = [
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-              <div className="bg-gray-900 rounded-lg p-6 text-white font-mono text-sm overflow-x-auto">
-                <div className="text-green-400 mb-2"># Install the SDK</div>
-                <div className="text-blue-400 mb-4">npm install zion-tech-api</div>
-                
-                <div className="text-green-400 mb-2"># Initialize the client</div>
-                <div className="text-white mb-4">import {'{ ZionTechAPI }'} from 'zion-tech-api';</div>
-                <div className="text-white mb-4">const api = new ZionTechAPI('your-api-key');</div>
-                
-                <div className="text-green-400 mb-2"># Make API calls</div>
-                <div className="text-white mb-2">// Get all services</div>
-                <div className="text-white mb-4">const services = await api.services.list();</div>
-                
-                <div className="text-white mb-2">// Create a new service</div>
-                <div className="text-white">const newService = await api.services.create({'{'}</div>
-                <div className="text-white ml-4">name: 'My Service',</div>
-                <div className="text-white ml-4">description: 'A new service'</div>
-                <div className="text-white">{'}'});</div>
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
@@ -608,7 +550,7 @@ const apiEndpoints = [
                     </pre>
                   </div>
                 </motion.div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+ursor/fix-lint-push-and-merge-to-main-4bb1
               </div>
             </div>
           </div>
@@ -635,20 +577,14 @@ const apiEndpoints = [
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Documentation
-<<<<<<< HEAD
-                </a>
-=======
                 </button>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </MainLayout>
-=======
     </Layout>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   );
 }

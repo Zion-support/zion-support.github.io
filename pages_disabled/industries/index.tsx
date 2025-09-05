@@ -1,13 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 
 const industries = [
   {
@@ -79,9 +75,6 @@ const benefits = [
 
 export default function IndustriesPage() {
   return (
-<<<<<<< HEAD
-    <Layout>
-=======
     <>
       <Head>
         <title>Industries - Zion Tech Group</title>
@@ -89,7 +82,7 @@ export default function IndustriesPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">

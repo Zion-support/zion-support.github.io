@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-import React,{ useState,useMemo } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { allServices,contactInfo } from\';\';../data/services\' const \"ServiceShowcase\": React.FC: = React.memo(() => { const [selectedCategor,y,setSelectedCategory] = useState<string>(\'';all\') const [sortBy,setSortBy] = useState<\';\';name\' |\';\';price\' |\';\';popularity\'>(\'';popularity\') \'';
-const React,{ useState,useMemo } from";react" import { motion,AnimatePresence } from";";framer-motion" import { allServices,contactInfo } from";";./data/services" const ServiceShowcase: React.FC: = React.memo(() => { const [selectedCategor,y,setSelectedCategory] = useState<string>("";all") const [sortBy,setSortBy] = useState<";";name" |";";price" |";";popularity">("";popularity") "";"""
-import _React,{ useState,useMemo } from';react' import { motion,AnimatePresence } from';';framer-motion' import { allServices,contactInfo } from';';../data/services' const "ServiceShowcase": _React.FC: = _React.memo(() => { const [selectedCategor,y,setSelectedCategory] = useState<string>('';all') const [sortBy,setSortBy] = useState<';';name' |';';price' |';';popularity'>('';popularity') '';
-=======
 >>>>>>> main
 >>>>>>> origin/main

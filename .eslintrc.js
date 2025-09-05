@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* eslint-env node */
-/* global module */
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
-=======
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
+
+
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -31,43 +21,8 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn'
-  },
-  env: {
-    node: true,
-    browser: true,
-    es2021: true
-  },
-  ignorePatterns: [
-    'pages._archive_corrupted/**',
-    'pages.disabled.full/**',
-    'pages.disabled_auto/**',
-    'pages_api.disabled/**',
-    'pages_backup_conflict/**',
-    'pages.blog.disabled/**',
-    'pages.corrupted.*/**',
-    'pages.broken/**',
-    'pages.bak/**',
-    'pages-quarantine/**',
-    'pages-disabled/**',
-    'pages.__backup/**',
-    'temp_backup/**',
-    'temp_broken_files/**',
-    'temp_working/**',
-    'tests.disabled/**',
-    'lib_backup/**',
-    'node_modules/**',
-    '.next/**',
-    'out/**',
-    'dist/**',
-    'build/**'
-  ]
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -158,8 +113,5 @@ module.exports = {
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
-<<<<<<< HEAD
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 };

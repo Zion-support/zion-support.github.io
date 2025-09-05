@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
+import { Building2, Users, Shield, Zap, ArrowRight, CheckCircle, Star, Clock, DollarSign, BarChart3, Globe, Target, Brain, Database, Server } from 'lucide-react';
 
 const solutions = [
   {

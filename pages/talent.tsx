@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Star, CheckCircle, ArrowRight, Clock, DollarSign, Users, Globe, Shield, Zap, Brain, Cloud, Target, BarChart3, Award, Network, Cpu, Lock, Heart, Code, Settings, HelpCircle, FileText, Calendar, Bell, TrendingUp, Workflow, Atom, Truck, Leaf, Satellite, Gauge, MessageCircle, Package, Globe2, ShieldCheck, Lightbulb, Eye, Search, Phone, MapPin, Database, Smartphone } from 'lucide-react';
 
 const jobOpenings = [
   {

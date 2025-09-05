@@ -45,20 +45,6 @@ function FeaturedListingsSection("props": "any) {          initial = {;
                   />;
                 <div className="absolute top - 3 left -3">;
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
-<<<<<<< HEAD
-                  </span>;
-                </div>;
-";
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-"hover": "scal e-110 transition-transform duration-300">;
-                  {service.image"}
-                </div>;
-";
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-"hover": "tex t-blue-600 transition-colors">;
-                  {service.title"}
-                </h3>;
-";
-                <p className="text-gray-600 mb-4 leading-relaxed">;
-=======
 >>>>>>> origin/main
                   </span>
                 </div>

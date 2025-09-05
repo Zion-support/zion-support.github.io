@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import SecurityHeaders from '../components/SecurityHeaders" describe('SecurityHeaders',() => {' test('renders without crashing',() => {' render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityHeaders / />) }) test('handles user interactions',() => {' render(<SecurityHeaders / />) }) test('applies correct styling',() => {' render(<SecurityHeaders / />) }) })
-=======
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityHeaders from "./components/SecurityHeaders" describe("SecurityHeaders",() => {" test("renders without crashing",() => {" render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SecurityHeaders / />) }) test("handles user interactions",() => {" render(<SecurityHeaders / />) }) test("applies correct styling",() => {" render(<SecurityHeaders / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import SecurityHeaders from '../components/SecurityHeaders" describe('SecurityHeaders',() => {' test('renders without crashing',() => {' render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityHeaders / />) }) test('handles user interactions',() => {' render(<SecurityHeaders / />) }) test('applies correct styling',() => {' render(<SecurityHeaders / />) }) })
-=======
 import _React from 'react"  import '@testing-library/jest-dom import SecurityHeaders from '../components/SecurityHeaders" describe('SecurityHeaders',() => {' test('renders without crashing',() => {' render(<SecurityHeaders / />) expect(screen.getByTestId("securityheaders")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityHeaders / />) }) test('handles user interactions',() => {' render(<SecurityHeaders / />) }) test('applies correct styling',() => {' render(<SecurityHeaders / />) }) })
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

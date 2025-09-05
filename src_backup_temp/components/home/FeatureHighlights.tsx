@@ -103,31 +103,6 @@ export function FeatureHighlights("props": "any) {;
               key={index}
               variants={itemVariants}
               whileHover={{;
-<<<<<<< HEAD
-                "y": "-5",;
-                "scale": "1.02",;
-                "transition": "{ "duration": 0.3 "}
-              }}";
-              className="group";
-";
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 "hover": "borde r-white/20 transition-all duration-300">;
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color"} rounded-lg flex items-center justify-center mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>`;
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />;
-                </div>;
-";
-                <h3 className="text-xl font-semibold text-white mb-2 group-"hover": "tex t-blue-400 transition-colors duration-300">;
-                  {feature.title"}
-                </h3>;
-";
-                <p className="text-gray-400 group-"hover": "tex t-gray-300 transition-colors duration-300">;
-                  {feature.description"}
-                </p>;
-              </div>;
-              <h3 className="text-xl font-bold text-white mb-3 group-"hover": "tex t-blue-400 transition-colors duration-200">;
-                {feature.title"}
-              </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;
-=======
 
 >>>>>>> origin/main
                 y: -5,

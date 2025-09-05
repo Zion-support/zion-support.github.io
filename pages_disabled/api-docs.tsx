@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
-
-export default function APIDocs() {
-  return (
-    <Layout title="API Documentation - Zion Tech Group" description="Comprehensive API documentation for all our services">
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -100,12 +91,6 @@ export default function APIDocs() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group's services and solutions." />
       </Head>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-=======
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -218,80 +203,19 @@ export default function APIDocs() {
     </div>
         {/* Code Examples */}
         <section className="py-16 bg-white">
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
           <div className="max-w-7xl mx-auto px-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+ursor/fix-lint-push-and-merge-to-main-4bb1
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.6 }}
-              className="text-center"
-=======
               transition={{ duration: 0.8 }}
               className="text-center text-white"
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 API Documentation
               </h1>
-<<<<<<< HEAD
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Comprehensive API documentation and integration guides for all our services
-              </p>
-            </motion.div>
-          </div>
-        </section>
-        
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                API Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our APIs provide powerful, easy-to-use endpoints for all your integration needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <Code className="w-12 h-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">RESTful APIs</h3>
-                <p className="text-gray-600">
-                  Clean, intuitive REST endpoints that follow industry best practices.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <BookOpen className="w-12 h-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Comprehensive Docs</h3>
-                <p className="text-gray-600">
-                  Detailed documentation with examples and interactive testing.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <Zap className="w-12 h-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Fast & Reliable</h3>
-                <p className="text-gray-600">
-                  High-performance APIs with 99.9% uptime guarantee.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <Shield className="w-12 h-12 text-indigo-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Secure</h3>
-                <p className="text-gray-600">
-                  Enterprise-grade security with OAuth 2.0 and API key authentication.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-=======
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
                 Comprehensive API documentation for all our services and solutions. 
                 Build amazing applications with our powerful APIs.
@@ -471,6 +395,6 @@ export default function APIDocs() {
         </section>
       </div>
     </>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   );
 }

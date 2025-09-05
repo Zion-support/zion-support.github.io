@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign, BarChart3, Globe, Target, Database, Smartphone } from 'lucide-react';
 
 const products = [
   {

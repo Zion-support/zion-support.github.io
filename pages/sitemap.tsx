@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { Home, Users, Settings, Shield, Brain, Cloud, Zap, Globe, CheckCircle, ArrowRight, Star, Clock, DollarSign, BarChart3, Target, Award, Network, Cpu, Lock, Heart, Code, HelpCircle, FileText, Calendar, Bell, TrendingUp, Workflow, Atom, Truck, Leaf, Satellite, Gauge, MessageCircle, Package, Globe2, ShieldCheck, Lightbulb, Eye, Search, Phone, MapPin, Database, Smartphone } from 'lucide-react';
 
 const sitemapSections = [
   {

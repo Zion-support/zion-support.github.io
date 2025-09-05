@@ -2,25 +2,6 @@ import React from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
-<<<<<<< HEAD
-;
-const "CTASection": "React.FC = (): JSX.Element => {;
-  const features = [;
-    {;
-      "icon": Rocke t",;
-      "title": "Fast Implementation",;
-      "description": "Get started in weeks, not months";
-    },;
-    {;
-      "icon": "MessageCircl e",;
-      "title": "24/7 Support",;
-      "description": "Expert assistance whenever you need it";
-    },;
-    {;
-      "icon": "Calenda r",;
-      "title": "Flexible Plans",;
-      "description": "Scale up or down as your business grows";
-=======
 
 >>>>>>> origin/main
 const CTASection: React.FC = (): JSX.Element => {
@@ -127,9 +108,7 @@ const CTASection: React.FC = (): JSX.Element => {
 "}}
           viewport={{ "once": "tru e "}}
         >;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />
@@ -249,9 +228,7 @@ const CTASection: React.FC = (): JSX.Element => {
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8";
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.;
           </motion.p>;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
         </div> {/* Feature Grid */}
         <motion.div
@@ -260,27 +237,21 @@ const CTASection: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 3 0 ;
 ;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
 }}
           whileInView = {
   { opacity: 1,
   y: 0 ;
 ;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 ;
 ;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
 }}
           viewport={{ once: tru e }}
@@ -307,9 +278,7 @@ const CTASection: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">;
                 <feature.icon className="w-6 h-6 text-white" aria-hidden="true" />;
               </div>;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20"
               initial = {
@@ -323,8 +292,6 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover: borde r-zion-cyan/40 transition-all duration-300 hover: shado w-lg hover: shado w-zion-cyan/20";
@@ -339,9 +306,7 @@ const CTASection: React.FC = (): JSX.Element => {
               transition = {;
   { duration: 0.6,;
   delay: 0.6 + index * 0.1;
-<<<<<<< HEAD
-=======
-=======
+
 
 >>>>>>> origin/main
 }}
@@ -356,13 +321,6 @@ const CTASection: React.FC = (): JSX.Element => {
           ))}
         </motion.div>
         {/* CTA Buttons */}
-<<<<<<< HEAD
-        <motion.div;
-          className="flex flex-col "sm": "fle x-row gap-6 justify-center items-center";
-          initial = {;
-  { opacity: 0,;
-  y: 3 0 ;
-=======
 >>>>>>> origin/main
 ;
 }}
@@ -410,10 +368,6 @@ const CTASection: React.FC = (): JSX.Element => {
           initial={{ "opacity": "0 "}}
           whileInView={{ "opacity": "1 "}}
           transition = {;
-<<<<<<< HEAD
-  { duration: 1,;
-  delay: 1 ;
-=======
 >>>>>>> origin/main
 ;
 }}
@@ -478,11 +432,6 @@ const CTASection: React.FC = (): JSX.Element => {
   );
 };
 export default CTASection;}};
-<<<<<<< HEAD
-</motion>
-</motion>';
-</motion>;';;';
-=======
 >>>>>>> origin/main
 </motion>;
 </motion>;
@@ -491,9 +440,7 @@ export default CTASection;}};
 </motion>;
 </motion>;
 </motion>;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
 </motion>
 </motion>
@@ -501,8 +448,5 @@ export default CTASection;}};
 </motion>
 </motion>
 </motion>
-<<<<<<< HEAD
-</motion>
-=======
 </motion>
 >>>>>>> origin/main

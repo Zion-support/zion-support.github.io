@@ -83,16 +83,6 @@ export function ClientSuccessStoriesSection("props": any) {;
                 <div>";
                   <h3 className="text-xl font-bold text-gray-900">;
                     {testimonial.name}
-<<<<<<< HEAD
-                  </h3>";
-                  <p className="text-gray-600">{testimonial.role}</p>";
-                  <p className="text-blue-600 font-medium">{testimonial.comp}</p>;
-                </div>";
-                <div className="absolute top-3 right-3">";
-                  <div className="flex items-center gap-1">;
-                    {[...Array(story.rating)].map((_, i) => (";
-                      <span key={i} className="text-yellow-400 text-sm">★</span>;
-=======
 >>>>>>> origin/main
                   "
                   <p className="text-gray-600">{testimonial.role}</p>"
@@ -109,9 +99,6 @@ export function ClientSuccessStoriesSection("props": any) {;
               <div className="p -6">;
                 <h3 className="text-xl font - bold text-white mb-2">;
                   {story.client}
-<<<<<<< HEAD
-                </h3>;
-=======
                 
 
 >>>>>>> origin/main
@@ -164,14 +151,6 @@ export function ClientSuccessStoriesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
-<<<<<<< HEAD
-"}}
-        >";
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
-            <h3 className="text-2xl font-bold text-white text-center mb-8">;
-              Success by the Numbers;
-            </h3>;
-=======
 
 >>>>>>> origin/main
 }}
@@ -179,8 +158,6 @@ export function ClientSuccessStoriesSection("props": any) {;
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
-<<<<<<< HEAD
-=======
             
 
 >>>>>>> origin/main
@@ -216,28 +193,6 @@ export function ClientSuccessStoriesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.6;
-<<<<<<< HEAD
-"}}
-        >";
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">";
-            <h3 className="text-2xl font-bold mb-4">;
-              Ready to Write Your Success Story?;
-            </h3>";
-            <p className="text-green-100 mb-6 max-w-2xl mx-auto">;
-              Join hundreds of satisfied clients who have transformed their;
-              businesses with our innovative technology solutions.</p>";
-            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
-              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200">;
-                Start Your Project";
-                <ArrowRight className="ml-2 h-5 w-5"   />;
-              </button>";
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-green-600 rounded-lg font-medium transition-colors duration-200">;
-                View All Case Studies";
-                <Award className="ml-2 h-5 w-5"   />              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-=======
 
 >>>>>>> origin/main
 }}

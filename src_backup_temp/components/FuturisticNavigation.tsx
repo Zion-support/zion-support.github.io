@@ -196,20 +196,6 @@ if(searchQuery.trim()) {;
                         exit = {;
   { "opacity": "0", "y": "-10",;
   "scale": "0.95;
-<<<<<<< HEAD
-"}}
-                        transition={{ "duration": "0.2 "}}";
-                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
-";
-                        <div className="p-4">";
-                          <div className="mb-4">";
-                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>";
-                            <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>;
-                          </div>";
-                          <div className="space-y-2">;
-                            {category.services.map((service, subIndex) => (;
-                              <motion.div;
-=======
 
 >>>>>>> origin/main
 }}
@@ -299,20 +285,6 @@ if(searchQuery.trim()) {;
       </header>;
     </>;
   )};
-<<<<<<< HEAD
-'"`;
-;,"});})";
-;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</ChevronDown>;
-</motion>;
-</motion>;
-</motion>;
-=======
 >>>>>>> origin/main
 '"`
 ;,"}

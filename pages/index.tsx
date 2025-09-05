@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { Brain, Network, Cloud, Globe, Shield, Cpu, Zap, Award, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign } from 'lucide-react';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },

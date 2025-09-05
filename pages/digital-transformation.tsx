@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import { RefreshCw, Cloud, Users, BarChart3, ArrowRight, CheckCircle, Star, Clock, DollarSign, Shield, Zap, Globe, Target, Brain } from 'lucide-react';
 
 const transformationAreas = [
   {

@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/main
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} .toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 interface PerformanceData {
   "url": string;
   timestamp: number;
@@ -46,17 +37,12 @@ export default function handler("req": NextApiReques t, "res": NextApiRespons e)
     console.error('Error processing performance "data": ', error);
     res.status(500).json({ "error": 'Internal server error' })}
 }
-<<<<<<< HEAD
-=======
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number} }} export default function handler(req: 'NextApiReques t',res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: 'dat a.url',timestamp: new Date(data.timestamp).toISOString(),metrics: 'dat a.metrics',}); res.status(200).json({ success: 'tru e',message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
-<<<<<<< HEAD
-import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
-=======
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
+
+
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

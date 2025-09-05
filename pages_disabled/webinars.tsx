@@ -1,336 +1,267 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { 
-  Calendar, 
 import React, { useState } from 'react';
-import Head from 'next/head';';
-import Link from 'next/link';';
-import {
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Play, 
-  Download, 
-  Share2, 
-  Tag,
-  ExternalLink,
-  Video,
-  Mic,
-  Users,
-  Star,
-  Award,
-  Globe,
-  BookOpen,
-  MessageSquare,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-
-const webinars = [
-  {
-    id: 1,
-    title: "AI Revolution: Transforming Business Operations",
-    description: "Learn how AI is revolutionizing business operations and how to implement AI solutions in your organization.",
-    presenter: "Dr. Sarah Johnson",
-    date: "2024-02-15",
-    time: "2:00 PM EST",
-    duration: "60 minutes",
-    category: "AI & Machine Learning",
-    level: "Beginner",
-    attendees: 1250,
-    rating: 4.8,
-    featured: true,
-    image: "/images/webinars/ai-revolution.jpg",
-    tags: ["AI", "Business Transformation", "Machine Learning"],
-    description: "Discover how artificial intelligence is reshaping the business landscape and learn practical strategies for implementing AI solutions in your organization. This webinar covers the latest AI trends, real-world case studies, and actionable insights for business leaders."
-  },
-  {
-    id: 2,
-    title: "Cloud Migration Best Practices",
-    description: "Expert guidance on migrating your infrastructure to the cloud with minimal disruption and maximum benefits.",
-    presenter: "Michael Chen",
-    date: "2024-02-22",
-    time: "3:00 PM EST",
-    duration: "45 minutes",
-    category: "Cloud Computing",
-    level: "Intermediate",
-    attendees: 890,
-    rating: 4.6,
-    featured: true,
-    image: "/images/webinars/cloud-migration.jpg",
-    tags: ["Cloud", "Migration", "Infrastructure"],
-    description: "Learn the essential strategies and best practices for successful cloud migration. Our experts will share proven methodologies, common pitfalls to avoid, and how to ensure a smooth transition to the cloud."
-  },
-  {
-    id: 3,
-    title: "Cybersecurity in the Digital Age",
-    description: "Protect your business from evolving cyber threats with modern security strategies and technologies.",
-    presenter: "Alex Rodriguez",
-    date: "2024-03-01",
-    time: "1:00 PM EST",
-    duration: "50 minutes",
-    category: "Cybersecurity",
-    level: "Advanced",
-    attendees: 1100,
-    rating: 4.9,
-    featured: false,
-    image: "/images/webinars/cybersecurity.jpg",
-    tags: ["Security", "Threats", "Protection"],
-    description: "Stay ahead of cyber threats with the latest security strategies and technologies. This webinar covers emerging threats, defense mechanisms, and how to build a robust security posture for your organization."
-  },
-  {
-    id: 4,
-    title: "Micro SaaS: Building Profitable Products",
-    description: "Learn how to build and scale successful Micro SaaS products that solve specific business problems.",
-    presenter: "Emily Davis",
-    date: "2024-03-08",
-    time: "2:30 PM EST",
-    duration: "55 minutes",
-    category: "Product Development",
-    level: "Intermediate",
-    attendees: 750,
-    rating: 4.7,
-    featured: false,
-    image: "/images/webinars/micro-saas.jpg",
-    tags: ["SaaS", "Product", "Entrepreneurship"],
-    description: "Discover the secrets to building successful Micro SaaS products. Learn about market research, product development, pricing strategies, and how to scale your SaaS business effectively."
-  },
-  {
-    id: 5,
-    title: "Data Analytics for Business Intelligence",
-    description: "Transform your data into actionable insights with advanced analytics and business intelligence tools.",
-    presenter: "David Kim",
-    date: "2024-03-15",
-    time: "4:00 PM EST",
-    duration: "65 minutes",
-    category: "Data Analytics",
-    level: "Intermediate",
-    attendees: 980,
-    rating: 4.5,
-    featured: false,
-    image: "/images/webinars/data-analytics.jpg",
-    tags: ["Analytics", "Data", "Business Intelligence"],
-    description: "Learn how to leverage data analytics to drive business decisions and improve performance. This webinar covers data visualization, predictive analytics, and how to build effective dashboards."
-  },
-  {
-    id: 6,
-    title: "DevOps: Accelerating Software Delivery",
-    description: "Implement DevOps practices to accelerate software delivery and improve team collaboration.",
-    presenter: "Lisa Wang",
-    date: "2024-03-22",
-    time: "3:30 PM EST",
-    duration: "50 minutes",
-    category: "DevOps",
-    level: "Advanced",
-    attendees: 650,
-    rating: 4.8,
-    featured: false,
-    image: "/images/webinars/devops.jpg",
-    tags: ["DevOps", "CI/CD", "Automation"],
-    description: "Master DevOps practices and tools to streamline your software development process. Learn about CI/CD pipelines, automation, monitoring, and how to build a culture of continuous improvement."
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Play, 
-  ArrowRight,
-  ExternalLink,
-  Download,
-  Share2,
-  BookOpen,
-  Brain,
-  Cloud,
-  Shield
-} from 'lucide-react';
 import Layout from '../components/Layout';
 
-const upcomingWebinars = [
-  {
-    id: 1,
-    title: 'AI in Healthcare: Transforming Patient Care',
-    description: 'Learn how artificial intelligence is revolutionizing healthcare delivery and improving patient outcomes.',
-    speaker: 'Dr. Sarah Chen',
-    speakerTitle: 'Chief Medical Officer, HealthTech Solutions',
-    date: '2024-02-15',
-    time: '2:00 PM EST',
-    duration: '60 minutes',
-    category: 'Healthcare AI',
-    image: '/webinars/healthcare-ai.jpg',
-    icon: Brain,
-    registrationUrl: '#',
-    isLive: false
-  },
-  {
-    id: 2,
-    title: 'Cloud Migration Best Practices',
-    description: 'Discover proven strategies for successful cloud migration and optimization.',
-    speaker: 'Michael Rodriguez',
-    speakerTitle: 'Senior Cloud Architect, Zion Tech Group',
-    date: '2024-02-22',
-    time: '3:00 PM EST',
-    duration: '45 minutes',
-    category: 'Cloud Computing',
-    image: '/webinars/cloud-migration.jpg',
-    icon: Cloud,
-    registrationUrl: '#',
-    isLive: false
-  },
-  {
-    id: 3,
-    title: 'Cybersecurity Trends 2024',
-    description: 'Stay ahead of emerging threats with the latest cybersecurity trends and solutions.',
-    speaker: 'Alex Thompson',
-    speakerTitle: 'Cybersecurity Expert, SecureTech Inc.',
-    date: '2024-02-28',
-    time: '1:00 PM EST',
-    duration: '50 minutes',
-    category: 'Cybersecurity',
-    image: '/webinars/cybersecurity.jpg',
-    icon: Shield,
-    registrationUrl: '#',
-    isLive: false
-  }
-];
-
-const pastWebinars = [
-  {
-    id: 4,
-    title: 'Micro SaaS Development: From Idea to Market',
-    description: 'Learn how to build and launch successful micro SaaS applications.',
-    speaker: 'Jennifer Lee',
-    speakerTitle: 'Product Manager, SaaS Solutions',
-    date: '2024-01-15',
-    duration: '55 minutes',
-    category: 'SaaS Development',
-    image: '/webinars/micro-saas.jpg',
-    icon: BookOpen,
-    recordingUrl: '#',
-    slidesUrl: '#'
-  },
-  {
-    id: 5,
-    title: 'Digital Transformation in Manufacturing',
-    description: 'Explore how Industry 4.0 technologies are transforming manufacturing operations.',
-    speaker: 'David Park',
-    speakerTitle: 'IoT Solutions Architect',
-    date: '2024-01-08',
-    duration: '65 minutes',
-    category: 'Manufacturing',
-    image: '/webinars/manufacturing.jpg',
-    icon: BookOpen,
-    recordingUrl: '#',
-    slidesUrl: '#'
-  }
-];
-
-const categories = [
-  "All",
-  "AI & Machine Learning",
-  "Cloud Computing",
-  "Cybersecurity",
-  "Product Development",
-  "Data Analytics",
-  "DevOps"
-];
-
-const levels = ["All", "Beginner", "Intermediate", "Advanced"];
-
 export default function WebinarsPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-  const [selectedLevel, setSelectedLevel] = React.useState("All");
-  const [searchTerm, setSearchTerm] = React.useState("");
-
-  const filteredWebinars = webinars.filter(webinar => {
-    const matchesCategory = selectedCategory === "All" || webinar.category === selectedCategory;
-    const matchesLevel = selectedLevel === "All" || webinar.level === selectedLevel;
-    const matchesSearch = searchTerm === "" || 
-      webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      webinar.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      webinar.presenter.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesLevel && matchesSearch;
-  });
-
   return (
-    <MainLayout
-      title="Webinars - Zion Tech Group"
-      description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and more. Learn from industry leaders and gain practical insights for your business."
-      keywords="webinars, online events, AI training, cloud computing, cybersecurity, business education, technology learning"
-    >
+    <Layout title="Webinars - Zion Tech Group" description="Learn from industry experts and stay ahead of the latest technology trends">
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center justify-center mb-6">
-                <Video className="w-16 h-16 text-purple-400 mr-4" />
-                <h1 className="text-4xl md:text-6xl font-bold">
-                  Expert Webinars
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Learn from industry experts through our comprehensive webinar series. 
-                Gain practical insights and stay ahead of technology trends.
-  { name: 'All', count: upcomingWebinars.length + pastWebinars.length },
-  { name: 'Healthcare AI', count: upcomingWebinars.filter(w => w.category === 'Healthcare AI').length },
-  { name: 'Cloud Computing', count: upcomingWebinars.filter(w => w.category === 'Cloud Computing').length },
-  { name: 'Cybersecurity', count: upcomingWebinars.filter(w => w.category === 'Cybersecurity').length },
-  { name: 'SaaS Development', count: pastWebinars.filter(w => w.category === 'SaaS Development').length },
-  { name: 'Manufacturing', count: pastWebinars.filter(w => w.category === 'Manufacturing').length }
-];
-
-export default function WebinarsPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [activeTab, setActiveTab] = React.useState('upcoming');
-
-  const filteredUpcoming = selectedCategory === 'All' 
-    ? upcomingWebinars 
-    : upcomingWebinars.filter(w => w.category === selectedCategory);
-
-  const filteredPast = selectedCategory === 'All' 
-    ? pastWebinars 
-    : pastWebinars.filter(w => w.category === selectedCategory);
-
-  return (
-    <Layout 
-      title="Webinars - Zion Tech Group"
-      description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and digital transformation. Learn from industry leaders and stay ahead of technology trends."
-      keywords="webinars, technology education, AI training, cloud computing, cybersecurity, digital transformation, online learning"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Join our educational webinars and learn from industry experts.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+  Download
+} from 'lucide-react';
+
+export default function WebinarsPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Webinars' },
+    { id: 'ai', name: 'AI & Machine Learning' },
+    { id: 'cloud', name: 'Cloud Solutions' },
+    { id: 'security', name: 'Cybersecurity' },
+    { id: 'development', name: 'Development' },
+    { id: 'business', name: 'Business Strategy' }
+  ];
+
+  const webinars = [
+    {
+      id: 1,
+      title: 'Introduction to AI and Machine Learning',
+      description: 'Learn the fundamentals of AI and ML, including key concepts, applications, and implementation strategies for your business.',
+      category: 'ai',
+      date: '2024-01-15',
+      time: '2:00 PM EST',
+      duration: '60 minutes',
+      attendees: 1250,
+      speaker: 'Dr. Sarah Johnson',
+      speakerTitle: 'AI Research Director',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 4.8
+    },
+    {
+      id: 2,
+      title: 'Cloud Migration Best Practices',
+      description: 'Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and maximizing efficiency.',
+      category: 'cloud',
+      date: '2024-01-22',
+      time: '3:00 PM EST',
+      duration: '45 minutes',
+      attendees: 980,
+      speaker: 'Mike Chen',
+      speakerTitle: 'Cloud Solutions Architect',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 4.9
+    },
+    {
+      id: 3,
+      title: 'Cybersecurity in the Digital Age',
+      description: 'Explore the latest cybersecurity threats and learn how to protect your organization with modern security practices.',
+      category: 'security',
+      date: '2024-01-08',
+      time: '1:00 PM EST',
+      duration: '75 minutes',
+      attendees: 2100,
+      speaker: 'Alex Rodriguez',
+      speakerTitle: 'Chief Security Officer',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: false,
+      rating: 4.7
+    },
+    {
+      id: 4,
+      title: 'Building Scalable Web Applications',
+      description: 'Learn how to design and build web applications that can handle millions of users with modern development practices.',
+      category: 'development',
+      date: '2024-01-29',
+      time: '4:00 PM EST',
+      duration: '90 minutes',
+      attendees: 0,
+      speaker: 'Emily Watson',
+      speakerTitle: 'Senior Full-Stack Developer',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: true,
+      isUpcoming: false,
+      rating: 0
+    },
+    {
+      id: 5,
+      title: 'Digital Transformation Strategy',
+      description: 'Understand how to create and execute a successful digital transformation strategy for your organization.',
+      category: 'business',
+      date: '2024-02-05',
+      time: '2:30 PM EST',
+      duration: '60 minutes',
+      attendees: 0,
+      speaker: 'David Kim',
+      speakerTitle: 'Digital Transformation Consultant',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: true,
+      rating: 0
+    },
+    {
+      id: 6,
+      title: 'Advanced AI Implementation',
+      description: 'Deep dive into advanced AI techniques and learn how to implement complex AI solutions in production environments.',
+      category: 'ai',
+      date: '2023-12-20',
+      time: '3:30 PM EST',
+      duration: '120 minutes',
+      attendees: 1850,
+      speaker: 'Dr. Sarah Johnson',
+      speakerTitle: 'AI Research Director',
+      image: '/api/placeholder/400/250',
+      videoUrl: '#',
+      slidesUrl: '#',
+      isLive: false,
+      isUpcoming: false,
+      rating: 4.9
+    }
+  ];
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const upcomingWebinars = webinars.filter(webinar => webinar.isUpcoming);
+  const liveWebinars = webinars.filter(webinar => webinar.isLive);
+  const pastWebinars = webinars.filter(webinar => !webinar.isUpcoming && !webinar.isLive);
+
+  return (
+    <MainLayout
+      title="Webinars - Zion Tech Group"
+      description="Join our educational webinars on AI, cloud solutions, cybersecurity, and more. Learn from industry experts and advance your technical knowledge."
+      keywords="webinars, AI training, cloud education, cybersecurity, technology learning, online courses"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Expert Webinars
+                Webinars & Events
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Learn from industry experts and stay ahead of technology trends with our comprehensive webinar series.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Learn from industry experts through our comprehensive webinar series. 
+                Covering AI, cloud solutions, cybersecurity, and more.
+
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Filters */}
-        <section className="py-12 bg-white">
+        {/* Live Webinars */}
+        {liveWebinars.length > 0 && (
+          <section className="py-16 bg-red-50">
+            <div className="container mx-auto px-4">
+              <motion.div
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3 animate-pulse"></div>
+                  Live Now
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Join our live webinars happening right now.
+                </p>
+              </motion.div>
+
+              <div className="max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {liveWebinars.map((webinar, index) => (
+                    <motion.div
+                      key={webinar.id}
+                      className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-red-200"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="relative">
+                        <img
+                          src={webinar.image}
+                          alt={webinar.title}
+                          className="w-full h-48 object-cover"
+                        />
+                        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                          LIVE
+                        </div>
+                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                          <button className="bg-red-500 hover:bg-red-600 text-white p-4 rounded-full transition-colors duration-300">
+                            <Play className="w-8 h-8" />
+                          </button>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{webinar.title}</h3>
+                        <p className="text-gray-600 mb-4">{webinar.description}</p>
+                        <div className="flex items-center text-sm text-gray-500 mb-4">
+                          <Users className="w-4 h-4 mr-2" />
+                          <span>{webinar.attendees} watching</span>
+                        </div>
+                        <button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold">
+                          Join Live
+                        </button>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Search and Filter */}
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col lg:flex-row gap-4 mb-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <div className="flex-1 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
@@ -338,455 +269,242 @@ export default function WebinarsPage() {
                     placeholder="Search webinars..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   />
                 </div>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  value={selectedLevel}
-                  onChange={(e) => setSelectedLevel(e.target.value)}
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {levels.map((level) => (
-                    <option key={level} value={level}>
-                      {level}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Webinars */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Featured Webinars
-              </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                Don't miss these popular webinars that have helped thousands of professionals 
-                advance their careers and transform their businesses.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredWebinars.filter(w => w.featured).map((webinar, index) => (
-                <motion.div
-                  key={webinar.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative">
-                    <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                      <Play className="w-16 h-16 text-white" />
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        LIVE
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Featured
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">
-                        {webinar.category}
-                      </span>
-                      <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        {webinar.level}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {webinar.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4">
-                      {webinar.description}
-                    </p>
-                    
-                    <div className="flex items-center mb-4">
-                      <User className="w-5 h-5 text-gray-400 mr-2" />
-                      <span className="text-sm text-gray-600">{webinar.presenter}</span>
-                    </div>
-                    
-                    <div className="flex items-center mb-4">
-                      <Calendar className="w-5 h-5 text-gray-400 mr-2" />
-                      <span className="text-sm text-gray-600">{webinar.date} at {webinar.time}</span>
-                    </div>
-                    
-                    <div className="flex items-center mb-4">
-                      <Clock className="w-5 h-5 text-gray-400 mr-2" />
-                      <span className="text-sm text-gray-600">{webinar.duration}</span>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center">
-                        <Users className="w-5 h-5 text-gray-400 mr-2" />
-                        <span className="text-sm text-gray-600">{webinar.attendees} attendees</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Star className="w-5 h-5 text-yellow-500 mr-1" />
-                        <span className="text-sm text-gray-600">{webinar.rating}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {webinar.tags.map((tag, idx) => (
-                        <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center">
-                        Register Now
-                      </button>
-                      <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                        <Share2 className="w-5 h-5" />
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* All Webinars */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                All Webinars
-              </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                Browse our complete library of webinars covering various technology topics 
-                and skill levels.
-              </p>
-            </motion.div>
-
-            <div className="space-y-6">
-              {filteredWebinars.map((webinar, index) => (
-                <motion.div
-                  key={webinar.id}
-                  className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-3">
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">
-                          {webinar.category}
-                        </span>
-                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">
-                          {webinar.level}
-                        </span>
-                        {webinar.featured && (
-                          <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
-                            Featured
-                          </span>
-                        )}
-                      </div>
-                      
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {webinar.title}
-                      </h3>
-                      
-                      <p className="text-gray-600 mb-4">
-                        {webinar.description}
-                      </p>
-                      
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                        <div className="flex items-center">
-                          <User className="w-4 h-4 mr-1" />
-                          {webinar.presenter}
-                        </div>
-                        <div className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-1" />
-                          {webinar.date}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {webinar.time}
-                        </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
-                          {webinar.attendees} attendees
-                        </div>
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 mr-1 text-yellow-500" />
-                          {webinar.rating}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-4 lg:mt-0 lg:ml-6">
-                      <button className="w-full lg:w-auto bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                        Register
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {filteredWebinars.length === 0 && (
-              <div className="text-center py-12">
-                <Video className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  No webinars found
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Try adjusting your search criteria or browse all webinars.
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('All');
-                    setSelectedLevel('All');
-                  }}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
-                  Clear Filters
-                </button>
-        {/* Category Filter */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap gap-2 justify-center mb-8">
-              {categories.map((category) => (
-                <button
-                  key={category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category.name
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-
-            {/* Tab Navigation */}
-            <div className="flex justify-center">
-              <div className="bg-gray-100 rounded-lg p-1">
-                <button
-                  onClick={() => setActiveTab('upcoming')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                    activeTab === 'upcoming'
-                      ? 'bg-white text-blue-600 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  Upcoming Webinars
-                </button>
-                <button
-                  onClick={() => setActiveTab('past')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                    activeTab === 'past'
-                      ? 'bg-white text-blue-600 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  Past Webinars
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Webinars Content */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            {activeTab === 'upcoming' && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredUpcoming.map((webinar, index) => {
-                  const IconComponent = webinar.icon;
-                  return (
-                    <motion.div
-                      key={webinar.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                    >
-                      <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center relative">
-                        <IconComponent className="w-16 h-16 text-white" />
-                        {webinar.isLive && (
-                          <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            LIVE
-                          </div>
-                        )}
-                      </div>
-                      
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                            {webinar.category}
-                          </span>
-                          <span className="text-sm text-gray-500">{webinar.duration}</span>
-                        </div>
-                        
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                          {webinar.title}
-                        </h3>
-                        
-                        <p className="text-gray-600 mb-4 leading-relaxed">
-                          {webinar.description}
-                        </p>
-                        
-                        <div className="space-y-2 mb-4 text-sm text-gray-600">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-2" />
-                            <span className="font-medium">{webinar.speaker}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            {new Date(webinar.date).toLocaleDateString()} at {webinar.time}
-                          </div>
-                        </div>
-                        
-                        <div className="flex gap-2">
-                          <a
-                            href={webinar.registrationUrl}
-                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors"
-                          >
-                            Register Now
-                          </a>
-                          <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                            <Share2 className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            )}
-
-            {activeTab === 'past' && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPast.map((webinar, index) => {
-                  const IconComponent = webinar.icon;
-                  return (
-                    <motion.div
-                      key={webinar.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                    >
-                      <div className="h-48 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center relative">
-                        <IconComponent className="w-16 h-16 text-white" />
-                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                          <Play className="w-12 h-12 text-white" />
-                        </div>
-                      </div>
-                      
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
-                            {webinar.category}
-                          </span>
-                          <span className="text-sm text-gray-500">{webinar.duration}</span>
-                        </div>
-                        
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                          {webinar.title}
-                        </h3>
-                        
-                        <p className="text-gray-600 mb-4 leading-relaxed">
-                          {webinar.description}
-                        </p>
-                        
-                        <div className="space-y-2 mb-4 text-sm text-gray-600">
-                          <div className="flex items-center">
-                            <User className="w-4 h-4 mr-2" />
-                            <span className="font-medium">{webinar.speaker}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            {new Date(webinar.date).toLocaleDateString()}
-                          </div>
-                        </div>
-                        
-                        <div className="flex gap-2">
-                          <a
-                            href={webinar.recordingUrl}
-                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors"
-                          >
-                            Watch Recording
-                          </a>
-                          <a
-                            href={webinar.slidesUrl}
-                            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                            title="Download Slides"
-                          >
-                            <Download className="w-4 h-4" />
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            )}
-
-            {((activeTab === 'upcoming' && filteredUpcoming.length === 0) || 
-              (activeTab === 'past' && filteredPast.length === 0)) && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <BookOpen className="w-16 h-16 mx-auto" />
+                <div className="relative">
+                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-white"
+                  >
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No webinars found</h3>
-                <p className="text-gray-600">Try selecting a different category or check back later for new webinars.</p>
               </div>
-            )}
+            </div>
+          </div>
+        </section>
+
+        {/* Upcoming Webinars */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Upcoming Webinars</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Register for our upcoming educational sessions.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {upcomingWebinars.map((webinar, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    <Calendar className="w-6 h-6 text-indigo-600 mr-2" />
+                    <span className="text-sm text-gray-500">{webinar.date}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{webinar.title}</h3>
+                  <p className="text-gray-600 mb-4">{webinar.description}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {webinar.time}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {webinar.attendees} registered
+                    </div>
+                  </div>
+                  <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
+                    Register Now
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Past Webinars */}
+        <section className="py-16 bg-white">
+
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Upcoming Webinars
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join our expert-led sessions to learn about the latest in AI, cloud computing, and digital transformation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <div className="flex items-center mb-4">
+                  <Calendar className="w-5 h-5 text-indigo-600 mr-2" />
+                  <span className="text-sm text-gray-600">February 15, 2024</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Introduction to Machine Learning</h3>
+                <p className="text-gray-600 mb-4">Learn the basics of machine learning and AI</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    75 minutes
+                  </div>
+                  <button className="text-indigo-600 hover:text-indigo-700 font-medium">
+                    Watch Now
+                  </button>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  <Download className="w-6 h-6 text-indigo-600 mr-2" />
+                  <span className="text-sm text-gray-500">Materials Available</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Cloud Security Best Practices</h3>
+                <p className="text-gray-600 mb-4">Secure your cloud infrastructure effectively</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    90 minutes
+                  </div>
+                  <button className="text-indigo-600 hover:text-indigo-700 font-medium">
+                    Download
+                  </button>
+                </div>
+        {/* Upcoming Webinars */}
+        {upcomingWebinars.length > 0 && (
+          <section className="py-16 bg-gray-50">
+            <div className="container mx-auto px-4">
+              <motion.div
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Upcoming Webinars
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Register for our upcoming educational sessions.
+
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>2:00 PM EST</span>
+                  </div>
+                  <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Past Webinars */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Past Webinars
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch recordings of our previous educational sessions.
+              </p>
+            </motion.div>
+
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {pastWebinars.map((webinar, index) => (
+                  <motion.div
+                    key={webinar.id}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={webinar.image}
+                        alt={webinar.title}
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <button className="bg-white hover:bg-gray-100 text-gray-900 p-4 rounded-full transition-colors duration-300">
+                          <Play className="w-8 h-8" />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{webinar.title}</h3>
+                      <p className="text-gray-600 mb-4">{webinar.description}</p>
+                      
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>{new Date(webinar.date).toLocaleDateString()}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-2" />
+                          <span>{webinar.duration}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <Users className="w-4 h-4 mr-2" />
+                          <span>{webinar.attendees} attendees</span>
+                        </div>
+                        {webinar.rating > 0 && (
+                          <div className="flex items-center text-sm text-gray-500">
+                            <Star className="w-4 h-4 mr-1 text-yellow-500 fill-current" />
+                            <span>{webinar.rating}/5.0</span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="flex gap-2">
+                        <button className="flex-1 bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-semibold">
+                          Watch Now
+                        </button>
+                        <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition-colors duration-300">
+                          <Download className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4">
             <motion.div
+              className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -795,48 +513,30 @@ export default function WebinarsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Stay Updated with Our Webinars
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Subscribe to our newsletter to get notified about upcoming webinars 
-                and exclusive content.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Subscribe Now
-                </a>
-                <a
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Contact Us
-                </a>
-                Stay Updated
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Subscribe to our newsletter to get notified about upcoming webinars and the latest technology insights.
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+                Subscribe to our newsletter to get notified about upcoming webinars, 
+                new content, and exclusive learning opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/newsletter"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                 >
-                  Subscribe to Newsletter
+                  Subscribe to Updates
                 </Link>
                 <Link
-                  href="/contact"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  href="/tutorials"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
-                  Request a Topic
+                  Browse Tutorials
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+    </>
     </MainLayout>
-    </Layout>
+
   );
 }

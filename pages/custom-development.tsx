@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
+import { Code, Zap, Server, Database, Cloud, Shield, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign, BarChart3 } from 'lucide-react';
 
 const services = [
   {

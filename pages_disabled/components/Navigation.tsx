@@ -4,8 +4,6 @@ import {
   ArrowRight,
   Award,
   BarChart3,
-<<<<<<< HEAD
-=======
   Shield,
   Code,
   Zap,
@@ -52,12 +50,6 @@ import {
   Star,
   Target,
   TrendingUp,
-<<<<<<< HEAD
-  Truck,
-  Users,
-  X,
-  Zap
-=======
   Clock,
   DollarSign,
   Cpu,

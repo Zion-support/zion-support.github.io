@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-const UltimateZionServicesShowcase: Reac t.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
-  const [searchTerm, setSearchTerm] = useState<any>('');';
-';';
-  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },';';
-=======
 >>>>>>> origin/main
 const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
   const [selectedCategory", setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
-<<<<<<< HEAD
-;
-  const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },;
-    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
-=======
 >>>>>>> origin/main
   const categories = [{ "id": 'all', "name": 'All Services', "icon": '🌟', "color": 'from - purple - 600 to - pink - 600' },;
     { "id": 'quantum - computing', "name": 'Quantum Computing', "icon": '⚛️', "color": 'from - blue - 600 to - cyan - 600' }, { "id": 'blockchain - web3', "name": 'Blockchain & Web3', "icon": '🔗', "color": 'from - green - 600 to - emerald - 600' }, { "id": 'space - tech', "name": 'Space Technology', "icon": '🛰️', "color": 'from - indigo - 600 to - purple - 600' }, { "id": 'biotech-ai', "name": 'Biotech & AI', "icon": '🧬', "color": 'from - red - 600 to - pink - 600' }, { "id": 'emerging - tech', "name": 'Emerging Tech', "icon": '🚀', "color": 'from - orange - 600 to - red - 600' }, { "id": 'micro - saas', "name": 'Micro SAAS', "icon": '💻', "color": 'from - blue - 600 to - indigo - 600' }, { "id": 'it - services', "name": 'IT Services', "icon": '🖥️', "color": 'from - gray - 600 to - slate - 600' };  ];
@@ -35,19 +23,9 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
   "hidden": "{ "opacity": 0",;
   "y": "2 0;
 ;
-<<<<<<< HEAD
-},;
-    visible: {;      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.5 }}};
-  return (
-    <div className="min-h-screen bg-white">
 ;
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
-=======
-;
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
-=======
+
 >>>>>>> origin/main
 "},;
     "visible": "{;      "opacity": 1",;
@@ -162,12 +140,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
               className="px-6 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white placeholder - gray - 400 "focus": "outlin e - none "focus": borde r-purple - 400 "focus": rin g - 2 "focus": rin g - purple - 400 / 20 w-full "md":w-80";
             />;
             <div  className="flex flex - wrap gap-2">;
-<<<<<<< HEAD
-              {categories.map((category) => (<button     key={category.id}
-                  onClick={ () => setSelectedCategory(category.id) }';
-                  className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id';';
-                      ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white'';';
-=======
 >>>>>>> origin/main
                   onClick={ () => setSelectedCategory(category.id) }
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;
@@ -323,24 +295,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
         </div>
       </section>
       {/* Services Grid */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
-        <div  className="max - w-7xl mx -auto">;
-          <motion.div;
-            className="grid grid - cols - 1 "md": gri d - cols - 2 "lg": gri d - cols - 3 gap-8";
-            variants={containerVariants"}
-            initial="hidden";
-            whileInView="visible";
-            viewport={{ "once": "anytru e "}}
-          >;
-            {filteredServices.map((service, index) => (<motion.div;
-                key={service.id}
-                variants={itemVariants}
-                className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 border border-white / 20 "hover": "borde r-white / 40 transition - all duration - 300 "hover": transform "hover":scale -105 group"              >;
-                {/* Service Header */"}";
-                <div className="text-center mb-6">`;
-                  <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;
-=======
 >>>>>>> origin/main
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
@@ -359,18 +313,10 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                 <div className="text-center mb-6">`
                   <div className={`text-6xl mb-4 group-hover: scal e-110 transition-transform duration-300`}>
                     {service.icon}
-<<<<<<< HEAD
-                  </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"';
-                  <p className="text-sm text-purple-400 font-medium mb-2">';';
                   </div>";
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
                   <p className="text-sm text-purple-400 font-medium mb-2">;
-=======
-                  </div>";
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
-                  <p className="text-sm text-purple-400 font-medium mb-2">;
-=======
+
 >>>>>>> origin/main
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
@@ -388,41 +334,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                 {/* Description */}"
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
-<<<<<<< HEAD
-                </p>;
-                {/* Pricing */}";
-                <div className="bg-white/5 rounded-lg p-4 mb-6">";
-                  <h4 className="text-purple-400 font-semibold mb-2">💰 Pricing & Market Value</h4>";
-                  <div className="space-y-1 text-sm">";
-                    <div className="flex justify-between">";
-                      <span className="text-gray-400">"Monthly": "</span>";
-                      <span className="text-green-400 font-semibold">{service.pricing.monthly"}</span>;
-                    </div>";
-                    <div className="flex justify-between">";
-                      <span className="text-gray-400">"Yearly": "</span>";
-                      <span className="text-green-400 font-semibold">{service.pricing.yearly"}</span>;
-                    </div>";
-                    <div className="flex justify-between">";
-                      <span className="text-gray-400">Market "Price": "</span>";
-                      <span className="text-blue-400 font-semibold">{service.pricing.marketPrice"}</span>;
-                    </div>";
-                    <div className="flex justify-between">";
-                      <span className="text-gray-400">"Setup": "</span>";
-                      <span className="text-yellow-400 font-semibold">{service.pricing.setup"}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-                {/* ROI and Benefits */}";
-                <div className="mb-6">";
-                  <h4 className="text-purple-400 font-semibold mb-2">📈 ROI & Benefits</h4>";
-                  <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg p-3 mb-3">";
-                    <p className="text-green-400 text-sm font-semibold">{service.roi}</p>;
-                  </div>";
-                  <div className="space-y-1">;
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (";
-                      <div key={idx} className="flex items-center text-sm text-gray-300">";
-                        <span className="text-green-400 mr-2">✓</span>;
-=======
 >>>>>>> origin/main
                 </p>
                 {/* Pricing */}"
@@ -472,79 +383,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                   </div>
                 </div>
                 {/* Market Information */}
-<<<<<<< HEAD
-                {service.marketSize && (";
-                  <div className="mb-6">";
-                    <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>";
-                    <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">";
-                      <p className="text-blue-400 text-sm font-semibold">;
-                        Market "Size": "{service.marketSize"}
-                      </p>;
-                    </div>;
-                  </div>) }
-;
-                {/* Trial and Setup */}";
-                <div className="flex justify-between items-center mb-6 text-sm">";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";
-                    <div className="text-gray-300">{service.trialDays} days</div>;
-                  </div>";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";
-                    <div className="text-gray-300">{service.setupTime}</div>;
-                  </div>;
-                </div>;
-                {/* Call to Action */}";
-                <div className="text-center">";
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 "hover": "fro m-purple-700 "hover": t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform "hover": scal e-105">;
-                    🚀 Get Started Today;
-                  </button>";
-                  <p className="text-xs text-gray-400 mt-2">;
-                    Contact us for a personalized demo;
-                  </p>;
-                </div>;
-                {/* Contact Quick Access */"}";
-                <div className="mt-4 text-center">";
-                  <div className="text-xs text-gray-400">";
-                    📞 <a href=""tel": "+13024640950" className="text-blue-400 "hover": tex t-blue-300">;
-                      +1 302 464 0950;
-                    </a> |;
-                    ✉️ <a href=""mailto": klebe r@ziontechgroup.com" className="text-blue - 400 "hover": tex t-blue -300">                      kleber@ziontechgroup.com;
-                    </a>;
-                  </div>;
-                </div>;
-              </motion.div>) ) "}
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Bottom CTA Section */}
-      <section className="py-20 px-4 "sm": "p x-6 "lg": p x-8">;
-        <div  className="max - w-4xl mx - auto text-center">;
-          <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-            whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-            transition={{ "duration": "0.6 "}}
-          >";
-            <h2 className="text-3xl "md": "tex t-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
-              Ready to Lead the Future?;
-            </h2>;
-            <p className="text-xl text-gray - 300 mb-8">;
-              Join the revolution and transform your business with cutting - edge technology solutions.Our team of experts is ready to help you implement these game - changing services.</p>;
-            <div  className="flex flex - col "md": fle x - row gap-4 justify -center">;
-              <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 "hover": fro m - purple - 700 "hover": t o - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform "hover": scal e -105">                🚀 Schedule a Consultation;
-              </button>";
-              <button className="bg-white/10 "hover": b g-white/20 border border-white/30 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">;
-                📋 View Full Portfolio;
-              </button>;
-            </div>";
-            <div className="mt-6 text-sm text-gray-400">;
-=======
 >>>>>>> origin/main
                 {service.marketSize && ("
                   <div className="mb-6">"
@@ -619,9 +457,7 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                     </a>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
               </motion.div>) ) }
           </motion.div>
@@ -659,30 +495,9 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-<<<<<<< HEAD
-      </section>;';
-    </div>;) };';';
-export default UltimateZionServicesShowcase;'"`
-</motion>
-</motion>
-</any>';
-</any>';';
+
       </section>;
-    </div>;) "};
-export default UltimateZionServicesShowcase;'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-=======
-=======
-      </section>;
-=======
+
 >>>>>>> origin/main
     </div>;) };
 export default UltimateZionServicesShowcase;'"`
@@ -694,8 +509,5 @@ export default UltimateZionServicesShowcase;'"`
 </motion>
 </motion>
 </any>
-<<<<<<< HEAD
-</any>
-=======
 </any>
 >>>>>>> origin/main

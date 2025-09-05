@@ -1,41 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Code, 
-  Cloud, 
-  Shield, 
-  Brain, 
-  Server, 
-  Database, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Globe
-} from 'lucide-react';
-
-const services = [
-  {
-    title: 'Micro SaaS Solutions',
-    description: 'Build and scale your software-as-a-service business with our comprehensive micro SaaS platform.',
-    icon: Code,
-    features: ['Rapid Development', 'Scalable Architecture', 'Multi-tenant Support', 'API Integration'],
-    pricing: 'Starting at $2,999/month'
-  },
-  {
-    title: 'IT Infrastructure',
-    description: 'Complete IT infrastructure solutions including cloud migration, security, and maintenance.',
-    icon: Server,
-    features: ['Cloud Migration', 'Security Hardening', '24/7 Monitoring', 'Disaster Recovery'],
-    pricing: 'Starting at $1,999/month'
-  },
-  {
-    title: 'AI & Machine Learning',
-    description: 'Leverage artificial intelligence to automate processes and gain valuable insights from your data.',
-=======
 import Link from 'next/link';
 import { Brain, Network, Zap, Shield, Users, Globe, Award, Star, TrendingUp, Clock, DollarSign, BarChart3, Settings, Code, Database, Server, MessageSquare, FileText, Mic, Search, Calendar, Package, ClipboardList, ShoppingCart } from 'lucide-react';
 
@@ -43,7 +8,7 @@ const services = [
   {
     title: "AI Services",
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+ursor/fix-lint-push-and-merge-to-main-4bb1
     icon: Brain,
     features: ['Custom AI Models', 'Data Analytics', 'Process Automation', 'Predictive Insights'],
     pricing: 'Starting at $3,999/month'
@@ -93,10 +58,6 @@ const benefits = [
     description: '99% client satisfaction rate with rigorous quality standards'
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import {
   Brain,
   Cloud,
@@ -251,8 +212,8 @@ export default function ServicesPage() {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+ursor/fix-lint-push-and-merge-to-main-4bb1
+
 
 export default function Services() {
   return (
@@ -262,12 +223,6 @@ export default function Services() {
         <meta name="description" content="Comprehensive technology services including micro SaaS, IT infrastructure, AI solutions, and cybersecurity." />
       </Head>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gray-50">
-=======
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gray-50">
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -285,8 +240,8 @@ export default function Services() {
       keywords="AI services, cloud solutions, cybersecurity, custom development, IT services, technology consulting"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+ursor/fix-lint-push-and-merge-to-main-4bb1
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
@@ -315,18 +270,10 @@ export default function Services() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="py-20 bg-white">
-=======
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="py-20 bg-white">
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+ursor/fix-lint-push-and-merge-to-main-4bb1
+
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -382,12 +329,6 @@ export default function Services() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-=======
-<<<<<<< HEAD
-        {/* Benefits Section */}
-=======
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -454,8 +395,8 @@ export default function Services() {
       </section>
     </>
         {/* Main Services */}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+ursor/fix-lint-push-and-merge-to-main-4bb1
+
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div

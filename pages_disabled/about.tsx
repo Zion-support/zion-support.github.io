@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
 import { motion } from 'framer-motion';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import Link from 'next/link';
 import { 
   TrendingUp,
   Building,
   Rocket,
   Lightbulb,
-<<<<<<< HEAD
   Handshake,
-<<<<<<< HEAD
-=======
-=======
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-import { 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
   Brain, 
   Users, 
   Award, 
@@ -46,36 +31,35 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
-<<<<<<< HEAD
-    description: 'We believe in the power of collaboration and work closely with our clients to achieve their goals.'
+    description: 'We work closely with our clients as partners, ensuring their success is our success.'
   }
 ];
 
-export default function AboutPage() {
+export default function About() {
   return (
     <>
-=======
-<<<<<<< HEAD
-    description: 'We work closely with our clients as partners, ensuring their success is our success.'
-  },
-  {
-    icon: Award,
-    title: 'Excellence',
-    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
-=======
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
-</h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
-                  </motion.div>
-                  </div>
-                  </section>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -337,16 +321,6 @@ const team = [{
     "expertise": 'AI & Machine Learning',
     "experience": '15+ years',
     "image": '/team/sarah-chen.jpg'
-<<<<<<< HEAD
-  }
-];
-
-const additionalValues = [
-  {
-    icon: Award,
-    title: 'Excellence',
-    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
-=======
   },
   {
     "name": 'Michael Rodriguez',
@@ -416,9 +390,6 @@ const timeline = [{
     "year": '2024',
     "title": 'Micro SaaS Platform',
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
-    icon: Award,
-    title: 'Excellence',
-    description: 'We strive for excellence in everything we do, delivering quality results every time.'
   }
 ];
 
@@ -447,15 +418,19 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-    description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-  },
-  {
-    icon: Target,
-    title: 'Results',
-    description: 'We focus on measurable outcomes that drive real business value and growth.'
-  },
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our Core Values
+              </h2>
+              <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                These principles guide everything we do and shape how we work with our clients.
+              </p>
+            </motion.div>
+          </div>
   {
     icon: Heart,
     title: 'Integrity',
@@ -569,13 +544,8 @@ export default function About() {
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
-                  <div className="text-gray-600 font-medium">
-                    {stat.label}
-                  </div>
-=======
                   <div className="text-gray-600">{stat.label}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+ursor/fix-lint-push-and-merge-to-main-4bb1
                 </motion.div>
               ))}
             </div>
@@ -591,14 +561,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-=======
-=======
+
               {values.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
@@ -621,8 +584,8 @@ export default function About() {
               })}
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+ursor/fix-lint-push-and-merge-to-main-4bb1
+
                 These core values guide everything we do and shape our company culture.
               </p>
             </motion.div>

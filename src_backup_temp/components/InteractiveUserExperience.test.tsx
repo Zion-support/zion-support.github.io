@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',;',';';';';
-    ';';';';';';
-=======
 >>>>>>> origin/main
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function InteractiveUserExperience.test() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveUserExperience.test services to help your business grow. </p> </div>'; </div>';'; );';';'}";
 import React from 'react',;',';';
@@ -13,25 +9,13 @@ export default function InteractiveUserExperience.test() {return (
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
-          Professional InteractiveUserExperience.test services to help your business grow.';
-        </p>';';
-      </div>';';';
-    </div>';';';';
-  );';';';';';
-}"';';';';;';;';
 import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function InteractiveUserExperience.test() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveUserExperience.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
-=======
-import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'; export default function InteractiveUserExperience.test() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveUserExperience.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"';';';';
-=======
+
 >>>>>>> origin/main
           Professional InteractiveUserExperience.test services to help your business grow.
         </p>
       </div>';
     </div>';';
   );';';';
-<<<<<<< HEAD
-}"';';';';
-=======
 }"';';';';
 >>>>>>> origin/main

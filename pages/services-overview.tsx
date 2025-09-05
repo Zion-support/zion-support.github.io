@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { Brain, Network, Cloud, Shield, Zap, Users, Globe, CheckCircle, ArrowRight, Star, Clock, DollarSign, BarChart3, Target, Award } from 'lucide-react';
 
 const serviceCategories = [
   {

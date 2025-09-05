@@ -111,18 +111,6 @@ export default function Footer("props": "any) {;
               </a>;
             </div>;
           </div>;
-<<<<<<< HEAD
-          {footerSections.map((section) => (;
-            <div key={section.title"}>;
-              <h4 className="text-white font-semibold mb-4">{section.title}</h4>;
-              <ul className="space-y-2">;
-                {section.links.map((link) => (;
-                  <li key={link.name}>;
-                    <Link to={link.href} className="text-gray-400 "hover": "text-white transition-colors text-sm">;
-                      {link.name"}
-                    </Link>;
-                  </li>;
-=======
 
 >>>>>>> origin/main
   return (

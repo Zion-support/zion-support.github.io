@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const BlogPost = () => {
   const router = useRouter();

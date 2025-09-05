@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { ReactNode } from "react";
-import { ReactNode } from "react";
-import EnhancedNavigation from "./EnhancedNavigation";
-import EnhancedFooter from "./EnhancedFooter";
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 interface EnhancedLayoutProps {
   \"children\": ReactNode;
 }
@@ -22,10 +14,5 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

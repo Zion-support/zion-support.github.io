@@ -1,19 +1,11 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-=======
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
+
+
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 
 export default [
   {
@@ -27,13 +19,7 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD
-      '.prettierrc.js',
-      '.eslintrc.*',
-      '*.min.js',
-      '*.bundle.js',
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
       'scripts/',
       'automation/',
       'automation_backup/',
@@ -51,13 +37,6 @@ export default [
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
-<<<<<<< HEAD
-      'src_backup_temp/',
-      'src.pages.disabled/',
-      'src.disabled/',
-      'src.broken/',
-      'src.corrupted/',
-=======
       'src.pages.disabled/',
       'src.pages.disabled/**/*',
       'src_backup_temp/',
@@ -185,141 +164,16 @@ export default [
       'pages_backup_conflicts/',
       'pages_backup_before_cleanup/',
       'pages_backup_conflict/',
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
       'pages_backup/',
       'pages_api.disabled/',
       'pages.disabled_auto/',
       'pages.disabled_full/',
       'pages.old/',
-<<<<<<< HEAD
-      'public/',
-      'server/',
-      'temp-backup/',
-      'temp_broken_files/',
-      'temp_working/',
-      'temp_footer_start.tsx',
-      'temp_backup/',
-      'test_build/',
-      'tests/',
-      'tools/',
-      'zion-os.disabled/',
-      'zion_academy/',
-      'fix-*.cjs',
-      'fix-*.js',
-      'git-*.js',
-      'git-*.cjs',
-      'hooks.disabled/',
-      'hooks/',
-      'intelligent-*.cjs',
-      'jest.*',
-      'master-*.cjs',
-      'merge-*.cjs',
-      'middleware.*',
-      'optimized-*.cjs',
-      'quick-*.cjs',
-      'resolve-*.cjs',
-      'run-*.cjs',
-      'security-*.cjs',
-      'seo-*.cjs',
-      'simple-*.cjs',
-      'structural-*.js',
-      'supabase/',
-      'types/',
-      'utils/',
-      'data/',
-      'database/',
-      'deployment*/',
-      'e2e/',
-      'ecosystem.*.cjs',
-      'enhanced-*.cjs',
-      'final-*.cjs',
-      'lint-stub.js',
-      'playwright.config.ts',
-      'pr-manager.cjs',
-      'services/',
-      'src/',
-      'components.disabled/',
-      'components.disabled_full/',
-      'contracts.disabled/',
-      'corrupted-files-backup/',
-      'cypress_backup/',
-      'ai-optimization-backups/',
-      'api-backup/',
-      'backup/',
-      'cache/',
-      'clean-build/',
-      'cypress.config.ts',
-      'pages/404.jsx',
-      'pages/404.tsx',
-      'pages/about.tsx',
-      'pages/ai-services.tsx',
-      'pages/api-docs.tsx',
-      'pages/api.tsx',
-      'pages/careers.tsx',
-      'pages/it-services.tsx',
-      'pages/micro-saas.tsx',
-      'pages/resources.tsx',
-      'pages/services.tsx',
-      'pages/webinars.tsx',
-      'pages/white-papers.tsx',
-      'components/layout/',
-      'components/performance/',
-      'components/ui/',
-      '*.cjs',
-      '*.js',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-<<<<<<< HEAD
-      '*.spec.tsx',
-      '*.backup.*',
-      '*.broken.*',
-      '*.corrupted.*',
-      '*.disabled.*',
-      '*.old.*',
-      '*.temp.*',
-      '*.tmp.*',
-      '*.bak.*',
-      '*.orig.*',
-      '*.rej.*',
-      '*.swp.*',
-      '*.swo.*',
-      '*.log',
-      '*.pid',
-      '*.seed',
-      '*.pid.lock',
-      'comprehensive-*.js',
-      'critical-fix.js',
-      'execute-automation.js',
-      'final-*.js',
-      'fix_*.js',
-      'health-endpoint.js',
-      'improve-app.js',
-      'maintenance-scheduler.js',
-      'merge-*.js',
-      'monitoring-system.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'run-*.js',
-      'seo-*.js',
-      'services-broken.tsx',
-      'simple-*.js',
-      'test-*.js',
-      'ultimate-*.js',
-      'ultimate-*.cjs',
-      'targeted-*.cjs',
-      'test-suite.cjs',
-      'ux-enhancer.cjs',
-      'vite.config-backup.ts',
-      'types/empty.ts'
-=======
       'pages.broken/',
       'pages.corrupted.1756905863/',
       'pages.disabled.full/'
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
     ]
   },
   {
@@ -369,7 +223,7 @@ export default [
         __filename: 'readonly',
         exports: 'readonly'
       },
-=======
+
       '*.spec.tsx'
     ]
   },
@@ -379,124 +233,20 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+
       parserOptions: {
         ecmaFeatures: {
           jsx: true
         }
       }
     },
-<<<<<<< HEAD
-    plugins: {
-      react,
-      'react-hooks': reactHooks
-    },
-    rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsparser,
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        KeyboardEvent: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        MutationObserver: 'readonly',
-        RequestInit: 'readonly',
-        AbortController: 'readonly',
-        fs: 'readonly',
-        CodeQualityChecker: 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      react: react,
-      'react-hooks': reactHooks
-    },
-    rules: {
-      'no-console': 'warn',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off'
-    }
-  },
-  {
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      globals: {
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        fireEvent: 'readonly',
-        render: 'readonly',
-<<<<<<< HEAD
-        screen: 'readonly',
-      },
-=======
         screen: 'readonly'
       }
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
     },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
-    },
-=======
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -514,10 +264,10 @@ export default [
       'use-isnan': 'error',
       'valid-typeof': 'error'
     }
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
+
+
       '@typescript-eslint/no-unused-vars': 'warn'
     }
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   }
 ];

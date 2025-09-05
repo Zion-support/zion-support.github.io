@@ -62,25 +62,6 @@ function SecurityComplianceSection("props": "any) {];
               transition = {;
   { "duration": "0.6",;
   "delay": "inde x * 0.1;
-<<<<<<< HEAD
-"}}
-            >";
-              <div className="flex items-start gap-4">;
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>";
-                  <span className="text-xl">{feature.icon}</span>;
-                </div>";
-                <div className="flex-1">";
-                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>";
-                  <p className="text-gray-400 text-sm mb-3">{feature.description}</p>";
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`;
-                    <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :';
-                      feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`;
-                    }`}></div>";
-                    <span className="text-gray-300 text-sm font-medium">{feature.status}</span>;
-                  </div>;
-                </div>;
-              </div>;
-=======
 
 >>>>>>> origin/main
 }}
@@ -121,21 +102,12 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
-<<<<<<< HEAD
-"}}
-        >";
-          <h3 className="text-3xl font-bold text-white text-center mb-8">;
-            Comprehensive Security Features;
-          </h3>;
-=======
 
 >>>>>>> origin/main
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
-<<<<<<< HEAD
-=======
           
 
 >>>>>>> origin/main
@@ -168,18 +140,6 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.6;
-<<<<<<< HEAD
-"}}
-        >";
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
-            <h3 className="text-2xl font-bold text-white text-center mb-8">;
-              Security Performance Metrics;
-            </h3>;
-            ;";
-            <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-6">;";
-              <div className="text-center">;";
-                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;";
-=======
 
 >>>>>>> origin/main
 }}
@@ -222,27 +182,6 @@ function SecurityComplianceSection("props": "any) {];
           transition = {;
   { "duration": "0.6",;
   "delay": "0.8;
-<<<<<<< HEAD
-"}}
-        >";
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
-            <h3 className="text-2xl font-bold mb-4">;
-              Secure Your Business Today;
-            </h3>";
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">;
-              Get enterprise-grade security and compliance without the complexity.Our experts handle everything while you focus on your business.</p>";
-            <div className="flex flex-col "sm": "fle x-row gap-4 justify-center">";
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 "hover": b g-gray-100 rounded-lg font-medium transition-colors duration-200">;
-                Security Assessment";
-                <Shield className="ml-2 h-5 w-5"   />;
-              </button>";
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200">;
-                Compliance Review";
-                <FileText className="ml-2 h-5 w-5"   />              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-=======
 
 >>>>>>> origin/main
 }}

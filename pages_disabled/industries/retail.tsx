@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-
-const solutions = [
-  {
-    title: 'E-commerce Platform',
-    description: 'Advanced e-commerce platform with AI-powered features for personalized shopping',
-    icon: ShoppingCart,
-    features: ['Product Catalog', 'Shopping Cart', 'Payment Processing', 'Order Management']
-  },
-  {
-    title: 'Inventory Management System',
-    description: 'AI-powered inventory management with demand forecasting and optimization',
-    icon: Package,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Management', 'Real-time Tracking']
-  },
-  {
-    title: 'Customer Analytics Platform',
-    description: 'Comprehensive analytics platform for customer behavior and preferences',
-    icon: BarChart3,
-    features: ['Customer Segmentation', 'Behavior Analysis', 'Purchase Patterns', 'Personalization']
-  },
-  {
-    title: 'Mobile Commerce App',
-    description: 'Native mobile app for seamless shopping experience across devices',
-    icon: Smartphone,
-    features: ['Mobile Shopping', 'Push Notifications', 'Offline Support', 'Social Integration']
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -57,18 +28,12 @@ const solutions = [
     description: 'End-to-end supply chain visibility and optimization for retail operations.',
     features: ['Inventory Optimization', 'Supplier Management', 'Demand Forecasting', 'Logistics Tracking'],
     icon: Shield
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   }
 ];
 
 const benefits = [
   {
-<<<<<<< HEAD
-    icon: TrendingUp,
-    title: 'Increased Sales',
-    description: 'AI-powered personalization and optimization drive higher conversion rates',
-    icon: ShoppingCart
-=======
     icon: Shield,
     title: 'Retail Expertise',
     description: 'Deep understanding of retail operations and customer experience requirements'
@@ -98,7 +63,7 @@ const caseStudies = [
     solution: 'Developed comprehensive e-commerce platform with inventory integration and mobile optimization',
     results: ['200% increase in online sales', '50% reduction in inventory costs', '95% customer satisfaction'],
     image: '/api/placeholder/400/300'
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
   },
   {
     title: 'POS System Modernization',
@@ -119,13 +84,9 @@ export default function RetailPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-=======
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -133,73 +94,6 @@ export default function RetailPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-                Retail <span className="text-blue-600">Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform retail operations with e-commerce platforms, inventory management systems, 
-                and AI-powered customer analytics.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Solutions Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Retail Solutions</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed specifically for retail businesses.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold">{solution.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-=======
                 Retail Technology
                 <span className="block text-yellow-400">Solutions</span>
               </h1>
@@ -315,7 +209,7 @@ export default function RetailPage() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 See how we've helped retail businesses improve customer experience and increase sales
               </p>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -357,36 +251,6 @@ export default function RetailPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Retail?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our retail solutions can help your business achieve its goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/it-services"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View IT Services
-                </Link>
-              </div>
-            </motion.div>
-=======
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Retail?
@@ -408,7 +272,7 @@ export default function RetailPage() {
                 Request Quote
               </Link>
             </div>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
           </div>
         </section>
       </div>

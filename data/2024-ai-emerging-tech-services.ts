@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from "../types/service-variants";
 
 export interface AIEmergingTechService {
@@ -96,4 +94,4 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 1800
   }
 ];
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

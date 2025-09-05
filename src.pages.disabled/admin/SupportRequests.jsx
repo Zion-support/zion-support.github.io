@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React,{ useState } from \'react\''\';\' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\''\';\' import { Input } from \'@/components/ui/input\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\''\';\' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from \'@/components/ui/select\''\';\' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from \'@/components/ui/table\''\';\' import { Badge } from \'@/components/ui/badge\''\';\' import { Search,Filter } from \'lucide-react\''\';\' import SEO from \'@/components/SEO\'';\";\";
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
+
+
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

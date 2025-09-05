@@ -1,9 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-<<<<<<< HEAD
-export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {';
-export const useTheme = (props: any) => {;';';
-type Theme = 'light' | 'dark' | 'system';';';
-=======
 >>>>>>> origin/main
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
 export const useTheme = (props: any) => {;
@@ -14,24 +9,7 @@ interface ThemeContextType {;
   theme: Them e;
   setTheme: (theme: Them e) => void;
   isDark: boolean}
-<<<<<<< HEAD
-export 
-  ';
-  if(context = == null) {;';';
-    throw new Error('useTheme must be used within a ThemeProvider');
-  return context};
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-  children: Reac t.ReactNode}
-export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {';
-';';
-    if(typeof window !== 'null') {';
-';';
-      if(saved && ['light',dark',system'].includes(saved)) {
-        return saved}';
-    }';';
-=======
-=======
+
 >>>>>>> origin/main
 export const "ThemeProvider": "React.FC < ThemeProviderProps> = ({ children "}) => {;
 export const useTheme = ("props": "any) => {;
@@ -75,19 +53,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       if(saved && ['light',dark',system'].includes(saved)) {
         return saved}
     }
-<<<<<<< HEAD
-    return 'system'});
-;
-    return 'system'}
-    );
-  const [isDark, setIsDark] = useState<any>(false);
-;
-  useEffect(() => {;
-// "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-=======
     return 'system'}
     );
 
@@ -100,22 +65,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     // Cleanup function
   };
 }, []);, []);
-<<<<<<< HEAD
-</any>
-</Theme>';
-</ThemeProviderProps>;';;';
-=======
 >>>>>>> origin/main
 ;
 </any>;
 </Theme>;
 </ThemeProviderProps>;
-<<<<<<< HEAD
-</any>
-</Theme>
-</ThemeProviderProps>
-=======
-=======
+
 
 </any>
 </Theme>

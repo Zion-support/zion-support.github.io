@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import MainLayout from '../src/components/layout/MainLayout';
+import { Rocket, Zap, Users, Shield, Globe, CheckCircle, ArrowRight, Star, Clock, DollarSign, Brain, Cloud, Target, BarChart3, Database, Smartphone, Award, Network, Cpu, Lock, Heart, Code, Settings, HelpCircle, FileText, Calendar, Bell, TrendingUp, Workflow, Atom, Truck, Leaf, Satellite, Gauge, MessageCircle, Package, Globe2, ShieldCheck, Lightbulb, Eye, Search, Phone, MapPin } from 'lucide-react';
 
 const solutions = [
   {

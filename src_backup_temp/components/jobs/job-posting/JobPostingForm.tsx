@@ -17,22 +17,6 @@ export function JobPostingForm("props": "any) {;
   const { createJob", updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState<any>(false);
   const [editorContent, setEditorContent] = useState<any>("");
-<<<<<<< HEAD
-  ;
-  const {;
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    submitJob;
-  } = useJobForm({ jobId, onSuccess });
-;
-  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
-=======
   
 >>>>>>> origin/main
   const {
@@ -134,11 +118,6 @@ export function JobPostingForm("props": "any) {;
           <p className="text-sm text-muted-foreground">;
             Fill in the details below to create a job posting.</p>;
         </div>;
-<<<<<<< HEAD
-        <BasicInfoFields control={form.control}  />;
-        ;
-        <DateFields startDate={startDate} ;
-=======
 
 >>>>>>> origin/main
   return (<Form {...form}>

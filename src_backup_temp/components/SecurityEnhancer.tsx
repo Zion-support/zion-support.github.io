@@ -209,19 +209,11 @@ export function SecurityEnhancer("props": any) {;
   }, [logSecurityEvent]) ;
 ;
   // Filter events;
-<<<<<<< HEAD
-    return matchesSearch && matchesFilter}) ;
-;
-  // Get status icon;
-  ;
-=======
 
 >>>>>>> origin/main
     return matchesSearch && matchesFilter}
     );
   // Get status icon
-<<<<<<< HEAD
-=======
   
 >>>>>>> origin/main
   };
@@ -298,33 +290,6 @@ export function SecurityEnhancer("props": any) {;
                     <X className="w-5 h-5"   />                  </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {/* Security Status */"}
-              {securityStatus && (";
-                <div className="mb-6">";
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
-                    Security Status;
-                  </h3>";
-                  <div className="space-y-2">;
-                    {[';
-                      { "key": 'csp'", "label": 'Content Security Policy' },;
-                      { "key": 'hsts', "label": 'HTTP Strict Transport Security' },;
-                      { "key": 'xss', "label": 'XSS Protection' },;
-                      { "key": 'frameOptions', "label": 'Frame Options' },;
-                      { "key": 'contentType', "label": 'Content Type Options' },;
-                      { "key": 'referrerPolicy', "label": 'Referrer Policy' },;
-                      { "key": 'permissionsPolicy', "label": 'Permissions Policy' },;
-                    ].map(item => (;
-                      <div;
-                        key={item.key}";
-                        className="flex items-center justify-between p-2 bg-gray-50 "dark": "b g-gray-800 rounded-lg";
-                      >";
-                        <span className="text-sm text-gray-700 "dark": tex t-gray-300">;
-                          {item.label"}
-                        </span>;
-                        {getStatusIcon();
-                          securityStatus[item.key as keyof SecurityStatus];
-=======
 
 >>>>>>> origin/main
               {/* Security Status */}
@@ -359,47 +324,6 @@ export function SecurityEnhancer("props": any) {;
                 </div>) }
 ;
               {/* Security Metrics */}
-<<<<<<< HEAD
-              {securityMetrics && (";
-                <div className="mb-6">";
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
-                    Security Metrics;
-                  </h3>";
-                  <div className="grid grid-cols-2 gap-3">";
-                    <div className="p-3 bg-blue-50 "dark": b g-blue-900/20 rounded-lg">";
-                      <p className="text-xs text-blue-600 "dark": tex t-blue-400">;
-                        Total Requests;
-                      </p>";
-                      <p className="text-lg font-bold text-blue-800 "dark": tex t-blue-200">;
-                        {securityMetrics.totalRequests.toLocaleString()"}
-                      </p>;
-                    </div>";
-                    <div className="p-3 bg-red-50 "dark": "b g-red-900/20 rounded-lg">";
-                      <p className="text-xs text-red-600 "dark": tex t-red-400">;
-                        Blocked Requests;
-                      </p>";
-                      <p className="text-lg font-bold text-red-800 "dark": tex t-red-200">;
-                        {securityMetrics.blockedRequests.toLocaleString()"}
-                      </p>;
-                    </div>";
-                    <div className="p-3 bg-yellow-50 "dark": "b g-yellow-900/20 rounded-lg">";
-                      <p className="text-xs text-yellow-600 "dark": tex t-yellow-400">;
-                        Suspicious Activity;
-                      </p>";
-                      <p className="text-lg font-bold text-yellow-800 "dark": tex t-yellow-200">;
-                        {securityMetrics.suspiciousActivity.toLocaleString()"}
-                      </p>;
-                    </div>";
-                    <div className="p-3 bg-green-50 "dark": "b g-green-900/20 rounded-lg">";
-                      <p className="text-xs text-green-600 "dark": tex t-green-400">;
-                        Compliance Score;
-                      </p>";
-                      <p className="text-lg font-bold text-green-800 "dark": tex t-green-200">;
-                        {securityMetrics.complianceScore"}%;
-                      </p>;
-                    </div>;
-                  </div>;
-=======
 >>>>>>> origin/main
               {securityMetrics && ("
                 <div className="mb-6">"
@@ -465,13 +389,6 @@ export function SecurityEnhancer("props": any) {;
                     )"}
                   </button>;
                 </div>;
-<<<<<<< HEAD
-                {/* Filters and Search */}";
-                <div className="mb-3 space-y-2">";
-                  <div className="flex space-x-2">;
-                    {['info',warning',error',success'].map(type => (;
-                      <button;
-=======
 
 >>>>>>> origin/main
               {/* Security Events */}"
@@ -562,24 +479,6 @@ export function SecurityEnhancer("props": any) {;
                     </div>) "}
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {/* Quick Actions */}";
-              <div className="mb-6">";
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
-                  Quick Actions;
-                </h3>";
-                <div className="grid grid-cols-2 gap-3">;
-                  <button;
-                    onClick={() =>;
-                      logSecurityEvent(';
-                        'info'",Manual security check initiated',User Action',low';
-                      );
-                    }";
-                    className="flex items-center justify-center space-x-2 p-3 bg-blue-50 "dark": "b g-blue-900/20 text-blue-700 "dark": tex t-blue-300 rounded-lg "hover": b g-blue-100 "dark": hove "r":bg-blue-900/40 transition-colors";
-                  >";
-                    <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>;
-                  </button>;
-=======
 
 >>>>>>> origin/main
               {/* Quick Actions */}"
@@ -598,8 +497,6 @@ export function SecurityEnhancer("props": any) {;
                   >"
                     <Activity className="w-4 h-4"   />"                    <span className="text-sm">Check Status</span>
                   </button>
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
                   <button;
@@ -611,22 +508,6 @@ export function SecurityEnhancer("props": any) {;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {/* Security Tips */"}";
-              <div className="mb-6">";
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 "dark": "tex t-white">;
-                  Security Tips;
-                </h3>";
-                <div className="space-y-2 text-sm text-gray-600 "dark": tex t-gray-400">;
-                  <p>• Keep your browser and extensions updated</p>;
-                  <p>• Use strong", unique passwords for each account</p>;
-                  <p>• Enable two - factor authentication when available</p>;
-                  <p>• Be cautious of suspicious links and downloads</p>;
-                  <p>• Regularly review your security settings</p>;
-                </div>;
-              </div>;
-            </div>;
-=======
 
 >>>>>>> origin/main
               {/* Security Tips */}"

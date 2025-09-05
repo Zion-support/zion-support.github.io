@@ -61,19 +61,6 @@ export default function Page("props": "any) {;
       "status": 'coming-soon';
     }
   ];
-<<<<<<< HEAD
-;
-    return matchesCategory && matchesSearch});
-;
-      case 'price': ";
-        return a.pricing.starter - b.pricing.starter;
-      case 'popularity':;
-        return 0; // Default sorting;
-      "default": return 0"}
-  });
-;
-      case 'beta': ";
-=======
 
 >>>>>>> origin/main
     return matchesCategory && matchesSearch}
@@ -106,12 +93,6 @@ export default function Page("props": "any) {;
           initial = {;
   { "opacity": "0",;
   "y": "2 0;
-<<<<<<< HEAD
-"}}
-          animate = {;
-  { "opacity": "1",;
-  "y": "0;
-=======
 
 >>>>>>> origin/main
   return (
@@ -122,8 +103,6 @@ export default function Page("props": "any) {;
           initial = {
   { opacity: 0,
   y: 2 0
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
 "}}

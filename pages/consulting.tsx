@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
+import { Target, Brain, Users, BarChart3, ArrowRight, CheckCircle, Star, Clock, DollarSign, Shield, Zap, Globe, Server, Database } from 'lucide-react';
 
 const consultingServices = [
   {

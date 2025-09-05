@@ -1,16 +1,10 @@
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type VariantProps } from "class-variance-authority";
-<<<<<<< HEAD
-</typeof>';
-</typeof>;';;';
-=======
 
 >>>>>>> origin/main
 import { cn } from "@/lib/utils"
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
 const labelVariants = cva(;
@@ -28,10 +22,6 @@ const Label = React.forwardRef<;
   />;
 ));
 Label.displayName = LabelPrimitive.Root.displayName;
-<<<<<<< HEAD
-export { Label }
-export { Label }
-=======
 
 export { Label }
 >>>>>>> origin/main

@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 import React from 'react';
 import Link from 'next/link';';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 const features = [;
   {}
     title: 'Rapid Prototyping,',

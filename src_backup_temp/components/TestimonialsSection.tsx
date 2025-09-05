@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';';
-export const TestimonialsSection: Reac t.FC = () => {';';
-import React, { useState } from 'react';
-export const "TestimonialsSection": "React.FC = () => {;
-import { motion", AnimatePresence  } from 'framer-motion';
-;
-export default function Page("props": "any) {;
-",;
-  {;
-    "id": "4",";
-    "name": "James Thompson",";
-    "position": "CEO",";
-    "company": "FinTech Innovations",";
-    "avatar": "/images/testimonials/james-thompson.jpg",;
-    "rating": "5",";
-    "content": "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.",";
-    "industry": "Finance",";
-    "results": "["25% market outperformance"", "Real-time analytics", "Risk reduction"],;
-    "verified": "tru e;
-  "},;
-  {;
-    "id": "5",";
-    "name": "Lisa Park",";
-    "position": "Head of Marketing",";
-    "company": "E-commerce Dynamics",";
-    "avatar": "/images/testimonials/lisa-park.jpg",;
-    "rating": "5",";
-    "content": "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",";
-    "industry": "E-commerce",";
-    "results": "["150% conversion increase"", "80% cost reduction", "Personalized campaigns"],;
-    "verified": "tru e;
-  "}";
-    "company": "Healthcare Innovations",;";
-    "content": "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
-    "rating": "5",;";
-    "industry": "Healthcare",;";
-    "project": "Cloud Migration & Optimization"};
-=======
 import React, { useState } from 'react';
 >>>>>>> origin/main
 export const TestimonialsSection: React.FC = () => {
@@ -99,9 +60,7 @@ export default function Page(props: any) {;
     verified: tru e;
   }";
     company: "Healthcare Innovations",;";
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;"
@@ -109,26 +68,12 @@ export default function Page(props: any) {;
     project: "Cloud Migration & Optimization"};
 ];
 ;
-<<<<<<< HEAD
-;
-export const "TestimonialsSection": "React.FC = props {;
-  const [currentTestimonial", setCurrentTestimonial] = useState<typeof 0>(0);
-=======
 >>>>>>> origin/main
 export const TestimonialsSection: React.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
   const [currentTestimonial, setCurrentTestimonial] = useState<any>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};
-<<<<<<< HEAD
-;
-  // Auto - play functionality;
-  React.useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-=======
 
 >>>>>>> origin/main
   // Auto - play functionality
@@ -140,29 +85,6 @@ export const TestimonialsSection: React.FC = props {
 }, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-<<<<<<< HEAD
-;
-  return (";
-    <section className="py-20 bg-zion-blue-dark">";
-      <div className="container mx-auto px-4">";
-        <div className="text-center mb-16">"          <h2 className="text-3xl "md": "tex t-4xl font-bold text-white mb-4">;
-            What Our Users Say;
-          </h2>";
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
-            Join thousands of satisfied professionals who trust Zion for their technology needs;
-          </p>;
-        </div>";
-        <div className="grid grid-cols-1 "md": gri d-cols-3 gap-8 max-w-6xl mx-auto">;
-          {testimonials.map((testimonial", index) => (;
-            <div;
-              key={index}";
-              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 "hover": "borde r-zion-purple/50 transition-all duration-300 "hover": transform "hover":scale-105 group";
-              {/* Quote icon */"}";
-              <div className="mb-4">";
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>;
-              {/* Rating */}";
-              <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;";
-=======
 
 >>>>>>> origin/main
   return ("
@@ -224,39 +146,6 @@ export const TestimonialsSection: React.FC = props {
           </div>
         </div>
         {/* Stats Section */}
-<<<<<<< HEAD
-        <motion.div";
-          className="text-center mb-16";
-          initial={{ "opacity": "0", "y": "3 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.8 "}}
-        >";
-          <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;
-            Trusted by Industry Leaders;
-          </h2>";
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions;
-          </p>;
-        </motion.div>;
-        {/* Stats Section */"}
-        <motion.div";
-          className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-20";
-          initial={{ "opacity": 0", "y": "3 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.8", "delay": "0.2 "}}
-        >;
-          {stats.map((stat, index) => (";
-            <div key={index} className="text-center">";
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">";
-                <stat.icon className="w-8 h-8 text-white" />;
-              </div>";
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>";
-              <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>";
-              <div className="text-sm text-gray-400">{stat.description}</div>;
-            </div>;
-=======
 >>>>>>> origin/main
         <motion.div"
           className="text-center mb-16"
@@ -296,39 +185,6 @@ export const TestimonialsSection: React.FC = props {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-<<<<<<< HEAD
-              initial={{ "opacity": "0", "x": "5 0 "}}
-              animate={{ "opacity": "1", "x": "0 "}}
-              exit={{ "opacity": "0", "x": "-50 "}}
-              transition={{ "duration": "0.5 "}}";
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 "md": "p-12";
-            >";
-              <div className="flex flex-col "lg": fle x-row items-start gap-8">;
-                {/* Testimonial Content */"}";
-                <div className="flex-1">";
-                  <div className="flex items-center gap-2 mb-4">;
-                    {[...Array(current.rating)].map((_, i) => (";
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />;
-                    ))}
-                  </div>;
-                  <Quote className="w-8 h-8 text-cyan - 400 mb-4"  />;
-                  <blockquote className="text-lg "md": "tex t-xl text-white mb-6 leading -relaxed">;
-                    "{current.content"}";
-                  </blockquote>;
-                  <div  className="space - y-3">;
-                    <h4 className="text-xl font - semibold text-white">{current.name}</h4>;
-                    <p className="text-cyan -400">{current.position}</p>;
-                    <p className="text-gray -300">{current.company}</p>;
-                    <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>;
-                </div>;
-                {/* Results and Verification */}";
-                <div className=""lg": "w-80 space-y-6">;
-                  {/* Verification Badge */"}
-                  {current.verified && (";
-                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
-                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
-                    </div>;
-=======
 >>>>>>> origin/main
               initial={{ opacity: 0, x: 5 0 }}
               animate={{ opacity: 1, x: 0 }}
@@ -370,35 +226,6 @@ export const TestimonialsSection: React.FC = props {
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
                         </li>) ) }
-<<<<<<< HEAD
-                    </ul>;
-                  </div>;
-                  {/* Industry Badge */}";
-                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">";
-                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </AnimatePresence>;
-          {/* Navigation Controls */}";
-          <div className="flex items-center justify-center mt-8 gap-4">;
-            <button;
-              onClick={prevTestimonial}";
-              className="p-3 bg-white/10 "hover": "b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 "hover": scal e-110";
-            >";
-              <ChevronLeft className="w-5 h-5"   />            </button>;
-            {/* Dots */"}";
-            <div className="flex gap-2">;
-              {testimonials.map((_, index) => (;
-                <button;
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
-                      ? 'bg-cyan-400 scale-125'';
-                      : 'bg-white/30 "hover": "b g-white/50'`;
-                  "}`}`;
-=======
 >>>>>>> origin/main
                     </ul>
                   </div>
@@ -421,14 +248,6 @@ export const TestimonialsSection: React.FC = props {
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
-<<<<<<< HEAD
-                  key={index}';
-                  onClick={() => goToTestimonial(index)}';';
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'';';
-                      ? 'bg-cyan-400 scale-125''';';
-                      : 'bg-white/30 hover: b g-white/50'`
-                  }`}`
-=======
 >>>>>>> origin/main
                   {current.verified && (";
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
@@ -471,9 +290,7 @@ export const TestimonialsSection: React.FC = props {
                       ? 'bg-cyan-400 scale-125'';
                       : 'bg-white/30 hover: b g-white/50'`;
                   }`}`;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
                   key={index}
                   onClick={() => goToTestimonial(index)}
@@ -524,9 +341,7 @@ export const TestimonialsSection: React.FC = props {
       </div>;
     </section>;
   )};";
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
             </div>
             <button
@@ -548,8 +363,6 @@ export const TestimonialsSection: React.FC = props {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
             </div>;
@@ -572,9 +385,7 @@ export const TestimonialsSection: React.FC = props {
             </button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
-=======
+
 >>>>>>> origin/main
         {/* Trust Indicators */}
         <motion.div"
@@ -599,10 +410,6 @@ export const TestimonialsSection: React.FC = props {
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
-<<<<<<< HEAD
-      </div>;';
-    </section>;) };';';
-=======
 >>>>>>> origin/main
       </div>;
     </section>;) };
@@ -613,10 +420,6 @@ export const TestimonialsSection: React.FC = props {
 </motion>
 </motion>
 </any>
-<<<<<<< HEAD
-</typeof>';
-</typeof>;';;';
-=======
 >>>>>>> origin/main
       </div>;
     </section>;) };
@@ -630,12 +433,7 @@ export const TestimonialsSection: React.FC = props {
 </any>;
 </typeof>;
 </typeof>;
-<<<<<<< HEAD
-</any>
-</typeof>
-</typeof>
-=======
-=======
+
 </any>
 </typeof>
 </typeof>

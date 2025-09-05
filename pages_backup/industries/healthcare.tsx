@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';';
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Heart, 
-  Brain, 
-  Shield, 
-  Users, 
-  BarChart3, 
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 import {
   Heart,
   Brain,
@@ -38,17 +20,8 @@ import {
   Camera,
   FileText;
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Layout from '../../components/Layout';';
-const services = [;
-  {}
-    title: 'AI-Powered Medical Diagnostics,',
-    description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -117,18 +90,8 @@ const services = [
       'Outcome tracking systems'';
     ];
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;];
-const benefits = [;
-  {}
-    title: 'Improved Patient Outcomes,',
-    description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
-    icon: Heart;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 ];
 const benefits = [
   {
@@ -151,18 +114,8 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
     icon: Shield;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;];
-const caseStudies = [;
-  {}
-    title: 'AI Diagnostic System Implementation,',
-    description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
-    results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 ];
 const caseStudies = [
   {
@@ -180,59 +133,8 @@ const caseStudies = [
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;];
-export default function HealthcarePage() {
-  return (;
-    <Layout );
-      title="Healthcare Technology Solutions - Zion Tech Group"";
-      description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions.""
-      keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics""
-    >;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">"
-          <div className="absolute inset-0">";
-            <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
-            <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-rose-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
-          </div>;
-          <div className="container mx-auto px-4 relative z-10">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto""
-            >;
-              <div className="flex items-center justify-center mb-6">";
-                <Heart className="w-12 h-12 text-red-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Healthcare;
-                  <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">";
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions. 
-                Improve patient outcomes, enhance efficiency, and ensure regulatory compliance.,
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Get Healthcare Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  View Healthcare Case Studies;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
 ];
 export default function HealthcarePage() {
   return (
@@ -287,25 +189,8 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Healthcare Technology Services;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive technology solutions designed specifically for healthcare organizations, 
-                from hospitals to private practices.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {services.map((service, index) => (,
-                <motion.div}),
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -323,23 +208,8 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
-                >;
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
-                    <service.icon className="w-6 h-6 text-white" />";
-                  </div>;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  <ul className="space-y-3">";
-                    {service.features.map((feature, featureIndex) => (,
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -357,15 +227,8 @@ export default function HealthcarePage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             </div>
           </div>
         </section>
@@ -376,25 +239,8 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Healthcare Solutions?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our healthcare technology solutions deliver measurable improvements in patient care, 
-                operational efficiency, and regulatory compliance.,
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {benefits.map((benefit, index) => (,
-                <motion.div}),
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -421,15 +267,8 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             </div>
           </div>
         </section>
@@ -440,25 +279,8 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Healthcare Success Stories;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Real results from healthcare organizations that have transformed their operations;
-                with our technology solutions.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-              {caseStudies.map((study, index) => (,
-                <motion.div}),
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -476,20 +298,8 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
-                >;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
-                  <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>"
-                  <div className="space-y-2">";
-                    {study.results.map((result, resultIndex) => (,
-                      <div key={resultIndex} className="flex items-center text-sm text-green-600">"
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -504,15 +314,8 @@ export default function HealthcarePage() {
                   </div>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             </div>
           </div>
         </section>
@@ -523,33 +326,8 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Healthcare?;
-              </h2>;
-              <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">";
-                Let our healthcare technology experts help you implement solutions that improve;
-                patient care and operational efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Healthcare Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-=======
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?

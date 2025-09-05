@@ -61,7 +61,8 @@ const services = {
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown DE 19709'
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  hours: '24/7 Support Available'
 };
 
 const socialLinks = [
@@ -71,13 +72,6 @@ const socialLinks = [
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
-
-const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
-};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -228,11 +222,6 @@ export default function Footer() {
                 })}
               </div>
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center mt-4 md:mt-0">
-              <Clock className="w-4 h-4 mr-2 text-gray-400" />
-              <span className="text-gray-400 text-sm">24/7 Support Available</span>
-=======
           </div>
         </div>
       </div>
@@ -240,6 +229,7 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
@@ -263,6 +253,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>
@@ -273,7 +264,6 @@ export default function Footer() {
               <span>SOC 2 Type II</span>
               <span>•</span>
               <span>ISO 27001</span>
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
             </div>
           </div>
         </div>

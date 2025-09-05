@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import SecurityEnhancer from '../components/SecurityEnhancer" describe('SecurityEnhancer',() => {' test('renders without crashing',() => {' render(<SecurityEnhancer / />) expect(screen.getByTestId("securityenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityEnhancer / />) }) test('handles user interactions',() => {' render(<SecurityEnhancer / />) }) test('applies correct styling',() => {' render(<SecurityEnhancer / />) }) })
-=======
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityEnhancer from "./components/SecurityEnhancer" describe("SecurityEnhancer",() => {" test("renders without crashing",() => {" render(<SecurityEnhancer / />) expect(screen.getByTestId("securityenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SecurityEnhancer / />) }) test("handles user interactions",() => {" render(<SecurityEnhancer / />) }) test("applies correct styling",() => {" render(<SecurityEnhancer / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import SecurityEnhancer from '../components/SecurityEnhancer" describe('SecurityEnhancer',() => {' test('renders without crashing',() => {' render(<SecurityEnhancer / />) expect(screen.getByTestId("securityenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityEnhancer / />) }) test('handles user interactions',() => {' render(<SecurityEnhancer / />) }) test('applies correct styling',() => {' render(<SecurityEnhancer / />) }) })
-=======
 import _React from 'react"  import '@testing-library/jest-dom import SecurityEnhancer from '../components/SecurityEnhancer" describe('SecurityEnhancer',() => {' test('renders without crashing',() => {' render(<SecurityEnhancer / />) expect(screen.getByTestId("securityenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityEnhancer / />) }) test('handles user interactions',() => {' render(<SecurityEnhancer / />) }) test('applies correct styling',() => {' render(<SecurityEnhancer / />) }) })
 >>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+

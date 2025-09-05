@@ -28,11 +28,6 @@ function AdvancedAnalytics({;
   // Generate unique session ID;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-<<<<<<< HEAD
-  return () => {;
-    // Cleanup function;
-  "};
-=======
 
 >>>>>>> origin/main
     pageViews: number;    clicks: number;
@@ -134,13 +129,6 @@ if(enableHeatmap) {;
     let "scrollTimeout": "NodeJ S.Timeout;
     const handleScroll = ("props": any) => {;
       clearTimeout(scrollTimeout) ;
-<<<<<<< HEAD
-      scrollTimeout = setTimeout(() => {;
-        trackInteraction('scroll'", {;
-          "scrollY": "windo w.scrollY",;
-          "scrollHeight": "documen t.documentElement.scrollHeight;
-        "}) ;
-=======
 >>>>>>> origin/main
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
@@ -221,20 +209,12 @@ if(enableHeatmap) {;
             "}
           }) ) ;
         }
-<<<<<<< HEAD
-      });
-      lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
-;
-      return () => lcpObserver.disconnect () } catch(error) {;
-=======
 >>>>>>> origin/main
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
       return () => lcpObserver.disconnect () } catch(error) {
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/main
       // }
@@ -369,41 +349,6 @@ if(enableHeatmap) {;
                 </div>;
                 <div className="text-lg font - bold text-orange -700">{analyticsData.conversionRate.toFixed(1) }%</div>              </div>;
             </div>;
-<<<<<<< HEAD
-            {/* Performance Metrics */}";
-            <div className="mb-6">";
-              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">";
-                <Zap className="w-4 h-4 text-yellow-500"   />                Performance;
-              </h3>";
-              <div className="space-y-2 text-xs">";
-                <div className="flex justify-between">;
-                  <span>Load "Time": "</span>";
-                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)"}ms</span>;
-                </div>";
-                <div className="flex justify-between">;
-                  <span>First "Paint": "</span>";
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)"}ms</span>;
-                </div>";
-                <div className="flex justify-between">;
-                  <span>"FCP": "</span>";
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)"}ms</span>;
-                </div>";
-                <div className="flex justify-between">;
-                  <span>"LCP": "</span>";
-                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)"}ms</span>;
-                </div>;
-              </div>;
-            </div>;
-            {/* Top Pages */}";
-            <div className="mb-6">";
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>";
-              <div className="space-y-2">;
-                {analyticsData.topPages.map((page, index) => (";
-                  <div key={index} className="flex justify-between items-center text-xs">";
-                    <span className="truncate flex-1">{page.path}</span>";
-                    <span className="font-mono text-gray-600">{page.views}</span>;
-                  </div>;
-=======
 
 >>>>>>> origin/main
             {/* Performance Metrics */}"
@@ -442,19 +387,6 @@ if(enableHeatmap) {;
                 ))}
               </div>;
             </div>;
-<<<<<<< HEAD
-            {/* Device Distribution */}";
-            <div className="mb-6">";
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>";
-              <div className="space-y-2">;
-                {analyticsData.userAgents.map((device, index) => (";
-                  <div key={index} className="flex items-center gap-2 text-xs">'";
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500"   />}'";
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500"   />}'";
-                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500"   />}";
-                    <span className="flex-1">{device.device}</span>"                    <span className="font-mono text-gray-600">{device.count}</span>;
-                  </div>;
-=======
 
 >>>>>>> origin/main
             {/* Device Distribution */}"
@@ -471,29 +403,6 @@ if(enableHeatmap) {;
                 ))}
               </div>;
             </div>;
-<<<<<<< HEAD
-            {/* Status Indicators */}";
-            <div className="pt-4 border-t border-gray-200">";
-              <div className="flex items-center justify-between text-xs text-gray-500">";
-                <div className="flex items-center gap-2">'`;
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}  />;
-                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>;
-                </div>;
-                <button;
-                  onClick={() => window.location.reload()}";
-                  className="text-blue-500 "hover": "tex t-blue-600";
-                >";
-                  <RefreshCw className="w-3 h-3"   />                </button>;
-              </div>;
-            </div>;
-          </motion.div>) "}
-      </AnimatePresence>;
-    </>;
-  )}}}}}}}}}}}}}'"`;
-;,"});})";
-;
-</motion>;
-=======
 
 >>>>>>> origin/main
             {/* Status Indicators */}"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
 
 export default function ApiDocs() {
   return (

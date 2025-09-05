@@ -136,10 +136,10 @@ function fixSyntaxAndConflicts() {
       let originalContent = content;
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-      content = content.replace(/=======/g, '');
+      content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(//g, '');
+      content = content.replace(//g, '');
       content = content.replace(/>>>>>>> [^\n]+/g, '');
       
       // Fix import statements

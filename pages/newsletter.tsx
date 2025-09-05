@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import { FileText, Mail, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Zap, Globe, Video, BarChart3 } from 'lucide-react';
 
 const newsletterFeatures = [
   {

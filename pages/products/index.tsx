@@ -1,7 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { NextPage } from 'next';
 import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
+import { Award, Globe, Shield, Zap, Users, Star, CheckCircle, ArrowRight, Search } from 'lucide-react';
 
 const products = [
   {
