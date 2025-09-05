@@ -2,10 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Clock, Star, DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, Settings, Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, Sprout, Mail, MessageSquare, Search, Eye, Target, TrendingUp, Package, Calendar, BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive } from 'lucide-react';
-
-import { motion } from 'framer-motion';
-import {
+import { 
   Cloud, 
   Zap, 
   Shield, 
@@ -22,7 +19,6 @@ import {
   Cpu, 
   Bot, 
   FileText, 
-  Image, 
   Video, 
   Mic, 
   Code, 
@@ -35,68 +31,26 @@ import {
   Rocket, 
   Heart, 
   Building, 
->>>>>>> main
-  Cloud,
-  Zap,
-  Shield,
-  Users,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Star,
-  DollarSign,
-  Award,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  Database,
-  Sprout,
->>>>>>> main
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Server,
-  Network,
-  Car,
-  Rocket,
-  Heart,
-  Building,
->>>>>>> main
-  Sprout,
->>>>>>> main
-  Mail,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
+  Sprout, 
+  Mail, 
+  MessageSquare, 
+  Search, 
+  Eye, 
+  Target, 
   Brain,
-  TrendingUp,
-  Package,
-  Calendar,
-  BookOpen,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  HardDrive
+  TrendingUp, 
+  Package, 
+  Calendar, 
+  BookOpen, 
+  ShoppingCart, 
+  Home, 
+  Trash2, 
+  Camera, 
   HardDrive,
   Database,
-  Droplets
-  Database
->>>>>>> main
->>>>>>> main
-  DollarSign,
-  Award,
+  Droplets,
   Phone,
-  MapPin,
-  Package
+  MapPin
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -108,11 +62,11 @@ const microSaasProducts = [
     features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
     pricing: '$299 - $1,499/month',
     category: 'FinOps',
-
->>>>>>> main
-const microSaaSProducts = [
-const microSaasProducts = [
->>>>>>> main
+    popular: true,
+    benefits: ['30% Cost Reduction', 'Automated Optimization', 'Real-time Monitoring', 'Budget Control'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/cloud-cost-guard'
+  },
   {
     title: 'AI Content Marketing Suite',
     description: 'Automated content creation, SEO optimization, and social media management platform.',
@@ -888,6 +842,126 @@ const microSaasProducts = [
     category: 'RPA',
     popular: true,
     link: 'https://rpaplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation from text, images, and audio with AI-powered editing and optimization.',
+    icon: Video,
+    features: ['Auto Video Creation', 'AI Editing', 'Voice Synthesis', 'Multi-format Export'],
+    pricing: '$99 - $599/month',
+    category: 'Content Creation',
+    popular: true,
+    benefits: ['10x Faster Production', 'Professional Quality', 'Cost Reduction', 'Scalable Content'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-video-generator'
+  },
+  {
+    title: 'Smart Contract Analytics Platform',
+    description: 'Comprehensive analytics and monitoring for DeFi protocols and smart contract interactions.',
+    icon: BarChart3,
+    features: ['Transaction Analytics', 'Risk Assessment', 'Performance Metrics', 'Alert System'],
+    pricing: '$199 - $1,299/month',
+    category: 'DeFi Analytics',
+    popular: true,
+    benefits: ['Real-time Insights', 'Risk Mitigation', 'Performance Optimization', 'Compliance Monitoring'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/smart-contract-analytics'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document review, contract analysis, and compliance checking using AI.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
+    pricing: '$299 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true,
+    benefits: ['Time Savings', 'Risk Reduction', 'Cost Efficiency', 'Accuracy Improvement'],
+    marketPrice: '$500 - $2,500/month',
+    link: 'https://ziontechgroup.com/legal-document-analyzer'
+  },
+  {
+    title: 'Quantum-Safe Encryption Manager',
+    description: 'Post-quantum cryptography implementation and migration for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-Safe Algorithms', 'Migration Tools', 'Key Management', 'Compliance Support'],
+    pricing: '$499 - $2,999/month',
+    category: 'Cybersecurity',
+    popular: true,
+    benefits: ['Future-Proof Security', 'Compliance Ready', 'Automated Migration', 'Zero Downtime'],
+    marketPrice: '$800 - $3,500/month',
+    link: 'https://ziontechgroup.com/quantum-safe-encryption'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Intelligent supply chain management with demand forecasting and risk mitigation.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Risk Analysis', 'Route Optimization', 'Supplier Management'],
+    pricing: '$399 - $2,499/month',
+    category: 'Supply Chain',
+    popular: true,
+    benefits: ['Cost Reduction', 'Risk Mitigation', 'Efficiency Gains', 'Real-time Visibility'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/supply-chain-optimizer'
+  },
+  {
+    title: 'Smart Building IoT Manager',
+    description: 'Comprehensive IoT platform for smart building management and energy optimization.',
+    icon: Building,
+    features: ['Energy Monitoring', 'Predictive Maintenance', 'Occupancy Analytics', 'Climate Control'],
+    pricing: '$199 - $1,299/month',
+    category: 'IoT',
+    popular: true,
+    benefits: ['Energy Savings', 'Predictive Maintenance', 'Comfort Optimization', 'Cost Reduction'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/smart-building-iot'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis Assistant',
+    description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals.',
+    icon: Heart,
+    features: ['Image Analysis', 'Diagnostic Support', 'Risk Assessment', 'Treatment Recommendations'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Improved Accuracy', 'Faster Diagnosis', 'Cost Reduction', 'Better Outcomes'],
+    marketPrice: '$1,500 - $6,000/month',
+    link: 'https://ziontechgroup.com/medical-diagnosis-ai'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification and KYC/AML compliance using blockchain technology.',
+    icon: Shield,
+    features: ['Decentralized Identity', 'KYC/AML Compliance', 'Privacy Protection', 'Cross-platform Verification'],
+    pricing: '$149 - $899/month',
+    category: 'Blockchain Identity',
+    popular: true,
+    benefits: ['Privacy Protection', 'Reduced Fraud', 'Compliance Automation', 'User Control'],
+    marketPrice: '$200 - $1,200/month',
+    link: 'https://ziontechgroup.com/blockchain-identity'
+  },
+  {
+    title: 'AI-Powered Financial Risk Manager',
+    description: 'Advanced financial risk assessment and portfolio optimization using machine learning.',
+    icon: TrendingUp,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis', 'Alert System'],
+    pricing: '$399 - $2,499/month',
+    category: 'FinTech',
+    popular: true,
+    benefits: ['Risk Reduction', 'Better Returns', 'Automated Analysis', 'Real-time Alerts'],
+    marketPrice: '$600 - $3,000/month',
+    link: 'https://ziontechgroup.com/financial-risk-manager'
+  },
+  {
+    title: 'Smart Agriculture IoT Platform',
+    description: 'AI-powered agricultural monitoring and optimization for precision farming.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Analysis', 'Irrigation Control', 'Yield Prediction'],
+    pricing: '$199 - $1,299/month',
+    category: 'AgTech',
+    popular: true,
+    benefits: ['Increased Yield', 'Resource Optimization', 'Cost Reduction', 'Sustainability'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/smart-agriculture-iot'
   }
 ];
 

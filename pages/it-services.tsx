@@ -1,16 +1,6 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket } from 'lucide-react';;
-
-const itServices = [
-  {
-=======
-import { motion } from 'framer-motion';
->>>>>>> main
 import {
   Server, 
   Shield, 
@@ -41,38 +31,24 @@ import {
   ShoppingCart,
   BookOpen,
   Brain,
-<<<<<<< HEAD
+  DollarSign,
+  Rocket,
+  Sprout,
+  Eye,
+  Bot,
   Target,
   TreePine,
   Heart,
-  ShoppingCart,
   GraduationCap,
-  Building,
   PieChart,
   Truck,
   Home,
   Video,
-  Rocket,
   ClipboardList
-=======
-  DollarSign,
-  Rocket,
-<<<<<<< HEAD
-  Sprout
->>>>>>> main
 } from 'lucide-react';
-
 
 const itServices = [
   {
-=======
-  Sprout,
-  Eye,
-  Bot
-} from 'lucide-react';
-const itServices = [{
->>>>>>> main
->>>>>>> main
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -1263,6 +1239,162 @@ title: 'AI-Powered IT Operations (AIOps)',
     features: ['Cost Analysis', 'Resource Right-sizing', 'Waste Detection', 'Optimization Recommendations'],
     pricing: '$15,000 - $75,000/setup',
     category: 'Cost Optimization'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup and integration for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Quantum-Classical Integration', 'Research Support'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    benefits: ['Future-Proof Technology', 'Research Capabilities', 'Competitive Advantage', 'Innovation Leadership'],
+    marketPrice: '$150,000 - $1,500,000/project',
+    link: 'https://ziontechgroup.com/quantum-computing-infrastructure'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Global Distribution'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge Computing',
+    popular: true,
+    benefits: ['Ultra-Low Latency', 'Improved Performance', 'Bandwidth Optimization', 'Real-time Processing'],
+    marketPrice: '$40,000 - $200,000/project',
+    link: 'https://ziontechgroup.com/edge-computing-solutions'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Network,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Blockchain',
+    popular: true,
+    benefits: ['Decentralized Security', 'Transparency', 'Cost Reduction', 'Innovation'],
+    marketPrice: '$75,000 - $750,000/project',
+    link: 'https://ziontechgroup.com/blockchain-infrastructure'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure with GPU clusters, data pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'Data Pipeline Design', 'Model Deployment', 'MLOps Implementation'],
+    pricing: '$75,000 - $300,000/project',
+    category: 'AI Infrastructure',
+    popular: true,
+    benefits: ['Scalable AI', 'Faster Training', 'Production Ready', 'Cost Effective'],
+    marketPrice: '$100,000 - $400,000/project',
+    link: 'https://ziontechgroup.com/ai-infrastructure-setup'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design and implementation for enterprise and industrial applications.',
+    icon: Network,
+    features: ['5G Network Design', 'Private 5G Networks', 'IoT Connectivity', 'Performance Optimization'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: '5G Networks',
+    popular: true,
+    benefits: ['Ultra-Fast Speeds', 'Low Latency', 'Massive IoT', 'Future Ready'],
+    marketPrice: '$300,000 - $2,500,000/project',
+    link: 'https://ziontechgroup.com/5g-network-implementation'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Framework'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'IoT',
+    popular: true,
+    benefits: ['Connected Devices', 'Real-time Insights', 'Automation', 'Scalability'],
+    marketPrice: '$150,000 - $1,000,000/project',
+    link: 'https://ziontechgroup.com/iot-platform-development'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform development for industrial and smart city applications.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Synchronization', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Digital Twin',
+    popular: true,
+    benefits: ['Virtual Simulation', 'Predictive Maintenance', 'Optimization', 'Cost Savings'],
+    marketPrice: '$200,000 - $2,000,000/project',
+    link: 'https://ziontechgroup.com/digital-twin-infrastructure'
+  },
+  {
+    title: 'AR/VR Infrastructure',
+    description: 'Augmented and virtual reality infrastructure for enterprise and consumer applications.',
+    icon: Video,
+    features: ['AR/VR Hardware Setup', 'Content Management', 'User Tracking', 'Performance Optimization'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'AR/VR',
+    popular: true,
+    benefits: ['Immersive Experience', 'Training Solutions', 'Remote Collaboration', 'Innovation'],
+    marketPrice: '$100,000 - $750,000/project',
+    link: 'https://ziontechgroup.com/ar-vr-infrastructure'
+  },
+  {
+    title: 'High-Performance Computing',
+    description: 'HPC cluster setup and optimization for scientific computing and data analysis.',
+    icon: Cpu,
+    features: ['HPC Cluster Design', 'Parallel Processing', 'Performance Tuning', 'Scientific Computing'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'HPC',
+    popular: true,
+    benefits: ['Massive Computing Power', 'Scientific Research', 'Data Analysis', 'Competitive Advantage'],
+    marketPrice: '$300,000 - $2,500,000/project',
+    link: 'https://ziontechgroup.com/high-performance-computing'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation for modern enterprise environments.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Reduced Risk', 'Compliance', 'Modern Architecture'],
+    marketPrice: '$150,000 - $750,000/project',
+    link: 'https://ziontechgroup.com/zero-trust-security'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy optimization and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Monitoring', 'Carbon Tracking', 'Efficient Hardware', 'Renewable Energy'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Green IT',
+    popular: true,
+    benefits: ['Sustainability', 'Cost Savings', 'Compliance', 'Brand Value'],
+    marketPrice: '$75,000 - $400,000/project',
+    link: 'https://ziontechgroup.com/green-it-solutions'
+  },
+  {
+    title: 'Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and data protection.',
+    icon: HardDrive,
+    features: ['Automated Failover', 'Data Replication', 'Recovery Testing', 'RTO/RPO Optimization'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Disaster Recovery',
+    popular: true,
+    benefits: ['Business Continuity', 'Data Protection', 'Minimal Downtime', 'Peace of Mind'],
+    marketPrice: '$40,000 - $200,000/setup',
+    link: 'https://ziontechgroup.com/disaster-recovery-service'
+  },
+  {
+    title: 'IT Governance Framework',
+    description: 'Comprehensive IT governance implementation with policies, procedures, and compliance.',
+    icon: ClipboardList,
+    features: ['Governance Framework', 'Risk Management', 'Compliance Monitoring', 'Policy Development'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'IT Governance',
+    popular: true,
+    benefits: ['Risk Mitigation', 'Compliance', 'Efficiency', 'Accountability'],
+    marketPrice: '$75,000 - $400,000/project',
+    link: 'https://ziontechgroup.com/it-governance-framework'
   }
 ];
 
