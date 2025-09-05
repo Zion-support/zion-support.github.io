@@ -57,7 +57,10 @@ import {
   Truck,
   GraduationCap,
   ClipboardList,
-  TreePine
+  TreePine,
+  FlaskConical,
+  Gamepad2,
+  Image
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -388,6 +391,390 @@ const microSaaSProducts = [
     benefits: ['Immersive Learning', 'Better Retention', 'Cost Savings', 'Scalable Training', 'Performance Tracking'],
     marketPrice: '$150 - $800/month',
     link: 'https://ziontechgroup.com/virtual-training-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced AI & Machine Learning Solutions
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Intelligent code review platform with automated bug detection, security analysis, and performance optimization suggestions.',
+    icon: Code,
+    features: ['Automated Code Review', 'Bug Detection', 'Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Team Collaboration'],
+    pricing: '$39 - $199/month',
+    category: 'AI Development',
+    popular: true,
+    benefits: ['Better Code Quality', 'Faster Reviews', 'Security Enhancement', 'Team Productivity', 'Cost Reduction'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI-Powered Test Automation',
+    description: 'Intelligent test automation platform with self-healing tests, visual testing, and AI-driven test generation.',
+    icon: CheckCircle,
+    features: ['Self-healing Tests', 'Visual Testing', 'AI Test Generation', 'Cross-browser Testing', 'Performance Testing', 'CI/CD Integration'],
+    pricing: '$49 - $249/month',
+    category: 'AI Testing',
+    popular: true,
+    benefits: ['Faster Testing', 'Reduced Maintenance', 'Better Coverage', 'Cost Efficiency', 'Quality Assurance'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-test-automation',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Document Intelligence',
+    description: 'Advanced document processing with OCR, data extraction, and intelligent document classification.',
+    icon: FileText,
+    features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Form Processing', 'Compliance Checking', 'API Integration'],
+    pricing: '$29 - $149/month',
+    category: 'Document AI',
+    popular: true,
+    benefits: ['Automated Processing', 'Time Savings', 'Accuracy Improvement', 'Cost Reduction', 'Scalability'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/ai-document-intelligence',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Voice Analytics Platform',
+    description: 'Intelligent voice analysis for customer service, sales calls, and team meetings with sentiment analysis and insights.',
+    icon: Mic,
+    features: ['Voice Analysis', 'Sentiment Detection', 'Call Analytics', 'Performance Insights', 'Real-time Monitoring', 'Compliance'],
+    pricing: '$59 - $299/month',
+    category: 'Voice AI',
+    popular: true,
+    benefits: ['Better Customer Service', 'Performance Insights', 'Compliance', 'Cost Reduction', 'Quality Improvement'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/ai-voice-analytics',
+    contact: '+1 302 464 0950'
+  },
+
+  // Blockchain & Web3 Solutions
+  {
+    title: 'NFT Marketplace Platform',
+    description: 'Complete NFT marketplace solution with minting, trading, and analytics for digital collectibles and art.',
+    icon: Image,
+    features: ['NFT Minting', 'Trading Platform', 'Wallet Integration', 'Analytics Dashboard', 'Royalty Management', 'Multi-blockchain'],
+    pricing: '$199 - $999/month',
+    category: 'Web3',
+    popular: true,
+    benefits: ['Revenue Generation', 'Market Access', 'Blockchain Integration', 'Scalability', 'Innovation'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/nft-marketplace-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'DeFi Yield Farming Platform',
+    description: 'Automated yield farming platform with smart contract integration and risk management for DeFi protocols.',
+    icon: TrendingUp,
+    features: ['Yield Optimization', 'Smart Contract Integration', 'Risk Management', 'Portfolio Tracking', 'Automated Strategies', 'Analytics'],
+    pricing: '$299 - $1,499/month',
+    category: 'DeFi',
+    popular: true,
+    benefits: ['Higher Yields', 'Risk Mitigation', 'Automation', 'Portfolio Optimization', 'DeFi Access'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/defi-yield-farming',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with vulnerability detection and compliance checking.',
+    icon: Shield,
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Compliance Checking', 'Security Scoring', 'Report Generation', 'Continuous Monitoring'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain Security',
+    popular: true,
+    benefits: ['Security Assurance', 'Risk Mitigation', 'Compliance', 'Cost Efficiency', 'Trust Building'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/smart-contract-audit',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Analytics & Business Intelligence
+  {
+    title: 'Real-time Data Streaming Platform',
+    description: 'High-performance data streaming platform with real-time analytics, event processing, and visualization.',
+    icon: Zap,
+    features: ['Real-time Streaming', 'Event Processing', 'Data Visualization', 'Scalable Architecture', 'API Integration', 'Monitoring'],
+    pricing: '$79 - $399/month',
+    category: 'Data Streaming',
+    popular: true,
+    benefits: ['Real-time Insights', 'Scalability', 'Performance', 'Cost Efficiency', 'Competitive Advantage'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/real-time-data-streaming',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Customer Journey Analytics',
+    description: 'Intelligent customer journey mapping with behavioral analysis, touchpoint optimization, and conversion prediction.',
+    icon: Target,
+    features: ['Journey Mapping', 'Behavioral Analysis', 'Touchpoint Optimization', 'Conversion Prediction', 'Personalization', 'ROI Tracking'],
+    pricing: '$49 - $249/month',
+    category: 'Customer Analytics',
+    popular: true,
+    benefits: ['Better Understanding', 'Conversion Improvement', 'Personalization', 'ROI Optimization', 'Customer Retention'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-customer-journey',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-powered predictive maintenance with IoT integration, failure prediction, and automated scheduling.',
+    icon: Settings,
+    features: ['Failure Prediction', 'IoT Integration', 'Automated Scheduling', 'Cost Optimization', 'Performance Monitoring', 'Alert System'],
+    pricing: '$99 - $499/month',
+    category: 'IoT Analytics',
+    popular: true,
+    benefits: ['Downtime Reduction', 'Cost Savings', 'Efficiency Improvement', 'Preventive Maintenance', 'ROI Enhancement'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/predictive-maintenance-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Security & Compliance
+  {
+    title: 'AI Threat Detection Platform',
+    description: 'Advanced threat detection with machine learning, behavioral analysis, and automated response capabilities.',
+    icon: Shield,
+    features: ['ML Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Real-time Monitoring', 'Incident Management', 'Compliance'],
+    pricing: '$149 - $749/month',
+    category: 'Cybersecurity',
+    popular: true,
+    benefits: ['Enhanced Security', 'Threat Prevention', 'Automated Response', 'Compliance', 'Cost Efficiency'],
+    marketPrice: '$250 - $1,200/month',
+    link: 'https://ziontechgroup.com/ai-threat-detection',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Zero Trust Security Platform',
+    description: 'Comprehensive zero trust security implementation with identity verification, network segmentation, and continuous monitoring.',
+    icon: Lock,
+    features: ['Identity Verification', 'Network Segmentation', 'Continuous Monitoring', 'Access Control', 'Policy Enforcement', 'Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Zero Trust Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Risk Reduction', 'Compliance', 'Visibility', 'Automated Enforcement'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/zero-trust-security',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Compliance Monitoring',
+    description: 'Automated compliance monitoring for GDPR, CCPA, HIPAA, and other regulations with AI-powered risk assessment.',
+    icon: CheckCircle,
+    features: ['Regulatory Compliance', 'AI Risk Assessment', 'Automated Monitoring', 'Policy Management', 'Audit Trails', 'Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Compliance AI',
+    popular: true,
+    benefits: ['Compliance Assurance', 'Risk Mitigation', 'Automated Monitoring', 'Cost Reduction', 'Audit Readiness'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-compliance-monitoring',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced E-commerce & Retail
+  {
+    title: 'AI-Powered Pricing Optimization',
+    description: 'Dynamic pricing platform with AI-driven price optimization, competitor analysis, and revenue maximization.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Competitor Analysis', 'Revenue Optimization', 'A/B Testing', 'Market Analysis', 'ROI Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce AI',
+    popular: true,
+    benefits: ['Revenue Optimization', 'Competitive Advantage', 'Automated Pricing', 'Market Intelligence', 'Profit Maximization'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-pricing-optimization',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Customer Service Platform',
+    description: 'Comprehensive customer service automation with chatbots, ticket routing, and sentiment analysis.',
+    icon: MessageSquare,
+    features: ['AI Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base', 'Multi-channel Support', 'Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Service AI',
+    popular: true,
+    benefits: ['24/7 Support', 'Cost Reduction', 'Better Experience', 'Scalability', 'Customer Satisfaction'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-customer-service',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Product Recommendation Engine',
+    description: 'Advanced recommendation system with machine learning, behavioral analysis, and personalization.',
+    icon: ShoppingCart,
+    features: ['ML Recommendations', 'Behavioral Analysis', 'Personalization', 'A/B Testing', 'Real-time Updates', 'Analytics'],
+    pricing: '$49 - $249/month',
+    category: 'Recommendation AI',
+    popular: true,
+    benefits: ['Higher Conversion', 'Better Experience', 'Revenue Growth', 'Personalization', 'Customer Engagement'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-product-recommendations',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Healthcare & Life Sciences
+  {
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical diagnosis support with image analysis, symptom checking, and treatment recommendations.',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'Drug Interaction Check', 'Patient History', 'Compliance'],
+    pricing: '$299 - $1,499/month',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Better Diagnosis', 'Faster Treatment', 'Cost Reduction', 'Improved Outcomes', 'Compliance'],
+    marketPrice: '$500 - $2,000/month',
+    link: 'https://ziontechgroup.com/ai-medical-diagnosis',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Drug Discovery Platform',
+    description: 'AI-powered drug discovery platform with molecular analysis, compound screening, and clinical trial optimization.',
+    icon: FlaskConical,
+    features: ['Molecular Analysis', 'Compound Screening', 'Clinical Trial Optimization', 'Drug Interaction Analysis', 'Patent Research', 'Compliance'],
+    pricing: '$999 - $4,999/month',
+    category: 'Pharma AI',
+    popular: true,
+    benefits: ['Faster Discovery', 'Cost Reduction', 'Better Success Rate', 'Innovation', 'Competitive Advantage'],
+    marketPrice: '$1,500 - $7,500/month',
+    link: 'https://ziontechgroup.com/ai-drug-discovery',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Clinical Trial Management',
+    description: 'Intelligent clinical trial management with patient recruitment, data collection, and regulatory compliance.',
+    icon: ClipboardList,
+    features: ['Patient Recruitment', 'Data Collection', 'Regulatory Compliance', 'Trial Optimization', 'Risk Management', 'Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Clinical AI',
+    popular: true,
+    benefits: ['Faster Trials', 'Cost Reduction', 'Better Compliance', 'Risk Mitigation', 'Success Rate'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/ai-clinical-trials',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Manufacturing & Industry 4.0
+  {
+    title: 'AI Quality Control System',
+    description: 'Intelligent quality control with computer vision, defect detection, and automated quality assurance.',
+    icon: CheckCircle,
+    features: ['Computer Vision', 'Defect Detection', 'Quality Scoring', 'Automated Inspection', 'Real-time Monitoring', 'Analytics'],
+    pricing: '$149 - $749/month',
+    category: 'Manufacturing AI',
+    popular: true,
+    benefits: ['Quality Improvement', 'Cost Reduction', 'Automation', 'Consistency', 'Efficiency'],
+    marketPrice: '$250 - $1,200/month',
+    link: 'https://ziontechgroup.com/ai-quality-control',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, logistics optimization, and risk management.',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Logistics Optimization', 'Risk Management', 'Supplier Analysis', 'Cost Optimization', 'Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Supply Chain AI',
+    popular: true,
+    benefits: ['Cost Reduction', 'Efficiency Improvement', 'Risk Mitigation', 'Better Planning', 'Competitive Edge'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Energy Management Platform',
+    description: 'Intelligent energy management with consumption optimization, renewable integration, and cost reduction.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Renewable Integration', 'Cost Analysis', 'Demand Response', 'Predictive Maintenance', 'Sustainability'],
+    pricing: '$79 - $399/month',
+    category: 'Energy AI',
+    popular: true,
+    benefits: ['Cost Reduction', 'Sustainability', 'Efficiency', 'Compliance', 'Environmental Impact'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-energy-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Real Estate & Property
+  {
+    title: 'AI Property Management Platform',
+    description: 'Intelligent property management with tenant screening, maintenance scheduling, and financial optimization.',
+    icon: Home,
+    features: ['Tenant Screening', 'Maintenance Scheduling', 'Financial Optimization', 'Market Analysis', 'Compliance', 'Analytics'],
+    pricing: '$49 - $249/month',
+    category: 'PropTech AI',
+    popular: true,
+    benefits: ['Efficiency Improvement', 'Cost Reduction', 'Better Tenants', 'Automated Operations', 'ROI Optimization'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-property-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Real Estate Investment Platform',
+    description: 'AI-powered real estate investment analysis with market prediction, ROI calculation, and risk assessment.',
+    icon: TrendingUp,
+    features: ['Market Prediction', 'ROI Calculation', 'Risk Assessment', 'Investment Analysis', 'Portfolio Management', 'Market Intelligence'],
+    pricing: '$99 - $499/month',
+    category: 'Real Estate AI',
+    popular: true,
+    benefits: ['Better Investments', 'Risk Mitigation', 'Market Intelligence', 'ROI Optimization', 'Competitive Advantage'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-real-estate-investment',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Agriculture & Environmental
+  {
+    title: 'AI Precision Agriculture Platform',
+    description: 'Intelligent agriculture management with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Weather Analysis', 'Pest Detection', 'Sustainability'],
+    pricing: '$79 - $399/month',
+    category: 'AgTech AI',
+    popular: true,
+    benefits: ['Yield Improvement', 'Resource Efficiency', 'Cost Reduction', 'Sustainability', 'Profitability'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-precision-agriculture',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Environmental Monitoring',
+    description: 'Intelligent environmental monitoring with pollution detection, climate analysis, and sustainability tracking.',
+    icon: TreePine,
+    features: ['Pollution Detection', 'Climate Analysis', 'Air Quality Monitoring', 'Water Quality', 'Sustainability Tracking', 'Alert System'],
+    pricing: '$59 - $299/month',
+    category: 'Environmental AI',
+    popular: true,
+    benefits: ['Environmental Protection', 'Compliance', 'Early Warning', 'Data Insights', 'Sustainability'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/ai-environmental-monitoring',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Gaming & Entertainment
+  {
+    title: 'AI Game Development Platform',
+    description: 'AI-powered game development tools with procedural generation, character AI, and automated testing.',
+    icon: Gamepad2,
+    features: ['Procedural Generation', 'Character AI', 'Automated Testing', 'Content Creation', 'Performance Optimization', 'Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Gaming AI',
+    popular: true,
+    benefits: ['Faster Development', 'Better Gameplay', 'Cost Efficiency', 'Innovation', 'Player Engagement'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-game-development',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Content Moderation Platform',
+    description: 'Intelligent content moderation with automated detection, classification, and policy enforcement.',
+    icon: Eye,
+    features: ['Automated Detection', 'Content Classification', 'Policy Enforcement', 'Real-time Moderation', 'Analytics', 'Compliance'],
+    pricing: '$39 - $199/month',
+    category: 'Content AI',
+    popular: true,
+    benefits: ['Automated Moderation', 'Cost Reduction', 'Consistency', 'Scalability', 'Compliance'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-content-moderation',
     contact: '+1 302 464 0950'
   }
 ];
