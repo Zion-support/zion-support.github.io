@@ -43,7 +43,9 @@ import {
   ShoppingCart,
   BookOpen,
   Package,
-  DollarSign
+  DollarSign,
+  Wifi,
+  Share2
 } from 'lucide-react';
 
 const aiServices = [
@@ -392,131 +394,167 @@ const aiServices = [
     link: 'https://aiperformance.ziontechgroup.com'
   },
   {
-    title: 'LLM Fine-tuning & Customization',
-    description: 'Custom large language model fine-tuning for specific business domains and use cases.',
-    icon: Brain,
-    features: ['Domain-specific Training', 'Custom Datasets', 'Model Optimization', 'Deployment Support'],
-    pricing: '$5,000 - $50,000/project',
-    category: 'LLM Development',
-    popular: true,
-    link: 'https://llmfinetuning.ziontechgroup.com'
-  },
-  {
-    title: 'Edge AI Deployment Platform',
-    description: 'Deploy and manage AI models at the edge with optimized inference and real-time processing.',
-    icon: Cpu,
-    features: ['Edge Deployment', 'Model Optimization', 'Real-time Inference', 'Device Management'],
-    pricing: '$3,000 - $25,000/project',
-    category: 'Edge AI',
-    link: 'https://edgeai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Cybersecurity Suite',
-    description: 'Advanced AI-driven threat detection, behavioral analysis, and automated response systems.',
-    icon: Shield,
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
-    pricing: '$4,000 - $30,000/month',
-    category: 'AI Security',
-    link: 'https://aicybersecurity.ziontechgroup.com'
-  },
-  {
-    title: 'Multimodal AI Platform',
-    description: 'Unified AI platform processing text, images, audio, and video with cross-modal understanding.',
-    icon: Eye,
-    features: ['Multimodal Processing', 'Cross-modal Understanding', 'Unified API', 'Real-time Analysis'],
-    pricing: '$5,000 - $40,000/month',
-    category: 'Multimodal AI',
-    link: 'https://multimodalai.ziontechgroup.com'
-  },
-  {
     title: 'AI-Powered Drug Discovery',
-    description: 'Machine learning-driven drug discovery and molecular design for pharmaceutical research.',
+    description: 'Machine learning algorithms for pharmaceutical research and drug development.',
     icon: Heart,
-    features: ['Molecular Design', 'Drug Discovery', 'Toxicity Prediction', 'Clinical Trial Optimization'],
-    pricing: '$10,000 - $100,000/project',
+    features: ['Molecular Analysis', 'Drug Interaction Prediction', 'Clinical Trial Optimization', 'Side Effect Analysis'],
+    pricing: '$50,000 - $500,000/project',
     category: 'Healthcare AI',
+    popular: true,
     link: 'https://aidrugdiscovery.ziontechgroup.com'
   },
   {
-    title: 'Autonomous Vehicle AI',
-    description: 'AI systems for autonomous vehicles including perception, planning, and control algorithms.',
-    icon: Car,
-    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
-    pricing: '$15,000 - $150,000/project',
-    category: 'Autonomous Systems',
-    link: 'https://autonomousai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Climate Modeling',
-    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
-    icon: Globe,
-    features: ['Climate Prediction', 'Impact Analysis', 'Weather Forecasting', 'Sustainability Planning'],
-    pricing: '$8,000 - $60,000/project',
-    category: 'Climate AI',
-    link: 'https://climateai.ziontechgroup.com'
-  },
-  {
-    title: 'Quantum-AI Hybrid Computing',
-    description: 'Hybrid quantum-classical AI algorithms for optimization and machine learning problems.',
-    icon: Zap,
-    features: ['Quantum Algorithms', 'Hybrid Computing', 'Optimization Problems', 'Quantum ML'],
-    pricing: '$20,000 - $200,000/project',
-    category: 'Quantum AI',
-    link: 'https://quantumai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Space Analytics',
-    description: 'Satellite data analysis and space mission optimization using advanced AI algorithms.',
-    icon: Rocket,
-    features: ['Satellite Analysis', 'Mission Optimization', 'Space Weather', 'Orbital Mechanics'],
-    pricing: '$12,000 - $120,000/project',
-    category: 'Space AI',
-    link: 'https://spaceai.ziontechgroup.com'
-  },
-  {
-    title: 'Neural Architecture Search',
-    description: 'Automated neural network design and optimization for specific tasks and constraints.',
-    icon: Network,
-    features: ['Auto Architecture', 'Task Optimization', 'Constraint Handling', 'Performance Tuning'],
-    pricing: '$5,000 - $50,000/project',
-    category: 'AutoML',
-    link: 'https://neuralsearch.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Materials Science',
-    description: 'Machine learning for materials discovery, property prediction, and design optimization.',
-    icon: Building,
-    features: ['Materials Discovery', 'Property Prediction', 'Design Optimization', 'Simulation'],
-    pricing: '$8,000 - $80,000/project',
-    category: 'Materials AI',
-    link: 'https://materialsai.ziontechgroup.com'
-  },
-  {
-    title: 'Federated Learning Platform',
-    description: 'Privacy-preserving machine learning with federated learning across distributed datasets.',
-    icon: Lock,
-    features: ['Privacy Preservation', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
-    pricing: '$6,000 - $60,000/project',
-    category: 'Privacy AI',
-    link: 'https://federatedlearning.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Robotics Control',
-    description: 'Advanced AI control systems for industrial and service robotics applications.',
-    icon: Settings,
-    features: ['Motion Planning', 'Object Recognition', 'Manipulation Control', 'Safety Systems'],
-    pricing: '$10,000 - $100,000/project',
-    category: 'Robotics AI',
-    link: 'https://roboticsai.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Financial Trading',
-    description: 'Algorithmic trading systems with AI-driven market analysis and automated execution.',
-    icon: TrendingUp,
-    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
-    pricing: '$15,000 - $150,000/project',
+    title: 'AI Financial Risk Assessment',
+    description: 'Advanced AI models for credit scoring, market risk analysis, and investment optimization.',
+    icon: DollarSign,
+    features: ['Credit Scoring', 'Market Risk Analysis', 'Portfolio Optimization', 'Regulatory Compliance'],
+    pricing: '$25,000 - $150,000/project',
     category: 'FinTech AI',
-    link: 'https://tradingai.ziontechgroup.com'
+    link: 'https://airiskassessment.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Prediction'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Supply Chain AI',
+    link: 'https://aisupplychain.ziontechgroup.com'
+  },
+  {
+    title: 'AI Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Prediction', 'Carbon Footprint Analysis', 'Sustainability Planning'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Environmental AI',
+    link: 'https://aiclimate.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles',
+    description: 'Self-driving vehicle technology with computer vision and decision-making algorithms.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Autonomous Systems',
+    link: 'https://aiautonomous.ziontechgroup.com'
+  },
+  {
+    title: 'AI Quantum Computing Solutions',
+    description: 'Quantum machine learning and optimization algorithms for complex problem solving.',
+    icon: Cpu,
+    features: ['Quantum ML', 'Optimization Algorithms', 'Cryptography', 'Simulation'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'Quantum AI',
+    link: 'https://aiquantum.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Cybersecurity AI',
+    link: 'https://aicybersecurity.ziontechgroup.com'
+  },
+  {
+    title: 'AI Medical Imaging Analysis',
+    description: 'Deep learning models for medical image analysis and diagnostic assistance.',
+    icon: Eye,
+    features: ['Image Classification', 'Tumor Detection', 'Diagnostic Assistance', 'Treatment Planning'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'Medical AI',
+    link: 'https://aimedicalimaging.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Smart Cities',
+    description: 'Intelligent urban planning and management using IoT and AI integration.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Waste Management', 'Public Safety'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities',
+    link: 'https://aismartcities.ziontechgroup.com'
+  },
+  {
+    title: 'AI Natural Language Understanding',
+    description: 'Advanced NLP models for complex language understanding and generation.',
+    icon: MessageSquare,
+    features: ['Language Understanding', 'Context Analysis', 'Sentiment Analysis', 'Multi-language Support'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'NLP',
+    link: 'https://ainlu.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Robotics',
+    description: 'Intelligent robotics systems with computer vision and autonomous decision making.',
+    icon: Bot,
+    features: ['Computer Vision', 'Autonomous Navigation', 'Object Manipulation', 'Human-Robot Interaction'],
+    pricing: '$50,000 - $400,000/project',
+    category: 'Robotics AI',
+    link: 'https://airobotics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Edge Computing Solutions',
+    description: 'AI models optimized for edge devices with real-time processing capabilities.',
+    icon: Wifi,
+    features: ['Edge Optimization', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge AI',
+    link: 'https://aiedge.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Machine learning models for equipment maintenance prediction and optimization.',
+    icon: Settings,
+    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Equipment Monitoring'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Predictive Maintenance',
+    link: 'https://aipredictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI Personalization Engine',
+    description: 'Advanced personalization algorithms for user experience optimization.',
+    icon: Users,
+    features: ['User Profiling', 'Behavioral Analysis', 'Content Personalization', 'A/B Testing'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Personalization',
+    link: 'https://aipersonalization.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Research',
+    description: 'Intelligent legal document analysis and case law research using NLP.',
+    icon: BookOpen,
+    features: ['Document Analysis', 'Case Law Research', 'Contract Review', 'Legal Prediction'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Legal AI',
+    link: 'https://ailegal.ziontechgroup.com'
+  },
+  {
+    title: 'AI Social Media Intelligence',
+    description: 'Advanced social media analysis and sentiment monitoring using AI.',
+    icon: Share2,
+    features: ['Sentiment Analysis', 'Trend Detection', 'Influence Mapping', 'Crisis Management'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Social Media AI',
+    link: 'https://aisocialmedia.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Energy Management',
+    description: 'Intelligent energy consumption optimization and renewable energy integration.',
+    icon: Zap,
+    features: ['Energy Optimization', 'Renewable Integration', 'Demand Response', 'Cost Reduction'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Energy AI',
+    link: 'https://aienergy.ziontechgroup.com'
+  },
+  {
+    title: 'AI Agricultural Intelligence',
+    description: 'Smart farming solutions with crop monitoring and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Irrigation Optimization'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'AgTech AI',
+    link: 'https://aiagriculture.ziontechgroup.com'
   }
 ];
 
@@ -782,6 +820,75 @@ export default function AIServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+              Ready to transform your business with AI? Contact our expert team for a free consultation.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">
+                    +1 302 464 0950
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-purple-600 hover:text-purple-800">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </a>
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

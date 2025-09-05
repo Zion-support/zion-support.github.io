@@ -34,7 +34,7 @@ import {
   DollarSign,
   Code,
   Rocket,
-  Brain,
+  Bot,
   Sprout
 } from 'lucide-react';
 
@@ -420,140 +420,149 @@ const itServices = [
     link: 'https://enterprisemonitoring.ziontechgroup.com'
   },
   {
-    title: 'Edge Computing Infrastructure',
-    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
-    icon: Cpu,
-    features: ['Edge Nodes', 'Low-latency Processing', 'IoT Integration', 'Distributed Management'],
-    pricing: '$15,000 - $100,000/project',
-    category: 'Edge Computing',
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Bot,
+    features: ['Predictive Maintenance', 'Anomaly Detection', 'Automated Remediation', 'Root Cause Analysis'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'AIOps',
     popular: true,
-    link: 'https://edgecomputing.ziontechgroup.com'
-  },
-  {
-    title: 'Quantum Computing Readiness',
-    description: 'Preparation and integration services for quantum computing technologies and hybrid systems.',
-    icon: Zap,
-    features: ['Quantum Readiness Assessment', 'Hybrid Systems', 'Algorithm Development', 'Future-proofing'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Quantum Computing',
-    link: 'https://quantumreadiness.ziontechgroup.com'
+    link: 'https://aiops.ziontechgroup.com'
   },
   {
     title: 'Zero Trust Security Architecture',
-    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
     icon: Shield,
     features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
-    pricing: '$20,000 - $150,000/project',
-    category: 'Advanced Security',
+    pricing: '$25,000 - $120,000/project',
+    category: 'Security Architecture',
     link: 'https://zerotrust.ziontechgroup.com'
   },
   {
-    title: '5G Network Implementation',
-    description: '5G network design, deployment, and optimization for enterprise and industrial applications.',
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for low-latency applications and IoT deployments.',
     icon: Wifi,
-    features: ['5G Network Design', 'Deployment Services', 'Performance Optimization', 'IoT Integration'],
-    pricing: '$30,000 - $300,000/project',
+    features: ['Edge Infrastructure', 'IoT Integration', 'Low-latency Processing', 'Distributed Computing'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Migration Planning', 'Security Assessment', 'Implementation Support'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Advanced Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise environments.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Performance Optimization', 'Integration Services'],
+    pricing: '$50,000 - $300,000/project',
     category: '5G Networks',
     link: 'https://5gnetworks.ziontechgroup.com'
   },
   {
-    title: 'Blockchain Infrastructure',
-    description: 'Blockchain network setup, smart contract development, and decentralized application deployment.',
-    icon: Lock,
-    features: ['Blockchain Setup', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
-    pricing: '$15,000 - $120,000/project',
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions including private networks, smart contracts, and DApps.',
+    icon: Network,
+    features: ['Private Blockchain Networks', 'Smart Contract Development', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$40,000 - $200,000/project',
     category: 'Blockchain',
     link: 'https://blockchaininfra.ziontechgroup.com'
   },
   {
-    title: 'AI Infrastructure & MLOps',
-    description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment platforms.',
-    icon: Brain,
-    features: ['MLOps Pipelines', 'Model Deployment', 'GPU Clusters', 'Model Monitoring'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'AI Infrastructure',
-    link: 'https://aiinfrastructure.ziontechgroup.com'
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform development with device management and data analytics.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Analytics', 'Real-time Processing', 'Security Integration'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
   },
   {
-    title: 'Hyperconverged Infrastructure',
-    description: 'HCI solutions combining compute, storage, and networking in a single platform.',
-    icon: Server,
-    features: ['HCI Design', 'Storage Virtualization', 'Network Integration', 'Management Platform'],
-    pricing: '$40,000 - $400,000/project',
-    category: 'HCI',
-    link: 'https://hci.ziontechgroup.com'
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Orchestration', 'Cost Optimization', 'Security Governance'],
+    pricing: '$18,000 - $90,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
   },
   {
-    title: 'Software-Defined Everything',
-    description: 'SDN, SD-WAN, and software-defined storage solutions for modern infrastructure.',
-    icon: Network,
-    features: ['SDN Implementation', 'SD-WAN Deployment', 'Software-defined Storage', 'Orchestration'],
-    pricing: '$20,000 - $180,000/project',
-    category: 'Software-Defined',
-    link: 'https://sdx.ziontechgroup.com'
-  },
-  {
-    title: 'Green IT & Sustainability',
-    description: 'Sustainable IT solutions with energy efficiency and carbon footprint reduction.',
-    icon: Sprout,
-    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
-    pricing: '$10,000 - $80,000/project',
-    category: 'Green IT',
-    link: 'https://greenit.ziontechgroup.com'
-  },
-  {
-    title: 'Digital Twin Technology',
-    description: 'Digital twin implementation for physical assets, processes, and systems monitoring.',
-    icon: Monitor,
-    features: ['Asset Modeling', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation'],
-    pricing: '$30,000 - $250,000/project',
-    category: 'Digital Twins',
-    link: 'https://digitaltwins.ziontechgroup.com'
-  },
-  {
-    title: 'Extended Reality (XR) Infrastructure',
-    description: 'AR/VR infrastructure setup and management for enterprise applications.',
-    icon: Smartphone,
-    features: ['XR Hardware Setup', 'Content Management', 'User Management', 'Analytics'],
-    pricing: '$15,000 - $120,000/project',
-    category: 'XR Infrastructure',
-    link: 'https://xrinfrastructure.ziontechgroup.com'
-  },
-  {
-    title: 'API Gateway & Management',
-    description: 'Comprehensive API management platform with security, monitoring, and developer tools.',
-    icon: Code,
-    features: ['API Gateway', 'Security Policies', 'Rate Limiting', 'Developer Portal'],
-    pricing: '$8,000 - $60,000/project',
-    category: 'API Management',
-    link: 'https://apimanagement.ziontechgroup.com'
-  },
-  {
-    title: 'Microservices Architecture',
-    description: 'Microservices design, implementation, and orchestration for scalable applications.',
+    title: 'IT Service Automation',
+    description: 'Intelligent automation of IT service delivery and management processes.',
     icon: Settings,
-    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
-    pricing: '$25,000 - $200,000/project',
-    category: 'Microservices',
-    link: 'https://microservices.ziontechgroup.com'
+    features: ['Process Automation', 'Self-healing Systems', 'Intelligent Routing', 'Service Orchestration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Service Automation',
+    link: 'https://itserviceautomation.ziontechgroup.com'
   },
   {
-    title: 'IT Disaster Recovery as a Service',
-    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
-    icon: HardDrive,
-    features: ['Automated Failover', 'Recovery Testing', 'RTO/RPO Optimization', 'Cloud Backup'],
-    pricing: '$5,000 - $50,000/month',
-    category: 'DRaaS',
-    link: 'https://draas.ziontechgroup.com'
+    title: 'Advanced Threat Intelligence',
+    description: 'Proactive threat intelligence and security analytics for advanced persistent threats.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Threat Intelligence', 'Incident Response'],
+    pricing: '$35,000 - $150,000/project',
+    category: 'Threat Intelligence',
+    link: 'https://threatintel.ziontechgroup.com'
   },
   {
     title: 'IT Governance & Risk Management',
-    description: 'Comprehensive IT governance framework with risk assessment and compliance management.',
-    icon: Shield,
-    features: ['Risk Assessment', 'Compliance Management', 'Policy Development', 'Audit Support'],
-    pricing: '$15,000 - $100,000/project',
-    category: 'IT Governance',
+    description: 'Comprehensive IT governance framework with risk management and compliance monitoring.',
+    icon: Building,
+    features: ['Governance Framework', 'Risk Assessment', 'Compliance Monitoring', 'Policy Management'],
+    pricing: '$25,000 - $120,000/project',
+    category: 'Governance',
     link: 'https://itgovernance.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions focusing on energy efficiency and environmental impact reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$15,000 - $80,000/project',
+    category: 'Sustainability',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service (DRaaS)',
+    description: 'Cloud-based disaster recovery solutions with automated failover and recovery testing.',
+    icon: HardDrive,
+    features: ['Automated Failover', 'Recovery Testing', 'RTO/RPO Optimization', 'Cloud-based Recovery'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Disaster Recovery',
+    link: 'https://draas.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance monitoring and reporting for various regulatory frameworks.',
+    icon: Shield,
+    features: ['Automated Monitoring', 'Compliance Reporting', 'Audit Preparation', 'Policy Enforcement'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Compliance Automation',
+    link: 'https://complianceautomation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Advanced performance engineering and optimization for enterprise applications and systems.',
+    icon: BarChart3,
+    features: ['Performance Testing', 'Load Testing', 'Capacity Planning', 'Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Performance Engineering',
+    link: 'https://performanceengineering.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concept development.',
+    icon: Rocket,
+    features: ['Emerging Tech Research', 'Proof of Concept', 'Innovation Workshops', 'Technology Pilots'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Innovation',
+    link: 'https://innovationlab.ziontechgroup.com'
   }
 ];
 
@@ -904,6 +913,75 @@ export default function ITServicesPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+              Ready to transform your IT infrastructure? Contact our expert team for a free consultation.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">
+                    +1 302 464 0950
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-purple-600 hover:text-purple-800">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </a>
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
