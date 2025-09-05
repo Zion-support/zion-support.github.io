@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
@@ -121,13 +122,13 @@ curl -X POST https://api.ziontechgroup.com/ai/content-generation \\
   }
 ];
 
-export default function APIDocs() {
+export default function APIDocsPage() {
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>API Documentation - Zion Tech Group | Developer Resources</title>
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
+        <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -158,9 +159,54 @@ export default function APIDocs() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* API Endpoints */}
+      {/* API Endpoints */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">API Endpoints</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive API endpoints for all services
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {apiEndpoints.map((endpoint, index) => (
+              <motion.div
+                key={endpoint.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
+                  <endpoint.icon className="w-8 h-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{endpoint.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                <div className="space-y-2">
+                  {endpoint.methods.map((method, methodIndex) => (
+                    <div key={methodIndex} className="flex items-center justify-between">
+                      <span className="text-sm text-gray-400">{method.method}</span>
+                      <span className="text-sm text-blue-400">{method.endpoint}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  </Layout>
+  );/* API Endpoints */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div

@@ -615,7 +615,6 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
-    </>
     </MainLayout>
   );
 }
