@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Calendar, 
+  Calendar as CalendarIcon, 
   Clock, 
   Users, 
   CheckCircle, 
@@ -92,7 +92,7 @@ const teamMembers = [
   }
 ];
 
-export default function Calendar() {
+export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>
