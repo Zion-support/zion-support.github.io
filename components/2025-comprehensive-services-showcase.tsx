@@ -364,7 +364,7 @@ const allServices = [
                             <Star className="w-4 h-4 fill-current" />
                             <span className="text-sm font-medium">Popular</span>
                           </div>
-                        </div>
+                        )}
 
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
