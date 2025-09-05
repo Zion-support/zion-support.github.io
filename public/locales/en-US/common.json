@@ -20,7 +20,18 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+>>>>>>> origin/chore/build-setup
     "services": "Services",
+=======
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+>>>>>>> origin/chore/cleanup-and-build
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -30,17 +41,29 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "faq": "FAQ",
+    "help": "Help Center",
+>>>>>>> origin/chore/build-setup
+=======
+>>>>>>> origin/chore/cleanup-and-build
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
     "contact": "Contact",
     "products": "Products",
     "green-it": "Green IT",
-    "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
+<<<<<<< HEAD
     "sitemap": "Sitemap";
 },
+=======
+    "sitemap": "Sitemap"
+  },
+>>>>>>> origin/chore/build-setup
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -92,6 +115,7 @@
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
+<<<<<<< HEAD
     "pay": "Pay with Stripe (test)";
 },
   "language": {
@@ -127,4 +151,20 @@
     "message": "Something went wrong.",
     "retry": "Retry";
 }
+=======
+    "pay": "Pay with Stripe (test)"
+  },
+  "jobs": {
+    "post_job_title": "Post a Job",
+    "post_job_description": "Fill out the form below to post your job and find the perfect talent",
+    "job_title": "Job Title",
+    "job_description": "Job Description",
+    "skills_required": "Skills Required",
+    "budget": "Budget",
+    "deadline": "Deadline",
+    "job_posted": "Job posted successfully",
+    "title_placeholder": "Enter job title",
+    "description_placeholder": "Describe the job in detail"
+  }
+>>>>>>> origin/chore/build-setup
 }
