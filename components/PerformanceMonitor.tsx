@@ -1,10 +1,18 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
+  showMetrics?: boolean;
+  logMetrics?: boolean;
+  onThresholdExceeded?: (metrics: any) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor = ({ 
+  onPerformanceData, 
+  showMetrics = false, 
+  logMetrics = false,
+  onThresholdExceeded 
+}: PerformanceMonitorProps) => {
   useEffect(() => {
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -19,23 +27,37 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           totalTime: navigation.loadEventEnd - navigation.fetchStart
         };
         
+        if (logMetrics) {
+          console.log('Performance Metrics:', performanceData);
+        }
+        
         if (onPerformanceData) {
           onPerformanceData(performanceData);
+        }
+        
+        if (onThresholdExceeded && performanceData.totalTime > 3000) {
+          onThresholdExceeded(performanceData);
         }
       }
     };
     
     // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    if (typeof window !== 'undefined') {
+      if (document.readyState === 'complete') {
+        measurePerformance();
+      } else {
+        window.addEventListener('load', measurePerformance);
+      }
     }
     
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('load', measurePerformance);
+      }
     }
-  }, [onPerformanceData]);
-  return null
+  }, [onPerformanceData, logMetrics, onThresholdExceeded]);
+  
+  return null;
 };
+
 export default PerformanceMonitor;
