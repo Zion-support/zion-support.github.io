@@ -717,9 +717,8 @@ export default function ServicesPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                     <p className="text-gray-600">{benefit.description}</p>
                   </motion.div>
-                );
-              })}
-            </div>
+              );
+            })}
           </div>
         </section>
 

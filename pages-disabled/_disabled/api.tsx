@@ -192,7 +192,6 @@ export default function APIPage() {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -201,7 +200,7 @@ export default function APIPage() {
                     <div className="text-indigo-600 mb-4">
                       <IconComponent className="w-10 h-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 mb-4">

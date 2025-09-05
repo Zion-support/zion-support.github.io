@@ -53,16 +53,16 @@ export default function Layout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "address": {
+name: "Zion Tech Group",
+              url: "https: //ziontechgroup.com",
+              logo: "https: //ziontechgroup.com/logo.png",
+              description: description,
+              address: {
                 "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "streetAddress": "123 Technology Drive",
+                "addressLocality": "Innovation City",
+                "addressRegion": "IC",
+                "postalCode": "12345",
                 "addressCountry": "US"
               },
               "contactPoint": {

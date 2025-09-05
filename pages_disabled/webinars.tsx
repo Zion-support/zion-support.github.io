@@ -208,13 +208,10 @@ export default function WebinarsPage() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">"
 </h2>
                     </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {webinar.description}
                     </p>
-                    "
-                    <div className="grid grid-cols-2 gap-4 mb-6">"
-</div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
                       <div>
 </div>
                         <h3 className="font-semibold text-gray-900 mb-1">Presenter:</h3>
@@ -271,6 +268,7 @@ export default function WebinarsPage() {
 </Download>
                         </button>
                       </div>
+                    )}
                   </div>
                 </div>
               </motion.article>)
@@ -294,6 +292,7 @@ export default function WebinarsPage() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
 </select>
                     <option key={category} value={category}>{category}</option>
+                  ))}
                 </select>
               </div>
               <div>
@@ -304,6 +303,7 @@ export default function WebinarsPage() {
                   onChange={(e) => setSelectedStatus(e.target.value)}
 </select>
                     <option key={status} value={status}>{status}</option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -354,9 +354,8 @@ export default function WebinarsPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
 </h3>
                     </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {webinar.description}
                     </p>
                     "
                     <div className="space-y-2 mb-4">"
@@ -397,6 +396,7 @@ export default function WebinarsPage() {
                           <ArrowRight className="w-4 h-4" />"
 </ArrowRight>
                         </Link>
+                      ) : (
                         <>
                           <Link,
                             href={webinar.recordingUrl}"

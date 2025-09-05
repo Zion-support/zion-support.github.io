@@ -31,225 +31,30 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      {
-        name: 'AI Services',
-        href: '/ai-services',
-        icon: Brain,
-        description: 'Advanced AI solutions and machine learning platforms',
-        children: [
-          { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-          { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
-          { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
-          { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-          { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-          { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
-          { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-          { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
-        ]
-      },
-      {
-        name: 'IT Services',
-        href: '/it-services',
-        icon: CpuIcon,
-        description: 'Comprehensive IT infrastructure and support',
-        children: [
-          { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-          { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-          { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-          { name: 'Database Management', href: '/it-services#database-management' },
-          { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-          { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-          { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-          { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
-        ]
-      },
-      {
-        name: 'Micro SaaS',
-        href: '/micro-saas',
-        icon: Cloud,
-        description: 'Innovative micro software-as-a-service solutions',
-        children: [
-          { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-          { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-          { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-          { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-          { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-          { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-          { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-          { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
-        ]
-      },
-      {
-        name: 'Cloud & DevOps',
-        href: '/services/cloud-devops',
-        icon: Cloud,
-        description: 'Cloud infrastructure and DevOps automation'
-      },
-      {
-        name: 'Cybersecurity',
-        href: '/services/cybersecurity',
-        icon: Shield,
-        description: 'Advanced security solutions and compliance'
-      },
-      {
-        name: 'Data Analytics',
-        href: '/services/data-analytics',
-        icon: BarChart3,
-        description: 'Business intelligence and data insights'
-      },
-      {
-        name: 'Quantum Computing',
-        href: '/services/quantum-computing',
-        icon: CpuIcon,
-        description: 'Next-generation quantum computing solutions'
-      }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
     ]
   },
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: Target,
-    children: [
-      {
-        name: 'Enterprise',
-        href: '/solutions/enterprise',
-        icon: Building2,
-        description: 'Enterprise-grade solutions for large organizations'
-      },
-      {
-        name: 'Healthcare',
-        href: '/solutions/healthcare',
-        icon: Heart,
-        description: 'Healthcare technology and compliance solutions'
-      },
-      {
-        name: 'Finance',
-        href: '/solutions/finance',
-        icon: DollarSign,
-        description: 'Financial services and fintech solutions'
-      },
-      {
-        name: 'Retail',
-        href: '/solutions/retail',
-        icon: ShoppingCart,
-        description: 'E-commerce and retail technology solutions'
-      },
-      {
-        name: 'Education',
-        href: '/solutions/education',
-        icon: GraduationCap,
-        description: 'Educational technology and learning platforms'
-      },
-      {
-        name: 'Government',
-        href: '/solutions/government',
-        icon: Shield,
-        description: 'Government and public sector solutions'
-      },
-      {
-        name: 'Startup',
-        href: '/solutions/startup',
-        icon: Rocket,
-        description: 'Startup acceleration and growth solutions'
-      }
-    ]
-  },
-  {
-    name: 'Industries',
-    href: '/industries',
-    icon: Building2,
-    children: [
-      {
-        name: 'Healthcare',
-        href: '/industries/healthcare',
-        icon: Heart,
-        description: 'Healthcare and life sciences'
-      },
-      {
-        name: 'Finance',
-        href: '/industries/finance',
-        icon: DollarSign,
-        description: 'Financial services and banking'
-      },
-      {
-        name: 'Education',
-        href: '/industries/education',
-        icon: GraduationCap,
-        description: 'Educational institutions and training'
-      },
-      {
-        name: 'Government',
-        href: '/industries/government',
-        icon: Shield,
-        description: 'Government and public sector'
-      },
-      {
-        name: 'Manufacturing',
-        href: '/industries/manufacturing',
-        icon: CpuIcon,
-        description: 'Manufacturing and industrial'
-      },
-      {
-        name: 'Retail',
-        href: '/industries/retail',
-        icon: ShoppingCart,
-        description: 'Retail and e-commerce'
-      }
+    icon: Shield,
+    children: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
+      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
+      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
     icon: FileText,
-    children: [
-      {
-        name: 'Blog',
-        href: '/blog',
-        icon: BookOpen,
-        description: 'Latest insights and industry news'
-      },
-      {
-        name: 'White Papers',
-        href: '/white-papers',
-        icon: FileText,
-        description: 'In-depth research and analysis'
-      },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-        icon: Award,
-        description: 'Success stories and client results'
-      },
-      {
-        name: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational webinars and training'
-      },
-      {
-        name: 'Help Center',
-        href: '/help',
-        icon: HelpCircle,
-        description: 'Support and documentation'
-      },
-      {
-        name: 'Documentation',
-        href: '/docs',
-        icon: BookOpen,
-        description: 'Technical documentation and guides'
-      },
-      {
-        name: 'API Reference',
-        href: '/api-docs',
-        icon: Network,
-        description: 'API documentation and integration guides'
-      },
-      {
-        name: 'Tutorials',
-        href: '/tutorials',
-        icon: GraduationCap,
-        description: 'Step-by-step tutorials and guides'
-      }
+    children: [{ name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'API Reference', href: '/api-docs', icon: Settings }
     ]
   },
   {
@@ -317,7 +122,6 @@ export function Header({ className }: HeaderProps) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

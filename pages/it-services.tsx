@@ -2,23 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Network, 
-  Monitor, 
-  Settings, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Award, 
-  Star, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Lock, 
+import {
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Monitor,
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Lock,
   Globe,
   Cpu,
   HardDrive,
@@ -542,7 +542,6 @@ const supportLevels = [
     pricing: 'Custom Pricing'
   }
 ];
-
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

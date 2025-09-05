@@ -29,11 +29,13 @@ const benefits = [
     icon: Heart
   },
   {
+    icon: Zap,
     title: "Flexible Work",
     description: "Remote work options, flexible hours, and work-life balance initiatives.",
     icon: Globe
   },
   {
+    icon: BookOpen,
     title: "Learning & Development",
     description: "Professional development budget, conferences, and continuous learning opportunities.",
     icon: Brain
@@ -49,7 +51,6 @@ const benefits = [
     icon: Users
   }
 ];
-
 const openPositions = [
   {
     title: "Senior Full Stack Developer",
@@ -61,9 +62,25 @@ const openPositions = [
     skills: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"]
   },
   {
-    title: "AI/ML Engineer",
-    department: "AI Services",
-    location: "Remote / Delaware",
+    title: "Cloud Solutions Architect",
+    department: "Cloud & Infrastructure",
+    location: "Remote / New York",
+    type: "Full-time",
+    experience: "7+ years",
+    description: "Design and implement scalable cloud solutions for enterprise clients."
+  },
+  {
+    title: "Cybersecurity Specialist",
+    department: "Security",
+    location: "Remote / Austin",
+    type: "Full-time",
+    experience: "4+ years",
+    description: "Protect client systems and implement advanced security measures."
+  },
+  {
+    title: "Frontend Developer",
+    department: "Engineering",
+    location: "Remote / Seattle",
     type: "Full-time",
     experience: "3+ years",
     description: "Develop and implement machine learning models and AI solutions for enterprise clients.",
@@ -72,7 +89,7 @@ const openPositions = [
   {
     title: "DevOps Engineer",
     department: "Infrastructure",
-    location: "Remote / Delaware",
+    location: "Remote / Chicago",
     type: "Full-time",
     experience: "4+ years",
     description: "Manage cloud infrastructure, CI/CD pipelines, and ensure system reliability and security.",
@@ -81,7 +98,7 @@ const openPositions = [
   {
     title: "Product Manager",
     department: "Product",
-    location: "Remote / Delaware",
+    location: "Remote / Boston",
     type: "Full-time",
     experience: "3+ years",
     description: "Drive product strategy, roadmap, and collaborate with engineering teams to deliver solutions.",

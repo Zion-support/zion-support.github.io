@@ -15,7 +15,6 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-
 const accessibilityFeatures = [
   {
     title: "Visual Accessibility",
@@ -123,17 +122,18 @@ export default function AccessibilityPage() {
                 <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Excellence
                 </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Building inclusive digital experiences that work for everyone
+              </h1>"
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">"
+</p>
               </p>
             </motion.div>
           </div>
-        </section>
-
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -177,16 +177,17 @@ export default function AccessibilityPage() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div>)
                 );
               })}
             </div>
           </div>
-        </section>
-
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -219,18 +220,19 @@ export default function AccessibilityPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {item}
                       </li>
-                    ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>"
+            <div className="max-w-4xl mx-auto">"
+</div>
+              <motion.div;"
                 className="bg-white p-8 rounded-xl shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -254,11 +256,12 @@ export default function AccessibilityPage() {
               </motion.div>
             </div>
           </div>
-        </section>
-
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
+        </section>"
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
+</section>"
+          <div className="container mx-auto px-4 text-center">"
+</div>
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

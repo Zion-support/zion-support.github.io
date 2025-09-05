@@ -2,23 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+import {
+  Brain,
+  Users,
+  Award,
+  Target,
+  Heart,
+  Globe,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake
 } from 'lucide-react';
 
 const values = [{

@@ -582,7 +582,6 @@ const pricingTiers = [
     popular: false
   }
 ];
-
 export default function MicroSaaSPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -670,7 +669,6 @@ export default function MicroSaaSPage() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
@@ -884,7 +882,6 @@ export default function MicroSaaSPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">

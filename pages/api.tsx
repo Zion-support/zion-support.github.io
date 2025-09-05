@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -32,7 +31,7 @@ export default function APIPage() {
   ];
 
   return (
-    <Layout 
+    <Layout
       title="API Reference - Zion Tech Group"
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >
@@ -113,7 +112,6 @@ export default function APIPage() {
                 Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">AI Services API</h3>
@@ -132,7 +130,6 @@ export default function APIPage() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">IT Services API</h3>
                 <div className="space-y-2">
@@ -150,7 +147,6 @@ export default function APIPage() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS API</h3>
                 <div className="space-y-2">
