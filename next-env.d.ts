@@ -4,4 +4,8 @@
 /// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
+<<<<<<< HEAD
 // see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+=======
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+>>>>>>> 116b25af07b61a9d40e22653e4aa531d26ffec3e
