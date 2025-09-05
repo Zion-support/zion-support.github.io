@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -197,6 +198,178 @@ const microSaaSProducts = [
     pricing: '$19 - $99/month',
     category: 'Scheduling',
     link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practice recommendations.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Optimization', 'Best Practice Checks', 'Automated Comments'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codeassistant.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security auditing with vulnerability detection and gas optimization.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checks', 'Automated Reports'],
+    pricing: '$499 - $2,999/project',
+    category: 'Blockchain',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with voice-to-text, diagram generation, and meeting transcription.',
+    icon: Kanban,
+    features: ['Voice-to-Text', 'AI Diagram Generation', 'Meeting Transcription', 'Real-time Collaboration'],
+    pricing: '$79 - $399/month',
+    category: 'Collaboration',
+    link: 'https://whiteboardpro.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Optimizer',
+    description: 'Comprehensive SEO optimization with content analysis, keyword research, and competitor tracking.',
+    icon: Search,
+    features: ['Content Analysis', 'Keyword Research', 'Competitor Tracking', 'Rank Monitoring'],
+    pricing: '$149 - $799/month',
+    category: 'SEO',
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Support Ticket AI',
+    description: 'Intelligent ticket routing, auto-responses, and sentiment analysis for customer support teams.',
+    icon: Headphones,
+    features: ['Smart Routing', 'Auto Responses', 'Sentiment Analysis', 'Performance Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Customer Support',
+    link: 'https://ticketingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Data Quality Inspector',
+    description: 'Automated data quality assessment with anomaly detection, cleansing recommendations, and compliance checks.',
+    icon: Database,
+    features: ['Anomaly Detection', 'Data Cleansing', 'Compliance Checks', 'Quality Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Data Quality',
+    link: 'https://dataquality.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Generator',
+    description: 'AI-powered smart contract generation with customizable templates and security best practices.',
+    icon: FileText,
+    features: ['Template Library', 'Custom Generation', 'Security Validation', 'Gas Optimization'],
+    pricing: '$199 - $999/project',
+    category: 'Blockchain',
+    link: 'https://contractgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Test Generator',
+    description: 'Automated test case generation with coverage analysis and intelligent test data creation.',
+    icon: CheckCircle,
+    features: ['Test Case Generation', 'Coverage Analysis', 'Test Data Creation', 'Regression Testing'],
+    pricing: '$149 - $799/month',
+    category: 'Testing',
+    link: 'https://testgenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Voice Analytics Dashboard',
+    description: 'Real-time voice analytics with emotion detection, speaker identification, and conversation insights.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Speaker ID', 'Conversation Insights', 'Real-time Analytics'],
+    pricing: '$199 - $999/month',
+    category: 'Analytics',
+    link: 'https://voiceanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review, risk assessment, and compliance checking.',
+    icon: BookOpen,
+    features: ['Contract Review', 'Risk Assessment', 'Compliance Checking', 'Clause Analysis'],
+    pricing: '$399 - $1,999/month',
+    category: 'Legal Tech',
+    link: 'https://legalanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Monitor',
+    description: 'IoT-based energy monitoring with predictive analytics, cost optimization, and sustainability reporting.',
+    icon: Zap,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Cost Optimization', 'Sustainability Reports'],
+    pricing: '$49 - $299/month',
+    category: 'IoT',
+    link: 'https://energymonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered HR Assistant',
+    description: 'Intelligent HR management with resume screening, interview scheduling, and employee analytics.',
+    icon: Users,
+    features: ['Resume Screening', 'Interview Scheduling', 'Employee Analytics', 'Performance Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech',
+    link: 'https://hrassistant.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Transaction Monitor',
+    description: 'Real-time blockchain transaction monitoring with fraud detection and compliance reporting.',
+    icon: Network,
+    features: ['Real-time Monitoring', 'Fraud Detection', 'Compliance Reporting', 'Risk Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain',
+    link: 'https://blockchainmonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced content moderation with multi-language support, context understanding, and custom rule engine.',
+    icon: Eye,
+    features: ['Multi-language Support', 'Context Understanding', 'Custom Rules', 'Real-time Processing'],
+    pricing: '$399 - $1,999/month',
+    category: 'Content Safety',
+    link: 'https://contentmodsuite.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Inventory Predictor',
+    description: 'AI-powered inventory forecasting with demand prediction, supply chain optimization, and cost analysis.',
+    icon: Package,
+    features: ['Demand Prediction', 'Supply Chain Optimization', 'Cost Analysis', 'Automated Reordering'],
+    pricing: '$199 - $999/month',
+    category: 'Supply Chain',
+    link: 'https://inventorypredictor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Translation Hub',
+    description: 'Real-time translation service with context awareness, industry-specific terminology, and quality scoring.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Industry Terminology', 'Quality Scoring'],
+    pricing: '$99 - $499/month',
+    category: 'Translation',
+    link: 'https://translationhub.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Compliance Tracker',
+    description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
+    icon: Shield,
+    features: ['Regulatory Updates', 'Risk Assessment', 'Audit Preparation', 'Compliance Scoring'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance',
+    link: 'https://compliancetracker.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research with competitor analysis, trend identification, and opportunity mapping.',
+    icon: TrendingUp,
+    features: ['Competitor Analysis', 'Trend Identification', 'Opportunity Mapping', 'Market Reports'],
+    pricing: '$199 - $999/month',
+    category: 'Market Research',
+    link: 'https://marketresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Document Processor',
+    description: 'AI-powered document processing with OCR, data extraction, and intelligent categorization.',
+    icon: FileText,
+    features: ['Advanced OCR', 'Data Extraction', 'Intelligent Categorization', 'Batch Processing'],
+    pricing: '$149 - $799/month',
+    category: 'Document Processing',
+    link: 'https://documentprocessor.ziontechgroup.com'
   },
   {
     title: 'Code Review Assistant',
@@ -824,6 +997,75 @@ export default function MicroSaaSPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+              Ready to transform your business with our micro SaaS solutions? Contact our expert team for a free consultation.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">
+                    +1 302 464 0950
+                  </a>
+                </p>
+              </div>
+              
+              <div className="text-center p-6 rounded-lg hover:bg-white transition-colors shadow-sm">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-2">
+                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-purple-600 hover:text-purple-800">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </a>
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
