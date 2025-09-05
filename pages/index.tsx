@@ -56,6 +56,8 @@ export default function HomePage() {
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
               <br className="hidden md:block" />
                   <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
+                  <br className="hidden md:block" />
+                  <span className="text-blue-200 text-lg">📍 364 E Main St STE 1008, Middletown DE 19709</span>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">

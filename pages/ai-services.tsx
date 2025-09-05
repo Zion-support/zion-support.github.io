@@ -45,7 +45,9 @@ import {
   Home,
   Gamepad2,
   Factory,
-  Trash2
+  Trash2,
+  Droplets,
+  DollarSign
 } from 'lucide-react';
 const aiServices = [
   {
@@ -298,6 +300,474 @@ const aiServices = [
     description: 'AI-powered equipment maintenance prediction and optimization.',
     icon: Settings,
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'AI-driven pharmaceutical drug discovery and development platform.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Side Effect Prediction'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Pharma AI',
+    popular: true
+  },
+  {
+    title: 'AI Financial Trading Algorithm',
+    description: 'Advanced AI trading algorithms for financial markets and cryptocurrency.',
+    icon: DollarSign,
+    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$25,000 - $125,000 setup',
+    category: 'FinTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Agriculture',
+    description: 'Intelligent farming solutions with AI-driven crop optimization and monitoring.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI Emotional Intelligence Platform',
+    description: 'AI system for understanding and responding to human emotions and social cues.',
+    icon: Heart,
+    features: ['Emotion Recognition', 'Sentiment Analysis', 'Social Intelligence', 'Empathy Modeling'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Emotional AI'
+  },
+  {
+    title: 'AI-Powered Energy Grid Optimization',
+    description: 'Intelligent energy grid management and renewable energy integration.',
+    icon: Zap,
+    features: ['Grid Optimization', 'Renewable Integration', 'Demand Forecasting', 'Energy Trading'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Energy AI',
+    popular: true
+  },
+  {
+    title: 'AI Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex problem solving.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Research Tools'],
+    pricing: '$75,000 - $375,000 project',
+    category: 'Quantum ML',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Advanced personalization AI for e-commerce, content, and user experiences.',
+    icon: Target,
+    features: ['User Profiling', 'Recommendation Engine', 'Behavioral Analysis', 'A/B Testing'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Personalization AI'
+  },
+  {
+    title: 'AI Smart City Management',
+    description: 'Comprehensive AI platform for smart city operations and citizen services.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Resource Management', 'Citizen Services', 'Environmental Monitoring'],
+    pricing: '$100,000 - $500,000 project',
+    category: 'Smart City AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Intelligence',
+    description: 'Intelligent supply chain optimization and risk management platform.',
+    icon: Network,
+    features: ['Demand Forecasting', 'Risk Assessment', 'Route Optimization', 'Inventory Management'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI Digital Twin Technology',
+    description: 'AI-powered digital twin creation and simulation for various industries.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Virtual Testing'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Digital Twin AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Advanced real-time language translation with cultural context understanding.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Document Translation', 'Voice Translation'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI Cybersecurity Threat Hunter',
+    description: 'Advanced AI-powered cybersecurity threat detection and response system.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Creation',
+    description: 'Intelligent content generation for blogs, social media, and marketing materials.',
+    icon: FileText,
+    features: ['Content Generation', 'SEO Optimization', 'Brand Consistency', 'Multi-format Output'],
+    pricing: '$3,000 - $15,000 setup',
+    category: 'Content AI'
+  },
+  {
+    title: 'AI Smart Home Automation',
+    description: 'AI-powered home automation and intelligent living solutions.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Predictive Control', 'Voice Commands'],
+    pricing: '$8,000 - $40,000 project',
+    category: 'Smart Home AI'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection system for financial institutions and e-commerce.',
+    icon: Shield,
+    features: ['Transaction Monitoring', 'Pattern Recognition', 'Risk Scoring', 'Real-time Alerts'],
+    pricing: '$12,000 - $60,000 setup',
+    category: 'Fraud Detection AI'
+  },
+  {
+    title: 'AI Medical Imaging Analysis',
+    description: 'AI-powered medical image analysis and diagnostic support for healthcare.',
+    icon: Heart,
+    features: ['Image Analysis', 'Disease Detection', 'Treatment Planning', 'Radiology Support'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Service',
+    description: 'Intelligent customer service automation with natural language understanding.',
+    icon: MessageSquare,
+    features: ['Chatbot Development', 'Sentiment Analysis', 'Ticket Routing', 'Performance Analytics'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Customer Service AI'
+  },
+  {
+    title: 'AI Smart Manufacturing',
+    description: 'AI-powered manufacturing optimization and quality control systems.',
+    icon: Settings,
+    features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Integration'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Analytics',
+    description: 'Advanced AI-driven data analytics and business intelligence platform.',
+    icon: BarChart3,
+    features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Insights', 'Dashboard Creation'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Analytics AI'
+  },
+  {
+    title: 'AI Edge Computing Solutions',
+    description: 'AI-powered edge computing for real-time data processing and analysis.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Data Analysis', 'Device Management', 'Network Optimization'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI-Powered Virtual Assistant',
+    description: 'Advanced virtual assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Task Management', 'Calendar Integration', 'Email Management', 'Voice Commands'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Virtual Assistant AI'
+  },
+  {
+    title: 'AI Smart Transportation',
+    description: 'AI-powered transportation optimization and traffic management systems.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Route Planning', 'Demand Prediction', 'Emission Reduction'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Transportation AI'
+  },
+  {
+    title: 'AI-Powered Research Assistant',
+    description: 'Intelligent research and knowledge discovery platform for academics and professionals.',
+    icon: BookOpen,
+    features: ['Literature Review', 'Data Analysis', 'Citation Management', 'Collaboration Tools'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Research AI'
+  },
+  {
+    title: 'AI Smart Retail Analytics',
+    description: 'AI-powered retail analytics and customer behavior analysis platform.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Price Optimization', 'Store Layout Analysis'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Retail AI'
+  },
+  {
+    title: 'AI-Powered Environmental Monitoring',
+    description: 'AI-powered environmental monitoring and sustainability tracking platform.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Data Analysis', 'Sustainability Metrics', 'Compliance Reporting'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI Smart Building Management',
+    description: 'AI-powered building management and optimization platform for commercial properties.',
+    icon: Building,
+    features: ['Energy Management', 'Occupancy Optimization', 'Predictive Maintenance', 'Cost Reduction'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'Building AI'
+  },
+  {
+    title: 'AI-Powered Document Processing',
+    description: 'Intelligent document processing and data extraction platform for businesses.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Document AI'
+  },
+  {
+    title: 'AI Smart Energy Management',
+    description: 'AI-powered energy optimization and management platform for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Consumption Optimization', 'Predictive Maintenance', 'Cost Analysis'],
+    pricing: '$18,000 - $90,000 project',
+    category: 'Energy AI'
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and regulatory reporting platform for enterprises.',
+    icon: Shield,
+    features: ['Regulatory Tracking', 'Compliance Reporting', 'Risk Assessment', 'Audit Preparation'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Compliance AI'
+  },
+  {
+    title: 'AI Smart Agriculture Monitoring',
+    description: 'AI-powered precision agriculture and crop monitoring platform for farmers.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Soil Analysis', 'Weather Prediction', 'Yield Optimization'],
+    pricing: '$12,000 - $60,000 project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI-Powered Fleet Management',
+    description: 'Intelligent fleet management and vehicle tracking platform with AI analytics.',
+    icon: Car,
+    features: ['Vehicle Tracking', 'Driver Behavior Analysis', 'Fuel Optimization', 'Maintenance Scheduling'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Fleet AI'
+  },
+  {
+    title: 'AI Smart Waste Management',
+    description: 'AI-powered waste management and recycling optimization platform for cities and businesses.',
+    icon: Trash2,
+    features: ['Waste Tracking', 'Route Optimization', 'Recycling Analysis', 'Cost Reduction'],
+    pricing: '$18,000 - $90,000 project',
+    category: 'Waste AI'
+  },
+  {
+    title: 'AI-Powered Talent Analytics',
+    description: 'Advanced talent analytics and workforce optimization platform for HR departments.',
+    icon: Users,
+    features: ['Performance Analytics', 'Retention Prediction', 'Skill Gap Analysis', 'Succession Planning'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Talent AI'
+  },
+  {
+    title: 'AI Smart Parking System',
+    description: 'AI-powered parking management and optimization platform for cities and venues.',
+    icon: Car,
+    features: ['Space Detection', 'Dynamic Pricing', 'Reservation System', 'Revenue Optimization'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Parking AI'
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Intelligent language learning platform with personalized AI tutoring and assessment.',
+    icon: BookOpen,
+    features: ['Personalized Learning', 'Speech Recognition', 'Progress Tracking', 'Cultural Context'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Language Learning AI'
+  },
+  {
+    title: 'AI Smart Water Management',
+    description: 'AI-powered water quality monitoring and distribution optimization platform.',
+    icon: Droplets,
+    features: ['Quality Monitoring', 'Leak Detection', 'Usage Optimization', 'Predictive Maintenance'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'Water AI'
+  },
+  {
+    title: 'AI-Powered Crisis Management',
+    description: 'Intelligent crisis management and emergency response coordination platform.',
+    icon: Shield,
+    features: ['Threat Assessment', 'Response Planning', 'Resource Allocation', 'Communication Management'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Crisis AI'
+  },
+  {
+    title: 'AI Smart Retail Analytics',
+    description: 'AI-powered retail analytics and customer behavior analysis platform.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Price Optimization', 'Store Layout Analysis'],
+    pricing: '$15,000 - $75,000 project',
+    category: 'Retail Analytics AI'
+  },
+  {
+    title: 'AI-Powered Patent Analysis',
+    description: 'Intelligent patent analysis and intellectual property research platform.',
+    icon: FileText,
+    features: ['Patent Search', 'Prior Art Analysis', 'Patentability Assessment', 'Portfolio Management'],
+    pricing: '$12,000 - $60,000 setup',
+    category: 'IP AI'
+  },
+  {
+    title: 'AI Smart Transportation Hub',
+    description: 'AI-powered transportation optimization and traffic management platform.',
+    icon: Car,
+    features: ['Traffic Optimization', 'Route Planning', 'Demand Prediction', 'Emission Reduction'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Transportation AI'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Task Management', 'Calendar Integration', 'Email Management', 'Voice Commands'],
+    pricing: '$5,000 - $25,000 setup',
+    category: 'Personal AI'
+  },
+  {
+    title: 'AI Smart Healthcare Analytics',
+    description: 'AI-powered healthcare analytics and patient outcome prediction platform.',
+    icon: Heart,
+    features: ['Patient Analytics', 'Outcome Prediction', 'Resource Optimization', 'Quality Metrics'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Healthcare Analytics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Contracts',
+    description: 'AI-powered smart contract development and deployment platform for blockchain applications.',
+    icon: Code,
+    features: ['Contract Generation', 'Security Analysis', 'Deployment Automation', 'Monitoring'],
+    pricing: '$15,000 - $75,000 setup',
+    category: 'Smart Contract AI'
+  },
+  {
+    title: 'AI Smart Energy Trading',
+    description: 'AI-powered energy trading and market optimization platform for utilities and traders.',
+    icon: Zap,
+    features: ['Market Analysis', 'Trading Algorithms', 'Price Prediction', 'Risk Management'],
+    pricing: '$50,000 - $250,000 project',
+    category: 'Energy Trading AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality',
+    description: 'AI-powered VR content creation and immersive experience platform.',
+    icon: Monitor,
+    features: ['Content Generation', 'Avatar Creation', 'Environment Design', 'Interaction Systems'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'VR AI'
+  },
+  {
+    title: 'AI Smart Insurance Claims',
+    description: 'AI-powered insurance claims processing and fraud detection platform.',
+    icon: Shield,
+    features: ['Claims Processing', 'Fraud Detection', 'Damage Assessment', 'Automated Settlements'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Insurance AI'
+  },
+  {
+    title: 'AI-Powered Augmented Reality',
+    description: 'AI-powered AR content creation and interactive experience platform.',
+    icon: Monitor,
+    features: ['AR Content Creation', 'Object Recognition', 'Spatial Mapping', 'User Interaction'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'AR AI'
+  },
+  {
+    title: 'AI Smart Manufacturing',
+    description: 'AI-powered manufacturing process optimization and quality control platform.',
+    icon: Settings,
+    features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Integration'],
+    pricing: '$40,000 - $200,000 project',
+    category: 'Manufacturing AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Computing',
+    description: 'AI-powered edge computing platform for real-time data processing and analysis.',
+    icon: Cpu,
+    features: ['Real-time Processing', 'Data Analysis', 'Device Management', 'Network Optimization'],
+    pricing: '$25,000 - $125,000 project',
+    category: 'Edge AI'
+  },
+  {
+    title: 'AI Smart Financial Planning',
+    description: 'AI-powered financial planning and investment advisory platform for individuals and businesses.',
+    icon: DollarSign,
+    features: ['Financial Planning', 'Investment Analysis', 'Risk Assessment', 'Goal Tracking'],
+    pricing: '$10,000 - $50,000 setup',
+    category: 'Financial AI'
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'AI-powered quantum machine learning platform for advanced computational tasks.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Machine Learning Models', 'Optimization Problems', 'Research Tools'],
+    pricing: '$75,000 - $375,000 project',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI Smart Environmental Monitoring',
+    description: 'AI-powered environmental monitoring and sustainability tracking platform.',
+    icon: Sprout,
+    features: ['Environmental Sensors', 'Data Analysis', 'Sustainability Metrics', 'Compliance Reporting'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Digital Identity',
+    description: 'AI-powered digital identity verification and management platform.',
+    icon: Shield,
+    features: ['Identity Verification', 'Biometric Analysis', 'Fraud Prevention', 'Privacy Protection'],
+    pricing: '$12,000 - $60,000 setup',
+    category: 'Identity AI'
+  },
+  {
+    title: 'AI Smart Supply Chain',
+    description: 'AI-powered supply chain optimization and risk management platform.',
+    icon: Network,
+    features: ['Supply Chain Mapping', 'Risk Assessment', 'Optimization Algorithms', 'Real-time Monitoring'],
+    pricing: '$30,000 - $150,000 project',
+    category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'AI-powered predictive maintenance and asset management platform for industrial equipment.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$20,000 - $100,000 project',
+    category: 'Maintenance AI'
+  },
+  {
+    title: 'AI Smart Customer Service',
+    description: 'AI-powered customer service automation and support platform.',
+    icon: MessageSquare,
+    features: ['Automated Responses', 'Sentiment Analysis', 'Ticket Routing', 'Performance Analytics'],
+    pricing: '$8,000 - $40,000 setup',
+    category: 'Customer Service AI'
+  },
+  {
+    title: 'AI-Powered Digital Twin',
+    description: 'AI-powered digital twin creation and simulation platform for various industries.',
+    icon: Monitor,
     pricing: '$8,000 - $40,000 project',
     category: 'Industrial AI'
   },
@@ -1712,12 +2182,13 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
+                  whileHover={{ y: -5 }}
+                >
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                   <IconComponent className="w-10 h-10" />

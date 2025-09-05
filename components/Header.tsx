@@ -22,7 +22,11 @@ import {
   Rocket, 
   MessageSquare, 
   Phone, 
-  FileText 
+  FileText,
+  BarChart3,
+  Cpu,
+  Car,
+  Code
 } from 'lucide-react';
 
 const navigation = [
@@ -31,10 +35,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '125+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '80+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '60+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '100+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '240+' }
     ]
   },
   {
@@ -43,7 +47,11 @@ const navigation = [
     icon: Shield,
     children: [
       { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud }
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
+      { name: 'AI Implementation', href: '/solutions/ai-implementation', icon: Brain },
+      { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: Shield },
+      { name: 'Data Analytics', href: '/solutions/data-analytics', icon: BarChart3 },
+      { name: 'IoT Solutions', href: '/solutions/iot', icon: Cpu }
     ]
   },
   {
@@ -56,7 +64,9 @@ const navigation = [
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building }
+      { name: 'Government', href: '/industries/government', icon: Building },
+      { name: 'Energy', href: '/industries/energy', icon: Zap },
+      { name: 'Transportation', href: '/industries/transportation', icon: Car }
     ]
   },
   {
@@ -65,7 +75,11 @@ const navigation = [
     icon: FileText,
     children: [
       { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
+      { name: 'Webinars', href: '/webinars', icon: Video },
+      { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+      { name: 'Blog', href: '/blog', icon: MessageSquare },
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'API Reference', href: '/api-docs', icon: Code }
     ]
   },
   {
@@ -74,11 +88,17 @@ const navigation = [
     icon: Users,
     children: [
       { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Our Team', href: '/about#team', icon: Users },
+      { name: 'Our Team', href: '/team', icon: Users },
       { name: 'Careers', href: '/careers', icon: Rocket },
       { name: 'Partners', href: '/partners', icon: Network },
-      { name: 'News', href: '/news', icon: MessageSquare }
+      { name: 'News', href: '/news', icon: MessageSquare },
+      { name: 'Contact', href: '/contact', icon: Phone }
     ]
+  },
+  {
+    name: 'Pricing',
+    href: '/pricing',
+    icon: DollarSign
   },
   {
     name: 'Contact',

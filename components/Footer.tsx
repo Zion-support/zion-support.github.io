@@ -20,7 +20,9 @@ const services = {
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
     { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' }
+    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'AI Financial Trading', href: '/ai-services#ai-financial-trading' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -28,7 +30,9 @@ const services = {
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
     { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-    { name: 'Data Center Migration', href: '/it-services#data-center-migration' }
+    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
+    { name: 'AI-Powered IT Management', href: '/it-services#ai-powered-it-management' },
+    { name: 'Zero Trust Security', href: '/it-services#zero-trust-security' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
@@ -36,7 +40,9 @@ const services = {
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
     { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-    { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' }
+    { name: 'Email Sequencer', href: '/micro-saas#email-sequencer' },
+    { name: 'AI Cybersecurity Threat Hunter', href: '/micro-saas#ai-cybersecurity-threat-hunter' },
+    { name: 'AI Smart City Platform', href: '/micro-saas#ai-smart-city-platform' }
   ]
 };
 const companyLinks = [
