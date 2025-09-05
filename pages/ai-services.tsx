@@ -477,416 +477,411 @@ const aiServices = [
     setupTime: '4-8 weeks',
     targetUsers: 'Schools, Universities, Online education, Corporate training'
   },
-
-  // Advanced AI & Emerging Technologies
+  // NEW ADVANCED AI SERVICES
   {
     id: 16,
-    title: 'AI Neuromorphic Computing',
-    description: 'Brain-inspired AI computing using neuromorphic chips for ultra-efficient processing and real-time learning.',
-    icon: Brain,
-    category: 'Neuromorphic AI',
-    price: 'Starting at $4,500/month',
+    title: 'AI Edge Computing Solutions',
+    description: 'Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities.',
+    icon: Cpu,
+    category: 'Edge AI',
+    price: 'Starting at $2,200/month',
     features: [
-      'Neuromorphic chip integration',
-      'Spiking neural networks',
-      'Ultra-low power processing',
-      'Real-time learning capabilities',
-      'Pattern recognition optimization',
-      'Adaptive system behavior',
-      'Edge computing deployment',
-      'Bio-inspired algorithms'
+      'Edge AI model deployment',
+      'Real-time inference processing',
+      'Offline AI capabilities',
+      'Edge device management',
+      'Data synchronization',
+      'Model optimization for edge',
+      'Security at the edge',
+      'Performance monitoring'
     ],
     benefits: [
-      'Reduce power consumption by 90%',
-      'Enable real-time learning',
-      'Process data 1000x faster',
-      'Mimic human brain efficiency'
+      'Reduce latency by 90%',
+      'Enable offline AI processing',
+      'Lower bandwidth requirements',
+      'Improve data privacy'
     ],
-    marketPrice: '$7,000-15,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'Research institutions, IoT companies, Edge computing, Autonomous systems'
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'IoT companies, Manufacturing, Retail, Healthcare, Automotive'
   },
   {
     id: 17,
-    title: 'AI Federated Learning Platform',
-    description: 'Privacy-preserving machine learning enabling collaborative model training without sharing raw data.',
+    title: 'AI Cybersecurity & Threat Detection',
+    description: 'Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response.',
     icon: Shield,
-    category: 'Federated AI',
-    price: 'Starting at $3,200/month',
+    category: 'AI Security',
+    price: 'Starting at $3,500/month',
     features: [
-      'Distributed model training',
-      'Privacy-preserving algorithms',
-      'Secure aggregation protocols',
-      'Differential privacy implementation',
-      'Cross-silo collaboration',
-      'Model synchronization',
-      'Federated analytics',
+      'Real-time threat detection',
+      'Behavioral analysis & anomaly detection',
+      'Automated incident response',
+      'Malware & virus detection',
+      'Network security monitoring',
+      'Phishing & fraud prevention',
+      'Security orchestration',
       'Compliance monitoring'
     ],
     benefits: [
-      'Maintain data privacy',
-      'Enable collaborative learning',
-      'Meet regulatory requirements',
-      'Scale across organizations'
+      'Detect threats 10x faster',
+      'Reduce false positives by 80%',
+      'Automate security responses',
+      'Improve security posture'
     ],
-    marketPrice: '$5,000-12,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Healthcare, Finance, Government, Research institutions'
+    marketPrice: '$5,500-12,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Enterprises, Government, Financial services, Healthcare, Critical infrastructure'
   },
   {
     id: 18,
-    title: 'AI Explainable Intelligence',
-    description: 'Transparent AI solutions providing interpretable decisions and regulatory compliance for critical applications.',
-    icon: Eye,
-    category: 'Explainable AI',
+    title: 'AI Supply Chain Intelligence',
+    description: 'Comprehensive AI solutions for supply chain optimization, risk management, and demand forecasting.',
+    icon: Package,
+    category: 'Supply Chain AI',
     price: 'Starting at $2,800/month',
     features: [
-      'Model interpretability tools',
-      'Decision explanation generation',
-      'Bias detection & mitigation',
-      'Fairness metrics & monitoring',
-      'Regulatory compliance reporting',
-      'Transparency dashboards',
-      'Audit trail generation',
-      'Human-AI collaboration tools'
+      'Demand forecasting & planning',
+      'Supply chain risk assessment',
+      'Vendor performance analytics',
+      'Inventory optimization',
+      'Route & logistics optimization',
+      'Quality control automation',
+      'Sustainability tracking',
+      'Real-time visibility'
     ],
     benefits: [
-      'Build trust in AI decisions',
-      'Meet regulatory requirements',
-      'Identify and fix biases',
-      'Enable human oversight'
+      'Reduce supply chain costs by 25%',
+      'Improve forecast accuracy by 40%',
+      'Minimize supply disruptions',
+      'Optimize inventory levels'
     ],
     marketPrice: '$4,500-9,000/month',
     setupTime: '4-8 weeks',
-    targetUsers: 'Healthcare, Finance, Legal, Government, Critical systems'
+    targetUsers: 'Manufacturing, Retail, Logistics, E-commerce, Food & beverage'
   },
   {
     id: 19,
-    title: 'AI Edge Computing Solutions',
-    description: 'Edge AI deployment for real-time processing, low-latency inference, and distributed intelligence.',
-    icon: Wifi,
-    category: 'Edge AI',
-    price: 'Starting at $2,500/month',
+    title: 'AI Voice & Speech Technology',
+    description: 'Advanced voice AI solutions including speech recognition, synthesis, and conversational interfaces.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $1,800/month',
     features: [
-      'Edge model deployment',
-      'Real-time inference processing',
-      'Low-latency optimization',
-      'Distributed intelligence',
-      'IoT device integration',
-      'Offline processing capabilities',
-      'Bandwidth optimization',
-      'Edge-to-cloud synchronization'
+      'Speech-to-text conversion',
+      'Text-to-speech synthesis',
+      'Voice biometrics & authentication',
+      'Conversational AI interfaces',
+      'Multi-language support',
+      'Voice emotion analysis',
+      'Real-time transcription',
+      'Voice command processing'
     ],
     benefits: [
-      'Reduce latency by 95%',
-      'Enable offline operation',
-      'Lower bandwidth costs',
-      'Improve response times'
+      'Improve accessibility by 60%',
+      'Enable hands-free operations',
+      'Enhance user experience',
+      'Reduce interaction barriers'
     ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Manufacturing, IoT, Autonomous vehicles, Smart cities'
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Customer service, Healthcare, Education, Accessibility, IoT devices'
   },
   {
     id: 20,
-    title: 'AI Multi-Modal Intelligence',
-    description: 'Advanced AI processing text, images, audio, and video for comprehensive understanding and analysis.',
-    icon: Eye,
-    category: 'Multi-Modal AI',
-    price: 'Starting at $3,800/month',
+    title: 'AI Healthcare Diagnostics',
+    description: 'AI-powered medical imaging analysis, diagnostic assistance, and treatment recommendation systems.',
+    icon: Stethoscope,
+    category: 'Healthcare AI',
+    price: 'Starting at $4,500/month',
     features: [
-      'Cross-modal data processing',
-      'Fusion algorithms',
-      'Context-aware understanding',
-      'Real-time multi-modal analysis',
-      'Cross-modal learning',
-      'Unified representation learning',
-      'Multi-sensor integration',
-      'Advanced reasoning capabilities'
+      'Medical image analysis (X-ray, MRI, CT)',
+      'Diagnostic decision support',
+      'Treatment recommendation systems',
+      'Drug interaction checking',
+      'Patient risk stratification',
+      'Clinical trial optimization',
+      'Electronic health record analysis',
+      'Telemedicine AI support'
     ],
     benefits: [
-      'Comprehensive data understanding',
-      'Cross-modal insights',
-      'Enhanced accuracy',
-      'Unified intelligence platform'
+      'Improve diagnostic accuracy by 30%',
+      'Reduce misdiagnosis by 50%',
+      'Accelerate treatment decisions',
+      'Enhance patient outcomes'
     ],
-    marketPrice: '$6,000-12,000/month',
+    marketPrice: '$7,000-15,000/month',
     setupTime: '6-12 weeks',
-    targetUsers: 'Media, Healthcare, Security, Autonomous systems, Content platforms'
+    targetUsers: 'Hospitals, Clinics, Medical imaging centers, Pharmaceutical companies, Research institutions'
   },
-
-  // Industry-Specific AI Solutions
   {
     id: 21,
-    title: 'AI Manufacturing Intelligence',
-    description: 'Smart manufacturing AI with predictive maintenance, quality control, and production optimization.',
-    icon: Settings,
-    category: 'AI Manufacturing',
-    price: 'Starting at $3,500/month',
+    title: 'AI FinTech & Banking Solutions',
+    description: 'Comprehensive AI solutions for financial services including fraud detection, credit scoring, and robo-advisory.',
+    icon: DollarSign,
+    category: 'FinTech AI',
+    price: 'Starting at $3,200/month',
     features: [
-      'Predictive maintenance systems',
-      'Quality control automation',
-      'Production line optimization',
-      'Supply chain intelligence',
-      'Defect detection & classification',
-      'Process automation',
-      'Resource optimization',
-      'Real-time monitoring'
+      'Fraud detection & prevention',
+      'Credit scoring & underwriting',
+      'Algorithmic trading systems',
+      'Robo-advisory services',
+      'Risk assessment & management',
+      'Regulatory compliance automation',
+      'Customer service automation',
+      'Financial planning assistance'
     ],
     benefits: [
-      'Reduce downtime by 60%',
-      'Improve quality by 40%',
-      'Optimize production efficiency',
-      'Lower operational costs'
+      'Reduce fraud losses by 85%',
+      'Improve credit decisions by 40%',
+      'Automate compliance processes',
+      'Enhance customer experience'
     ],
-    marketPrice: '$5,500-11,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Manufacturing companies, Industrial automation, Quality control'
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Banks, Credit unions, Investment firms, Insurance companies, Fintech startups'
   },
   {
     id: 22,
-    title: 'AI Retail & E-commerce Intelligence',
-    description: 'AI solutions for retail optimization, customer personalization, and supply chain management.',
-    icon: ShoppingCart,
-    category: 'AI Retail',
-    price: 'Starting at $2,800/month',
+    title: 'AI Content Generation & Marketing',
+    description: 'AI-powered content creation, marketing automation, and personalized customer engagement solutions.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,500/month',
     features: [
-      'Customer behavior analysis',
-      'Personalized recommendations',
-      'Dynamic pricing optimization',
-      'Inventory management',
-      'Demand forecasting',
-      'Visual search capabilities',
-      'Chatbot integration',
-      'Omnichannel analytics'
+      'Automated content generation',
+      'Personalized marketing campaigns',
+      'Social media content creation',
+      'Email marketing optimization',
+      'SEO content optimization',
+      'Content performance analysis',
+      'Brand voice consistency',
+      'Multi-language content creation'
     ],
     benefits: [
-      'Increase sales by 35%',
-      'Improve customer experience',
-      'Optimize inventory levels',
-      'Reduce operational costs'
+      'Increase content production by 300%',
+      'Improve engagement rates by 45%',
+      'Reduce content costs by 60%',
+      'Maintain brand consistency'
     ],
-    marketPrice: '$4,500-9,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Retail chains, E-commerce platforms, Fashion, Consumer goods'
+    marketPrice: '$2,500-6,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Marketing agencies, E-commerce, Media companies, Content creators, SaaS companies'
   },
   {
     id: 23,
-    title: 'AI Transportation & Logistics',
-    description: 'AI solutions for route optimization, fleet management, and supply chain logistics.',
-    icon: Truck,
-    category: 'AI Transportation',
-    price: 'Starting at $3,200/month',
+    title: 'AI Robotics & Automation',
+    description: 'AI solutions for robotic process automation, industrial robots, and intelligent automation systems.',
+    icon: Bot,
+    category: 'Robotics AI',
+    price: 'Starting at $3,800/month',
     features: [
-      'Route optimization algorithms',
-      'Fleet management systems',
+      'Robotic process automation (RPA)',
+      'Industrial robot programming',
+      'Computer vision for robots',
+      'Autonomous navigation systems',
+      'Human-robot collaboration',
+      'Quality control automation',
       'Predictive maintenance',
-      'Fuel efficiency optimization',
-      'Driver behavior analysis',
-      'Real-time tracking',
-      'Supply chain optimization',
-      'Demand forecasting'
+      'Safety monitoring systems'
     ],
     benefits: [
-      'Reduce fuel costs by 25%',
-      'Optimize delivery routes',
-      'Improve fleet efficiency',
-      'Lower operational expenses'
+      'Increase productivity by 50%',
+      'Reduce operational costs by 40%',
+      'Improve quality consistency',
+      'Enable 24/7 operations'
     ],
-    marketPrice: '$5,000-10,000/month',
+    marketPrice: '$6,000-12,000/month',
     setupTime: '6-12 weeks',
-    targetUsers: 'Logistics companies, Transportation, Delivery services, Supply chain'
+    targetUsers: 'Manufacturing, Warehousing, Healthcare, Agriculture, Construction, Service industries'
   },
   {
     id: 24,
-    title: 'AI Smart City Solutions',
-    description: 'Comprehensive AI platform for smart city management, traffic optimization, and citizen services.',
-    icon: Building,
-    category: 'AI Smart Cities',
-    price: 'Starting at $4,500/month',
+    title: 'AI Environmental Monitoring',
+    description: 'AI-powered environmental monitoring, climate analysis, and sustainability optimization solutions.',
+    icon: TreePine,
+    category: 'Environmental AI',
+    price: 'Starting at $2,200/month',
     features: [
-      'Traffic management systems',
-      'Energy optimization',
-      'Citizen service automation',
-      'Environmental monitoring',
-      'Public safety analytics',
-      'Urban planning insights',
-      'Resource allocation',
-      'Data-driven governance'
+      'Air quality monitoring & prediction',
+      'Water quality analysis',
+      'Climate change modeling',
+      'Pollution source identification',
+      'Environmental impact assessment',
+      'Sustainability reporting',
+      'Carbon footprint tracking',
+      'Ecosystem health monitoring'
     ],
     benefits: [
-      'Improve urban efficiency',
-      'Enhance citizen services',
-      'Optimize resource usage',
-      'Enable data-driven decisions'
+      'Improve environmental outcomes by 40%',
+      'Enable proactive environmental management',
+      'Meet sustainability goals',
+      'Reduce environmental risks'
     ],
-    marketPrice: '$7,000-15,000/month',
-    setupTime: '8-16 weeks',
-    targetUsers: 'City governments, Urban planners, Infrastructure companies'
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Environmental agencies, Government, Energy companies, Manufacturing, Research institutions'
   },
   {
     id: 25,
-    title: 'AI Real Estate Intelligence',
-    description: 'AI solutions for property valuation, market analysis, and real estate investment optimization.',
-    icon: Home,
-    category: 'AI Real Estate',
-    price: 'Starting at $2,200/month',
+    title: 'AI Sports Analytics & Performance',
+    description: 'AI solutions for sports performance analysis, injury prevention, and team optimization.',
+    icon: Trophy,
+    category: 'Sports AI',
+    price: 'Starting at $2,500/month',
     features: [
-      'Property valuation models',
-      'Market trend analysis',
-      'Investment opportunity identification',
-      'Location intelligence',
-      'Price prediction algorithms',
-      'Risk assessment tools',
-      'Portfolio optimization',
-      'Market forecasting'
+      'Performance analysis & tracking',
+      'Injury prediction & prevention',
+      'Tactical analysis & strategy',
+      'Player scouting & recruitment',
+      'Fan engagement optimization',
+      'Broadcast enhancement',
+      'Training optimization',
+      'Real-time statistics'
     ],
     benefits: [
-      'Improve investment decisions',
-      'Accurate property valuations',
-      'Identify market opportunities',
-      'Optimize portfolio returns'
+      'Improve athlete performance by 25%',
+      'Reduce injury rates by 30%',
+      'Enhance fan engagement',
+      'Optimize team strategies'
     ],
-    marketPrice: '$3,500-7,000/month',
+    marketPrice: '$4,000-8,000/month',
     setupTime: '4-8 weeks',
-    targetUsers: 'Real estate agencies, Investors, Property developers, Appraisers'
+    targetUsers: 'Professional sports teams, Athletic organizations, Sports media, Fitness centers, Universities'
   },
-
-  // Advanced Analytics & Intelligence
   {
     id: 26,
-    title: 'AI Predictive Analytics Suite',
-    description: 'Comprehensive predictive analytics platform with advanced forecasting and scenario planning.',
-    icon: TrendingUp,
-    category: 'AI Analytics',
-    price: 'Starting at $3,000/month',
+    title: 'AI Real Estate Intelligence',
+    description: 'AI-powered real estate analysis, property valuation, and market prediction solutions.',
+    icon: Home,
+    category: 'Real Estate AI',
+    price: 'Starting at $1,800/month',
     features: [
-      'Advanced forecasting models',
-      'Scenario planning tools',
-      'Risk assessment algorithms',
-      'Pattern recognition',
-      'Automated insights generation',
-      'Real-time predictions',
-      'Custom model development',
-      'Integration capabilities'
+      'Property valuation & pricing',
+      'Market trend analysis',
+      'Investment opportunity identification',
+      'Property condition assessment',
+      'Tenant screening & analysis',
+      'Rental price optimization',
+      'Neighborhood analysis',
+      'Risk assessment'
     ],
     benefits: [
-      'Improve forecast accuracy by 50%',
-      'Enable proactive decision making',
-      'Identify trends early',
-      'Optimize business strategies'
+      'Improve property valuations by 20%',
+      'Identify investment opportunities',
+      'Optimize rental pricing',
+      'Reduce investment risks'
     ],
-    marketPrice: '$4,800-9,600/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Business intelligence, Finance, Marketing, Operations'
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Real estate agents, Property managers, Investors, Developers, Lenders'
   },
   {
     id: 27,
-    title: 'AI Data Lake & Analytics',
-    description: 'Intelligent data lake platform with automated processing, analytics, and insights generation.',
-    icon: Database,
-    category: 'AI Data Management',
+    title: 'AI Transportation & Logistics',
+    description: 'AI solutions for transportation optimization, fleet management, and smart mobility.',
+    icon: Truck,
+    category: 'Transportation AI',
     price: 'Starting at $2,800/month',
     features: [
-      'Automated data ingestion',
-      'Schema evolution management',
-      'Data quality assessment',
-      'Metadata management',
-      'Automated analytics',
-      'Real-time processing',
-      'Data lineage tracking',
-      'Governance tools'
+      'Route optimization & planning',
+      'Fleet management & tracking',
+      'Demand prediction & matching',
+      'Autonomous vehicle systems',
+      'Traffic flow optimization',
+      'Maintenance scheduling',
+      'Fuel efficiency optimization',
+      'Safety monitoring'
     ],
     benefits: [
-      'Automate data processing',
-      'Improve data quality',
-      'Enable self-service analytics',
-      'Reduce data management costs'
+      'Reduce transportation costs by 25%',
+      'Improve delivery times by 30%',
+      'Optimize fleet utilization',
+      'Enhance safety performance'
     ],
     marketPrice: '$4,500-9,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Data teams, Analytics, Business intelligence, IT departments'
+    setupTime: '4-8 weeks',
+    targetUsers: 'Logistics companies, Transportation providers, E-commerce, Delivery services, Fleet operators'
   },
   {
     id: 28,
-    title: 'AI Real-Time Streaming Analytics',
-    description: 'Real-time data processing and analytics platform for instant insights and decision making.',
-    icon: Zap,
-    category: 'AI Streaming',
-    price: 'Starting at $3,500/month',
+    title: 'AI Gaming & Entertainment',
+    description: 'AI solutions for game development, content generation, and personalized entertainment experiences.',
+    icon: Gamepad2,
+    category: 'Gaming AI',
+    price: 'Starting at $1,500/month',
     features: [
-      'Real-time stream processing',
-      'Complex event processing',
-      'Instant analytics',
-      'Alert systems',
-      'Pattern detection',
-      'Scalable architecture',
-      'Multi-source integration',
-      'Low-latency processing'
+      'Procedural content generation',
+      'AI-powered NPCs & characters',
+      'Dynamic difficulty adjustment',
+      'Player behavior analysis',
+      'Content personalization',
+      'Automated testing & QA',
+      'Monetization optimization',
+      'Real-time adaptation'
     ],
     benefits: [
-      'Enable real-time decisions',
-      'Process data instantly',
-      'Detect anomalies immediately',
-      'Scale with data volume'
+      'Reduce development time by 40%',
+      'Improve player engagement',
+      'Personalize gaming experiences',
+      'Optimize monetization'
     ],
-    marketPrice: '$5,500-11,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Financial services, IoT, Gaming, Social media, E-commerce'
+    marketPrice: '$2,500-6,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Game developers, Entertainment companies, Streaming platforms, Esports organizations'
   },
   {
     id: 29,
-    title: 'AI Voice & Speech Intelligence',
-    description: 'Advanced voice AI solutions with speech recognition, synthesis, and conversational intelligence.',
-    icon: Mic,
-    category: 'Voice AI',
-    price: 'Starting at $2,200/month',
+    title: 'AI Research & Development',
+    description: 'AI solutions for scientific research, drug discovery, and innovation acceleration.',
+    icon: FlaskConical,
+    category: 'Research AI',
+    price: 'Starting at $4,000/month',
     features: [
-      'Advanced speech recognition',
-      'Natural language understanding',
-      'Voice synthesis & cloning',
-      'Emotion detection',
-      'Multi-language support',
-      'Noise cancellation',
-      'Real-time processing',
-      'Custom voice training'
+      'Scientific literature analysis',
+      'Hypothesis generation & testing',
+      'Data mining & pattern recognition',
+      'Simulation & modeling',
+      'Collaborative research tools',
+      'Patent analysis & insights',
+      'Research trend identification',
+      'Innovation opportunity mapping'
     ],
     benefits: [
-      'Enable hands-free operations',
-      'Improve accessibility',
-      'Enhance user experience',
-      'Support multiple languages'
+      'Accelerate research by 50%',
+      'Identify new opportunities',
+      'Improve research efficiency',
+      'Enable breakthrough discoveries'
     ],
-    marketPrice: '$3,500-7,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Call centers, Healthcare, Education, Accessibility, IoT'
+    marketPrice: '$6,500-15,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Research institutions, Universities, Pharmaceutical companies, Government labs, Innovation centers'
   },
   {
     id: 30,
-    title: 'AI Content Intelligence',
-    description: 'AI-powered content creation, analysis, and optimization for marketing and communication.',
-    icon: FileText,
-    category: 'Content AI',
-    price: 'Starting at $1,800/month',
+    title: 'AI Personalization Engine',
+    description: 'Advanced AI personalization platform for websites, apps, and digital experiences.',
+    icon: Users,
+    category: 'Personalization AI',
+    price: 'Starting at $1,200/month',
     features: [
-      'Automated content generation',
-      'Content optimization',
-      'SEO analysis & recommendations',
-      'Brand voice consistency',
-      'Multi-language content',
-      'Content performance analytics',
+      'User behavior analysis',
+      'Content personalization',
+      'Product recommendations',
+      'Dynamic pricing optimization',
+      'Email & message personalization',
       'A/B testing automation',
-      'Content personalization'
+      'Customer journey optimization',
+      'Real-time personalization'
     ],
     benefits: [
-      'Scale content production',
-      'Improve content quality',
-      'Optimize for search engines',
-      'Maintain brand consistency'
+      'Increase conversion rates by 35%',
+      'Improve user engagement by 50%',
+      'Boost customer satisfaction',
+      'Optimize user experience'
     ],
-    marketPrice: '$3,000-6,000/month',
-    setupTime: '4-8 weeks',
-    targetUsers: 'Marketing teams, Content creators, E-commerce, Media companies'
+    marketPrice: '$2,000-5,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'E-commerce, SaaS companies, Media platforms, Mobile apps, Digital agencies'
   }
 ];
 
@@ -897,13 +892,31 @@ const categories = [
   { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
   { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
   { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
-  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
-  { name: "Process Automation", count: aiServices.filter(s => s.category === "Process Automation").length },
-  { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length },
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "AI Healthcare", count: aiServices.filter(s => s.category === "AI Healthcare").length },
+  { name: "AI Climate", count: aiServices.filter(s => s.category === "AI Climate").length },
+  { name: "AI Space", count: aiServices.filter(s => s.category === "AI Space").length },
+  { name: "AI Autonomous", count: aiServices.filter(s => s.category === "AI Autonomous").length },
+  { name: "AI Legal", count: aiServices.filter(s => s.category === "AI Legal").length },
+  { name: "AI Finance", count: aiServices.filter(s => s.category === "AI Finance").length },
+  { name: "AI Agriculture", count: aiServices.filter(s => s.category === "AI Agriculture").length },
+  { name: "AI Energy", count: aiServices.filter(s => s.category === "AI Energy").length },
+  { name: "AI Education", count: aiServices.filter(s => s.category === "AI Education").length },
+  { name: "Edge AI", count: aiServices.filter(s => s.category === "Edge AI").length },
+  { name: "AI Security", count: aiServices.filter(s => s.category === "AI Security").length },
   { name: "Supply Chain AI", count: aiServices.filter(s => s.category === "Supply Chain AI").length },
+  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length },
   { name: "Healthcare AI", count: aiServices.filter(s => s.category === "Healthcare AI").length },
   { name: "FinTech AI", count: aiServices.filter(s => s.category === "FinTech AI").length },
-  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length }
+  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
+  { name: "Robotics AI", count: aiServices.filter(s => s.category === "Robotics AI").length },
+  { name: "Environmental AI", count: aiServices.filter(s => s.category === "Environmental AI").length },
+  { name: "Sports AI", count: aiServices.filter(s => s.category === "Sports AI").length },
+  { name: "Real Estate AI", count: aiServices.filter(s => s.category === "Real Estate AI").length },
+  { name: "Transportation AI", count: aiServices.filter(s => s.category === "Transportation AI").length },
+  { name: "Gaming AI", count: aiServices.filter(s => s.category === "Gaming AI").length },
+  { name: "Research AI", count: aiServices.filter(s => s.category === "Research AI").length },
+  { name: "Personalization AI", count: aiServices.filter(s => s.category === "Personalization AI").length }
 ];
 
 export default function AIServicesPage() {
@@ -920,19 +933,20 @@ export default function AIServicesPage() {
   return (
     <>
       <Head>
-        <title>AI Services - Zion Tech Group | 100+ Cutting-Edge AI Solutions</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, NLP, analytics, and automation. 100+ AI solutions with competitive pricing and proven results." />
-        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, AI automation, AI consulting, artificial intelligence solutions" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our comprehensive AI services. 100+ cutting-edge solutions with competitive pricing." />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
-        <meta property="og:type" content="website" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including machine learning, computer vision, natural language processing, and specialized AI solutions for modern businesses." />
+        <meta name="keywords" content="AI services, machine learning, computer vision, NLP, artificial intelligence, AI consulting, AI development" />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -940,215 +954,103 @@ export default function AIServicesPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Services & Solutions
+                AI{' '}
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                  Services
+                </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, 
-                quantum AI, autonomous systems, and advanced analytics with real-world applications and proven results.
+                Transform your business with cutting-edge AI solutions. From machine learning to computer vision, 
+                we provide comprehensive AI services that drive innovation and growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Free Consultation
-                </Link>
-                <Link href="#services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Explore Services
-                </Link>
-              </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Contact Info Bar */}
-        <section className="bg-blue-900 text-white py-4">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-              <div className="flex items-center space-x-6 mb-2 md:mb-0">
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <a href="tel:+13024640950" className="hover:text-blue-300">{contactInfo.phone}</a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">{contactInfo.email}</a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span className="text-blue-200">24/7 AI Support Available</span>
-                <div className="flex space-x-2">
-                  <a href="#" className="hover:text-blue-300"><Globe className="w-4 h-4" /></a>
-                  <a href="#" className="hover:text-blue-300"><Mail className="w-4 h-4" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="mb-8">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search AI services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.map((category) => (
-                  <button
-                    key={category.name}
-                    onClick={() => setSelectedCategory(category.name)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                      selectedCategory === category.name
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section id="services" className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={service.id}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
-                        <IconComponent className="w-8 h-8" />
-                      </div>
-                      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">
-                        {service.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-lg font-bold text-green-600">
-                          {service.price}
-                        </span>
-                        <span className="text-sm text-gray-500 line-through">
-                          {service.marketPrice}
-                        </span>
-                      </div>
-                      <div className="text-xs text-green-600 font-medium">
-                        Save up to 40% vs market rate
-                      </div>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
-                      <ul className="text-xs text-gray-600 space-y-1">
-                        {service.features.slice(0, 4).map((feature, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
-                          <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                      <span>Setup: {service.setupTime}</span>
-                      <span>Target: {service.targetUsers.split(',')[0]}</span>
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <Link
-                        href="/contact"
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
-                      >
-                        Get Quote
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg text-sm font-semibold transition-colors"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
-                  </motion.div>
-                );
-              })}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive AI solutions tailored to your business needs and industry requirements.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service) => (
+                <motion.div
+                  key={service.id}
+                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-indigo-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
+                    <span className="text-gray-500 ml-2">/month</span>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
+                        <li key={index} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                        <li key={index} className="flex items-center">
+                          <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-500">{service.category}</span>
+                    <Link href="/contact" className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                      Get Started
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        {/* Contact Section */}
+        <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let our AI experts help you implement the perfect solution for your business needs.
-                Get a free consultation and custom quote today.
-              </p>
-              <div className="mb-8">
-                <p className="text-lg text-blue-100 mb-2">
-                  📞 <strong>Call us:</strong> {contactInfo.phone}
-                </p>
-                <p className="text-lg text-blue-100 mb-2">
-                  📧 <strong>Email us:</strong> {contactInfo.email}
-                </p>
-                <p className="text-lg text-blue-100">
-                  📍 <strong>Visit us:</strong> {contactInfo.address}
-                </p>
+            <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Business with AI?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Contact us today to discuss your AI needs and discover how our solutions can drive your business forward.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+              <a href="tel:+13024640950" className="flex items-center text-lg hover:text-indigo-400 transition-colors">
+                <Phone className="w-5 h-5 mr-2" />
+                {contactInfo.phone}
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-lg hover:text-indigo-400 transition-colors">
+                <Mail className="w-5 h-5 mr-2" />
+                {contactInfo.email}
+              </a>
+              <div className="flex items-center text-lg">
+                <MapPin className="w-5 h-5 mr-2" />
+                {contactInfo.address}
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Free AI Consultation
-                </Link>
-                <Link href="/micro-saas" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Explore Micro SaaS
-                </Link>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
