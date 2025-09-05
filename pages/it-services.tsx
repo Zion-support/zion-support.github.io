@@ -34,7 +34,9 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  DollarSign,
+  FileText
 } from 'lucide-react';
 
 const itServices = [{
@@ -378,6 +380,177 @@ const itServices = [{
     "pricing": '$30,000 - $150,000/setup',
     "category": 'Threat Intelligence',
     "popular": true
+  },
+  {
+    "title": 'AI-Powered IT Service Desk',
+    "description": 'Intelligent IT service desk with automated ticket routing and resolution.',
+    "icon": Users,
+    "features": ['AI Ticket Routing', 'Automated Resolution', 'Knowledge Base', 'Predictive Analytics'],
+    "pricing": '$5,000 - $25,000/setup',
+    "category": 'AI Service Desk',
+    "popular": true
+  },
+  {
+    "title": 'Multi-Cloud Cost Optimization',
+    "description": 'Intelligent cost optimization across multiple cloud providers with automated rightsizing.',
+    "icon": DollarSign,
+    "features": ['Cost Analysis', 'Rightsizing Recommendations', 'Reserved Instance Management', 'Budget Alerts'],
+    "pricing": '$10,000 - $50,000/setup',
+    "category": 'Cloud Optimization',
+    "popular": true
+  },
+  {
+    "title": 'Zero-Downtime Migration Services',
+    "description": 'Seamless migration of critical systems with zero business disruption.',
+    "icon": Server,
+    "features": ['Blue-Green Deployment', 'Database Migration', 'Load Balancing', 'Rollback Capability'],
+    "pricing": '$25,000 - $150,000/project',
+    "category": 'Migration Services',
+    "popular": true
+  },
+  {
+    "title": 'IT Compliance Automation Platform',
+    "description": 'Automated compliance monitoring and reporting for various regulatory standards.',
+    "icon": Shield,
+    "features": ['Automated Auditing', 'Compliance Reporting', 'Policy Enforcement', 'Risk Assessment'],
+    "pricing": '$15,000 - $75,000/setup',
+    "category": 'Compliance Automation',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Network Monitoring',
+    "description": 'AI-powered network monitoring with predictive analytics and automated troubleshooting.',
+    "icon": Network,
+    "features": ['Predictive Analytics', 'Automated Troubleshooting', 'Performance Optimization', 'Anomaly Detection'],
+    "pricing": '$8,000 - $40,000/setup',
+    "category": 'Network Intelligence',
+    "popular": true
+  },
+  {
+    "title": 'Cloud-Native Security Platform',
+    "description": 'Comprehensive security solutions designed for cloud-native applications and infrastructure.',
+    "icon": Lock,
+    "features": ['Container Security', 'Runtime Protection', 'Secrets Management', 'Compliance Scanning'],
+    "pricing": '$20,000 - $100,000/setup',
+    "category": 'Cloud Security',
+    "popular": true
+  },
+  {
+    "title": 'IT Infrastructure as Code (IaC)',
+    "description": 'Infrastructure automation using code for consistent and repeatable deployments.',
+    "icon": Code,
+    "features": ['Terraform/CloudFormation', 'Version Control', 'Automated Testing', 'Environment Management'],
+    "pricing": '$12,000 - $60,000/setup',
+    "category": 'Infrastructure Automation',
+    "popular": true
+  },
+  {
+    "title": 'Advanced Backup & Recovery Solutions',
+    "description": 'Next-generation backup solutions with AI-powered recovery and ransomware protection.',
+    "icon": Shield,
+    "features": ['AI-Powered Recovery', 'Ransomware Protection', 'Instant Recovery', 'Cross-Platform Backup'],
+    "pricing": '$5,000 - $30,000/setup',
+    "category": 'Backup & Recovery',
+    "popular": true
+  },
+  {
+    "title": 'IT Performance Analytics Platform',
+    "description": 'Comprehensive IT performance monitoring with business impact analysis.',
+    "icon": BarChart3,
+    "features": ['Performance Monitoring', 'Business Impact Analysis', 'Capacity Planning', 'Trend Analysis'],
+    "pricing": '$10,000 - $50,000/setup',
+    "category": 'Performance Analytics',
+    "popular": true
+  },
+  {
+    "title": 'Smart IT Asset Management',
+    "description": 'AI-powered IT asset management with automated discovery and lifecycle optimization.',
+    "icon": Monitor,
+    "features": ['Automated Discovery', 'Lifecycle Management', 'Cost Optimization', 'Compliance Tracking'],
+    "pricing": '$8,000 - $40,000/setup',
+    "category": 'Asset Management',
+    "popular": true
+  },
+  {
+    "title": 'Edge Computing Security Solutions',
+    "description": 'Specialized security solutions for edge computing environments and IoT devices.',
+    "icon": Shield,
+    "features": ['Edge Security', 'Device Authentication', 'Data Encryption', 'Threat Detection'],
+    "pricing": '$15,000 - $80,000/setup',
+    "category": 'Edge Security',
+    "popular": true
+  },
+  {
+    "title": 'IT Disaster Recovery Testing',
+    "description": 'Automated disaster recovery testing with continuous validation and improvement.',
+    "icon": Shield,
+    "features": ['Automated Testing', 'Recovery Validation', 'Performance Testing', 'Improvement Recommendations'],
+    "pricing": '$5,000 - $25,000/project',
+    "category": 'Disaster Recovery',
+    "popular": true
+  },
+  {
+    "title": 'Cloud-Native Database Services',
+    "description": 'Managed database services optimized for cloud-native applications and microservices.',
+    "icon": Database,
+    "features": ['Auto-scaling', 'High Availability', 'Backup Automation', 'Performance Tuning'],
+    "pricing": '$3,000 - $15,000/month',
+    "category": 'Database Services',
+    "popular": true
+  },
+  {
+    "title": 'IT Change Management Automation',
+    "description": 'Automated change management with risk assessment and approval workflows.',
+    "icon": Settings,
+    "features": ['Automated Workflows', 'Risk Assessment', 'Approval Management', 'Rollback Capability'],
+    "pricing": '$10,000 - $50,000/setup',
+    "category": 'Change Management',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent Capacity Planning',
+    "description": 'AI-powered capacity planning with predictive scaling and resource optimization.',
+    "icon": TrendingUp,
+    "features": ['Predictive Scaling', 'Resource Optimization', 'Cost Forecasting', 'Performance Planning'],
+    "pricing": '$8,000 - $40,000/setup',
+    "category": 'Capacity Planning',
+    "popular": true
+  },
+  {
+    "title": 'IT Security Awareness Training Platform',
+    "description": 'Comprehensive security awareness training with simulated phishing and gamification.',
+    "icon": Shield,
+    "features": ['Simulated Phishing', 'Gamification', 'Progress Tracking', 'Custom Content'],
+    "pricing": '$2,000 - $10,000/setup',
+    "category": 'Security Training',
+    "popular": true
+  },
+  {
+    "title": 'Cloud-Native Monitoring & Observability',
+    "description": 'Advanced monitoring and observability platform for cloud-native applications.',
+    "icon": Monitor,
+    "features": ['Distributed Tracing', 'Metrics Collection', 'Log Aggregation', 'Alert Management'],
+    "pricing": '$5,000 - $25,000/setup',
+    "category": 'Observability',
+    "popular": true
+  },
+  {
+    "title": 'IT Vendor Risk Management',
+    "description": 'Comprehensive vendor risk assessment and management platform.',
+    "icon": Shield,
+    "features": ['Risk Assessment', 'Vendor Monitoring', 'Compliance Tracking', 'Contract Management'],
+    "pricing": '$8,000 - $40,000/setup',
+    "category": 'Vendor Management',
+    "popular": true
+  },
+  {
+    "title": 'Intelligent IT Documentation Platform',
+    "description": 'AI-powered IT documentation with automated updates and knowledge management.',
+    "icon": FileText,
+    "features": ['Automated Updates', 'Knowledge Management', 'Search & Discovery', 'Version Control'],
+    "pricing": '$5,000 - $25,000/setup',
+    "category": 'Documentation',
+    "popular": true
   }
 ];
 
@@ -506,7 +679,7 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group"
+                  className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -514,7 +687,7 @@ export default function ITServicesPage() {
                   whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-green-600 group-"hover": text-emerald-600 transition-colors">
+                    <div className="text-green-600 group-hover: text-emerald-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
@@ -547,7 +720,7 @@ export default function ITServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="w-full bg-green-600 "hover": bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-green-600 hover: bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Quote</span>
                     <ArrowRight className="w-3 h-3 ml-1" />
@@ -583,7 +756,7 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-                  className="text-center p-6 rounded-lg "hover": bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, "y": 30 }}
                   whileInView={{ "opacity": 1, "y": 0 }}
                   transition={{ "duration": 0.8, "delay": index * 0.1 }}
@@ -705,7 +878,7 @@ export default function ITServicesPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-                      ? 'bg-green-600 "hover": bg-green-700 text-white'
+                      ? 'bg-green-600 hover: bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
