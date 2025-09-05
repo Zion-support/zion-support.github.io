@@ -270,5 +270,5 @@ export default function RetailPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

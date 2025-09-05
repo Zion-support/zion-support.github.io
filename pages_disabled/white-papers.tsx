@@ -150,13 +150,11 @@ export default function WhitePapersPage() {
 </span>
                       </span>
                     </div>
-                    "
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      {paper.title}
                     </h2>
-                    "
-                    <p className="text-gray-600 mb-6 text-lg">"
-</p>
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {paper.description}
                     </p>
                     "
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-6">"
@@ -225,8 +223,9 @@ export default function WhitePapersPage() {
                       : 'bg-gray-100 text-gray-700 hover:bg-blue-50''
                   }}
                 >
-</button>
+                  {category}
                 </button>
+              ))}
             </div>
           </div>
         </div>
@@ -264,13 +263,11 @@ export default function WhitePapersPage() {
 </span>
                       </span>
                     </div>
-                    "
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
-</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {paper.title}
                     </h3>
-                    "
-                    <p className="text-gray-600 mb-4 line-clamp-3">"
-</p>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {paper.description}
                     </p>
                     "
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">"

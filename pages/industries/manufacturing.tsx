@@ -271,5 +271,5 @@ export default function ManufacturingPage() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

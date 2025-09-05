@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Network, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Target, 
-  Users, 
+import {
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  Zap,
+  Target,
+  Users,
   BarChart3,
   ArrowRight,
   CheckCircle,
@@ -85,7 +85,6 @@ const serviceCategories = [
     stats: { projects: '100+', satisfaction: '100%' }
   }
 ];
-
 const whyChooseUs = [
   {
     icon: Award,
@@ -108,7 +107,6 @@ const whyChooseUs = [
     description: 'Serving clients worldwide with local expertise'
   }
 ];
-
 const testimonials = [
   {
     name: 'Sarah Johnson',
@@ -132,12 +130,10 @@ const testimonials = [
     rating: 5
   }
 ];
-
 export default function ServicesOverviewPage() {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
