@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -16,9 +12,6 @@ import ContactPage from '../pages/contact';
 import ServicesPage from '../pages/services';
 import PricingPage from '../pages/pricing';
 ;
-<<<<<<< HEAD
-export default function App() {; return (; <ErrorBoundary>; <Router>; <div className = "min-h-screen bg-gray-50">; <Header />; <Sidebar />; <main className = "flex-1 lg:ml-80">; <Routes>; <Route path = "/" element = {<HomePage />} />; <Route path = "/about" element = {<AboutPage />} />; <Route path = "/contact" element = {<ContactPage />} />; <Route path = "/services" element = {<ServicesPage />} />; <Route path = "/pricing" element = {<PricingPage />} />; </Routes>; </main>; <Footer />; </div>; </Router>; </ErrorBoundary>; )};
-=======
 export default function App() {;
   return (;
     <ErrorBoundary>;
@@ -40,7 +33,6 @@ export default function App() {;
       </Router>;
     </ErrorBoundary>;
   );
-=======
 import React from 'react',
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
 import { Header } from './components/Header',
@@ -76,6 +68,4 @@ export default function App() {,
       </Router>,
     </ErrorBoundary>,
   ),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
