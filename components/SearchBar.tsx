@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;

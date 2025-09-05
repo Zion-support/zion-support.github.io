@@ -67,7 +67,7 @@ const NotificationContainer: React.FC = () => {
 
 const NotificationItem: React.FC<{
   notification: Notification;
-  onRemove: (id: string) => void;
+  onRemove: (_id: string) => void;
 }> = ({ notification, onRemove }) => {
   const icons = {
     success: CheckCircle,

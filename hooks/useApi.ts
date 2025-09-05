@@ -36,7 +36,7 @@ export function useApi<T>(
     if (options.immediate !== false) {
       fetchData();
     }
-  }, []);
+  }, [fetchData, options.immediate]);
 
   return {
     data,
