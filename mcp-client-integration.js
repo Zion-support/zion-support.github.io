@@ -5,8 +5,8 @@
  * Placeholder for MCP client integration functionality
  */
 
-console.log('🔌 MCP Client Integration - Placeholder');
-console.log('This system is not yet implemented but will provide MCP client integration.');
+// console.log('🔌 MCP Client Integration - Placeholder');
+// console.log('This system is not yet implemented but will provide MCP client integration.');
 
 // Placeholder functionality
 class MCPClientIntegration {
@@ -15,7 +15,7 @@ class MCPClientIntegration {
   }
 
   connect() {
-    console.log('MCP client would connect here');
+    // console.log('MCP client would connect here');
     return { success: true, message: 'Placeholder connection' };
   }
 

@@ -16,7 +16,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    // console.log('Form submitted:', formData);
   };
 
   const handleChange = (e) => {
@@ -28,37 +28,37 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      title: "General Inquiries",
-      email: "info@ziontechgroup.com",
-      phone: "+1 (555) 123-4567"
+      title: &quot;General Inquiries&quot;,
+      email: &quot;info@ziontechgroup.com&quot;,
+      phone: &quot;+1 (555) 123-4567&quot;
     },
     {
-      title: "Sales & Partnerships",
-      email: "sales@ziontechgroup.com",
-      phone: "+1 (555) 123-4568"
+      title: &quot;Sales & Partnerships&quot;,
+      email: &quot;sales@ziontechgroup.com&quot;,
+      phone: &quot;+1 (555) 123-4568&quot;
     },
     {
-      title: "Technical Support",
-      email: "support@ziontechgroup.com",
-      phone: "+1 (555) 123-4569"
+      title: &quot;Technical Support&quot;,
+      email: &quot;support@ziontechgroup.com&quot;,
+      phone: &quot;+1 (555) 123-4569&quot;
     }
   ];
 
   const offices = [
     {
-      city: "San Francisco",
-      address: "123 Innovation Drive, San Francisco, CA 94105",
-      phone: "+1 (555) 123-4567"
+      city: &quot;San Francisco&quot;,
+      address: &quot;123 Innovation Drive, San Francisco, CA 94105&quot;,
+      phone: &quot;+1 (555) 123-4567&quot;
     },
     {
-      city: "New York",
-      address: "456 Tech Avenue, New York, NY 10001",
-      phone: "+1 (555) 123-4568"
+      city: &quot;New York&quot;,
+      address: &quot;456 Tech Avenue, New York, NY 10001&quot;,
+      phone: &quot;+1 (555) 123-4568&quot;
     },
     {
-      city: "London",
-      address: "789 Digital Street, London, UK EC1A 1BB",
-      phone: "+44 20 1234 5678"
+      city: &quot;London&quot;,
+      address: &quot;789 Digital Street, London, UK EC1A 1BB&quot;,
+      phone: &quot;+44 20 1234 5678&quot;
     }
   ];
 
@@ -66,131 +66,131 @@ const Contact = () => {
     <EnhancedLayout>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. Contact us for technology solutions, partnerships, or general inquiries. We're here to help transform your business." />
+        <meta name=&quot;description&quot; content=&quot;Get in touch with Zion Tech Group. Contact us for technology solutions, partnerships, or general inquiries. We're here to help transform your business.&quot; />
       </Head>
       
-      <main className="container mx-auto px-4 py-16">
+      <main className=&quot;container mx-auto px-4 py-16&quot;>
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        <div className=&quot;text-center mb-16&quot;>
+          <h1 className=&quot;text-4xl font-bold text-gray-900 mb-6&quot;>
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className=&quot;text-xl text-gray-600 max-w-3xl mx-auto&quot;>
             Ready to transform your business with cutting-edge technology? 
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className=&quot;grid lg:grid-cols-2 gap-16&quot;>
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+          <div className=&quot;bg-white rounded-lg shadow-lg p-8&quot;>
+            <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>Send us a Message</h2>
+            <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+              <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Full Name *
                   </label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
+                    type=&quot;text&quot;
+                    id=&quot;name&quot;
+                    name=&quot;name&quot;
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;Your full name&quot;
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Email Address *
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
+                    type=&quot;email&quot;
+                    id=&quot;email&quot;
+                    name=&quot;email&quot;
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;your.email@company.com&quot;
                   />
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Company
                   </label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
+                    type=&quot;text&quot;
+                    id=&quot;company&quot;
+                    name=&quot;company&quot;
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;Your company name&quot;
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor=&quot;phone&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Phone Number
                   </label>
                   <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
+                    type=&quot;tel&quot;
+                    id=&quot;phone&quot;
+                    name=&quot;phone&quot;
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;+1 (555) 123-4567&quot;
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor=&quot;service&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                   Service of Interest
                 </label>
                 <select
-                  id="service"
-                  name="service"
+                  id=&quot;service&quot;
+                  name=&quot;service&quot;
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
                 >
-                  <option value="">Select a service</option>
-                  <option value="ai-development">AI Development</option>
-                  <option value="cloud-services">Cloud Services</option>
-                  <option value="blockchain">Blockchain Solutions</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="mobile-development">Mobile Development</option>
-                  <option value="data-analytics">Data Analytics</option>
-                  <option value="consulting">Technology Consulting</option>
-                  <option value="other">Other</option>
+                  <option value="&quot;>Select a service</option>
+                  <option value=&quot;ai-development&quot;>AI Development</option>
+                  <option value=&quot;cloud-services&quot;>Cloud Services</option>
+                  <option value=&quot;blockchain&quot;>Blockchain Solutions</option>
+                  <option value=&quot;web-development&quot;>Web Development</option>
+                  <option value=&quot;mobile-development&quot;>Mobile Development</option>
+                  <option value=&quot;data-analytics&quot;>Data Analytics</option>
+                  <option value=&quot;consulting&quot;>Technology Consulting</option>
+                  <option value=&quot;other&quot;>Other</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor=&quot;message" className="block text-sm font-medium text-gray-700 mb-2&quot;>
                   Message *
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
+                  id=&quot;message&quot;
+                  name=&quot;message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project or how we can help..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                  placeholder=&quot;Tell us about your project or how we can help...&quot;
                 />
               </div>
 
               <button
-                type="submit"
+                type=&quot;submit"
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Send Message

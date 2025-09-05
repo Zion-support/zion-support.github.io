@@ -1,31 +1,31 @@
 
-import React from "react";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+import React from &quot;react&quot;;
+import { useOnboardingStatus } from &quot;@/hooks/useOnboardingStatus&quot;;
+import { PlusCircle, SendIcon, InboxIcon } from &quot;lucide-react&quot;;
+import { OnboardingTracker, OnboardingStep } from &quot;./OnboardingTracker&quot;;
 
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus();
   
   const steps: OnboardingStep[] = [
     {
-      id: "post-job",
-      label: "Post your first job",
+      id: &quot;post-job&quot;,
+      label: &quot;Post your first job&quot;,
       completed: onboardingStatus.jobPosted,
-      link: "/post-job",
-      action: "Post Job"},
+      link: &quot;/post-job&quot;,
+      action: &quot;Post Job&quot;},
     {
-      id: "invite",
-      label: "Send invitation to talent",
+      id: &quot;invite&quot;,
+      label: &quot;Send invitation to talent&quot;,
       completed: onboardingStatus.inviteSent,
-      link: "/talent",
-      action: "Find Talent"},
+      link: &quot;/talent&quot;,
+      action: &quot;Find Talent&quot;},
     {
-      id: "response",
-      label: "Receive your first application",
+      id: &quot;response&quot;,
+      label: &quot;Receive your first application&quot;,
       completed: onboardingStatus.responseReceived,
-      link: "/client-dashboard",
-      action: "Check Dashboard"}];
+      link: &quot;/client-dashboard&quot;,
+      action: &quot;Check Dashboard&quot;}];
   
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+  return <OnboardingTracker steps={steps} title=&quot;Get Started With Hiring&quot; />;
 }

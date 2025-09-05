@@ -78,37 +78,37 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         title={post.title}
         description={post.excerpt}
         image={post.featuredImage}
-        type="article"
+        type=&quot;article&quot;
         article={articleLd}
       />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+      <main className=&quot;prose dark:prose-invert max-w-3xl mx-auto py-8&quot;>
         <h1>{post.title}</h1>
-        {post.excerpt && <p className="lead">{post.excerpt}</p>}
-        <div className="flex items-center gap-3 mb-6">
+        {post.excerpt && <p className=&quot;lead&quot;>{post.excerpt}</p>}
+        <div className=&quot;flex items-center gap-3 mb-6&quot;>
           <img
             src={post.author.avatarUrl}
             alt={post.author.name}
-            className="w-10 h-10 rounded-full"
+            className=&quot;w-10 h-10 rounded-full&quot;
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement;
               target.src = '/images/blog-placeholder.svg';
             }}
           />
           <div>
-            <p className="m-0 font-medium">{post.author.name}</p>
+            <p className=&quot;m-0 font-medium&quot;>{post.author.name}</p>
             {post.author.title && (
-              <p className="m-0 text-sm text-zion-slate-light">
+              <p className=&quot;m-0 text-sm text-zion-slate-light&quot;>
                 {post.author.title}
               </p>
             )}
           </div>
         </div>
         {post.featuredImage && (
-          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+          <div className=&quot;aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6&quot;>
             <img
               src={post.featuredImage}
               alt={post.title}
-              className="object-cover w-full h-full"
+              className=&quot;object-cover w-full h-full&quot;
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.src = '/images/blog-placeholder.svg';

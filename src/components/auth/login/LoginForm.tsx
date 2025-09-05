@@ -1,29 +1,29 @@
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 import { useRouter } from 'next/router';
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { useForm, ControllerRenderProps } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import { z } from &quot;zod&quot;;
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent } from '@/lib/analytics';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useAuth } from &quot;@/context/auth/AuthProvider&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import Link from "next/link";
+  FormMessage} from &quot;@/components/ui/form&quot;;
+import { Alert, AlertDescription } from &quot;@/components/ui/alert&quot;;
+import Link from &quot;next/link&quot;;
 
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  email: z.string().email(&quot;Please enter a valid email&quot;).min(1, &quot;Email is required&quot;),
+  password: z.string().min(6, &quot;Password must be at least 6 characters&quot;),
   rememberMe: z.boolean()});
 
 
@@ -40,8 +40,8 @@ export function LoginForm() {
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
-      email: "",
-      password: "",
+      email: "&quot;,
+      password: "&quot;,
       rememberMe: false}});
 
   const onSubmit = async (data: LoginFormValues) => {
@@ -52,15 +52,15 @@ export function LoginForm() {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe);
       if (result?.error) {
-        let errorMessage = "Login failed. Please try again."; // Default generic error
+        let errorMessage = &quot;Login failed. Please try again.&quot;; // Default generic error
         if (result?.error && result?.error?.message) {
-          if (result.error.message.toLowerCase().includes("email not confirmed")) {
-            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link.";
+          if (result.error.message.toLowerCase().includes(&quot;email not confirmed&quot;)) {
+            errorMessage = &quot;Your email is not confirmed. Please check your inbox for a confirmation link.&quot;;
           } else {
             errorMessage = result.error.message;
           }
         }
-        form.setError("root", { message: errorMessage });
+        form.setError(&quot;root&quot;, { message: errorMessage });
       } else {
         fireEvent('login', { method: 'email' });
       }
@@ -108,7 +108,7 @@ export function LoginForm() {
   return (
     <Form {...form}>
       {form.formState.errors.root && (
-        <Alert variant="destructive" className="mb-4">
+        <Alert variant=&quot;destructive&quot; className=&quot;mb-4&quot;>
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
@@ -119,132 +119,132 @@ export function LoginForm() {
             form.setFocus(firstError);
           }
         })}
-        className="space-y-6"
+        className=&quot;space-y-6&quot;
       >
         <FormField
           control={form.control}
-          name="email"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "email"> }) => (
+          name=&quot;email&quot;
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues, &quot;email&quot;> }) => (
             <FormItem>
-              <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+              <FormLabel className=&quot;text-zion-slate-light&quot;>Email address</FormLabel>
               <FormControl>
-                <div className="relative">
+                <div className=&quot;relative&quot;>
                   <Input
-                    placeholder="you@example.com"
-                    aria-label="Email address"
+                    placeholder=&quot;you@example.com&quot;
+                    aria-label=&quot;Email address&quot;
                     aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className=&quot;bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple&quot;
                     {...field}
                   />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <User className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className=&quot;text-red-400&quot; />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="password"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "password"> }) => (
+          name=&quot;password&quot;
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues, &quot;password&quot;> }) => (
             <FormItem>
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>
+              <FormLabel className=&quot;text-zion-slate-light&quot;>Password</FormLabel>
               <FormControl>
-                <div className="relative">
+                <div className=&quot;relative&quot;>
                   <Input
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Enter password"
-                    aria-label="Password"
+                    type={showPassword ? &quot;text&quot; : &quot;password&quot;}
+                    placeholder=&quot;Enter password&quot;
+                    aria-label=&quot;Password&quot;
                     aria-invalid={!!form.formState.errors.password}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className=&quot;bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple&quot;
                     {...field}
                   />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <LogIn className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4&quot; />
                   <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    type=&quot;button&quot;
+                    variant=&quot;ghost&quot;
+                    size=&quot;sm&quot;
+                    className=&quot;absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan&quot;
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className=&quot;h-4 w-4&quot; />
                     ) : (
-                      <Eye className="h-4 w-4" />
+                      <Eye className=&quot;h-4 w-4&quot; />
                     )}
-                    <span className="sr-only">
-                      {showPassword ? "Hide password" : "Show password"}
+                    <span className=&quot;sr-only&quot;>
+                      {showPassword ? &quot;Hide password&quot; : &quot;Show password&quot;}
                     </span>
                   </Button>
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className=&quot;text-red-400&quot; />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="rememberMe"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues, "rememberMe"> }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+          name=&quot;rememberMe&quot;
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues, &quot;rememberMe&quot;> }) => (
+            <FormItem className=&quot;flex flex-row items-start space-x-3 space-y-0&quot;>
               <FormControl>
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                  className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
-                  aria-label="Remember me"
+                  className=&quot;border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white&quot;
+                  aria-label=&quot;Remember me&quot;
                 />
               </FormControl>
-              <div className="space-y-1 leading-none">
-                <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
+              <div className=&quot;space-y-1 leading-none&quot;>
+                <FormLabel className=&quot;text-zion-slate-light&quot;>Remember me</FormLabel>
               </div>
             </FormItem>
           )}
         />
-        <div className="flex items-center justify-between">
-          <div className="text-sm">
-            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
-            {/* If "Remember me" was previously here, it's moved. */}
+        <div className=&quot;flex items-center justify-between&quot;>
+          <div className=&quot;text-sm&quot;>
+            {/* &quot;Remember me&quot; checkbox is now above, this div can be used for &quot;Forgot Password&quot; if it's still needed */}
+            {/* If &quot;Remember me&quot; was previously here, it's moved. */}
           </div>
-          <div className="text-sm">
-            <Link href="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+          <div className=&quot;text-sm&quot;>
+            <Link href=&quot;/forgot-password&quot; className=&quot;font-medium text-zion-cyan hover:text-zion-cyan-light&quot;>
               Forgot password?
             </Link>
           </div>
         </div>
         <Button
-          type="submit"
-          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
+          type=&quot;submit&quot;
+          className=&quot;w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible&quot;
           disabled={isLoading || isSubmitting}
         >
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+          {isLoading || isSubmitting ? &quot;Logging in...&quot; : &quot;Login&quot;}
         </Button>
         {verificationMessage && (
-          <p className="text-sm text-center text-zion-slate-light mt-2">
+          <p className=&quot;text-sm text-center text-zion-slate-light mt-2&quot;>
             {verificationMessage}
           </p>
         )}
-        <div className="flex justify-between mt-4">
+        <div className=&quot;flex justify-between mt-4&quot;>
           <Button
-            type="button"
-            variant="secondary"
-            className="w-1/2 mr-2"
+            type=&quot;button&quot;
+            variant=&quot;secondary&quot;
+            className=&quot;w-1/2 mr-2&quot;
             onClick={handleResendEmail}
             disabled={isResending}
           >
             {isResending ? 'Sending...' : 'Resend / Verify e-mail'}
           </Button>
           <Button
-            type="button"
-            variant="outline"
-            className="w-1/2 ml-2"
+            type=&quot;button&quot;
+            variant=&quot;outline&quot;
+            className=&quot;w-1/2 ml-2&quot;
             onClick={handleCheckStatus}
           >
             Check status
           </Button>
         </div>
-        <p className="text-sm text-center mt-4">
-          <Link href="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+        <p className=&quot;text-sm text-center mt-4&quot;>
+          <Link href=&quot;/signup&quot; className=&quot;font-medium text-zion-cyan hover:text-zion-cyan-light&quot;>
             Create account
           </Link>
         </p>

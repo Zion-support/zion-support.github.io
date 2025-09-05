@@ -1,16 +1,16 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from &quot;react&quot;;
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ReviewForm } from "./ReviewForm";
-import { useReviews } from "@/hooks/useReviews";
+  DialogTrigger} from &quot;@/components/ui/dialog&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { ReviewForm } from &quot;./ReviewForm&quot;;
+import { useReviews } from &quot;@/hooks/useReviews&quot;;
 
 interface LeaveReviewModalProps {
   projectId: string;
@@ -61,10 +61,10 @@ export function LeaveReviewModal({
   
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-md">
+      <DialogContent className=&quot;max-w-md&quot;>
         <DialogHeader>
           <DialogTitle>
-            {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
+            {userReview ? &quot;Edit Your Review&quot; : `Rate Your Experience with ${revieweeName}`}
           </DialogTitle>
           <DialogDescription>
             Your feedback helps build a trustworthy community. It will be visible after moderation.

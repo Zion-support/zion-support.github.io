@@ -191,63 +191,63 @@ export function ChatAssistant({
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="chat-assistant-title"
+      className=&quot;fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4&quot;
+      role=&quot;dialog&quot;
+      aria-modal=&quot;true&quot;
+      aria-labelledby=&quot;chat-assistant-title&quot;
     >
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div className=&quot;w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]&quot;>
         {/* Header */}
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
-          <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 border border-zion-purple/20">
+        <div className=&quot;bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20&quot;>
+          <div className=&quot;flex items-center space-x-3&quot;>
+            <Avatar className=&quot;h-10 w-10 border border-zion-purple/20&quot;>
               <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
-              <AvatarFallback className="bg-zion-purple/20 text-white">
+              <AvatarFallback className=&quot;bg-zion-purple/20 text-white&quot;>
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
             <div>
-              <h2 id="chat-assistant-title" className="font-medium text-white">
+              <h2 id=&quot;chat-assistant-title&quot; className=&quot;font-medium text-white&quot;>
                 {recipient.name}
               </h2>
               {recipient.role && (
-                <div className="text-xs text-zion-slate">{recipient.role}</div>
+                <div className=&quot;text-xs text-zion-slate&quot;>{recipient.role}</div>
               )}
             </div>
           </div>
           <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
+            variant=&quot;ghost&quot;
+            size=&quot;icon&quot;
+            className=&quot;text-white hover:bg-zion-purple/10 rounded-full&quot;
             onClick={onClose}
-            aria-label="Close chat"
+            aria-label=&quot;Close chat&quot;
           >
-            <X className="h-5 w-5" />
+            <X className=&quot;h-5 w-5&quot; />
           </Button>
         </div>
 
         {/* Context Header (Optional) */}
         {contextHeader && (
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
+          <div className=&quot;border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3&quot;>
             {contextHeader}
           </div>
         )}
 
         {/* Messages */}
         <div
-          className="flex-1 overflow-y-auto p-4 space-y-4"
-          aria-live="polite"
+          className=&quot;flex-1 overflow-y-auto p-4 space-y-4&quot;
+          aria-live=&quot;polite&quot;
         >
           {currentMessages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8 space-y-4">
+            <div className=&quot;text-center text-zion-slate py-8 space-y-4&quot;>
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className=&quot;flex flex-wrap justify-center gap-2&quot;>
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
-                      variant="outline"
-                      className="text-xs"
+                      variant=&quot;outline&quot;
+                      className=&quot;text-xs&quot;
                       onClick={() => handleSendMessage(q)}
                     >
                       {q}
@@ -265,39 +265,39 @@ export function ChatAssistant({
         </div>
 
         {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+        <div className=&quot;p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30&quot;>
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
 
       {showGuestModal && guestMessage && (
         <div
-          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="confirm-message-title"
+          className=&quot;fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4&quot;
+          role=&quot;dialog&quot;
+          aria-modal=&quot;true&quot;
+          aria-labelledby=&quot;confirm-message-title&quot;
         >
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
+          <div className=&quot;bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md&quot;>
             <h3
-              id="confirm-message-title"
-              className="text-lg font-semibold text-white mb-4"
+              id=&quot;confirm-message-title&quot;
+              className=&quot;text-lg font-semibold text-white mb-4&quot;
             >
               Confirm Message
             </h3>
-            <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">
+            <p className=&quot;text-zion-slate mb-6 whitespace-pre-wrap break-words&quot;>
               {guestMessage}
             </p>
-            <div className="flex justify-end space-x-3">
+            <div className=&quot;flex justify-end space-x-3&quot;>
               <Button
-                variant="outline"
+                variant=&quot;outline&quot;
                 onClick={handleModalCancel}
-                className="text-white border-zion-purple hover:bg-zion-purple/10"
+                className=&quot;text-white border-zion-purple hover:bg-zion-purple/10&quot;
               >
                 Cancel
               </Button>
               <Button
                 onClick={handleModalSendConfirm}
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
               >
                 Send
               </Button>

@@ -1,39 +1,39 @@
 
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";
-import { QuoteFormSection } from "@/components/QuoteFormSection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { PageHero } from "@/components/services/PageSections/PageHero";
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+import { useState, useEffect } from &quot;react&quot;;
+import { useSearchParams } from &quot;react-router-dom&quot;;
+import { AppLayout } from &quot;@/layout/AppLayout&quot;;
+import { ITServicePricingTable } from &quot;@/components/services/ITServicePricingTable&quot;;
+import { GlobalServiceSection } from &quot;@/components/GlobalServiceSection&quot;;
+import { QuoteFormSection } from &quot;@/components/QuoteFormSection&quot;;
+import { TrustedBySection } from &quot;@/components/TrustedBySection&quot;;
+import { CountryPricing, onsiteServicePricing } from &quot;@/data/onsiteServicePricing&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { PageHero } from &quot;@/components/services/PageSections/PageHero&quot;;
+import { CountryTabs } from &quot;@/components/services/PageSections/CountryTabs&quot;;
+import { ServiceDetailsSection } from &quot;@/components/services/PageSections/ServiceDetailsSection&quot;;
+import { ServiceProcessSteps } from &quot;@/components/services/PageSections/ServiceProcessSteps&quot;;
+import { ServiceIncludes } from &quot;@/components/services/PageSections/ServiceIncludes&quot;;
+import { EnterpriseCallToAction } from &quot;@/components/services/PageSections/EnterpriseCallToAction&quot;;
 
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("&quot;);
   
   // Check for success parameter in URL
-  const success = searchParams.get("success");
+  const success = searchParams.get(&quot;success&quot;);
   
   // Show success toast if redirected from successful payment
   useEffect(() => {
-    if (success === "true") {
+    if (success === &quot;true&quot;) {
       toast({
-        title: "Payment Successful",
-        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+        title: &quot;Payment Successful&quot;,
+        description: &quot;Your IT onsite service request has been received. Our team will contact you shortly.&quot;});
     }
   }, [success]);
   
   // Popular countries for the featured cards
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+  const popularCountries = [&quot;United States&quot;, &quot;United Kingdom&quot;, &quot;Canada&quot;, &quot;Germany&quot;, &quot;Japan&quot;, &quot;Singapore"];
   
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
@@ -69,7 +69,7 @@ export default function ITOnsiteServicesPage() {
           <PageHero />
           
           {/* Country Selection Tabs */}
-          <div className="mb-12">
+          <div className="mb-12&quot;>
             <CountryTabs 
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
@@ -92,7 +92,7 @@ export default function ITOnsiteServicesPage() {
           <ServiceIncludes />
           
           {/* Complete Pricing Table */}
-          <div id="pricing-table" className="my-16">
+          <div id=&quot;pricing-table" className="my-16">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>
               <p className="text-zion-slate-light mb-6">

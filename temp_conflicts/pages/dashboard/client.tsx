@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useMemo, useState } from &quot;react&quot;;
+import { supabase } from &quot;../../utils/supabase/client&quot;;
+import { AnimatePresence, motion } from &quot;framer-motion&quot;;
 
 type TalentSuggestion = {
   id: string;
-  match_type?: "talent_for_job" | string;
+  match_type?: &quot;talent_for_job&quot; | string;
   job_id: string;
   job_title: string;
   client_id: string;
@@ -15,7 +15,7 @@ type TalentSuggestion = {
   summary?: string;
   skills?: string[];
   hourly_rate?: number;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
+  status?: &quot;new&quot; | &quot;viewed&quot; | &quot;applied&quot; | &quot;declined&quot; | &quot;pending&quot; | string | null;
   score?: number;
   created_at?: string;
 };
@@ -27,12 +27,12 @@ interface JobGroup {
 }
 
 const SUGGESTION_TABLE_ENV =
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || &quot;ai_matches&quot;;
 
 const MAX_SUGGESTIONS_PER_JOB = 5;
 
 const badge = (
-  <span className="ml-2 inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/20">
+  <span className=&quot;ml-2 inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/20&quot;>
     Matched by AI
   </span>
 );
@@ -49,31 +49,31 @@ function InviteModal({
 }) {
   if (!open || !talent) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
-        <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-lg font-semibold">Invite to apply</h3>
-          <button onClick={onClose} className="rounded p-1 hover:bg-gray-100">
+    <div className=&quot;fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4&quot;>
+      <div className=&quot;w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl&quot;>
+        <div className=&quot;mb-4 flex items-center justify-between&quot;>
+          <h3 className=&quot;text-lg font-semibold&quot;>Invite to apply</h3>
+          <button onClick={onClose} className=&quot;rounded p-1 hover:bg-gray-100&quot;>
             ✕
           </button>
         </div>
-        <div className="space-y-4">
-          <div className="flex items-center gap-3">
+        <div className=&quot;space-y-4&quot;>
+          <div className=&quot;flex items-center gap-3&quot;>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={talent.talent_photo_url || "/default-avatar.svg"}
+              src={talent.talent_photo_url || &quot;/default-avatar.svg&quot;}
               alt={talent.talent_name}
-              className="h-10 w-10 rounded-full object-cover ring-2 ring-indigo-500/20"
+              className=&quot;h-10 w-10 rounded-full object-cover ring-2 ring-indigo-500/20&quot;
             />
             <div>
-              <div className="font-medium">{talent.talent_name}</div>
+              <div className=&quot;font-medium&quot;>{talent.talent_name}</div>
               {talent.talent_title && (
-                <div className="text-xs text-gray-500">{talent.talent_title}</div>
+                <div className=&quot;text-xs text-gray-500&quot;>{talent.talent_title}</div>
               )}
             </div>
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">
+            <label className=&quot;mb-1 block text-sm font-medium text-gray-700&quot;>
               Job
             </label>
             <input
@@ -83,11 +83,11 @@ function InviteModal({
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">
+            <label className="mb-1 block text-sm font-medium text-gray-700&quot;>
               Message (optional)
             </label>
             <textarea
-              placeholder="Share context or request a quote..."
+              placeholder=&quot;Share context or request a quote..."
               className="h-28 w-full rounded-md border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
           </div>
@@ -100,7 +100,7 @@ function InviteModal({
             </button>
             <button
               onClick={onClose}
-              className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+              className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700&quot;
             >
               Send Invite
             </button>
@@ -155,26 +155,26 @@ export default function ClientDashboardSuggestedTalents() {
       .from<TalentSuggestion>(SUGGESTION_TABLE_ENV)
       .select(
         [
-          "id",
-          "match_type",
-          "job_id",
-          "job_title",
-          "client_id",
-          "talent_id",
-          "talent_name",
-          "talent_title",
-          "talent_photo_url",
-          "summary",
-          "skills",
-          "hourly_rate",
-          "status",
-          "score",
-          "created_at"].join(",")
+          &quot;id&quot;,
+          &quot;match_type&quot;,
+          &quot;job_id&quot;,
+          &quot;job_title&quot;,
+          &quot;client_id&quot;,
+          &quot;talent_id&quot;,
+          &quot;talent_name&quot;,
+          &quot;talent_title&quot;,
+          &quot;talent_photo_url&quot;,
+          &quot;summary&quot;,
+          &quot;skills&quot;,
+          &quot;hourly_rate&quot;,
+          &quot;status&quot;,
+          &quot;score&quot;,
+          &quot;created_at&quot;].join(&quot;,&quot;)
       )
-      .eq("client_id", currentUserId)
-      .or("match_type.eq.talent_for_job,match_type.is.null")
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: false });
+      .eq(&quot;client_id&quot;, currentUserId)
+      .or(&quot;match_type.eq.talent_for_job,match_type.is.null&quot;)
+      .order(&quot;score&quot;, { ascending: false })
+      .order(&quot;created_at&quot;, { ascending: false });
 
     if (error) {
       // fail softly
@@ -192,10 +192,10 @@ export default function ClientDashboardSuggestedTalents() {
     const channel = supabase
       .channel(`ai-matches-client-${currentUserId}`)
       .on(
-        "postgres_changes",
+        &quot;postgres_changes&quot;,
         {
-          event: "INSERT",
-          schema: "public",
+          event: &quot;INSERT&quot;,
+          schema: &quot;public&quot;,
           table: SUGGESTION_TABLE_ENV,
           filter: `client_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
@@ -206,10 +206,10 @@ export default function ClientDashboardSuggestedTalents() {
     supabase
       .channel(`ai-matches-client-upd-${currentUserId}`)
       .on(
-        "postgres_changes",
+        &quot;postgres_changes&quot;,
         {
-          event: "UPDATE",
-          schema: "public",
+          event: &quot;UPDATE&quot;,
+          schema: &quot;public&quot;,
           table: SUGGESTION_TABLE_ENV,
           filter: `client_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
@@ -228,7 +228,7 @@ export default function ClientDashboardSuggestedTalents() {
       if (!key) continue;
       const group = byJob.get(key) || {
         jobId: key,
-        jobTitle: row.job_title || "Untitled Job",
+        jobTitle: row.job_title || &quot;Untitled Job",
         suggestions: []};
       if (group.suggestions.length < MAX_SUGGESTIONS_PER_JOB) {
         group.suggestions.push(row);
@@ -336,8 +336,8 @@ export default function ClientDashboardSuggestedTalents() {
                       </div>
                     )}
                     <div className="mt-4 flex items-center justify-between">
-                      <div className="text-sm text-gray-700">
-                        {s.hourly_rate ? `$${s.hourly_rate}/hr` : "Rate N/A"}
+                      <div className="text-sm text-gray-700&quot;>
+                        {s.hourly_rate ? `$${s.hourly_rate}/hr` : &quot;Rate N/A"}
                       </div>
                       <button
                         onClick={() => {

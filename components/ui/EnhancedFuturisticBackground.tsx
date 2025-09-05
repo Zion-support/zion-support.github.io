@@ -315,20 +315,20 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     <div className={`relative min-h-screen ${className}`}>
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none z-0&quot;
         style={{ background: 'transparent' }}
       />
       
       {/* Overlay gradient */}
       <div 
-        className="fixed inset-0 pointer-events-none z-0"
+        className=&quot;fixed inset-0 pointer-events-none z-0&quot;
         style={{
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
         }}
       />
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className=&quot;relative z-10&quot;>
         {children}
       </div>
     </div>

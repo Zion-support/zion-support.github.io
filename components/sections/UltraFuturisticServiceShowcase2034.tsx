@@ -104,33 +104,33 @@ export default function UltraFuturisticServiceShowcase2034() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+    <section className=&quot;py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden&quot;>
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+        <div className=&quot;absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+        <div className=&quot;absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+        <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className=&quot;text-center mb-16&quot;
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+          <h2 className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6&quot;>
             Revolutionary Technology Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className=&quot;text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed&quot;>
             Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
             Each service is designed to transform your business and propel you into the future.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mt-12&quot;>
             {[
               { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
               { label: 'Happy Customers', value: '50K+', icon: Users },
@@ -143,11 +143,11 @@ export default function UltraFuturisticServiceShowcase2034() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                className=&quot;text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300&quot;
               >
-                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <stat.icon className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
+                <div className=&quot;text-2xl font-bold text-white&quot;>{stat.value}</div>
+                <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -159,28 +159,28 @@ export default function UltraFuturisticServiceShowcase2034() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className=&quot;mb-12&quot;
         >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div className=&quot;flex flex-col md:flex-row gap-4 items-center justify-center&quot;>
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className=&quot;relative flex-1 max-w-md&quot;>
               <input
-                type="text"
-                placeholder="Search services..."
+                type=&quot;text&quot;
+                placeholder=&quot;Search services...&quot;
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className=&quot;w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
               />
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400&quot; />
             </div>
 
             {/* Category Filter */}
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              className=&quot;px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
             >
-              <option value="all">All Categories</option>
+              <option value=&quot;all&quot;>All Categories</option>
               {serviceCategories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}
@@ -196,9 +196,9 @@ export default function UltraFuturisticServiceShowcase2034() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className=&quot;mb-16&quot;
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -213,16 +213,16 @@ export default function UltraFuturisticServiceShowcase2034() {
                 }`}
                 onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
               >
-                <div className="flex items-center space-x-3 mb-4">
+                <div className=&quot;flex items-center space-x-3 mb-4&quot;>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                    <category.icon className="w-6 h-6 text-white" />
+                    <category.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                    <p className="text-sm text-gray-400">{category.description}</p>
+                    <h3 className=&quot;text-lg font-semibold text-white&quot;>{category.title}</h3>
+                    <p className=&quot;text-sm text-gray-400&quot;>{category.description}</p>
                   </div>
                 </div>
-                <div className="text-sm text-gray-300">
+                <div className=&quot;text-sm text-gray-300&quot;>
                   {category.services.length} services available
                 </div>
               </motion.div>
@@ -233,112 +233,112 @@ export default function UltraFuturisticServiceShowcase2034() {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+              className=&quot;group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105&quot;
             >
               {/* Popular Badge */}
               {service.popular && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <div className=&quot;absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold&quot;>
                   Popular
                 </div>
               )}
 
               {/* Service Icon */}
-              <div className="flex items-center justify-between mb-4">
+              <div className=&quot;flex items-center justify-between mb-4&quot;>
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
                   {service.icon}
                 </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-white">{service.price}</div>
-                  <div className="text-sm text-gray-400">{service.period}</div>
+                <div className=&quot;text-right&quot;>
+                  <div className=&quot;text-2xl font-bold text-white&quot;>{service.price}</div>
+                  <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                 </div>
               </div>
 
               {/* Service Info */}
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+              <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
                 {service.name}
               </h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>
                 {service.description}
               </p>
 
               {/* Features */}
-              <div className="space-y-2 mb-4">
+              <div className=&quot;space-y-2 mb-4&quot;>
                 {service.features.slice(0, 3).map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <div key={idx} className=&quot;flex items-center space-x-2 text-sm text-gray-400&quot;>
+                    <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
                     <span>{feature}</span>
                   </div>
                 ))}
                 {service.features.length > 3 && (
-                  <div className="text-sm text-cyan-400">
+                  <div className=&quot;text-sm text-cyan-400&quot;>
                     +{service.features.length - 3} more features
                   </div>
                 )}
               </div>
 
               {/* Service Meta */}
-              <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Clock className="w-4 h-4" />
+              <div className=&quot;grid grid-cols-2 gap-4 mb-6 text-sm&quot;>
+                <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
+                  <Clock className=&quot;w-4 h-4&quot; />
                   <span>{service.setupTime}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Users className="w-4 h-4" />
+                <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
+                  <Users className=&quot;w-4 h-4&quot; />
                   <span>{service.customers.toLocaleString()}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Star className="w-4 h-4 text-yellow-400" />
+                <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
+                  <Star className=&quot;w-4 h-4 text-yellow-400&quot; />
                   <span>{service.rating}/5</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <TrendingUp className="w-4 h-4 text-green-400" />
+                <div className=&quot;flex items-center space-x-2 text-gray-400&quot;>
+                  <TrendingUp className=&quot;w-4 h-4 text-green-400&quot; />
                   <span>{service.growthRate}</span>
                 </div>
               </div>
 
               {/* Market Position */}
-              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>
-                <div className="text-sm text-gray-300 leading-relaxed">
+              <div className=&quot;mb-4 p-3 rounded-lg bg-white/5 border border-white/10&quot;>
+                <div className=&quot;text-xs text-gray-400 mb-1&quot;>Market Position</div>
+                <div className=&quot;text-sm text-gray-300 leading-relaxed&quot;>
                   {service.marketPosition}
                 </div>
               </div>
 
               {/* ROI */}
-              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
-                <div className="text-sm text-green-300 font-medium">
+              <div className=&quot;mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30&quot;>
+                <div className=&quot;text-xs text-green-400 mb-1 font-semibold&quot;>Expected ROI</div>
+                <div className=&quot;text-sm text-green-300 font-medium&quot;>
                   {service.roi}
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex space-x-3">
+              <div className=&quot;flex space-x-3&quot;>
                 <a
                   href={service.link}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
+                  className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group&quot;
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className=&quot;w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform&quot; />
                 </a>
-                <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">
-                  <Eye className="w-4 h-4" />
+                <button className=&quot;px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200&quot;>
+                  <Eye className=&quot;w-4 h-4&quot; />
                 </button>
               </div>
 
               {/* Trial Info */}
-              <div className="mt-4 text-center">
-                <div className="text-sm text-gray-400">
-                  <span className="text-cyan-400 font-semibold">{service.trialDays} days</span> free trial
+              <div className=&quot;mt-4 text-center&quot;>
+                <div className=&quot;text-sm text-gray-400&quot;>
+                  <span className=&quot;text-cyan-400 font-semibold&quot;>{service.trialDays} days</span> free trial
                 </div>
               </div>
             </motion.div>
@@ -351,32 +351,32 @@ export default function UltraFuturisticServiceShowcase2034() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-20"
+          className=&quot;text-center mt-20&quot;
         >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm&quot;>
+            <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
               Join thousands of businesses already leveraging our cutting-edge technology solutions. 
               Get started today and experience the future of business automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg&quot;
               >
                 Start Your Free Trial
               </a>
                              <a
-                 href="/pricing-2034"
-                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
+                 href=&quot;/pricing-2034&quot;
+                 className=&quot;px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg&quot;
                >
                  View Pricing
                </a>
             </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <Phone className="w-4 h-4 inline mr-2" />
+            <div className=&quot;mt-6 text-sm text-gray-400&quot;>
+              <Phone className=&quot;w-4 h-4 inline mr-2&quot; />
               Need help? Call us at {contactInfo.mobile}
             </div>
           </div>

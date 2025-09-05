@@ -1,7 +1,7 @@
-"use client";
+"use client&quot;;
 
-import { Suspense, lazy, Component, ReactNode } from "react";
-import { useState, useEffect } from "react";
+import { Suspense, lazy, Component, ReactNode } from &quot;react&quot;;
+import { useState, useEffect } from &quot;react&quot;;
 
 // Lazy load components for better performance
 const LazyComponent = ({ component: Component, fallback, ...props }: {
@@ -36,7 +36,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Error caught by boundary:", error, errorInfo);
+    console.error(&quot;Error caught by boundary:", error, errorInfo);
   }
 
   render() {
@@ -46,7 +46,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>
           <button
             onClick={() => this.setState({ hasError: false })}
-            className="btn-primary"
+            className="btn-primary&quot;
           >
             Try again
           </button>
@@ -59,14 +59,14 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 }
 
 // Loading spinner component
-export function LoadingSpinner({ size = "md", className = "" }: { 
-  size?: "sm" | "md" | "lg"; 
+export function LoadingSpinner({ size = &quot;md&quot;, className = "&quot; }: { 
+  size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;; 
   className?: string;
 }) {
   const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-6 h-6",
-    lg: "w-8 h-8"
+    sm: &quot;w-4 h-4&quot;,
+    md: &quot;w-6 h-6&quot;,
+    lg: &quot;w-8 h-8&quot;
   };
 
   return (
@@ -84,7 +84,7 @@ export function Skeleton({ className = "", lines = 1 }: {
       {Array.from({ length: lines }).map((_, i) => (
         <div
           key={i}
-          className="h-4 bg-[var(--border)] rounded mb-2 last:mb-0"
+          className="h-4 bg-[var(--border)] rounded mb-2 last:mb-0&quot;
           style={{ width: `${Math.random() * 40 + 60}%` }}
         />
       ))}
@@ -102,12 +102,12 @@ export function usePerformanceMonitor(componentName: string) {
       const duration = endTime - startTime;
       
       // Log performance metrics in development
-      if (process.env.NODE_ENV === "development") {
-        console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
+      if (process.env.NODE_ENV === &quot;development&quot;) {
+        // console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
       }
       
       // Send to analytics in production
-      if (process.env.NODE_ENV === "production" && duration > 100) {
+      if (process.env.NODE_ENV === &quot;production" && duration > 100) {
         // Could send to analytics service here
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }

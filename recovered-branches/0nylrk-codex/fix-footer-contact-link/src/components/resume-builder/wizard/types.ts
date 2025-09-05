@@ -1,5 +1,5 @@
 
-import { Resume } from "@/types/resume";
+import { Resume } from &quot;@/types/resume&quot;;
 
 export interface StepProps {
   id: string;

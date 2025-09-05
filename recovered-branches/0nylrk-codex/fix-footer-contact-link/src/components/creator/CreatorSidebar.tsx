@@ -1,5 +1,5 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from &quot;lucide-react&quot;;
 import {
   Sidebar,
   SidebarContent,
@@ -8,7 +8,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-  SidebarGroupContent} from "@/components/ui/sidebar";
+  SidebarGroupContent} from &quot;@/components/ui/sidebar&quot;;
 
 export function AppSidebar() {
   return (
@@ -20,26 +20,26 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/creator-dashboard">
+                  <a href=&quot;/creator-dashboard&quot;>
                     <Home size={16} />
                     <span>Home</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/messaging">
+                  <a href=&quot;/messaging&quot;>
                     <Mail size={16} />
                     <span>Messages</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/notifications">
+                  <a href=&quot;/notifications&quot;>
                     <Bell size={16} />
                     <span>Notifications</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -52,18 +52,18 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/publish">
+                  <a href=&quot;/publish&quot;>
                     <FileText size={16} />
                     <span>My Content</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/analytics">
+                  <a href=&quot;/analytics&quot;>
                     <Search size={16} />
                     <span>Analytics</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -76,18 +76,18 @@ export function AppSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/profile">
+                  <a href=&quot;/profile&quot;>
                     <Users size={16} />
                     <span>Profile</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/settings">
+                  <a href=&quot;/settings&quot;>
                     <Settings size={16} />
                     <span>Settings</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

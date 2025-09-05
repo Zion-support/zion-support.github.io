@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`);
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;zion-protocol-${edition}.pdf&quot;`);
 
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;

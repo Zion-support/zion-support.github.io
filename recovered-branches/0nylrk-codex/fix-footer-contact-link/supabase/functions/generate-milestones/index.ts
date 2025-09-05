@@ -1,6 +1,6 @@
 
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -27,7 +27,7 @@ serve(async (req) => {
     You are an expert project manager who specializes in breaking down projects into clear milestones.
     
     Based on the following project details:
-    - Project Scope: "${scope}"
+    - Project Scope: &quot;${scope}&quot;
     - Project Timeline: ${startDate} to ${endDate}
     - Project Type: ${projectType}
     
@@ -41,7 +41,7 @@ serve(async (req) => {
     4. Estimated Hours: Reasonable effort estimate
     
     Format the response as a valid JSON array of milestone objects with these fields:
-    "title", "description", "dueDate", "estimatedHours"
+    &quot;title&quot;, &quot;description&quot;, &quot;dueDate&quot;, &quot;estimatedHours&quot;
     
     Ensure your response is ONLY the JSON array with no additional text.
     `;

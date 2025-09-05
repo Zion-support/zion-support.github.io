@@ -14,8 +14,8 @@ export function EducationList({ educationEntries, onEdit, onDelete }: EducationL
   }
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Education</h3>
+    <div className=&quot;space-y-4&quot;>
+      <h3 className=&quot;text-md font-medium&quot;>Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem 
           key={edu.id} 

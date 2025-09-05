@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
 
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
@@ -77,11 +77,11 @@ export function usePricingSuggestionAnalytics(days = 30) {
         // Process data and setAnalytics({...})
 
       } catch (error) {
-        console.error("Error fetching pricing suggestion analytics:", error);
+        console.error(&quot;Error fetching pricing suggestion analytics:&quot;, error);
         setAnalytics({
           ...analytics,
           isLoading: false,
-          error: "Failed to load pricing analytics data."
+          error: &quot;Failed to load pricing analytics data.&quot;
         });
       }
     };

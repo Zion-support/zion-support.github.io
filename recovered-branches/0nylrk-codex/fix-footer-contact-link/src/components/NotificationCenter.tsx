@@ -38,9 +38,9 @@ export const NotificationCenter: React.FC = () => {
           await fetchNotifications();
           setError(null);
         } catch (err) {
-          console.error("Failed to fetch notifications:", err);
-          setError("Couldn't load notifications");
-          toast.error("Failed to load notifications");
+          console.error(&quot;Failed to fetch notifications:&quot;, err);
+          setError(&quot;Couldn't load notifications&quot;);
+          toast.error(&quot;Failed to load notifications&quot;);
         }
       };
       
@@ -51,10 +51,10 @@ export const NotificationCenter: React.FC = () => {
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
-      toast.success("All notifications marked as read");
+      toast.success(&quot;All notifications marked as read&quot;);
     } catch (err) {
-      console.error("Failed to mark notifications as read:", err);
-      toast.error("Failed to update notifications");
+      console.error(&quot;Failed to mark notifications as read:&quot;, err);
+      toast.error(&quot;Failed to update notifications&quot;);
     }
   };
 
@@ -65,16 +65,16 @@ export const NotificationCenter: React.FC = () => {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="relative">
-          <Bell className="h-5 w-5 text-zion-slate-light" />
+        <Button variant=&quot;ghost&quot; size=&quot;icon&quot; className=&quot;relative&quot;>
+          <Bell className=&quot;h-5 w-5 text-zion-slate-light&quot; />
           {unreadCount > 0 && (
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+            <span className=&quot;absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium&quot;>
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+      <PopoverContent className=&quot;w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col&quot;>
         <NotificationHeader 
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 

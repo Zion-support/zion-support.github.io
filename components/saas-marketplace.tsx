@@ -28,7 +28,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $19.99/month',
       rating: 4.8,
       users: '2M+',
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      icon: <Zap className=&quot;w-8 h-8 text-orange-400&quot; />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         '5000+ app integrations',
@@ -50,7 +50,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $8/month',
       rating: 4.7,
       users: '20M+',
-      icon: <Code className="w-8 h-8 text-gray-400" />,
+      icon: <Code className=&quot;w-8 h-8 text-gray-400&quot; />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
         'Note-taking & docs',
@@ -72,7 +72,7 @@ export default function SaaSMarketplacePage() {
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
-      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      icon: <Shield className=&quot;w-8 h-8 text-blue-400&quot; />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
         'Global payment methods',
@@ -94,7 +94,7 @@ export default function SaaSMarketplacePage() {
       pricing: '$39 - $999/month',
       rating: 4.6,
       users: '25K+',
-      icon: <Users className="w-8 h-8 text-green-400" />,
+      icon: <Users className=&quot;w-8 h-8 text-green-400&quot; />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Live chat',
@@ -116,7 +116,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      icon: <BarChart3 className=&quot;w-8 h-8 text-purple-400&quot; />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'User behavior tracking',
@@ -138,7 +138,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $57/month',
       rating: 4.7,
       users: '35K+',
-      icon: <Database className="w-8 h-8 text-green-400" />,
+      icon: <Database className=&quot;w-8 h-8 text-green-400&quot; />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Fully managed MongoDB',
@@ -160,7 +160,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100K+',
-      icon: <Cloud className="w-8 h-8 text-black" />,
+      icon: <Cloud className=&quot;w-8 h-8 text-black&quot; />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
         'Zero-config deployment',
@@ -182,7 +182,7 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $8/month',
       rating: 4.9,
       users: '10K+',
-      icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
+      icon: <TrendingUp className=&quot;w-8 h-8 text-blue-400&quot; />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
         'Issue tracking',
@@ -210,54 +210,54 @@ export default function SaaSMarketplacePage() {
     <>
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
-        <meta property="og:title" content="SaaS Marketplace - Zion Tech Group" />
-        <meta property="og:description" content="Curated selection of the best micro SaaS services for modern businesses." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=&quot;description&quot; content=&quot;Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;SaaS Marketplace - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Curated selection of the best micro SaaS services for modern businesses.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]&quot; />
         </div>
 
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20&quot; />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-20 animate-fade-in">
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in">
-                <Globe className="w-4 h-4 mr-2" />
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;mb-20 animate-fade-in&quot;>
+            <div className=&quot;mb-8&quot;>
+              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in&quot;>
+                <Globe className=&quot;w-4 h-4 mr-2&quot; />
                 Curated SaaS Solutions
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
+            <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
               SaaS Marketplace
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+            <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light&quot;>
               Discover the best micro SaaS services that power modern businesses. 
               Hand-picked tools for automation, productivity, and growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+            <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
               <Button
-                href="#services"
-                size="lg"
-                className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
+                href=&quot;#services&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40&quot;
                 style={{ animationDelay: '0.2s' }}
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
               </Button>
               <Button
-                href="/contact"
-                variant="outline"
-                size="lg"
-                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+                href=&quot;/contact&quot;
+                variant=&quot;outline&quot;
+                size=&quot;lg&quot;
+                className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
                 style={{ animationDelay: '0.4s' }}
               >
                 Get Recommendations
@@ -266,39 +266,39 @@ export default function SaaSMarketplacePage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 {microSaasServices.length}+
               </div>
-              <div className="text-gray-400 text-sm">Curated Services</div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Curated Services</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 9
               </div>
-              <div className="text-gray-400 text-sm">Categories</div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Categories</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 4.7+
               </div>
-              <div className="text-gray-400 text-sm">Avg Rating</div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Avg Rating</div>
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+            <div className=&quot;text-center group&quot;>
+              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300&quot;>
                 100K+
               </div>
-              <div className="text-gray-400 text-sm">Total Users</div>
+              <div className=&quot;text-gray-400 text-sm&quot;>Total Users</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+      <section className=&quot;py-16 bg-gray-900&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
             {categories.map((category) => (
               <button
                 key={category}
@@ -317,13 +317,13 @@ export default function SaaSMarketplacePage() {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section id=&quot;services&quot; className=&quot;py-24 bg-black&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;text-center mb-20&quot;>
+            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
               {selectedCategory === 'All' ? 'All Services' : `${selectedCategory} Services`}
             </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               {selectedCategory === 'All' 
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`
@@ -331,66 +331,66 @@ export default function SaaSMarketplacePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {filteredServices.map((service, index) => (
               <Card
                 key={index}
-                className="group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
+                className=&quot;group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1&quot;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
+                <div className=&quot;flex items-start space-x-6&quot;>
+                  <div className=&quot;relative&quot;>
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {service.icon}
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                  <div className=&quot;flex-1&quot;>
+                    <div className=&quot;flex items-center justify-between mb-2&quot;>
+                      <h3 className=&quot;text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300&quot;>
                         {service.name}
                       </h3>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{service.rating}</span>
+                      <div className=&quot;flex items-center space-x-2&quot;>
+                        <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
+                        <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
-                      <span className="px-2 py-1 bg-gray-800 rounded-full">{service.category}</span>
+                    <div className=&quot;flex items-center space-x-4 mb-3 text-sm text-gray-400&quot;>
+                      <span className=&quot;px-2 py-1 bg-gray-800 rounded-full&quot;>{service.category}</span>
                       <span>{service.users} users</span>
-                      <span className="text-green-400">{service.pricing}</span>
+                      <span className=&quot;text-green-400&quot;>{service.pricing}</span>
                     </div>
 
-                    <p className="text-gray-400 leading-relaxed mb-4">
+                    <p className=&quot;text-gray-400 leading-relaxed mb-4&quot;>
                       {service.description}
                     </p>
 
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Key Features:</h4>
+                      <div className=&quot;grid grid-cols-2 gap-2&quot;>
                         {service.features.slice(0, 4).map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                            <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
+                            <Check className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between">
+                    <div className=&quot;flex items-center justify-between&quot;>
                       <Button
                         href={service.website}
-                        variant="outline"
-                        size="sm"
-                        className="group-hover:border-blue-500 group-hover:text-blue-400"
+                        variant=&quot;outline&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;group-hover:border-blue-500 group-hover:text-blue-400&quot;
                       >
                         Visit Website
-                        <ExternalLink className="w-4 h-4 ml-2" />
+                        <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
                       </Button>
                       
-                      <div className="text-right">
-                        <div className="text-xs text-gray-500 mb-1">Use Case:</div>
-                        <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
+                      <div className=&quot;text-right&quot;>
+                        <div className=&quot;text-xs text-gray-500 mb-1&quot;>Use Case:</div>
+                        <div className=&quot;text-sm text-gray-300 max-w-xs&quot;>{service.useCase}</div>
                       </div>
                     </div>
                   </div>
@@ -402,31 +402,31 @@ export default function SaaSMarketplacePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+      <section className=&quot;py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
+          <h2 className=&quot;text-4xl sm:text-5xl font-bold text-white mb-8&quot;>
             Need Help Choosing?
           </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className=&quot;text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>
             Our team of experts can help you select the perfect SaaS tools for your business needs. 
             Get personalized recommendations and implementation support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
             <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
+              href=&quot;/contact&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-blue-600 hover:bg-gray-100 shadow-2xl&quot;
             >
               Get Expert Advice
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
             </Button>
             <Button
-              href="/services"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+              href=&quot;/services&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl&quot;
             >
               View Our Services
             </Button>

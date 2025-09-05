@@ -1,10 +1,10 @@
 
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
+import React, { useState } from &quot;react&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from &quot;@/components/ui/card&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Check, Pencil } from &quot;lucide-react&quot;;
 
 interface GeneratedDescriptionDisplayProps {
   description: string;
@@ -23,30 +23,30 @@ export function GeneratedDescriptionDisplay({
     onSave(editedDescription);
     setIsEditing(false);
     toast({
-      title: "Description Saved",
-      description: "Your edited description has been saved."
+      title: &quot;Description Saved&quot;,
+      description: &quot;Your edited description has been saved.&quot;
     });
   };
 
   return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">
+    <Card className=&quot;border border-zion-blue-light bg-zion-blue-dark&quot;>
       <CardHeader>
-        <CardTitle className="text-white flex items-center justify-between">
+        <CardTitle className=&quot;text-white flex items-center justify-between&quot;>
           Generated Description
           <Button 
-            variant="outline" 
-            size="sm" 
+            variant=&quot;outline&quot; 
+            size=&quot;sm&quot; 
             onClick={() => setIsEditing(!isEditing)}
-            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+            className=&quot;border-zion-blue-light text-zion-slate-light hover:text-white&quot;
           >
             {isEditing ? (
               <>
-                <Check className="h-4 w-4 mr-1" />
+                <Check className=&quot;h-4 w-4 mr-1&quot; />
                 Done
               </>
             ) : (
               <>
-                <Pencil className="h-4 w-4 mr-1" />
+                <Pencil className=&quot;h-4 w-4 mr-1&quot; />
                 Edit
               </>
             )}
@@ -58,10 +58,10 @@ export function GeneratedDescriptionDisplay({
           <Textarea
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+            className=&quot;bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none&quot;
           />
         ) : (
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+          <div className=&quot;bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap&quot;>
             {editedDescription}
           </div>
         )}
@@ -70,7 +70,7 @@ export function GeneratedDescriptionDisplay({
         <CardFooter>
           <Button 
             onClick={handleSave}
-            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+            className=&quot;w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white&quot;
           >
             Save Changes
           </Button>

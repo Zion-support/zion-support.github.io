@@ -101,7 +101,7 @@ export default function ComprehensivePricingPage() {
         'Community forum access',
         'Basic analytics'
       ],
-      icon: <Star className="w-6 h-6" />,
+      icon: <Star className=&quot;w-6 h-6&quot; />,
       color: 'from-blue-500 to-cyan-600',
       popular: false
     },
@@ -118,7 +118,7 @@ export default function ComprehensivePricingPage() {
         'Advanced analytics',
         'Custom integrations'
       ],
-      icon: <Gem className="w-6 h-6" />,
+      icon: <Gem className=&quot;w-6 h-6&quot; />,
       color: 'from-purple-500 to-pink-600',
       popular: true
     },
@@ -136,7 +136,7 @@ export default function ComprehensivePricingPage() {
         'White-label options',
         'SLA guarantees'
       ],
-      icon: <Crown className="w-6 h-6" />,
+      icon: <Crown className=&quot;w-6 h-6&quot; />,
       color: 'from-yellow-500 to-orange-600',
       popular: false
     }
@@ -148,25 +148,25 @@ export default function ComprehensivePricingPage() {
       metric: '$15.2B',
       label: 'Total Market Size',
       description: 'Combined market value of all services',
-      icon: <ChartBar className="w-6 h-6" />
+      icon: <ChartBar className=&quot;w-6 h-6&quot; />
     },
     {
       metric: '400+',
       label: 'Services Available',
       description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className="w-6 h-6" />
+      icon: <Database className=&quot;w-6 h-6&quot; />
     },
     {
       metric: '99.99%',
       label: 'Uptime Guarantee',
       description: 'Enterprise-grade reliability',
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className=&quot;w-6 h-6&quot; />
     },
     {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-      icon: <TrendingUp className="w-6 h-6" />
+      icon: <TrendingUp className=&quot;w-6 h-6&quot; />
     }
   ];
 
@@ -192,38 +192,38 @@ export default function ComprehensivePricingPage() {
   };
 
   return (
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-      <div className="min-h-screen">
+    <UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans</title>
-          <meta name="description" content="Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size." />
-          <meta name="keywords" content="micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Comprehensive Pricing | Zion Tech Group" />
-          <meta property="og:description" content="Transparent pricing for all micro SaaS services with market analysis and ROI guarantees." />
-          <meta property="og:url" content="https://ziontechgroup.com/comprehensive-pricing" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing" />
+          <meta name=&quot;description&quot; content=&quot;Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Comprehensive Pricing | Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/comprehensive-pricing&quot; />
         </Head>
 
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
+        <section className=&quot;relative py-20 overflow-hidden&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
+            <div className=&quot;max-w-5xl mx-auto&quot;>
               <motion.h1 
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Comprehensive
                 </span>
                 <br />
-                <span className="text-white">Pricing & Plans</span>
+                <span className=&quot;text-white&quot;>Pricing & Plans</span>
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -234,42 +234,42 @@ export default function ComprehensivePricingPage() {
               
               {/* Market Stats */}
               <motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+                className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                    <div className="text-gray-500 text-xs">{stat.description}</div>
+                  <div key={index} className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{stat.metric}</div>
+                    <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
+                    <div className=&quot;text-gray-500 text-xs&quot;>{stat.description}</div>
                   </div>
                 ))}
               </motion.div>
 
               {/* CTA Buttons */}
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
-                  variant="primary" 
-                  size="lg"
+                  variant=&quot;primary&quot; 
+                  size=&quot;lg&quot;
                   onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   View Pricing Tiers
-                  <DollarSign className="ml-2 w-5 h-5" />
+                  <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
                 <Button 
-                  variant="futuristic" 
-                  size="lg"
+                  variant=&quot;futuristic&quot; 
+                  size=&quot;lg&quot;
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Browse All Services
-                  <Search className="ml-2 w-5 h-5" />
+                  <Search className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
               </motion.div>
             </div>
@@ -277,52 +277,52 @@ export default function ComprehensivePricingPage() {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">{contactInfo.mobile}</span>
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white">{contactInfo.email}</span>
+        <section className=&quot;py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
+            <div className=&quot;flex flex-col md:flex-row justify-between items-center gap-4&quot;>
+              <div className=&quot;flex items-center gap-4&quot;>
+                <Phone className=&quot;w-5 h-5 text-cyan-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.mobile}</span>
+                <Mail className=&quot;w-5 h-5 text-purple-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center gap-4">
-                <MapPin className="w-5 h-5 text-green-400" />
-                <span className="text-white">{contactInfo.address}</span>
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-white">{contactInfo.website}</span>
+              <div className=&quot;flex items-center gap-4&quot;>
+                <MapPin className=&quot;w-5 h-5 text-green-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.address}</span>
+                <Globe className=&quot;w-5 h-5 text-blue-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.website}</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Pricing Tiers */}
-        <section id="pricing-tiers" className="py-20">
-          <div className="container mx-auto px-4">
+        <section id=&quot;pricing-tiers&quot; className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div 
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
+                <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
                   Flexible Pricing
                 </span>
                 <br />
-                <span className="text-white">for Every Business</span>
+                <span className=&quot;text-white&quot;>for Every Business</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
 
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial=&quot;hidden&quot;
+              whileInView=&quot;visible&quot;
               viewport={{ once: true }}
             >
               {pricingTiers.map((tier, index) => (
@@ -333,45 +333,45 @@ export default function ComprehensivePricingPage() {
                 >
                   <UltraFuturisticCard
                     variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
-                    size="large"
+                    size=&quot;large&quot;
                     className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
                   >
                     {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                      <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
+                        <div className=&quot;bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold&quot;>
                           Most Popular
                         </div>
                       </div>
                     )}
                     
-                    <div className="text-center mb-8">
+                    <div className=&quot;text-center mb-8&quot;>
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
                         {tier.icon}
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
-                      <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
-                      <div className="text-sm text-gray-400">{tier.period}</div>
+                      <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{tier.name}</h3>
+                      <p className=&quot;text-gray-300 text-sm mb-4&quot;>{tier.description}</p>
+                      <div className=&quot;text-4xl font-bold text-cyan-400 mb-2&quot;>{tier.price}</div>
+                      <div className=&quot;text-sm text-gray-400&quot;>{tier.period}</div>
                     </div>
                     
-                    <div className="space-y-3 mb-8">
+                    <div className=&quot;space-y-3 mb-8&quot;>
                       {tier.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                        <div key={idx} className=&quot;flex items-center gap-2&quot;>
+                          <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
+                          <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="text-center">
+                    <div className=&quot;text-center&quot;>
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
-                         size="md"
+                         size=&quot;md&quot;
                          onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                         className="w-full"
+                         className=&quot;w-full&quot;
                        >
                         Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
                       </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -382,24 +382,24 @@ export default function ComprehensivePricingPage() {
         </section>
 
         {/* Services Pricing Grid */}
-        <section id="services-pricing" className="py-20">
-          <div className="container mx-auto px-4">
+        <section id=&quot;services-pricing&quot; className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             {/* Filters and Controls */}
             <motion.div 
-              className="mb-8"
+              className=&quot;mb-8&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex flex-wrap gap-4">
+              <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
+                <div className=&quot;flex flex-wrap gap-4&quot;>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400&quot;
                   >
-                    <option value="All">All Categories</option>
+                    <option value=&quot;All&quot;>All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
                       <option key={category} value={category}>{category}</option>
                     ))}
@@ -408,7 +408,7 @@ export default function ComprehensivePricingPage() {
                   <select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400&quot;
                   >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
@@ -418,7 +418,7 @@ export default function ComprehensivePricingPage() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400&quot;
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -426,30 +426,30 @@ export default function ComprehensivePricingPage() {
                   </select>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <div className=&quot;flex items-center gap-4&quot;>
+                  <div className=&quot;relative&quot;>
+                    <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
                     <input
-                      type="text"
-                      placeholder="Search services..."
+                      type=&quot;text&quot;
+                      placeholder=&quot;Search services...&quot;
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
+                      className=&quot;pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64&quot;
                     />
                   </div>
                   
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">
+                  <div className=&quot;flex border border-gray-600 rounded-lg overflow-hidden&quot;>
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <Grid className="w-4 h-4" />
+                      <Grid className=&quot;w-4 h-4&quot; />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <List className="w-4 h-4" />
+                      <List className=&quot;w-4 h-4&quot; />
                     </button>
                   </div>
                 </div>
@@ -459,12 +459,12 @@ export default function ComprehensivePricingPage() {
             {/* Services Display */}
             <motion.div 
               className={viewMode === 'grid' 
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
+                ? &quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+                : &quot;space-y-6&quot;
               }
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial=&quot;hidden&quot;
+              whileInView=&quot;visible&quot;
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
@@ -480,97 +480,97 @@ export default function ComprehensivePricingPage() {
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
-                      <div className="text-center">
-                        <div className="text-4xl mb-4">{service.icon}</div>
-                        <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                        <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                        <div className="text-sm text-gray-400 mb-4">{service.period}</div>
+                      <div className=&quot;text-center&quot;>
+                        <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
+                        <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                        <p className=&quot;text-gray-300 mb-4 text-sm&quot;>{service.tagline}</p>
+                        <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
+                        <div className=&quot;text-sm text-gray-400 mb-4&quot;>{service.period}</div>
                         
-                        <div className="space-y-2 mb-6">
+                        <div className=&quot;space-y-2 mb-6&quot;>
                           {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm">
-                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                              <span className="text-gray-300">{feature}</span>
+                            <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                              <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
+                              <span className=&quot;text-gray-300&quot;>{feature}</span>
                             </div>
                           ))}
                         </div>
 
-                        <div className="text-center space-y-2">
+                        <div className=&quot;text-center space-y-2&quot;>
                                                      <Button 
-                             variant="primary" 
-                             size="sm"
+                             variant=&quot;primary&quot; 
+                             size=&quot;sm&quot;
                              onClick={() => window.open(service.link, '_blank')}
-                             className="w-full"
+                             className=&quot;w-full&quot;
                            >
                              Learn More
-                             <ExternalLink className="ml-2 w-4 h-4" />
+                             <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                            </Button>
                            <Button 
-                             variant="futuristic" 
-                             size="sm"
+                             variant=&quot;futuristic&quot; 
+                             size=&quot;sm&quot;
                              onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                             className="w-full"
+                             className=&quot;w-full&quot;
                            >
                              Get Pricing
-                             <DollarSign className="ml-2 w-4 h-4" />
+                             <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
                            </Button>
                         </div>
                       </div>
                     ) : (
                       // List View
-                      <div className="flex flex-col md:flex-row gap-6 w-full">
-                        <div className="text-4xl md:text-5xl flex-shrink-0">{service.icon}</div>
-                        <div className="flex-1">
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div className=&quot;flex flex-col md:flex-row gap-6 w-full&quot;>
+                        <div className=&quot;text-4xl md:text-5xl flex-shrink-0&quot;>{service.icon}</div>
+                        <div className=&quot;flex-1&quot;>
+                          <div className=&quot;flex flex-col md:flex-row md:items-center md:justify-between mb-4&quot;>
                             <div>
-                              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                              <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                              <p className=&quot;text-gray-300 text-sm&quot;>{service.tagline}</p>
                             </div>
-                            <div className="text-right mt-2 md:mt-0">
-                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                              <div className="text-sm text-gray-400">{service.period}</div>
+                            <div className=&quot;text-right mt-2 md:mt-0&quot;>
+                              <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</div>
+                              <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                             </div>
                           </div>
                           
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
                             <div>
-                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
-                              <div className="space-y-1">
+                              <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Key Features</h4>
+                              <div className=&quot;space-y-1&quot;>
                                 {service.features.slice(0, 4).map((feature, idx) => (
-                                  <div key={idx} className="flex items-center gap-2 text-sm">
-                                    <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                    <span className="text-gray-300">{feature}</span>
+                                  <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                                    <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
+                                    <span className=&quot;text-gray-300&quot;>{feature}</span>
                                   </div>
                                 ))}
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
-                              <div className="space-y-1 text-sm text-gray-300">
-                                <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
-                                <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
-                                <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
+                              <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Market Info</h4>
+                              <div className=&quot;space-y-1 text-sm text-gray-300&quot;>
+                                <div><span className=&quot;text-gray-400&quot;>ROI:</span> {service.roi}</div>
+                                <div><span className=&quot;text-gray-400&quot;>Market:</span> {service.marketSize}</div>
+                                <div><span className=&quot;text-gray-400&quot;>Growth:</span> {service.growthRate}</div>
                               </div>
                             </div>
                           </div>
                           
-                          <div className="flex gap-2">
+                          <div className=&quot;flex gap-2&quot;>
                                                          <Button 
-                               variant="primary" 
-                               size="sm"
+                               variant=&quot;primary&quot; 
+                               size=&quot;sm&quot;
                                onClick={() => window.open(service.link, '_blank')}
                              >
                                Learn More
-                               <ExternalLink className="ml-2 w-4 h-4" />
+                               <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                              </Button>
                              <Button 
-                               variant="futuristic" 
-                               size="sm"
+                               variant=&quot;futuristic&quot; 
+                               size=&quot;sm&quot;
                                onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
                              >
                                Get Pricing
-                               <DollarSign className="ml-2 w-4 h-4" />
+                               <DollarSign className=&quot;ml-2 w-4 h-4&quot; />
                              </Button>
                           </div>
                         </div>
@@ -583,16 +583,16 @@ export default function ComprehensivePricingPage() {
 
             {filteredServices.length === 0 && (
               <motion.div 
-                className="text-center py-16"
+                className=&quot;text-center py-16&quot;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No Services Found</h3>
+                <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or filters.</p>
                                  <Button 
-                   variant="primary"
+                   variant=&quot;primary&quot;
                    onClick={() => {
                      setSearchQuery('');
                      setSelectedCategory('All');
@@ -607,56 +607,56 @@ export default function ComprehensivePricingPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
+        <section className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
             <motion.div 
-              className="max-w-4xl mx-auto"
+              className=&quot;max-w-4xl mx-auto&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-8&quot;>
                 <Button 
-                  variant="primary" 
-                  size="lg"
+                  variant=&quot;primary&quot; 
+                  size=&quot;lg&quot;
                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
                 >
                   Contact Sales
-                  <Mail className="ml-2 w-5 h-5" />
+                  <Mail className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
                 <Button 
-                  variant="futuristic" 
-                  size="lg"
+                  variant=&quot;futuristic&quot; 
+                  size=&quot;lg&quot;
                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
                 >
                   Schedule Demo
-                  <Calendar className="ml-2 w-5 h-5" />
+                  <Calendar className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
                 <div>
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                  <Phone className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Call us anytime</div>
                 </div>
                 <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.email}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Email us 24/7</div>
                 </div>
                 <div>
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.address}</div>
-                  <div className="text-gray-400 text-sm">Visit our office</div>
+                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.address}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Visit our office</div>
                 </div>
               </div>
             </motion.div>

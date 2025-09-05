@@ -121,21 +121,21 @@ export default function ServicesIndexPage() {
   };
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+    <UltraFuturisticBackground variant=&quot;quantum&quot; intensity={1.5}>
       <Head>
         <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+        <meta name=&quot;description&quot; content=&quot;Discover curated IT services. Request quotes with AI-assisted summaries.&quot; />
       </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
+      <div className=&quot;relative&quot;>
+        <div className=&quot;absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500&quot; />
+        <div className=&quot;flex flex-col sm:flex-row gap-6&quot;>
           <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
+          <div className=&quot;flex-1&quot;>
+            <div className=&quot;mb-4 flex items-center justify-between&quot;>
+              <h1 className=&quot;text-2xl font-semibold text-white&quot;>Services</h1>
+              <div className=&quot;text-sm text-white/70&quot;>{filtered.length} results</div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
               {filtered.map((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
               ))}

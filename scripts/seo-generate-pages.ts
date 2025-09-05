@@ -44,7 +44,7 @@ async function main() {
     }
     const file = path.join(outDir, `${res.slug}.json`);
     fs.writeFileSync(file, JSON.stringify(res.payload, null, 2));
-    console.log('Wrote', file);
+    // console.log('Wrote', file);
   }
 }
 

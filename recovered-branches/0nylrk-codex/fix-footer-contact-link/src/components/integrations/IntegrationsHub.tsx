@@ -1,111 +1,111 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { IntegrationCards } from "./IntegrationCards";
-import { ZapierIntegration } from "./ZapierIntegration";
-import { Badge } from "@/components/ui/badge";
-import { WebhookManager } from "./WebhookManager";
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+import React, { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { IntegrationCards } from &quot;./IntegrationCards&quot;;
+import { ZapierIntegration } from &quot;./ZapierIntegration&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { WebhookManager } from &quot;./WebhookManager&quot;;
+import { IntegrationsSyncLog } from &quot;./IntegrationsSyncLog&quot;;
 
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
+  const [activeTab, setActiveTab] = useState(&quot;marketplace&quot;);
   
   return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex justify-between items-center&quot;>
         <div>
-          <h1 className="text-3xl font-bold">Integrations Hub</h1>
-          <p className="text-muted-foreground mt-1">
+          <h1 className=&quot;text-3xl font-bold&quot;>Integrations Hub</h1>
+          <p className=&quot;text-muted-foreground mt-1&quot;>
             Connect your platform with the tools and services you use every day
           </p>
         </div>
         
-        <div className="flex gap-2">
-          <Button variant="outline">View Documentation</Button>
+        <div className=&quot;flex gap-2&quot;>
+          <Button variant=&quot;outline&quot;>View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
         <Card>
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-center">
-              <CardTitle className="text-lg">Status</CardTitle>
-              <Badge variant="outline" className="bg-green-100 text-green-800">Healthy</Badge>
+          <CardHeader className=&quot;pb-2&quot;>
+            <div className=&quot;flex justify-between items-center&quot;>
+              <CardTitle className=&quot;text-lg&quot;>Status</CardTitle>
+              <Badge variant=&quot;outline&quot; className=&quot;bg-green-100 text-green-800&quot;>Healthy</Badge>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Connected Services</span>
-                <span className="font-medium">7 / 12</span>
+            <div className=&quot;space-y-2&quot;>
+              <div className=&quot;flex justify-between text-sm&quot;>
+                <span className=&quot;text-muted-foreground&quot;>Connected Services</span>
+                <span className=&quot;font-medium&quot;>7 / 12</span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Last Sync</span>
-                <span className="font-medium">2 mins ago</span>
+              <div className=&quot;flex justify-between text-sm&quot;>
+                <span className=&quot;text-muted-foreground&quot;>Last Sync</span>
+                <span className=&quot;font-medium&quot;>2 mins ago</span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-muted-foreground">Pending Webhooks</span>
-                <span className="font-medium">0</span>
+              <div className=&quot;flex justify-between text-sm&quot;>
+                <span className=&quot;text-muted-foreground&quot;>Pending Webhooks</span>
+                <span className=&quot;font-medium&quot;>0</span>
               </div>
             </div>
           </CardContent>
         </Card>
         
-        <Card className="md:col-span-2">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-lg">Recent Activity</CardTitle>
+        <Card className=&quot;md:col-span-2&quot;>
+          <CardHeader className=&quot;pb-2&quot;>
+            <CardTitle className=&quot;text-lg&quot;>Recent Activity</CardTitle>
           </CardHeader>
-          <CardContent className="pb-0">
-            <ul className="space-y-2 text-sm">
-              <li className="flex justify-between items-center pb-2 border-b">
+          <CardContent className=&quot;pb-0&quot;>
+            <ul className=&quot;space-y-2 text-sm&quot;>
+              <li className=&quot;flex justify-between items-center pb-2 border-b&quot;>
                 <div>
-                  <p className="font-medium">Slack notification sent</p>
-                  <p className="text-muted-foreground">New job application received</p>
+                  <p className=&quot;font-medium&quot;>Slack notification sent</p>
+                  <p className=&quot;text-muted-foreground&quot;>New job application received</p>
                 </div>
-                <Badge variant="outline">5m ago</Badge>
+                <Badge variant=&quot;outline&quot;>5m ago</Badge>
               </li>
-              <li className="flex justify-between items-center pb-2 border-b">
+              <li className=&quot;flex justify-between items-center pb-2 border-b&quot;>
                 <div>
-                  <p className="font-medium">Google Calendar sync</p>
-                  <p className="text-muted-foreground">Interview scheduled</p>
+                  <p className=&quot;font-medium&quot;>Google Calendar sync</p>
+                  <p className=&quot;text-muted-foreground&quot;>Interview scheduled</p>
                 </div>
-                <Badge variant="outline">1h ago</Badge>
+                <Badge variant=&quot;outline&quot;>1h ago</Badge>
               </li>
-              <li className="flex justify-between items-center">
+              <li className=&quot;flex justify-between items-center&quot;>
                 <div>
-                  <p className="font-medium">Zapier webhook trigger</p>
-                  <p className="text-muted-foreground">Contract signed</p>
+                  <p className=&quot;font-medium&quot;>Zapier webhook trigger</p>
+                  <p className=&quot;text-muted-foreground&quot;>Contract signed</p>
                 </div>
-                <Badge variant="outline">2h ago</Badge>
+                <Badge variant=&quot;outline&quot;>2h ago</Badge>
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="pt-4">
-            <Button variant="outline" className="w-full">View All Activity</Button>
+          <CardFooter className=&quot;pt-4&quot;>
+            <Button variant=&quot;outline&quot; className=&quot;w-full&quot;>View All Activity</Button>
           </CardFooter>
         </Card>
       </div>
       
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-3 md:w-[400px]">
-          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
-          <TabsTrigger value="zapier">Zapier</TabsTrigger>
-          <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
+      <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
+        <TabsList className=&quot;grid grid-cols-3 md:w-[400px]&quot;>
+          <TabsTrigger value=&quot;marketplace&quot;>Marketplace</TabsTrigger>
+          <TabsTrigger value=&quot;zapier&quot;>Zapier</TabsTrigger>
+          <TabsTrigger value=&quot;webhooks&quot;>Webhooks</TabsTrigger>
         </TabsList>
         
-        <div className="mt-6">
-          <TabsContent value="marketplace" className="m-0">
+        <div className=&quot;mt-6&quot;>
+          <TabsContent value=&quot;marketplace&quot; className=&quot;m-0&quot;>
             <IntegrationCards />
           </TabsContent>
           
-          <TabsContent value="zapier" className="m-0">
+          <TabsContent value=&quot;zapier&quot; className=&quot;m-0&quot;>
             <ZapierIntegration />
           </TabsContent>
           
-          <TabsContent value="webhooks" className="m-0">
+          <TabsContent value=&quot;webhooks&quot; className=&quot;m-0&quot;>
             <Card>
               <CardHeader>
                 <CardTitle>Webhook Management</CardTitle>
@@ -118,7 +118,7 @@ export function IntegrationsHub() {
               </CardContent>
             </Card>
             
-            <Card className="mt-6">
+            <Card className=&quot;mt-6&quot;>
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
                 <CardDescription>

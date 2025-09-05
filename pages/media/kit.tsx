@@ -87,12 +87,12 @@ const KitPage = () => {
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName });
     const onCopy = () => navigator.clipboard.writeText(text);
     return (
-      <div className="p-4 border rounded-lg space-y-2">
-        <div className="flex items-center justify-between">
-          <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+      <div className=&quot;p-4 border rounded-lg space-y-2&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h4 className=&quot;font-semibold&quot;>{title}</h4>
+          <button className=&quot;text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200&quot; onClick={onCopy}>Copy</button>
         </div>
-        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
+        <pre className=&quot;whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto&quot;>{text}</pre>
       </div>
     );
   };
@@ -101,68 +101,68 @@ const KitPage = () => {
     <div>
       <Head>
         <title>Media Kit - Zion</title>
-        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+        <meta name=&quot;description&quot; content=&quot;Zion media kit: brand, assets, legal, and rollout playbooks.&quot; />
       </Head>
 
-      <div className="space-y-8">
-        <header className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Media Kit</h1>
-          <div className="flex gap-2">
-            <button onClick={onDownloadZip} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Download all as ZIP</button>
-            <button onClick={onGeneratePdf} className="px-4 py-2 rounded bg-gray-900 text-white hover:bg-black">Generate PDF</button>
+      <div className=&quot;space-y-8&quot;>
+        <header className=&quot;flex items-center justify-between&quot;>
+          <h1 className=&quot;text-2xl font-bold&quot;>Media Kit</h1>
+          <div className=&quot;flex gap-2&quot;>
+            <button onClick={onDownloadZip} className=&quot;px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700&quot;>Download all as ZIP</button>
+            <button onClick={onGeneratePdf} className=&quot;px-4 py-2 rounded bg-gray-900 text-white hover:bg-black&quot;>Generate PDF</button>
           </div>
         </header>
 
-        <section className="grid md:grid-cols-3 gap-6">
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Bundle</h3>
-            <div className="flex gap-2">
+        <section className=&quot;grid md:grid-cols-3 gap-6&quot;>
+          <div className=&quot;p-4 border rounded-lg&quot;>
+            <h3 className=&quot;font-semibold mb-2&quot;>Bundle</h3>
+            <div className=&quot;flex gap-2&quot;>
               {(['general','web3','institutional'] as MediaBundle[]).map(b => (
                 <button key={b} onClick={() => setBundle(b)} className={`px-3 py-1 rounded border ${bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white'}`}>{b}</button>
               ))}
             </div>
-            <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
+            <p className=&quot;text-xs text-gray-500 mt-2&quot;>Toggle to tailor assets and legal docs.</p>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Organization</h3>
-            <div className="space-y-2">
-              <input className="w-full border rounded px-2 py-1" value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder="Company name" />
-              <input className="w-full border rounded px-2 py-1" value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder="Seed raise amount" />
-              <input className="w-full border rounded px-2 py-1" value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder="Token name" />
+          <div className=&quot;p-4 border rounded-lg&quot;>
+            <h3 className=&quot;font-semibold mb-2&quot;>Organization</h3>
+            <div className=&quot;space-y-2&quot;>
+              <input className=&quot;w-full border rounded px-2 py-1&quot; value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder=&quot;Company name&quot; />
+              <input className=&quot;w-full border rounded px-2 py-1&quot; value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder=&quot;Seed raise amount&quot; />
+              <input className=&quot;w-full border rounded px-2 py-1&quot; value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder=&quot;Token name&quot; />
             </div>
           </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Rollout Timeline</h3>
-            <div className="space-y-2">
-              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
-              <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
+          <div className=&quot;p-4 border rounded-lg&quot;>
+            <h3 className=&quot;font-semibold mb-2&quot;>Rollout Timeline</h3>
+            <div className=&quot;space-y-2&quot;>
+              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className=&quot;w-full border rounded px-2 py-1&quot; />
+              <button onClick={onGenerateTimeline} className=&quot;px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700&quot;>Generate</button>
             </div>
             {timeline.length>0 && (
-              <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
+              <ul className=&quot;mt-3 text-sm list-disc list-inside space-y-1&quot;>
+                {timeline.map((t)=> (<li key={t.label}><span className=&quot;font-medium&quot;>{t.label}:</span> {t.date}</li>))}
               </ul>
             )}
           </div>
         </section>
 
-        <section className="p-4 border rounded-lg">
-          <h3 className="font-semibold mb-3">Assets Included</h3>
-          <ul className="grid md:grid-cols-2 gap-3">
+        <section className=&quot;p-4 border rounded-lg&quot;>
+          <h3 className=&quot;font-semibold mb-3&quot;>Assets Included</h3>
+          <ul className=&quot;grid md:grid-cols-2 gap-3&quot;>
             {assets.map(a => (
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
-                <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
+              <li key={a.filename} className=&quot;flex items-center justify-between border rounded p-2&quot;>
+                <span className=&quot;text-sm&quot;>{a.filename}</span>
+                {a.path ? <a href={a.path} download className=&quot;text-blue-600 text-sm&quot;>Download</Link> : <span className=&quot;text-gray-400 text-xs&quot;>generated</span>}
               </li>
             ))}
           </ul>
         </section>
 
-        <section className="p-4 border rounded-lg space-y-4">
-          <h3 className="font-semibold">Prewritten Press Releases</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <PressReleaseCard type="seed-round" title="Seed round" />
-            <PressReleaseCard type="launch" title="Launch" />
-            {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
+        <section className=&quot;p-4 border rounded-lg space-y-4&quot;>
+          <h3 className=&quot;font-semibold&quot;>Prewritten Press Releases</h3>
+          <div className=&quot;grid md:grid-cols-3 gap-4&quot;>
+            <PressReleaseCard type=&quot;seed-round&quot; title=&quot;Seed round&quot; />
+            <PressReleaseCard type=&quot;launch&quot; title=&quot;Launch&quot; />
+            {bundle === 'web3' && <PressReleaseCard type=&quot;token-sale&quot; title=&quot;Token sale&quot; />}
           </div>
         </section>
       </div>

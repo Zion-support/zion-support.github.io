@@ -1,13 +1,13 @@
 
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
 import { format } from 'date-fns';
-import { toast } from "sonner";
+import { toast } from &quot;sonner&quot;;
 import { useNavigate } from 'react-router-dom';
 
 import { jobSchema, JobSchemaType } from './validation';
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
 
 export interface JobPostingProps {
   jobId?: string;
@@ -44,13 +44,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       category: '',
       status: '',
       external_apply_link: ''},
-    mode: "onChange"});
+    mode: &quot;onChange&quot;});
 
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {
-      toast.error("You must be logged in to post a job");
-      navigate("/login");
+      toast.error(&quot;You must be logged in to post a job&quot;);
+      navigate(&quot;/login&quot;);
       return;
     }
 
@@ -73,8 +73,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       
       return jobData;
     } catch (error: any) {
-      console.error("Error in job form submission:", error);
-      toast.error(error.message || "Failed to process form");
+      console.error(&quot;Error in job form submission:&quot;, error);
+      toast.error(error.message || &quot;Failed to process form&quot;);
       throw error;
     } finally {
       setIsLoading(false);

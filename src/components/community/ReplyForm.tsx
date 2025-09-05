@@ -1,16 +1,16 @@
 
-import { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from &quot;react&quot;;
+import { useForm, ControllerRenderProps } from &quot;react-hook-form&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage
-} from "@/components/ui/form";
-import { Card, CardContent } from "@/components/ui/card";
+} from &quot;@/components/ui/form&quot;;
+import { Card, CardContent } from &quot;@/components/ui/card&quot;;
 
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
@@ -42,13 +42,13 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
 
   return (
     <Card>
-      <CardContent className="pt-6">
+      <CardContent className="pt-6&quot;>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
               control={form.control}
-              name="content"
-              render={({ field }: { field: ControllerRenderProps<ReplyFormValues, "content"> }) => (
+              name=&quot;content&quot;
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues, &quot;content"> }) => (
                 <FormItem>
                   <FormControl>
                     <Textarea
@@ -60,9 +60,9 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
                 </FormItem>
               )}
             />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
+            <div className="mt-4 flex justify-end&quot;>
+              <Button type=&quot;submit&quot; disabled={isSubmitting}>
+                {isSubmitting ? &quot;Submitting...&quot; : &quot;Post Reply"}
               </Button>
             </div>
           </form>

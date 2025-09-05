@@ -1,8 +1,8 @@
 
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { QuoteFormData } from &quot;@/types/quotes&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
@@ -11,89 +11,89 @@ interface ProjectDetailsStepProps {
 
 export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       <div>
-        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+        <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Tell us about your project</h3>
         
-        <div className="space-y-4">
+        <div className=&quot;space-y-4&quot;>
           <div>
-            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>
+            <Label htmlFor=&quot;projectName&quot; className=&quot;text-zion-slate-light&quot;>Project Name</Label>
             <Input
-              id="projectName"
-              placeholder="Enter a name for your project"
+              id=&quot;projectName&quot;
+              placeholder=&quot;Enter a name for your project&quot;
               value={formData.projectName}
               onChange={(e) => updateFormData({ projectName: e.target.value })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
           
           <div>
-            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>
+            <Label htmlFor=&quot;projectDescription&quot; className=&quot;text-zion-slate-light&quot;>Project Description</Label>
             <Textarea
-              id="projectDescription"
-              placeholder="Describe your project in detail..."
+              id=&quot;projectDescription&quot;
+              placeholder=&quot;Describe your project in detail...&quot;
               value={formData.projectDescription}
               onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
         </div>
       </div>
       
       <div>
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+        <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Contact Information</h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <div>
-            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>
+            <Label htmlFor=&quot;name&quot; className=&quot;text-zion-slate-light&quot;>Name</Label>
             <Input
-              id="name"
-              placeholder="Your name"
+              id=&quot;name&quot;
+              placeholder=&quot;Your name&quot;
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, name: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
           
           <div>
-            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>
+            <Label htmlFor=&quot;company&quot; className=&quot;text-zion-slate-light&quot;>Company</Label>
             <Input
-              id="company"
-              placeholder="Your company name"
+              id=&quot;company&quot;
+              placeholder=&quot;Your company name&quot;
               value={formData.contactInfo.company}
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, company: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
           
           <div>
-            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>
+            <Label htmlFor=&quot;email&quot; className=&quot;text-zion-slate-light&quot;>Email</Label>
             <Input
-              id="email"
-              type="email"
-              placeholder="Your email address"
+              id=&quot;email&quot;
+              type=&quot;email&quot;
+              placeholder=&quot;Your email address&quot;
               value={formData.contactInfo.email}
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, email: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
           
           <div>
-            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>
+            <Label htmlFor=&quot;phone&quot; className=&quot;text-zion-slate-light&quot;>Phone</Label>
             <Input
-              id="phone"
-              placeholder="Your phone number"
+              id=&quot;phone&quot;
+              placeholder=&quot;Your phone number&quot;
               value={formData.contactInfo.phone}
               onChange={(e) => updateFormData({ 
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } 
               })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className=&quot;bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white&quot;
             />
           </div>
         </div>

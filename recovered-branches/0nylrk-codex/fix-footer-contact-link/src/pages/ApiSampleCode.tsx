@@ -1,8 +1,8 @@
 
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from &quot;react&quot;;
+import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
+import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
@@ -56,7 +56,7 @@ async function main() {
   try {
     // Get all open jobs
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    console.log('Jobs:', jobs);
+    // console.log('Jobs:', jobs);
     
     // Create a new job
     const newJob = await createJob({
@@ -70,11 +70,11 @@ async function main() {
       },
       skills: ['React', 'TypeScript', 'Tailwind CSS']
     });
-    console.log('New job created:', newJob);
+    // console.log('New job created:', newJob);
     
     // Search for talent with React skills
     const talent = await searchTalent({ skills: 'React', limit: 10 });
-    console.log('Talent:', talent);
+    // console.log('Talent:', talent);
   } catch (error) {
     console.error('Something went wrong:', error);
   }
@@ -96,32 +96,32 @@ headers = {
 }
 
 def get_jobs(filters=None):
-    """Get all jobs with optional filters"""
-    url = f"{BASE_URL}/api/jobs"
+    &quot;"&quot;Get all jobs with optional filters&quot;"&quot;
+    url = f&quot;{BASE_URL}/api/jobs&quot;
     response = requests.get(url, params=filters, headers=headers)
     response.raise_for_status()  # Raise exception for 4XX/5XX responses
     return response.json()
 
 def create_job(job_data):
-    """Create a new job posting"""
-    url = f"{BASE_URL}/api/jobs"
+    &quot;"&quot;Create a new job posting&quot;"&quot;
+    url = f&quot;{BASE_URL}/api/jobs&quot;
     response = requests.post(url, json=job_data, headers=headers)
     response.raise_for_status()
     return response.json()
 
 def search_talent(filters=None):
-    """Search for talent with optional filters"""
-    url = f"{BASE_URL}/api/talent"
+    &quot;"&quot;Search for talent with optional filters&quot;"&quot;
+    url = f&quot;{BASE_URL}/api/talent&quot;
     response = requests.get(url, params=filters, headers=headers)
     response.raise_for_status()
     return response.json()
 
 # Example usage
-if __name__ == "__main__":
+if __name__ == &quot;__main__&quot;:
     try:
         # Get all open jobs
         jobs = get_jobs({'status': 'open', 'limit': 5})
-        print(f"Found {len(jobs['jobs'])} jobs")
+        print(f&quot;Found {len(jobs['jobs'])} jobs&quot;)
         
         # Create a new job
         new_job = create_job({
@@ -135,17 +135,17 @@ if __name__ == "__main__":
             },
             'skills': ['Python', 'Machine Learning', 'SQL']
         })
-        print(f"New job created with ID: {new_job['id']}")
+        print(f&quot;New job created with ID: {new_job['id']}&quot;)
         
         # Search for talent with Python skills
         talent = search_talent({'skills': 'Python', 'limit': 10})
-        print(f"Found {len(talent['talent'])} talented people")
+        print(f&quot;Found {len(talent['talent'])} talented people&quot;)
         
     except requests.exceptions.HTTPError as e:
-        print(f"HTTP Error: {e}")
-        print(f"Response: {e.response.text}")
+        print(f&quot;HTTP Error: {e}&quot;)
+        print(f&quot;Response: {e.response.text}&quot;)
     except Exception as e:
-        print(f"Error: {e}")`;
+        print(f&quot;Error: {e}&quot;)`;
 
   // Node.js example with fetch
   const nodeFetchExample = `// Using node-fetch with Node.js
@@ -215,7 +215,7 @@ async function main() {
   try {
     // Get all open jobs
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    console.log('Jobs:', jobs);
+    // console.log('Jobs:', jobs);
     
     // Create a new job
     const newJob = await createJob({
@@ -229,11 +229,11 @@ async function main() {
       },
       skills: ['Node.js', 'Express', 'MongoDB']
     });
-    console.log('New job created:', newJob);
+    // console.log('New job created:', newJob);
     
     // Search for talent with Node.js skills
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 });
-    console.log('Talent:', talent);
+    // console.log('Talent:', talent);
   } catch (error) {
     console.error('Something went wrong:', error);
   }
@@ -243,7 +243,7 @@ main();`;
 
   return (
     <ApiDocsLayout>
-      <div className="max-w-3xl prose prose-invert">
+      <div className=&quot;max-w-3xl prose prose-invert&quot;>
         <h1>Sample Code</h1>
         
         <p>
@@ -257,45 +257,45 @@ main();`;
           in the Authorization header as shown in the examples below.
         </p>
         
-        <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
-          <h3 className="text-yellow-500 text-sm font-medium mt-0">Security Warning</h3>
-          <p className="text-sm text-yellow-300/90 mb-0">
+        <div className=&quot;bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6&quot;>
+          <h3 className=&quot;text-yellow-500 text-sm font-medium mt-0&quot;>Security Warning</h3>
+          <p className=&quot;text-sm text-yellow-300/90 mb-0&quot;>
             Never include your API key directly in client-side code. These examples are intended for server-side usage only.
           </p>
         </div>
 
         <h2>Code Examples</h2>
-        <Tabs defaultValue="javascript">
+        <Tabs defaultValue=&quot;javascript&quot;>
           <TabsList>
-            <TabsTrigger value="javascript">JavaScript (Axios)</TabsTrigger>
-            <TabsTrigger value="python">Python</TabsTrigger>
-            <TabsTrigger value="node">Node.js (fetch)</TabsTrigger>
+            <TabsTrigger value=&quot;javascript&quot;>JavaScript (Axios)</TabsTrigger>
+            <TabsTrigger value=&quot;python&quot;>Python</TabsTrigger>
+            <TabsTrigger value=&quot;node&quot;>Node.js (fetch)</TabsTrigger>
           </TabsList>
-          <TabsContent value="javascript">
+          <TabsContent value=&quot;javascript&quot;>
             <p>Using Axios with JavaScript:</p>
-            <CodeBlock code={jsAxiosExample} language="javascript" showLineNumbers={true} />
+            <CodeBlock code={jsAxiosExample} language=&quot;javascript&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value="python">
+          <TabsContent value=&quot;python&quot;>
             <p>Using requests with Python:</p>
-            <CodeBlock code={pythonExample} language="python" showLineNumbers={true} />
+            <CodeBlock code={pythonExample} language=&quot;python&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value="node">
+          <TabsContent value=&quot;node&quot;>
             <p>Using fetch with Node.js:</p>
-            <CodeBlock code={nodeFetchExample} language="javascript" showLineNumbers={true} />
+            <CodeBlock code={nodeFetchExample} language=&quot;javascript&quot; showLineNumbers={true} />
           </TabsContent>
         </Tabs>
 
         <h2>Using the Examples</h2>
         <p>
           To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key,
-          which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
+          which you can generate in the <a href=&quot;/developers/portal&quot; className=&quot;text-zion-cyan&quot;>Developer Portal</Link>.
         </p>
         
         <h2>Additional Resources</h2>
         <ul>
-          <li>Download our <a href="#" className="text-zion-cyan">Postman Collection</a> for easy API testing</li>
-          <li>Check out our <a href="#" className="text-zion-cyan">GitHub repository</a> for more code examples</li>
-          <li>Join our <a href="#" className="text-zion-cyan">Developer Discord</a> for community support</li>
+          <li>Download our <a href=&quot;#&quot; className=&quot;text-zion-cyan&quot;>Postman Collection</Link> for easy API testing</li>
+          <li>Check out our <a href=&quot;#&quot; className=&quot;text-zion-cyan&quot;>GitHub repository</Link> for more code examples</li>
+          <li>Join our <a href=&quot;#&quot; className=&quot;text-zion-cyan&quot;>Developer Discord</Link> for community support</li>
         </ul>
       </div>
     </ApiDocsLayout>

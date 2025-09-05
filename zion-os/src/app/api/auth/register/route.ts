@@ -1,12 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
-import { prisma } from "@/lib/prisma";
-import { z } from "zod";
+import { NextRequest, NextResponse } from &quot;next/server&quot;;
+import bcrypt from &quot;bcryptjs&quot;;
+import { prisma } from &quot;@/lib/prisma&quot;;
+import { z } from &quot;zod&quot;;
 
 const registerSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(8, "Password must be at least 8 characters")});
+  name: z.string().min(2, &quot;Name must be at least 2 characters&quot;),
+  email: z.string().email(&quot;Invalid email address&quot;),
+  password: z.string().min(8, &quot;Password must be at least 8 characters&quot;)});
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
 
     if (existingUser) {
       return NextResponse.json(
-        { error: "User with this email already exists" },
+        { error: &quot;User with this email already exists&quot; },
         { status: 400 }
       );
     }
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
         name,
         email,
         password: hashedPassword,
-        role: "user",
+        role: &quot;user&quot;,
         onboardingCompleted: false}});
 
     // Remove password from response
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { 
-        message: "User created successfully",
+        message: &quot;User created successfully&quot;,
         user: userWithoutPassword 
       },
       { status: 201 }
@@ -49,14 +49,14 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: "Validation failed", details: error.errors },
+        { error: &quot;Validation failed&quot;, details: error.errors },
         { status: 400 }
       );
     }
 
-    console.error("Registration error:", error);
+    console.error(&quot;Registration error:&quot;, error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: &quot;Internal server error&quot; },
       { status: 500 }
     );
   }

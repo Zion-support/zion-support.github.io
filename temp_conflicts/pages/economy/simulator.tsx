@@ -55,24 +55,24 @@ export default function EconomySimulatorPage() {
 
   return (
     <EnhancedLayout>
-      <div id={containerId} className="space-y-8">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">ZION$ Economy Simulator</h1>
+      <div id={containerId} className=&quot;space-y-8&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>ZION$ Economy Simulator</h1>
           <SimulatorExports points={series.points} containerId={containerId} />
         </div>
 
-        <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <div className=&quot;bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800&quot;>
           <SimulatorForm values={inputs} onChange={setInputs} onScenario={handleScenario} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
+          <div className=&quot;lg:col-span-2&quot;>
             <SimulatorCharts points={series.points} />
           </div>
-          <div className="space-y-4">
-            <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <h3 className="font-semibold mb-2">Forecast Summary</h3>
-              <ul className="text-sm space-y-1">
+          <div className=&quot;space-y-4&quot;>
+            <div className=&quot;bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800&quot;>
+              <h3 className=&quot;font-semibold mb-2&quot;>Forecast Summary</h3>
+              <ul className=&quot;text-sm space-y-1&quot;>
                 <li>Ending supply: {Math.round(series.summary.endingSupply).toLocaleString()}</li>
                 <li>Ending treasury: {Math.round(series.summary.endingTreasury).toLocaleString()}</li>
                 <li>Avg inflation: {series.summary.avgInflationPct.toFixed(2)}%</li>
@@ -81,26 +81,26 @@ export default function EconomySimulatorPage() {
               </ul>
             </div>
 
-            <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <label className="flex flex-col gap-2">
-                <span className="text-sm font-medium">Operator Prompt</span>
+            <div className=&quot;bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800&quot;>
+              <label className=&quot;flex flex-col gap-2&quot;>
+                <span className=&quot;text-sm font-medium&quot;>Operator Prompt</span>
                 <textarea
-                  className="w-full min-h-[120px] px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/40"
+                  className=&quot;w-full min-h-[120px] px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-black/40&quot;
                   value={operatorPrompt}
                   onChange={(e) => setOperatorPrompt(e.target.value)}
                 />
               </label>
-              <div className="mt-3 flex justify-end">
+              <div className=&quot;mt-3 flex justify-end&quot;>
                 <button
                   onClick={onAnalyze}
                   disabled={loadingAnalysis}
-                  className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50"
+                  className=&quot;px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50&quot;
                 >
                   {loadingAnalysis ? 'Analyzing…' : 'Analyze with GPT'}
                 </button>
               </div>
               {analysis && (
-                <div className="mt-3 text-sm whitespace-pre-wrap border-t border-gray-200 dark:border-gray-800 pt-3">
+                <div className=&quot;mt-3 text-sm whitespace-pre-wrap border-t border-gray-200 dark:border-gray-800 pt-3&quot;>
                   {analysis}
                 </div>
               )}

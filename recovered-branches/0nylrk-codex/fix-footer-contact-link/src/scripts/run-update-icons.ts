@@ -5,17 +5,17 @@ import path from 'path';
 
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
 
-console.log('Running icon import updater...');
+// console.log('Running icon import updater...');
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
     console.error(`Error executing script: ${error}`);
     return;
   }
   
-  console.log(stdout);
+  // console.log(stdout);
   if (stderr) {
     console.error(stderr);
   }
   
-  console.log('Icon imports updated successfully!');
+  // console.log('Icon imports updated successfully!');
 });

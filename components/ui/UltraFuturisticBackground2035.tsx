@@ -275,19 +275,19 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   };
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className=&quot;w-full h-full&quot;
         style={{
           background: colors.background}}
       />
       
       {/* Additional overlay effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {/* Quantum energy field */}
         <motion.div
-          className="absolute inset-0"
+          className=&quot;absolute inset-0&quot;
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -298,16 +298,16 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
         
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">
+        <div className=&quot;absolute inset-0 opacity-20&quot;>
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
+              className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent&quot;
               style={{
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary
@@ -320,7 +320,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: &quot;easeInOut&quot;
               }}
             />
           ))}

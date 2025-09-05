@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
     res.setHeader('Content-Type', 'application/epub+zip');
-    res.setHeader('Content-Disposition', 'attachment; filename="zion-os-book.epub"');
+    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.epub&quot;');
     res.status(200).send(buf);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to build EPUB' });

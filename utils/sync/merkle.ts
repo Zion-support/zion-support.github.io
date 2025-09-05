@@ -1,8 +1,8 @@
-import crypto from "crypto";
-import { ProposalVoteEntry } from "./types";
+import crypto from &quot;crypto&quot;;
+import { ProposalVoteEntry } from &quot;./types&quot;;
 
 export function sha256Hex(input: string): string {
-  return crypto.createHash("sha256").update(input).digest("hex");
+  return crypto.createHash(&quot;sha256&quot;).update(input).digest(&quot;hex&quot;);
 }
 
 export function leafHashForVote(vote: ProposalVoteEntry): string {
@@ -14,7 +14,7 @@ export function leafHashForVote(vote: ProposalVoteEntry): string {
 }
 
 export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
-  if (!votes || votes.length === 0) return sha256Hex("EMPTY");
+  if (!votes || votes.length === 0) return sha256Hex(&quot;EMPTY&quot;);
   const leaves = votes
     .slice()
     .sort((a, b) => a.voterId.localeCompare(b.voterId))
@@ -23,7 +23,7 @@ export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
 }
 
 export function computeMerkleRootFromLeaves(leaves: string[]): string {
-  if (leaves.length === 0) return sha256Hex("EMPTY");
+  if (leaves.length === 0) return sha256Hex(&quot;EMPTY&quot;);
   let layer = leaves.slice();
   while (layer.length > 1) {
     const next: string[] = [];

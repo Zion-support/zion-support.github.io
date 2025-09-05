@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ShieldAlert } from "lucide-react";
+import { ShieldAlert } from &quot;lucide-react&quot;;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
 interface ProjectActionsProps {
@@ -21,18 +21,18 @@ export function ProjectActions({
   onAddMilestone
 }: ProjectActionsProps) {
   return (
-    <div className="flex gap-2">
+    <div className=&quot;flex gap-2&quot;>
       {isUnderDispute && disputeId ? (
-        <Button variant="outline" asChild>
+        <Button variant=&quot;outline&quot; asChild>
           <Link to={`/dashboard/disputes/${disputeId}`}>
-            <ShieldAlert className="h-4 w-4 mr-2" />
+            <ShieldAlert className=&quot;h-4 w-4 mr-2&quot; />
             View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton 
           projectId={projectId}
-          variant="outline"
+          variant=&quot;outline&quot;
         />
       )}
       {isTalent && !isUnderDispute && (

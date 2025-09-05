@@ -76,7 +76,7 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   Each automation service operates independently, communicating
                   through well-defined APIs and message queues. This decoupling
-                  ensures that a failure in one service doesn&apos;t bring down
+                  ensures that a failure in one service doesn't bring down
                   the entire system.
                 </p>
               </section>
@@ -182,7 +182,7 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-                  infrastructure, we&apos;re exploring emerging technologies
+                  infrastructure, we're exploring emerging technologies
                   like:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>

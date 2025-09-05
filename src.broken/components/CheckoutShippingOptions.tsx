@@ -77,20 +77,20 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   if (!toAddress) return null;
 
   return (
-    <div className="my-4">
-      <h2 className="font-semibold mb-2">Shipping Options</h2>
+    <div className=&quot;my-4&quot;>
+      <h2 className=&quot;font-semibold mb-2&quot;>Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (
-        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
+        <RadioGroup value={selected} onValueChange={handleChange} className=&quot;space-y-2&quot;>
           {rates.map(rate => (
-            <label key={rate.id} className="flex items-center gap-2">
+            <label key={rate.id} className=&quot;flex items-center gap-2&quot;>
               <RadioGroupItem value={rate.id} />
               <span>
                 {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
                 {rate.delivery_days && ` (${rate.delivery_days}d)`}
               </span>
               {rate.tax && (
-                <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
+                <span className=&quot;ml-1 text-sm&quot;>(+{rate.tax} taxes)</span>
               )}
             </label>
           ))}

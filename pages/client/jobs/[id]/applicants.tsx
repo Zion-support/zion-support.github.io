@@ -15,24 +15,24 @@ export default function JobApplicantsPage() {
   const applications = (appsData?.applications as any[]) || [];
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Applicants</h1>
-        <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</a></Link>
+    <div className=&quot;space-y-4&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>Applicants</h1>
+        <Link href=&quot;/client/dashboard&quot;><a className=&quot;text-sm underline&quot;>Back to Dashboard</Link></Link>
       </div>
-      {job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
-      <div className="grid gap-3">
-        {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
+      {job && <p className=&quot;text-sm text-gray-600&quot;>For job: {job.title}</p>}
+      <div className=&quot;grid gap-3&quot;>
+        {applications.length === 0 && <p className=&quot;text-sm text-gray-500&quot;>No applicants yet.</p>}
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug);
           return (
-            <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
-              <div className="flex items-center justify-between">
+            <div key={a.id} className=&quot;border rounded p-4 bg-white dark:bg-gray-900&quot;>
+              <div className=&quot;flex items-center justify-between&quot;>
                 <div>
-                  <p className="font-medium">{talent?.name || a.talentSlug}</p>
-                  <p className="text-xs text-gray-500">Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
+                  <p className=&quot;font-medium&quot;>{talent?.name || a.talentSlug}</p>
+                  <p className=&quot;text-xs text-gray-500&quot;>Status: {a.status} • Applied: {new Date(a.createdAtIso).toLocaleString()}</p>
                 </div>
-                <button className="px-2 py-1 text-sm border rounded">Message</button>
+                <button className=&quot;px-2 py-1 text-sm border rounded&quot;>Message</button>
               </div>
             </div>
           );

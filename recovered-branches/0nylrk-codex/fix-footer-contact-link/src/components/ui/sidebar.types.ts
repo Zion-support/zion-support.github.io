@@ -24,7 +24,7 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =
 export type SafeRef<T> = React.Ref<T>;
 
 // Sidebar specific types
-export type SidebarState = "expanded" | "collapsed";
+export type SidebarState = &quot;expanded&quot; | &quot;collapsed&quot;;
 
 export type SidebarContext = {
   state: SidebarState;

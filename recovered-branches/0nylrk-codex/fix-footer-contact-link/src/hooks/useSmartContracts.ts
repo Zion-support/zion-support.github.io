@@ -5,7 +5,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
 import { TalentProfile } from '@/types/talent';
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+import { ContractFormValues } from &quot;@/components/contracts/components/ContractForm&quot;;
 
 export function useSmartContracts() {
   const { user } = useAuth();
@@ -20,7 +20,7 @@ export function useSmartContracts() {
     try {
       setIsLoading(true);
       
-      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
+      const { data, error } = await supabase.functions.invoke(&quot;generate-smart-contract&quot;, {
         body: {
           talentName: talent.full_name,
           clientName: clientName,
@@ -38,11 +38,11 @@ export function useSmartContracts() {
       if (data && data.solidityCode) {
         return data.solidityCode;
       } else {
-        throw new Error("Failed to generate Solidity contract");
+        throw new Error(&quot;Failed to generate Solidity contract&quot;);
       }
     } catch (err: any) {
-      console.error("Error generating Solidity contract:", err);
-      toast.error("Failed to generate smart contract");
+      console.error(&quot;Error generating Solidity contract:&quot;, err);
+      toast.error(&quot;Failed to generate smart contract&quot;);
       throw err;
     } finally {
       setIsLoading(false);
@@ -54,7 +54,7 @@ export function useSmartContracts() {
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
-      toast.error("You must be logged in to deploy a contract");
+      toast.error(&quot;You must be logged in to deploy a contract&quot;);
       return null;
     }
     
@@ -83,12 +83,12 @@ export function useSmartContracts() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setDeploymentStatus('success');
-      toast.success("Smart contract deployed successfully!");
+      toast.success(&quot;Smart contract deployed successfully!&quot;);
       
       return mockSmartContractInfo;
     } catch (err: any) {
-      console.error("Error deploying smart contract:", err);
-      toast.error("Failed to deploy smart contract");
+      console.error(&quot;Error deploying smart contract:&quot;, err);
+      toast.error(&quot;Failed to deploy smart contract&quot;);
       setDeploymentStatus('error');
       return null;
     }

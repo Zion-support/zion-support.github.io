@@ -1,9 +1,9 @@
 
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import { cleanupAuthState } from "@/utils/authUtils";
+import { useState } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
+import { cleanupAuthState } from &quot;@/utils/authUtils&quot;;
 
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void,
@@ -21,19 +21,19 @@ export const useEmailAuth = (
 
       if (error) {
         toast({
-          title: "Login failed",
+          title: &quot;Login failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return { error };
       }
 
       return { data };
     } catch (error: any) {
-      console.error("Login error:", error);
+      console.error(&quot;Login error:&quot;, error);
       toast({
-        title: "Login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Login failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
       return { error };
     } finally {
       setIsLoading(false);
@@ -51,7 +51,7 @@ export const useEmailAuth = (
         await supabase.auth.signOut({ scope: 'global' });
       } catch (err) {
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err);
+        // console.log(&quot;Sign out before signup failed:&quot;, err);
       }
       
       // Create a proper options object
@@ -61,27 +61,27 @@ export const useEmailAuth = (
         options: {
           // Only store a simple display name in the profile data
           data: {
-            display_name: userData?.displayName ?? userData?.name ?? ""
+            display_name: userData?.displayName ?? userData?.name ?? "&quot;
           }}});
 
       if (error) {
         toast({
-          title: "Signup failed",
+          title: &quot;Signup failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return { error };
       }
 
       toast({
-        title: "Signup successful",
-        description: "Check your email for verification instructions."});
+        title: &quot;Signup successful&quot;,
+        description: &quot;Check your email for verification instructions.&quot;});
       return { data };
     } catch (error: any) {
-      console.error("Signup error:", error);
+      console.error(&quot;Signup error:&quot;, error);
       toast({
-        title: "Signup failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Signup failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
       return { error };
     } finally {
       setIsLoading(false);
@@ -96,22 +96,22 @@ export const useEmailAuth = (
 
       if (error) {
         toast({
-          title: "Password reset failed",
+          title: &quot;Password reset failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return { error };
       }
 
       toast({
-        title: "Password reset email sent",
-        description: "Check your email for password reset instructions."});
+        title: &quot;Password reset email sent&quot;,
+        description: &quot;Check your email for password reset instructions.&quot;});
       return {};
     } catch (error: any) {
-      console.error("Password reset error:", error);
+      console.error(&quot;Password reset error:&quot;, error);
       toast({
-        title: "Password reset failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Password reset failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive"});
       return { error };
     } finally {
       setIsLoading(false);

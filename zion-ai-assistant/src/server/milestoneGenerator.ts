@@ -1,4 +1,4 @@
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from &quot;../shared/types.js&quot;;
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN;
 
@@ -15,18 +15,18 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
   };
 
   const body = {
-    model: "gpt-4o-mini",
+    model: &quot;gpt-4o-mini&quot;,
     messages: [
-      { role: "system", content: system },
-      { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
+      { role: &quot;system&quot;, content: system },
+      { role: &quot;user&quot;, content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ],
     temperature: 0.3
   } as any;
 
-  const resp = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
+  const resp = await fetch(&quot;https://api.openai.com/v1/chat/completions&quot;, {
+    method: &quot;POST&quot;,
     headers: {
-      "Content-Type": "application/json",
+      &quot;Content-Type&quot;: &quot;application/json&quot;,
       Authorization: `Bearer ${OPENAI_API_KEY}`
     },
     body: JSON.stringify(body)
@@ -44,10 +44,10 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     if (!milestones.length) return null;
     return milestones.map((m) => ({
       title: String(m.title).slice(0, 120),
-      description: String(m.description || "").slice(0, 2000),
+      description: String(m.description || "&quot;).slice(0, 2000),
       suggestedDueDateIso: String(m.suggestedDueDateIso),
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) || 8),
-      tags: ["AI Suggested"]
+      tags: [&quot;AI Suggested&quot;]
     }));
   } catch {
     return null;
@@ -62,12 +62,12 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   const perPhaseDays = Math.max(5, Math.round(totalDays / phases));
 
   const titlesByType: Record<string, string[]> = {
-    "Web Dev": ["Discovery & Planning", "Design", "Implementation", "QA & UAT", "Deployment"],
-    "AI/ML": ["Problem Framing & Data Audit", "Data Pipeline & EDA", "Model Baseline", "Iteration & Evaluation", "Integration & Monitoring"],
-    "DevOps": ["Infrastructure Assessment", "CI/CD Setup", "Observability", "Security Hardening", "Scaling & Cost Ops"],
-    "Mobile": ["Requirements & Wireframes", "App Skeleton", "Feature Implementation", "Testing & Beta", "Store Release"],
-    "Data Engineering": ["Requirements & Modeling", "Ingestion Pipelines", "Transformations & Quality", "Serving Layer", "Monitoring & Docs"],
-    Other: ["Phase 1", "Phase 2", "Phase 3", "Phase 4", "Phase 5"]
+    &quot;Web Dev&quot;: [&quot;Discovery & Planning&quot;, &quot;Design&quot;, &quot;Implementation&quot;, &quot;QA & UAT&quot;, &quot;Deployment&quot;],
+    &quot;AI/ML&quot;: [&quot;Problem Framing & Data Audit&quot;, &quot;Data Pipeline & EDA&quot;, &quot;Model Baseline&quot;, &quot;Iteration & Evaluation&quot;, &quot;Integration & Monitoring&quot;],
+    &quot;DevOps&quot;: [&quot;Infrastructure Assessment&quot;, &quot;CI/CD Setup&quot;, &quot;Observability&quot;, &quot;Security Hardening&quot;, &quot;Scaling & Cost Ops&quot;],
+    &quot;Mobile&quot;: [&quot;Requirements & Wireframes&quot;, &quot;App Skeleton&quot;, &quot;Feature Implementation&quot;, &quot;Testing & Beta&quot;, &quot;Store Release&quot;],
+    &quot;Data Engineering&quot;: [&quot;Requirements & Modeling&quot;, &quot;Ingestion Pipelines&quot;, &quot;Transformations & Quality&quot;, &quot;Serving Layer&quot;, &quot;Monitoring & Docs&quot;],
+    Other: [&quot;Phase 1&quot;, &quot;Phase 2&quot;, &quot;Phase 3&quot;, &quot;Phase 4&quot;, &quot;Phase 5&quot;]
   };
 
   const pool = titlesByType[input.projectType] || titlesByType.Other;
@@ -85,7 +85,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       description,
       suggestedDueDateIso: due.toISOString(),
       estimatedEffortHours,
-      tags: ["AI Suggested"]
+      tags: [&quot;AI Suggested"]
     });
     phaseStart = due;
   }

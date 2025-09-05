@@ -1,7 +1,7 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
 import { Crown, Medal, Trophy } from 'lucide-react'
 
 interface LeaderboardEntry {
@@ -18,49 +18,49 @@ export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
-      id: "1",
+      id: &quot;1&quot;,
       rank: 1,
-      name: "AI Tech Guru",
-      avatar: "", // URL would be here
+      name: &quot;AI Tech Guru&quot;,
+      avatar: "&quot;, // URL would be here
       referrals: 178,
       earnings: 4500,
-      badges: ["gold", "trending"]
+      badges: [&quot;gold&quot;, &quot;trending&quot;]
     },
     {
-      id: "2",
+      id: &quot;2&quot;,
       rank: 2,
-      name: "Machine Learning Hub",
-      avatar: "",
+      name: &quot;Machine Learning Hub&quot;,
+      avatar: "&quot;,
       referrals: 145,
       earnings: 3625,
-      badges: ["silver"]
+      badges: [&quot;silver&quot;]
     },
     {
-      id: "3",
+      id: &quot;3&quot;,
       rank: 3,
-      name: "Neural Networks Pro",
-      avatar: "",
+      name: &quot;Neural Networks Pro&quot;,
+      avatar: "&quot;,
       referrals: 124,
       earnings: 3100,
-      badges: ["bronze"]
+      badges: [&quot;bronze&quot;]
     },
     {
-      id: "4",
+      id: &quot;4&quot;,
       rank: 4,
-      name: "AI Career Insights",
-      avatar: "",
+      name: &quot;AI Career Insights&quot;,
+      avatar: "&quot;,
       referrals: 98,
       earnings: 2450,
       badges: []
     },
     {
-      id: "5",
+      id: &quot;5&quot;,
       rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
+      name: &quot;Deep Learning Daily&quot;,
+      avatar: "&quot;,
       referrals: 87,
       earnings: 2175,
-      badges: ["newcomer"]
+      badges: [&quot;newcomer"]
     }
   ];
   
@@ -119,14 +119,14 @@ export function PartnerLeaderboard() {
                       <div className="font-semibold text-white">${entry.earnings}</div>
                       <div className="text-xs text-zion-slate-light">earned</div>
                     </div>
-                    <div className="flex gap-1">
-                      {entry.badges.includes("gold") && (
-                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
+                    <div className="flex gap-1&quot;>
+                      {entry.badges.includes(&quot;gold&quot;) && (
+                        <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400&quot;>
                           Elite
                         </Badge>
                       )}
-                      {entry.badges.includes("trending") && (
-                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+                      {entry.badges.includes(&quot;trending&quot;) && (
+                        <Badge variant=&quot;outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
                           Trending
                         </Badge>
                       )}
@@ -154,10 +154,10 @@ export function PartnerLeaderboard() {
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <p className="text-zion-slate-light mb-4">
+            <p className="text-zion-slate-light mb-4&quot;>
               Start referring to appear on the leaderboard
             </p>
-            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
+            <Badge variant=&quot;outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
               New Partner
             </Badge>
           </div>
@@ -171,8 +171,8 @@ export function PartnerLeaderboard() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
-              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
+            <div className="flex items-center gap-2 mb-2&quot;>
+              <Badge variant=&quot;outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                 Elite Partner
               </Badge>
               <span className="text-xs text-zion-slate-light">(Top 3)</span>
@@ -186,8 +186,8 @@ export function PartnerLeaderboard() {
           </div>
           
           <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
-              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
+            <div className="flex items-center gap-2 mb-2&quot;>
+              <Badge variant=&quot;outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
                 Premier Partner
               </Badge>
               <span className="text-xs text-zion-slate-light">(Top 10)</span>

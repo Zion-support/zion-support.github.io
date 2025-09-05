@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
+import { useState, useEffect } from &quot;react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from &quot;@/types/referrals&quot;;
 
 export function useReferrals() {
   const { user } = useAuth();
@@ -36,13 +36,13 @@ export function useReferrals() {
         .single();
 
       if (error) {
-        console.error("Error fetching referral code:", error);
+        console.error(&quot;Error fetching referral code:&quot;, error);
         return;
       }
 
       setReferralCode(data);
     } catch (error) {
-      console.error("Error in fetchReferralCode:", error);
+      console.error(&quot;Error in fetchReferralCode:&quot;, error);
     } finally {
       setIsLoading(false);
     }
@@ -62,7 +62,7 @@ export function useReferrals() {
       
       setReferrals(data || []);
     } catch (error) {
-      console.error("Error fetching referrals:", error);
+      console.error(&quot;Error fetching referrals:&quot;, error);
     }
   };
 
@@ -80,7 +80,7 @@ export function useReferrals() {
       
       setRewards(data || []);
     } catch (error) {
-      console.error("Error fetching rewards:", error);
+      console.error(&quot;Error fetching rewards:&quot;, error);
     }
   };
 
@@ -121,7 +121,7 @@ export function useReferrals() {
       });
       
     } catch (error) {
-      console.error("Error fetching referral stats:", error);
+      console.error(&quot;Error fetching referral stats:&quot;, error);
     }
   };
 
@@ -129,9 +129,9 @@ export function useReferrals() {
     try {
       if (!user) {
         toast({
-          title: "Authentication required",
-          description: "You need to be logged in to generate a referral code",
-          variant: "destructive"});
+          title: &quot;Authentication required&quot;,
+          description: &quot;You need to be logged in to generate a referral code&quot;,
+          variant: &quot;destructive&quot;});
         return;
       }
 
@@ -142,26 +142,26 @@ export function useReferrals() {
       if (error) throw error;
 
       toast({
-        title: "Success!",
-        description: "Your referral code has been generated",
-        variant: "success"});
+        title: &quot;Success!&quot;,
+        description: &quot;Your referral code has been generated&quot;,
+        variant: &quot;success&quot;});
 
       // Refresh the code
       fetchReferralCode();
       
       return data;
     } catch (error: any) {
-      console.error("Error generating referral code:", error);
+      console.error(&quot;Error generating referral code:&quot;, error);
       toast({
-        title: "Error generating code",
-        description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"});
+        title: &quot;Error generating code&quot;,
+        description: error.message || &quot;There was a problem generating your referral code&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
   // Get the referral link for the current user
   const getReferralLink = () => {
-    if (!referralCode) return "";
+    if (!referralCode) return "&quot;;
     
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`;
@@ -173,27 +173,27 @@ export function useReferrals() {
     if (link) {
       navigator.clipboard.writeText(link);
       toast({
-        title: "Copied!",
-        description: "Referral link copied to clipboard",
-        variant: "success"});
+        title: &quot;Copied!&quot;,
+        description: &quot;Referral link copied to clipboard&quot;,
+        variant: &quot;success&quot;});
     } else {
       toast({
-        title: "Cannot copy link",
-        description: "Please generate a referral code first",
-        variant: "destructive"});
+        title: &quot;Cannot copy link&quot;,
+        description: &quot;Please generate a referral code first&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
   // Share on social media platforms
   const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
     const link = getReferralLink();
-    const text = "Join Zion AI marketplace for AI talent and opportunities!";
+    const text = &quot;Join Zion AI marketplace for AI talent and opportunities!&quot;;
     
     if (!link) {
       toast({
-        title: "Cannot share",
-        description: "Please generate a referral code first",
-        variant: "destructive"});
+        title: &quot;Cannot share&quot;,
+        description: &quot;Please generate a referral code first&quot;,
+        variant: &quot;destructive"});
       return;
     }
     

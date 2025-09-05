@@ -31,12 +31,12 @@ export const useCreateMilestone = (projectId?: string) => {
       // Create activity record
       await recordMilestoneActivity(data.id, 'created', null, 'pending', 'Milestone created');
       
-      toast.success("Milestone created successfully");
+      toast.success(&quot;Milestone created successfully&quot;);
       
       return data;
     } catch (err: any) {
-      console.error("Error creating milestone:", err);
-      toast.error("Failed to create milestone: " + err.message);
+      console.error(&quot;Error creating milestone:&quot;, err);
+      toast.error(&quot;Failed to create milestone: &quot; + err.message);
       return null;
     } finally {
       setIsSubmitting(false);

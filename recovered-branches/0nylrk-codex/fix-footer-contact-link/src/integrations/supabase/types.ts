@@ -33,11 +33,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "ai_chats_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;ai_chats_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       analytics_events: {
@@ -70,11 +70,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "analytics_events_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;analytics_events_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       api_keys: {
@@ -87,7 +87,7 @@ export type Database = {
           key_prefix: string
           last_used_at: string | null
           name: string
-          scopes: Database["public"]["Enums"]["api_key_scope"][]
+          scopes: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
           user_id: string
         }
         Insert: {
@@ -99,7 +99,7 @@ export type Database = {
           key_prefix: string
           last_used_at?: string | null
           name: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          scopes?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
           user_id: string
         }
         Update: {
@@ -111,16 +111,16 @@ export type Database = {
           key_prefix?: string
           last_used_at?: string | null
           name?: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          scopes?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;api_key_scope&quot;][]
           user_id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "api_keys_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;api_keys_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       api_logs: {
@@ -162,18 +162,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "api_logs_api_key_id_fkey"
-            columns: ["api_key_id"]
+            foreignKeyName: &quot;api_logs_api_key_id_fkey&quot;
+            columns: [&quot;api_key_id&quot;]
             isOneToOne: false
-            referencedRelation: "api_keys"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;api_keys&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "api_logs_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;api_logs_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       certifications: {
@@ -212,11 +212,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "certifications_resume_id_fkey"
-            columns: ["resume_id"]
+            foreignKeyName: &quot;certifications_resume_id_fkey&quot;
+            columns: [&quot;resume_id&quot;]
             isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;talent_resumes&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       content: {
@@ -261,11 +261,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "content_creator_id_fkey"
-            columns: ["creator_id"]
+            foreignKeyName: &quot;content_creator_id_fkey&quot;
+            columns: [&quot;creator_id&quot;]
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       contract_templates: {
@@ -298,11 +298,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "contract_templates_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;contract_templates_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       education: {
@@ -353,11 +353,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "education_resume_id_fkey"
-            columns: ["resume_id"]
+            foreignKeyName: &quot;education_resume_id_fkey&quot;
+            columns: [&quot;resume_id&quot;]
             isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;talent_resumes&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       fraud_detection_reports: {
@@ -410,7 +410,7 @@ export type Database = {
           reason: string
           reviewed_at: string | null
           reviewed_by: string | null
-          severity: Database["public"]["Enums"]["fraud_severity"]
+          severity: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
           status: string
           timestamp: string
           updated_at: string | null
@@ -430,7 +430,7 @@ export type Database = {
           reason: string
           reviewed_at?: string | null
           reviewed_by?: string | null
-          severity?: Database["public"]["Enums"]["fraud_severity"]
+          severity?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
           status?: string
           timestamp?: string
           updated_at?: string | null
@@ -450,7 +450,7 @@ export type Database = {
           reason?: string
           reviewed_at?: string | null
           reviewed_by?: string | null
-          severity?: Database["public"]["Enums"]["fraud_severity"]
+          severity?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;fraud_severity&quot;]
           status?: string
           timestamp?: string
           updated_at?: string | null
@@ -459,18 +459,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "fraud_flags_reviewed_by_fkey"
-            columns: ["reviewed_by"]
+            foreignKeyName: &quot;fraud_flags_reviewed_by_fkey&quot;
+            columns: [&quot;reviewed_by&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "fraud_flags_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;fraud_flags_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       hire_requests: {
@@ -638,25 +638,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "job_applications_job_id_fkey"
-            columns: ["job_id"]
+            foreignKeyName: &quot;job_applications_job_id_fkey&quot;
+            columns: [&quot;job_id&quot;]
             isOneToOne: false
-            referencedRelation: "jobs"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;jobs&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "job_applications_resume_id_fkey"
-            columns: ["resume_id"]
+            foreignKeyName: &quot;job_applications_resume_id_fkey&quot;
+            columns: [&quot;resume_id&quot;]
             isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;talent_resumes&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "job_applications_talent_id_fkey"
-            columns: ["talent_id"]
+            foreignKeyName: &quot;job_applications_talent_id_fkey&quot;
+            columns: [&quot;talent_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       jobs: {
@@ -701,11 +701,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "jobs_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: &quot;jobs_client_id_fkey&quot;
+            columns: [&quot;client_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       milestone_activities: {
@@ -741,18 +741,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "milestone_activities_milestone_id_fkey"
-            columns: ["milestone_id"]
+            foreignKeyName: &quot;milestone_activities_milestone_id_fkey&quot;
+            columns: [&quot;milestone_id&quot;]
             isOneToOne: false
-            referencedRelation: "project_milestones"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;project_milestones&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "milestone_activities_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;milestone_activities_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       notification_preferences: {
@@ -782,11 +782,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "notification_preferences_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;notification_preferences_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: true
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       notifications: {
@@ -825,11 +825,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "notifications_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;notifications_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       partner_payouts: {
@@ -868,11 +868,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "partner_payouts_partner_id_fkey"
-            columns: ["partner_id"]
+            foreignKeyName: &quot;partner_payouts_partner_id_fkey&quot;
+            columns: [&quot;partner_id&quot;]
             isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;partner_profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       partner_profiles: {
@@ -926,11 +926,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "partner_profiles_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;partner_profiles_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       partner_referral_links: {
@@ -969,11 +969,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "partner_referral_links_partner_id_fkey"
-            columns: ["partner_id"]
+            foreignKeyName: &quot;partner_referral_links_partner_id_fkey&quot;
+            columns: [&quot;partner_id&quot;]
             isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;partner_profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       portfolio_projects: {
@@ -1018,11 +1018,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "portfolio_projects_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;portfolio_projects_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       profiles: {
@@ -1085,18 +1085,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "profiles_id_fkey"
-            columns: ["id"]
+            foreignKeyName: &quot;profiles_id_fkey&quot;
+            columns: [&quot;id&quot;]
             isOneToOne: true
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "profiles_tenant_id_fkey"
-            columns: ["tenant_id"]
+            foreignKeyName: &quot;profiles_tenant_id_fkey&quot;
+            columns: [&quot;tenant_id&quot;]
             isOneToOne: false
-            referencedRelation: "whitelabel_tenants"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;whitelabel_tenants&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       project_milestones: {
@@ -1141,18 +1141,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "project_milestones_created_by_fkey"
-            columns: ["created_by"]
+            foreignKeyName: &quot;project_milestones_created_by_fkey&quot;
+            columns: [&quot;created_by&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "project_milestones_project_id_fkey"
-            columns: ["project_id"]
+            foreignKeyName: &quot;project_milestones_project_id_fkey&quot;
+            columns: [&quot;project_id&quot;]
             isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;projects&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       project_notes: {
@@ -1179,18 +1179,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "project_notes_project_id_fkey"
-            columns: ["project_id"]
+            foreignKeyName: &quot;project_notes_project_id_fkey&quot;
+            columns: [&quot;project_id&quot;]
             isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;projects&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "project_notes_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;project_notes_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       projects: {
@@ -1235,25 +1235,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "projects_client_id_fkey"
-            columns: ["client_id"]
+            foreignKeyName: &quot;projects_client_id_fkey&quot;
+            columns: [&quot;client_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "projects_job_id_fkey"
-            columns: ["job_id"]
+            foreignKeyName: &quot;projects_job_id_fkey&quot;
+            columns: [&quot;job_id&quot;]
             isOneToOne: false
-            referencedRelation: "jobs"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;jobs&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "projects_talent_id_fkey"
-            columns: ["talent_id"]
+            foreignKeyName: &quot;projects_talent_id_fkey&quot;
+            columns: [&quot;talent_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       quote_requests: {
@@ -1272,7 +1272,7 @@ export type Database = {
           requester_id: string | null
           requester_name: string
           start_date: string | null
-          status: Database["public"]["Enums"]["quote_request_status"]
+          status: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
           talent_id: string | null
           timeline: string
           updated_at: string
@@ -1293,7 +1293,7 @@ export type Database = {
           requester_id?: string | null
           requester_name: string
           start_date?: string | null
-          status?: Database["public"]["Enums"]["quote_request_status"]
+          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
           talent_id?: string | null
           timeline: string
           updated_at?: string
@@ -1314,7 +1314,7 @@ export type Database = {
           requester_id?: string | null
           requester_name?: string
           start_date?: string | null
-          status?: Database["public"]["Enums"]["quote_request_status"]
+          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;quote_request_status&quot;]
           talent_id?: string | null
           timeline?: string
           updated_at?: string
@@ -1322,18 +1322,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "quote_requests_requester_id_fkey"
-            columns: ["requester_id"]
+            foreignKeyName: &quot;quote_requests_requester_id_fkey&quot;
+            columns: [&quot;requester_id&quot;]
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "quote_requests_talent_id_fkey"
-            columns: ["talent_id"]
+            foreignKeyName: &quot;quote_requests_talent_id_fkey&quot;
+            columns: [&quot;talent_id&quot;]
             isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       referral_codes: {
@@ -1360,11 +1360,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "referral_codes_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;referral_codes_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: true
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       referral_rewards: {
@@ -1400,25 +1400,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "referral_rewards_partner_id_fkey"
-            columns: ["partner_id"]
+            foreignKeyName: &quot;referral_rewards_partner_id_fkey&quot;
+            columns: [&quot;partner_id&quot;]
             isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;partner_profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "referral_rewards_referral_id_fkey"
-            columns: ["referral_id"]
+            foreignKeyName: &quot;referral_rewards_referral_id_fkey&quot;
+            columns: [&quot;referral_id&quot;]
             isOneToOne: false
-            referencedRelation: "referrals"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;referrals&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "referral_rewards_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;referral_rewards_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       referrals: {
@@ -1436,7 +1436,7 @@ export type Database = {
           referrer_user_type: string | null
           reward_issued: boolean
           reward_issued_at: string | null
-          status: Database["public"]["Enums"]["referral_status"]
+          status: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
         }
         Insert: {
           completed_at?: string | null
@@ -1452,7 +1452,7 @@ export type Database = {
           referrer_user_type?: string | null
           reward_issued?: boolean
           reward_issued_at?: string | null
-          status?: Database["public"]["Enums"]["referral_status"]
+          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
         }
         Update: {
           completed_at?: string | null
@@ -1468,36 +1468,36 @@ export type Database = {
           referrer_user_type?: string | null
           reward_issued?: boolean
           reward_issued_at?: string | null
-          status?: Database["public"]["Enums"]["referral_status"]
+          status?: Database[&quot;public&quot;][&quot;Enums&quot;][&quot;referral_status&quot;]
         }
         Relationships: [
           {
-            foreignKeyName: "referrals_partner_id_fkey"
-            columns: ["partner_id"]
+            foreignKeyName: &quot;referrals_partner_id_fkey&quot;
+            columns: [&quot;partner_id&quot;]
             isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;partner_profiles&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "referrals_referral_code_fkey"
-            columns: ["referral_code"]
+            foreignKeyName: &quot;referrals_referral_code_fkey&quot;
+            columns: [&quot;referral_code&quot;]
             isOneToOne: false
-            referencedRelation: "referral_codes"
-            referencedColumns: ["code"]
+            referencedRelation: &quot;referral_codes&quot;
+            referencedColumns: [&quot;code&quot;]
           },
           {
-            foreignKeyName: "referrals_referred_id_fkey"
-            columns: ["referred_id"]
+            foreignKeyName: &quot;referrals_referred_id_fkey&quot;
+            columns: [&quot;referred_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "referrals_referrer_id_fkey"
-            columns: ["referrer_id"]
+            foreignKeyName: &quot;referrals_referrer_id_fkey&quot;
+            columns: [&quot;referrer_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       reminder_logs: {
@@ -1533,11 +1533,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "reminder_logs_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;reminder_logs_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       resume_skills: {
@@ -1570,11 +1570,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "resume_skills_resume_id_fkey"
-            columns: ["resume_id"]
+            foreignKeyName: &quot;resume_skills_resume_id_fkey&quot;
+            columns: [&quot;resume_id&quot;]
             isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;talent_resumes&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       review_reports: {
@@ -1607,18 +1607,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "review_reports_reporter_id_fkey"
-            columns: ["reporter_id"]
+            foreignKeyName: &quot;review_reports_reporter_id_fkey&quot;
+            columns: [&quot;reporter_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "review_reports_review_id_fkey"
-            columns: ["review_id"]
+            foreignKeyName: &quot;review_reports_review_id_fkey&quot;
+            columns: [&quot;review_id&quot;]
             isOneToOne: false
-            referencedRelation: "reviews"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;reviews&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
       reviews: {
@@ -1678,25 +1678,25 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "reviews_project_id_fkey"
-            columns: ["project_id"]
+            foreignKeyName: &quot;reviews_project_id_fkey&quot;
+            columns: [&quot;project_id&quot;]
             isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;projects&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "reviews_reviewee_id_fkey"
-            columns: ["reviewee_id"]
+            foreignKeyName: &quot;reviews_reviewee_id_fkey&quot;
+            columns: [&quot;reviewee_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           },
           {
-            foreignKeyName: "reviews_reviewer_id_fkey"
-            columns: ["reviewer_id"]
+            foreignKeyName: &quot;reviews_reviewer_id_fkey&quot;
+            columns: [&quot;reviewer_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       scheduled_jobs: {
@@ -1771,11 +1771,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "subscriptions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;subscriptions_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       talent_resumes: {
@@ -1811,11 +1811,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "talent_resumes_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;talent_resumes_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       tenant_administrators: {
@@ -1839,18 +1839,18 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "tenant_administrators_tenant_id_fkey"
-            columns: ["tenant_id"]
+            foreignKeyName: &quot;tenant_administrators_tenant_id_fkey&quot;
+            columns: [&quot;tenant_id&quot;]
             isOneToOne: false
-            referencedRelation: "whitelabel_tenants"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;whitelabel_tenants&quot;
+            referencedColumns: [&quot;id&quot;]
           },
           {
-            foreignKeyName: "tenant_administrators_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;tenant_administrators_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       user_onboarding: {
@@ -1937,11 +1937,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "user_onboarding_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;user_onboarding_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       user_privacy_settings: {
@@ -1968,11 +1968,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "user_privacy_settings_id_fkey"
-            columns: ["id"]
+            foreignKeyName: &quot;user_privacy_settings_id_fkey&quot;
+            columns: [&quot;id&quot;]
             isOneToOne: true
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       webhook_configs: {
@@ -2014,11 +2014,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "webhook_configs_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: &quot;webhook_configs_user_id_fkey&quot;
+            columns: [&quot;user_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       whitelabel_tenants: {
@@ -2072,11 +2072,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey"
-            columns: ["account_manager_id"]
+            foreignKeyName: &quot;whitelabel_tenants_account_manager_id_fkey&quot;
+            columns: [&quot;account_manager_id&quot;]
             isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
+            referencedRelation: &quot;user_metrics&quot;
+            referencedColumns: [&quot;user_id&quot;]
           }]
       }
       work_history: {
@@ -2124,11 +2124,11 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "work_history_resume_id_fkey"
-            columns: ["resume_id"]
+            foreignKeyName: &quot;work_history_resume_id_fkey&quot;
+            columns: [&quot;resume_id&quot;]
             isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
+            referencedRelation: &quot;talent_resumes&quot;
+            referencedColumns: [&quot;id&quot;]
           }]
       }
     }
@@ -2272,20 +2272,20 @@ export type Database = {
     }
     Enums: {
       api_key_scope:
-        | "jobs:read"
-        | "jobs:write"
-        | "talent:read"
-        | "quotes:write"
-        | "webhooks:manage"
-      fraud_severity: "safe" | "suspicious" | "dangerous"
+        | &quot;jobs:read&quot;
+        | &quot;jobs:write&quot;
+        | &quot;talent:read&quot;
+        | &quot;quotes:write&quot;
+        | &quot;webhooks:manage&quot;
+      fraud_severity: &quot;safe&quot; | &quot;suspicious&quot; | &quot;dangerous&quot;
       quote_request_status:
-        | "new"
-        | "in_review"
-        | "accepted"
-        | "responded"
-        | "closed"
-        | "archived"
-      referral_status: "pending" | "completed" | "expired"
+        | &quot;new&quot;
+        | &quot;in_review&quot;
+        | &quot;accepted&quot;
+        | &quot;responded&quot;
+        | &quot;closed&quot;
+        | &quot;archived&quot;
+      referral_status: &quot;pending&quot; | &quot;completed&quot; | &quot;expired&quot;
     }
     CompositeTypes: {
       [_ in never]: never
@@ -2293,29 +2293,29 @@ export type Database = {
   }
 }
 
-type DefaultSchema = Database[Extract<keyof Database, "public">]
+type DefaultSchema = Database[Extract<keyof Database, &quot;public&quot;>]
 
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+    | keyof (DefaultSchema[&quot;Tables&quot;] & DefaultSchema[&quot;Views&quot;])
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
+    ? keyof (Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;] &
+        Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Views&quot;])
     : never = never,
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
+  ? (Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;] &
+      Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Views&quot;])[TableName] extends {
       Row: infer R
     }
     ? R
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])
-    ? (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema[&quot;Tables&quot;] &
+        DefaultSchema[&quot;Views&quot;])
+    ? (DefaultSchema[&quot;Tables&quot;] &
+        DefaultSchema[&quot;Views&quot;])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
       ? R
@@ -2324,21 +2324,21 @@ export type Tables<
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+    | keyof DefaultSchema[&quot;Tables&quot;]
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    ? keyof Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;]
     : never = never,
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+  ? Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;][TableName] extends {
       Insert: infer I
     }
     ? I
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema[&quot;Tables&quot;]
+    ? DefaultSchema[&quot;Tables&quot;][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
       ? I
@@ -2347,21 +2347,21 @@ export type TablesInsert<
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+    | keyof DefaultSchema[&quot;Tables&quot;]
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    ? keyof Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;]
     : never = never,
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+  ? Database[DefaultSchemaTableNameOrOptions[&quot;schema&quot;]][&quot;Tables&quot;][TableName] extends {
       Update: infer U
     }
     ? U
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema[&quot;Tables&quot;]
+    ? DefaultSchema[&quot;Tables&quot;][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
       ? U
@@ -2370,49 +2370,49 @@ export type TablesUpdate<
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema["Enums"]
+    | keyof DefaultSchema[&quot;Enums&quot;]
     | { schema: keyof Database },
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    ? keyof Database[DefaultSchemaEnumNameOrOptions[&quot;schema&quot;]][&quot;Enums&quot;]
     : never = never,
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+  ? Database[DefaultSchemaEnumNameOrOptions[&quot;schema&quot;]][&quot;Enums&quot;][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema[&quot;Enums&quot;]
+    ? DefaultSchema[&quot;Enums&quot;][DefaultSchemaEnumNameOrOptions]
     : never
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]
+    | keyof DefaultSchema[&quot;CompositeTypes&quot;]
     | { schema: keyof Database },
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    ? keyof Database[PublicCompositeTypeNameOrOptions[&quot;schema&quot;]][&quot;CompositeTypes&quot;]
     : never = never,
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+  ? Database[PublicCompositeTypeNameOrOptions[&quot;schema&quot;]][&quot;CompositeTypes&quot;][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema[&quot;CompositeTypes&quot;]
+    ? DefaultSchema[&quot;CompositeTypes&quot;][PublicCompositeTypeNameOrOptions]
     : never
 
 export const Constants = {
   public: {
     Enums: {
       api_key_scope: [
-        "jobs:read",
-        "jobs:write",
-        "talent:read",
-        "quotes:write",
-        "webhooks:manage"],
-      fraud_severity: ["safe", "suspicious", "dangerous"],
+        &quot;jobs:read&quot;,
+        &quot;jobs:write&quot;,
+        &quot;talent:read&quot;,
+        &quot;quotes:write&quot;,
+        &quot;webhooks:manage&quot;],
+      fraud_severity: [&quot;safe&quot;, &quot;suspicious&quot;, &quot;dangerous&quot;],
       quote_request_status: [
-        "new",
-        "in_review",
-        "accepted",
-        "responded",
-        "closed",
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const
+        &quot;new&quot;,
+        &quot;in_review&quot;,
+        &quot;accepted&quot;,
+        &quot;responded&quot;,
+        &quot;closed&quot;,
+        &quot;archived&quot;],
+      referral_status: [&quot;pending&quot;, &quot;completed&quot;, &quot;expired&quot;]}}} as const

@@ -37,7 +37,7 @@ async function main() {
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.');
-    console.log('No low-rated feedback to analyze.');
+    // console.log('No low-rated feedback to analyze.');
     return;
   }
 
@@ -59,7 +59,7 @@ async function main() {
   // Append to prompt improvements
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '';
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`);
-  console.log('Analysis written to', summaryPath);
+  // console.log('Analysis written to', summaryPath);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

@@ -10,7 +10,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 
-  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
+  if (!activeVendor) return <div className=&quot;text-gray-500&quot;>No vendor found. Please apply first.</div>;
 
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -41,60 +41,60 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   }
 
   return (
-    <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
-        {!activeVendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
+    <div className=&quot;space-y-8&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>Agency Dashboard</h1>
+        {!activeVendor.verified && <span className=&quot;text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800&quot;>Pending Verification</span>}
       </div>
 
-      <section className="space-y-4">
-        <h2 className="text-lg font-medium">Profile</h2>
-        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section className=&quot;space-y-4&quot;>
+        <h2 className=&quot;text-lg font-medium&quot;>Profile</h2>
+        <form onSubmit={saveProfile} className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <div>
-            <label className="block text-sm mb-1">Agency Name</label>
-            <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <label className=&quot;block text-sm mb-1&quot;>Agency Name</label>
+            <input name=&quot;name&quot; defaultValue={activeVendor.name} className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
           </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1">About</label>
-            <textarea name="about" defaultValue={activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
+          <div className=&quot;md:col-span-2&quot;>
+            <label className=&quot;block text-sm mb-1&quot;>About</label>
+            <textarea name=&quot;about&quot; defaultValue={activeVendor.about || ''} rows={4} className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
           </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join(', ') || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
+          <div className=&quot;md:col-span-2&quot;>
+            <label className=&quot;block text-sm mb-1&quot;>Services Offered</label>
+            <input name=&quot;servicesOffered&quot; defaultValue={activeVendor.servicesOffered?.join(', ') || ''} className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
           </div>
-          <div className="md:col-span-2">
-            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
+          <div className=&quot;md:col-span-2&quot;>
+            <button className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>Save</button>
           </div>
         </form>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-medium">Publish Packages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <section className=&quot;space-y-3&quot;>
+        <h2 className=&quot;text-lg font-medium&quot;>Publish Packages</h2>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
           {(activeVendor.packages || []).map(p => (
-            <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
-              <div className="font-medium">{p.title}</div>
-              <div className="text-sm text-gray-500">{p.description}</div>
-              <div className="mt-2 text-sm">${p.priceUsd}</div>
+            <div key={p.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded p-4&quot;>
+              <div className=&quot;font-medium&quot;>{p.title}</div>
+              <div className=&quot;text-sm text-gray-500&quot;>{p.description}</div>
+              <div className=&quot;mt-2 text-sm&quot;>${p.priceUsd}</div>
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
-          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <div className="flex gap-2">
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
-            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2 items-end&quot;>
+          <input placeholder=&quot;Title&quot; value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className=&quot;border rounded px-3 py-2 bg-transparent&quot; />
+          <input placeholder=&quot;Description&quot; value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className=&quot;border rounded px-3 py-2 bg-transparent&quot; />
+          <div className=&quot;flex gap-2&quot;>
+            <input placeholder=&quot;Price (USD)&quot; type=&quot;number&quot; value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className=&quot;border rounded px-3 py-2 bg-transparent w-full&quot; />
+            <button onClick={addPackage} className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>Add</button>
           </div>
         </div>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-medium">Project Pipeline</h2>
+      <section className=&quot;space-y-3&quot;>
+        <h2 className=&quot;text-lg font-medium&quot;>Project Pipeline</h2>
         <Pipeline vendorId={activeVendor.id} />
       </section>
 
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+      <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>
     </div>
   );
 }
@@ -119,21 +119,21 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   useEffect(() => { fetchItems(); }, []);
 
   return (
-    <div className="space-y-2">
-      {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
+    <div className=&quot;space-y-2&quot;>
+      {items.length === 0 && <div className=&quot;text-sm text-gray-500&quot;>No leads yet.</div>}
       {items.map(item => (
-        <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
+        <div key={item.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between&quot;>
           <div>
-            <div className="font-medium">{item.title}</div>
-            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
+            <div className=&quot;font-medium&quot;>{item.title}</div>
+            <div className=&quot;text-xs text-gray-500&quot;>{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
           </div>
-          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
-            <option value="lead">Lead</option>
-            <option value="qualified">Qualified</option>
-            <option value="proposal">Proposal</option>
-            <option value="in_progress">In Progress</option>
-            <option value="complete">Complete</option>
-            <option value="lost">Lost</option>
+          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className=&quot;border rounded px-2 py-1 bg-transparent text-sm&quot;>
+            <option value=&quot;lead&quot;>Lead</option>
+            <option value=&quot;qualified&quot;>Qualified</option>
+            <option value=&quot;proposal&quot;>Proposal</option>
+            <option value=&quot;in_progress&quot;>In Progress</option>
+            <option value=&quot;complete&quot;>Complete</option>
+            <option value=&quot;lost&quot;>Lost</option>
           </select>
         </div>
       ))}

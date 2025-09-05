@@ -13,17 +13,17 @@ export default function JobsListPage() {
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }];
 
   return (
-    <div className="space-y-4">
-      <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
+    <div className=&quot;space-y-4&quot;>
+      <InteractiveSearch placeholder=&quot;Search jobs, keywords, or companies...&quot; />
       {loading ? (
         <EnhancedLoading lines={4} />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
-                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-              </a>
+                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className=&quot;text-blue-600&quot;>View Job →</span>} />
+              </Link>
             </Link>
           ))}
         </div>

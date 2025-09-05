@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import { useTranslation } from "react-i18next";
+import { Header } from &quot;@/components/Header&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { toast } from &quot;@/components/ui/use-toast&quot;;
+import { useTranslation } from &quot;react-i18next&quot;;
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { useTranslationService } from "@/hooks/useTranslationService";
+import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
+import { useLanguage, SupportedLanguage } from &quot;@/context/LanguageContext&quot;;
+import { useTranslationService } from &quot;@/hooks/useTranslationService&quot;;
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 export default function TranslationManager() {
@@ -21,8 +21,8 @@ export default function TranslationManager() {
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
   
-  const [selectedNamespace, setSelectedNamespace] = useState("translation");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedNamespace, setSelectedNamespace] = useState(&quot;translation&quot;);
+  const [searchQuery, setSearchQuery] = useState("&quot;);
   const [translations, setTranslations] = useState<Record<string, any>>({});
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
   const [editingKey, setEditingKey] = useState<string | null>(null);
@@ -130,8 +130,8 @@ export default function TranslationManager() {
       setIsSaving(false);
       
       toast({
-        title: t("translation.saved"),
-        description: t("translation.changes_saved")});
+        title: t(&quot;translation.saved&quot;),
+        description: t(&quot;translation.changes_saved&quot;)});
     }, 1000);
   };
   
@@ -152,7 +152,7 @@ export default function TranslationManager() {
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-        variant: "destructive"});
+        variant: &quot;destructive&quot;});
       return;
     }
     
@@ -167,7 +167,7 @@ export default function TranslationManager() {
         toast({
           title: t('translation.translation_failed'),
           description: error,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return;
       }
       
@@ -185,7 +185,7 @@ export default function TranslationManager() {
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"});
+        variant: &quot;destructive"});
     }
   };
   
@@ -226,23 +226,23 @@ export default function TranslationManager() {
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground&quot; />
                   <Input
-                    type="search"
-                    className="pl-8"
+                    type=&quot;search"
+                    className="pl-8&quot;
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
                 <Tabs 
-                  defaultValue="translation" 
+                  defaultValue=&quot;translation" 
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto&quot;
                 >
                   <TabsList>
-                    <TabsTrigger value="translation">General</TabsTrigger>
-                    <TabsTrigger value="admin">Admin</TabsTrigger>
+                    <TabsTrigger value=&quot;translation&quot;>General</TabsTrigger>
+                    <TabsTrigger value=&quot;admin">Admin</TabsTrigger>
                   </TabsList>
                 </Tabs>
               </div>
@@ -291,9 +291,9 @@ export default function TranslationManager() {
                                 </div>
                               ))}
                             </div>
-                            <div className="flex gap-2 mt-4">
+                            <div className="flex gap-2 mt-4&quot;>
                               <Button 
-                                size="sm" 
+                                size=&quot;sm" 
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >
@@ -304,21 +304,21 @@ export default function TranslationManager() {
                                   </>
                                 ) : (
                                   <>
-                                    <Check className="mr-2 h-4 w-4" />
+                                    <Check className="mr-2 h-4 w-4&quot; />
                                     {t('general.save')}
                                   </>
                                 )}
                               </Button>
                               <Button 
-                                size="sm" 
-                                variant="outline" 
+                                size=&quot;sm&quot; 
+                                variant=&quot;outline&quot; 
                                 onClick={handleCancel}
                               >
                                 {t('general.cancel')}
                               </Button>
                               <Button
-                                size="sm"
-                                variant="secondary"
+                                size=&quot;sm&quot;
+                                variant=&quot;secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >
@@ -354,11 +354,11 @@ export default function TranslationManager() {
                             </div>
                           </div>
                         )}
-                        <div className="p-3 flex items-center justify-end">
+                        <div className="p-3 flex items-center justify-end&quot;>
                           {editingKey === key ? null : (
                             <Button
-                              size="sm"
-                              variant="outline"
+                              size=&quot;sm&quot;
+                              variant=&quot;outline"
                               onClick={() => handleEdit(key)}
                             >
                               {t('translation.edit')}

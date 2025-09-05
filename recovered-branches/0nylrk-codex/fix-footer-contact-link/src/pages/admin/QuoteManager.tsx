@@ -1,24 +1,24 @@
 
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
+import React, { useState } from &quot;react&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { useAdminQuotes } from &quot;@/hooks/useAdminQuotes&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
 import { 
   Card,
   CardContent
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
+} from &quot;@/components/ui/card&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Navigate } from &quot;react-router-dom&quot;;
+import type { QuoteRequest } from &quot;@/types/quotes&quot;;
+import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
+import { QuoteDetails } from &quot;@/components/quotes/QuoteDetails&quot;;
+import { ExportToCSV } from &quot;@/components/quotes/ExportToCSV&quot;;
 import {
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-} from "@/components/admin/quotes";
+} from &quot;@/components/admin/quotes&quot;;
 
 export default function QuoteManager() {
   const { user } = useAuth();
@@ -66,21 +66,21 @@ export default function QuoteManager() {
   };
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to=&quot;/unauthorized&quot; replace />;
   }
 
   return (
     <ProtectedRoute adminOnly>
       <div>
         <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+        <div className=&quot;min-h-screen bg-zion-blue px-4 py-8&quot;>
+          <div className=&quot;container mx-auto&quot;>
+            <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center mb-8&quot;>
               <div>
-                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
-                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
+                <h1 className=&quot;text-3xl font-bold text-white mb-2&quot;>Quote Request Manager</h1>
+                <p className=&quot;text-zion-slate-light&quot;>Manage and respond to all talent hire requests</p>
               </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+              <ExportToCSV quotes={quotes} filename=&quot;zion-quote-requests&quot; />
             </div>
             
             {/* Status Summary Cards */}
@@ -100,15 +100,15 @@ export default function QuoteManager() {
             />
             
             {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+            <Tabs defaultValue=&quot;active&quot; className=&quot;mb-6&quot;>
+              <TabsList className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+                <TabsTrigger value=&quot;active&quot;>Active Quotes</TabsTrigger>
+                <TabsTrigger value=&quot;archived&quot;>Archived Quotes</TabsTrigger>
               </TabsList>
               
-              <TabsContent value="active">
+              <TabsContent value=&quot;active&quot;>
                 {/* Quotes Table */}
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light overflow-hidden&quot;>
                   <QuotesTable
                     quotes={quotes.filter(quote => !quote.is_archived)}
                     isLoading={isLoading}
@@ -120,8 +120,8 @@ export default function QuoteManager() {
                 </Card>
               </TabsContent>
               
-              <TabsContent value="archived">
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+              <TabsContent value=&quot;archived&quot;>
+                <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light overflow-hidden&quot;>
                   <QuotesTable
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}

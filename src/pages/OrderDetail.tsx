@@ -67,21 +67,21 @@ export default function OrderDetailPage() {
 
   if (isLoading || !order) {
     return (
-      <div className="container max-w-3xl py-10">
-        <Skeleton className="h-6 w-full" />
+      <div className=&quot;container max-w-3xl py-10&quot;>
+        <Skeleton className=&quot;h-6 w-full&quot; />
       </div>
     );
   }
 
   return (
-    <div className="container max-w-3xl py-10 space-y-6">
-      <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
+    <div className=&quot;container max-w-3xl py-10 space-y-6&quot;>
+      <h1 className=&quot;text-3xl font-bold&quot;>Order #{order.orderId}</h1>
 
       <div>
-        <h2 className="font-semibold mb-2">Items</h2>
-        <ul className="space-y-1">
+        <h2 className=&quot;font-semibold mb-2&quot;>Items</h2>
+        <ul className=&quot;space-y-1&quot;>
           {order.items.map((item, idx) => (
-            <li key={idx} className="flex justify-between">
+            <li key={idx} className=&quot;flex justify-between&quot;>
               <span>{item.name} x {item.quantity}</span>
               <span>${item.price.toFixed(2)}</span>
             </li>
@@ -90,26 +90,26 @@ export default function OrderDetailPage() {
       </div>
 
       <div>
-        <h2 className="font-semibold mb-2">Shipping Address</h2>
+        <h2 className=&quot;font-semibold mb-2&quot;>Shipping Address</h2>
         <p>{order.shippingAddress.name}</p>
         <p>{order.shippingAddress.street}</p>
         <p>{order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zip}</p>
       </div>
 
       <div>
-        <h2 className="font-semibold mb-2">Tracking</h2>
+        <h2 className=&quot;font-semibold mb-2&quot;>Tracking</h2>
         <OrderTimeline events={order.trackingEvents} />
       </div>
 
-      <div className="flex gap-3">
+      <div className=&quot;flex gap-3&quot;>
         <Button onClick={handleDownload}>Download PDF Invoice</Button>
-        <Button variant="outline" onClick={handleCopySummary}>
-          <Clipboard className="h-4 w-4" /> Copy Summary
+        <Button variant=&quot;outline&quot; onClick={handleCopySummary}>
+          <Clipboard className=&quot;h-4 w-4&quot; /> Copy Summary
         </Button>
-        <Button variant="outline" onClick={handleResend}>Resend Receipt</Button>
+        <Button variant=&quot;outline&quot; onClick={handleResend}>Resend Receipt</Button>
       </div>
 
-      <Link href="/orders" className="text-zion-purple underline">
+      <Link href=&quot;/orders&quot; className=&quot;text-zion-purple underline&quot;>
         Back to orders
       </Link>
     </div>

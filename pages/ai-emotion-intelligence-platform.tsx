@@ -134,35 +134,35 @@ export default function AIEmotionIntelligencePlatform() {
     <>
       <Head>
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights." />
-        <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name=&quot;description&quot; content=&quot;Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
       </Head>
 
       <UltraFuturisticBackground2030>
         <UltraFuturisticNavigation2030 />
         
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden pt-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }} className="mb-8">
+              transition={{ duration: 0.8 }} className=&quot;mb-8&quot;>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
+                transition={{ duration: 0.8, delay: 0.2 }} className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6&quot;>
+                <Sparkles className=&quot;w-4 h-4 mr-2&quot; />
                 AI & Customer Experience
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                transition={{ duration: 0.8, delay: 0.4 }} className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
+                <span className=&quot;bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent&quot;>
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
@@ -170,14 +170,14 @@ export default function AIEmotionIntelligencePlatform() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                transition={{ duration: 0.8, delay: 0.6 }} className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed&quot;>
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                transition={{ duration: 0.8, delay: 0.8 }} className=&quot;text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto&quot;>
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
@@ -186,21 +186,21 @@ export default function AIEmotionIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+              transition={{ duration: 0.8, delay: 1.0 }} className=&quot;flex flex-col sm:flex-row items-center justify-center gap-6 mb-16&quot;>
               <Link
-                href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
-                <span className="relative z-10 flex items-center">
+                href=&quot;/contact&quot; className=&quot;group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25&quot;>
+                <span className=&quot;relative z-10 flex items-center&quot;>
                   Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className=&quot;ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200&quot; />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className=&quot;absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
               </Link>
 
               <Link
-                href="#pricing" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center">
+                href=&quot;#pricing&quot; className=&quot;group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105&quot;>
+                <span className=&quot;flex items-center&quot;>
                   View Pricing
-                  <DollarSign className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+                  <DollarSign className=&quot;ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200&quot; />
                 </span>
               </Link>
             </motion.div>
@@ -209,56 +209,56 @@ export default function AIEmotionIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
-                <div className="text-gray-400 text-sm">Emotions Detected</div>
+              transition={{ duration: 0.8, delay: 1.2 }} className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;>
+              <div className=&quot;text-center&quot;>
+                <div className=&quot;text-3xl md:text-4xl font-bold text-pink-400 mb-2&quot;>27</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Emotions Detected</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-400 text-sm">Accuracy Rate</div>
+              <div className=&quot;text-center&quot;>
+                <div className=&quot;text-3xl md:text-4xl font-bold text-purple-400 mb-2&quot;>99.9%</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Accuracy Rate</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt;100ms</div>
-                <div className="text-gray-400 text-sm">Response Time</div>
+              <div className=&quot;text-center&quot;>
+                <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2&quot;>&lt;100ms</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Response Time</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
-                <div className="text-gray-400 text-sm">Satisfaction Increase</div>
+              <div className=&quot;text-center&quot;>
+                <div className=&quot;text-3xl md:text-4xl font-bold text-emerald-400 mb-2&quot;>35%</div>
+                <div className=&quot;text-gray-400 text-sm&quot;>Satisfaction Increase</div>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className=&quot;py-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }} className=&quot;text-center mb-16&quot;>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Powerful Features for Emotion Intelligence
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
                 Our platform provides comprehensive emotion analysis capabilities to transform your customer interactions
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  viewport={{ once: true }} className=&quot;group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10&quot;>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
+                    <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-400&quot;>{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -266,34 +266,34 @@ export default function AIEmotionIntelligencePlatform() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className=&quot;py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }} className=&quot;text-center mb-16&quot;>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Transform Your Business with Emotion AI
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
                 Discover how emotion intelligence can revolutionize your customer experience and business outcomes
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                  viewport={{ once: true }} className=&quot;p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300&quot;>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6&quot;>
+                    <useCase.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-400 text-lg">{useCase.description}</p>
+                  <h3 className=&quot;text-2xl font-semibold text-white mb-4&quot;>{useCase.title}</h3>
+                  <p className=&quot;text-gray-400 text-lg&quot;>{useCase.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -301,22 +301,22 @@ export default function AIEmotionIntelligencePlatform() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id=&quot;pricing&quot; className=&quot;py-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }} className=&quot;text-center mb-16&quot;>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Choose Your Plan
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
                 Start with our professional plan and scale as you grow
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
@@ -331,27 +331,27 @@ export default function AIEmotionIntelligencePlatform() {
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full">
+                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
+                      <span className=&quot;px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full&quot;>
                         Most Popular
                       </span>
                     </div>
                   )}
 
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400">{plan.period}</span>
+                  <div className=&quot;text-center mb-8&quot;>
+                    <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
+                    <div className=&quot;mb-4&quot;>
+                      <span className=&quot;text-4xl font-bold text-white&quot;>{plan.price}</span>
+                      <span className=&quot;text-gray-400&quot;>{plan.period}</span>
                     </div>
-                    <p className="text-gray-400">{plan.description}</p>
+                    <p className=&quot;text-gray-400&quot;>{plan.description}</p>
                   </div>
 
-                  <ul className="space-y-4 mb-8">
+                  <ul className=&quot;space-y-4 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                      <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
+                        <CheckCircle className=&quot;w-5 h-5 text-pink-400 flex-shrink-0&quot; />
+                        <span className=&quot;text-gray-300&quot;>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -373,61 +373,61 @@ export default function AIEmotionIntelligencePlatform() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className=&quot;py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-400 mb-8 max-w-3xl mx-auto&quot;>
                 Join hundreds of companies already using our AI Emotion Intelligence Platform to transform their customer experience
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+              <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-6 mb-12&quot;>
                 <Link
-                  href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
-                  <span className="relative z-10 flex items-center">
+                  href=&quot;/contact&quot; className=&quot;group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25&quot;>
+                  <span className=&quot;relative z-10 flex items-center&quot;>
                     Start Free Trial
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className=&quot;ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200&quot; />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className=&quot;absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
                 </Link>
 
                 <Link
-                  href="/contact" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-                  <span className="flex items-center">
+                  href=&quot;/contact&quot; className=&quot;group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105&quot;>
+                  <span className=&quot;flex items-center&quot;>
                     Schedule Demo
-                    <MessageCircle className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+                    <MessageCircle className=&quot;ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200&quot; />
                   </span>
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="flex flex-col items-center">
-                  <Phone className="w-8 h-8 text-pink-400 mb-4" />
-                  <span className="text-gray-300 text-sm">Call Us</span>
-                  <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
+                <div className=&quot;flex flex-col items-center&quot;>
+                  <Phone className=&quot;w-8 h-8 text-pink-400 mb-4&quot; />
+                  <span className=&quot;text-gray-300 text-sm&quot;>Call Us</span>
+                  <a href={`tel:${contactInfo.mobile}`} className=&quot;text-white font-semibold hover:text-pink-400 transition-colors&quot;>
                     {contactInfo.mobile}
-                  </a>
+                  </Link>
                 </div>
-                <div className="flex flex-col items-center">
-                  <Mail className="w-8 h-8 text-purple-400 mb-4" />
-                  <span className="text-gray-300 text-sm">Email Us</span>
-                  <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
+                <div className=&quot;flex flex-col items-center&quot;>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mb-4&quot; />
+                  <span className=&quot;text-gray-300 text-sm&quot;>Email Us</span>
+                  <a href={`mailto:${contactInfo.email}`} className=&quot;text-white font-semibold hover:text-purple-400 transition-colors&quot;>
                     {contactInfo.email}
-                  </a>
+                  </Link>
                 </div>
-                <div className="flex flex-col items-center">
-                  <Globe className="w-8 h-8 text-cyan-400 mb-4" />
-                  <span className="text-gray-300 text-sm">Visit Us</span>
-                  <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
+                <div className=&quot;flex flex-col items-center&quot;>
+                  <Globe className=&quot;w-8 h-8 text-cyan-400 mb-4&quot; />
+                  <span className=&quot;text-gray-300 text-sm&quot;>Visit Us</span>
+                  <a href={contactInfo.website} className=&quot;text-white font-semibold hover:text-cyan-400 transition-colors&quot;>
                     {contactInfo.website.replace('https://', '')}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

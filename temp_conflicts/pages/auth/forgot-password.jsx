@@ -6,7 +6,7 @@ const ForgotPassword = () => {
     <div>
       <Head>
         <title>ForgotPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ForgotPassword page" />
+        <meta name=&quot;description&quot; content=&quot;ForgotPassword page&quot; />
       </Head>
       
       <main>

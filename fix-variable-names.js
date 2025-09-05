@@ -5,7 +5,7 @@
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
     return false} catch (error) {,
-    console.error("Error fixing ${filePath}:", error.message),
+    console.error(&quot;Error fixing ${filePath}:&quot;, error.message),
     return false};
 };
 function fixedCount = 0,

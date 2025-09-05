@@ -1,20 +1,20 @@
 
-import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from &quot;react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { motion, AnimatePresence } from &quot;framer-motion&quot;;
 
 interface StickyActionProps {
   className?: string;
   children: React.ReactNode;
   showAfterScroll?: number;
-  position?: "bottom" | "top";
+  position?: &quot;bottom&quot; | &quot;top&quot;;
 }
 
 export function StickyAction({
   className,
   children,
   showAfterScroll = 300,
-  position = "bottom"
+  position = &quot;bottom&quot;
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,32 +27,32 @@ export function StickyAction({
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener(&quot;scroll&quot;, handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener(&quot;scroll&quot;, handleScroll);
     };
   }, [showAfterScroll]);
 
   const positionClasses = {
-    bottom: "bottom-4",
-    top: "top-20"
+    bottom: &quot;bottom-4&quot;,
+    top: &quot;top-20&quot;
   };
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          initial={{ opacity: 0, y: position === &quot;bottom&quot; ? 20 : -20 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          exit={{ opacity: 0, y: position === &quot;bottom&quot; ? 20 : -20 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4",
+            &quot;fixed left-0 right-0 z-50 mx-auto flex justify-center px-4&quot;,
             positionClasses[position],
             className
           )}
         >
-          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
+          <div className=&quot;rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center&quot;>
             {children}
           </div>
         </motion.div>

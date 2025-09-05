@@ -1,13 +1,13 @@
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { QuoteRequestForm } from &quot;@/components/QuoteRequestForm&quot;;
 
 export default function RequestQuote() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-zion-blue">
+      <div className=&quot;min-h-screen bg-zion-blue&quot;>
         <QuoteRequestForm />
       </div>
       <Footer />

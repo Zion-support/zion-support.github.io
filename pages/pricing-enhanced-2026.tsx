@@ -122,7 +122,7 @@ export default function PricingEnhanced2026Page() {
         'Mobile App Access',
         'API Access (1000 calls/month)'
       ],
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className=&quot;w-8 h-8&quot; />,
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
@@ -148,7 +148,7 @@ export default function PricingEnhanced2026Page() {
         'Users Collaboration Tools',
         'Advanced Workflow Automation'
       ],
-      icon: <Star className="w-8 h-8" />,
+      icon: <Star className=&quot;w-8 h-8&quot; />,
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
@@ -176,7 +176,7 @@ export default function PricingEnhanced2026Page() {
         'Custom SLA Agreements',
         'On-site Implementation'
       ],
-      icon: <Crown className="w-8 h-8" />,
+      icon: <Crown className=&quot;w-8 h-8&quot; />,
       variant: 'quantum-advanced' as const,
       popular: false,
       cta: 'Contact Sales',
@@ -225,45 +225,45 @@ export default function PricingEnhanced2026Page() {
   ];
 
   return (
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+    <UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden&quot;>
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>
-          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
-          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
-          <link rel="icon" href="/favicon.svg" />
+          <meta name=&quot;description&quot; content=&quot;Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee&quot; />
+          <link rel=&quot;icon&quot; href=&quot;/favicon.svg&quot; />
           
           {/* Open Graph */}
-          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta property=&quot;og:title&quot; content=&quot;Enhanced 2026 Pricing - Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/pricing-enhanced-2026&quot; />
+          <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.svg&quot; />
           
           {/* Twitter */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+          <meta name=&quot;twitter:title&quot; content=&quot;Enhanced 2026 Pricing - Zion Tech Group&quot; />
+          <meta name=&quot;twitter:description&quot; content=&quot;Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.&quot; />
+          <meta name=&quot;twitter:image&quot; content=&quot;https://ziontechgroup.com/og-image.svg&quot; />
         </Head>
         {/* Enhanced Header Section */}
-        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className=&quot;relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-7xl mx-auto text-center"
+            className=&quot;max-w-7xl mx-auto text-center&quot;
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>
               Enhanced 2026 Pricing
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
 
             {/* Billing Cycle Toggle */}
-            <div className="flex items-center justify-center space-x-4 mb-8">
+            <div className=&quot;flex items-center justify-center space-x-4 mb-8&quot;>
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
@@ -278,25 +278,25 @@ export default function PricingEnhanced2026Page() {
                 />
               </button>
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
+                Yearly <span className=&quot;text-cyan-400 text-sm&quot;>(Save 20%)</span>
               </span>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div className="flex items-center justify-center space-x-2">
-                  <Phone className="w-4 h-4 text-purple-400" />
+            <div className=&quot;bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto&quot;>
+              <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-4&quot;>Need Custom Pricing?</h3>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 text-sm&quot;>
+                <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                  <Phone className=&quot;w-4 h-4 text-purple-400&quot; />
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
+                <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                  <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
                   <span>{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <MapPin className="w-4 h-4 text-purple-400" />
-                  <span className="text-center">{contactInfo.address}</span>
+                <div className=&quot;flex items-center justify-center space-x-2&quot;>
+                  <MapPin className=&quot;w-4 h-4 text-purple-400&quot; />
+                  <span className=&quot;text-center&quot;>{contactInfo.address}</span>
                 </div>
               </div>
             </div>
@@ -304,60 +304,60 @@ export default function PricingEnhanced2026Page() {
         </div>
 
         {/* Enhanced Pricing Tiers */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className=&quot;relative z-10 px-4 sm:px-6 lg:px-8 mb-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
+            <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative"
+                  className=&quot;relative&quot;
                 >
                   <UltraFuturisticCard
                     variant={tier.variant}
                     className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
                   >
                     {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
+                        <div className=&quot;bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold&quot;>
                           Most Popular
                         </div>
                       </div>
                     )}
                     
-                    <div className="p-8 text-center">
-                      <div className="flex justify-center mb-4">
+                    <div className=&quot;p-8 text-center&quot;>
+                      <div className=&quot;flex justify-center mb-4&quot;>
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
                           {tier.icon}
                         </div>
                       </div>
                       
-                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-400 mb-6">{tier.description}</p>
+                      <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{tier.name}</h3>
+                      <p className=&quot;text-gray-400 mb-6&quot;>{tier.description}</p>
                       
-                      <div className="mb-6">
-                        <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
-                        <span className="text-gray-400">{tier.period}</span>
+                      <div className=&quot;mb-6&quot;>
+                        <span className=&quot;text-4xl font-bold text-cyan-400&quot;>${tier.price}</span>
+                        <span className=&quot;text-gray-400&quot;>{tier.period}</span>
                         {tier.savings && (
-                          <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
+                          <div className=&quot;text-sm text-green-400 mt-1&quot;>{tier.savings}</div>
                         )}
                       </div>
                       
-                      <ul className="text-left space-y-3 mb-8">
+                      <ul className=&quot;text-left space-y-3 mb-8&quot;>
                         {tier.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-300">{feature}</span>
+                          <li key={idx} className=&quot;flex items-start&quot;>
+                            <Check className=&quot;w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0&quot; />
+                            <span className=&quot;text-gray-300&quot;>{feature}</span>
                           </li>
                         ))}
                       </ul>
                       
                                              <Button
-                                                   variant="primary"
-                         size="lg"
-                         className="w-full"
+                                                   variant=&quot;primary&quot;
+                         size=&quot;lg&quot;
+                         className=&quot;w-full&quot;
                          onClick={() => {
                            if (tier.name === 'Enterprise') {
                              window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank');
@@ -377,24 +377,24 @@ export default function PricingEnhanced2026Page() {
         </div>
 
         {/* Enhanced Service Categories */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
+        <div className=&quot;relative z-10 px-4 sm:px-6 lg:px-8 mb-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className=&quot;text-center mb-12&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
                 Service Categories & Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Explore our comprehensive service categories with transparent pricing and competitive advantages
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
@@ -403,39 +403,39 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-center mb-4">
+                  <UltraFuturisticCard variant=&quot;quantum-advanced&quot; className=&quot;h-full&quot;>
+                    <div className=&quot;p-6&quot;>
+                      <div className=&quot;flex items-center mb-4&quot;>
                         <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
-                          <category.icon className="w-6 h-6 text-white" />
+                          <category.icon className=&quot;w-6 h-6 text-white&quot; />
                         </div>
-                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                        <h3 className=&quot;text-xl font-bold text-white&quot;>{category.name}</h3>
                       </div>
                       
-                      <p className="text-gray-400 mb-4">{category.description}</p>
+                      <p className=&quot;text-gray-400 mb-4&quot;>{category.description}</p>
                       
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
-                        <div className="text-sm text-green-400">{category.savings}</div>
+                      <div className=&quot;mb-4&quot;>
+                        <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.avgPrice}</span>
+                        <div className=&quot;text-sm text-green-400&quot;>{category.savings}</div>
                       </div>
                       
-                      <ul className="space-y-2 mb-4">
+                      <ul className=&quot;space-y-2 mb-4&quot;>
                         {category.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                            <Check className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                             {service}
                           </li>
                         ))}
                       </ul>
                       
                       <Button
-                        variant="primary"
-                        size="sm"
-                        className="w-full"
+                        variant=&quot;primary&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;w-full&quot;
                         onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')}
                       >
                         View Services
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
                       </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -446,24 +446,24 @@ export default function PricingEnhanced2026Page() {
         </div>
 
         {/* Featured Services Showcase */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
+        <div className=&quot;relative z-10 px-4 sm:px-6 lg:px-8 mb-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className=&quot;text-center mb-12&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
                 Featured Services
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Discover our most popular and innovative services that are transforming businesses worldwide
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.name}
@@ -472,41 +472,41 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard variant="holographic" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl">{service.icon}</div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">Starting price</div>
+                  <UltraFuturisticCard variant=&quot;holographic&quot; className=&quot;h-full&quot;>
+                    <div className=&quot;p-6&quot;>
+                      <div className=&quot;flex items-start justify-between mb-4&quot;>
+                        <div className=&quot;text-4xl&quot;>{service.icon}</div>
+                        <div className=&quot;text-right&quot;>
+                          <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</div>
+                          <div className=&quot;text-sm text-gray-400&quot;>Starting price</div>
                         </div>
                       </div>
                       
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-400 mb-4">{service.description}</p>
+                      <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                      <p className=&quot;text-gray-400 mb-4&quot;>{service.description}</p>
                       
-                      <ul className="space-y-2 mb-4">
+                      <ul className=&quot;space-y-2 mb-4&quot;>
                         {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                            <Check className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}
                           </li>
                         ))}
                       </ul>
                       
-                      <div className="flex space-x-2">
+                      <div className=&quot;flex space-x-2&quot;>
                         <Button
-                          variant="primary"
-                          size="sm"
-                          className="flex-1"
+                          variant=&quot;primary&quot;
+                          size=&quot;sm&quot;
+                          className=&quot;flex-1&quot;
                           onClick={() => window.open(service.link, '_blank')}
                         >
                           Learn More
-                          <ArrowRight className="w-4 h-4 ml-1" />
+                          <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
                         </Button>
                         <Button
-                          variant="secondary"
-                          size="sm"
+                          variant=&quot;secondary&quot;
+                          size=&quot;sm&quot;
                           onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
                         >
                           Contact
@@ -521,40 +521,40 @@ export default function PricingEnhanced2026Page() {
         </div>
 
         {/* Enhanced Footer CTA */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-4xl mx-auto">
+        <div className=&quot;relative z-10 px-4 sm:px-6 lg:px-8 pb-20&quot;>
+          <div className=&quot;max-w-4xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
+              className=&quot;bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center&quot;
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <Button
-                  variant="primary"
-                  size="lg"
+                  variant=&quot;primary&quot;
+                  size=&quot;lg&quot;
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className=&quot;w-5 h-5 mr-2&quot; />
                   Schedule Consultation
                 </Button>
                 <Button
-                  variant="secondary"
-                  size="lg"
+                  variant=&quot;secondary&quot;
+                  size=&quot;lg&quot;
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className=&quot;w-5 h-5 mr-2&quot; />
                   Call Now
                 </Button>
               </div>
-              <div className="mt-8 text-sm text-gray-400">
+              <div className=&quot;mt-8 text-sm text-gray-400&quot;>
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
                 <p>{contactInfo.address}</p>
               </div>

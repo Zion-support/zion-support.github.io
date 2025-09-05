@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
+import React from &quot;react&quot;;
+import { Eye, MoreHorizontal, Archive, Trash2 } from &quot;lucide-react&quot;;
 import { 
   Table, 
   TableBody, 
@@ -8,17 +8,17 @@ import {
   TableHead, 
   TableHeader, 
   TableRow 
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
+} from &quot;@/components/ui/table&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
+} from &quot;@/components/ui/dropdown-menu&quot;;
+import { QuoteStatusBadge } from &quot;@/components/quotes/QuoteStatusBadge&quot;;
+import type { QuoteRequest, QuoteStatus } from &quot;@/types/quotes&quot;;
+import { formatDate } from &quot;@/utils/dateUtils&quot;;
 
 interface QuotesTableProps {
   quotes: QuoteRequest[];
@@ -40,53 +40,53 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   onViewDetails
 }) => {
   return (
-    <div className="overflow-x-auto">
+    <div className=&quot;overflow-x-auto&quot;>
       <Table>
         <TableHeader>
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
-            <TableHead className="text-zion-slate-light">Talent</TableHead>
-            <TableHead className="text-zion-slate-light">Requester</TableHead>
-            <TableHead className="text-zion-slate-light">Project</TableHead>
-            <TableHead className="text-zion-slate-light">Budget</TableHead>
-            <TableHead className="text-zion-slate-light">Date</TableHead>
-            <TableHead className="text-zion-slate-light">Status</TableHead>
-            <TableHead className="text-zion-slate-light">Actions</TableHead>
+          <TableRow className=&quot;border-zion-blue-light hover:bg-zion-blue&quot;>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Talent</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Requester</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Project</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Budget</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Date</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Status</TableHead>
+            <TableHead className=&quot;text-zion-slate-light&quot;>Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {isLoading ? (
             <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+              <TableCell colSpan={7} className=&quot;text-center py-10 text-zion-slate-light&quot;>
                 Loading quote requests...
               </TableCell>
             </TableRow>
           ) : quotes.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+              <TableCell colSpan={7} className=&quot;text-center py-10 text-zion-slate-light&quot;>
                 {isArchived 
-                  ? "No archived quote requests found." 
-                  : "No quote requests found."}
+                  ? &quot;No archived quote requests found.&quot; 
+                  : &quot;No quote requests found.&quot;}
               </TableCell>
             </TableRow>
           ) : (
             quotes.map(quote => (
               <TableRow 
                 key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue"
+                className=&quot;border-zion-blue-light hover:bg-zion-blue&quot;
               >
-                <TableCell className="text-white">
+                <TableCell className=&quot;text-white&quot;>
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
-                <TableCell className="text-white">
+                <TableCell className=&quot;text-white&quot;>
                   {quote.requester_name}
                 </TableCell>
-                <TableCell className="text-white">
-                  <div className="font-medium">{quote.project_name}</div>
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
+                <TableCell className=&quot;text-white&quot;>
+                  <div className=&quot;font-medium&quot;>{quote.project_name}</div>
+                  <div className=&quot;text-sm text-zion-slate-light truncate max-w-[200px]&quot;>
                     {quote.project_summary}
                   </div>
                 </TableCell>
-                <TableCell className="text-white">
+                <TableCell className=&quot;text-white&quot;>
                   {quote.budget_display || 
                   (quote.budget_min && quote.budget_max 
                    ? `$${quote.budget_min} - $${quote.budget_max}` 
@@ -94,56 +94,56 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                      ? `$${quote.budget_min}` 
                      : 'Not specified')}
                 </TableCell>
-                <TableCell className="text-white">
+                <TableCell className=&quot;text-white&quot;>
                   {formatDate(quote.created_at)}
                 </TableCell>
                 <TableCell>
                   <QuoteStatusBadge status={quote.status} />
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
+                  <div className=&quot;flex items-center gap-2&quot;>
                     <Button 
-                      variant="ghost" 
-                      size="icon" 
+                      variant=&quot;ghost&quot; 
+                      size=&quot;icon&quot; 
                       onClick={() => onViewDetails(quote)}
                     >
-                      <Eye className="h-4 w-4" />
-                      <span className="sr-only">View Details</span>
+                      <Eye className=&quot;h-4 w-4&quot; />
+                      <span className=&quot;sr-only&quot;>View Details</span>
                     </Button>
                     
                     {isArchived ? (
                       <>
                         <Button 
-                          variant="ghost" 
-                          size="icon"
+                          variant=&quot;ghost&quot; 
+                          size=&quot;icon&quot;
                           onClick={() => toggleArchive(quote.id, false)}
                         >
-                          <Archive className="h-4 w-4" />
-                          <span className="sr-only">Unarchive</span>
+                          <Archive className=&quot;h-4 w-4&quot; />
+                          <span className=&quot;sr-only&quot;>Unarchive</span>
                         </Button>
                         <Button 
-                          variant="ghost" 
-                          size="icon"
-                          className="text-red-500"
+                          variant=&quot;ghost&quot; 
+                          size=&quot;icon&quot;
+                          className=&quot;text-red-500&quot;
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                               deleteQuote(quote.id);
                             }
                           }}
                         >
-                          <Trash2 className="h-4 w-4" />
-                          <span className="sr-only">Delete</span>
+                          <Trash2 className=&quot;h-4 w-4&quot; />
+                          <span className=&quot;sr-only&quot;>Delete</span>
                         </Button>
                       </>
                     ) : (
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="ghost" size="icon">
-                            <MoreHorizontal className="h-4 w-4" />
-                            <span className="sr-only">Actions</span>
+                          <Button variant=&quot;ghost&quot; size=&quot;icon&quot;>
+                            <MoreHorizontal className=&quot;h-4 w-4&quot; />
+                            <span className=&quot;sr-only&quot;>Actions</span>
                           </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
+                        <DropdownMenuContent align=&quot;end&quot;>
                           <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
                             Mark as New
                           </DropdownMenuItem>
@@ -160,7 +160,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             Mark as Closed
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
-                            <Archive className="h-4 w-4 mr-2" />
+                            <Archive className=&quot;h-4 w-4 mr-2&quot; />
                             Archive
                           </DropdownMenuItem>
                           <DropdownMenuItem 
@@ -169,9 +169,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                                 deleteQuote(quote.id);
                               }
                             }}
-                            className="text-red-500"
+                            className=&quot;text-red-500&quot;
                           >
-                            <Trash2 className="h-4 w-4 mr-2" />
+                            <Trash2 className=&quot;h-4 w-4 mr-2&quot; />
                             Delete
                           </DropdownMenuItem>
                         </DropdownMenuContent>

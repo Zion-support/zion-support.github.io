@@ -1,4 +1,4 @@
-console.log("main.tsx: Start");
+// console.log(&quot;main.tsx: Start&quot;);
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
@@ -36,7 +36,7 @@ const queryClient = new QueryClient({
       onError: (error) => showApiError(error)}}});
 
 try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
+  // console.log(&quot;main.tsx: Before ReactDOM.createRoot&quot;);
   // Render the app with proper provider structure
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -68,14 +68,14 @@ try {
       </HelmetProvider>
     </React.StrictMode>,
   );
-  console.log("main.tsx: After ReactDOM.createRoot");
+  // console.log(&quot;main.tsx: After ReactDOM.createRoot&quot;);
 } catch (error) {
-  console.error("Global error caught in main.tsx:", error);
-  console.log("main.tsx: Global error caught");
+  console.error(&quot;Global error caught in main.tsx:&quot;, error);
+  // console.log(&quot;main.tsx: Global error caught&quot;);
   const rootElement = document.getElementById('root');
   if (rootElement) {
     rootElement.innerHTML = `
-      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+      <div style=&quot;padding: 20px; text-align: center; font-family: sans-serif;&quot;>
         <h1>Application Error</h1>
         <p>A critical error occurred while loading the application.</p>
         <p>Error: ${(error as Error).message}</p>

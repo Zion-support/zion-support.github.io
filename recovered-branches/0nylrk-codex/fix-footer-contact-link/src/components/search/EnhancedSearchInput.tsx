@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; 
-import { SearchSuggestion } from "@/types/search";
+import React, { useState, useEffect, useRef } from &quot;react&quot;;
+import { Search, X } from &quot;lucide-react&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { AutocompleteSuggestions } from &quot;@/components/search/AutocompleteSuggestions&quot;; 
+import { SearchSuggestion } from &quot;@/types/search&quot;;
 
 interface EnhancedSearchInputProps {
   value: string;
@@ -15,7 +15,7 @@ interface EnhancedSearchInputProps {
 export function EnhancedSearchInput({ 
   value, 
   onChange, 
-  placeholder = "Search...", 
+  placeholder = &quot;Search...&quot;, 
   searchSuggestions 
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -53,8 +53,8 @@ export function EnhancedSearchInput({
       }
     }
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener(&quot;mousedown&quot;, handleClickOutside);
+    return () => document.removeEventListener(&quot;mousedown&quot;, handleClickOutside);
   }, []);
 
   const handleSelectSuggestion = (suggestion: string) => {
@@ -64,26 +64,26 @@ export function EnhancedSearchInput({
   };
   
   return (
-    <div className="relative w-full" ref={containerRef}>
-      <div className="relative">
+    <div className=&quot;relative w-full&quot; ref={containerRef}>
+      <div className=&quot;relative&quot;>
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
         />
         <Input
           ref={inputRef}
-          type="text"
+          type=&quot;text&quot;
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
         />
         {value && (
           <button 
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;
             onClick={() => onChange('')}
           >
-            <X className="h-4 w-4" />
+            <X className=&quot;h-4 w-4&quot; />
           </button>
         )}
       </div>

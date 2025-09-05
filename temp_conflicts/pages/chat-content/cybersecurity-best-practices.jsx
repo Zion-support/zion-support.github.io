@@ -6,7 +6,7 @@ const CybersecurityBestPractices = () => {
     <div>
       <Head>
         <title>CybersecurityBestPractices - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityBestPractices page" />
+        <meta name=&quot;description&quot; content=&quot;CybersecurityBestPractices page&quot; />
       </Head>
       
       <main>

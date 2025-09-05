@@ -82,8 +82,8 @@ const AppLayout = dynamic(() =>
   import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
   ssr: true,
   loading: () => (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-pulse text-lg">Loading layout...</div>
+    <div className=&quot;flex items-center justify-center min-h-screen&quot;>
+      <div className=&quot;animate-pulse text-lg&quot;>Loading layout...</div>
     </div>
   )
 });
@@ -185,7 +185,7 @@ const poppins = Poppins({
     const initializeApp = async () => {
       try {
         if (process.env.NODE_ENV === 'development') {
-          console.log('[App] Starting optimized initialization...');
+          // console.log('[App] Starting optimized initialization...');
         }
 
         // Critical path only
@@ -293,14 +293,14 @@ const poppins = Poppins({
   // FIXED: Enhanced loading screen with error display
   if (!isInitialized) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
-          <p className="text-blue-200 text-sm mt-2">
+      <div className=&quot;flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4&quot;></div>
+          <p className=&quot;text-white text-lg font-medium&quot;>Initializing Zion App...</p>
+          <p className=&quot;text-blue-200 text-sm mt-2&quot;>
             {initError ? `Error: ${initError}` : 'Optimizing performance...'}
           </p>
-          <p className="text-blue-300 text-xs mt-2">This should complete in a few seconds</p>
+          <p className=&quot;text-blue-300 text-xs mt-2&quot;>This should complete in a few seconds</p>
         </div>
       </div>
     );
@@ -344,8 +344,8 @@ const poppins = Poppins({
             <HydrationErrorBoundary>
               <React.Suspense
                 fallback={
-                  <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-pulse text-lg">Loading app...</div>
+                  <div className=&quot;flex items-center justify-center min-h-screen&quot;>
+                    <div className=&quot;animate-pulse text-lg&quot;>Loading app...</div>
                   </div>
                 }
               >
@@ -357,9 +357,9 @@ const poppins = Poppins({
                           <ErrorProvider>
                             <AuthProvider>
                               <ErrorBoundary fallback={
-                                <div className="flex items-center justify-center min-h-screen">
-                                  <div className="text-center">
-                                    <h2 className="text-xl mb-4">Loading providers...</h2>
+                                <div className=&quot;flex items-center justify-center min-h-screen&quot;>
+                                  <div className=&quot;text-center&quot;>
+                                    <h2 className=&quot;text-xl mb-4&quot;>Loading providers...</h2>
                                     <p>If this takes too long, there may be a provider issue.</p>
                                   </div>
                                 </div>
@@ -412,7 +412,7 @@ const poppins = Poppins({
 }
 
 if (process.env.NODE_ENV === 'development') {
-  console.log('[App] MyApp component initialized with loading fix');
+  // console.log('[App] MyApp component initialized with loading fix');
 }
 
 export default MyApp;

@@ -25,7 +25,7 @@ export const useUpdateMilestone = () => {
         .single();
       
       if (fetchError) throw fetchError;
-      if (!milestoneData) throw new Error("Milestone not found");
+      if (!milestoneData) throw new Error(&quot;Milestone not found&quot;);
       
       const previousStatus = milestoneData.status;
       
@@ -44,8 +44,8 @@ export const useUpdateMilestone = () => {
       
       return true;
     } catch (err: any) {
-      console.error("Error updating milestone status:", err);
-      toast.error("Failed to update status: " + err.message);
+      console.error(&quot;Error updating milestone status:&quot;, err);
+      toast.error(&quot;Failed to update status: &quot; + err.message);
       return false;
     } finally {
       setIsSubmitting(false);
@@ -68,12 +68,12 @@ export const useUpdateMilestone = () => {
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'updated', null, 'updated', 'Milestone details updated');
       
-      toast.success("Milestone updated successfully");
+      toast.success(&quot;Milestone updated successfully&quot;);
       
       return true;
     } catch (err: any) {
-      console.error("Error updating milestone:", err);
-      toast.error("Failed to update milestone: " + err.message);
+      console.error(&quot;Error updating milestone:&quot;, err);
+      toast.error(&quot;Failed to update milestone: &quot; + err.message);
       return false;
     } finally {
       setIsSubmitting(false);

@@ -8,17 +8,17 @@ type Props = {
 
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12">
-      <h1 className="text-2xl font-bold text-gray-900">Changelog</h1>
+    <main className=&quot;mx-auto max-w-4xl px-4 py-12&quot;>
+      <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Changelog</h1>
       {generatedAt && (
-        <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>
+        <p className=&quot;mt-2 text-sm text-gray-600&quot;>Generated: {generatedAt}</p>
       )}
       {content ? (
-        <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">
+        <pre className=&quot;mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm&quot;>
 {content}
         </pre>
       ) : (
-        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
+        <div className=&quot;mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600&quot;>
           No changelog generated yet.
         </div>
       )}

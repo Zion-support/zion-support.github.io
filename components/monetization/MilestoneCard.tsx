@@ -21,21 +21,21 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
 
   return (
-    <div className="border rounded-lg p-4 bg-white shadow-sm">
-      <div className="flex items-start justify-between">
+    <div className=&quot;border rounded-lg p-4 bg-white shadow-sm&quot;>
+      <div className=&quot;flex items-start justify-between&quot;>
         <div>
-          <h3 className="text-lg font-semibold">{milestone.title}</h3>
-          <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
+          <h3 className=&quot;text-lg font-semibold&quot;>{milestone.title}</h3>
+          <p className=&quot;text-sm text-gray-600&quot;>Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
         </div>
-        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>
+        <button className=&quot;text-sm text-blue-600&quot; onClick={() => setExpanded((v) => !v)}>
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
 
-      <div className="mt-3">
-        <div className="flex items-center gap-2">
+      <div className=&quot;mt-3&quot;>
+        <div className=&quot;flex items-center gap-2&quot;>
           {statusSteps.map((step, idx) => (
-            <div key={step} className="flex items-center">
+            <div key={step} className=&quot;flex items-center&quot;>
               <div
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
@@ -48,20 +48,20 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
             </div>
           ))}
         </div>
-        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+        <div className=&quot;mt-2 text-xs text-gray-700&quot;>Status: {milestone.status}</div>
       </div>
 
       {expanded && (
-        <div className="mt-4 space-y-2 text-sm text-gray-800">
+        <div className=&quot;mt-4 space-y-2 text-sm text-gray-800&quot;>
           {milestone.description && <p>{milestone.description}</p>}
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
-              <div className="font-medium">Attachments</div>
-              <ul className="list-disc ml-5">
+              <div className=&quot;font-medium&quot;>Attachments</div>
+              <ul className=&quot;list-disc ml-5&quot;>
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
-                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+                    <a className=&quot;text-blue-600 underline&quot; href={a.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>
                       {a.label || a.url}
                     </a>
                   </li>
@@ -72,10 +72,10 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         </div>
       )}
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className=&quot;mt-4 flex flex-wrap gap-2&quot;>
         {canClientMarkInProgress && (
           <button
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className=&quot;px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700&quot;
             onClick={() => onAction('in_progress', milestone.id)}
           >
             Mark In Progress
@@ -83,7 +83,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
         {canTalentSubmit && (
           <button
-            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
+            className=&quot;px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700&quot;
             onClick={() => onAction('submitted', milestone.id)}
           >
             Submit Work
@@ -91,7 +91,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
         {canClientApprove && (
           <button
-            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
+            className=&quot;px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700&quot;
             onClick={() => onAction('approved', milestone.id)}
           >
             Approve
@@ -99,7 +99,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
         {canClientMarkPaid && (
           <button
-            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
+            className=&quot;px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800&quot;
             onClick={() => onAction('paid', milestone.id)}
           >
             Mark as Paid

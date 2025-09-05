@@ -129,28 +129,28 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		<Layout>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={service.link} />
+				<meta name=&quot;description&quot; content={service.tagline || service.description} />
+				<link rel=&quot;canonical&quot; href={service.link} />
 				<script
-					type="application/ld+json"
+					type=&quot;application/ld+json&quot;
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org",
-								"@type": "Service",
+								&quot;@context&quot;: &quot;https://schema.org&quot;,
+								&quot;@type&quot;: &quot;Service&quot;,
 								name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
+									&quot;@type&quot;: &quot;Organization&quot;,
+									name: &quot;Zion Tech Group&quot;,
+									url: &quot;https://ziontechgroup.com&quot;
 								},
 								offers: {
-									"@type": "Offer",
-									        price: "99",
-									priceCurrency: "USD",
-									availability: "https://schema.org/InStock"
+									&quot;@type&quot;: &quot;Offer&quot;,
+									        price: &quot;99&quot;,
+									priceCurrency: &quot;USD&quot;,
+									availability: &quot;https://schema.org/InStock&quot;
 								}
 							},
 							null,
@@ -160,27 +160,27 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				/>
 			</Head>
 
-			<div className="container mx-auto px-4 py-16">
-				<div className="text-center mb-10">
-					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+			<div className=&quot;container mx-auto px-4 py-16&quot;>
+				<div className=&quot;text-center mb-10&quot;>
+					<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4&quot;>
 						{service.name}
 					</h1>
-					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+					<p className=&quot;text-gray-300 text-lg max-w-3xl mx-auto&quot;>{service.tagline || service.description}</p>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-					<div className="lg:col-span-2 space-y-6">
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+				<div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12&quot;>
+					<div className=&quot;lg:col-span-2 space-y-6&quot;>
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<h2 className=&quot;text-white text-xl font-semibold mb-3&quot;>Overview</h2>
+							<p className=&quot;text-gray-300 leading-relaxed&quot;>{service.description}</p>
 						</div>
 
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
-							<ul className="space-y-2 text-gray-300">
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Key Features</h3>
+							<ul className=&quot;space-y-2 text-gray-300&quot;>
 								{(service.features || []).slice(0, 12).map((f: string) => (
-									<li key={f} className="flex items-start gap-2">
-										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+									<li key={f} className=&quot;flex items-start gap-2&quot;>
+										<Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; />
 										<span>{f}</span>
 									</li>
 								))}
@@ -188,22 +188,22 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						</div>
 
 						{/* Use Cases & Integrations */}
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Use Cases & Integrations</h3>
+							<div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300&quot;>
 								<div>
-									<div className="text-sm text-gray-400 mb-2">Use Cases</div>
-									<ul className="list-disc list-inside space-y-1">
+									<div className=&quot;text-sm text-gray-400 mb-2&quot;>Use Cases</div>
+									<ul className=&quot;list-disc list-inside space-y-1&quot;>
 										{(service.useCases || []).slice(0, 8).map((u: string) => (
 											<li key={u}>{u}</li>
 										))}
 									</ul>
 								</div>
 								<div>
-									<div className="text-sm text-gray-400 mb-2">Integrations</div>
-									<div className="flex flex-wrap gap-2">
+									<div className=&quot;text-sm text-gray-400 mb-2&quot;>Integrations</div>
+									<div className=&quot;flex flex-wrap gap-2&quot;>
 										{(service.integrations || []).slice(0, 10).map((i: string) => (
-											<span key={i} className="px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs">{i}</span>
+											<span key={i} className=&quot;px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs&quot;>{i}</span>
 										))}
 									</div>
 								</div>
@@ -211,36 +211,36 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						</div>
 					</div>
 
-					<div className="space-y-6">
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<div className="text-sm text-gray-400 mb-1">Pricing</div>
-							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
-							<div className="mt-6 flex gap-3">
-								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
-								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
+					<div className=&quot;space-y-6&quot;>
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<div className=&quot;text-sm text-gray-400 mb-1&quot;>Pricing</div>
+							<div className=&quot;text-3xl font-bold text-white&quot;>${getPriceValue(service.price)}<span className=&quot;text-base font-medium text-gray-400&quot;>{service.period || '/month'}</span></div>
+							<div className=&quot;text-sm text-gray-400 mt-2&quot;>Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
+							<div className=&quot;mt-6 flex gap-3&quot;>
+								<a href=&quot;/contact&quot; className=&quot;flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300&quot;>Contact Sales</a>
+								<a href={service.link} className=&quot;flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300&quot;><ExternalLink className=&quot;w-4 h-4 mr-2 inline&quot; /> Learn More</a>
 							</div>
 						</div>
 
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<h3 className="text-white font-semibold mb-3">Contact</h3>
-							<div className="space-y-3 text-sm">
-								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
-								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<h3 className=&quot;text-white font-semibold mb-3&quot;>Contact</h3>
+							<div className=&quot;space-y-3 text-sm&quot;>
+								<div className=&quot;flex items-center gap-2 text-cyan-400&quot;><Phone className=&quot;w-4 h-4&quot; /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className=&quot;hover:underline&quot;>{contactInfo.mobile}</a></div>
+								<div className=&quot;flex items-center gap-2 text-purple-400&quot;><Mail className=&quot;w-4 h-4&quot; /><a href={`mailto:${contactInfo.email}`} className=&quot;hover:underline&quot;>{contactInfo.email}</a></div>
+								<div className=&quot;flex items-center gap-2 text-green-400&quot;><MapPin className=&quot;w-4 h-4&quot; /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:underline&quot;>{contactInfo.address}</a></div>
 							</div>
 						</div>
 
 						{/* Market Position & ROI */}
-						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
-							<h3 className="text-white font-semibold mb-3">Market & ROI</h3>
-							<div className="space-y-3 text-sm text-gray-300">
-								{service.marketPosition && <p className="leading-relaxed"><span className="text-gray-400">Position:</span> {service.marketPosition}</p>}
-								{service.roi && <p className="leading-relaxed"><span className="text-gray-400">ROI:</span> {service.roi}</p>}
+						<div className=&quot;p-6 bg-black/40 border border-gray-700/50 rounded-lg&quot;>
+							<h3 className=&quot;text-white font-semibold mb-3&quot;>Market & ROI</h3>
+							<div className=&quot;space-y-3 text-sm text-gray-300&quot;>
+								{service.marketPosition && <p className=&quot;leading-relaxed&quot;><span className=&quot;text-gray-400&quot;>Position:</span> {service.marketPosition}</p>}
+								{service.roi && <p className=&quot;leading-relaxed&quot;><span className=&quot;text-gray-400&quot;>ROI:</span> {service.roi}</p>}
 								{service.competitors?.length ? (
-									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
+									<p className=&quot;leading-relaxed&quot;><span className=&quot;text-gray-400&quot;>Competitors:</span> {service.competitors.slice(0,6).join(', ')}</p>
 								) : null}
-								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
+								<a href=&quot;/market-pricing&quot; className=&quot;inline-block mt-2 text-cyan-300 hover:text-cyan-200&quot;>See average market prices →</a>
 							</div>
 						</div>
 					</div>
@@ -267,9 +267,9 @@ const ServiceDetail: NextPage = () => {
         <Head>
           <title>Service Not Found - Zion Tech Solutions</title>
         </Head>
-        <div className="space-y-4">
-          <h1 className="text-xl font-semibold">Service not found</h1>
-          <Link href="/services"><a className="text-blue-600 hover:underline">Back to Services</a></Link>
+        <div className=&quot;space-y-4&quot;>
+          <h1 className=&quot;text-xl font-semibold&quot;>Service not found</h1>
+          <Link href=&quot;/services&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Services</a></a>
         </div>
       </EnhancedLayout>
     );
@@ -282,25 +282,25 @@ const ServiceDetail: NextPage = () => {
       <Head>
         <title>{service.name} - Zion Tech Solutions</title>
       </Head>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 space-y-4">
-          <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
+      <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+        <div className=&quot;md:col-span-2 space-y-4&quot;>
+          <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className=&quot;w-full rounded-lg border border-gray-200 dark:border-gray-800&quot; />
           <div>
-            <h1 className="text-2xl font-semibold">{service.name}</h1>
-            <p className="opacity-80">Category: {service.category}</p>
+            <h1 className=&quot;text-2xl font-semibold&quot;>{service.name}</h1>
+            <p className=&quot;opacity-80&quot;>Category: {service.category}</p>
           </div>
-          <p className="leading-relaxed">{service.description}</p>
-          <div className="flex flex-wrap gap-2">
-            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700">{service.category}</span>
+          <p className=&quot;leading-relaxed&quot;>{service.description}</p>
+          <div className=&quot;flex flex-wrap gap-2&quot;>
+            <span className=&quot;text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-zinc-700&quot;>{service.category}</span>
           </div>
         </div>
-        <aside className="md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max">
-          <div className="text-sm opacity-70">Price Range</div>
-          <div className="text-xl font-semibold">{priceRange}</div>
+        <aside className=&quot;md:col-span-1 space-y-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900 h-max&quot;>
+          <div className=&quot;text-sm opacity-70&quot;>Price Range</div>
+          <div className=&quot;text-xl font-semibold&quot;>{priceRange}</div>
           <Link href={`/contact?subject=${encodeURIComponent('Quote request: ' + service.name)}`}>
-            <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Request Quote</a>
-          </Link>
-          <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+            <a className=&quot;inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700&quot;>Request Quote</a>
+          </a>
+          <Link href=&quot;/services&quot;><a className=&quot;text-sm text-blue-600 hover:underline&quot;>Back to Services</a></a>
         </aside>
       </div>
     </EnhancedLayout>

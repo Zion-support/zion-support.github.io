@@ -1,11 +1,11 @@
 
-import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { FraudFlag } from "@/types/fraud";
-import { SeverityDisplay } from "./SeverityDisplay";
-import { ActionButtons } from "./ActionButtons";
-import { EmptyFraudState } from "./EmptyFraudState";
+import React from &quot;react&quot;;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { FraudFlag } from &quot;@/types/fraud&quot;;
+import { SeverityDisplay } from &quot;./SeverityDisplay&quot;;
+import { ActionButtons } from &quot;./ActionButtons&quot;;
+import { EmptyFraudState } from &quot;./EmptyFraudState&quot;;
 
 interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -24,8 +24,8 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 }) => {
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
+      <div className=&quot;flex justify-center items-center h-64&quot;>
+        <div className=&quot;animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple&quot;></div>
       </div>
     );
   }
@@ -55,19 +55,19 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
             <TableCell>
               <SeverityDisplay severity={flag.severity} />
             </TableCell>
-            <TableCell className="font-medium">
+            <TableCell className=&quot;font-medium&quot;>
               {flag.user_email || flag.user_id.substring(0, 8)}
             </TableCell>
-            <TableCell className="max-w-xs truncate">
+            <TableCell className=&quot;max-w-xs truncate&quot;>
               {flag.content_excerpt}
             </TableCell>
             <TableCell>
-              <Badge variant="outline">{flag.content_type}</Badge>
+              <Badge variant=&quot;outline&quot;>{flag.content_type}</Badge>
             </TableCell>
-            <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
-            <TableCell className="max-w-xs truncate">
+            <TableCell className=&quot;max-w-xs truncate&quot;>{flag.reason}</TableCell>
+            <TableCell className=&quot;max-w-xs truncate&quot;>
               {flag.gpt_explanation || (
-                <span className="text-muted-foreground text-xs">Not analyzed</span>
+                <span className=&quot;text-muted-foreground text-xs&quot;>Not analyzed</span>
               )}
             </TableCell>
             <TableCell>

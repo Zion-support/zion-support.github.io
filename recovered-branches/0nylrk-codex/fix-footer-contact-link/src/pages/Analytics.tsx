@@ -1,14 +1,14 @@
 
-import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer";
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary";
-import { PageViewsTable } from "@/components/analytics/PageViewsTable";
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats";
-import { PageViewsChart } from "@/components/analytics/PageViewsChart";
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
-import { ExportPanel } from "@/components/analytics/ExportPanel";
+import React, { useState } from &quot;react&quot;;
+import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { AnalyticsContainer } from &quot;@/components/analytics/AnalyticsContainer&quot;;
+import { AnalyticsSummary } from &quot;@/components/analytics/AnalyticsSummary&quot;;
+import { PageViewsTable } from &quot;@/components/analytics/PageViewsTable&quot;;
+import { UserBehaviorStats } from &quot;@/components/analytics/UserBehaviorStats&quot;;
+import { PageViewsChart } from &quot;@/components/analytics/PageViewsChart&quot;;
+import { ConversionAnalysisChart } from &quot;@/components/analytics/ConversionAnalysisChart&quot;;
+import { ExportPanel } from &quot;@/components/analytics/ExportPanel&quot;;
 
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d');
@@ -113,7 +113,7 @@ export default function Analytics() {
     <AnalyticsContainer>
       <AnalyticsSummary />
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
         <PageViewsChart
           data={pageViewTrends || []}
           timeRange={timeRange}
@@ -122,11 +122,11 @@ export default function Analytics() {
         <PageViewsTable />
       </div>
       
-      <div className="mb-6">
+      <div className=&quot;mb-6&quot;>
         <UserBehaviorStats />
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6&quot;>
         <ConversionAnalysisChart 
           data={conversionData || []} 
           timeRange={timeRange}

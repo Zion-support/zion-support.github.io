@@ -116,8 +116,8 @@ const pages = [
 
 // Generate sitemap XML content
 function generateSitemapXML() {
-  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  let xml = '<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>\n';
+  xml += '<urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>\n';
   
   pages.forEach(page => {
     xml += '  <url>\n';
@@ -150,13 +150,13 @@ function main() {
     const sitemapXML = generateSitemapXML();
     const xmlPath = path.join(publicDir, 'sitemap.xml');
     fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
-    console.log(`✅ Sitemap XML generated: ${xmlPath}`);
+    // console.log(`✅ Sitemap XML generated: ${xmlPath}`);
 
     // Generate and save sitemap.txt
     const sitemapTXT = generateSitemapTXT();
     const txtPath = path.join(publicDir, 'sitemap.txt');
     fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
-    console.log(`✅ Sitemap TXT generated: ${txtPath}`);
+    // console.log(`✅ Sitemap TXT generated: ${txtPath}`);
 
     // Generate robots.txt
     const robotsTXT = `User-agent: *
@@ -171,11 +171,11 @@ Crawl-delay: 1`;
     
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
-    console.log(`✅ Robots.txt generated: ${robotsPath}`);
+    // console.log(`✅ Robots.txt generated: ${robotsPath}`);
 
-    console.log(`\n🎉 Sitemap generation complete!`);
-    console.log(`📊 Total pages: ${pages.length}`);
-    console.log(`🌐 Base URL: ${BASE_URL}`);
+    // console.log(`\n🎉 Sitemap generation complete!`);
+    // console.log(`📊 Total pages: ${pages.length}`);
+    // console.log(`🌐 Base URL: ${BASE_URL}`);
     
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);

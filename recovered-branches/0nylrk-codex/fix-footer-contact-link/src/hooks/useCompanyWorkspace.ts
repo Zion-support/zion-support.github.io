@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from "react";
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
+import { useState, useEffect } from &quot;react&quot;;
+import { Company } from &quot;@/components/enterprise/workspace/CompanyDashboard&quot;;
 
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
@@ -12,21 +12,21 @@ export function useCompanyWorkspace(companySlug?: string) {
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
     setTimeout(() => {
-      if (companySlug === "demo" || !companySlug) {
+      if (companySlug === &quot;demo&quot; || !companySlug) {
         // Demo company data
         setCompany({
-          id: "company-123",
-          name: "Acme Corporation",
-          logoUrl: "/placeholder.svg",
+          id: &quot;company-123&quot;,
+          name: &quot;Acme Corporation&quot;,
+          logoUrl: &quot;/placeholder.svg&quot;,
           theme: {
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"},
-          plan: "Business",
+            primaryColor: &quot;#4f46e5&quot;,
+            backgroundColor: &quot;#ffffff&quot;,
+            textColor: &quot;#1f2937&quot;},
+          plan: &quot;Business&quot;,
           teamSize: 12,
           teamLimit: 50,
-          billingCycle: "Annual",
-          workspaceUrl: "acme.zion-ai.com"});
+          billingCycle: &quot;Annual&quot;,
+          workspaceUrl: &quot;acme.zion-ai.com&quot;});
         setError(null);
       } else {
         // For any other slug, we could check if it's a valid company
@@ -34,15 +34,15 @@ export function useCompanyWorkspace(companySlug?: string) {
         setCompany({
           id: `company-${companySlug}`,
           name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),
-          logoUrl: "/placeholder.svg",
+          logoUrl: &quot;/placeholder.svg&quot;,
           theme: {
-            primaryColor: "#4f46e5",
-            backgroundColor: "#ffffff",
-            textColor: "#1f2937"},
-          plan: "Teams",
+            primaryColor: &quot;#4f46e5&quot;,
+            backgroundColor: &quot;#ffffff&quot;,
+            textColor: &quot;#1f2937&quot;},
+          plan: &quot;Teams&quot;,
           teamSize: 5,
           teamLimit: 10,
-          billingCycle: "Monthly",
+          billingCycle: &quot;Monthly&quot;,
           workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null);
       }

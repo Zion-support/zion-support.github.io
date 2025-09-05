@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
+    res.setHeader('Content-Disposition', `attachment; filename=&quot;${courseId}-certificate.pdf&quot;`);
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response

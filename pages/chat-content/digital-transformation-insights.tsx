@@ -6,7 +6,7 @@ const DigitalTransformationInsights: NextPage = () => {
     <div>
       <Head>
         <title>DigitalTransformationInsights - Zion Tech Solutions</title>
-        <meta name="description" content="DigitalTransformationInsights page" />
+        <meta name=&quot;description&quot; content=&quot;DigitalTransformationInsights page&quot; />
       </Head>
       
       <main>

@@ -7,13 +7,13 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {
     <div>
       <Head>
         <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>
-        <meta name="description" content="TheRiseOfEdgeComputingInIotApplicationsChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;TheRiseOfEdgeComputingInIotApplicationsChat blog post&quot; />
       </Head>
       
       <main>
         <h1>TheRiseOfEdgeComputingInIotApplicationsChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

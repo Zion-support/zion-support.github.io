@@ -1,12 +1,12 @@
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
 import { BriefcaseIcon, Clock } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { useProjects } from &quot;@/hooks/useProjects&quot;;
+import { Project } from &quot;@/types/projects&quot;;
 
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
@@ -25,16 +25,16 @@ export function ActiveProjectsCard() {
     return (
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BriefcaseIcon className="h-5 w-5 text-primary" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <BriefcaseIcon className=&quot;h-5 w-5 text-primary&quot; />
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
+          <div className=&quot;space-y-2&quot;>
             {[1, 2].map(idx => (
-              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+              <div key={idx} className=&quot;h-16 animate-pulse bg-muted rounded&quot;></div>
             ))}
           </div>
         </CardContent>
@@ -46,16 +46,16 @@ export function ActiveProjectsCard() {
     return (
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BriefcaseIcon className="h-5 w-5 text-primary" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <BriefcaseIcon className=&quot;h-5 w-5 text-primary&quot; />
             <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-        <CardContent className="text-center py-6">
-          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
-          <Button variant="outline" asChild>
-            <Link href="/jobs">Find Opportunities</Link>
+        <CardContent className=&quot;text-center py-6&quot;>
+          <p className=&quot;text-muted-foreground mb-2&quot;>You don't have any active projects at the moment.</p>
+          <Button variant=&quot;outline&quot; asChild>
+            <Link href=&quot;/jobs&quot;>Find Opportunities</Link>
           </Button>
         </CardContent>
       </Card>
@@ -65,29 +65,29 @@ export function ActiveProjectsCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BriefcaseIcon className="h-5 w-5 text-primary" />
+        <CardTitle className=&quot;flex items-center gap-2&quot;>
+          <BriefcaseIcon className=&quot;h-5 w-5 text-primary&quot; />
           <span>Active Projects</span>
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className=&quot;space-y-4&quot;>
         {activeProjects.map(project => (
-          <div key={project.id} className="border rounded-md p-3">
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="font-medium text-sm">{project.job?.title}</h3>
+          <div key={project.id} className=&quot;border rounded-md p-3&quot;>
+            <div className=&quot;flex justify-between items-start mb-2&quot;>
+              <h3 className=&quot;font-medium text-sm&quot;>{project.job?.title}</h3>
               <Badge 
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+                variant={project.status === &quot;in_progress&quot; ? &quot;default&quot; : &quot;outline&quot;}
+                className={project.status === &quot;in_progress&quot; ? &quot;bg-blue-100 text-blue-800 hover:bg-blue-100&quot; : "&quot;}
               >
-                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+                {project.status === &quot;offer_accepted&quot; ? &quot;Starting&quot; : &quot;In Progress"}
               </Badge>
             </div>
             <div className="flex items-center text-xs text-muted-foreground gap-2">
-              <Clock className="h-3 w-3" />
+              <Clock className="h-3 w-3&quot; />
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
-            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+            <Button size=&quot;sm&quot; variant=&quot;outline" className="w-full mt-2" asChild>
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>

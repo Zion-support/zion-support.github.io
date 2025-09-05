@@ -6,7 +6,7 @@ const ResetPassword: NextPage = () => {
     <div>
       <Head>
         <title>ResetPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ResetPassword page" />
+        <meta name=&quot;description&quot; content=&quot;ResetPassword page&quot; />
       </Head>
       
       <main>

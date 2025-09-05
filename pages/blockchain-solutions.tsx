@@ -6,7 +6,7 @@ const BlockchainSolutions: NextPage = () => {
     <div>
       <Head>
         <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainSolutions page" />
+        <meta name=&quot;description&quot; content=&quot;BlockchainSolutions page&quot; />
       </Head>
       
       <main>

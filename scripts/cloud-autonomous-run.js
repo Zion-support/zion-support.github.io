@@ -78,7 +78,7 @@ async function main() {
     await generateIdeasIfPossible();
   } catch {}
 
-  console.log('Cloud autonomous run complete:', status.updatedAt);
+  // console.log('Cloud autonomous run complete:', status.updatedAt);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

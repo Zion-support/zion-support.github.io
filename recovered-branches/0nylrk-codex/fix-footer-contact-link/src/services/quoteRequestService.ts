@@ -1,6 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import type { QuoteRequest, QuoteStatus } from &quot;@/types/quotes&quot;;
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)

@@ -1,8 +1,8 @@
 
-import React from "react";
-import { QuoteRequestCard } from "./QuoteRequestCard";
-import { EmptyStateCard } from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
+import React from &quot;react&quot;;
+import { QuoteRequestCard } from &quot;./QuoteRequestCard&quot;;
+import { EmptyStateCard } from &quot;./EmptyStateCard&quot;;
+import type { QuoteRequest } from &quot;@/types/quotes&quot;;
 
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[];
@@ -23,8 +23,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 }) => {
   if (isLoading) {
     return (
-      <div className="text-center py-20">
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
+      <div className=&quot;text-center py-20&quot;>
+        <p className=&quot;text-zion-slate-light&quot;>Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     );
   }
@@ -34,7 +34,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   }
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
       {quotes.map(quote => (
         <QuoteRequestCard
           key={quote.id}

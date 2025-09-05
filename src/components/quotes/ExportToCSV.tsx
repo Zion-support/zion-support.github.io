@@ -1,14 +1,14 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from &quot;@/components/ui/button&quot;;
 import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes";
+import type { QuoteRequest } from &quot;@/types/quotes&quot;;
 
 interface ExportToCSVProps {
   quotes: QuoteRequest[];
   filename?: string;
 }
 
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+export const ExportToCSV = ({ quotes, filename = &quot;quote-requests&quot; }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -49,8 +49,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row => 
         row.map(cell => 
           // Escape commas and quotes in cell values
-          typeof cell === 'string' && (cell.includes(',') || cell.includes('"')) 
-            ? `"${cell.replace(/"/g, '""')}"` 
+          typeof cell === 'string' && (cell.includes(',') || cell.includes('&quot;')) 
+            ? `&quot;${cell.replace(/&quot;/g, '"&quot;')}&quot;` 
             : cell
         ).join(',')
       )
@@ -74,7 +74,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   
   return (
     <Button 
-      variant="outline" 
+      variant=&quot;outline" 
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}

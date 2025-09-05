@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { AuthContext } from "@/context/auth/AuthContext";
-import type { UserDetails as AuthUserDetails } from "@/types/auth";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { AuthContext } from &quot;@/context/auth/AuthContext&quot;;
+import type { UserDetails as AuthUserDetails } from &quot;@/types/auth&quot;;
 
 // Define types for our context
 export interface UserDetails {
@@ -48,37 +48,37 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Mock auth functions for now - these would connect to Supabase in a real implementation
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign in attempted with:", email);
+    // console.log(&quot;Sign in attempted with:&quot;, email);
     // Mock successful sign-in
     setUser({ 
-      id: "mock-user-id", 
+      id: &quot;mock-user-id&quot;, 
       email, 
-      displayName: "Mock User", 
-      name: "Mock User",
-      avatarUrl: "",
+      displayName: &quot;Mock User&quot;, 
+      name: &quot;Mock User&quot;,
+      avatarUrl: "&quot;,
       profileComplete: true,
-      role: "enterprise_admin",
-      permissions: ["billing_access", "admin_access", "team_management"],
-      companyId: "company-123"
+      role: &quot;enterprise_admin&quot;,
+      permissions: [&quot;billing_access&quot;, &quot;admin_access&quot;, &quot;team_management&quot;],
+      companyId: &quot;company-123&quot;
     });
     return { error: null };
   };
 
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign out attempted");
+    // console.log(&quot;Sign out attempted&quot;);
     setUser(null);
   };
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign up attempted with:", email, userData);
+    // console.log(&quot;Sign up attempted with:&quot;, email, userData);
     // Mock successful sign-up
     setUser({ 
-      id: "mock-user-id", 
+      id: &quot;mock-user-id&quot;, 
       email, 
-      displayName: userData?.name || "New User",
-      name: userData?.name || "New User",
+      displayName: userData?.name || &quot;New User&quot;,
+      name: userData?.name || &quot;New User&quot;,
       userType: userData?.userType,
       profileComplete: false
     });
@@ -87,13 +87,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const resetPassword = async (email: string) => {
     // Mock implementation
-    console.log("Password reset requested for:", email);
+    // console.log(&quot;Password reset requested for:&quot;, email);
     return { error: null };
   };
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
-    console.log("Profile update requested with:", data);
+    // console.log(&quot;Profile update requested with:&quot;, data);
     if (user) {
       setUser({ ...user, ...data });
     }
@@ -101,46 +101,46 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const loginWithGoogle = async () => {
-    console.log("Google login requested");
+    // console.log(&quot;Google login requested&quot;);
     // Mock implementation
     setUser({ 
-      id: "google-user-id", 
-      email: "google@example.com", 
-      displayName: "Google User",
-      name: "Google User",
+      id: &quot;google-user-id&quot;, 
+      email: &quot;google@example.com&quot;, 
+      displayName: &quot;Google User&quot;,
+      name: &quot;Google User&quot;,
       profileComplete: true
     });
   };
 
   const loginWithFacebook = async () => {
-    console.log("Facebook login requested");
+    // console.log(&quot;Facebook login requested&quot;);
     // Mock implementation
     setUser({ 
-      id: "facebook-user-id", 
-      email: "facebook@example.com", 
-      displayName: "Facebook User", 
-      name: "Facebook User",
+      id: &quot;facebook-user-id&quot;, 
+      email: &quot;facebook@example.com&quot;, 
+      displayName: &quot;Facebook User&quot;, 
+      name: &quot;Facebook User&quot;,
       profileComplete: true
     });
   };
 
   const loginWithTwitter = async () => {
-    console.log("Twitter login requested");
+    // console.log(&quot;Twitter login requested&quot;);
     // Mock implementation
     setUser({
-      id: "twitter-user-id",
-      email: "twitter@example.com",
-      displayName: "Twitter User",
-      name: "Twitter User",
+      id: &quot;twitter-user-id&quot;,
+      email: &quot;twitter@example.com&quot;,
+      displayName: &quot;Twitter User&quot;,
+      name: &quot;Twitter User&quot;,
       profileComplete: true
     });
   };
 
   const loginWithWeb3 = async () => {
-    console.log("Web3 login requested");
+    // console.log(&quot;Web3 login requested&quot;);
     const ethereum = (window as any).ethereum;
     if (!ethereum) {
-      console.warn("No wallet detected");
+      console.warn(&quot;No wallet detected&quot;);
       return;
     }
     try {
@@ -196,7 +196,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
+    throw new Error(&quot;useAuth must be used within an AuthProvider");
   }
   return context;
 }

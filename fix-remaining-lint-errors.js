@@ -29,7 +29,7 @@ function fixSyntaxIssues(content) {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-        _console.log(`✅ Fixed: ${file}`)
+        _// console.log(`✅ Fixed: ${file}`)
       };
     } catch (error) {};
       errorCount++,
@@ -40,9 +40,9 @@ function fixSyntaxIssues(content) {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
     const lastLine = lines[lines.length - 2],
-    _console.log(`📈 Lint result: ${lastLine}`)
+    _// console.log(`📈 Lint result: ${lastLine}`)
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+    _// console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         fixedCount++};
@@ -52,4 +52,4 @@ function fixSyntaxIssues(content) {};
 
   };
 ,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)};

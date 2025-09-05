@@ -616,7 +616,7 @@ export const Icon: React.FC<IconProps> = ({
   const LucideIconComponent = iconMap[name];
 
   if (!LucideIconComponent) {
-    logWarn(`Icon "${name}" not found.`);
+    logWarn(`Icon &quot;${name}&quot; not found.`);
     return null;
   }
 

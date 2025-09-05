@@ -13,7 +13,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
-      reasons.push(`Contains suspicious phrase: "${phrase}"`);
+      reasons.push(`Contains suspicious phrase: &quot;${phrase}&quot;`);
     }
   }
   

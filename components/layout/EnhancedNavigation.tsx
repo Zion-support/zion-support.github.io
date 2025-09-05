@@ -28,20 +28,20 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
     {
       name: 'Services',
       href: '/services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className=&quot;w-4 h-4&quot; />,
       dropdown: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Space Technology', href: '/services?category=space', icon: <Globe className="w-4 h-4" /> },
-        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <Dna className="w-4 h-4" /> },
-        { name: 'Financial Services', href: '/services?category=finance', icon: <DollarSign className="w-4 h-4" /> },
-        { name: 'Cybersecurity', href: '/services?category=security', icon: <Lock className="w-4 h-4" /> },
-        { name: 'IoT & Smart Devices', href: '/services?category=iot', icon: <Wifi className="w-4 h-4" /> },
-        { name: 'Logistics & Supply Chain', href: '/services?category=logistics', icon: <Truck className="w-4 h-4" /> },
-        { name: 'Metaverse & Gaming', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className="w-4 h-4" /> },
-        { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className="w-4 h-4" /> },
-        { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className="w-4 h-4" /> }
+        { name: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: <Brain className=&quot;w-4 h-4&quot; /> },
+        { name: 'Quantum Computing', href: '/services?category=quantum', icon: <Rocket className=&quot;w-4 h-4&quot; /> },
+        { name: 'Space Technology', href: '/services?category=space', icon: <Globe className=&quot;w-4 h-4&quot; /> },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <Dna className=&quot;w-4 h-4&quot; /> },
+        { name: 'Financial Services', href: '/services?category=finance', icon: <DollarSign className=&quot;w-4 h-4&quot; /> },
+        { name: 'Cybersecurity', href: '/services?category=security', icon: <Lock className=&quot;w-4 h-4&quot; /> },
+        { name: 'IoT & Smart Devices', href: '/services?category=iot', icon: <Wifi className=&quot;w-4 h-4&quot; /> },
+        { name: 'Logistics & Supply Chain', href: '/services?category=logistics', icon: <Truck className=&quot;w-4 h-4&quot; /> },
+        { name: 'Metaverse & Gaming', href: '/services?category=metaverse', icon: <Gamepad2 className=&quot;w-4 h-4&quot; /> },
+        { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className=&quot;w-4 h-4&quot; /> },
+        { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className=&quot;w-4 h-4&quot; /> },
+        { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className=&quot;w-4 h-4&quot; /> }
       hasDropdown: true,
       dropdownItems: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml' },
@@ -86,46 +86,46 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
         : 'bg-transparent'
     } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;flex items-center justify-between h-20&quot;>
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center space-x-3"
+            className=&quot;flex items-center space-x-3&quot;
           >
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
+              <div className=&quot;relative&quot;>
+                <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
+                  <Zap className=&quot;w-6 h-6 text-white&quot; />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot; />
               </div>
-              <div className="hidden sm:block">
-                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <div className=&quot;hidden sm:block&quot;>
+                <div className=&quot;text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300&quot;>
                   Zion Tech Group
                 </div>
-                <div className="text-xs text-cyan-400">Revolutionary Technology</div>
+                <div className=&quot;text-xs text-cyan-400&quot;>Revolutionary Technology</div>
               </div>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             {navigationItems.map((item, index) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
+                className=&quot;relative&quot;
                 onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 {item.hasDropdown ? (
-                  <div className="relative">
-                    <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">
+                  <div className=&quot;relative&quot;>
+                    <button className=&quot;flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2&quot;>
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
@@ -139,17 +139,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                          className=&quot;absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden&quot;
                         >
-                          <div className="p-2">
+                          <div className=&quot;p-2&quot;>
                             {item.dropdownItems?.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+                                className=&quot;block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;
                               >
                                 {dropdownItem.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                         </motion.div>
@@ -159,25 +159,25 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                    className=&quot;text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2&quot;
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 )}
               </motion.div>
             ))}
           </div>
 
           {/* Right side actions */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             {/* Search */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+              className=&quot;p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;
             >
-              <Search className="w-5 h-5" />
+              <Search className=&quot;w-5 h-5&quot; />
             </motion.button>
 
             {/* Notifications */}
@@ -185,10 +185,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
+              className=&quot;p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative&quot;
             >
-              <Bell className="w-5 h-5" />
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+              <Bell className=&quot;w-5 h-5&quot; />
+              <div className=&quot;absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse&quot; />
             </motion.button>
 
             {/* CTA Button */}
@@ -198,11 +198,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                href=&quot;/contact&quot;
+                className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25&quot;
               >
                 Get Started
-              </Link>
+              </a>
             </motion.div>
           </div>
 
@@ -212,9 +212,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+            className=&quot;lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300&quot;
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
           </motion.button>
         </div>
       </div>
@@ -227,41 +227,41 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+            className=&quot;lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20&quot;
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className=&quot;px-4 py-6 space-y-4&quot;>
               {/* Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <div className=&quot;relative&quot;>
+                <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
                 <input
-                  type="text"
-                  placeholder="Search services..."
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                  type=&quot;text&quot;
+                  placeholder=&quot;Search services...&quot;
+                  className=&quot;w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500&quot;
                 />
               </div>
 
               {/* Navigation Items */}
               {navigationItems.map((item) => (
-                <div key={item.name} className="space-y-2">
+                <div key={item.name} className=&quot;space-y-2&quot;>
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                    className=&quot;block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2&quot;
                   >
                     {item.name}
-                  </Link>
+                  </a>
                   
                   {item.hasDropdown && item.dropdownItems && (
-                    <div className="ml-4 space-y-1">
+                    <div className=&quot;ml-4 space-y-1&quot;>
                       {item.dropdownItems.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
+                          className=&quot;block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm&quot;
                         >
                           {dropdownItem.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   )}
@@ -269,28 +269,28 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               ))}
 
               {/* Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20">
-                <div className="space-y-2 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Globe className="w-4 h-4" />
+              <div className=&quot;pt-4 border-t border-cyan-500/20&quot;>
+                <div className=&quot;space-y-2 text-sm text-gray-400&quot;>
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <Globe className=&quot;w-4 h-4&quot; />
                     <span>{contactInfo.website}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <User className="w-4 h-4" />
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <User className=&quot;w-4 h-4&quot; />
                     <span>{contactInfo.email}</span>
                   </div>
                 </div>
               </div>
 
               {/* Mobile CTA */}
-              <div className="pt-4">
+              <div className=&quot;pt-4&quot;>
                 <Link
-                  href="/contact"
+                  href=&quot;/contact&quot;
                   onClick={() => setIsOpen(false)}
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                  className=&quot;block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300&quot;
                 >
                   Get Started Today
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

@@ -42,50 +42,50 @@ export function AppHeader() {
   return (
     <>
       <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
+        style={{ &quot;--nav-height&quot;: &quot;64px&quot; } as React.CSSProperties}
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
+          &quot;sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground&quot;,
+          { &quot;bg-red-500&quot;: mobileMenuOpen }
         )}
       >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+        <div className=&quot;container flex h-16 items-center px-4 sm:px-6&quot;>
           <Logo />
           {showTagline && (
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
+            <span className=&quot;ml-4 hidden text-sm text-muted-foreground md:inline&quot;>
               {t('home.header_tagline')}
             </span>
           )}
-          <div className="ml-6 flex-1 hidden md:block">
-            <nav role="navigation" aria-label="Main navigation">
+          <div className=&quot;ml-6 flex-1 hidden md:block&quot;>
+            <nav role=&quot;navigation&quot; aria-label=&quot;Main navigation&quot;>
               <ResponsiveNavigation openLoginModal={openLoginModal} />
             </nav>
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
+          <div className=&quot;md:hidden ml-auto mr-4&quot;>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className=&quot;inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring&quot;
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
             >
-              <span className="sr-only">{t('general.open_main_menu')}</span>
+              <span className=&quot;sr-only&quot;>{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className=&quot;block h-6 w-6&quot; aria-hidden=&quot;true&quot; />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className=&quot;block h-6 w-6&quot; aria-hidden=&quot;true&quot; />
               )}
             </button>
           </div>
 
           <PointsBadge />
           {!isLoggedIn && (
-            <div className="ml-4 relative z-10 flex items-center">
+            <div className=&quot;ml-4 relative z-10 flex items-center&quot;>
               <Link
-                href="/auth/login"
-                className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                href=&quot;/auth/login&quot;
+                className=&quot;text-sm font-medium text-foreground/70 hover:text-foreground&quot;
                 aria-label={t('auth.login')}
-                data-testid="login-link"
+                data-testid=&quot;login-link&quot;
                 onClick={(e) => {
                   e.preventDefault();
                   // For the main login link, we might not have a specific returnTo beyond current page,
@@ -98,10 +98,10 @@ export function AppHeader() {
                 {t('auth.login')}
               </Link>
               <Link
-                href="/signup"
-                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
+                href=&quot;/signup&quot;
+                className=&quot;ml-2 text-sm font-medium text-foreground/70 hover:text-foreground&quot;
                 aria-label={t('auth.signup')}
-                data-testid="signup-nav-link"
+                data-testid=&quot;signup-nav-link&quot;
               >
                 {t('auth.signup')}
               </Link>
@@ -109,7 +109,7 @@ export function AppHeader() {
           )}
           {/* User avatar menu */}
           {isLoggedIn && (
-            <div className="ml-4">
+            <div className=&quot;ml-4&quot;>
               <UserMenu />
             </div>
           )}
@@ -118,13 +118,13 @@ export function AppHeader() {
       
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
+        <div className=&quot;md:hidden fixed inset-0 z-60 pt-16&quot;>
           <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot;
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
+            aria-hidden=&quot;true&quot;
           />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className=&quot;relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto&quot;>
             <MobileMenu 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}

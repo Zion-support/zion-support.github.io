@@ -66,7 +66,7 @@ export default function FAQPage() {
         answer: 'We\'re committed to sustainable AI development. Our systems use energy-efficient algorithms, renewable energy-powered infrastructure, and optimization techniques that minimize environmental impact. We also help clients measure and reduce the carbon footprint of their AI operations through our sustainability tools and consulting services.'
       },
       {
-        question: 'What makes your AI systems "green"?',
+        question: 'What makes your AI systems &quot;green&quot;?',
         answer: 'Our green AI systems incorporate several key features: energy-efficient model architectures, intelligent resource allocation, renewable energy integration, and carbon footprint monitoring. We\'ve developed proprietary techniques that achieve comparable performance to traditional AI systems while using significantly less computational power.'
       },
       {
@@ -117,34 +117,34 @@ export default function FAQPage() {
     <>
       <Head>
         <title>FAQ | Zion Tech Group - Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's AI automation solutions, implementation process, and services." />
-        <meta property="og:title" content="FAQ | Zion Tech Group" />
-        <meta property="og:description" content="Find answers to common questions about Zion Tech Group's AI automation solutions." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=&quot;description&quot; content=&quot;Find answers to common questions about Zion Tech Group's AI automation solutions, implementation process, and services.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;FAQ | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Find answers to common questions about Zion Tech Group's AI automation solutions.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <div className=&quot;max-w-6xl mx-auto&quot;>
+            <nav className=&quot;mb-8&quot;>
+              <Link href=&quot;/&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                 ← Back to Home
               </Link>
             </nav>
             
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <header className=&quot;text-center mb-16&quot;>
+              <h1 className=&quot;text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
                 Frequently Asked Questions
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
                 Find answers to common questions about our AI automation solutions, 
                 implementation process, and services.
               </p>
             </header>
             
             {/* Category Navigation */}
-            <div className="mb-12">
-              <div className="flex flex-wrap gap-4 justify-center">
+            <div className=&quot;mb-12&quot;>
+              <div className=&quot;flex flex-wrap gap-4 justify-center&quot;>
                 {categories.map((category) => (
                   <button
                     key={category.id}
@@ -155,7 +155,7 @@ export default function FAQPage() {
                         : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
                     }`}
                   >
-                    <span className="text-lg">{category.icon}</span>
+                    <span className=&quot;text-lg&quot;>{category.icon}</span>
                     {category.name}
                   </button>
                 ))}
@@ -163,13 +163,13 @@ export default function FAQPage() {
             </div>
             
             {/* FAQ Content */}
-            <div className="space-y-6">
+            <div className=&quot;space-y-6&quot;>
               {faqData[openCategory as keyof typeof faqData]?.map((item, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-xl font-bold mb-4 text-cyan-400">
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                  <h3 className=&quot;text-xl font-bold mb-4 text-cyan-400&quot;>
                     {item.question}
                   </h3>
-                  <p className="text-white/90 leading-relaxed">
+                  <p className=&quot;text-white/90 leading-relaxed&quot;>
                     {item.answer}
                   </p>
                 </div>
@@ -177,23 +177,23 @@ export default function FAQPage() {
             </div>
             
             {/* Contact Section */}
-            <section className="mt-20 text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
-                <h2 className="text-2xl font-bold mb-4 text-white">Still Have Questions?</h2>
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+            <section className=&quot;mt-20 text-center&quot;>
+              <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
+                <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Still Have Questions?</h2>
+                <p className=&quot;text-white/80 mb-6 max-w-2xl mx-auto&quot;>
                   Can't find the answer you're looking for? Our team of AI automation experts 
                   is here to help. Get in touch with us for personalized assistance.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <Link 
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    href=&quot;/contact&quot;
+                    className=&quot;bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
                   >
                     Contact Our Team
                   </Link>
                   <Link 
-                    href="/resources"
-                    className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                    href=&quot;/resources&quot;
+                    className=&quot;bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300&quot;
                   >
                     Browse Resources
                   </Link>
@@ -202,31 +202,31 @@ export default function FAQPage() {
             </section>
             
             {/* Related Pages */}
-            <section className="mt-16">
-              <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">🚀</span>
+            <section className=&quot;mt-16&quot;>
+              <h2 className=&quot;text-2xl font-bold mb-8 text-center text-white&quot;>Explore More</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+                <Link href=&quot;/services&quot; className=&quot;bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group&quot;>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
+                    <span className=&quot;text-2xl&quot;>🚀</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Services</h3>
-                  <p className="text-white/80 text-sm">Discover our comprehensive AI automation solutions</p>
+                  <h3 className=&quot;text-lg font-semibold text-cyan-400 mb-2&quot;>Our Services</h3>
+                  <p className=&quot;text-white/80 text-sm&quot;>Discover our comprehensive AI automation solutions</p>
                 </Link>
                 
-                <Link href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📚</span>
+                <Link href=&quot;/blog&quot; className=&quot;bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center group&quot;>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
+                    <span className=&quot;text-2xl&quot;>📚</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Blog & Insights</h3>
-                  <p className="text-white/80 text-sm">Read our latest thoughts on AI and automation</p>
+                  <h3 className=&quot;text-lg font-semibold text-fuchsia-400 mb-2&quot;>Blog & Insights</h3>
+                  <p className=&quot;text-white/80 text-sm&quot;>Read our latest thoughts on AI and automation</p>
                 </Link>
                 
-                <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📊</span>
+                <Link href=&quot;/case-studies&quot; className=&quot;bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center group&quot;>
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
+                    <span className=&quot;text-2xl&quot;>📊</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-green-400 mb-2">Case Studies</h3>
-                  <p className="text-white/80 text-sm">See how we've helped other organizations succeed</p>
+                  <h3 className=&quot;text-lg font-semibold text-green-400 mb-2&quot;>Case Studies</h3>
+                  <p className=&quot;text-white/80 text-sm&quot;>See how we've helped other organizations succeed</p>
                 </Link>
               </div>
             </section>
@@ -239,7 +239,7 @@ import React from 'react';
 import Head from 'next/head';
   return (
     <>
-      <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
+      <Head><title>faq - Zion App</title><meta name=&quot;description&quot; content=&quot;faq page&quot; /></Head><div className=&quot;container mx-auto px-4 py-8&quot;><h1 className=&quot;text-3xl font-bold mb-6&quot;>faq</h1><p className=&quot;text-lg mb-4&quot;>This page is under construction.</p><div className=&quot;mt-4&quot;><a href=&quot;/&quot; className=&quot;text-blue-600 hover:underline&quot;>;
+            ← Back to Home</Link></div></div></>;
   );
 }

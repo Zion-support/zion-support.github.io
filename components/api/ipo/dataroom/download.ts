@@ -14,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: 'Not found' });
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream';
   res.setHeader('Content-Type', contentType);
-  res.setHeader('Content-Disposition', `attachment; filename="${path.basename(fullPath)}"`);
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;${path.basename(fullPath)}&quot;`);
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }

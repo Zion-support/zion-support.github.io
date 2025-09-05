@@ -1,25 +1,25 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState } from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
+import { useAuth } from &quot;@/contexts/AuthContext&quot;;
 
 export default function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("&quot;);
+  const [password, setPassword] = useState("&quot;);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState("&quot;);
   const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setError("");
+    setError("&quot;);
 
     try {
       await login(email, password);
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Login failed");
+      setError(error instanceof Error ? error.message : &quot;Login failed");
     } finally {
       setIsLoading(false);
     }
@@ -39,52 +39,52 @@ export default function SignInPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
-                <p className="text-red-400 text-sm">{error}</p>
+                <p className="text-red-400 text-sm&quot;>{error}</p>
               </div>
             )}
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;email" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Email Address
               </label>
               <input
-                id="email"
-                type="email"
+                id=&quot;email&quot;
+                type=&quot;email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your email"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Enter your email&quot;
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;password" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Password
               </label>
               <input
-                id="password"
-                type="password"
+                id=&quot;password&quot;
+                type=&quot;password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your password"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Enter your password&quot;
               />
             </div>
 
             <button
-              type="submit"
+              type=&quot;submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200&quot;
             >
-              {isLoading ? "Signing In..." : "Sign In"}
+              {isLoading ? &quot;Signing In...&quot; : &quot;Sign In"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
-            <p className="text-zinc-400 text-sm">
-              Don't have an account?{" "}
+            <p className="text-zinc-400 text-sm&quot;>
+              Don't have an account?{&quot; "}
               <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300 font-medium">
                 Sign up for free
               </Link>
@@ -93,12 +93,12 @@ export default function SignInPage() {
         </div>
 
         <div className="text-center">
-          <p className="text-zinc-500 text-xs">
-            By signing in, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
+          <p className="text-zinc-500 text-xs&quot;>
+            By signing in, you agree to our{&quot; "}
+            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300&quot;>
               Terms of Service
-            </Link>{" "}
-            and{" "}
+            </Link>{&quot; &quot;}
+            and{&quot; "}
             <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
               Privacy Policy
             </Link>

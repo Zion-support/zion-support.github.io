@@ -1,68 +1,68 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Suspense } from "react";
-import { Button } from "@/components/ui/button";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
-import PostCard from "@/components/community/PostCard";
-import { PostListSkeleton } from "@/components/community/PostCardSkeleton";
-import { ForumCategoryInfo, ForumPost } from "@/types/community";
-import { usePostsByCategory } from "@/hooks/usePostsByCategory";
-import NotFound from "./NotFound";
-import { useAuth } from "@/hooks/useAuth";
-import { useCommunity } from "@/context";
-import { useToast } from "@/hooks/use-toast";
-import { useFollowedCategories } from "@/hooks/useFollowedCategories";
+import { useState, useEffect } from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
+import { useRouter } from &quot;next/router&quot;;
+import { Suspense } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import CreatePostButton from &quot;@/components/community/CreatePostButton&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import PostCard from &quot;@/components/community/PostCard&quot;;
+import { PostListSkeleton } from &quot;@/components/community/PostCardSkeleton&quot;;
+import { ForumCategoryInfo, ForumPost } from &quot;@/types/community&quot;;
+import { usePostsByCategory } from &quot;@/hooks/usePostsByCategory&quot;;
+import NotFound from &quot;./NotFound&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { useCommunity } from &quot;@/context&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { useFollowedCategories } from &quot;@/hooks/useFollowedCategories&quot;;
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
-  "getting-hired": {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
+  &quot;getting-hired&quot;: {
+    id: &quot;getting-hired&quot;,
+    name: &quot;Getting Hired&quot;,
+    description: &quot;Tips, strategies, and questions about getting hired on the platform.&quot;,
     adminOnly: false,
-    icon: "Briefcase"
+    icon: &quot;Briefcase&quot;
   },
-  "project-help": {
-    id: "project-help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
+  &quot;project-help&quot;: {
+    id: &quot;project-help&quot;,
+    name: &quot;Project Help&quot;,
+    description: &quot;Get help with your ongoing projects and collaboration.&quot;,
     adminOnly: false,
-    icon: "MessageSquare"
+    icon: &quot;MessageSquare&quot;
   },
-  "ai-tools": {
-    id: "ai-tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
+  &quot;ai-tools&quot;: {
+    id: &quot;ai-tools&quot;,
+    name: &quot;AI Tools Discussion&quot;,
+    description: &quot;Discuss AI tools, frameworks, and best practices.&quot;,
     adminOnly: false,
-    icon: "Code"
+    icon: &quot;Code&quot;
   },
-  "feedback": {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
+  &quot;feedback&quot;: {
+    id: &quot;feedback&quot;,
+    name: &quot;Feedback & Feature Requests&quot;,
+    description: &quot;Share your feedback and suggest new features.&quot;,
     adminOnly: false,
-    icon: "FileText"
+    icon: &quot;FileText&quot;
   },
-  "announcements": {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
+  &quot;announcements&quot;: {
+    id: &quot;announcements&quot;,
+    name: &quot;Announcements&quot;,
+    description: &quot;Official announcements from the Zion team.&quot;,
     adminOnly: true,
-    icon: "Megaphone"
+    icon: &quot;Megaphone&quot;
   }
 };
 
 const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
-  "Megaphone": Megaphone
+  &quot;Briefcase&quot;: Briefcase,
+  &quot;MessageSquare&quot;: MessageSquare,
+  &quot;Code&quot;: Code,
+  &quot;FileText&quot;: FileText,
+  &quot;Megaphone&quot;: Megaphone
 };
 
 function CategoryContent({
@@ -150,9 +150,9 @@ function CategoryContent({
 
       <div className="mb-6">
         <div className="relative">
-          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground&quot; />
           <Input
-            placeholder="Search posts in this category..."
+            placeholder=&quot;Search posts in this category..."
             className="pl-10"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -168,17 +168,17 @@ function CategoryContent({
         ) : searchQuery ? (
           <div className="text-center py-12">
             <h3 className="text-lg font-medium mb-2">No posts found</h3>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4&quot;>
               Try adjusting your search terms or browse all posts in this category.
             </p>
-            <Button variant="outline" onClick={() => setSearchQuery("")}>
+            <Button variant=&quot;outline&quot; onClick={() => setSearchQuery("&quot;)}>
               Clear Search
             </Button>
           </div>
         ) : (
-          <div className="text-center py-12">
-            <h3 className="text-lg font-medium mb-2">No posts yet</h3>
-            <p className="text-muted-foreground mb-4">
+          <div className=&quot;text-center py-12&quot;>
+            <h3 className=&quot;text-lg font-medium mb-2&quot;>No posts yet</h3>
+            <p className=&quot;text-muted-foreground mb-4&quot;>
               Be the first to start a conversation in this category.
             </p>
             {canCreatePost ? (
@@ -223,14 +223,14 @@ export default function ForumCategoryPage() {
 
   if (!hasAccess) {
     return (
-      <div className="container py-8">
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
-          <p className="text-muted-foreground mb-4">
+      <div className=&quot;container py-8&quot;>
+        <div className=&quot;text-center py-12&quot;>
+          <h1 className=&quot;text-2xl font-bold mb-4&quot;>Access Restricted</h1>
+          <p className=&quot;text-muted-foreground mb-4&quot;>
             This category is only accessible to administrators.
           </p>
           <Button asChild>
-            <Link href="/community">Back to Community</Link>
+            <Link href=&quot;/community&quot;>Back to Community</Link>
           </Button>
         </div>
       </div>

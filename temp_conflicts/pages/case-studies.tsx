@@ -120,39 +120,39 @@ export default function CaseStudies() {
     <>
       <Head>
         <title>Case Studies - Zion Tech Group | Client Success Stories & AI Implementations</title>
-        <meta name="description" content="Explore real-world case studies of Zion Tech Group's AI solutions. See how we've transformed businesses across industries with autonomous technology." />
-        <meta name="keywords" content="case studies, AI implementations, client success stories, business transformation, Zion Tech Group" />
-        <meta property="og:title" content="Case Studies - Zion Tech Group" />
-        <meta property="og:description" content="Real-world examples of AI transformation and business success." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
-        <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+        <meta name=&quot;description&quot; content=&quot;Explore real-world case studies of Zion Tech Group's AI solutions. See how we've transformed businesses across industries with autonomous technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;case studies, AI implementations, client success stories, business transformation, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Case Studies - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Real-world examples of AI transformation and business success.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/case-studies&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/case-studies&quot; />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white&quot;>
         <SmartHeader />
         
-        <main id="main-content" className="pt-16">
+        <main id=&quot;main-content&quot; className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className="relative py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+          <section className=&quot;relative py-20 px-6&quot;>
+            <div className=&quot;mx-auto max-w-7xl&quot;>
+              <div className=&quot;text-center&quot;>
+                <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent mb-6&quot;>
                   Case Studies
                 </h1>
-                <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+                <p className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
                   Real-world transformations powered by our AI solutions. See how we've revolutionized businesses across industries.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <Link 
-                    href="/services" 
-                    className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    href=&quot;/services&quot; 
+                    className=&quot;px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105&quot;
                   >
                     Explore Our Services
                   </Link>
                   <Link 
-                    href="/contact" 
-                    className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                    href=&quot;/contact&quot; 
+                    className=&quot;px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300&quot;
                   >
                     Start Your Project
                   </Link>
@@ -162,89 +162,89 @@ export default function CaseStudies() {
           </section>
 
           {/* Stats Section */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-7xl">
-              <div className="grid md:grid-cols-4 gap-8 text-center">
+          <section className=&quot;py-20 px-6 bg-white/5&quot;>
+            <div className=&quot;mx-auto max-w-7xl&quot;>
+              <div className=&quot;grid md:grid-cols-4 gap-8 text-center&quot;>
                 <div>
-                  <div className="text-5xl font-bold text-fuchsia-400 mb-2">50+</div>
-                  <div className="text-white/70">Successful Implementations</div>
+                  <div className=&quot;text-5xl font-bold text-fuchsia-400 mb-2&quot;>50+</div>
+                  <div className=&quot;text-white/70&quot;>Successful Implementations</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold text-cyan-400 mb-2">15+</div>
-                  <div className="text-white/70">Industries Served</div>
+                  <div className=&quot;text-5xl font-bold text-cyan-400 mb-2&quot;>15+</div>
+                  <div className=&quot;text-white/70&quot;>Industries Served</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold text-green-400 mb-2">300%</div>
-                  <div className="text-white/70">Average ROI</div>
+                  <div className=&quot;text-5xl font-bold text-green-400 mb-2&quot;>300%</div>
+                  <div className=&quot;text-white/70&quot;>Average ROI</div>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-                  <div className="text-white/70">Client Satisfaction</div>
+                  <div className=&quot;text-5xl font-bold text-purple-400 mb-2&quot;>99.9%</div>
+                  <div className=&quot;text-white/70&quot;>Client Satisfaction</div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Case Studies Grid */}
-          <section className="py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Featured Success Stories</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <section className=&quot;py-20 px-6&quot;>
+            <div className=&quot;mx-auto max-w-7xl&quot;>
+              <div className=&quot;text-center mb-16&quot;>
+                <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Featured Success Stories</h2>
+                <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
                   Discover how our AI solutions have transformed businesses and delivered measurable results
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                 {caseStudies.map((study) => (
-                  <div key={study.id} className="bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-fuchsia-500/30 transition-all duration-300 hover:scale-105">
-                    <div className="p-6">
-                      <div className="text-4xl mb-4">{study.image}</div>
-                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-fuchsia-500/20 border border-fuchsia-500/30 text-fuchsia-300 text-xs font-medium mb-4">
+                  <div key={study.id} className=&quot;bg-white/5 rounded-lg border border-white/10 overflow-hidden hover:border-fuchsia-500/30 transition-all duration-300 hover:scale-105&quot;>
+                    <div className=&quot;p-6&quot;>
+                      <div className=&quot;text-4xl mb-4&quot;>{study.image}</div>
+                      <div className=&quot;inline-flex items-center px-3 py-1 rounded-full bg-fuchsia-500/20 border border-fuchsia-500/30 text-fuchsia-300 text-xs font-medium mb-4&quot;>
                         {study.industry}
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                      <p className="text-white/60 text-sm mb-4">{study.company}</p>
+                      <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{study.title}</h3>
+                      <p className=&quot;text-white/60 text-sm mb-4&quot;>{study.company}</p>
                       
-                      <div className="space-y-3 mb-6">
+                      <div className=&quot;space-y-3 mb-6&quot;>
                         <div>
-                          <h4 className="text-white font-semibold text-sm mb-1">Challenge:</h4>
-                          <p className="text-white/70 text-sm">{study.challenge}</p>
+                          <h4 className=&quot;text-white font-semibold text-sm mb-1&quot;>Challenge:</h4>
+                          <p className=&quot;text-white/70 text-sm&quot;>{study.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-white font-semibold text-sm mb-1">Solution:</h4>
-                          <p className="text-white/70 text-sm">{study.solution}</p>
+                          <h4 className=&quot;text-white font-semibold text-sm mb-1&quot;>Solution:</h4>
+                          <p className=&quot;text-white/70 text-sm&quot;>{study.solution}</p>
                         </div>
                       </div>
 
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold text-sm mb-2">Key Results:</h4>
-                        <ul className="space-y-1">
+                      <div className=&quot;mb-6&quot;>
+                        <h4 className=&quot;text-white font-semibold text-sm mb-2&quot;>Key Results:</h4>
+                        <ul className=&quot;space-y-1&quot;>
                           {study.results.map((result, index) => (
-                            <li key={index} className="text-white/70 text-sm flex items-start">
-                              <span className="text-green-400 mr-2 mt-1">✓</span>
+                            <li key={index} className=&quot;text-white/70 text-sm flex items-start&quot;>
+                              <span className=&quot;text-green-400 mr-2 mt-1&quot;>✓</span>
                               {result}
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                      <div className=&quot;grid grid-cols-2 gap-4 mb-6 text-sm&quot;>
                         <div>
-                          <span className="text-white/60">Duration:</span>
-                          <div className="text-white font-semibold">{study.duration}</div>
+                          <span className=&quot;text-white/60&quot;>Duration:</span>
+                          <div className=&quot;text-white font-semibold&quot;>{study.duration}</div>
                         </div>
                         <div>
-                          <span className="text-white/60">ROI:</span>
-                          <div className="text-white font-semibold">{study.roi}</div>
+                          <span className=&quot;text-white/60&quot;>ROI:</span>
+                          <div className=&quot;text-white font-semibold&quot;>{study.roi}</div>
                         </div>
                       </div>
 
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold text-sm mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
+                      <div className=&quot;mb-6&quot;>
+                        <h4 className=&quot;text-white font-semibold text-sm mb-2&quot;>Technologies:</h4>
+                        <div className=&quot;flex flex-wrap gap-2&quot;>
                           {study.technologies.map((tech, index) => (
-                            <span key={index} className="px-2 py-1 bg-white/10 rounded text-xs text-white/80">
+                            <span key={index} className=&quot;px-2 py-1 bg-white/10 rounded text-xs text-white/80&quot;>
                               {tech}
                             </span>
                           ))}
@@ -253,7 +253,7 @@ export default function CaseStudies() {
 
                       <Link 
                         href={`/case-studies/${study.id}`}
-                        className="w-full px-4 py-2 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center block"
+                        className=&quot;w-full px-4 py-2 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center block&quot;
                       >
                         Read Full Case Study
                       </Link>
@@ -265,104 +265,104 @@ export default function CaseStudies() {
           </section>
 
           {/* Industry Focus */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Industries We Transform</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <section className=&quot;py-20 px-6 bg-white/5&quot;>
+            <div className=&quot;mx-auto max-w-7xl&quot;>
+              <div className=&quot;text-center mb-16&quot;>
+                <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Industries We Transform</h2>
+                <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
                   Our AI solutions are designed to work across diverse industries and business models
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🏭</span>
+              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4&quot;>
+                    <span className=&quot;text-3xl&quot;>🏭</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Manufacturing</h3>
-                  <p className="text-white/60 text-sm">Supply chain optimization, predictive maintenance, quality control</p>
+                  <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>Manufacturing</h3>
+                  <p className=&quot;text-white/60 text-sm&quot;>Supply chain optimization, predictive maintenance, quality control</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🏦</span>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4&quot;>
+                    <span className=&quot;text-3xl&quot;>🏦</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Financial Services</h3>
-                  <p className="text-white/60 text-sm">Risk management, fraud detection, compliance automation</p>
+                  <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>Financial Services</h3>
+                  <p className=&quot;text-white/60 text-sm&quot;>Risk management, fraud detection, compliance automation</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🏥</span>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4&quot;>
+                    <span className=&quot;text-3xl&quot;>🏥</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Healthcare</h3>
-                  <p className="text-white/60 text-sm">Diagnostic assistance, patient monitoring, research automation</p>
+                  <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>Healthcare</h3>
+                  <p className=&quot;text-white/60 text-sm&quot;>Diagnostic assistance, patient monitoring, research automation</p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">📱</span>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mx-auto mb-4&quot;>
+                    <span className=&quot;text-3xl&quot;>📱</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Technology</h3>
-                  <p className="text-white/60 text-sm">AI development, automation, cloud infrastructure</p>
+                  <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>Technology</h3>
+                  <p className=&quot;text-white/60 text-sm&quot;>AI development, automation, cloud infrastructure</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Testimonials */}
-          <section className="py-20 px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
-                <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <section className=&quot;py-20 px-6&quot;>
+            <div className=&quot;mx-auto max-w-7xl&quot;>
+              <div className=&quot;text-center mb-16&quot;>
+                <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>What Our Clients Say</h2>
+                <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
                   Real feedback from businesses that have transformed with our AI solutions
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">👨‍💼</span>
+              <div className=&quot;grid md:grid-cols-3 gap-8&quot;>
+                <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                  <div className=&quot;flex items-center mb-4&quot;>
+                    <div className=&quot;w-12 h-12 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-full flex items-center justify-center mr-4&quot;>
+                      <span className=&quot;text-xl&quot;>👨‍💼</span>
                     </div>
                     <div>
-                      <div className="text-white font-semibold">John Smith</div>
-                      <div className="text-white/60 text-sm">CTO, Global Manufacturing</div>
+                      <div className=&quot;text-white font-semibold&quot;>John Smith</div>
+                      <div className=&quot;text-white/60 text-sm&quot;>CTO, Global Manufacturing</div>
                     </div>
                   </div>
-                  <p className="text-white/80 text-sm">
-                    "Zion Tech Group's AI solution transformed our operations completely. We've seen a 40% reduction in delays and 25% improvement in efficiency. The autonomous decision-making capabilities are game-changing."
+                  <p className=&quot;text-white/80 text-sm&quot;>
+                    &quot;Zion Tech Group's AI solution transformed our operations completely. We've seen a 40% reduction in delays and 25% improvement in efficiency. The autonomous decision-making capabilities are game-changing.&quot;
                   </p>
                 </div>
                 
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">👩‍💼</span>
+                <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                  <div className=&quot;flex items-center mb-4&quot;>
+                    <div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4&quot;>
+                      <span className=&quot;text-xl&quot;>👩‍💼</span>
                     </div>
                     <div>
-                      <div className="text-white font-semibold">Sarah Johnson</div>
-                      <div className="text-white/60 text-sm">CEO, Digital Marketing Agency</div>
+                      <div className=&quot;text-white font-semibold&quot;>Sarah Johnson</div>
+                      <div className=&quot;text-white/60 text-sm&quot;>CEO, Digital Marketing Agency</div>
                     </div>
                   </div>
-                  <p className="text-white/80 text-sm">
-                    "The AI content generation platform has revolutionized our business. We're producing 3x more content with 60% better quality. Our clients are amazed by the results."
+                  <p className=&quot;text-white/80 text-sm&quot;>
+                    &quot;The AI content generation platform has revolutionized our business. We're producing 3x more content with 60% better quality. Our clients are amazed by the results.&quot;
                   </p>
                 </div>
                 
-                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-xl">👨‍🔬</span>
+                <div className=&quot;bg-white/5 rounded-lg p-6 border border-white/10&quot;>
+                  <div className=&quot;flex items-center mb-4&quot;>
+                    <div className=&quot;w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4&quot;>
+                      <span className=&quot;text-xl&quot;>👨‍🔬</span>
                     </div>
                     <div>
-                      <div className="text-white font-semibold">Dr. Michael Chen</div>
-                      <div className="text-white/60 text-sm">Research Director, Institute</div>
+                      <div className=&quot;text-white font-semibold&quot;>Dr. Michael Chen</div>
+                      <div className=&quot;text-white/60 text-sm&quot;>Research Director, Institute</div>
                     </div>
                   </div>
-                  <p className="text-white/80 text-sm">
-                    "The quantum computing platform has accelerated our research by 1000x. We've made breakthrough discoveries that would have taken years with traditional methods."
+                  <p className=&quot;text-white/80 text-sm&quot;>
+                    &quot;The quantum computing platform has accelerated our research by 1000x. We've made breakthrough discoveries that would have taken years with traditional methods.&quot;
                   </p>
                 </div>
               </div>
@@ -370,22 +370,22 @@ export default function CaseStudies() {
           </section>
 
           {/* CTA Section */}
-          <section className="py-20 px-6 bg-white/5">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Write Your Success Story?</h2>
-              <p className="text-xl text-white/80 mb-8">
+          <section className=&quot;py-20 px-6 bg-white/5&quot;>
+            <div className=&quot;mx-auto max-w-4xl text-center&quot;>
+              <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Write Your Success Story?</h2>
+              <p className=&quot;text-xl text-white/80 mb-8&quot;>
                 Join the growing list of companies transforming their business with AI
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <Link 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  href=&quot;/contact&quot; 
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105&quot;
                 >
                   Start Your Transformation
                 </Link>
                 <Link 
-                  href="/services" 
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                  href=&quot;/services&quot; 
+                  className=&quot;px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300&quot;
                 >
                   Explore Solutions
                 </Link>

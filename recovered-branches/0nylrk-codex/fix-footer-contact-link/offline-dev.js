@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
 
 const PORT = 8080;
 server.listen(PORT, () => {
-  console.log(`
+  // console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣

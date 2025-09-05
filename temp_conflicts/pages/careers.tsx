@@ -24,112 +24,112 @@ export default function CareersPage() {
   const jobOpenings = [
     {
       id: 1,
-      title: "Senior AI Research Scientist",
-      department: "ai",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$150K - $250K",
-      description: "Lead cutting-edge research in autonomous AI systems and consciousness evolution.",
+      title: &quot;Senior AI Research Scientist&quot;,
+      department: &quot;ai&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;5+ years&quot;,
+      salary: &quot;$150K - $250K&quot;,
+      description: &quot;Lead cutting-edge research in autonomous AI systems and consciousness evolution.&quot;,
       requirements: [
-        "PhD in Computer Science, AI, or related field",
-        "Experience with large language models and neural networks",
-        "Published research in top AI conferences",
-        "Experience with quantum computing concepts"
+        &quot;PhD in Computer Science, AI, or related field&quot;,
+        &quot;Experience with large language models and neural networks&quot;,
+        &quot;Published research in top AI conferences&quot;,
+        &quot;Experience with quantum computing concepts&quot;
       ],
       benefits: [
-        "Competitive salary and equity",
-        "Flexible work arrangements",
-        "Professional development budget",
-        "Health and wellness benefits"
+        &quot;Competitive salary and equity&quot;,
+        &quot;Flexible work arrangements&quot;,
+        &quot;Professional development budget&quot;,
+        &quot;Health and wellness benefits&quot;
       ]
     },
     {
       id: 2,
-      title: "Quantum Software Engineer",
-      department: "quantum",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      experience: "3+ years",
-      salary: "$120K - $180K",
-      description: "Develop quantum algorithms and software for our quantum computing platform.",
+      title: &quot;Quantum Software Engineer&quot;,
+      department: &quot;quantum&quot;,
+      location: &quot;San Francisco, CA&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;3+ years&quot;,
+      salary: &quot;$120K - $180K&quot;,
+      description: &quot;Develop quantum algorithms and software for our quantum computing platform.&quot;,
       requirements: [
-        "Bachelor's degree in Computer Science or Physics",
-        "Experience with quantum programming languages",
-        "Knowledge of quantum algorithms and cryptography",
-        "Python and C++ programming skills"
+        &quot;Bachelor's degree in Computer Science or Physics&quot;,
+        &quot;Experience with quantum programming languages&quot;,
+        &quot;Knowledge of quantum algorithms and cryptography&quot;,
+        &quot;Python and C++ programming skills&quot;
       ],
       benefits: [
-        "Competitive salary and equity",
-        "State-of-the-art quantum computing access",
-        "Collaboration with leading researchers",
-        "Comprehensive benefits package"
+        &quot;Competitive salary and equity&quot;,
+        &quot;State-of-the-art quantum computing access&quot;,
+        &quot;Collaboration with leading researchers&quot;,
+        &quot;Comprehensive benefits package&quot;
       ]
     },
     {
       id: 3,
-      title: "Senior Full-Stack Engineer",
-      department: "engineering",
-      location: "Remote",
-      type: "Full-time",
-      experience: "4+ years",
-      salary: "$130K - $190K",
-      description: "Build scalable web applications and microservices for our AI platform.",
+      title: &quot;Senior Full-Stack Engineer&quot;,
+      department: &quot;engineering&quot;,
+      location: &quot;Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;4+ years&quot;,
+      salary: &quot;$130K - $190K&quot;,
+      description: &quot;Build scalable web applications and microservices for our AI platform.&quot;,
       requirements: [
-        "Experience with React, Node.js, and TypeScript",
-        "Knowledge of cloud infrastructure (AWS/Azure)",
-        "Experience with microservices architecture",
-        "Strong problem-solving skills"
+        &quot;Experience with React, Node.js, and TypeScript&quot;,
+        &quot;Knowledge of cloud infrastructure (AWS/Azure)&quot;,
+        &quot;Experience with microservices architecture&quot;,
+        &quot;Strong problem-solving skills&quot;
       ],
       benefits: [
-        "Remote-first culture",
-        "Competitive salary and equity",
-        "Latest development tools and equipment",
-        "Professional development opportunities"
+        &quot;Remote-first culture&quot;,
+        &quot;Competitive salary and equity&quot;,
+        &quot;Latest development tools and equipment&quot;,
+        &quot;Professional development opportunities&quot;
       ]
     },
     {
       id: 4,
-      title: "AI Ethics Researcher",
-      department: "research",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "3+ years",
-      salary: "$100K - $150K",
-      description: "Research and develop ethical frameworks for autonomous AI systems.",
+      title: &quot;AI Ethics Researcher&quot;,
+      department: &quot;research&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;3+ years&quot;,
+      salary: &quot;$100K - $150K&quot;,
+      description: &quot;Research and develop ethical frameworks for autonomous AI systems.&quot;,
       requirements: [
-        "Master's or PhD in Philosophy, Ethics, or AI",
-        "Understanding of AI safety and alignment",
-        "Experience with policy development",
-        "Strong analytical and writing skills"
+        &quot;Master's or PhD in Philosophy, Ethics, or AI&quot;,
+        &quot;Understanding of AI safety and alignment&quot;,
+        &quot;Experience with policy development&quot;,
+        &quot;Strong analytical and writing skills&quot;
       ],
       benefits: [
-        "Competitive salary and equity",
-        "Impact on AI safety and governance",
-        "Collaboration with global experts",
-        "Professional development support"
+        &quot;Competitive salary and equity&quot;,
+        &quot;Impact on AI safety and governance&quot;,
+        &quot;Collaboration with global experts&quot;,
+        &quot;Professional development support&quot;
       ]
     },
     {
       id: 5,
-      title: "Business Development Manager",
-      department: "business",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$120K - $180K + Commission",
-      description: "Drive business growth through strategic partnerships and client relationships.",
+      title: &quot;Business Development Manager&quot;,
+      department: &quot;business&quot;,
+      location: &quot;San Francisco, CA&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;5+ years&quot;,
+      salary: &quot;$120K - $180K + Commission&quot;,
+      description: &quot;Drive business growth through strategic partnerships and client relationships.&quot;,
       requirements: [
-        "Experience in B2B technology sales",
-        "Knowledge of AI and quantum computing markets",
-        "Strong networking and communication skills",
-        "Proven track record of exceeding targets"
+        &quot;Experience in B2B technology sales&quot;,
+        &quot;Knowledge of AI and quantum computing markets&quot;,
+        &quot;Strong networking and communication skills&quot;,
+        &quot;Proven track record of exceeding targets&quot;
       ],
       benefits: [
-        "Competitive base salary + commission",
-        "Performance-based bonuses",
-        "Travel and networking opportunities",
-        "Career advancement potential"
+        &quot;Competitive base salary + commission&quot;,
+        &quot;Performance-based bonuses&quot;,
+        &quot;Travel and networking opportunities&quot;,
+        &quot;Career advancement potential&quot;
       ]
     }
   ];
@@ -141,56 +141,56 @@ export default function CareersPage() {
   const values = [
     {
       icon: Brain,
-      title: "Innovation First",
-      description: "We push boundaries and explore uncharted territories in technology"
+      title: &quot;Innovation First&quot;,
+      description: &quot;We push boundaries and explore uncharted territories in technology&quot;
     },
     {
       icon: Users,
-      title: "Collaboration",
-      description: "Great ideas come from diverse teams working together"
+      title: &quot;Collaboration&quot;,
+      description: &quot;Great ideas come from diverse teams working together&quot;
     },
     {
       icon: Rocket,
-      title: "Impact Driven",
-      description: "We build technology that makes a real difference in the world"
+      title: &quot;Impact Driven&quot;,
+      description: &quot;We build technology that makes a real difference in the world&quot;
     },
     {
       icon: Heart,
-      title: "Work-Life Balance",
-      description: "We believe in sustainable innovation and personal well-being"
+      title: &quot;Work-Life Balance&quot;,
+      description: &quot;We believe in sustainable innovation and personal well-being&quot;
     }
   ];
 
   const benefits = [
     {
       icon: DollarSign,
-      title: "Competitive Compensation",
-      description: "Above-market salaries, equity, and performance bonuses"
+      title: &quot;Competitive Compensation&quot;,
+      description: &quot;Above-market salaries, equity, and performance bonuses&quot;
     },
     {
       icon: Globe,
-      title: "Remote-First Culture",
-      description: "Work from anywhere with flexible schedules"
+      title: &quot;Remote-First Culture&quot;,
+      description: &quot;Work from anywhere with flexible schedules&quot;
     },
     {
       icon: Zap,
-      title: "Cutting-Edge Technology",
-      description: "Access to the latest AI and quantum computing tools"
+      title: &quot;Cutting-Edge Technology&quot;,
+      description: &quot;Access to the latest AI and quantum computing tools&quot;
     },
     {
       icon: Star,
-      title: "Professional Growth",
-      description: "Continuous learning and career development opportunities"
+      title: &quot;Professional Growth&quot;,
+      description: &quot;Continuous learning and career development opportunities&quot;
     },
     {
       icon: Shield,
-      title: "Health & Wellness",
-      description: "Comprehensive health, dental, and mental health coverage"
+      title: &quot;Health & Wellness&quot;,
+      description: &quot;Comprehensive health, dental, and mental health coverage&quot;
     },
     {
       icon: Award,
-      title: "Recognition",
-      description: "Regular recognition and rewards for outstanding contributions"
+      title: &quot;Recognition&quot;,
+      description: &quot;Regular recognition and rewards for outstanding contributions&quot;
     }
   ];
 
@@ -198,69 +198,69 @@ export default function CareersPage() {
     <>
       <Head>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group's mission to revolutionize technology. Explore career opportunities in AI, quantum computing, and autonomous innovation." />
-        <meta name="keywords" content="Zion Tech Group careers, AI jobs, quantum computing jobs, technology careers, innovation jobs" />
-        <meta property="og:title" content="Careers - Zion Tech Group" />
-        <meta property="og:description" content="Join our team of innovators and shape the future of technology." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/careers" />
+        <meta name=&quot;description&quot; content=&quot;Join Zion Tech Group's mission to revolutionize technology. Explore career opportunities in AI, quantum computing, and autonomous innovation.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;Zion Tech Group careers, AI jobs, quantum computing jobs, technology careers, innovation jobs&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Careers - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Join our team of innovators and shape the future of technology.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/careers&quot; />
       </Head>
 
       <EnhancedNavigation />
 
-      <main className="min-h-screen bg-slate-900 text-white">
+      <main className=&quot;min-h-screen bg-slate-900 text-white&quot;>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-6">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className=&quot;pt-32 pb-20 px-6&quot;>
+          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
                 Join Our Mission
               </h1>
-              <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8&quot;>
                 Help us revolutionize technology through autonomous AI, quantum computing, 
                 and consciousness evolution. Be part of the future.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <a
-                  href="#openings"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                  href=&quot;#openings&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105&quot;
                 >
                   View Open Positions
-                </a>
+                </Link>
                 <a
-                  href="/contact"
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300&quot;
                 >
                   Get in Touch
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Company Culture */}
-        <section className="py-20 px-6 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-20 px-6 bg-slate-800/50&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
                 Our Culture
               </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
                 We're building more than technology - we're building the future
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
               {values.map((value, index) => (
                 <motion.div
                   key={value.title}
@@ -268,14 +268,14 @@ export default function CareersPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group"
+                  className=&quot;group&quot;
                 >
-                  <div className="p-6 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70 text-center">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                      <value.icon className="w-8 h-8 text-white" />
+                  <div className=&quot;p-6 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70 text-center&quot;>
+                    <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300&quot;>
+                      <value.icon className=&quot;w-8 h-8 text-white&quot; />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{value.description}</p>
+                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{value.title}</h3>
+                    <p className=&quot;text-white/70 leading-relaxed&quot;>{value.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -284,24 +284,24 @@ export default function CareersPage() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-20 px-6&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
                 Benefits & Perks
               </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
                 We take care of our team so you can focus on changing the world
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
@@ -309,14 +309,14 @@ export default function CareersPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group"
+                  className=&quot;group&quot;
                 >
-                  <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <benefit.icon className="w-8 h-8 text-white" />
+                  <div className=&quot;p-6 rounded-2xl bg-slate-800/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70&quot;>
+                    <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300&quot;>
+                      <benefit.icon className=&quot;w-8 h-8 text-white&quot; />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{benefit.description}</p>
+                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
+                    <p className=&quot;text-white/70 leading-relaxed&quot;>{benefit.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -325,24 +325,24 @@ export default function CareersPage() {
         </section>
 
         {/* Job Openings */}
-        <section id="openings" className="py-20 px-6 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
+        <section id=&quot;openings&quot; className=&quot;py-20 px-6 bg-slate-800/50&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <h2 className=&quot;text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
                 Open Positions
               </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+              <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto mb-8&quot;>
                 Join our team of innovators and help shape the future of technology
               </p>
 
               {/* Department Filter */}
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className=&quot;flex flex-wrap justify-center gap-3&quot;>
                 {departments.map((dept) => (
                   <button
                     key={dept.id}
@@ -359,7 +359,7 @@ export default function CareersPage() {
               </div>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className=&quot;space-y-6&quot;>
               {filteredJobs.map((job, index) => (
                 <motion.div
                   key={job.id}
@@ -367,55 +367,55 @@ export default function CareersPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group"
+                  className=&quot;group&quot;
                 >
-                  <div className="p-8 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-4 mb-4">
-                          <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                  <div className=&quot;p-8 rounded-2xl bg-slate-700/50 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/70&quot;>
+                    <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6&quot;>
+                      <div className=&quot;flex-1&quot;>
+                        <div className=&quot;flex items-center gap-4 mb-4&quot;>
+                          <h3 className=&quot;text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300&quot;>
                             {job.title}
                           </h3>
-                          <span className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm font-medium rounded-full border border-blue-500/30">
+                          <span className=&quot;px-3 py-1 bg-blue-600/20 text-blue-400 text-sm font-medium rounded-full border border-blue-500/30&quot;>
                             {job.type}
                           </span>
                         </div>
                         
-                        <div className="flex flex-wrap items-center gap-6 mb-4 text-white/70">
-                          <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4" />
+                        <div className=&quot;flex flex-wrap items-center gap-6 mb-4 text-white/70&quot;>
+                          <div className=&quot;flex items-center gap-2&quot;>
+                            <MapPin className=&quot;w-4 h-4&quot; />
                             <span>{job.location}</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
+                          <div className=&quot;flex items-center gap-2&quot;>
+                            <Clock className=&quot;w-4 h-4&quot; />
                             <span>{job.experience}</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <DollarSign className="w-4 h-4" />
+                          <div className=&quot;flex items-center gap-2&quot;>
+                            <DollarSign className=&quot;w-4 h-4&quot; />
                             <span>{job.salary}</span>
                           </div>
                         </div>
 
-                        <p className="text-white/80 mb-4 leading-relaxed">{job.description}</p>
+                        <p className=&quot;text-white/80 mb-4 leading-relaxed&quot;>{job.description}</p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
                           <div>
-                            <h4 className="font-semibold text-white mb-2">Requirements:</h4>
-                            <ul className="space-y-1">
+                            <h4 className=&quot;font-semibold text-white mb-2&quot;>Requirements:</h4>
+                            <ul className=&quot;space-y-1&quot;>
                               {job.requirements.map((req, idx) => (
-                                <li key={idx} className="text-white/70 text-sm flex items-start gap-2">
-                                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></span>
+                                <li key={idx} className=&quot;text-white/70 text-sm flex items-start gap-2&quot;>
+                                  <span className=&quot;w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0&quot;></span>
                                   {req}
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white mb-2">Benefits:</h4>
-                            <ul className="space-y-1">
+                            <h4 className=&quot;font-semibold text-white mb-2&quot;>Benefits:</h4>
+                            <ul className=&quot;space-y-1&quot;>
                               {job.benefits.map((benefit, idx) => (
-                                <li key={idx} className="text-white/70 text-sm flex items-start gap-2">
-                                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></span>
+                                <li key={idx} className=&quot;text-white/70 text-sm flex items-start gap-2&quot;>
+                                  <span className=&quot;w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0&quot;></span>
                                   {benefit}
                                 </li>
                               ))}
@@ -424,9 +424,9 @@ export default function CareersPage() {
                         </div>
                       </div>
 
-                      <div className="lg:flex-shrink-0">
-                        <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                          <Send className="w-4 h-4" />
+                      <div className=&quot;lg:flex-shrink-0&quot;>
+                        <button className=&quot;px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2&quot;>
+                          <Send className=&quot;w-4 h-4&quot; />
                           Apply Now
                         </button>
                       </div>
@@ -441,12 +441,12 @@ export default function CareersPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="text-center py-12"
+                  className=&quot;text-center py-12&quot;
                 >
-                  <p className="text-white/70 text-lg mb-4">
+                  <p className=&quot;text-white/70 text-lg mb-4&quot;>
                     No open positions in this department at the moment.
                   </p>
-                  <p className="text-white/50">
+                  <p className=&quot;text-white/50&quot;>
                     Check back soon or send us your resume for future opportunities!
                   </p>
                 </motion.div>
@@ -456,37 +456,37 @@ export default function CareersPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className=&quot;py-20 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6 text-white">
+              <h2 className=&quot;text-4xl font-bold mb-6 text-white&quot;>
                 Don't See the Perfect Role?
               </h2>
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              <p className=&quot;text-xl text-white/80 mb-8 leading-relaxed&quot;>
                 We're always looking for talented individuals who are passionate about 
                 technology and innovation. Send us your resume and let's discuss how 
                 you can contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2&quot;
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className=&quot;w-5 h-5&quot; />
                   <span>Send Your Resume</span>
-                </a>
+                </Link>
                 <a
-                  href="mailto:careers@ziontechgroup.com"
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
+                  href=&quot;mailto:careers@ziontechgroup.com&quot;
+                  className=&quot;px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2&quot;
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <ExternalLink className=&quot;w-5 h-5&quot; />
                   <span>Email Us</span>
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

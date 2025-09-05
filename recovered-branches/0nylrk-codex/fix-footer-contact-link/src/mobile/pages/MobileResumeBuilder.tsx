@@ -1,18 +1,18 @@
 
-import React from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
+import React from &quot;react&quot;;
+import { MobileHeader } from &quot;../components/common/MobileHeader&quot;;
+import { BottomNavigation } from &quot;../components/common/BottomNavigation&quot;;
+import { MobileResumeBuilder as ResumeBuilderComponent } from &quot;../components/resume/MobileResumeBuilder&quot;;
 
 export function MobileResumeBuilder() {
   return (
-    <div className="min-h-screen">
+    <div className=&quot;min-h-screen&quot;>
       <MobileHeader
-        title="Resume Builder"
+        title=&quot;Resume Builder&quot;
         showBack
       />
       
-      <main className="py-4">
+      <main className=&quot;py-4&quot;>
         <ResumeBuilderComponent />
       </main>
       

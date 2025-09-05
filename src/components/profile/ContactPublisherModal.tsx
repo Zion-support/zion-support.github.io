@@ -99,68 +99,68 @@ export function ContactPublisherModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
+          className=&quot;bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md&quot;
           onKeyDown={handleKeyDown}
-          aria-modal="true"
-          aria-labelledby="contact-publisher-title"
+          aria-modal=&quot;true&quot;
+          aria-labelledby=&quot;contact-publisher-title&quot;
         >
           <DialogHeader>
-            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">
-              <Mail className="h-5 w-5 text-zion-cyan" />
+            <DialogTitle id=&quot;contact-publisher-title&quot; className=&quot;text-xl font-bold text-white flex items-center gap-2&quot;>
+              <Mail className=&quot;h-5 w-5 text-zion-cyan&quot; />
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-          {error && <p className="text-red-500 mb-2">{error}</p>}
+          {error && <p className=&quot;text-red-500 mb-2&quot;>{error}</p>}
           {publisherEmail && (
-            <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
+            <div className=&quot;mb-4 text-zion-slate-light&quot;>
+            <span className=&quot;block&quot;>Email:</span>
+            <a href={`mailto:${publisherEmail}`} className=&quot;text-zion-cyan hover:underline truncate block&quot;>
               {publisherEmail}
-            </a>
+            </Link>
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+          <form onSubmit={(e) => e.preventDefault()} className=&quot;space-y-4&quot;>
             <FormField
               control={form.control}
-              name="subject"
+              name=&quot;subject&quot;
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Subject"
-                      className="bg-zion-blue border-zion-blue-light text-white"
+                      placeholder=&quot;Subject&quot;
+                      className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="text-red-500" />
+                  <FormMessage className=&quot;text-red-500&quot; />
                 </FormItem>
               )}
             />
             <FormField
               control={form.control}
-              name="message"
+              name=&quot;message&quot;
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
-                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+                      className=&quot;bg-zion-blue border-zion-blue-light text-white min-h-[120px]&quot;
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="text-red-500" />
+                  <FormMessage className=&quot;text-red-500&quot; />
                 </FormItem>
               )}
             />
             <Button
               onClick={handleSend}
-              className="w-full"
+              className=&quot;w-full&quot;
               disabled={!form.formState.isValid || isSubmitting}
             >
-              <SendIcon className="mr-2" />
+              <SendIcon className=&quot;mr-2&quot; />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

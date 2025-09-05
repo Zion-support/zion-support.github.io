@@ -1,9 +1,9 @@
 
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Review, ReviewReport } from "@/types/reviews";
-import { toast } from "@/hooks/use-toast";
+import { useState } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Review, ReviewReport } from &quot;@/types/reviews&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
 
 export function useReviews(projectId?: string) {
   const { user } = useAuth();
@@ -20,14 +20,14 @@ export function useReviews(projectId?: string) {
     
     try {
       const { data, error } = await supabase
-        .from("reviews")
+        .from(&quot;reviews&quot;)
         .select(`
           *,
           reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
         `)
-        .eq("project_id", projectId)
-        .eq("is_visible", true)
-        .eq("status", "approved");
+        .eq(&quot;project_id&quot;, projectId)
+        .eq(&quot;is_visible&quot;, true)
+        .eq(&quot;status&quot;, &quot;approved&quot;);
         
       if (error) throw error;
       
@@ -36,10 +36,10 @@ export function useReviews(projectId?: string) {
       // Check if current user has already submitted a review
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
-          .from("reviews")
-          .select("*")
-          .eq("project_id", projectId)
-          .eq("reviewer_id", user.id)
+          .from(&quot;reviews&quot;)
+          .select(&quot;*&quot;)
+          .eq(&quot;project_id&quot;, projectId)
+          .eq(&quot;reviewer_id&quot;, user.id)
           .single();
           
         if (!userReviewError && userReviewData) {
@@ -47,11 +47,11 @@ export function useReviews(projectId?: string) {
         }
       }
     } catch (err: any) {
-      console.error("Error fetching reviews:", err);
+      console.error(&quot;Error fetching reviews:&quot;, err);
       toast({
-        title: "Error",
-        description: "Failed to load reviews",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to load reviews&quot;,
+        variant: &quot;destructive&quot;});
     } finally {
       setIsLoading(false);
     }
@@ -65,25 +65,25 @@ export function useReviews(projectId?: string) {
     
     try {
       const { data, error } = await supabase
-        .from("reviews")
+        .from(&quot;reviews&quot;)
         .select(`
           *,
           reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
         `)
-        .eq("reviewee_id", userId)
-        .eq("is_visible", true)
-        .eq("status", "approved")
-        .order("created_at", { ascending: false });
+        .eq(&quot;reviewee_id&quot;, userId)
+        .eq(&quot;is_visible&quot;, true)
+        .eq(&quot;status&quot;, &quot;approved&quot;)
+        .order(&quot;created_at&quot;, { ascending: false });
         
       if (error) throw error;
       
       setReviews(data || []);
     } catch (err: any) {
-      console.error("Error fetching user reviews:", err);
+      console.error(&quot;Error fetching user reviews:&quot;, err);
       toast({
-        title: "Error",
-        description: "Failed to load reviews",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to load reviews&quot;,
+        variant: &quot;destructive&quot;});
     } finally {
       setIsLoading(false);
     }
@@ -103,9 +103,9 @@ export function useReviews(projectId?: string) {
   }) => {
     if (!user) {
       toast({
-        title: "Error",
-        description: "You must be logged in to submit a review",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;You must be logged in to submit a review&quot;,
+        variant: &quot;destructive&quot;});
       return false;
     }
     
@@ -113,7 +113,7 @@ export function useReviews(projectId?: string) {
     
     try {
       const { data, error } = await supabase
-        .from("reviews")
+        .from(&quot;reviews&quot;)
         .insert({
           ...review,
           reviewer_id: user.id})
@@ -123,25 +123,25 @@ export function useReviews(projectId?: string) {
       if (error) throw error;
       
       toast({
-        title: "Success",
-        description: "Your review has been submitted and is pending approval"});
+        title: &quot;Success&quot;,
+        description: &quot;Your review has been submitted and is pending approval&quot;});
       
       setUserReview(data);
       return true;
     } catch (err: any) {
-      console.error("Error submitting review:", err);
+      console.error(&quot;Error submitting review:&quot;, err);
       
       // Check for unique constraint violation
-      if (err.code === "23505") {
+      if (err.code === &quot;23505&quot;) {
         toast({
-          title: "Error",
-          description: "You have already submitted a review for this project",
-          variant: "destructive"});
+          title: &quot;Error&quot;,
+          description: &quot;You have already submitted a review for this project&quot;,
+          variant: &quot;destructive&quot;});
       } else {
         toast({
-          title: "Error",
-          description: "Failed to submit review",
-          variant: "destructive"});
+          title: &quot;Error&quot;,
+          description: &quot;Failed to submit review&quot;,
+          variant: &quot;destructive&quot;});
       }
       return false;
     } finally {
@@ -157,17 +157,17 @@ export function useReviews(projectId?: string) {
     
     try {
       const { error } = await supabase
-        .from("reviews")
+        .from(&quot;reviews&quot;)
         .update(updates)
-        .eq("id", reviewId)
-        .eq("reviewer_id", user.id)
-        .eq("status", "pending");
+        .eq(&quot;id&quot;, reviewId)
+        .eq(&quot;reviewer_id&quot;, user.id)
+        .eq(&quot;status&quot;, &quot;pending&quot;);
         
       if (error) throw error;
       
       toast({
-        title: "Success",
-        description: "Your review has been updated"});
+        title: &quot;Success&quot;,
+        description: &quot;Your review has been updated&quot;});
       
       if (userReview) {
         setUserReview({ ...userReview, ...updates });
@@ -175,11 +175,11 @@ export function useReviews(projectId?: string) {
       
       return true;
     } catch (err: any) {
-      console.error("Error updating review:", err);
+      console.error(&quot;Error updating review:&quot;, err);
       toast({
-        title: "Error",
-        description: "Failed to update review",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update review&quot;,
+        variant: &quot;destructive&quot;});
       return false;
     } finally {
       setIsSubmitting(false);
@@ -192,7 +192,7 @@ export function useReviews(projectId?: string) {
     
     try {
       const { error } = await supabase
-        .from("review_reports")
+        .from(&quot;review_reports&quot;)
         .insert({
           review_id: reviewId,
           reporter_id: user.id,
@@ -200,26 +200,26 @@ export function useReviews(projectId?: string) {
         
       if (error) {
         // Check for unique constraint violation
-        if (error.code === "23505") {
+        if (error.code === &quot;23505&quot;) {
           toast({
-            title: "Error",
-            description: "You have already reported this review",
-            variant: "destructive"});
+            title: &quot;Error&quot;,
+            description: &quot;You have already reported this review&quot;,
+            variant: &quot;destructive&quot;});
         } else {
           throw error;
         }
       } else {
         toast({
-          title: "Report Submitted",
-          description: "Thank you. Our team will review your report"});
+          title: &quot;Report Submitted&quot;,
+          description: &quot;Thank you. Our team will review your report&quot;});
         return true;
       }
     } catch (err: any) {
-      console.error("Error reporting review:", err);
+      console.error(&quot;Error reporting review:&quot;, err);
       toast({
-        title: "Error",
-        description: "Failed to report review",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to report review&quot;,
+        variant: &quot;destructive&quot;});
     }
     
     return false;

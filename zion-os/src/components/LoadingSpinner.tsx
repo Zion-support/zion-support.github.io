@@ -1,41 +1,41 @@
-"use client";
+"use client&quot;;
 
 interface LoadingSpinnerProps {
-  size?: "small" | "medium" | "large";
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
   className?: string;
 }
 
-export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {
+export function LoadingSpinner({ size = &quot;medium&quot;, className = "&quot; }: LoadingSpinnerProps) {
   const sizeClasses = {
-    small: "w-4 h-4",
-    medium: "w-8 h-8",
-    large: "w-12 h-12"
+    small: &quot;w-4 h-4&quot;,
+    medium: &quot;w-8 h-8&quot;,
+    large: &quot;w-12 h-12&quot;
   };
 
   return (
-    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">
+    <div className={`${sizeClasses[size]} ${className}`} role=&quot;status&quot; aria-label=&quot;Loading&quot;>
       <svg
-        className="animate-spin text-blue-500"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
+        className=&quot;animate-spin text-blue-500&quot;
+        xmlns=&quot;http://www.w3.org/2000/svg&quot;
+        fill=&quot;none&quot;
+        viewBox=&quot;0 0 24 24&quot;
+        aria-hidden=&quot;true&quot;
       >
         <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
+          className=&quot;opacity-25&quot;
+          cx=&quot;12&quot;
+          cy=&quot;12&quot;
+          r=&quot;10&quot;
+          stroke=&quot;currentColor&quot;
+          strokeWidth=&quot;4&quot;
         />
         <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          className=&quot;opacity-75&quot;
+          fill=&quot;currentColor&quot;
+          d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;
         />
       </svg>
-      <span className="sr-only">Loading...</span>
+      <span className=&quot;sr-only&quot;>Loading...</span>
     </div>
   );
 }

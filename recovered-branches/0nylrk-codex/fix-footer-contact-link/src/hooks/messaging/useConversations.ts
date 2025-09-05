@@ -173,9 +173,9 @@ export function useConversations(
     } catch (error) {
       console.error('Error creating conversation:', error);
       toast({
-        title: "Failed to create conversation",
-        description: "Please try again later",
-        variant: "destructive"
+        title: &quot;Failed to create conversation&quot;,
+        description: &quot;Please try again later&quot;,
+        variant: &quot;destructive&quot;
       });
     }
   };

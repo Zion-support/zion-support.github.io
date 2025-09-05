@@ -1,12 +1,12 @@
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
-import { toast } from "sonner";
-import { JobApplication } from "@/types/jobs";
+import { useState } from &quot;react&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from &quot;@/components/ui/card&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Loader2, Star, BarChart2, Lightbulb } from &quot;lucide-react&quot;;
+import { toast } from &quot;sonner&quot;;
+import { JobApplication } from &quot;@/types/jobs&quot;;
 
 interface ApplicationScoreCardProps {
   application: JobApplication;
@@ -27,14 +27,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-      case "Strongly Recommended":
-        return "bg-green-100 text-green-800";
-      case "Recommended for Review":
-        return "bg-blue-100 text-blue-800";
-      case "Low Match":
-        return "bg-orange-100 text-orange-800";
+      case &quot;Strongly Recommended&quot;:
+        return &quot;bg-green-100 text-green-800&quot;;
+      case &quot;Recommended for Review&quot;:
+        return &quot;bg-blue-100 text-blue-800&quot;;
+      case &quot;Low Match&quot;:
+        return &quot;bg-orange-100 text-orange-800&quot;;
       default:
-        return "bg-gray-100 text-gray-800";
+        return &quot;bg-gray-100 text-gray-800&quot;;
     }
   };
 
@@ -51,7 +51,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       
       if (error) throw error;
       
-      toast.success("Resume scoring has been initiated");
+      toast.success(&quot;Resume scoring has been initiated&quot;);
       
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0;
@@ -61,19 +61,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         attempts++;
         
         const { data, error } = await supabase
-          .from("job_applications")
-          .select("*")
-          .eq("id", application.id)
+          .from(&quot;job_applications&quot;)
+          .select(&quot;*&quot;)
+          .eq(&quot;id&quot;, application.id)
           .single();
           
         if (error) {
           setIsScoring(false);
-          return toast.error("Failed to check scoring status");
+          return toast.error(&quot;Failed to check scoring status&quot;);
         }
         
         if (data.scored_at) {
           setIsScoring(false);
-          toast.success("Resume scoring completed");
+          toast.success(&quot;Resume scoring completed&quot;);
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
         }
@@ -82,7 +82,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           setTimeout(checkScore, 3000);
         } else {
           setIsScoring(false);
-          toast.info("Scoring is taking longer than expected. Check back later.");
+          toast.info(&quot;Scoring is taking longer than expected. Check back later.&quot;);
         }
       };
       
@@ -96,12 +96,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 
   // Render the score result or button to score
   return (
-    <Card className="overflow-hidden">
-      <CardHeader className="pb-3">
-        <CardTitle className="text-lg font-medium flex items-center justify-between">
+    <Card className=&quot;overflow-hidden&quot;>
+      <CardHeader className=&quot;pb-3&quot;>
+        <CardTitle className=&quot;text-lg font-medium flex items-center justify-between&quot;>
           Resume Match Score
-          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">
-            {hasScore ? "SCORED" : "NOT SCORED"}
+          <Badge variant={hasScore ? &quot;default&quot; : &quot;outline&quot;} className=&quot;ml-2&quot;>
+            {hasScore ? &quot;SCORED&quot; : &quot;NOT SCORED&quot;}
           </Badge>
         </CardTitle>
       </CardHeader>
@@ -110,39 +110,39 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         {hasScore ? (
           <div>
             {/* Score */}
-            <div className="flex items-center mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3">
-                <Star className="h-5 w-5 text-primary" />
+            <div className=&quot;flex items-center mb-4&quot;>
+              <div className=&quot;p-2 bg-primary/10 rounded-full mr-3&quot;>
+                <Star className=&quot;h-5 w-5 text-primary&quot; />
               </div>
               <div>
-                <div className="text-sm text-muted-foreground">Match Score</div>
-                <div className="font-semibold text-xl">{application.match_score}/100</div>
+                <div className=&quot;text-sm text-muted-foreground&quot;>Match Score</div>
+                <div className=&quot;font-semibold text-xl&quot;>{application.match_score}/100</div>
               </div>
             </div>
             
             {/* Summary */}
-            <div className="flex items-start mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <BarChart2 className="h-5 w-5 text-primary" />
+            <div className=&quot;flex items-start mb-4&quot;>
+              <div className=&quot;p-2 bg-primary/10 rounded-full mr-3 mt-0.5&quot;>
+                <BarChart2 className=&quot;h-5 w-5 text-primary&quot; />
               </div>
               <div>
-                <div className="text-sm text-muted-foreground">Summary</div>
-                <div className="font-medium">{application.match_summary}</div>
+                <div className=&quot;text-sm text-muted-foreground&quot;>Summary</div>
+                <div className=&quot;font-medium&quot;>{application.match_summary}</div>
               </div>
             </div>
             
             {/* Suggestion */}
-            <div className="flex items-start">
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <Lightbulb className="h-5 w-5 text-primary" />
+            <div className=&quot;flex items-start&quot;>
+              <div className=&quot;p-2 bg-primary/10 rounded-full mr-3 mt-0.5&quot;>
+                <Lightbulb className=&quot;h-5 w-5 text-primary&quot; />
               </div>
               <div>
-                <div className="text-sm text-muted-foreground">Suggestion</div>
+                <div className=&quot;text-sm text-muted-foreground&quot;>Suggestion</div>
                 <Badge className={getSuggestionColor(application.match_suggestion)}>
                   {application.match_suggestion}
                 </Badge>
                 {scoredDate && (
-                  <div className="text-xs text-muted-foreground mt-1">
+                  <div className=&quot;text-xs text-muted-foreground mt-1&quot;>
                     Scored on {scoredDate}
                   </div>
                 )}
@@ -151,34 +151,34 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
-              <div className="mt-4 pt-4 border-t">
-                <details className="text-sm">
-                  <summary className="font-medium cursor-pointer">
+              <div className=&quot;mt-4 pt-4 border-t&quot;>
+                <details className=&quot;text-sm&quot;>
+                  <summary className=&quot;font-medium cursor-pointer&quot;>
                     View detailed breakdown
                   </summary>
-                  <div className="mt-2 space-y-2 text-muted-foreground">
+                  <div className=&quot;mt-2 space-y-2 text-muted-foreground&quot;>
                     {application.match_breakdown.skills_match && (
                       <div>
-                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>
+                        <p className=&quot;font-medium&quot;>Skills Match: {application.match_breakdown.skills_match.score}/100</p>
                         {application.match_breakdown.skills_match.matching && (
-                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(", ")}</p>
+                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(&quot;, &quot;)}</p>
                         )}
                         {application.match_breakdown.skills_match.missing && (
-                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
+                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(&quot;, &quot;)}</p>
                         )}
                       </div>
                     )}
                     
                     {application.match_breakdown.experience_match && (
                       <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
+                        <p className=&quot;font-medium&quot;>Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
                     
                     {application.match_breakdown.education_match && (
                       <div>
-                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
+                        <p className=&quot;font-medium&quot;>Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
                     )}
@@ -188,22 +188,22 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             )}
           </div>
         ) : (
-          <div className="text-center py-4">
-            <p className="text-muted-foreground mb-4">
+          <div className=&quot;text-center py-4&quot;>
+            <p className=&quot;text-muted-foreground mb-4&quot;>
               Analyze how well this resume matches your job requirements.
             </p>
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
-              className="w-full"
+              className=&quot;w-full&quot;
             >
               {isScoring ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                   Scoring Resume...
                 </>
               ) : (
-                "Score Resume"
+                &quot;Score Resume&quot;
               )}
             </Button>
           </div>

@@ -41,48 +41,48 @@ export default function InnovativeServicesShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className=&quot;min-h-screen bg-black text-white relative overflow-hidden&quot;>
       {/* Enhanced Background Effects */}
-      <div className="quantum-matrix-grid"></div>
-      <div className="holographic-rings"></div>
-      <div className="neural-network-pattern"></div>
-      <div className="cyberpunk-grid"></div>
-      <div className="quantum-field-effect"></div>
+      <div className=&quot;quantum-matrix-grid&quot;></div>
+      <div className=&quot;holographic-rings&quot;></div>
+      <div className=&quot;neural-network-pattern&quot;></div>
+      <div className=&quot;cyberpunk-grid&quot;></div>
+      <div className=&quot;quantum-field-effect&quot;></div>
       
       <Head>
         <title>Innovative Services Showcase - Zion Tech Group | Revolutionary AI & Quantum Solutions</title>
-        <meta name="description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services. First-to-market solutions with breakthrough capabilities." />
-        <meta name="keywords" content="innovative AI, quantum computing, neural interface, space technology, biotech, autonomous systems, revolutionary technology" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name=&quot;description&quot; content=&quot;Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services. First-to-market solutions with breakthrough capabilities.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;innovative AI, quantum computing, neural interface, space technology, biotech, autonomous systems, revolutionary technology&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Innovative Services Showcase - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our most innovative and revolutionary AI, quantum computing, and emerging technology services.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/innovative-services-showcase&quot; />
+        <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.jpg&quot; />
       </Head>
 
       {/* Enhanced Header */}
-      <header className="relative z-10 bg-black/80 backdrop-blur-xl border-b border-purple-500/20">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center">
-            <h1 className="holographic-text text-5xl md:text-6xl font-bold mb-6">
+      <header className=&quot;relative z-10 bg-black/80 backdrop-blur-xl border-b border-purple-500/20&quot;>
+        <div className=&quot;container mx-auto px-4 py-8&quot;>
+          <div className=&quot;text-center&quot;>
+            <h1 className=&quot;holographic-text text-5xl md:text-6xl font-bold mb-6&quot;>
               Innovative Services Showcase
             </h1>
-            <p className="quantum-text text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+            <p className=&quot;quantum-text text-xl md:text-2xl mb-8 max-w-4xl mx-auto&quot;>
               Discover our most revolutionary and first-to-market AI, quantum computing, and emerging technology solutions
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <span className="px-6 py-3 bg-purple-500/20 border border-purple-500/40 rounded-full text-purple-400 font-semibold">
+            <div className=&quot;flex flex-wrap justify-center gap-6 text-sm&quot;>
+              <span className=&quot;px-6 py-3 bg-purple-500/20 border border-purple-500/40 rounded-full text-purple-400 font-semibold&quot;>
                 🚀 First-to-Market
               </span>
-              <span className="px-6 py-3 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-cyan-400 font-semibold">
+              <span className=&quot;px-6 py-3 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-cyan-400 font-semibold&quot;>
                 🧠 Revolutionary AI
               </span>
-              <span className="px-6 py-3 bg-green-500/20 border border-green-500/40 rounded-full text-green-400 font-semibold">
+              <span className=&quot;px-6 py-3 bg-green-500/20 border border-green-500/40 rounded-full text-green-400 font-semibold&quot;>
                 ⚛️ Quantum Computing
               </span>
-              <span className="px-6 py-3 bg-pink-500/20 border border-pink-500/40 rounded-full text-pink-400 font-semibold">
+              <span className=&quot;px-6 py-3 bg-pink-500/20 border border-pink-500/40 rounded-full text-pink-400 font-semibold&quot;>
                 🌟 Breakthrough Technology
               </span>
             </div>
@@ -91,57 +91,57 @@ export default function InnovativeServicesShowcase() {
       </header>
 
       <UltraFuturisticMatrixBackground>
-        <div className="min-h-screen relative z-10">
+        <div className=&quot;min-h-screen relative z-10&quot;>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className=&quot;relative py-20 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
                 Revolutionary Micro SAAS Services
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
                 Experience the future of business with our cutting-edge micro SAAS solutions powered by quantum AI, autonomous systems, and breakthrough technology.
               </p>
               
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">25+</div>
-                  <div className="text-gray-300">Innovative Services</div>
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-12&quot;>
+                <div className=&quot;bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30&quot;>
+                  <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>25+</div>
+                  <div className=&quot;text-gray-300&quot;>Innovative Services</div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">$50B+</div>
-                  <div className="text-gray-300">Market Value</div>
+                <div className=&quot;bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30&quot;>
+                  <div className=&quot;text-3xl font-bold text-blue-400 mb-2&quot;>$50B+</div>
+                  <div className=&quot;text-gray-300&quot;>Market Value</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">
-                  <div className="text-3xl font-bold text-green-400 mb-2">500%+</div>
-                  <div className="text-gray-300">Average ROI</div>
+                <div className=&quot;bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30&quot;>
+                  <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>500%+</div>
+                  <div className=&quot;text-gray-300&quot;>Average ROI</div>
                 </div>
-                <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                  <div className="text-gray-300">AI Support</div>
+                <div className=&quot;bg-gradient-to-br from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30&quot;>
+                  <div className=&quot;text-3xl font-bold text-yellow-400 mb-2&quot;>24/7</div>
+                  <div className=&quot;text-gray-300&quot;>AI Support</div>
                 </div>
               </div>
 
               {/* Contact Information */}
-              <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 max-w-2xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>
-                <div className="space-y-4 text-left">
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <span className="text-gray-300">{contactInfo.mobile}</span>
+              <div className=&quot;bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 max-w-2xl mx-auto&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Contact Zion Tech Group</h3>
+                <div className=&quot;space-y-4 text-left&quot;>
+                  <div className=&quot;flex items-center space-x-3&quot;>
+                    <Phone className=&quot;w-5 h-5 text-cyan-400&quot; />
+                    <span className=&quot;text-gray-300&quot;>{contactInfo.mobile}</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <ExternalLink className="w-5 h-5 text-purple-400" />
-                    <span className="text-gray-300">{contactInfo.email}</span>
+                  <div className=&quot;flex items-center space-x-3&quot;>
+                    <ExternalLink className=&quot;w-5 h-5 text-purple-400&quot; />
+                    <span className=&quot;text-gray-300&quot;>{contactInfo.email}</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-gray-300">{contactInfo.address}</span>
+                  <div className=&quot;flex items-center space-x-3&quot;>
+                    <CheckCircle className=&quot;w-5 h-5 text-green-400&quot; />
+                    <span className=&quot;text-gray-300&quot;>{contactInfo.address}</span>
                   </div>
                 </div>
               </div>
@@ -150,23 +150,23 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Service Categories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Explore our comprehensive range of innovative services across cutting-edge technology domains
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className=&quot;grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6&quot;>
               {categories.map((category, index) => {
                 const Icon = category.icon;
                 return (
@@ -175,11 +175,11 @@ export default function InnovativeServicesShowcase() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group cursor-pointer"
+                    className=&quot;group cursor-pointer&quot;
                   >
                     <div className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-center transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
-                      <Icon className="w-8 h-8 mx-auto mb-3 text-white" />
-                      <h3 className="text-sm font-semibold text-white leading-tight">
+                      <Icon className=&quot;w-8 h-8 mx-auto mb-3 text-white&quot; />
+                      <h3 className=&quot;text-sm font-semibold text-white leading-tight&quot;>
                         {category.name}
                       </h3>
                     </div>
@@ -191,95 +191,95 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Featured Services Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Featured Revolutionary Services
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Discover our most innovative and game-changing micro SAAS solutions
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {allServices.filter(service => service.popular).slice(0, 9).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
+                  className=&quot;group&quot;
                 >
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-4xl">{service.icon}</div>
+                  <div className=&quot;bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20&quot;>
+                    <div className=&quot;flex items-center justify-between mb-6&quot;>
+                      <div className=&quot;text-4xl&quot;>{service.icon}</div>
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        <span className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold px-3 py-1 rounded-full&quot;>
                           Popular
                         </span>
                       )}
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    <h3 className=&quot;text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors&quot;>
                       {service.name}
                     </h3>
                     
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                    <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-3&quot;>
                       {service.description}
                     </p>
 
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-2xl font-bold text-purple-400">
+                    <div className=&quot;flex items-center justify-between mb-4&quot;>
+                      <div className=&quot;text-2xl font-bold text-purple-400&quot;>
                         {service.price}
-                        <span className="text-sm text-gray-400">{service.period}</span>
+                        <span className=&quot;text-sm text-gray-400&quot;>{service.period}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{service.rating}</span>
-                        <span className="text-xs text-gray-500">({service.reviews})</span>
+                      <div className=&quot;flex items-center space-x-1&quot;>
+                        <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
+                        <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
+                        <span className=&quot;text-xs text-gray-500&quot;>({service.reviews})</span>
                       </div>
                     </div>
 
-                    <div className="space-y-2 mb-6">
+                    <div className=&quot;space-y-2 mb-6&quot;>
                       {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-xs text-gray-300">{feature}</span>
+                        <div key={idx} className=&quot;flex items-center space-x-2&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
+                          <span className=&quot;text-xs text-gray-300&quot;>{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="space-y-3 mb-6">
-                      <div className="text-xs">
-                        <span className="text-gray-400">Market Size:</span>
-                        <span className="text-green-400 ml-2">{service.marketSize}</span>
+                    <div className=&quot;space-y-3 mb-6&quot;>
+                      <div className=&quot;text-xs&quot;>
+                        <span className=&quot;text-gray-400&quot;>Market Size:</span>
+                        <span className=&quot;text-green-400 ml-2&quot;>{service.marketSize}</span>
                       </div>
-                      <div className="text-xs">
-                        <span className="text-gray-400">Growth Rate:</span>
-                        <span className="text-blue-400 ml-2">{service.growthRate}</span>
+                      <div className=&quot;text-xs&quot;>
+                        <span className=&quot;text-gray-400&quot;>Growth Rate:</span>
+                        <span className=&quot;text-blue-400 ml-2&quot;>{service.growthRate}</span>
                       </div>
-                      <div className="text-xs">
-                        <span className="text-gray-400">ROI:</span>
-                        <span className="text-purple-400 ml-2">{service.roi}</span>
+                      <div className=&quot;text-xs&quot;>
+                        <span className=&quot;text-gray-400&quot;>ROI:</span>
+                        <span className=&quot;text-purple-400 ml-2&quot;>{service.roi}</span>
                       </div>
                     </div>
 
-                    <div className="flex space-x-3">
+                    <div className=&quot;flex space-x-3&quot;>
                       <a
                         href={service.link}
-                        className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                        className=&quot;flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2&quot;
                       >
                         <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                      <button className="bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-lg transition-colors duration-300">
-                        <Phone className="w-4 h-4" />
+                        <ArrowRight className=&quot;w-4 h-4&quot; />
+                      </Link>
+                      <button className=&quot;bg-gray-700 hover:bg-gray-600 text-white p-3 rounded-lg transition-colors duration-300&quot;>
+                        <Phone className=&quot;w-4 h-4&quot; />
                       </button>
                     </div>
                   </div>
@@ -290,72 +290,72 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Market Analysis Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Market Analysis & Competitive Advantage
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Understand why our services outperform competitors and deliver exceptional ROI
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantages</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+            <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
+              <div className=&quot;bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Competitive Advantages</h3>
+                <div className=&quot;space-y-4&quot;>
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Quantum AI Integration</h4>
-                      <p className="text-gray-300 text-sm">First-to-market quantum AI capabilities in multiple domains</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Quantum AI Integration</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>First-to-market quantum AI capabilities in multiple domains</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Cost Leadership</h4>
-                      <p className="text-gray-300 text-sm">90% cost reduction compared to enterprise competitors</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Cost Leadership</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>90% cost reduction compared to enterprise competitors</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <CheckCircle className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Performance Superiority</h4>
-                      <p className="text-gray-300 text-sm">99.9% accuracy and 500%+ ROI across all services</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Performance Superiority</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>99.9% accuracy and 500%+ ROI across all services</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6">Market Opportunities</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+              <div className=&quot;bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Market Opportunities</h3>
+                <div className=&quot;space-y-4&quot;>
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <TrendingUp className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Quantum Computing</h4>
-                      <p className="text-gray-300 text-sm">$1.5B market with 300% annual growth</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Quantum Computing</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>$1.5B market with 300% annual growth</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <TrendingUp className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Space Technology</h4>
-                      <p className="text-gray-300 text-sm">$469B space economy with 150% growth</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Space Technology</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>$469B space economy with 150% growth</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <div className=&quot;flex items-start space-x-3&quot;>
+                    <TrendingUp className=&quot;w-5 h-5 text-green-400 mt-1 flex-shrink-0&quot; />
                     <div>
-                      <h4 className="font-semibold text-white">Biotech AI</h4>
-                      <p className="text-gray-300 text-sm">$1.5T market with 200% annual growth</p>
+                      <h4 className=&quot;font-semibold text-white&quot;>Biotech AI</h4>
+                      <p className=&quot;text-gray-300 text-sm&quot;>$1.5T market with 200% annual growth</p>
                     </div>
                   </div>
                 </div>
@@ -365,55 +365,55 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Contact CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join the future of business with our revolutionary micro SAAS services. Get started with a free trial today.
               </p>
               
-              <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="text-center">
-                    <Phone className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
-                    <div className="text-white font-semibold">Phone</div>
-                    <div className="text-gray-300">{contactInfo.mobile}</div>
+              <div className=&quot;bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Contact Zion Tech Group</h3>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
+                  <div className=&quot;text-center&quot;>
+                    <Phone className=&quot;w-8 h-8 mx-auto mb-3 text-cyan-400&quot; />
+                    <div className=&quot;text-white font-semibold&quot;>Phone</div>
+                    <div className=&quot;text-gray-300&quot;>{contactInfo.mobile}</div>
                   </div>
-                  <div className="text-center">
-                    <ExternalLink className="w-8 h-8 mx-auto mb-3 text-purple-400" />
-                    <div className="text-white font-semibold">Email</div>
-                    <div className="text-gray-300">{contactInfo.email}</div>
+                  <div className=&quot;text-center&quot;>
+                    <ExternalLink className=&quot;w-8 h-8 mx-auto mb-3 text-purple-400&quot; />
+                    <div className=&quot;text-white font-semibold&quot;>Email</div>
+                    <div className=&quot;text-gray-300&quot;>{contactInfo.email}</div>
                   </div>
-                  <div className="text-center">
-                    <CheckCircle className="w-8 h-8 mx-auto mb-3 text-green-400" />
-                    <div className="text-white font-semibold">Address</div>
-                    <div className="text-gray-300 text-sm">{contactInfo.address}</div>
+                  <div className=&quot;text-center&quot;>
+                    <CheckCircle className=&quot;w-8 h-8 mx-auto mb-3 text-green-400&quot; />
+                    <div className=&quot;text-white font-semibold&quot;>Address</div>
+                    <div className=&quot;text-gray-300 text-sm&quot;>{contactInfo.address}</div>
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <a
-                    href="https://ziontechgroup.com"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                    href=&quot;https://ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center space-x-2&quot;
                   >
                     <span>Visit Website</span>
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
+                    <ExternalLink className=&quot;w-5 h-5&quot; />
+                  </Link>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className=&quot;bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2&quot;
                   >
                     <span>Call Now</span>
-                    <Phone className="w-5 h-5" />
-                  </a>
+                    <Phone className=&quot;w-5 h-5&quot; />
+                  </Link>
                 </div>
               </div>
             </motion.div>

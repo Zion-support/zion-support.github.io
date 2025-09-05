@@ -50,10 +50,10 @@ export default function EnterprisePlans() {
               ))}
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
-              <Link href="/enterprise" passHref legacyBehavior>
-                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
+              <Link href=&quot;/enterprise&quot; passHref legacyBehavior>
+                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</Link>
               </Link>
-              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
+              <a href=&quot;mailto:sales@zion.ai&quot; style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
             </div>
           </div>
         ))}
@@ -94,7 +94,7 @@ export default function EnterprisePlans() {
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
         </div>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href="/enterprise/admin">Admin Dashboard</Link>
+          <Link href=&quot;/enterprise/admin&quot;>Admin Dashboard</Link>
         </div>
       </section>
     </main>

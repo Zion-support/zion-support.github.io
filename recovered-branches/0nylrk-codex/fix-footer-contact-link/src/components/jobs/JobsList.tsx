@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { Job, JobStatus } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, Edit, X, Eye } from "lucide-react";
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from &quot;react&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Job, JobStatus } from &quot;@/types/jobs&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Loader2, Edit, X, Eye } from &quot;lucide-react&quot;;
+import { format } from &quot;date-fns&quot;;
+import { Link } from &quot;react-router-dom&quot;;
 
 interface JobsListProps {
   filter?: JobStatus;
@@ -26,13 +26,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
       try {
         let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false });
+          .from(&quot;jobs&quot;)
+          .select(&quot;*&quot;)
+          .eq(&quot;client_id&quot;, user.id)
+          .order(&quot;created_at&quot;, { ascending: false });
 
         if (filter) {
-          query = query.eq("status", filter);
+          query = query.eq(&quot;status&quot;, filter);
         }
 
         const { data, error } = await query;
@@ -40,7 +40,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         if (error) throw error;
         setJobs(data as Job[]);
       } catch (error) {
-        console.error("Error fetching jobs:", error);
+        console.error(&quot;Error fetching jobs:&quot;, error);
       } finally {
         setIsLoading(false);
       }
@@ -51,23 +51,23 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className=&quot;flex justify-center items-center p-8&quot;>
+        <Loader2 className=&quot;h-8 w-8 animate-spin text-primary&quot; />
       </div>
     );
   }
 
   if (jobs.length === 0) {
     return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">
-        <p className="text-lg text-muted-foreground">
+      <div className=&quot;text-center p-8 border rounded-md bg-muted/20&quot;>
+        <p className=&quot;text-lg text-muted-foreground&quot;>
           {filter 
-            ? `No jobs with status "${filter}" found.` 
-            : "You haven't posted any jobs yet."
+            ? `No jobs with status &quot;${filter}&quot; found.` 
+            : &quot;You haven't posted any jobs yet.&quot;
           }
         </p>
-        <Button asChild className="mt-4">
-          <Link to="/post-job">Post Your First Job</Link>
+        <Button asChild className=&quot;mt-4&quot;>
+          <Link to=&quot;/post-job&quot;>Post Your First Job</Link>
         </Button>
       </div>
     );
@@ -75,26 +75,26 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-      case "new":
-        return "bg-blue-100 text-blue-800";
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800";
-      case "filled":
-        return "bg-green-100 text-green-800";
-      case "closed":
-        return "bg-gray-100 text-gray-800";
+      case &quot;new&quot;:
+        return &quot;bg-blue-100 text-blue-800&quot;;
+      case &quot;in_progress&quot;:
+        return &quot;bg-yellow-100 text-yellow-800&quot;;
+      case &quot;filled&quot;:
+        return &quot;bg-green-100 text-green-800&quot;;
+      case &quot;closed&quot;:
+        return &quot;bg-gray-100 text-gray-800&quot;;
       default:
-        return "bg-gray-100 text-gray-800";
+        return &quot;bg-gray-100 text-gray-800&quot;;
     }
   };
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className=&quot;grid gap-6 md:grid-cols-2&quot;>
       {jobs.map((job) => (
         <Card 
           key={job.id} 
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
-            onSelectJob ? "cursor-pointer" : ""
+            onSelectJob ? &quot;cursor-pointer&quot; : ""
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >
@@ -102,12 +102,12 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             <div className="flex justify-between items-start">
               <div>
                 <CardTitle className="text-xl">{job.title}</CardTitle>
-                <CardDescription className="mt-1">
-                  Posted {format(new Date(job.created_at), "PPP")}
+                <CardDescription className="mt-1&quot;>
+                  Posted {format(new Date(job.created_at), &quot;PPP")}
                 </CardDescription>
               </div>
               <Badge className={getStatusColor(job.status)}>
-                {job.status.replace("_", " ").toUpperCase()}
+                {job.status.replace("_&quot;, &quot; ").toUpperCase()}
               </Badge>
             </div>
           </CardHeader>
@@ -115,14 +115,14 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
               {job.description}
             </p>
-            <div className="flex flex-wrap gap-1 mt-2">
+            <div className="flex flex-wrap gap-1 mt-2&quot;>
               {job.skills.slice(0, 3).map((skill, index) => (
-                <Badge key={index} variant="outline" className="text-xs">
+                <Badge key={index} variant=&quot;outline" className="text-xs&quot;>
                   {skill}
                 </Badge>
               ))}
               {job.skills.length > 3 && (
-                <Badge variant="outline" className="text-xs">
+                <Badge variant=&quot;outline" className="text-xs">
                   +{job.skills.length - 3} more
                 </Badge>
               )}
@@ -131,22 +131,22 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>
             <div className="mt-1 text-sm">
-              <span className="font-medium">Deadline:</span> {format(new Date(job.deadline), "PPP")}
+              <span className="font-medium&quot;>Deadline:</span> {format(new Date(job.deadline), &quot;PPP")}
             </div>
           </CardContent>
-          <CardFooter className="flex justify-between p-4 pt-0 gap-2">
-            <Button variant="outline" size="sm" asChild>
+          <CardFooter className="flex justify-between p-4 pt-0 gap-2&quot;>
+            <Button variant=&quot;outline&quot; size=&quot;sm" asChild>
               <Link to={`/jobs/${job.id}`}>
                 <Eye className="h-4 w-4 mr-1" /> View Details
               </Link>
             </Button>
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" asChild>
+            <div className="flex gap-2&quot;>
+              <Button variant=&quot;outline&quot; size=&quot;sm" asChild>
                 <Link to={`/jobs/${job.id}/edit`}>
-                  <Edit className="h-4 w-4" />
+                  <Edit className="h-4 w-4&quot; />
                 </Link>
               </Button>
-              <Button variant="outline" size="sm">
+              <Button variant=&quot;outline&quot; size=&quot;sm">
                 <X className="h-4 w-4" />
               </Button>
             </div>

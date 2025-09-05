@@ -11,104 +11,104 @@ import EnhancedFooter from '../components/EnhancedFooter';
 export default function WhitepapersPage() {
   const whitepapers = [
     {
-      title: "The Future of Autonomous AI Systems",
-      description: "A comprehensive analysis of autonomous AI systems and their potential to revolutionize technology and business operations.",
-      author: "Zion Tech Group AI Team",
-      date: "2025",
-      category: "AI & Machine Learning",
+      title: &quot;The Future of Autonomous AI Systems&quot;,
+      description: &quot;A comprehensive analysis of autonomous AI systems and their potential to revolutionize technology and business operations.&quot;,
+      author: &quot;Zion Tech Group AI Team&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;AI & Machine Learning&quot;,
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: The Future of Autonomous AI Systems"
+      color: &quot;from-purple-500 to-pink-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: The Future of Autonomous AI Systems&quot;
     },
     {
-      title: "Quantum Computing in Cybersecurity",
-      description: "Exploring the intersection of quantum computing and cybersecurity, including quantum-resistant encryption and threat detection.",
-      author: "Zion Tech Group Research",
-      date: "2025",
-      category: "Quantum Computing",
+      title: &quot;Quantum Computing in Cybersecurity&quot;,
+      description: &quot;Exploring the intersection of quantum computing and cybersecurity, including quantum-resistant encryption and threat detection.&quot;,
+      author: &quot;Zion Tech Group Research&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;Quantum Computing&quot;,
       icon: Atom,
-      color: "from-blue-500 to-cyan-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: Quantum Computing in Cybersecurity"
+      color: &quot;from-blue-500 to-cyan-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: Quantum Computing in Cybersecurity&quot;
     },
     {
-      title: "Next-Generation Space Technology",
-      description: "Innovations in space technology including AI-powered satellite systems and autonomous space exploration.",
-      author: "Zion Tech Group Space Division",
-      date: "2025",
-      category: "Space Technology",
+      title: &quot;Next-Generation Space Technology&quot;,
+      description: &quot;Innovations in space technology including AI-powered satellite systems and autonomous space exploration.&quot;,
+      author: &quot;Zion Tech Group Space Division&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;Space Technology&quot;,
       icon: Rocket,
-      color: "from-indigo-500 to-purple-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: Next-Generation Space Technology"
+      color: &quot;from-indigo-500 to-purple-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: Next-Generation Space Technology&quot;
     },
     {
-      title: "Edge Computing Architecture",
-      description: "Modern edge computing architectures and their applications in IoT, AI deployment, and distributed systems.",
-      author: "Zion Tech Group Engineering",
-      date: "2025",
-      category: "Edge Computing",
+      title: &quot;Edge Computing Architecture&quot;,
+      description: &quot;Modern edge computing architectures and their applications in IoT, AI deployment, and distributed systems.&quot;,
+      author: &quot;Zion Tech Group Engineering&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;Edge Computing&quot;,
       icon: Database,
-      color: "from-emerald-500 to-teal-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: Edge Computing Architecture"
+      color: &quot;from-emerald-500 to-teal-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: Edge Computing Architecture&quot;
     },
     {
-      title: "DevOps Automation Strategies",
-      description: "Advanced DevOps automation strategies for modern software development and deployment pipelines.",
-      author: "Zion Tech Group DevOps Team",
-      date: "2025",
-      category: "DevOps",
+      title: &quot;DevOps Automation Strategies&quot;,
+      description: &quot;Advanced DevOps automation strategies for modern software development and deployment pipelines.&quot;,
+      author: &quot;Zion Tech Group DevOps Team&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;DevOps&quot;,
       icon: Cpu,
-      color: "from-yellow-500 to-orange-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: DevOps Automation Strategies"
+      color: &quot;from-yellow-500 to-orange-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: DevOps Automation Strategies&quot;
     },
     {
-      title: "Cybersecurity in the AI Era",
-      description: "Comprehensive cybersecurity strategies for protecting AI systems and infrastructure in the modern digital landscape.",
-      author: "Zion Tech Group Security",
-      date: "2025",
-      category: "Cybersecurity",
+      title: &quot;Cybersecurity in the AI Era&quot;,
+      description: &quot;Comprehensive cybersecurity strategies for protecting AI systems and infrastructure in the modern digital landscape.&quot;,
+      author: &quot;Zion Tech Group Security&quot;,
+      date: &quot;2025&quot;,
+      category: &quot;Cybersecurity&quot;,
       icon: Shield,
-      color: "from-red-500 to-orange-500",
-      downloadUrl: "mailto:kleber@ziontechgroup.com?subject=Request: Cybersecurity in the AI Era"
+      color: &quot;from-red-500 to-orange-500&quot;,
+      downloadUrl: &quot;mailto:kleber@ziontechgroup.com?subject=Request: Cybersecurity in the AI Era&quot;
     }
   ];
 
-  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Space Technology", "Edge Computing", "DevOps", "Cybersecurity"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const categories = [&quot;All&quot;, &quot;AI & Machine Learning&quot;, &quot;Quantum Computing&quot;, &quot;Space Technology&quot;, &quot;Edge Computing&quot;, &quot;DevOps&quot;, &quot;Cybersecurity&quot;];
+  const [selectedCategory, setSelectedCategory] = React.useState(&quot;All&quot;);
 
-  const filteredWhitepapers = selectedCategory === "All" 
+  const filteredWhitepapers = selectedCategory === &quot;All&quot; 
     ? whitepapers 
     : whitepapers.filter(paper => paper.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
       <Head>
         <title>Whitepapers - Zion Tech Group | Research & Insights</title>
-        <meta name="description" content="Access comprehensive whitepapers on AI, quantum computing, cybersecurity, space technology, and more from Zion Tech Group." />
-        <meta name="keywords" content="whitepapers, research, AI, quantum computing, cybersecurity, space technology, Zion Tech Group" />
-        <meta property="og:title" content="Whitepapers - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive research and insights on cutting-edge technology." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/whitepapers" />
-        <link rel="canonical" href="https://ziontechgroup.com/whitepapers" />
+        <meta name=&quot;description&quot; content=&quot;Access comprehensive whitepapers on AI, quantum computing, cybersecurity, space technology, and more from Zion Tech Group.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;whitepapers, research, AI, quantum computing, cybersecurity, space technology, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Whitepapers - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Comprehensive research and insights on cutting-edge technology.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/whitepapers&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/whitepapers&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-5 mx-auto mb-8">
-              <FileText className="w-10 h-10 text-white" />
+            <div className=&quot;w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-5 mx-auto mb-8&quot;>
+              <FileText className=&quot;w-10 h-10 text-white&quot; />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent&quot;>
               Whitepapers & Research
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
+            <p className=&quot;text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8&quot;>
               Deep insights and research on cutting-edge technology topics. 
               Download our comprehensive whitepapers to stay ahead of the curve.
             </p>
@@ -117,9 +117,9 @@ export default function WhitepapersPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-10 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
+      <section className=&quot;py-10 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
             {categories.map((category) => (
               <button
                 key={category}
@@ -138,9 +138,9 @@ export default function WhitepapersPage() {
       </section>
 
       {/* Whitepapers Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {filteredWhitepapers.map((paper, index) => (
               <motion.div
                 key={paper.title}
@@ -148,30 +148,30 @@ export default function WhitepapersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105"
+                className=&quot;relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105&quot;
               >
                 <div className={`pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r ${paper.color.replace('from-', 'from-').replace('to-', 'to-')}/0 via-${paper.color.split('-')[1]}-400/10 to-${paper.color.split('-')[3]}-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100`} />
                 
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${paper.color} p-4 mb-6`}>
-                  <paper.icon className="w-8 h-8 text-white" />
+                  <paper.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-white/70 mb-3">
+                <div className=&quot;mb-4&quot;>
+                  <span className=&quot;inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-white/70 mb-3&quot;>
                     {paper.category}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-4">{paper.title}</h3>
-                <p className="text-white/70 mb-6">{paper.description}</p>
+                <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{paper.title}</h3>
+                <p className=&quot;text-white/70 mb-6&quot;>{paper.description}</p>
                 
-                <div className="flex items-center justify-between text-sm text-white/60 mb-6">
-                  <div className="flex items-center space-x-2">
-                    <User className="w-4 h-4" />
+                <div className=&quot;flex items-center justify-between text-sm text-white/60 mb-6&quot;>
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <User className=&quot;w-4 h-4&quot; />
                     <span>{paper.author}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4" />
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <Calendar className=&quot;w-4 h-4&quot; />
                     <span>{paper.date}</span>
                   </div>
                 </div>
@@ -180,9 +180,9 @@ export default function WhitepapersPage() {
                   href={paper.downloadUrl}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300"
+                  className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300&quot;
                 >
-                  <Download className="w-4 h-4 inline mr-2" />
+                  <Download className=&quot;w-4 h-4 inline mr-2&quot; />
                   Request Download
                 </motion.a>
               </motion.div>
@@ -192,28 +192,28 @@ export default function WhitepapersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
               Need Custom Research?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Let's discuss your specific research needs and create custom whitepapers tailored to your industry
             </p>
             <motion.a
-              href="mailto:kleber@ziontechgroup.com"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className=&quot;inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl&quot;
             >
               <span>Discuss Research Needs</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.a>
           </motion.div>
         </div>

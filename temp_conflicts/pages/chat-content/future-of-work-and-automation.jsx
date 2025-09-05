@@ -6,7 +6,7 @@ const FutureOfWorkAndAutomation = () => {
     <div>
       <Head>
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
-        <meta name="description" content="FutureOfWorkAndAutomation page" />
+        <meta name=&quot;description&quot; content=&quot;FutureOfWorkAndAutomation page&quot; />
       </Head>
       
       <main>

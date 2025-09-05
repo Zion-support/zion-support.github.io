@@ -137,11 +137,11 @@ export default function TalentOnboardingPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">
-        <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">
-          <div className="text-center space-y-3">
-            <h1 className="text-2xl md:text-3xl font-semibold text-high-contrast">Thanks! We’re using AI to optimize your profile.</h1>
-            <p className="text-high-contrast-secondary">You’ll appear in search results shortly.</p>
+      <div className=&quot;min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6&quot;>
+        <div className=&quot;max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in&quot;>
+          <div className=&quot;text-center space-y-3&quot;>
+            <h1 className=&quot;text-2xl md:text-3xl font-semibold text-high-contrast&quot;>Thanks! We’re using AI to optimize your profile.</h1>
+            <p className=&quot;text-high-contrast-secondary&quot;>You’ll appear in search results shortly.</p>
           </div>
         </div>
       </div>
@@ -149,49 +149,49 @@ export default function TalentOnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-3xl">
-        <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-semibold">Zion AI Marketplace: Talent Onboarding</h1>
-          <p className="text-high-contrast-muted mt-1">Create your public profile in a few quick steps.</p>
+    <div className=&quot;min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md:p-8&quot;>
+      <div className=&quot;w-full max-w-3xl&quot;>
+        <div className=&quot;mb-6&quot;>
+          <h1 className=&quot;text-2xl md:text-3xl font-semibold&quot;>Zion AI Marketplace: Talent Onboarding</h1>
+          <p className=&quot;text-high-contrast-muted mt-1&quot;>Create your public profile in a few quick steps.</p>
         </div>
 
-        <div className="w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6">
-          <div className="h-full bg-[var(--text-accent)] transition-all duration-500" style={{ width: `${progressPercent}%` }} />
+        <div className=&quot;w-full h-2 bg-[var(--border-secondary)] rounded-full overflow-hidden mb-6&quot;>
+          <div className=&quot;h-full bg-[var(--text-accent)] transition-all duration-500&quot; style={{ width: `${progressPercent}%` }} />
         </div>
 
         {errorMessage && (
-          <div className="mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239,68,68,0.1)]">
+          <div className=&quot;mb-4 rounded-lg border border-[var(--border-error)] text-high-contrast-error px-4 py-3 bg-[rgba(239,68,68,0.1)]&quot;>
             {errorMessage}
           </div>
         )}
 
-        <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">
-          <AnimatePresence mode="wait">
+        <div className=&quot;bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]&quot;>
+          <AnimatePresence mode=&quot;wait&quot;>
             {currentStep === 'Basic Info' && (
-              <motion.div key="step-basic" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <motion.div key=&quot;step-basic&quot; variants={containerVariants} initial=&quot;initial&quot; animate=&quot;animate&quot; exit=&quot;exit&quot; transition={{ duration: 0.3 }}>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6&quot;>
                   <FloatingInput
-                    id="fullName"
-                    label="Full Name"
+                    id=&quot;fullName&quot;
+                    label=&quot;Full Name&quot;
                     value={formData.fullName}
                     onChange={(v) => update('fullName', v)}
                     required
                   />
                   <FloatingInput
-                    id="professionalTitle"
-                    label="Professional Title"
-                    placeholder="e.g., AI Developer, Network Engineer"
+                    id=&quot;professionalTitle&quot;
+                    label=&quot;Professional Title&quot;
+                    placeholder=&quot;e.g., AI Developer, Network Engineer&quot;
                     value={formData.professionalTitle}
                     onChange={(v) => update('professionalTitle', v)}
                     required
                   />
                 </div>
-                <div className="mt-6">
+                <div className=&quot;mt-6&quot;>
                   <FileUpload
-                    id="profilePicture"
-                    label="Profile Picture (optional)"
-                    accept="image/*"
+                    id=&quot;profilePicture&quot;
+                    label=&quot;Profile Picture (optional)&quot;
+                    accept=&quot;image/*&quot;
                     fileData={formData.profilePicture}
                     onFileChange={(f) => update('profilePicture', f)}
                   />
@@ -200,26 +200,26 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Experience' && (
-              <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
-                <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <motion.div key=&quot;step-experience&quot; variants={containerVariants} initial=&quot;initial&quot; animate=&quot;animate&quot; exit=&quot;exit&quot; transition={{ duration: 0.3 }}>
+                <div className=&quot;grid grid-cols-1 gap-4 md:gap-6&quot;>
                   <FloatingTextarea
-                    id="bio"
-                    label="Short Bio or Work History"
+                    id=&quot;bio&quot;
+                    label=&quot;Short Bio or Work History&quot;
                     value={formData.bio}
                     onChange={(v) => update('bio', v)}
                     required
                   />
                   <FloatingTextarea
-                    id="projects"
-                    label="Key Projects or Roles (optional)"
-                    placeholder="Use bullets or short lines"
+                    id=&quot;projects&quot;
+                    label=&quot;Key Projects or Roles (optional)&quot;
+                    placeholder=&quot;Use bullets or short lines&quot;
                     value={formData.projects}
                     onChange={(v) => update('projects', v)}
                   />
                   <FloatingInput
-                    id="yearsOfExperience"
-                    label="Years of Experience"
-                    type="number"
+                    id=&quot;yearsOfExperience&quot;
+                    label=&quot;Years of Experience&quot;
+                    type=&quot;number&quot;
                     min={0}
                     value={formData.yearsOfExperience}
                     onChange={(v) => update('yearsOfExperience', v)}
@@ -230,20 +230,20 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Skills & Tech' && (
-              <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
-                <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <motion.div key=&quot;step-skills&quot; variants={containerVariants} initial=&quot;initial&quot; animate=&quot;animate&quot; exit=&quot;exit&quot; transition={{ duration: 0.3 }}>
+                <div className=&quot;grid grid-cols-1 gap-4 md:gap-6&quot;>
                   <FloatingInput
-                    id="skills"
-                    label="Skills (comma-separated)"
-                    placeholder="e.g., Python, LLMs, Kubernetes"
+                    id=&quot;skills&quot;
+                    label=&quot;Skills (comma-separated)&quot;
+                    placeholder=&quot;e.g., Python, LLMs, Kubernetes&quot;
                     value={formData.skills}
                     onChange={(v) => update('skills', v)}
                     required
                   />
                   <FloatingInput
-                    id="tools"
-                    label="Tools/Platforms (optional, comma-separated)"
-                    placeholder="e.g., AWS, GCP, Docker, Snowflake"
+                    id=&quot;tools&quot;
+                    label=&quot;Tools/Platforms (optional, comma-separated)&quot;
+                    placeholder=&quot;e.g., AWS, GCP, Docker, Snowflake&quot;
                     value={formData.tools}
                     onChange={(v) => update('tools', v)}
                   />
@@ -252,53 +252,53 @@ export default function TalentOnboardingPage() {
             )}
 
             {currentStep === 'Availability' && (
-              <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
-                <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <motion.div key=&quot;step-availability&quot; variants={containerVariants} initial=&quot;initial&quot; animate=&quot;animate&quot; exit=&quot;exit&quot; transition={{ duration: 0.3 }}>
+                <div className=&quot;grid grid-cols-1 gap-4 md:gap-6&quot;>
                   <div>
-                    <label htmlFor="availability" className="block text-sm mb-2 text-high-contrast-secondary">Current Availability</label>
+                    <label htmlFor=&quot;availability&quot; className=&quot;block text-sm mb-2 text-high-contrast-secondary&quot;>Current Availability</label>
                     <select
-                      id="availability"
-                      className="w-full rounded-lg bg-high-contrast-tertiary/50 border border-[var(--border-secondary)] px-4 py-3 outline-none focus:ring-2 focus:ring-[var(--focus-ring)]"
+                      id=&quot;availability&quot;
+                      className=&quot;w-full rounded-lg bg-high-contrast-tertiary/50 border border-[var(--border-secondary)] px-4 py-3 outline-none focus:ring-2 focus:ring-[var(--focus-ring)]&quot;
                       value={formData.availability}
                       onChange={(e) => update('availability', e.target.value as OnboardingFormData['availability'])}
                     >
-                      <option value="">Select...</option>
-                      <option value="Full-time">Full-time</option>
-                      <option value="Part-time">Part-time</option>
-                      <option value="Project-based">Project-based</option>
+                      <option value="&quot;>Select...</option>
+                      <option value=&quot;Full-time&quot;>Full-time</option>
+                      <option value=&quot;Part-time&quot;>Part-time</option>
+                      <option value=&quot;Project-based&quot;>Project-based</option>
                     </select>
                   </div>
 
                   <FloatingInput
-                    id="timezone"
-                    label="Preferred Timezone"
-                    placeholder="e.g., UTC-5, PST, CET"
+                    id=&quot;timezone&quot;
+                    label=&quot;Preferred Timezone&quot;
+                    placeholder=&quot;e.g., UTC-5, PST, CET&quot;
                     value={formData.timezone}
                     onChange={(v) => update('timezone', v)}
                     required
                   />
 
                   <FloatingInput
-                    id="hourlyRate"
-                    label="Hourly Rate (optional)"
-                    type="number"
+                    id=&quot;hourlyRate&quot;
+                    label=&quot;Hourly Rate (optional)&quot;
+                    type=&quot;number&quot;
                     min={0}
                     value={formData.hourlyRate || ''}
                     onChange={(v) => update('hourlyRate', v)}
                   />
 
                   <FloatingInput
-                    id="portfolioLinks"
-                    label="Portfolio Links (optional)"
-                    placeholder="e.g., https://github.com/you, https://your-site.com"
+                    id=&quot;portfolioLinks&quot;
+                    label=&quot;Portfolio Links (optional)&quot;
+                    placeholder=&quot;e.g., https://github.com/you, https://your-site.com&quot;
                     value={formData.portfolioLinks || ''}
                     onChange={(v) => update('portfolioLinks', v)}
                   />
 
                   <FileUpload
-                    id="cvFile"
-                    label="Upload CV (optional)"
-                    accept=".pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    id=&quot;cvFile&quot;
+                    label=&quot;Upload CV (optional)&quot;
+                    accept=&quot;.pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     fileData={formData.cvFile}
                     onFileChange={(f) => update('cvFile', f)}
                   />
@@ -307,10 +307,10 @@ export default function TalentOnboardingPage() {
             )}
           </AnimatePresence>
 
-          <div className="mt-8 flex items-center justify-between">
+          <div className="mt-8 flex items-center justify-between&quot;>
             <button
-              type="button"
-              className="px-4 py-2 rounded-lg border border-[var(--border-secondary)] text-high-contrast-secondary hover:bg-high-contrast-tertiary/60 transition-colors"
+              type=&quot;button"
+              className="px-4 py-2 rounded-lg border border-[var(--border-secondary)] text-high-contrast-secondary hover:bg-high-contrast-tertiary/60 transition-colors&quot;
               onClick={prevStep}
               disabled={stepIndex === 0}
             >
@@ -319,8 +319,8 @@ export default function TalentOnboardingPage() {
 
             {stepIndex < steps.length - 1 ? (
               <button
-                type="button"
-                className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50"
+                type=&quot;button"
+                className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50&quot;
                 onClick={() => {
                   const missing = requiredMissingForStep();
                   if (missing) {
@@ -335,7 +335,7 @@ export default function TalentOnboardingPage() {
               </button>
             ) : (
               <button
-                type="button"
+                type=&quot;button"
                 className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50"
                 onClick={handleSubmit}
                 disabled={submitting}
@@ -421,10 +421,10 @@ function FileUpload(props: {
 
   return (
     <div>
-      <label htmlFor={id} className="block text-sm mb-2 text-high-contrast-secondary">{label}</label>
+      <label htmlFor={id} className="block text-sm mb-2 text-high-contrast-secondary&quot;>{label}</label>
       <input
         id={id}
-        type="file"
+        type=&quot;file"
         accept={accept}
         className="block w-full text-sm text-high-contrast-secondary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90"
         onChange={async (e) => {

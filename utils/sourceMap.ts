@@ -1,7 +1,7 @@
-import fs from "fs";
-import path from "path";
+import fs from &quot;fs&quot;;
+import path from &quot;path&quot;;
 
-export type SourceNodeType = "folder" | "file";
+export type SourceNodeType = &quot;folder&quot; | &quot;file&quot;;
 
 export interface SourceNode {
   name: string;
@@ -24,7 +24,7 @@ export interface SourceMapResponse {
 const ROOT = process.cwd();
 
 function withPath(base: string, segment: string): string {
-  if (base === "/") return `/${segment}`;
+  if (base === &quot;/&quot;) return `/${segment}`;
   return `${base}/${segment}`;
 }
 
@@ -33,102 +33,102 @@ function folder(name: string, basePath: string, children: string[] = []): Source
   return {
     name,
     path: fullPath,
-    type: "folder",
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))};
+    type: &quot;folder&quot;,
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: &quot;folder&quot; }))};
 }
 
 export function buildZionSourceMap(): SourceNode[] {
   const map: SourceNode[] = [
     // 1. /core
     {
-      name: "core",
-      path: "/core",
-      type: "folder",
+      name: &quot;core&quot;,
+      path: &quot;/core&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "auth", path: "/core/auth", type: "folder" },
-        { name: "user", path: "/core/user", type: "folder" },
-        { name: "marketplace", path: "/core/marketplace", type: "folder" },
-        { name: "payments", path: "/core/payments", type: "folder" },
-        { name: "messaging", path: "/core/messaging", type: "folder" },
-        { name: "analytics", path: "/core/analytics", type: "folder" },
-        { name: "roles", path: "/core/roles", type: "folder" },
-        { name: "talent", path: "/core/talent", type: "folder" },
-        { name: "client", path: "/core/client", type: "folder" }]},
+        { name: &quot;auth&quot;, path: &quot;/core/auth&quot;, type: &quot;folder&quot; },
+        { name: &quot;user&quot;, path: &quot;/core/user&quot;, type: &quot;folder&quot; },
+        { name: &quot;marketplace&quot;, path: &quot;/core/marketplace&quot;, type: &quot;folder&quot; },
+        { name: &quot;payments&quot;, path: &quot;/core/payments&quot;, type: &quot;folder&quot; },
+        { name: &quot;messaging&quot;, path: &quot;/core/messaging&quot;, type: &quot;folder&quot; },
+        { name: &quot;analytics&quot;, path: &quot;/core/analytics&quot;, type: &quot;folder&quot; },
+        { name: &quot;roles&quot;, path: &quot;/core/roles&quot;, type: &quot;folder&quot; },
+        { name: &quot;talent&quot;, path: &quot;/core/talent&quot;, type: &quot;folder&quot; },
+        { name: &quot;client&quot;, path: &quot;/core/client&quot;, type: &quot;folder&quot; }]},
     // 2. /ai
     {
-      name: "ai",
-      path: "/ai",
-      type: "folder",
+      name: &quot;ai&quot;,
+      path: &quot;/ai&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "gpt", path: "/ai/gpt", type: "folder" },
-        { name: "resume-generator", path: "/ai/resume-generator", type: "folder" },
-        { name: "proposal-writer", path: "/ai/proposal-writer", type: "folder" },
-        { name: "contract-writer", path: "/ai/contract-writer", type: "folder" },
-        { name: "assistant", path: "/ai/assistant", type: "folder" },
-        { name: "prompts", path: "/ai/prompts", type: "folder" }]},
+        { name: &quot;gpt&quot;, path: &quot;/ai/gpt&quot;, type: &quot;folder&quot; },
+        { name: &quot;resume-generator&quot;, path: &quot;/ai/resume-generator&quot;, type: &quot;folder&quot; },
+        { name: &quot;proposal-writer&quot;, path: &quot;/ai/proposal-writer&quot;, type: &quot;folder&quot; },
+        { name: &quot;contract-writer&quot;, path: &quot;/ai/contract-writer&quot;, type: &quot;folder&quot; },
+        { name: &quot;assistant&quot;, path: &quot;/ai/assistant&quot;, type: &quot;folder&quot; },
+        { name: &quot;prompts&quot;, path: &quot;/ai/prompts&quot;, type: &quot;folder&quot; }]},
     // 3. /dao
     {
-      name: "dao",
-      path: "/dao",
-      type: "folder",
+      name: &quot;dao&quot;,
+      path: &quot;/dao&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "proposals", path: "/dao/proposals", type: "folder" },
-        { name: "voting", path: "/dao/voting", type: "folder" },
-        { name: "quorum", path: "/dao/quorum", type: "folder" },
-        { name: "staking", path: "/dao/staking", type: "folder" },
-        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" }]},
+        { name: &quot;proposals&quot;, path: &quot;/dao/proposals&quot;, type: &quot;folder&quot; },
+        { name: &quot;voting&quot;, path: &quot;/dao/voting&quot;, type: &quot;folder&quot; },
+        { name: &quot;quorum&quot;, path: &quot;/dao/quorum&quot;, type: &quot;folder&quot; },
+        { name: &quot;staking&quot;, path: &quot;/dao/staking&quot;, type: &quot;folder&quot; },
+        { name: &quot;snapshot-integration&quot;, path: &quot;/dao/snapshot-integration&quot;, type: &quot;folder&quot; }]},
     // 4. /token
     {
-      name: "token",
-      path: "/token",
-      type: "folder",
+      name: &quot;token&quot;,
+      path: &quot;/token&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "rewards", path: "/token/rewards", type: "folder" },
-        { name: "pricing-engine", path: "/token/pricing-engine", type: "folder" },
-        { name: "escrow", path: "/token/escrow", type: "folder" },
-        { name: "payout-engine", path: "/token/payout-engine", type: "folder" },
-        { name: "wallet", path: "/token/wallet", type: "folder" }]},
+        { name: &quot;rewards&quot;, path: &quot;/token/rewards&quot;, type: &quot;folder&quot; },
+        { name: &quot;pricing-engine&quot;, path: &quot;/token/pricing-engine&quot;, type: &quot;folder&quot; },
+        { name: &quot;escrow&quot;, path: &quot;/token/escrow&quot;, type: &quot;folder&quot; },
+        { name: &quot;payout-engine&quot;, path: &quot;/token/payout-engine&quot;, type: &quot;folder&quot; },
+        { name: &quot;wallet&quot;, path: &quot;/token/wallet&quot;, type: &quot;folder&quot; }]},
     // 5. /academy
     {
-      name: "academy",
-      path: "/academy",
-      type: "folder",
+      name: &quot;academy&quot;,
+      path: &quot;/academy&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "courses", path: "/academy/courses", type: "folder" },
-        { name: "certifications", path: "/academy/certifications", type: "folder" },
-        { name: "quiz", path: "/academy/quiz", type: "folder" },
-        { name: "video", path: "/academy/video", type: "folder" },
-        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" }]},
+        { name: &quot;courses&quot;, path: &quot;/academy/courses&quot;, type: &quot;folder&quot; },
+        { name: &quot;certifications&quot;, path: &quot;/academy/certifications&quot;, type: &quot;folder&quot; },
+        { name: &quot;quiz&quot;, path: &quot;/academy/quiz&quot;, type: &quot;folder&quot; },
+        { name: &quot;video&quot;, path: &quot;/academy/video&quot;, type: &quot;folder&quot; },
+        { name: &quot;ai-tutor&quot;, path: &quot;/academy/ai-tutor&quot;, type: &quot;folder&quot; }]},
     // 6. /governance
     {
-      name: "governance",
-      path: "/governance",
-      type: "folder",
+      name: &quot;governance&quot;,
+      path: &quot;/governance&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "manifesto", path: "/governance/manifesto", type: "folder" },
-        { name: "constitution", path: "/governance/constitution", type: "folder" },
-        { name: "roadmap", path: "/governance/roadmap", type: "folder" },
-        { name: "changelog", path: "/governance/changelog", type: "folder" }]},
+        { name: &quot;manifesto&quot;, path: &quot;/governance/manifesto&quot;, type: &quot;folder&quot; },
+        { name: &quot;constitution&quot;, path: &quot;/governance/constitution&quot;, type: &quot;folder&quot; },
+        { name: &quot;roadmap&quot;, path: &quot;/governance/roadmap&quot;, type: &quot;folder&quot; },
+        { name: &quot;changelog&quot;, path: &quot;/governance/changelog&quot;, type: &quot;folder&quot; }]},
     // 7. /deployments
     {
-      name: "deployments",
-      path: "/deployments",
-      type: "folder",
+      name: &quot;deployments&quot;,
+      path: &quot;/deployments&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "multiverse", path: "/deployments/multiverse", type: "folder" },
-        { name: "subdomains", path: "/deployments/subdomains", type: "folder" },
-        { name: "config-templates", path: "/deployments/config-templates", type: "folder" },
-        { name: "environments", path: "/deployments/environments", type: "folder" }]},
+        { name: &quot;multiverse&quot;, path: &quot;/deployments/multiverse&quot;, type: &quot;folder&quot; },
+        { name: &quot;subdomains&quot;, path: &quot;/deployments/subdomains&quot;, type: &quot;folder&quot; },
+        { name: &quot;config-templates&quot;, path: &quot;/deployments/config-templates&quot;, type: &quot;folder&quot; },
+        { name: &quot;environments&quot;, path: &quot;/deployments/environments&quot;, type: &quot;folder&quot; }]},
     // 8. /api
     {
-      name: "api",
-      path: "/api",
-      type: "folder",
+      name: &quot;api&quot;,
+      path: &quot;/api&quot;,
+      type: &quot;folder&quot;,
       children: [
-        { name: "docs", path: "/api/docs", type: "folder" },
-        { name: "partners", path: "/api/partners", type: "folder" },
-        { name: "integrations", path: "/api/integrations", type: "folder" },
-        { name: "webhooks", path: "/api/webhooks", type: "folder" }]}];
+        { name: &quot;docs&quot;, path: &quot;/api/docs&quot;, type: &quot;folder&quot; },
+        { name: &quot;partners&quot;, path: &quot;/api/partners&quot;, type: &quot;folder&quot; },
+        { name: &quot;integrations&quot;, path: &quot;/api/integrations&quot;, type: &quot;folder&quot; },
+        { name: &quot;webhooks&quot;, path: &quot;/api/webhooks&quot;, type: &quot;folder&quot; }]}];
 
   return map;
 }
@@ -168,15 +168,15 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
 
   ensureDirectory(absoluteDir);
 
-  const keepFile = path.join(absoluteDir, ".keep");
+  const keepFile = path.join(absoluteDir, &quot;.keep&quot;);
   if (!fs.existsSync(keepFile)) {
-    fs.writeFileSync(keepFile, "");
+    fs.writeFileSync(keepFile, "&quot;);
     createdPaths.push(keepFile);
   } else {
     skippedPaths.push(keepFile);
   }
 
-  const readmeFile = path.join(absoluteDir, "README.md");
+  const readmeFile = path.join(absoluteDir, &quot;README.md");
   if (!fs.existsSync(readmeFile)) {
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync(readmeFile, readme);

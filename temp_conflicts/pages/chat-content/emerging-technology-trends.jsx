@@ -6,7 +6,7 @@ const EmergingTechnologyTrends = () => {
     <div>
       <Head>
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
-        <meta name="description" content="EmergingTechnologyTrends page" />
+        <meta name=&quot;description&quot; content=&quot;EmergingTechnologyTrends page&quot; />
       </Head>
       
       <main>

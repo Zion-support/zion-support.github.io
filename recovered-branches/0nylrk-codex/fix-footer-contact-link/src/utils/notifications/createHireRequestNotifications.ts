@@ -16,10 +16,10 @@ export async function createHireRequestNotifications({
 }: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 
-    : "project";
+    : &quot;project&quot;;
   
   const summaryText = projectSummary 
-    ? `: "${projectSummary}"` 
+    ? `: &quot;${projectSummary}&quot;` 
     : "";
   
   // Create notification for talent

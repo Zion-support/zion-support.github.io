@@ -8,7 +8,7 @@
 ,
       const memInfo = execSync('free -m', { encoding: 'utf8' }),
       const diskInfo = execSync('df -h', { encoding: 'utf8' }),
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }),
+      const cpuInfo = execSync('top -bn1 | grep &quot;Cpu(s)&quot;', { encoding: 'utf8' }),
 ,
       // Parse memory info,
       const memLines = memInfo.split('\n'),

@@ -22,10 +22,10 @@ const contactInfo = {
 };
 
 const heroStats = [
-  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
-  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
-  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
-  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" /> }
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className=&quot;w-5 h-5&quot; /> },
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className=&quot;w-5 h-5&quot; /> },
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className=&quot;w-5 h-5&quot; /> },
+  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className=&quot;w-5 h-5&quot; /> }
 ];
 
 const serviceCategories = [
@@ -130,52 +130,52 @@ export default function AdvancedITInfrastructureServices() {
     <Layout>
       <Head>
         <title>Advanced IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology." />
-        <meta name="keywords" content="IT infrastructure, quantum computing, edge computing, cybersecurity, data centers, cloud computing, zero trust security" />
-        <meta property="og:title" content="Advanced IT Infrastructure Services - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers." />
-        <meta property="og:url" content="https://ziontechgroup.com/advanced-it-infrastructure-services" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
+        <meta name=&quot;description&quot; content=&quot;Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;IT infrastructure, quantum computing, edge computing, cybersecurity, data centers, cloud computing, zero trust security&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Advanced IT Infrastructure Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/advanced-it-infrastructure-services&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/advanced-it-infrastructure-services&quot; />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20&quot;></div>
+        <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6&quot;>
               Advanced IT Infrastructure Services
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className=&quot;text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className=&quot;flex flex-wrap justify-center gap-4 mb-12&quot;>
               {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
+                  className=&quot;flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30&quot;
                 >
                   {stat.icon}
-                  <span className="text-blue-400 font-semibold">{stat.value}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
+                  <span className=&quot;text-blue-400 font-semibold&quot;>{stat.value}</span>
+                  <span className=&quot;text-gray-300 text-sm&quot;>{stat.label}</span>
                 </motion.div>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <Link href=&quot;#services&quot; className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;>
                 Explore Services
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
               </Link>
-              <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
-                <Phone className="mr-2 w-5 h-5" />
+              <Link href={`tel:${contactInfo.mobile}`} className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300&quot;>
+                <Phone className=&quot;mr-2 w-5 h-5&quot; />
                 Get Started
               </Link>
             </div>
@@ -184,24 +184,24 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className=&quot;py-20 bg-gradient-to-b from-black to-gray-900&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
               Why Choose Our IT Infrastructure Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
             {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -209,16 +209,16 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative group"
+                className=&quot;relative group&quot;
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
-                  <div className="bg-gray-900 rounded-xl p-6 h-full">
-                    <div className="text-center">
+                  <div className=&quot;bg-gray-900 rounded-xl p-6 h-full&quot;>
+                    <div className=&quot;text-center&quot;>
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                        <feature.icon className="w-8 h-8 text-white" />
+                        <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
+                      <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                      <p className=&quot;text-gray-300&quot;>{feature.description}</p>
                     </div>
                   </div>
                 </div>
@@ -229,24 +229,24 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id=&quot;services&quot; className=&quot;py-20 bg-black&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
               IT Infrastructure Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
 
-          <div className="space-y-16">
+          <div className=&quot;space-y-16&quot;>
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -254,17 +254,17 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-                className="relative"
+                className=&quot;relative&quot;
               >
-                <div className="text-center mb-12">
+                <div className=&quot;text-center mb-12&quot;>
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
-                    <category.icon className="w-10 h-10 text-white" />
+                    <category.icon className=&quot;w-10 h-10 text-white&quot; />
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
+                  <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>{category.title}</h3>
+                  <p className=&quot;text-xl text-gray-300 max-w-2xl mx-auto&quot;>{category.description}</p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div className=&quot;grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8&quot;>
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -272,44 +272,44 @@ export default function AdvancedITInfrastructureServices() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="relative group"
+                      className=&quot;relative group&quot;
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-3xl">{service.icon}</span>
+                        <div className=&quot;bg-gray-900 rounded-xl p-6 h-full&quot;>
+                          <div className=&quot;flex items-center justify-between mb-4&quot;>
+                            <span className=&quot;text-3xl&quot;>{service.icon}</span>
                             {service.popular && (
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                              <span className=&quot;bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full&quot;>
                                 Popular
                               </span>
                             )}
                           </div>
-                          <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
-                          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-2xl font-bold text-white">{service.price}</span>
-                            <span className="text-gray-400">{service.period}</span>
+                          <h4 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.name}</h4>
+                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.tagline}</p>
+                          <div className=&quot;flex items-center justify-between mb-4&quot;>
+                            <span className=&quot;text-2xl font-bold text-white&quot;>{service.price}</span>
+                            <span className=&quot;text-gray-400&quot;>{service.period}</span>
                           </div>
-                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                          <div className="space-y-2 mb-6">
+                          <p className=&quot;text-gray-300 text-sm mb-4&quot;>{service.description}</p>
+                          <div className=&quot;space-y-2 mb-6&quot;>
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                                <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                                 {feature}
                               </div>
                             ))}
                           </div>
-                          <div className="flex items-center justify-between">
+                          <div className=&quot;flex items-center justify-between&quot;>
                             <Link
                               href={service.link}
-                              className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                              className=&quot;inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300&quot;
                             >
                               Learn More
-                              <ArrowRight className="ml-1 w-4 h-4" />
+                              <ArrowRight className=&quot;ml-1 w-4 h-4&quot; />
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-                              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
+                              className=&quot;inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300&quot;
                             >
                               Get Started
                             </Link>
@@ -326,24 +326,24 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className=&quot;py-20 bg-gradient-to-b from-gray-900 to-black&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-4&quot;>
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -351,21 +351,21 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
+                className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20&quot;
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{testimonial.avatar}</span>
+                <div className=&quot;flex items-center mb-4&quot;>
+                  <span className=&quot;text-3xl mr-3&quot;>{testimonial.avatar}</span>
                   <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-blue-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <h4 className=&quot;text-white font-semibold&quot;>{testimonial.name}</h4>
+                    <p className=&quot;text-blue-400 text-sm&quot;>{testimonial.role}</p>
+                    <p className=&quot;text-gray-400 text-sm&quot;>{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{testimonial.content}</p>
-                <div className="flex items-center">
-                  <div className="flex text-yellow-400">
+                <p className=&quot;text-gray-300 mb-4&quot;>{testimonial.content}</p>
+                <div className=&quot;flex items-center&quot;>
+                  <div className=&quot;flex text-yellow-400&quot;>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className=&quot;w-4 h-4 fill-current&quot; />
                     ))}
                   </div>
                 </div>
@@ -376,39 +376,39 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className=&quot;py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className=&quot;text-3xl lg:text-4xl font-bold text-white mb-6&quot;>
               Ready to Transform Your Infrastructure?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
               Join hundreds of organizations that have already revolutionized their IT infrastructure with our advanced services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <Link
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className=&quot;mr-2 w-5 h-5&quot; />
                 Call Now: {contactInfo.mobile}
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
+                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300&quot;
               >
-                <Mail className="mr-2 w-5 h-5" />
+                <Mail className=&quot;mr-2 w-5 h-5&quot; />
                 Email Us
               </Link>
             </div>
-            <div className="mt-8 text-center">
-              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
-              <p className="text-gray-300">🌐 {contactInfo.website}</p>
+            <div className=&quot;mt-8 text-center&quot;>
+              <p className=&quot;text-gray-300 mb-2&quot;>📍 {contactInfo.address}</p>
+              <p className=&quot;text-gray-300&quot;>🌐 {contactInfo.website}</p>
             </div>
           </motion.div>
         </div>

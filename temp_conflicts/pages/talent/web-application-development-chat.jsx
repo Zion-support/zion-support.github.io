@@ -7,13 +7,13 @@ const WebApplicationDevelopmentChat = () => {
     <div>
       <Head>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="WebApplicationDevelopmentChat service" />
+        <meta name=&quot;description&quot; content=&quot;WebApplicationDevelopmentChat service&quot; />
       </Head>
       
       <main>
         <h1>WebApplicationDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
+        <Link href=&quot;/services&quot;>Back to Services</Link>
       </main>
     </div>
   );

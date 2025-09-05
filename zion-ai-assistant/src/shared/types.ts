@@ -1,4 +1,4 @@
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
+export type ProjectType = &quot;Web Dev&quot; | &quot;AI/ML&quot; | &quot;DevOps&quot; | &quot;Mobile&quot; | &quot;Data Engineering&quot; | &quot;Other&quot;;
 
 export interface MilestoneSuggestionInput {
   scopeOfWork: string;
@@ -12,7 +12,7 @@ export interface SuggestedMilestoneItem {
   description: string;
   suggestedDueDateIso: string;
   estimatedEffortHours: number; // estimated hours
-  tags?: string[]; // e.g., ["AI Suggested"]
+  tags?: string[]; // e.g., [&quot;AI Suggested&quot;]
 }
 
 export interface MilestoneSuggestionResponse {

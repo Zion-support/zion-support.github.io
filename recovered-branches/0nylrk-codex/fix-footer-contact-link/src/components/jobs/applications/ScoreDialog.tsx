@@ -4,9 +4,9 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle
-} from "@/components/ui/dialog";
-import { JobApplication } from "@/types/jobs";
-import { ApplicationScoreCard } from "../ApplicationScoreCard";
+} from &quot;@/components/ui/dialog&quot;;
+import { JobApplication } from &quot;@/types/jobs&quot;;
+import { ApplicationScoreCard } from &quot;../ApplicationScoreCard&quot;;
 
 interface ScoreDialogProps {
   open: boolean;
@@ -23,7 +23,7 @@ export function ScoreDialog({
 }: ScoreDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className=&quot;sm:max-w-md&quot;>
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>

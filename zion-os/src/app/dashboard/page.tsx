@@ -1,9 +1,9 @@
-"use client";
+"use client&quot;;
 
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Link from "next/link";
+import { useAuth } from &quot;@/contexts/AuthContext&quot;;
+import { useRouter } from &quot;next/navigation&quot;;
+import { useEffect } from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
 
 export default function DashboardPage() {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -11,7 +11,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
-      router.push("/auth/signin");
+      router.push(&quot;/auth/signin");
     }
   }, [isAuthenticated, isLoading, router]);
 
@@ -34,8 +34,8 @@ export default function DashboardPage() {
     <div className="space-y-8">
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">
-        <h1 className="text-3xl font-bold text-white mb-2">
-          Welcome back, {user?.name || "User"}! 👋
+        <h1 className="text-3xl font-bold text-white mb-2&quot;>
+          Welcome back, {user?.name || &quot;User"}! 👋
         </h1>
         <p className="text-zinc-300 text-lg">
           Ready to continue building your digital economy? Here's what you can do next.
@@ -113,7 +113,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>
-            <p className="text-white">{user?.name || "Not provided"}</p>
+            <p className="text-white&quot;>{user?.name || &quot;Not provided"}</p>
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Email</label>

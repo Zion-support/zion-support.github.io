@@ -5,7 +5,7 @@ export default function TestPage() {
     <>
       <Head>
         <title>Test Page - Zion App</title>
-        <meta name="description" content="Test page to verify app functionality" />
+        <meta name=&quot;description&quot; content=&quot;Test page to verify app functionality&quot; />
       </Head>
       
       <div style={{

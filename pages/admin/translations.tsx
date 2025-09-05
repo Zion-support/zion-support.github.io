@@ -4,7 +4,7 @@ const TranslationPreview = dynamic(() => import('../../components/admin/Translat
 
 export default function TranslationsAdminPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className=&quot;container mx-auto px-4 py-8&quot;>
       <TranslationPreview />
     </div>
   );

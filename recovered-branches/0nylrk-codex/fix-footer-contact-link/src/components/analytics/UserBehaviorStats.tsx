@@ -1,11 +1,11 @@
 
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
-import { AnalyticsChart } from "./AnalyticsChart";
+import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
+import { useState } from &quot;react&quot;;
+import { AnalyticsChart } from &quot;./AnalyticsChart&quot;;
 
 type TimeRange = '7d' | '30d' | '90d' | '365d';
 
@@ -80,48 +80,48 @@ export function UserBehaviorStats() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
         <EventTypeCard 
-          title="Click Events" 
-          description="Button and link interactions"
+          title=&quot;Click Events&quot; 
+          description=&quot;Button and link interactions&quot;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click || 0), 0) || 0
           }
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>
+            <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;><path d=&quot;m14.5 12.5-4-4&quot;/><path d=&quot;M8 6.2A3 3 0 1 0 6.2 8&quot;/><circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/></svg>
           }
         />
         <EventTypeCard 
-          title="Form Submissions" 
-          description="Completed forms and sign-ups"
+          title=&quot;Form Submissions&quot; 
+          description=&quot;Completed forms and sign-ups&quot;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
           }
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>
+            <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;><rect width=&quot;18&quot; height=&quot;18&quot; x=&quot;3&quot; y=&quot;3&quot; rx=&quot;2&quot;/><path d=&quot;M9 17H7&quot;/><path d=&quot;M17 17h-5&quot;/><path d=&quot;M7 12h10&quot;/><path d=&quot;M7 7h2&quot;/><path d=&quot;M17 7h-5&quot;/></svg>
           }
         />
         <EventTypeCard 
-          title="Conversions" 
-          description="Goal completions"
+          title=&quot;Conversions&quot; 
+          description=&quot;Goal completions&quot;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
           }
           icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;><path d=&quot;M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&quot;/><polyline points=&quot;15 3 21 3 21 9&quot;/><line x1=&quot;10&quot; x2=&quot;21&quot; y1=&quot;14&quot; y2=&quot;3&quot;/></svg>
           }
         />
       </div>
       
       <AnalyticsChart
-        title="User Behavior Over Time"
-        description="Track different types of user interactions"
+        title=&quot;User Behavior Over Time&quot;
+        description=&quot;Track different types of user interactions&quot;
         data={behaviorData || []}
-        type="line"
+        type=&quot;line&quot;
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
@@ -140,18 +140,18 @@ interface EventTypeCardProps {
 
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardContent className="p-6">
-        <div className="flex items-center gap-4">
-          <div className="h-12 w-12 rounded-lg bg-zion-cyan/20 flex items-center justify-center text-zion-cyan">
+    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+      <CardContent className=&quot;p-6&quot;>
+        <div className=&quot;flex items-center gap-4&quot;>
+          <div className=&quot;h-12 w-12 rounded-lg bg-zion-cyan/20 flex items-center justify-center text-zion-cyan&quot;>
             {icon}
           </div>
           <div>
-            <h4 className="text-lg font-medium text-white">{title}</h4>
-            <p className="text-sm text-zion-slate-light">{description}</p>
-            <div className="text-xl font-bold text-white mt-1">
+            <h4 className=&quot;text-lg font-medium text-white&quot;>{title}</h4>
+            <p className=&quot;text-sm text-zion-slate-light&quot;>{description}</p>
+            <div className=&quot;text-xl font-bold text-white mt-1&quot;>
               {isLoading ? (
-                <Skeleton className="h-7 w-16 bg-zion-blue-light" />
+                <Skeleton className=&quot;h-7 w-16 bg-zion-blue-light&quot; />
               ) : (
                 new Intl.NumberFormat().format(count)
               )}

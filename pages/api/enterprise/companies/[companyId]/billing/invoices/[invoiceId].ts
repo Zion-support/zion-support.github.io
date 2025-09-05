@@ -18,6 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', `attachment; filename="invoice-${invoiceId}.pdf"`);
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;invoice-${invoiceId}.pdf&quot;`);
   res.status(200).send(pdfBuffer);
 }

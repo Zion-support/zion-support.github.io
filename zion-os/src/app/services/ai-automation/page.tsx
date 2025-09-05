@@ -161,7 +161,7 @@ export default function AIAutomationPage() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=AI Automation Starter Plan" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
               Get Started
-            </a>
+            </Link>
           </div>
 
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-center text-white relative">
@@ -179,7 +179,7 @@ export default function AIAutomationPage() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=AI Automation Professional Plan" className="block w-full bg-white text-blue-600 py-2 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors">
               Get Started
-            </a>
+            </Link>
           </div>
 
           <div className="bg-zinc-900 border border-white/10 rounded-lg p-6 text-center">
@@ -194,7 +194,7 @@ export default function AIAutomationPage() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=AI Automation Enterprise Plan" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
               Contact Sales
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -211,13 +211,13 @@ export default function AIAutomationPage() {
             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Schedule Consultation
-          </a>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
           >
             Call +1 302 464 0950
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 
 interface AIService {
   id: string;
@@ -18,175 +18,175 @@ interface AIService {
 
 const aiServices: AIService[] = [
   {
-    id: "zion-gpt-enterprise",
-    name: "ZionGPT Enterprise",
-    description: "Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",
+    id: &quot;zion-gpt-enterprise&quot;,
+    name: &quot;ZionGPT Enterprise&quot;,
+    description: &quot;Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.&quot;,
     technicalSpecs: [
-      "GPT-4/Claude-3 integration",
-      "Custom fine-tuning capabilities",
-      "Multi-tenant architecture",
-      "Enterprise SSO integration",
-      "Real-time learning from feedback",
-      "Advanced prompt engineering"
+      &quot;GPT-4/Claude-3 integration&quot;,
+      &quot;Custom fine-tuning capabilities&quot;,
+      &quot;Multi-tenant architecture&quot;,
+      &quot;Enterprise SSO integration&quot;,
+      &quot;Real-time learning from feedback&quot;,
+      &quot;Advanced prompt engineering&quot;
     ],
     useCases: [
-      "Customer support automation",
-      "Knowledge management",
-      "Document analysis and summarization",
-      "Code review and assistance",
-      "Research and data analysis",
-      "Training and onboarding"
+      &quot;Customer support automation&quot;,
+      &quot;Knowledge management&quot;,
+      &quot;Document analysis and summarization&quot;,
+      &quot;Code review and assistance&quot;,
+      &quot;Research and data analysis&quot;,
+      &quot;Training and onboarding&quot;
     ],
-    pricing: "Starting at $499/month",
+    pricing: &quot;Starting at $499/month&quot;,
     startingPrice: 499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry",
-    icon: "🤖",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry&quot;,
+    icon: &quot;🤖&quot;,
     features: [
-      "Custom knowledge base training",
-      "Multi-language support (100+ languages)",
-      "Advanced reasoning and problem-solving",
-      "API integration and webhooks",
-      "Real-time learning and adaptation",
-      "Enterprise security and compliance",
-      "Audit trails and logging",
-      "Custom branding and theming"
+      &quot;Custom knowledge base training&quot;,
+      &quot;Multi-language support (100+ languages)&quot;,
+      &quot;Advanced reasoning and problem-solving&quot;,
+      &quot;API integration and webhooks&quot;,
+      &quot;Real-time learning and adaptation&quot;,
+      &quot;Enterprise security and compliance&quot;,
+      &quot;Audit trails and logging&quot;,
+      &quot;Custom branding and theming&quot;
     ],
     integration: [
-      "REST API with webhooks",
-      "Slack, Teams, Discord bots",
-      "Chrome extension",
-      "Mobile SDK (iOS/Android)",
-      "WordPress plugin",
-      "Shopify app"
+      &quot;REST API with webhooks&quot;,
+      &quot;Slack, Teams, Discord bots&quot;,
+      &quot;Chrome extension&quot;,
+      &quot;Mobile SDK (iOS/Android)&quot;,
+      &quot;WordPress plugin&quot;,
+      &quot;Shopify app&quot;
     ]
   },
   {
-    id: "ai-content-generation",
-    name: "AI Content Generation Suite",
-    description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",
+    id: &quot;ai-content-generation&quot;,
+    name: &quot;AI Content Generation Suite&quot;,
+    description: &quot;Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.&quot;,
     technicalSpecs: [
-      "Multi-model AI integration",
-      "Brand voice training",
-      "SEO optimization",
-      "Plagiarism detection",
-      "Multi-format output",
-      "Collaborative editing"
+      &quot;Multi-model AI integration&quot;,
+      &quot;Brand voice training&quot;,
+      &quot;SEO optimization&quot;,
+      &quot;Plagiarism detection&quot;,
+      &quot;Multi-format output&quot;,
+      &quot;Collaborative editing&quot;
     ],
     useCases: [
-      "Marketing copy and campaigns",
-      "Blog posts and articles",
-      "Product descriptions",
-      "Email marketing",
-      "Social media content",
-      "Technical documentation"
+      &quot;Marketing copy and campaigns&quot;,
+      &quot;Blog posts and articles&quot;,
+      &quot;Product descriptions&quot;,
+      &quot;Email marketing&quot;,
+      &quot;Social media content&quot;,
+      &quot;Technical documentation&quot;
     ],
-    pricing: "Starting at $199/month",
+    pricing: &quot;Starting at $199/month&quot;,
     startingPrice: 199,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",
-    icon: "✍️",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry&quot;,
+    icon: &quot;✍️&quot;,
     features: [
-      "AI-powered content creation",
-      "Brand voice consistency",
-      "SEO optimization tools",
-      "Multi-language support",
-      "Content calendar management",
-      "Performance analytics",
-      "A/B testing capabilities",
-      "Team collaboration tools"
+      &quot;AI-powered content creation&quot;,
+      &quot;Brand voice consistency&quot;,
+      &quot;SEO optimization tools&quot;,
+      &quot;Multi-language support&quot;,
+      &quot;Content calendar management&quot;,
+      &quot;Performance analytics&quot;,
+      &quot;A/B testing capabilities&quot;,
+      &quot;Team collaboration tools&quot;
     ],
     integration: [
-      "WordPress integration",
-      "Shopify product descriptions",
-      "Mailchimp email campaigns",
-      "Social media platforms",
-      "CMS systems",
-      "Marketing automation tools"
+      &quot;WordPress integration&quot;,
+      &quot;Shopify product descriptions&quot;,
+      &quot;Mailchimp email campaigns&quot;,
+      &quot;Social media platforms&quot;,
+      &quot;CMS systems&quot;,
+      &quot;Marketing automation tools&quot;
     ]
   },
   {
-    id: "ai-data-analytics",
-    name: "AI-Powered Business Intelligence",
-    description: "Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",
+    id: &quot;ai-data-analytics&quot;,
+    name: &quot;AI-Powered Business Intelligence&quot;,
+    description: &quot;Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.&quot;,
     technicalSpecs: [
-      "Machine learning models",
-      "Real-time data processing",
-      "Predictive analytics",
-      "Natural language queries",
-      "Automated reporting",
-      "Data visualization"
+      &quot;Machine learning models&quot;,
+      &quot;Real-time data processing&quot;,
+      &quot;Predictive analytics&quot;,
+      &quot;Natural language queries&quot;,
+      &quot;Automated reporting&quot;,
+      &quot;Data visualization&quot;
     ],
     useCases: [
-      "Sales forecasting",
-      "Customer behavior analysis",
-      "Risk assessment",
-      "Performance optimization",
-      "Market trend analysis",
-      "Operational efficiency"
+      &quot;Sales forecasting&quot;,
+      &quot;Customer behavior analysis&quot;,
+      &quot;Risk assessment&quot;,
+      &quot;Performance optimization&quot;,
+      &quot;Market trend analysis&quot;,
+      &quot;Operational efficiency&quot;
     ],
-    pricing: "Starting at $599/month",
+    pricing: &quot;Starting at $599/month&quot;,
     startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",
-    icon: "📊",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry&quot;,
+    icon: &quot;📊&quot;,
     features: [
-      "Predictive analytics",
-      "Natural language queries",
-      "Automated reporting",
-      "Real-time dashboards",
-      "Data visualization",
-      "Custom ML models",
-      "Anomaly detection",
-      "Trend forecasting"
+      &quot;Predictive analytics&quot;,
+      &quot;Natural language queries&quot;,
+      &quot;Automated reporting&quot;,
+      &quot;Real-time dashboards&quot;,
+      &quot;Data visualization&quot;,
+      &quot;Custom ML models&quot;,
+      &quot;Anomaly detection&quot;,
+      &quot;Trend forecasting&quot;
     ],
     integration: [
-      "Database connectors",
-      "API integrations",
-      "BI tools (Tableau, Power BI)",
-      "CRM systems",
-      "ERP systems",
-      "Cloud data warehouses"
+      &quot;Database connectors&quot;,
+      &quot;API integrations&quot;,
+      &quot;BI tools (Tableau, Power BI)&quot;,
+      &quot;CRM systems&quot;,
+      &quot;ERP systems&quot;,
+      &quot;Cloud data warehouses&quot;
     ]
   },
   {
-    id: "ai-automation",
-    name: "AI Process Automation",
-    description: "Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",
+    id: &quot;ai-automation&quot;,
+    name: &quot;AI Process Automation&quot;,
+    description: &quot;Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.&quot;,
     technicalSpecs: [
-      "RPA with AI enhancement",
-      "Process mining",
-      "Workflow automation",
-      "Document processing",
-      "Decision automation",
-      "Learning algorithms"
+      &quot;RPA with AI enhancement&quot;,
+      &quot;Process mining&quot;,
+      &quot;Workflow automation&quot;,
+      &quot;Document processing&quot;,
+      &quot;Decision automation&quot;,
+      &quot;Learning algorithms&quot;
     ],
     useCases: [
-      "Invoice processing",
-      "Customer onboarding",
-      "Data entry automation",
-      "Report generation",
-      "Quality control",
-      "Compliance monitoring"
+      &quot;Invoice processing&quot;,
+      &quot;Customer onboarding&quot;,
+      &quot;Data entry automation&quot;,
+      &quot;Report generation&quot;,
+      &quot;Quality control&quot;,
+      &quot;Compliance monitoring&quot;
     ],
-    pricing: "Starting at $399/month",
+    pricing: &quot;Starting at $399/month&quot;,
     startingPrice: 399,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",
-    icon: "⚡",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry&quot;,
+    icon: &quot;⚡&quot;,
     features: [
-      "Process mining and discovery",
-      "Workflow automation",
-      "Document processing",
-      "Decision automation",
-      "Learning and optimization",
-      "Integration capabilities",
-      "Monitoring and analytics",
-      "Compliance tracking"
+      &quot;Process mining and discovery&quot;,
+      &quot;Workflow automation&quot;,
+      &quot;Document processing&quot;,
+      &quot;Decision automation&quot;,
+      &quot;Learning and optimization&quot;,
+      &quot;Integration capabilities&quot;,
+      &quot;Monitoring and analytics&quot;,
+      &quot;Compliance tracking&quot;
     ],
     integration: [
-      "ERP systems",
-      "CRM platforms",
-      "Accounting software",
-      "HR systems",
-      "Email platforms",
-      "Cloud services"
+      &quot;ERP systems&quot;,
+      &quot;CRM platforms&quot;,
+      &quot;Accounting software&quot;,
+      &quot;HR systems&quot;,
+      &quot;Email platforms&quot;,
+      &quot;Cloud services"
     ]
   }
 ];
@@ -279,13 +279,13 @@ export default function AISolutionsPage() {
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold"
               >
                 Get Started
-              </a>
+              </Link>
               <a
                 href={`https://ziontechgroup.com/services/${service.id}`}
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -326,13 +326,13 @@ export default function AISolutionsPage() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
           >
             Schedule AI Consultation
-          </a>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
           >
             Call: +1 302 464 0950
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -343,7 +343,7 @@ export default function AISolutionsPage() {
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
-        </a>
+        </Link>
       </div>
     </div>
   );

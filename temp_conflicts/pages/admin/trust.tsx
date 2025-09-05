@@ -27,29 +27,29 @@ export default function AdminTrustPage() {
 
   return (
     <EnhancedLayout>
-      <div className="space-y-6">
-        <h1 className="text-2xl font-semibold">Trust Engine Admin</h1>
+      <div className=&quot;space-y-6&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>Trust Engine Admin</h1>
         {loading && <div>Loading...</div>}
         {!loading && weights && (
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
-              <h2 className="font-medium">Adjust Weightings</h2>
-              <div className="grid grid-cols-2 gap-2 text-sm">
+          <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
+            <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 space-y-3&quot;>
+              <h2 className=&quot;font-medium&quot;>Adjust Weightings</h2>
+              <div className=&quot;grid grid-cols-2 gap-2 text-sm&quot;>
                 {Object.keys(weights).map((k) => (
-                  <label key={k} className="flex items-center justify-between gap-2">
+                  <label key={k} className=&quot;flex items-center justify-between gap-2&quot;>
                     <span>{k}</span>
-                    <input type="number" step="0.01" value={weights[k]} onChange={(e) => setWeights({ ...weights, [k]: parseFloat(e.target.value) })} className="w-24 border rounded px-2 py-1" />
+                    <input type=&quot;number&quot; step=&quot;0.01&quot; value={weights[k]} onChange={(e) => setWeights({ ...weights, [k]: parseFloat(e.target.value) })} className=&quot;w-24 border rounded px-2 py-1&quot; />
                   </label>
                 ))}
               </div>
-              <div className="flex gap-2">
-                <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" onClick={save}>Save</button>
-                <button className="text-sm px-3 py-1 rounded" onClick={() => setWeights(defaults)}>Reset Defaults</button>
+              <div className=&quot;flex gap-2&quot;>
+                <button className=&quot;text-sm px-3 py-1 rounded bg-blue-600 text-white&quot; onClick={save}>Save</button>
+                <button className=&quot;text-sm px-3 py-1 rounded&quot; onClick={() => setWeights(defaults)}>Reset Defaults</button>
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
-              <h2 className="font-medium">Flagged Anomalies</h2>
-              <p className="text-sm text-gray-600">Coming soon: detection of rating manipulation, copy/paste proposals, etc.</p>
+            <div className=&quot;bg-white dark:bg-gray-900 rounded border p-4 space-y-3&quot;>
+              <h2 className=&quot;font-medium&quot;>Flagged Anomalies</h2>
+              <p className=&quot;text-sm text-gray-600&quot;>Coming soon: detection of rating manipulation, copy/paste proposals, etc.</p>
             </div>
           </div>
         )}

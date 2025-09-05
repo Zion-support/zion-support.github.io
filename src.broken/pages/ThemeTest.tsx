@@ -1,11 +1,11 @@
-import React from "react";
-import ThemeToggle from "@/components/ThemeToggle";
-import { ThemeProvider } from "@/context/ThemeContext";
+import React from &quot;react&quot;;
+import ThemeToggle from &quot;@/components/ThemeToggle&quot;;
+import { ThemeProvider } from &quot;@/context/ThemeContext&quot;;
 
 export default function ThemeTest() {
   return (
     <ThemeProvider>
-      <div className="p-4">
+      <div className=&quot;p-4&quot;>
         <ThemeToggle />
       </div>
     </ThemeProvider>

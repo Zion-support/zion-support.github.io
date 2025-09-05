@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 
 interface MicroSAASService {
   id: string;
@@ -19,280 +19,280 @@ interface MicroSAASService {
 
 const microSAASServices: MicroSAASService[] = [
   {
-    id: "marketplace-platform-pro",
-    name: "Digital Marketplace Platform Pro",
-    description: "White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",
+    id: &quot;marketplace-platform-pro&quot;,
+    name: &quot;Digital Marketplace Platform Pro&quot;,
+    description: &quot;White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.&quot;,
     targetMarket: [
-      "Job boards and recruitment",
-      "Freelance platforms",
-      "Service marketplaces",
-      "E-commerce platforms",
-      "Educational platforms",
-      "Healthcare services"
+      &quot;Job boards and recruitment&quot;,
+      &quot;Freelance platforms&quot;,
+      &quot;Service marketplaces&quot;,
+      &quot;E-commerce platforms&quot;,
+      &quot;Educational platforms&quot;,
+      &quot;Healthcare services&quot;
     ],
     features: [
-      "Custom branding and theming",
-      "Multi-currency support",
-      "Integrated payment gateways",
-      "User management and roles",
-      "Analytics and reporting",
-      "Mobile-responsive design",
-      "AI-powered matching",
-      "Escrow and dispute resolution",
-      "Multi-language support",
-      "API access and webhooks"
+      &quot;Custom branding and theming&quot;,
+      &quot;Multi-currency support&quot;,
+      &quot;Integrated payment gateways&quot;,
+      &quot;User management and roles&quot;,
+      &quot;Analytics and reporting&quot;,
+      &quot;Mobile-responsive design&quot;,
+      &quot;AI-powered matching&quot;,
+      &quot;Escrow and dispute resolution&quot;,
+      &quot;Multi-language support&quot;,
+      &quot;API access and webhooks&quot;
     ],
-    pricing: "Starting at $1,499/month",
+    pricing: &quot;Starting at $1,499/month&quot;,
     startingPrice: 1499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry",
-    icon: "🏪",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Pro%20Inquiry&quot;,
+    icon: &quot;🏪&quot;,
     benefits: [
-      "Reduce time to market by 80%",
-      "Lower development costs by 60%",
-      "Scalable architecture",
-      "Built-in compliance features",
-      "24/7 technical support",
-      "Regular feature updates"
+      &quot;Reduce time to market by 80%&quot;,
+      &quot;Lower development costs by 60%&quot;,
+      &quot;Scalable architecture&quot;,
+      &quot;Built-in compliance features&quot;,
+      &quot;24/7 technical support&quot;,
+      &quot;Regular feature updates&quot;
     ],
     integrations: [
-      "Stripe, PayPal, Coinbase",
-      "Slack, Teams, Discord",
-      "Zapier, Make.com",
-      "Google Analytics, Mixpanel",
-      "Mailchimp, SendGrid",
-      "AWS, Azure, Google Cloud"
+      &quot;Stripe, PayPal, Coinbase&quot;,
+      &quot;Slack, Teams, Discord&quot;,
+      &quot;Zapier, Make.com&quot;,
+      &quot;Google Analytics, Mixpanel&quot;,
+      &quot;Mailchimp, SendGrid&quot;,
+      &quot;AWS, Azure, Google Cloud&quot;
     ],
-    deployment: "Cloud-hosted with white-label options"
+    deployment: &quot;Cloud-hosted with white-label options&quot;
   },
   {
-    id: "token-economy-platform",
-    name: "Token Economy Platform",
-    description: "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",
+    id: &quot;token-economy-platform&quot;,
+    name: &quot;Token Economy Platform&quot;,
+    description: &quot;Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.&quot;,
     targetMarket: [
-      "Gaming platforms",
-      "Community platforms",
-      "Loyalty programs",
-      "Educational platforms",
-      "Social networks",
-      "DeFi applications"
+      &quot;Gaming platforms&quot;,
+      &quot;Community platforms&quot;,
+      &quot;Loyalty programs&quot;,
+      &quot;Educational platforms&quot;,
+      &quot;Social networks&quot;,
+      &quot;DeFi applications&quot;
     ],
     features: [
-      "Custom token creation",
-      "Reward distribution system",
-      "Governance voting mechanisms",
-      "Staking and liquidity pools",
-      "Multi-chain support",
-      "Analytics and reporting",
-      "Smart contract templates",
-      "Wallet integration",
-      "Compliance tools",
-      "API and SDK access"
+      &quot;Custom token creation&quot;,
+      &quot;Reward distribution system&quot;,
+      &quot;Governance voting mechanisms&quot;,
+      &quot;Staking and liquidity pools&quot;,
+      &quot;Multi-chain support&quot;,
+      &quot;Analytics and reporting&quot;,
+      &quot;Smart contract templates&quot;,
+      &quot;Wallet integration&quot;,
+      &quot;Compliance tools&quot;,
+      &quot;API and SDK access&quot;
     ],
-    pricing: "Starting at $999/month",
+    pricing: &quot;Starting at $999/month&quot;,
     startingPrice: 999,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry",
-    icon: "🪙",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Token%20Economy%20Platform%20Inquiry&quot;,
+    icon: &quot;🪙&quot;,
     benefits: [
-      "Increase user engagement by 300%",
-      "Reduce churn by 40%",
-      "Monetize community activities",
-      "Regulatory compliance built-in",
-      "Multi-blockchain support",
-      "Professional support team"
+      &quot;Increase user engagement by 300%&quot;,
+      &quot;Reduce churn by 40%&quot;,
+      &quot;Monetize community activities&quot;,
+      &quot;Regulatory compliance built-in&quot;,
+      &quot;Multi-blockchain support&quot;,
+      &quot;Professional support team&quot;
     ],
     integrations: [
-      "MetaMask, WalletConnect",
-      "Ethereum, Polygon, BSC",
-      "Discord, Telegram bots",
-      "Shopify, WooCommerce",
-      "WordPress, Webflow",
-      "Mobile apps (iOS/Android)"
+      &quot;MetaMask, WalletConnect&quot;,
+      &quot;Ethereum, Polygon, BSC&quot;,
+      &quot;Discord, Telegram bots&quot;,
+      &quot;Shopify, WooCommerce&quot;,
+      &quot;WordPress, Webflow&quot;,
+      &quot;Mobile apps (iOS/Android)&quot;
     ],
-    deployment: "Multi-cloud with blockchain integration"
+    deployment: &quot;Multi-cloud with blockchain integration&quot;
   },
   {
-    id: "kyc-aml-enterprise",
-    name: "KYC/AML Verification Enterprise",
-    description: "Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",
+    id: &quot;kyc-aml-enterprise&quot;,
+    name: &quot;KYC/AML Verification Enterprise&quot;,
+    description: &quot;Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.&quot;,
     targetMarket: [
-      "Financial institutions",
-      "Cryptocurrency exchanges",
-      "Real estate platforms",
-      "Healthcare services",
-      "Legal services",
-      "Government agencies"
+      &quot;Financial institutions&quot;,
+      &quot;Cryptocurrency exchanges&quot;,
+      &quot;Real estate platforms&quot;,
+      &quot;Healthcare services&quot;,
+      &quot;Legal services&quot;,
+      &quot;Government agencies&quot;
     ],
     features: [
-      "Document verification",
-      "Biometric authentication",
-      "Compliance reporting",
-      "Risk scoring",
-      "Multi-jurisdiction support",
-      "API integration",
-      "Fraud detection AI",
-      "Audit trails",
-      "Custom compliance rules",
-      "Real-time monitoring"
+      &quot;Document verification&quot;,
+      &quot;Biometric authentication&quot;,
+      &quot;Compliance reporting&quot;,
+      &quot;Risk scoring&quot;,
+      &quot;Multi-jurisdiction support&quot;,
+      &quot;API integration&quot;,
+      &quot;Fraud detection AI&quot;,
+      &quot;Audit trails&quot;,
+      &quot;Custom compliance rules&quot;,
+      &quot;Real-time monitoring&quot;
     ],
-    pricing: "Starting at $499/month",
+    pricing: &quot;Starting at $499/month&quot;,
     startingPrice: 499,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry",
-    icon: "🆔",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Enterprise%20Inquiry&quot;,
+    icon: &quot;🆔&quot;,
     benefits: [
-      "Reduce compliance costs by 50%",
-      "Improve verification accuracy by 95%",
-      "Faster customer onboarding",
-      "Regulatory compliance assurance",
-      "Reduced fraud incidents",
-      "Scalable verification process"
+      &quot;Reduce compliance costs by 50%&quot;,
+      &quot;Improve verification accuracy by 95%&quot;,
+      &quot;Faster customer onboarding&quot;,
+      &quot;Regulatory compliance assurance&quot;,
+      &quot;Reduced fraud incidents&quot;,
+      &quot;Scalable verification process&quot;
     ],
     integrations: [
-      "Banking systems",
-      "CRM platforms",
-      "Payment processors",
-      "Blockchain networks",
-      "Government databases",
-      "Third-party verification services"
+      &quot;Banking systems&quot;,
+      &quot;CRM platforms&quot;,
+      &quot;Payment processors&quot;,
+      &quot;Blockchain networks&quot;,
+      &quot;Government databases&quot;,
+      &quot;Third-party verification services&quot;
     ],
-    deployment: "Enterprise-grade cloud with on-premise options"
+    deployment: &quot;Enterprise-grade cloud with on-premise options&quot;
   },
   {
-    id: "dao-governance-platform",
-    name: "DAO Governance Platform",
-    description: "Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",
+    id: &quot;dao-governance-platform&quot;,
+    name: &quot;DAO Governance Platform&quot;,
+    description: &quot;Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.&quot;,
     targetMarket: [
-      "DeFi protocols",
-      "NFT communities",
-      "Investment DAOs",
-      "Governance tokens",
-      "Decentralized organizations",
-      "Community projects"
+      &quot;DeFi protocols&quot;,
+      &quot;NFT communities&quot;,
+      &quot;Investment DAOs&quot;,
+      &quot;Governance tokens&quot;,
+      &quot;Decentralized organizations&quot;,
+      &quot;Community projects&quot;
     ],
     features: [
-      "Proposal creation and management",
-      "Multiple voting mechanisms",
-      "Treasury management",
-      "Member onboarding",
-      "Governance analytics",
-      "Integration with major wallets",
-      "Custom governance rules",
-      "Multi-signature support",
-      "Compliance reporting",
-      "Mobile governance app"
+      &quot;Proposal creation and management&quot;,
+      &quot;Multiple voting mechanisms&quot;,
+      &quot;Treasury management&quot;,
+      &quot;Member onboarding&quot;,
+      &quot;Governance analytics&quot;,
+      &quot;Integration with major wallets&quot;,
+      &quot;Custom governance rules&quot;,
+      &quot;Multi-signature support&quot;,
+      &quot;Compliance reporting&quot;,
+      &quot;Mobile governance app&quot;
     ],
-    pricing: "Starting at $799/month",
+    pricing: &quot;Starting at $799/month&quot;,
     startingPrice: 799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry",
-    icon: "🏛️",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=DAO%20Governance%20Platform%20Inquiry&quot;,
+    icon: &quot;🏛️&quot;,
     benefits: [
-      "Streamline governance processes",
-      "Increase community participation",
-      "Transparent decision-making",
-      "Reduce governance overhead",
-      "Compliance with regulations",
-      "Professional support and maintenance"
+      &quot;Streamline governance processes&quot;,
+      &quot;Increase community participation&quot;,
+      &quot;Transparent decision-making&quot;,
+      &quot;Reduce governance overhead&quot;,
+      &quot;Compliance with regulations&quot;,
+      &quot;Professional support and maintenance&quot;
     ],
     integrations: [
-      "MetaMask, WalletConnect",
-      "Ethereum, Polygon, BSC",
-      "Discord, Telegram",
-      "Snapshot, Tally",
-      "Gnosis Safe",
-      "DeFi protocols"
+      &quot;MetaMask, WalletConnect&quot;,
+      &quot;Ethereum, Polygon, BSC&quot;,
+      &quot;Discord, Telegram&quot;,
+      &quot;Snapshot, Tally&quot;,
+      &quot;Gnosis Safe&quot;,
+      &quot;DeFi protocols&quot;
     ],
-    deployment: "Blockchain-native with cloud management"
+    deployment: &quot;Blockchain-native with cloud management&quot;
   },
   {
-    id: "ai-learning-platform",
-    name: "AI-Powered Learning Platform",
-    description: "Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",
+    id: &quot;ai-learning-platform&quot;,
+    name: &quot;AI-Powered Learning Platform&quot;,
+    description: &quot;Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.&quot;,
     targetMarket: [
-      "Educational institutions",
-      "Corporate training",
-      "Online course creators",
-      "Skill development platforms",
-      "Language learning",
-      "Professional certification"
+      &quot;Educational institutions&quot;,
+      &quot;Corporate training&quot;,
+      &quot;Online course creators&quot;,
+      &quot;Skill development platforms&quot;,
+      &quot;Language learning&quot;,
+      &quot;Professional certification&quot;
     ],
     features: [
-      "AI content generation",
-      "Interactive assessments",
-      "Certification tracking",
-      "Learning analytics",
-      "Multi-format support",
-      "Mobile learning",
-      "Personalized learning paths",
-      "Collaborative learning tools",
-      "Gamification elements",
-      "Multi-language support"
+      &quot;AI content generation&quot;,
+      &quot;Interactive assessments&quot;,
+      &quot;Certification tracking&quot;,
+      &quot;Learning analytics&quot;,
+      &quot;Multi-format support&quot;,
+      &quot;Mobile learning&quot;,
+      &quot;Personalized learning paths&quot;,
+      &quot;Collaborative learning tools&quot;,
+      &quot;Gamification elements&quot;,
+      &quot;Multi-language support&quot;
     ],
-    pricing: "Starting at $599/month",
+    pricing: &quot;Starting at $599/month&quot;,
     startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry",
-    icon: "🎓",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=AI%20Learning%20Platform%20Inquiry&quot;,
+    icon: &quot;🎓&quot;,
     benefits: [
-      "Reduce content creation time by 70%",
-      "Improve learning outcomes by 40%",
-      "Personalized learning experience",
-      "Scalable content generation",
-      "Advanced analytics insights",
-      "Mobile-first design"
+      &quot;Reduce content creation time by 70%&quot;,
+      &quot;Improve learning outcomes by 40%&quot;,
+      &quot;Personalized learning experience&quot;,
+      &quot;Scalable content generation&quot;,
+      &quot;Advanced analytics insights&quot;,
+      &quot;Mobile-first design&quot;
     ],
     integrations: [
-      "LMS systems",
-      "Video platforms",
-      "Payment processors",
-      "CRM systems",
-      "Analytics tools",
-      "Social learning platforms"
+      &quot;LMS systems&quot;,
+      &quot;Video platforms&quot;,
+      &quot;Payment processors&quot;,
+      &quot;CRM systems&quot;,
+      &quot;Analytics tools&quot;,
+      &quot;Social learning platforms&quot;
     ],
-    deployment: "Cloud-hosted with offline capabilities"
+    deployment: &quot;Cloud-hosted with offline capabilities&quot;
   },
   {
-    id: "incubator-grants-platform",
-    name: "Incubator & Grants Management Platform",
-    description: "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",
+    id: &quot;incubator-grants-platform&quot;,
+    name: &quot;Incubator & Grants Management Platform&quot;,
+    description: &quot;Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.&quot;,
     targetMarket: [
-      "Startup incubators",
-      "Government agencies",
-      "Non-profit organizations",
-      "Corporate innovation programs",
-      "Educational institutions",
-      "Investment funds"
+      &quot;Startup incubators&quot;,
+      &quot;Government agencies&quot;,
+      &quot;Non-profit organizations&quot;,
+      &quot;Corporate innovation programs&quot;,
+      &quot;Educational institutions&quot;,
+      &quot;Investment funds&quot;
     ],
     features: [
-      "Application management",
-      "Review and scoring systems",
-      "Fund distribution tracking",
-      "Progress monitoring",
-      "Impact measurement",
-      "Reporting and analytics",
-      "Compliance tracking",
-      "Stakeholder communication",
-      "Performance dashboards",
-      "API access"
+      &quot;Application management&quot;,
+      &quot;Review and scoring systems&quot;,
+      &quot;Fund distribution tracking&quot;,
+      &quot;Progress monitoring&quot;,
+      &quot;Impact measurement&quot;,
+      &quot;Reporting and analytics&quot;,
+      &quot;Compliance tracking&quot;,
+      &quot;Stakeholder communication&quot;,
+      &quot;Performance dashboards&quot;,
+      &quot;API access&quot;
     ],
-    pricing: "Starting at $1,199/month",
+    pricing: &quot;Starting at $1,199/month&quot;,
     startingPrice: 1199,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry",
-    icon: "🌱",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Platform%20Inquiry&quot;,
+    icon: &quot;🌱&quot;,
     benefits: [
-      "Streamline application processes",
-      "Improve decision-making transparency",
-      "Reduce administrative overhead",
-      "Better impact measurement",
-      "Compliance automation",
-      "Data-driven insights"
+      &quot;Streamline application processes&quot;,
+      &quot;Improve decision-making transparency&quot;,
+      &quot;Reduce administrative overhead&quot;,
+      &quot;Better impact measurement&quot;,
+      &quot;Compliance automation&quot;,
+      &quot;Data-driven insights&quot;
     ],
     integrations: [
-      "Payment systems",
-      "CRM platforms",
-      "Accounting software",
-      "Communication tools",
-      "Analytics platforms",
-      "Government databases"
+      &quot;Payment systems&quot;,
+      &quot;CRM platforms&quot;,
+      &quot;Accounting software&quot;,
+      &quot;Communication tools&quot;,
+      &quot;Analytics platforms&quot;,
+      &quot;Government databases&quot;
     ],
-    deployment: "Enterprise cloud with compliance features"
+    deployment: &quot;Enterprise cloud with compliance features"
   }
 ];
 
@@ -388,13 +388,13 @@ export default function MicroSAASPage() {
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold"
               >
                 Get Started
-              </a>
+              </Link>
               <a
                 href={`https://ziontechgroup.com/services/${service.id}`}
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -440,13 +440,13 @@ export default function MicroSAASPage() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
           >
             Schedule SAAS Consultation
-          </a>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
           >
             Call: +1 302 464 0950
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -457,7 +457,7 @@ export default function MicroSAASPage() {
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
-        </a>
+        </Link>
       </div>
     </div>
   );

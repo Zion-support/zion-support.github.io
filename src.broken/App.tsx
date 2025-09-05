@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import InstallPrompt from "./components/InstallPrompt";
+import { ThemeProvider } from &quot;./components/ThemeProvider&quot;;
+import { WhitelabelProvider } from &quot;./context/WhitelabelContext&quot;;
+import { Toaster } from &quot;./components/ui/toaster&quot;;
+import { Toaster as SonnerToaster } from &quot;./components/ui/sonner&quot;;
+import InstallPrompt from &quot;./components/InstallPrompt&quot;;
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -63,27 +63,27 @@ const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+        <Suspense fallback={<div className=&quot;p-4 text-center&quot;>Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
             ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="/seller/*" element={<SellerRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
+            <Route path=&quot;/auth/*&quot; element={<AuthRoutes />} />
+            <Route path=&quot;/dashboard/*&quot; element={<DashboardRoutes />} />
+            <Route path=&quot;/marketplace/*&quot; element={<MarketplaceRoutes />} />
+            <Route path=&quot;/talent/*&quot; element={<TalentRoutes />} />
+            <Route path=&quot;/admin/*&quot; element={<AdminRoutes />} />
+            <Route path=&quot;/mobile/*&quot; element={<MobileAppRoutes />} />
+            <Route path=&quot;/content/*&quot; element={<ContentRoutes />} />
+            <Route path=&quot;/enterprise/*&quot; element={<EnterpriseRoutes />} />
+            <Route path=&quot;/community/*&quot; element={<CommunityRoutes />} />
+            <Route path=&quot;/developers/*&quot; element={<DeveloperRoutes />} />
+            <Route path=&quot;/seller/*&quot; element={<SellerRoutes />} />
+            <Route path=&quot;*&quot; element={<ErrorRoutes />} />
           </Routes>
         </Suspense>
         <Toaster />
-        <SonnerToaster position="top-right" />
+        <SonnerToaster position=&quot;top-right&quot; />
         <InstallPrompt />
       </ThemeProvider>
     </WhitelabelProvider>

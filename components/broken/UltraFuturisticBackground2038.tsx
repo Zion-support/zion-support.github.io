@@ -281,10 +281,10 @@ export default function UltraFuturisticBackground2038({
   }, [intensity, theme]);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none">
+    <div ref={containerRef} className=&quot;fixed inset-0 pointer-events-none&quot;>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className=&quot;w-full h-full&quot;
         style={{
           background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
@@ -294,14 +294,14 @@ export default function UltraFuturisticBackground2038({
       />
       
       {/* Additional visual effects */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {/* Quantum field lines */}
         {theme === 'consciousness' && (
-          <div className="absolute inset-0">
+          <div className=&quot;absolute inset-0&quot;>
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
+                className=&quot;absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20&quot;
                 style={{
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`}}
@@ -311,7 +311,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: &quot;easeInOut&quot;
                 }}
               />
             ))}
@@ -320,11 +320,11 @@ export default function UltraFuturisticBackground2038({
 
         {/* Holographic grid */}
         {theme === 'holographic' && (
-          <div className="absolute inset-0">
+          <div className=&quot;absolute inset-0&quot;>
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30&quot;
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
@@ -332,7 +332,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 4 + i * 0.3,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: &quot;easeInOut&quot;
                 }}
               />
             ))}
@@ -341,11 +341,11 @@ export default function UltraFuturisticBackground2038({
 
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
-          <div className="absolute inset-0">
+          <div className=&quot;absolute inset-0&quot;>
             {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
+                className=&quot;absolute w-96 h-96 border border-pink-500/20 rounded-full&quot;
                 style={{
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`}}
@@ -355,7 +355,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: &quot;easeInOut&quot;
                 }}
               />
             ))}

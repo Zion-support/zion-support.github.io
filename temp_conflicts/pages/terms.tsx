@@ -14,7 +14,7 @@ export default function TermsPage() {
   const sections = [
     {
       title: 'Acceptance of Terms',
-      icon: <CheckCircle className="w-6 h-6" />,
+      icon: <CheckCircle className=&quot;w-6 h-6&quot; />,
       content: [
         'By accessing or using our services, you agree to be bound by these terms',
         'If you do not agree to these terms, do not use our services',
@@ -24,7 +24,7 @@ export default function TermsPage() {
     },
     {
       title: 'Service Description',
-      icon: <Info className="w-6 h-6" />,
+      icon: <Info className=&quot;w-6 h-6&quot; />,
       content: [
         'AI and machine learning platforms and services',
         'Quantum computing solutions and infrastructure',
@@ -35,7 +35,7 @@ export default function TermsPage() {
     },
     {
       title: 'User Responsibilities',
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className=&quot;w-6 h-6&quot; />,
       content: [
         'Provide accurate and complete information',
         'Maintain security of your account credentials',
@@ -46,7 +46,7 @@ export default function TermsPage() {
     },
     {
       title: 'Intellectual Property',
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className=&quot;w-6 h-6&quot; />,
       content: [
         'Our services and content are protected by copyright',
         'You retain rights to your data and content',
@@ -57,7 +57,7 @@ export default function TermsPage() {
     },
     {
       title: 'Privacy and Data',
-      icon: <Lock className="w-6 h-6" />,
+      icon: <Lock className=&quot;w-6 h-6&quot; />,
       content: [
         'Collection and use of data as described in Privacy Policy',
         'Implementation of appropriate security measures',
@@ -68,9 +68,9 @@ export default function TermsPage() {
     },
     {
       title: 'Limitation of Liability',
-      icon: <AlertTriangle className="w-6 h-6" />,
+      icon: <AlertTriangle className=&quot;w-6 h-6&quot; />,
       content: [
-        'Services provided "as is" without warranties',
+        'Services provided &quot;as is&quot; without warranties',
         'Limitation of liability to extent permitted by law',
         'No liability for indirect or consequential damages',
         'Force majeure events and circumstances',
@@ -80,36 +80,36 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>Terms of Service — Zion Tech Group | Service Terms & Conditions</title>
-        <meta name="description" content="Zion Tech Group's terms of service outline the rules and conditions for using our technology services. Read our comprehensive terms and conditions." />
-        <meta property="og:title" content="Terms of Service — Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive terms of service detailing the rules and conditions for using our technology solutions." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://ziontechgroup.com/terms" />
+        <meta name=&quot;description&quot; content=&quot;Zion Tech Group's terms of service outline the rules and conditions for using our technology services. Read our comprehensive terms and conditions.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Terms of Service — Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Comprehensive terms of service detailing the rules and conditions for using our technology solutions.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/terms&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-6xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <FileText className="w-10 h-10 text-white" />
+            <div className=&quot;w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6&quot;>
+              <FileText className=&quot;w-10 h-10 text-white&quot; />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
               Terms of Service
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed&quot;>
               Please read these terms carefully before using our services.
             </p>
-            <div className="mt-8 text-gray-300">
+            <div className=&quot;mt-8 text-gray-300&quot;>
               <p>Last updated: {lastUpdated}</p>
             </div>
           </motion.div>
@@ -117,21 +117,21 @@ export default function TermsPage() {
       </section>
 
       {/* Introduction */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
+            className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s services, including our website, 
+            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Agreement to Terms</h2>
+            <p className=&quot;text-gray-300 leading-relaxed mb-6&quot;>
+              These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group's services, including our website, 
               applications, and any related services (collectively, the &quot;Services&quot;).
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className=&quot;text-gray-300 leading-relaxed&quot;>
               By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part 
               of these terms, you may not access the Services.
             </p>
@@ -140,9 +140,9 @@ export default function TermsPage() {
       </section>
 
       {/* Terms Sections */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-6xl mx-auto&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {sections.map((section, index) => (
               <motion.div
                 key={section.title}
@@ -150,19 +150,19 @@ export default function TermsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300&quot;
               >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <div className=&quot;flex items-center space-x-3 mb-4&quot;>
+                  <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center&quot;>
                     {section.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                  <h3 className=&quot;text-xl font-bold text-white&quot;>{section.title}</h3>
                 </div>
-                <ul className="space-y-2">
+                <ul className=&quot;space-y-2&quot;>
                   {section.content.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300 text-sm">{item}</span>
+                    <li key={itemIndex} className=&quot;flex items-start space-x-3&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5&quot; />
+                      <span className=&quot;text-gray-300 text-sm&quot;>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -173,25 +173,25 @@ export default function TermsPage() {
       </section>
 
       {/* Additional Terms */}
-      <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
-        <div className="max-w-4xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50&quot;>
+        <div className=&quot;max-w-4xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className=&quot;space-y-8&quot;
           >
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertCircle className="w-6 h-6 text-yellow-400 mr-3" />
+            <div className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50&quot;>
+              <h3 className=&quot;text-2xl font-bold text-white mb-4 flex items-center&quot;>
+                <AlertCircle className=&quot;w-6 h-6 text-yellow-400 mr-3&quot; />
                 Payment Terms
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className=&quot;text-gray-300 leading-relaxed mb-4&quot;>
                 Payment for our services is due according to the terms specified in your service agreement. 
                 We reserve the right to suspend services for non-payment.
               </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
+              <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
                 <li>• Payment due dates and late fees</li>
                 <li>• Subscription billing and renewal</li>
                 <li>• Refund policies and procedures</li>
@@ -200,16 +200,16 @@ export default function TermsPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Shield className="w-6 h-6 text-green-400 mr-3" />
+            <div className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50&quot;>
+              <h3 className=&quot;text-2xl font-bold text-white mb-4 flex items-center&quot;>
+                <Shield className=&quot;w-6 h-6 text-green-400 mr-3&quot; />
                 Security and Compliance
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className=&quot;text-gray-300 leading-relaxed mb-4&quot;>
                 We implement industry-standard security measures to protect your data and ensure compliance 
                 with applicable regulations and standards.
               </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
+              <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
                 <li>• ISO 27001 security standards</li>
                 <li>• SOC 2 Type II compliance</li>
                 <li>• Regular security audits and assessments</li>
@@ -218,16 +218,16 @@ export default function TermsPage() {
               </ul>
             </div>
 
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Globe className="w-6 h-6 text-cyan-400 mr-3" />
+            <div className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50&quot;>
+              <h3 className=&quot;text-2xl font-bold text-white mb-4 flex items-center&quot;>
+                <Globe className=&quot;w-6 h-6 text-cyan-400 mr-3&quot; />
                 Termination and Suspension
               </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <p className=&quot;text-gray-300 leading-relaxed mb-4&quot;>
                 Either party may terminate the service agreement with appropriate notice. We may suspend 
                 services for violations of these terms or security concerns.
               </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
+              <ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
                 <li>• Termination notice requirements</li>
                 <li>• Service suspension conditions</li>
                 <li>• Data retention after termination</li>
@@ -240,17 +240,17 @@ export default function TermsPage() {
       </section>
 
       {/* Governing Law */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
+            className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50&quot;
           >
-            <h2 className="text-3xl font-bold text-white mb-6">Governing Law and Disputes</h2>
-            <div className="space-y-6 text-gray-300">
+            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Governing Law and Disputes</h2>
+            <div className=&quot;space-y-6 text-gray-300&quot;>
               <p>
                 These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, 
                 United States, without regard to its conflict of law provisions.
@@ -269,31 +269,31 @@ export default function TermsPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Questions About These Terms?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We&apos;re here to help clarify any questions you may have about our terms of service.
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Questions About These Terms?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+              We're here to help clarify any questions you may have about our terms of service.
             </p>
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div className=&quot;bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50&quot;>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 text-left&quot;>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
-                  <div className="space-y-3 text-gray-300">
+                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Contact Information</h3>
+                  <div className=&quot;space-y-3 text-gray-300&quot;>
                     <p><strong>Email:</strong> legal@ziontechgroup.com</p>
                     <p><strong>Phone:</strong> +1 302 464 0950</p>
                     <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Legal Department</h3>
-                  <div className="space-y-2 text-gray-300 text-sm">
+                  <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Legal Department</h3>
+                  <div className=&quot;space-y-2 text-gray-300 text-sm&quot;>
                     <p>• Terms of service questions</p>
                     <p>• Contract negotiations</p>
                     <p>• Compliance inquiries</p>

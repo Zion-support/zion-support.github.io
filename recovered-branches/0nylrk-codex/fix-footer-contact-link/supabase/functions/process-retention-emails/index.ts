@@ -1,40 +1,40 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.45.0&quot;;
 
 // Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;)!;
+const supabaseServiceKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;)!;
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     // Call the database function to schedule retention emails
     const { data: scheduledCount, error: scheduleError } = await supabase.rpc(
-      "schedule_retention_emails"
+      &quot;schedule_retention_emails&quot;
     );
 
     if (scheduleError) {
       throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`);
     }
 
-    console.log(`Scheduled ${scheduledCount} retention emails`);
+    // console.log(`Scheduled ${scheduledCount} retention emails`);
 
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
-      .from("scheduled_jobs")
-      .select("id, payload")
-      .eq("job_type", "send_retention_email")
-      .eq("status", "pending")
+      .from(&quot;scheduled_jobs&quot;)
+      .select(&quot;id, payload&quot;)
+      .eq(&quot;job_type&quot;, &quot;send_retention_email&quot;)
+      .eq(&quot;status&quot;, &quot;pending&quot;)
       .limit(50);
 
     if (jobsError) {
@@ -50,10 +50,10 @@ serve(async (req) => {
           const reminderResponse = await fetch(
             `${supabaseUrl}/functions/v1/send-retention-email`,
             {
-              method: "POST",
+              method: &quot;POST&quot;,
               headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${supabaseServiceKey}`},
+                &quot;Content-Type&quot;: &quot;application/json&quot;,
+                &quot;Authorization&quot;: `Bearer ${supabaseServiceKey}`},
               body: JSON.stringify(job)}
           );
 
@@ -63,10 +63,10 @@ serve(async (req) => {
             
             // Update job status to failed
             await supabase
-              .from("scheduled_jobs")
+              .from(&quot;scheduled_jobs&quot;)
               .update({
-                status: "failed"})
-              .eq("id", job.id);
+                status: &quot;failed&quot;})
+              .eq(&quot;id&quot;, job.id);
           } else {
             processedJobs.push(job.id);
           }
@@ -75,35 +75,35 @@ serve(async (req) => {
           
           // Update job status to failed
           await supabase
-            .from("scheduled_jobs")
+            .from(&quot;scheduled_jobs&quot;)
             .update({
-              status: "failed"})
-            .eq("id", job.id);
+              status: &quot;failed&quot;})
+            .eq(&quot;id&quot;, job.id);
         }
       }
     }
 
     return new Response(
       JSON.stringify({
-        message: "Retention emails processed successfully",
+        message: &quot;Retention emails processed successfully&quot;,
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
         job_ids: processedJobs}),
       {
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
     );
   } catch (error) {
-    console.error("Error in process-retention-emails function:", error);
+    console.error(&quot;Error in process-retention-emails function:&quot;, error);
 
     return new Response(
       JSON.stringify({ 
-        error: "Internal server error", 
+        error: &quot;Internal server error&quot;, 
         details: error.message
       }),
       {
         status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, ...corsHeaders }}
     );
   }
 });

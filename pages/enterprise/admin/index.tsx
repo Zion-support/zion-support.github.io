@@ -30,7 +30,7 @@ export default function CompanyAdmin() {
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
+          <Link href=&quot;/workspace/acme&quot;>Go to Workspace</Link>
         </div>
       </header>
 
@@ -85,13 +85,13 @@ function MembersTab({ members, setMembers }: { members: Member[]; setMembers: (m
     <section>
       <h2>Team members</h2>
       <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
-        <input placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input placeholder=&quot;Full name&quot; value={name} onChange={e => setName(e.target.value)} />
+        <input placeholder=&quot;Email&quot; value={email} onChange={e => setEmail(e.target.value)} />
         <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
-          <option value="recruiter">Recruiter</option>
-          <option value="manager">Manager</option>
-          <option value="viewer">Viewer</option>
-          <option value="admin">Admin</option>
+          <option value=&quot;recruiter&quot;>Recruiter</option>
+          <option value=&quot;manager&quot;>Manager</option>
+          <option value=&quot;viewer&quot;>Viewer</option>
+          <option value=&quot;admin&quot;>Admin</option>
         </select>
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
@@ -112,10 +112,10 @@ function MembersTab({ members, setMembers }: { members: Member[]; setMembers: (m
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
-                  <option value="recruiter">Recruiter</option>
-                  <option value="manager">Manager</option>
-                  <option value="viewer">Viewer</option>
-                  <option value="admin">Admin</option>
+                  <option value=&quot;recruiter&quot;>Recruiter</option>
+                  <option value=&quot;manager&quot;>Manager</option>
+                  <option value=&quot;viewer&quot;>Viewer</option>
+                  <option value=&quot;admin&quot;>Admin</option>
                 </select>
               </td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
@@ -144,11 +144,11 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage; setUsage: (u: 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
         <label>
           <div>Monthly job posts</div>
-          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+          <input type=&quot;number&quot; value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
           <div>Budget cap (USD)</div>
-          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+          <input type=&quot;number&quot; value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -197,7 +197,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
+                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Download PDF</Link>
               </td>
             </tr>
           ))}

@@ -298,29 +298,29 @@ export default function SearchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>Search | Zion Tech Group</title>
-        <meta name="description" content="Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering." />
-        <meta property="og:title" content="Search | Zion Tech Group" />
-        <meta property="og:description" content="Advanced search across all services and solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/search" />
+        <meta name=&quot;description&quot; content=&quot;Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Search | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced search across all services and solutions.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/search&quot; />
       </Head>
 
       <SmartHeader />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
               Search Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
               Find the perfect AI and technology solutions for your business needs. 
               Search across our comprehensive service catalog with advanced filtering options.
             </p>
@@ -329,25 +329,25 @@ export default function SearchPage() {
       </section>
 
       {/* Search Interface */}
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+      <section className=&quot;px-6 pb-12&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <div className=&quot;bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6&quot;>
             {/* Search Bar */}
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
-              <div className="flex-1 max-w-2xl">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-6 h-6" />
+            <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between mb-6&quot;>
+              <div className=&quot;flex-1 max-w-2xl&quot;>
+                <div className=&quot;relative&quot;>
+                  <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-6 h-6&quot; />
                   <input
-                    type="text"
-                    placeholder="Search for services, technologies, or solutions..."
+                    type=&quot;text&quot;
+                    placeholder=&quot;Search for services, technologies, or solutions...&quot;
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg"
+                    className=&quot;w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg&quot;
                   />
                   <button
                     onClick={performSearch}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
+                    className=&quot;absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors&quot;
                   >
                     Search
                   </button>
@@ -355,14 +355,14 @@ export default function SearchPage() {
               </div>
 
               {/* View Mode Toggle */}
-              <div className="flex items-center gap-2">
+              <div className=&quot;flex items-center gap-2&quot;>
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className=&quot;w-5 h-5&quot; />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -370,44 +370,44 @@ export default function SearchPage() {
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className=&quot;w-5 h-5&quot; />
                 </button>
               </div>
             </div>
 
             {/* Filters and Sort */}
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-              <div className="flex items-center gap-4">
+            <div className=&quot;flex flex-col lg:flex-row gap-4 items-center justify-between&quot;>
+              <div className=&quot;flex items-center gap-4&quot;>
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
+                  className=&quot;flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors&quot;
                 >
-                  <Sliders className="w-4 h-4" />
+                  <Sliders className=&quot;w-4 h-4&quot; />
                   Filters
                   {Object.values(filters).some(f => f !== 'all') && (
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span className=&quot;w-2 h-2 bg-cyan-400 rounded-full&quot;></span>
                   )}
                 </button>
                 
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                  className=&quot;px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all&quot;
                 >
-                  <option value="relevance">Sort by Relevance</option>
-                  <option value="price-low">Sort by Price: Low to High</option>
-                  <option value="price-high">Sort by Price: High to Low</option>
-                  <option value="name">Sort by Name</option>
-                  <option value="status">Sort by Status</option>
+                  <option value=&quot;relevance&quot;>Sort by Relevance</option>
+                  <option value=&quot;price-low&quot;>Sort by Price: Low to High</option>
+                  <option value=&quot;price-high&quot;>Sort by Price: High to Low</option>
+                  <option value=&quot;name&quot;>Sort by Name</option>
+                  <option value=&quot;status&quot;>Sort by Status</option>
                 </select>
               </div>
 
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className=&quot;flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors&quot;
                 >
-                  <X className="w-4 h-4" />
+                  <X className=&quot;w-4 h-4&quot; />
                   Clear Filters
                 </button>
               )}
@@ -419,19 +419,19 @@ export default function SearchPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-                className="mt-6 pt-6 border-t border-white/20"
+                className=&quot;mt-6 pt-6 border-t border-white/20&quot;
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
                   {/* Category Filter */}
                   <div>
-                    <label className="block text-white font-medium mb-2">Category</label>
+                    <label className=&quot;block text-white font-medium mb-2&quot;>Category</label>
                     <select
                       value={filters.category}
                       onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                      className=&quot;w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all&quot;
                     >
                       {categories.map(category => (
-                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
+                        <option key={category.id} value={category.id} className=&quot;bg-slate-800 text-white&quot;>
                           {category.icon} {category.name}
                         </option>
                       ))}
@@ -440,14 +440,14 @@ export default function SearchPage() {
 
                   {/* Status Filter */}
                   <div>
-                    <label className="block text-white font-medium mb-2">Status</label>
+                    <label className=&quot;block text-white font-medium mb-2&quot;>Status</label>
                     <select
                       value={filters.status}
                       onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                      className=&quot;w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all&quot;
                     >
                       {statuses.map(status => (
-                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
+                        <option key={status.id} value={status.id} className=&quot;bg-slate-800 text-white&quot;>
                           {status.icon} {status.name}
                         </option>
                       ))}
@@ -456,14 +456,14 @@ export default function SearchPage() {
 
                   {/* Price Range Filter */}
                   <div>
-                    <label className="block text-white font-medium mb-2">Price Range</label>
+                    <label className=&quot;block text-white font-medium mb-2&quot;>Price Range</label>
                     <select
                       value={filters.priceRange}
                       onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                      className=&quot;w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all&quot;
                     >
                       {priceRanges.map(range => (
-                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
+                        <option key={range.id} value={range.id} className=&quot;bg-slate-800 text-white&quot;>
                           {range.icon} {range.name}
                         </option>
                       ))}
@@ -472,14 +472,14 @@ export default function SearchPage() {
 
                   {/* Technology Filter */}
                   <div>
-                    <label className="block text-white font-medium mb-2">Technology</label>
+                    <label className=&quot;block text-white font-medium mb-2&quot;>Technology</label>
                     <select
                       value={filters.technology}
                       onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                      className=&quot;w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all&quot;
                     >
                       {technologies.map(tech => (
-                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
+                        <option key={tech.id} value={tech.id} className=&quot;bg-slate-800 text-white&quot;>
                           {tech.icon} {tech.name}
                         </option>
                       ))}
@@ -493,14 +493,14 @@ export default function SearchPage() {
       </section>
 
       {/* Search Results */}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;px-6 pb-20&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           {/* Results Header */}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
+          <div className=&quot;mb-8&quot;>
+            <h2 className=&quot;text-3xl font-bold text-white mb-2&quot;>
+              {searchTerm ? `Search Results for &quot;${searchTerm}&quot;` : 'All Services'}
             </h2>
-            <p className="text-white/60">
+            <p className=&quot;text-white/60&quot;>
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
             </p>
@@ -508,27 +508,27 @@ export default function SearchPage() {
 
           {/* Loading State */}
           {isSearching && (
-            <div className="text-center py-20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+            <div className=&quot;text-center py-20&quot;>
+              <div className=&quot;w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center&quot;>
+                <div className=&quot;w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin&quot;></div>
               </div>
-              <p className="text-white/60">Searching our services...</p>
+              <p className=&quot;text-white/60&quot;>Searching our services...</p>
             </div>
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
+            <div className=&quot;text-center py-20&quot;>
+              <div className=&quot;w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center&quot;>
+                <Search className=&quot;w-12 h-12 text-white/40&quot; />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-              <p className="text-white/60 mb-6">
+              <h3 className=&quot;text-2xl font-semibold text-white mb-2&quot;>No services found</h3>
+              <p className=&quot;text-white/60 mb-6&quot;>
                 Try adjusting your search terms or filters
               </p>
               <button
                 onClick={clearFilters}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+                className=&quot;px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors&quot;
               >
                 Clear All Filters
               </button>
@@ -537,7 +537,7 @@ export default function SearchPage() {
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode=&quot;wait&quot;>
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
                   <motion.div
@@ -551,13 +551,13 @@ export default function SearchPage() {
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
+                    <div className=&quot;absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl&quot; />
+                    <div className=&quot;relative z-10&quot;>
+                      <div className=&quot;flex items-start justify-between mb-4&quot;>
                         <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
-                          <service.icon className="w-8 h-8 text-white" />
+                          <service.icon className=&quot;w-8 h-8 text-white&quot; />
                         </div>
-                        <div className="flex flex-col items-end gap-2">
+                        <div className=&quot;flex flex-col items-end gap-2&quot;>
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                             service.status === 'active' ? 'bg-green-500/20 text-green-300' :
                             service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
@@ -565,45 +565,45 @@ export default function SearchPage() {
                           }`}>
                             {service.status}
                           </span>
-                          <span className="text-xs text-white/40">{service.technology}</span>
+                          <span className=&quot;text-xs text-white/40&quot;>{service.technology}</span>
                         </div>
                       </div>
                       
-                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
+                      <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{service.title}</h3>
+                      <p className=&quot;text-white/70 leading-relaxed mb-4&quot;>{service.description}</p>
                       
                       {/* Price */}
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                      <div className=&quot;mb-4&quot;>
+                        <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</span>
                       </div>
                       
                       {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
-                        <div className="space-y-2">
+                      <div className=&quot;mb-6&quot;>
+                        <h4 className=&quot;text-white font-semibold mb-3 text-sm&quot;>Key Features:</h4>
+                        <div className=&quot;space-y-2&quot;>
                           {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                            <div key={idx} className=&quot;flex items-center gap-2 text-sm text-white/70&quot;>
+                              <CheckCircle className=&quot;w-4 h-4 text-cyan-400 flex-shrink-0&quot; />
                               <span>{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
                       
-                      <div className="flex items-center justify-between">
+                      <div className=&quot;flex items-center justify-between&quot;>
                         <a
                           href={service.link}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
+                          className=&quot;flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300&quot;
                         >
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </a>
+                          <span className=&quot;text-sm font-medium&quot;>Learn More</span>
+                          <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
+                        </Link>
                         <a
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
+                          href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                          className=&quot;px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105&quot;
                         >
                           Get Quote
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -614,16 +614,16 @@ export default function SearchPage() {
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
+            <div className=&quot;text-center py-20&quot;>
+              <div className=&quot;w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center&quot;>
+                <Search className=&quot;w-12 h-12 text-white/40&quot; />
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
-              <p className="text-white/60 mb-6">
+              <h3 className=&quot;text-2xl font-semibold text-white mb-2&quot;>Start Your Search</h3>
+              <p className=&quot;text-white/60 mb-6&quot;>
                 Enter keywords above to find the perfect technology solutions for your business
               </p>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="text-sm text-white/40">Popular searches:</span>
+              <div className=&quot;flex flex-wrap justify-center gap-2&quot;>
+                <span className=&quot;text-sm text-white/40&quot;>Popular searches:</span>
                 {['AI', 'Cybersecurity', 'Quantum Computing', 'Edge Computing'].map((term) => (
                   <button
                     key={term}
@@ -631,7 +631,7 @@ export default function SearchPage() {
                       setSearchTerm(term);
                       performSearch();
                     }}
-                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
+                    className=&quot;px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors&quot;
                   >
                     {term}
                   </button>

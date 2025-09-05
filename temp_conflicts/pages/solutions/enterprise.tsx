@@ -11,39 +11,39 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 export default function EnterpriseSolutionsPage() {
   const solutions = [
     {
-      title: "Enterprise AI Platform",
-      description: "Comprehensive AI platform designed for large-scale enterprise operations",
+      title: &quot;Enterprise AI Platform&quot;,
+      description: &quot;Comprehensive AI platform designed for large-scale enterprise operations&quot;,
       features: [
-        "Scalable AI infrastructure",
-        "Enterprise-grade security",
-        "Custom model development",
-        "24/7 support"
+        &quot;Scalable AI infrastructure&quot;,
+        &quot;Enterprise-grade security&quot;,
+        &quot;Custom model development&quot;,
+        &quot;24/7 support&quot;
       ],
-      price: "Custom Pricing",
+      price: &quot;Custom Pricing&quot;,
       icon: Cpu
     },
     {
-      title: "Quantum Security Suite",
-      description: "Enterprise-level quantum-resistant cybersecurity solutions",
+      title: &quot;Quantum Security Suite&quot;,
+      description: &quot;Enterprise-level quantum-resistant cybersecurity solutions&quot;,
       features: [
-        "Quantum-resistant encryption",
-        "Advanced threat detection",
-        "Compliance ready",
-        "Global deployment"
+        &quot;Quantum-resistant encryption&quot;,
+        &quot;Advanced threat detection&quot;,
+        &quot;Compliance ready&quot;,
+        &quot;Global deployment&quot;
       ],
-      price: "Custom Pricing",
+      price: &quot;Custom Pricing&quot;,
       icon: Shield
     },
     {
-      title: "Enterprise DevOps",
-      description: "Comprehensive DevOps solutions for enterprise-scale operations",
+      title: &quot;Enterprise DevOps&quot;,
+      description: &quot;Comprehensive DevOps solutions for enterprise-scale operations&quot;,
       features: [
-        "CI/CD automation",
-        "Infrastructure as code",
-        "Monitoring & alerting",
-        "Performance optimization"
+        &quot;CI/CD automation&quot;,
+        &quot;Infrastructure as code&quot;,
+        &quot;Monitoring & alerting&quot;,
+        &quot;Performance optimization&quot;
       ],
-      price: "Custom Pricing",
+      price: &quot;Custom Pricing&quot;,
       icon: Database
     }
   ];
@@ -51,91 +51,91 @@ export default function EnterpriseSolutionsPage() {
   const benefits = [
     {
       icon: Scale,
-      title: "Enterprise Scale",
-      description: "Solutions designed to handle the largest enterprise workloads"
+      title: &quot;Enterprise Scale&quot;,
+      description: &quot;Solutions designed to handle the largest enterprise workloads&quot;
     },
     {
       icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security and compliance for your critical operations"
+      title: &quot;Enterprise Security&quot;,
+      description: &quot;Bank-level security and compliance for your critical operations&quot;
     },
     {
       icon: Users,
-      title: "Dedicated Support",
-      description: "24/7 dedicated support team for enterprise clients"
+      title: &quot;Dedicated Support&quot;,
+      description: &quot;24/7 dedicated support team for enterprise clients&quot;
     },
     {
       icon: Star,
-      title: "Custom Solutions",
-      description: "Tailored solutions designed specifically for your business needs"
+      title: &quot;Custom Solutions&quot;,
+      description: &quot;Tailored solutions designed specifically for your business needs&quot;
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
       <Head>
         <title>Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive enterprise technology solutions including AI platforms, quantum security, and DevOps automation for large organizations." />
-        <meta name="keywords" content="enterprise solutions, enterprise AI, enterprise security, enterprise DevOps, Zion Tech Group" />
-        <meta property="og:title" content="Enterprise Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive enterprise technology solutions for large organizations." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/solutions/enterprise" />
-        <link rel="canonical" href="https://ziontechgroup.com/solutions/enterprise" />
+        <meta name=&quot;description&quot; content=&quot;Comprehensive enterprise technology solutions including AI platforms, quantum security, and DevOps automation for large organizations.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;enterprise solutions, enterprise AI, enterprise security, enterprise DevOps, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Enterprise Solutions - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Comprehensive enterprise technology solutions for large organizations.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/solutions/enterprise&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/solutions/enterprise&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-5 mx-auto mb-8">
-              <Building className="w-10 h-10 text-white" />
+            <div className=&quot;w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 p-5 mx-auto mb-8&quot;>
+              <Building className=&quot;w-10 h-10 text-white&quot; />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent&quot;>
               Enterprise Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
+            <p className=&quot;text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8&quot;>
               Comprehensive technology solutions designed for enterprise-scale operations. 
               From AI platforms to quantum security, we deliver the solutions your organization needs.
             </p>
             <motion.a
-              href="mailto:kleber@ziontechgroup.com"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className=&quot;inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl&quot;
             >
               <span>Discuss Enterprise Needs</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.a>
           </motion.div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
               Enterprise Solutions
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Comprehensive technology solutions designed for enterprise-scale operations
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
@@ -143,33 +143,33 @@ export default function EnterpriseSolutionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105"
+                className=&quot;relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105&quot;
               >
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-blue-500/0 via-cyan-400/10 to-blue-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />
+                <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-blue-500/0 via-cyan-400/10 to-blue-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100&quot; />
                 
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-4 mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-4 mb-6&quot;>
+                  <solution.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
-                <p className="text-white/70 mb-6">{solution.description}</p>
+                <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{solution.title}</h3>
+                <p className=&quot;text-white/70 mb-6&quot;>{solution.description}</p>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className=&quot;space-y-3 mb-6&quot;>
                   {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                      <span className="text-white/80">{feature}</span>
+                    <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
+                      <CheckCircle className=&quot;w-5 h-5 text-blue-400 flex-shrink-0&quot; />
+                      <span className=&quot;text-white/80&quot;>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <div className="text-2xl font-bold text-blue-400 mb-4">{solution.price}</div>
+                <div className=&quot;text-2xl font-bold text-blue-400 mb-4&quot;>{solution.price}</div>
                 
                 <motion.a
-                  href="mailto:kleber@ziontechgroup.com"
+                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300"
+                  className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300&quot;
                 >
                   Get Quote
                 </motion.a>
@@ -180,24 +180,24 @@ export default function EnterpriseSolutionsPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
               Why Choose Enterprise Solutions?
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Discover the advantages of our enterprise-grade technology solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -205,14 +205,14 @@ export default function EnterpriseSolutionsPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10"
+                className=&quot;flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10&quot;
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-4 flex-shrink-0">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-4 flex-shrink-0&quot;>
+                  <benefit.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-white/70">{benefit.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
+                  <p className=&quot;text-white/70&quot;>{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -221,28 +221,28 @@ export default function EnterpriseSolutionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
               Ready to Transform Your Enterprise?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Let's discuss how our enterprise solutions can drive innovation and growth for your organization
             </p>
             <motion.a
-              href="mailto:kleber@ziontechgroup.com"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className=&quot;inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl&quot;
             >
               <span>Start Enterprise Journey</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.a>
           </motion.div>
         </div>

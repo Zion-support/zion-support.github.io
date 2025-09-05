@@ -9,12 +9,12 @@ export default function InteractiveNavigation() {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
-      <button className="md:hidden px-3 py-2 border rounded" onClick={() => setOpen(!open)}>Menu</button>
+      <a href=&quot;#main&quot; className=&quot;sr-only focus:not-sr-only&quot;>Skip to content</a>
+      <button className=&quot;md:hidden px-3 py-2 border rounded&quot; onClick={() => setOpen(!open)}>Menu</button>
       {open && (
-        <div className="md:hidden mt-2 space-y-2">
-          <a href="/talent" className="block">Browse Talent</a>
-          <a href="/jobs" className="block">Browse Jobs</a>
+        <div className=&quot;md:hidden mt-2 space-y-2&quot;>
+          <a href=&quot;/talent&quot; className=&quot;block&quot;>Browse Talent</a>
+          <a href=&quot;/jobs&quot; className=&quot;block&quot;>Browse Jobs</a>
         </div>
       )}
     </div>

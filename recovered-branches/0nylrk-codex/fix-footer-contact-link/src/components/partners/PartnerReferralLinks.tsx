@@ -1,19 +1,19 @@
-import { useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Download, Link, Plus } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useReferrals } from "@/hooks/useReferrals";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useRef, useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Copy, Download, Link, Plus } from &quot;lucide-react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { useReferrals } from &quot;@/hooks/useReferrals&quot;;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
 
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
+  const [selectedCampaign, setSelectedCampaign] = useState<string>(&quot;default&quot;);
+  const [customParam, setCustomParam] = useState<string>("&quot;);
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
   
   // Get the base referral link
@@ -22,9 +22,9 @@ export function PartnerReferralLinks() {
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link);
     toast({
-      title: "Link copied!",
-      description: "The referral link has been copied to your clipboard",
-      variant: "default"
+      title: &quot;Link copied!&quot;,
+      description: &quot;The referral link has been copied to your clipboard&quot;,
+      variant: &quot;default&quot;
     });
   };
   
@@ -33,42 +33,42 @@ export function PartnerReferralLinks() {
       const url = new URL(baseLink);
       
       // Add custom campaign parameter if selected
-      if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign);
+      if (selectedCampaign !== &quot;default&quot;) {
+        url.searchParams.append(&quot;campaign&quot;, selectedCampaign);
       }
       
       // Add custom parameter if provided
       if (customParam) {
-        url.searchParams.append("source", customParam);
+        url.searchParams.append(&quot;source&quot;, customParam);
       }
       
       const newLink = {
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : "&quot;}`,
         link: url.toString()
       };
       
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
-      setCustomParam("");
+      setCustomParam("&quot;);
     }
   };
   
   const handleDownloadLinks = () => {
     const allLinks = [
-      { name: "Default", link: baseLink },
+      { name: &quot;Default&quot;, link: baseLink },
       ...generatedLinks
     ];
     
     const csvContent = [
-      "Name,Link",
+      &quot;Name,Link&quot;,
       ...allLinks.map(l => `${l.name},${l.link}`)
-    ].join("\n");
+    ].join(&quot;\n&quot;);
     
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", "zion_referral_links.csv");
+    const link = document.createElement(&quot;a&quot;);
+    link.setAttribute(&quot;href&quot;, url);
+    link.setAttribute(&quot;download&quot;, &quot;zion_referral_links.csv");
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -79,11 +79,11 @@ export function PartnerReferralLinks() {
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
-          <CardTitle className="flex items-center justify-between">
+          <CardTitle className="flex items-center justify-between&quot;>
             <span>Your Referral Link</span>
             <Button 
-              variant="outline" 
-              size="sm" 
+              variant=&quot;outline&quot; 
+              size=&quot;sm" 
               onClick={handleDownloadLinks}
               className="flex items-center gap-2"
             >
@@ -98,9 +98,9 @@ export function PartnerReferralLinks() {
             <Input
               value={baseLink}
               readOnly
-              className="font-mono text-sm"
+              className="font-mono text-sm&quot;
             />
-            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
+            <Button variant=&quot;outline" onClick={() => handleCopyLink(baseLink)}>
               <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
@@ -109,10 +109,10 @@ export function PartnerReferralLinks() {
       </Card>
 
       <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
+        <h3 className="text-lg font-semibold text-white&quot;>Custom Campaign Links</h3>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <Button variant=&quot;outline&quot; size=&quot;sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
               Create New Link
             </Button>
@@ -125,30 +125,30 @@ export function PartnerReferralLinks() {
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
-              <div className="grid gap-2">
-                <Label htmlFor="campaign">Campaign Type</Label>
+              <div className="grid gap-2&quot;>
+                <Label htmlFor=&quot;campaign&quot;>Campaign Type</Label>
                 <Select 
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}
                 >
-                  <SelectTrigger id="campaign">
-                    <SelectValue placeholder="Select campaign type" />
+                  <SelectTrigger id=&quot;campaign&quot;>
+                    <SelectValue placeholder=&quot;Select campaign type&quot; />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="default">General (Default)</SelectItem>
-                    <SelectItem value="youtube">YouTube</SelectItem>
-                    <SelectItem value="newsletter">Newsletter</SelectItem>
-                    <SelectItem value="blog">Blog</SelectItem>
-                    <SelectItem value="podcast">Podcast</SelectItem>
-                    <SelectItem value="social">Social Media</SelectItem>
+                    <SelectItem value=&quot;default&quot;>General (Default)</SelectItem>
+                    <SelectItem value=&quot;youtube&quot;>YouTube</SelectItem>
+                    <SelectItem value=&quot;newsletter&quot;>Newsletter</SelectItem>
+                    <SelectItem value=&quot;blog&quot;>Blog</SelectItem>
+                    <SelectItem value=&quot;podcast&quot;>Podcast</SelectItem>
+                    <SelectItem value=&quot;social">Social Media</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-              <div className="grid gap-2">
-                <Label htmlFor="custom">Custom Parameter (Optional)</Label>
+              <div className="grid gap-2&quot;>
+                <Label htmlFor=&quot;custom&quot;>Custom Parameter (Optional)</Label>
                 <Input 
-                  id="custom" 
-                  placeholder="spring_campaign, video_123, etc." 
+                  id=&quot;custom&quot; 
+                  placeholder=&quot;spring_campaign, video_123, etc.&quot; 
                   value={customParam}
                   onChange={(e) => setCustomParam(e.target.value)}
                 />
@@ -156,14 +156,14 @@ export function PartnerReferralLinks() {
             </div>
             <DialogFooter>
               <Button 
-                type="button" 
-                variant="secondary" 
+                type=&quot;button&quot; 
+                variant=&quot;secondary&quot; 
                 onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
               <Button 
-                type="button" 
+                type=&quot;button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
               >
@@ -181,8 +181,8 @@ export function PartnerReferralLinks() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Link className="h-4 w-4 text-zion-purple" />
-                    <span>{item.name || "Campaign Link"}</span>
+                    <Link className="h-4 w-4 text-zion-purple&quot; />
+                    <span>{item.name || &quot;Campaign Link"}</span>
                   </div>
                 </CardTitle>
               </CardHeader>
@@ -191,11 +191,11 @@ export function PartnerReferralLinks() {
                   <Input
                     value={item.link}
                     readOnly
-                    className="font-mono text-xs"
+                    className="font-mono text-xs&quot;
                   />
                   <Button 
-                    variant="outline" 
-                    size="sm" 
+                    variant=&quot;outline&quot; 
+                    size=&quot;sm" 
                     onClick={() => handleCopyLink(item.link)}
                   >
                     <Copy className="h-4 w-4" />
@@ -208,11 +208,11 @@ export function PartnerReferralLinks() {
         ) : (
           <Card className="bg-zion-blue/20 border-dashed border-zion-blue-light">
             <CardContent className="flex flex-col items-center justify-center p-6">
-              <p className="text-zion-slate-light text-center mb-4">
+              <p className="text-zion-slate-light text-center mb-4&quot;>
                 Create custom campaign links to track different marketing efforts
               </p>
               <Button 
-                variant="outline"
+                variant=&quot;outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2"
               >

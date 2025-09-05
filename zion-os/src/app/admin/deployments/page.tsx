@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from &quot;react&quot;;
 import { 
   Rocket, 
   Clock, 
@@ -24,7 +24,7 @@ import {
   Pause,
   StopCircle,
   MapPin
-} from "lucide-react";
+} from &quot;lucide-react&quot;;
 
 interface Deployment {
   id: string;
@@ -45,46 +45,46 @@ interface Deployment {
 // Mock data - replace with actual API calls
 const mockDeployments: Deployment[] = [
   {
-    id: "deploy-001",
-    instanceName: "Zion Health Network",
-    status: "completed",
-    createdAt: "2024-01-15T10:30:00Z",
-    updatedAt: "2024-01-15T11:45:00Z",
+    id: &quot;deploy-001&quot;,
+    instanceName: &quot;Zion Health Network&quot;,
+    status: &quot;completed&quot;,
+    createdAt: &quot;2024-01-15T10:30:00Z&quot;,
+    updatedAt: &quot;2024-01-15T11:45:00Z&quot;,
     progress: 100,
-    features: ["marketplace", "zion_gpt", "kyc_aml", "dao_voting"],
-    vertical: "HEALTH",
-    governanceType: "DAO_FULL",
-    domain: "health.zion.network",
-    region: "North America",
-    country: "United States"
+    features: [&quot;marketplace&quot;, &quot;zion_gpt&quot;, &quot;kyc_aml&quot;, &quot;dao_voting&quot;],
+    vertical: &quot;HEALTH&quot;,
+    governanceType: &quot;DAO_FULL&quot;,
+    domain: &quot;health.zion.network&quot;,
+    region: &quot;North America&quot;,
+    country: &quot;United States&quot;
   },
   {
-    id: "deploy-002",
-    instanceName: "EduDAO Academy",
-    status: "deploying",
-    createdAt: "2024-01-15T14:20:00Z",
-    updatedAt: "2024-01-15T15:10:00Z",
+    id: &quot;deploy-002&quot;,
+    instanceName: &quot;EduDAO Academy&quot;,
+    status: &quot;deploying&quot;,
+    createdAt: &quot;2024-01-15T14:20:00Z&quot;,
+    updatedAt: &quot;2024-01-15T15:10:00Z&quot;,
     progress: 65,
-    features: ["academy", "zion_gpt", "incubator_grants"],
-    vertical: "EDUCATION",
-    governanceType: "DAO_LITE",
-    subdomain: "edu",
-    region: "Europe",
-    country: "Germany"
+    features: [&quot;academy&quot;, &quot;zion_gpt&quot;, &quot;incubator_grants&quot;],
+    vertical: &quot;EDUCATION&quot;,
+    governanceType: &quot;DAO_LITE&quot;,
+    subdomain: &quot;edu&quot;,
+    region: &quot;Europe&quot;,
+    country: &quot;Germany&quot;
   },
   {
-    id: "deploy-003",
-    instanceName: "LegalTech DAO",
-    status: "pending",
-    createdAt: "2024-01-15T16:00:00Z",
-    updatedAt: "2024-01-15T16:00:00Z",
+    id: &quot;deploy-003&quot;,
+    instanceName: &quot;LegalTech DAO&quot;,
+    status: &quot;pending&quot;,
+    createdAt: &quot;2024-01-15T16:00:00Z&quot;,
+    updatedAt: &quot;2024-01-15T16:00:00Z&quot;,
     progress: 0,
-    features: ["marketplace", "onchain_contracts", "web3_login"],
-    vertical: "LAW",
-    governanceType: "DAO_FULL",
-    domain: "legal.zion.network",
-    region: "Asia Pacific",
-    country: "Singapore"
+    features: [&quot;marketplace&quot;, &quot;onchain_contracts&quot;, &quot;web3_login&quot;],
+    vertical: &quot;LAW&quot;,
+    governanceType: &quot;DAO_FULL&quot;,
+    domain: &quot;legal.zion.network&quot;,
+    region: &quot;Asia Pacific&quot;,
+    country: &quot;Singapore"
   }
 ];
 
@@ -110,25 +110,25 @@ export default function DeploymentsPage() {
       case 'pending': return <Clock className="w-5 h-5" />;
       case 'failed': return <AlertCircle className="w-5 h-5" />;
       case 'paused': return <Pause className="w-5 h-5" />;
-      default: return <Clock className="w-5 h-5" />;
+      default: return <Clock className="w-5 h-5&quot; />;
     }
   };
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
-      default: return <Globe className="w-4 h-4 text-gray-400" />;
+      case &quot;HEALTH": return <Shield className="w-4 h-4 text-blue-400&quot; />;
+      case &quot;EDUCATION": return <Building2 className="w-4 h-4 text-green-400&quot; />;
+      case &quot;LAW": return <Shield className="w-4 h-4 text-purple-400&quot; />;
+      case &quot;GOV": return <Users className="w-4 h-4 text-red-400" />;
+      default: return <Globe className="w-4 h-4 text-gray-400&quot; />;
     }
   };
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
-      case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
+      case &quot;ADMIN": return <User className="w-4 h-4 text-yellow-400&quot; />;
+      case &quot;DAO_LITE": return <Users className="w-4 h-4 text-blue-400&quot; />;
+      case &quot;DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
       default: return <User className="w-4 h-4 text-gray-400" />;
     }
   };
@@ -400,10 +400,10 @@ export default function DeploymentsPage() {
             <Rocket className="w-8 h-8 text-white/40" />
           </div>
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
-          <p className="text-white/40 mb-6">
+          <p className="text-white/40 mb-6&quot;>
             {filter === 'all' 
               ? 'Start by creating your first Zion ecosystem deployment'
-              : `No deployments with status "${filter}" found`
+              : `No deployments with status &quot;${filter}" found`
             }
           </p>
           {filter === 'all' && (
@@ -413,7 +413,7 @@ export default function DeploymentsPage() {
             >
               <Rocket className="w-4 h-4" />
               Deploy First Instance
-            </a>
+            </Link>
           )}
         </div>
       )}

@@ -1,19 +1,19 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { Resend } from "npm:resend@2.0.0";
+import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
+import { Resend } from &quot;npm:resend@2.0.0&quot;;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+const resend = new Resend(Deno.env.get(&quot;RESEND_API_KEY&quot;));
+const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) || "&quot;;
+const supabaseServiceKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) || "&quot;;
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
 
@@ -39,7 +39,7 @@ serve(async (req) => {
     
     if (error) throw error;
     
-    console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
+    // console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
     
     const results = [];
     
@@ -47,13 +47,13 @@ serve(async (req) => {
       for (const interview of interviews) {
         // Send email to client
         const clientEmail = interview.clients?.email;
-        const talentName = interview.talents?.display_name || interview.talents?.full_name || "Talent";
+        const talentName = interview.talents?.display_name || interview.talents?.full_name || &quot;Talent&quot;;
         const interviewDate = new Date(interview.scheduled_date);
         
         if (clientEmail) {
           try {
             await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+              from: &quot;Zion Marketplace <onboarding@resend.dev>&quot;,
               to: [clientEmail],
               subject: `Your interview with ${talentName} is starting soon!`,
               html: `
@@ -61,7 +61,7 @@ serve(async (req) => {
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
                 <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href=&quot;${interview.meeting_link}&quot;>${interview.meeting_link}</Link></p>` : ''}
                 <p>Please be ready on time!</p>
               `});
             
@@ -73,12 +73,12 @@ serve(async (req) => {
         
         // Send email to talent
         const talentEmail = interview.talents?.email;
-        const clientName = interview.clients?.display_name || "Client";
+        const clientName = interview.clients?.display_name || &quot;Client&quot;;
         
         if (talentEmail) {
           try {
             await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+              from: &quot;Zion Marketplace <onboarding@resend.dev>&quot;,
               to: [talentEmail],
               subject: `Your interview with ${clientName} is starting soon!`,
               html: `
@@ -86,7 +86,7 @@ serve(async (req) => {
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
                 <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href=&quot;${interview.meeting_link}&quot;>${interview.meeting_link}</Link></p>` : ''}
                 <p>Please be ready on time!</p>
               `});
             
@@ -105,12 +105,12 @@ serve(async (req) => {
     }
     
     return new Response(JSON.stringify({ success: true, results }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
       status: 200});
   } catch (error) {
-    console.error("Error in send-interview-reminder function:", error);
+    console.error(&quot;Error in send-interview-reminder function:&quot;, error);
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
       status: 500});
   }
 });

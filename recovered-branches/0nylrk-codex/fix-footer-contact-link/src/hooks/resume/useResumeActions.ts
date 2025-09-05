@@ -33,7 +33,7 @@ export function useResumeActions() {
       
       if (error) throw error;
       
-      showSuccessToast("Resume created", "Your resume has been created successfully");
+      showSuccessToast(&quot;Resume created&quot;, &quot;Your resume has been created successfully&quot;);
       
       return data.id;
     } catch (e: any) {
@@ -65,7 +65,7 @@ export function useResumeActions() {
       
       if (error) throw error;
       
-      return showSuccessToast("Resume updated", "Your resume information has been updated");
+      return showSuccessToast(&quot;Resume updated&quot;, &quot;Your resume information has been updated&quot;);
     } catch (e: any) {
       return handleResumeError(e, 'Could not update resume');
     } finally {
@@ -100,7 +100,7 @@ export function useResumeActions() {
       
       if (error) throw error;
       
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active");
+      return showSuccessToast(&quot;Active resume set&quot;, &quot;Your selected resume is now marked as active&quot;);
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume');
     } finally {

@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
-import { format } from "date-fns";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
+import { useState } from &quot;react&quot;;
+import { useMutation } from &quot;@tanstack/react-query&quot;;
+import { Check, X, User, Star, MoreHorizontal } from &quot;lucide-react&quot;;
+import { format } from &quot;date-fns&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Review, ReviewStatus } from &quot;@/types/reviews&quot;;
 
 import {
   Table,
@@ -12,22 +12,22 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+  TableRow} from &quot;@/components/ui/table&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle} from "@/components/ui/dialog";
+  DialogTitle} from &quot;@/components/ui/dialog&quot;;
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+  DropdownMenuTrigger} from &quot;@/components/ui/dropdown-menu&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 
 interface ReviewsModerationTableProps {
   reviews: Review[];
@@ -50,41 +50,41 @@ export function ReviewsModerationTable({
       status: ReviewStatus;
     }) => {
       const { error } = await supabase
-        .from("reviews")
+        .from(&quot;reviews&quot;)
         .update({ status })
-        .eq("id", reviewId);
+        .eq(&quot;id&quot;, reviewId);
 
       if (error) throw error;
       return { reviewId, status };
     },
     onSuccess: (data) => {
       toast({
-        title: "Review updated",
+        title: &quot;Review updated&quot;,
         description: `Review has been ${data.status}.`});
       onRefresh();
       setViewDetailsOpen(false);
     },
     onError: (error: Error) => {
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive"});
+        variant: &quot;destructive&quot;});
     }});
 
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
-      case "approved":
-        return "bg-green-100 text-green-800 hover:bg-green-200";
-      case "rejected":
-        return "bg-red-100 text-red-800 hover:bg-red-200";
+      case &quot;approved&quot;:
+        return &quot;bg-green-100 text-green-800 hover:bg-green-200&quot;;
+      case &quot;rejected&quot;:
+        return &quot;bg-red-100 text-red-800 hover:bg-red-200&quot;;
       default:
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
+        return &quot;bg-yellow-100 text-yellow-800 hover:bg-yellow-200&quot;;
     }
   };
 
   const getInitials = (name: string) => {
     return name
-      .split(" ")
+      .split(&quot; &quot;)
       .map((n) => n[0])
       .join("")
       .toUpperCase();
@@ -105,7 +105,7 @@ export function ReviewsModerationTable({
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground&quot;>
           All reviews have been processed. Check back later for new submissions.
         </p>
       </div>
@@ -113,11 +113,11 @@ export function ReviewsModerationTable({
   }
 
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" });
+    updateReviewStatus({ reviewId, status: &quot;approved&quot; });
   };
 
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" });
+    updateReviewStatus({ reviewId, status: &quot;rejected" });
   };
 
   const handleViewDetails = (review: Review) => {
@@ -131,7 +131,7 @@ export function ReviewsModerationTable({
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400&quot; : &quot;text-gray-300"}`}
           />
         ))}
       </div>
@@ -166,16 +166,16 @@ export function ReviewsModerationTable({
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-                          : <User className="h-4 w-4" />}
+                          : <User className=&quot;h-4 w-4&quot; />}
                       </AvatarFallback>
                     )}
                   </Avatar>
                   <div>
                     {review.is_anonymous ? (
-                      <span className="text-sm font-medium">Anonymous</span>
+                      <span className=&quot;text-sm font-medium&quot;>Anonymous</span>
                     ) : (
-                      <span className="text-sm font-medium">
-                        {review.reviewer_profile?.display_name || "User"}
+                      <span className=&quot;text-sm font-medium&quot;>
+                        {review.reviewer_profile?.display_name || &quot;User&quot;}
                       </span>
                     )}
                   </div>
@@ -183,11 +183,11 @@ export function ReviewsModerationTable({
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
-                {format(new Date(review.created_at), "MMM d, yyyy")}
+                {format(new Date(review.created_at), &quot;MMM d, yyyy&quot;)}
               </TableCell>
               <TableCell>
                 <Badge
-                  variant="outline"
+                  variant=&quot;outline&quot;
                   className={`${getStatusColor(review.status as ReviewStatus)}`}
                 >
                   {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
@@ -195,56 +195,56 @@ export function ReviewsModerationTable({
               </TableCell>
               <TableCell>
                 {review.report_count > 0 ? (
-                  <Badge variant="destructive">{review.report_count}</Badge>
+                  <Badge variant=&quot;destructive&quot;>{review.report_count}</Badge>
                 ) : (
-                  "None"
+                  &quot;None&quot;
                 )}
               </TableCell>
-              <TableCell className="text-right">
-                <div className="flex justify-end gap-2">
-                  {review.status === "pending" && (
+              <TableCell className=&quot;text-right&quot;>
+                <div className=&quot;flex justify-end gap-2&quot;>
+                  {review.status === &quot;pending&quot; && (
                     <>
                       <Button
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
+                        size=&quot;sm&quot;
+                        variant=&quot;outline&quot;
+                        className=&quot;h-8 w-8 p-0&quot;
                         onClick={() => handleApprove(review.id)}
                         disabled={isPending}
                       >
-                        <Check className="h-4 w-4 text-green-500" />
+                        <Check className=&quot;h-4 w-4 text-green-500&quot; />
                       </Button>
                       <Button
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
+                        size=&quot;sm&quot;
+                        variant=&quot;outline&quot;
+                        className=&quot;h-8 w-8 p-0&quot;
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
-                        <X className="h-4 w-4 text-red-500" />
+                        <X className=&quot;h-4 w-4 text-red-500&quot; />
                       </Button>
                     </>
                   )}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-8 w-8 p-0"
+                        variant=&quot;ghost&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;h-8 w-8 p-0&quot;
                       >
-                        <MoreHorizontal className="h-4 w-4" />
+                        <MoreHorizontal className=&quot;h-4 w-4&quot; />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
+                    <DropdownMenuContent align=&quot;end&quot;>
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
-                      {review.status === "approved" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
+                      {review.status === &quot;approved&quot; && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: &quot;rejected&quot; })}>
                           Mark as rejected
                         </DropdownMenuItem>
                       )}
-                      {review.status === "rejected" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
+                      {review.status === &quot;rejected&quot; && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: &quot;approved&quot; })}>
                           Mark as approved
                         </DropdownMenuItem>
                       )}
@@ -259,18 +259,18 @@ export function ReviewsModerationTable({
 
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
-          <DialogContent className="max-w-lg">
+          <DialogContent className=&quot;max-w-lg&quot;>
             <DialogHeader>
               <DialogTitle>Review Details</DialogTitle>
               <DialogDescription>
-                Review submitted on{" "}
-                {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
+                Review submitted on{&quot; &quot;}
+                {format(new Date(selectedReview.created_at), &quot;MMMM d, yyyy&quot;)}
               </DialogDescription>
             </DialogHeader>
 
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;flex items-center justify-between&quot;>
+                <div className=&quot;flex items-center gap-2&quot;>
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
@@ -286,12 +286,12 @@ export function ReviewsModerationTable({
                     )}
                   </Avatar>
                   <div>
-                    <div className="font-medium">
+                    <div className="font-medium&quot;>
                       {selectedReview.is_anonymous
-                        ? "Anonymous"
-                        : selectedReview.reviewer_profile?.display_name || "User"}
+                        ? &quot;Anonymous&quot;
+                        : selectedReview.reviewer_profile?.display_name || &quot;User&quot;}
                     </div>
-                    <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>
+                    <Badge variant=&quot;outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>
                       {selectedReview.status}
                     </Badge>
                   </div>
@@ -305,28 +305,28 @@ export function ReviewsModerationTable({
 
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2&quot;>
                   {selectedReview.communication_rating && (
-                    <Badge variant="outline">
+                    <Badge variant=&quot;outline&quot;>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
                   )}
                   {selectedReview.quality_rating && (
-                    <Badge variant="outline">
+                    <Badge variant=&quot;outline&quot;>
                       Quality: {selectedReview.quality_rating}/5
                     </Badge>
                   )}
                   {selectedReview.timeliness_rating && (
-                    <Badge variant="outline">
+                    <Badge variant=&quot;outline&quot;>
                       Timeliness: {selectedReview.timeliness_rating}/5
                     </Badge>
                   )}
                   {selectedReview.would_work_again !== undefined && (
                     <Badge
-                      variant={selectedReview.would_work_again ? "default" : "secondary"}
-                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}
+                      variant={selectedReview.would_work_again ? &quot;default&quot; : &quot;secondary"}
+                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800&quot; : &quot;bg-gray-100 text-gray-800&quot;}
                     >
-                      {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+                      {selectedReview.would_work_again ? &quot;Would work again&quot; : &quot;Would not work again"}
                     </Badge>
                   )}
                 </div>
@@ -335,7 +335,7 @@ export function ReviewsModerationTable({
               {selectedReview.report_count > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
-                  <p className="text-sm text-red-700">
+                  <p className="text-sm text-red-700&quot;>
                     This review has been reported by users and may need investigation.
                   </p>
                 </div>
@@ -343,10 +343,10 @@ export function ReviewsModerationTable({
             </div>
 
             <DialogFooter>
-              {selectedReview.status === "pending" && (
+              {selectedReview.status === &quot;pending&quot; && (
                 <>
                   <Button
-                    variant="destructive"
+                    variant=&quot;destructive&quot;
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
                   >
@@ -360,18 +360,18 @@ export function ReviewsModerationTable({
                   </Button>
                 </>
               )}
-              {selectedReview.status === "approved" && (
+              {selectedReview.status === &quot;approved&quot; && (
                 <Button
-                  variant="destructive"
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}
+                  variant=&quot;destructive&quot;
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: &quot;rejected&quot; })}
                   disabled={isPending}
                 >
                   Mark as Rejected
                 </Button>
               )}
-              {selectedReview.status === "rejected" && (
+              {selectedReview.status === &quot;rejected&quot; && (
                 <Button
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: &quot;approved" })}
                   disabled={isPending}
                 >
                   Mark as Approved

@@ -69,40 +69,40 @@ export default function ZkVotePage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 space-y-4">
-      <h1 className="text-2xl font-semibold">Zion OS — ZK Vote (Semaphore)</h1>
-      <div className="space-x-2">
-        <button className="px-3 py-1 rounded bg-black text-white" onClick={connect}>Connect Wallet</button>
-        <span className="text-sm opacity-70">{account || 'Not connected'}</span>
+    <div className=&quot;max-w-2xl mx-auto p-6 space-y-4&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Zion OS — ZK Vote (Semaphore)</h1>
+      <div className=&quot;space-x-2&quot;>
+        <button className=&quot;px-3 py-1 rounded bg-black text-white&quot; onClick={connect}>Connect Wallet</button>
+        <span className=&quot;text-sm opacity-70&quot;>{account || 'Not connected'}</span>
       </div>
 
-      <div className="space-y-2">
-        <label className="block text-sm">Group ID</label>
-        <input className="w-full border p-2 rounded" value={groupId} onChange={e=>setGroupId(e.target.value)} />
-        <label className="block text-sm">Option ID</label>
-        <input className="w-full border p-2 rounded" type="number" value={optionId} onChange={e=>setOptionId(parseInt(e.target.value||'0',10))} />
-        <label className="block text-sm">Weight (ZION$)</label>
-        <input className="w-full border p-2 rounded" type="number" value={weight} onChange={e=>setWeight(e.target.value)} />
+      <div className=&quot;space-y-2&quot;>
+        <label className=&quot;block text-sm&quot;>Group ID</label>
+        <input className=&quot;w-full border p-2 rounded&quot; value={groupId} onChange={e=>setGroupId(e.target.value)} />
+        <label className=&quot;block text-sm&quot;>Option ID</label>
+        <input className=&quot;w-full border p-2 rounded&quot; type=&quot;number&quot; value={optionId} onChange={e=>setOptionId(parseInt(e.target.value||'0',10))} />
+        <label className=&quot;block text-sm&quot;>Weight (ZION$)</label>
+        <input className=&quot;w-full border p-2 rounded&quot; type=&quot;number&quot; value={weight} onChange={e=>setWeight(e.target.value)} />
       </div>
 
-      <div className="space-x-2">
-        <button className="px-3 py-1 rounded bg-blue-600 text-white" onClick={generateIdentity}>Generate ZK Identity</button>
-        <span className="text-sm break-all">{identityCommitment || '—'}</span>
+      <div className=&quot;space-x-2&quot;>
+        <button className=&quot;px-3 py-1 rounded bg-blue-600 text-white&quot; onClick={generateIdentity}>Generate ZK Identity</button>
+        <span className=&quot;text-sm break-all&quot;>{identityCommitment || '—'}</span>
       </div>
 
-      <div className="space-x-2">
-        <button className="px-3 py-1 rounded bg-indigo-600 text-white" onClick={makeProof}>Create Proof (mock)</button>
-        <button disabled={!proof || submitting} className="px-3 py-1 rounded bg-green-600 text-white disabled:opacity-50" onClick={submitVote}>Submit Vote</button>
-      </div>
-
-      <div>
-        <h2 className="font-medium">Proof</h2>
-        {proof ? <ReactJson name={false} src={proof} collapsed={1} /> : <p className="text-sm opacity-70">No proof yet</p>}
+      <div className=&quot;space-x-2&quot;>
+        <button className=&quot;px-3 py-1 rounded bg-indigo-600 text-white&quot; onClick={makeProof}>Create Proof (mock)</button>
+        <button disabled={!proof || submitting} className=&quot;px-3 py-1 rounded bg-green-600 text-white disabled:opacity-50&quot; onClick={submitVote}>Submit Vote</button>
       </div>
 
       <div>
-        <h2 className="font-medium">Result</h2>
-        {result ? <ReactJson name={false} src={result} collapsed={1} /> : <p className="text-sm opacity-70">No submission</p>}
+        <h2 className=&quot;font-medium&quot;>Proof</h2>
+        {proof ? <ReactJson name={false} src={proof} collapsed={1} /> : <p className=&quot;text-sm opacity-70&quot;>No proof yet</p>}
+      </div>
+
+      <div>
+        <h2 className=&quot;font-medium&quot;>Result</h2>
+        {result ? <ReactJson name={false} src={result} collapsed={1} /> : <p className=&quot;text-sm opacity-70&quot;>No submission</p>}
       </div>
     </div>
   )

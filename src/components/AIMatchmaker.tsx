@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from &quot;react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { AIMatchingResults } from &quot;@/components/AIMatchingResults&quot;;
+import { findMatches, MatchResult } from &quot;@/lib/ai-matchmaking&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
@@ -15,8 +15,8 @@ interface AIMatchmakerProps {
   className?: string;
 }
 
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState("");
+export function AIMatchmaker({ serviceType = "&quot;, onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState("&quot;);
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
@@ -24,9 +24,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"});
+        title: &quot;Please enter a description&quot;,
+        description: &quot;Tell us what you're looking for so we can find matches.&quot;,
+        variant: &quot;destructive&quot;});
       return;
     }
 
@@ -34,7 +34,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     setHasSearched(true);
     
     try {
-      logInfo("Starting AI matching", { data: { query, serviceType } });
+      logInfo(&quot;Starting AI matching&quot;, { data: { query, serviceType } });
       
       // Get AI matches
       const results = await findMatches(
@@ -47,14 +47,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setMatches(results);
       
       toast({
-        title: "Matches Found",
+        title: &quot;Matches Found&quot;,
         description: `Found ${results.length} matches based on your description.`});
     } catch (error) {
       logErrorToProduction('Error during AI matching:', { data: error });
       toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"});
+        title: &quot;Matching Error&quot;,
+        description: &quot;We couldn't find matches for your request. Please try again.&quot;,
+        variant: &quot;destructive&quot;});
       // Set empty matches to show no results found UI
       setMatches([]);
     } finally {
@@ -83,14 +83,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
-          Describe what you&apos;re looking for and our AI will find the best matches
+          Describe what you're looking for and our AI will find the best matches
         </p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          <div className="space-y-2">
+          <div className="space-y-2&quot;>
             <Textarea
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              placeholder=&quot;Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"

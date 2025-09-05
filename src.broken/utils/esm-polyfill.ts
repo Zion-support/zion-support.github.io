@@ -1,6 +1,6 @@
 /**
  * ESM Polyfill for Next.js 15 + React 19 build compatibility
- * Fixes "Module not found: ESM packages need to be imported" errors
+ * Fixes &quot;Module not found: ESM packages need to be imported&quot; errors
  */
 
 // Force proper ESM resolution for problematic packages

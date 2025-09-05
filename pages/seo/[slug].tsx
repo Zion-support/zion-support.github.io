@@ -34,16 +34,16 @@ export default function SEOLandingPage() {
   if (!payload) return null;
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className=&quot;max-w-4xl mx-auto&quot;>
       <head>
         <title>{payload.title}</title>
-        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
+        <meta name=&quot;description&quot; content={`${payload.title} • Zion Marketplace`} />
       </head>
-      <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
-      <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>{payload.h1}</h1>
+      <div className=&quot;prose dark:prose-invert max-w-none&quot; dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
 
-      <div className="mt-8">
-        <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
+      <div className=&quot;mt-8&quot;>
+        <h2 className=&quot;text-lg font-semibold mb-2&quot;>Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
       </div>
 

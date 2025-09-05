@@ -6,7 +6,7 @@ const IotPlatforms = () => {
     <div>
       <Head>
         <title>IotPlatforms - Zion Tech Solutions</title>
-        <meta name="description" content="IotPlatforms page" />
+        <meta name=&quot;description&quot; content=&quot;IotPlatforms page&quot; />
       </Head>
       
       <main>

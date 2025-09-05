@@ -12,7 +12,7 @@ async function post(url: string, body: any) {
 async function main() {
   const seedsPath = path.join(process.cwd(), 'data', 'page-metadata', 'seo-seeds.json');
   if (!fs.existsSync(seedsPath)) {
-    console.log('No seeds file found at', seedsPath);
+    // console.log('No seeds file found at', seedsPath);
     process.exit(0);
   }
   const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string; region?: string; service?: string }>;
@@ -22,7 +22,7 @@ async function main() {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
-      console.log('Generated', gen.slug);
+      // console.log('Generated', gen.slug);
     }
   }
 }

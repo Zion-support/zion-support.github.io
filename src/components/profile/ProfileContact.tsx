@@ -1,10 +1,10 @@
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 import { Mail, Send } from 'lucide-react'
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+import { useState } from &quot;react&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
 
 interface ProfileContactProps {
   email?: string;
@@ -13,8 +13,8 @@ interface ProfileContactProps {
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("&quot;);
+  const [subject, setSubject] = useState("&quot;);
   const [isSending, setIsSending] = useState(false);
   
   const handleSendMessage = (e: React.FormEvent) => {
@@ -24,41 +24,41 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     // Here would be the actual API call to send the message
     setTimeout(() => {
       setIsSending(false);
-      setMessage("");
-      setSubject("");
+      setMessage("&quot;);
+      setSubject("&quot;);
       toast({
-        title: "Message Sent",
+        title: &quot;Message Sent&quot;,
         description: `Your message has been sent to ${profileName}.`});
     }, 1000);
   };
 
   return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-        <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
+    <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8&quot;>
+      <h3 className=&quot;text-xl font-bold text-white mb-4 flex items-center&quot;>
+        <Mail className=&quot;mr-2 h-5 w-5 text-zion-cyan&quot; />
         Contact
       </h3>
       
       {email && (
-        <div className="mb-4 text-zion-slate-light">
-          <span className="block">Email: </span>
+        <div className=&quot;mb-4 text-zion-slate-light&quot;>
+          <span className=&quot;block&quot;>Email: </span>
           <a 
             href={`mailto:${email}`} 
-            className="text-zion-cyan hover:underline truncate block"
+            className=&quot;text-zion-cyan hover:underline truncate block&quot;
           >
             {email}
-          </a>
+          </Link>
         </div>
       )}
       
       <form onSubmit={handleSendMessage}>
-        <div className="space-y-4">
+        <div className=&quot;space-y-4&quot;>
           <div>
             <Input
-              placeholder="Subject"
+              placeholder=&quot;Subject&quot;
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white"
+              className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;
               required
             />
           </div>
@@ -67,17 +67,17 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
               placeholder={`Message to ${profileName}...`}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              className=&quot;bg-zion-blue border-zion-blue-light text-white min-h-[120px]&quot;
               required
             />
           </div>
           <Button 
-            type="submit" 
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            type=&quot;submit&quot; 
+            className=&quot;w-full bg-zion-cyan hover:bg-zion-cyan/90&quot;
             disabled={isSending}
           >
-            <Send className="mr-2 h-4 w-4" />
-            {isSending ? "Sending..." : "Send Message"}
+            <Send className=&quot;mr-2 h-4 w-4&quot; />
+            {isSending ? &quot;Sending...&quot; : &quot;Send Message&quot;}
           </Button>
         </div>
       </form>

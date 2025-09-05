@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
+import React, { useMemo, useState } from &quot;react&quot;;
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from &quot;../shared/types&quot;;
 
 export interface MilestoneAssistantProps {
   scopeOfWork: string;
@@ -30,20 +30,20 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         endDateIso: props.endDateIso,
         projectType: props.projectType
       };
-      const res = await fetch("/api/ai/milestones", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch(&quot;/api/ai/milestones&quot;, {
+        method: &quot;POST&quot;,
+        headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
         body: JSON.stringify(payload)
       });
       if (!res.ok) {
         const t = await res.text();
-        throw new Error(t || "Failed to generate");
+        throw new Error(t || &quot;Failed to generate&quot;);
       }
       const data = await res.json();
       setItems(Array.isArray(data?.milestones) ? data.milestones : []);
       setExpandedIdx(0);
     } catch (e: any) {
-      setError(e?.message || "Unexpected error");
+      setError(e?.message || &quot;Unexpected error&quot;);
     } finally {
       setLoading(false);
     }
@@ -62,77 +62,77 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
   }
 
   return (
-    <div className="milestone-assistant">
-      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>
+    <div className=&quot;milestone-assistant&quot;>
+      <div className=&quot;assistant-header&quot; style={{ display: &quot;flex&quot;, gap: 12, alignItems: &quot;center&quot; }}>
         <button onClick={generate} disabled={loading || isDisabled}>
-          {loading ? "Generating..." : "💡 Generate AI Milestones"}
+          {loading ? &quot;Generating...&quot; : &quot;💡 Generate AI Milestones&quot;}
         </button>
-        <label style={{ display: "flex", gap: 6, alignItems: "center" }}>
-          <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />
+        <label style={{ display: &quot;flex&quot;, gap: 6, alignItems: &quot;center&quot; }}>
+          <input type=&quot;checkbox&quot; checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />
           Auto-add to Milestone Tracker
         </label>
       </div>
-      {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
+      {error && <div style={{ color: &quot;#b00&quot;, marginTop: 8 }}>{error}</div>}
 
       <div style={{ marginTop: 12 }}>
         {items.length === 0 && !loading && (
-          <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>
+          <div style={{ color: &quot;#666&quot; }}>No suggestions yet. Click &quot;Generate&quot; above.</div>
         )}
         {items.map((item, idx) => (
-          <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>
+          <div key={idx} className=&quot;milestone-item&quot; style={{ border: &quot;1px solid #ddd&quot;, borderRadius: 8, marginBottom: 8 }}>
             <div
-              className="milestone-summary"
-              style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+              className=&quot;milestone-summary&quot;
+              style={{ padding: 12, cursor: &quot;pointer&quot;, display: &quot;flex&quot;, justifyContent: &quot;space-between&quot;, alignItems: &quot;center&quot; }}
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
             >
-              <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <div style={{ display: &quot;flex&quot;, gap: 8, alignItems: &quot;center&quot; }}>
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>
-                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>
+                <span style={{ background: &quot;#eef7ff&quot;, color: &quot;#1677ff&quot;, padding: &quot;2px 6px&quot;, borderRadius: 4, fontSize: 12 }}>
                   AI Suggested
                 </span>
               </div>
-              <div style={{ fontSize: 12, color: "#555" }}>
+              <div style={{ fontSize: 12, color: &quot;#555&quot; }}>
                 Due: {new Date(item.suggestedDueDateIso).toLocaleDateString()} · ~{item.estimatedEffortHours}h
               </div>
             </div>
             {expandedIdx === idx && (
-              <div className="milestone-details" style={{ padding: 12, display: "grid", gap: 8 }}>
-                <div style={{ display: "grid", gap: 6 }}>
+              <div className=&quot;milestone-details&quot; style={{ padding: 12, display: &quot;grid&quot;, gap: 8 }}>
+                <div style={{ display: &quot;grid&quot;, gap: 6 }}>
                   <label>Title</label>
                   <input
                     value={item.title}
                     onChange={(e) => updateItem(idx, { title: e.target.value })}
-                    placeholder="Title"
+                    placeholder=&quot;Title&quot;
                   />
                 </div>
-                <div style={{ display: "grid", gap: 6 }}>
+                <div style={{ display: &quot;grid&quot;, gap: 6 }}>
                   <label>Description</label>
                   <textarea
                     value={item.description}
                     onChange={(e) => updateItem(idx, { description: e.target.value })}
                     rows={3}
-                    placeholder="Description"
+                    placeholder=&quot;Description&quot;
                   />
                 </div>
-                <div style={{ display: "grid", gap: 6 }}>
+                <div style={{ display: &quot;grid&quot;, gap: 6 }}>
                   <label>Suggested due date</label>
                   <input
-                    type="date"
+                    type=&quot;date&quot;
                     value={item.suggestedDueDateIso.slice(0, 10)}
                     onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() })}
                   />
                 </div>
-                <div style={{ display: "grid", gap: 6 }}>
+                <div style={{ display: &quot;grid&quot;, gap: 6 }}>
                   <label>Estimated effort (hours)</label>
                   <input
-                    type="number"
+                    type=&quot;number&quot;
                     min={1}
                     value={item.estimatedEffortHours}
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || &quot;0&quot;, 10)) })}
                   />
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>
-                  <button onClick={() => removeItem(idx)} style={{ color: "#b00" }}>Remove</button>
+                <div style={{ display: &quot;flex&quot;, justifyContent: &quot;space-between&quot;, marginTop: 8 }}>
+                  <button onClick={() => removeItem(idx)} style={{ color: &quot;#b00&quot; }}>Remove</button>
                   <button onClick={accept}>Accept</button>
                 </div>
               </div>

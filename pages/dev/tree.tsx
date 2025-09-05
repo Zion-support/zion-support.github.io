@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
+import React, { useEffect, useState } from &quot;react&quot;;
+import Tree, { TreeNode } from &quot;../../components/ui/Tree&quot;;
 
 interface ApiResponse {
   nodes: TreeNode[];
@@ -9,13 +9,13 @@ interface ApiResponse {
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
-  const [adminToken, setAdminToken] = useState<string>("");
+  const [git, setGit] = useState<ApiResponse[&quot;status&quot;] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>("&quot;);
 
   const fetchTree = async (token?: string) => {
     try {
-      const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined});
+      const resp = await fetch(&quot;/api/dev/source-map&quot;, {
+        headers: token ? { &quot;x-admin-token&quot;: token } : undefined});
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`);
@@ -24,28 +24,28 @@ export default function DevTreePage() {
       setNodes(data.nodes);
       setGit(data.status);
     } catch (e: any) {
-      setError(e.message || "Failed to load");
+      setError(e.message || &quot;Failed to load&quot;);
     }
   };
 
   useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "";
+    const stored = localStorage.getItem(&quot;ADMIN_TOKEN&quot;) || "&quot;;
     setAdminToken(stored);
     fetchTree(stored);
   }, []);
 
   const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken);
+    localStorage.setItem(&quot;ADMIN_TOKEN&quot;, adminToken);
     fetchTree(adminToken);
   };
 
   const onDeploy = async (p: string) => {
     try {
-      const resp = await fetch("/api/dev/source-map", {
-        method: "POST",
+      const resp = await fetch(&quot;/api/dev/source-map&quot;, {
+        method: &quot;POST&quot;,
         headers: {
-          "Content-Type": "application/json",
-          "x-admin-token": adminToken},
+          &quot;Content-Type&quot;: &quot;application/json&quot;,
+          &quot;x-admin-token&quot;: adminToken},
         body: JSON.stringify({ path: p })});
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({}));
@@ -53,36 +53,36 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
-      setError(e.message || "Deploy failed");
+      setError(e.message || &quot;Deploy failed&quot;);
     }
   };
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <div className="flex items-center gap-4 mb-4">
-        <h1 className="text-xl font-semibold">Zion OS Source Tree</h1>
+    <div className=&quot;p-6 max-w-5xl mx-auto&quot;>
+      <div className=&quot;flex items-center gap-4 mb-4&quot;>
+        <h1 className=&quot;text-xl font-semibold&quot;>Zion OS Source Tree</h1>
         {git && (
-          <div className="text-sm text-gray-600">
-            Git: {git.gitConnected ? `connected (${git.gitBranch})` : "not connected"}
+          <div className=&quot;text-sm text-gray-600&quot;>
+            Git: {git.gitConnected ? `connected (${git.gitBranch})` : &quot;not connected&quot;}
           </div>
         )}
-        <div className="ml-auto flex items-center gap-2">
+        <div className=&quot;ml-auto flex items-center gap-2&quot;>
           <input
-            className="border rounded px-2 py-1 text-sm"
-            placeholder="Admin token"
+            className=&quot;border rounded px-2 py-1 text-sm&quot;
+            placeholder=&quot;Admin token&quot;
             value={adminToken}
             onChange={(e) => setAdminToken(e.target.value)}
           />
-          <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>
+          <button className=&quot;px-3 py-1 text-sm bg-blue-600 text-white rounded&quot; onClick={handleSaveToken}>
             Save Token
           </button>
         </div>
       </div>
 
-      {error && <div className="mb-3 text-sm text-red-600">{error}</div>}
+      {error && <div className=&quot;mb-3 text-sm text-red-600&quot;>{error}</div>}
 
       {nodes ? (
-        <div className="rounded border p-3 bg-white">
+        <div className=&quot;rounded border p-3 bg-white&quot;>
           <Tree nodes={nodes} onDeploy={onDeploy} />
         </div>
       ) : (

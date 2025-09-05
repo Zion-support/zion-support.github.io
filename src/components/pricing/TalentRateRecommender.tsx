@@ -1,15 +1,15 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   getTalentRateSuggestion, 
   PricingSuggestion,
   TalentRateParams,
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
+} from &quot;@/services/pricingSuggestionService&quot;;
+import { PricingSuggestionBox } from &quot;./PricingSuggestionBox&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
 import { Sparkles } from 'lucide-react'
 
 interface TalentRateRecommenderProps {
@@ -17,7 +17,7 @@ interface TalentRateRecommenderProps {
   yearsExperience: number;
   location?: string;
   onSuggestionApplied: (value: number) => void;
-  rateType: "hourly" | "fixed";
+  rateType: &quot;hourly&quot; | &quot;fixed&quot;;
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
@@ -61,7 +61,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-          suggestionType: "talent",
+          suggestionType: &quot;talent&quot;,
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           actualValue: suggestedRate,
@@ -72,17 +72,17 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   };
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type="button"
-            variant="outline"
+            type=&quot;button&quot;
+            variant=&quot;outline&quot;
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
-            className="w-full"
+            className=&quot;w-full&quot;
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
+            <Sparkles className=&quot;h-4 w-4 mr-2&quot; /> Optimize Rate with AI
           </Button>
         ) : (
           <PricingSuggestionBox

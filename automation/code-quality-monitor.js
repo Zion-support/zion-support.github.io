@@ -1,8 +1,8 @@
 
 #!/usr/bin/env node,
-const fs = require("fs"),
-const path = require("path"),
-const { execSync } = require("child_process"),
+const fs = require(&quot;fs&quot;),
+const path = require(&quot;path&quot;),
+const { execSync } = require(&quot;child_process&quot;),
 class CodeQualityMonitor {,
   constructor() {,
     this.metrics = {,
@@ -13,20 +13,20 @@ class CodeQualityMonitor {,
 
       lastUpdated: new Date().toISOString()
     };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log")
+    this.logFile = path.join(__dirname, &quot;logs&quot;, &quot;code-quality.log&quot;)
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
-    console.log(message),
+    // console.log(message),
 
     fs.appendFileSync(this.logFile, logMessage)
   };
 ,
   async analyzeCodeQuality() {,
     try {,
-      this.log("Starting code quality analysis..."),
+      this.log(&quot;Starting code quality analysis...&quot;),
 ,
       this.metrics.complexity = this.calculateComplexity(),
       this.metrics.maintainability = this.calculateMaintainability(),
@@ -36,9 +36,9 @@ class CodeQualityMonitor {,
 
 ,
       this.saveMetrics(),
-      this.log("Code quality analysis completed successfully"),
+      this.log(&quot;Code quality analysis completed successfully&quot;),
       return this.metrics
     } catch (error) {,
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
+      this.log(`Code quality analysis failed: ${error.message}`, &quot;ERROR&quot;),
       return null
     };

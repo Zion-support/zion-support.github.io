@@ -1,19 +1,19 @@
 
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useMemo } from &quot;react&quot;;
+import { onsiteServicePricing, CountryPricing } from &quot;@/data/onsiteServicePricing&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
+import { Globe, Search, ArrowUpDown } from &quot;lucide-react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("&quot;);
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
-    direction: "ascending" | "descending";
+    direction: &quot;ascending&quot; | &quot;descending&quot;;
   }>({
-    key: "country",
-    direction: "ascending"});
+    key: &quot;country&quot;,
+    direction: &quot;ascending&quot;});
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
@@ -28,10 +28,10 @@ export function ITServicePricingTable() {
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;
+        return sortConfig.direction === &quot;ascending&quot; ? -1 : 1;
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1;
+        return sortConfig.direction === &quot;ascending&quot; ? 1 : -1;
       }
       return 0;
     });
@@ -43,18 +43,18 @@ export function ITServicePricingTable() {
     setSortConfig({
       key,
       direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"});
+        sortConfig.key === key && sortConfig.direction === &quot;ascending&quot; 
+          ? &quot;descending&quot; 
+          : &quot;ascending"});
   };
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light&quot; />
           <Input
-            placeholder="Search by country..."
+            placeholder=&quot;Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
@@ -66,20 +66,20 @@ export function ITServicePricingTable() {
         <Table>
           <TableHeader className="bg-zion-blue">
             <TableRow>
-              <TableHead className="text-zion-cyan font-medium">
+              <TableHead className="text-zion-cyan font-medium&quot;>
                 <Button 
-                  variant="ghost" 
-                  onClick={() => handleSort("country")}
+                  variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
-              <TableHead className="text-right text-zion-cyan font-medium">
+              <TableHead className="text-right text-zion-cyan font-medium&quot;>
                 <Button 
-                  variant="ghost" 
-                  onClick={() => handleSort("pricePerIncident")}
+                  variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Price Per Incident</span>

@@ -90,7 +90,7 @@ const LoginPage = () => {
         setUser(session?.user ?? null);
         // If auth state changes after initial check, ensure sessionChecked is true
         // This handles cases like login/logout in another tab.
-        if (!sessionChecked && event !== "INITIAL_SESSION") {
+        if (!sessionChecked && event !== &quot;INITIAL_SESSION&quot;) {
            setSessionChecked(true);
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
         }
@@ -237,7 +237,7 @@ const LoginPage = () => {
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
                                                  signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code "email_not_verified"
+        // As per issue description, check for a specific error code &quot;email_not_verified&quot;
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified';
 
@@ -307,13 +307,13 @@ const LoginPage = () => {
 
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-    logInfo('LoginPage: Rendering "Checking authentication..."');
+    logInfo('LoginPage: Rendering &quot;Checking authentication...&quot;');
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Checking authentication...</p>
-          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
+          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
         </div>
       </div>
     );
@@ -322,13 +322,13 @@ const LoginPage = () => {
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
-    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    logInfo('LoginPage: Rendering &quot;Already Logged In / Redirecting...&quot;');
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
-          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Already Logged In</h2>
+          <p className=&quot;text-gray-600 mb-4&quot;>Redirecting to your dashboard...</p>
         </div>
       </div>
     );
@@ -349,11 +349,11 @@ const LoginPage = () => {
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+        <meta name=&quot;description&quot; content=&quot;Sign in to your Zion Tech Marketplace account&quot; />
       </Head>
       
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <Card className="w-full max-w-md">
+      <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8&quot;>
+        <Card className=&quot;w-full max-w-md&quot;>
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
@@ -361,20 +361,20 @@ const LoginPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleLogin} className=&quot;space-y-4&quot;>
               {error && (
-                <div className="p-3 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-sm text-red-600">{error.message}</p>
+                <div className=&quot;p-3 bg-red-50 border border-red-200 rounded-md&quot;>
+                  <p className=&quot;text-sm text-red-600&quot;>{error.message}</p>
                 </div>
               )}
               
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
+              <div className=&quot;space-y-2&quot;>
+                <label htmlFor=&quot;email&quot; className=&quot;text-sm font-medium&quot;>
                   Email
                 </label>
                 <Input
-                  id="email"
-                  type="email"
+                  id=&quot;email&quot;
+                  type=&quot;email&quot;
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -382,13 +382,13 @@ const LoginPage = () => {
                 />
               </div>
               
-              <div className="space-y-2">
-                <label htmlFor="password" className="text-sm font-medium">
+              <div className=&quot;space-y-2&quot;>
+                <label htmlFor=&quot;password&quot; className=&quot;text-sm font-medium&quot;>
                   Password
                 </label>
                 <Input
-                  id="password"
-                  type="password"
+                  id=&quot;password&quot;
+                  type=&quot;password&quot;
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -396,15 +396,15 @@ const LoginPage = () => {
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
+              <Button type=&quot;submit&quot; className=&quot;w-full&quot; disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>
             
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
+            <div className=&quot;mt-6 text-center&quot;>
+              <p className=&quot;text-sm text-gray-600&quot;>
                 Don't have an account?{' '}
-                <Link href="/auth/register" className="text-blue-600 hover:underline">
+                <Link href=&quot;/auth/register&quot; className=&quot;text-blue-600 hover:underline&quot;>
                   Sign up
                 </Link>
               </p>

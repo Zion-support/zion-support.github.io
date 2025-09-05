@@ -13,6 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['CAC/LTV ratio','1:5.6','0.4']];
   const csv = rows.map(r => r.map(v => String(v)).join(',')).join('\n');
   res.setHeader('Content-Type', 'text/csv');
-  res.setHeader('Content-Disposition', 'attachment; filename="ipo-metrics.csv"');
+  res.setHeader('Content-Disposition', 'attachment; filename=&quot;ipo-metrics.csv&quot;');
   res.status(200).send(csv);
 }

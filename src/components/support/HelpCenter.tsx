@@ -1,12 +1,12 @@
 
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
+import React, { useState } from &quot;react&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { HelpCategoryList } from &quot;./HelpCategoryList&quot;;
+import { HelpArticleList } from &quot;./HelpArticleList&quot;;
+import { HelpArticleView } from &quot;./HelpArticleView&quot;;
+import { HELP_CATEGORIES } from &quot;./help-content&quot;;
 import { Search } from 'lucide-react'
 
 export default function HelpCenter() {
@@ -43,24 +43,24 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support team.
           </p>
           
-          <div className="relative mb-8">
+          <div className="relative mb-8&quot;>
             <Input
-              placeholder="Search for help articles..."
+              placeholder=&quot;Search for help articles..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
             />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
           </div>
           
-          <Tabs defaultValue="articles" className="mb-8">
-            <TabsList className="w-full grid grid-cols-3 mb-6">
-              <TabsTrigger value="articles">Articles</TabsTrigger>
-              <TabsTrigger value="faq">FAQ</TabsTrigger>
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>
+          <Tabs defaultValue=&quot;articles" className="mb-8">
+            <TabsList className="w-full grid grid-cols-3 mb-6&quot;>
+              <TabsTrigger value=&quot;articles&quot;>Articles</TabsTrigger>
+              <TabsTrigger value=&quot;faq&quot;>FAQ</TabsTrigger>
+              <TabsTrigger value=&quot;contact&quot;>Contact Us</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="articles">
+            <TabsContent value=&quot;articles&quot;>
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList 
                   categories={HELP_CATEGORIES} 
@@ -72,9 +72,9 @@ export default function HelpCenter() {
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
-                    variant="ghost"
+                    variant=&quot;ghost"
                     onClick={handleBackToCategories}
-                    className="mb-4"
+                    className="mb-4&quot;
                   >
                     ← All Categories
                   </Button>
@@ -89,9 +89,9 @@ export default function HelpCenter() {
               {selectedArticle && (
                 <>
                   <Button
-                    variant="ghost"
+                    variant=&quot;ghost"
                     onClick={handleBackToArticles}
-                    className="mb-4"
+                    className="mb-4&quot;
                   >
                     ← Back to Articles
                   </Button>
@@ -100,7 +100,7 @@ export default function HelpCenter() {
               )}
             </TabsContent>
             
-            <TabsContent value="faq">
+            <TabsContent value=&quot;faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
@@ -128,7 +128,7 @@ export default function HelpCenter() {
                   
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
-                    <p className="text-zion-slate-light">
+                    <p className="text-zion-slate-light&quot;>
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.
                     </p>
                   </div>
@@ -136,7 +136,7 @@ export default function HelpCenter() {
               </div>
             </TabsContent>
             
-            <TabsContent value="contact">
+            <TabsContent value=&quot;contact">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
@@ -146,21 +146,21 @@ export default function HelpCenter() {
                   
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3&quot;>
+                        <svg xmlns=&quot;http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;>
+                          <path d=&quot;M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z&quot; />
+                          <path d=&quot;M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
-                      </a>
+                      </Link>
                     </div>
                     
                     <div className="flex items-center">
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3&quot;>
+                        <svg xmlns=&quot;http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;>
+                          <path d=&quot;M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                         </svg>
                       </div>
                       <span className="text-zion-slate-light">+1 302 464 0950</span>
@@ -178,21 +178,21 @@ export default function HelpCenter() {
                     We value your input and are constantly looking to improve our platform.
                   </p>
                   
-                  <form className="space-y-4">
+                  <form className="space-y-4&quot;>
                     <div>
                       <Input
-                        placeholder="Your email"
+                        placeholder=&quot;Your email&quot;
                       />
                     </div>
                     <div>
                       <Input
-                        placeholder="Subject"
+                        placeholder=&quot;Subject"
                       />
                     </div>
                     <div>
                       <textarea
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black"
-                        placeholder="Your feedback or suggestion"
+                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black&quot;
+                        placeholder=&quot;Your feedback or suggestion"
                       />
                     </div>
                     

@@ -14,7 +14,7 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
   const { OpenAI } = await import('openai');
   const client = new OpenAI({ apiKey });
 
-  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';
+  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {&quot;label&quot;:&quot;SAFE|SUSPICIOUS|DANGEROUS&quot;,&quot;reason&quot;:&quot;short&quot;,&quot;confidence&quot;:0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';
   const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`;
 
   const completion = await client.chat.completions.create({

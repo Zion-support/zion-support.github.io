@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from "../../integrations/supabase/client";
-import { useAuthOperations } from "../../hooks/useAuthOperations";
-import { AuthContext } from "./AuthContext";
-import { cleanupAuthState } from "../../utils/authUtils";
+import React, { useEffect } from &quot;react&quot;;
+import { supabase, getFromProfiles } from &quot;../../integrations/supabase/client&quot;;
+import { useAuthOperations } from &quot;../../hooks/useAuthOperations&quot;;
+import { AuthContext } from &quot;./AuthContext&quot;;
+import { cleanupAuthState } from &quot;../../utils/authUtils&quot;;
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthState } from "./useAuthState";
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
-import { mapProfileToUser } from "./profileMapper";
+import { useAuthState } from &quot;./useAuthState&quot;;
+import { useAuthEventHandlers } from &quot;./useAuthEventHandlers&quot;;
+import { mapProfileToUser } from &quot;./profileMapper&quot;;
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
@@ -63,11 +63,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 handleSignedIn(mappedUser);
               }
             } else if (error) {
-              console.error("Error fetching user profile:", error);
+              console.error(&quot;Error fetching user profile:&quot;, error);
               setUser(null);
             }
           } catch (error) {
-            console.error("Error fetching user profile:", error);
+            console.error(&quot;Error fetching user profile:&quot;, error);
             setUser(null);
           }
         } else {

@@ -1,7 +1,7 @@
-"use client";
+"use client&quot;;
 
-import Link from "next/link";
-import { ReactNode } from "react";
+import Link from &quot;next/link&quot;;
+import { ReactNode } from &quot;react&quot;;
 
 interface FeatureCardProps {
   id: number;
@@ -24,12 +24,12 @@ export function FeatureCard({
   onClick 
 }: FeatureCardProps) {
   const colorClasses = {
-    blue: "bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30",
-    purple: "bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30",
-    green: "bg-green-500/20 hover:bg-green-500/30 border-green-500/30",
-    red: "bg-red-500/20 hover:bg-red-500/30 border-red-500/30",
-    yellow: "bg-yellow-500/20 hover:bg-yellow-500/30 border-yellow-500/30",
-    indigo: "bg-indigo-500/20 hover:bg-indigo-500/30 border-indigo-500/30"
+    blue: &quot;bg-blue-500/20 hover:bg-blue-500/30 border-blue-500/30&quot;,
+    purple: &quot;bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30&quot;,
+    green: &quot;bg-green-500/20 hover:bg-green-500/30 border-green-500/30&quot;,
+    red: &quot;bg-red-500/20 hover:bg-red-500/30 border-red-500/30&quot;,
+    yellow: &quot;bg-yellow-500/20 hover:bg-yellow-500/30 border-yellow-500/30&quot;,
+    indigo: &quot;bg-indigo-500/20 hover:bg-indigo-500/30 border-indigo-500/30"
   };
 
   return (

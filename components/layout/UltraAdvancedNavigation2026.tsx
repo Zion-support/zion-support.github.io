@@ -187,34 +187,34 @@ const UltraAdvancedNavigation2026 = () => {
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Rocket className="w-6 h-6 text-white" />
+            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
+              <div className=&quot;relative&quot;>
+                <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
+                  <Rocket className=&quot;w-6 h-6 text-white&quot; />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
               </div>
-              <div className="hidden sm:block">
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <div className=&quot;hidden sm:block&quot;>
+                <div className=&quot;text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent&quot;>
                   Zion Tech Group
                 </div>
-                <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
+                <div className=&quot;text-xs text-gray-400&quot;>Revolutionary Technology Solutions</div>
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className=&quot;relative group&quot;>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2&quot;
                   >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.name}</span>
+                    <item.icon className=&quot;w-5 h-5&quot; />
+                    <span className=&quot;font-medium&quot;>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
@@ -228,44 +228,44 @@ const UltraAdvancedNavigation2026 = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
+                        className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden&quot;
                       >
-                        <div className="p-4">
-                          <div className="flex items-center space-x-3 mb-4">
+                        <div className=&quot;p-4&quot;>
+                          <div className=&quot;flex items-center space-x-3 mb-4&quot;>
                             <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                              <item.icon className="w-5 h-5 text-white" />
+                              <item.icon className=&quot;w-5 h-5 text-white&quot; />
                             </div>
                             <div>
-                              <h3 className="text-white font-semibold">{item.name}</h3>
-                              <p className="text-gray-400 text-sm">{item.description}</p>
+                              <h3 className=&quot;text-white font-semibold&quot;>{item.name}</h3>
+                              <p className=&quot;text-gray-400 text-sm&quot;>{item.description}</p>
                             </div>
                           </div>
                           
-                          <div className="space-y-2">
+                          <div className=&quot;space-y-2&quot;>
                             {item.subItems.map((subItem) => (
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                className=&quot;block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group&quot;
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                                <div className=&quot;text-white font-medium group-hover:text-purple-300 transition-colors duration-200&quot;>
                                   {subItem.name}
                                 </div>
-                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
+                                <div className=&quot;text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200&quot;>
                                   {subItem.description}
                                 </div>
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           
                           <Link
                             href={item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                            className=&quot;block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
                             onClick={() => setActiveDropdown(null)}
                           >
                             View All {item.name}
-                          </Link>
+                          </a>
                         </div>
                       </motion.div>
                     )}
@@ -274,39 +274,39 @@ const UltraAdvancedNavigation2026 = () => {
               ))}
 
               {/* Quick Links */}
-              <div className="flex items-center space-x-6">
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+              <div className=&quot;flex items-center space-x-6&quot;>
+                <Link href=&quot;/services&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
                   All Services
-                </Link>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                </a>
+                <Link href=&quot;/pricing&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
                   Pricing
-                </Link>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                </a>
+                <Link href=&quot;/contact&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
                   Contact
-                </Link>
+                </a>
               </div>
             </div>
 
             {/* Contact Info - Desktop */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">{contactInfo.phone}</span>
+            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
+              <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
+                <Phone className=&quot;w-4 h-4&quot; />
+                <span className=&quot;text-sm font-medium&quot;>{contactInfo.phone}</span>
               </div>
               <Link
-                href="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                href=&quot;/contact&quot;
+                className=&quot;px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105&quot;
               >
                 Get Started
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
             </button>
           </div>
         </div>
@@ -320,7 +320,7 @@ const UltraAdvancedNavigation2026 = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden&quot;
             onClick={() => setIsOpen(false)}
           >
             <motion.div
@@ -328,106 +328,106 @@ const UltraAdvancedNavigation2026 = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
+              className=&quot;absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto&quot;
               onClick={(e) => e.stopPropagation()}
             >
               {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-5 h-5 text-white" />
+              <div className=&quot;flex items-center justify-between mb-8&quot;>
+                <div className=&quot;flex items-center space-x-3&quot;>
+                  <div className=&quot;w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center&quot;>
+                    <Rocket className=&quot;w-5 h-5 text-white&quot; />
                   </div>
-                  <span className="text-white font-bold text-lg">Menu</span>
+                  <span className=&quot;text-white font-bold text-lg&quot;>Menu</span>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
+                  className=&quot;p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
                 >
-                  <X className="w-6 h-6" />
+                  <X className=&quot;w-6 h-6&quot; />
                 </button>
               </div>
 
               {/* Mobile Navigation Items */}
-              <div className="space-y-4">
+              <div className=&quot;space-y-4&quot;>
                 {navigationItems.map((item) => (
-                  <div key={item.name} className="border-b border-gray-700/50 pb-4">
+                  <div key={item.name} className=&quot;border-b border-gray-700/50 pb-4&quot;>
                     <Link
                       href={item.href}
-                      className="flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2"
+                      className=&quot;flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2&quot;
                       onClick={() => setIsOpen(false)}
                     >
                       <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}>
-                        <item.icon className="w-4 h-4 text-white" />
+                        <item.icon className=&quot;w-4 h-4 text-white&quot; />
                       </div>
-                      <span className="font-medium">{item.name}</span>
-                    </Link>
+                      <span className=&quot;font-medium&quot;>{item.name}</span>
+                    </a>
                     
                     {/* Mobile Sub-items */}
-                    <div className="mt-3 ml-11 space-y-2">
+                    <div className=&quot;mt-3 ml-11 space-y-2&quot;>
                       {item.subItems.slice(0, 3).map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
+                          className=&quot;block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1&quot;
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
                 ))}
 
                 {/* Quick Links */}
-                <div className="space-y-3 pt-4">
+                <div className=&quot;space-y-3 pt-4&quot;>
                   <Link
-                    href="/services"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    href=&quot;/services&quot;
+                    className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
                   >
                     All Services
-                  </Link>
+                  </a>
                   <Link
-                    href="/pricing"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    href=&quot;/pricing&quot;
+                    className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
                   >
                     Pricing
-                  </Link>
+                  </a>
                   <Link
-                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    href=&quot;/contact&quot;
+                    className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
                     onClick={() => setIsOpen(false)}
                   >
                     Contact
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Contact Info - Mobile */}
-                <div className="pt-6 border-t border-gray-700/50 space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.phone}</span>
+                <div className=&quot;pt-6 border-t border-gray-700/50 space-y-3&quot;>
+                  <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
+                    <Phone className=&quot;w-4 h-4&quot; />
+                    <span className=&quot;text-sm&quot;>{contactInfo.phone}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.email}</span>
+                  <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
+                    <Mail className=&quot;w-4 h-4&quot; />
+                    <span className=&quot;text-sm&quot;>{contactInfo.email}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
+                  <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
+                    <MapPin className=&quot;w-4 h-4&quot; />
+                    <span className=&quot;text-sm&quot;>{contactInfo.address}</span>
                   </div>
                 </div>
 
                 {/* Get Started Button - Mobile */}
-                <div className="pt-4">
+                <div className=&quot;pt-4&quot;>
                   <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                    href=&quot;/contact&quot;
+                    className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started Today
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -436,7 +436,7 @@ const UltraAdvancedNavigation2026 = () => {
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
+      <div className=&quot;h-20&quot;></div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.7.1&quot;;
 
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
@@ -56,7 +56,7 @@ serve(async (req) => {
         }
       }
     } catch (authError) {
-      console.log("Auth error:", authError);
+      // console.log(&quot;Auth error:&quot;, authError);
       // Continue without user identity
     }
 
@@ -102,7 +102,7 @@ serve(async (req) => {
         }
       }
     } catch (openAIError) {
-      console.error("OpenAI error:", openAIError);
+      console.error(&quot;OpenAI error:&quot;, openAIError);
       // Continue without AI analysis
     }
     

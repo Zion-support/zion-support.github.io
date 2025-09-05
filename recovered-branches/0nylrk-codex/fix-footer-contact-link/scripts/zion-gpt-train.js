@@ -47,7 +47,7 @@ function buildTrainingPairs(records) {
 
   for (const job of records.jobs) {
     pairs.push({
-      prompt: `Create a job description titled "${stripPii(job.title)}"`,
+      prompt: `Create a job description titled &quot;${stripPii(job.title)}&quot;`,
       completion: stripPii(job.description)
     });
   }
@@ -102,7 +102,7 @@ async function createFineTune(filePath) {
     })
   });
   const job = await jobRes.json();
-  console.log('Fine-tune job created:', job.id);
+  // console.log('Fine-tune job created:', job.id);
 }
 
 async function main() {

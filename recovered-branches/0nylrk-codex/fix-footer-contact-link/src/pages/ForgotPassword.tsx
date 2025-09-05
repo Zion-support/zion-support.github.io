@@ -1,27 +1,27 @@
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Mail } from "lucide-react";
+import { useState } from &quot;react&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+import { useForm, type UseFormReturn } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import { z } from &quot;zod&quot;;
+import { Mail } from &quot;lucide-react&quot;;
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+  FormMessage} from &quot;@/components/ui/form&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
 
 // Form validation schema
 const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")});
+  email: z.string().email(&quot;Please enter a valid email&quot;)});
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
@@ -66,9 +66,9 @@ export default function ForgotPassword() {
                   <p className="mt-2 text-sm text-zion-slate-light">
                     We've sent a password reset link to your email address.
                   </p>
-                  <div className="mt-6">
+                  <div className="mt-6&quot;>
                     <Link
-                      to="/login"
+                      to=&quot;/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
                     >
                       Back to login
@@ -77,39 +77,39 @@ export default function ForgotPassword() {
                 </div>
               ) : (
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
                     <FormField
                       control={form.control}
-                      name="email"
+                      name=&quot;email"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                           <FormControl>
-                            <div className="relative">
+                            <div className="relative&quot;>
                               <Input
-                                placeholder="you@example.com"
+                                placeholder=&quot;you@example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                                 {...field}
                               />
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400&quot; />
                         </FormItem>
                       )}
                     />
 
                     <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      type=&quot;submit"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                       disabled={isLoading}
                     >
-                      {isLoading ? "Sending..." : "Reset Password"}
+                      {isLoading ? &quot;Sending...&quot; : &quot;Reset Password"}
                     </Button>
 
-                    <div className="text-center">
+                    <div className="text-center&quot;>
                       <Link
-                        to="/login"
+                        to=&quot;/login"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
                         Back to login

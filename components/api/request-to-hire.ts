@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const timestamp = new Date().toISOString();
-    console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
+    // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
 
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests');

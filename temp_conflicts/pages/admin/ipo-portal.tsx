@@ -18,15 +18,15 @@ export default function IpoPortal({ user }: Props) {
 
   return (
     <EnhancedLayout>
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-semibold">IPO Readiness Portal</h1>
-        <div className="flex gap-2">
-          <a href="/api/ipo/export-metrics" className="px-3 py-2 border rounded">Export Metrics</a>
-          <a href="/api/ipo/audit-log" className="px-3 py-2 border rounded">Download Audit Log</a>
+      <div className=&quot;flex items-center justify-between mb-6&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>IPO Readiness Portal</h1>
+        <div className=&quot;flex gap-2&quot;>
+          <a href=&quot;/api/ipo/export-metrics&quot; className=&quot;px-3 py-2 border rounded&quot;>Export Metrics</Link>
+          <a href=&quot;/api/ipo/audit-log&quot; className=&quot;px-3 py-2 border rounded&quot;>Download Audit Log</Link>
         </div>
       </div>
 
-      <div className="flex gap-2 mb-6">
+      <div className=&quot;flex gap-2 mb-6&quot;>
         <button onClick={() => setActiveTab('dashboard')} className={`px-3 py-2 rounded border ${activeTab==='dashboard' ? 'bg-black text-white dark:bg-white dark:text-black' : ''}`}>KPI Dashboard</button>
         <button onClick={() => setActiveTab('dataroom')} className={`px-3 py-2 rounded border ${activeTab==='dataroom' ? 'bg-black text-white dark:bg-white dark:text-black' : ''}`}>Data Room</button>
         <button onClick={() => setActiveTab('updates')} className={`px-3 py-2 rounded border ${activeTab==='updates' ? 'bg-black text-white dark:bg-white dark:text-black' : ''}`}>Investor Updates</button>
@@ -48,24 +48,24 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4&quot;>
       {metrics.map((m) => (
-        <div key={m.label} className="border rounded p-4">
-          <div className="text-sm text-gray-500">{m.label}</div>
-          <div className="text-2xl font-semibold">{m.value}</div>
+        <div key={m.label} className=&quot;border rounded p-4&quot;>
+          <div className=&quot;text-sm text-gray-500&quot;>{m.label}</div>
+          <div className=&quot;text-2xl font-semibold&quot;>{m.value}</div>
           {typeof m.trend === 'number' && (
             <div className={`text-sm ${m.trend >= 0 ? 'text-green-600' : 'text-red-600'}`}>{m.trend >= 0 ? '+' : ''}{m.trend}%</div>
           )}
         </div>
       ))}
-      <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="border rounded p-4">
-          <div className="font-medium mb-2">Retention cohorts</div>
-          <img src="/api/ipo/cohort-chart" alt="Retention cohorts" className="w-full h-64 object-cover bg-gray-100" />
+      <div className=&quot;md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+        <div className=&quot;border rounded p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Retention cohorts</div>
+          <img src=&quot;/api/ipo/cohort-chart&quot; alt=&quot;Retention cohorts&quot; className=&quot;w-full h-64 object-cover bg-gray-100&quot; />
         </div>
-        <div className="border rounded p-4">
-          <div className="font-medium mb-2">Global user breakdown</div>
-          <img src="/api/ipo/geo-chart" alt="Global user breakdown" className="w-full h-64 object-cover bg-gray-100" />
+        <div className=&quot;border rounded p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Global user breakdown</div>
+          <img src=&quot;/api/ipo/geo-chart&quot; alt=&quot;Global user breakdown&quot; className=&quot;w-full h-64 object-cover bg-gray-100&quot; />
         </div>
       </div>
     </div>
@@ -103,21 +103,21 @@ function DataRoom() {
 
   return (
     <div>
-      <div className="flex gap-2 mb-4 overflow-x-auto">
+      <div className=&quot;flex gap-2 mb-4 overflow-x-auto&quot;>
         {sections.map((s) => (
           <button key={s} onClick={() => setActive(s)} className={`px-3 py-2 rounded border ${active===s ? 'bg-black text-white dark:bg-white dark:text-black' : ''}`}>{s}</button>
         ))}
       </div>
-      <div className="mb-4">
-        <input type="file" onChange={onUpload} />
+      <div className=&quot;mb-4&quot;>
+        <input type=&quot;file&quot; onChange={onUpload} />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-3&quot;>
         {files.map((f) => (
-          <div key={f.name} className="border rounded p-3 flex items-center justify-between">
-            <div className="truncate">{f.name}</div>
-            <div className="flex gap-2">
-              <button className="px-2 py-1 border rounded" onClick={() => onOpen(f.name)}>Open</button>
-              <a className="px-2 py-1 border rounded" href={`/api/ipo/dataroom/download?section=${encodeURIComponent(active)}&file=${encodeURIComponent(f.name)}`}>Download</a>
+          <div key={f.name} className=&quot;border rounded p-3 flex items-center justify-between&quot;>
+            <div className=&quot;truncate&quot;>{f.name}</div>
+            <div className=&quot;flex gap-2&quot;>
+              <button className=&quot;px-2 py-1 border rounded&quot; onClick={() => onOpen(f.name)}>Open</button>
+              <a className=&quot;px-2 py-1 border rounded&quot; href={`/api/ipo/dataroom/download?section=${encodeURIComponent(active)}&file=${encodeURIComponent(f.name)}`}>Download</Link>
             </div>
           </div>
         ))}
@@ -154,35 +154,35 @@ function InvestorUpdates() {
 
   return (
     <div>
-      <div className="mb-4">
-        <button className="px-3 py-2 border rounded" onClick={() => setShowModal(true)}>Create Update</button>
+      <div className=&quot;mb-4&quot;>
+        <button className=&quot;px-3 py-2 border rounded&quot; onClick={() => setShowModal(true)}>Create Update</button>
       </div>
-      <div className="space-y-3">
+      <div className=&quot;space-y-3&quot;>
         {updates.map((u) => (
-          <div key={u.id} className="border rounded p-3 flex items-center justify-between">
+          <div key={u.id} className=&quot;border rounded p-3 flex items-center justify-between&quot;>
             <div>
-              <div className="font-medium">{u.title}</div>
-              <div className="text-sm text-gray-500">{u.date}</div>
+              <div className=&quot;font-medium&quot;>{u.title}</div>
+              <div className=&quot;text-sm text-gray-500&quot;>{u.date}</div>
             </div>
-            <div className="flex gap-2">
-              <a className="px-2 py-1 border rounded" href={`/api/ipo/updates/export?id=${encodeURIComponent(u.id)}`}>Email PDF</a>
-              <a className="px-2 py-1 border rounded" href={`/api/ipo/updates/opens?id=${encodeURIComponent(u.id)}`}>Opens</a>
+            <div className=&quot;flex gap-2&quot;>
+              <a className=&quot;px-2 py-1 border rounded&quot; href={`/api/ipo/updates/export?id=${encodeURIComponent(u.id)}`}>Email PDF</Link>
+              <a className=&quot;px-2 py-1 border rounded&quot; href={`/api/ipo/updates/opens?id=${encodeURIComponent(u.id)}`}>Opens</Link>
             </div>
           </div>
         ))}
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4">
-          <div className="w-full max-w-lg bg-white dark:bg-gray-900 rounded p-4 space-y-3">
-            <div className="text-lg font-semibold">Create Update</div>
-            <input className="w-full border px-3 py-2 rounded" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-            <input className="w-full border px-3 py-2 rounded" placeholder="Date" value={date} onChange={(e) => setDate(e.target.value)} />
-            <textarea className="w-full border px-3 py-2 rounded" placeholder="Summary" value={summary} onChange={(e) => setSummary(e.target.value)} />
-            <textarea className="w-full border px-3 py-2 rounded" placeholder="KPIs" value={kpis} onChange={(e) => setKpis(e.target.value)} />
-            <div className="flex justify-end gap-2">
-              <button className="px-3 py-2 border rounded" onClick={() => setShowModal(false)}>Cancel</button>
-              <button className="px-3 py-2 border rounded bg-black text-white dark:bg-white dark:text-black" onClick={save}>Save</button>
+        <div className=&quot;fixed inset-0 bg-black/50 flex items-center justify-center p-4&quot;>
+          <div className=&quot;w-full max-w-lg bg-white dark:bg-gray-900 rounded p-4 space-y-3&quot;>
+            <div className=&quot;text-lg font-semibold&quot;>Create Update</div>
+            <input className=&quot;w-full border px-3 py-2 rounded&quot; placeholder=&quot;Title&quot; value={title} onChange={(e) => setTitle(e.target.value)} />
+            <input className=&quot;w-full border px-3 py-2 rounded&quot; placeholder=&quot;Date&quot; value={date} onChange={(e) => setDate(e.target.value)} />
+            <textarea className=&quot;w-full border px-3 py-2 rounded&quot; placeholder=&quot;Summary&quot; value={summary} onChange={(e) => setSummary(e.target.value)} />
+            <textarea className=&quot;w-full border px-3 py-2 rounded&quot; placeholder=&quot;KPIs&quot; value={kpis} onChange={(e) => setKpis(e.target.value)} />
+            <div className=&quot;flex justify-end gap-2&quot;>
+              <button className=&quot;px-3 py-2 border rounded&quot; onClick={() => setShowModal(false)}>Cancel</button>
+              <button className=&quot;px-3 py-2 border rounded bg-black text-white dark:bg-white dark:text-black&quot; onClick={save}>Save</button>
             </div>
           </div>
         </div>
@@ -211,27 +211,27 @@ function DealRoom() {
   }
 
   return (
-    <div className="space-y-4">
-      <div className="border rounded p-4">
-        <div className="font-medium mb-2">Current Round Terms</div>
-        <pre className="text-sm whitespace-pre-wrap">{JSON.stringify(terms, null, 2)}</pre>
+    <div className=&quot;space-y-4&quot;>
+      <div className=&quot;border rounded p-4&quot;>
+        <div className=&quot;font-medium mb-2&quot;>Current Round Terms</div>
+        <pre className=&quot;text-sm whitespace-pre-wrap&quot;>{JSON.stringify(terms, null, 2)}</pre>
       </div>
-      <div className="border rounded p-4">
-        <div className="font-medium mb-2">Offerings</div>
-        <div className="flex gap-4">
-          <label className="flex items-center gap-2"><input type="checkbox" checked={offerings.safe} onChange={(e) => setOfferings((o) => ({ ...o, safe: e.target.checked }))} /> SAFE</label>
-          <label className="flex items-center gap-2"><input type="checkbox" checked={offerings.equity} onChange={(e) => setOfferings((o) => ({ ...o, equity: e.target.checked }))} /> Equity</label>
-          <label className="flex items-center gap-2"><input type="checkbox" checked={offerings.token} onChange={(e) => setOfferings((o) => ({ ...o, token: e.target.checked }))} /> Token</label>
+      <div className=&quot;border rounded p-4&quot;>
+        <div className=&quot;font-medium mb-2&quot;>Offerings</div>
+        <div className=&quot;flex gap-4&quot;>
+          <label className=&quot;flex items-center gap-2&quot;><input type=&quot;checkbox&quot; checked={offerings.safe} onChange={(e) => setOfferings((o) => ({ ...o, safe: e.target.checked }))} /> SAFE</label>
+          <label className=&quot;flex items-center gap-2&quot;><input type=&quot;checkbox&quot; checked={offerings.equity} onChange={(e) => setOfferings((o) => ({ ...o, equity: e.target.checked }))} /> Equity</label>
+          <label className=&quot;flex items-center gap-2&quot;><input type=&quot;checkbox&quot; checked={offerings.token} onChange={(e) => setOfferings((o) => ({ ...o, token: e.target.checked }))} /> Token</label>
         </div>
-        <div className="mt-3">
-          <button className="px-3 py-2 border rounded" onClick={saveOfferings}>Save</button>
+        <div className=&quot;mt-3&quot;>
+          <button className=&quot;px-3 py-2 border rounded&quot; onClick={saveOfferings}>Save</button>
         </div>
       </div>
-      <div className="border rounded p-4">
-        <div className="font-medium mb-2">Soft Commitments</div>
-        <div className="flex gap-2">
-          <input className="border px-3 py-2 rounded" placeholder="$ Amount" value={softCommit} onChange={(e) => setSoftCommit(e.target.value)} />
-          <button className="px-3 py-2 border rounded" onClick={submitSoftCommit}>Submit</button>
+      <div className=&quot;border rounded p-4&quot;>
+        <div className=&quot;font-medium mb-2&quot;>Soft Commitments</div>
+        <div className=&quot;flex gap-2&quot;>
+          <input className=&quot;border px-3 py-2 rounded&quot; placeholder=&quot;$ Amount&quot; value={softCommit} onChange={(e) => setSoftCommit(e.target.value)} />
+          <button className=&quot;px-3 py-2 border rounded&quot; onClick={submitSoftCommit}>Submit</button>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import fs from "fs";
-import path from "path";
-import { MarketplaceDb, Offer, Project } from "./types";
+import fs from &quot;fs&quot;;
+import path from &quot;path&quot;;
+import { MarketplaceDb, Offer, Project } from &quot;./types&quot;;
 
-const DATA_DIR = path.join(process.cwd(), "data", "runtime");
-const DB_PATH = path.join(DATA_DIR, "marketplace.json");
+const DATA_DIR = path.join(process.cwd(), &quot;data&quot;, &quot;runtime&quot;);
+const DB_PATH = path.join(DATA_DIR, &quot;marketplace.json&quot;);
 
 function ensureDataFile(): void {
   if (!fs.existsSync(DATA_DIR)) {
@@ -11,14 +11,14 @@ function ensureDataFile(): void {
   }
   if (!fs.existsSync(DB_PATH)) {
     const initial: MarketplaceDb = { offers: [], projects: [] };
-    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8");
+    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), &quot;utf-8&quot;);
   }
 }
 
 export function readDb(): MarketplaceDb {
   ensureDataFile();
   try {
-    const raw = fs.readFileSync(DB_PATH, "utf-8");
+    const raw = fs.readFileSync(DB_PATH, &quot;utf-8&quot;);
     const data = JSON.parse(raw) as MarketplaceDb;
     if (!data.offers) data.offers = [];
     if (!data.projects) data.projects = [];
@@ -30,7 +30,7 @@ export function readDb(): MarketplaceDb {
 
 export function writeDb(db: MarketplaceDb): void {
   ensureDataFile();
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8");
+  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), &quot;utf-8&quot;);
 }
 
 export function saveOffer(offer: Offer): Offer {

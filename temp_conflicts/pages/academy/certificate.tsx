@@ -21,8 +21,8 @@ export default function CertificatePage() {
   );
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl sm:text-3xl font-semibold">Certificate</h1>
+    <div className=&quot;space-y-6&quot;>
+      <h1 className=&quot;text-2xl sm:text-3xl font-semibold&quot;>Certificate</h1>
       <CertificateView completedCount={completedCount} totalCount={totalCount} />
     </div>
   );

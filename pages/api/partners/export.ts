@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z';
       res.setHeader('Content-Type', 'text/csv');
-      res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
+      res.setHeader('Content-Disposition', `attachment; filename=&quot;${code}-referrals.csv&quot;`);
       return res.status(200).send(csv);
     }
 
@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const csv = rows.map(r => r.join(',')).join('\n');
 
     res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
+    res.setHeader('Content-Disposition', `attachment; filename=&quot;${code}-referrals.csv&quot;`);
     return res.status(200).send(csv);
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });

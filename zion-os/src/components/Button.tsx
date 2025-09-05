@@ -65,10 +65,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   
   const content = (
     <>
-      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
-      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
+      {loading && <LoadingSpinner size=&quot;sm&quot; color=&quot;white&quot; className=&quot;mr-2&quot; />}
+      {icon && iconPosition === 'left' && !loading && <span className=&quot;mr-2&quot;>{icon}</span>}
       <span className={loading ? 'opacity-0' : ''}>{children}</span>
-      {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
+      {icon && iconPosition === 'right' && !loading && <span className=&quot;ml-2&quot;>{icon}</span>}
     </>
   );
   
@@ -100,19 +100,19 @@ export default Button;
 
 // Specialized button variants
 export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="primary" />;
+  return <Button {...props} variant=&quot;primary&quot; />;
 }
 
 export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="secondary" />;
+  return <Button {...props} variant=&quot;secondary&quot; />;
 }
 
 export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="outline" />;
+  return <Button {...props} variant=&quot;outline&quot; />;
 }
 
 export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
-  return <Button {...props} variant="ghost" />;
+  return <Button {...props} variant=&quot;ghost&quot; />;
 }
 
 // Icon button variant
@@ -122,7 +122,7 @@ export function IconButton({
   ...props
 }: ButtonProps & { icon: React.ReactNode }) {
   return (
-    <Button {...props} icon={icon} iconPosition="left" size="sm">
+    <Button {...props} icon={icon} iconPosition=&quot;left&quot; size=&quot;sm&quot;>
       {children}
     </Button>
   );
@@ -141,8 +141,8 @@ export function FloatingActionButton({
       icon={icon}
       onClick={onClick}
       className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
-      size="lg"
-      rounded="full"
+      size=&quot;lg&quot;
+      rounded=&quot;full&quot;
     />
   );
 }

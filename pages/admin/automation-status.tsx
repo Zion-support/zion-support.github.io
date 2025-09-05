@@ -6,7 +6,7 @@ const AutomationStatus: NextPage = () => {
     <div>
       <Head>
         <title>AutomationStatus - Zion Tech Solutions</title>
-        <meta name="description" content="AutomationStatus page" />
+        <meta name=&quot;description&quot; content=&quot;AutomationStatus page&quot; />
       </Head>
       
       <main>

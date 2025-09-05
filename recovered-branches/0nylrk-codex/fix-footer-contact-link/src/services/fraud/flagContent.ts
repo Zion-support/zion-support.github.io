@@ -18,7 +18,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-    console.log('Flagging content for review:', {
+    // console.log('Flagging content for review:', {
       userId,
       contentType,
       contentId,

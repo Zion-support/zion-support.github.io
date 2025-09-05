@@ -7,13 +7,13 @@ const ApiDevelopmentChat: NextPage = () => {
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />
+        <meta name=&quot;description&quot; content=&quot;ApiDevelopmentChat service&quot; />
       </Head>
       
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href=&quot;/services&quot;>Back to Services</a>
       </main>
     </div>
   );

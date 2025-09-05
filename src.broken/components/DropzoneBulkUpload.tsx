@@ -44,7 +44,7 @@ export function DropzoneBulkUpload() {
       const data = await res.json();
       setReport(data);
       if (data.errors && data.errors.length) {
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n');
+        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},&quot;${e.error}&quot;`)].join('\n');
         const blob = new Blob([csv], { type: 'text/csv' });
         setErrorUrl(URL.createObjectURL(blob));
       }
@@ -56,7 +56,7 @@ export function DropzoneBulkUpload() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <div
         {...getRootProps({
           className:
@@ -69,19 +69,19 @@ export function DropzoneBulkUpload() {
           <p>Drag and drop CSV file here, or click to select file</p>
         )}
       </div>
-      {file && <p className="text-sm">Selected: {file.name}</p>}
+      {file && <p className=&quot;text-sm&quot;>Selected: {file.name}</p>}
       <Button onClick={handleUpload} disabled={!file}>Upload</Button>
       {progress > 0 && progress < 100 && <Progress value={progress} />}
       {report && (
-        <div className="text-sm">
+        <div className=&quot;text-sm&quot;>
           <p>Created: {report.created}</p>
           {report.errors.length > 0 && (
-            <div className="mt-2">
-              <p className="text-red-500">Errors: {report.errors.length}</p>
+            <div className=&quot;mt-2&quot;>
+              <p className=&quot;text-red-500&quot;>Errors: {report.errors.length}</p>
               {errorUrl && (
-                <a href={errorUrl} download="errors.csv" className="underline">
+                <a href={errorUrl} download=&quot;errors.csv&quot; className=&quot;underline&quot;>
                   Download error CSV
-                </a>
+                </Link>
               )}
             </div>
           )}

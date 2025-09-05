@@ -127,7 +127,7 @@ export default function EnhancedServicesShowcase() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const
+        ease: &quot;easeOut&quot; as const
       }
     }
   };
@@ -154,49 +154,49 @@ export default function EnhancedServicesShowcase() {
   ];
 
   return (
-    <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
-      <div className="min-h-screen">
+    <UltraAdvancedFuturisticMatrixBackground intensity=&quot;high&quot;       colorScheme=&quot;quantum&quot;>
+      <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>
-          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />
-          <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="600+ cutting-edge technology services showcase" />
-          <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase" />
+          <meta name=&quot;description&quot; content=&quot;Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Enhanced Services Showcase - Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;600+ cutting-edge technology services showcase&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/enhanced-services-showcase&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/enhanced-services-showcase&quot; />
         </Head>
 
         {/* Hero Section */}
-        <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className=&quot;relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>
                 Enhanced Services Showcase
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
                 600+ Revolutionary AI, Quantum Computing & IT Services
               </p>
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+              <p className=&quot;text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto&quot;>
                 From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30">
-                  <Users className="w-5 h-5 text-cyan-400" />
-                  <span className="text-cyan-300 font-semibold">600+ Services</span>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;>
+                <div className=&quot;flex items-center justify-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 border border-cyan-500/30&quot;>
+                  <Users className=&quot;w-5 h-5 text-cyan-400&quot; />
+                  <span className=&quot;text-cyan-300 font-semibold&quot;>600+ Services</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30">
-                  <TrendingUp className="w-5 h-5 text-purple-400" />
-                  <span className="text-purple-300 font-semibold">1000% ROI</span>
+                <div className=&quot;flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 border border-purple-500/30&quot;>
+                  <TrendingUp className=&quot;w-5 h-5 text-purple-400&quot; />
+                  <span className=&quot;text-purple-300 font-semibold&quot;>1000% ROI</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30">
-                  <Zap className="w-5 h-5 text-pink-400" />
-                  <span className="text-pink-300 font-semibold">24/7 Support</span>
+                <div className=&quot;flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30&quot;>
+                  <Zap className=&quot;w-5 h-5 text-pink-400&quot; />
+                  <span className=&quot;text-pink-300 font-semibold&quot;>24/7 Support</span>
                 </div>
               </div>
             </motion.div>
@@ -204,24 +204,24 @@ export default function EnhancedServicesShowcase() {
         </section>
 
         {/* Featured Service Categories */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className=&quot;py-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6&quot;>
                 Featured Service Categories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Explore our most innovative and high-impact service categories
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
               {featuredServices.map((category, index) => (
                 <motion.div
                   key={index}
@@ -229,31 +229,31 @@ export default function EnhancedServicesShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="relative"
+                  className=&quot;relative&quot;
                 >
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="relative z-10">
-                      <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
-                      <p className="text-lg mb-6 opacity-90">{category.description}</p>
+                    <div className=&quot;absolute inset-0 bg-black/20&quot;></div>
+                    <div className=&quot;relative z-10&quot;>
+                      <h3 className=&quot;text-2xl font-bold mb-4&quot;>{category.title}</h3>
+                      <p className=&quot;text-lg mb-6 opacity-90&quot;>{category.description}</p>
                       
-                      <div className="space-y-3">
+                      <div className=&quot;space-y-3&quot;>
                         {category.services.map((service, serviceIndex) => (
-                          <div key={serviceIndex} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
-                            <span className="text-2xl">{service.icon}</span>
-                            <div className="flex-1">
-                              <div className="font-semibold">{service.name}</div>
-                              <div className="text-sm opacity-80">{service.price}{service.period}</div>
+                          <div key={serviceIndex} className=&quot;flex items-center space-x-3 bg-white/10 rounded-lg p-3&quot;>
+                            <span className=&quot;text-2xl&quot;>{service.icon}</span>
+                            <div className=&quot;flex-1&quot;>
+                              <div className=&quot;font-semibold&quot;>{service.name}</div>
+                              <div className=&quot;text-sm opacity-80&quot;>{service.price}{service.period}</div>
                             </div>
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className=&quot;w-4 h-4&quot; />
                           </div>
                         ))}
                       </div>
                       
                       <Button 
                         href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        variant="secondary"
-                        className="mt-6 w-full"
+                        variant=&quot;secondary&quot;
+                        className=&quot;mt-6 w-full&quot;
                       >
                         View All {category.title.split(' ')[0" Services
                       </Button>
@@ -273,10 +273,10 @@ export default function EnhancedServicesShowcase() {
                 {/* Search */}
                 <div className="flex-1">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
                     <input
-                      type="text"
-                      placeholder="Search services..."
+                      type=&quot;text&quot;
+                      placeholder=&quot;Search services..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -346,11 +346,11 @@ export default function EnhancedServicesShowcase() {
 
         {/* Services Grid/List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto&quot;>
             <motion.div
               variants={containerVariants}
-              initial="hidden"
-              animate="visible"
+              initial=&quot;hidden&quot;
+              animate=&quot;visible"
               className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
@@ -411,8 +411,8 @@ export default function EnhancedServicesShowcase() {
                           <ExternalLink className="ml-2 w-4 h-4" />
                         </Button>
                         <Button 
-                          href="/contact"
-                          variant="secondary"
+                          href="/contact&quot;
+                          variant=&quot;secondary"
                           className="flex-1"
                         >
                           Get Started
@@ -465,16 +465,16 @@ export default function EnhancedServicesShowcase() {
                         <div className="flex gap-3">
                           <Button 
                             href={service.link} 
-                            variant="primary"
-                            size="sm"
+                            variant="primary&quot;
+                            size=&quot;sm"
                           >
                             Learn More
                             <ExternalLink className="ml-2 w-4 h-4" />
                           </Button>
                           <Button 
-                            href="/contact"
-                            variant="secondary"
-                            size="sm"
+                            href="/contact&quot;
+                            variant=&quot;secondary&quot;
+                            size=&quot;sm"
                           >
                             Get Started
                           </Button>
@@ -492,12 +492,12 @@ export default function EnhancedServicesShowcase() {
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
                 <Button 
-                  href="#"
+                  href="#&quot;
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  variant="primary"
+                  variant=&quot;primary"
                 >
                   View All Services
                 </Button>
@@ -539,22 +539,22 @@ export default function EnhancedServicesShowcase() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  href="/contact"
-                  variant="primary"
-                  size="lg"
+                  href="/contact&quot;
+                  variant=&quot;primary&quot;
+                  size=&quot;lg"
                   className="text-lg px-8 py-4"
                 >
                   Start Your Transformation
                   <Rocket className="ml-2 w-6 h-6" />
                 </Button>
                 <Button 
-                  href="/pricing"
-                  variant="secondary"
-                  size="lg"
+                  href="/pricing&quot;
+                  variant=&quot;secondary&quot;
+                  size=&quot;lg"
                   className="text-lg px-8 py-4"
                 >
                   View Pricing
-                  <DollarSign className="ml-2 w-6 h-6" />
+                  <DollarSign className="ml-2 w-6 h-6&quot; />
                 </Button>
               </div>
             </motion.div>
@@ -594,7 +594,7 @@ const Button = ({
     lg: 'px-8 py-4 text-lg'
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant&quot; ${sizeClasses[size" ${className}`;
 
   if (href) {
     return (

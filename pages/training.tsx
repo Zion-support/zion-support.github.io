@@ -34,7 +34,7 @@ export default function TrainingPage() {
       rating: 4.9,
       students: '1,247',
       featured: true,
-      icon: <Brain className="w-12 h-12" />,
+      icon: <Brain className=&quot;w-12 h-12&quot; />,
       highlights: [
         'Hands-on AI consciousness platform development',
         'Real-world project implementation',
@@ -54,7 +54,7 @@ export default function TrainingPage() {
       rating: 4.8,
       students: '892',
       featured: true,
-      icon: <Atom className="w-12 h-12" />,
+      icon: <Atom className=&quot;w-12 h-12&quot; />,
       highlights: [
         'Quantum algorithm development',
         'Enterprise integration strategies',
@@ -74,7 +74,7 @@ export default function TrainingPage() {
       rating: 4.9,
       students: '1,156',
       featured: true,
-      icon: <Rocket className="w-12 h-12" />,
+      icon: <Rocket className=&quot;w-12 h-12&quot; />,
       highlights: [
         'Business process automation design',
         'AI-powered decision making systems',
@@ -97,7 +97,7 @@ export default function TrainingPage() {
       price: '$1,299',
       rating: 4.7,
       students: '2,341',
-      icon: <Brain className="w-8 h-8" />
+      icon: <Brain className=&quot;w-8 h-8&quot; />
     },
     {
       id: 5,
@@ -109,7 +109,7 @@ export default function TrainingPage() {
       price: '$3,999',
       rating: 4.9,
       students: '567',
-      icon: <Brain className="w-8 h-8" />
+      icon: <Brain className=&quot;w-8 h-8&quot; />
     },
     {
       id: 6,
@@ -121,7 +121,7 @@ export default function TrainingPage() {
       price: '$1,899',
       rating: 4.8,
       students: '1,023',
-      icon: <Shield className="w-8 h-8" />
+      icon: <Shield className=&quot;w-8 h-8&quot; />
     },
     {
       id: 7,
@@ -133,7 +133,7 @@ export default function TrainingPage() {
       price: '$2,199',
       rating: 4.7,
       students: '789',
-      icon: <Code className="w-8 h-8" />
+      icon: <Code className=&quot;w-8 h-8&quot; />
     },
 
     // Quantum Computing Programs
@@ -147,7 +147,7 @@ export default function TrainingPage() {
       price: '$1,599',
       rating: 4.6,
       students: '1,456',
-      icon: <Atom className="w-8 h-8" />
+      icon: <Atom className=&quot;w-8 h-8&quot; />
     },
     {
       id: 9,
@@ -159,7 +159,7 @@ export default function TrainingPage() {
       price: '$3,299',
       rating: 4.8,
       students: '423',
-      icon: <Atom className="w-8 h-8" />
+      icon: <Atom className=&quot;w-8 h-8&quot; />
     },
     {
       id: 10,
@@ -171,7 +171,7 @@ export default function TrainingPage() {
       price: '$2,399',
       rating: 4.7,
       students: '678',
-      icon: <Shield className="w-8 h-8" />
+      icon: <Shield className=&quot;w-8 h-8&quot; />
     },
 
     // Autonomous Operations Programs
@@ -185,7 +185,7 @@ export default function TrainingPage() {
       price: '$1,999',
       rating: 4.8,
       students: '945',
-      icon: <Zap className="w-8 h-8" />
+      icon: <Zap className=&quot;w-8 h-8&quot; />
     },
     {
       id: 12,
@@ -197,7 +197,7 @@ export default function TrainingPage() {
       price: '$2,999',
       rating: 4.9,
       students: '567',
-      icon: <Target className="w-8 h-8" />
+      icon: <Target className=&quot;w-8 h-8&quot; />
     },
 
     // Enterprise IT Programs
@@ -211,7 +211,7 @@ export default function TrainingPage() {
       price: '$2,299',
       rating: 4.7,
       students: '823',
-      icon: <Building className="w-8 h-8" />
+      icon: <Building className=&quot;w-8 h-8&quot; />
     },
     {
       id: 14,
@@ -223,7 +223,7 @@ export default function TrainingPage() {
       price: '$1,899',
       rating: 4.6,
       students: '1,134',
-      icon: <Server className="w-8 h-8" />
+      icon: <Server className=&quot;w-8 h-8&quot; />
     },
     {
       id: 15,
@@ -235,7 +235,7 @@ export default function TrainingPage() {
       price: '$1,599',
       rating: 4.8,
       students: '756',
-      icon: <Zap className="w-8 h-8" />
+      icon: <Zap className=&quot;w-8 h-8&quot; />
     }
   ];
 
@@ -245,12 +245,12 @@ export default function TrainingPage() {
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-      'ai-consciousness': <Brain className="w-6 h-6" />,
-      'quantum-computing': <Atom className="w-6 h-6" />,
-      'autonomous-ops': <Rocket className="w-6 h-6" />,
-      'enterprise-it': <Building className="w-6 h-6" />
+      'ai-consciousness': <Brain className=&quot;w-6 h-6&quot; />,
+      'quantum-computing': <Atom className=&quot;w-6 h-6&quot; />,
+      'autonomous-ops': <Rocket className=&quot;w-6 h-6&quot; />,
+      'enterprise-it': <Building className=&quot;w-6 h-6&quot; />
     };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />;
+    return icons[category as keyof typeof icons] || <GraduationCap className=&quot;w-6 h-6&quot; />;
   };
 
   const getCategoryColor = (category: string) => {
@@ -270,37 +270,37 @@ export default function TrainingPage() {
   return (
     <Layout>
       <SEO 
-        title="Training & Certification - Zion Tech Group"
-        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
+        title=&quot;Training & Certification - Zion Tech Group&quot;
+        description=&quot;Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.&quot;
       />
       
-      <div className="min-h-screen">
+      <div className=&quot;min-h-screen&quot;>
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
+        <section className=&quot;relative py-20 lg:py-32 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10&quot; />
+          <div className=&quot;relative z-10 container mx-auto px-4 text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              <h1 className=&quot;text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6&quot;>
                 Training & Certification
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              <p className=&quot;text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8&quot;>
                 Master the future of technology with our comprehensive training programs in AI consciousness, quantum computing, and autonomous operations.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
+              <div className=&quot;flex flex-wrap justify-center gap-4 text-gray-400&quot;>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <GraduationCap className=&quot;w-5 h-5&quot; />
                   <span>Expert-Led Training</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <Award className=&quot;w-5 h-5&quot; />
                   <span>Industry Certifications</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <Users className=&quot;w-5 h-5&quot; />
                   <span>Global Community</span>
                 </div>
               </div>
@@ -309,9 +309,9 @@ export default function TrainingPage() {
         </section>
 
         {/* Category Filters */}
-        <section className="py-10">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-3">
+        <section className=&quot;py-10&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
+            <div className=&quot;flex flex-wrap justify-center gap-3&quot;>
               {trainingCategories.map((category) => (
                 <button
                   key={category.id}
@@ -330,24 +330,24 @@ export default function TrainingPage() {
         </section>
 
         {/* Featured Programs */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
                 Featured Programs
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className=&quot;text-xl text-gray-400&quot;>
                 Our most popular and comprehensive training programs
               </p>
             </motion.div>
             
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <div className=&quot;grid lg:grid-cols-3 gap-8 mb-16&quot;>
               {featuredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
@@ -355,62 +355,62 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
+                  className=&quot;bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden&quot;
                 >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+                  <div className=&quot;h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center&quot;>
                     {program.icon}
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className=&quot;p-6&quot;>
+                    <div className=&quot;flex items-center gap-2 mb-3&quot;>
                       <span className={`px-3 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded-full text-sm border border-${getCategoryColor(program.category)}-500/30`}>
                         {program.category.replace('-', ' ')}
                       </span>
-                      <span className="text-gray-400 text-sm">
+                      <span className=&quot;text-gray-400 text-sm&quot;>
                         {program.level}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
+                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>
                       {program.title}
                     </h3>
-                    <p className="text-gray-300 mb-4">
+                    <p className=&quot;text-gray-300 mb-4&quot;>
                       {program.description}
                     </p>
                     
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                    <div className=&quot;flex items-center gap-4 text-sm text-gray-400 mb-4&quot;>
+                      <div className=&quot;flex items-center gap-1&quot;>
+                        <Clock className=&quot;w-4 h-4&quot; />
                         <span>{program.duration}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
+                      <div className=&quot;flex items-center gap-1&quot;>
+                        <Users className=&quot;w-4 h-4&quot; />
                         <span>{program.students} students</span>
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white font-medium">{program.rating}</span>
+                    <div className=&quot;flex items-center justify-between mb-4&quot;>
+                      <div className=&quot;flex items-center gap-1&quot;>
+                        <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
+                        <span className=&quot;text-white font-medium&quot;>{program.rating}</span>
                       </div>
-                      <span className="text-2xl font-bold text-cyan-400">{program.price}</span>
+                      <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{program.price}</span>
                     </div>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className=&quot;space-y-2 mb-6&quot;>
                       {program.highlights.slice(0, 3).map((highlight, highlightIndex) => (
-                        <div key={highlightIndex} className="flex items-center gap-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
+                        <div key={highlightIndex} className=&quot;flex items-center gap-2 text-sm text-gray-300&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                           <span>{highlight}</span>
                         </div>
                       ))}
                     </div>
                     
                     <a
-                      href="#"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                      href=&quot;#&quot;
+                      className=&quot;w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
                     >
                       Enroll Now
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                      <ArrowRight className=&quot;w-4 h-4&quot; />
+                    </Link>
                   </div>
                 </motion.div>
               ))}
@@ -419,24 +419,24 @@ export default function TrainingPage() {
         </section>
 
         {/* All Programs */}
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-20 bg-black/50&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
                 All Training Programs
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className=&quot;text-xl text-gray-400&quot;>
                 Comprehensive collection of training programs across all technology domains
               </p>
             </motion.div>
             
-            <div className="space-y-4">
+            <div className=&quot;space-y-4&quot;>
               {filteredPrograms.map((program, index) => (
                 <motion.div
                   key={program.id}
@@ -444,59 +444,59 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
+                  className=&quot;bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden&quot;
                 >
-                  <div className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className=&quot;p-6&quot;>
+                    <div className=&quot;flex items-start gap-4&quot;>
+                      <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0&quot;>
                         {program.icon}
                       </div>
                       
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
+                      <div className=&quot;flex-1&quot;>
+                        <div className=&quot;flex items-center gap-2 mb-2&quot;>
                           <span className={`px-2 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded text-xs border border-${getCategoryColor(program.category)}-500/30`}>
                             {program.category.replace('-', ' ')}
                           </span>
-                          <span className="text-gray-400 text-xs">
+                          <span className=&quot;text-gray-400 text-xs&quot;>
                             {program.level}
                           </span>
                         </div>
                         
-                        <h3 className="text-lg font-bold text-white mb-2">
+                        <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>
                           {program.title}
                         </h3>
-                        <p className="text-gray-300 text-sm mb-3">
+                        <p className=&quot;text-gray-300 text-sm mb-3&quot;>
                           {program.description}
                         </p>
                         
-                        <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
+                        <div className=&quot;flex items-center gap-4 text-xs text-gray-400 mb-3&quot;>
+                          <div className=&quot;flex items-center gap-1&quot;>
+                            <Clock className=&quot;w-3 h-3&quot; />
                             <span>{program.duration}</span>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Users className="w-3 h-3" />
+                          <div className=&quot;flex items-center gap-1&quot;>
+                            <Users className=&quot;w-3 h-3&quot; />
                             <span>{program.students} students</span>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                          <div className=&quot;flex items-center gap-1&quot;>
+                            <Star className=&quot;w-3 h-3 text-yellow-400 fill-current&quot; />
                             <span>{program.rating}</span>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="text-right flex-shrink-0">
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">
+                      <div className=&quot;text-right flex-shrink-0&quot;>
+                        <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>
                           {program.price}
                         </div>
                         <button
                           onClick={() => toggleProgram(program.id)}
-                          className="text-gray-400 hover:text-white transition-colors duration-300"
+                          className=&quot;text-gray-400 hover:text-white transition-colors duration-300&quot;
                         >
                           {expandedProgram === program.id ? (
-                            <ChevronUp className="w-5 h-5" />
+                            <ChevronUp className=&quot;w-5 h-5&quot; />
                           ) : (
-                            <ChevronDown className="w-5 h-5" />
+                            <ChevronDown className=&quot;w-5 h-5&quot; />
                           )}
                         </button>
                       </div>
@@ -508,68 +508,68 @@ export default function TrainingPage() {
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="mt-4 pt-4 border-t border-gray-700"
+                        className=&quot;mt-4 pt-4 border-t border-gray-700&quot;
                       >
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className=&quot;grid md:grid-cols-2 gap-6&quot;>
                           <div>
-                            <h4 className="text-white font-semibold mb-3">What You'll Learn</h4>
-                            <ul className="space-y-2 text-sm text-gray-300">
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
+                            <h4 className=&quot;text-white font-semibold mb-3&quot;>What You'll Learn</h4>
+                            <ul className=&quot;space-y-2 text-sm text-gray-300&quot;>
+                              <li className=&quot;flex items-center gap-2&quot;>
+                                <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                                 <span>Core concepts and principles</span>
                               </li>
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
+                              <li className=&quot;flex items-center gap-2&quot;>
+                                <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                                 <span>Hands-on practical exercises</span>
                               </li>
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
+                              <li className=&quot;flex items-center gap-2&quot;>
+                                <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                                 <span>Real-world project implementation</span>
                               </li>
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
+                              <li className=&quot;flex items-center gap-2&quot;>
+                                <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
                                 <span>Industry best practices</span>
                               </li>
                             </ul>
                           </div>
                           
                           <div>
-                            <h4 className="text-white font-semibold mb-3">Program Details</h4>
-                            <div className="space-y-2 text-sm text-gray-300">
-                              <div className="flex justify-between">
+                            <h4 className=&quot;text-white font-semibold mb-3&quot;>Program Details</h4>
+                            <div className=&quot;space-y-2 text-sm text-gray-300&quot;>
+                              <div className=&quot;flex justify-between&quot;>
                                 <span>Duration:</span>
-                                <span className="text-white">{program.duration}</span>
+                                <span className=&quot;text-white&quot;>{program.duration}</span>
                               </div>
-                              <div className="flex justify-between">
+                              <div className=&quot;flex justify-between&quot;>
                                 <span>Level:</span>
-                                <span className="text-white">{program.level}</span>
+                                <span className=&quot;text-white&quot;>{program.level}</span>
                               </div>
-                              <div className="flex justify-between">
+                              <div className=&quot;flex justify-between&quot;>
                                 <span>Format:</span>
-                                <span className="text-white">Online + Live Sessions</span>
+                                <span className=&quot;text-white&quot;>Online + Live Sessions</span>
                               </div>
-                              <div className="flex justify-between">
+                              <div className=&quot;flex justify-between&quot;>
                                 <span>Support:</span>
-                                <span className="text-white">24/7 Community + Mentors</span>
+                                <span className=&quot;text-white&quot;>24/7 Community + Mentors</span>
                               </div>
                             </div>
                           </div>
                         </div>
                         
-                        <div className="mt-6 flex gap-3">
+                        <div className=&quot;mt-6 flex gap-3&quot;>
                           <a
-                            href="#"
-                            className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                            href=&quot;#&quot;
+                            className=&quot;flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300&quot;
                           >
                             Enroll Now
-                            <ArrowRight className="w-4 h-4" />
-                          </a>
+                            <ArrowRight className=&quot;w-4 h-4&quot; />
+                          </Link>
                           <a
-                            href="#"
-                            className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                            href=&quot;#&quot;
+                            className=&quot;inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300&quot;
                           >
                             Learn More
-                          </a>
+                          </Link>
                         </div>
                       </motion.div>
                     )}
@@ -581,24 +581,24 @@ export default function TrainingPage() {
         </section>
 
         {/* Learning Paths */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>
                 Learning Paths
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className=&quot;text-xl text-gray-400&quot;>
                 Structured learning journeys to master complete technology domains
               </p>
             </motion.div>
             
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className=&quot;grid lg:grid-cols-3 gap-8&quot;>
               {[
                 {
                   title: 'AI Consciousness Expert',
@@ -606,7 +606,7 @@ export default function TrainingPage() {
                   duration: '6-12 months',
                   courses: 8,
                   level: 'Beginner to Expert',
-                  icon: <Brain className="w-12 h-12" />,
+                  icon: <Brain className=&quot;w-12 h-12&quot; />,
                   color: 'cyan',
                   path: [
                     'AI Consciousness Fundamentals',
@@ -625,7 +625,7 @@ export default function TrainingPage() {
                   duration: '8-16 months',
                   courses: 6,
                   level: 'Intermediate to Expert',
-                  icon: <Atom className="w-12 h-12" />,
+                  icon: <Atom className=&quot;w-12 h-12&quot; />,
                   color: 'purple',
                   path: [
                     'Quantum Computing Basics',
@@ -642,7 +642,7 @@ export default function TrainingPage() {
                   duration: '6-10 months',
                   courses: 5,
                   level: 'Intermediate to Advanced',
-                  icon: <Rocket className="w-12 h-12" />,
+                  icon: <Rocket className=&quot;w-12 h-12&quot; />,
                   color: 'green',
                   path: [
                     'Business Process Analysis',
@@ -659,48 +659,48 @@ export default function TrainingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                  className=&quot;p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300&quot;
                 >
-                  <div className="text-center mb-6">
+                  <div className=&quot;text-center mb-6&quot;>
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                       {path.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
+                    <h3 className=&quot;text-2xl font-bold text-white mb-3&quot;>
                       {path.title}
                     </h3>
-                    <p className="text-gray-300 mb-4">
+                    <p className=&quot;text-gray-300 mb-4&quot;>
                       {path.description}
                     </p>
-                    <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                    <div className=&quot;flex items-center justify-center gap-4 text-sm text-gray-400&quot;>
+                      <div className=&quot;flex items-center gap-1&quot;>
+                        <Clock className=&quot;w-4 h-4&quot; />
                         <span>{path.duration}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
+                      <div className=&quot;flex items-center gap-1&quot;>
+                        <BookOpen className=&quot;w-4 h-4&quot; />
                         <span>{path.courses} courses</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className=&quot;space-y-3 mb-6&quot;>
                     {path.path.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-center gap-3 text-sm">
-                        <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
+                      <div key={stepIndex} className=&quot;flex items-center gap-3 text-sm&quot;>
+                        <div className=&quot;w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold&quot;>
                           {stepIndex + 1}
                         </div>
-                        <span className="text-gray-300">{step}</span>
+                        <span className=&quot;text-gray-300&quot;>{step}</span>
                       </div>
                     ))}
                   </div>
                   
                   <a
-                    href="#"
+                    href=&quot;#&quot;
                     className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
                   >
                     Start Learning Path
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+                    <ArrowRight className=&quot;w-4 h-4&quot; />
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -708,33 +708,33 @@ export default function TrainingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          <div className="container mx-auto px-4 text-center">
+        <section className=&quot;py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Career?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                 Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
                 >
                   Get Personalized Guidance
-                </a>
+                </Link>
                 <a
-                  href="/resources"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  href=&quot;/resources&quot;
+                  className=&quot;px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300&quot;
                 >
                   Explore Free Resources
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

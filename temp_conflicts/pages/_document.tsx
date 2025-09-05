@@ -2,24 +2,24 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function MyDocument() {
   return (
-    <Html lang="en">
+    <Html lang=&quot;en&quot;>
       <Head>
         <title>Zion Tech Group - Pioneering Autonomous Business Operations</title>
-        <meta name="description" content="Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses. Autonomous DevOps, cybersecurity, and business intelligence platforms." />
-        <meta name="keywords" content="AI, artificial intelligence, quantum computing, cybersecurity, DevOps, business intelligence, autonomous systems, emerging technology, blockchain, IoT" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Pioneering Autonomous Business Operations" />
-        <meta property="og:description" content="Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Pioneering Autonomous Business Operations" />
-        <meta name="twitter:description" content="Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses." />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0ea5e9" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name=&quot;description&quot; content=&quot;Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses. Autonomous DevOps, cybersecurity, and business intelligence platforms.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, quantum computing, cybersecurity, DevOps, business intelligence, autonomous systems, emerging technology, blockchain, IoT&quot; />
+        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Zion Tech Group - Pioneering Autonomous Business Operations&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com&quot; />
+        <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;twitter:title&quot; content=&quot;Zion Tech Group - Pioneering Autonomous Business Operations&quot; />
+        <meta name=&quot;twitter:description&quot; content=&quot;Leading-edge AI, quantum computing, and emerging technology solutions that transform businesses.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com&quot; />
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />
+        <meta name=&quot;theme-color&quot; content=&quot;#0ea5e9&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; />
       </Head>
       <body>
         <Main />

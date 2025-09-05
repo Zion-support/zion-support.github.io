@@ -1,12 +1,12 @@
-"use client";
+"use client&quot;;
 
-import Link from "next/link";
-import { ReactNode } from "react";
+import Link from &quot;next/link&quot;;
+import { ReactNode } from &quot;react&quot;;
 
 interface CTAButtonProps {
   href: string;
-  variant?: "primary" | "secondary" | "outline";
-  size?: "small" | "medium" | "large";
+  variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;outline&quot;;
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
@@ -14,24 +14,24 @@ interface CTAButtonProps {
 
 export function CTAButton({ 
   href, 
-  variant = "primary", 
-  size = "medium", 
+  variant = &quot;primary&quot;, 
+  size = &quot;medium&quot;, 
   children, 
-  className = "",
+  className = "&quot;,
   onClick 
 }: CTAButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+  const baseClasses = &quot;inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900&quot;;
   
   const variantClasses = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
-    secondary: "bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500",
-    outline: "bg-transparent hover:bg-white/10 text-white border border-white/20 hover:border-white/40"
+    primary: &quot;bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500&quot;,
+    secondary: &quot;bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500&quot;,
+    outline: &quot;bg-transparent hover:bg-white/10 text-white border border-white/20 hover:border-white/40&quot;
   };
 
   const sizeClasses = {
-    small: "px-4 py-2 text-sm",
-    medium: "px-6 py-3 text-base",
-    large: "px-8 py-4 text-lg"
+    small: &quot;px-4 py-2 text-sm&quot;,
+    medium: &quot;px-6 py-3 text-base&quot;,
+    large: &quot;px-8 py-4 text-lg&quot;
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
@@ -41,7 +41,7 @@ export function CTAButton({
       href={href} 
       className={classes}
       onClick={onClick}
-      role="button"
+      role=&quot;button&quot;
       tabIndex={0}
     >
       {children}

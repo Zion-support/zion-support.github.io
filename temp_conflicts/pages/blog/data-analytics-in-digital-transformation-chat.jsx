@@ -7,13 +7,13 @@ const DataAnalyticsInDigitalTransformationChat = () => {
     <div>
       <Head>
         <title>DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions</title>
-        <meta name="description" content="DataAnalyticsInDigitalTransformationChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;DataAnalyticsInDigitalTransformationChat blog post&quot; />
       </Head>
       
       <main>
         <h1>DataAnalyticsInDigitalTransformationChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

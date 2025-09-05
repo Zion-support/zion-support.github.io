@@ -32,7 +32,7 @@ export function MilestoneSuggestions({
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || "Other"
+      projectType: projectType || &quot;Other&quot;
     };
 
     const milestones = await generateMilestones(input);
@@ -54,22 +54,22 @@ export function MilestoneSuggestions({
   };
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       {!showSuggestions && (
         <Button
-          variant="outline"
+          variant=&quot;outline&quot;
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
-          className="w-full"
+          className=&quot;w-full&quot;
         >
           {isGenerating ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
               Generating milestones...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className=&quot;mr-2 h-4 w-4&quot; />
               Suggest Project Milestones with AI
             </>
           )}
@@ -78,36 +78,36 @@ export function MilestoneSuggestions({
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="text-lg flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-primary" />
+          <CardHeader className=&quot;pb-3&quot;>
+            <CardTitle className=&quot;text-lg flex items-center&quot;>
+              <Sparkles className=&quot;h-5 w-5 mr-2 text-primary&quot; />
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-3">
+            <div className=&quot;space-y-3&quot;>
               {generatedMilestones.map((milestone, index) => (
-                <div key={index} className="p-3 border rounded-lg bg-muted/10">
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="font-medium flex items-center">
+                <div key={index} className=&quot;p-3 border rounded-lg bg-muted/10&quot;>
+                  <div className=&quot;flex items-center justify-between mb-1&quot;>
+                    <div className=&quot;font-medium flex items-center&quot;>
                       {milestone.title}
-                      <Badge variant="secondary" className="ml-2 text-xs">
+                      <Badge variant=&quot;secondary&quot; className=&quot;ml-2 text-xs&quot;>
                         AI Suggested
                       </Badge>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className=&quot;text-sm text-muted-foreground&quot;>
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
-                  <div className="flex justify-between items-center mt-2 text-sm">
+                  <p className=&quot;text-sm text-muted-foreground&quot;>{milestone.description}</p>
+                  <div className=&quot;flex justify-between items-center mt-2 text-sm&quot;>
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
 
-              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
-                <Check className="h-4 w-4 mr-1 text-green-500" />
+              <div className=&quot;flex items-center justify-center mt-4 text-sm text-muted-foreground&quot;>
+                <Check className=&quot;h-4 w-4 mr-1 text-green-500&quot; />
                 These milestones will be added to your contract
               </div>
             </div>

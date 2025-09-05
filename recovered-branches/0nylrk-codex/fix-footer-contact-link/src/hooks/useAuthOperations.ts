@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import type { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
+import { useState, useEffect } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { trackReferral, checkUrlForReferralCode } from &quot;@/utils/referralUtils&quot;;
+import { cleanupAuthState } from &quot;@/utils/authUtils&quot;;
 
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
@@ -27,23 +27,23 @@ export function useAuthOperations(
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
         return { data: null, error: error.message };
       }
 
       toast({
-        title: "Login successful!",
+        title: &quot;Login successful!&quot;,
         description: `Welcome back, ${email}!`});
 
       return { data, error: null };
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Oh no! Something went wrong.",
-        description: "Failed to sign in. Please check your credentials."});
-      return { data: null, error: "Failed to sign in." };
+        variant: &quot;destructive&quot;,
+        title: &quot;Oh no! Something went wrong.&quot;,
+        description: &quot;Failed to sign in. Please check your credentials.&quot;});
+      return { data: null, error: &quot;Failed to sign in.&quot; };
     } finally {
       setIsLoading(false);
     }
@@ -61,8 +61,8 @@ export function useAuthOperations(
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Error during signup",
+          variant: &quot;destructive&quot;,
+          title: &quot;Error during signup&quot;,
           description: error.message});
         return { data: null, error: error.message };
       }
@@ -74,16 +74,16 @@ export function useAuthOperations(
       }
 
       toast({
-        title: "Signup successful!",
+        title: &quot;Signup successful!&quot;,
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
 
       return { data, error: null };
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Oh no! Something went wrong.",
-        description: "Failed to sign up. Please try again."});
-      return { data: null, error: "Failed to sign up." };
+        variant: &quot;destructive&quot;,
+        title: &quot;Oh no! Something went wrong.&quot;,
+        description: &quot;Failed to sign up. Please try again.&quot;});
+      return { data: null, error: &quot;Failed to sign up.&quot; };
     } finally {
       setIsLoading(false);
     }
@@ -96,21 +96,21 @@ export function useAuthOperations(
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
       } else {
         setUser(null); // Clear the user state upon successful logout
         toast({
-          title: "Logout successful!",
-          description: "You have been successfully logged out."});
+          title: &quot;Logout successful!&quot;,
+          description: &quot;You have been successfully logged out.&quot;});
       }
     } catch (error) {
-      console.error("Logout failed:", error);
+      console.error(&quot;Logout failed:&quot;, error);
       toast({
-        variant: "destructive",
-        title: "Logout failed",
-        description: "There was an issue logging you out. Please try again."});
+        variant: &quot;destructive&quot;,
+        title: &quot;Logout failed&quot;,
+        description: &quot;There was an issue logging you out. Please try again.&quot;});
     } finally {
       setIsLoading(false);
     }
@@ -124,23 +124,23 @@ export function useAuthOperations(
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
         return { data: null, error: error.message };
       }
 
       toast({
-        title: "Password reset email sent!",
+        title: &quot;Password reset email sent!&quot;,
         description: `Please check your email (${email}) for instructions on how to reset your password.`});
 
       return { data, error: null };
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Oh no! Something went wrong.",
-        description: "Failed to send reset password email. Please try again."});
-      return { data: null, error: "Failed to send reset password email." };
+        variant: &quot;destructive&quot;,
+        title: &quot;Oh no! Something went wrong.&quot;,
+        description: &quot;Failed to send reset password email. Please try again.&quot;});
+      return { data: null, error: &quot;Failed to send reset password email.&quot; };
     } finally {
       setIsLoading(false);
     }
@@ -150,11 +150,11 @@ export function useAuthOperations(
     setIsLoading(true);
     try {
       if (!profileData || !profileData.id) {
-        throw new Error("Profile data or user ID is missing.");
+        throw new Error(&quot;Profile data or user ID is missing.&quot;);
       }
 
       const { error } = await supabase
-        .from("profiles")
+        .from(&quot;profiles&quot;)
         .update({
           display_name: profileData.displayName,
           user_type: profileData.userType,
@@ -162,12 +162,12 @@ export function useAuthOperations(
           bio: profileData.bio,
           avatar_url: profileData.avatarUrl,
           headline: profileData.headline})
-        .eq("id", profileData.id);
+        .eq(&quot;id&quot;, profileData.id);
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Failed to update profile",
+          variant: &quot;destructive&quot;,
+          title: &quot;Failed to update profile&quot;,
           description: error.message});
         return { error: error.message };
       }
@@ -181,17 +181,17 @@ export function useAuthOperations(
       });
 
       toast({
-        title: "Profile updated!",
-        description: "Your profile has been successfully updated."});
+        title: &quot;Profile updated!&quot;,
+        description: &quot;Your profile has been successfully updated.&quot;});
 
       return { error: null };
     } catch (error) {
-      console.error("Profile update failed:", error);
+      console.error(&quot;Profile update failed:&quot;, error);
       toast({
-        variant: "destructive",
-        title: "Profile update failed",
-        description: "There was an issue updating your profile. Please try again."});
-      return { error: "Failed to update profile." };
+        variant: &quot;destructive&quot;,
+        title: &quot;Profile update failed&quot;,
+        description: &quot;There was an issue updating your profile. Please try again.&quot;});
+      return { error: &quot;Failed to update profile.&quot; };
     } finally {
       setIsLoading(false);
     }
@@ -201,12 +201,12 @@ export function useAuthOperations(
     setIsLoading(true);
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-        provider: "google"});
+        provider: &quot;google&quot;});
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
       }
     } finally {
@@ -218,12 +218,12 @@ export function useAuthOperations(
     setIsLoading(true);
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-        provider: "facebook"});
+        provider: &quot;facebook&quot;});
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
       }
     } finally {
@@ -235,12 +235,12 @@ export function useAuthOperations(
     setIsLoading(true);
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-        provider: "twitter"});
+        provider: &quot;twitter&quot;});
 
       if (error) {
         toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
+          variant: &quot;destructive&quot;,
+          title: &quot;Oh no! Something went wrong.&quot;,
           description: error.message});
       }
     } finally {
@@ -253,7 +253,7 @@ export function useAuthOperations(
     try {
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
-        throw new Error("Web3 wallet not found");
+        throw new Error(&quot;Web3 wallet not found&quot;);
       }
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];

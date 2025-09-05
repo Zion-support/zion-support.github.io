@@ -202,13 +202,13 @@ class ChunkErrorHandler {
     `;
 
     errorDiv.innerHTML = `
-      <div style="text-align: center; padding: 2rem; max-width: 500px;">
-        <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
-        <p style="margin-bottom: 1.5rem; line-height: 1.5;">
+      <div style=&quot;text-align: center; padding: 2rem; max-width: 500px;&quot;>
+        <h2 style=&quot;margin-bottom: 1rem;&quot;>Connection Issue</h2>
+        <p style=&quot;margin-bottom: 1.5rem; line-height: 1.5;&quot;>
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>
-        <button onclick="window.location.reload()" style="
+        <button onclick=&quot;window.location.reload()&quot; style=&quot;
           background: #0070f3;
           color: white;
           border: none;
@@ -217,10 +217,10 @@ class ChunkErrorHandler {
           font-size: 1rem;
           cursor: pointer;
           margin-right: 1rem;
-        ">
+        &quot;>
           Try Again
         </button>
-        <button onclick="window.location.href='/'" style="
+        <button onclick="window.location.href='/'" style=&quot;
           background: #666;
           color: white;
           border: none;
@@ -228,7 +228,7 @@ class ChunkErrorHandler {
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
-        ">
+        &quot;>
           Go Home
         </button>
       </div>

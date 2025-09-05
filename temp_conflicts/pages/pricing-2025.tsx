@@ -11,118 +11,118 @@ import EnhancedFooter from '../components/EnhancedFooter';
 export default function PricingPage() {
   const plans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI",
+      name: &quot;Starter&quot;,
+      price: &quot;$299&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Perfect for small businesses getting started with AI&quot;,
       features: [
-        "Basic AI analytics",
-        "5 customizable dashboards",
-        "Standard reporting",
-        "Email support",
-        "Up to 10 users",
-        "Basic security features"
+        &quot;Basic AI analytics&quot;,
+        &quot;5 customizable dashboards&quot;,
+        &quot;Standard reporting&quot;,
+        &quot;Email support&quot;,
+        &quot;Up to 10 users&quot;,
+        &quot;Basic security features&quot;
       ],
       popular: false,
-      color: "from-blue-500 to-cyan-500"
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Advanced features for growing businesses",
+      name: &quot;Professional&quot;,
+      price: &quot;$799&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Advanced features for growing businesses&quot;,
       features: [
-        "Everything in Starter",
-        "Advanced AI capabilities",
-        "Unlimited dashboards",
-        "Custom reporting",
-        "Priority support",
-        "Up to 50 users",
-        "API access",
-        "Advanced security"
+        &quot;Everything in Starter&quot;,
+        &quot;Advanced AI capabilities&quot;,
+        &quot;Unlimited dashboards&quot;,
+        &quot;Custom reporting&quot;,
+        &quot;Priority support&quot;,
+        &quot;Up to 50 users&quot;,
+        &quot;API access&quot;,
+        &quot;Advanced security&quot;
       ],
       popular: true,
-      color: "from-purple-500 to-pink-500"
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Full-scale solution for large organizations",
+      name: &quot;Enterprise&quot;,
+      price: &quot;Custom&quot;,
+      period: "&quot;,
+      description: &quot;Full-scale solution for large organizations&quot;,
       features: [
-        "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support team",
-        "Unlimited users",
-        "On-premise deployment",
-        "Custom training",
-        "SLA guarantees",
-        "Advanced compliance"
+        &quot;Everything in Professional&quot;,
+        &quot;Custom AI models&quot;,
+        &quot;Dedicated support team&quot;,
+        &quot;Unlimited users&quot;,
+        &quot;On-premise deployment&quot;,
+        &quot;Custom training&quot;,
+        &quot;SLA guarantees&quot;,
+        &quot;Advanced compliance&quot;
       ],
       popular: false,
-      color: "from-green-500 to-emerald-500"
+      color: &quot;from-green-500 to-emerald-500&quot;
     }
   ];
 
   const addOns = [
     {
-      name: "AI Research Assistant",
-      price: "$199",
-      period: "/month",
-      description: "Autonomous research and knowledge discovery",
-      features: ["Literature analysis", "Knowledge synthesis", "Research automation"],
+      name: &quot;AI Research Assistant&quot;,
+      price: &quot;$199&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Autonomous research and knowledge discovery&quot;,
+      features: [&quot;Literature analysis&quot;, &quot;Knowledge synthesis&quot;, &quot;Research automation&quot;],
       icon: Brain
     },
     {
-      name: "Quantum Cybersecurity",
-      price: "$399",
-      period: "/month",
-      description: "Future-proof security with quantum-resistant encryption",
-      features: ["Quantum encryption", "AI threat detection", "Zero-trust architecture"],
+      name: &quot;Quantum Cybersecurity&quot;,
+      price: &quot;$399&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Future-proof security with quantum-resistant encryption&quot;,
+      features: [&quot;Quantum encryption&quot;, &quot;AI threat detection&quot;, &quot;Zero-trust architecture&quot;],
       icon: Shield
     },
     {
-      name: "Space Technology",
-      price: "$299",
-      period: "/month",
-      description: "Satellite data and space resource intelligence",
-      features: ["Satellite optimization", "Earth observation", "Orbital analytics"],
+      name: &quot;Space Technology&quot;,
+      price: &quot;$299&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Satellite data and space resource intelligence&quot;,
+      features: [&quot;Satellite optimization&quot;, &quot;Earth observation&quot;, &quot;Orbital analytics&quot;],
       icon: Rocket
     },
     {
-      name: "Edge Computing",
-      price: "$199",
-      period: "/month",
-      description: "Real-time processing at the network edge",
-      features: ["Edge orchestration", "IoT management", "Real-time processing"],
+      name: &quot;Edge Computing&quot;,
+      price: &quot;$199&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Real-time processing at the network edge&quot;,
+      features: [&quot;Edge orchestration&quot;, &quot;IoT management&quot;, &quot;Real-time processing&quot;],
       icon: Cpu
     }
   ];
 
   const faqs = [
     {
-      question: "What's included in the base pricing?",
-      answer: "Our base pricing includes core AI analytics, basic dashboards, standard reporting, and email support. Each plan builds upon these features with additional capabilities and user limits."
+      question: &quot;What's included in the base pricing?&quot;,
+      answer: &quot;Our base pricing includes core AI analytics, basic dashboards, standard reporting, and email support. Each plan builds upon these features with additional capabilities and user limits.&quot;
     },
     {
-      question: "Can I change plans at any time?",
-      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
+      question: &quot;Can I change plans at any time?&quot;,
+      answer: &quot;Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.&quot;
     },
     {
-      question: "Do you offer custom pricing for specific needs?",
-      answer: "Absolutely! Our Enterprise plan is fully customizable. Contact our sales team to discuss your specific requirements and get a tailored quote."
+      question: &quot;Do you offer custom pricing for specific needs?&quot;,
+      answer: &quot;Absolutely! Our Enterprise plan is fully customizable. Contact our sales team to discuss your specific requirements and get a tailored quote.&quot;
     },
     {
-      question: "What support options are available?",
-      answer: "Starter plans include email support, Professional plans get priority support, and Enterprise plans include dedicated support teams with SLA guarantees."
+      question: &quot;What support options are available?&quot;,
+      answer: &quot;Starter plans include email support, Professional plans get priority support, and Enterprise plans include dedicated support teams with SLA guarantees.&quot;
     },
     {
-      question: "Are there any setup or hidden fees?",
-      answer: "No hidden fees! Setup is included in all plans. The only additional costs are for add-on services and exceeding user limits on lower-tier plans."
+      question: &quot;Are there any setup or hidden fees?&quot;,
+      answer: &quot;No hidden fees! Setup is included in all plans. The only additional costs are for add-on services and exceeding user limits on lower-tier plans.&quot;
     },
     {
-      question: "Do you offer discounts for annual billing?",
-      answer: "Yes! We offer a 20% discount for annual billing on all plans. This is applied automatically when you choose annual billing."
+      question: &quot;Do you offer discounts for annual billing?&quot;,
+      answer: &quot;Yes! We offer a 20% discount for annual billing on all plans. This is applied automatically when you choose annual billing.&quot;
     }
   ];
 
@@ -130,12 +130,12 @@ export default function PricingPage() {
     <>
       <Head>
         <title>Pricing 2025 - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for our AI, cybersecurity, and technology solutions. Choose the plan that fits your business needs and budget." />
-        <meta name="keywords" content="pricing, AI pricing, cybersecurity pricing, technology pricing, Zion Tech Group" />
-        <meta property="og:title" content="Pricing 2025 - Zion Tech Group" />
-        <meta property="og:description" content="Transparent pricing for our AI, cybersecurity, and technology solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing-2025" />
+        <meta name=&quot;description&quot; content=&quot;Transparent pricing for our AI, cybersecurity, and technology solutions. Choose the plan that fits your business needs and budget.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;pricing, AI pricing, cybersecurity pricing, technology pricing, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Pricing 2025 - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transparent pricing for our AI, cybersecurity, and technology solutions.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/pricing-2025" />
       </Head>
 
       <EnhancedNavigation />
@@ -151,8 +151,8 @@ export default function PricingPage() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Simple,
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Transparent Pricing
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent&quot;>
+                {&quot; "}Transparent Pricing
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -165,20 +165,20 @@ export default function PricingPage() {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 View Plans
-              </a>
+              </Link>
               <a
                 href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
+                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200&quot;
               >
                 Contact Sales
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Pricing Plans */}
-      <section id="plans" className="py-20 bg-white">
+      <section id=&quot;plans" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ export default function PricingPage() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -288,7 +288,7 @@ export default function PricingPage() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Add Service
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -416,13 +416,13 @@ export default function PricingPage() {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </a>
+              </Link>
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Consultation
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

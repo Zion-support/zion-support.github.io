@@ -1,11 +1,11 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1";
+import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
+import { Configuration, OpenAIApi } from &quot;https://esm.sh/openai@3.2.1&quot;;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
 interface HireRequest {
   talent: {
@@ -34,14 +34,14 @@ interface EnhancedContent {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
   
   try {
     const supabase = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+      Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
+      Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;
     );
     
     const requestData: HireRequest = await req.json();
@@ -53,7 +53,7 @@ serve(async (req) => {
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null;
     
-    const openAiKey = Deno.env.get("OPENAI_API_KEY");
+    const openAiKey = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
     if (openAiKey) {
       try {
         const configuration = new Configuration({
@@ -61,40 +61,40 @@ serve(async (req) => {
         const openai = new OpenAIApi(configuration);
         
         const prompt = `
-          Project Overview: "${project.overview}"
+          Project Overview: &quot;${project.overview}&quot;
           
           Please provide:
           1. A brief summary of this project (max 100 characters)
-          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
+          2. Classify this project into one category (e.g., &quot;AI Development&quot;, &quot;Cloud Migration&quot;, &quot;Web Design&quot;, etc.)
           
           Format your response as JSON:
           {
-            "summary": "Brief summary here",
-            "projectType": "Project type here"
+            &quot;summary&quot;: &quot;Brief summary here&quot;,
+            &quot;projectType&quot;: &quot;Project type here&quot;
           }
         `;
         
         const completion = await openai.createCompletion({
-          model: "gpt-3.5-turbo-instruct",
+          model: &quot;gpt-3.5-turbo-instruct&quot;,
           prompt,
           max_tokens: 150,
           temperature: 0.3});
         
-        const responseText = completion.data.choices[0]?.text || "";
+        const responseText = completion.data.choices[0]?.text || "&quot;;
         
         try {
           // Extract JSON from the response
           const jsonMatch = responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
             enhancedContent = JSON.parse(jsonMatch[0]);
-            console.log("Enhanced content generated:", enhancedContent);
+            // console.log(&quot;Enhanced content generated:&quot;, enhancedContent);
           }
         } catch (jsonError) {
-          console.error("Error parsing AI response:", jsonError);
+          console.error(&quot;Error parsing AI response:&quot;, jsonError);
           // Continue without enhanced content
         }
       } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError);
+        console.error(&quot;Error generating enhanced content:&quot;, aiError);
         // Continue without enhanced content
       }
     }
@@ -134,7 +134,7 @@ serve(async (req) => {
       .limit(1);
       
     if (adminError) {
-      console.error("Error fetching admin users:", adminError);
+      console.error(&quot;Error fetching admin users:&quot;, adminError);
     }
     
     let adminId: string | undefined = undefined;
@@ -146,7 +146,7 @@ serve(async (req) => {
       const adminNotificationContent = {
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: "hire_request",
+        type: &quot;hire_request&quot;,
         related_id: requestRecord[0].id
       };
       
@@ -160,7 +160,7 @@ serve(async (req) => {
         });
         
       if (notificationError) {
-        console.error("Error creating admin notification:", notificationError);
+        console.error(&quot;Error creating admin notification:&quot;, notificationError);
       }
     }
     
@@ -186,30 +186,30 @@ serve(async (req) => {
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}});
       
-      console.log("Email sending result:", emailResponse);
+      // console.log(&quot;Email sending result:&quot;, emailResponse);
     }
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Hire request processed successfully",
+        message: &quot;Hire request processed successfully&quot;,
         request_id: requestRecord[0].id
       }),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
         status: 200}
     );
   } catch (error) {
-    console.error("Error processing hire request:", error.message);
+    console.error(&quot;Error processing hire request:&quot;, error.message);
     
     return new Response(
       JSON.stringify({ 
         success: false, 
-        message: "Failed to process hire request",
+        message: &quot;Failed to process hire request&quot;,
         error: error.message 
       }),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" },
         status: 500}
     );
   }

@@ -1,11 +1,11 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import z from "zod";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
+import React from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import z from &quot;zod&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
 
 import {
   Form,
@@ -14,22 +14,22 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
+  FormMessage} from &quot;@/components/ui/form&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { AspectRatio } from &quot;@/components/ui/aspect-ratio&quot;;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from &quot;@/components/ui/tabs&quot;;
+import { AIListingGenerator } from &quot;@/components/listing/AIListingGenerator&quot;;
+import { Sparkles } from &quot;lucide-react&quot;;
 
 // Define the form schema with zod
 const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  description: z.string().min(10, "Description must be at least 10 characters"),
+  title: z.string().min(3, &quot;Title must be at least 3 characters&quot;),
+  description: z.string().min(10, &quot;Description must be at least 10 characters&quot;),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-    message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
+    message: &quot;Price must be a valid number&quot;}),
+  category: z.string().min(1, &quot;Please select a category&quot;),
   image: z.instanceof(File).optional(),
   tags: z.string().optional()});
 
@@ -42,23 +42,23 @@ export function ProductSubmissionForm() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
+  const [activeTab, setActiveTab] = React.useState(&quot;manual&quot;);
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
     defaultValues: {
-      title: "",
-      description: "",
-      price: "",
-      category: "",
-      tags: ""}});
+      title: "&quot;,
+      description: "&quot;,
+      price: "&quot;,
+      category: "&quot;,
+      tags: "&quot;}});
   
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("image", file);
+      form.setValue(&quot;image&quot;, file);
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string);
@@ -69,24 +69,24 @@ export function ProductSubmissionForm() {
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
+    form.setValue(&quot;description&quot;, content.description);
+    form.setValue(&quot;tags&quot;, content.tags.join(&quot;, &quot;));
     
     // Set a default price as the middle of the suggested range
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
+    form.setValue(&quot;price&quot;, averagePrice);
     
     // Switch to the manual tab to show applied content
-    setActiveTab("manual");
+    setActiveTab(&quot;manual&quot;);
   };
 
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
-        title: "Authentication Required",
-        description: "You must be logged in to publish products",
-        variant: "destructive"});
+        title: &quot;Authentication Required&quot;,
+        description: &quot;You must be logged in to publish products&quot;,
+        variant: &quot;destructive&quot;});
       return;
     }
 
@@ -99,10 +99,10 @@ export function ProductSubmissionForm() {
         description: values.description,
         price: parseFloat(values.price),
         category: values.category,
-        currency: "USD", // Default currency
+        currency: &quot;USD&quot;, // Default currency
         tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
         author: {
-          name: user.displayName || "Anonymous Creator",
+          name: user.displayName || &quot;Anonymous Creator&quot;,
           id: user.id},
         createdAt: new Date().toISOString()};
       
@@ -147,16 +147,16 @@ export function ProductSubmissionForm() {
       
       // Show success message
       toast({
-        title: "Product Published!",
-        description: "Your product has been successfully published on Zion."});
+        title: &quot;Product Published!&quot;,
+        description: &quot;Your product has been successfully published on Zion.&quot;});
       
       // Redirect to product page
       navigate(`/marketplace/listing/${productRecord.id}`);
     } catch (error) {
       toast({
-        title: "Publication Failed",
-        description: error instanceof Error ? error.message : "An unknown error occurred",
-        variant: "destructive"});
+        title: &quot;Publication Failed&quot;,
+        description: error instanceof Error ? error.message : &quot;An unknown error occurred&quot;,
+        variant: &quot;destructive"});
     } finally {
       setIsSubmitting(false);
     }
@@ -164,27 +164,27 @@ export function ProductSubmissionForm() {
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-      <TabsList className="grid grid-cols-2 mb-6">
-        <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+      <TabsList className="grid grid-cols-2 mb-6&quot;>
+        <TabsTrigger value=&quot;manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple&quot;>
           Manual Creation
         </TabsTrigger>
-        <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
-          <Sparkles className="h-4 w-4 mr-2" />
+        <TabsTrigger value=&quot;ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
+          <Sparkles className="h-4 w-4 mr-2&quot; />
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
       
-      <TabsContent value="manual">
+      <TabsContent value=&quot;manual">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
             <FormField
               control={form.control}
-              name="title"
+              name=&quot;title&quot;
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Product Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter product title" {...field} />
+                    <Input placeholder=&quot;Enter product title&quot; {...field} />
                   </FormControl>
                   <FormDescription>
                     Create a compelling title that describes your product
@@ -196,13 +196,13 @@ export function ProductSubmissionForm() {
 
             <FormField
               control={form.control}
-              name="description"
+              name=&quot;description&quot;
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Describe your product in detail..." 
+                      placeholder=&quot;Describe your product in detail..." 
                       className="min-h-32" 
                       {...field} 
                     />
@@ -215,15 +215,15 @@ export function ProductSubmissionForm() {
               )}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
               <FormField
                 control={form.control}
-                name="price"
+                name=&quot;price&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
-                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
+                      <Input type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.01&quot; placeholder=&quot;0.00&quot; {...field} />
                     </FormControl>
                     <FormDescription>
                       Set your price in USD
@@ -235,22 +235,22 @@ export function ProductSubmissionForm() {
 
               <FormField
                 control={form.control}
-                name="category"
+                name=&quot;category"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm&quot;
                         {...field}
                       >
-                        <option value="">Select a category</option>
-                        <option value="digital_product">Digital Product</option>
-                        <option value="service">Service</option>
-                        <option value="ai_tool">AI Tool</option>
-                        <option value="course">Course</option>
-                        <option value="template">Template</option>
-                        <option value="other">Other</option>
+                        <option value="&quot;>Select a category</option>
+                        <option value=&quot;digital_product&quot;>Digital Product</option>
+                        <option value=&quot;service&quot;>Service</option>
+                        <option value=&quot;ai_tool&quot;>AI Tool</option>
+                        <option value=&quot;course&quot;>Course</option>
+                        <option value=&quot;template&quot;>Template</option>
+                        <option value=&quot;other&quot;>Other</option>
                       </select>
                     </FormControl>
                     <FormMessage />
@@ -261,12 +261,12 @@ export function ProductSubmissionForm() {
 
             <FormField
               control={form.control}
-              name="tags"
+              name=&quot;tags&quot;
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter tags separated by commas" {...field} />
+                    <Input placeholder=&quot;Enter tags separated by commas&quot; {...field} />
                   </FormControl>
                   <FormDescription>
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
@@ -278,16 +278,16 @@ export function ProductSubmissionForm() {
 
             <FormField
               control={form.control}
-              name="image"
+              name=&quot;image&quot;
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
                     <Input 
-                      type="file" 
-                      accept="image/*" 
+                      type=&quot;file&quot; 
+                      accept=&quot;image/*&quot; 
                       onChange={handleImageChange}
-                      className="cursor-pointer"
+                      className=&quot;cursor-pointer&quot;
                     />
                   </FormControl>
                   <FormDescription>
@@ -296,12 +296,12 @@ export function ProductSubmissionForm() {
                   <FormMessage />
                   
                   {imagePreview && (
-                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+                    <div className=&quot;mt-2 w-full max-w-md border rounded overflow-hidden&quot;>
                       <AspectRatio ratio={3/2}>
                         <img 
                           src={imagePreview} 
-                          alt="Preview" 
-                          className="w-full h-full object-cover"
+                          alt=&quot;Preview&quot; 
+                          className=&quot;w-full h-full object-cover&quot;
                         />
                       </AspectRatio>
                     </div>
@@ -310,25 +310,25 @@ export function ProductSubmissionForm() {
               )}
             />
 
-            <div className="flex justify-end">
+            <div className=&quot;flex justify-end&quot;>
               <Button 
-                type="submit" 
+                type=&quot;submit&quot; 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
               >
-                {isSubmitting ? "Publishing..." : "Publish Product"}
+                {isSubmitting ? &quot;Publishing...&quot; : &quot;Publish Product&quot;}
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
       
-      <TabsContent value="ai">
+      <TabsContent value=&quot;ai&quot;>
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title"),
-            category: form.getValues("category")
+            title: form.getValues(&quot;title&quot;),
+            category: form.getValues(&quot;category&quot;)
           }}
         />
       </TabsContent>

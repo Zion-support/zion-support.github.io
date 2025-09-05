@@ -1,7 +1,7 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
 
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
@@ -9,7 +9,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true);
 
       if (!data.id) {
-        return { error: "User ID is required" };
+        return { error: &quot;User ID is required&quot; };
       }
 
       // Update user metadata
@@ -21,15 +21,15 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       if (authError) {
         toast({
-          title: "Profile update failed",
+          title: &quot;Profile update failed&quot;,
           description: authError.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return { error: authError };
       }
 
       // Update profiles table
       const { error: profileError } = await supabase
-        .from("profiles")
+        .from(&quot;profiles&quot;)
         .update({
           display_name: data.displayName,
           user_type: data.userType,
@@ -38,27 +38,27 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
           updated_at: new Date().toISOString()})
-        .eq("id", data.id);
+        .eq(&quot;id&quot;, data.id);
 
       if (profileError) {
         toast({
-          title: "Profile update failed",
+          title: &quot;Profile update failed&quot;,
           description: profileError.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
         return { error: profileError };
       }
 
       toast({
-        title: "Profile updated",
-        description: "Your profile has been updated successfully."});
+        title: &quot;Profile updated&quot;,
+        description: &quot;Your profile has been updated successfully.&quot;});
 
       return { success: true };
     } catch (error: any) {
-      console.error("Profile update error:", error);
+      console.error(&quot;Profile update error:&quot;, error);
       toast({
-        title: "Profile update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Profile update failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
       return { error };
     } finally {
       setIsLoading(false);

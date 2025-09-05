@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {,
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    // console.log('Form submitted:', formData);
   }),
 ,
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -83,105 +83,105 @@ const ContactForm: React.FC = () => {,
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
             Name *
           </label>
           <input
-            type="text"
-            id="name"
-            name="name"
+            type=&quot;text&quot;
+            id=&quot;name&quot;
+            name=&quot;name&quot;
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
             Email *
           </label>
           <input
-            type="email"
-            id="email"
-            name="email"
+            type=&quot;email&quot;
+            id=&quot;email&quot;
+            name=&quot;email&quot;
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
           />
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
             Company
           </label>
           <input
-            type="text"
-            id="company"
-            name="company"
+            type=&quot;text&quot;
+            id=&quot;company&quot;
+            name=&quot;company&quot;
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor=&quot;phone&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
             Phone
           </label>
           <input
-            type="tel"
-            id="phone"
-            name="phone"
+            type=&quot;tel&quot;
+            id=&quot;phone&quot;
+            name=&quot;phone&quot;
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor=&quot;service&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
           Service Interest
         </label>
         <select
-          id="service"
-          name="service"
+          id=&quot;service&quot;
+          name=&quot;service&quot;
           value={formData.service}
           onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className=&quot;w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
         >
-          <option value="">Select a service</option>
-          <option value="micro-saas">Micro SaaS Products</option>
-          <option value="ai-services">AI Services</option>
-          <option value="it-services">IT & Cloud Services</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
+          <option value="&quot;>Select a service</option>
+          <option value=&quot;micro-saas&quot;>Micro SaaS Products</option>
+          <option value=&quot;ai-services&quot;>AI Services</option>
+          <option value=&quot;it-services&quot;>IT & Cloud Services</option>
+          <option value=&quot;consulting&quot;>Consulting</option>
+          <option value=&quot;other&quot;>Other</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor=&quot;message" className="block text-sm font-medium text-gray-700 mb-2&quot;>
           Message *
         </label>
         <textarea
-          id="message"
-          name="message"
+          id=&quot;message&quot;
+          name=&quot;message"
           value={formData.message}
           onChange={handleChange}
           required
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Tell us about your project requirements..."
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+          placeholder=&quot;Tell us about your project requirements...&quot;
         />
       </div>
 
       <button
-        type="submit"
+        type=&quot;submit"
         className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
       >
         Send Message

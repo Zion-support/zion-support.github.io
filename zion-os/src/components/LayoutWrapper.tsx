@@ -1,15 +1,15 @@
-"use client";
+"use client&quot;;
 
-import { useWalkthroughTarget } from "./OnboardingWalkthrough";
-import { useAuth } from "@/contexts/AuthContext";
-import Link from "next/link";
+import { useWalkthroughTarget } from &quot;./OnboardingWalkthrough&quot;;
+import { useAuth } from &quot;@/contexts/AuthContext&quot;;
+import Link from &quot;next/link";
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const { user, isAuthenticated, logout } = useAuth();
 
   return (
     <>
-      <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {...useWalkthroughTarget("nav-menu")}>
+      <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur&quot; {...useWalkthroughTarget(&quot;nav-menu")}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="font-semibold text-lg">Zion OS</Link>

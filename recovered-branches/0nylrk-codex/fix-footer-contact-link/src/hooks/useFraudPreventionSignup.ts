@@ -29,7 +29,7 @@ export function useFraudPreventionSignup() {
       const fraudCheck = await checkSignupPatterns(email, ipAddress);
       
       if (fraudCheck.isSuspicious) {
-        console.log('Suspicious signup detected:', fraudCheck.reasons);
+        // console.log('Suspicious signup detected:', fraudCheck.reasons);
         
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
@@ -55,9 +55,9 @@ export function useFraudPreventionSignup() {
           r.includes('suspicious email domain')
         )) {
           toast({
-            title: "Signup blocked",
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-            variant: "destructive"});
+            title: &quot;Signup blocked&quot;,
+            description: &quot;This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.&quot;,
+            variant: &quot;destructive&quot;});
           return false;
         }
         

@@ -1,12 +1,12 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useState } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Loader2 } from &quot;lucide-react&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
 
 interface PaymentButtonProps {
   amount: number;
@@ -22,7 +22,7 @@ export function PaymentButton({
   amount,
   serviceId,
   providerId,
-  buttonText = "Purchase",
+  buttonText = &quot;Purchase&quot;,
   className,
   onPaymentInitiated,
   redirectUrl}: PaymentButtonProps) {
@@ -33,10 +33,10 @@ export function PaymentButton({
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."});
+        title: &quot;Authentication required&quot;,
+        description: &quot;Please sign in to make a purchase.&quot;});
       
-      navigate("/login", { 
+      navigate(&quot;/login&quot;, { 
         state: { from: window.location.pathname } 
       });
       return;
@@ -50,7 +50,7 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
+      const { data, error } = await supabase.functions.invoke(&quot;create-checkout&quot;, {
         body: {
           amount,
           serviceId,
@@ -67,15 +67,15 @@ export function PaymentButton({
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank');
       } else {
-        throw new Error("No checkout URL returned");
+        throw new Error(&quot;No checkout URL returned&quot;);
       }
       
     } catch (error) {
-      console.error("Payment error:", error);
+      console.error(&quot;Payment error:&quot;, error);
       toast({
-        title: "Payment error",
-        description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"});
+        title: &quot;Payment error&quot;,
+        description: &quot;There was a problem initiating your payment. Please try again.&quot;,
+        variant: &quot;destructive&quot;});
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
@@ -89,13 +89,13 @@ export function PaymentButton({
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]",
+        &quot;relative min-w-[120px]&quot;,
         className
       )}
     >
       {isProcessing ? (
         <>
-          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+          <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
           Processing...
         </>
       ) : (

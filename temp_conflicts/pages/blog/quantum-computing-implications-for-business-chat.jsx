@@ -7,13 +7,13 @@ const QuantumComputingImplicationsForBusinessChat = () => {
     <div>
       <Head>
         <title>QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions</title>
-        <meta name="description" content="QuantumComputingImplicationsForBusinessChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;QuantumComputingImplicationsForBusinessChat blog post&quot; />
       </Head>
       
       <main>
         <h1>QuantumComputingImplicationsForBusinessChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

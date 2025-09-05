@@ -33,16 +33,16 @@ export default function FounderCoursePage() {
   };
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-3">
-        <h1 className="text-2xl sm:text-3xl font-semibold">Founder Course: Launch Your Zion Instance</h1>
-        <p className="text-gray-700 dark:text-gray-300 max-w-3xl">
+    <div className=&quot;space-y-8&quot;>
+      <div className=&quot;space-y-3&quot;>
+        <h1 className=&quot;text-2xl sm:text-3xl font-semibold&quot;>Founder Course: Launch Your Zion Instance</h1>
+        <p className=&quot;text-gray-700 dark:text-gray-300 max-w-3xl&quot;>
           An interactive, step-by-step onboarding course for founders and builders launching their own Zion instance or vertical. Use the AI tools embedded in each module to test readiness and generate summaries.
         </p>
         <ProgressTracker completedCount={completedCount} totalCount={totalCount} />
       </div>
 
-      <div className="space-y-6">
+      <div className=&quot;space-y-6&quot;>
         {founderCourseModules.map((m) => (
           <ModuleCard
             key={m.id}
@@ -57,7 +57,7 @@ export default function FounderCoursePage() {
 
       <CertificateView completedCount={completedCount} totalCount={totalCount} />
 
-      <div className="text-xs text-gray-500 dark:text-gray-400">
+      <div className=&quot;text-xs text-gray-500 dark:text-gray-400&quot;>
         Operator prompt: Create a 5-module course for founders launching a decentralized AI work protocol — include mission, DAO, token, governance, and deployment tools.
       </div>
     </div>

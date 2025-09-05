@@ -1,44 +1,44 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { useState } from &quot;react&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Footer } from &quot;@/components/Footer&quot;;
+import { UserTypeSelection } from &quot;@/components/onboarding/UserTypeSelection&quot;;
+import { ProfileSetup } from &quot;@/components/onboarding/ProfileSetup&quot;;
+import { Steps, Step } from &quot;@/components/ui/steps&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
 
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
+  const [userType, setUserType] = useState<&quot;serviceProvider&quot; | &quot;talent&quot; | &quot;client&quot; | null>(null);
   const navigate = useNavigate();
 
   // Convert our user types to match what's expected in the database
-  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
+  const mapUserTypeToDatabase = (type: &quot;serviceProvider&quot; | &quot;talent&quot; | &quot;client&quot;) => {
     switch (type) {
-      case "serviceProvider":
-        return "creator";
-      case "talent":
-        return "jobSeeker";
-      case "client":
-        return "employer";
+      case &quot;serviceProvider&quot;:
+        return &quot;creator&quot;;
+      case &quot;talent&quot;:
+        return &quot;jobSeeker&quot;;
+      case &quot;client&quot;:
+        return &quot;employer&quot;;
       default:
-        return "buyer";
+        return &quot;buyer&quot;;
     }
   };
 
-  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
+  const handleUserTypeSelect = (type: &quot;serviceProvider&quot; | &quot;talent&quot; | &quot;client&quot;) => {
     setUserType(type);
     
     // Direct to specific registration page based on user type
-    if (type === "serviceProvider") {
+    if (type === &quot;serviceProvider&quot;) {
       navigate('/service-onboarding');
       return;
-    } else if (type === "talent") {
+    } else if (type === &quot;talent&quot;) {
       navigate('/talent-onboarding');
       return;
     }
@@ -50,9 +50,9 @@ export default function Onboarding() {
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user || !userType) {
       toast({
-        title: "Authentication Error",
-        description: "Your session may have expired. Please log in again.",
-        variant: "destructive"});
+        title: &quot;Authentication Error&quot;,
+        description: &quot;Your session may have expired. Please log in again.&quot;,
+        variant: &quot;destructive&quot;});
       navigate('/login');
       return;
     }
@@ -81,9 +81,9 @@ export default function Onboarding() {
         description: 'Your profile has been set up successfully.'});
       
       // Get the appropriate dashboard route based on user type
-      const dashboardRoute = userType === "client" 
-        ? "/client-dashboard" 
-        : "/talent-dashboard";
+      const dashboardRoute = userType === &quot;client&quot; 
+        ? &quot;/client-dashboard&quot; 
+        : &quot;/talent-dashboard&quot;;
       
       // Redirect to dashboard
       navigate(dashboardRoute);
@@ -98,8 +98,8 @@ export default function Onboarding() {
   };
 
   const steps = [
-    { label: "Select Role", description: "Choose how you'll use the platform" },
-    { label: "Create Profile", description: "Tell us about yourself" }];
+    { label: &quot;Select Role&quot;, description: &quot;Choose how you'll use the platform&quot; },
+    { label: &quot;Create Profile&quot;, description: &quot;Tell us about yourself&quot; }];
 
   if (!user) {
     navigate('/login');
@@ -109,28 +109,28 @@ export default function Onboarding() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
+      <div className=&quot;min-h-screen bg-zion-blue py-12 px-4&quot;>
+        <div className=&quot;max-w-4xl mx-auto&quot;>
+          <div className=&quot;text-center mb-12&quot;>
+            <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>
               Welcome to Zion
             </h1>
-            <p className="text-zion-slate-light text-xl">
+            <p className=&quot;text-zion-slate-light text-xl&quot;>
               Complete your profile to get started
             </p>
           </div>
 
-          <div className="mb-12">
-            <Steps currentStep={currentStep} className="max-w-xl mx-auto">
+          <div className=&quot;mb-12&quot;>
+            <Steps currentStep={currentStep} className=&quot;max-w-xl mx-auto&quot;>
               {steps.map((step, index) => (
                 <Step
                   key={index}
                   status={
                     currentStep > index
-                      ? "complete"
+                      ? &quot;complete&quot;
                       : currentStep === index
-                      ? "current"
-                      : "incomplete"
+                      ? &quot;current&quot;
+                      : &quot;incomplete&quot;
                   }
                   label={step.label}
                   description={step.description}
@@ -139,7 +139,7 @@ export default function Onboarding() {
             </Steps>
           </div>
 
-          <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
+          <div className=&quot;bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light&quot;>
             {currentStep === 0 ? (
               <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />
             ) : (
@@ -147,10 +147,10 @@ export default function Onboarding() {
             )}
 
             {currentStep === 1 && (
-              <div className="mt-6">
+              <div className=&quot;mt-6&quot;>
                 <Button
-                  variant="outline"
-                  className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
+                  variant=&quot;outline&quot;
+                  className=&quot;w-full border-zion-blue-light text-white hover:bg-zion-blue-light&quot;
                   onClick={() => setCurrentStep(0)}
                 >
                   Back to Role Selection

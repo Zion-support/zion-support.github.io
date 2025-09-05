@@ -1,5 +1,5 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
 
 /**
  * Checks if the profiles table exists and creates it if it doesn't
@@ -18,7 +18,7 @@ export const ensureProfilesTableExists = async () => {
     
     // If there's an error, log it and proceed with table creation
     if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error);
+      console.warn(&quot;Error checking if profiles table exists, attempting to create it:&quot;, error);
     }
     
     // Attempt to create the table and related objects
@@ -46,7 +46,7 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can view their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can view their own profile" 
+          CREATE POLICY &quot;Users can view their own profile&quot; 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id);
         END IF;
@@ -60,7 +60,7 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can update their own profile" 
+          CREATE POLICY &quot;Users can update their own profile&quot; 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id);
         END IF;
@@ -98,7 +98,7 @@ export const ensureProfilesTableExists = async () => {
     if (createError) {
       console.error('Error creating profiles table:', createError);
     } else {
-      console.log('Profiles table setup completed');
+      // console.log('Profiles table setup completed');
     }
   } catch (error) {
     console.error('Error setting up profiles table:', error);

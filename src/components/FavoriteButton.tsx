@@ -33,10 +33,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     
     // Provide feedback
     toast({
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
+      title: wasWishlisted ? &quot;Removed from wishlist&quot; : &quot;Added to wishlist&quot;,
       description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"});
+        ? &quot;Item has been removed from your wishlist&quot; 
+        : &quot;Item has been added to your wishlist&quot;});
   };
 
   const active = isWishlisted(itemId);

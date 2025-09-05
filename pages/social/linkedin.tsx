@@ -12,14 +12,14 @@ export default function LinkedInRedirect() {
 		<>
 			<Head>
 				<title>LinkedIn | Zion Tech Group</title>
-				<link rel="canonical" href="https://www.linkedin.com/company/zion-tech-group" />
-				<meta httpEquiv="refresh" content="0;url=https://www.linkedin.com/company/zion-tech-group" />
-				<meta name="robots" content="noindex, nofollow" />
+				<link rel=&quot;canonical&quot; href=&quot;https://www.linkedin.com/company/zion-tech-group&quot; />
+				<meta httpEquiv=&quot;refresh&quot; content=&quot;0;url=https://www.linkedin.com/company/zion-tech-group&quot; />
+				<meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; />
 			</Head>
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-				<a href="https://www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
+			<div className=&quot;min-h-screen bg-black text-white flex items-center justify-center p-8&quot;>
+				<a href=&quot;https://www.linkedin.com/company/zion-tech-group&quot; className=&quot;text-cyan-400 underline&quot;>
 					Continue to LinkedIn
-				</a>
+				</Link>
 			</div>
 		</>
 	);

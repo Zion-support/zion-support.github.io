@@ -31,24 +31,24 @@ const AdminReviewsPage: NextPage = () => {
   }
 
   return (
-    <main className="max-w-5xl mx-auto p-6 space-y-6">
-      <h1 className="text-2xl font-semibold">Review Moderation</h1>
+    <main className=&quot;max-w-5xl mx-auto p-6 space-y-6&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Review Moderation</h1>
 
-      <div className="enhanced-card">
-        <label className="block text-sm mb-2">Admin Key</label>
-        <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />
+      <div className=&quot;enhanced-card&quot;>
+        <label className=&quot;block text-sm mb-2&quot;>Admin Key</label>
+        <input className=&quot;border p-2 rounded w-full&quot; value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder=&quot;Enter admin key&quot; />
       </div>
 
-      <section className="enhanced-card">
-        <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>
-        <div className="space-y-4">
+      <section className=&quot;enhanced-card&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-4&quot;>Pending Reviews</h2>
+        <div className=&quot;space-y-4&quot;>
           {pending.map((r) => (
-            <div key={r.id} className="border rounded p-3">
-              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
-              <div className="font-medium">{r.rating}★ — {r.text}</div>
-              <div className="mt-2 flex gap-2">
-                <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>
-                <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
+            <div key={r.id} className=&quot;border rounded p-3&quot;>
+              <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
+              <div className=&quot;font-medium&quot;>{r.rating}★ — {r.text}</div>
+              <div className=&quot;mt-2 flex gap-2&quot;>
+                <button className=&quot;enhanced-button enhanced-button-primary&quot; onClick={() => moderate('approve', r.id)}>Approve</button>
+                <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
           ))}
@@ -56,9 +56,9 @@ const AdminReviewsPage: NextPage = () => {
         </div>
       </section>
 
-      <section className="enhanced-card">
-        <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
-        <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
+      <section className=&quot;enhanced-card&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
+        <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
   );

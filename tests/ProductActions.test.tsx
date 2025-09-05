@@ -5,7 +5,7 @@ import { ProductActions } from '@/components/ProductActions';
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
-  render(<ProductActions productId="1" addToCart={addToCart} />);
+  render(<ProductActions productId=&quot;1&quot; addToCart={addToCart} />);
   const button = screen.getByRole('button', { name: /add to cart/i });
   return { addToCart, button };
 }
@@ -19,7 +19,7 @@ describe('ProductActions', () => {
 
     await waitFor(() => expect(addToCart).toHaveBeenCalled());
     
-    // Wait for the "Added!" status to appear
+    // Wait for the &quot;Added!&quot; status to appear
     await waitFor(() => {
       expect(button).toHaveTextContent('Added!');
     });

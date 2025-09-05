@@ -1,10 +1,10 @@
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
 interface EmailRequest {
   user_id: string;
@@ -13,7 +13,7 @@ interface EmailRequest {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
   
@@ -22,8 +22,8 @@ serve(async (req) => {
     
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+      Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
+      Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;
     );
 
     // Get notification details and user email
@@ -45,24 +45,24 @@ serve(async (req) => {
 
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.
     // to send the actual email. For this example, we'll simulate the email sending.
-    console.log(`Email would be sent to ${userProfile.email}`);
-    console.log(`Subject: ${notification.title}`);
-    console.log(`Body: ${notification.message}`);
-    console.log(`Type: ${notification.type}`);
+    // console.log(`Email would be sent to ${userProfile.email}`);
+    // console.log(`Subject: ${notification.title}`);
+    // console.log(`Body: ${notification.message}`);
+    // console.log(`Type: ${notification.type}`);
 
     return new Response(
       JSON.stringify({ success: true }),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
         status: 200}
     );
     
   } catch (error) {
-    console.error("Error sending email notification:", error.message);
+    console.error(&quot;Error sending email notification:&quot;, error.message);
     return new Response(
       JSON.stringify({ error: error.message }),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; },
         status: 500}
     );
   }

@@ -6,8 +6,8 @@ export default function CertificatePage() {
   const { courseId } = router.query as { courseId: string };
   if (!courseId) return null;
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Certificate</h1>
+    <div className=&quot;space-y-4&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
   );

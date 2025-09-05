@@ -18,15 +18,15 @@ export default function PrivacySettings() {
   return (
     <>
       <Header />
-      <SEO title="Privacy Settings" description="Manage your cookie preferences" />
-      <main className="container mx-auto px-4 py-8 space-y-6">
-        <h1 className="text-2xl font-bold">Privacy Settings</h1>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
+      <SEO title=&quot;Privacy Settings&quot; description=&quot;Manage your cookie preferences&quot; />
+      <main className=&quot;container mx-auto px-4 py-8 space-y-6&quot;>
+        <h1 className=&quot;text-2xl font-bold&quot;>Privacy Settings</h1>
+        <div className=&quot;space-y-4&quot;>
+          <div className=&quot;flex items-center justify-between&quot;>
             <span>Analytics Cookies</span>
             <Switch checked={analytics} onCheckedChange={setAnalytics} />
           </div>
-          <div className="flex items-center justify-between">
+          <div className=&quot;flex items-center justify-between&quot;>
             <span>Advertising Cookies</span>
             <Switch checked={ads} onCheckedChange={setAds} />
           </div>

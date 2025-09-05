@@ -12,118 +12,118 @@ export default function AIBusinessIntelligencePage() {
   const features = [
     {
       icon: Brain,
-      title: "Predictive Analytics",
-      description: "Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.",
-      color: "from-purple-500 to-pink-500"
+      title: &quot;Predictive Analytics&quot;,
+      description: &quot;Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.&quot;,
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
       icon: BarChart3,
-      title: "Real-time Dashboards",
-      description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.",
-      color: "from-blue-500 to-cyan-500"
+      title: &quot;Real-time Dashboards&quot;,
+      description: &quot;Monitor key performance indicators in real-time with customizable, interactive dashboards.&quot;,
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
       icon: TrendingUp,
-      title: "Performance Optimization",
-      description: "Automatically identify bottlenecks and optimize business processes for maximum efficiency.",
-      color: "from-green-500 to-emerald-500"
+      title: &quot;Performance Optimization&quot;,
+      description: &quot;Automatically identify bottlenecks and optimize business processes for maximum efficiency.&quot;,
+      color: &quot;from-green-500 to-emerald-500&quot;
     },
     {
       icon: Users,
-      title: "Customer Insights",
-      description: "Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.",
-      color: "from-orange-500 to-red-500"
+      title: &quot;Customer Insights&quot;,
+      description: &quot;Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.&quot;,
+      color: &quot;from-orange-500 to-red-500&quot;
     },
     {
       icon: Target,
-      title: "Strategic Planning",
-      description: "Data-driven decision making with scenario modeling and risk assessment capabilities.",
-      color: "from-indigo-500 to-purple-500"
+      title: &quot;Strategic Planning&quot;,
+      description: &quot;Data-driven decision making with scenario modeling and risk assessment capabilities.&quot;,
+      color: &quot;from-indigo-500 to-purple-500&quot;
     },
     {
       icon: Zap,
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
-      color: "from-yellow-500 to-orange-500"
+      title: &quot;Automated Reporting&quot;,
+      description: &quot;Generate comprehensive reports automatically, saving hours of manual work each week.&quot;,
+      color: &quot;from-yellow-500 to-orange-500&quot;
     }
   ];
 
   const benefits = [
-    "Increase revenue by 25-40% through data-driven insights",
-    "Reduce operational costs by 15-30% with process optimization",
-    "Improve customer retention by 20-35% with predictive analytics",
-    "Accelerate decision-making by 60% with real-time data",
-    "Reduce manual reporting time by 80% with automation",
-    "Achieve 99.9% data accuracy with AI-powered validation"
+    &quot;Increase revenue by 25-40% through data-driven insights&quot;,
+    &quot;Reduce operational costs by 15-30% with process optimization&quot;,
+    &quot;Improve customer retention by 20-35% with predictive analytics&quot;,
+    &quot;Accelerate decision-making by 60% with real-time data&quot;,
+    &quot;Reduce manual reporting time by 80% with automation&quot;,
+    &quot;Achieve 99.9% data accuracy with AI-powered validation&quot;
   ];
 
   const useCases = [
     {
-      industry: "Retail & E-commerce",
-      description: "Customer segmentation, inventory optimization, and demand forecasting",
-      results: "35% increase in conversion rates, 25% reduction in inventory costs"
+      industry: &quot;Retail & E-commerce&quot;,
+      description: &quot;Customer segmentation, inventory optimization, and demand forecasting&quot;,
+      results: &quot;35% increase in conversion rates, 25% reduction in inventory costs&quot;
     },
     {
-      industry: "Financial Services",
-      description: "Risk assessment, fraud detection, and portfolio optimization",
-      results: "40% improvement in risk prediction, 60% faster fraud detection"
+      industry: &quot;Financial Services&quot;,
+      description: &quot;Risk assessment, fraud detection, and portfolio optimization&quot;,
+      results: &quot;40% improvement in risk prediction, 60% faster fraud detection&quot;
     },
     {
-      industry: "Healthcare",
-      description: "Patient outcome prediction, resource allocation, and treatment optimization",
-      results: "30% improvement in patient outcomes, 20% reduction in operational costs"
+      industry: &quot;Healthcare&quot;,
+      description: &quot;Patient outcome prediction, resource allocation, and treatment optimization&quot;,
+      results: &quot;30% improvement in patient outcomes, 20% reduction in operational costs&quot;
     },
     {
-      industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      results: "45% reduction in downtime, 35% improvement in product quality"
+      industry: &quot;Manufacturing&quot;,
+      description: &quot;Predictive maintenance, quality control, and supply chain optimization&quot;,
+      results: &quot;45% reduction in downtime, 35% improvement in product quality&quot;
     }
   ];
 
   const pricing = [
     {
-      plan: "Starter",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI",
+      plan: &quot;Starter&quot;,
+      price: &quot;$499&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Perfect for small businesses getting started with AI&quot;,
       features: [
-        "Basic predictive analytics",
-        "5 customizable dashboards",
-        "Standard reporting",
-        "Email support",
-        "Up to 10 users"
+        &quot;Basic predictive analytics&quot;,
+        &quot;5 customizable dashboards&quot;,
+        &quot;Standard reporting&quot;,
+        &quot;Email support&quot;,
+        &quot;Up to 10 users&quot;
       ],
       popular: false
     },
     {
-      plan: "Professional",
-      price: "$1,299",
-      period: "/month",
-      description: "Advanced features for growing businesses",
+      plan: &quot;Professional&quot;,
+      price: &quot;$1,299&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Advanced features for growing businesses&quot;,
       features: [
-        "Advanced predictive analytics",
-        "Unlimited dashboards",
-        "Custom reporting",
-        "Priority support",
-        "Up to 50 users",
-        "API access",
-        "Custom integrations"
+        &quot;Advanced predictive analytics&quot;,
+        &quot;Unlimited dashboards&quot;,
+        &quot;Custom reporting&quot;,
+        &quot;Priority support&quot;,
+        &quot;Up to 50 users&quot;,
+        &quot;API access&quot;,
+        &quot;Custom integrations&quot;
       ],
       popular: true
     },
     {
-      plan: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Full-scale solution for large organizations",
+      plan: &quot;Enterprise&quot;,
+      price: &quot;Custom&quot;,
+      period: "&quot;,
+      description: &quot;Full-scale solution for large organizations&quot;,
       features: [
-        "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support team",
-        "Unlimited users",
-        "On-premise deployment",
-        "Custom training",
-        "SLA guarantees"
+        &quot;Everything in Professional&quot;,
+        &quot;Custom AI models&quot;,
+        &quot;Dedicated support team&quot;,
+        &quot;Unlimited users&quot;,
+        &quot;On-premise deployment&quot;,
+        &quot;Custom training&quot;,
+        &quot;SLA guarantees&quot;
       ],
       popular: false
     }
@@ -133,12 +133,12 @@ export default function AIBusinessIntelligencePage() {
     <>
       <Head>
         <title>AI Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency." />
-        <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform" />
-        <meta property="og:title" content="AI Business Intelligence - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence" />
+        <meta name=&quot;description&quot; content=&quot;Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Business Intelligence - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-business-intelligence" />
       </Head>
 
       <EnhancedNavigation />
@@ -154,8 +154,8 @@ export default function AIBusinessIntelligencePage() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Business Intelligence
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent&quot;>
+                {&quot; "}Business Intelligence
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -169,13 +169,13 @@ export default function AIBusinessIntelligencePage() {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-              </a>
+              </Link>
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -362,7 +362,7 @@ export default function AIBusinessIntelligencePage() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -387,13 +387,13 @@ export default function AIBusinessIntelligencePage() {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </a>
+              </Link>
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

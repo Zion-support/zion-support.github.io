@@ -1,10 +1,10 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from &quot;@/components/FooterNewsletter&quot;;
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link"; // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+import Link from &quot;next/link&quot;; // Changed from react-router-dom
+import { FeedbackWidget } from &quot;@/components/feedback/FeedbackWidget&quot;;
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
-  if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
+  if (!envVar || envVar.trim() === "&quot; || envVar === &quot;#&quot; || envVar === &quot;/&quot;) {
     return fallback;
   }
   return envVar;
@@ -12,23 +12,23 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
-  "https://twitter.com/ZionTechGroup"
+  &quot;https://twitter.com/ZionTechGroup&quot;
 );
 const LINKEDIN_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
-  "https://linkedin.com/company/ziontechgroup"
+  &quot;https://linkedin.com/company/ziontechgroup&quot;
 );
 const FACEBOOK_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
-  "https://facebook.com/ZionTechGroup"
+  &quot;https://facebook.com/ZionTechGroup&quot;
 );
 const INSTAGRAM_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
-  "https://instagram.com/ZionTechGroup"
+  &quot;https://instagram.com/ZionTechGroup&quot;
 );
 const GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
-  "https://github.com/ZionTechGroup"
+  &quot;https://github.com/ZionTechGroup"
 );
 
 export function Footer() {
@@ -41,64 +41,64 @@ export function Footer() {
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
             </div>
             <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
-              The world&apos;s first free marketplace dedicated to high-tech and artificial intelligence.
+              The world's first free marketplace dedicated to high-tech and artificial intelligence.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
                 href={TWITTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
-                aria-label="Twitter"
-                title="Twitter"
+                target="_blank&quot;
+                rel=&quot;noopener noreferrer"
+                className="text-foreground/80 hover:text-primary transition-colors&quot;
+                aria-label=&quot;Twitter&quot;
+                title=&quot;Twitter"
               >
-                <Twitter className="h-5 w-5" aria-hidden="true" />
+                <Twitter className="h-5 w-5&quot; aria-hidden=&quot;true" />
                 <span className="sr-only">Twitter</span>
-              </a>
+              </Link>
               <a
                 href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-                title="LinkedIn"
+                target="_blank&quot;
+                rel=&quot;noopener noreferrer"
+                className="text-foreground/80 hover:text-primary transition-colors&quot;
+                aria-label=&quot;LinkedIn&quot;
+                title=&quot;LinkedIn"
               >
-                <Linkedin className="h-5 w-5" aria-hidden="true" />
+                <Linkedin className="h-5 w-5&quot; aria-hidden=&quot;true" />
                 <span className="sr-only">LinkedIn</span>
-              </a>
+              </Link>
               <a
                 href={FACEBOOK_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
-                aria-label="Facebook"
-                title="Facebook"
+                target="_blank&quot;
+                rel=&quot;noopener noreferrer"
+                className="text-foreground/80 hover:text-primary transition-colors&quot;
+                aria-label=&quot;Facebook&quot;
+                title=&quot;Facebook"
               >
-                <Facebook className="h-5 w-5" aria-hidden="true" />
+                <Facebook className="h-5 w-5&quot; aria-hidden=&quot;true" />
                 <span className="sr-only">Facebook</span>
-              </a>
+              </Link>
               <a
                 href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
-                aria-label="Instagram"
-                title="Instagram"
+                target="_blank&quot;
+                rel=&quot;noopener noreferrer"
+                className="text-foreground/80 hover:text-primary transition-colors&quot;
+                aria-label=&quot;Instagram&quot;
+                title=&quot;Instagram"
               >
-                <Instagram className="h-5 w-5" aria-hidden="true" />
+                <Instagram className="h-5 w-5&quot; aria-hidden=&quot;true" />
                 <span className="sr-only">Instagram</span>
-              </a>
+              </Link>
               <a
                 href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/80 hover:text-primary transition-colors"
-                aria-label="GitHub"
-                title="GitHub"
+                target="_blank&quot;
+                rel=&quot;noopener noreferrer"
+                className="text-foreground/80 hover:text-primary transition-colors&quot;
+                aria-label=&quot;GitHub&quot;
+                title=&quot;GitHub"
               >
-                <Github className="h-5 w-5" aria-hidden="true" />
+                <Github className="h-5 w-5&quot; aria-hidden=&quot;true" />
                 <span className="sr-only">GitHub</span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -119,8 +119,8 @@ export function Footer() {
               <li>
                 <Link
                   href="/equipment"
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm"
-                  target="_self"
+                  className="text-foreground/80 hover:text-primary transition-colors text-sm&quot;
+                  target=&quot;_self"
                 >
                   Equipment
                 </Link>
@@ -141,9 +141,9 @@ export function Footer() {
               <li><Link href="/contact" className="text-foreground/80 hover:text-primary transition-colors text-sm">Contact</Link></li>
               <li>
                 <Link
-                  href="/sitemap"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/sitemap&quot;
+                  target=&quot;_blank&quot;
+                  rel=&quot;noopener noreferrer"
                   className="text-foreground/80 hover:text-primary transition-colors text-sm"
                 >
                   Sitemap
@@ -163,19 +163,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex justify-end">
+        <div className="mt-8 flex justify-end&quot;>
           <button
-            type="button"
+            type=&quot;button"
             onClick={() => {
               window.scrollTo({ 
                 top: 0, 
                 behavior: 'smooth' 
               });
             }}
-            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
-            aria-label="Back to top"
+            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer&quot;
+            aria-label=&quot;Back to top"
           >
-            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <ChevronUp className="h-4 w-4&quot; aria-hidden=&quot;true" />
             <span>Back to Top</span>
           </button>
         </div>

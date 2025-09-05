@@ -37,7 +37,7 @@ export function useEducation() {
       
       if (error) throw error;
       
-      return showSuccessToast("Education added", "Your education has been added to your resume");
+      return showSuccessToast(&quot;Education added&quot;, &quot;Your education has been added to your resume&quot;);
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education');
     } finally {
@@ -72,7 +72,7 @@ export function useEducation() {
       
       if (error) throw error;
       
-      return showSuccessToast("Education updated", "Your education has been updated");
+      return showSuccessToast(&quot;Education updated&quot;, &quot;Your education has been updated&quot;);
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education');
     } finally {
@@ -97,7 +97,7 @@ export function useEducation() {
       
       if (error) throw error;
       
-      return showSuccessToast("Education deleted", "Your education has been removed from your resume");
+      return showSuccessToast(&quot;Education deleted&quot;, &quot;Your education has been removed from your resume&quot;);
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education');
     } finally {

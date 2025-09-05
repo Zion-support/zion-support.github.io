@@ -1,14 +1,14 @@
 
-import { useState } from "react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { useJobApplications } from "@/hooks/useJobApplications";
+import { useState } from &quot;react&quot;;
+import { JobApplication, ApplicationStatus } from &quot;@/types/jobs&quot;;
+import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
 import {
   ApplicationsTable,
   EmptyState,
   ErrorState,
   LoadingState,
   ScoreDialog
-} from "./applications";
+} from &quot;./applications&quot;;
 
 interface JobApplicationsTableProps {
   jobId: string;

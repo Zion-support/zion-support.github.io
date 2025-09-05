@@ -1,5 +1,5 @@
 
-import { ReactNode } from "react";
+import { ReactNode } from &quot;react&quot;;
 
 export interface HelpArticle {
   id: string;
@@ -22,8 +22,8 @@ export interface SupportTicket {
   userId: string;
   subject: string;
   message: string;
-  status: "open" | "in-progress" | "resolved" | "closed";
-  priority: "low" | "medium" | "high";
+  status: &quot;open&quot; | &quot;in-progress&quot; | &quot;resolved&quot; | &quot;closed&quot;;
+  priority: &quot;low&quot; | &quot;medium&quot; | &quot;high&quot;;
   createdAt: string;
   updatedAt: string;
 }

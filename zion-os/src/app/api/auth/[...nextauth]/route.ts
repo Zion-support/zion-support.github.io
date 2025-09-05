@@ -1,17 +1,17 @@
-import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { prisma } from "@/lib/prisma";
-import bcrypt from "bcryptjs";
+import NextAuth from &quot;next-auth&quot;;
+import CredentialsProvider from &quot;next-auth/providers/credentials&quot;;
+import { PrismaAdapter } from &quot;@auth/prisma-adapter&quot;;
+import { prisma } from &quot;@/lib/prisma&quot;;
+import bcrypt from &quot;bcryptjs&quot;;
 
 const handler = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
-      name: "credentials",
+      name: &quot;credentials&quot;,
       credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" }
+        email: { label: &quot;Email&quot;, type: &quot;email&quot; },
+        password: { label: &quot;Password&quot;, type: &quot;password&quot; }
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -46,7 +46,7 @@ const handler = NextAuth({
     })
   ],
   session: {
-    strategy: "jwt"},
+    strategy: &quot;jwt&quot;},
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
@@ -62,7 +62,7 @@ const handler = NextAuth({
       return session;
     }},
   pages: {
-    signIn: "/auth/signin",
-    signUp: "/auth/signup"}});
+    signIn: &quot;/auth/signin&quot;,
+    signUp: &quot;/auth/signup&quot;}});
 
 export { handler as GET, handler as POST };

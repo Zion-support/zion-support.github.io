@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useState, useEffect, useRef, useMemo } from &quot;react&quot;;
+import { useTranslation } from &quot;react-i18next&quot;;
 import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
+import { Input } from &quot;@/components/ui/input&quot;;
+import { AutocompleteSuggestions } from &quot;@/components/search/AutocompleteSuggestions&quot;;
+import { SearchSuggestion } from &quot;@/types/search&quot;;
+import { useDebounce } from &quot;@/hooks/useDebounce&quot;;
+import { useRouter } from &quot;next/router&quot;;
+import { slugify } from &quot;@/lib/slugify&quot;;
+import { debounce } from &quot;lodash&quot;;
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
 
@@ -31,7 +31,7 @@ export function EnhancedSearchInput({
   value,
   onChange,
   onSelectSuggestion,
-  placeholder = "Search...",
+  placeholder = &quot;Search...&quot;,
   searchSuggestions
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -123,8 +123,8 @@ export function EnhancedSearchInput({
       }
     }
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener(&quot;mousedown&quot;, handleClickOutside);
+    return () => document.removeEventListener(&quot;mousedown&quot;, handleClickOutside);
   }, []);
 
   const router = useRouter();
@@ -200,23 +200,23 @@ export function EnhancedSearchInput({
   
   return (
     <div
-      className="relative w-full"
+      className=&quot;relative w-full&quot;
       ref={containerRef}
-      role="combobox"
+      role=&quot;combobox&quot;
       aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls
+      aria-haspopup=&quot;listbox&quot;
+      aria-controls=&quot;autocomplete-suggestions-list&quot; // Added aria-controls
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="relative flex items-center w-full">
+      <div className=&quot;relative flex items-center w-full&quot;>
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate&quot; 
         />
         <Input
           ref={inputRef}
-          type="text"
-          id="enhanced-search-input"
-          name="search"
+          type=&quot;text&quot;
+          id=&quot;enhanced-search-input&quot;
+          name=&quot;search&quot;
           value={value}
           onChange={(e) => {
             onChange(e.target.value);
@@ -240,18 +240,18 @@ export function EnhancedSearchInput({
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
+          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0&quot;
+          aria-autocomplete=&quot;list&quot;
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off"
+          autoComplete=&quot;off&quot;
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className=&quot;absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white&quot;
             onClick={() => onChange('')}
-            aria-label="Clear search"
+            aria-label=&quot;Clear search&quot;
           >
-            <X className="h-4 w-4" />
+            <X className=&quot;h-4 w-4&quot; />
           </button>
         )}
       </div>
@@ -262,7 +262,7 @@ export function EnhancedSearchInput({
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+        listId=&quot;autocomplete-suggestions-list&quot; // Pass ID for aria-controls
       />
     </div>
   );

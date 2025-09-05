@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
+import { useState, useEffect } from &quot;react&quot;;
+import { Link, useNavigate, useSearchParams } from &quot;react-router-dom&quot;;
+import { AppLayout } from &quot;@/layout/AppLayout&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import PostForm from &quot;@/components/community/PostForm&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { ForumCategory } from &quot;@/types/community&quot;;
 
 interface PostFormValues {
   title: string;
@@ -21,10 +21,10 @@ export default function CreatePostPage() {
   const [searchParams] = useSearchParams();
   
   // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialCategory = searchParams.get(&quot;category&quot;) as ForumCategory | null;
   
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"
+    categoryId: initialCategory || &quot;project-help&quot;
   };
 
   const handleSubmit = async (values: PostFormValues) => {
@@ -33,20 +33,20 @@ export default function CreatePostPage() {
       // For now, we'll just simulate a successful post creation
       
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
+      const tagsArray = values.tags.split(&quot;,&quot;).map(tag => tag.trim());
       
       toast({
-        title: "Post created",
-        description: "Your post has been published successfully"
+        title: &quot;Post created&quot;,
+        description: &quot;Your post has been published successfully&quot;
       });
       
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`);
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem creating your post",
-        variant: "destructive"
+        title: &quot;Error&quot;,
+        description: &quot;There was a problem creating your post&quot;,
+        variant: &quot;destructive&quot;
       });
     }
   };
@@ -54,21 +54,21 @@ export default function CreatePostPage() {
   return (
     <AppLayout>
       <SEO 
-        title="Create New Post | Community Forum | Zion AI Marketplace"
-        description="Create a new discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, create post, new thread"
+        title=&quot;Create New Post | Community Forum | Zion AI Marketplace&quot;
+        description=&quot;Create a new discussion post in the Zion AI Marketplace community forum.&quot;
+        keywords=&quot;community, forum, discussion, create post, new thread&quot;
       />
       
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+      <div className=&quot;container py-8&quot;>
+        <div className=&quot;flex items-center gap-3 mb-6&quot;>
+          <Link to=&quot;/community&quot; className=&quot;text-sm text-muted-foreground hover:text-foreground&quot;>
             Forum
           </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="text-sm font-medium">Create Post</span>
+          <span className=&quot;text-muted-foreground&quot;>/</span>
+          <span className=&quot;text-sm font-medium&quot;>Create Post</span>
         </div>
         
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
+        <h1 className=&quot;text-3xl font-bold mb-8&quot;>Create New Post</h1>
         
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>

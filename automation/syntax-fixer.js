@@ -7,14 +7,14 @@
     const files = this.getSourceFiles(),
     files.forEach(file => {,
       try {,
-        let content = fs.readFileSync(file, "utf8"),
+        let content = fs.readFileSync(file, &quot;utf8&quot;),
         let modified = false,
 ,
         // Fix import statements;
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
 ,
-        if (content !== fs.readFileSync(file, "utf8")) {,
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         };
 ,
@@ -24,7 +24,7 @@
           this.log(`Fixed import issues in ${file}`);
         };
       } catch (error) {,
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
       };
     })
   };
@@ -33,13 +33,13 @@
     const files = this.getSourceFiles(),
     files.forEach(file => {,
       try {,
-        let content = fs.readFileSync(file, "utf8"),
+        let content = fs.readFileSync(file, &quot;utf8&quot;),
         let modified = false,
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
 ,
-        if (content !== fs.readFileSync(file, "utf8")) {,
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         };
 ,
@@ -49,14 +49,14 @@
           this.log(`Fixed export issues in ${file}`)
         };
       } catch (error) {,
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
       };
     })
   };
 ,
   getSourceFiles() {,
     const files = [],
-    const srcDir = path.join(process.cwd(), "src"),
+    const srcDir = path.join(process.cwd(), &quot;src&quot;),
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -65,9 +65,9 @@
           const fullPath = path.join(dir, item),
           const stat = fs.statSync(fullPath),
 ,
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {,
             walkDir(fullPath)
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+          } else if (item.endsWith(&quot;.ts&quot;) || item.endsWith(&quot;.tsx&quot;) || item.endsWith(&quot;.js&quot;) || item.endsWith(&quot;.jsx&quot;)) {,
             files.push(fullPath)
           };
         })
@@ -80,14 +80,14 @@
   };
 ,
   async run() {,
-    this.log("🚀 Starting Syntax Fixer"),
+    this.log(&quot;🚀 Starting Syntax Fixer&quot;),
 ,
     try {,
       await this.fixSyntaxErrors(),
 ,
-      this.log("=" * 50),
+      this.log(&quot;=&quot; * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`)} catch (error) {,
-      this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")
+      this.log(`❌ Syntax Fixer failed: ${error.message}`, &quot;ERROR&quot;)
     };
   };
 };

@@ -7,13 +7,13 @@ const CloudNativeArchitectureBestPracticesChat = () => {
     <div>
       <Head>
         <title>CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions</title>
-        <meta name="description" content="CloudNativeArchitectureBestPracticesChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;CloudNativeArchitectureBestPracticesChat blog post&quot; />
       </Head>
       
       <main>
         <h1>CloudNativeArchitectureBestPracticesChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

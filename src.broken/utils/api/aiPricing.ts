@@ -150,7 +150,7 @@ Contract:
 Constraints:
 - Assume remote contractor.
 - Use current global market rates.
-- currency must be "USD".
+- currency must be &quot;USD&quot;.
 - min and max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`;
@@ -200,7 +200,7 @@ Candidate:
 
 Constraints:
 - Consider global averages and location factor.
-- currency must be "USD".
+- currency must be &quot;USD&quot;.
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`;

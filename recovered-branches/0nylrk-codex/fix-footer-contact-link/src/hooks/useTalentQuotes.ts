@@ -49,24 +49,24 @@ export const useTalentQuotes = () => {
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
     onSuccess: (_, variables) => {
-      let message = "Status updated";
+      let message = &quot;Status updated&quot;;
       if (variables.status === 'in_review') {
-        message = "Quote marked as viewed";
+        message = &quot;Quote marked as viewed&quot;;
       } else if (variables.status === 'responded') {
-        message = "Quote marked as responded";
+        message = &quot;Quote marked as responded&quot;;
       }
       
       toast({
         title: message,
-        description: "The quote request status has been updated"
+        description: &quot;The quote request status has been updated&quot;
       });
       queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] });
     },
     onError: (error: Error) => {
       toast({
-        title: "Error",
-        description: "Failed to update status: " + error.message,
-        variant: "destructive"
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update status: &quot; + error.message,
+        variant: &quot;destructive&quot;
       });
     }
   });
@@ -77,18 +77,18 @@ export const useTalentQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived),
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
+        title: variables.isArchived ? &quot;Quote archived&quot; : &quot;Quote unarchived&quot;,
         description: variables.isArchived 
-          ? "The quote request has been archived" 
-          : "The quote request has been moved back to active quotes"
+          ? &quot;The quote request has been archived&quot; 
+          : &quot;The quote request has been moved back to active quotes&quot;
       });
       queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] });
     },
     onError: (error: Error) => {
       toast({
-        title: "Error",
-        description: "Failed to update quote: " + error.message,
-        variant: "destructive"
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update quote: &quot; + error.message,
+        variant: &quot;destructive&quot;
       });
     }
   });

@@ -97,9 +97,9 @@ export function useMessages(
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Failed to send message",
-        description: "Please try again later",
-        variant: "destructive"
+        title: &quot;Failed to send message&quot;,
+        description: &quot;Please try again later&quot;,
+        variant: &quot;destructive&quot;
       });
     }
   };

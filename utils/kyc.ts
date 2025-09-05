@@ -38,7 +38,7 @@ export interface KycProfile {
   status: KycStatus;
   amlStatus: AmlStatus;
   riskScore?: number; // 0-100
-  flags?: string[]; // e.g., ["mismatch","duplicate_ip"]
+  flags?: string[]; // e.g., [&quot;mismatch&quot;,&quot;duplicate_ip&quot;]
   lastUpdatedAt: string; // ISO
   createdAt: string; // ISO
   auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>;

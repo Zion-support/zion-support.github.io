@@ -1,4 +1,4 @@
-        "isDesktop": width >= 1024})};
+        &quot;isDesktop&quot;: width >= 1024})};
 
     updateDimensions(),
     window.addEventListener(,

@@ -12,7 +12,7 @@ export function usePageViewTracking() {
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
-      console.log('Page view:', window.location.pathname);
+      // console.log('Page view:', window.location.pathname);
     };
     
     // Listen for route changes
@@ -28,6 +28,6 @@ export function usePageViewTracking() {
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-    console.log('Page view:', location.pathname);
+    // console.log('Page view:', location.pathname);
   }, [location.pathname]);
 }

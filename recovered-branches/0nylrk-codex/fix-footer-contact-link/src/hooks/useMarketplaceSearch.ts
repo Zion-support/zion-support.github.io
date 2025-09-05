@@ -1,12 +1,12 @@
 
-import { useState, useMemo } from "react";
-import { ProductListing } from "@/types/listings";
-import { SearchSuggestion, FilterOptions } from "@/types/search";
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { useState, useMemo } from &quot;react&quot;;
+import { ProductListing } from &quot;@/types/listings&quot;;
+import { SearchSuggestion, FilterOptions } from &quot;@/types/search&quot;;
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from &quot;@/data/marketplaceData&quot;;
 
 export function useMarketplaceSearch() {
   // Search state
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("&quot;);
   
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
@@ -82,7 +82,7 @@ export function useMarketplaceSearch() {
   
   // Clear all filters
   const clearAllFilters = () => {
-    setSearchQuery("");
+    setSearchQuery("&quot;);
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);

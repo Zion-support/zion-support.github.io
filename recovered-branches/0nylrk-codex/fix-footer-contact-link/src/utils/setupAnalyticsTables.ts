@@ -10,7 +10,7 @@ export async function ensureAnalyticsTablesExist() {
       .limit(1);
       
     if (error && error.code === 'PGRST204') {
-      console.log('Creating analytics tables...');
+      // console.log('Creating analytics tables...');
       await createAnalyticsTables();
     }
   } catch (error) {
@@ -82,7 +82,7 @@ async function createAnalyticsTables() {
       `
     });
     
-    console.log('Analytics tables created successfully');
+    // console.log('Analytics tables created successfully');
   } catch (error) {
     console.error('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue

@@ -68,8 +68,8 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project added",
-        description: "Your project has been added to your portfolio"
+        title: &quot;Project added&quot;,
+        description: &quot;Your project has been added to your portfolio&quot;
       });
       
       await fetchProjects();
@@ -78,9 +78,9 @@ export function usePortfolio() {
       console.error('Error adding portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not add project: ${e.message}`,
-        variant: "destructive"
+        variant: &quot;destructive&quot;
       });
       return null;
     } finally {
@@ -115,8 +115,8 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project updated",
-        description: "Your portfolio project has been updated"
+        title: &quot;Project updated&quot;,
+        description: &quot;Your portfolio project has been updated&quot;
       });
       
       await fetchProjects();
@@ -125,9 +125,9 @@ export function usePortfolio() {
       console.error('Error updating portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not update project: ${e.message}`,
-        variant: "destructive"
+        variant: &quot;destructive&quot;
       });
       return false;
     } finally {
@@ -154,8 +154,8 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project deleted",
-        description: "Your portfolio project has been deleted"
+        title: &quot;Project deleted&quot;,
+        description: &quot;Your portfolio project has been deleted&quot;
       });
       
       setProjects(projects.filter(p => p.id !== projectId));
@@ -164,9 +164,9 @@ export function usePortfolio() {
       console.error('Error deleting portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: `Could not delete project: ${e.message}`,
-        variant: "destructive"
+        variant: &quot;destructive&quot;
       });
       return false;
     } finally {

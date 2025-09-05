@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from &quot;react&quot;;
 
 export interface TreeNode {
   name: string;
   path: string;
-  type: "folder" | "file";
+  type: &quot;folder&quot; | &quot;file&quot;;
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -26,11 +26,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
-      method: "POST",
+      method: &quot;POST&quot;,
       headers: {
-        "Content-Type": "application/json",
+        &quot;Content-Type&quot;: &quot;application/json&quot;,
         // Expect an admin token in local storage, fall back to prompt
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
+        &quot;x-admin-token&quot;: localStorage.getItem(&quot;ADMIN_TOKEN&quot;) || ""} as any,
       body: JSON.stringify({ path: node.path })});
   };
 
@@ -40,19 +40,19 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
     <div className="ml-2">
       <div className="flex items-center gap-2 py-1">
         {hasChildren ? (
-          <button className="text-sm" onClick={toggle} aria-label="Toggle">
-            {open ? "▾" : "▸"}
+          <button className="text-sm&quot; onClick={toggle} aria-label=&quot;Toggle&quot;>
+            {open ? &quot;▾&quot; : &quot;▸"}
           </button>
         ) : (
           <span className="inline-block w-4" />
         )}
-        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600&quot; : &quot;text-gray-500"}`}>
           {node.path}
         </span>
         <div className="ml-auto flex gap-2">
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
-          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={copyPath} title=&quot;Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded&quot; onClick={clonePath} title=&quot;Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded&quot; onClick={deploy} title=&quot;Auto-deploy">Deploy</button>
         </div>
       </div>
       {hasChildren && open && (

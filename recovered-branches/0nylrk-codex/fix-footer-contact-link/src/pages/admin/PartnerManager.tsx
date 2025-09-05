@@ -1,18 +1,18 @@
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { useState, useEffect } from &quot;react&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { Alert, AlertDescription, AlertTitle } from &quot;@/components/ui/alert&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { Check, Flag, Search, Settings, X } from &quot;lucide-react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
 
 interface PartnerProfile {
   id: string;
@@ -34,8 +34,8 @@ export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
+  const [searchQuery, setSearchQuery] = useState("&quot;);
+  const [activeTab, setActiveTab] = useState(&quot;pending&quot;);
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function PartnerManager() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate("/login");
+      navigate(&quot;/login&quot;);
       return;
     }
 
@@ -151,11 +151,11 @@ export default function PartnerManager() {
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
       }
     } catch (error) {
-      console.error("Error fetching partners:", error);
+      console.error(&quot;Error fetching partners:&quot;, error);
       toast({
-        title: "Error",
-        description: "Failed to load partner data",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to load partner data&quot;,
+        variant: &quot;destructive&quot;});
     } finally {
       setIsLoading(false);
     }
@@ -165,7 +165,7 @@ export default function PartnerManager() {
     let filtered = partners;
     
     // Filter by status
-    if (status !== "all") {
+    if (status !== &quot;all&quot;) {
       filtered = filtered.filter(p => p.status === status);
     }
     
@@ -218,20 +218,20 @@ export default function PartnerManager() {
       );
       
       toast({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
+        title: status === 'approved' ? &quot;Partner Approved&quot; : &quot;Partner Rejected&quot;,
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"});
+        variant: status === 'approved' ? &quot;default&quot; : &quot;destructive&quot;});
       
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false);
       }
     } catch (error) {
-      console.error("Error updating partner status:", error);
+      console.error(&quot;Error updating partner status:&quot;, error);
       toast({
-        title: "Error",
-        description: "Failed to update partner status",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update partner status&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
@@ -251,17 +251,17 @@ export default function PartnerManager() {
       );
       
       toast({
-        title: "Settings Updated",
-        description: "Partner settings have been updated successfully.",
-        variant: "default"});
+        title: &quot;Settings Updated&quot;,
+        description: &quot;Partner settings have been updated successfully.&quot;,
+        variant: &quot;default&quot;});
       
       setIsSettingsOpen(false);
     } catch (error) {
-      console.error("Error updating partner settings:", error);
+      console.error(&quot;Error updating partner settings:&quot;, error);
       toast({
-        title: "Error",
-        description: "Failed to update partner settings",
-        variant: "destructive"});
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update partner settings&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
@@ -279,13 +279,13 @@ export default function PartnerManager() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
+        return <Badge variant=&quot;outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600&quot;>Pending</Badge>;
       case 'approved':
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+        return <Badge variant=&quot;outline" className="bg-green-900/30 text-green-500 border-green-600&quot;>Approved</Badge>;
       case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
+        return <Badge variant=&quot;outline" className="bg-red-900/30 text-red-500 border-red-600&quot;>Rejected</Badge>;
       default:
-        return <Badge variant="outline">{status}</Badge>;
+        return <Badge variant=&quot;outline&quot;>{status}</Badge>;
     }
   };
 
@@ -293,7 +293,7 @@ export default function PartnerManager() {
     if (flags === 0) return null;
     
     return (
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
+      <Badge variant=&quot;outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
         {flags}
       </Badge>
@@ -374,9 +374,9 @@ export default function PartnerManager() {
           </div>
           <div className="w-full md:w-80">
             <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light&quot; />
               <Input
-                placeholder="Search partners..."
+                placeholder=&quot;Search partners..."
                 className="pl-8"
                 value={searchQuery}
                 onChange={handleSearch}
@@ -386,14 +386,14 @@ export default function PartnerManager() {
         </CardHeader>
         <CardContent>
           <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">
-            <TabsList className="grid grid-cols-4 w-full md:w-auto">
-              <TabsTrigger value="pending">Pending</TabsTrigger>
-              <TabsTrigger value="approved">Approved</TabsTrigger>
-              <TabsTrigger value="rejected">Rejected</TabsTrigger>
-              <TabsTrigger value="all">All</TabsTrigger>
+            <TabsList className="grid grid-cols-4 w-full md:w-auto&quot;>
+              <TabsTrigger value=&quot;pending&quot;>Pending</TabsTrigger>
+              <TabsTrigger value=&quot;approved&quot;>Approved</TabsTrigger>
+              <TabsTrigger value=&quot;rejected&quot;>Rejected</TabsTrigger>
+              <TabsTrigger value=&quot;all&quot;>All</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="pending" className="space-y-4">
+            <TabsContent value=&quot;pending" className="space-y-4&quot;>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -405,7 +405,7 @@ export default function PartnerManager() {
               />
             </TabsContent>
             
-            <TabsContent value="approved" className="space-y-4">
+            <TabsContent value=&quot;approved" className="space-y-4&quot;>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -417,7 +417,7 @@ export default function PartnerManager() {
               />
             </TabsContent>
             
-            <TabsContent value="rejected" className="space-y-4">
+            <TabsContent value=&quot;rejected" className="space-y-4&quot;>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -429,7 +429,7 @@ export default function PartnerManager() {
               />
             </TabsContent>
             
-            <TabsContent value="all" className="space-y-4">
+            <TabsContent value=&quot;all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -469,7 +469,7 @@ export default function PartnerManager() {
               
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
-                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
+                <p className="text-white&quot;>{selectedPartner.bio || &quot;No bio provided"}</p>
               </div>
               
               <div className="grid grid-cols-2 gap-2">
@@ -507,7 +507,7 @@ export default function PartnerManager() {
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
-                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>
+                  <p className="text-white capitalize&quot;>{selectedPartner.payout_method || &quot;Not specified"}</p>
                 </div>
                 <div>
                   <p className="text-xs text-zion-slate-light">Commission Rate</p>
@@ -528,9 +528,9 @@ export default function PartnerManager() {
               )}
               
               {selectedPartner.status === 'pending' && (
-                <div className="flex justify-end gap-2 mt-4">
+                <div className="flex justify-end gap-2 mt-4&quot;>
                   <Button 
-                    variant="destructive" 
+                    variant=&quot;destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
                   >
                     <X className="h-4 w-4 mr-1" />
@@ -568,24 +568,24 @@ export default function PartnerManager() {
               </div>
               
               <div>
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
+                <label className="text-sm font-medium text-white&quot; htmlFor=&quot;commission-rate&quot;>
                   Commission Rate (%)
                 </label>
                 <Input
-                  id="commission-rate"
-                  type="number"
-                  min="1"
-                  max="50"
+                  id=&quot;commission-rate&quot;
+                  type=&quot;number&quot;
+                  min=&quot;1&quot;
+                  max=&quot;50"
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                 />
-                <p className="text-xs text-zion-slate-light mt-1">
+                <p className="text-xs text-zion-slate-light mt-1&quot;>
                   Percentage of reward granted to this partner for successful referrals
                 </p>
               </div>
               
               <DialogFooter>
-                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
+                <Button variant=&quot;outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
                 </Button>
                 <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -665,43 +665,43 @@ function PartnerTable({
               {new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
             <TableCell className="text-right">
-              <div className="flex justify-end gap-2">
+              <div className="flex justify-end gap-2&quot;>
                 {partner.status === 'pending' && (
                   <>
                     <Button 
-                      variant="ghost"
-                      size="sm"
+                      variant=&quot;ghost&quot;
+                      size=&quot;sm"
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
                       <X className="h-4 w-4" />
-                      <span className="sr-only">Reject</span>
+                      <span className="sr-only&quot;>Reject</span>
                     </Button>
                     <Button 
-                      variant="ghost"
-                      size="sm"
+                      variant=&quot;ghost&quot;
+                      size=&quot;sm"
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />
-                      <span className="sr-only">Approve</span>
+                      <span className="sr-only&quot;>Approve</span>
                     </Button>
                   </>
                 )}
                 
                 <Button 
-                  variant="ghost" 
-                  size="sm"
+                  variant=&quot;ghost&quot; 
+                  size=&quot;sm"
                   onClick={() => onOpenSettings(partner)}
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
-                  <span className="sr-only">Settings</span>
+                  <span className="sr-only&quot;>Settings</span>
                 </Button>
                 
                 <Button 
-                  variant="outline" 
-                  size="sm"
+                  variant=&quot;outline&quot; 
+                  size=&quot;sm"
                   onClick={() => onViewDetails(partner)}
                 >
                   View

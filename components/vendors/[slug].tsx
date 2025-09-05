@@ -8,7 +8,7 @@ export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
+  if (!vendor) return <div className=&quot;text-gray-500&quot;>Vendor not found.</div>;
 
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -33,37 +33,37 @@ export default function VendorProfilePage({ vendor }: Props) {
   }
 
   return (
-    <div className="space-y-8">
-      <div className="flex items-center gap-4">
+    <div className=&quot;space-y-8&quot;>
+      <div className=&quot;flex items-center gap-4&quot;>
         {vendor.logoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
+          <img src={vendor.logoUrl} alt={vendor.name} className=&quot;w-16 h-16 rounded&quot; />
         ) : (
-          <div className="w-16 h-16 rounded bg-gray-100 dark:bg-gray-900" />
+          <div className=&quot;w-16 h-16 rounded bg-gray-100 dark:bg-gray-900&quot; />
         )}
         <div>
-          <div className="text-2xl font-semibold flex items-center gap-2">
+          <div className=&quot;text-2xl font-semibold flex items-center gap-2&quot;>
             {vendor.name}
-            {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
+            {vendor.verified && <span className=&quot;text-xs px-2 py-0.5 rounded bg-green-100 text-green-700&quot;>Verified</span>}
           </div>
-          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join(', ')}</div>
+          <div className=&quot;text-sm text-gray-500&quot;>{vendor.servicesOffered?.join(', ')}</div>
         </div>
       </div>
 
       <div>
-        <h2 className="text-lg font-medium mb-2">About</h2>
-        <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about || 'No description provided.'}</p>
+        <h2 className=&quot;text-lg font-medium mb-2&quot;>About</h2>
+        <p className=&quot;text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line&quot;>{vendor.about || 'No description provided.'}</p>
       </div>
 
       {vendor.packages && vendor.packages.length > 0 && (
         <div>
-          <h2 className="text-lg font-medium mb-2">Packages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h2 className=&quot;text-lg font-medium mb-2&quot;>Packages</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
             {vendor.packages.map(p => (
-              <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
-                <div className="font-medium">{p.title}</div>
-                <div className="text-sm text-gray-500">{p.description}</div>
-                <div className="mt-2 text-sm">${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>
+              <div key={p.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded p-4&quot;>
+                <div className=&quot;font-medium&quot;>{p.title}</div>
+                <div className=&quot;text-sm text-gray-500&quot;>{p.description}</div>
+                <div className=&quot;mt-2 text-sm&quot;>${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>
               </div>
             ))}
           </div>
@@ -72,19 +72,19 @@ export default function VendorProfilePage({ vendor }: Props) {
 
       {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (
         <div>
-          <h2 className="text-lg font-medium mb-2">Sample Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h2 className=&quot;text-lg font-medium mb-2&quot;>Sample Projects</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
             {vendor.sampleProjects.map(sp => (
-              <div key={sp.id} className="border border-gray-200 dark:border-gray-800 rounded overflow-hidden">
+              <div key={sp.id} className=&quot;border border-gray-200 dark:border-gray-800 rounded overflow-hidden&quot;>
                 {sp.imageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={sp.imageUrl} alt={sp.title} className="w-full h-40 object-cover" />
+                  <img src={sp.imageUrl} alt={sp.title} className=&quot;w-full h-40 object-cover&quot; />
                 ) : (
-                  <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />
+                  <div className=&quot;w-full h-40 bg-gray-100 dark:bg-gray-900&quot; />
                 )}
-                <div className="p-3">
-                  <div className="font-medium">{sp.title}</div>
-                  <div className="text-sm text-gray-500">{sp.description}</div>
+                <div className=&quot;p-3&quot;>
+                  <div className=&quot;font-medium&quot;>{sp.title}</div>
+                  <div className=&quot;text-sm text-gray-500&quot;>{sp.description}</div>
                 </div>
               </div>
             ))}
@@ -93,17 +93,17 @@ export default function VendorProfilePage({ vendor }: Props) {
       )}
 
       <div>
-        <h2 className="text-lg font-medium mb-2">Request a Quote</h2>
-        <form onSubmit={submitLead} className="space-y-3">
-          <input name="title" required placeholder="What do you need?" className="w-full border rounded px-3 py-2 bg-transparent" />
-          <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
+        <h2 className=&quot;text-lg font-medium mb-2&quot;>Request a Quote</h2>
+        <form onSubmit={submitLead} className=&quot;space-y-3&quot;>
+          <input name=&quot;title&quot; required placeholder=&quot;What do you need?&quot; className=&quot;w-full border rounded px-3 py-2 bg-transparent&quot; />
+          <button disabled={loading} className=&quot;px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black&quot;>
             {loading ? 'Submitting...' : 'Send'}
           </button>
-          {message && <div className="text-sm">{message}</div>}
+          {message && <div className=&quot;text-sm&quot;>{message}</div>}
         </form>
       </div>
 
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+      <div className=&quot;text-center text-xs text-gray-500&quot;>Powered by Zion</div>
     </div>
   );
 }

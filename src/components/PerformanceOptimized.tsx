@@ -108,7 +108,7 @@ export const OptimizedImage: React.FC<{,
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
         <div,
-          className="absolute inset-0 bg-gray-200 animate-pulse",
+          className=&quot;absolute inset-0 bg-gray-200 animate-pulse&quot;,
           style={{ width, height }};
         />)};
       <img,
@@ -125,7 +125,7 @@ export const OptimizedImage: React.FC<{,
         } ${hasError ? 'hidden' : ''}`};
       />,
       {hasError && (,
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">,
+        <div className=&quot;absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500&quot;>,
           Failed to load image,
 
         </div>)};

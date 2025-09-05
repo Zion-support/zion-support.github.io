@@ -1,11 +1,11 @@
 
-import { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
+import { useState } from &quot;react&quot;;
+import { formatDistanceToNow } from &quot;date-fns&quot;;
 import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Review } from &quot;@/types/reviews&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
 import {
   Dialog,
   DialogContent,
@@ -13,8 +13,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
-import { Textarea } from "@/components/ui/textarea";
+  DialogTrigger} from &quot;@/components/ui/dialog&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 
 interface ReviewCardProps {
   review: Review;
@@ -22,7 +22,7 @@ interface ReviewCardProps {
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState("");
+  const [reportReason, setReportReason] = useState("&quot;);
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
   
@@ -34,7 +34,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     setIsReporting(false);
     
     if (success) {
-      setReportReason("");
+      setReportReason("&quot;);
       setIsReportDialogOpen(false);
     }
   };
@@ -43,11 +43,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     if (!rating) return null;
     
     return (
-      <div className="flex">
+      <div className=&quot;flex&quot;>
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+            className={`h-4 w-4 ${star <= rating ? &quot;fill-yellow-400 text-yellow-400&quot; : &quot;text-gray-300&quot;}`}
           />
         ))}
       </div>
@@ -56,7 +56,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   
   const getInitials = (name: string) => {
     return name
-      .split(" ")
+      .split(&quot; &quot;)
       .map((n) => n[0])
       .join("")
       .toUpperCase()
@@ -87,8 +87,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           )}
           
           <div>
-            <div className="font-medium">
-              {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
+            <div className="font-medium&quot;>
+              {review.is_anonymous ? &quot;Anonymous&quot; : review.reviewer_profile?.display_name || &quot;User"}
             </div>
             <div className="text-sm text-muted-foreground">
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
@@ -107,45 +107,45 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2&quot;>
             {review.communication_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
+              <Badge variant=&quot;outline" className="flex gap-1 items-center">
                 Communication
-                <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
+                <span className="ml-1 text-yellow-500&quot;>{review.communication_rating}/5</span>
               </Badge>
             )}
             
             {review.quality_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
+              <Badge variant=&quot;outline" className="flex gap-1 items-center">
                 Quality
-                <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
+                <span className="ml-1 text-yellow-500&quot;>{review.quality_rating}/5</span>
               </Badge>
             )}
             
             {review.timeliness_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
+              <Badge variant=&quot;outline" className="flex gap-1 items-center">
                 Timeliness
-                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
+                <span className="ml-1 text-yellow-500&quot;>{review.timeliness_rating}/5</span>
               </Badge>
             )}
             
             {review.would_work_again !== undefined && (
               <Badge 
-                variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+                variant={review.would_work_again ? &quot;default&quot; : &quot;secondary"}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200&quot; : &quot;bg-gray-100 text-gray-800 hover:bg-gray-200&quot;}`}
               >
-                {review.would_work_again ? "Would work again" : "Would not work again"}
+                {review.would_work_again ? &quot;Would work again&quot; : &quot;Would not work again"}
               </Badge>
             )}
           </div>
         </div>
       )}
       
-      <div className="mt-3 flex justify-end">
+      <div className="mt-3 flex justify-end&quot;>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-muted-foreground">
-              <Flag className="h-3 w-3 mr-1" />
+            <Button variant=&quot;ghost&quot; size=&quot;sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1&quot; />
               Report
             </Button>
           </DialogTrigger>
@@ -158,21 +158,21 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </DialogHeader>
             
             <Textarea
-              placeholder="Why are you reporting this review?"
+              placeholder=&quot;Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-              className="min-h-[100px]"
+              className="min-h-[100px]&quot;
             />
             
             <DialogFooter>
-              <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
+              <Button variant=&quot;outline&quot; onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
-                {isReporting ? "Submitting..." : "Submit Report"}
+                {isReporting ? &quot;Submitting...&quot; : &quot;Submit Report"}
               </Button>
             </DialogFooter>
           </DialogContent>

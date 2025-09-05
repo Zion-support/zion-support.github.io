@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useEffect } from "react";
+import { useEffect } from &quot;react&quot;;
 
 interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
@@ -11,38 +11,38 @@ interface FirstInputEntry extends PerformanceEntry {
 export function Analytics() {
   useEffect(() => {
     // Performance monitoring
-    if (typeof window !== "undefined") {
+    if (typeof window !== &quot;undefined&quot;) {
       // Core Web Vitals monitoring
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === "largest-contentful-paint") {
-            console.log("LCP:", entry.startTime);
+          if (entry.entryType === &quot;largest-contentful-paint&quot;) {
+            // console.log(&quot;LCP:&quot;, entry.startTime);
           }
-          if (entry.entryType === "first-input") {
+          if (entry.entryType === &quot;first-input&quot;) {
             const firstInputEntry = entry as FirstInputEntry;
-            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+            // console.log(&quot;FID:&quot;, firstInputEntry.processingStart - firstInputEntry.startTime);
           }
         }
       });
 
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+      observer.observe({ entryTypes: [&quot;largest-contentful-paint&quot;, &quot;first-input&quot;] });
 
       // Cumulative Layout Shift monitoring
       let cls = 0;
       const observer2 = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === "layout-shift") {
+          if (entry.entryType === &quot;layout-shift&quot;) {
             const layoutShiftEntry = entry as any;
             cls += layoutShiftEntry.value;
           }
         }
       });
 
-      observer2.observe({ entryTypes: ["layout-shift"] });
+      observer2.observe({ entryTypes: [&quot;layout-shift&quot;] });
 
       // Report metrics on page unload
-      window.addEventListener("beforeunload", () => {
-        console.log("CLS:", cls);
+      window.addEventListener(&quot;beforeunload&quot;, () => {
+        // console.log(&quot;CLS:", cls);
       });
 
       // Cleanup

@@ -10,165 +10,165 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 export default function CareersPage() {
   const openPositions = [
     {
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$150,000 - $200,000",
-      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",
+      title: &quot;Senior AI Engineer&quot;,
+      department: &quot;AI & Machine Learning&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;5+ years&quot;,
+      salary: &quot;$150,000 - $200,000&quot;,
+      description: &quot;Lead the development of cutting-edge AI solutions and neural networks for enterprise clients&quot;,
       requirements: [
-        "Advanced degree in Computer Science, AI, or related field",
-        "Expertise in TensorFlow, PyTorch, and deep learning frameworks",
-        "Experience with large-scale AI model deployment",
-        "Strong background in machine learning algorithms"
+        &quot;Advanced degree in Computer Science, AI, or related field&quot;,
+        &quot;Expertise in TensorFlow, PyTorch, and deep learning frameworks&quot;,
+        &quot;Experience with large-scale AI model deployment&quot;,
+        &quot;Strong background in machine learning algorithms&quot;
       ],
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Equity options&quot;, &quot;Health insurance&quot;, &quot;Flexible work arrangements&quot;],
       icon: Brain,
-      color: "from-purple-500 to-pink-500"
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
-      title: "Quantum Computing Researcher",
-      department: "Quantum Computing",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "3+ years",
-      salary: "$120,000 - $180,000",
-      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",
+      title: &quot;Quantum Computing Researcher&quot;,
+      department: &quot;Quantum Computing&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;3+ years&quot;,
+      salary: &quot;$120,000 - $180,000&quot;,
+      description: &quot;Research and develop quantum algorithms and quantum-resistant cryptography solutions&quot;,
       requirements: [
-        "PhD in Physics, Computer Science, or related field",
-        "Experience with quantum computing frameworks (Qiskit, Cirq)",
-        "Knowledge of quantum algorithms and cryptography",
-        "Strong mathematical and analytical skills"
+        &quot;PhD in Physics, Computer Science, or related field&quot;,
+        &quot;Experience with quantum computing frameworks (Qiskit, Cirq)&quot;,
+        &quot;Knowledge of quantum algorithms and cryptography&quot;,
+        &quot;Strong mathematical and analytical skills&quot;
       ],
-      benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Research funding&quot;, &quot;Conference attendance&quot;, &quot;Health insurance&quot;],
       icon: Atom,
-      color: "from-blue-500 to-cyan-500"
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
-      title: "Cybersecurity Architect",
-      department: "Cybersecurity",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "7+ years",
-      salary: "$160,000 - $220,000",
-      description: "Design and implement enterprise-level security architectures and zero-trust solutions",
+      title: &quot;Cybersecurity Architect&quot;,
+      department: &quot;Cybersecurity&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;7+ years&quot;,
+      salary: &quot;$160,000 - $220,000&quot;,
+      description: &quot;Design and implement enterprise-level security architectures and zero-trust solutions&quot;,
       requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "Expertise in security frameworks and compliance standards",
-        "Experience with zero-trust architecture implementation",
-        "Strong knowledge of threat detection and response"
+        &quot;Bachelor's degree in Computer Science or related field&quot;,
+        &quot;Expertise in security frameworks and compliance standards&quot;,
+        &quot;Experience with zero-trust architecture implementation&quot;,
+        &quot;Strong knowledge of threat detection and response&quot;
       ],
-      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Security certifications&quot;, &quot;Health insurance&quot;, &quot;Remote work&quot;],
       icon: Shield,
-      color: "from-red-500 to-orange-500"
+      color: &quot;from-red-500 to-orange-500&quot;
     },
     {
-      title: "Cloud Infrastructure Engineer",
-      department: "Cloud Infrastructure",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "4+ years",
-      salary: "$130,000 - $180,000",
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",
+      title: &quot;Cloud Infrastructure Engineer&quot;,
+      department: &quot;Cloud Infrastructure&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;4+ years&quot;,
+      salary: &quot;$130,000 - $180,000&quot;,
+      description: &quot;Build and maintain scalable cloud infrastructure and DevOps automation systems&quot;,
       requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "Expertise in AWS, Azure, or GCP",
-        "Experience with Kubernetes, Docker, and CI/CD",
-        "Strong knowledge of infrastructure as code"
+        &quot;Bachelor's degree in Computer Science or related field&quot;,
+        &quot;Expertise in AWS, Azure, or GCP&quot;,
+        &quot;Experience with Kubernetes, Docker, and CI/CD&quot;,
+        &quot;Strong knowledge of infrastructure as code&quot;
       ],
-      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Cloud certifications&quot;, &quot;Health insurance&quot;, &quot;Flexible hours&quot;],
       icon: Cloud,
-      color: "from-emerald-500 to-teal-500"
+      color: &quot;from-emerald-500 to-teal-500&quot;
     },
     {
-      title: "Data Scientist",
-      department: "Data Analytics",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "3+ years",
-      salary: "$110,000 - $160,000",
-      description: "Develop predictive analytics models and data-driven insights for business clients",
+      title: &quot;Data Scientist&quot;,
+      department: &quot;Data Analytics&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;3+ years&quot;,
+      salary: &quot;$110,000 - $160,000&quot;,
+      description: &quot;Develop predictive analytics models and data-driven insights for business clients&quot;,
       requirements: [
-        "Master's degree in Data Science, Statistics, or related field",
-        "Proficiency in Python, R, and SQL",
-        "Experience with machine learning and statistical modeling",
-        "Strong analytical and problem-solving skills"
+        &quot;Master's degree in Data Science, Statistics, or related field&quot;,
+        &quot;Proficiency in Python, R, and SQL&quot;,
+        &quot;Experience with machine learning and statistical modeling&quot;,
+        &quot;Strong analytical and problem-solving skills&quot;
       ],
-      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Learning budget&quot;, &quot;Health insurance&quot;, &quot;Remote work&quot;],
       icon: Zap,
-      color: "from-indigo-500 to-purple-500"
+      color: &quot;from-indigo-500 to-purple-500&quot;
     },
     {
-      title: "Product Manager",
-      department: "Product",
-      location: "San Francisco, CA / Remote",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "$140,000 - $190,000",
-      description: "Lead product strategy and development for our technology solutions portfolio",
+      title: &quot;Product Manager&quot;,
+      department: &quot;Product&quot;,
+      location: &quot;San Francisco, CA / Remote&quot;,
+      type: &quot;Full-time&quot;,
+      experience: &quot;5+ years&quot;,
+      salary: &quot;$140,000 - $190,000&quot;,
+      description: &quot;Lead product strategy and development for our technology solutions portfolio&quot;,
       requirements: [
-        "Bachelor's degree in Business, Engineering, or related field",
-        "Experience in B2B SaaS or technology products",
-        "Strong analytical and strategic thinking skills",
-        "Excellent communication and leadership abilities"
+        &quot;Bachelor's degree in Business, Engineering, or related field&quot;,
+        &quot;Experience in B2B SaaS or technology products&quot;,
+        &quot;Strong analytical and strategic thinking skills&quot;,
+        &quot;Excellent communication and leadership abilities&quot;
       ],
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"],
+      benefits: [&quot;Competitive salary&quot;, &quot;Equity options&quot;, &quot;Health insurance&quot;, &quot;Professional development&quot;],
       icon: Rocket,
-      color: "from-yellow-500 to-orange-500"
+      color: &quot;from-yellow-500 to-orange-500&quot;
     }
   ];
 
   const benefits = [
     {
-      title: "Competitive Compensation",
-      description: "Above-market salaries with equity options and performance bonuses",
+      title: &quot;Competitive Compensation&quot;,
+      description: &quot;Above-market salaries with equity options and performance bonuses&quot;,
       icon: DollarSign,
-      color: "from-green-500 to-emerald-500"
+      color: &quot;from-green-500 to-emerald-500&quot;
     },
     {
-      title: "Health & Wellness",
-      description: "Comprehensive health, dental, and vision insurance for you and your family",
+      title: &quot;Health & Wellness&quot;,
+      description: &quot;Comprehensive health, dental, and vision insurance for you and your family&quot;,
       icon: Star,
-      color: "from-blue-500 to-cyan-500"
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
-      title: "Flexible Work",
-      description: "Remote work options and flexible hours to support work-life balance",
+      title: &quot;Flexible Work&quot;,
+      description: &quot;Remote work options and flexible hours to support work-life balance&quot;,
       icon: Clock,
-      color: "from-purple-500 to-pink-500"
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
-      title: "Professional Growth",
-      description: "Continuous learning opportunities, conferences, and career development",
+      title: &quot;Professional Growth&quot;,
+      description: &quot;Continuous learning opportunities, conferences, and career development&quot;,
       icon: Rocket,
-      color: "from-orange-500 to-red-500"
+      color: &quot;from-orange-500 to-red-500&quot;
     }
   ];
 
   return (
     <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
+      <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+          <meta name=&quot;description&quot; content=&quot;Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects.&quot; />
         </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;relative pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className=&quot;mb-8&quot;
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
               Join Our Team
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed&quot;>
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions
             </p>
           </motion.div>
@@ -177,37 +177,37 @@ export default function CareersPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
+            className=&quot;mb-12&quot;
           >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            <p className=&quot;text-lg text-white/70 max-w-2xl mx-auto mb-8&quot;>
               Work alongside world-class engineers and researchers to solve the most complex 
               technological challenges and shape the future of computing.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+            <button className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto&quot;>
               View Open Positions
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </button>
           </motion.div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Why Work at Zion Tech Group?</h2>
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               We offer competitive benefits and a collaborative environment that fosters innovation and growth
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -215,13 +215,13 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+                className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300&quot;
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-white/70">{benefit.description}</p>
+                <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{benefit.title}</h3>
+                <p className=&quot;text-white/70&quot;>{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -229,22 +229,22 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Open Positions</h2>
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Join our team of innovators and help build the future of technology
             </p>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className=&quot;space-y-6&quot;>
             {openPositions.map((position, index) => (
               <motion.div
                 key={position.title}
@@ -252,58 +252,58 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+                className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300&quot;
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
+                <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6&quot;>
+                  <div className=&quot;flex-1&quot;>
+                    <div className=&quot;flex items-center gap-4 mb-4&quot;>
                       <div className={`w-12 h-12 bg-gradient-to-br ${position.color} rounded-xl flex items-center justify-center`}>
-                        <position.icon className="w-6 h-6 text-white" />
+                        <position.icon className=&quot;w-6 h-6 text-white&quot; />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white">{position.title}</h3>
-                        <p className="text-white/70">{position.department}</p>
+                        <h3 className=&quot;text-2xl font-bold text-white&quot;>{position.title}</h3>
+                        <p className=&quot;text-white/70&quot;>{position.department}</p>
                       </div>
                     </div>
                     
-                    <p className="text-white/80 mb-4">{position.description}</p>
+                    <p className=&quot;text-white/80 mb-4&quot;>{position.description}</p>
                     
-                    <div className="flex flex-wrap gap-4 mb-4">
-                      <div className="flex items-center gap-2 text-white/70">
-                        <MapPin className="w-4 h-4" />
+                    <div className=&quot;flex flex-wrap gap-4 mb-4&quot;>
+                      <div className=&quot;flex items-center gap-2 text-white/70&quot;>
+                        <MapPin className=&quot;w-4 h-4&quot; />
                         <span>{position.location}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-white/70">
-                        <Clock className="w-4 h-4" />
+                      <div className=&quot;flex items-center gap-2 text-white/70&quot;>
+                        <Clock className=&quot;w-4 h-4&quot; />
                         <span>{position.type}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-white/70">
-                        <Users className="w-4 h-4" />
+                      <div className=&quot;flex items-center gap-2 text-white/70&quot;>
+                        <Users className=&quot;w-4 h-4&quot; />
                         <span>{position.experience}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-white/70">
-                        <DollarSign className="w-4 h-4" />
+                      <div className=&quot;flex items-center gap-2 text-white/70&quot;>
+                        <DollarSign className=&quot;w-4 h-4&quot; />
                         <span>{position.salary}</span>
                       </div>
                     </div>
                     
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>
-                      <ul className="space-y-1">
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider&quot;>Requirements</h4>
+                      <ul className=&quot;space-y-1&quot;>
                         {position.requirements.map((req, idx) => (
-                          <li key={idx} className="text-sm text-white/80 flex items-center">
-                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                          <li key={idx} className=&quot;text-sm text-white/80 flex items-center&quot;>
+                            <div className=&quot;w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2&quot; />
                             {req}
                           </li>
                         ))}
                       </ul>
                     </div>
                     
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
-                      <div className="flex flex-wrap gap-2">
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider&quot;>Benefits</h4>
+                      <div className=&quot;flex flex-wrap gap-2&quot;>
                         {position.benefits.map((benefit) => (
-                          <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
+                          <span key={benefit} className=&quot;text-xs bg-white/5 text-white/70 px-2 py-1 rounded&quot;>
                             {benefit}
                           </span>
                         ))}
@@ -311,8 +311,8 @@ export default function CareersPage() {
                     </div>
                   </div>
                   
-                  <div className="lg:flex-shrink-0">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                  <div className=&quot;lg:flex-shrink-0&quot;>
+                    <button className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105&quot;>
                       Apply Now
                     </button>
                   </div>
@@ -324,25 +324,25 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
               Don't See the Right Role?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105&quot;>
                 Send Resume
               </button>
-              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
                 Contact Recruiting
               </button>
             </div>

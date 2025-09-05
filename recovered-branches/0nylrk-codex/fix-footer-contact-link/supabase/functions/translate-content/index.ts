@@ -1,38 +1,38 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
 
-const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+const OPENAI_API_KEY = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     // Extract request data
-    const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json();
+    const { content, sourceLanguage = &quot;en&quot;, targetLanguages = [&quot;es&quot;, &quot;pt&quot;, &quot;ar&quot;], contentType } = await req.json();
 
-    if (!content || content.trim() === "") {
-      throw new Error("Content is required");
+    if (!content || content.trim() === "&quot;) {
+      throw new Error(&quot;Content is required&quot;);
     }
 
     if (!OPENAI_API_KEY) {
-      throw new Error("OpenAI API key is not configured");
+      throw new Error(&quot;OpenAI API key is not configured&quot;);
     }
 
     // Prepare system prompt based on content type
-    let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.";
-    if (contentType === "job") {
-      systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology.";
-    } else if (contentType === "profile") {
-      systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.";
+    let systemPrompt = &quot;You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.&quot;;
+    if (contentType === &quot;job&quot;) {
+      systemPrompt = &quot;You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology.&quot;;
+    } else if (contentType === &quot;profile&quot;) {
+      systemPrompt = &quot;You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.&quot;;
     }
 
     // Create translations for each target language
@@ -44,20 +44,20 @@ serve(async (req) => {
         continue;
       }
       
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
+      const response = await fetch(&quot;https://api.openai.com/v1/chat/completions&quot;, {
+        method: &quot;POST&quot;,
         headers: {
-          "Authorization": `Bearer ${OPENAI_API_KEY}`,
-          "Content-Type": "application/json"},
+          &quot;Authorization&quot;: `Bearer ${OPENAI_API_KEY}`,
+          &quot;Content-Type&quot;: &quot;application/json&quot;},
         body: JSON.stringify({
-          model: "gpt-4o-mini",
+          model: &quot;gpt-4o-mini&quot;,
           messages: [
             {
-              role: "system",
+              role: &quot;system&quot;,
               content: systemPrompt},
             {
-              role: "user",
-              content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
+              role: &quot;user&quot;,
+              content: `Translate the following ${contentType || &quot;content&quot;} from ${sourceLanguage} to ${targetLang}: 
               
               ${content}
               
@@ -77,17 +77,17 @@ serve(async (req) => {
       JSON.stringify({
         translations}),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; }}
     );
 
   } catch (error) {
-    console.error("Error in translate-content function:", error);
+    console.error(&quot;Error in translate-content function:&quot;, error);
     return new Response(
       JSON.stringify({
         error: error.message}),
       {
         status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" }}
     );
   }
 });

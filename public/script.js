@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^=&quot;#&quot;]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formData = new FormData(form);
-            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitBtn = form.querySelector('button[type=&quot;submit&quot;]');
             const originalText = submitBtn.textContent;
             
             // Show loading state
@@ -143,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const email = this.querySelector('input[type="email"]').value;
-            const submitBtn = this.querySelector('button[type="submit"]');
+            const email = this.querySelector('input[type=&quot;email&quot;]').value;
+            const submitBtn = this.querySelector('button[type=&quot;submit&quot;]');
             const originalText = submitBtn.textContent;
             
             // Show loading state
@@ -243,11 +243,11 @@ function performSearch(query) {
         
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result => 
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+                `<a href=&quot;${result.url}&quot; class=&quot;search-result-item&quot;>${result.title}</Link>`
             ).join('');
             searchResults.style.display = 'block';
         } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>';
+            searchResults.innerHTML = '<div class=&quot;search-result-item no-results&quot;>No results found</div>';
             searchResults.style.display = 'block';
         }
     }
@@ -353,8 +353,8 @@ function initializeModals() {
 function logPerformance() {
     if ('performance' in window) {
         const perfData = performance.getEntriesByType('navigation')[0];
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+        // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
     }
 }
 
@@ -366,7 +366,7 @@ window.addEventListener('error', function(e) {
 
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-    console.log('Event tracked:', eventName, eventData);
+    // console.log('Event tracked:', eventName, eventData);
     // Implement your analytics tracking here
 }
 

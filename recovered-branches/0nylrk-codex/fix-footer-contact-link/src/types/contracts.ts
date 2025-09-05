@@ -1,5 +1,5 @@
 
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+import { ContractFormValues } from &quot;@/components/contracts/components/ContractForm&quot;;
 
 export interface ContractTemplate {
   id: string;

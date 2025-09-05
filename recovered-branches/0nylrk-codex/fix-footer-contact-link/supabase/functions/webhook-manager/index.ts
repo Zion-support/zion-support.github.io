@@ -1,5 +1,5 @@
 
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
+import { serve } from &quot;https://deno.land/std@0.177.0/http/server.ts&quot;;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
 
 interface CreateWebhookRequest {
@@ -15,8 +15,8 @@ interface WebhookTestRequest {
 }
 
 // Create a Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
+const supabaseUrl = Deno.env.get(&quot;SUPABASE_URL&quot;) as string;
+const supabaseKey = Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 serve(async (req) => {

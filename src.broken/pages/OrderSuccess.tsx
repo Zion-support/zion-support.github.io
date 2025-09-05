@@ -6,10 +6,10 @@ export default function OrderSuccess() {
   const sessionId = params.get('session_id');
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6">
-      <h1 className="text-2xl font-bold mb-4">Payment Successful</h1>
-      {sessionId && <p className="mb-4">Session ID: {sessionId}</p>}
-      <Link className="underline" to="/">Return Home</Link>
+    <div className=&quot;min-h-screen flex flex-col items-center justify-center p-6&quot;>
+      <h1 className=&quot;text-2xl font-bold mb-4&quot;>Payment Successful</h1>
+      {sessionId && <p className=&quot;mb-4&quot;>Session ID: {sessionId}</p>}
+      <Link className=&quot;underline&quot; to=&quot;/&quot;>Return Home</Link>
     </div>
   );
 }

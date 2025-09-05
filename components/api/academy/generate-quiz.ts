@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const client = new OpenAI({ apiKey });
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {&quot;questions&quot;:[{&quot;question&quot;:string,&quot;options&quot;:string[],&quot;answerIndex&quot;:number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',

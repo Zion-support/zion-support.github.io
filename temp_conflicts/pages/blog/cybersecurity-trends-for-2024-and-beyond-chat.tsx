@@ -7,13 +7,13 @@ const CybersecurityTrendsFor2024AndBeyondChat = () => {
     <div>
       <Head>
         <title>CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityTrendsFor2024AndBeyondChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;CybersecurityTrendsFor2024AndBeyondChat blog post&quot; />
       </Head>
       
       <main>
         <h1>CybersecurityTrendsFor2024AndBeyondChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

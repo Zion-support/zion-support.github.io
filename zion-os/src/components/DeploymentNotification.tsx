@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 import { 
   Rocket, 
   CheckCircle, 
@@ -17,7 +17,7 @@ import {
   Building2,
   Users,
   Zap
-} from "lucide-react";
+} from &quot;lucide-react";
 
 interface DeploymentUpdate {
   id: string;
@@ -57,7 +57,7 @@ export default function DeploymentNotification({
       case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />;
       case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />;
       case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
-      default: return <Rocket className="w-5 h-5 text-gray-400" />;
+      default: return <Rocket className="w-5 h-5 text-gray-400&quot; />;
     }
   };
 
@@ -74,19 +74,19 @@ export default function DeploymentNotification({
 
   const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
-      default: return <Globe className="w-4 h-4 text-gray-400" />;
+      case &quot;HEALTH": return <Shield className="w-4 h-4 text-blue-400&quot; />;
+      case &quot;EDUCATION": return <Building2 className="w-4 h-4 text-green-400&quot; />;
+      case &quot;LAW": return <Shield className="w-4 h-4 text-purple-400&quot; />;
+      case &quot;GOV": return <Users className="w-4 h-4 text-red-400" />;
+      default: return <Globe className="w-4 h-4 text-gray-400&quot; />;
     }
   };
 
   const getGovernanceIcon = (type: string) => {
     switch (type) {
-      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
+      case &quot;ADMIN": return <Users className="w-4 h-4 text-yellow-400&quot; />;
+      case &quot;DAO_LITE": return <Users className="w-4 h-4 text-blue-400&quot; />;
+      case &quot;DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
       default: return <Users className="w-4 h-4 text-gray-400" />;
     }
   };
@@ -212,7 +212,7 @@ export default function DeploymentNotification({
           )}
 
           {/* Timestamp */}
-          <div className="absolute bottom-2 right-4 text-xs text-white/60">
+          <div className="absolute bottom-2 right-4 text-xs text-white/60&quot;>
             {formatTimestamp(update.timestamp)}
           </div>
         </div>
@@ -225,34 +225,34 @@ export default function DeploymentNotification({
 export function DeploymentNotificationExample() {
   const [updates, setUpdates] = useState<DeploymentUpdate[]>([
     {
-      id: "1",
-      type: "deployment_started",
-      title: "Deployment Started",
-      message: "Zion Health Network is now being deployed to production",
+      id: &quot;1&quot;,
+      type: &quot;deployment_started&quot;,
+      title: &quot;Deployment Started&quot;,
+      message: &quot;Zion Health Network is now being deployed to production&quot;,
       timestamp: new Date().toISOString(),
-      instanceName: "Zion Health Network",
-      vertical: "HEALTH",
-      governanceType: "DAO_FULL",
-      domain: "health.zion.network",
+      instanceName: &quot;Zion Health Network&quot;,
+      vertical: &quot;HEALTH&quot;,
+      governanceType: &quot;DAO_FULL&quot;,
+      domain: &quot;health.zion.network&quot;,
       progress: 25,
       actions: [
-        { label: "View Progress", action: "view", href: "/admin/deployments" },
-        { label: "Configure", action: "configure", href: "/admin/instances" }
+        { label: &quot;View Progress&quot;, action: &quot;view&quot;, href: &quot;/admin/deployments&quot; },
+        { label: &quot;Configure&quot;, action: &quot;configure&quot;, href: &quot;/admin/instances&quot; }
       ]
     },
     {
-      id: "2",
-      type: "instance_ready",
-      title: "Instance Ready",
-      message: "EduDAO Academy has been successfully deployed and is now live",
+      id: &quot;2&quot;,
+      type: &quot;instance_ready&quot;,
+      title: &quot;Instance Ready&quot;,
+      message: &quot;EduDAO Academy has been successfully deployed and is now live&quot;,
       timestamp: new Date(Date.now() - 5 * 60 * 1000).toISOString(),
-      instanceName: "EduDAO Academy",
-      vertical: "EDUCATION",
-      governanceType: "DAO_LITE",
-      domain: "edu.zion.network",
+      instanceName: &quot;EduDAO Academy&quot;,
+      vertical: &quot;EDUCATION&quot;,
+      governanceType: &quot;DAO_LITE&quot;,
+      domain: &quot;edu.zion.network&quot;,
       actions: [
-        { label: "View Instance", action: "view", href: "/admin/instances" },
-        { label: "Manage", action: "configure", href: "/admin/instances" }
+        { label: &quot;View Instance&quot;, action: &quot;view&quot;, href: &quot;/admin/instances&quot; },
+        { label: &quot;Manage&quot;, action: &quot;configure&quot;, href: &quot;/admin/instances" }
       ]
     }
   ]);
@@ -262,7 +262,7 @@ export function DeploymentNotificationExample() {
   };
 
   const handleAction = (id: string, action: string) => {
-    console.log(`Action ${action} for update ${id}`);
+    // console.log(`Action ${action} for update ${id}`);
     // Handle different actions here
   };
 

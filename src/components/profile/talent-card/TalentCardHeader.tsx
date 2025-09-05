@@ -1,8 +1,8 @@
 
-import React from "react";
+import React from &quot;react&quot;;
 import { BadgeCheck } from 'lucide-react'
-import { TalentCardAvatar } from "./TalentCardAvatar";
-import { TalentCardAvailability } from "./TalentCardAvailability";
+import { TalentCardAvatar } from &quot;./TalentCardAvatar&quot;;
+import { TalentCardAvailability } from &quot;./TalentCardAvailability&quot;;
 
 interface TalentCardHeaderProps {
   fullName: string;
@@ -20,23 +20,23 @@ export function TalentCardHeader({
   yearsExperience
 }: TalentCardHeaderProps) {
   return (
-    <div className="flex items-start gap-4 mb-4">
+    <div className=&quot;flex items-start gap-4 mb-4&quot;>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
       
-      <div className="flex-1">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-white flex items-center gap-1">
+      <div className=&quot;flex-1&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h3 className=&quot;text-lg font-semibold text-white flex items-center gap-1&quot;>
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
-              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
+              <BadgeCheck className=&quot;h-4 w-4 text-zion-cyan&quot; aria-label=&quot;Verified Expert&quot; />
             )}
           </h3>
           
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
         
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>
+        <p className=&quot;text-zion-cyan text-sm&quot;>{professionalTitle}</p>
       </div>
     </div>
   );

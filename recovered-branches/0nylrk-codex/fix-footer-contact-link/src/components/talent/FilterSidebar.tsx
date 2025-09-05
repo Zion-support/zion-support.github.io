@@ -1,15 +1,15 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Filter } from "lucide-react";
-import { SearchFilter } from "./filters/SearchFilter";
-import { SortFilter } from "./filters/SortFilter";
-import { SkillsFilter } from "./filters/SkillsFilter";
-import { AvailabilityFilter } from "./filters/AvailabilityFilter";
-import { RegionFilter } from "./filters/RegionFilter";
-import { ExperienceFilter } from "./filters/ExperienceFilter";
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
+import React from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Filter } from &quot;lucide-react&quot;;
+import { SearchFilter } from &quot;./filters/SearchFilter&quot;;
+import { SortFilter } from &quot;./filters/SortFilter&quot;;
+import { SkillsFilter } from &quot;./filters/SkillsFilter&quot;;
+import { AvailabilityFilter } from &quot;./filters/AvailabilityFilter&quot;;
+import { RegionFilter } from &quot;./filters/RegionFilter&quot;;
+import { ExperienceFilter } from &quot;./filters/ExperienceFilter&quot;;
+import { PriceFilter } from &quot;./filters/PriceFilter&quot;;
+import { FilterSidebarProps } from &quot;@/types/filters&quot;;
 
 export function FilterSidebar({
   searchTerm,
@@ -34,16 +34,16 @@ export function FilterSidebar({
   return (
     <>
       {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+      <div className=&quot;flex items-center justify-between mb-6&quot;>
+        <h3 className=&quot;text-lg font-semibold text-white flex items-center&quot;>
+          <Filter className=&quot;h-4 w-4 mr-2 text-zion-purple&quot; />
           Filters
         </h3>
         <Button 
-          variant="ghost" 
-          size="sm" 
+          variant=&quot;ghost&quot; 
+          size=&quot;sm&quot; 
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+          className=&quot;h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent&quot;
         >
           Clear All
         </Button>
@@ -103,7 +103,7 @@ export function FilterSidebar({
       {isMobileFilterOpen && (
         <Button 
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+          className=&quot;w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4&quot;
         >
           Apply Filters
         </Button>

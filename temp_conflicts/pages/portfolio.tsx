@@ -120,30 +120,30 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
       <Head>
         <title>Portfolio - Zion Tech Group | Our Projects & Success Stories</title>
-        <meta name="description" content="Explore Zion Tech Group's portfolio of innovative projects, case studies, and success stories across AI, quantum computing, cybersecurity, and space technology." />
-        <meta name="keywords" content="Zion Tech Group portfolio, AI projects, quantum computing projects, cybersecurity solutions, space technology projects, case studies" />
-        <meta property="og:title" content="Portfolio - Zion Tech Group" />
-        <meta property="og:description" content="Explore our innovative projects and success stories across cutting-edge technologies." />
-        <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
+        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's portfolio of innovative projects, case studies, and success stories across AI, quantum computing, cybersecurity, and space technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;Zion Tech Group portfolio, AI projects, quantum computing projects, cybersecurity solutions, space technology projects, case studies&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Portfolio - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our innovative projects and success stories across cutting-edge technologies.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/portfolio&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className=&quot;relative pt-32 pb-16 px-6&quot;>
+        <div className=&quot;max-w-6xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6&quot;>
               Our Portfolio
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
               Discover how we've transformed businesses with cutting-edge technology solutions, 
               from AI-powered platforms to quantum-resistant security systems.
             </p>
@@ -152,24 +152,24 @@ export default function PortfolioPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section className=&quot;py-16 px-6&quot;>
+        <div className=&quot;max-w-6xl mx-auto&quot;>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;>
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className=&quot;text-center&quot;
               >
-                <div className="flex justify-center mb-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-white" />
+                <div className=&quot;flex justify-center mb-3&quot;>
+                  <div className=&quot;w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center&quot;>
+                    <stat.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/70">{stat.label}</div>
+                <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.number}</div>
+                <div className=&quot;text-white/70&quot;>{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -177,11 +177,11 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filters and Search */}
-      <section className="py-8 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <section className=&quot;py-8 px-6&quot;>
+        <div className=&quot;max-w-6xl mx-auto&quot;>
+          <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
             {/* Category Filters */}
-            <div className="flex flex-wrap gap-3">
+            <div className=&quot;flex flex-wrap gap-3&quot;>
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -192,21 +192,21 @@ export default function PortfolioPage() {
                       : 'border-white/20 text-white/70 hover:border-white/40 hover:text-white'
                   }`}
                 >
-                  <category.icon className="w-4 h-4" />
+                  <category.icon className=&quot;w-4 h-4&quot; />
                   <span>{category.name}</span>
                 </button>
               ))}
             </div>
 
             {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+            <div className=&quot;relative&quot;>
+              <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50&quot; />
               <input
-                type="text"
-                placeholder="Search projects..."
+                type=&quot;text&quot;
+                placeholder=&quot;Search projects...&quot;
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                className=&quot;pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-blue-500 transition-colors duration-300&quot;
               />
             </div>
           </div>
@@ -214,16 +214,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <AnimatePresence mode="wait">
+      <section className=&quot;py-16 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <AnimatePresence mode=&quot;wait&quot;>
             <motion.div
               key={`${selectedCategory}-${searchTerm}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
             >
               {filteredProjects.map((project, index) => (
                 <motion.div
@@ -236,36 +236,36 @@ export default function PortfolioPage() {
                   }`}
                 >
                   {/* Project Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                      <Globe className="w-8 h-8 text-white" />
+                  <div className=&quot;relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center&quot;>
+                    <div className=&quot;w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center&quot;>
+                      <Globe className=&quot;w-8 h-8 text-white&quot; />
                     </div>
                     {project.featured && (
-                      <div className="absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
+                      <div className=&quot;absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full&quot;>
                         Featured
                       </div>
                     )}
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                      <p className="text-cyan-400 text-sm font-medium">{project.client}</p>
+                  <div className=&quot;p-6&quot;>
+                    <div className=&quot;mb-4&quot;>
+                      <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{project.title}</h3>
+                      <p className=&quot;text-cyan-400 text-sm font-medium&quot;>{project.client}</p>
                     </div>
 
-                    <p className="text-white/70 text-sm leading-relaxed mb-4">
+                    <p className=&quot;text-white/70 text-sm leading-relaxed mb-4&quot;>
                       {project.description}
                     </p>
 
                     {/* Technologies */}
-                    <div className="mb-4">
-                      <h4 className="text-white font-medium mb-2 text-sm">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-white font-medium mb-2 text-sm&quot;>Technologies</h4>
+                      <div className=&quot;flex flex-wrap gap-2&quot;>
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-2 py-1 bg-white/10 rounded-lg text-xs text-white/80"
+                            className=&quot;px-2 py-1 bg-white/10 rounded-lg text-xs text-white/80&quot;
                           >
                             {tech}
                           </span>
@@ -274,12 +274,12 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Results */}
-                    <div className="mb-6">
-                      <h4 className="text-white font-medium mb-2 text-sm">Key Results</h4>
-                      <ul className="space-y-1">
+                    <div className=&quot;mb-6&quot;>
+                      <h4 className=&quot;text-white font-medium mb-2 text-sm&quot;>Key Results</h4>
+                      <ul className=&quot;space-y-1&quot;>
                         {project.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center space-x-2 text-sm text-white/70">
-                            <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                          <li key={idx} className=&quot;flex items-center space-x-2 text-sm text-white/70&quot;>
+                            <CheckCircle className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
                             <span>{result}</span>
                           </li>
                         ))}
@@ -287,20 +287,20 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Project Links */}
-                    <div className="flex space-x-3">
+                    <div className=&quot;flex space-x-3&quot;>
                       <a
                         href={project.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
+                        className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105&quot;
                       >
                         View Project
-                      </a>
+                      </Link>
                       <a
                         href={project.github}
-                        className="px-4 py-2 border border-white/20 hover:border-white/40 rounded-lg text-white/70 hover:text-white transition-all duration-300"
-                        title="View Code"
+                        className=&quot;px-4 py-2 border border-white/20 hover:border-white/40 rounded-lg text-white/70 hover:text-white transition-all duration-300&quot;
+                        title=&quot;View Code&quot;
                       >
-                        <Github className="w-4 h-4" />
-                      </a>
+                        <Github className=&quot;w-4 h-4&quot; />
+                      </Link>
                     </div>
                   </div>
                 </motion.div>
@@ -312,47 +312,47 @@ export default function PortfolioPage() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-16"
+              className=&quot;text-center py-16&quot;
             >
-              <div className="w-16 h-16 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">
-                <Search className="w-8 h-8 text-white/50" />
+              <div className=&quot;w-16 h-16 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center&quot;>
+                <Search className=&quot;w-8 h-8 text-white/50&quot; />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">No projects found</h3>
-              <p className="text-white/70">Try adjusting your search criteria or category selection.</p>
+              <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>No projects found</h3>
+              <p className=&quot;text-white/70&quot;>Try adjusting your search criteria or category selection.</p>
             </motion.div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-16 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12"
+            className=&quot;bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12&quot;
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
               Ready to Start Your Project?
             </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-white/80 text-lg mb-8 max-w-2xl mx-auto&quot;>
               Let's discuss how our cutting-edge technology solutions can transform your business 
               and drive innovation in your industry.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
               >
                 Start a Project
-              </a>
+              </Link>
               <a
-                href="/services"
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                href=&quot;/services&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;
               >
                 Explore Services
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -12,121 +12,121 @@ export default function EdgeComputingPage() {
   const features = [
     {
       icon: Cpu,
-      title: "Edge Orchestration",
-      description: "Intelligent distribution and management of computing workloads across edge nodes for optimal performance.",
-      color: "from-blue-500 to-cyan-500"
+      title: &quot;Edge Orchestration&quot;,
+      description: &quot;Intelligent distribution and management of computing workloads across edge nodes for optimal performance.&quot;,
+      color: &quot;from-blue-500 to-cyan-500&quot;
     },
     {
       icon: Network,
-      title: "IoT Management",
-      description: "Comprehensive management of IoT devices with real-time monitoring and automated control systems.",
-      color: "from-purple-500 to-pink-500"
+      title: &quot;IoT Management&quot;,
+      description: &quot;Comprehensive management of IoT devices with real-time monitoring and automated control systems.&quot;,
+      color: &quot;from-purple-500 to-pink-500&quot;
     },
     {
       icon: Zap,
-      title: "Real-time Processing",
-      description: "Ultra-low latency data processing at the network edge for mission-critical applications.",
-      color: "from-green-500 to-emerald-500"
+      title: &quot;Real-time Processing&quot;,
+      description: &quot;Ultra-low latency data processing at the network edge for mission-critical applications.&quot;,
+      color: &quot;from-green-500 to-emerald-500&quot;
     },
     {
       icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols designed specifically for distributed edge computing environments.",
-      color: "from-red-500 to-orange-500"
+      title: &quot;Edge Security&quot;,
+      description: &quot;Advanced security protocols designed specifically for distributed edge computing environments.&quot;,
+      color: &quot;from-red-500 to-orange-500&quot;
     },
     {
       icon: Database,
-      title: "Data Synchronization",
-      description: "Seamless data synchronization between edge nodes and central systems with conflict resolution.",
-      color: "from-indigo-500 to-purple-500"
+      title: &quot;Data Synchronization&quot;,
+      description: &quot;Seamless data synchronization between edge nodes and central systems with conflict resolution.&quot;,
+      color: &quot;from-indigo-500 to-purple-500&quot;
     },
     {
       icon: Globe,
-      title: "Global Distribution",
-      description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
-      color: "from-yellow-500 to-orange-500"
+      title: &quot;Global Distribution&quot;,
+      description: &quot;Worldwide edge network deployment with intelligent traffic routing and load balancing.&quot;,
+      color: &quot;from-yellow-500 to-orange-500&quot;
     }
   ];
 
   const benefits = [
-    "Reduce latency by 80-90% with edge processing",
-    "Cut bandwidth costs by 60% through local data processing",
-    "Improve reliability with distributed computing architecture",
-    "Scale seamlessly across global edge networks",
-    "Enable real-time AI and machine learning at the edge",
-    "Reduce central server load and improve overall performance"
+    &quot;Reduce latency by 80-90% with edge processing&quot;,
+    &quot;Cut bandwidth costs by 60% through local data processing&quot;,
+    &quot;Improve reliability with distributed computing architecture&quot;,
+    &quot;Scale seamlessly across global edge networks&quot;,
+    &quot;Enable real-time AI and machine learning at the edge&quot;,
+    &quot;Reduce central server load and improve overall performance&quot;
   ];
 
   const useCases = [
     {
-      industry: "Manufacturing",
-      description: "Real-time quality control, predictive maintenance, and production optimization",
-      results: "30% reduction in downtime, 25% improvement in product quality"
+      industry: &quot;Manufacturing&quot;,
+      description: &quot;Real-time quality control, predictive maintenance, and production optimization&quot;,
+      results: &quot;30% reduction in downtime, 25% improvement in product quality&quot;
     },
     {
-      industry: "Healthcare",
-      description: "Patient monitoring, medical device management, and telemedicine support",
-      results: "40% faster response times, improved patient outcomes"
+      industry: &quot;Healthcare&quot;,
+      description: &quot;Patient monitoring, medical device management, and telemedicine support&quot;,
+      results: &quot;40% faster response times, improved patient outcomes&quot;
     },
     {
-      industry: "Transportation",
-      description: "Autonomous vehicle support, traffic management, and fleet optimization",
-      results: "50% reduction in accidents, 35% improvement in efficiency"
+      industry: &quot;Transportation&quot;,
+      description: &quot;Autonomous vehicle support, traffic management, and fleet optimization&quot;,
+      results: &quot;50% reduction in accidents, 35% improvement in efficiency&quot;
     },
     {
-      industry: "Retail",
-      description: "Inventory management, customer analytics, and supply chain optimization",
-      results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
+      industry: &quot;Retail&quot;,
+      description: &quot;Inventory management, customer analytics, and supply chain optimization&quot;,
+      results: &quot;45% reduction in stockouts, 30% improvement in customer satisfaction&quot;
     }
   ];
 
   const pricing = [
     {
-      plan: "Starter",
-      price: "$399",
-      period: "/month",
-      description: "Basic edge computing for small deployments",
+      plan: &quot;Starter&quot;,
+      price: &quot;$399&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Basic edge computing for small deployments&quot;,
       features: [
-        "Up to 10 edge nodes",
-        "Basic orchestration",
-        "Standard monitoring",
-        "Email support",
-        "Basic security features",
-        "Up to 100 IoT devices"
+        &quot;Up to 10 edge nodes&quot;,
+        &quot;Basic orchestration&quot;,
+        &quot;Standard monitoring&quot;,
+        &quot;Email support&quot;,
+        &quot;Basic security features&quot;,
+        &quot;Up to 100 IoT devices&quot;
       ],
       popular: false
     },
     {
-      plan: "Professional",
-      price: "$999",
-      period: "/month",
-      description: "Advanced features for growing edge networks",
+      plan: &quot;Professional&quot;,
+      price: &quot;$999&quot;,
+      period: &quot;/month&quot;,
+      description: &quot;Advanced features for growing edge networks&quot;,
       features: [
-        "Everything in Starter",
-        "Up to 100 edge nodes",
-        "Advanced orchestration",
-        "Real-time monitoring",
-        "Priority support",
-        "Advanced security",
-        "Up to 1000 IoT devices",
-        "Custom integrations"
+        &quot;Everything in Starter&quot;,
+        &quot;Up to 100 edge nodes&quot;,
+        &quot;Advanced orchestration&quot;,
+        &quot;Real-time monitoring&quot;,
+        &quot;Priority support&quot;,
+        &quot;Advanced security&quot;,
+        &quot;Up to 1000 IoT devices&quot;,
+        &quot;Custom integrations&quot;
       ],
       popular: true
     },
     {
-      plan: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Full-scale solution for large organizations",
+      plan: &quot;Enterprise&quot;,
+      price: &quot;Custom&quot;,
+      period: "&quot;,
+      description: &quot;Full-scale solution for large organizations&quot;,
       features: [
-        "Everything in Professional",
-        "Unlimited edge nodes",
-        "Custom orchestration",
-        "Dedicated support team",
-        "Unlimited IoT devices",
-        "On-premise deployment",
-        "Custom training",
-        "SLA guarantees"
+        &quot;Everything in Professional&quot;,
+        &quot;Unlimited edge nodes&quot;,
+        &quot;Custom orchestration&quot;,
+        &quot;Dedicated support team&quot;,
+        &quot;Unlimited IoT devices&quot;,
+        &quot;On-premise deployment&quot;,
+        &quot;Custom training&quot;,
+        &quot;SLA guarantees&quot;
       ],
       popular: false
     }
@@ -136,12 +136,12 @@ export default function EdgeComputingPage() {
     <>
       <Head>
         <title>Edge Computing Orchestration - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />
-        <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />
-        <meta property="og:title" content="Edge Computing Orchestration - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/edge-computing-orchestration" />
+        <meta name=&quot;description&quot; content=&quot;Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Edge Computing Orchestration - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/edge-computing-orchestration" />
       </Head>
 
       <EnhancedNavigation />
@@ -157,8 +157,8 @@ export default function EdgeComputingPage() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                {" "}Orchestration
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent&quot;>
+                {&quot; "}Orchestration
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -171,13 +171,13 @@ export default function EdgeComputingPage() {
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-              </a>
+              </Link>
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -422,7 +422,7 @@ export default function EdgeComputingPage() {
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -447,13 +447,13 @@ export default function EdgeComputingPage() {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </a>
+              </Link>
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

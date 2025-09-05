@@ -47,43 +47,43 @@ export async function getStaticProps() {
 export default function EconomyAutoReportPage({ latest, latestReport, summaries }: any) {
   return (
     <EnhancedLayout>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">ZION$ Economy Autopilot Reports</h1>
-          <Link href="/economy/simulator"><a className="text-sm underline">Open Simulator</a></Link>
+      <div className=&quot;space-y-6&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>ZION$ Economy Autopilot Reports</h1>
+          <Link href=&quot;/economy/simulator&quot;><a className=&quot;text-sm underline&quot;>Open Simulator</Link></Link>
         </div>
 
         {latestReport ? (
-          <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-            <h2 className="font-semibold mb-2">Latest: {latestReport.runId}</h2>
-            <p className="text-sm opacity-80">Created: {latestReport.createdAt}</p>
-            <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div className=&quot;bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>Latest: {latestReport.runId}</h2>
+            <p className=&quot;text-sm opacity-80&quot;>Created: {latestReport.createdAt}</p>
+            <div className=&quot;mt-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm&quot;>
               <div>Ending supply: {Math.round(latestReport.baseline.summary.endingSupply).toLocaleString()}</div>
               <div>Ending treasury: {Math.round(latestReport.baseline.summary.endingTreasury).toLocaleString()}</div>
               <div>Avg inflation: {latestReport.baseline.summary.avgInflationPct.toFixed(2)}%</div>
               <div>Scenarios: {latestReport.scenarios?.length || 0}</div>
             </div>
-            <div className="mt-3 text-sm">
-              <Link href={`/reports/economy/${latestReport.runId}-baseline.csv`}><a className="underline">Download baseline CSV</a></Link>
+            <div className=&quot;mt-3 text-sm&quot;>
+              <Link href={`/reports/economy/${latestReport.runId}-baseline.csv`}><a className=&quot;underline&quot;>Download baseline CSV</Link></Link>
             </div>
           </div>
         ) : (
-          <div className="text-sm opacity-80">No reports available yet. The autopilot will populate this page after its first run.</div>
+          <div className=&quot;text-sm opacity-80&quot;>No reports available yet. The autopilot will populate this page after its first run.</div>
         )}
 
-        <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-          <h3 className="font-semibold mb-3">Recent runs</h3>
+        <div className=&quot;bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800&quot;>
+          <h3 className=&quot;font-semibold mb-3&quot;>Recent runs</h3>
           {summaries?.length ? (
-            <ul className="text-sm space-y-1">
+            <ul className=&quot;text-sm space-y-1&quot;>
               {summaries.slice(0, 20).map((s: any) => (
-                <li key={s.runId} className="flex items-center justify-between">
+                <li key={s.runId} className=&quot;flex items-center justify-between&quot;>
                   <span>{s.runId}</span>
-                  <Link href={`/reports/economy/${s.runId}-baseline.csv`}><a className="underline">CSV</a></Link>
+                  <Link href={`/reports/economy/${s.runId}-baseline.csv`}><a className=&quot;underline&quot;>CSV</Link></Link>
                 </li>
               ))}
             </ul>
           ) : (
-            <div className="text-sm opacity-80">No runs recorded.</div>
+            <div className=&quot;text-sm opacity-80&quot;>No runs recorded.</div>
           )}
         </div>
       </div>

@@ -80,7 +80,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         metadata: metadata
       }]);
       
-      console.log(`Analytics event tracked: ${type}`, metadata);
+      // console.log(`Analytics event tracked: ${type}`, metadata);
     } catch (error) {
       console.error('Error logging analytics event:', error);
     }

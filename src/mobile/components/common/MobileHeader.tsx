@@ -1,8 +1,8 @@
-import React from "react";
+import React from &quot;react&quot;;
 import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from &quot;@/lib/utils&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 
 interface MobileHeaderProps {
   title: string;
@@ -26,45 +26,45 @@ export function MobileHeader({
 
   return (
     <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+      &quot;sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border&quot;,
       className
     )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
+      <div className=&quot;flex items-center justify-between h-14 px-4&quot;>
+        <div className=&quot;flex items-center&quot;>
           {showBack && (
             <Button 
-              variant="ghost" 
-              size="icon" 
-              className="mr-2" 
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot; 
+              className=&quot;mr-2&quot; 
               onClick={() => router.back()}
             >
-              <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Back</span>
+              <ChevronLeft className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Back</span>
             </Button>
           )}
-          <h1 className="text-lg font-medium leading-none truncate">
+          <h1 className=&quot;text-lg font-medium leading-none truncate&quot;>
             {title}
           </h1>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className=&quot;flex items-center space-x-2&quot;>
           {showNotifications && (
             <Button 
-              variant="ghost" 
-              size="icon"
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot;
               onClick={onNotificationsClick}
             >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
+              <Bell className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Notifications</span>
             </Button>
           )}
           {showSettings && (
             <Button 
-              variant="ghost" 
-              size="icon"
+              variant=&quot;ghost&quot; 
+              size=&quot;icon&quot;
               onClick={onSettingsClick}
             >
-              <Settings className="h-5 w-5" />
-              <span className="sr-only">Settings</span>
+              <Settings className=&quot;h-5 w-5&quot; />
+              <span className=&quot;sr-only&quot;>Settings</span>
             </Button>
           )}
         </div>

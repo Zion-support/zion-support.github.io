@@ -3,7 +3,7 @@ import React from 'react';
 import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { toast } from "sonner";
+import { toast } from &quot;sonner&quot;;
 
 interface MilestoneManagerProps {
   projectId: string;
@@ -38,29 +38,29 @@ export function MilestoneManager({
 }: MilestoneManagerProps) {
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
-      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
-      toast.success("Milestone approved");
+      await onUpdateStatus(milestoneId, &quot;completed&quot; as MilestoneStatus);
+      toast.success(&quot;Milestone approved&quot;);
       await refetch();
     } catch (error) {
-      console.error("Error approving milestone:", error);
-      toast.error("Failed to approve milestone");
+      console.error(&quot;Error approving milestone:&quot;, error);
+      toast.error(&quot;Failed to approve milestone&quot;);
     }
   };
   
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
-      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
-      toast.success("Milestone rejected");
+      await onUpdateStatus(milestoneId, &quot;rejected&quot; as MilestoneStatus);
+      toast.success(&quot;Milestone rejected&quot;);
       await refetch();
     } catch (error) {
-      console.error("Error rejecting milestone:", error);
-      toast.error("Failed to reject milestone");
+      console.error(&quot;Error rejecting milestone:&quot;, error);
+      toast.error(&quot;Failed to reject milestone&quot;);
     }
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2">
+    <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
+      <div className=&quot;lg:col-span-2&quot;>
         <MilestonesList 
           milestones={milestones}
           activities={activities}

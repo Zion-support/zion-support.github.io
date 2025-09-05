@@ -7,13 +7,13 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
     <div>
       <Head>
         <title>MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions</title>
-        <meta name="description" content="MachineLearningApplicationsInEnterpriseSoftwareChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;MachineLearningApplicationsInEnterpriseSoftwareChat blog post&quot; />
       </Head>
       
       <main>
         <h1>MachineLearningApplicationsInEnterpriseSoftwareChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</Link>
       </main>
     </div>
   );

@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
+import { useState } from &quot;react&quot;;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from &quot;@/components/ui/dialog&quot;;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from &quot;@/components/ui/tabs&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
 import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
-import { useSmartContracts } from "@/hooks/useSmartContracts";
-import { toast } from "sonner";
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { ContractForm, ContractFormValues } from &quot;./components/ContractForm&quot;;
+import { ContractPreview } from &quot;./components/ContractPreview&quot;;
+import { TemplateManager } from &quot;./templates/TemplateManager&quot;;
+import { DeploymentOptions, SmartContractInfo } from &quot;@/types/smart-contracts&quot;;
+import { useSmartContracts } from &quot;@/hooks/useSmartContracts&quot;;
+import { toast } from &quot;sonner&quot;;
 import {logErrorToProduction} from '@/utils/productionLogger';
 
 
@@ -27,7 +27,7 @@ export function SmartContractBuilder({
   talent,
   clientName,
   onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form");
+  const [activeTab, setActiveTab] = useState<string>(&quot;form&quot;);
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
@@ -59,15 +59,15 @@ export function SmartContractBuilder({
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
-        toast.success("Smart contract deployed successfully!");
+        toast.success(&quot;Smart contract deployed successfully!&quot;);
       } else {
         setDeployStatus('error');
-        toast.error("Failed to deploy smart contract");
+        toast.error(&quot;Failed to deploy smart contract&quot;);
       }
     } catch (error) {
       logErrorToProduction('Error deploying contract:', { data: error });
       setDeployStatus('error');
-      toast.error("Failed to deploy smart contract");
+      toast.error(&quot;Failed to deploy smart contract&quot;);
     }
   };
 
@@ -79,36 +79,36 @@ export function SmartContractBuilder({
       onContractGenerated(contract);
     }
     setGeneratedContract(contract);
-    setActiveTab("preview");
+    setActiveTab(&quot;preview&quot;);
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className=&quot;max-w-4xl max-h-[90vh] overflow-y-auto&quot;>
         <DialogHeader>
           <DialogTitle>Smart Contract Builder</DialogTitle>
         </DialogHeader>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;mt-4&quot;>
+          <div className=&quot;flex justify-between items-center&quot;>
+            <TabsList className=&quot;grid grid-cols-2&quot;>
+              <TabsTrigger value=&quot;form&quot;>Contract Details</TabsTrigger>
+              <TabsTrigger value=&quot;preview&quot; disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             
-            <div className="flex gap-2">
+            <div className=&quot;flex gap-2&quot;>
               <Button 
-                variant="outline" 
-                size="sm"
+                variant=&quot;outline&quot; 
+                size=&quot;sm&quot;
                 onClick={() => setTemplateManagerOpen(true)}
-                className="flex gap-1"
+                className=&quot;flex gap-1&quot;
               >
-                <Save className="h-4 w-4" />
+                <Save className=&quot;h-4 w-4&quot; />
                 Templates
               </Button>
             </div>
           </div>
           
-          <TabsContent value="form" className="pt-4">
+          <TabsContent value=&quot;form&quot; className=&quot;pt-4&quot;>
             <ContractForm 
               talent={talent}
               clientName={clientName}
@@ -118,7 +118,7 @@ export function SmartContractBuilder({
             />
           </TabsContent>
           
-          <TabsContent value="preview" className="pt-4">
+          <TabsContent value=&quot;preview&quot; className=&quot;pt-4&quot;>
             {generatedContract && (
               <div>
                 <ContractPreview 
@@ -129,11 +129,11 @@ export function SmartContractBuilder({
                 />
                 
                 {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
+                  <div className=&quot;mt-6 flex justify-center&quot;>
                     <Button 
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                      className=&quot;bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700&quot;
                     >
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>

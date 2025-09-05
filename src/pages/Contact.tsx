@@ -106,7 +106,7 @@ export default function Contact() {
           toast({
             title: 'Message Sent',
             description:
-              "We've received your message and will get back to you soon."});
+              &quot;We've received your message and will get back to you soon.&quot;});
           setSubmitted(true);
           setTimeout(() => setSubmitted(false), 2000);
           setFormData({ name: '', email: '', message: '' });
@@ -176,65 +176,65 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Us - Get Help from Zion Tech Marketplace"
-        description="Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime."
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app.ziontechgroup.com/contact"
+        title=&quot;Contact Us - Get Help from Zion Tech Marketplace&quot;
+        description=&quot;Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime.&quot;
+        keywords=&quot;contact Zion, AI marketplace support, tech platform contact&quot;
+        canonical=&quot;https://app.ziontechgroup.com/contact&quot;
       />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <main className=&quot;min-h-screen bg-zion-blue pt-24 pb-20&quot;>
+        <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;text-center mb-16&quot;>
             <GradientHeading>Contact Us</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto&quot;>
               Have questions or want to learn more? We'd love to hear from you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24&quot;>
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
                 Get in Touch
               </h2>
-              <p className="text-zion-slate-light text-lg mb-8">
+              <p className=&quot;text-zion-slate-light text-lg mb-8&quot;>
                 Whether you have a question about our platform, pricing, or
                 anything else, our team is ready to answer all your questions.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+                <div className=&quot;grid grid-cols-1 sm:grid-cols-2 gap-4&quot;>
                   <div>
-                    <label htmlFor="name" className="block text-white mb-2">
+                    <label htmlFor=&quot;name&quot; className=&quot;block text-white mb-2&quot;>
                       Your Name
                     </label>
                     <Input
-                      id="name"
-                      name="name"
+                      id=&quot;name&quot;
+                      name=&quot;name&quot;
                       value={formData.name}
                       onChange={handleChange}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder="John Doe"
+                      placeholder=&quot;John Doe&quot;
                       required
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.name}</p>
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white mb-2">
+                    <label htmlFor=&quot;email&quot; className=&quot;block text-white mb-2&quot;>
                       Email Address
                     </label>
                     <Input
-                      id="email"
-                      name="email"
-                      type="email"
+                      id=&quot;email&quot;
+                      name=&quot;email&quot;
+                      type=&quot;email&quot;
                       value={formData.email}
                       onChange={handleChange}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder="john@example.com"
+                      placeholder=&quot;john@example.com&quot;
                       required
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>
                         {errors.email}
                       </p>
                     )}
@@ -242,28 +242,28 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white mb-2">
+                  <label htmlFor=&quot;message&quot; className=&quot;block text-white mb-2&quot;>
                     Message
                   </label>
                   <Textarea
-                    id="message"
-                    name="message"
+                    id=&quot;message&quot;
+                    name=&quot;message&quot;
                     value={formData.message}
                     onChange={handleChange}
                     className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                    placeholder="Tell us what you'd like to know..."
+                    placeholder=&quot;Tell us what you'd like to know...&quot;
                     required
                   />
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">
+                    <p className=&quot;mt-1 text-sm text-red-500&quot;>
                       {errors.message}
                     </p>
                   )}
                 </div>
 
                 <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  type=&quot;submit&quot;
+                  className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -274,12 +274,12 @@ export default function Contact() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="mt-4 text-center space-y-1"
+                      className=&quot;mt-4 text-center space-y-1&quot;
                     >
-                      <h3 className="text-green-500 text-lg font-bold">
+                      <h3 className=&quot;text-green-500 text-lg font-bold&quot;>
                         Message Sent!
                       </h3>
-                      <p className="text-zion-slate-light">
+                      <p className=&quot;text-zion-slate-light&quot;>
                         Thanks for reaching out. Our team received your message
                         and will respond with helpful info as soon as possible
                         shortly.
@@ -294,7 +294,7 @@ export default function Contact() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <h2 className="text-3xl font-bold text-white mb-6">
+                    <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
                       Our Offices
                     </h2>
                   </TooltipTrigger>
@@ -304,73 +304,73 @@ export default function Contact() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              <div className="grid grid-cols-1 gap-6">
+              <div className=&quot;grid grid-cols-1 gap-6&quot;>
                 {offices.map((office, index) => (
                   <Card
                     key={index}
-                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
+                    className=&quot;bg-zion-blue-dark border border-zion-blue-light p-6&quot;
                   >
-                    <h3 className="text-xl font-bold text-white mb-3">
+                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>
                       {office.name}
                     </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
+                    <div className=&quot;space-y-3&quot;>
+                      <div className=&quot;flex items-start&quot;>
+                        <MapPin className=&quot;w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0&quot; />
+                        <span className=&quot;text-zion-slate-light&quot;>
                           {office.address}
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
+                      <div className=&quot;flex items-center&quot;>
+                        <Phone className=&quot;w-5 h-5 text-zion-cyan mr-3 flex-shrink-0&quot; />
+                        <span className=&quot;text-zion-slate-light&quot;>
                           {office.phone}
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      <div className=&quot;flex items-center&quot;>
+                        <Mail className=&quot;w-5 h-5 text-zion-cyan mr-3 flex-shrink-0&quot; />
                         <a
                           href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
+                          className=&quot;text-zion-cyan hover:underline&quot;
                         >
                           {office.email}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </Card>
                 ))}
               </div>
 
-              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
+              <div className=&quot;mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden&quot;>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
-                  width="100%"
-                  height="300"
+                  src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk&quot;
+                  width=&quot;100%&quot;
+                  height=&quot;300&quot;
                   style={{ border: 0 }}
                   allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Zion Office Locations"
+                  loading=&quot;lazy&quot;
+                  referrerPolicy=&quot;no-referrer-when-downgrade&quot;
+                  title=&quot;Zion Office Locations&quot;
                 ></iframe>
               </div>
 
-              <div className="mt-8">
-                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
-                  <div className="flex items-center">
-                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
-                      <MessageSquare className="h-6 w-6 text-zion-purple" />
+              <div className=&quot;mt-8&quot;>
+                <Card className=&quot;bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6&quot;>
+                  <div className=&quot;flex items-center&quot;>
+                    <div className=&quot;bg-zion-purple/20 p-3 rounded-full mr-4&quot;>
+                      <MessageSquare className=&quot;h-6 w-6 text-zion-purple&quot; />
                     </div>
                     <div>
-                      <h3 className="text-white text-lg font-bold">
+                      <h3 className=&quot;text-white text-lg font-bold&quot;>
                         Live AI Support
                       </h3>
-                      <p className="text-zion-slate-light">
+                      <p className=&quot;text-zion-slate-light&quot;>
                         Get instant answers to your questions
                       </p>
                     </div>
                   </div>
                   <Button
                     onClick={() => setIsChatOpen(true)}
-                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                    className=&quot;w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
                   >
                     Chat With Our AI Assistant
                   </Button>
@@ -379,43 +379,43 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+          <div className=&quot;bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center&quot;>
+            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
               Need immediate assistance?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
+            <p className=&quot;text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto&quot;>
               Our customer support team is available 24/7 to help you with any
               questions.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className=&quot;flex flex-col sm:flex-row justify-center gap-4&quot;>
               <Button
                 onClick={() => setIsChatOpen(true)}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
               >
-                <MessageSquare className="mr-2 h-5 w-5" />
+                <MessageSquare className=&quot;mr-2 h-5 w-5&quot; />
                 Chat With AI
               </Button>
               <Button
-                variant="outline"
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                variant=&quot;outline&quot;
+                className=&quot;border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10&quot;
                 asChild
               >
-                <a href="mailto:support@ziontechgroup.com">
-                  <Mail className="mr-2 h-5 w-5" />
+                <a href=&quot;mailto:support@ziontechgroup.com&quot;>
+                  <Mail className=&quot;mr-2 h-5 w-5&quot; />
                   Email Support
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-zion-slate-light text-lg">
+          <div className=&quot;mt-12 text-center&quot;>
+            <p className=&quot;text-zion-slate-light text-lg&quot;>
               Looking for more details about our platform? Visit our{' '}
-              <Link href="/services" className="text-zion-cyan underline">
+              <Link href=&quot;/services&quot; className=&quot;text-zion-cyan underline&quot;>
                 services page
               </Link>{' '}
               or explore the{' '}
-              <Link href="/blog" className="text-zion-cyan underline">
+              <Link href=&quot;/blog&quot; className=&quot;text-zion-cyan underline&quot;>
                 Zion blog
               </Link>{' '}
               for additional insights.

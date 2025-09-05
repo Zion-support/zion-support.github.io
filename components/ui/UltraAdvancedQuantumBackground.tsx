@@ -253,53 +253,53 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Quantum Matrix Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+      <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
       </div>
 
       {/* Animated Quantum Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
+      <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
+        <div className=&quot;absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]&quot; />
       </div>
 
       {/* Floating Quantum Elements */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
+        className=&quot;absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl&quot;
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.4, 0.2]}}
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: &quot;easeInOut&quot;
         }}
       />
       
       <motion.div
-        className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
+        className=&quot;absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl&quot;
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.2, 0.5, 0.2]}}
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: &quot;easeInOut&quot;,
           delay: 1
         }}
       />
 
       <motion.div
-        className="absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl"
+        className=&quot;absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl&quot;
         animate={{
           scale: [1, 1.4, 1],
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
           duration: 6,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: &quot;easeInOut&quot;,
           delay: 2
         }}
       />
@@ -307,35 +307,35 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-60"
+        className=&quot;absolute inset-0 w-full h-full opacity-60&quot;
         style={{ zIndex: 1 }}
       />
 
       {/* Content Layer */}
-      <div className="relative z-10">
+      <div className=&quot;relative z-10&quot;>
         {children}
       </div>
 
       {/* Quantum Energy Waves */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
+      <div className=&quot;absolute bottom-0 left-0 right-0 h-32 overflow-hidden&quot;>
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent"
+          className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent&quot;
           animate={{
             x: [0, -100, 0]}}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent"
+          className=&quot;absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent&quot;
           animate={{
             x: [0, 100, 0]}}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "linear",
+            ease: &quot;linear&quot;,
             delay: 2
           }}
         />

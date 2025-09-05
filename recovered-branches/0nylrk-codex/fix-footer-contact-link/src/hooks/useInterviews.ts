@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
 import { supabase } from '@/integrations/supabase/client';
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
 import { toast } from '@/components/ui/use-toast';
@@ -15,9 +15,9 @@ export function useInterviews() {
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "You must be logged in to request interviews",
-        variant: "destructive"
+        title: &quot;Authentication required&quot;,
+        description: &quot;You must be logged in to request interviews&quot;,
+        variant: &quot;destructive&quot;
       });
       return null;
     }
@@ -44,7 +44,7 @@ export function useInterviews() {
         .single();
 
       if (insertError) {
-        console.error("Error requesting interview:", insertError);
+        console.error(&quot;Error requesting interview:&quot;, insertError);
         setError(insertError.message);
         return null;
       }
@@ -60,7 +60,7 @@ export function useInterviews() {
 
       return data;
     } catch (err: any) {
-      console.error("Error in requestInterview:", err);
+      console.error(&quot;Error in requestInterview:&quot;, err);
       setError(err.message);
       return null;
     } finally {
@@ -91,7 +91,7 @@ export function useInterviews() {
         .order('scheduled_date', { ascending: true });
 
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError);
+        console.error(&quot;Error fetching interviews:&quot;, fetchError);
         setError(fetchError.message);
         return [];
       }
@@ -120,7 +120,7 @@ export function useInterviews() {
       setInterviews(formattedInterviews);
       return formattedInterviews;
     } catch (err: any) {
-      console.error("Error in fetchInterviews:", err);
+      console.error(&quot;Error in fetchInterviews:&quot;, err);
       setError(err.message);
       return [];
     } finally {
@@ -135,9 +135,9 @@ export function useInterviews() {
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
-        title: "Authentication required",
-        description: "You must be logged in to respond to interviews",
-        variant: "destructive"
+        title: &quot;Authentication required&quot;,
+        description: &quot;You must be logged in to respond to interviews&quot;,
+        variant: &quot;destructive&quot;
       });
       return false;
     }
@@ -156,7 +156,7 @@ export function useInterviews() {
         .eq('id', interviewId);
 
       if (updateError) {
-        console.error("Error responding to interview:", updateError);
+        console.error(&quot;Error responding to interview:&quot;, updateError);
         setError(updateError.message);
         return false;
       }
@@ -169,7 +169,7 @@ export function useInterviews() {
         .single();
 
       if (fetchError) {
-        console.error("Error fetching interview:", fetchError);
+        console.error(&quot;Error fetching interview:&quot;, fetchError);
         setError(fetchError.message);
         return false;
       }
@@ -201,7 +201,7 @@ export function useInterviews() {
       await fetchInterviews();
       return true;
     } catch (err: any) {
-      console.error("Error in respondToInterview:", err);
+      console.error(&quot;Error in respondToInterview:&quot;, err);
       setError(err.message);
       return false;
     } finally {
@@ -225,7 +225,7 @@ export function useInterviews() {
         message,
         related_id: relatedId});
     } catch (error) {
-      console.error("Error creating notification:", error);
+      console.error(&quot;Error creating notification:&quot;, error);
     }
   };
 
@@ -251,7 +251,7 @@ export function useInterviews() {
 
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
-        setError("You don't have permission to cancel this interview");
+        setError(&quot;You don't have permission to cancel this interview&quot;);
         return false;
       }
 
@@ -287,7 +287,7 @@ export function useInterviews() {
       await fetchInterviews();
       return true;
     } catch (err: any) {
-      console.error("Error in cancelInterview:", err);
+      console.error(&quot;Error in cancelInterview:&quot;, err);
       setError(err.message);
       return false;
     } finally {

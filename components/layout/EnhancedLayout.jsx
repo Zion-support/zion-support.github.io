@@ -4,9 +4,9 @@ import EnhancedFooter from './EnhancedFooter';
 
 const EnhancedLayout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className=&quot;min-h-screen flex flex-col&quot;>
       <EnhancedNavigation />
-      <main className="flex-1">
+      <main className=&quot;flex-1&quot;>
         {children}
       </main>
       <EnhancedFooter />

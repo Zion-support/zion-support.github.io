@@ -303,10 +303,10 @@ export default function UltraFuturisticBackground2029() {
   };
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       {/* Animated gradient overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
+        className=&quot;absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30&quot;
         animate={{
           background: [
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',
@@ -324,15 +324,15 @@ export default function UltraFuturisticBackground2029() {
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ filter: 'blur(0.5px)' }}
       />
       
       {/* Additional visual layers */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {/* Quantum field ripples */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          className=&quot;absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20&quot;
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
@@ -346,7 +346,7 @@ export default function UltraFuturisticBackground2029() {
         
         {/* Holographic matrix */}
         <motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
+          className=&quot;absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20&quot;
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.1, 0.3]
@@ -360,7 +360,7 @@ export default function UltraFuturisticBackground2029() {
         
         {/* Neural network nodes */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+          className=&quot;absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20&quot;
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.4, 0.2]
@@ -374,11 +374,11 @@ export default function UltraFuturisticBackground2029() {
       </div>
       
       {/* Floating orbs with glow effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400"
+            className=&quot;absolute w-2 h-2 rounded-full bg-cyan-400&quot;
             style={{
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,

@@ -9,13 +9,13 @@ const ServicePage: NextPage<Props> = () => {
     <>
       <Head>
         <title>Instagram Content Scheduler | Services</title>
-        <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." />
+        <meta name=&quot;description&quot; content=&quot;Auto-generate posts from blog feeds and schedule with analytics.&quot; />
       </Head>
       
       <main>
         <h1>InstagramContentScheduler</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href=&quot;/services&quot;>Back to Services</a>
       </main>
     </div>
   );

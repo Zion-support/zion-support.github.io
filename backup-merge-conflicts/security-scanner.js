@@ -17,7 +17,7 @@ class SecurityScanner {,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`,
-    console.log(logMessage.trim()),
+    // console.log(logMessage.trim()),
 
 ,
     // Ensure log directory exists,

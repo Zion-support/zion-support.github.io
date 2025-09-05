@@ -1,32 +1,32 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useEffect, useState } from &quot;react&quot;;
+import Head from &quot;next/head&quot;;
 
 export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState("");
+  const [apiKey, setApiKey] = useState("&quot;);
   const [token, setToken] = useState<string | null>(null);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("zion_partner_token");
+    const saved = localStorage.getItem(&quot;zion_partner_token&quot;);
     if (saved) setToken(saved);
   }, []);
 
   async function getToken() {
-    const res = await fetch("/api/partners/token", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch(&quot;/api/partners/token&quot;, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
       body: JSON.stringify({ apiKey })});
     const data = await res.json();
     if (data.token) {
-      localStorage.setItem("zion_partner_token", data.token);
+      localStorage.setItem(&quot;zion_partner_token&quot;, data.token);
       setToken(data.token);
     }
   }
 
   async function fetchUsage() {
     setLoading(true);
-    const res = await fetch("/api/partners/usage", {
+    const res = await fetch(&quot;/api/partners/usage&quot;, {
       headers: token ? { Authorization: `Bearer ${token}` } : {}});
     const data = await res.json();
     setUsage(data.summary || null);
@@ -34,8 +34,8 @@ export default function PartnerDashboard() {
   }
 
   async function regenerateKey() {
-    const res = await fetch("/api/partners/key", {
-      method: "POST",
+    const res = await fetch(&quot;/api/partners/key&quot;, {
+      method: &quot;POST",
       headers: token ? { Authorization: `Bearer ${token}` } : {}});
     const data = await res.json();
     if (data.apiKey) {
@@ -56,7 +56,7 @@ export default function PartnerDashboard() {
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
             <div className="flex gap-2">
-              <input className="border rounded px-3 py-2 flex-1" placeholder="Paste your API key" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
+              <input className="border rounded px-3 py-2 flex-1&quot; placeholder=&quot;Paste your API key" value={apiKey} onChange={(e) => setApiKey(e.target.value)} />
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function PartnerDashboard() {
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
-            <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
+            <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3&quot;>{loading ? &quot;Loading...&quot; : &quot;Refresh"}</button>
             {usage ? (
               <div className="text-sm">
                 <p>Total requests: <strong>{usage.totalRequests}</strong></p>
@@ -92,8 +92,8 @@ export default function PartnerDashboard() {
 
         <div className="bg-white p-6 rounded-lg shadow mt-6">
           <h3 className="font-medium mb-2">SDKs</h3>
-          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
-          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
+          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</Link>
+          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</Link>
         </div>
       </div>
     </div>

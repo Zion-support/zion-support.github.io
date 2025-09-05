@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
 
 export interface HireRequestData {
   talent: {
@@ -42,23 +42,23 @@ export function useHireRequest() {
       
       // Show success message
       toast({
-        title: "Request Submitted",
+        title: &quot;Request Submitted&quot;,
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id };
     } catch (error) {
-      console.error("Error submitting hire request:", error);
+      console.error(&quot;Error submitting hire request:&quot;, error);
       
       const errorMessage = error instanceof Error 
         ? error.message 
-        : "There was a problem submitting your request. Please try again.";
+        : &quot;There was a problem submitting your request. Please try again.&quot;;
       
       setError(errorMessage);
       
       toast({
-        title: "Error",
+        title: &quot;Error&quot;,
         description: errorMessage,
-        variant: "destructive"});
+        variant: &quot;destructive&quot;});
       
       return { success: false, error: errorMessage };
     } finally {

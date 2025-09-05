@@ -33,74 +33,74 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
-      title: "Post your first job",
-      description: "Describe the talent you need for your project",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
+      title: &quot;Post your first job&quot;,
+      description: &quot;Describe the talent you need for your project&quot;,
+      icon: <FileText className=&quot;h-6 w-6 text-zion-purple&quot; />,
       action: {
-        text: "Post a Job",
-        url: "/post-job"
+        text: &quot;Post a Job&quot;,
+        url: &quot;/post-job&quot;
       },
-      skipText: "I'll do this later"
+      skipText: &quot;I'll do this later&quot;
     },
     {
-      title: "View suggested matches",
-      description: "Our AI system will find the best talent matches",
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
+      title: &quot;View suggested matches&quot;,
+      description: &quot;Our AI system will find the best talent matches&quot;,
+      icon: <Users className=&quot;h-6 w-6 text-zion-cyan&quot; />,
       action: {
-        text: "View Matches",
-        url: "/talent"
+        text: &quot;View Matches&quot;,
+        url: &quot;/talent&quot;
       },
-      skipText: "Skip for now"
+      skipText: &quot;Skip for now&quot;
     },
     {
-      title: "Contact talent",
-      description: "Reach out to the talent that fits your needs",
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
+      title: &quot;Contact talent&quot;,
+      description: &quot;Reach out to the talent that fits your needs&quot;,
+      icon: <MessageSquare className=&quot;h-6 w-6 text-zion-purple&quot; />,
       action: {
-        text: "Browse Talent",
-        url: "/talent"
+        text: &quot;Browse Talent&quot;,
+        url: &quot;/talent&quot;
       }
     }
   ];
 
   const talentSteps: WizardStep[] = [
     {
-      title: "Complete your profile",
-      description: "Add your skills, experience, and preferences",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
+      title: &quot;Complete your profile&quot;,
+      description: &quot;Add your skills, experience, and preferences&quot;,
+      icon: <FileText className=&quot;h-6 w-6 text-zion-purple&quot; />,
       action: {
-        text: "Edit Profile",
-        url: "/profile"
+        text: &quot;Edit Profile&quot;,
+        url: &quot;/profile&quot;
       },
-      skipText: "I'll do this later"
+      skipText: &quot;I'll do this later&quot;
     },
     {
-      title: "Define skills & availability",
-      description: "Let clients know when you're available and what you can do",
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
+      title: &quot;Define skills & availability&quot;,
+      description: &quot;Let clients know when you're available and what you can do&quot;,
+      icon: <Calendar className=&quot;h-6 w-6 text-zion-cyan&quot; />,
       action: {
-        text: "Set Availability",
-        url: "/profile?tab=skills"
+        text: &quot;Set Availability&quot;,
+        url: &quot;/profile?tab=skills&quot;
       },
-      skipText: "Skip for now"
+      skipText: &quot;Skip for now&quot;
     },
     {
-      title: "Preview your profile",
-      description: "See how clients will view your profile",
-      icon: <Eye className="h-6 w-6 text-zion-purple" />,
+      title: &quot;Preview your profile&quot;,
+      description: &quot;See how clients will view your profile&quot;,
+      icon: <Eye className=&quot;h-6 w-6 text-zion-purple&quot; />,
       action: {
-        text: "Preview Profile",
+        text: &quot;Preview Profile&quot;,
         url: `/talent/${user?.id}`
       },
-      skipText: "Skip for now"
+      skipText: &quot;Skip for now&quot;
     },
     {
-      title: "Enable AI matchmaking",
-      description: "Let our AI find the perfect opportunities for you",
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
+      title: &quot;Enable AI matchmaking&quot;,
+      description: &quot;Let our AI find the perfect opportunities for you&quot;,
+      icon: <Rocket className=&quot;h-6 w-6 text-zion-cyan&quot; />,
       action: {
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
+        text: &quot;Enable Matchmaking&quot;,
+        url: &quot;/talent-dashboard&quot;
       }
     }
   ];
@@ -133,45 +133,45 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   };
   
   return (
-    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+    <Card className={cn(&quot;border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md&quot;, className)}>
       <CardHeader>
-        <CardTitle className="text-center text-white">
+        <CardTitle className=&quot;text-center text-white&quot;>
           {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
+            &quot;Ready to find top IT talent?&quot; : 
+            &quot;Let's build your professional profile&quot;}
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center mb-6">
+        <div className=&quot;flex items-center mb-6&quot;>
           {/* Step dots */}
-          <div className="flex items-center justify-center flex-1">
+          <div className=&quot;flex items-center justify-center flex-1&quot;>
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-                  "h-2 w-2 rounded-full mx-1",
+                  &quot;h-2 w-2 rounded-full mx-1&quot;,
                   index === currentStep
-                    ? "bg-zion-purple scale-125"
+                    ? &quot;bg-zion-purple scale-125&quot;
                     : index < currentStep
-                    ? "bg-zion-cyan"
-                    : "bg-zion-blue-light"
+                    ? &quot;bg-zion-cyan&quot;
+                    : &quot;bg-zion-blue-light&quot;
                 )}
               />
             ))}
           </div>
         </div>
 
-        <div className="flex flex-col items-center text-center p-4">
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
+        <div className=&quot;flex flex-col items-center text-center p-4&quot;>
+          <div className=&quot;bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4&quot;>
             {steps[currentStep]?.icon}
           </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
+          <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{steps[currentStep]?.title}</h3>
+          <p className=&quot;text-zion-slate-light mb-6&quot;>{steps[currentStep]?.description}</p>
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
+      <CardFooter className=&quot;flex flex-col space-y-2&quot;>
         <Button
-          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+          className=&quot;w-full bg-zion-purple hover:bg-zion-purple-light&quot;
           onClick={handleAction}
         >
           {steps[currentStep]?.action.text}
@@ -179,8 +179,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         
         {steps[currentStep]?.skipText && (
           <Button
-            variant="ghost"
-            className="text-zion-slate-light hover:text-white"
+            variant=&quot;ghost&quot;
+            className=&quot;text-zion-slate-light hover:text-white&quot;
             onClick={handleSkip}
           >
             {steps[currentStep]?.skipText}

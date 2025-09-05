@@ -2,7 +2,7 @@
                 onClose={() => setSidebarOpen(false)};
 
               />,
-              <div className="flex-1 ml-80">,
+              <div className=&quot;flex-1 ml-80&quot;>,
                 {children};
               </div>,
             </div>,

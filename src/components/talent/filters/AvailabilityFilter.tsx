@@ -1,42 +1,42 @@
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox";
-import { AvailabilityFilterProps } from "@/types/filters";
+import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
+import { AvailabilityFilterProps } from &quot;@/types/filters&quot;;
 
 const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" },
-  { id: "part_time", label: "Part-time" },
-  { id: "project", label: "Project-based" }
+  { id: &quot;full_time&quot;, label: &quot;Full-time&quot; },
+  { id: &quot;part_time&quot;, label: &quot;Part-time&quot; },
+  { id: &quot;project&quot;, label: &quot;Project-based&quot; }
 ];
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
+    <div className=&quot;mb-6 border-b border-zion-blue-light pb-6&quot;>
       <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
+        className=&quot;flex w-full items-center justify-between text-white font-medium&quot;
       >
         <span>Availability</span>
         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+          <ChevronUp className=&quot;h-4 w-4 text-zion-slate-light&quot; />
         ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+          <ChevronDown className=&quot;h-4 w-4 text-zion-slate-light&quot; />
         )}
       </button>
       
       {expanded && (
-        <div className="mt-4 space-y-2">
+        <div className=&quot;mt-4 space-y-2&quot;>
           {AVAILABILITY_OPTIONS.map(option => (
-            <div key={option.id} className="flex items-center">
+            <div key={option.id} className=&quot;flex items-center&quot;>
               <Checkbox
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+                className=&quot;border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple&quot;
               />
               <label
                 htmlFor={`availability-${option.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+                className=&quot;ml-2 text-sm text-zion-slate-light cursor-pointer&quot;
               >
                 {option.label}
               </label>

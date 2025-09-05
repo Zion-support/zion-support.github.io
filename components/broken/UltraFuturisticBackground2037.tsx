@@ -406,10 +406,10 @@ export default function UltraFuturisticBackground2037({
   }, []);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 w-full h-full pointer-events-none">
+    <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className=&quot;w-full h-full&quot;
         style={{
           background: 'transparent',
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'

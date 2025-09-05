@@ -6,7 +6,7 @@ const EnhancedHome = () => {
     <div>
       <Head>
         <title>EnhancedHome - Zion Tech Solutions</title>
-        <meta name="description" content="EnhancedHome page" />
+        <meta name=&quot;description&quot; content=&quot;EnhancedHome page&quot; />
       </Head>
       
       <main>

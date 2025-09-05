@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Control } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from &quot;@/components/ui/form&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
 import { JobSchemaType } from './validation';
 
 interface DescriptionFieldsProps {
@@ -16,7 +16,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
     <>
       <FormField
         control={control}
-        name="description"
+        name=&quot;description&quot;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
@@ -27,8 +27,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
                 }}
-                className="min-h-[200px]"
-                placeholder="Enter a detailed description of the job role"
+                className=&quot;min-h-[200px]&quot;
+                placeholder=&quot;Enter a detailed description of the job role&quot;
               />
             </FormControl>
             <FormDescription>
@@ -41,14 +41,14 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
       <FormField
         control={control}
-        name="responsibilities"
+        name=&quot;responsibilities&quot;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Responsibilities (Optional)</FormLabel>
             <FormControl>
               <Textarea
-                placeholder="List the main responsibilities of this job"
-                className="resize-none min-h-[100px]"
+                placeholder=&quot;List the main responsibilities of this job&quot;
+                className=&quot;resize-none min-h-[100px]&quot;
                 {...field}
               />
             </FormControl>
@@ -62,14 +62,14 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
       <FormField
         control={control}
-        name="qualifications"
+        name=&quot;qualifications&quot;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Qualifications (Optional)</FormLabel>
             <FormControl>
               <Textarea
-                placeholder="List the required qualifications for this job"
-                className="resize-none min-h-[100px]"
+                placeholder=&quot;List the required qualifications for this job&quot;
+                className=&quot;resize-none min-h-[100px]&quot;
                 {...field}
               />
             </FormControl>
@@ -83,14 +83,14 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
       <FormField
         control={control}
-        name="benefits"
+        name=&quot;benefits&quot;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Benefits (Optional)</FormLabel>
             <FormControl>
               <Textarea
-                placeholder="List the benefits offered for this job"
-                className="resize-none min-h-[100px]"
+                placeholder=&quot;List the benefits offered for this job&quot;
+                className=&quot;resize-none min-h-[100px]&quot;
                 {...field}
               />
             </FormControl>
@@ -104,14 +104,14 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
       <FormField
         control={control}
-        name="application_instructions"
+        name=&quot;application_instructions&quot;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Application Instructions (Optional)</FormLabel>
             <FormControl>
               <Textarea
-                placeholder="Provide instructions on how to apply for this job"
-                className="resize-none min-h-[100px]"
+                placeholder=&quot;Provide instructions on how to apply for this job&quot;
+                className=&quot;resize-none min-h-[100px]&quot;
                 {...field}
               />
             </FormControl>

@@ -84,78 +84,78 @@ export default function VerifyPage() {
     <>
       <Head>
         <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name=&quot;description&quot; content=&quot;Complete KYC/AML verification to secure marketplace trust&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
       </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+      <main className=&quot;max-w-3xl mx-auto px-4 py-8&quot;>
+        <h1 className=&quot;text-2xl font-bold mb-4&quot;>Identity Verification</h1>
+        <p className=&quot;text-sm text-gray-600 mb-6&quot;>Guided step-by-step KYC/AML verification with progress tracking.</p>
 
         {labels.length > 0 && (
-          <div className="mb-4">
+          <div className=&quot;mb-4&quot;>
             <VerifiedBadge labels={labels} />
           </div>
         )}
 
-        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=&quot;mb-6 grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <div>
-            <label className="block text-sm font-medium">User ID</label>
-            <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
+            <label className=&quot;block text-sm font-medium&quot;>User ID</label>
+            <input className=&quot;mt-1 w-full border rounded px-3 py-2&quot; value={userId} onChange={(e) => setUserId(e.target.value)} />
           </div>
           <div>
-            <label className="block text-sm font-medium">Role</label>
-            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
-              <option value="client">Client</option>
-              <option value="talent">Talent</option>
-              <option value="enterprise">Enterprise</option>
+            <label className=&quot;block text-sm font-medium&quot;>Role</label>
+            <select className=&quot;mt-1 w-full border rounded px-3 py-2&quot; value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
+              <option value=&quot;client&quot;>Client</option>
+              <option value=&quot;talent&quot;>Talent</option>
+              <option value=&quot;enterprise&quot;>Enterprise</option>
             </select>
           </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium">Full legal name</label>
-            <input className="mt-1 w-full border rounded px-3 py-2" value={fullLegalName} onChange={(e) => setFullLegalName(e.target.value)} />
+          <div className=&quot;md:col-span-2&quot;>
+            <label className=&quot;block text-sm font-medium&quot;>Full legal name</label>
+            <input className=&quot;mt-1 w-full border rounded px-3 py-2&quot; value={fullLegalName} onChange={(e) => setFullLegalName(e.target.value)} />
           </div>
           {role === 'enterprise' && (
             <>
               <div>
-                <label className="block text-sm font-medium">Business name</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
+                <label className=&quot;block text-sm font-medium&quot;>Business name</label>
+                <input className=&quot;mt-1 w-full border rounded px-3 py-2&quot; value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
               </div>
               <div>
-                <label className="block text-sm font-medium">Registration number</label>
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
+                <label className=&quot;block text-sm font-medium&quot;>Registration number</label>
+                <input className=&quot;mt-1 w-full border rounded px-3 py-2&quot; value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
           )}
         </div>
 
-        <div className="mb-6">
-          <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
+        <div className=&quot;mb-6&quot;>
+          <button disabled={busy} onClick={start} className=&quot;rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50&quot;>Start/Update</button>
         </div>
 
         {profile && (
-          <div className="space-y-6">
+          <div className=&quot;space-y-6&quot;>
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-600">Progress</span>
-                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
+              <div className=&quot;flex items-center justify-between mb-2&quot;>
+                <span className=&quot;text-sm text-gray-600&quot;>Progress</span>
+                <span className=&quot;text-sm font-medium&quot;>{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
               </div>
-              <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
-                <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+              <div className=&quot;w-full bg-gray-100 rounded h-3 overflow-hidden&quot;>
+                <div className=&quot;bg-blue-600 h-3&quot; style={{ width: `${progress}%` }} />
               </div>
             </div>
 
             <section>
-              <h2 className="font-semibold mb-2">Required documents</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <h2 className=&quot;font-semibold mb-2&quot;>Required documents</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-2&quot;>
                 {requiredDocs.map((k) => {
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
                   return (
-                    <div key={k} className="flex items-center justify-between border rounded p-3">
+                    <div key={k} className=&quot;flex items-center justify-between border rounded p-3&quot;>
                       <div>
-                        <div className="text-sm font-medium">{k}</div>
-                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
+                        <div className=&quot;text-sm font-medium&quot;>{k}</div>
+                        <div className=&quot;text-xs text-gray-500&quot;>{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                      <button disabled={busy} onClick={() => upload(k)} className=&quot;text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50&quot;>{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   );
                 })}
@@ -164,17 +164,17 @@ export default function VerifyPage() {
 
             {optionalDocs.length > 0 && (
               <section>
-                <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <h2 className=&quot;font-semibold mb-2&quot;>Optional documents</h2>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-2&quot;>
                   {optionalDocs.map((k) => {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
                     return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
+                      <div key={k} className=&quot;flex items-center justify-between border rounded p-3&quot;>
                         <div>
-                          <div className="text-sm font-medium">{k}</div>
-                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
+                          <div className=&quot;text-sm font-medium&quot;>{k}</div>
+                          <div className=&quot;text-xs text-gray-500&quot;>{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
-                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                        <button disabled={busy} onClick={() => upload(k)} className=&quot;text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50&quot;>{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
                     );
                   })}
@@ -183,10 +183,10 @@ export default function VerifyPage() {
             )}
 
             <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className=&quot;rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50&quot;>Submit for review</button>
             </div>
 
-            {message && <div className="text-sm text-blue-700">{message}</div>}
+            {message && <div className=&quot;text-sm text-blue-700&quot;>{message}</div>}
           </div>
         )}
       </main>

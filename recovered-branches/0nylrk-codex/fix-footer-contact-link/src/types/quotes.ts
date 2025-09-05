@@ -1,8 +1,8 @@
 
-export type ServiceType = "service" | "talent" | "equipment" | "";
+export type ServiceType = &quot;service&quot; | &quot;talent&quot; | &quot;equipment&quot; | "&quot;;
 export type ServiceCategory = string;
-export type TimelineType = "fixed" | "flexible";
-export type BudgetType = "fixed" | "hourly" | "range";
+export type TimelineType = &quot;fixed&quot; | &quot;flexible&quot;;
+export type BudgetType = &quot;fixed&quot; | &quot;hourly&quot; | &quot;range";
 
 export interface ListingItem {
   id: string;

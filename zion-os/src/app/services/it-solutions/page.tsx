@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 
 interface ITService {
   id: string;
@@ -19,273 +19,273 @@ interface ITService {
 
 const itServices: ITService[] = [
   {
-    id: "cloud-migration-complete",
-    name: "Complete Cloud Migration & DevOps",
-    description: "End-to-end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal performance.",
+    id: &quot;cloud-migration-complete&quot;,
+    name: &quot;Complete Cloud Migration & DevOps&quot;,
+    description: &quot;End-to-end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal performance.&quot;,
     deliverables: [
-      "Cloud architecture design",
-      "Migration strategy and planning",
-      "Infrastructure as Code (IaC)",
-      "CI/CD pipeline setup",
-      "Performance optimization",
-      "Security and compliance",
-      "24/7 monitoring and support"
+      &quot;Cloud architecture design&quot;,
+      &quot;Migration strategy and planning&quot;,
+      &quot;Infrastructure as Code (IaC)&quot;,
+      &quot;CI/CD pipeline setup&quot;,
+      &quot;Performance optimization&quot;,
+      &quot;Security and compliance&quot;,
+      &quot;24/7 monitoring and support&quot;
     ],
-    timeline: "4-12 weeks depending on complexity",
-    pricing: "Starting at $15,000",
+    timeline: &quot;4-12 weeks depending on complexity&quot;,
+    pricing: &quot;Starting at $15,000&quot;,
     startingPrice: 15000,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cloud%20Migration%20Inquiry",
-    icon: "☁️",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Cloud%20Migration%20Inquiry&quot;,
+    icon: &quot;☁️&quot;,
     features: [
-      "Multi-cloud strategy planning",
-      "Infrastructure as Code (IaC)",
-      "CI/CD pipeline setup",
-      "Performance optimization",
-      "Security and compliance",
-      "24/7 monitoring and support",
-      "Disaster recovery planning",
-      "Cost optimization analysis"
+      &quot;Multi-cloud strategy planning&quot;,
+      &quot;Infrastructure as Code (IaC)&quot;,
+      &quot;CI/CD pipeline setup&quot;,
+      &quot;Performance optimization&quot;,
+      &quot;Security and compliance&quot;,
+      &quot;24/7 monitoring and support&quot;,
+      &quot;Disaster recovery planning&quot;,
+      &quot;Cost optimization analysis&quot;
     ],
     technologies: [
-      "AWS, Azure, Google Cloud",
-      "Terraform, CloudFormation",
-      "Docker, Kubernetes",
-      "Jenkins, GitLab CI",
-      "Prometheus, Grafana",
-      "Ansible, Chef"
+      &quot;AWS, Azure, Google Cloud&quot;,
+      &quot;Terraform, CloudFormation&quot;,
+      &quot;Docker, Kubernetes&quot;,
+      &quot;Jenkins, GitLab CI&quot;,
+      &quot;Prometheus, Grafana&quot;,
+      &quot;Ansible, Chef&quot;
     ],
     industries: [
-      "Financial Services",
-      "Healthcare",
-      "E-commerce",
-      "Manufacturing",
-      "Education",
-      "Government"
+      &quot;Financial Services&quot;,
+      &quot;Healthcare&quot;,
+      &quot;E-commerce&quot;,
+      &quot;Manufacturing&quot;,
+      &quot;Education&quot;,
+      &quot;Government&quot;
     ]
   },
   {
-    id: "cybersecurity-comprehensive",
-    name: "Comprehensive Cybersecurity & Compliance",
-    description: "Full-spectrum cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.",
+    id: &quot;cybersecurity-comprehensive&quot;,
+    name: &quot;Comprehensive Cybersecurity & Compliance&quot;,
+    description: &quot;Full-spectrum cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.&quot;,
     deliverables: [
-      "Security assessment report",
-      "Penetration testing results",
-      "Compliance audit findings",
-      "Security policy documentation",
-      "Incident response plan",
-      "Security awareness training",
-      "Ongoing monitoring setup"
+      &quot;Security assessment report&quot;,
+      &quot;Penetration testing results&quot;,
+      &quot;Compliance audit findings&quot;,
+      &quot;Security policy documentation&quot;,
+      &quot;Incident response plan&quot;,
+      &quot;Security awareness training&quot;,
+      &quot;Ongoing monitoring setup&quot;
     ],
-    timeline: "2-8 weeks depending on scope",
-    pricing: "Starting at $8,500",
+    timeline: &quot;2-8 weeks depending on scope&quot;,
+    pricing: &quot;Starting at $8,500&quot;,
     startingPrice: 8500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cybersecurity%20Inquiry",
-    icon: "🔒",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Cybersecurity%20Inquiry&quot;,
+    icon: &quot;🔒&quot;,
     features: [
-      "Penetration testing",
-      "Security audits and assessments",
-      "Compliance frameworks (SOC2, ISO27001)",
-      "Incident response planning",
-      "Security awareness training",
-      "Ongoing monitoring and support",
-      "Vulnerability management",
-      "Threat intelligence"
+      &quot;Penetration testing&quot;,
+      &quot;Security audits and assessments&quot;,
+      &quot;Compliance frameworks (SOC2, ISO27001)&quot;,
+      &quot;Incident response planning&quot;,
+      &quot;Security awareness training&quot;,
+      &quot;Ongoing monitoring and support&quot;,
+      &quot;Vulnerability management&quot;,
+      &quot;Threat intelligence&quot;
     ],
     technologies: [
-      "Nessus, OpenVAS",
-      "Metasploit, Burp Suite",
-      "SIEM platforms",
-      "EDR solutions",
-      "Firewall management",
-      "Identity management"
+      &quot;Nessus, OpenVAS&quot;,
+      &quot;Metasploit, Burp Suite&quot;,
+      &quot;SIEM platforms&quot;,
+      &quot;EDR solutions&quot;,
+      &quot;Firewall management&quot;,
+      &quot;Identity management&quot;
     ],
     industries: [
-      "Financial Services",
-      "Healthcare",
-      "Government",
-      "Technology",
-      "Manufacturing",
-      "Retail"
+      &quot;Financial Services&quot;,
+      &quot;Healthcare&quot;,
+      &quot;Government&quot;,
+      &quot;Technology&quot;,
+      &quot;Manufacturing&quot;,
+      &quot;Retail&quot;
     ]
   },
   {
-    id: "network-infrastructure-enterprise",
-    name: "Enterprise Network Infrastructure",
-    description: "Design, implementation, and maintenance of enterprise-grade network infrastructure and connectivity solutions.",
+    id: &quot;network-infrastructure-enterprise&quot;,
+    name: &quot;Enterprise Network Infrastructure&quot;,
+    description: &quot;Design, implementation, and maintenance of enterprise-grade network infrastructure and connectivity solutions.&quot;,
     deliverables: [
-      "Network design documentation",
-      "Hardware procurement and setup",
-      "Configuration and optimization",
-      "Security implementation",
-      "Performance testing",
-      "Documentation and training",
-      "Ongoing maintenance plan"
+      &quot;Network design documentation&quot;,
+      &quot;Hardware procurement and setup&quot;,
+      &quot;Configuration and optimization&quot;,
+      &quot;Security implementation&quot;,
+      &quot;Performance testing&quot;,
+      &quot;Documentation and training&quot;,
+      &quot;Ongoing maintenance plan&quot;
     ],
-    timeline: "3-10 weeks depending on size",
-    pricing: "Starting at $6,500",
+    timeline: &quot;3-10 weeks depending on size&quot;,
+    pricing: &quot;Starting at $6,500&quot;,
     startingPrice: 6500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Network%20Infrastructure%20Inquiry",
-    icon: "🌐",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Network%20Infrastructure%20Inquiry&quot;,
+    icon: &quot;🌐&quot;,
     features: [
-      "Network design and planning",
-      "Hardware procurement and setup",
-      "Wireless network optimization",
-      "VPN and remote access",
-      "Network security implementation",
-      "Ongoing maintenance and support",
-      "Performance monitoring",
-      "Capacity planning"
+      &quot;Network design and planning&quot;,
+      &quot;Hardware procurement and setup&quot;,
+      &quot;Wireless network optimization&quot;,
+      &quot;VPN and remote access&quot;,
+      &quot;Network security implementation&quot;,
+      &quot;Ongoing maintenance and support&quot;,
+      &quot;Performance monitoring&quot;,
+      &quot;Capacity planning&quot;
     ],
     technologies: [
-      "Cisco, Juniper, Aruba",
-      "VMware NSX",
-      "SD-WAN solutions",
-      "Network monitoring tools",
-      "Load balancers",
-      "Firewall appliances"
+      &quot;Cisco, Juniper, Aruba&quot;,
+      &quot;VMware NSX&quot;,
+      &quot;SD-WAN solutions&quot;,
+      &quot;Network monitoring tools&quot;,
+      &quot;Load balancers&quot;,
+      &quot;Firewall appliances&quot;
     ],
     industries: [
-      "Manufacturing",
-      "Healthcare",
-      "Education",
-      "Retail",
-      "Financial Services",
-      "Government"
+      &quot;Manufacturing&quot;,
+      &quot;Healthcare&quot;,
+      &quot;Education&quot;,
+      &quot;Retail&quot;,
+      &quot;Financial Services&quot;,
+      &quot;Government&quot;
     ]
   },
   {
-    id: "it-strategy-consulting",
-    name: "IT Strategy & Digital Transformation",
-    description: "Strategic IT consulting services to help organizations align technology with business objectives and digital transformation goals.",
+    id: &quot;it-strategy-consulting&quot;,
+    name: &quot;IT Strategy & Digital Transformation&quot;,
+    description: &quot;Strategic IT consulting services to help organizations align technology with business objectives and digital transformation goals.&quot;,
     deliverables: [
-      "Technology roadmap",
-      "Digital transformation strategy",
-      "Vendor evaluation report",
-      "Cost optimization analysis",
-      "Risk assessment report",
-      "Implementation timeline",
-      "Change management plan"
+      &quot;Technology roadmap&quot;,
+      &quot;Digital transformation strategy&quot;,
+      &quot;Vendor evaluation report&quot;,
+      &quot;Cost optimization analysis&quot;,
+      &quot;Risk assessment report&quot;,
+      &quot;Implementation timeline&quot;,
+      &quot;Change management plan&quot;
     ],
-    timeline: "2-6 weeks depending on scope",
-    pricing: "Starting at $200/hour",
+    timeline: &quot;2-6 weeks depending on scope&quot;,
+    pricing: &quot;Starting at $200/hour&quot;,
     startingPrice: 200,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=IT%20Strategy%20Inquiry",
-    icon: "💡",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=IT%20Strategy%20Inquiry&quot;,
+    icon: &quot;💡&quot;,
     features: [
-      "Technology roadmap planning",
-      "Digital transformation strategy",
-      "Vendor selection and management",
-      "Cost optimization analysis",
-      "Risk assessment and mitigation",
-      "Change management support",
-      "Technology evaluation",
-      "Performance benchmarking"
+      &quot;Technology roadmap planning&quot;,
+      &quot;Digital transformation strategy&quot;,
+      &quot;Vendor selection and management&quot;,
+      &quot;Cost optimization analysis&quot;,
+      &quot;Risk assessment and mitigation&quot;,
+      &quot;Change management support&quot;,
+      &quot;Technology evaluation&quot;,
+      &quot;Performance benchmarking&quot;
     ],
     technologies: [
-      "Enterprise architecture tools",
-      "Project management platforms",
-      "Business process modeling",
-      "Data analytics tools",
-      "Cloud cost management",
-      "Performance monitoring"
+      &quot;Enterprise architecture tools&quot;,
+      &quot;Project management platforms&quot;,
+      &quot;Business process modeling&quot;,
+      &quot;Data analytics tools&quot;,
+      &quot;Cloud cost management&quot;,
+      &quot;Performance monitoring&quot;
     ],
     industries: [
-      "All Industries",
-      "Cross-sector expertise",
-      "Enterprise focus",
-      "SMB optimization",
-      "Startup guidance",
-      "Non-profit support"
+      &quot;All Industries&quot;,
+      &quot;Cross-sector expertise&quot;,
+      &quot;Enterprise focus&quot;,
+      &quot;SMB optimization&quot;,
+      &quot;Startup guidance&quot;,
+      &quot;Non-profit support&quot;
     ]
   },
   {
-    id: "data-center-solutions",
-    name: "Data Center & Colocation Services",
-    description: "Complete data center solutions including design, build, migration, and ongoing management services.",
+    id: &quot;data-center-solutions&quot;,
+    name: &quot;Data Center & Colocation Services&quot;,
+    description: &quot;Complete data center solutions including design, build, migration, and ongoing management services.&quot;,
     deliverables: [
-      "Data center design",
-      "Infrastructure setup",
-      "Migration services",
-      "Monitoring and management",
-      "Disaster recovery setup",
-      "Documentation and training",
-      "Ongoing support"
+      &quot;Data center design&quot;,
+      &quot;Infrastructure setup&quot;,
+      &quot;Migration services&quot;,
+      &quot;Monitoring and management&quot;,
+      &quot;Disaster recovery setup&quot;,
+      &quot;Documentation and training&quot;,
+      &quot;Ongoing support&quot;
     ],
-    timeline: "8-20 weeks depending on complexity",
-    pricing: "Starting at $25,000",
+    timeline: &quot;8-20 weeks depending on complexity&quot;,
+    pricing: &quot;Starting at $25,000&quot;,
     startingPrice: 25000,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Data%20Center%20Inquiry",
-    icon: "🏢",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Data%20Center%20Inquiry&quot;,
+    icon: &quot;🏢&quot;,
     features: [
-      "Data center design and planning",
-      "Infrastructure procurement",
-      "Power and cooling systems",
-      "Security and access control",
-      "Monitoring and management",
-      "Disaster recovery planning",
-      "Compliance and certification",
-      "Ongoing maintenance"
+      &quot;Data center design and planning&quot;,
+      &quot;Infrastructure procurement&quot;,
+      &quot;Power and cooling systems&quot;,
+      &quot;Security and access control&quot;,
+      &quot;Monitoring and management&quot;,
+      &quot;Disaster recovery planning&quot;,
+      &quot;Compliance and certification&quot;,
+      &quot;Ongoing maintenance&quot;
     ],
     technologies: [
-      "Server hardware",
-      "Storage solutions",
-      "Network infrastructure",
-      "Power systems",
-      "Cooling systems",
-      "Security systems"
+      &quot;Server hardware&quot;,
+      &quot;Storage solutions&quot;,
+      &quot;Network infrastructure&quot;,
+      &quot;Power systems&quot;,
+      &quot;Cooling systems&quot;,
+      &quot;Security systems&quot;
     ],
     industries: [
-      "Financial Services",
-      "Healthcare",
-      "Government",
-      "Technology",
-      "Manufacturing",
-      "Telecommunications"
+      &quot;Financial Services&quot;,
+      &quot;Healthcare&quot;,
+      &quot;Government&quot;,
+      &quot;Technology&quot;,
+      &quot;Manufacturing&quot;,
+      &quot;Telecommunications&quot;
     ]
   },
   {
-    id: "managed-it-services",
-    name: "Managed IT Services",
-    description: "Comprehensive managed IT services including 24/7 monitoring, help desk support, and proactive maintenance.",
+    id: &quot;managed-it-services&quot;,
+    name: &quot;Managed IT Services&quot;,
+    description: &quot;Comprehensive managed IT services including 24/7 monitoring, help desk support, and proactive maintenance.&quot;,
     deliverables: [
-      "24/7 monitoring setup",
-      "Help desk implementation",
-      "Proactive maintenance",
-      "Security management",
-      "Backup and recovery",
-      "Performance optimization",
-      "Monthly reporting"
+      &quot;24/7 monitoring setup&quot;,
+      &quot;Help desk implementation&quot;,
+      &quot;Proactive maintenance&quot;,
+      &quot;Security management&quot;,
+      &quot;Backup and recovery&quot;,
+      &quot;Performance optimization&quot;,
+      &quot;Monthly reporting&quot;
     ],
-    timeline: "2-4 weeks for setup",
-    pricing: "Starting at $2,500/month",
+    timeline: &quot;2-4 weeks for setup&quot;,
+    pricing: &quot;Starting at $2,500/month&quot;,
     startingPrice: 2500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Managed%20IT%20Services%20Inquiry",
-    icon: "🔄",
+    contactLink: &quot;mailto:kleber@ziontechgroup.com?subject=Managed%20IT%20Services%20Inquiry&quot;,
+    icon: &quot;🔄&quot;,
     features: [
-      "24/7 monitoring and alerting",
-      "Help desk support",
-      "Proactive maintenance",
-      "Security management",
-      "Backup and recovery",
-      "Performance optimization",
-      "Monthly reporting",
-      "Strategic planning"
+      &quot;24/7 monitoring and alerting&quot;,
+      &quot;Help desk support&quot;,
+      &quot;Proactive maintenance&quot;,
+      &quot;Security management&quot;,
+      &quot;Backup and recovery&quot;,
+      &quot;Performance optimization&quot;,
+      &quot;Monthly reporting&quot;,
+      &quot;Strategic planning&quot;
     ],
     technologies: [
-      "RMM platforms",
-      "PSA tools",
-      "Monitoring solutions",
-      "Backup systems",
-      "Security tools",
-      "Documentation platforms"
+      &quot;RMM platforms&quot;,
+      &quot;PSA tools&quot;,
+      &quot;Monitoring solutions&quot;,
+      &quot;Backup systems&quot;,
+      &quot;Security tools&quot;,
+      &quot;Documentation platforms&quot;
     ],
     industries: [
-      "All Industries",
-      "SMB focus",
-      "Enterprise support",
-      "Healthcare",
-      "Legal",
-      "Financial Services"
+      &quot;All Industries&quot;,
+      &quot;SMB focus&quot;,
+      &quot;Enterprise support&quot;,
+      &quot;Healthcare&quot;,
+      &quot;Legal&quot;,
+      &quot;Financial Services"
     ]
   }
 ];
@@ -377,13 +377,13 @@ export default function ITSolutionsPage() {
                 className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold"
               >
                 Get Started
-              </a>
+              </Link>
               <a
                 href={`https://ziontechgroup.com/services/${service.id}`}
                 className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         ))}
@@ -429,13 +429,13 @@ export default function ITSolutionsPage() {
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
           >
             Schedule IT Consultation
-          </a>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
           >
             Call: +1 302 464 0950
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -446,7 +446,7 @@ export default function ITSolutionsPage() {
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold"
         >
           ← Back to All Services
-        </a>
+        </Link>
       </div>
     </div>
   );

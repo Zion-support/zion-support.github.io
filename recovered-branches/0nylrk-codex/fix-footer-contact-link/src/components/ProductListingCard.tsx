@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
+import { useNavigate } from &quot;react-router-dom&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { ProductListing } from &quot;@/types/listings&quot;;
+import { Star, DollarSign } from &quot;lucide-react&quot;;
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -25,7 +25,7 @@ export function ProductListingCard({
     
   // Format price display
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
+    if (listing.price === null) return &quot;Custom pricing&quot;;
     return `${listing.currency}${listing.price.toLocaleString()}`;
   };
 
@@ -60,11 +60,11 @@ export function ProductListingCard({
           <img 
             src={imageUrl} 
             alt={listing.title}
-            className="w-full h-full object-cover"
+            className=&quot;w-full h-full object-cover&quot;
             onError={handleImageError}
           />
           {listing.featured && (
-            <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">
+            <Badge className=&quot;absolute top-2 right-2 bg-zion-purple text-white border-none&quot;>
               Featured
             </Badge>
           )}
@@ -75,38 +75,38 @@ export function ProductListingCard({
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
           {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">
-            <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">
+          <div className=&quot;flex justify-between items-center mb-2&quot;>
+            <Badge variant=&quot;outline&quot; className=&quot;bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light&quot;>
               {listing.category}
             </Badge>
             {listing.rating && (
-              <div className="flex items-center text-zion-slate-light">
-                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />
+              <div className=&quot;flex items-center text-zion-slate-light&quot;>
+                <Star className=&quot;h-4 w-4 fill-zion-cyan text-zion-cyan mr-1&quot; />
                 <span>{listing.rating}</span>
                 {listing.reviewCount && (
-                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                  <span className=&quot;text-xs ml-1&quot;>({listing.reviewCount})</span>
                 )}
               </div>
             )}
           </div>
           
           {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
+          <div onClick={handleViewListing} className=&quot;block&quot;>
+            <h3 className=&quot;text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors&quot;>
               {listing.title}
             </h3>
           </div>
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
+          <p className=&quot;text-sm text-zion-slate line-clamp-2 mb-4&quot;>
             {listing.description}
           </p>
           
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-4">
+            <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
               {listing.tags.map((tag, idx) => (
                 <span 
                   key={idx} 
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
+                  className=&quot;text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full&quot;
                 >
                   {tag}
                 </span>
@@ -116,38 +116,38 @@ export function ProductListingCard({
         </div>
         
         {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
-          <div className="text-sm font-medium">
+        <div className=&quot;flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light&quot;>
+          <div className=&quot;text-sm font-medium&quot;>
             {listing.price !== null ? (
-              <div className="flex items-center text-zion-purple">
-                <DollarSign className="h-4 w-4 mr-1" />
+              <div className=&quot;flex items-center text-zion-purple&quot;>
+                <DollarSign className=&quot;h-4 w-4 mr-1&quot; />
                 {formatPrice()}
               </div>
             ) : (
-              <span className="text-zion-slate-light">
+              <span className=&quot;text-zion-slate-light&quot;>
                 {formatPrice()}
               </span>
             )}
           </div>
           
-          <div className="flex gap-2">
+          <div className=&quot;flex gap-2&quot;>
             <Button 
-              size="sm" 
+              size=&quot;sm&quot; 
               onClick={(e) => {
                 e.stopPropagation();
                 navigate(`/listing/${listing.id}`);
               }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+              className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
             >
               Buy Now
             </Button>
             
             {onRequestQuote && (
               <Button 
-                size="sm"
-                variant="outline" 
+                size=&quot;sm&quot;
+                variant=&quot;outline&quot; 
                 onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
               >
                 Request Quote
               </Button>

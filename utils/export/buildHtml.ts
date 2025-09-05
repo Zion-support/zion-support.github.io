@@ -3,15 +3,15 @@ import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
+    .map((q) => `<blockquote class=&quot;quote&quot;><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
     .join('\n');
 
   const chapterHtml = chapters
     .map(
       (c) => `
-      <section class="chapter">
+      <section class=&quot;chapter&quot;>
         <h2>${escapeHtml(c.title)}</h2>
-        <div class="content">${paragraphize(c.content)}</div>
+        <div class=&quot;content&quot;>${paragraphize(c.content)}</div>
       </section>
     `,
     )
@@ -21,15 +21,15 @@ export function buildPrintableHtml(project: BookProject): string {
     ...visuals.timelineImages,
     ...visuals.daoVoteCharts,
     ...visuals.uiScreens]
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
+    .map((src) => `<figure class=&quot;visual&quot;><img src=&quot;${src}&quot; /></figure>`) // base64 ok
     .join('\n');
 
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+  const barcode = meta.isbn ? `<img class=&quot;barcode&quot; src=&quot;/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}&quot; />` : '';
 
   return `<!doctype html>
 <html>
 <head>
-<meta charset="utf-8" />
+<meta charset=&quot;utf-8&quot; />
 <title>${escapeHtml(meta.title)}</title>
 <style>
   @page { margin: 1in; }
@@ -49,11 +49,11 @@ export function buildPrintableHtml(project: BookProject): string {
 </style>
 </head>
 <body>
-  <section class="cover">
+  <section class=&quot;cover&quot;>
     <div>${escapeHtml(meta.publisher || '')}</div>
     <h1>${escapeHtml(meta.title)}</h1>
     <h3>${escapeHtml(meta.subtitle || '')}</h3>
-    <div class="by">By ${escapeHtml(meta.author)}</div>
+    <div class=&quot;by&quot;>By ${escapeHtml(meta.author)}</div>
     ${barcode}
   </section>
   ${quotesHtml}

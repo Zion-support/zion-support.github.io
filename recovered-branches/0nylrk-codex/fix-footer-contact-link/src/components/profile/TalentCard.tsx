@@ -1,9 +1,9 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card } from &quot;@/components/ui/card&quot;;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from &quot;lucide-react&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
 
 export interface TalentCardProps {
   talent: TalentProfile;
@@ -48,43 +48,43 @@ export function TalentCard({
   const skills = talent.skills?.slice(0, 5) || [];
 
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
-      <div className="p-6">
-        <div className="flex items-start">
+    <Card className=&quot;overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer&quot; onClick={handleViewProfile}>
+      <div className=&quot;p-6&quot;>
+        <div className=&quot;flex items-start&quot;>
           {/* Avatar */}
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
+          <div className=&quot;relative mr-4&quot;>
+            <div className=&quot;w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light&quot;>
               {talent.profile_picture_url ? (
                 <img 
                   src={talent.profile_picture_url} 
                   alt={talent.full_name} 
-                  className="w-full h-full object-cover" 
+                  className=&quot;w-full h-full object-cover&quot; 
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) || "T"}
+                <div className=&quot;w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold&quot;>
+                  {talent.full_name?.charAt(0) || &quot;T&quot;}
                 </div>
               )}
             </div>
             {talent.is_verified && (
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+              <div className=&quot;absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full&quot;>
+                <CheckCircle2 className=&quot;w-5 h-5 text-zion-cyan&quot; />
               </div>
             )}
           </div>
           
           {/* Main Info */}
-          <div className="flex-1">
-            <div className="flex justify-between items-start">
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
+          <div className=&quot;flex-1&quot;>
+            <div className=&quot;flex justify-between items-start&quot;>
+              <h3 className=&quot;text-lg font-bold text-white&quot;>{talent.full_name}</h3>
               <Button
-                variant="ghost"
-                size="sm"
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
+                className=&quot;p-1 h-auto text-zion-slate-light hover:text-zion-cyan&quot;
                 onClick={handleToggleSave}
               >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
+                <Star className={`h-5 w-5 ${isSaved ? &quot;fill-yellow-400 text-yellow-400&quot; : ""}`} />
+                <span className="sr-only&quot;>{isSaved ? &quot;Saved&quot; : &quot;Save"}</span>
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
@@ -141,20 +141,20 @@ export function TalentCard({
             )}
           </div>
           
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2&quot;>
             {isAuthenticated && (
               <Button
-                size="sm"
-                variant="secondary"
+                size=&quot;sm&quot;
+                variant=&quot;secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover:bg-zion-purple-light text-white&quot;
               >
                 Hire
               </Button>
             )}
             <Button
-              size="sm"
-              variant="ghost"
+              size=&quot;sm&quot;
+              variant=&quot;ghost"
               onClick={handleViewProfile}
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
             >

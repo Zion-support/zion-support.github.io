@@ -164,9 +164,9 @@ export function PerformanceDashboard() {
   };
 
   const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />;
-    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />;
-    return <AlertTriangle className="w-4 h-4 text-red-600" />;
+    if (score >= 90) return <CheckCircle className=&quot;w-4 h-4 text-green-600&quot; />;
+    if (score >= 70) return <AlertTriangle className=&quot;w-4 h-4 text-yellow-600&quot; />;
+    return <AlertTriangle className=&quot;w-4 h-4 text-red-600&quot; />;
   };
 
   useEffect(() => {
@@ -177,12 +177,12 @@ export function PerformanceDashboard() {
   }, []);
 
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className=&quot;flex items-center justify-between&quot;>
         <div>
-          <h2 className="text-2xl font-bold">Performance Dashboard</h2>
-          <p className="text-muted-foreground">
+          <h2 className=&quot;text-2xl font-bold&quot;>Performance Dashboard</h2>
+          <p className=&quot;text-muted-foreground&quot;>
             Monitor bundle size, performance metrics, and optimization opportunities
           </p>
         </div>
@@ -195,19 +195,19 @@ export function PerformanceDashboard() {
       {/* Performance Score */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Zap className="w-5 h-5" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <Zap className=&quot;w-5 h-5&quot; />
             Performance Score
           </CardTitle>
         </CardHeader>
         <CardContent>
           {metrics ? (
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;flex items-center gap-4&quot;>
                 {getScoreIcon(metrics.performanceScore)}
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold">
+                <div className=&quot;flex-1&quot;>
+                  <div className=&quot;flex items-center justify-between mb-2&quot;>
+                    <span className=&quot;text-2xl font-bold&quot;>
                       {metrics.performanceScore}/100
                     </span>
                     <Badge variant={metrics.performanceScore >= 90 ? 'default' : 'secondary'}>
@@ -215,20 +215,20 @@ export function PerformanceDashboard() {
                        metrics.performanceScore >= 70 ? 'Good' : 'Needs Improvement'}
                     </Badge>
                   </div>
-                  <Progress value={metrics.performanceScore} className="h-2" />
+                  <Progress value={metrics.performanceScore} className=&quot;h-2&quot; />
                 </div>
               </div>
               
               {lastUpdated && (
-                <p className="text-sm text-muted-foreground">
+                <p className=&quot;text-sm text-muted-foreground&quot;>
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
               )}
             </div>
           ) : (
-            <div className="text-center py-8">
-              <Clock className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
-              <p className="text-muted-foreground">Click refresh to collect metrics</p>
+            <div className=&quot;text-center py-8&quot;>
+              <Clock className=&quot;w-8 h-8 mx-auto mb-2 text-muted-foreground&quot; />
+              <p className=&quot;text-muted-foreground&quot;>Click refresh to collect metrics</p>
             </div>
           )}
         </CardContent>
@@ -236,58 +236,58 @@ export function PerformanceDashboard() {
 
       {/* Metrics Grid */}
       {metrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           <Card>
-            <CardContent className="p-4">
-              <div className="flex items-center gap-2">
-                <Package className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-medium">Bundle Size</span>
+            <CardContent className=&quot;p-4&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
+                <Package className=&quot;w-4 h-4 text-blue-600&quot; />
+                <span className=&quot;text-sm font-medium&quot;>Bundle Size</span>
               </div>
-              <p className="text-2xl font-bold mt-2">{formatSize(metrics.bundleSize)}</p>
-              <p className="text-xs text-muted-foreground">
+              <p className=&quot;text-2xl font-bold mt-2&quot;>{formatSize(metrics.bundleSize)}</p>
+              <p className=&quot;text-xs text-muted-foreground&quot;>
                 {metrics.chunkCount} chunks
               </p>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-purple-600" />
-                <span className="text-sm font-medium">Load Time</span>
+            <CardContent className=&quot;p-4&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
+                <Clock className=&quot;w-4 h-4 text-purple-600&quot; />
+                <span className=&quot;text-sm font-medium&quot;>Load Time</span>
               </div>
-              <p className="text-2xl font-bold mt-2">{metrics.loadTime.toFixed(0)}ms</p>
-              <p className="text-xs text-muted-foreground">
+              <p className=&quot;text-2xl font-bold mt-2&quot;>{metrics.loadTime.toFixed(0)}ms</p>
+              <p className=&quot;text-xs text-muted-foreground&quot;>
                 Average chunk load time
               </p>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-green-600" />
-                <span className="text-sm font-medium">First Contentful Paint</span>
+            <CardContent className=&quot;p-4&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
+                <Globe className=&quot;w-4 h-4 text-green-600&quot; />
+                <span className=&quot;text-sm font-medium&quot;>First Contentful Paint</span>
               </div>
-              <p className="text-2xl font-bold mt-2">
+              <p className=&quot;text-2xl font-bold mt-2&quot;>
                 {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className=&quot;text-xs text-muted-foreground&quot;>
                 Time to first paint
               </p>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex items-center gap-2">
-                <BarChart3 className="w-4 h-4 text-orange-600" />
-                <span className="text-sm font-medium">Largest Contentful Paint</span>
+            <CardContent className=&quot;p-4&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
+                <BarChart3 className=&quot;w-4 h-4 text-orange-600&quot; />
+                <span className=&quot;text-sm font-medium&quot;>Largest Contentful Paint</span>
               </div>
-              <p className="text-2xl font-bold mt-2">
+              <p className=&quot;text-2xl font-bold mt-2&quot;>
                 {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className=&quot;text-xs text-muted-foreground&quot;>
                 Time to largest paint
               </p>
             </CardContent>
@@ -298,37 +298,37 @@ export function PerformanceDashboard() {
       {/* Bundle Chunks */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Package className="w-5 h-5" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <Package className=&quot;w-5 h-5&quot; />
             Bundle Chunks
           </CardTitle>
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-            <div className="space-y-2">
+            <div className=&quot;space-y-2&quot;>
               {chunks.slice(0, 10).map((chunk, index) => (
-                <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-mono text-muted-foreground">
+                <div key={chunk.name} className=&quot;flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded&quot;>
+                  <div className=&quot;flex items-center gap-3&quot;>
+                    <span className=&quot;text-sm font-mono text-muted-foreground&quot;>
                       {index + 1}
                     </span>
                     <div>
-                      <p className="font-medium text-sm">{chunk.name}</p>
-                      <div className="flex items-center gap-2">
-                        <Badge variant="outline" className="text-xs">
+                      <p className=&quot;font-medium text-sm&quot;>{chunk.name}</p>
+                      <div className=&quot;flex items-center gap-2&quot;>
+                        <Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;>
                           {chunk.type}
                         </Badge>
                         {chunk.cached && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant=&quot;secondary&quot; className=&quot;text-xs&quot;>
                             cached
                           </Badge>
                         )}
                       </div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="font-medium">{formatSize(chunk.size)}</p>
-                    <p className="text-xs text-muted-foreground">
+                  <div className=&quot;text-right&quot;>
+                    <p className=&quot;font-medium&quot;>{formatSize(chunk.size)}</p>
+                    <p className=&quot;text-xs text-muted-foreground&quot;>
                       {chunk.loadTime.toFixed(0)}ms
                     </p>
                   </div>
@@ -336,13 +336,13 @@ export function PerformanceDashboard() {
               ))}
               
               {chunks.length > 10 && (
-                <p className="text-sm text-muted-foreground text-center pt-2">
+                <p className=&quot;text-sm text-muted-foreground text-center pt-2&quot;>
                   ... and {chunks.length - 10} more chunks
                 </p>
               )}
             </div>
           ) : (
-            <p className="text-center py-8 text-muted-foreground">
+            <p className=&quot;text-center py-8 text-muted-foreground&quot;>
               No chunk data available. Refresh to collect metrics.
             </p>
           )}
@@ -352,45 +352,45 @@ export function PerformanceDashboard() {
       {/* Recommendations */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <TrendingUp className=&quot;w-5 h-5&quot; />
             Optimization Recommendations
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-3">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+          <div className=&quot;space-y-3&quot;>
+            <div className=&quot;flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded&quot;>
+              <CheckCircle className=&quot;w-5 h-5 text-blue-600 mt-0.5&quot; />
               <div>
-                <p className="font-medium text-blue-900 dark:text-blue-100">
+                <p className=&quot;font-medium text-blue-900 dark:text-blue-100&quot;>
                   Bundle splitting implemented
                 </p>
-                <p className="text-sm text-blue-700 dark:text-blue-300">
+                <p className=&quot;text-sm text-blue-700 dark:text-blue-300&quot;>
                   Your bundle is properly split into framework, vendor, and application chunks
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+            <div className=&quot;flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded&quot;>
+              <CheckCircle className=&quot;w-5 h-5 text-green-600 mt-0.5&quot; />
               <div>
-                <p className="font-medium text-green-900 dark:text-green-100">
+                <p className=&quot;font-medium text-green-900 dark:text-green-100&quot;>
                   Performance monitoring active
                 </p>
-                <p className="text-sm text-green-700 dark:text-green-300">
+                <p className=&quot;text-sm text-green-700 dark:text-green-300&quot;>
                   Real-time performance tracking is helping optimize your application
                 </p>
               </div>
             </div>
             
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+              <div className=&quot;flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded&quot;>
+                <AlertTriangle className=&quot;w-5 h-5 text-yellow-600 mt-0.5&quot; />
                 <div>
-                  <p className="font-medium text-yellow-900 dark:text-yellow-100">
+                  <p className=&quot;font-medium text-yellow-900 dark:text-yellow-100&quot;>
                     Consider more aggressive code splitting
                   </p>
-                  <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                  <p className=&quot;text-sm text-yellow-700 dark:text-yellow-300&quot;>
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
                   </p>
                 </div>

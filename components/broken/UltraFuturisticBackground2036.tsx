@@ -283,27 +283,27 @@ export default function UltraFuturisticBackground2036({
   }, [variant, intensity]);
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className=&quot;w-full h-full&quot;
         style={{ display: 'block' }}
       />
       
       {/* Additional overlay effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+          <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
         )}
         
         {/* Quantum field lines */}
         {variant === 'quantum' && (
-          <div className="absolute inset-0">
+          <div className=&quot;absolute inset-0&quot;>
             {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"
+                className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
                 style={{
                   left: `${(i + 1) * 12.5}%`,
                   transform: 'translateX(-50%)'
@@ -321,11 +321,11 @@ export default function UltraFuturisticBackground2036({
         
         {/* AI neural network overlay */}
         {variant === 'ai' && (
-          <div className="absolute inset-0">
+          <div className=&quot;absolute inset-0&quot;>
             {[...Array(6)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent"
+                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
                 animate={{

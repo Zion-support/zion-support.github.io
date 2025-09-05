@@ -108,25 +108,25 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <div className="w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl">
-        <div className="mb-4">
-          <h2 className="text-lg font-semibold">Connect your wallet</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">No gas needed. We will verify your ownership with a signed message.</p>
+    <div className=&quot;fixed inset-0 z-50 flex items-center justify-center bg-black/60&quot;>
+      <div className=&quot;w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl&quot;>
+        <div className=&quot;mb-4&quot;>
+          <h2 className=&quot;text-lg font-semibold&quot;>Connect your wallet</h2>
+          <p className=&quot;text-sm text-gray-500 dark:text-gray-400&quot;>No gas needed. We will verify your ownership with a signed message.</p>
         </div>
         {error && (
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+          <div className=&quot;mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300&quot;>{error}</div>
         )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+        <div className=&quot;space-y-3&quot;>
+          <button onClick={handleEvmConnect} disabled={loading} className=&quot;w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black&quot;>
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+          <button onClick={handlePhantomConnect} disabled={loading} className=&quot;w-full rounded-lg bg-purple-600 text-white py-2.5&quot;>
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
         </div>
-        <div className="mt-4 flex justify-end">
-          <button onClick={onClose} className="text-sm text-gray-600 dark:text-gray-300">Cancel</button>
+        <div className=&quot;mt-4 flex justify-end&quot;>
+          <button onClick={onClose} className=&quot;text-sm text-gray-600 dark:text-gray-300&quot;>Cancel</button>
         </div>
       </div>
     </div>

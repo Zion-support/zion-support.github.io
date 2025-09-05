@@ -1,53 +1,53 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === &quot;OPTIONS&quot;) {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     const { content, enhancementType, context, instructions } = await req.json();
-    const openAiKey = Deno.env.get("OPENAI_API_KEY");
+    const openAiKey = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
 
     if (!openAiKey) {
-      throw new Error("OPENAI_API_KEY is not defined");
+      throw new Error(&quot;OPENAI_API_KEY is not defined&quot;);
     }
 
     if (!content && !context) {
-      throw new Error("Either content or context is required");
+      throw new Error(&quot;Either content or context is required&quot;);
     }
 
     // Determine the system prompt based on enhancement type
-    let systemPrompt = "";
-    let userPrompt = "";
+    let systemPrompt = "&quot;;
+    let userPrompt = "&quot;;
 
     switch (enhancementType) {
-      case "resume-summary":
-        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
+      case &quot;resume-summary&quot;:
+        systemPrompt = &quot;You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.&quot;;
         userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
         break;
-      case "work-description":
-        systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+      case &quot;work-description&quot;:
+        systemPrompt = &quot;You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.&quot;;
         userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
-      case "job-post":
-        systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.";
+      case &quot;job-post&quot;:
+        systemPrompt = &quot;You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.&quot;;
         userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
         break;
-      case "proposal":
-        systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.";
+      case &quot;proposal&quot;:
+        systemPrompt = &quot;You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.&quot;;
         userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`;
         break;
       default:
-        systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.";
+        systemPrompt = &quot;You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.&quot;;
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
     }
 
@@ -57,19 +57,19 @@ serve(async (req) => {
     }
 
     // Call OpenAI API
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
+    const response = await fetch(&quot;https://api.openai.com/v1/chat/completions&quot;, {
+      method: &quot;POST&quot;,
       headers: {
-        "Authorization": `Bearer ${openAiKey}`,
-        "Content-Type": "application/json"},
+        &quot;Authorization&quot;: `Bearer ${openAiKey}`,
+        &quot;Content-Type&quot;: &quot;application/json&quot;},
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: &quot;gpt-4o-mini&quot;,
         messages: [
           {
-            role: "system",
+            role: &quot;system&quot;,
             content: systemPrompt},
           {
-            role: "user",
+            role: &quot;user&quot;,
             content: userPrompt}],
         temperature: 0.7})});
 
@@ -85,16 +85,16 @@ serve(async (req) => {
       JSON.stringify({
         enhancedContent}),
       {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; }}
     );
   } catch (error) {
-    console.error("Error in ai-content-enhancer function:", error);
+    console.error(&quot;Error in ai-content-enhancer function:&quot;, error);
     return new Response(
       JSON.stringify({
         error: error.message}),
       {
         status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; }}
     );
   }
 });

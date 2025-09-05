@@ -135,64 +135,64 @@ const itemVariants = {
 
 export default function UltraFuturisticFooter2032() {
   return (
-    <footer className="relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden">
+    <footer className=&quot;relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden&quot;>
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      <div className=&quot;absolute inset-0&quot;>
+        <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl&quot;></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
+      <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10&quot;>
         <motion.div
           variants={footerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
           viewport={{ once: true }}
-          className="space-y-16"
+          className=&quot;space-y-16&quot;
         >
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-12&quot;>
             {/* Company Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30">
-                  <Rocket className="w-7 h-7 text-white" />
+            <motion.div variants={itemVariants} className=&quot;lg:col-span-1&quot;>
+              <div className=&quot;flex items-center space-x-3 mb-6&quot;>
+                <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30&quot;>
+                  <Rocket className=&quot;w-7 h-7 text-white&quot; />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <h3 className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                     Zion Tech Group
                   </h3>
-                  <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>
+                  <p className=&quot;text-sm text-cyan-300 font-medium&quot;>2032 Future Technology</p>
                 </div>
               </div>
               
-              <p className="text-slate-300 mb-6 leading-relaxed">
+              <p className=&quot;text-slate-300 mb-6 leading-relaxed&quot;>
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
               </p>
 
               {/* Contact Information */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-300 transition-colors">
+              <div className=&quot;space-y-3&quot;>
+                <div className=&quot;flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors&quot;>
+                  <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
+                  <a href={`tel:${contactInfo.mobile}`} className=&quot;hover:text-cyan-300 transition-colors&quot;>
                     {contactInfo.mobile}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-300 transition-colors">
+                <div className=&quot;flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors&quot;>
+                  <Mail className=&quot;w-4 h-4 text-cyan-400&quot; />
+                  <a href={`mailto:${contactInfo.email}`} className=&quot;hover:text-cyan-300 transition-colors&quot;>
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-slate-300">
-                  <MapPin className="w-4 h-4 text-cyan-400" />
+                <div className=&quot;flex items-center space-x-3 text-slate-300&quot;>
+                  <MapPin className=&quot;w-4 h-4 text-cyan-400&quot; />
                   <span>{contactInfo.address}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
-                  <Globe className="w-4 h-4 text-cyan-400" />
-                  <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
+                <div className=&quot;flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors&quot;>
+                  <Globe className=&quot;w-4 h-4 text-cyan-400&quot; />
+                  <a href={contactInfo.website} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-cyan-300 transition-colors&quot;>
                     {contactInfo.website}
                   </a>
                 </div>
@@ -200,23 +200,23 @@ export default function UltraFuturisticFooter2032() {
             </motion.div>
 
             {/* Service Categories */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <motion.div variants={itemVariants} className=&quot;lg:col-span-2&quot;>
+              <h3 className=&quot;text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
                 Our Revolutionary Services
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
                 {serviceCategories.map((category, index) => (
-                  <div key={index} className="space-y-4">
-                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
-                    <ul className="space-y-2">
+                  <div key={index} className=&quot;space-y-4&quot;>
+                    <h4 className=&quot;text-lg font-medium text-white&quot;>{category.title}</h4>
+                    <ul className=&quot;space-y-2&quot;>
                       {category.services.map((service, serviceIndex) => (
                         <li key={serviceIndex}>
                           <Link
                             href={service.href}
-                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+                            className=&quot;text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform&quot;
                           >
                             {service.name}
-                          </Link>
+                          </a>
                         </li>
                       ))}
                     </ul>
@@ -226,41 +226,41 @@ export default function UltraFuturisticFooter2032() {
             </motion.div>
 
             {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-1">
-              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <motion.div variants={itemVariants} className=&quot;lg:col-span-1&quot;>
+              <h3 className=&quot;text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                 Quick Access
               </h3>
               
               {/* Quick Links */}
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
-                <ul className="space-y-2">
+              <div className=&quot;mb-8&quot;>
+                <h4 className=&quot;text-lg font-medium text-white mb-4&quot;>Quick Links</h4>
+                <ul className=&quot;space-y-2&quot;>
                   {quickLinks.map((link, index) => (
                     <li key={index}>
                       <Link
                         href={link.href}
-                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group"
+                        className=&quot;flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group&quot;
                       >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <link.icon className=&quot;w-4 h-4 group-hover:scale-110 transition-transform&quot; />
                         <span>{link.name}</span>
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Company Info */}
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Company</h4>
-                <ul className="space-y-2">
+              <div className=&quot;mb-8&quot;>
+                <h4 className=&quot;text-lg font-medium text-white mb-4&quot;>Company</h4>
+                <ul className=&quot;space-y-2&quot;>
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                        className=&quot;text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm&quot;
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -268,17 +268,17 @@ export default function UltraFuturisticFooter2032() {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
+                <h4 className=&quot;text-lg font-medium text-white mb-4&quot;>Follow Us</h4>
+                <div className=&quot;flex space-x-4&quot;>
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
+                      target=&quot;_blank&quot;
+                      rel=&quot;noopener noreferrer&quot;
+                      className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20&quot;
                     >
-                      <social.icon className="w-5 h-5" />
+                      <social.icon className=&quot;w-5 h-5&quot; />
                     </a>
                   ))}
                 </div>
@@ -287,22 +287,22 @@ export default function UltraFuturisticFooter2032() {
           </div>
 
           {/* Newsletter Signup */}
-          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
+          <motion.div variants={itemVariants} className=&quot;border-t border-cyan-500/30 pt-12&quot;>
+            <div className=&quot;text-center&quot;>
+              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
                 Stay Ahead with Future Technology
               </h3>
-              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+              <p className=&quot;text-slate-300 mb-8 max-w-2xl mx-auto&quot;>
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, 
                 and autonomous systems development. Join our community of future technology pioneers.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 max-w-md mx-auto&quot;>
                 <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                  type=&quot;email&quot;
+                  placeholder=&quot;Enter your email address&quot;
+                  className=&quot;flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300&quot;
                 />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105">
+                <button className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105&quot;>
                   Subscribe
                 </button>
               </div>
@@ -310,24 +310,24 @@ export default function UltraFuturisticFooter2032() {
           </motion.div>
 
           {/* Bottom Bar */}
-          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-8">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-2 text-slate-400 text-sm">
+          <motion.div variants={itemVariants} className=&quot;border-t border-cyan-500/30 pt-8&quot;>
+            <div className=&quot;flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0&quot;>
+              <div className=&quot;flex items-center space-x-2 text-slate-400 text-sm&quot;>
                 <span>© 2024 Zion Tech Group. All rights reserved.</span>
-                <span className="text-cyan-400">|</span>
+                <span className=&quot;text-cyan-400&quot;>|</span>
                 <span>Leading the Future of Technology</span>
               </div>
               
-              <div className="flex items-center space-x-6 text-sm">
-                <Link href="/privacy" className="text-slate-400 hover:text-cyan-300 transition-colors">
+              <div className=&quot;flex items-center space-x-6 text-sm&quot;>
+                <Link href=&quot;/privacy&quot; className=&quot;text-slate-400 hover:text-cyan-300 transition-colors&quot;>
                   Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-slate-400 hover:text-cyan-300 transition-colors">
+                </a>
+                <Link href=&quot;/terms&quot; className=&quot;text-slate-400 hover:text-cyan-300 transition-colors&quot;>
                   Terms of Service
-                </Link>
-                <Link href="/cookies" className="text-slate-400 hover:text-cyan-300 transition-colors">
+                </a>
+                <Link href=&quot;/cookies&quot; className=&quot;text-slate-400 hover:text-cyan-300 transition-colors&quot;>
                   Cookie Policy
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -335,14 +335,14 @@ export default function UltraFuturisticFooter2032() {
       </div>
 
       {/* Floating Action Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className=&quot;fixed bottom-8 right-8 z-50&quot;>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
+          className=&quot;w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white&quot;
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />
+          <ArrowRight className=&quot;w-6 h-6 transform rotate-[-90deg]&quot; />
         </motion.button>
       </div>
     </footer>

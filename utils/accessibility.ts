@@ -21,7 +21,7 @@ export const announceToScreenReader = (message: string): void => {
 
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
   );
 
   const firstElement = focusableElements[0] as HTMLElement;

@@ -1,64 +1,64 @@
 
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from &quot;react&quot;;
+import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
+import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
 
 export function ApiWebhooks() {
   // Sample webhook event payload
   const newApplicationPayload = `{
-  "event_type": "new_application",
-  "created_at": "2023-06-10T15:42:31Z",
-  "data": {
-    "application_id": "app-123456",
-    "job_id": "job-789",
-    "talent_id": "talent-456",
-    "status": "new",
-    "cover_letter": "I'm excited to apply for this position...",
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
-    "created_at": "2023-06-10T15:42:31Z"
+  &quot;event_type&quot;: &quot;new_application&quot;,
+  &quot;created_at&quot;: &quot;2023-06-10T15:42:31Z&quot;,
+  &quot;data&quot;: {
+    &quot;application_id&quot;: &quot;app-123456&quot;,
+    &quot;job_id&quot;: &quot;job-789&quot;,
+    &quot;talent_id&quot;: &quot;talent-456&quot;,
+    &quot;status&quot;: &quot;new&quot;,
+    &quot;cover_letter&quot;: &quot;I'm excited to apply for this position...&quot;,
+    &quot;resume_url&quot;: &quot;https://storage.zionai.com/resumes/resume-123.pdf&quot;,
+    &quot;created_at&quot;: &quot;2023-06-10T15:42:31Z&quot;
   }
 }`;
 
   const newHirePayload = `{
-  "event_type": "talent_hired",
-  "created_at": "2023-06-12T09:15:22Z",
-  "data": {
-    "project_id": "project-123",
-    "job_id": "job-456",
-    "client_id": "client-789",
-    "talent_id": "talent-123",
-    "start_date": "2023-07-01",
-    "status": "offer_accepted",
-    "created_at": "2023-06-12T09:15:22Z"
+  &quot;event_type&quot;: &quot;talent_hired&quot;,
+  &quot;created_at&quot;: &quot;2023-06-12T09:15:22Z&quot;,
+  &quot;data&quot;: {
+    &quot;project_id&quot;: &quot;project-123&quot;,
+    &quot;job_id&quot;: &quot;job-456&quot;,
+    &quot;client_id&quot;: &quot;client-789&quot;,
+    &quot;talent_id&quot;: &quot;talent-123&quot;,
+    &quot;start_date&quot;: &quot;2023-07-01&quot;,
+    &quot;status&quot;: &quot;offer_accepted&quot;,
+    &quot;created_at&quot;: &quot;2023-06-12T09:15:22Z&quot;
   }
 }`;
 
   const quoteReceivedPayload = `{
-  "event_type": "quote_received",
-  "created_at": "2023-06-15T11:30:00Z",
-  "data": {
-    "quote_id": "quote-123",
-    "client_id": "client-456",
-    "talent_id": "talent-789",
-    "project_name": "Website Redesign",
-    "budget_min": 5000,
-    "budget_max": 8000,
-    "status": "new",
-    "created_at": "2023-06-15T11:30:00Z"
+  &quot;event_type&quot;: &quot;quote_received&quot;,
+  &quot;created_at&quot;: &quot;2023-06-15T11:30:00Z&quot;,
+  &quot;data&quot;: {
+    &quot;quote_id&quot;: &quot;quote-123&quot;,
+    &quot;client_id&quot;: &quot;client-456&quot;,
+    &quot;talent_id&quot;: &quot;talent-789&quot;,
+    &quot;project_name&quot;: &quot;Website Redesign&quot;,
+    &quot;budget_min&quot;: 5000,
+    &quot;budget_max&quot;: 8000,
+    &quot;status&quot;: &quot;new&quot;,
+    &quot;created_at&quot;: &quot;2023-06-15T11:30:00Z&quot;
   }
 }`;
 
   const messageReceivedPayload = `{
-  "event_type": "message_received",
-  "created_at": "2023-06-18T14:22:15Z",
-  "data": {
-    "message_id": "msg-123",
-    "conversation_id": "conv-456",
-    "sender_id": "user-789",
-    "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.",
-    "created_at": "2023-06-18T14:22:15Z"
+  &quot;event_type&quot;: &quot;message_received&quot;,
+  &quot;created_at&quot;: &quot;2023-06-18T14:22:15Z&quot;,
+  &quot;data&quot;: {
+    &quot;message_id&quot;: &quot;msg-123&quot;,
+    &quot;conversation_id&quot;: &quot;conv-456&quot;,
+    &quot;sender_id&quot;: &quot;user-789&quot;,
+    &quot;recipient_id&quot;: &quot;user-012&quot;,
+    &quot;content&quot;: &quot;Hi, I'd like to discuss the project details.&quot;,
+    &quot;created_at&quot;: &quot;2023-06-18T14:22:15Z&quot;
   }
 }`;
 
@@ -103,27 +103,27 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   // Handle different event types
   switch (event_type) {
     case 'new_application':
-      console.log('New application received:', data.application_id);
+      // console.log('New application received:', data.application_id);
       // Process the new application...
       break;
     
     case 'talent_hired':
-      console.log('Talent hired:', data.talent_id);
+      // console.log('Talent hired:', data.talent_id);
       // Update your system...
       break;
     
     case 'quote_received':
-      console.log('New quote received:', data.quote_id);
+      // console.log('New quote received:', data.quote_id);
       // Process the quote...
       break;
     
     case 'message_received':
-      console.log('New message received:', data.message_id);
+      // console.log('New message received:', data.message_id);
       // Process the message...
       break;
     
     default:
-      console.log('Unknown event type:', event_type);
+      // console.log('Unknown event type:', event_type);
   }
   
   // Always return a 200 response quickly
@@ -131,12 +131,12 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Webhook server listening on port 3000');
+  // console.log('Webhook server listening on port 3000');
 });`;
 
   return (
     <ApiDocsLayout>
-      <div className="max-w-3xl prose prose-invert">
+      <div className=&quot;max-w-3xl prose prose-invert&quot;>
         <h1>Webhooks</h1>
         
         <p>
@@ -147,30 +147,30 @@ app.listen(3000, () => {
         <h2>Supported Events</h2>
         <p>You can subscribe to the following webhook events:</p>
         
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full border-collapse">
+        <div className=&quot;overflow-x-auto mb-6&quot;>
+          <table className=&quot;w-full border-collapse&quot;>
             <thead>
-              <tr className="border-b border-zinc-800">
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Event Type</th>
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Description</th>
+              <tr className=&quot;border-b border-zinc-800&quot;>
+                <th className=&quot;text-left py-2 px-4 text-zinc-300 font-medium&quot;>Event Type</th>
+                <th className=&quot;text-left py-2 px-4 text-zinc-300 font-medium&quot;>Description</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-zinc-800">
-                <td className="py-2 px-4 text-white font-mono">new_application</td>
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent applies to one of your job postings</td>
+              <tr className=&quot;border-b border-zinc-800&quot;>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>new_application</td>
+                <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when a talent applies to one of your job postings</td>
               </tr>
-              <tr className="border-b border-zinc-800">
-                <td className="py-2 px-4 text-white font-mono">talent_hired</td>
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent is hired for a project</td>
+              <tr className=&quot;border-b border-zinc-800&quot;>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>talent_hired</td>
+                <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when a talent is hired for a project</td>
               </tr>
-              <tr className="border-b border-zinc-800">
-                <td className="py-2 px-4 text-white font-mono">quote_received</td>
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a quote request</td>
+              <tr className=&quot;border-b border-zinc-800&quot;>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>quote_received</td>
+                <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when you receive a quote request</td>
               </tr>
               <tr>
-                <td className="py-2 px-4 text-white font-mono">message_received</td>
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a new message</td>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>message_received</td>
+                <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when you receive a new message</td>
               </tr>
             </tbody>
           </table>
@@ -178,7 +178,7 @@ app.listen(3000, () => {
 
         <h2>Setting Up Webhooks</h2>
         <p>
-          You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.
+          You can configure webhooks in the <a href=&quot;/developers/portal&quot; className=&quot;text-zion-cyan&quot;>Developer Portal</Link> under the Webhooks tab.
           For each webhook, you'll need to provide:
         </p>
         
@@ -195,24 +195,24 @@ app.listen(3000, () => {
         <h2>Webhook Payload Format</h2>
         <p>All webhook payloads follow a common format:</p>
         
-        <Tabs defaultValue="new_application">
+        <Tabs defaultValue=&quot;new_application&quot;>
           <TabsList>
-            <TabsTrigger value="new_application">New Application</TabsTrigger>
-            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>
-            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>
-            <TabsTrigger value="message_received">Message Received</TabsTrigger>
+            <TabsTrigger value=&quot;new_application&quot;>New Application</TabsTrigger>
+            <TabsTrigger value=&quot;talent_hired&quot;>Talent Hired</TabsTrigger>
+            <TabsTrigger value=&quot;quote_received&quot;>Quote Received</TabsTrigger>
+            <TabsTrigger value=&quot;message_received&quot;>Message Received</TabsTrigger>
           </TabsList>
-          <TabsContent value="new_application">
-            <CodeBlock code={newApplicationPayload} language="json" showLineNumbers={true} />
+          <TabsContent value=&quot;new_application&quot;>
+            <CodeBlock code={newApplicationPayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value="talent_hired">
-            <CodeBlock code={newHirePayload} language="json" showLineNumbers={true} />
+          <TabsContent value=&quot;talent_hired&quot;>
+            <CodeBlock code={newHirePayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value="quote_received">
-            <CodeBlock code={quoteReceivedPayload} language="json" showLineNumbers={true} />
+          <TabsContent value=&quot;quote_received&quot;>
+            <CodeBlock code={quoteReceivedPayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value="message_received">
-            <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />
+          <TabsContent value=&quot;message_received&quot;>
+            <CodeBlock code={messageReceivedPayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
         </Tabs>
 
@@ -229,12 +229,12 @@ app.listen(3000, () => {
         
         <p>Here's an example of verifying a webhook in Node.js:</p>
         
-        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
+        <CodeBlock code={webhookHandlerJs} language=&quot;javascript&quot; showLineNumbers={true} />
 
         <h2>Testing Webhooks</h2>
         <p>
           You can test your webhook implementation using the Developer Portal. From the Webhooks tab,
-          select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
+          select &quot;Test Webhook&quot; next to any configured webhook to send a test payload to your endpoint.
         </p>
         
         <h2>Best Practices</h2>

@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
+import { useState } from &quot;react&quot;;
 
 interface PricingTier {
   name: string;
@@ -24,230 +24,230 @@ interface ServicePricing {
 
 const servicePricing: ServicePricing[] = [
   {
-    serviceName: "Zion OS Platform",
-    category: "Core Platform",
-    description: "Unified deployment protocol for sovereign AI-powered digital economies",
-    features: ["Instance deployment", "Feature toggles", "Multi-vertical support", "Governance systems", "API management", "Multi-region support"],
-    benefits: ["Reduce deployment time from months to minutes", "Built-in compliance and governance", "Scalable architecture"],
+    serviceName: &quot;Zion OS Platform&quot;,
+    category: &quot;Core Platform&quot;,
+    description: &quot;Unified deployment protocol for sovereign AI-powered digital economies&quot;,
+    features: [&quot;Instance deployment&quot;, &quot;Feature toggles&quot;, &quot;Multi-vertical support&quot;, &quot;Governance systems&quot;, &quot;API management&quot;, &quot;Multi-region support&quot;],
+    benefits: [&quot;Reduce deployment time from months to minutes&quot;, &quot;Built-in compliance and governance&quot;, &quot;Scalable architecture&quot;],
     tiers: [
       {
-        name: "Starter",
-        price: "$99",
-        period: "/month",
-        description: "Perfect for small businesses and startups",
-        features: ["Up to 3 instances", "Basic feature set", "Community support", "Standard deployment", "Basic analytics"],
-        cta: "Start Free Trial",
-        ctaLink: "/multiverse/launch"
+        name: &quot;Starter&quot;,
+        price: &quot;$99&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;Perfect for small businesses and startups&quot;,
+        features: [&quot;Up to 3 instances&quot;, &quot;Basic feature set&quot;, &quot;Community support&quot;, &quot;Standard deployment&quot;, &quot;Basic analytics&quot;],
+        cta: &quot;Start Free Trial&quot;,
+        ctaLink: &quot;/multiverse/launch&quot;
       },
       {
-        name: "Professional",
-        price: "$299",
-        period: "/month",
-        description: "Ideal for growing businesses",
-        features: ["Up to 10 instances", "Advanced features", "Priority support", "Custom domains", "Advanced analytics", "API access"],
+        name: &quot;Professional&quot;,
+        price: &quot;$299&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;Ideal for growing businesses&quot;,
+        features: [&quot;Up to 10 instances&quot;, &quot;Advanced features&quot;, &quot;Priority support&quot;, &quot;Custom domains&quot;, &quot;Advanced analytics&quot;, &quot;API access&quot;],
         popular: true,
-        cta: "Get Started",
-        ctaLink: "/multiverse/launch"
+        cta: &quot;Get Started&quot;,
+        ctaLink: &quot;/multiverse/launch&quot;
       },
       {
-        name: "Enterprise",
-        price: "$999",
-        period: "/month",
-        description: "For large organizations with complex needs",
-        features: ["Unlimited instances", "All features", "24/7 support", "Custom integrations", "White-label options", "Dedicated account manager"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise&quot;,
+        price: &quot;$999&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For large organizations with complex needs&quot;,
+        features: [&quot;Unlimited instances&quot;, &quot;All features&quot;, &quot;24/7 support&quot;, &quot;Custom integrations&quot;, &quot;White-label options&quot;, &quot;Dedicated account manager&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   },
   {
-    serviceName: "ZionGPT Core",
-    category: "AI Services",
-    description: "Advanced AI language model optimized for business applications",
-    features: ["Custom fine-tuning", "Multi-language support", "Industry-specific models", "API access", "Enterprise security", "Real-time processing"],
-    benefits: ["Improve customer service efficiency by 60%", "Reduce content creation time", "Ensure compliance accuracy"],
+    serviceName: &quot;ZionGPT Core&quot;,
+    category: &quot;AI Services&quot;,
+    description: &quot;Advanced AI language model optimized for business applications&quot;,
+    features: [&quot;Custom fine-tuning&quot;, &quot;Multi-language support&quot;, &quot;Industry-specific models&quot;, &quot;API access&quot;, &quot;Enterprise security&quot;, &quot;Real-time processing&quot;],
+    benefits: [&quot;Improve customer service efficiency by 60%&quot;, &quot;Reduce content creation time&quot;, &quot;Ensure compliance accuracy&quot;],
     tiers: [
       {
-        name: "Starter",
-        price: "$49",
-        period: "/month",
-        description: "For small teams and individual users",
-        features: ["100 API calls/day", "Basic models", "Email support", "Standard response time", "Basic documentation"],
-        cta: "Start Free Trial",
-        ctaLink: "/services/zion-gpt"
+        name: &quot;Starter&quot;,
+        price: &quot;$49&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For small teams and individual users&quot;,
+        features: [&quot;100 API calls/day&quot;, &quot;Basic models&quot;, &quot;Email support&quot;, &quot;Standard response time&quot;, &quot;Basic documentation&quot;],
+        cta: &quot;Start Free Trial&quot;,
+        ctaLink: &quot;/services/zion-gpt&quot;
       },
       {
-        name: "Professional",
-        price: "$149",
-        period: "/month",
-        description: "For growing businesses",
-        features: ["1,000 API calls/day", "Advanced models", "Priority support", "Custom fine-tuning", "Multi-language support", "Analytics dashboard"],
-        cta: "Get Started",
-        ctaLink: "/services/zion-gpt"
+        name: &quot;Professional&quot;,
+        price: &quot;$149&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For growing businesses&quot;,
+        features: [&quot;1,000 API calls/day&quot;, &quot;Advanced models&quot;, &quot;Priority support&quot;, &quot;Custom fine-tuning&quot;, &quot;Multi-language support&quot;, &quot;Analytics dashboard&quot;],
+        cta: &quot;Get Started&quot;,
+        ctaLink: &quot;/services/zion-gpt&quot;
       },
       {
-        name: "Enterprise",
-        price: "$499",
-        period: "/month",
-        description: "For large organizations",
-        features: ["Unlimited API calls", "Custom models", "24/7 support", "Dedicated infrastructure", "SLA guarantee", "Custom integrations"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise&quot;,
+        price: &quot;$499&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For large organizations&quot;,
+        features: [&quot;Unlimited API calls&quot;, &quot;Custom models&quot;, &quot;24/7 support&quot;, &quot;Dedicated infrastructure&quot;, &quot;SLA guarantee&quot;, &quot;Custom integrations&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   },
   {
-    serviceName: "AI Content Hub",
-    category: "AI Services",
-    description: "Comprehensive content creation and management platform powered by AI",
-    features: ["AI content generation", "SEO optimization", "Multi-platform publishing", "Content calendar", "Performance analytics", "Team collaboration"],
-    benefits: ["Generate 10x more content", "Improve SEO rankings", "Save 20+ hours per week"],
+    serviceName: &quot;AI Content Hub&quot;,
+    category: &quot;AI Services&quot;,
+    description: &quot;Comprehensive content creation and management platform powered by AI&quot;,
+    features: [&quot;AI content generation&quot;, &quot;SEO optimization&quot;, &quot;Multi-platform publishing&quot;, &quot;Content calendar&quot;, &quot;Performance analytics&quot;, &quot;Team collaboration&quot;],
+    benefits: [&quot;Generate 10x more content&quot;, &quot;Improve SEO rankings&quot;, &quot;Save 20+ hours per week&quot;],
     tiers: [
       {
-        name: "Starter",
-        price: "$39",
-        period: "/month",
-        description: "For content creators and small teams",
-        features: ["50 AI-generated articles/month", "Basic SEO tools", "Social media integration", "Content calendar", "Basic analytics"],
-        cta: "Start Free Trial",
-        ctaLink: "/services/ai-content-hub"
+        name: &quot;Starter&quot;,
+        price: &quot;$39&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For content creators and small teams&quot;,
+        features: [&quot;50 AI-generated articles/month&quot;, &quot;Basic SEO tools&quot;, &quot;Social media integration&quot;, &quot;Content calendar&quot;, &quot;Basic analytics&quot;],
+        cta: &quot;Start Free Trial&quot;,
+        ctaLink: &quot;/services/ai-content-hub&quot;
       },
       {
-        name: "Professional",
-        price: "$99",
-        period: "/month",
-        description: "For growing content teams",
-        features: ["200 AI-generated articles/month", "Advanced SEO optimization", "Multi-platform publishing", "Team collaboration", "Advanced analytics", "API access"],
-        cta: "Get Started",
-        ctaLink: "/services/ai-content-hub"
+        name: &quot;Professional&quot;,
+        price: &quot;$99&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For growing content teams&quot;,
+        features: [&quot;200 AI-generated articles/month&quot;, &quot;Advanced SEO optimization&quot;, &quot;Multi-platform publishing&quot;, &quot;Team collaboration&quot;, &quot;Advanced analytics&quot;, &quot;API access&quot;],
+        cta: &quot;Get Started&quot;,
+        ctaLink: &quot;/services/ai-content-hub&quot;
       },
       {
-        name: "Enterprise",
-        price: "$299",
-        period: "/month",
-        description: "For large content operations",
-        features: ["Unlimited content generation", "Custom AI models", "White-label options", "Advanced integrations", "Dedicated support", "Custom workflows"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise&quot;,
+        price: &quot;$299&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For large content operations&quot;,
+        features: [&quot;Unlimited content generation&quot;, &quot;Custom AI models&quot;, &quot;White-label options&quot;, &quot;Advanced integrations&quot;, &quot;Dedicated support&quot;, &quot;Custom workflows&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   },
   {
-    serviceName: "Digital Marketplace Platform",
-    category: "E-commerce & Services",
-    description: "Complete marketplace solution for jobs, talent, projects, and services",
-    features: ["Job posting & matching", "Talent marketplace", "Project management", "Payment processing", "Rating system", "Analytics dashboard"],
-    benefits: ["Launch marketplace in 24 hours", "Reduce operational costs by 30%", "Increase revenue through commissions"],
+    serviceName: &quot;Digital Marketplace Platform&quot;,
+    category: &quot;E-commerce & Services&quot;,
+    description: &quot;Complete marketplace solution for jobs, talent, projects, and services&quot;,
+    features: [&quot;Job posting & matching&quot;, &quot;Talent marketplace&quot;, &quot;Project management&quot;, &quot;Payment processing&quot;, &quot;Rating system&quot;, &quot;Analytics dashboard&quot;],
+    benefits: [&quot;Launch marketplace in 24 hours&quot;, &quot;Reduce operational costs by 30%&quot;, &quot;Increase revenue through commissions&quot;],
     tiers: [
       {
-        name: "Starter",
-        price: "$79",
-        period: "/month",
-        description: "For small marketplaces",
-        features: ["Up to 100 users", "Basic marketplace features", "Payment processing", "Basic analytics", "Email support"],
-        cta: "Start Free Trial",
-        ctaLink: "/services/marketplace"
+        name: &quot;Starter&quot;,
+        price: &quot;$79&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For small marketplaces&quot;,
+        features: [&quot;Up to 100 users&quot;, &quot;Basic marketplace features&quot;, &quot;Payment processing&quot;, &quot;Basic analytics&quot;, &quot;Email support&quot;],
+        cta: &quot;Start Free Trial&quot;,
+        ctaLink: &quot;/services/marketplace&quot;
       },
       {
-        name: "Professional",
-        price: "$199",
-        period: "/month",
-        description: "For growing marketplaces",
-        features: ["Up to 1,000 users", "Advanced features", "Custom branding", "Advanced analytics", "API access", "Priority support"],
-        cta: "Get Started",
-        ctaLink: "/services/marketplace"
+        name: &quot;Professional&quot;,
+        price: &quot;$199&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For growing marketplaces&quot;,
+        features: [&quot;Up to 1,000 users&quot;, &quot;Advanced features&quot;, &quot;Custom branding&quot;, &quot;Advanced analytics&quot;, &quot;API access&quot;, &quot;Priority support&quot;],
+        cta: &quot;Get Started&quot;,
+        ctaLink: &quot;/services/marketplace&quot;
       },
       {
-        name: "Enterprise",
-        price: "$599",
-        period: "/month",
-        description: "For large marketplaces",
-        features: ["Unlimited users", "Custom development", "White-label options", "Advanced integrations", "Dedicated support", "Custom workflows"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise&quot;,
+        price: &quot;$599&quot;,
+        period: &quot;/month&quot;,
+        description: &quot;For large marketplaces&quot;,
+        features: [&quot;Unlimited users&quot;, &quot;Custom development&quot;, &quot;White-label options&quot;, &quot;Advanced integrations&quot;, &quot;Dedicated support&quot;, &quot;Custom workflows&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   },
   {
-    serviceName: "Cloud Migration Services",
-    category: "IT Services",
-    description: "Professional cloud migration and optimization services",
-    features: ["Infrastructure assessment", "Migration planning", "Data migration", "Performance optimization", "24/7 support", "Post-migration support"],
-    benefits: ["Reduce infrastructure costs by 40%", "Improve scalability", "Enhanced security"],
+    serviceName: &quot;Cloud Migration Services&quot;,
+    category: &quot;IT Services&quot;,
+    description: &quot;Professional cloud migration and optimization services&quot;,
+    features: [&quot;Infrastructure assessment&quot;, &quot;Migration planning&quot;, &quot;Data migration&quot;, &quot;Performance optimization&quot;, &quot;24/7 support&quot;, &quot;Post-migration support&quot;],
+    benefits: [&quot;Reduce infrastructure costs by 40%&quot;, &quot;Improve scalability&quot;, &quot;Enhanced security&quot;],
     tiers: [
       {
-        name: "Basic Migration",
-        price: "$2,500",
-        period: "one-time",
-        description: "Simple infrastructure migration",
-        features: ["Infrastructure assessment", "Basic migration plan", "Data migration", "Basic testing", "Documentation"],
-        cta: "Get Quote",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Basic Migration&quot;,
+        price: &quot;$2,500&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Simple infrastructure migration&quot;,
+        features: [&quot;Infrastructure assessment&quot;, &quot;Basic migration plan&quot;, &quot;Data migration&quot;, &quot;Basic testing&quot;, &quot;Documentation&quot;],
+        cta: &quot;Get Quote&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       },
       {
-        name: "Standard Migration",
-        price: "$7,500",
-        period: "one-time",
-        description: "Comprehensive migration with optimization",
-        features: ["Detailed assessment", "Comprehensive plan", "Data migration", "Performance optimization", "Testing & validation", "Training"],
-        cta: "Get Quote",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Standard Migration&quot;,
+        price: &quot;$7,500&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Comprehensive migration with optimization&quot;,
+        features: [&quot;Detailed assessment&quot;, &quot;Comprehensive plan&quot;, &quot;Data migration&quot;, &quot;Performance optimization&quot;, &quot;Testing & validation&quot;, &quot;Training&quot;],
+        cta: &quot;Get Quote&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       },
       {
-        name: "Enterprise Migration",
-        price: "$15,000+",
-        period: "one-time",
-        description: "Complex enterprise migration",
-        features: ["Full assessment", "Custom migration strategy", "Advanced optimization", "Custom integrations", "Ongoing support", "SLA guarantee"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise Migration&quot;,
+        price: &quot;$15,000+&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Complex enterprise migration&quot;,
+        features: [&quot;Full assessment&quot;, &quot;Custom migration strategy&quot;, &quot;Advanced optimization&quot;, &quot;Custom integrations&quot;, &quot;Ongoing support&quot;, &quot;SLA guarantee&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   },
   {
-    serviceName: "Cybersecurity Audit & Compliance",
-    category: "IT Services",
-    description: "Comprehensive security assessments and compliance consulting",
-    features: ["Security assessment", "Penetration testing", "Compliance audit", "Security training", "Incident response planning", "Ongoing monitoring"],
-    benefits: ["Protect against cyber threats", "Meet compliance requirements", "Reduce security risks"],
+    serviceName: &quot;Cybersecurity Audit & Compliance&quot;,
+    category: &quot;IT Services&quot;,
+    description: &quot;Comprehensive security assessments and compliance consulting&quot;,
+    features: [&quot;Security assessment&quot;, &quot;Penetration testing&quot;, &quot;Compliance audit&quot;, &quot;Security training&quot;, &quot;Incident response planning&quot;, &quot;Ongoing monitoring&quot;],
+    benefits: [&quot;Protect against cyber threats&quot;, &quot;Meet compliance requirements&quot;, &quot;Reduce security risks&quot;],
     tiers: [
       {
-        name: "Basic Audit",
-        price: "$1,500",
-        period: "one-time",
-        description: "Essential security assessment",
-        features: ["Basic security scan", "Vulnerability assessment", "Compliance checklist", "Basic report", "Email support"],
-        cta: "Get Quote",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Basic Audit&quot;,
+        price: &quot;$1,500&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Essential security assessment&quot;,
+        features: [&quot;Basic security scan&quot;, &quot;Vulnerability assessment&quot;, &quot;Compliance checklist&quot;, &quot;Basic report&quot;, &quot;Email support&quot;],
+        cta: &quot;Get Quote&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       },
       {
-        name: "Standard Audit",
-        price: "$4,500",
-        period: "one-time",
-        description: "Comprehensive security assessment",
-        features: ["Full security audit", "Penetration testing", "Compliance audit", "Detailed report", "Remediation guidance", "Phone support"],
-        cta: "Get Quote",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Standard Audit&quot;,
+        price: &quot;$4,500&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Comprehensive security assessment&quot;,
+        features: [&quot;Full security audit&quot;, &quot;Penetration testing&quot;, &quot;Compliance audit&quot;, &quot;Detailed report&quot;, &quot;Remediation guidance&quot;, &quot;Phone support&quot;],
+        cta: &quot;Get Quote&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       },
       {
-        name: "Enterprise Audit",
-        price: "$9,000+",
-        period: "one-time",
-        description: "Advanced security assessment",
-        features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"],
-        cta: "Contact Sales",
-        ctaLink: "mailto:kleber@ziontechgroup.com"
+        name: &quot;Enterprise Audit&quot;,
+        price: &quot;$9,000+&quot;,
+        period: &quot;one-time&quot;,
+        description: &quot;Advanced security assessment&quot;,
+        features: [&quot;Advanced testing&quot;, &quot;Custom compliance&quot;, &quot;Ongoing monitoring&quot;, &quot;Security training&quot;, &quot;Incident response&quot;, &quot;Dedicated support&quot;],
+        cta: &quot;Contact Sales&quot;,
+        ctaLink: &quot;mailto:kleber@ziontechgroup.com&quot;
       }
     ]
   }
 ];
 
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"];
+const categories = [&quot;All&quot;, &quot;Core Platform&quot;, &quot;AI Services&quot;, &quot;IT Services&quot;, &quot;E-commerce & Services&quot;];
 
 export default function PricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(&quot;All&quot;);
 
-  const filteredServices = selectedCategory === "All" 
+  const filteredServices = selectedCategory === &quot;All" 
     ? servicePricing 
     : servicePricing.filter(service => service.category === selectedCategory);
 
@@ -361,7 +361,7 @@ export default function PricingPage() {
                       }`}
                     >
                       {tier.cta}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -396,7 +396,7 @@ export default function PricingPage() {
             className="inline-block px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Get Custom Quote
-          </a>
+          </Link>
         </div>
       </div>
 

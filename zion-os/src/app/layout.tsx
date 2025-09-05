@@ -1,49 +1,49 @@
-import "./globals.css";
-import type { ReactNode } from "react";
-import { Metadata } from "next";
+import &quot;./globals.css&quot;;
+import type { ReactNode } from &quot;react&quot;;
+import { Metadata } from &quot;next&quot;;
 
 export const metadata = {
-  title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
-  description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
-  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
+  title: &quot;Zion OS - Launch Sovereign AI-Powered Digital Economies&quot;,
+  description: &quot;Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.&quot;,
+  keywords: &quot;AI, blockchain, digital economy, marketplace, governance, deployment, Zion&quot;};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
-        <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <a href="/" className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">Z</span>
+    <html lang=&quot;en&quot;>
+      <body className=&quot;min-h-screen bg-[var(--bg)] text-[var(--fg)]&quot;>
+        <nav className=&quot;border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+            <div className=&quot;flex items-center justify-between h-16&quot;>
+              <div className=&quot;flex items-center&quot;>
+                <a href=&quot;/&quot; className=&quot;flex items-center space-x-2&quot;>
+                  <div className=&quot;w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center&quot;>
+                    <span className=&quot;text-white font-bold text-sm&quot;>Z</span>
                   </div>
-                  <span className="font-bold text-xl gradient-text">Zion OS</span>
-                </a>
+                  <span className=&quot;font-bold text-xl gradient-text&quot;>Zion OS</span>
+                </Link>
               </div>
               
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-8">
-                  <a href="/" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <div className=&quot;hidden md:block&quot;>
+                <div className=&quot;ml-10 flex items-baseline space-x-8&quot;>
+                  <a href=&quot;/&quot; className=&quot;text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors&quot;>
                     Home
-                  </a>
-                  <a href="/multiverse/launch" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  </Link>
+                  <a href=&quot;/multiverse/launch&quot; className=&quot;text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors&quot;>
                     Launch
-                  </a>
-                  <a href="/admin/instances" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  </Link>
+                  <a href=&quot;/admin/instances&quot; className=&quot;text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors&quot;>
                     Instances
-                  </a>
-                  <a href="/admin/os-deploy" className="text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  </Link>
+                  <a href=&quot;/admin/os-deploy&quot; className=&quot;text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors&quot;>
                     Admin
-                  </a>
+                  </Link>
                 </div>
               </div>
 
-              <div className="md:hidden">
-                <button className="text-white/80 hover:text-white p-2">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <div className=&quot;md:hidden&quot;>
+                <button className=&quot;text-white/80 hover:text-white p-2&quot;>
+                  <svg className=&quot;w-6 h-6&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                    <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16&quot; />
                   </svg>
                 </button>
               </div>
@@ -51,44 +51,44 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </nav>
         
-        <main className="min-h-screen">{children}</main>
+        <main className=&quot;min-h-screen&quot;>{children}</main>
         
-        <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="col-span-1 md:col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">Z</span>
+        <footer className=&quot;border-t border-white/10 bg-zinc-900/50 mt-20&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-8&quot;>
+              <div className=&quot;col-span-1 md:col-span-2&quot;>
+                <div className=&quot;flex items-center space-x-2 mb-4&quot;>
+                  <div className=&quot;w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center&quot;>
+                    <span className=&quot;text-white font-bold text-sm&quot;>Z</span>
                   </div>
-                  <span className="font-bold text-xl gradient-text">Zion OS</span>
+                  <span className=&quot;font-bold text-xl gradient-text&quot;>Zion OS</span>
                 </div>
-                <p className="text-white/70 max-w-md">
+                <p className=&quot;text-white/70 max-w-md&quot;>
                   Launch sovereign AI-powered digital economies with one click. 
                   Unified deployment protocol for the future of decentralized business.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-white font-semibold mb-4">Platform</h3>
-                <ul className="space-y-2 text-white/70">
-                  <li><a href="/multiverse/launch" className="hover:text-white transition-colors">Launch Wizard</a></li>
-                  <li><a href="/admin/instances" className="hover:text-white transition-colors">Manage Instances</a></li>
-                  <li><a href="/admin/os-deploy" className="hover:text-white transition-colors">Admin Panel</a></li>
+                <h3 className=&quot;text-white font-semibold mb-4&quot;>Platform</h3>
+                <ul className=&quot;space-y-2 text-white/70&quot;>
+                  <li><a href=&quot;/multiverse/launch&quot; className=&quot;hover:text-white transition-colors&quot;>Launch Wizard</Link></li>
+                  <li><a href=&quot;/admin/instances&quot; className=&quot;hover:text-white transition-colors&quot;>Manage Instances</Link></li>
+                  <li><a href=&quot;/admin/os-deploy&quot; className=&quot;hover:text-white transition-colors&quot;>Admin Panel</Link></li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-white font-semibold mb-4">Resources</h3>
-                <ul className="space-y-2 text-white/70">
-                  <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
+                <h3 className=&quot;text-white font-semibold mb-4&quot;>Resources</h3>
+                <ul className=&quot;space-y-2 text-white/70&quot;>
+                  <li><a href=&quot;#&quot; className=&quot;hover:text-white transition-colors&quot;>Documentation</Link></li>
+                  <li><a href=&quot;#&quot; className=&quot;hover:text-white transition-colors&quot;>API Reference</Link></li>
+                  <li><a href=&quot;#&quot; className=&quot;hover:text-white transition-colors&quot;>Support</Link></li>
                 </ul>
               </div>
             </div>
             
-            <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
+            <div className=&quot;border-t border-white/10 mt-8 pt-8 text-center text-white/50&quot;>
               <p>&copy; 2024 Zion OS. All rights reserved.</p>
             </div>
           </div>

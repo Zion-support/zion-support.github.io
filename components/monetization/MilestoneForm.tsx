@@ -35,56 +35,56 @@ export default function MilestoneForm({ onSubmit }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
+    <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
+      {error && <div className=&quot;text-red-600 text-sm&quot;>{error}</div>}
       <div>
-        <label className="block text-sm font-medium">Title</label>
+        <label className=&quot;block text-sm font-medium&quot;>Title</label>
         <input
-          className="mt-1 w-full rounded border px-3 py-2"
+          className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Phase 1 – Backend Setup"
+          placeholder=&quot;Phase 1 – Backend Setup&quot;
           required
         />
       </div>
       <div>
-        <label className="block text-sm font-medium">Description</label>
+        <label className=&quot;block text-sm font-medium&quot;>Description</label>
         <textarea
-          className="mt-1 w-full rounded border px-3 py-2"
+          className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Describe deliverables..."
+          placeholder=&quot;Describe deliverables...&quot;
           rows={3}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
         <div>
-          <label className="block text-sm font-medium">Due Date</label>
+          <label className=&quot;block text-sm font-medium&quot;>Due Date</label>
           <input
-            type="date"
-            className="mt-1 w-full rounded border px-3 py-2"
+            type=&quot;date&quot;
+            className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Amount (USD)</label>
+          <label className=&quot;block text-sm font-medium&quot;>Amount (USD)</label>
           <input
-            type="number"
+            type=&quot;number&quot;
             min={0}
-            step="0.01"
-            className="mt-1 w-full rounded border px-3 py-2"
+            step=&quot;0.01&quot;
+            className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
             value={amountUsd}
             onChange={(e) => setAmountUsd(e.target.value)}
-            placeholder="3000"
+            placeholder=&quot;3000&quot;
             required
           />
         </div>
       </div>
       <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        type=&quot;submit&quot;
+        className=&quot;bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50&quot;
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}

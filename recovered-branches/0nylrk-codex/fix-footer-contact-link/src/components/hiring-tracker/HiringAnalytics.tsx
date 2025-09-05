@@ -1,7 +1,7 @@
 
-import { useState, useEffect } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState, useEffect } from &quot;react&quot;;
+import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
+import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
 
 interface HiringAnalyticsProps {
@@ -74,10 +74,10 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   
   if (!applications || applications.length === 0) {
     return (
-      <Card className="text-center py-16">
+      <Card className=&quot;text-center py-16&quot;>
         <CardContent>
-          <h3 className="text-lg font-semibold mb-2">No data available</h3>
-          <p className="text-muted-foreground mb-6">
+          <h3 className=&quot;text-lg font-semibold mb-2&quot;>No data available</h3>
+          <p className=&quot;text-muted-foreground mb-6&quot;>
             You need applications to generate analytics
           </p>
         </CardContent>
@@ -88,23 +88,23 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
       {/* Status Distribution */}
       <Card>
         <CardHeader>
           <CardTitle>Application Status Distribution</CardTitle>
         </CardHeader>
-        <CardContent className="h-64">
-          <ResponsiveContainer width="100%" height="100%">
+        <CardContent className=&quot;h-64&quot;>
+          <ResponsiveContainer width=&quot;100%&quot; height=&quot;100%&quot;>
             <PieChart>
               <Pie
                 data={analyticsData.statusDistribution}
-                cx="50%"
-                cy="50%"
+                cx=&quot;50%&quot;
+                cy=&quot;50%&quot;
                 labelLine={false}
                 outerRadius={80}
-                fill="#8884d8"
-                dataKey="count"
+                fill=&quot;#8884d8&quot;
+                dataKey=&quot;count&quot;
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
               >
                 {analyticsData.statusDistribution.map((entry, index) => (
@@ -122,11 +122,11 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         <CardHeader>
           <CardTitle>Time to Hire</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col items-center justify-center h-64">
-          <div className="text-5xl font-bold text-primary">
-            {analyticsData.timeToHire || "N/A"}
+        <CardContent className=&quot;flex flex-col items-center justify-center h-64&quot;>
+          <div className=&quot;text-5xl font-bold text-primary&quot;>
+            {analyticsData.timeToHire || &quot;N/A&quot;}
           </div>
-          <div className="text-sm text-muted-foreground mt-2">
+          <div className=&quot;text-sm text-muted-foreground mt-2&quot;>
             Average days from application to hire
           </div>
         </CardContent>
@@ -137,31 +137,31 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         <CardHeader>
           <CardTitle>Application Conversion Rate</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col items-center justify-center h-64">
-          <div className="text-5xl font-bold text-primary">
+        <CardContent className=&quot;flex flex-col items-center justify-center h-64&quot;>
+          <div className=&quot;text-5xl font-bold text-primary&quot;>
             {analyticsData.conversionRate}%
           </div>
-          <div className="text-sm text-muted-foreground mt-2">
+          <div className=&quot;text-sm text-muted-foreground mt-2&quot;>
             Applications to hired ratio
           </div>
         </CardContent>
       </Card>
       
       {/* Hiring Funnel */}
-      <Card className="lg:col-span-3">
+      <Card className=&quot;lg:col-span-3&quot;>
         <CardHeader>
           <CardTitle>Hiring Funnel</CardTitle>
         </CardHeader>
-        <CardContent className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
+        <CardContent className=&quot;h-80&quot;>
+          <ResponsiveContainer width=&quot;100%&quot; height=&quot;100%&quot;>
             <BarChart
               data={analyticsData.funnelData}
-              layout="vertical"
+              layout=&quot;vertical&quot;
             >
-              <XAxis type="number" />
-              <YAxis dataKey="name" type="category" width={100} />
+              <XAxis type=&quot;number&quot; />
+              <YAxis dataKey=&quot;name&quot; type=&quot;category&quot; width={100} />
               <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>
+              <Bar dataKey=&quot;value&quot; fill=&quot;#8884d8&quot; radius={[0, 4, 4, 0]}>
                 {analyticsData.funnelData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}

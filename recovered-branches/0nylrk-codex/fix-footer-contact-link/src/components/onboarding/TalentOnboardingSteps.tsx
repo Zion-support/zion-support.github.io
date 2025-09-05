@@ -1,9 +1,9 @@
 
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+import React from &quot;react&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { useOnboardingStatus } from &quot;@/hooks/useOnboardingStatus&quot;;
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from &quot;lucide-react&quot;;
+import { OnboardingTracker, OnboardingStep } from &quot;./OnboardingTracker&quot;;
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
@@ -11,29 +11,29 @@ export function TalentOnboardingSteps() {
   
   const steps: OnboardingStep[] = [
     {
-      id: "profile",
-      label: "Complete your profile",
+      id: &quot;profile&quot;,
+      label: &quot;Complete your profile&quot;,
       completed: onboardingStatus.profileCompleted,
-      link: "/profile",
-      action: "Update"},
+      link: &quot;/profile&quot;,
+      action: &quot;Update&quot;},
     {
-      id: "skills",
-      label: "Add your top skills",
+      id: &quot;skills&quot;,
+      label: &quot;Add your top skills&quot;,
       completed: onboardingStatus.skillsAdded,
-      link: "/profile/skills",
-      action: "Add Skills"},
+      link: &quot;/profile/skills&quot;,
+      action: &quot;Add Skills&quot;},
     {
-      id: "availability",
-      label: "Set your availability",
+      id: &quot;availability&quot;,
+      label: &quot;Set your availability&quot;,
       completed: onboardingStatus.availabilitySet,
-      link: "/profile/availability",
-      action: "Set"},
+      link: &quot;/profile/availability&quot;,
+      action: &quot;Set&quot;},
     {
-      id: "match",
-      label: "Receive your first job match",
+      id: &quot;match&quot;,
+      label: &quot;Receive your first job match&quot;,
       completed: onboardingStatus.matchReceived,
-      link: "/talent-dashboard",
-      action: "View Matches"}];
+      link: &quot;/talent-dashboard&quot;,
+      action: &quot;View Matches&quot;}];
   
   return <OnboardingTracker steps={steps} />;
 }

@@ -30,10 +30,10 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   }
   
   return (
-    <div className="space-y-6">
-      <h3 className="text-md font-medium">Your Skills</h3>
+    <div className=&quot;space-y-6&quot;>
+      <h3 className=&quot;text-md font-medium&quot;>Your Skills</h3>
       
-      <div className="space-y-4">
+      <div className=&quot;space-y-4&quot;>
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory 
             key={category} 

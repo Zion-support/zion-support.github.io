@@ -1,65 +1,65 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
 
 export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google"});
+        provider: &quot;google&quot;});
 
       if (error) {
         toast({
-          title: "Google login failed",
+          title: &quot;Google login failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
       }
     } catch (error: any) {
-      console.error("Google login error:", error);
+      console.error(&quot;Google login error:&quot;, error);
       toast({
-        title: "Google login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Google login failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
   const loginWithFacebook = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: "facebook"});
+        provider: &quot;facebook&quot;});
 
       if (error) {
         toast({
-          title: "Facebook login failed",
+          title: &quot;Facebook login failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
       }
     } catch (error: any) {
-      console.error("Facebook login error:", error);
+      console.error(&quot;Facebook login error:&quot;, error);
       toast({
-        title: "Facebook login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Facebook login failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 
   const loginWithTwitter = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider: "twitter"});
+        provider: &quot;twitter&quot;});
 
       if (error) {
         toast({
-          title: "Twitter login failed",
+          title: &quot;Twitter login failed&quot;,
           description: error.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
       }
     } catch (error: any) {
-      console.error("Twitter login error:", error);
+      console.error(&quot;Twitter login error:&quot;, error);
       toast({
-        title: "Twitter login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        title: &quot;Twitter login failed&quot;,
+        description: error.message || &quot;An unexpected error occurred&quot;,
+        variant: &quot;destructive&quot;});
     }
   };
 

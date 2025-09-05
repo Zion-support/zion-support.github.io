@@ -49,9 +49,9 @@ export function useAIContentEnhancer() {
       const errorMessage = err.message || 'Failed to enhance content';
       setError(errorMessage);
       toast({
-        title: "AI Enhancement Failed",
+        title: &quot;AI Enhancement Failed&quot;,
         description: errorMessage,
-        variant: "destructive"
+        variant: &quot;destructive&quot;
       });
       console.error('Enhancement error:', err);
       return null;

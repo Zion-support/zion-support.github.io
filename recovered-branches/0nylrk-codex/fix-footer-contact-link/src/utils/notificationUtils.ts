@@ -1,5 +1,5 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
 
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
@@ -76,10 +76,10 @@ export async function createHireRequestNotifications({
 }) {
   const projectInfo = projectType 
     ? `${projectType} project` 
-    : "project";
+    : &quot;project&quot;;
   
   const summaryText = projectSummary 
-    ? `: "${projectSummary}"` 
+    ? `: &quot;${projectSummary}&quot;` 
     : "";
   
   // Create notification for talent

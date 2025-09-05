@@ -6,15 +6,15 @@ export default function ZGPLibraryPage() {
     <>
       <Head>
         <title>ZGP Library - Zion Tech Group</title>
-        <meta name="description" content="Zion Governance Protocol Library" />
+        <meta name=&quot;description&quot; content=&quot;Zion Governance Protocol Library&quot; />
       </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">ZGP Library</h1>
-        <p className="text-lg mb-4">Access our Zion Governance Protocol resources and documentation.</p>
-        <div className="mt-4">
-          <a href="/governance" className="text-blue-600 hover:underline">
+      <div className=&quot;container mx-auto px-4 py-8&quot;>
+        <h1 className=&quot;text-3xl font-bold mb-6&quot;>ZGP Library</h1>
+        <p className=&quot;text-lg mb-4&quot;>Access our Zion Governance Protocol resources and documentation.</p>
+        <div className=&quot;mt-4&quot;>
+          <a href=&quot;/governance&quot; className=&quot;text-blue-600 hover:underline&quot;>
             ← Back to Governance
-          </a>
+          </Link>
         </div>
       </div>
     </>

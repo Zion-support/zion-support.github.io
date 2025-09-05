@@ -80,7 +80,7 @@ export function WhitelabelRequestForm() {
   };
 
   return (
-    <Card className="w-full max-w-2xl">
+    <Card className=&quot;w-full max-w-2xl&quot;>
       <CardHeader>
         <CardTitle>Create White-Label Instance</CardTitle>
         <CardDescription>
@@ -89,16 +89,16 @@ export function WhitelabelRequestForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
+            <div className=&quot;space-y-4&quot;>
               <FormField
                 control={form.control}
-                name="brand_name"
+                name=&quot;brand_name&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Brand Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Acme AI Solutions" {...field} />
+                      <Input placeholder=&quot;Acme AI Solutions&quot; {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -107,14 +107,14 @@ export function WhitelabelRequestForm() {
               
               <FormField
                 control={form.control}
-                name="subdomain"
+                name=&quot;subdomain&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Subdomain</FormLabel>
                     <FormControl>
-                      <div className="flex items-center">
-                        <Input placeholder="acme" {...field} />
-                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace.com</span>
+                      <div className=&quot;flex items-center&quot;>
+                        <Input placeholder=&quot;acme&quot; {...field} />
+                        <span className=&quot;ml-2 text-muted-foreground&quot;>.ziontechmarketplace.com</span>
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -124,12 +124,12 @@ export function WhitelabelRequestForm() {
               
               <FormField
                 control={form.control}
-                name="custom_domain"
+                name=&quot;custom_domain&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Custom Domain (Optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="marketplace.acme.com" {...field} />
+                      <Input placeholder=&quot;marketplace.acme.com&quot; {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -138,14 +138,14 @@ export function WhitelabelRequestForm() {
               
               <FormField
                 control={form.control}
-                name="primary_color"
+                name=&quot;primary_color&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Primary Brand Color</FormLabel>
                     <FormControl>
-                      <div className="flex items-center gap-2">
-                        <Input type="color" {...field} className="w-12 h-9 p-1" />
-                        <Input {...field} placeholder="#9b87f5" className="flex-1" />
+                      <div className=&quot;flex items-center gap-2&quot;>
+                        <Input type=&quot;color&quot; {...field} className=&quot;w-12 h-9 p-1&quot; />
+                        <Input {...field} placeholder=&quot;#9b87f5&quot; className=&quot;flex-1&quot; />
                       </div>
                     </FormControl>
                     <FormMessage />
@@ -155,22 +155,22 @@ export function WhitelabelRequestForm() {
               
               <FormField
                 control={form.control}
-                name="theme_preset"
+                name=&quot;theme_preset&quot;
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Theme Preset</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a theme" />
+                          <SelectValue placeholder=&quot;Select a theme&quot; />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="light">Light</SelectItem>
-                        <SelectItem value="dark">Dark</SelectItem>
-                        <SelectItem value="neon">Neon</SelectItem>
-                        <SelectItem value="corporate">Corporate</SelectItem>
-                        <SelectItem value="startup">Startup</SelectItem>
+                        <SelectItem value=&quot;light&quot;>Light</SelectItem>
+                        <SelectItem value=&quot;dark&quot;>Dark</SelectItem>
+                        <SelectItem value=&quot;neon&quot;>Neon</SelectItem>
+                        <SelectItem value=&quot;corporate&quot;>Corporate</SelectItem>
+                        <SelectItem value=&quot;startup&quot;>Startup</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -178,17 +178,17 @@ export function WhitelabelRequestForm() {
                 )}
               />
               
-              <div className="border rounded-md p-4 space-y-4">
-                <h3 className="text-sm font-medium">Landing Page Copy</h3>
+              <div className=&quot;border rounded-md p-4 space-y-4&quot;>
+                <h3 className=&quot;text-sm font-medium&quot;>Landing Page Copy</h3>
                 
                 <FormField
                   control={form.control}
-                  name="headline"
+                  name=&quot;headline&quot;
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Headline</FormLabel>
                       <FormControl>
-                        <Input placeholder="AI Marketplace" {...field} />
+                        <Input placeholder=&quot;AI Marketplace&quot; {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -197,12 +197,12 @@ export function WhitelabelRequestForm() {
                 
                 <FormField
                   control={form.control}
-                  name="subtitle"
+                  name=&quot;subtitle&quot;
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Subtitle</FormLabel>
                       <FormControl>
-                        <Input placeholder="Find the best AI talent" {...field} />
+                        <Input placeholder=&quot;Find the best AI talent&quot; {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -211,12 +211,12 @@ export function WhitelabelRequestForm() {
                 
                 <FormField
                   control={form.control}
-                  name="cta"
+                  name=&quot;cta&quot;
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>CTA Button Text</FormLabel>
                       <FormControl>
-                        <Input placeholder="Get Started" {...field} />
+                        <Input placeholder=&quot;Get Started&quot; {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -225,13 +225,13 @@ export function WhitelabelRequestForm() {
               </div>
             </div>
             
-            <Button type="submit" className="w-full" size="lg">
+            <Button type=&quot;submit&quot; className=&quot;w-full&quot; size=&quot;lg&quot;>
               Create White-Label Instance
             </Button>
           </form>
         </Form>
       </CardContent>
-      <CardFooter className="bg-muted/50 text-xs text-muted-foreground">
+      <CardFooter className=&quot;bg-muted/50 text-xs text-muted-foreground&quot;>
         <p>
           After creating the tenant, you must upload a logo via the tenant management dashboard.
           DNS verification for custom domains must be completed before they can be used.

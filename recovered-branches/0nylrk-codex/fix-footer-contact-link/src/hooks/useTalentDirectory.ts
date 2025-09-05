@@ -1,8 +1,8 @@
 
-import { useAuthStatus } from "./talent/useAuthStatus";
-import { useTalentData } from "./talent/useTalentData";
-import { useFilterTalents } from "./talent/useFilterTalents";
-import { useUIState } from "./talent/useUIState";
+import { useAuthStatus } from &quot;./talent/useAuthStatus&quot;;
+import { useTalentData } from &quot;./talent/useTalentData&quot;;
+import { useFilterTalents } from &quot;./talent/useFilterTalents&quot;;
+import { useUIState } from &quot;./talent/useUIState&quot;;
 
 export function useTalentDirectory() {
   // Fetch auth status and saved talents

@@ -38,7 +38,7 @@ export default function VideoCall() {
     setTimeout(() => {
       setHasJoined(true);
       setIsJoining(false);
-      toast.success("Call joined", {
+      toast.success(&quot;Call joined&quot;, {
         description: `You have joined meeting room ${roomId}`
       });
     }, 1500);
@@ -46,8 +46,8 @@ export default function VideoCall() {
 
   const handleLeaveCall = () => {
     setHasJoined(false);
-    toast.info("Call ended", {
-      description: "You have left the meeting"
+    toast.info(&quot;Call ended&quot;, {
+      description: &quot;You have left the meeting&quot;
     });
     
     // Navigate back after a short delay
@@ -74,24 +74,24 @@ export default function VideoCall() {
 
   return (
     <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+      <SEO title={`Video Call - Room ${roomId}`} description=&quot;Zion video call&quot; />
       <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
+      <main className=&quot;container mx-auto py-8 min-h-[calc(100vh-200px)]&quot;>
         {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+          <div className=&quot;flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8&quot;>
+            <h1 className=&quot;text-3xl font-bold mb-6 text-white&quot;>Join Video Call</h1>
+            <p className=&quot;text-zion-slate-light mb-8&quot;>Room ID: {roomId}</p>
             <Button 
               onClick={handleJoinCall} 
               disabled={isJoining}
-              size="lg"
-              className="bg-zion-purple hover:bg-zion-purple-light"
+              size=&quot;lg&quot;
+              className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
             >
-              {isJoining ? "Connecting..." : "Join Call"}
+              {isJoining ? &quot;Connecting...&quot; : &quot;Join Call&quot;}
             </Button>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className=&quot;space-y-4&quot;>
             <VideoCallRoom 
               roomId={roomId || ''} 
               participants={participants}
@@ -99,8 +99,8 @@ export default function VideoCall() {
             />
             
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">
-              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+            <div className=&quot;flex justify-center mt-4&quot;>
+              <Button variant=&quot;outline&quot; onClick={simulateUserJoining} className=&quot;text-sm&quot;>
                 Simulate user joining (demo only)
               </Button>
             </div>

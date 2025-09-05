@@ -81,25 +81,25 @@ const Enhanced2026ServicesShowcase = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
+      <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10&quot;></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className=&quot;text-center mb-16&quot;
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+            <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
               2026 Revolutionary Services
             </span>
           </h2>
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className=&quot;text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed&quot;>
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ const Enhanced2026ServicesShowcase = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
         >
           {categories.map((category, index) => (
             <motion.div
@@ -120,19 +120,19 @@ const Enhanced2026ServicesShowcase = () => {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="group text-center"
+              className=&quot;group text-center&quot;
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                <category.icon className="w-8 h-8 text-white" />
+                <category.icon className=&quot;w-8 h-8 text-white&quot; />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
-              <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
+              <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{category.name}</h3>
+              <p className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.count}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Featured Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -141,32 +141,32 @@ const Enhanced2026ServicesShowcase = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative"
+              className=&quot;group relative&quot;
             >
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
-              <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
+              <div className=&quot;relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300&quot;>
                 {/* Service Header */}
-                <div className="flex items-center space-x-3 mb-4">
+                <div className=&quot;flex items-center space-x-3 mb-4&quot;>
                   <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center`}>
-                    <service.icon className="w-6 h-6 text-white" />
+                    <service.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">{service.name}</h3>
-                    <p className="text-gray-400 text-sm">{service.category}</p>
+                    <h3 className=&quot;text-lg font-bold text-white&quot;>{service.name}</h3>
+                    <p className=&quot;text-gray-400 text-sm&quot;>{service.category}</p>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                <p className=&quot;text-gray-300 text-sm mb-4 leading-relaxed&quot;>
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <div className="mb-4">
-                  <ul className="space-y-1">
+                <div className=&quot;mb-4&quot;>
+                  <ul className=&quot;space-y-1&quot;>
                     {service.features.slice(0, 2).map((feature, i) => (
-                      <li key={i} className="flex items-center text-gray-400 text-xs">
-                        <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                      <li key={i} className=&quot;flex items-center text-gray-400 text-xs&quot;>
+                        <Star className=&quot;w-3 h-3 text-cyan-400 mr-2 flex-shrink-0&quot; />
                         {feature}
                       </li>
                     ))}
@@ -174,17 +174,17 @@ const Enhanced2026ServicesShowcase = () => {
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between">
+                <div className=&quot;flex items-center justify-between&quot;>
                   <div>
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <span className="text-gray-400 text-sm">{service.period}</span>
+                    <span className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</span>
+                    <span className=&quot;text-gray-400 text-sm&quot;>{service.period}</span>
                   </div>
                   <Link 
                     href={`/${service.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200"
+                    className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200&quot;
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                    Learn More <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -197,28 +197,28 @@ const Enhanced2026ServicesShowcase = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center"
+          className=&quot;text-center&quot;
         >
-          <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className=&quot;bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8&quot;>
+            <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className=&quot;text-gray-300 mb-6 max-w-2xl mx-auto&quot;>
               Join thousands of businesses already leveraging our revolutionary services to achieve unprecedented growth and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6&quot;>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
                 <Link
-                  href="/services"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
+                  href=&quot;/services&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200&quot;
                 >
-                  <Rocket className="w-5 h-5 mr-2" />
+                  <Rocket className=&quot;w-5 h-5 mr-2&quot; />
                   View All Services
-                </Link>
+                </a>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -226,12 +226,12 @@ const Enhanced2026ServicesShowcase = () => {
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200"
+                  href=&quot;/contact&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200&quot;
                 >
-                  <Shield className="w-5 h-5 mr-2" />
+                  <Shield className=&quot;w-5 h-5 mr-2&quot; />
                   Get Started
-                </Link>
+                </a>
               </motion.div>
             </div>
           </div>

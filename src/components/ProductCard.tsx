@@ -63,10 +63,10 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }});
     return (
-      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
-        <p className="text-destructive text-sm">Product information unavailable.</p>
+      <div className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid=&quot;product-card-error&quot;>
+        <p className=&quot;text-destructive text-sm&quot;>Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
-        {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
+        {/* {product && product.id && <p className=&quot;text-xs text-muted-foreground&quot;>ID: {product.id}</p>} */}
       </div>
     );
   }
@@ -113,16 +113,16 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   return (
-    <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
+    <div className=&quot;relative border rounded-lg bg-card p-4&quot; data-testid=&quot;product-card&quot;>
       <button
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70"
+        className=&quot;absolute top-2 right-2 p-1 rounded-full bg-background/70&quot;
         onClick={() => toggle(product.id)}
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >
         <Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />
       </button>
 
-    <div className="w-full h-40 relative mb-2">
+    <div className=&quot;w-full h-40 relative mb-2&quot;>
       {imageUrl && !imageError ? (
         <Image
           src={imageUrl}
@@ -132,23 +132,23 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
           priority={false}
         />
       ) : (
-        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">No Image</span>
+        <div className=&quot;w-full h-full bg-gray-200 flex items-center justify-center&quot;>
+          <span className=&quot;text-gray-500&quot;>No Image</span>
         </div>
       )}
       {stockStatus && (
-        <Badge variant={stockVariant as any} className="absolute top-2 left-2">
+        <Badge variant={stockVariant as any} className=&quot;absolute top-2 left-2&quot;>
           {stockStatus}
         </Badge>
       )}
       {active && (
-        <div className="absolute top-10 left-2 p-1 rounded-full bg-background/70">
-          <Heart className="text-red-500 fill-red-500" />
+        <div className=&quot;absolute top-10 left-2 p-1 rounded-full bg-background/70&quot;>
+          <Heart className=&quot;text-red-500 fill-red-500&quot; />
         </div>
       )}
     </div>
       <Link href={`/marketplace/listing/${product.id}`}>
-        <div className="w-full h-40 relative mb-2 cursor-pointer">
+        <div className=&quot;w-full h-40 relative mb-2 cursor-pointer&quot;>
           {imageUrl && !imageError ? (
             <Image
               src={imageUrl}
@@ -158,26 +158,26 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
               priority={false}
             />
           ) : (
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+            <div className=&quot;w-full h-full bg-gray-200 flex items-center justify-center&quot;>
+              <span className=&quot;text-gray-500&quot;>No Image</span>
             </div>
           )}
           {active && (
-            <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
-              <Heart className="text-red-500 fill-red-500" />
+            <div className=&quot;absolute top-2 left-2 p-1 rounded-full bg-background/70&quot;>
+              <Heart className=&quot;text-red-500 fill-red-500&quot; />
             </div>
           )}
         </div>
-        <h3 className="font-semibold mb-1">{productTitle}</h3>
+        <h3 className=&quot;font-semibold mb-1&quot;>{productTitle}</h3>
       </Link>
       {product.price != null && (
-        <p className="text-sm text-muted-foreground">
+        <p className=&quot;text-sm text-muted-foreground&quot;>
           {product.currency}
           {product.price}
         </p>
       )}
-      <div className="mt-2 flex gap-2">
-        <Button size="sm" className="flex-1" onClick={addToCart}>
+      <div className=&quot;mt-2 flex gap-2&quot;>
+        <Button size=&quot;sm&quot; className=&quot;flex-1&quot; onClick={addToCart}>
           Add to Cart
         </Button>
         {onBuy && (
@@ -201,15 +201,15 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                         });
                     }
                   }}
-                  size="sm"
-                  variant="outline"
-                  className="flex-1"
-                  data-testid="buy-now-button"
+                  size=&quot;sm&quot;
+                  variant=&quot;outline&quot;
+                  className=&quot;flex-1&quot;
+                  data-testid=&quot;buy-now-button&quot;
                   disabled={!isAuthenticated || buyDisabled || isRedirecting}
                 >
                   {isRedirecting ? (
                     <>
-                      <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span>
+                      <span className=&quot;animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;></span>
                       Processing...
                     </>
                   ) : (

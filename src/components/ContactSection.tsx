@@ -1,19 +1,19 @@
 
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
+import { useState } from &quot;react&quot;;
+import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { toast } from &quot;@/components/ui/use-toast&quot;;
+import z from &quot;zod&quot;;
 import { Mail } from 'lucide-react'
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""});
+    name: "&quot;,
+    email: "&quot;,
+    subject: "&quot;,
+    message: "&quot;});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{
@@ -35,10 +35,10 @@ export function ContactSection() {
     e.preventDefault();
 
     const schema = z.object({
-      name: z.string().min(2, "Name is required"),
-      email: z.string().email("Enter a valid email"),
-      subject: z.string().min(2, "Subject is required"),
-      message: z.string().min(10, "Message must be at least 10 characters")});
+      name: z.string().min(2, &quot;Name is required&quot;),
+      email: z.string().email(&quot;Enter a valid email&quot;),
+      subject: z.string().min(2, &quot;Subject is required&quot;),
+      message: z.string().min(10, &quot;Message must be at least 10 characters&quot;)});
 
     const result = schema.safeParse(formData);
     if (!result.success) {
@@ -50,128 +50,128 @@ export function ContactSection() {
       }
       setErrors(fieldErrors);
       toast({
-        title: "Form Validation Error",
-        description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"});
+        title: &quot;Form Validation Error&quot;,
+        description: result.error.errors[0]?.message || &quot;Please check your form and try again&quot;,
+        variant: &quot;destructive&quot;});
       return;
     }
 
     setErrors({});
     setIsSubmitting(true);
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    fetch(&quot;/api/contact&quot;, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
       body: JSON.stringify(formData)})
       .then(async (res) => {
         setIsSubmitting(false);
         if (!res.ok) {
           const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || "Failed to send message");
+          throw new Error(data.error || &quot;Failed to send message&quot;);
         }
         toast({
-          title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+          title: &quot;Message Sent&quot;,
+          description: &quot;We've received your message and will get back to you soon.&quot;});
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 2000);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "&quot;, email: "&quot;, subject: "&quot;, message: "&quot; });
       })
       .catch((err) => {
         setIsSubmitting(false);
         toast({
-          title: "Submission Error",
+          title: &quot;Submission Error&quot;,
           description: err.message,
-          variant: "destructive"});
+          variant: &quot;destructive&quot;});
       });
   };
 
   return (
-    <section className="py-20 bg-zion-blue" id="contact">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className=&quot;py-20 bg-zion-blue&quot; id=&quot;contact&quot;>
+      <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&quot;>
           <div>
             <GradientHeading>Get In Touch</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl mb-8">
+            <p className=&quot;mt-4 text-zion-slate-light text-xl mb-8&quot;>
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
             </p>
-            <div className="flex items-center mb-6">
-              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
-                <Mail className="h-6 w-6" />
+            <div className=&quot;flex items-center mb-6&quot;>
+              <div className=&quot;mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan&quot;>
+                <Mail className=&quot;h-6 w-6&quot; />
               </div>
               <div>
-                <p className="text-white font-semibold">Email Us</p>
-                <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
+                <p className=&quot;text-white font-semibold&quot;>Email Us</p>
+                <a href=&quot;mailto:commercial@ziontechgroup.com&quot; className=&quot;text-zion-cyan hover:text-zion-purple transition-colors&quot;>
                   commercial@ziontechgroup.com
-                </a>
+                </Link>
               </div>
             </div>
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+            <Button className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;>
               Request Commercial Proposal
             </Button>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
-            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className=&quot;relative&quot;>
+            <div className=&quot;absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30&quot;></div>
+            <div className=&quot;relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8&quot;>
+              <h3 className=&quot;text-xl font-bold mb-6 text-white&quot;>Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+                <div className=&quot;grid grid-cols-1 gap-6 sm:grid-cols-2&quot;>
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                       Name
                     </label>
                     <Input
-                      id="name"
-                      name="name"
+                      id=&quot;name&quot;
+                      name=&quot;name&quot;
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.name}</p>
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                       Email
                     </label>
                     <Input
-                      id="email"
-                      name="email"
-                      type="email"
+                      id=&quot;email&quot;
+                      name=&quot;email&quot;
+                      type=&quot;email&quot;
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.email}</p>
                     )}
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;subject&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Subject
                   </label>
                   <Input
-                    id="subject"
-                    name="subject"
+                    id=&quot;subject&quot;
+                    name=&quot;subject&quot;
                     value={formData.subject}
                     onChange={handleChange}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
+                    <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.subject}</p>
                   )}
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;message&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Message
                   </label>
                   <Textarea
-                    id="message"
-                    name="message"
+                    id=&quot;message&quot;
+                    name=&quot;message&quot;
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
@@ -179,19 +179,19 @@ export function ContactSection() {
                     required
                   />
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                    <p className=&quot;mt-1 text-sm text-red-500&quot;>{errors.message}</p>
                   )}
                 </div>
                 <div>
                   <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    type=&quot;submit&quot;
+                    className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
-                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                    <p className=&quot;text-green-500 text-center mt-2&quot;>Thank you! We'll be in touch.</p>
                   )}
                 </div>
               </form>

@@ -16,11 +16,11 @@ interface PreviewResumeProps {
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       <PreviewHeader resume={resume} onBack={onBack} />
       
       {/* Resume Preview */}
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
+      <div className=&quot;bg-white text-black p-8 rounded-lg shadow-lg print-section&quot;>
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
         <WorkExperienceSection workExperience={resume.work_experience} />
         <EducationSection education={resume.education} />

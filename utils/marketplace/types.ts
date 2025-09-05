@@ -1,23 +1,23 @@
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
+export type PaymentTermsType = &quot;hourly&quot; | &quot;fixed&quot; | &quot;milestone&quot;;
 
 export type Milestone = {
   id: string;
   title: string;
   dueDateIso?: string;
   amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
+  status?: &quot;planned&quot; | &quot;in-progress&quot; | &quot;done&quot;;
 };
 
 export type PaymentTerms =
-  | { type: "hourly"; hourlyRateUsd: number }
-  | { type: "fixed"; fixedAmountUsd: number }
-  | { type: "milestone"; milestones: Milestone[] };
+  | { type: &quot;hourly&quot;; hourlyRateUsd: number }
+  | { type: &quot;fixed&quot;; fixedAmountUsd: number }
+  | { type: &quot;milestone&quot;; milestones: Milestone[] };
 
 export type OfferStatus =
-  | "SENT"
-  | "CONFIRMED"
-  | "CHANGES_REQUESTED"
-  | "DECLINED";
+  | &quot;SENT&quot;
+  | &quot;CONFIRMED&quot;
+  | &quot;CHANGES_REQUESTED&quot;
+  | &quot;DECLINED&quot;;
 
 export type Offer = {
   id: string;
@@ -33,7 +33,7 @@ export type Offer = {
   projectId?: string;
 };
 
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
+export type ProjectStatus = &quot;ACTIVE&quot; | &quot;COMPLETED&quot; | &quot;ARCHIVED&quot;;
 
 export type ProjectDocument = {
   id: string;
@@ -45,7 +45,7 @@ export type ProjectDocument = {
 export type ProjectNote = {
   id: string;
   authorId: string;
-  authorRole: "client" | "talent";
+  authorRole: &quot;client&quot; | &quot;talent&quot;;
   content: string;
   createdAtIso: string;
 };

@@ -30,7 +30,7 @@ function toCsv(rows: any[]): string {
   const escape = (v: any) => {
     if (v === null || v === undefined) return '';
     const s = typeof v === 'string' ? v : JSON.stringify(v);
-    return '"' + s.replace(/"/g, '""') + '"';
+    return '&quot;' + s.replace(/&quot;/g, '"&quot;') + '&quot;';
   };
   const lines = [headers.join(',')].concat(rows.map((r) => headers.map((h) => escape(r[h])).join(',')));
   return lines.join('\n');
@@ -63,7 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (error) return res.status(500).json({ error: error.message });
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`);
+        res.setHeader('Content-Disposition', `attachment; filename=&quot;${type}.csv&quot;`);
         return res.status(200).send(toCsv(data || []));
       }
       return res.status(200).json({ items: data || [], total: count || 0 });
@@ -93,7 +93,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const pageItems = filtered.slice(start, end);
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv');
-        res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`);
+        res.setHeader('Content-Disposition', `attachment; filename=&quot;${type}.csv&quot;`);
         return res.status(200).send(toCsv(pageItems));
       }
       return res.status(200).json({ items: pageItems, total });

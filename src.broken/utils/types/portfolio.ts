@@ -36,7 +36,7 @@ export type EducationItem = {
 
 export type ResumeVersion = {
   id: string;
-  name: string; // e.g., "AI Engineer", "Cloud DevOps"
+  name: string; // e.g., &quot;AI Engineer&quot;, &quot;Cloud DevOps&quot;
   createdAt: string;
   updatedAt: string;
   talentSlug?: string;

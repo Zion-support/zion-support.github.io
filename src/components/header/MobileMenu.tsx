@@ -90,21 +90,21 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   );
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>
+    <div className=&quot;py-6&quot;>
+      <div className=&quot;flex justify-between items-center px-6 mb-6&quot;>
+        <h2 className=&quot;text-xl font-bold text-foreground&quot;>Menu</h2>
         <Button
-          variant="ghost"
-          size="icon"
+          variant=&quot;ghost&quot;
+          size=&quot;icon&quot;
           onClick={onClose}
-          aria-label="Close menu"
-          title="Close menu"
+          aria-label=&quot;Close menu&quot;
+          title=&quot;Close menu&quot;
         >
-          <X className="h-5 w-5" />
+          <X className=&quot;h-5 w-5&quot; />
         </Button>
       </div>
 
-      <nav className="space-y-1">
+      <nav className=&quot;space-y-1&quot;>
         {visibleItems.map((item) => (
           <Link
             key={item.name}
@@ -129,10 +129,10 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
               onClose(); // Close mobile menu on any click
             }}
           >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" aria-hidden="true" />
+            <div className=&quot;relative mr-4&quot;>
+              <item.icon className=&quot;h-5 w-5&quot; aria-hidden=&quot;true&quot; />
               {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                <span className=&quot;absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center&quot;>
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -141,7 +141,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
           </Link>
         ))}
       </nav>
-      <div className="mt-6 px-6">
+      <div className=&quot;mt-6 px-6&quot;>
         <ModeToggle />
       </div>
     </div>

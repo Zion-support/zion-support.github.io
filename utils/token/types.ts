@@ -1,11 +1,11 @@
-export type TokenSymbol = "ZION$";
+export type TokenSymbol = &quot;ZION$&quot;;
 
 export type TokenTransactionType =
-  | "earn"
-  | "burn"
-  | "issue"
-  | "revoke"
-  | "redeem";
+  | &quot;earn&quot;
+  | &quot;burn&quot;
+  | &quot;issue&quot;
+  | &quot;revoke&quot;
+  | &quot;redeem&quot;;
 
 export interface TokenTransaction {
   id: string;

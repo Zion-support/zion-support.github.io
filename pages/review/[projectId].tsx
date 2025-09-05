@@ -14,16 +14,16 @@ type Props = {
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
   if (!valid) {
     return (
-      <main className="max-w-2xl mx-auto p-6">
-        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
-        <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>
+      <main className=&quot;max-w-2xl mx-auto p-6&quot;>
+        <h1 className=&quot;text-2xl font-semibold mb-3&quot;>Review unavailable</h1>
+        <p className=&quot;text-sm text-gray-600&quot;>{reason || 'You cannot submit a review for this project.'}</p>
       </main>
     );
   }
 
   return (
-    <main className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
+    <main className=&quot;max-w-2xl mx-auto p-6&quot;>
+      <h1 className=&quot;text-2xl font-semibold mb-6&quot;>Leave a review</h1>
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
   );

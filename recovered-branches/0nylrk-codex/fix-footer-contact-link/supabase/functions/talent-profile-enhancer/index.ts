@@ -1,6 +1,6 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';
 
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
@@ -39,7 +39,7 @@ serve(async (req) => {
     
     if (!talentData.bio || talentData.bio.length < 20) {
       return new Response(
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+        JSON.stringify({ error: &quot;Bio must be at least 20 characters long&quot; }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -68,13 +68,13 @@ serve(async (req) => {
             
             Return the result as a JSON object with these keys: 
             {
-              "summary": "The professional summary text (100-150 words)",
-              "categorizedSkills": {
-                "programming": ["skill1", "skill2"],
-                "devops": ["skill1", "skill2"],
-                "platforms": ["skill1", "skill2"],
-                "softSkills": ["skill1", "skill2"],
-                "other": ["skill1", "skill2"]
+              &quot;summary&quot;: &quot;The professional summary text (100-150 words)&quot;,
+              &quot;categorizedSkills&quot;: {
+                &quot;programming&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
+                &quot;devops&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
+                &quot;platforms&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
+                &quot;softSkills&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
+                &quot;other&quot;: [&quot;skill1&quot;, &quot;skill2&quot;]
               }
             }
             
@@ -82,13 +82,13 @@ serve(async (req) => {
           }
         ],
         temperature: 0.7,
-        response_format: { type: "json_object" }
+        response_format: { type: &quot;json_object&quot; }
       })});
 
     const openAIData = await openAIResponse.json();
     
     if (!openAIData.choices || openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content");
+      throw new Error(&quot;Failed to generate profile content&quot;);
     }
     
     // Extract the generated content from the response
@@ -99,8 +99,8 @@ serve(async (req) => {
     try {
       enhancedProfile = JSON.parse(responseContent);
     } catch (e) {
-      console.error("Error parsing OpenAI response:", e);
-      throw new Error("Failed to parse the generated content");
+      console.error(&quot;Error parsing OpenAI response:&quot;, e);
+      throw new Error(&quot;Failed to parse the generated content&quot;);
     }
 
     return new Response(
@@ -109,7 +109,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error);
+    console.error(&quot;Error in talent-profile-enhancer function:&quot;, error);
     
     return new Response(
       JSON.stringify({ error: error.message }),

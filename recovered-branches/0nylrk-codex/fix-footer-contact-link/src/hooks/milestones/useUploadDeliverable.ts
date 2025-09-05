@@ -24,7 +24,7 @@ export const useUploadDeliverable = () => {
         .single();
       
       if (fetchError) throw fetchError;
-      if (!milestone) throw new Error("Milestone not found");
+      if (!milestone) throw new Error(&quot;Milestone not found&quot;);
       
       // For this example, instead of actually uploading files (which would require storage setup),
       // we'll just store the file metadata in the deliverables JSONB field
@@ -55,12 +55,12 @@ export const useUploadDeliverable = () => {
         `Deliverable added: ${file.name}`
       );
       
-      toast.success("Deliverable added successfully");
+      toast.success(&quot;Deliverable added successfully&quot;);
       
       return newDeliverable;
     } catch (err: any) {
-      console.error("Error uploading deliverable:", err);
-      toast.error("Failed to upload deliverable: " + err.message);
+      console.error(&quot;Error uploading deliverable:&quot;, err);
+      toast.error(&quot;Failed to upload deliverable: &quot; + err.message);
       return null;
     } finally {
       setIsSubmitting(false);

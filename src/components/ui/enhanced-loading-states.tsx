@@ -40,7 +40,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
-      {showText && <span className="text-sm text-muted-foreground">{text}</span>}
+      {showText && <span className=&quot;text-sm text-muted-foreground&quot;>{text}</span>}
     </div>
   );
 };
@@ -75,11 +75,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   }, [activeStep, steps.length, onComplete]);
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       {showProgress && (
-        <div className="w-full bg-muted rounded-full h-2">
+        <div className=&quot;w-full bg-muted rounded-full h-2&quot;>
           <motion.div
-            className="bg-primary h-2 rounded-full"
+            className=&quot;bg-primary h-2 rounded-full&quot;
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3 }}
@@ -87,7 +87,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         </div>
       )}
       
-      <div className="space-y-2">
+      <div className=&quot;space-y-2&quot;>
         {steps.map((step, index) => (
           <motion.div
             key={step.id}
@@ -100,15 +100,15 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
             transition={{ delay: index * 0.1 }}
           >
             {index < activeStep ? (
-              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white" />
+              <div className=&quot;h-4 w-4 rounded-full bg-green-500 flex items-center justify-center&quot;>
+                <div className=&quot;h-2 w-2 rounded-full bg-white&quot; />
               </div>
             ) : index === activeStep ? (
-              <LoadingSpinner size="sm" variant="primary" />
+              <LoadingSpinner size=&quot;sm&quot; variant=&quot;primary&quot; />
             ) : (
-              <div className="h-4 w-4 rounded-full border-2 border-muted" />
+              <div className=&quot;h-4 w-4 rounded-full border-2 border-muted&quot; />
             )}
-            <span className="text-sm font-medium">{step.label}</span>
+            <span className=&quot;text-sm font-medium&quot;>{step.label}</span>
           </motion.div>
         ))}
       </div>
@@ -147,7 +147,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   if (variant === 'text' && lines > 1) {
     return (
-      <div className="space-y-2">
+      <div className=&quot;space-y-2&quot;>
         {Array.from({ length: lines }).map((_, i) => (
           <div
             key={i}
@@ -272,53 +272,53 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 
   return (
     <Card className={cn('border-destructive/20', className)}>
-      <CardContent className="p-8 text-center">
+      <CardContent className=&quot;p-8 text-center&quot;>
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
-          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+          <h3 className=&quot;text-lg font-semibold mb-2&quot;>{config.title}</h3>
+          <p className=&quot;text-muted-foreground mb-6 max-w-md mx-auto&quot;>
             {config.description}
           </p>
 
           {error && process.env.NODE_ENV === 'development' && (
-            <details className="mb-4 text-left">
-              <summary className="text-sm text-muted-foreground cursor-pointer">
+            <details className=&quot;mb-4 text-left&quot;>
+              <summary className=&quot;text-sm text-muted-foreground cursor-pointer&quot;>
                 Error Details (Development)
               </summary>
-              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+              <pre className=&quot;mt-2 p-2 bg-muted rounded text-xs overflow-auto&quot;>
                 {typeof error === 'string' ? error : error.message}
               </pre>
             </details>
           )}
 
-          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+          <div className=&quot;flex flex-col sm:flex-row gap-2 justify-center&quot;>
             {canRetry && (
-              <Button onClick={onRetry} variant="default">
-                <RefreshCw className="h-4 w-4 mr-2" />
+              <Button onClick={onRetry} variant=&quot;default&quot;>
+                <RefreshCw className=&quot;h-4 w-4 mr-2&quot; />
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
             
             {action && (
-              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+              <Button onClick={action.onClick} variant={canRetry ? &quot;outline&quot; : &quot;default&quot;}>
                 {action.label}
               </Button>
             )}
             
             {secondaryAction && (
-              <Button onClick={secondaryAction.onClick} variant="ghost">
+              <Button onClick={secondaryAction.onClick} variant=&quot;ghost&quot;>
                 {secondaryAction.label}
               </Button>
             )}
           </div>
 
           {!isOnline && (
-            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <WifiOff className="h-4 w-4" />
+            <div className=&quot;mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground&quot;>
+              <WifiOff className=&quot;h-4 w-4&quot; />
               <span>Offline</span>
             </div>
           )}
@@ -357,38 +357,38 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   return (
     <div className={cn(gridClasses[variant], className)}>
       {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className="animate-pulse">
+        <Card key={i} className=&quot;animate-pulse&quot;>
           <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
-                <Skeleton variant="rectangular" className="h-32" />
-                <div className="space-y-2">
-                  <Skeleton variant="text" className="h-6 w-3/4" />
-                  <Skeleton variant="text" lines={2} />
-                  <div className="flex gap-2">
-                    <Skeleton variant="text" className="h-4 w-16" />
-                    <Skeleton variant="text" className="h-4 w-20" />
+                <Skeleton variant=&quot;rectangular&quot; className=&quot;h-32&quot; />
+                <div className=&quot;space-y-2&quot;>
+                  <Skeleton variant=&quot;text&quot; className=&quot;h-6 w-3/4&quot; />
+                  <Skeleton variant=&quot;text&quot; lines={2} />
+                  <div className=&quot;flex gap-2&quot;>
+                    <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-16&quot; />
+                    <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-20&quot; />
                   </div>
                 </div>
               </>
             )}
             
             {variant === 'list' && (
-              <div className="flex gap-4">
-                <Skeleton variant="circular" />
-                <div className="flex-1 space-y-2">
-                  <Skeleton variant="text" className="h-5 w-1/2" />
-                  <Skeleton variant="text" lines={2} />
+              <div className=&quot;flex gap-4&quot;>
+                <Skeleton variant=&quot;circular&quot; />
+                <div className=&quot;flex-1 space-y-2&quot;>
+                  <Skeleton variant=&quot;text&quot; className=&quot;h-5 w-1/2&quot; />
+                  <Skeleton variant=&quot;text&quot; lines={2} />
                 </div>
               </div>
             )}
             
             {variant === 'table' && (
-              <div className="flex items-center gap-4">
-                <Skeleton variant="text" className="h-4 w-1/4" />
-                <Skeleton variant="text" className="h-4 w-1/3" />
-                <Skeleton variant="text" className="h-4 w-1/6" />
-                <Skeleton variant="text" className="h-4 w-1/4" />
+              <div className=&quot;flex items-center gap-4&quot;>
+                <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-1/4&quot; />
+                <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-1/3&quot; />
+                <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-1/6&quot; />
+                <Skeleton variant=&quot;text&quot; className=&quot;h-4 w-1/4&quot; />
               </div>
             )}
           </CardContent>
@@ -420,9 +420,9 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
   if (isLoading) {
     return (
-      <Badge variant="outline" className={cn('text-xs', className)}>
-        <LoadingSpinner size="sm" />
-        <span className="ml-1">Loading...</span>
+      <Badge variant=&quot;outline&quot; className={cn('text-xs', className)}>
+        <LoadingSpinner size=&quot;sm&quot; />
+        <span className=&quot;ml-1&quot;>Loading...</span>
       </Badge>
     );
   }
@@ -430,8 +430,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   return (
     <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>
       {loadTime && (
-        <Badge variant="outline" className={getPerformanceColor(loadTime)}>
-          <Zap className="h-3 w-3 mr-1" />
+        <Badge variant=&quot;outline&quot; className={getPerformanceColor(loadTime)}>
+          <Zap className=&quot;h-3 w-3 mr-1&quot; />
           {loadTime}ms
         </Badge>
       )}

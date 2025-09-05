@@ -70,117 +70,117 @@ export default function ZionBrainAdmin() {
     <>
       <Head>
         <title>Zion Brain Admin</title>
-        <meta name="robots" content="noindex,nofollow" />
+        <meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot; />
       </Head>
       <EnhancedNavigation />
-      <main className="container mx-auto px-4 py-6">
-        <div className="flex items-center gap-2 mb-6">
-          <h1 className="text-2xl font-semibold">Zion Brain — Admin</h1>
-          <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded">Always-on, self-monitoring AI</span>
+      <main className=&quot;container mx-auto px-4 py-6&quot;>
+        <div className=&quot;flex items-center gap-2 mb-6&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Zion Brain — Admin</h1>
+          <span className=&quot;text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded&quot;>Always-on, self-monitoring AI</span>
         </div>
 
-        <section className="mb-8 p-4 border rounded-lg">
-          <h2 className="font-semibold mb-2">Superadmin Access</h2>
-          <div className="flex gap-2 items-center">
-            <input className="border px-2 py-1 rounded w-80" placeholder="Enter admin token" value={token} onChange={(e) => setToken(e.target.value)} />
-            <button className="px-3 py-1 bg-black text-white rounded" onClick={saveToken}>Save</button>
-            <span className="text-xs text-gray-500">Token is required if SUPERADMIN_TOKEN is set on server</span>
+        <section className=&quot;mb-8 p-4 border rounded-lg&quot;>
+          <h2 className=&quot;font-semibold mb-2&quot;>Superadmin Access</h2>
+          <div className=&quot;flex gap-2 items-center&quot;>
+            <input className=&quot;border px-2 py-1 rounded w-80&quot; placeholder=&quot;Enter admin token&quot; value={token} onChange={(e) => setToken(e.target.value)} />
+            <button className=&quot;px-3 py-1 bg-black text-white rounded&quot; onClick={saveToken}>Save</button>
+            <span className=&quot;text-xs text-gray-500&quot;>Token is required if SUPERADMIN_TOKEN is set on server</span>
           </div>
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <section className="p-4 border rounded-lg">
-            <h2 className="font-semibold mb-2">1) Auto-Prompt Router</h2>
-            <textarea className="w-full border rounded p-2 mb-2" rows={4} placeholder="Type a user request..." value={routerInput} onChange={(e) => setRouterInput(e.target.value)} />
-            <button className="px-3 py-1 bg-blue-600 text-white rounded" onClick={handleRoute}>Detect & Route</button>
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6&quot;>
+          <section className=&quot;p-4 border rounded-lg&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>1) Auto-Prompt Router</h2>
+            <textarea className=&quot;w-full border rounded p-2 mb-2&quot; rows={4} placeholder=&quot;Type a user request...&quot; value={routerInput} onChange={(e) => setRouterInput(e.target.value)} />
+            <button className=&quot;px-3 py-1 bg-blue-600 text-white rounded&quot; onClick={handleRoute}>Detect & Route</button>
             {routerResult && (
-              <div className="mt-3 text-sm">
+              <div className=&quot;mt-3 text-sm&quot;>
                 <div><b>Intent</b>: {routerResult.intent} ({Math.round((routerResult.confidence || 0) * 100)}%)</div>
                 <div><b>Routed</b>: {routerResult.routed?.routed ? 'yes' : 'no'}</div>
               </div>
             )}
-            <ul className="text-xs mt-2 list-disc pl-5 text-gray-600">
+            <ul className=&quot;text-xs mt-2 list-disc pl-5 text-gray-600&quot;>
               <li>Chains: Resume builder, DAO explainer, Tokenomics simulator, Governance summarizer, Nation assistant</li>
             </ul>
           </section>
 
-          <section className="p-4 border rounded-lg">
-            <h2 className="font-semibold mb-2">2) Reflex Engine</h2>
-            <div className="grid grid-cols-3 gap-2 mb-2 text-sm">
-              <label className="flex flex-col">
+          <section className=&quot;p-4 border rounded-lg&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>2) Reflex Engine</h2>
+            <div className=&quot;grid grid-cols-3 gap-2 mb-2 text-sm&quot;>
+              <label className=&quot;flex flex-col&quot;>
                 <span>Signups/hr</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.signupsLastHour} onChange={(e) => setMetrics({ ...metrics, signupsLastHour: Number(e.target.value) })} />
+                <input type=&quot;number&quot; className=&quot;border rounded px-2 py-1&quot; value={metrics.signupsLastHour} onChange={(e) => setMetrics({ ...metrics, signupsLastHour: Number(e.target.value) })} />
               </label>
-              <label className="flex flex-col">
+              <label className=&quot;flex flex-col&quot;>
                 <span>Disputes/hr</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.disputeFlagsLastHour} onChange={(e) => setMetrics({ ...metrics, disputeFlagsLastHour: Number(e.target.value) })} />
+                <input type=&quot;number&quot; className=&quot;border rounded px-2 py-1&quot; value={metrics.disputeFlagsLastHour} onChange={(e) => setMetrics({ ...metrics, disputeFlagsLastHour: Number(e.target.value) })} />
               </label>
-              <label className="flex flex-col">
+              <label className=&quot;flex flex-col&quot;>
                 <span>ZION$/min</span>
-                <input type="number" className="border rounded px-2 py-1" value={metrics.zionVelocity} onChange={(e) => setMetrics({ ...metrics, zionVelocity: Number(e.target.value) })} />
+                <input type=&quot;number&quot; className=&quot;border rounded px-2 py-1&quot; value={metrics.zionVelocity} onChange={(e) => setMetrics({ ...metrics, zionVelocity: Number(e.target.value) })} />
               </label>
             </div>
-            <button className="px-3 py-1 bg-green-700 text-white rounded" onClick={handleEvaluateReflex}>Evaluate</button>
+            <button className=&quot;px-3 py-1 bg-green-700 text-white rounded&quot; onClick={handleEvaluateReflex}>Evaluate</button>
             {triggers?.length > 0 ? (
-              <ul className="mt-3 text-sm list-disc pl-5">
+              <ul className=&quot;mt-3 text-sm list-disc pl-5&quot;>
                 {triggers.map((t, i) => (
                   <li key={i}>{t.action} — {t.reason} ({t.severity})</li>
                 ))}
               </ul>
             ) : (
-              <div className="mt-3 text-sm text-gray-600">No triggers</div>
+              <div className=&quot;mt-3 text-sm text-gray-600&quot;>No triggers</div>
             )}
           </section>
 
-          <section className="p-4 border rounded-lg">
-            <h2 className="font-semibold mb-2">3) Prompt Optimizer</h2>
-            <input className="border rounded px-2 py-1 w-full mb-2" placeholder="Optional: user intent" value={userIntent} onChange={(e) => setUserIntent(e.target.value)} />
-            <textarea className="w-full border rounded p-2 mb-2" rows={5} placeholder="Paste a prompt to optimize" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
-            <div className="flex gap-2">
-              <button className="px-3 py-1 bg-purple-700 text-white rounded" onClick={handleOptimize}>Optimize</button>
-              <span className="text-xs text-gray-500">Instruction: Review this prompt and rewrite it to be 30% faster and more specific to user intent.</span>
+          <section className=&quot;p-4 border rounded-lg&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>3) Prompt Optimizer</h2>
+            <input className=&quot;border rounded px-2 py-1 w-full mb-2&quot; placeholder=&quot;Optional: user intent&quot; value={userIntent} onChange={(e) => setUserIntent(e.target.value)} />
+            <textarea className=&quot;w-full border rounded p-2 mb-2&quot; rows={5} placeholder=&quot;Paste a prompt to optimize&quot; value={prompt} onChange={(e) => setPrompt(e.target.value)} />
+            <div className=&quot;flex gap-2&quot;>
+              <button className=&quot;px-3 py-1 bg-purple-700 text-white rounded&quot; onClick={handleOptimize}>Optimize</button>
+              <span className=&quot;text-xs text-gray-500&quot;>Instruction: Review this prompt and rewrite it to be 30% faster and more specific to user intent.</span>
             </div>
             {optimized && (
-              <div className="mt-3">
-                <div className="text-xs uppercase text-gray-500 mb-1">Optimized</div>
-                <pre className="text-sm whitespace-pre-wrap bg-gray-50 dark:bg-gray-900 p-2 rounded">{optimized}</pre>
+              <div className=&quot;mt-3&quot;>
+                <div className=&quot;text-xs uppercase text-gray-500 mb-1&quot;>Optimized</div>
+                <pre className=&quot;text-sm whitespace-pre-wrap bg-gray-50 dark:bg-gray-900 p-2 rounded&quot;>{optimized}</pre>
               </div>
             )}
           </section>
 
-          <section className="p-4 border rounded-lg">
-            <h2 className="font-semibold mb-2">4) Visualization Dashboard</h2>
-            <div className="text-sm mb-2">Logs per prompt type and module usage</div>
-            <div className="grid grid-cols-5 gap-2">
+          <section className=&quot;p-4 border rounded-lg&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>4) Visualization Dashboard</h2>
+            <div className=&quot;text-sm mb-2&quot;>Logs per prompt type and module usage</div>
+            <div className=&quot;grid grid-cols-5 gap-2&quot;>
               {heatCells.map(({ key, value }) => (
-                <div key={key} className="p-3 rounded text-center text-xs" style={{ background: `rgba(59,130,246,${Math.min(1, 0.2 + value / 15)})`, color: 'white' }}>
-                  <div className="font-semibold">{key}</div>
+                <div key={key} className=&quot;p-3 rounded text-center text-xs&quot; style={{ background: `rgba(59,130,246,${Math.min(1, 0.2 + value / 15)})`, color: 'white' }}>
+                  <div className=&quot;font-semibold&quot;>{key}</div>
                   <div>{value}</div>
                 </div>
               ))}
-              {heatCells.length === 0 && <div className="text-xs text-gray-500">No data</div>}
+              {heatCells.length === 0 && <div className=&quot;text-xs text-gray-500&quot;>No data</div>}
             </div>
-            <div className="mt-4">
-              <div className="text-sm font-medium mb-1">Stuck users</div>
+            <div className=&quot;mt-4&quot;>
+              <div className=&quot;text-sm font-medium mb-1&quot;>Stuck users</div>
               {stuck.length > 0 ? (
-                <ul className="text-xs list-disc pl-5">
+                <ul className=&quot;text-xs list-disc pl-5&quot;>
                   {stuck.map((e, i) => (
                     <li key={i}>{e.module} — {String(e.type)} — {e.status} — {e.latencyMs || '?'}ms</li>
                   ))}
                 </ul>
               ) : (
-                <div className="text-xs text-gray-500">None detected</div>
+                <div className=&quot;text-xs text-gray-500&quot;>None detected</div>
               )}
             </div>
           </section>
         </div>
 
-        <section className="mt-8 p-4 border rounded-lg">
-          <h2 className="font-semibold mb-2">Superadmin Controls</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-            <button className="px-3 py-2 border rounded hover:bg-gray-50" onClick={() => alert('Deploy chain — stubbed')}>Deploy new GPT chain</button>
-            <button className="px-3 py-2 border rounded hover:bg-gray-50" onClick={() => alert('Suspend agent — stubbed')}>Suspend agents</button>
-            <button className="px-3 py-2 border rounded hover:bg-gray-50" onClick={() => refreshLogs()}>View audit trail (refresh logs)</button>
+        <section className=&quot;mt-8 p-4 border rounded-lg&quot;>
+          <h2 className=&quot;font-semibold mb-2&quot;>Superadmin Controls</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-3 text-sm&quot;>
+            <button className=&quot;px-3 py-2 border rounded hover:bg-gray-50&quot; onClick={() => alert('Deploy chain — stubbed')}>Deploy new GPT chain</button>
+            <button className=&quot;px-3 py-2 border rounded hover:bg-gray-50&quot; onClick={() => alert('Suspend agent — stubbed')}>Suspend agents</button>
+            <button className=&quot;px-3 py-2 border rounded hover:bg-gray-50&quot; onClick={() => refreshLogs()}>View audit trail (refresh logs)</button>
           </div>
         </section>
       </main>

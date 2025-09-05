@@ -1,9 +1,9 @@
 
-import { serve } from "https://deno.land/std@0.131.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0";
-import { corsHeaders } from "../_shared/cors.ts";
+import { serve } from &quot;https://deno.land/std@0.131.0/http/server.ts&quot;;
+import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2.20.0&quot;;
+import { corsHeaders } from &quot;../_shared/cors.ts&quot;;
 
-console.log("Track Referral function started!");
+// console.log(&quot;Track Referral function started!&quot;);
 
 serve(async (req) => {
   // Handle CORS pre-flight request

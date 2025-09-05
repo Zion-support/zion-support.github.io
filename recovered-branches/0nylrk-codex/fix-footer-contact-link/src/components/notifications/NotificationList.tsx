@@ -24,27 +24,27 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onRetry
 }) => {
   return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+    <ScrollArea className=&quot;flex-1 overflow-y-auto max-h-[350px]&quot;>
       {error ? (
-        <div className="p-8 text-center text-amber-500">
+        <div className=&quot;p-8 text-center text-amber-500&quot;>
           <p>{error}</p>
           <Button 
-            variant="outline" 
-            size="sm" 
-            className="mt-2"
+            variant=&quot;outline&quot; 
+            size=&quot;sm&quot; 
+            className=&quot;mt-2&quot;
             onClick={onRetry}
           >
             Try Again
           </Button>
         </div>
       ) : loading ? (
-        <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        <div className=&quot;p-4 space-y-4&quot;>
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
+          <Skeleton className=&quot;h-12 w-full bg-zion-blue-dark/50&quot; />
         </div>
       ) : notifications.length === 0 ? (
-        <div className="p-8 text-center text-zion-slate-light">
+        <div className=&quot;p-8 text-center text-zion-slate-light&quot;>
           <p>No notifications yet</p>
         </div>
       ) : (

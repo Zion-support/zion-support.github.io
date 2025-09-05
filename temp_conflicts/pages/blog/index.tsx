@@ -24,35 +24,35 @@ const BlogHome: NextPage<Props> = ({ posts, authors, topics, tags }) => {
     <Layout>
       <Head>
         <title>Blog - Zion AI Marketplace</title>
-        <meta name="description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta property="og:title" content="Zion Blog" />
-        <meta property="og:description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta property="og:image" content="/images/og/blog-default.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Blog" />
-        <meta name="twitter:description" content="Insights on AI, DevOps, and digital transformation." />
-        <meta name="twitter:image" content="/images/og/blog-default.jpg" />
+        <meta name=&quot;description&quot; content=&quot;Insights on AI, DevOps, and digital transformation.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Zion Blog&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Insights on AI, DevOps, and digital transformation.&quot; />
+        <meta property=&quot;og:image&quot; content=&quot;/images/og/blog-default.jpg&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;twitter:title&quot; content=&quot;Zion Blog&quot; />
+        <meta name=&quot;twitter:description&quot; content=&quot;Insights on AI, DevOps, and digital transformation.&quot; />
+        <meta name=&quot;twitter:image&quot; content=&quot;/images/og/blog-default.jpg&quot; />
       </Head>
 
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4">Zion Blog</h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-3">Thought leadership on AI, DevOps, and building with speed.</p>
-        <div className="mb-6">
+      <div className=&quot;mx-auto max-w-6xl&quot;>
+        <h1 className=&quot;text-4xl font-bold mb-4&quot;>Zion Blog</h1>
+        <p className=&quot;text-gray-600 dark:text-gray-300 mb-3&quot;>Thought leadership on AI, DevOps, and building with speed.</p>
+        <div className=&quot;mb-6&quot;>
           <PageShareButtons
-            title="Zion Blog"
+            title=&quot;Zion Blog&quot;
             url={typeof window === 'undefined' ? 'https://zion.app/blog' : window.location.href}
-            description="Insights on AI and DevOps from Zion."
+            description=&quot;Insights on AI and DevOps from Zion.&quot;
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: 'Zion Blog', network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=blog' }) }).catch(() => {})}
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
           {posts.map((p) => (
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">
-              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
-              <p className="text-gray-400 mb-4">{p.excerpt}</p>
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+            <div key={p.slug} className=&quot;p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg&quot;>
+              <h2 className=&quot;text-white text-xl font-semibold mb-2&quot;>{p.title}</h2>
+              <p className=&quot;text-gray-400 mb-4&quot;>{p.excerpt}</p>
+              <Link href={`/blog/${p.slug}`} className=&quot;text-cyan-400 hover:text-white font-medium&quot;>Read →</Link>
             </div>
           ))}
         </div>

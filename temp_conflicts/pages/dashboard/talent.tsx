@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useMemo, useState } from &quot;react&quot;;
+import { supabase } from &quot;../../utils/supabase/client&quot;;
+import { AnimatePresence, motion } from &quot;framer-motion&quot;;
 
 type JobSuggestion = {
   id: string;
-  match_type?: "job_for_talent" | string;
+  match_type?: &quot;job_for_talent&quot; | string;
   job_id: string;
   job_title: string;
   client_name?: string;
@@ -15,14 +15,14 @@ type JobSuggestion = {
   budget_min?: number | null;
   budget_max?: number | null;
   duration?: string | null;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
+  status?: &quot;new&quot; | &quot;viewed&quot; | &quot;applied&quot; | &quot;declined&quot; | &quot;pending&quot; | string | null;
   score?: number;
   created_at?: string;
   updated_at?: string;
 };
 
 const SUGGESTION_TABLE_ENV =
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || &quot;ai_matches&quot;;
 
 export default function TalentDashboardSuggestedJobs() {
   const [userId, setUserId] = useState<string | null>(null);
@@ -61,27 +61,27 @@ export default function TalentDashboardSuggestedJobs() {
       .from<JobSuggestion>(SUGGESTION_TABLE_ENV)
       .select(
         [
-          "id",
-          "match_type",
-          "job_id",
-          "job_title",
-          "client_name",
-          "client_id",
-          "talent_id",
-          "summary",
-          "skills",
-          "budget_min",
-          "budget_max",
-          "duration",
-          "status",
-          "score",
-          "created_at",
-          "updated_at"].join(",")
+          &quot;id&quot;,
+          &quot;match_type&quot;,
+          &quot;job_id&quot;,
+          &quot;job_title&quot;,
+          &quot;client_name&quot;,
+          &quot;client_id&quot;,
+          &quot;talent_id&quot;,
+          &quot;summary&quot;,
+          &quot;skills&quot;,
+          &quot;budget_min&quot;,
+          &quot;budget_max&quot;,
+          &quot;duration&quot;,
+          &quot;status&quot;,
+          &quot;score&quot;,
+          &quot;created_at&quot;,
+          &quot;updated_at&quot;].join(&quot;,&quot;)
       )
-      .eq("talent_id", currentUserId)
-      .or("match_type.eq.job_for_talent,match_type.is.null")
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: false });
+      .eq(&quot;talent_id&quot;, currentUserId)
+      .or(&quot;match_type.eq.job_for_talent,match_type.is.null&quot;)
+      .order(&quot;score&quot;, { ascending: false })
+      .order(&quot;created_at&quot;, { ascending: false });
 
     if (error) {
       setSuggestions([]);
@@ -97,10 +97,10 @@ export default function TalentDashboardSuggestedJobs() {
     const channel = supabase
       .channel(`ai-jobs-talent-${currentUserId}`)
       .on(
-        "postgres_changes",
+        &quot;postgres_changes&quot;,
         {
-          event: "INSERT",
-          schema: "public",
+          event: &quot;INSERT&quot;,
+          schema: &quot;public&quot;,
           table: SUGGESTION_TABLE_ENV,
           filter: `talent_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
@@ -110,10 +110,10 @@ export default function TalentDashboardSuggestedJobs() {
     supabase
       .channel(`ai-jobs-talent-upd-${currentUserId}`)
       .on(
-        "postgres_changes",
+        &quot;postgres_changes&quot;,
         {
-          event: "UPDATE",
-          schema: "public",
+          event: &quot;UPDATE&quot;,
+          schema: &quot;public&quot;,
           table: SUGGESTION_TABLE_ENV,
           filter: `talent_id=eq.${currentUserId}`},
         () => fetchSuggestions(currentUserId)
@@ -126,27 +126,27 @@ export default function TalentDashboardSuggestedJobs() {
   };
 
   const newMatches = useMemo(
-    () => (suggestions || []).filter((s) => (s.status || "new") === "new"),
+    () => (suggestions || []).filter((s) => (s.status || &quot;new&quot;) === &quot;new&quot;),
     [suggestions]
   );
   const viewedMatches = useMemo(
-    () => (suggestions || []).filter((s) => (s.status || "new") !== "new"),
+    () => (suggestions || []).filter((s) => (s.status || &quot;new&quot;) !== &quot;new&quot;),
     [suggestions]
   );
 
   const handleApply = async (s: JobSuggestion) => {
     await supabase
       .from(SUGGESTION_TABLE_ENV)
-      .update({ status: "applied" })
-      .eq("id", s.id);
+      .update({ status: &quot;applied&quot; })
+      .eq(&quot;id&quot;, s.id);
     await fetchSuggestions(userId as string);
   };
 
   const handleDecline = async (s: JobSuggestion) => {
     await supabase
       .from(SUGGESTION_TABLE_ENV)
-      .update({ status: "declined" })
-      .eq("id", s.id);
+      .update({ status: &quot;declined&quot; })
+      .eq(&quot;id&quot;, s.id);
     await fetchSuggestions(userId as string);
   };
 
@@ -158,9 +158,9 @@ export default function TalentDashboardSuggestedJobs() {
     items: JobSuggestion[];
     highlightNew?: boolean;
   }) => (
-    <section className="space-y-3">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <section className=&quot;space-y-3&quot;>
+      <h2 className=&quot;text-lg font-semibold text-gray-900&quot;>{title}</h2>
+      <div className=&quot;grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3&quot;>
         <AnimatePresence initial={false}>
           {items.map((s) => (
             <motion.div
@@ -170,57 +170,57 @@ export default function TalentDashboardSuggestedJobs() {
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.2 }}
               className={`relative rounded-2xl border bg-white p-4 shadow-sm hover:shadow-md ${
-                highlightNew && (s.status || "new") === "new"
-                  ? "border-emerald-200 ring-1 ring-emerald-200"
-                  : "border-gray-200"
+                highlightNew && (s.status || &quot;new&quot;) === &quot;new&quot;
+                  ? &quot;border-emerald-200 ring-1 ring-emerald-200&quot;
+                  : &quot;border-gray-200&quot;
               }`}
             >
-              {(s.status || "new") === "new" && (
-                <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-emerald-600/10 px-2 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-600/20">
+              {(s.status || &quot;new&quot;) === &quot;new&quot; && (
+                <span className=&quot;absolute right-3 top-3 inline-flex items-center rounded-full bg-emerald-600/10 px-2 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-600/20&quot;>
                   New Match
                 </span>
               )}
-              <div className="mb-2 text-sm text-gray-500">
-                {s.client_name || "Client"}
+              <div className=&quot;mb-2 text-sm text-gray-500&quot;>
+                {s.client_name || &quot;Client&quot;}
               </div>
-              <h3 className="text-base font-medium text-gray-900">
+              <h3 className=&quot;text-base font-medium text-gray-900&quot;>
                 {s.job_title}
               </h3>
               {s.summary && (
-                <p className="mt-2 line-clamp-3 text-sm text-gray-600">
+                <p className=&quot;mt-2 line-clamp-3 text-sm text-gray-600&quot;>
                   {s.summary}
                 </p>
               )}
               {!!s.skills?.length && (
-                <div className="mt-3 flex flex-wrap gap-1">
+                <div className=&quot;mt-3 flex flex-wrap gap-1&quot;>
                   {s.skills.slice(0, 6).map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full bg-gray-50 px-2 py-0.5 text-xs text-gray-700 ring-1 ring-inset ring-gray-200"
+                      className=&quot;rounded-full bg-gray-50 px-2 py-0.5 text-xs text-gray-700 ring-1 ring-inset ring-gray-200&quot;
                     >
                       {skill}
                     </span>
                   ))}
                   {s.skills.length > 6 && (
-                    <span className="text-xs text-gray-400">
+                    <span className=&quot;text-xs text-gray-400&quot;>
                       +{s.skills.length - 6} more
                     </span>
                   )}
                 </div>
               )}
-              <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-sm text-gray-700">
+              <div className=&quot;mt-4 flex flex-wrap items-center justify-between gap-2 text-sm text-gray-700&quot;>
                 <div>
                   {s.budget_min || s.budget_max ? (
                     <span>
-                      {s.budget_min ? `$${s.budget_min}` : ""}
-                      {s.budget_min && s.budget_max ? "–" : ""}
-                      {s.budget_max ? `$${s.budget_max}` : ""} budget
+                      {s.budget_min ? `$${s.budget_min}` : "&quot;}
+                      {s.budget_min && s.budget_max ? &quot;–&quot; : "&quot;}
+                      {s.budget_max ? `$${s.budget_max}` : "&quot;} budget
                     </span>
                   ) : (
                     <span>Budget N/A</span>
                   )}
                 </div>
-                <div>{s.duration || "Duration N/A"}</div>
+                <div>{s.duration || &quot;Duration N/A"}</div>
               </div>
               <div className="mt-4 flex items-center justify-end gap-2">
                 <button
@@ -231,12 +231,12 @@ export default function TalentDashboardSuggestedJobs() {
                 </button>
                 <button
                   onClick={() => handleApply(s)}
-                  className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700"
+                  className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700&quot;
                 >
                   Apply Now
                 </button>
               </div>
-              {(s.status && s.status !== "new") && (
+              {(s.status && s.status !== &quot;new") && (
                 <div className="mt-2 text-right text-xs text-gray-500">
                   Status: {s.status}
                 </div>
@@ -279,9 +279,9 @@ export default function TalentDashboardSuggestedJobs() {
     }
 
     return (
-      <div className="space-y-10">
-        <Section title="New Matches" items={newMatches} highlightNew />
-        <Section title="Previously Viewed" items={viewedMatches} />
+      <div className="space-y-10&quot;>
+        <Section title=&quot;New Matches&quot; items={newMatches} highlightNew />
+        <Section title=&quot;Previously Viewed" items={viewedMatches} />
       </div>
     );
   }, [loading, newMatches, userId, viewedMatches]);

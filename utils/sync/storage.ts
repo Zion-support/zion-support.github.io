@@ -1,21 +1,21 @@
-import fs from "fs";
-import path from "path";
-import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
+import fs from &quot;fs&quot;;
+import path from &quot;path&quot;;
+import { MultiverseState, InstanceConfig, SyncEvent } from &quot;./types&quot;;
 
-const DATA_DIR = path.join(process.cwd(), "data", "multiverse");
-const STATE_PATH = path.join(DATA_DIR, "state.json");
+const DATA_DIR = path.join(process.cwd(), &quot;data&quot;, &quot;multiverse&quot;);
+const STATE_PATH = path.join(DATA_DIR, &quot;state.json&quot;);
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
 function defaultConfig(): InstanceConfig {
-  const instanceId = process.env.ZION_INSTANCE_ID || "zion-local";
+  const instanceId = process.env.ZION_INSTANCE_ID || &quot;zion-local&quot;;
   return {
     instanceId,
     optIn: false,
     paused: false,
-    scope: "full",
+    scope: &quot;full&quot;,
     peers: [],
     secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)};
 }
@@ -37,7 +37,7 @@ export function readState(): MultiverseState {
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
     return initial;
   }
-  const raw = fs.readFileSync(STATE_PATH, "utf8");
+  const raw = fs.readFileSync(STATE_PATH, &quot;utf8&quot;);
   try {
     const parsed = JSON.parse(raw) as MultiverseState;
     // Backfill missing fields on upgrade
@@ -68,7 +68,7 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   const currentVersion = state.latestVersionByEntityId[entityId] || 0;
   const isNewer = event.version > currentVersion;
 
-  if (event.type === "proposal" && event.merkleRoot && isNewer) {
+  if (event.type === &quot;proposal&quot; && event.merkleRoot && isNewer) {
     state.proposalMerkleById[entityId] = event.merkleRoot;
   }
 
@@ -84,16 +84,16 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
 
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
-    case "proposal":
+    case &quot;proposal&quot;:
       return (event.payload as any).proposalId;
-    case "token_transfer":
+    case &quot;token_transfer&quot;:
       return (event.payload as any).txId;
-    case "talent_mobility":
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate;
-    case "dao_endorsement":
+    case &quot;talent_mobility&quot;:
+      return (event.payload as any).personId + &quot;:&quot; + (event.payload as any).startDate;
+    case &quot;dao_endorsement&quot;:
       return (event.payload as any).resolutionId;
-    case "leaderboard_entry":
-      return (event.payload as any).subjectId + ":" + (event.payload as any).period;
+    case &quot;leaderboard_entry&quot;:
+      return (event.payload as any).subjectId + &quot;:&quot; + (event.payload as any).period;
     default:
       return (event.payload as any).id || event.eventId;
   }
@@ -101,14 +101,14 @@ export function getEntityId(event: SyncEvent): string {
 
 export function filterEventsByScope(
   events: SyncEvent[],
-  scope: InstanceConfig["scope"]
+  scope: InstanceConfig[&quot;scope&quot;]
 ): SyncEvent[] {
-  if (scope === "full") return events;
-  if (scope === "dao") {
-    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement");
+  if (scope === &quot;full&quot;) return events;
+  if (scope === &quot;dao&quot;) {
+    return events.filter((e) => e.type === &quot;proposal&quot; || e.type === &quot;dao_endorsement&quot;);
   }
-  if (scope === "marketplace") {
-    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry");
+  if (scope === &quot;marketplace&quot;) {
+    return events.filter((e) => e.type === &quot;token_transfer&quot; || e.type === &quot;talent_mobility&quot; || e.type === &quot;leaderboard_entry&quot;);
   }
   return events;
 }

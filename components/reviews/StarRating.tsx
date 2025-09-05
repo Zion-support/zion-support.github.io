@@ -13,13 +13,13 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
   const stars = [1, 2, 3, 4, 5];
 
   return (
-    <div className="flex items-center gap-1">
+    <div className=&quot;flex items-center gap-1&quot;>
       {stars.map((star) => {
         const active = (hovered ?? value) >= star;
         return (
           <button
             key={star}
-            type="button"
+            type=&quot;button&quot;
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
             onMouseEnter={() => !readOnly && setHovered(star)}
             onMouseLeave={() => !readOnly && setHovered(null)}
@@ -27,18 +27,18 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             aria-label={`${star} star`}
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns=&quot;http://www.w3.org/2000/svg&quot;
               width={size}
               height={size}
-              viewBox="0 0 24 24"
+              viewBox=&quot;0 0 24 24&quot;
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'currentColor'}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeWidth=&quot;2&quot;
+              strokeLinecap=&quot;round&quot;
+              strokeLinejoin=&quot;round&quot;
               className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}
             >
-              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />
+              <polygon points=&quot;12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2&quot; />
             </svg>
           </button>
         );

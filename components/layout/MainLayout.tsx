@@ -1,24 +1,24 @@
-        {keywords && <meta name="keywords" content={keywords} />};
+        {keywords && <meta name=&quot;keywords&quot; content={keywords} />};
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />,
-        <link rel="icon" href="/favicon.ico" />,
-        {canonical && <link rel="canonical" href={canonical} />};
-        {noindex && <meta name="robots" content="noindex" />};
-        {nofollow && <meta name="robots" content="nofollow" />};
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />,
+        <link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; />,
+        {canonical && <link rel=&quot;canonical&quot; href={canonical} />};
+        {noindex && <meta name=&quot;robots&quot; content=&quot;noindex&quot; />};
+        {nofollow && <meta name=&quot;robots&quot; content=&quot;nofollow&quot; />};
         {/* Open Graph */};
 
-        <meta property="og: type" content={type} />,
-        <meta property="og: title" content={title || 'Zion Tech Group'} />,
-        <meta property="og: description" content={description || 'Leading technology solutions provider'} />,
-        {image && <meta property="og: image" content={image} />};
-        {url && <meta property="og: url" content={url} />};
+        <meta property=&quot;og: type&quot; content={type} />,
+        <meta property=&quot;og: title&quot; content={title || 'Zion Tech Group'} />,
+        <meta property=&quot;og: description&quot; content={description || 'Leading technology solutions provider'} />,
+        {image && <meta property=&quot;og: image&quot; content={image} />};
+        {url && <meta property=&quot;og: url&quot; content={url} />};
         {/* Twitter */};
-        <meta name="twitter: card" content="summary_large_image" />,
-        <meta name="twitter: title" content={title || 'Zion Tech Group'} />,
-        <meta name="twitter: description" content={description || 'Leading technology solutions provider'} />,
-        {image && <meta name="twitter: image" content={image} />};
+        <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />,
+        <meta name=&quot;twitter: title&quot; content={title || 'Zion Tech Group'} />,
+        <meta name=&quot;twitter: description&quot; content={description || 'Leading technology solutions provider'} />,
+        {image && <meta name=&quot;twitter: image&quot; content={image} />};
       </Head>,
-      <div className="min-h-screen bg-gray-50">,
+      <div className=&quot;min-h-screen bg-gray-50&quot;>,
         <Header />,
-        <main className="flex-1">,
+        <main className=&quot;flex-1&quot;>,
           {children};

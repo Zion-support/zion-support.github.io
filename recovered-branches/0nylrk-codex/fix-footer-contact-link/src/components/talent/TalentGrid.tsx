@@ -1,6 +1,6 @@
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
+import { TalentCard } from &quot;@/components/talent/TalentCard&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
 
 export interface TalentGridProps {
   talents: TalentProfile[];
@@ -30,7 +30,7 @@ export function TalentGrid({
       handleRequestHire(talent);
     } else {
       // Default implementation
-      console.log("Request to hire:", talent.id);
+      // console.log(&quot;Request to hire:&quot;, talent.id);
     }
   };
 
@@ -43,19 +43,19 @@ export function TalentGrid({
   };
   
   if (isLoading) {
-    return <div className="py-8 text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-      <p className="text-zion-cyan">Loading talent profiles...</p>
+    return <div className=&quot;py-8 text-center&quot;>
+      <div className=&quot;animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4&quot;></div>
+      <p className=&quot;text-zion-cyan&quot;>Loading talent profiles...</p>
     </div>;
   }
 
   if (!talents || talents.length === 0) {
-    return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
-      <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
+    return <div className=&quot;py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6&quot;>
+      <p className=&quot;text-zion-slate-light mb-4&quot;>No talents found matching your criteria</p>
       {clearFilters && (
         <button 
           onClick={clearFilters}
-          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+          className=&quot;px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors&quot;
         >
           Clear Filters
         </button>
@@ -64,7 +64,7 @@ export function TalentGrid({
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
       {talents.map((talent) => (
         <TalentCard
           key={talent.id}

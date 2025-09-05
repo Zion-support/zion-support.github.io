@@ -36,25 +36,25 @@ export function PortfolioBuilder() {
   
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      <div className=&quot;flex justify-center items-center h-64&quot;>
+        <Loader2 className=&quot;h-8 w-8 animate-spin text-primary&quot; />
       </div>
     );
   }
   
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6&quot;>
         <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
-          <p className="text-muted-foreground">Showcase your best work and projects</p>
+          <h1 className=&quot;text-2xl font-bold&quot;>Portfolio Projects</h1>
+          <p className=&quot;text-muted-foreground&quot;>Showcase your best work and projects</p>
         </div>
         <Button 
           onClick={() => setShowAddProject(true)} 
-          className="gap-2"
+          className=&quot;gap-2&quot;
           disabled={showAddProject || !!editingProject}
         >
-          <FilePlus className="h-4 w-4" />
+          <FilePlus className=&quot;h-4 w-4&quot; />
           Add Project
         </Button>
       </div>
@@ -62,8 +62,8 @@ export function PortfolioBuilder() {
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
-          <CardContent className="pt-6">
-            <h2 className="text-xl font-semibold mb-6">
+          <CardContent className=&quot;pt-6&quot;>
+            <h2 className=&quot;text-xl font-semibold mb-6&quot;>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
             
@@ -81,7 +81,7 @@ export function PortfolioBuilder() {
       
       {/* Projects List */}
       {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -93,19 +93,19 @@ export function PortfolioBuilder() {
         </div>
       ) : (
         !showAddProject && (
-          <Card className="text-center py-12">
+          <Card className=&quot;text-center py-12&quot;>
             <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
+              <div className=&quot;flex flex-col items-center gap-4&quot;>
+                <div className=&quot;bg-muted/50 p-6 rounded-full&quot;>
+                  <FilePlus className=&quot;h-12 w-12 text-muted-foreground&quot; />
                 </div>
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
+                <h3 className=&quot;text-xl font-medium&quot;>No portfolio projects yet</h3>
+                <p className=&quot;text-muted-foreground max-w-md mx-auto&quot;>
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
                 <Button 
                   onClick={() => setShowAddProject(true)} 
-                  className="mt-2"
+                  className=&quot;mt-2&quot;
                 >
                   Add Your First Project
                 </Button>

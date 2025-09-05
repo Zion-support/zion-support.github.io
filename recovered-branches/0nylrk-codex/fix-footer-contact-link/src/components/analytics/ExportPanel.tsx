@@ -1,8 +1,8 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+import React from &quot;react&quot;;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
 
 export function ExportPanel() {
   const { toast } = useToast();
@@ -11,37 +11,37 @@ export function ExportPanel() {
     // Placeholder for actual export functionality
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
-      description: "Your export is being prepared and will download shortly."});
+      description: &quot;Your export is being prepared and will download shortly.&quot;});
     
     // In a real implementation, this would trigger an API call to generate and download the export
     setTimeout(() => {
       toast({
         title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded."});
+        description: &quot;Your export has been downloaded.&quot;});
     }, 1500);
   };
   
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
+    <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
       <CardHeader>
-        <CardTitle className="text-white text-lg">Export Data</CardTitle>
-        <CardDescription className="text-zion-slate-light">Download analytics data for further analysis</CardDescription>
+        <CardTitle className=&quot;text-white text-lg&quot;>Export Data</CardTitle>
+        <CardDescription className=&quot;text-zion-slate-light&quot;>Download analytics data for further analysis</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <p className="text-zion-slate">
+      <CardContent className=&quot;space-y-4&quot;>
+        <p className=&quot;text-zion-slate&quot;>
           Export your analytics data in CSV or JSON format for deeper analysis in your preferred tools.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className=&quot;flex flex-wrap gap-4&quot;>
           <Button 
-            variant="default" 
-            className="bg-zion-purple hover:bg-zion-purple-dark"
+            variant=&quot;default&quot; 
+            className=&quot;bg-zion-purple hover:bg-zion-purple-dark&quot;
             onClick={() => handleExport('csv')}
           >
             Export as CSV
           </Button>
           <Button 
-            variant="outline" 
-            className="border-zion-blue-light text-zion-slate-light"
+            variant=&quot;outline&quot; 
+            className=&quot;border-zion-blue-light text-zion-slate-light&quot;
             onClick={() => handleExport('json')}
           >
             Export as JSON

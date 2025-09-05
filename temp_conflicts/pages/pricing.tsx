@@ -163,42 +163,42 @@ export default function PricingPage() {
     <>
       <Head>
         <title>Pricing - Zion Tech Group | Transparent Pricing for Revolutionary Technology</title>
-        <meta name="description" content="Explore Zion Tech Group's transparent pricing for AI, quantum computing, and space technology solutions. Start with a free trial today!" />
-        <meta name="keywords" content="pricing, AI services pricing, quantum computing cost, space technology pricing, Zion Tech Group pricing" />
-        <meta property="og:title" content="Pricing - Zion Tech Group" />
-        <meta property="og:description" content="Transparent pricing for revolutionary technology solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
+        <meta name=&quot;description&quot; content=&quot;Explore Zion Tech Group's transparent pricing for AI, quantum computing, and space technology solutions. Start with a free trial today!&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;pricing, AI services pricing, quantum computing cost, space technology pricing, Zion Tech Group pricing&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Pricing - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Transparent pricing for revolutionary technology solutions.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/pricing&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/pricing&quot; />
       </Head>
 
       <EnhancedNavigation />
 
-      <main className="min-h-screen bg-black text-white">
+      <main className=&quot;min-h-screen bg-black text-white&quot;>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />
+        <section className=&quot;relative pt-32 pb-20 overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]&quot; />
           
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className=&quot;max-w-7xl mx-auto px-6 relative z-10&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className=&quot;text-center&quot;
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h1 className=&quot;text-5xl md:text-7xl font-bold mb-8&quot;>
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Transparent Pricing
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+              <p className=&quot;text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12&quot;>
                 Choose the perfect plan for your business needs. All plans include 
                 free trials and our revolutionary technology solutions.
               </p>
               
               {/* Billing Toggle */}
-              <div className="flex items-center justify-center space-x-4 mb-8">
+              <div className=&quot;flex items-center justify-center space-x-4 mb-8&quot;>
                 <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
                 </span>
@@ -217,7 +217,7 @@ export default function PricingPage() {
                 <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
                   Annual
                   {billingCycle === 'annual' && (
-                    <span className="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">
+                    <span className=&quot;ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full&quot;>
                       Save {savings.annual}%
                     </span>
                   )}
@@ -225,27 +225,27 @@ export default function PricingPage() {
               </div>
 
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Check className="w-6 h-6 text-white" />
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
+                    <Check className=&quot;w-6 h-6 text-white&quot; />
                   </div>
-                  <div className="text-white font-semibold mb-2">Free Trials</div>
-                  <div className="text-gray-400 text-sm">Start with no commitment</div>
+                  <div className=&quot;text-white font-semibold mb-2&quot;>Free Trials</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Start with no commitment</div>
                 </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-6 h-6 text-white" />
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
+                    <Shield className=&quot;w-6 h-6 text-white&quot; />
                   </div>
-                  <div className="text-white font-semibold mb-2">No Hidden Fees</div>
-                  <div className="text-gray-400 text-sm">Transparent pricing</div>
+                  <div className=&quot;text-white font-semibold mb-2&quot;>No Hidden Fees</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Transparent pricing</div>
                 </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-6 h-6 text-white" />
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>
+                    <Users className=&quot;w-6 h-6 text-white&quot; />
                   </div>
-                  <div className="text-white font-semibold mb-2">24/7 Support</div>
-                  <div className="text-gray-400 text-sm">Always here to help</div>
+                  <div className=&quot;text-white font-semibold mb-2&quot;>24/7 Support</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Always here to help</div>
                 </div>
               </div>
             </motion.div>
@@ -253,9 +253,9 @@ export default function PricingPage() {
         </section>
 
         {/* Pricing Plans */}
-        <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className=&quot;py-20 relative&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-6&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={plan.id}
@@ -269,8 +269,8 @@ export default function PricingPage() {
                 >
                   {/* Popular Badge */}
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
+                      <div className=&quot;bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg&quot;>
                         ⭐ Most Popular
                       </div>
                     </div>
@@ -282,39 +282,39 @@ export default function PricingPage() {
                       : 'border-gray-700 bg-gradient-to-br from-gray-900/50 to-gray-800/50 hover:border-gray-600'
                   }`}>
                     {/* Plan Header */}
-                    <div className="text-center mb-8">
+                    <div className=&quot;text-center mb-8&quot;>
                       <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                        <plan.icon className="w-8 h-8 text-white" />
+                        <plan.icon className=&quot;w-8 h-8 text-white&quot; />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{plan.description}</p>
+                      <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
+                      <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>{plan.description}</p>
                     </div>
 
                     {/* Pricing */}
-                    <div className="text-center mb-8">
-                      <div className="mb-2">
-                        <span className="text-4xl font-bold text-white">
+                    <div className=&quot;text-center mb-8&quot;>
+                      <div className=&quot;mb-2&quot;>
+                        <span className=&quot;text-4xl font-bold text-white&quot;>
                           {typeof plan.monthlyPrice === 'number' ? '$' : ''}
                           {billingCycle === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
                         </span>
                         {typeof plan.monthlyPrice === 'number' && (
-                          <span className="text-gray-400 text-lg">/month</span>
+                          <span className=&quot;text-gray-400 text-lg&quot;>/month</span>
                         )}
                       </div>
                       {billingCycle === 'annual' && typeof plan.monthlyPrice === 'number' && (
-                        <div className="text-sm text-green-400">
+                        <div className=&quot;text-sm text-green-400&quot;>
                           Save ${Math.round((plan.monthlyPrice * 12 - plan.annualPrice) / 12)}/month
                         </div>
                       )}
                     </div>
 
                     {/* Features */}
-                    <div className="flex-grow mb-8">
-                      <ul className="space-y-3">
+                    <div className=&quot;flex-grow mb-8&quot;>
+                      <ul className=&quot;space-y-3&quot;>
                         {plan.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-3">
-                            <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
+                          <li key={idx} className=&quot;flex items-start space-x-3&quot;>
+                            <Check className=&quot;w-5 h-5 text-green-400 flex-shrink-0 mt-0.5&quot; />
+                            <span className=&quot;text-gray-300 text-sm&quot;>{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -335,24 +335,24 @@ export default function PricingPage() {
         </section>
 
         {/* Add-ons Section */}
-        <section className="py-20 relative bg-gradient-to-r from-gray-900/50 to-gray-800/50">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className=&quot;py-20 relative bg-gradient-to-r from-gray-900/50 to-gray-800/50&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-6&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Additional Services
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Enhance your experience with our specialized add-on services
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
               {addOns.map((addon, index) => (
                 <motion.div
                   key={addon.name}
@@ -360,19 +360,19 @@ export default function PricingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-gray-600 transition-all duration-300"
+                  className=&quot;p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 hover:border-gray-600 transition-all duration-300&quot;
                 >
                   <div className={`w-12 h-12 bg-gradient-to-br ${addon.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <addon.icon className="w-6 h-6 text-white" />
+                    <addon.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{addon.description}</p>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white mb-2">
+                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{addon.name}</h3>
+                  <p className=&quot;text-gray-400 text-sm mb-4&quot;>{addon.description}</p>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-2xl font-bold text-white mb-2&quot;>
                       ${billingCycle === 'monthly' ? addon.monthlyPrice : addon.annualPrice}
-                      <span className="text-gray-400 text-lg">/month</span>
+                      <span className=&quot;text-gray-400 text-lg&quot;>/month</span>
                     </div>
-                    <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
+                    <button className=&quot;text-cyan-400 hover:text-cyan-300 text-sm font-medium&quot;>
                       Learn More →
                     </button>
                   </div>
@@ -383,44 +383,44 @@ export default function PricingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-6">
+        <section className=&quot;py-20 relative&quot;>
+          <div className=&quot;max-w-4xl mx-auto px-6&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className=&quot;text-center mb-16&quot;
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className=&quot;text-xl text-gray-300&quot;>
                 Get answers to common questions about our pricing and services
               </p>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className=&quot;space-y-6&quot;>
               {[
                 {
-                  question: "What's included in the free trial?",
-                  answer: "All plans include a free trial with full access to features. Starter plans get 14 days, Professional gets 30 days, and Enterprise gets 60 days. No credit card required."
+                  question: &quot;What's included in the free trial?&quot;,
+                  answer: &quot;All plans include a free trial with full access to features. Starter plans get 14 days, Professional gets 30 days, and Enterprise gets 60 days. No credit card required.&quot;
                 },
                 {
-                  question: "Can I change plans later?",
-                  answer: "Yes! You can upgrade, downgrade, or cancel your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
+                  question: &quot;Can I change plans later?&quot;,
+                  answer: &quot;Yes! You can upgrade, downgrade, or cancel your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.&quot;
                 },
                 {
-                  question: "Is there a setup fee?",
-                  answer: "No setup fees for standard plans. Custom Enterprise solutions may have one-time implementation costs, which we'll discuss during consultation."
+                  question: &quot;Is there a setup fee?&quot;,
+                  answer: &quot;No setup fees for standard plans. Custom Enterprise solutions may have one-time implementation costs, which we'll discuss during consultation.&quot;
                 },
                 {
-                  question: "What payment methods do you accept?",
-                  answer: "We accept all major credit cards, bank transfers, and can accommodate custom payment terms for Enterprise customers."
+                  question: &quot;What payment methods do you accept?&quot;,
+                  answer: &quot;We accept all major credit cards, bank transfers, and can accommodate custom payment terms for Enterprise customers.&quot;
                 },
                 {
-                  question: "Do you offer volume discounts?",
-                  answer: "Yes! We offer significant discounts for annual billing and volume deployments. Contact our sales team for custom pricing."
+                  question: &quot;Do you offer volume discounts?&quot;,
+                  answer: &quot;Yes! We offer significant discounts for annual billing and volume deployments. Contact our sales team for custom pricing.&quot;
                 }
               ].map((faq, index) => (
                 <motion.div
@@ -429,10 +429,10 @@ export default function PricingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6"
+                  className=&quot;bg-gradient-to-r from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6&quot;
                 >
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-3&quot;>{faq.question}</h3>
+                  <p className=&quot;text-gray-300 leading-relaxed&quot;>{faq.answer}</p>
                 </motion.div>
               ))}
             </div>
@@ -440,41 +440,41 @@ export default function PricingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className=&quot;py-20 relative&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-6&quot;>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center"
+              className=&quot;text-center&quot;
             >
-              <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              <div className=&quot;bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16&quot;>
+                <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-8&quot;>
                   Ready to Get Started?
                 </h2>
-                <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                <p className=&quot;text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed&quot;>
                   Start your free trial today and experience the power of revolutionary 
                   AI, quantum computing, and space technology solutions.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
                   <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
+                    href=&quot;/contact&quot;
+                    className=&quot;bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40&quot;
                   >
                     Start Free Trial
-                  </a>
+                  </Link>
                   <a
-                    href="tel:+13024640950"
-                    className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm&quot;
                   >
                     📞 Talk to Sales
-                  </a>
+                  </Link>
                 </div>
                 
-                <div className="mt-10 text-sm text-gray-400">
-                  <p>Questions? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our team</a> for personalized guidance.</p>
+                <div className=&quot;mt-10 text-sm text-gray-400&quot;>
+                  <p>Questions? <a href=&quot;/contact&quot; className=&quot;text-cyan-400 hover:text-cyan-300 underline&quot;>Contact our team</Link> for personalized guidance.</p>
                 </div>
               </div>
             </motion.div>

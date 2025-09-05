@@ -9,21 +9,21 @@ type Props = { items: TalentItem[] };
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
-    <main className="space-y-6">
-      <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>
-      <div className="grid gap-3">
+    <main className=&quot;space-y-6&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Top Talents — Auto Generated</h1>
+      <div className=&quot;grid gap-3&quot;>
         {items.map((t) => (
           <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>
-            <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">
+            <div className=&quot;enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between&quot;>
               <div>
-                <div className="font-medium">{t.talentName}</div>
-                <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
+                <div className=&quot;font-medium&quot;>{t.talentName}</div>
+                <div className=&quot;text-sm text-gray-600&quot;>{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
               </div>
-              <span className="pill">Auto</span>
+              <span className=&quot;pill&quot;>Auto</span>
             </div>
           </Link>
         ))}
-        {!items.length && <div className="enhanced-card">No data yet.</div>}
+        {!items.length && <div className=&quot;enhanced-card&quot;>No data yet.</div>}
       </div>
     </main>
   );

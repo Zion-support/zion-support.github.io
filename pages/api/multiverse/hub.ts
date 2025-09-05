@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
+import type { NextApiRequest, NextApiResponse } from &quot;next&quot;;
+import { readState } from &quot;../../../utils/sync/storage&quot;;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState();
 
-  if (req.method === "GET") {
+  if (req.method === &quot;GET&quot;) {
     return res.status(200).json({
-      route: "/multiverse/hub",
+      route: &quot;/multiverse/hub&quot;,
       instanceId: state.config.instanceId,
       peers: state.config.peers,
       scope: state.config.scope,
@@ -15,5 +15,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       lastSyncedAt: state.lastSyncedAt});
   }
 
-  return res.status(405).json({ error: "Method not allowed" });
+  return res.status(405).json({ error: &quot;Method not allowed&quot; });
 }

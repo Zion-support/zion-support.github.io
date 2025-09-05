@@ -61,7 +61,7 @@ export default function PerformanceOptimization() {
                   Understanding Performance Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  Before diving into optimization strategies, it&apos;s crucial
+                  Before diving into optimization strategies, it's crucial
                   to understand what performance means in the context of
                   autonomous systems. Key metrics include:
                 </p>

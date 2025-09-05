@@ -24,32 +24,32 @@ export default function GrantsPage() {
 
   return (
     <EnhancedLayout>
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
-        <div className="flex gap-2">
-          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
-          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
+      <div className=&quot;flex items-center justify-between mb-6&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>Zion Grants & Incubator</h1>
+        <div className=&quot;flex gap-2&quot;>
+          <Link href=&quot;/grants/apply&quot;><a className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot;>Apply</a></a>
+          <Link href=&quot;/incubator&quot;><a className=&quot;px-3 py-2 bg-purple-600 text-white rounded&quot;>Incubator</a></a>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-4 gap-4 mb-6">
-        <select className="border rounded p-2" value={filters.sector || ''} onChange={(e) => setFilters((f) => ({ ...f, sector: e.target.value || undefined }))}>
+      <div className=&quot;grid md:grid-cols-4 gap-4 mb-6&quot;>
+        <select className=&quot;border rounded p-2&quot; value={filters.sector || ''} onChange={(e) => setFilters((f) => ({ ...f, sector: e.target.value || undefined }))}>
           <option value="">All Sectors</option>
           {categories.map((c) => (
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
-        <select className="border rounded p-2" value={filters.status || ''} onChange={(e) => setFilters((f) => ({ ...f, status: e.target.value || undefined }))}>
-          <option value="">All Stages</option>
+        <select className="border rounded p-2&quot; value={filters.status || ''} onChange={(e) => setFilters((f) => ({ ...f, status: e.target.value || undefined }))}>
+          <option value="&quot;>All Stages</option>
           {statuses.map((s) => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
-        <input className="border rounded p-2" placeholder="Region" value={filters.region || ''} onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined }))} />
-        <select className="border rounded p-2" value={filters.program || ''} onChange={(e) => setFilters((f) => ({ ...f, program: e.target.value || undefined }))}>
-          <option value="">All Programs</option>
-          <option value="grant">Grant</option>
-          <option value="incubator">Incubator</option>
+        <input className=&quot;border rounded p-2&quot; placeholder=&quot;Region&quot; value={filters.region || ''} onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined }))} />
+        <select className=&quot;border rounded p-2&quot; value={filters.program || ''} onChange={(e) => setFilters((f) => ({ ...f, program: e.target.value || undefined }))}>
+          <option value="&quot;>All Programs</option>
+          <option value=&quot;grant&quot;>Grant</option>
+          <option value=&quot;incubator">Incubator</option>
         </select>
       </div>
 
@@ -58,7 +58,7 @@ export default function GrantsPage() {
           <div key={g.id} className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></Link></h3>
+                <h3 className="text-lg font-medium"><Link href={`/grants/${g.id}`}><a>{g.projectName}</a></a></h3>
                 <div className="text-xs text-gray-600 dark:text-gray-400">{g.sector || 'General'} • {g.region || 'Global'} • {g.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
               </div>
               <div className="flex gap-2 items-center">

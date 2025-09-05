@@ -138,9 +138,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   };
 
   const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-    return <AlertTriangle className="w-5 h-5 text-red-400" />;
+    if (score >= 90) return <CheckCircle className=&quot;w-5 h-5 text-green-400&quot; />;
+    if (score >= 70) return <AlertTriangle className=&quot;w-5 h-5 text-yellow-400&quot; />;
+    return <AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />;
   };
 
   const formatTime = (ms: number): string => {
@@ -218,71 +218,71 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          className="fixed bottom-4 left-4 z-50"
+          className=&quot;fixed bottom-4 left-4 z-50&quot;
         >
           {/* Performance Monitor Panel */}
-          <div className="bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
+          <div className=&quot;bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden&quot;>
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-              <div className="flex items-center space-x-2">
-                <Activity className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-semibold">Performance Monitor</span>
+            <div className=&quot;flex items-center justify-between p-4 border-b border-gray-700/50&quot;>
+              <div className=&quot;flex items-center space-x-2&quot;>
+                <Activity className=&quot;w-5 h-5 text-cyan-400&quot; />
+                <span className=&quot;text-white font-semibold&quot;>Performance Monitor</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className=&quot;flex items-center space-x-2&quot;>
                 <button
                   onClick={refreshMetrics}
                   disabled={isLoading}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50"
-                  aria-label="Refresh metrics"
+                  className=&quot;p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50&quot;
+                  aria-label=&quot;Refresh metrics&quot;
                 >
                   <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 </button>
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
+                  className=&quot;p-1 text-gray-400 hover:text-white transition-colors duration-200&quot;
                   aria-label={isExpanded ? 'Collapse' : 'Expand'}
                 >
-                  <BarChart3 className="w-4 h-4" />
+                  <BarChart3 className=&quot;w-4 h-4&quot; />
                 </button>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="Close"
+                  className=&quot;p-1 text-gray-400 hover:text-white transition-colors duration-200&quot;
+                  aria-label=&quot;Close&quot;
                 >
-                  <X className="w-4 h-4" />
+                  <X className=&quot;w-4 h-4&quot; />
                 </button>
               </div>
             </div>
 
             {/* Performance Score */}
-            <div className="p-4 border-b border-gray-700/50">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-400">Performance Score</span>
+            <div className=&quot;p-4 border-b border-gray-700/50&quot;>
+              <div className=&quot;flex items-center justify-between mb-2&quot;>
+                <span className=&quot;text-sm text-gray-400&quot;>Performance Score</span>
                 {getScoreIcon(getPerformanceScore())}
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="text-2xl font-bold text-white">
+              <div className=&quot;flex items-center space-x-3&quot;>
+                <div className=&quot;text-2xl font-bold text-white&quot;>
                   {getPerformanceScore()}
                 </div>
               </div>
               
-              <div className="text-xs text-gray-400 text-center">
+              <div className=&quot;text-xs text-gray-400 text-center&quot;>
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </div>
             </div>
 
             {/* Key Metrics */}
-            <div className="p-4 space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-2 bg-gray-800/50 rounded-lg">
-                  <div className="text-xs text-gray-400 mb-1">Load Time</div>
-                  <div className="text-sm font-semibold text-white">
+            <div className=&quot;p-4 space-y-3&quot;>
+              <div className=&quot;grid grid-cols-2 gap-3&quot;>
+                <div className=&quot;text-center p-2 bg-gray-800/50 rounded-lg&quot;>
+                  <div className=&quot;text-xs text-gray-400 mb-1&quot;>Load Time</div>
+                  <div className=&quot;text-sm font-semibold text-white&quot;>
                     {formatTime(metrics.loadTime)}
                   </div>
                 </div>
-                <div className="text-center p-2 bg-gray-800/50 rounded-lg">
-                  <div className="text-xs text-gray-400 mb-1">FCP</div>
-                  <div className="text-sm font-semibold text-white">
+                <div className=&quot;text-center p-2 bg-gray-800/50 rounded-lg&quot;>
+                  <div className=&quot;text-xs text-gray-400 mb-1&quot;>FCP</div>
+                  <div className=&quot;text-sm font-semibold text-white&quot;>
                     {formatTime(metrics.firstContentfulPaint)}
                   </div>
                 </div>
@@ -297,26 +297,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="border-t border-gray-700/50"
+                  className=&quot;border-t border-gray-700/50&quot;
                 >
-                  <div className="p-4 space-y-4">
+                  <div className=&quot;p-4 space-y-4&quot;>
                     {/* Detailed Metrics */}
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-white">Detailed Metrics</h4>
+                    <div className=&quot;space-y-3&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-white&quot;>Detailed Metrics</h4>
                       
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-400">Largest Contentful Paint:</span>
-                          <span className="text-white">{formatTime(metrics.largestContentfulPaint)}</span>
+                      <div className=&quot;space-y-2&quot;>
+                        <div className=&quot;flex justify-between text-sm&quot;>
+                          <span className=&quot;text-gray-400&quot;>Largest Contentful Paint:</span>
+                          <span className=&quot;text-white&quot;>{formatTime(metrics.largestContentfulPaint)}</span>
                         </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-400">Time to Interactive:</span>
-                          <span className="text-white">{formatTime(metrics.timeToInteractive)}</span>
+                        <div className=&quot;flex justify-between text-sm&quot;>
+                          <span className=&quot;text-gray-400&quot;>Time to Interactive:</span>
+                          <span className=&quot;text-white&quot;>{formatTime(metrics.timeToInteractive)}</span>
                         </div>
                         {metrics.memoryUsage && (
-                          <div className="flex justify-between text-sm">
-                            <span className="text-gray-400">Memory Usage:</span>
-                            <span className="text-white">{metrics.memoryUsage.toFixed(1)} MB</span>
+                          <div className=&quot;flex justify-between text-sm&quot;>
+                            <span className=&quot;text-gray-400&quot;>Memory Usage:</span>
+                            <span className=&quot;text-white&quot;>{metrics.memoryUsage.toFixed(1)} MB</span>
                           </div>
                         )}
                       </div>
@@ -324,12 +324,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
                     {/* Alerts */}
                     {alerts.length > 0 && (
-                      <div className="space-y-2">
-                        <h4 className="text-sm font-semibold text-white">Performance Alerts</h4>
-                        <div className="space-y-1">
+                      <div className=&quot;space-y-2&quot;>
+                        <h4 className=&quot;text-sm font-semibold text-white&quot;>Performance Alerts</h4>
+                        <div className=&quot;space-y-1&quot;>
                           {alerts.map((alert, index) => (
-                            <div key={index} className="flex items-center space-x-2 text-xs text-yellow-400">
-                              <AlertTriangle className="w-3 h-3" />
+                            <div key={index} className=&quot;flex items-center space-x-2 text-xs text-yellow-400&quot;>
+                              <AlertTriangle className=&quot;w-3 h-3&quot; />
                               <span>{alert}</span>
                             </div>
                           ))}
@@ -338,9 +338,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                     )}
 
                     {/* Recommendations */}
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-white">Recommendations</h4>
-                      <div className="text-xs text-gray-400 space-y-1">
+                    <div className=&quot;space-y-2&quot;>
+                      <h4 className=&quot;text-sm font-semibold text-white&quot;>Recommendations</h4>
+                      <div className=&quot;text-xs text-gray-400 space-y-1&quot;>
                         {getPerformanceScore() < 90 && (
                           <>
                             <div>• Optimize images and assets</div>
@@ -366,9 +366,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
 // Helper functions
 const getScoreIcon = (score: number) => {
-  if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-  return <AlertTriangle className="w-5 h-5 text-red-400" />;
+  if (score >= 90) return <CheckCircle className=&quot;w-5 h-5 text-green-400&quot; />;
+  if (score >= 70) return <AlertTriangle className=&quot;w-5 h-5 text-yellow-400&quot; />;
+  return <AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />;
 };
 
 const getScoreLabel = (score: number) => {

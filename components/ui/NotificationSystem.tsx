@@ -2,11 +2,11 @@
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
 
         >,
-          <div className="flex items-start justify-between">,
-            <div className="flex-1">,
+          <div className=&quot;flex items-start justify-between&quot;>,
+            <div className=&quot;flex-1&quot;>,
               {notification.title && (,
-                <h4 className="font-medium mb-1">{notification.title}</h4>)};
-              <p className="text-sm">{notification.message}</p>,
+                <h4 className=&quot;font-medium mb-1&quot;>{notification.title}</h4>)};
+              <p className=&quot;text-sm&quot;>{notification.message}</p>,
             </div>,
             {onDismiss && (,
               <button,
@@ -40,8 +40,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return (
     <NotificationContext.Provider value={{ notify }}>
       {children}
-      <div className="fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none">
-        <div className="w-full max-w-md px-4">
+      <div className=&quot;fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none&quot;>
+        <div className=&quot;w-full max-w-md px-4&quot;>
           <AnimatePresence>
             {toasts.map((toast) => (
               <motion.div
@@ -57,7 +57,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
                     : 'border-gray-200 bg-white/90 text-gray-900 dark:border-gray-800 dark:bg-gray-900/90 dark:text-gray-100'
                 }`}
               >
-                <div className="text-sm font-medium">{toast.message}</div>
+                <div className=&quot;text-sm font-medium&quot;>{toast.message}</div>
               </motion.div>
             ))}
           </AnimatePresence>

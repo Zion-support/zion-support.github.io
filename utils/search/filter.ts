@@ -102,7 +102,7 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
 }
 
 export function suggestDidYouMean(query: string): string | null {
-  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
+  // naive suggestion: if user says devops latam -> normalize to &quot;DevOps jobs in LATAM&quot;
   const q = query.toLowerCase();
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM';
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';

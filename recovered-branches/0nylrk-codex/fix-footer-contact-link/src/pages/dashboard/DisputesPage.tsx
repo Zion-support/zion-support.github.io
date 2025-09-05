@@ -11,8 +11,8 @@ function DisputesPage() {
     <ProtectedRoute>
       <>
         <SEO 
-          title="Dispute Resolution Center | Zion AI Marketplace" 
-          description="View and manage disputes between clients and talents"
+          title=&quot;Dispute Resolution Center | Zion AI Marketplace&quot; 
+          description=&quot;View and manage disputes between clients and talents&quot;
         />
         <AppHeader />
         <DisputeDashboard />

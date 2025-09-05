@@ -1,49 +1,49 @@
-"use client";
+"use client&quot;;
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState, useEffect } from &quot;react&quot;;
+import { useAuth } from &quot;@/contexts/AuthContext&quot;;
 
 interface WalkthroughStep {
   id: string;
   title: string;
   description: string;
   target?: string;
-  position: "top" | "bottom" | "left" | "right";
+  position: &quot;top&quot; | &quot;bottom&quot; | &quot;left&quot; | &quot;right&quot;;
 }
 
 const walkthroughSteps: WalkthroughStep[] = [
   {
-    id: "welcome",
-    title: "Welcome to Zion OS! 🚀",
-    description: "Let's take a quick tour to help you get started with launching your digital economy.",
-    position: "bottom"
+    id: &quot;welcome&quot;,
+    title: &quot;Welcome to Zion OS! 🚀&quot;,
+    description: &quot;Let's take a quick tour to help you get started with launching your digital economy.&quot;,
+    position: &quot;bottom&quot;
   },
   {
-    id: "launch-wizard",
-    title: "Launch Wizard",
-    description: "Start here to create a new instance with marketplace, governance, and identity tools.",
-    target: "launch-wizard-card",
-    position: "right"
+    id: &quot;launch-wizard&quot;,
+    title: &quot;Launch Wizard&quot;,
+    description: &quot;Start here to create a new instance with marketplace, governance, and identity tools.&quot;,
+    target: &quot;launch-wizard-card&quot;,
+    position: &quot;right&quot;
   },
   {
-    id: "admin-panel",
-    title: "Admin Panel",
-    description: "Manage your deployed instances, API keys, and governance settings from here.",
-    target: "admin-instances-card",
-    position: "left"
+    id: &quot;admin-panel&quot;,
+    title: &quot;Admin Panel&quot;,
+    description: &quot;Manage your deployed instances, API keys, and governance settings from here.&quot;,
+    target: &quot;admin-instances-card&quot;,
+    position: &quot;left&quot;
   },
   {
-    id: "navigation",
-    title: "Navigation",
-    description: "Use the top navigation to quickly access different sections of the platform.",
-    target: "nav-menu",
-    position: "bottom"
+    id: &quot;navigation&quot;,
+    title: &quot;Navigation&quot;,
+    description: &quot;Use the top navigation to quickly access different sections of the platform.&quot;,
+    target: &quot;nav-menu&quot;,
+    position: &quot;bottom&quot;
   },
   {
-    id: "complete",
-    title: "You're All Set! 🎉",
-    description: "You now know the basics. Start building your digital economy or explore more features.",
-    position: "top"
+    id: &quot;complete&quot;,
+    title: &quot;You're All Set! 🎉&quot;,
+    description: &quot;You now know the basics. Start building your digital economy or explore more features.&quot;,
+    position: &quot;top&quot;
   }
 ];
 
@@ -85,7 +85,7 @@ export function OnboardingWalkthrough() {
       setIsVisible(false);
       setIsCompleted(true);
     } catch (error) {
-      console.error("Failed to complete onboarding:", error);
+      console.error(&quot;Failed to complete onboarding:", error);
     }
   };
 
@@ -146,9 +146,9 @@ export function OnboardingWalkthrough() {
 
             <button
               onClick={handleNext}
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors&quot;
             >
-              {currentStep === walkthroughSteps.length - 1 ? "Complete" : "Next"}
+              {currentStep === walkthroughSteps.length - 1 ? &quot;Complete&quot; : &quot;Next"}
             </button>
           </div>
         </div>
@@ -165,13 +165,13 @@ export function OnboardingWalkthrough() {
             bottom: 0}}
         >
           <div
-            className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10"
+            className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10&quot;
             style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "300px",
-              height: "200px"}}
+              top: &quot;50%&quot;,
+              left: &quot;50%&quot;,
+              transform: &quot;translate(-50%, -50%)&quot;,
+              width: &quot;300px&quot;,
+              height: &quot;200px&quot;}}
           />
         </div>
       )}
@@ -182,6 +182,6 @@ export function OnboardingWalkthrough() {
 // Hook to add data attributes for walkthrough targeting
 export function useWalkthroughTarget(id: string) {
   return {
-    "data-walkthrough-target": id,
+    &quot;data-walkthrough-target": id,
     id};
 }

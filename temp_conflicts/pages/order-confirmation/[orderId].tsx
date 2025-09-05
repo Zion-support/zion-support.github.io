@@ -10,18 +10,18 @@ export default function OrderConfirmationPage() {
     <>
       <Head>
         <title>Order Confirmation - Zion Tech Group</title>
-        <meta name="description" content="Order confirmation details" />
+        <meta name=&quot;description&quot; content=&quot;Order confirmation details&quot; />
       </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Order Confirmation</h1>
+      <div className=&quot;container mx-auto px-4 py-8&quot;>
+        <h1 className=&quot;text-3xl font-bold mb-6&quot;>Order Confirmation</h1>
         {orderId && (
-          <p className="text-lg mb-4">Order ID: {orderId}</p>
+          <p className=&quot;text-lg mb-4&quot;>Order ID: {orderId}</p>
         )}
-        <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+        <p className=&quot;text-lg mb-4&quot;>Your order has been confirmed and is being processed.</p>
+        <div className=&quot;mt-4&quot;>
+          <a href=&quot;/&quot; className=&quot;text-blue-600 hover:underline&quot;>
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </>

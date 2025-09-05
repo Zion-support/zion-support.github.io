@@ -139,7 +139,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'AI & Machine Learning',
       href: '/services?category=AI%20%26%20Machine%20Learning',
       description: '200+ AI & ML Solutions',
-      icon: <Brain className="w-5 h-5" />,
+      icon: <Brain className=&quot;w-5 h-5&quot; />,
       color: 'from-purple-500 to-indigo-600',
       children: [
         { 
@@ -182,7 +182,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'Quantum Technology',
       href: '/services?category=Quantum%20Computing',
       description: '50+ Quantum Solutions',
-      icon: <Atom className="w-5 h-5" />,
+      icon: <Atom className=&quot;w-5 h-5&quot; />,
       color: 'from-blue-500 to-cyan-600',
       children: [
         { 
@@ -225,7 +225,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'Emerging Tech',
       href: '/services?category=Emerging%20Technology',
       description: '100+ Future Solutions',
-      icon: <Rocket className="w-5 h-5" />,
+      icon: <Rocket className=&quot;w-5 h-5&quot; />,
       color: 'from-green-500 to-emerald-600',
       children: [
         { 
@@ -268,7 +268,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'Business Solutions',
       href: '/services?category=Business%20Operations',
       description: '150+ Business Tools',
-      icon: <Target className="w-5 h-5" />,
+      icon: <Target className=&quot;w-5 h-5&quot; />,
       color: 'from-orange-500 to-red-600',
       children: [
         { 
@@ -311,7 +311,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'Cybersecurity',
       href: '/services?category=Cybersecurity',
       description: '75+ Security Solutions',
-      icon: <Shield className="w-5 h-5" />,
+      icon: <Shield className=&quot;w-5 h-5&quot; />,
       color: 'from-red-500 to-pink-600',
       children: [
         { 
@@ -354,7 +354,7 @@ export default function UltraFuturisticNavigation2027() {
       name: 'Enterprise IT',
       href: '/services?category=Enterprise%20IT',
       description: '100+ Enterprise Solutions',
-      icon: <Building className="w-5 h-5" />,
+      icon: <Building className=&quot;w-5 h-5&quot; />,
       color: 'from-indigo-500 to-purple-600',
       children: [
         { 
@@ -403,10 +403,10 @@ export default function UltraFuturisticNavigation2027() {
   };
 
   const quickLinks = [
-    { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },
-    { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
-    { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
+    { name: 'Pricing', href: '/pricing', icon: <CreditCard className=&quot;w-4 h-4&quot; /> },
+    { name: 'Case Studies', href: '/case-studies', icon: <FileText className=&quot;w-4 h-4&quot; /> },
+    { name: 'Support', href: '/support', icon: <MessageSquare className=&quot;w-4 h-4&quot; /> },
+    { name: 'Contact', href: '/contact', icon: <Mail className=&quot;w-4 h-4&quot; /> }
   ];
 
   return (
@@ -416,35 +416,35 @@ export default function UltraFuturisticNavigation2027() {
         : 'bg-transparent'
     }`}>
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
+      <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse&quot; />
       
-      <div className="relative container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className=&quot;relative container mx-auto px-4&quot;>
+        <div className=&quot;flex items-center justify-between h-20&quot;>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group relative z-10">
+          <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group relative z-10&quot;>
             <motion.div 
-              className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+              className=&quot;w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30&quot;
               whileHover={{ rotate: 5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Zap className="w-7 h-7 text-white" />
+              <Zap className=&quot;w-7 h-7 text-white&quot; />
             </motion.div>
-            <div className="hidden sm:block">
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
+            <div className=&quot;hidden sm:block&quot;>
+              <div className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300&quot;>
                 Zion Tech Group
               </div>
-              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
+              <div className=&quot;text-xs text-gray-400 group-hover:text-cyan-300 transition-colors&quot;>
                 Revolutionary Technology Solutions
               </div>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-1">
+          <nav className=&quot;hidden xl:flex items-center space-x-1&quot;>
             {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className=&quot;relative group&quot;>
                 <motion.button
-                  className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
+                  className=&quot;flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20&quot;
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
@@ -453,8 +453,8 @@ export default function UltraFuturisticNavigation2027() {
                   <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
                     {item.icon}
                   </div>
-                  <span className="font-medium">{item.name}</span>
-                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                  <span className=&quot;font-medium&quot;>{item.name}</span>
+                  <ChevronDown className=&quot;w-4 h-4 group-hover:rotate-180 transition-transform duration-300&quot; />
                 </motion.button>
 
                 {/* Dropdown Menu */}
@@ -465,38 +465,38 @@ export default function UltraFuturisticNavigation2027() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                      className=&quot;absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden&quot;
                     >
-                      <div className="p-4">
-                        <div className="flex items-center space-x-3 mb-4">
+                      <div className=&quot;p-4&quot;>
+                        <div className=&quot;flex items-center space-x-3 mb-4&quot;>
                           <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
                             {item.icon}
                           </div>
                           <div>
-                            <h3 className="text-lg font-semibold text-white">{item.name}</h3>
-                            <p className="text-sm text-gray-400">{item.description}</p>
+                            <h3 className=&quot;text-lg font-semibold text-white&quot;>{item.name}</h3>
+                            <p className=&quot;text-sm text-gray-400&quot;>{item.description}</p>
                           </div>
                         </div>
                         
-                        <div className="space-y-2">
+                        <div className=&quot;space-y-2&quot;>
                           {item.children.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
+                              className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group&quot;
                             >
-                              <span className="text-2xl">{child.icon}</span>
-                              <div className="flex-1">
-                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
+                              <span className=&quot;text-2xl&quot;>{child.icon}</span>
+                              <div className=&quot;flex-1&quot;>
+                                <div className=&quot;font-medium text-white group-hover:text-cyan-300 transition-colors&quot;>
                                   {child.name}
                                 </div>
-                                <div className="text-sm text-gray-400">{child.description}</div>
+                                <div className=&quot;text-sm text-gray-400&quot;>{child.description}</div>
                               </div>
-                              <div className="text-right">
-                                <div className="text-sm font-medium text-cyan-400">{child.price}</div>
-                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                              <div className=&quot;text-right&quot;>
+                                <div className=&quot;text-sm font-medium text-cyan-400&quot;>{child.price}</div>
+                                <ChevronRight className=&quot;w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors&quot; />
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -508,21 +508,21 @@ export default function UltraFuturisticNavigation2027() {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center space-x-4">
+          <div className=&quot;flex items-center space-x-4&quot;>
             {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4 text-sm">
+            <div className=&quot;hidden lg:flex items-center space-x-4 text-sm&quot;>
               <a 
                 href={`tel:${contactInfo.mobile}`}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors&quot;
               >
-                <Phone className="w-4 h-4" />
+                <Phone className=&quot;w-4 h-4&quot; />
                 <span>{contactInfo.mobile}</span>
               </a>
               <a 
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                className=&quot;flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors&quot;
               >
-                <Mail className="w-4 h-4" />
+                <Mail className=&quot;w-4 h-4&quot; />
                 <span>{contactInfo.email}</span>
               </a>
             </div>
@@ -533,20 +533,20 @@ export default function UltraFuturisticNavigation2027() {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/contact"
-                className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300"
+                href=&quot;/contact&quot;
+                className=&quot;hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300&quot;
               >
-                <Rocket className="w-4 h-4" />
+                <Rocket className=&quot;w-4 h-4&quot; />
                 <span>Get Started</span>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
+              className=&quot;xl:hidden p-2 text-gray-300 hover:text-white transition-colors&quot;
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
             </button>
           </div>
         </div>
@@ -560,71 +560,71 @@ export default function UltraFuturisticNavigation2027() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+            className=&quot;xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50&quot;
           >
-            <div className="container mx-auto px-4 py-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className=&quot;container mx-auto px-4 py-6&quot;>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
                 {/* Services */}
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-                  <div className="space-y-3">
+                  <h3 className=&quot;text-lg font-semibold text-white mb-4&quot;>Services</h3>
+                  <div className=&quot;space-y-3&quot;>
                     {navigation.map((item) => (
                       <div key={item.name}>
                         <Link
                           href={item.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                          className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200&quot;
                         >
                           <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}>
                             {item.icon}
                           </div>
                           <div>
-                            <div className="font-medium text-white">{item.name}</div>
-                            <div className="text-sm text-gray-400">{item.description}</div>
+                            <div className=&quot;font-medium text-white&quot;>{item.name}</div>
+                            <div className=&quot;text-sm text-gray-400&quot;>{item.description}</div>
                           </div>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Quick Links & Contact */}
-                <div className="space-y-6">
+                <div className=&quot;space-y-6&quot;>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <div className="space-y-2">
+                    <h3 className=&quot;text-lg font-semibold text-white mb-4&quot;>Quick Links</h3>
+                    <div className=&quot;space-y-2&quot;>
                       {quickLinks.map((link) => (
                         <Link
                           key={link.name}
                           href={link.href}
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                          className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200&quot;
                         >
                           {link.icon}
-                          <span className="text-white">{link.name}</span>
-                        </Link>
+                          <span className=&quot;text-white&quot;>{link.name}</span>
+                        </a>
                       ))}
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
-                    <div className="space-y-3">
+                    <h3 className=&quot;text-lg font-semibold text-white mb-4&quot;>Contact Info</h3>
+                    <div className=&quot;space-y-3&quot;>
                       <a 
                         href={`tel:${contactInfo.mobile}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                        className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200&quot;
                       >
-                        <Phone className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white">{contactInfo.mobile}</span>
+                        <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
+                        <span className=&quot;text-white&quot;>{contactInfo.mobile}</span>
                       </a>
                       <a 
                         href={`mailto:${contactInfo.email}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                        className=&quot;flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200&quot;
                       >
-                        <Mail className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white">{contactInfo.email}</span>
+                        <Mail className=&quot;w-4 h-4 text-cyan-400&quot; />
+                        <span className=&quot;text-white&quot;>{contactInfo.email}</span>
                       </a>
-                      <div className="flex items-center space-x-3 p-3 rounded-xl">
-                        <MapPin className="w-4 h-4 text-cyan-400" />
-                        <span className="text-white text-sm">{contactInfo.address}</span>
+                      <div className=&quot;flex items-center space-x-3 p-3 rounded-xl&quot;>
+                        <MapPin className=&quot;w-4 h-4 text-cyan-400&quot; />
+                        <span className=&quot;text-white text-sm&quot;>{contactInfo.address}</span>
                       </div>
                     </div>
                   </div>
@@ -632,14 +632,14 @@ export default function UltraFuturisticNavigation2027() {
               </div>
 
               {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-gray-700/50">
+              <div className=&quot;mt-6 pt-6 border-t border-gray-700/50&quot;>
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300"
+                  href=&quot;/contact&quot;
+                  className=&quot;inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300&quot;
                 >
-                  <Rocket className="w-4 h-4 mr-2" />
+                  <Rocket className=&quot;w-4 h-4 mr-2&quot; />
                   Get Started Today
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

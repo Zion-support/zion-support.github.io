@@ -11,39 +11,39 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 export default function SpaceTechnologyPage() {
   const services = [
     {
-      title: "Satellite Intelligence",
-      description: "Advanced satellite systems with AI-powered data analysis and optimization",
+      title: &quot;Satellite Intelligence&quot;,
+      description: &quot;Advanced satellite systems with AI-powered data analysis and optimization&quot;,
       features: [
-        "Satellite constellation management",
-        "Real-time data processing",
-        "AI-powered optimization",
-        "Global coverage"
+        &quot;Satellite constellation management&quot;,
+        &quot;Real-time data processing&quot;,
+        &quot;AI-powered optimization&quot;,
+        &quot;Global coverage&quot;
       ],
-      price: "$2,999/month",
+      price: &quot;$2,999/month&quot;,
       icon: Satellite
     },
     {
-      title: "Space Resource Discovery",
-      description: "AI-powered exploration and resource identification in space",
+      title: &quot;Space Resource Discovery&quot;,
+      description: &quot;AI-powered exploration and resource identification in space&quot;,
       features: [
-        "Resource mapping",
-        "Exploration planning",
-        "Data analysis",
-        "Mission optimization"
+        &quot;Resource mapping&quot;,
+        &quot;Exploration planning&quot;,
+        &quot;Data analysis&quot;,
+        &quot;Mission optimization&quot;
       ],
-      price: "$3,499/month",
+      price: &quot;$3,499/month&quot;,
       icon: Planet
     },
     {
-      title: "Space Mission Planning",
-      description: "Intelligent mission planning and execution for space operations",
+      title: &quot;Space Mission Planning&quot;,
+      description: &quot;Intelligent mission planning and execution for space operations&quot;,
       features: [
-        "Mission design",
-        "Risk assessment",
-        "Resource optimization",
-        "Real-time monitoring"
+        &quot;Mission design&quot;,
+        &quot;Risk assessment&quot;,
+        &quot;Resource optimization&quot;,
+        &quot;Real-time monitoring&quot;
       ],
-      price: "$1,999/month",
+      price: &quot;$1,999/month&quot;,
       icon: Rocket
     }
   ];
@@ -51,91 +51,91 @@ export default function SpaceTechnologyPage() {
   const benefits = [
     {
       icon: Rocket,
-      title: "Cutting-Edge Technology",
-      description: "Latest space technology innovations and AI-powered systems"
+      title: &quot;Cutting-Edge Technology&quot;,
+      description: &quot;Latest space technology innovations and AI-powered systems&quot;
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Access to space resources and global satellite coverage"
+      title: &quot;Global Reach&quot;,
+      description: &quot;Access to space resources and global satellite coverage&quot;
     },
     {
       icon: Star,
-      title: "Future-Focused",
-      description: "Pioneering the next generation of space exploration"
+      title: &quot;Future-Focused&quot;,
+      description: &quot;Pioneering the next generation of space exploration&quot;
     },
     {
       icon: Zap,
-      title: "AI-Powered",
-      description: "Intelligent systems that optimize space operations"
+      title: &quot;AI-Powered&quot;,
+      description: &quot;Intelligent systems that optimize space operations&quot;
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden&quot;>
       <Head>
         <title>Space Technology Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary space technology solutions including satellite intelligence, resource discovery, and mission planning services." />
-        <meta name="keywords" content="space technology, satellite intelligence, space exploration, space resources, Zion Tech Group" />
-        <meta property="og:title" content="Space Technology Services - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary space technology solutions for the future of exploration." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/services/space-tech" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/space-tech" />
+        <meta name=&quot;description&quot; content=&quot;Revolutionary space technology solutions including satellite intelligence, resource discovery, and mission planning services.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;space technology, satellite intelligence, space exploration, space resources, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Space Technology Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Revolutionary space technology solutions for the future of exploration.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/services/space-tech&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/services/space-tech&quot; />
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className=&quot;pt-32 pb-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 p-5 mx-auto mb-8">
-              <Rocket className="w-10 h-10 text-white" />
+            <div className=&quot;w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 p-5 mx-auto mb-8&quot;>
+              <Rocket className=&quot;w-10 h-10 text-white&quot; />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">
+            <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent&quot;>
               Space Technology
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8">
+            <p className=&quot;text-xl md:text-2xl text-white/70 max-w-4xl mx-auto mb-8&quot;>
               Explore the final frontier with our revolutionary space technology solutions. 
               From satellite intelligence to space resource discovery, we're pushing the boundaries of what's possible.
             </p>
             <motion.a
-              href="mailto:kleber@ziontechgroup.com"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className=&quot;inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl&quot;
             >
               <span>Explore Space</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.a>
           </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent&quot;>
               Space Solutions
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Cutting-edge space technology services that redefine exploration
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -143,33 +143,33 @@ export default function SpaceTechnologyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-indigo-400/30 transition-all duration-300 transform hover:scale-105"
+                className=&quot;relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-indigo-400/30 transition-all duration-300 transform hover:scale-105&quot;
               >
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-indigo-500/0 via-purple-400/10 to-indigo-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100" />
+                <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-indigo-500/0 via-purple-400/10 to-indigo-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100&quot; />
                 
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 p-4 mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 p-4 mb-6&quot;>
+                  <service.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/70 mb-6">{service.description}</p>
+                <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>{service.title}</h3>
+                <p className=&quot;text-white/70 mb-6&quot;>{service.description}</p>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className=&quot;space-y-3 mb-6&quot;>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-                      <span className="text-white/80">{feature}</span>
+                    <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
+                      <CheckCircle className=&quot;w-5 h-5 text-indigo-400 flex-shrink-0&quot; />
+                      <span className=&quot;text-white/80&quot;>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <div className="text-2xl font-bold text-indigo-400 mb-4">{service.price}</div>
+                <div className=&quot;text-2xl font-bold text-indigo-400 mb-4&quot;>{service.price}</div>
                 
                 <motion.a
-                  href="mailto:kleber@ziontechgroup.com"
+                  href=&quot;mailto:kleber@ziontechgroup.com&quot;
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300"
+                  className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300&quot;
                 >
                   Get Started
                 </motion.a>
@@ -180,24 +180,24 @@ export default function SpaceTechnologyPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+      <section className=&quot;py-20 px-6 bg-gradient-to-r from-white/5 to-white/10&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className=&quot;text-center mb-16&quot;
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent&quot;>
               Why Space Technology?
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-white/70 max-w-3xl mx-auto&quot;>
               Discover the revolutionary advantages of space technology innovation
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -205,14 +205,14 @@ export default function SpaceTechnologyPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10"
+                className=&quot;flex items-start space-x-6 p-6 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10&quot;
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 p-4 flex-shrink-0">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className=&quot;w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 p-4 flex-shrink-0&quot;>
+                  <benefit.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-white/70">{benefit.description}</p>
+                  <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
+                  <p className=&quot;text-white/70&quot;>{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -221,28 +221,28 @@ export default function SpaceTechnologyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className=&quot;py-20 px-6&quot;>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent">
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-transparent&quot;>
               Ready to Explore Space?
             </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
               Join us in pioneering the future of space technology and exploration
             </p>
             <motion.a
-              href="mailto:kleber@ziontechgroup.com"
+              href=&quot;mailto:kleber@ziontechgroup.com&quot;
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className=&quot;inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl&quot;
             >
               <span>Launch Your Mission</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.a>
           </motion.div>
         </div>

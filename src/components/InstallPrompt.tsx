@@ -109,12 +109,12 @@ export const InstallPrompt: React.FC = () => {
           }
         `}
       </style>
-      <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
-        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
-          <p className="text-sm">Install our app for a better experience!</p>
-          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>
-          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">
-            <X className="h-4 w-4" />
+      <div className=&quot;fixed bottom-4 right-4 z-[1000] pwa-install-button-container&quot;> {/* Added a container for styling */}
+        <div className=&quot;bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3&quot;>
+          <p className=&quot;text-sm&quot;>Install our app for a better experience!</p>
+          <Button onClick={install} aria-label=&quot;Install PWA&quot; size=&quot;sm&quot;>Install</Button>
+          <Button variant=&quot;ghost&quot; size=&quot;sm&quot; onClick={close} aria-label=&quot;Dismiss install prompt&quot;>
+            <X className=&quot;h-4 w-4&quot; />
           </Button>
         </div>
       </div>

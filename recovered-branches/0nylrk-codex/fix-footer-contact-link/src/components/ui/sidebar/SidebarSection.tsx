@@ -1,6 +1,6 @@
 
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from &quot;react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
 
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -10,13 +10,13 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function SidebarSection({ className, title, children, ...props }: SidebarSectionProps) {
   return (
-    <div className={cn("py-2", className)} {...props}>
+    <div className={cn(&quot;py-2&quot;, className)} {...props}>
       {title && (
-        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+        <h3 className=&quot;px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider&quot;>
           {title}
         </h3>
       )}
-      <div className="space-y-1">{children}</div>
+      <div className=&quot;space-y-1&quot;>{children}</div>
     </div>
   );
 }

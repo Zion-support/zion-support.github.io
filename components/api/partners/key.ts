@@ -1,15 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
+import type { NextApiRequest, NextApiResponse } from &quot;next&quot;;
+import { authenticateRequest, listApiKeys, saveApiKeys } from &quot;../../../utils/api/partnerAuth&quot;;
+import { v4 as uuidv4 } from &quot;uuid&quot;;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
+  if (req.method !== &quot;POST&quot;) {
+    res.setHeader(&quot;Allow&quot;, &quot;POST&quot;);
+    return res.status(405).json({ error: &quot;Method Not Allowed&quot; });
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
+    return res.status(401).json({ error: &quot;Unauthorized&quot; });
   }
   const { apiKey } = auth;
   const keys = await listApiKeys();

@@ -6,14 +6,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-  DialogFooter} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Textarea } from "@/components/ui/textarea";
-import { useMessaging } from "@/context/MessagingContext";
-import { TalentProfile } from "@/types/talent";
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
+  DialogFooter} from &quot;@/components/ui/dialog&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { useMessaging } from &quot;@/context/MessagingContext&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { toast } from &quot;@/components/ui/use-toast&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
 
 export interface MessageTalentModalProps {
   talent: TalentProfile;
@@ -40,9 +40,9 @@ export function MessageTalentModal({
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
-        title: "Message required",
-        description: "Please enter a message before sending.",
-        variant: "destructive"
+        title: &quot;Message required&quot;,
+        description: &quot;Please enter a message before sending.&quot;,
+        variant: &quot;destructive&quot;
       });
       return;
     }
@@ -53,8 +53,8 @@ export function MessageTalentModal({
       // Create context data for the conversation
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`,
-        description: talent.bio || talent.professional_title || "",
-        image_url: talent.profile_picture_url || ""
+        description: talent.bio || talent.professional_title || "&quot;,
+        image_url: talent.profile_picture_url || "&quot;
       };
       
       // Create conversation with this talent
@@ -67,19 +67,19 @@ export function MessageTalentModal({
       );
       
       toast({
-        title: "Message sent",
+        title: &quot;Message sent&quot;,
         description: `Your message has been sent to ${talent.full_name}.`});
       
       onClose();
       
       // Navigate to messages inbox
-      navigate("/messages");
+      navigate(&quot;/messages&quot;);
     } catch (error) {
-      console.error("Failed to send message:", error);
+      console.error(&quot;Failed to send message:&quot;, error);
       toast({
-        title: "Message not sent",
-        description: "There was an error sending your message. Please try again.",
-        variant: "destructive"
+        title: &quot;Message not sent&quot;,
+        description: &quot;There was an error sending your message. Please try again.&quot;,
+        variant: &quot;destructive&quot;
       });
     } finally {
       setIsSubmitting(false);
@@ -88,54 +88,54 @@ export function MessageTalentModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">
+      <DialogContent className=&quot;sm:max-w-md bg-zion-blue border-zion-purple/20&quot;>
         <DialogHeader>
-          <DialogTitle className="text-white flex items-center gap-3">
-            <Avatar className="h-8 w-8 border border-zion-purple/20">
+          <DialogTitle className=&quot;text-white flex items-center gap-3&quot;>
+            <Avatar className=&quot;h-8 w-8 border border-zion-purple/20&quot;>
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
-              <AvatarFallback className="bg-zion-blue-dark text-white">
+              <AvatarFallback className=&quot;bg-zion-blue-dark text-white&quot;>
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
             Message {talent.full_name}
           </DialogTitle>
-          <DialogDescription className="text-zion-slate">
+          <DialogDescription className=&quot;text-zion-slate&quot;>
             Send a direct message to start a conversation.
             {talent.professional_title && (
-              <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
+              <span className=&quot;block mt-1 text-zion-cyan&quot;>{talent.professional_title}</span>
             )}
           </DialogDescription>
         </DialogHeader>
         
-        <div className="space-y-4">
+        <div className=&quot;space-y-4&quot;>
           <div>
-            <label className="block text-sm font-medium text-zion-slate mb-1">
+            <label className=&quot;block text-sm font-medium text-zion-slate mb-1&quot;>
               Message
             </label>
             <Textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={5}
-              className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple"
-              placeholder="Write your message here..."
+              className=&quot;w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple&quot;
+              placeholder=&quot;Write your message here...&quot;
             />
           </div>
         </div>
         
-        <DialogFooter className="gap-2 sm:gap-0">
+        <DialogFooter className=&quot;gap-2 sm:gap-0&quot;>
           <Button
-            type="button"
-            variant="outline"
+            type=&quot;button&quot;
+            variant=&quot;outline&quot;
             onClick={onClose}
-            className="border-zion-purple/30 text-white"
+            className=&quot;border-zion-purple/30 text-white&quot;
           >
             Cancel
           </Button>
           <Button
-            type="button" 
+            type=&quot;button&quot; 
             onClick={handleSendMessage}
             disabled={isSubmitting}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>

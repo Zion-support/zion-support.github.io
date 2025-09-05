@@ -7,13 +7,13 @@ export function RatingStars({ value = 0, count }: { value?: number; count?: numb
   const total = 5;
 
   return (
-    <div className="flex items-center text-zion-slate">
+    <div className=&quot;flex items-center text-zion-slate&quot;>
       {[...Array(total)].map((_, i) => {
         if (i < filled) {
           return (
             <Star
               key={i}
-              className="h-4 w-4 fill-zion-cyan text-zion-cyan"
+              className=&quot;h-4 w-4 fill-zion-cyan text-zion-cyan&quot;
             />
           );
         }
@@ -21,14 +21,14 @@ export function RatingStars({ value = 0, count }: { value?: number; count?: numb
           return (
             <StarHalf
               key={i}
-              className="h-4 w-4 fill-zion-cyan text-zion-cyan"
+              className=&quot;h-4 w-4 fill-zion-cyan text-zion-cyan&quot;
             />
           );
         }
-        return <Star key={i} className="h-4 w-4 text-zion-slate" />;
+        return <Star key={i} className=&quot;h-4 w-4 text-zion-slate&quot; />;
       })}
       {typeof count === 'number' && (
-        <span className="text-xs ml-1">({count})</span>
+        <span className=&quot;text-xs ml-1&quot;>({count})</span>
       )}
     </div>
   );

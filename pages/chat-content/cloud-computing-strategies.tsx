@@ -6,7 +6,7 @@ const CloudComputingStrategies: NextPage = () => {
     <div>
       <Head>
         <title>CloudComputingStrategies - Zion Tech Solutions</title>
-        <meta name="description" content="CloudComputingStrategies page" />
+        <meta name=&quot;description&quot; content=&quot;CloudComputingStrategies page&quot; />
       </Head>
       
       <main>

@@ -79,15 +79,15 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
+      <div className=&quot;space-y-4&quot;>
         {[1, 2, 3].map((i) => (
           <Card key={i}>
-            <CardContent className="p-6">
-              <div className="flex items-center space-x-4">
-                <Skeleton className="h-10 w-10 rounded-full" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-40" />
-                  <Skeleton className="h-4 w-60" />
+            <CardContent className=&quot;p-6&quot;>
+              <div className=&quot;flex items-center space-x-4&quot;>
+                <Skeleton className=&quot;h-10 w-10 rounded-full&quot; />
+                <div className=&quot;space-y-2&quot;>
+                  <Skeleton className=&quot;h-4 w-40&quot; />
+                  <Skeleton className=&quot;h-4 w-60&quot; />
                 </div>
               </div>
             </CardContent>
@@ -100,43 +100,43 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   if (activities.length === 0) {
     return (
       <Card>
-        <CardContent className="p-6 text-center">
-          <p className="text-muted-foreground py-8">No activity found for this project</p>
+        <CardContent className=&quot;p-6 text-center&quot;>
+          <p className=&quot;text-muted-foreground py-8&quot;>No activity found for this project</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <Card>
         <CardHeader>
           <CardTitle>Project Activity</CardTitle>
         </CardHeader>
-        <CardContent className="p-6">
-          <div className="space-y-6">
+        <CardContent className=&quot;p-6&quot;>
+          <div className=&quot;space-y-6&quot;>
             {activities.map((activity) => (
-              <div key={activity.id} className="flex items-start space-x-4">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />
+              <div key={activity.id} className=&quot;flex items-start space-x-4&quot;>
+                <Avatar className=&quot;h-10 w-10&quot;>
+                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt=&quot;User&quot; />
                   <AvatarFallback>
                     {activity.created_by_profile?.display_name?.charAt(0) || '?'}
                   </AvatarFallback>
                 </Avatar>
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>
-                    <span className="text-muted-foreground text-sm">
+                <div className=&quot;space-y-1&quot;>
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <span className=&quot;font-medium&quot;>{activity.created_by_profile?.display_name}</span>
+                    <span className=&quot;text-muted-foreground text-sm&quot;>
                       {getActivityDescription(activity)}
                     </span>
-                    <span className="text-muted-foreground text-xs">
+                    <span className=&quot;text-muted-foreground text-xs&quot;>
                       {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
                     </span>
                   </div>
-                  <p className="text-sm">
-                    <span className="font-medium">{activity.milestone?.title}</span>
+                  <p className=&quot;text-sm&quot;>
+                    <span className=&quot;font-medium&quot;>{activity.milestone?.title}</span>
                     {activity.comment && (
-                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>
+                      <span className=&quot;ml-2 text-muted-foreground&quot;>&quot;{activity.comment}&quot;</span>
                     )}
                   </p>
                 </div>

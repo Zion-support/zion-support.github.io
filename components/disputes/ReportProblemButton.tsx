@@ -4,9 +4,9 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">
+      <a className=&quot;inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm&quot;>
         Report a Problem
       </a>
-    </Link>
+    </a>
   );
 }

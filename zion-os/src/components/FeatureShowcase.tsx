@@ -1,6 +1,6 @@
-"use client";
+"use client&quot;;
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from &quot;react&quot;;
 
 interface Feature {
   id: string;
@@ -14,57 +14,57 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    id: "marketplace",
-    title: "Marketplace & Jobs",
-    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",
+    id: &quot;marketplace&quot;,
+    title: &quot;Marketplace & Jobs&quot;,
+    description: &quot;Complete marketplace infrastructure with job posting, talent matching, and project management.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      <svg className="w-8 h-8&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+        <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4&quot; />
       </svg>
     ),
-    color: "blue",
+    color: &quot;blue&quot;,
     details: [
-      "Smart job matching algorithms",
-      "Escrow payment systems",
-      "Project milestone tracking",
-      "Rating and review systems",
-      "Multi-currency support"
+      &quot;Smart job matching algorithms&quot;,
+      &quot;Escrow payment systems&quot;,
+      &quot;Project milestone tracking&quot;,
+      &quot;Rating and review systems&quot;,
+      &quot;Multi-currency support&quot;
     ]
   },
   {
-    id: "governance",
-    title: "AI Governance",
-    description: "Intelligent governance systems with DAO voting, proposal management, and automated decision-making.",
+    id: &quot;governance&quot;,
+    title: &quot;AI Governance&quot;,
+    description: &quot;Intelligent governance systems with DAO voting, proposal management, and automated decision-making.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg className="w-8 h-8&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+        <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&quot; />
       </svg>
     ),
-    color: "purple",
+    color: &quot;purple&quot;,
     details: [
-      "AI-powered proposal analysis",
-      "Automated voting systems",
-      "Smart contract governance",
-      "Transparency reporting",
-      "Multi-signature wallets"
+      &quot;AI-powered proposal analysis&quot;,
+      &quot;Automated voting systems&quot;,
+      &quot;Smart contract governance&quot;,
+      &quot;Transparency reporting&quot;,
+      &quot;Multi-signature wallets&quot;
     ]
   },
   {
-    id: "tokens",
-    title: "Token Systems",
-    description: "Flexible token economics with rewards, staking, and multi-currency support for your economy.",
+    id: &quot;tokens&quot;,
+    title: &quot;Token Systems&quot;,
+    description: &quot;Flexible token economics with rewards, staking, and multi-currency support for your economy.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+      <svg className="w-8 h-8&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+        <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1&quot; />
       </svg>
     ),
-    color: "green",
+    color: &quot;green&quot;,
     details: [
-      "Custom token creation",
-      "Staking and rewards",
-      "Liquidity pools",
-      "Token burning mechanisms",
-      "Cross-chain bridges"
+      &quot;Custom token creation&quot;,
+      &quot;Staking and rewards&quot;,
+      &quot;Liquidity pools&quot;,
+      &quot;Token burning mechanisms&quot;,
+      &quot;Cross-chain bridges&quot;
     ]
   }
 ];
@@ -79,14 +79,14 @@ export function FeatureShowcase() {
 
   const getColorClasses = (color: string) => {
     const colorMap = {
-      blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600",
-      green: "from-green-500 to-green-600",
-      red: "from-red-500 to-red-600",
-      yellow: "from-yellow-500 to-yellow-600",
-      indigo: "from-indigo-500 to-indigo-600"
+      blue: &quot;from-blue-500 to-blue-600&quot;,
+      purple: &quot;from-purple-500 to-purple-600&quot;,
+      green: &quot;from-green-500 to-green-600&quot;,
+      red: &quot;from-red-500 to-red-600&quot;,
+      yellow: &quot;from-yellow-500 to-yellow-600&quot;,
+      indigo: &quot;from-indigo-500 to-indigo-600&quot;
     };
-    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600";
+    return colorMap[color as keyof typeof colorMap] || &quot;from-blue-500 to-blue-600";
   };
 
   return (
@@ -140,8 +140,8 @@ export function FeatureShowcase() {
                   <div className={`transform transition-transform duration-300 ${
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0'
                   }`}>
-                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg className="w-5 h-5 text-gray-400&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </div>
@@ -202,8 +202,8 @@ export function FeatureShowcase() {
               ) : (
                 <div className="text-center py-12">
                   <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
-                    <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <svg className="w-12 h-12 text-blue-400&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <p className="text-gray-400">

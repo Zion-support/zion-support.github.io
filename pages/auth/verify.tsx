@@ -6,7 +6,7 @@ const Verify: NextPage = () => {
     <div>
       <Head>
         <title>Verify - Zion Tech Solutions</title>
-        <meta name="description" content="Verify page" />
+        <meta name=&quot;description&quot; content=&quot;Verify page&quot; />
       </Head>
       
       <main>

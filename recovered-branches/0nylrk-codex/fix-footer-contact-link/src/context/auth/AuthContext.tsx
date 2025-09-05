@@ -1,6 +1,6 @@
 
-import { createContext } from "react";
-import type { AuthContextType } from "@/types/auth";
+import { createContext } from &quot;react&quot;;
+import type { AuthContextType } from &quot;@/types/auth&quot;;
 
 // Create the AuthContext and export it. We avoid providing a generic
 // parameter to `createContext` because in environments where the React

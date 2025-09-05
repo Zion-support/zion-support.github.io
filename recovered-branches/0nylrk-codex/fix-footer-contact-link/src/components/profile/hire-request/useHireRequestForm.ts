@@ -1,10 +1,10 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useHireRequest } from "@/hooks/useHireRequest";
-import { TalentProfile } from "@/types/talent";
+import { useState } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+import { z } from &quot;zod&quot;;
+import { useHireRequest } from &quot;@/hooks/useHireRequest&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
 
 interface UseHireRequestFormProps {
   talent: TalentProfile;
@@ -32,25 +32,25 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
   // Define the form schema with validation rules
   const formSchema = z.object({
-    requesterName: z.string().min(2, "Name is required"),
-    requesterEmail: z.string().email("Valid email is required"),
-    projectOverview: z.string().min(10, "Please provide more details about your project"),
-    timeline: z.string().min(5, "Please specify your timeline"),
-    budgetMin: z.number().min(1, "Budget minimum is required"),
-    budgetMax: z.number().min(1, "Budget maximum is required")
+    requesterName: z.string().min(2, &quot;Name is required&quot;),
+    requesterEmail: z.string().email(&quot;Valid email is required&quot;),
+    projectOverview: z.string().min(10, &quot;Please provide more details about your project&quot;),
+    timeline: z.string().min(5, &quot;Please specify your timeline&quot;),
+    budgetMin: z.number().min(1, &quot;Budget minimum is required&quot;),
+    budgetMax: z.number().min(1, &quot;Budget maximum is required&quot;)
   }).refine(data => data.budgetMax >= data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget",
-    path: ["budgetMax"]
+    message: &quot;Maximum budget must be greater than or equal to minimum budget&quot;,
+    path: [&quot;budgetMax&quot;]
   });
 
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      requesterName: userDetails?.name || "",
-      requesterEmail: userDetails?.email || "",
-      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
-      timeline: "",
+      requesterName: userDetails?.name || "&quot;,
+      requesterEmail: userDetails?.email || "&quot;,
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "&quot;,
+      timeline: "&quot;,
       budgetMin: talent.hourly_rate || 25,
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
@@ -62,7 +62,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     try {
       const requestData = {
         talent: {
-          id: talent.id || "",
+          id: talent.id || "&quot;,
           full_name: talent.full_name,
           professional_title: talent.professional_title},
         requester: {
@@ -83,7 +83,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         onClose();
       }
     } catch (error) {
-      console.error("Error submitting hire request:", error);
+      console.error(&quot;Error submitting hire request:", error);
     } finally {
       setIsSubmitting(false);
     }

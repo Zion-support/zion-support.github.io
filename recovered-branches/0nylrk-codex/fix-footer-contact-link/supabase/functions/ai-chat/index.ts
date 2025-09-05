@@ -1,6 +1,6 @@
 
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+import { serve } from &quot;https://deno.land/std@0.168.0/http/server.ts&quot;;
 
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 
@@ -56,7 +56,7 @@ serve(async (req) => {
 
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
-    console.log('AI chat interaction logged');
+    // console.log('AI chat interaction logged');
 
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});

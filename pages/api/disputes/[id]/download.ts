@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const stat = fs.statSync(att.path);
   res.setHeader('Content-Type', att.mimeType);
   res.setHeader('Content-Length', String(stat.size));
-  res.setHeader('Content-Disposition', `attachment; filename="${path.basename(att.fileName)}"`);
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;${path.basename(att.fileName)}&quot;`);
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
 }

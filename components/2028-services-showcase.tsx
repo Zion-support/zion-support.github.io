@@ -122,14 +122,14 @@ export default function ServicesShowcase2028() {
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
               <Link
                 href="/revolutionary-2028-pricing"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Pricing</span>
                 <DollarSign className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}
@@ -204,7 +204,7 @@ export default function ServicesShowcase2028() {
                     >
                       <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -270,7 +270,7 @@ export default function ServicesShowcase2028() {
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
-                      </Link>
+                      </a>
                       <div className="text-right">
                         <div className="text-sm text-purple-300">Setup Time</div>
                         <div className="text-white font-medium">{service.setupTime}</div>
@@ -376,14 +376,14 @@ export default function ServicesShowcase2028() {
               >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
               <Link
                 href="/case-studies"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Case Studies</span>
                 <TrendingUp className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-purple-300">

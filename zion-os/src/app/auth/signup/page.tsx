@@ -1,25 +1,25 @@
-"use client";
+"use client&quot;;
 
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState } from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
+import { useAuth } from &quot;@/contexts/AuthContext&quot;;
 
 export default function SignUpPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName] = useState("&quot;);
+  const [email, setEmail] = useState("&quot;);
+  const [password, setPassword] = useState("&quot;);
+  const [confirmPassword, setConfirmPassword] = useState("&quot;);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState("&quot;);
   const { register } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setError("");
+    setError("&quot;);
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError(&quot;Passwords do not match&quot;);
       setIsLoading(false);
       return;
     }
@@ -27,7 +27,7 @@ export default function SignUpPage() {
     try {
       await register(name, email, password);
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Registration failed");
+      setError(error instanceof Error ? error.message : &quot;Registration failed");
     } finally {
       setIsLoading(false);
     }
@@ -77,83 +77,83 @@ export default function SignUpPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
-                <p className="text-red-400 text-sm">{error}</p>
+                <p className="text-red-400 text-sm&quot;>{error}</p>
               </div>
             )}
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;name" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Full Name
               </label>
               <input
-                id="name"
-                type="text"
+                id=&quot;name&quot;
+                type=&quot;text"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your full name"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Enter your full name&quot;
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;email" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Email Address
               </label>
               <input
-                id="email"
-                type="email"
+                id=&quot;email&quot;
+                type=&quot;email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your email address"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Enter your email address&quot;
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;password" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Password
               </label>
               <input
-                id="password"
-                type="password"
+                id=&quot;password&quot;
+                type=&quot;password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Create a strong password"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Create a strong password"
               />
-              <p className="text-xs text-zinc-500 mt-1">Must be at least 8 characters</p>
+              <p className="text-xs text-zinc-500 mt-1&quot;>Must be at least 8 characters</p>
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor=&quot;confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2&quot;>
                 Confirm Password
               </label>
               <input
-                id="confirmPassword"
-                type="password"
+                id=&quot;confirmPassword&quot;
+                type=&quot;password"
                 required
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Confirm your password"
+                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                placeholder=&quot;Confirm your password&quot;
               />
             </div>
 
             <button
-              type="submit"
+              type=&quot;submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200&quot;
             >
-              {isLoading ? "Creating Account..." : "Start Free Trial"}
+              {isLoading ? &quot;Creating Account...&quot; : &quot;Start Free Trial"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
-            <p className="text-zinc-400 text-sm">
-              Already have an account?{" "}
+            <p className="text-zinc-400 text-sm&quot;>
+              Already have an account?{&quot; "}
               <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">
                 Sign in
               </Link>
@@ -162,12 +162,12 @@ export default function SignUpPage() {
         </div>
 
         <div className="text-center">
-          <p className="text-zinc-500 text-xs">
-            By signing up, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">
+          <p className="text-zinc-500 text-xs&quot;>
+            By signing up, you agree to our{&quot; "}
+            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300&quot;>
               Terms of Service
-            </Link>{" "}
-            and{" "}
+            </Link>{&quot; &quot;}
+            and{&quot; "}
             <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">
               Privacy Policy
             </Link>

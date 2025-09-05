@@ -1,10 +1,10 @@
 
-import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { AppPlatform, AppMetadataValues } from "./MetadataManager";
-import { toast } from "sonner";
+import React from &quot;react&quot;;
+import { Card, CardHeader, CardTitle, CardContent } from &quot;@/components/ui/card&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Download } from &quot;lucide-react&quot;;
+import { AppPlatform, AppMetadataValues } from &quot;./MetadataManager&quot;;
+import { toast } from &quot;sonner&quot;;
 
 interface ExportPanelProps {
   platform: AppPlatform;
@@ -31,7 +31,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.platform
         ];
         
-        content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',');
+        content = headers.join(',') + '\n' + values.map(value => `&quot;${String(value).replace(/&quot;/g, '"&quot;')}&quot;`).join(',');
         
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(',');
@@ -52,46 +52,46 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       
       toast.success(`Exported ${format.toUpperCase()} file successfully`);
     } catch (error) {
-      console.error("Export failed:", error);
+      console.error(&quot;Export failed:&quot;, error);
       toast.error(`Failed to export ${format.toUpperCase()} file`);
     }
   };
   
   const trackAnalytics = () => {
-    console.log("Tracking app installation analytics...");
-    toast.success("Analytics tracking enabled");
+    // console.log(&quot;Tracking app installation analytics...&quot;);
+    toast.success(&quot;Analytics tracking enabled&quot;);
   };
   
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">
+    <Card className=&quot;bg-zion-blue border-zion-purple/30&quot;>
       <CardHeader>
-        <CardTitle className="text-lg">Export & Analytics</CardTitle>
+        <CardTitle className=&quot;text-lg&quot;>Export & Analytics</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className=&quot;space-y-4&quot;>
           <div>
-            <h4 className="font-medium mb-2">Export Metadata</h4>
-            <p className="text-sm text-gray-400 mb-3">
+            <h4 className=&quot;font-medium mb-2&quot;>Export Metadata</h4>
+            <p className=&quot;text-sm text-gray-400 mb-3&quot;>
               Export your app metadata for submission to app stores
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">
-                <Download className="mr-2 h-4 w-4" />
+            <div className=&quot;flex flex-col sm:flex-row gap-2&quot;>
+              <Button variant=&quot;outline&quot; onClick={() => handleExport('json')} className=&quot;flex-1&quot;>
+                <Download className=&quot;mr-2 h-4 w-4&quot; />
                 JSON
               </Button>
-              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">
-                <Download className="mr-2 h-4 w-4" />
+              <Button variant=&quot;outline&quot; onClick={() => handleExport('csv')} className=&quot;flex-1&quot;>
+                <Download className=&quot;mr-2 h-4 w-4&quot; />
                 CSV
               </Button>
             </div>
           </div>
           
-          <div className="border-t border-zion-purple/20 pt-4">
-            <h4 className="font-medium mb-2">Installation Analytics</h4>
-            <p className="text-sm text-gray-400 mb-3">
-              Track how many users click "Install" from web
+          <div className=&quot;border-t border-zion-purple/20 pt-4&quot;>
+            <h4 className=&quot;font-medium mb-2&quot;>Installation Analytics</h4>
+            <p className=&quot;text-sm text-gray-400 mb-3&quot;>
+              Track how many users click &quot;Install&quot; from web
             </p>
-            <Button onClick={trackAnalytics} className="w-full">
+            <Button onClick={trackAnalytics} className=&quot;w-full&quot;>
               Enable Analytics
             </Button>
           </div>

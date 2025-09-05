@@ -1,10 +1,10 @@
-import fs from "fs";
-import path from "path";
-import { TokenConfig, TokenTransaction, Wallet } from "./types";
-import { DEFAULT_TOKEN_CONFIG } from "./rules";
+import fs from &quot;fs&quot;;
+import path from &quot;path&quot;;
+import { TokenConfig, TokenTransaction, Wallet } from &quot;./types&quot;;
+import { DEFAULT_TOKEN_CONFIG } from &quot;./rules&quot;;
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const STORE_FILE = path.join(DATA_DIR, "token_store.json");
+const DATA_DIR = path.join(process.cwd(), &quot;data&quot;);
+const STORE_FILE = path.join(DATA_DIR, &quot;token_store.json&quot;);
 
 export interface TokenStoreData {
   wallets: Record<string, Wallet>;
@@ -22,7 +22,7 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
     if (!fs.existsSync(STORE_FILE)) return null;
-    const raw = fs.readFileSync(STORE_FILE, "utf8");
+    const raw = fs.readFileSync(STORE_FILE, &quot;utf8&quot;);
     const parsed = JSON.parse(raw) as TokenStoreData;
     return parsed;
   } catch {
@@ -33,7 +33,7 @@ function readFromDisk(): TokenStoreData | null {
 function writeToDisk(data: TokenStoreData): void {
   try {
     ensureDataDir();
-    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), "utf8");
+    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), &quot;utf8&quot;);
   } catch {}
 }
 

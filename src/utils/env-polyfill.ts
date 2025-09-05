@@ -2,7 +2,7 @@
  * Environment Polyfill for Browser
  * 
  * This polyfill ensures that process.env is always available in the browser environment.
- * It prevents the "Cannot read properties of undefined (reading 'env')" error.
+ * It prevents the &quot;Cannot read properties of undefined (reading 'env')&quot; error.
  */
 
 // Define safe defaults for environment variables
@@ -76,6 +76,6 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 
-console.log('✅ Environment polyfill loaded successfully');
+// console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;

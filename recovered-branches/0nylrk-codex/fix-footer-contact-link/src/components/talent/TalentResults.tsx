@@ -1,9 +1,9 @@
 
-import React from "react";
-import { TalentProfile } from "@/types/talent";
-import { ActiveFilters } from "@/components/talent/ActiveFilters";
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
+import React from &quot;react&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { ActiveFilters } from &quot;@/components/talent/ActiveFilters&quot;;
+import { ResultsHeader } from &quot;@/components/talent/ResultsHeader&quot;;
+import { TalentGrid } from &quot;@/components/talent/TalentGrid&quot;;
 
 interface TalentResultsProps {
   filteredTalents: TalentProfile[];
@@ -39,7 +39,7 @@ export function TalentResults({
   activeFiltersProps
 }: TalentResultsProps) {
   return (
-    <div className="flex-1">
+    <div className=&quot;flex-1&quot;>
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
       

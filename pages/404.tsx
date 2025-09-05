@@ -6,19 +6,19 @@ export default function Custom404() {
     <>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name=&quot;description&quot; content=&quot;The page you're looking for doesn't exist.&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
       </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold mb-4">404</h1>
-          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-          <p className="text-slate-300 mb-8">
-            The page you&apos;re looking for doesn&apos;t exist.
+      <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <h1 className=&quot;text-6xl font-bold mb-4&quot;>404</h1>
+          <h2 className=&quot;text-2xl font-semibold mb-4&quot;>Page Not Found</h2>
+          <p className=&quot;text-slate-300 mb-8&quot;>
+            The page you're looking for doesn't exist.
           </p>
           <Link
-            href="/"
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+            href=&quot;/&quot;
+            className=&quot;px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors&quot;
           >
             Go Home
           </Link>
@@ -35,7 +35,7 @@ const NotFoundPage: NextPage = () => {
     <div>
       <Head>
         <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
+        <meta name=&quot;description&quot; content=&quot;404 page&quot; />
       </Head>
       
       <main>

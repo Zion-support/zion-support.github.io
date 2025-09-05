@@ -49,11 +49,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
 
     // Show user-friendly error message with retry option
     toast({
-      title: "Something went wrong",
+      title: &quot;Something went wrong&quot;,
       description: getErrorMessage(error),
-      variant: "destructive",
+      variant: &quot;destructive&quot;,
       action: retryAction ? {
-        label: "Try Again",
+        label: &quot;Try Again&quot;,
         onClick: () => {
           setRetryCount(prev => ({
             ...prev,
@@ -68,24 +68,24 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
     
     toast({
-      title: isOnline ? "Connection Issue" : "No Internet Connection",
+      title: isOnline ? &quot;Connection Issue&quot; : &quot;No Internet Connection&quot;,
       description: isOnline 
-        ? "Unable to connect to our servers. Please check your connection and try again."
-        : "You appear to be offline. Please check your internet connection.",
-      variant: "destructive",
+        ? &quot;Unable to connect to our servers. Please check your connection and try again.&quot;
+        : &quot;You appear to be offline. Please check your internet connection.&quot;,
+      variant: &quot;destructive&quot;,
       action: retryAction ? {
-        label: "Retry",
+        label: &quot;Retry&quot;,
         onClick: retryAction
       } : undefined});
   }, []);
 
   const showAuthError = useCallback((loginAction?: () => void) => {
     toast({
-      title: "Authentication Required",
-      description: "Please log in to continue with this action.",
-      variant: "destructive",
+      title: &quot;Authentication Required&quot;,
+      description: &quot;Please log in to continue with this action.&quot;,
+      variant: &quot;destructive&quot;,
       action: loginAction ? {
-        label: "Log In",
+        label: &quot;Log In&quot;,
         onClick: loginAction
       } : undefined});
   }, []);
@@ -122,35 +122,35 @@ function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase();
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
-    return "Unable to connect to our servers. Please check your internet connection.";
+    return &quot;Unable to connect to our servers. Please check your internet connection.&quot;;
   }
 
   if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {
-    return "Your session has expired. Please log in again.";
+    return &quot;Your session has expired. Please log in again.&quot;;
   }
 
   if (message.includes('forbidden') || message.includes('403')) {
-    return "You don't have permission to perform this action.";
+    return &quot;You don't have permission to perform this action.&quot;;
   }
 
   if (message.includes('not found') || message.includes('404')) {
-    return "The requested information could not be found.";
+    return &quot;The requested information could not be found.&quot;;
   }
 
   if (message.includes('timeout')) {
-    return "Request timed out. Please try again.";
+    return &quot;Request timed out. Please try again.&quot;;
   }
 
   if (message.includes('validation') || message.includes('invalid')) {
-    return "Please check your input and try again.";
+    return &quot;Please check your input and try again.&quot;;
   }
 
   if (message.includes('server') || message.includes('500')) {
-    return "Our servers are experiencing issues. Please try again in a moment.";
+    return &quot;Our servers are experiencing issues. Please try again in a moment.&quot;;
   }
 
   // Fallback for unknown errors
-  return "An unexpected error occurred. Please try again.";
+  return &quot;An unexpected error occurred. Please try again.&quot;;
 }
 
 // Utility hook for common error scenarios
@@ -180,7 +180,7 @@ export function useErrorHandler() {
       
       if (options?.successMessage) {
         toast({
-          title: "Success",
+          title: &quot;Success&quot;,
           description: options.successMessage});
       }
       

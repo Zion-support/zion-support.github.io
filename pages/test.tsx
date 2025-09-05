@@ -7,8 +7,8 @@ export default function TestPage() {
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
+      <div className=&quot;min-h-screen bg-black text-white flex items-center justify-center&quot;>
+        <h1 className=&quot;text-4xl font-bold text-cyan-400&quot;>Test Page Working</h1>
       </div>
     </>
   );

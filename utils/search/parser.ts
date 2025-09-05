@@ -12,7 +12,7 @@ export type ParsedFilters = {
 
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase();
-  // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
+  // Examples: &quot;$50/hr&quot;, &quot;under 50&quot;, &quot;< 100&quot;, &quot;between 40 and 80&quot;, &quot;50-100&quot;
   const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower);
   if (perHour) {
     const max = parseInt(perHour[1], 10);
@@ -56,7 +56,7 @@ function extractType(text: string): SearchType {
 
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase();
-  // Simple heuristic e.g., "in latam", "in berlin", "remote"
+  // Simple heuristic e.g., &quot;in latam&quot;, &quot;in berlin&quot;, &quot;remote&quot;
   const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower);
   if (inMatch) return inMatch[1].trim();
   if (/remote/.test(lower)) return 'remote';

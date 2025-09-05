@@ -52,9 +52,9 @@ export const useLoadMilestones = (projectId?: string) => {
       setActivities(activitiesMap);
       setError(null);
     } catch (err: any) {
-      console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
-      toast.error("Failed to fetch milestones");
+      console.error(&quot;Error fetching milestones:&quot;, err);
+      setError(&quot;Failed to fetch milestones: &quot; + err.message);
+      toast.error(&quot;Failed to fetch milestones&quot;);
     } finally {
       setIsLoading(false);
     }

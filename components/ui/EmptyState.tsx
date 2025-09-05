@@ -12,25 +12,25 @@ export type EmptyStateProps = {
 
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
   return (
-    <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">
-      <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>
-      <h3 className="text-lg font-semibold">{title}</h3>
-      {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
+    <div className=&quot;w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3&quot;>
+      <div className=&quot;text-3xl opacity-70&quot;>{icon ?? '🧭'}</div>
+      <h3 className=&quot;text-lg font-semibold&quot;>{title}</h3>
+      {description && <p className=&quot;text-sm opacity-80 max-w-prose&quot;>{description}</p>}
       {(primaryAction || secondaryAction) && (
-        <div className="flex gap-2 mt-2">
+        <div className=&quot;flex gap-2 mt-2&quot;>
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
-                <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
+                <EnhancedButton size=&quot;md&quot;>{primaryAction.label}</EnhancedButton>
               </a>
-            </Link>
+            </a>
           )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
-                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
+                <EnhancedButton variant=&quot;secondary&quot; size=&quot;md&quot;>{secondaryAction.label}</EnhancedButton>
               </a>
-            </Link>
+            </a>
           )}
         </div>
       )}

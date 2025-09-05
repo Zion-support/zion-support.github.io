@@ -5,16 +5,16 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
+  DialogTitle} from &quot;@/components/ui/dialog&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { JobApplication } from &quot;@/types/jobs&quot;;
 
 export interface HireConfirmationModalProps {
   isOpen: boolean;
@@ -159,58 +159,58 @@ export function HireConfirmationModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className=&quot;sm:max-w-[425px]&quot;>
         <DialogHeader>
           <DialogTitle>Confirm Hire</DialogTitle>
           <DialogDescription>
-            Confirm that you want to hire {talentData?.full_name || "this candidate"} for a new project.
+            Confirm that you want to hire {talentData?.full_name || &quot;this candidate&quot;} for a new project.
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="projectName" className="text-right">
+        <div className=&quot;grid gap-4 py-4&quot;>
+          <div className=&quot;grid grid-cols-4 items-center gap-4&quot;>
+            <Label htmlFor=&quot;projectName&quot; className=&quot;text-right&quot;>
               Project Name
             </Label>
             <Input
-              id="projectName"
+              id=&quot;projectName&quot;
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
-              className="col-span-3"
+              className=&quot;col-span-3&quot;
             />
           </div>
-          <div className="grid grid-cols-4 items-start gap-4">
-            <Label htmlFor="projectDescription" className="text-right mt-2">
+          <div className=&quot;grid grid-cols-4 items-start gap-4&quot;>
+            <Label htmlFor=&quot;projectDescription&quot; className=&quot;text-right mt-2&quot;>
               Project Description
             </Label>
             <Textarea
-              id="projectDescription"
+              id=&quot;projectDescription&quot;
               value={projectDescription}
               onChange={(e) => setProjectDescription(e.target.value)}
-              className="col-span-3"
+              className=&quot;col-span-3&quot;
             />
           </div>
-          <div className="flex items-center space-x-2">
+          <div className=&quot;flex items-center space-x-2&quot;>
             <input
-              type="checkbox"
-              id="updateAvailability"
-              className="h-4 w-4"
+              type=&quot;checkbox&quot;
+              id=&quot;updateAvailability&quot;
+              className=&quot;h-4 w-4&quot;
               checked={updateAvailability}
               onChange={(e) => setUpdateAvailability(e.target.checked)}
             />
             <label
-              htmlFor="updateAvailability"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed"
+              htmlFor=&quot;updateAvailability&quot;
+              className=&quot;text-sm font-medium leading-none peer-disabled:cursor-not-allowed&quot;
             >
-              Update talent availability to "Unavailable"
+              Update talent availability to &quot;Unavailable&quot;
             </label>
           </div>
         </div>
-        <div className="flex justify-end gap-2">
-          <Button type="button" variant="secondary" onClick={onClose}>
+        <div className=&quot;flex justify-end gap-2&quot;>
+          <Button type=&quot;button&quot; variant=&quot;secondary&quot; onClick={onClose}>
             Cancel
           </Button>
-          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>
-            {isLoading ? "Hiring..." : "Confirm Hire"}
+          <Button type=&quot;button&quot; onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>
+            {isLoading ? &quot;Hiring...&quot; : &quot;Confirm Hire&quot;}
           </Button>
         </div>
       </DialogContent>

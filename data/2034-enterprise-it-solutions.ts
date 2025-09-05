@@ -5,7 +5,7 @@ export type EnterpriseITSolution = {
 	description: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity';
 	pricing: {
-		starter: string; // e.g. "$2,999/mo"
+		starter: string; // e.g. &quot;$2,999/mo&quot;
 		professional?: string;
 		enterprise?: string;
 	};

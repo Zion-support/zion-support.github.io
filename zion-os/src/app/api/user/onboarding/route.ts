@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { prisma } from "@/lib/prisma";
+import { NextRequest, NextResponse } from &quot;next/server&quot;;
+import { getServerSession } from &quot;next-auth&quot;;
+import { prisma } from &quot;@/lib/prisma&quot;;
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     
     if (!session?.user?.email) {
       return NextResponse.json(
-        { error: "Unauthorized" },
+        { error: &quot;Unauthorized&quot; },
         { status: 401 }
       );
     }
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { 
-        message: "Onboarding completed successfully",
+        message: &quot;Onboarding completed successfully&quot;,
         user: {
           id: updatedUser.id,
           name: updatedUser.name,
@@ -31,9 +31,9 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Onboarding completion error:", error);
+    console.error(&quot;Onboarding completion error:&quot;, error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: &quot;Internal server error&quot; },
       { status: 500 }
     );
   }

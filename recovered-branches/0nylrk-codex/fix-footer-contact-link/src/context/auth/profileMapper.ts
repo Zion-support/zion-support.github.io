@@ -1,5 +1,5 @@
 
-import type { UserProfile } from "@/types/auth";
+import type { UserProfile } from &quot;@/types/auth&quot;;
 
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
@@ -16,9 +16,9 @@ export interface SupabaseUser {
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {
     id: user.id,
-    email: user.email || "",
-    displayName: profile.display_name || "",
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null,
+    email: user.email || "&quot;,
+    displayName: profile.display_name || "&quot;,
+    userType: (profile.user_type as &quot;creator&quot; | &quot;jobSeeker&quot; | &quot;employer&quot; | &quot;buyer&quot; | &quot;admin&quot; | null) || null,
     profileComplete: Boolean(profile.profile_complete),
     createdAt: new Date(profile.created_at).toISOString(),
     updatedAt: new Date(profile.updated_at).toISOString(),

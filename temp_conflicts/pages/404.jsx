@@ -7,7 +7,7 @@ const Custom404 = () => {
     <div>
       <Head>
         <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
+        <meta name=&quot;description&quot; content=&quot;404 page&quot; />
       </Head>
       
       <main>
