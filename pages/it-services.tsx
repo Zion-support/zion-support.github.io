@@ -1263,6 +1263,163 @@ title: 'AI-Powered IT Operations (AIOps)',
     features: ['Cost Analysis', 'Resource Right-sizing', 'Waste Detection', 'Optimization Recommendations'],
     pricing: '$15,000 - $75,000/setup',
     category: 'Cost Optimization'
+  },
+  {
+    title: 'AI-Powered DevOps Automation',
+    description: 'Intelligent DevOps pipeline with automated testing, deployment, and monitoring.',
+    icon: Settings,
+    features: ['CI/CD Automation', 'Automated Testing', 'Deployment Orchestration', 'Performance Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'DevOps',
+    popular: true,
+    benefits: ['Faster Deployments', 'Reduced Errors', 'Better Quality', 'Cost Savings'],
+    marketPrice: '$40,000 - $200,000/setup',
+    link: 'https://ziontechgroup.com/ai-devops-automation'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Better Compliance', 'Risk Reduction', 'Future-proof'],
+    marketPrice: '$75,000 - $500,000/setup',
+    link: 'https://ziontechgroup.com/zero-trust-security'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Global Distribution'],
+    pricing: '$100,000 - $800,000/setup',
+    category: 'Edge Computing',
+    benefits: ['Low Latency', 'Better Performance', 'Scalability', 'Cost Efficiency'],
+    marketPrice: '$150,000 - $1,200,000/setup',
+    link: 'https://ziontechgroup.com/edge-computing-infrastructure'
+  },
+  {
+    title: 'AI/ML Infrastructure Setup',
+    description: 'Complete AI and machine learning infrastructure with GPU clusters and MLOps pipeline.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'MLOps Pipeline', 'Model Deployment', 'Data Pipeline'],
+    pricing: '$75,000 - $400,000/setup',
+    category: 'AI Infrastructure',
+    popular: true,
+    benefits: ['Faster AI Development', 'Scalable Infrastructure', 'Better Performance', 'Cost Optimization'],
+    marketPrice: '$100,000 - $600,000/setup',
+    link: 'https://ziontechgroup.com/ai-ml-infrastructure'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Network,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Blockchain',
+    benefits: ['Decentralization', 'Transparency', 'Security', 'Innovation'],
+    marketPrice: '$150,000 - $1,500,000/setup',
+    link: 'https://ziontechgroup.com/blockchain-infrastructure'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design and implementation for enterprise and industrial applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Private 5G Networks', 'IoT Connectivity', 'Performance Optimization'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: '5G Networks',
+    benefits: ['High Speed', 'Low Latency', 'IoT Connectivity', 'Future Technology'],
+    marketPrice: '$300,000 - $3,000,000/setup',
+    link: 'https://ziontechgroup.com/5g-network-implementation'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing setup and integration for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Quantum-Classical Integration', 'Research Support'],
+    pricing: '$500,000 - $5,000,000/setup',
+    category: 'Quantum Computing',
+    benefits: ['Exponential Computing', 'Research Advancement', 'Competitive Edge', 'Future Technology'],
+    marketPrice: '$750,000 - $7,500,000/setup',
+    link: 'https://ziontechgroup.com/quantum-computing-integration'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Framework'],
+    pricing: '$150,000 - $1,200,000/setup',
+    category: 'IoT',
+    benefits: ['Device Connectivity', 'Data Insights', 'Automation', 'Scalability'],
+    marketPrice: '$200,000 - $1,800,000/setup',
+    link: 'https://ziontechgroup.com/iot-platform-development'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin platform development for industrial and smart city applications.',
+    icon: Building,
+    features: ['3D Modeling', 'Real-time Synchronization', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$200,000 - $2,000,000/setup',
+    category: 'Digital Twin',
+    benefits: ['Predictive Maintenance', 'Better Planning', 'Cost Reduction', 'Innovation'],
+    marketPrice: '$300,000 - $3,000,000/setup',
+    link: 'https://ziontechgroup.com/digital-twin-infrastructure'
+  },
+  {
+    title: 'AR/VR Infrastructure Setup',
+    description: 'Augmented and virtual reality infrastructure for enterprise and consumer applications.',
+    icon: Video,
+    features: ['AR/VR Hardware Setup', 'Content Management', 'User Tracking', 'Performance Optimization'],
+    pricing: '$100,000 - $800,000/setup',
+    category: 'AR/VR',
+    benefits: ['Immersive Experience', 'Training Solutions', 'Remote Collaboration', 'Innovation'],
+    marketPrice: '$150,000 - $1,200,000/setup',
+    link: 'https://ziontechgroup.com/ar-vr-infrastructure'
+  },
+  {
+    title: 'High-Performance Computing Cluster',
+    description: 'HPC cluster setup and optimization for scientific computing and data analysis.',
+    icon: Cpu,
+    features: ['HPC Cluster Design', 'Parallel Processing', 'Performance Tuning', 'Scientific Computing'],
+    pricing: '$300,000 - $3,000,000/setup',
+    category: 'HPC',
+    benefits: ['High Performance', 'Scientific Computing', 'Data Analysis', 'Research Support'],
+    marketPrice: '$450,000 - $4,500,000/setup',
+    link: 'https://ziontechgroup.com/hpc-cluster-setup'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy optimization and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Tracking', 'Sustainable Hardware', 'Green Certifications'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Green IT',
+    benefits: ['Environmental Impact', 'Cost Savings', 'Compliance', 'Sustainability'],
+    marketPrice: '$75,000 - $450,000/setup',
+    link: 'https://ziontechgroup.com/green-it-solutions'
+  },
+  {
+    title: 'IT Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery and business continuity planning and implementation.',
+    icon: Shield,
+    features: ['Disaster Recovery Planning', 'Backup Systems', 'Failover Mechanisms', 'Business Continuity'],
+    pricing: '$75,000 - $500,000/setup',
+    category: 'Disaster Recovery',
+    benefits: ['Business Protection', 'Minimal Downtime', 'Data Security', 'Compliance'],
+    marketPrice: '$100,000 - $750,000/setup',
+    link: 'https://ziontechgroup.com/disaster-recovery'
+  },
+  {
+    title: 'IT Governance & Compliance Framework',
+    description: 'Comprehensive IT governance framework with compliance monitoring and risk management.',
+    icon: CheckCircle,
+    features: ['Governance Framework', 'Compliance Monitoring', 'Risk Management', 'Policy Development'],
+    pricing: '$100,000 - $600,000/setup',
+    category: 'IT Governance',
+    benefits: ['Better Compliance', 'Risk Management', 'Policy Enforcement', 'Audit Readiness'],
+    marketPrice: '$150,000 - $900,000/setup',
+    link: 'https://ziontechgroup.com/it-governance-compliance'
   }
 ];
 

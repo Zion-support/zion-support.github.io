@@ -2556,6 +2556,161 @@ title: 'Generative AI Content Creation Suite',
     features: ['Risk Assessment', 'Supplier Analysis', 'Disruption Prediction', 'Mitigation Planning'],
     pricing: '$25,000 - $125,000/project',
     category: 'Supply Chain AI'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design, target identification, and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Design', 'Target Identification', 'Clinical Trial Optimization', 'Toxicity Prediction'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Healthcare AI',
+    popular: true,
+    benefits: ['Faster Discovery', 'Cost Reduction', 'Better Success Rate', 'Innovation'],
+    marketPrice: '$150,000 - $750,000/project',
+    link: 'https://ziontechgroup.com/ai-drug-discovery'
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and prediction using AI for environmental impact assessment.',
+    icon: Sprout,
+    features: ['Climate Modeling', 'Impact Assessment', 'Prediction Analytics', 'Policy Recommendations'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Environmental AI',
+    benefits: ['Better Predictions', 'Policy Support', 'Environmental Protection', 'Research Advancement'],
+    marketPrice: '$75,000 - $450,000/project',
+    link: 'https://ziontechgroup.com/ai-climate-modeling'
+  },
+  {
+    title: 'AI-Powered Space Exploration Analytics',
+    description: 'AI-driven space data analysis for satellite operations, space weather prediction, and exploration missions.',
+    icon: Rocket,
+    features: ['Satellite Analytics', 'Space Weather Prediction', 'Mission Planning', 'Data Processing'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Space AI',
+    benefits: ['Mission Success', 'Data Insights', 'Risk Reduction', 'Innovation'],
+    marketPrice: '$300,000 - $2,250,000/project',
+    link: 'https://ziontechgroup.com/ai-space-analytics'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Complete autonomous vehicle AI system with perception, decision making, and control algorithms.',
+    icon: Car,
+    features: ['Computer Vision', 'Decision Making', 'Path Planning', 'Safety Systems'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Autonomous Vehicles',
+    benefits: ['Safety', 'Efficiency', 'Innovation', 'Future Technology'],
+    marketPrice: '$750,000 - $7,500,000/project',
+    link: 'https://ziontechgroup.com/ai-autonomous-vehicles'
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'Quantum-enhanced machine learning algorithms for complex optimization and pattern recognition.',
+    icon: Cpu,
+    features: ['Quantum Algorithms', 'Optimization', 'Pattern Recognition', 'Quantum-Classical Hybrid'],
+    pricing: '$300,000 - $2,000,000/project',
+    category: 'Quantum AI',
+    benefits: ['Exponential Speedup', 'Better Optimization', 'Research Advancement', 'Competitive Edge'],
+    marketPrice: '$450,000 - $3,000,000/project',
+    link: 'https://ziontechgroup.com/ai-quantum-ml'
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'AI-driven personalized treatment recommendations based on genetic, lifestyle, and medical data.',
+    icon: Heart,
+    features: ['Genetic Analysis', 'Treatment Optimization', 'Drug Interaction Analysis', 'Outcome Prediction'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Personalized Medicine',
+    benefits: ['Better Outcomes', 'Personalized Care', 'Cost Efficiency', 'Patient Safety'],
+    marketPrice: '$100,000 - $600,000/project',
+    link: 'https://ziontechgroup.com/ai-personalized-medicine'
+  },
+  {
+    title: 'AI-Powered Smart Grid Optimization',
+    description: 'Intelligent energy grid management with demand forecasting, load balancing, and renewable integration.',
+    icon: Zap,
+    features: ['Demand Forecasting', 'Load Balancing', 'Renewable Integration', 'Grid Optimization'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'Energy AI',
+    benefits: ['Energy Efficiency', 'Cost Reduction', 'Renewable Integration', 'Grid Stability'],
+    marketPrice: '$150,000 - $1,200,000/project',
+    link: 'https://ziontechgroup.com/ai-smart-grid'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Intelligence',
+    description: 'Advanced threat intelligence and response system with behavioral analysis and automated defense.',
+    icon: Shield,
+    features: ['Threat Intelligence', 'Behavioral Analysis', 'Automated Response', 'Incident Investigation'],
+    pricing: '$150,000 - $1,000,000/project',
+    category: 'Cybersecurity AI',
+    benefits: ['Better Security', 'Faster Response', 'Threat Prevention', 'Cost Reduction'],
+    marketPrice: '$200,000 - $1,500,000/project',
+    link: 'https://ziontechgroup.com/ai-cybersecurity-threats'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Comprehensive AI platform for smart city infrastructure, traffic management, and citizen services.',
+    icon: Building,
+    features: ['Traffic Management', 'Resource Optimization', 'Citizen Services', 'Infrastructure Monitoring'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Smart City AI',
+    benefits: ['Better Urban Living', 'Efficiency', 'Sustainability', 'Citizen Satisfaction'],
+    marketPrice: '$750,000 - $7,500,000/project',
+    link: 'https://ziontechgroup.com/ai-smart-city'
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Advanced financial risk assessment and management using AI for portfolio optimization and fraud detection.',
+    icon: DollarSign,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Fraud Detection', 'Market Analysis'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'Financial AI',
+    benefits: ['Better Risk Management', 'Higher Returns', 'Fraud Prevention', 'Compliance'],
+    marketPrice: '$150,000 - $1,200,000/project',
+    link: 'https://ziontechgroup.com/ai-financial-risk'
+  },
+  {
+    title: 'AI-Powered Manufacturing Quality Control',
+    description: 'Intelligent quality control system with computer vision and predictive maintenance for manufacturing.',
+    icon: Settings,
+    features: ['Computer Vision', 'Quality Inspection', 'Predictive Maintenance', 'Process Optimization'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Manufacturing AI',
+    benefits: ['Better Quality', 'Cost Reduction', 'Predictive Maintenance', 'Efficiency'],
+    marketPrice: '$300,000 - $2,250,000/project',
+    link: 'https://ziontechgroup.com/ai-manufacturing-quality'
+  },
+  {
+    title: 'AI-Powered Educational Personalization',
+    description: 'Personalized learning platform with adaptive curriculum and intelligent tutoring systems.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Intelligent Tutoring', 'Progress Tracking', 'Content Personalization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'EdTech AI',
+    benefits: ['Better Learning', 'Personalized Experience', 'Improved Outcomes', 'Engagement'],
+    marketPrice: '$75,000 - $450,000/project',
+    link: 'https://ziontechgroup.com/ai-educational-personalization'
+  },
+  {
+    title: 'AI-Powered Agricultural Optimization',
+    description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Pest Detection'],
+    pricing: '$75,000 - $500,000/project',
+    category: 'AgTech AI',
+    benefits: ['Higher Yields', 'Resource Efficiency', 'Cost Reduction', 'Sustainability'],
+    marketPrice: '$100,000 - $750,000/project',
+    link: 'https://ziontechgroup.com/ai-agricultural-optimization'
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'AI-powered mental health support system with mood tracking, crisis detection, and therapeutic conversations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'HealthTech AI',
+    benefits: ['Better Mental Health', 'Early Intervention', 'Accessibility', 'Privacy'],
+    marketPrice: '$40,000 - $225,000/project',
+    link: 'https://ziontechgroup.com/ai-mental-health-companion'
   }
 ];
 

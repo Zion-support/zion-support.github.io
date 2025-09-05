@@ -888,6 +888,227 @@ const microSaasProducts = [
     category: 'RPA',
     popular: true,
     link: 'https://rpaplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Legal Research'],
+    pricing: '$199 - $999/month',
+    category: 'Legal Tech',
+    popular: true,
+    benefits: ['Faster Reviews', 'Risk Reduction', 'Cost Savings', 'Compliance'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/ai-legal-analyzer'
+  },
+  {
+    title: 'Smart Contract Lifecycle Manager',
+    description: 'End-to-end smart contract management from development to deployment and monitoring.',
+    icon: Shield,
+    features: ['Development Tools', 'Testing Suite', 'Deployment Automation', 'Monitoring Dashboard'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain',
+    benefits: ['Faster Development', 'Better Security', 'Automated Testing', 'Real-time Monitoring'],
+    marketPrice: '$200 - $1,200/month',
+    link: 'https://ziontechgroup.com/smart-contract-manager'
+  },
+  {
+    title: 'AI-Powered Medical Image Analysis',
+    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
+    icon: Heart,
+    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
+    pricing: '$299 - $1,999/month',
+    category: 'Healthcare AI',
+    benefits: ['Faster Diagnosis', 'Improved Accuracy', 'Automated Reports', 'Better Patient Care'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-medical-imaging'
+  },
+  {
+    title: 'Intelligent Fleet Management System',
+    description: 'AI-powered fleet optimization with route planning, fuel efficiency, and maintenance scheduling.',
+    icon: Car,
+    features: ['Route Optimization', 'Fuel Efficiency', 'Maintenance Scheduling', 'Driver Analytics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Fleet Management',
+    benefits: ['Cost Reduction', 'Better Efficiency', 'Predictive Maintenance', 'Driver Safety'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://ziontechgroup.com/ai-fleet-management'
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI and machine learning with market analysis.',
+    icon: Building,
+    features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$99 - $599/month',
+    category: 'Real Estate',
+    benefits: ['Accurate Valuations', 'Market Insights', 'Investment Guidance', 'Risk Analysis'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/ai-real-estate-valuation'
+  },
+  {
+    title: 'Smart Agriculture Monitoring',
+    description: 'IoT-based agricultural monitoring with crop health analysis and yield prediction.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Soil Analysis', 'Weather Integration', 'Yield Prediction'],
+    pricing: '$149 - $899/month',
+    category: 'AgTech',
+    benefits: ['Higher Yields', 'Resource Optimization', 'Disease Prevention', 'Cost Reduction'],
+    marketPrice: '$200 - $1,500/month',
+    link: 'https://ziontechgroup.com/smart-agriculture'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response with AI-powered security analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Security Reports'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    benefits: ['Better Security', 'Faster Response', 'Threat Prevention', 'Compliance'],
+    marketPrice: '$600 - $4,000/month',
+    link: 'https://ziontechgroup.com/ai-cybersecurity'
+  },
+  {
+    title: 'Intelligent Energy Trading Platform',
+    description: 'AI-powered energy trading with market analysis and automated trading strategies.',
+    icon: Zap,
+    features: ['Market Analysis', 'Trading Strategies', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$499 - $2,999/month',
+    category: 'Energy Trading',
+    benefits: ['Better Returns', 'Risk Management', 'Automated Trading', 'Market Insights'],
+    marketPrice: '$800 - $5,000/month',
+    link: 'https://ziontechgroup.com/ai-energy-trading'
+  },
+  {
+    title: 'AI-Powered Language Learning Platform',
+    description: 'Personalized language learning with AI tutors and adaptive curriculum.',
+    icon: BookOpen,
+    features: ['AI Tutoring', 'Adaptive Learning', 'Speech Recognition', 'Progress Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'EdTech',
+    benefits: ['Faster Learning', 'Personalized Experience', 'Better Retention', 'Flexible Schedule'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-language-learning'
+  },
+  {
+    title: 'Smart Waste Management System',
+    description: 'IoT-based waste management with route optimization and recycling analytics.',
+    icon: Trash2,
+    features: ['Route Optimization', 'Fill Level Monitoring', 'Recycling Analytics', 'Cost Tracking'],
+    pricing: '$199 - $1,299/month',
+    category: 'Waste Management',
+    benefits: ['Cost Reduction', 'Better Efficiency', 'Environmental Impact', 'Route Optimization'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://ziontechgroup.com/smart-waste-management'
+  },
+  {
+    title: 'AI-Powered Insurance Claims Processor',
+    description: 'Automated insurance claims processing with fraud detection and damage assessment.',
+    icon: FileText,
+    features: ['Claims Processing', 'Fraud Detection', 'Damage Assessment', 'Automated Payouts'],
+    pricing: '$299 - $1,999/month',
+    category: 'InsurTech',
+    benefits: ['Faster Processing', 'Fraud Prevention', 'Cost Reduction', 'Better Accuracy'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-insurance-claims'
+  },
+  {
+    title: 'Intelligent Parking Management',
+    description: 'Smart parking solutions with real-time availability and dynamic pricing.',
+    icon: Car,
+    features: ['Real-time Availability', 'Dynamic Pricing', 'Payment Processing', 'Analytics'],
+    pricing: '$99 - $599/month',
+    category: 'Smart City',
+    benefits: ['Better Utilization', 'Revenue Optimization', 'User Experience', 'Data Insights'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/smart-parking'
+  },
+  {
+    title: 'AI-Powered Restaurant Management',
+    description: 'Complete restaurant management with inventory, staff scheduling, and customer analytics.',
+    icon: ShoppingCart,
+    features: ['Inventory Management', 'Staff Scheduling', 'Customer Analytics', 'Menu Optimization'],
+    pricing: '$149 - $899/month',
+    category: 'Restaurant Tech',
+    benefits: ['Better Efficiency', 'Cost Control', 'Customer Satisfaction', 'Data-Driven Decisions'],
+    marketPrice: '$200 - $1,500/month',
+    link: 'https://ziontechgroup.com/ai-restaurant-management'
+  },
+  {
+    title: 'Smart Water Quality Monitor',
+    description: 'Real-time water quality monitoring with contamination detection and alerts.',
+    icon: Droplets,
+    features: ['Real-time Monitoring', 'Contamination Detection', 'Alert System', 'Data Analytics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Environmental',
+    benefits: ['Public Safety', 'Early Detection', 'Cost Savings', 'Compliance'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://ziontechgroup.com/smart-water-monitor'
+  },
+  {
+    title: 'AI-Powered Personal Finance Coach',
+    description: 'Personalized financial coaching with budgeting, investment advice, and goal tracking.',
+    icon: DollarSign,
+    features: ['Budget Planning', 'Investment Advice', 'Goal Tracking', 'Expense Analysis'],
+    pricing: '$9 - $49/month',
+    category: 'FinTech',
+    benefits: ['Better Financial Health', 'Goal Achievement', 'Cost Savings', 'Financial Education'],
+    marketPrice: '$15 - $75/month',
+    link: 'https://ziontechgroup.com/ai-finance-coach'
+  },
+  {
+    title: 'Intelligent Building Management',
+    description: 'Smart building automation with energy optimization and predictive maintenance.',
+    icon: Building,
+    features: ['Energy Optimization', 'Predictive Maintenance', 'Occupancy Analytics', 'Climate Control'],
+    pricing: '$299 - $1,999/month',
+    category: 'Smart Buildings',
+    benefits: ['Energy Savings', 'Better Comfort', 'Predictive Maintenance', 'Cost Reduction'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://ziontechgroup.com/smart-building-management'
+  },
+  {
+    title: 'AI-Powered Event Management',
+    description: 'Complete event management platform with attendee analytics and automated workflows.',
+    icon: Calendar,
+    features: ['Event Planning', 'Attendee Analytics', 'Automated Workflows', 'Venue Management'],
+    pricing: '$99 - $599/month',
+    category: 'Event Management',
+    benefits: ['Better Events', 'Time Savings', 'Data Insights', 'Automation'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/ai-event-management'
+  },
+  {
+    title: 'Smart Retail Analytics',
+    description: 'AI-powered retail analytics with customer behavior analysis and inventory optimization.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Sales Forecasting', 'Store Layout'],
+    pricing: '$199 - $1,299/month',
+    category: 'Retail Tech',
+    benefits: ['Better Sales', 'Inventory Optimization', 'Customer Insights', 'Cost Reduction'],
+    marketPrice: '$300 - $2,000/month',
+    link: 'https://ziontechgroup.com/smart-retail-analytics'
+  },
+  {
+    title: 'AI-Powered Mental Health Tracker',
+    description: 'Personal mental health monitoring with mood tracking and wellness recommendations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Wellness Recommendations', 'Progress Monitoring', 'Professional Support'],
+    pricing: '$19 - $99/month',
+    category: 'Health Tech',
+    benefits: ['Better Mental Health', 'Early Intervention', 'Personalized Care', 'Privacy Protection'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-mental-health'
+  },
+  {
+    title: 'Intelligent Document Workflow',
+    description: 'Automated document processing with AI-powered classification and routing.',
+    icon: FileText,
+    features: ['Document Classification', 'Automated Routing', 'OCR Processing', 'Workflow Automation'],
+    pricing: '$149 - $899/month',
+    category: 'Document Management',
+    benefits: ['Faster Processing', 'Better Organization', 'Cost Reduction', 'Error Reduction'],
+    marketPrice: '$200 - $1,500/month',
+    link: 'https://ziontechgroup.com/intelligent-document-workflow'
   }
 ];
 
