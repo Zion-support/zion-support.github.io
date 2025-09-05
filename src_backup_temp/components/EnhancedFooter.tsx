@@ -1,4 +1,4 @@
-import React from 'react',;',';';
+import * as React from 'react',;',';';
     ;
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
     ;
@@ -66,7 +66,7 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
     ';';';
   "https": ''',';';
     ';';';
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -135,7 +135,7 @@ import {
   Calendar as CalendarIcon, 
   Package as PackageIcon, 
   CreditCard as CreditCardIcon, 
-import React from 'react',;',';';
+import * as React from 'react',;',';';
     ';';';';
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
     ';';';';
@@ -203,7 +203,7 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
     ';';';
   https: ''',';';
     ';';';
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import {;
   Mail,;

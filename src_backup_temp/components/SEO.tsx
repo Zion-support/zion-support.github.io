@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
@@ -24,7 +24,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description }) => {
 
 export default SEO;
 
-import React from 'react';
+import * as React from 'react';
 
 interface SEOProps {
 

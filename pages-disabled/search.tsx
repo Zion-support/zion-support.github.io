@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Search, ArrowRight, FileText, Users, Briefcase, Building2 } from 'lucide-react';
 import Layout from '../components/Layout';
