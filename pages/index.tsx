@@ -93,14 +93,17 @@ export default function HomePage() {
                   className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} whileHover={{ y: -5 }}">
+                  transition={{ duration: 0.8, delay: index * 0.1 }} 
+                  viewport={{ once: true }} 
+                  whileHover={{ y: -5 }}
+                >
                   <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
-                  <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
+                    <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-<p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
                   <Link
                     href={service.href}
                     className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"

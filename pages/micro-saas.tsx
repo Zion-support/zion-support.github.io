@@ -38,6 +38,7 @@ import {
   Search,
   Eye,
   Target,
+  Brain,
   TrendingUp,
   Package,
   Calendar,
