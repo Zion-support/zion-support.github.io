@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/types/ref-types.ts
+=======
 <<<<<<< HEAD
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": "T) => void) | null;"
 =======
@@ -10,5 +12,6 @@ module.exports = type SafeRef<T> = { current: "unknownT" } | ((value: T) => void
 export type SafeRef<T> = { "current": 'unknownT' } | (("value": T) => void) | null;"
 </T>"
 >>>>>>> main
+>>>>>>> main:src_backup_temp/types/ref-types.ts
 >>>>>>> main
 >>>>>>> main

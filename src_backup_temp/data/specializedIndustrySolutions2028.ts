@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/specializedIndustrySolutions2028.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -334,3 +336,4 @@ import { ProductListing } from "@/types/listings"; export const SPECIALIZED_INDU
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/specializedIndustrySolutions2028.ts

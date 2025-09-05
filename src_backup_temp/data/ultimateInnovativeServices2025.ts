@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/ultimateInnovativeServices2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,3 +71,4 @@ export interface UltimateInnovativeService { id: string; title: string; descript
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/ultimateInnovativeServices2025.ts

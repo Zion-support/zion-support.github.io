@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/advancedInnovativeServices2026.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -434,3 +436,4 @@ export interface AdvancedInnovativeService2026 { id: string; title: string; desc
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/advancedInnovativeServices2026.ts

@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+import { NextResponse } from "next/server";",
+import type { NextRequest } from "next/server";",
+
+const publicRoutes = [;
+  "/",",
+  "/about",",
+  "/contact",",
+  "/blog",",
+  "/services",",
+  "/solutions",",
+  "/industries",",
+  "/resources",",
+  "/talent",",
+  "/team",",
+  "/partners",",
+  "/news",",
+  "/careers",",
+  "/privacy",",
+  "/terms",",
+  "/cookies",",
+  "/sitemap",",
+  "/auth/login",",
+  "/auth/register",",
+  "/auth/forgot-password",",
+  "/auth/reset-password",",
+  "/auth/verify",",
+;];,
+
+  }
+  
+=======
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 <<<<<<< HEAD
@@ -170,6 +202,7 @@ export function middleware(request: NextRequest) {
   // For protected routes, you can add authentication logic here
   // For now, we'll just allow all requests
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
   return NextResponse.next();
 }
 

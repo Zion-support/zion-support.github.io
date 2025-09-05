@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import Header from '../Header';
-import Footer from '../Footer';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
 
 export default function Layout({ children }: LayoutProps) {
   return (
@@ -20,7 +10,6 @@ export default function Layout({ children }: LayoutProps) {
       <Footer />
 =======
 
->>>>>>> main
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -28,16 +17,12 @@ interface LayoutProps {
   keywords?: string;
 }
 
-<<<<<<< HEAD
-export default function Layout({ children }: LayoutProps) {
-=======
 export default function Layout({ 
   children, 
   title = "Zion Tech Group", 
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
 }: LayoutProps) {
->>>>>>> main
   return (
     <div className="min-h-screen bg-gray-50">
       {children}

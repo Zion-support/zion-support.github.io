@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/itServicesData.ts
+=======
 <<<<<<< HEAD
 export interface ITService {;
   "id": "string;
@@ -2721,6 +2723,7 @@ export const IT_SERVICES: ITService[] = [
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],
     marketSize: "$25.6 billion by 2025"
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/itServicesData.ts
 >>>>>>> main
 >>>>>>> main
   }

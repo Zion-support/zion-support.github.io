@@ -1,16 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
+import Link from 'next/link';
+import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
 
 export default function TermsPage() {
   return (
-    <>
-      <Head>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of service for Zion Tech Group services." />
-      </Head>
-
+    <MainLayout
+      title="Terms of Service - Zion Tech Group"
+      description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
+      keywords="terms of service, user agreement, service terms, legal terms"
+      canonical="https://ziontechgroup.com/terms"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">

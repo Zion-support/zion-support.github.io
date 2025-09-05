@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';;
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -19,7 +16,6 @@ import { Heart,
   CheckCircle, 
   Star, 
   Zap, 
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -34,16 +30,13 @@ import {
   CheckCircle,
   Star,
   Zap,
->>>>>>> main
   Users,
   Globe,
   BarChart3,
   Brain,
   Network,
-<<<<<<< HEAD
   Cloud;
 } from 'lucide-react';
->>>>>>> main
 
 const industries = [;
   {}
@@ -238,7 +231,6 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">";
           <motion.div;
             className="text-center mb-16"";
-=======
   Cloud
 } from 'lucide-react';
 const industries = [
@@ -429,12 +421,10 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
->>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >,
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
               Industries We Serve;
@@ -451,7 +441,6 @@ export default function IndustriesPage() {
                 <motion.div);
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
-=======
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Industries We Serve
@@ -467,13 +456,11 @@ export default function IndustriesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
->>>>>>> main
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
-<<<<<<< HEAD
                 >,
                   <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>,
                     <IconComponent className="w-8 h-8 text-white" />";
@@ -539,7 +526,6 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">";
           <motion.div;
             className="text-center mb-16"";
-=======
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -598,12 +584,10 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
->>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >,
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">";
               Technologies We Use;
@@ -620,7 +604,6 @@ export default function IndustriesPage() {
                 <motion.div);
                   key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors""
-=======
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Technologies We Use
@@ -636,12 +619,10 @@ export default function IndustriesPage() {
                 <motion.div
                   key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
->>>>>>> main
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                 >,
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <IconComponent className="w-8 h-8 text-blue-600" />";
@@ -663,7 +644,6 @@ export default function IndustriesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="container mx-auto px-4 text-center">";
           <motion.div;
-=======
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -684,12 +664,10 @@ export default function IndustriesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
->>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >,
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Ready to Transform Your Industry?;
@@ -709,7 +687,6 @@ export default function IndustriesPage() {
         </div>;
       </section>;
     </div>;
-=======
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Industry?
@@ -729,6 +706,5 @@ export default function IndustriesPage() {
         </div>
       </section>
     </div>
->>>>>>> main
   );
 }
