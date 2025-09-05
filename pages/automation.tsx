@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -8,13 +7,9 @@ import {
   Bot, 
   Workflow, 
   CheckCircle, 
-  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  Users,
-  Shield,
-  Globe,
   BarChart3,
   Database
 } from 'lucide-react';

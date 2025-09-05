@@ -1,14 +1,11 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Link as LinkIcon, 
   Shield, 
-  Zap, 
   Coins, 
   Globe, 
-  Lock, 
   CheckCircle, 
   ArrowRight, 
   Phone, 
@@ -17,8 +14,6 @@ import {
   DollarSign, 
   Clock, 
   Award,
-  Users,
-  Database,
   Smartphone,
   Building,
   TrendingUp,
