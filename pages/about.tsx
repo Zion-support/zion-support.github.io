@@ -19,7 +19,7 @@ import {
   Lightbulb, 
   Handshake 
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const values = [
   {
