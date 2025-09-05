@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -19,3 +20,7 @@ export default LazyComponent;
 import React from 'react',
 },
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+import React from 'react',;
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

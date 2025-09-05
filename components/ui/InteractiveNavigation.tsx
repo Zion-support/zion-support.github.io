@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
+<<<<<<< HEAD
 interface NavItem {
   label: string;
   href: string;
@@ -150,3 +151,7 @@ export default function InteractiveNavigation() {
   );
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+const InteractiveNavigation = () => {},;
+export default InteractiveNavigation;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

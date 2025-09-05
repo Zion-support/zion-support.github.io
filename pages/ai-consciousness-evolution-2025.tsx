@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIConsciousnessEvolution2025() {
@@ -17,9 +18,31 @@ export default function AIConsciousnessEvolution2025() {
 				&quot;Evaluation harness for subjective tasks&quot;,
 				&quot;Multi-modal context fusion (text, voice, UI)&quot;,
 				&quot;Partnered research roadmap and governance&quot;
+=======
+import React from 'react',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
+export default function AIConsciousnessEvolution2025() {;
+	return (;
+		<ServiceLanding;
+			title="AI Consciousness Evolution 2025";
+			slug="ai-consciousness-evolution-2025";
+			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent.";
+			subtitle="From narrow tasks to contextual understanding with emotional intelligence.";
+			pricePerMonthUSD={4999}
+			implementationWeeks="Implementation: 6–12 weeks";
+			roiNote="Strategic R&D with demonstrable prototypes and IP";
+			features={[;
+				"Affective signals and sentiment grounding",;
+				"Self-reflection loops and memory consolidation",;
+				"Safety layers for alignment and guardrails",;
+				"Evaluation harness for subjective tasks";
+				"Multi-modal context fusion (text, voice, UI)";
+				"Partnered research roadmap and governance";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 			]}
 <<<<<<< HEAD
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
+<<<<<<< HEAD
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 =======
 			industries={[&quot;R&D&quot;, &quot;Healthcare&quot;, &quot;Education&quot;, &quot;Assistive Tech&quot;]}
@@ -27,4 +50,9 @@ export default function AIConsciousnessEvolution2025() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 		/>
 	)
+=======
+			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025";
+		/>;
+	);
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

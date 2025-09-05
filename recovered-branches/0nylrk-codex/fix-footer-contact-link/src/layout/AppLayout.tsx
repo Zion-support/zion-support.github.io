@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { AppHeader } from "./AppHeader",
 import { Footer } from "@/components/Footer",
@@ -19,9 +20,25 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
     <div className=&quot;flex flex-col min-h-screen bg-background&quot;>
       <AppHeader />
       <main className=&quot;flex-grow&quot;>
-        {children}
-      </main>
-      {!hideFooter && <Footer />}
-    </div>
-  )
+=======
+import React from "react",;
+import { AppHeader } from "./AppHeader",;
+import { Footer } from "@/components/Footer",;
+interface AppLayoutProps {;
+  children: React.ReactNode;
+  hideFooter?: boolean;
 }
+;
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
+  return (;
+    <div className="flex flex-col min-h-screen bg-background">;
+      <AppHeader />;
+      <main className="flex-grow">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+        {children}
+      </main>;
+      {!hideFooter && <Footer />}
+    </div>;
+  );
+}
+;

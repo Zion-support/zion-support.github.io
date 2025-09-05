@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as LabelPrimitive from &quot;@radix-ui/react-label&quot;
 import { useReactId } from &quot;@/hooks/useReactId&quot;
@@ -42,22 +43,62 @@ const useFormField = () => {
 
   if (!itemContext) {
     throw new Error(&quot;useFormField should be used within <FormItem>")
+=======
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { useReactId } from "@/hooks/useReactId";
+import { Slot } from "@radix-ui/react-slot";
+import {;
+  Controller,;
+  type FieldPath,;
+  type FieldValues,;
+  FormProvider,;
+  useFormContext} from "react-hook-form";
+import { cn } from "@/lib/utils";
+import { Label } from "@/components/ui/label";
+const Form = FormProvider;
+type FormFieldContextValue = {;
+  name: string;
+}
+;
+const FormFieldContext = React.createContext<FormFieldContextValue>({;
+  name: ""});
+const FormField = ({ ...props }: any) => {;
+  return (;
+    <FormFieldContext.Provider value={{ name: props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext.Provider>;
+  );
+}
+;
+const useFormField = () => {;
+  const fieldContext = React.useContext(FormFieldContext) as FormFieldContextValue;
+  const itemContext = React.useContext(FormItemContext) as FormItemContextValue | null;
+  const { getFieldState, formState } = useFormContext();
+  const fieldState = getFieldState(fieldContext.name, formState);
+  if (!fieldContext) {;
+    throw new Error("useFormField should be used within <FormField>");
   }
-
-  const { id } = itemContext as FormItemContextValue
-
-  return {
-    id,
-    name: fieldContext.name,
-    formItemId: `${id}-form-item`,
-    formDescriptionId: `${id}-form-item-description`,
-    formMessageId: `${id}-form-item-message`,
+;
+  if (!itemContext) {;
+    throw new Error("useFormField should be used within <FormItem>");
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+  }
+;
+  const { id } = itemContext as FormItemContextValue;
+  return {;
+    id,;
+    name: fieldContext.name,;
+    formItemId: `${id}-form-item`,;
+    formDescriptionId: `${id}-form-item-description`,;
+    formMessageId: `${id}-form-item-message`,;
     ...fieldState}
 }
-
-type FormItemContextValue = {
-  id: string
+;
+type FormItemContextValue = {;
+  id: string;
 }
+<<<<<<< HEAD
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
 
@@ -83,10 +124,34 @@ const FormLabel = React.forwardRef<
 
   return (
     <Label
+=======
+;
+const FormItemContext = React.createContext<FormItemContextValue | null>(null);
+const FormItem = React.forwardRef<;
+  HTMLDivElement,;
+  React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => {;
+  const id = useReactId();
+  return (;
+    <FormItemContext.Provider value={{ id }}>;
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />;
+    </FormItemContext.Provider>;
+  );
+});
+FormItem.displayName = "FormItem";
+const FormLabel = React.forwardRef<;
+  React.ElementRef<typeof LabelPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>;
+>(({ className, ...props }, ref) => {;
+  const { error, formItemId } = useFormField();
+  return (;
+    <Label;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ref={ref}
       className={cn(error && "text-destructive&quot;, className)}
       htmlFor={formItemId}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
@@ -100,15 +165,29 @@ const FormControl = React.forwardRef<
 
   return (
     <Slot
+=======
+    />;
+  );
+});
+FormLabel.displayName = "FormLabel";
+const FormControl = React.forwardRef<;
+  React.ElementRef<typeof Slot>,;
+  React.ComponentPropsWithoutRef<typeof Slot>;
+>(({ ...props }, ref) => {;
+  const { error, formItemId, formDescriptionId, formMessageId } = useFormField();
+  return (;
+    <Slot;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ref={ref}
       id={formItemId}
-      aria-describedby={
-        !error
-          ? `${formDescriptionId}`
-          : `${formDescriptionId} ${formMessageId}`
+      aria-describedby={;
+        !error;
+          ? `${formDescriptionId}`;
+          : `${formDescriptionId} ${formMessageId}`;
       }
       aria-invalid={!!error}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
@@ -122,10 +201,24 @@ const FormDescription = React.forwardRef<
 
   return (
     <p
+=======
+    />;
+  );
+});
+FormControl.displayName = "FormControl";
+const FormDescription = React.forwardRef<;
+  HTMLParagraphElement,;
+  React.HTMLAttributes<HTMLParagraphElement>;
+>(({ className, ...props }, ref) => {;
+  const { formDescriptionId } = useFormField();
+  return (;
+    <p;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
       ref={ref}
       id={formDescriptionId}
       className={cn("text-sm text-muted-foreground&quot;, className)}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
@@ -140,16 +233,31 @@ const FormMessage = React.forwardRef<
 
   if (!body) {
     return null
+=======
+    />;
+  );
+});
+FormDescription.displayName = "FormDescription";
+const FormMessage = React.forwardRef<;
+  HTMLParagraphElement,;
+  React.HTMLAttributes<HTMLParagraphElement>;
+>(({ className, children, ...props }, ref) => {;
+  const { error, formMessageId } = useFormField();
+  const body = error ? String(error?.message) : children;
+  if (!body) {;
+    return null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
-
-  return (
-    <p
+;
+  return (;
+    <p;
       ref={ref}
       id={formMessageId}
       className={cn("text-sm font-medium text-destructive&quot;, className)}
       {...props}
-    >
+    >;
       {body}
+<<<<<<< HEAD
     </p>
   )
 })
@@ -163,4 +271,19 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
+=======
+    </p>;
+  );
+});
+FormMessage.displayName = "FormMessage";
+export {;
+  useFormField,;
+  Form,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription;
+  FormMessage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
   FormField}
+;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 export default function TestingDocRedirect() {
   return (
@@ -14,5 +15,19 @@ export default function TestingDocRedirect() {
       </main>
     </>
   )
+=======
+import Head from 'next/head';
+export default function TestingDocRedirect() {;
+  return (;
+    <>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to Testing documentation…</p>;
+      </main>;
+    </>;
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
-
+;

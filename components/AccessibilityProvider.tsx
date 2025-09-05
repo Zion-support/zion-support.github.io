@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
@@ -101,3 +102,51 @@ export const useAccessibility = () => {
 =======
 export default AccessibilityProvider;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+import React, { createContext, useContext, useState } from 'react',;
+interface AccessibilityContextType {;
+  highContras: t: boolean,;
+  largeTex: t: boolean,;
+  reducedMotio: n: boolean,;
+  toggleHighContras: t: () => void,;
+  toggleLargeTex: t: () => void,;
+  toggleReducedMotio: n: () => void;
+}
+;
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined),;
+export const useAccessibility = () => {;
+  const context = useContext(AccessibilityContext),;
+  if (context === undefined) {;
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  }
+  return context;
+},;
+interface AccessibilityProviderProps {;
+  childre: n: React.ReactNode;
+}
+;
+export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
+  const [highContrast, setHighContrast] = useState(false),;
+  const [largeText, setLargeText] = useState(false),;
+  const [reducedMotion, setReducedMotion] = useState(false),;
+  const toggleHighContrast = () => setHighContrast(!highContrast),;
+  const toggleLargeText = () => setLargeText(!largeText),;
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),;
+  const value = {;
+    highContrast,;
+    largeText,;
+    reducedMotion,;
+    toggleHighContrast,;
+    toggleLargeText,;
+    toggleReducedMotion;
+  },;
+  return (;
+    <AccessibilityContext.Provider value={value}>;
+      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>;
+        {children}
+      </div>;
+    </AccessibilityContext.Provider>;
+  );
+};
+export default AccessibilityProvider;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

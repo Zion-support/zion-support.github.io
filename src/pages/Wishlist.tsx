@@ -1,44 +1,41 @@
-import { useFavorites } from '@/hooks/useFavorites',
-import { X } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { TalentCard } from '@/components/talent/TalentCard',
-import { Button } from '@/components/ui/button',
-import { useCart } from '@/context/CartContext',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { useEffect } from 'react', // Added useEffect
-
-export default function WishlistPage() {
-  const { favorites, loading, toggleFavorite } = useFavorites(),
-  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
-  const router = useRouter(), // Changed from navigate
-
-  useEffect(() => {
-    // Redirect if not authenticated and auth loading is complete
-    if (!isAuthLoading && !user) {
-      router.push('/login')
+import { useFavorites } from '@/hooks/useFavorites',;
+import { X } from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
+import { TALENT_PROFILES } from '@/data/talentData',;
+import { ProductListingCard } from '@/components/ProductListingCard',;
+import { TalentCard } from '@/components/talent/TalentCard',;
+import { Button } from '@/components/ui/button',;
+import { useCart } from '@/context/CartContext',;
+import { toast } from '@/hooks/use-toast',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useRouter } from 'next/router', // Changed from useNavigate;
+import { useEffect } from 'react', // Added useEffect;
+export default function WishlistPage() {;
+  const { favorites, loading, toggleFavorite } = useFavorites(),;
+  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading;
+  const router = useRouter(), // Changed from navigate;
+  useEffect(() => {;
+    // Redirect if not authenticated and auth loading is complete;
+    if (!isAuthLoading && !user) {;
+      router.push('/login');
     }
-  }, [user, isAuthLoading, router]),
-
-  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null, // Or a loading spinner
+  }, [user, isAuthLoading, router]),;
+  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
+    return null, // Or a loading spinner;
   }
-
-  const { items, dispatch } = useCart(),
-
-  const addToCart = (item: { id: string, title?: string, price?: number }) => {
-    if (items.some(i => i.id === item.id)) return,
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1
+;
+  const { items, dispatch } = useCart(),;
+  const addToCart = (item: { id: string, title?: string, price?: number }) => {;
+    if (items.some(i => i.id === item.id)) return,;
+    dispatch({;
+      type: 'ADD_ITEM',;
+      payload: {;
+        id: item.id,;
+        name: item.title || 'Item',;
+        price: item.price || 0,;
+        quantity: 1;
       }
+<<<<<<< HEAD
     }),
     toast.success(`1× ${item.title || 'Item'} added`)
   },
@@ -80,19 +77,66 @@ export default function WishlistPage() {
                     <X className=&quot;h-4 w-4&quot; />
                   </button>
                   <TalentCard
+=======
+    }),;
+    toast.success(`1× ${item.title || 'Item'} added`);
+  },;
+  const productMap = MARKETPLACE_LISTINGS.reduce<Record<string any>>((acc, p) => {;
+    acc[p.id] = p,;
+    return acc;
+  }, {}),;
+  const talentMap = TALENT_PROFILES.reduce<Record<string any>>((acc, t) => {;
+    acc[t.id] = t,;
+    return acc;
+  }, {}),;
+  const sortedFavorites = [...favorites].sort(;
+    (a, b) =>;
+      new Date(b.created_at || '').getTime() -;
+      new Date(a.created_at || '').getTime();
+  ),;
+  return (;
+    <div className="container py-8">;
+      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>;
+      {loading ? (;
+        <p>Loading...</p>;
+      ) : favorites.length === 0 ? (;
+        <p>No items saved.</p>;
+      ) : (;
+        <div className="responsive-grid">;
+          {sortedFavorites.map(fav => {;
+            if (fav.item_type === 'talent') {;
+              const talent = talentMap[fav.item_id];
+              return talent ? (;
+                <div key={fav.item_id} className="relative">;
+                  <button;
+                    aria-label="Remove from favorites";
+                    className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80";
+                    onClick={() => toggleFavorite('talent', fav.item_id)}
+                  >;
+                    <X className="h-4 w-4" />;
+                  </button>;
+                  <TalentCard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     talent={talent}
                     onViewProfile={() => {}}
                     onRequestHire={() => {}}
                     isAuthenticated={true}
+<<<<<<< HEAD
                   />
                   {fav.created_at && (
                     <p className=&quot;mt-1 text-xs text-muted-foreground&quot;>
+=======
+                  />;
+                  {fav.created_at && (;
+                    <p className="mt-1 text-xs text-muted-foreground">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       Saved {new Date(fav.created_at).toLocaleDateString()}
-                    </p>
+                    </p>;
                   )}
-                </div>
-              ) : null
+                </div>;
+              ) : null;
             }
+<<<<<<< HEAD
             const item = productMap[fav.item_id],
             return item ? (
               <div key={fav.item_id} className=&quot;relative&quot;>
@@ -107,21 +151,44 @@ export default function WishlistPage() {
                 <Button
                   size=&quot;sm&quot;
                   className=&quot;absolute bottom-2 right-2&quot;
+=======
+            const item = productMap[fav.item_id];
+            return item ? (;
+              <div key={fav.item_id} className="relative">;
+                <button;
+                  aria-label="Remove from favorites";
+                  className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80";
+                  onClick={() => toggleFavorite(fav.item_type, fav.item_id)}
+                >;
+                  <X className="h-4 w-4" />;
+                </button>;
+                <ProductListingCard listing={item} />;
+                <Button;
+                  size="sm";
+                  className="absolute bottom-2 right-2";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   onClick={() => addToCart(item)}
                   disabled={items.some(i => i.id === item.id)}
-                >
+                >;
                   {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
+<<<<<<< HEAD
                 </Button>
                 {fav.created_at && (
                   <p className=&quot;mt-1 text-xs text-muted-foreground&quot;>
+=======
+                </Button>;
+                {fav.created_at && (;
+                  <p className="mt-1 text-xs text-muted-foreground">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                     Saved {new Date(fav.created_at).toLocaleDateString()}
-                  </p>
+                  </p>;
                 )}
-              </div>
-            ) : null
+              </div>;
+            ) : null;
           })}
-        </div>
+        </div>;
       )}
-    </div>
-  )
+    </div>;
+  );
 }
+;

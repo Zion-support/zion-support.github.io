@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -22,10 +23,29 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
       className={cn(
         &quot;border-zion-purple/30 hover:bg-zion-purple hover:text-white&quot;,
         &quot;transition-colors duration-200&quot;
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { cn } from "@/lib/utils",;
+interface QuickReplyButtonProps {;
+  text: string,;
+  onClick: () => void;
+}
+;
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
+  return (;
+    <Button;
+      variant="outline";
+      size="sm";
+      className={cn(;
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
+        "transition-colors duration-200";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
       )}
       onClick={onClick}
-    >
+    >;
       {text}
-    </Button>
-  )
+    </Button>;
+  );
 }
+;

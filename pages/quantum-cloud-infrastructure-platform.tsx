@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -23,9 +24,37 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 					&quot;Automated cost controls&quot;,
 					&quot;Cross-region DR and backup&quot;,
 					&quot;Compliance and audit kits&quot;
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
+export default function QuantumCloudInfrastructurePlatformPage() {;
+	return (;
+		<>;
+			<Head>;
+				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
+				<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />;
+				<link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure-platform" />;
+			</Head>;
+			<ServiceLanding;
+				title="Quantum Cloud Infrastructure Platform";
+				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.";
+				subtitle="Next-gen compute for critical workloads";
+				pricePerMonthUSD={28999}
+				implementationWeeks="1-2 weeks";
+				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost";
+				features={[;
+					"Managed quantum accelerators",;
+					"Zero-trust and quantum-safe security",;
+					"Observability and SLOs",;
+					"Automated cost controls";
+					"Cross-region DR and backup";
+					"Compliance and audit kits";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 				]}
 <<<<<<< HEAD
 				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
+<<<<<<< HEAD
 				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
 =======
 				industries={[&quot;Financial Services&quot;, &quot;Life Sciences&quot;, &quot;Government&quot;, &quot;Energy&quot;, &quot;Media&quot;]}
@@ -34,4 +63,10 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 			/>
 		</>
 	)
+=======
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform";
+			/>;
+		</>;
+	);
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }

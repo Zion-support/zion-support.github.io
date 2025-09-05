@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
@@ -18,9 +19,32 @@ export default function QuantumSecureCloudInfrastructure() {
 				&quot;Zero Trust + PQC reference designs&quot;,
 				&quot;Threat modeling and validation&quot;,
 				&quot;NIST PQC roadmap alignment]}
+=======
+import React from 'react',;
+import { motion } from 'framer-motion',;
+import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',;
+import SEO from '../components/SEO',;
+export default function QuantumSecureCloudInfrastructure() {;
+	return (;
+		<ServiceLanding;
+			title="Quantum-Secure Cloud Infrastructure";
+			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks.";
+			subtitle="Protect data beyond the quantum horizon";
+			pricePerMonthUSD={5999}
+			implementationWeeks="6-10 weeks";
+			roiNote="Meet emerging PQC compliance and safeguard long-lived data";
+			features={[;
+				"PQC algorithms for data at-rest and in-transit",;
+				"Hybrid crypto transition plans",;
+				"HSM/KMS integrations and key rotation",;
+				"Zero Trust + PQC reference designs";
+				"Threat modeling and validation";
+				"NIST PQC roadmap alignment]}
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 			]}
 <<<<<<< HEAD
 			industries={["Financial Services", "Healthcare", "Government"]}
+<<<<<<< HEAD
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 =======
 			industries={[&quot;Financial Services&quot;, &quot;Healthcare&quot;, &quot;Government&quot;]}
@@ -28,4 +52,10 @@ export default function QuantumSecureCloudInfrastructure() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 		/>
 	)
+=======
+			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure";
+		/>;
+	);
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
+;

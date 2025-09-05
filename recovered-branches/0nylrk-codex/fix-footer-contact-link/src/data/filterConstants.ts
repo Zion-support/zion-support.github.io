@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Common skills for filtering
 export const COMMON_SKILLS = [
 <<<<<<< HEAD
@@ -48,3 +49,28 @@ export const REGIONS = [
   &quot;Africa&quot;
 ];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+  "Machine Learning",;
+  "Python",;
+  "JavaScript",;
+  "React",;
+  "Data Science",;
+  "AWS",;
+  "Docker",;
+  "Kubernetes",;
+  "DevOps",;
+  "Cloud Architecture",;
+  "TensorFlow";
+],;
+// Regions;
+export const REGIONS = [;
+  "North America",;
+  "Europe",;
+  "Asia Pacific",;
+  "South America",;
+  "Middle East",;
+  "Africa";
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

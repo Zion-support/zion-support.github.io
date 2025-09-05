@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -42,16 +43,44 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+=======
+import { useState } from "react",;
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
+import { Switch } from "@/components/ui/switch",;
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
-
-interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
-  defaultValues?: Review,
-  isSubmitting: boolean
+;
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>,;
+  defaultValues?: Review,;
+  isSubmitting: boolean;
 }
+<<<<<<< HEAD
 
 export function ReviewForm({
   projectId,
@@ -77,19 +106,44 @@ export function ReviewForm({
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
+=======
+;
+export function ReviewForm({;
+  projectId,;
+  revieweeId,;
+  revieweeName,;
+  onSubmit,;
+  defaultValues,;
+  isSubmitting}: ReviewFormProps) {;
+  const [hoveredStar, setHoveredStar] = useState<number>(0),;
+  const form = useForm<ReviewFormValues>({;
+    defaultValues: defaultValues ? {;
+      rating: defaultValues.rating,;
+      review_text: defaultValues.review_text,;
+      communication_rating: defaultValues.communication_rating,;
+      quality_rating: defaultValues.quality_rating,;
+      timeliness_rating: defaultValues.timeliness_rating,;
+      would_work_again: defaultValues.would_work_again,;
+      is_anonymous: defaultValues.is_anonymous} : {;
+      rating: 0,;
+      review_text: "",;
+      communication_rating: undefined,;
+      quality_rating: undefined,;
+      timeliness_rating: undefined,;
+      would_work_again: undefined,;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
       is_anonymous: false}
-  }),
-  
-  const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values,
-      project_id: projectId,
-      reviewee_id: revieweeId},
-    
-    const success = await onSubmit(formattedData),
-    if (success) {
-      form.reset()
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
     }
+<<<<<<< HEAD
   },
   
 <<<<<<< HEAD
@@ -101,9 +155,17 @@ export function ReviewForm({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6&quot;>
+=======
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
         {/* Main Rating */}
-        <FormField
+        <FormField;
           control={form.control}
+<<<<<<< HEAD
           name=&quot;rating&quot;
           rules={{ required: &quot;Rating is required" }}
           render={({ field }) => (
@@ -127,22 +189,56 @@ export function ReviewForm({
                           star <= (hoveredStar || field.value || 0)
                             ? "fill-yellow-400 text-yellow-400&quot;
                             : &quot;text-gray-300"
+=======
+          name="rating";
+          rules={{ required: "Rating is required" }}
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel className="block text-center mb-2">;
+                How was your experience with {revieweeName}?;
+              </FormLabel>;
+              <FormControl>;
+                <div className="flex justify-center gap-1">;
+                  {[1, 2, 3, 4, 5].map((star) => (;
+                    <button;
+                      key={star}
+                      type="button";
+                      onClick={() => field.onChange(star)}
+                      onMouseEnter={() => setHoveredStar(star)}
+                      onMouseLeave={() => setHoveredStar(0)}
+                      className="focus:outline-none transition-transform hover:scale-110";
+                    >;
+                      <Star;
+                        className={`h-10 w-10 ${;
+                          star <= (hoveredStar || field.value || 0);
+                            ? "fill-yellow-400 text-yellow-400";
+                            : "text-gray-300";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                         } transition-colors`}
-                      />
-                    </button>
+                      />;
+                    </button>;
                   ))}
+<<<<<<< HEAD
                 </div>
               </FormControl>
               <div className="text-center mt-1 h-5&quot;>
                 <FormMessage />
               </div>
             </FormItem>
+=======
+                </div>;
+              </FormControl>;
+              <div className="text-center mt-1 h-5">;
+                <FormMessage />;
+              </div>;
+            </FormItem>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
           )}
-        />
-        
+        />;
         {/* Review Text */}
-        <FormField
+        <FormField;
           control={form.control}
+<<<<<<< HEAD
           name=&quot;review_text&quot;
           rules={{
             required: &quot;Please provide feedback&quot;,
@@ -156,121 +252,193 @@ export function ReviewForm({
                 <Textarea
                   placeholder=&quot;Share your experience and feedback..."
                   className="min-h-24 resize-none"
+=======
+          name="review_text";
+          rules={{;
+            required: "Please provide feedback";
+            minLength: {;
+              value: 20;
+              message: "Review must be at least 20 characters"}}}
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Your Review</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder="Share your experience and feedback...";
+                  className="min-h-24 resize-none";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                   {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
-        />
-        
+        />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
+<<<<<<< HEAD
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm&quot;>Additional Ratings (Optional)</h3>
             
+=======
+        {watchRating > 0 && (;
+          <div className="space-y-6 border-t pt-6">;
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
             {/* Communication */}
-            <FormField
+            <FormField;
               control={form.control}
+<<<<<<< HEAD
               name=&quot;communication_rating"
               render={({ field }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Communication</FormLabel>
                   <FormControl>
                     <RadioGroup
+=======
+              name="communication_rating";
+              render={({ field }) => (;
+                <FormItem className="space-y-2">;
+                  <FormLabel>Communication</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
                           key={value}
+<<<<<<< HEAD
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal&quot;>
+=======
+                          className="flex items-center space-x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.toString()} />;
+                          </FormControl>;
+                          <FormLabel className="cursor-pointer font-normal">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                             {value}
-                          </FormLabel>
-                        </FormItem>
+                          </FormLabel>;
+                        </FormItem>;
                       ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
+            />;
             {/* Quality */}
-            <FormField
+            <FormField;
               control={form.control}
+<<<<<<< HEAD
               name=&quot;quality_rating"
               render={({ field }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Quality of Work</FormLabel>
                   <FormControl>
                     <RadioGroup
+=======
+              name="quality_rating";
+              render={({ field }) => (;
+                <FormItem className="space-y-2">;
+                  <FormLabel>Quality of Work</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
                           key={value}
+<<<<<<< HEAD
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal&quot;>
+=======
+                          className="flex items-center space-x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.toString()} />;
+                          </FormControl>;
+                          <FormLabel className="cursor-pointer font-normal">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                             {value}
-                          </FormLabel>
-                        </FormItem>
+                          </FormLabel>;
+                        </FormItem>;
                       ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
+            />;
             {/* Timeliness */}
-            <FormField
+            <FormField;
               control={form.control}
+<<<<<<< HEAD
               name=&quot;timeliness_rating"
               render={({ field }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Timeliness</FormLabel>
                   <FormControl>
                     <RadioGroup
+=======
+              name="timeliness_rating";
+              render={({ field }) => (;
+                <FormItem className="space-y-2">;
+                  <FormLabel>Timeliness</FormLabel>;
+                  <FormControl>;
+                    <RadioGroup;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+                      className="flex flex-wrap gap-4";
+                    >;
+                      {[1, 2, 3, 4, 5].map((value) => (;
+                        <FormItem;
                           key={value}
+<<<<<<< HEAD
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal&quot;>
+=======
+                          className="flex items-center space-x-2";
+                        >;
+                          <FormControl>;
+                            <RadioGroupItem value={value.toString()} />;
+                          </FormControl>;
+                          <FormLabel className="cursor-pointer font-normal">;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
                             {value}
-                          </FormLabel>
-                        </FormItem>
+                          </FormLabel>;
+                        </FormItem>;
                       ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
+            />;
             {/* Would Work Again */}
-            <FormField
+            <FormField;
               control={form.control}
+<<<<<<< HEAD
               name=&quot;would_work_again"
               render={({ field }) => (
                 <FormItem>
@@ -290,14 +458,36 @@ export function ReviewForm({
                   </div>
                   <FormMessage />
                 </FormItem>
+=======
+              name="would_work_again";
+              render={({ field }) => (;
+                <FormItem>;
+                  <div className="flex items-center gap-2">;
+                    <FormLabel>Would you work with {revieweeName} again?</FormLabel>;
+                    <FormControl>;
+                      <div className="flex items-center space-x-2">;
+                        <Switch;
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />;
+                        <span className="text-sm text-muted-foreground">;
+                          {field.value ? "Yes" : "No"}
+                        </span>;
+                      </div>;
+                    </FormControl>;
+                  </div>;
+                  <FormMessage />;
+                </FormItem>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
               )}
-            />
-          </div>
+            />;
+          </div>;
         )}
-        
+;
         {/* Anonymous Review */}
-        <FormField
+        <FormField;
           control={form.control}
+<<<<<<< HEAD
           name=&quot;is_anonymous"
           render={({ field }) => (
             <FormItem>
@@ -330,4 +520,38 @@ export function ReviewForm({
       </form>
     </Form>
   )
+=======
+          name="is_anonymous";
+          render={({ field }) => (;
+            <FormItem>;
+              <div className="flex items-center gap-2">;
+                <FormControl>;
+                  <Switch;
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />;
+                </FormControl>;
+                <FormLabel className="cursor-pointer font-normal">;
+                  Submit anonymously;
+                </FormLabel>;
+              </div>;
+              <p className="text-xs text-muted-foreground mt-1">;
+                Anonymous reviews won't display your name but will still be linked to your account.;
+              </p>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+        <Button;
+          type="submit";
+          className="w-full";
+          disabled={isSubmitting || !form.formState.isValid}
+        >;
+          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+        </Button>;
+      </form>;
+    </Form>;
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
+;

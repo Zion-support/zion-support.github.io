@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Common constants used across fraud detection modules
 
 // Phrases that might indicate fraud
@@ -52,3 +53,30 @@ export const suspiciousEmailDomains = [
   &quot;10minutemail&quot;
 ];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspiciousPhrases = [;
+  "whatsapp me",;
+  "contact me outside",;
+  "cashapp only",;
+  "western union",;
+  "pay directly",;
+  "bypass",;
+  "telegram",;
+  "signal me",;
+  "avoid fees",;
+  "payment link",;
+  "urgent payment",;
+  "deal outside";
+],;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;
+  "tempmail",;
+  "throwaway",;
+  "fakeemail",;
+  "mailinator",;
+  "guerrillamail",;
+  "10minutemail";
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Additional type declaration for the badge variants
 declare type BadgeVariant = 
 <<<<<<< HEAD
@@ -18,3 +19,14 @@ declare type BadgeVariant =
   | &quot;warning&quot;
   | &quot;info&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+// Additional type declaration for the badge variants;
+declare type BadgeVariant =;
+  | "default";
+  | "secondary";
+  | "destructive";
+  | "outline";
+  | "success";
+  | "warning";
+  | "info",;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

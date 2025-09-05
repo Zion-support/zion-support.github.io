@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
@@ -31,3 +32,9 @@ export default SimpleLayout;
     </>)
 },
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+        {description && <meta name="description" content={description} />},;
+      {children},;
+    </>);
+},;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

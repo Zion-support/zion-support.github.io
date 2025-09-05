@@ -10,6 +10,7 @@ if (fs.existsSync(apiDisabledDir)) {; fixTypeScriptFiles(apiDisabledDir); consol
 =======
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
 
+<<<<<<< HEAD
       } catch (error) {,
         // console.log(`Error processing ${fullPath}: ${error.message}`)};
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
@@ -44,3 +45,17 @@ if (fs.existsSync(apiDisabledDir)) {,
   // console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {,
   // console.log('❌ api-disabled directory not found')};
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {},')}
+;
+      } catch (error) {,;
+        console.log(`Error processing ${fullPath}: ${error.message}`)}
+}
+  })},;
+// Fix all TypeScript files in api-disabled directory,;
+const apiDisabledDir = path.join(__dirname, 'api-disabled'),;
+if (fs.existsSync(apiDisabledDir)) {,;
+  fixTypeScriptFiles(apiDisabledDir),;
+  console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {,;
+  console.log('❌ api-disabled directory not found')};
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

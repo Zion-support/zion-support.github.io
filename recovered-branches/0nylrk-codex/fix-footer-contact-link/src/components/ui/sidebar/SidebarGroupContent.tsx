@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 =======
@@ -15,7 +16,20 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {
   return (
     <div className={cn(&quot;space-y-1&quot;, className)} {...props}>
-      {children}
-    </div>
-  )
+=======
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?: string;
+  children?: React.ReactNode;
 }
+;
+export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
+  return (;
+    <div className={cn("space-y-1", className)} {...props}>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
+      {children}
+    </div>;
+  );
+}
+;

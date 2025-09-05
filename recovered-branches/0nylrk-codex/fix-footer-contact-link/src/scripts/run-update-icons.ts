@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // This is a simple script wrapper to execute our icon update script
 import { exec } from 'child_process',
 import path from 'path',
@@ -33,3 +34,23 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   // console.log('Icon imports updated successfully!');
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+// This is a simple script wrapper to execute our icon update script;
+import { exec } from 'child_process',;
+import path from 'path',;
+const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;
+// // // console.log('Running icon import updater...'),;
+exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
+  if (error) {;
+    console.error(`Error executing script: ${error}`),;
+    return;
+  }
+;
+  // // // console.log(stdout),;
+  if (stderr) {;
+    console.error(stderr);
+  }
+;
+  // // // console.log('Icon imports updated successfully!');
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

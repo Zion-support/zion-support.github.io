@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface Breakpoints {
@@ -64,3 +65,13 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
   return state},
 export default useResponsive,
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+        "isDesktop": width >= 1024})},;
+    updateDimensions(),;
+    window.addEventListener(;
+  'resize', updateDimensions),;
+    return () => window.removeEventListener(;
+  'resize', updateDimensions)}, []),;
+  return state},;
+export default useResponsive;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

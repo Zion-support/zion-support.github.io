@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 =======
@@ -35,22 +36,41 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number) => void;
   rateType: &quot;hourly&quot; | &quot;fixed&quot;;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  getTalentRateSuggestion,;
+  PricingSuggestion,;
+  TalentRateParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string,;
+  onSuggestionApplied: (value: number) => void,;
+  rateType: "hourly" | "fixed";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills,
-  yearsExperience,
-  location,
-  onSuggestionApplied,
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false),
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth(),
-
-  const generateSuggestion = async () => {
-    if (skills.length === 0 || yearsExperience <= 0) {
-      return
+;
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+  skills,;
+  yearsExperience,;
+  location,;
+  onSuggestionApplied,;
+  rateType}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (skills.length === 0 || yearsExperience <= 0) {;
+      return;
     }
+<<<<<<< HEAD
 
     setIsLoading(true),
     try {
@@ -69,27 +89,41 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
+=======
+;
+    setIsLoading(true),;
+    try {;
+      const params: TalentRateParams = {;
+        skills,;
+        yearsExperience,;
+        location},;
+      const result = await getTalentRateSuggestion(params),;
+      setSuggestion(result);
+    } catch (error) {;
+      console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
     }
-  },
-
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
-      onSuggestionApplied(suggestedRate),
-      
-      // Track this suggestion application
-      if (user) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'talent',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          actualValue: suggestedRate,
-          accepted: true
-        })
+  },;
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      // We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),;
+      onSuggestionApplied(suggestedRate),;
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'talent',;
+          suggestedMin: suggestion.minRate,;
+          suggestedMax: suggestion.maxRate,;
+          actualValue: suggestedRate,;
+          accepted: true;
+        });
       }
     }
+<<<<<<< HEAD
   },
 
   return (
@@ -107,13 +141,31 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           </Button>
         ) : (
           <PricingSuggestionBox
+=======
+  };
+  return (;
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
+          <Button;
+            type="button";
+            variant="outline";
+            onClick={generateSuggestion}
+            disabled={skills.length === 0 || yearsExperience <= 0}
+            className="w-full";
+          >;
+            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
+          </Button>;
+        ) : (;
+          <PricingSuggestionBox;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
-          />
+          />;
         )}
-      </div>
-    </div>
-  )
-},
+      </div>;
+    </div>;
+  );
+};

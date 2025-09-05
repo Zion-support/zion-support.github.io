@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 export default function Placeholder() {
@@ -15,4 +16,23 @@ export default function Placeholder() {
       </main>
     </div>
   )
+=======
+import Head from 'next/head',;
+import Link from 'next/link';
+export default function Placeholder() {;
+  return (;
+    <main className="min-h-screen p-8">;
+      <Head>;
+        <title>Services • Ai-seo-auditor - Placeholder</title>;
+        <meta name="robots" content="noindex" />;
+      </Head>;
+      <main>;
+        <h1>AiSeoAuditor</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
+;

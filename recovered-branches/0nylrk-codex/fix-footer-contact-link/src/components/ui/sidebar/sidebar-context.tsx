@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { TooltipProvider } from &quot;@/components/ui/tooltip&quot;
@@ -15,10 +16,27 @@ export function useSidebar(): SidebarContextType {
   const context = React.useContext(SidebarContext)
   if (!context) {
     throw new Error(&quot;useSidebar must be used within a SidebarProvider.&quot;)
+=======
+import * as React from "react";
+import type { CSSProperties } from "react";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+const SIDEBAR_COOKIE_NAME = "sidebar:state";
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+const SidebarContext = React.createContext<SidebarContextType | null>(null);
+export function useSidebar(): SidebarContextType {;
+  const context = React.useContext(SidebarContext);
+  if (!context) {;
+    throw new Error("useSidebar must be used within a SidebarProvider.");
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
   }
-
-  return context as SidebarContextType
+;
+  return context as SidebarContextType;
 }
+<<<<<<< HEAD
 
 export interface SidebarProviderProps extends React.ComponentProps<&quot;div&quot;> {
   defaultOpen?: boolean
@@ -56,32 +74,69 @@ export const SidebarProvider = React.forwardRef<
           setOpenProp(openState)
         } else {
           _setOpen(openState)
+=======
+;
+export interface SidebarProviderProps extends React.ComponentProps<"div"> {;
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+;
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement,;
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+      defaultOpen = true,;
+      open: openProp,;
+      onOpenChange: setOpenProp,;
+      className,;
+      style,;
+      children,;
+      ...props;
+    },;
+    ref;
+  ) => {;
+    const isMobile = useIsMobile();
+    const [openMobile, setOpenMobile] = React.useState(false);
+    // This is the internal state of the sidebar.;
+    // We use openProp and setOpenProp for control from outside the component.;
+    const [_open, _setOpen] = React.useState(defaultOpen);
+    const open = openProp ?? _open;
+    const setOpen = React.useCallback(;
+      (value: boolean | ((value: boolean) => boolean)) => {;
+        const openState = typeof value === "function" ? value(open) : value;
+        if (setOpenProp) {;
+          setOpenProp(openState);
+        } else {;
+          _setOpen(openState);
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
         }
-
-        // This sets the cookie to keep the sidebar state.
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
-      },
-      [setOpenProp, open]
-    )
-
-    // Helper to toggle the sidebar.
-    const toggleSidebar = React.useCallback(() => {
-      return isMobile
-        ? setOpenMobile((open) => !open)
-        : setOpen((open) => !open)
-    }, [isMobile, setOpen, setOpenMobile])
-
-    // Adds a keyboard shortcut to toggle the sidebar.
-    React.useEffect(() => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (
-          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
-          (event.metaKey || event.ctrlKey)
-        ) {
-          event.preventDefault()
-          toggleSidebar()
+;
+        // This sets the cookie to keep the sidebar state.;
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      },;
+      [setOpenProp, open];
+    );
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event.metaKey || event.ctrlKey);
+        ) {;
+          event.preventDefault();
+          toggleSidebar();
         }
       }
+<<<<<<< HEAD
 
       window.addEventListener(&quot;keydown&quot;, handleKeyDown)
       return () => window.removeEventListener(&quot;keydown&quot;, handleKeyDown)
@@ -116,17 +171,56 @@ export const SidebarProvider = React.forwardRef<
             className={cn(
               &quot;group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar&quot;,
               className
+=======
+;
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [toggleSidebar]);
+    // We add a state so that we can do data-state="expanded" or "collapsed".;
+    // This makes it easier to style the sidebar with Tailwind classes.;
+    const state = open ? "expanded" : "collapsed" as SidebarState;
+    const contextValue = React.useMemo(;
+      (): SidebarContextType => ({;
+        state,;
+        open,;
+        setOpen,;
+        isMobile,;
+        openMobile,;
+        setOpenMobile,;
+        toggleSidebar}),;
+      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
+    );
+    return (;
+      <SidebarContext.Provider value={contextValue}>;
+        <TooltipProvider delayDuration={0}>;
+          <div;
+              style={;
+              {;
+                "--sidebar-width": "16rem",;
+                "--sidebar-width-icon": "3rem";
+                ...style} as CSSProperties;
+              }
+            className={cn(;
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
+              className;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
             )}
             ref={ref}
             {...props}
-          >
+          >;
             {children}
-          </div>
-        </TooltipProvider>
-      </SidebarContext.Provider>
-    )
+          </div>;
+        </TooltipProvider>;
+      </SidebarContext.Provider>;
+    );
   }
+<<<<<<< HEAD
 )
 SidebarProvider.displayName = &quot;SidebarProvider&quot;
 
+=======
+);
+SidebarProvider.displayName = "SidebarProvider";
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 export { SidebarContext }
+;

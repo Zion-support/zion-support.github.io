@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState } from "react",
 =======
 import React, { createContext, useContext, useState } from &quot;react&quot;;
@@ -10,36 +11,41 @@ interface SidebarContextType {
   toggle: () => void,
   open: () => void,
   close: () => void
+=======
+import React, { createContext, useContext, useState } from "react",;
+interface SidebarContextType {;
+  isOpen: boolean,;
+  toggle: () => void,;
+  open: () => void,;
+  close: () => void;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094
 }
-
-const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true,
-  toggle: () => {},
-  open: () => {},
-  close: () => {}}),
-
-export const useSidebar = (): SidebarContextType => useContext(SidebarContext),
-
-interface SidebarProviderProps {
-  children: React.ReactNode,
-  defaultOpen?: boolean
+;
+const SidebarContext = createContext<SidebarContextType>({;
+  isOpen: true,;
+  toggle: () => {},;
+  open: () => {},;
+  close: () => {}}),;
+export const useSidebar = (): SidebarContextType => useContext(SidebarContext),;
+interface SidebarProviderProps {;
+  children: React.ReactNode,;
+  defaultOpen?: boolean;
 }
-
-export function SidebarProvider({ 
-  children, 
-  defaultOpen = true 
-}: SidebarProviderProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen),
-
-  const toggle = () => setIsOpen(!isOpen),
-  const open = () => setIsOpen(true),
-  const close = () => setIsOpen(false),
-
-  return (
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+;
+export function SidebarProvider({;
+  children,;
+  defaultOpen = true;
+}: SidebarProviderProps) {;
+  const [isOpen, setIsOpen] = useState(defaultOpen),;
+  const toggle = () => setIsOpen(!isOpen),;
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+  return (;
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
         {children}
-      </div>
-    </SidebarContext.Provider>
-  )
+      </div>;
+    </SidebarContext.Provider>;
+  );
 }
+;
