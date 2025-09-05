@@ -4,8 +4,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
@@ -353,7 +351,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
@@ -480,14 +478,13 @@ export default [
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tseslint,
       react: react,
       'jsx-a11y': jsxA11y,
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
       'react/prop-types': 'off',
@@ -520,7 +517,6 @@ export default [
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
     },
   }
 ];
