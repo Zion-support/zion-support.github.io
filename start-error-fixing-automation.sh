@@ -1,9 +1,7 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Error Fixing Automation Startup Script
 # This script starts the comprehensive error fixing automation system
-=======
 # Error Fixing Automation PM2 Management Script
 # This script manages the PM2 error fixing automation system
 
@@ -17,7 +15,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-<<<<<<< HEAD
 echo "🚀 Starting Error Fixing Automation System..."
 
 # Ensure we're in the project root
@@ -76,7 +73,6 @@ echo "✅ Error Fixing Automation System started successfully!"
 echo "🔧 The system will automatically detect and fix errors every 5-30 minutes"
 echo "📊 Check the logs directory for detailed reports"
 echo "📈 Monitor progress in the error-reports directory"
-=======
 # Configuration
 ECOSYSTEM_FILE="ecosystem-error-fixing-automation.config.cjs"
 LOG_DIR="./automation/logs"
@@ -96,9 +92,9 @@ print_error() {
 }
 
 print_header() {
-    echo -e "${CYAN}================================${NC}"
+    echo -e "${CYAN}====${NC}"
     echo -e "${CYAN}$1${NC}"
-    echo -e "${CYAN}================================${NC}"
+    echo -e "${CYAN}====${NC}"
 }
 
 # Function to check if PM2 is installed

@@ -1,0 +1,11 @@
+interface ResourceError {;
+  "url"
+        this.handleResourceError(url, 'script', "Incorrect MIME "type": ${contentType} (expected javascript)"
+    "type"
+    // console.error('� Resource "Error"
+  private attemptRetry("url": string, "type"
+  private retryResource("url": string, "type"
+      // "Example"
+      // console.log(' Reporting error to monitoring "service"
+  private getResourceType("element"
+cursor/fix-lint-push-and-merge-to-main-f3c1

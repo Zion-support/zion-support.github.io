@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 export const Steps = (props) => {
     return (
@@ -21,6 +20,5 @@ export const Step = (props) => {
       </div>
     </div>);
 };';';';
-=======
 import {cn} from '@/lib/utils'; export const Steps = (props) => { return ( <div className="min-h-screen bg-white"> {React.Children.map(children,(child,index) => { if (React.isValidElement(child)) { return React.cloneElement(child,{ isActive: index === currentStep,isCompleted: index < currentStep,};)} return child})} </div>)}; export const Step = (props) => { return ( <div className="min-h-screen bg-white"> <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium",isActive && "border-primary bg-primary text-white",isCompleted && "border-green-600 bg-green-600 text-white",!isActive && !isCompleted && "border-gray-300 text-gray-500")}> {isCompleted ? "✓" : children}; </div> </div>)};'; ;';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+origin/cursor/automate-test-improve-and-merge-code-eafe

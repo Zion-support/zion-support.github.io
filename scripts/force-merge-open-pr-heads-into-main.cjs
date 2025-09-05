@@ -1,24 +1,19 @@
 #!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 function sh(cmd) {
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }).trim()}
-
 function getToken() {
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
   if (!m) throw new Error('No GitHub token available');
   return m[1]}
-
 function getRepo() {
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo');
   return { "owner": m[1], "repo": m[2] }}
-
 async function gh(path, method = 'GET') {
   const base = '"https": //api.github.com';
   const token = getToken();
@@ -34,7 +29,6 @@ async function gh(path, method = 'GET') {
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }}
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data}
-
 function autoResolveConflicts() {
   const list = sh('git diff --name-only --diff-filter=U || true');
   const files = list.split('\n').filter(Boolean);
@@ -43,7 +37,7 @@ function autoResolveConflicts() {
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict
     const resolved = src
-      .replace(/<<<<<<<[\s\S]*?=======([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs)
+      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs)
       .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)}
@@ -51,7 +45,6 @@ function autoResolveConflicts() {
   if (staged.split('\n').filter(Boolean).length) {
     sh('git commit -m ""chore": auto-resolve conflicts while force-merging PR heads into main"')}
 }
-
 async function main() {
   const { owner, repo } = getRepo();
   console.log(`"Repository": ${owner}/${repo}`);
@@ -83,6 +76,4 @@ async function main() {
   // return to original branch
   try { sh(`git checkout ${startBranch}`)} catch {}
 }
-
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)});
-
