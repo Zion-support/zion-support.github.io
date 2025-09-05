@@ -74,8 +74,7 @@ class SecurityScanner {
       this.log('⚙️  Scanning configuration files...'),
       const configIssues = [],
       const configFiles = [
-        'package.jsonnext.config.jstsconfig.json.env',
-        '.env.local.env.production'],
+        'package.jsonnext.config.jstsconfig.json.env.env.local.env.production'],
       configFiles.forEach(configFile => {
         const filePath = path.join(this.projectRoot, configFile),
         if (fs.existsSync(filePath)) {

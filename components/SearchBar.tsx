@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react',
 import Link from 'next/link';
 interface SearchResult {
-  title: string,
+  title: string;
   description: string,
   url: string,
   type: 'service' | 'page' | 'category'};

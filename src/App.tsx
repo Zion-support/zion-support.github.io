@@ -12,7 +12,7 @@ import ServicesPage from '../pages/services';
 import PricingPage from '../pages/pricing';
 export default function App() {
   return (
-    <ErrorBoundary>,
+    <ErrorBoundary>;
       <Router>,
         <div className="min-h-screen bg-gray-50">,
           <Header />,

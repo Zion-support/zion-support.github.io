@@ -1,7 +1,7 @@
 import React, { useState } from 'react',
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
-  name: string,
+  name: string;
   email: string,
   company: string,
   phone: string,

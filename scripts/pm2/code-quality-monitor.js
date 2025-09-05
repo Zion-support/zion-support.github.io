@@ -54,7 +54,7 @@
                 severity: 'medium'})};
           };
         };
-      }),
+      });
       return analysis} catch (error) {
       this.log(`Error analyzing file ${filePath}: ${error.message}`),
       return null};

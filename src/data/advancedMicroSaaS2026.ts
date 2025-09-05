@@ -5,7 +5,7 @@ export const advancedMicroSaaS2026 = [
     description: 'Automated content creation using advanced AI models',
     category: 'AI & Machine Learning',
     pricing: '$29/month',
-    features: ['Content generationSEO optimization', 'Multi-language support'],
+    features: ['Content generationSEO optimizationMulti-language support'],
     status: 'active'
   },
   {
@@ -14,7 +14,7 @@ export const advancedMicroSaaS2026 = [
     description: 'Automated social media posting and management',
     category: 'Social Media',
     pricing: '$19/month',
-    features: ['Multi-platform postingAnalytics', 'Content calendar'],
+    features: ['Multi-platform postingAnalyticsContent calendar'],
     status: 'active'
   }
 ];
